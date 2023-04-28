@@ -663,6 +663,7 @@ it-IT:
           &lt;h1&gt; Pancetta &lt;/h1&gt;
           &lt;h6&gt; Cialde &lt;/h6&gt;
           </pre>
+        title: Controllo rapido delle intestazioni (o titoli)
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -682,6 +683,7 @@ it-IT:
           &lt;h1&gt; Pancetta &lt;/h1&gt;
           &lt;h6&gt; Cialde &lt;/h6&gt;
           </pre>
+        title: Controllo rapido delle intestazioni (o titoli)
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -707,6 +709,7 @@ it-IT:
           &lt;h1&gt; Pancetta &lt;/h1&gt;
           &lt;h6&gt; Cialde &lt;/h6&gt;
           </pre>
+        title: Controllo rapido delle intestazioni (o titoli)
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -1208,26 +1211,46 @@ it-IT:
         content1: descrizione qui
       CSD U3 drawSprites placement match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+        content1: Abbina il codice all'immagine prodotta.
+        title: drawSprites
       CSD U3 drawSprites placement match_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+        content1: Abbina il codice all'immagine prodotta.
+        title: drawSprites
       CSD U3 game intro:
         content1: descrizione qui
       CSD U3 game intro_2018:
@@ -6799,7 +6822,7 @@ it-IT:
           * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
         markdown: |-
@@ -6922,9 +6945,9 @@ it-IT:
 
           [/key]
       csd-pre-survey-2017-levelgroup_2018:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csd-pre-survey-levelgroup_2019:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       outbreak_story:
         content1: descrizione qui
         markdown: "# Epidemia: programma la tua simulazione\n\n## Benvenuto nella
@@ -7656,9 +7679,9 @@ it-IT:
 
           ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+        title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
       csd-post-survey-levelgroup-2018:
-        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+        title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
       BigEvent-Unplugged_2021:
         markdown: |-
           # Il Grande Evento
@@ -9817,13 +9840,17 @@ it-IT:
           di una mappa da utilizzare nella loro app.\n"
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un personaggio "ape" al centro dello schermo
+        - text: un personaggio "ape" nell’angolo in basso a destra
+          correct: true
+        - text: due personaggi "ape", uno al centro e uno nell’angolo in basso a destra
+        - text: tre personaggi "ape", tutti in posti diversi
+        - text: niente, ci sarà un errore
         questions:
-        - {}
+        - text: Cosa mostrerà il programma?
+        content1: Guarda il programma qui sotto e prevedi dove apparirà il personaggio
+          delle api.
+        title: Posizionamento del personaggio "ape"
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -9849,6 +9876,7 @@ it-IT:
           &lt;h1&gt; Pancetta &lt;/h1&gt;
           &lt;h6&gt; Cialde &lt;/h6&gt;
           </pre>
+        title: Controllo rapido delle intestazioni (o titoli)
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2021:
@@ -9905,7 +9933,7 @@ it-IT:
           * Come formattare il codice per facilitarne la lettura
           * Come eseguire il debugging del codice HTML e CSS
           * Come utilizzare le immagini in modo responsabile
-          * Come proteggere le informazioni personali online
+          * Come proteggere i dati personali online
 
           ## Esempi
 
@@ -9940,6 +9968,14 @@ it-IT:
         questions:
         - {}
         title: titolo
+        markdown: |
+          # Espressioni booleane
+
+          **Espressione booleana** - un'espressione che può restituire solo `TRUE` (VERO) o `FALSE` (FALSO).
+
+          # Previsione
+
+          Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descrizione qui
       CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
@@ -9958,22 +9994,52 @@ it-IT:
         - {}
       CSD U3 drawSprites placement match_2019_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+        content1: Abbina il codice all'immagine prodotta.
+        title: drawSprites
       CSD U3 drawing practice choice_2021:
-        display_name: Pratica
+        display_name: Applicazioni pratiche
         description: Fai molta pratica!
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descrizione qui
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descrizione qui
+        markdown: |
+          # Realizzare il gioco Salto tra piattaforme
+
+          Mentre costruisci il tuo gioco "Salto tra piattaforme", utilizzerai il processo di risoluzione dei problemi.
+
+          ## Definisci
+
+          Il problema è chiaramente definito per questo gioco, perché hai già visto una versione di esempio. Tuttavia, potresti voler apportare alcune modifiche. Assicurati che tutte le nuove funzionalità del tuo gioco siano chiaramente definite.
+
+          ## Preparara
+
+          Prima di iniziare a programmare, è necessario compilare una guida al progetto. Ti preparerà e renderà la codifica molto più semplice.
+
+          ## Prova
+
+          Metterai poi alla prova il tuo progetto quando inizierai a programmare. E, a quel punto, non dimenticare tutto il materiale disponibile: la documentazione tecnica e la scheda “Guida e suggerimenti”.
+
+          ## Rifletti
+
+          Dopo aver terminato il tuo progetto, ti consigliamo di chiederti se il gioco ha funzionato come previsto e se potresti migliorare il tuo processo per la prossima volta.
       CSD U5 test_2021:
         title: Test Post-Progetto su Dati e Società
       CSD U6 LED create intro_2021:
@@ -10003,18 +10069,25 @@ it-IT:
         title: Testo Post-Progetto di Sviluppo Web
       CSD games cake challenge choice_2021:
         display_name: Sfide
+        description: |2-
+
+          Personalizzazione
+          Hai appena seguito il piano di qualcun altro per creare un gioco, quindi ora è il momento di farlo tuo. Quali funzionalità o sfide aggiuntive desideri creare?
       CSD games platform challenge choice_2021:
         display_name: Sfide
+        description: Migliora il tuo gioco con queste sfide!
       CSD web draw loop practice choice_2021:
-        display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        display_name: Applicazioni pratiche
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web movement practice choice_2021:
-        display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        display_name: Applicazioni pratiche
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web text practice choice_2021:
-        display_name: Pratica
+        display_name: Applicazioni pratiche
+        description: In queste attività, metti alla prova le tue abilità la gestione
+          del testo.
       csd-pre-survey-levelgroup_21_22:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       Choose 2 Test:
         answers:
         - correct: true
@@ -10096,17 +10169,25 @@ it-IT:
         - text: Nessuno dei precedenti
       CSD Games Properties practice_2021:
         display_name: Proprietà del personaggio
+        description: Prova ad usare le proprietà dei personaggi che hai imparato fin
+          qui
       CSD Games Properties multi predict_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un personaggio "ape" al centro dello schermo
+        - text: un personaggio "ape" nell’angolo in basso a destra
+          correct: true
+        - text: due personaggi "ape", uno al centro e uno nell’angolo in basso a destra
+        - text: tre personaggi "ape", tutti in posti diversi
+        - text: niente, ci sarà un errore
         questions:
-        - {}
+        - text: Cosa mostrerà il programma?
+        content1: Guarda il programma qui sotto e prevedi dove apparirà il personaggio
+          delle api.
+        title: Posizionamento del personaggio "ape"
       CSD Games Properties practice_2022:
         display_name: Proprietà del personaggio
+        description: Prova ad usare le proprietà dei personaggi che hai imparato fin
+          qui
       CSD Header Size MC_2018_2019_pilot_2022:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -10132,6 +10213,7 @@ it-IT:
           &lt;h1&gt; Pancetta &lt;/h1&gt;
           &lt;h6&gt; Cialde &lt;/h6&gt;
           </pre>
+        title: Controllo rapido delle intestazioni (o titoli)
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
         title: Animazioni Interattive e Test Post-Progetto dei Giochi
       CSD Physical Computing Post-Project Test_2022:
@@ -10147,6 +10229,7 @@ it-IT:
         - text: Output
         - text: Memoria
         - text: Elaborazione
+        title: Domanda n. 2
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -10158,6 +10241,7 @@ it-IT:
         - text: Output
         - text: Memoria
         - text: Elaborazione
+        title: Domanda n. 2
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -10169,6 +10253,7 @@ it-IT:
         - text: Output
         - text: Memoria
         - text: Elaborazione
+        title: Domanda n. 2
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -10180,6 +10265,7 @@ it-IT:
         - text: Rifletti
         - text: Prova
         - text: Definisci
+        title: Domanda n. 2
       CSD U1 Test PSP match_2021:
         answers:
         - {}
@@ -10191,6 +10277,7 @@ it-IT:
         - text: Rifletti
         - text: Prova
         - text: Definisci
+        title: Domanda n. 2
       CSD U1 Test PSP match_2022:
         answers:
         - {}
@@ -10202,6 +10289,7 @@ it-IT:
         - text: Rifletti
         - text: Prova
         - text: Definisci
+        title: Domanda n. 2
       CSD U1 Test define a computer:
         answers:
         - correct: true
@@ -10211,6 +10299,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U1 Test define a computer_2021:
         answers:
         - correct: true
@@ -10220,6 +10309,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U1 Test define a computer_2022:
         answers:
         - correct: true
@@ -10229,6 +10319,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U1 Test define problem:
         answers:
         - correct: true
@@ -10237,6 +10328,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U1 Test define problem_2021:
         answers:
         - correct: true
@@ -10245,6 +10337,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U1 Test define problem_2022:
         answers:
         - correct: true
@@ -10253,6 +10346,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U1 Test_2022:
         title: Computer e Risoluzione di Problemi - Verifica finale
       CSD U2 Image challenge_pilot_2022:
@@ -10270,6 +10364,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U2 Test Classes_pilot_2021:
         answers:
         - {}
@@ -10279,6 +10374,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U2 Test Classes_pilot_2022:
         answers:
         - {}
@@ -10288,6 +10384,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U2 Test ContentStructureStyle:
         answers:
         - {}
@@ -10297,6 +10394,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 2
       CSD U2 Test ContentStructureStyle_pilot_2021:
         answers:
         - {}
@@ -10306,6 +10404,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 2
       CSD U2 Test ContentStructureStyle_pilot_2022:
         answers:
         - {}
@@ -10315,6 +10414,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 2
       CSD U2 Test Copyright:
         answers:
         - {}
@@ -10345,24 +10445,27 @@ it-IT:
       CSD U2 Test Debug:
         answers:
         - correct: true
+        - text: solo 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 e 3
+        title: Domanda n. 4
       CSD U2 Test Debug_pilot_2021:
         answers:
         - correct: true
+        - text: solo 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 e 3
+        title: Domanda n. 4
       CSD U2 Test Debug_pilot_2022:
         answers:
         - correct: true
+        - text: solo 3
         - {}
         - {}
-        - {}
-        - {}
+        - text: 1, 2 e 3
+        title: Domanda n. 4
       CSD U2 Test HTML Usage:
         answers:
         - {}
@@ -10372,6 +10475,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 1
       CSD U2 Test HTML Usage_pilot_2021:
         answers:
         - {}
@@ -10381,6 +10485,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 1
       CSD U2 Test HTML Usage_pilot_2022:
         answers:
         - {}
@@ -10390,6 +10495,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 1
       CSD U2 Test code styles:
         answers:
         - {}
@@ -10399,6 +10505,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 6
       CSD U2 Test code styles_pilot_2021:
         answers:
         - {}
@@ -10408,6 +10515,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 6
       CSD U2 Test code styles_pilot_2022:
         answers:
         - {}
@@ -10417,45 +10525,66 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 6
       CSD U2 Test code stylesheet:
         answers:
+        - text: 1 e 3
+        - {}
+        - text: 2 e 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        title: Domanda n. 5
       CSD U2 Test code stylesheet_pilot_2021:
         answers:
+        - text: 1 e 3
+        - {}
+        - text: 2 e 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        title: Domanda n. 5
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
+        - text: 1 e 3
+        - {}
+        - text: 2 e 3
+          correct: true
         - {}
         - {}
-        - correct: true
-        - {}
-        - {}
+        title: Domanda n. 5
       CSD U2 image debug match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
+        - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
+        - text: https://images.code.org/41b12f31a9084638e4625fecaff916d5-image-1648054026831.png
+        - text: https://images.code.org/030d30152c42faf0891259af025b9884-image-1648054068540.png
+        - text: https://images.code.org/eb2e2f9a15688cc4b2d80f4c401223b1-image-1648054098000.png
         questions:
         - text: L'attributo 'src' è scritto in modo scorretto.
         - text: Gli attributi 'src' 'alt' sono invertiti
         - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
-        - {}
+        - text: Il tag dell'immagine non è corretto e manca l'attributo `src`
         - text: C'è uno spazio nel nome del file
         teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
           la comprensione da parte degli studenti della sintassi del tag `<img>`,
           il suo scopo principale è quello di rendere gli studenti consapevoli dei
           tipi più comuni di bug che possono incontrare quando aggiungono immagini
           alle pagine web.
+        markdown: |
+          # Corrispondenza
+
+          **Ciascuno degli elementi seguenti ha un bug. Abbina la descrizione al bug corretto.**
+
+          ## A: ![](https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47%20PM.png)
+
+          ## B: ![](https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40%20PM.png)
+
+          ## C: ![](https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01%20PM.png)
+
+          ## D: ![](https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24%20PM.png)
+
+          ## E: ![](https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png)
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: descrizione qui
         markdown: |2-
@@ -10477,7 +10606,7 @@ it-IT:
           * Come formattare il codice per facilitarne la lettura
           * Come eseguire il debugging del codice HTML e CSS
           * Come utilizzare le immagini in modo responsabile
-          * Come proteggere le informazioni personali online
+          * Come proteggere i dati personali online
 
           ## Esempi
 
@@ -10512,6 +10641,14 @@ it-IT:
         questions:
         - {}
         title: titolo
+        markdown: |
+          # Espressioni booleane
+
+          **Espressione booleana** - un'espressione che può restituire solo `TRUE` (VERO) o `FALSE` (FALSO).
+
+          # Previsione
+
+          Leggi il programma qui sotto. Ci sono alcuni nuovi simboli che non ti sono stati presentati. Prova a indovinare cosa significano e prova a rispondere alla seguente domanda
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - {}
@@ -10535,6 +10672,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U3 Test clean code_pilot_2021:
         answers:
         - {}
@@ -10544,6 +10682,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U3 Test clean code_pilot_2022:
         answers:
         - {}
@@ -10553,6 +10692,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 1
       CSD U3 Test comment:
         answers:
         - {}
@@ -10562,10 +10702,11 @@ it-IT:
         - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Linea 11
+        - text: Linea 14
+        - text: Linea 17
+        - text: Linea 19
+        title: Domanda n. 6
       CSD U3 Test comment_pilot_2021:
         answers:
         - {}
@@ -10575,10 +10716,11 @@ it-IT:
         - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Linea 11
+        - text: Linea 14
+        - text: Linea 17
+        - text: Linea 19
+        title: Domanda n. 6
       CSD U3 Test comment_pilot_2022:
         answers:
         - {}
@@ -10588,31 +10730,38 @@ it-IT:
         - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Linea 11
+        - text: Linea 14
+        - text: Linea 17
+        - text: Linea 19
+        title: Domanda n. 6
       CSD U3 Test debugging:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: solo 3
+        - text: 1 e 2
+        - text: 1 e 3
+        - text: 2 e 3
+          correct: true
+        - text: 1, 2 e 3
+        title: Domanda n. 5
       CSD U3 Test debugging_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: solo 3
+        - text: 1 e 2
+        - text: 1 e 3
+        - text: 2 e 3
+          correct: true
+        - text: 1, 2 e 3
+        title: Domanda n. 5
       CSD U3 Test debugging_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: solo 3
+        - text: 1 e 2
+        - text: 1 e 3
+        - text: 2 e 3
+          correct: true
+        - text: 1, 2 e 3
+        title: Domanda n. 5
       CSD U3 Test functions:
         answers:
         - correct: true
@@ -10622,6 +10771,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 2
       CSD U3 Test functions_pilot_2021:
         answers:
         - correct: true
@@ -10631,6 +10781,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 2
       CSD U3 Test functions_pilot_2022:
         answers:
         - correct: true
@@ -10640,6 +10791,7 @@ it-IT:
         - correct: true
         questions:
         - {}
+        title: Domanda n. 2
       CSD U3 Test planning:
         answers:
         - {}
@@ -10649,6 +10801,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U3 Test planning_pilot_2021:
         answers:
         - {}
@@ -10658,6 +10811,7 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U3 Test planning_pilot_2022:
         answers:
         - {}
@@ -10667,49 +10821,85 @@ it-IT:
         - {}
         questions:
         - {}
+        title: Domanda n. 4
       CSD U3 Test variables:
         answers:
         - text: '20'
-        - correct: true
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U3 Test variables_pilot_2021:
         answers:
         - text: '20'
-        - correct: true
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U3 Test variables_pilot_2022:
         answers:
         - text: '20'
-        - correct: true
-        - {}
+        - text: '90'
+          correct: true
+        - text: '110'
         - {}
         - {}
         questions:
         - {}
+        title: Domanda n. 3
       CSD U3 drawSprites placement match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
+        title: drawSprites
       CSD U3 drawing practice choice_2022:
-        display_name: Pratica
+        display_name: Applicazioni pratiche
         description: Fai molta pratica!
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: descrizione qui
+        markdown: |
+          # Realizzare il gioco Salto tra piattaforme
+
+          Mentre costruisci il tuo gioco "Salto tra piattaforme", utilizzerai il processo di risoluzione dei problemi.
+
+          ## Definisci
+
+          Il problema è chiaramente definito per questo gioco, perché hai già visto una versione di esempio. Tuttavia, potresti voler apportare alcune modifiche. Assicurati che tutte le nuove funzionalità del tuo gioco siano chiaramente definite.
+
+          ## Preparara
+
+          Prima di iniziare a programmare, è necessario compilare una guida al progetto. Ti preparerà e renderà la codifica molto più semplice.
+
+          ## Prova
+
+          Metterai poi alla prova il tuo progetto quando inizierai a programmare. E, a quel punto, non dimenticare tutto il materiale disponibile: la documentazione tecnica e la scheda “Guida e suggerimenti”.
+
+          ## Rifletti
+
+          Dopo aver terminato il tuo progetto, ti consigliamo di chiederti se il gioco ha funzionato come previsto e se potresti migliorare il tuo processo per la prossima volta.
       CSD U4 test feature match:
         answers:
         - text: "«Dimentico sempre i miei occhiali da lettura»."
@@ -10955,145 +11145,217 @@ it-IT:
           <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U5 test clean multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
-        - {}
+        - text: Una classe ha partecipato a un sondaggio per decidere dove andare
+            durante una gita scolastica e vuole creare un grafico per vedere quanto
+            è stata popolare ciascuna scelta. Potrebbe essere necessario apportare
+            modifiche ai dati prima di creare il grafico?
       CSD U5 test clean multi_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
-        - {}
+        - text: Una classe ha partecipato a un sondaggio per decidere dove andare
+            durante una gita scolastica e vuole creare un grafico per vedere quanto
+            è stata popolare ciascuna scelta. Potrebbe essere necessario apportare
+            modifiche ai dati prima di creare il grafico?
       CSD U5 test clean multi_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: No, non è onesto modificare i dati prima di inserirli in un grafico.
+        - text: Sì, dovrebbero correggere gli errori di ortografia e uniformare i
+            nomi in modo che il grafico sia più preciso.
+          correct: true
+        - text: Sì, dovrebbero visitare luoghi che ritengono non adatti alla gita
+            scolastica.
+        - text: No, la modifica dei dati confonderà le persone se le loro risposte
+            non sono nel grafico.
+        - text: No, se i dati presentano problemi, bisogna ripetere il sondaggio.
         questions:
-        - {}
+        - text: Una classe ha partecipato a un sondaggio per decidere dove andare
+            durante una gita scolastica e vuole creare un grafico per vedere quanto
+            è stata popolare ciascuna scelta. Dovranno apportare modifiche ai dati
+            prima di creare il grafico?
       CSD U5 test crosstab multi:
         answers:
         - text: cane
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test crosstab multi_2021:
         answers:
         - text: cane
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test crosstab multi_2022:
         answers:
         - text: cane
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
           correct: true
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Secondo questo grafico, se qualcuno ti dicesse che la sua stagione
+            preferita è l'autunno, quale animale preferirebbe con maggiore probabilità?
       CSD U5 test datacount multi:
         answers:
         - text: cane
           correct: true
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test datacount multi_2021:
         answers:
         - text: cane
           correct: true
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test datacount multi_2022:
         answers:
         - text: cane
           correct: true
         - text: pinguino
-        - text: Ranocchio
+        - text: ranocchio
         - text: giraffa
-        - {}
+        - text: È impossibile capirlo da queste informazioni.
         questions:
-        - {}
+        - text: Qual è, secondo questo grafico, l'animale che riscuote più successo?
+        markdown: "La tabella seguente mostra la relazione tra animali preferiti e
+          stagioni preferite. \n\n<img src='https://images.code.org/ea4a2068f77bf0283cf19ad643422189-image-1558116149426.01.35
+          AM.png' width=\"400px\">\n"
       CSD U5 test encoding multi2:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test encoding multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test encoding multi2_2022:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
-        - {}
+        - text: Il sistema deve utilizzare solo due elementi diversi per codificare
+            le informazioni.
+        - text: Chiunque lo utilizzi deve concordare sulle regole del sistema.
+          correct: true
+        - text: Le regole del sistema devono essere chiare, in modo che ci sia un
+            solo modo per interpretare i dati codificati.
+          correct: true
+        - text: Il sistema dovrebbe disporre di uno schema, in modo che sia facile
+            da ricordare.
+        - text: La chiave del sistema deve essere tenuta segreta in modo che le persone
+            non possano spiare le informazioni.
         questions:
-        - {}
+        - text: Quale delle due seguenti cose è necessaria per il funzionamento di
+            qualsiasi sistema di codifica?
       CSD U5 test secure multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test secure multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test secure multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Assicurarsi che l'algoritmo utilizzato per crittografare i dati sia
+            tenuto segreto
+          correct: true
+        - text: Assicurarsi che la chiave utilizzata per crittografare i dati sia
+            mantenuta segreta
+        - text: Fai sempre attenzione ai dati che potresti produrre, anche involontariamente
+        - text: Assicurare la sicurezza fisica per i dispositivi che contengono dati
+            (chiusura delle porte, ecc.)
+        - text: Usare una chiave di cifratura forte che non può essere facilmente
+            indovinata
         questions:
-        - {}
+        - text: Quando si mantengono i dati al sicuro, quale delle seguenti cose non
+            è un problema?
       CSD U5 test_2022:
         title: Test Post-Progetto su Dati e Società
       CSD U6 - Accelerometer - Chal_2222:
@@ -11131,22 +11393,32 @@ it-IT:
         title: Fai una previsione
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: gestori di eventi
+        - text: cicli con contatore e matrici
+          correct: true
+        - text: funzioni con parametri
+        - text: getters/getProperty
+          correct: true
+        - text: conversione da analogico a digitale
         questions:
-        - {}
+        - text: Una classe vuole creare un programma che dia il buongiorno a tutti.
+            Ad esempio, il programma potrà mostrare «Buongiorno, Dwayne!» , «Buongiorno,
+            Mari!» per ciascuno studente. Quali DUE strumenti di programmazione saranno
+            i più utili per scrivere questo programma?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: gestori di eventi
+        - text: cicli con contatore e matrici
+          correct: true
+        - text: funzioni con parametri
+        - text: getters/getProperty
+          correct: true
+        - text: conversione da analogico a digitale
         questions:
-        - {}
+        - text: Una classe vuole creare un programma che dia il buongiorno a tutti.
+            Ad esempio, il programma potrà mostrare «Buongiorno, Dwayne!» , «Buongiorno,
+            Mari!» per ciascuno studente. Quali DUE strumenti di programmazione saranno
+            i più utili per scrivere questo programma?
       CSD U6 test debugging multi:
         answers:
         - correct: true
@@ -11261,16 +11533,23 @@ it-IT:
         title: Testo Post-Progetto di Sviluppo Web
       CSD games cake challenge choice_2022:
         display_name: Sfide
+        description: |2-
+
+          Personalizzazione
+          Hai appena seguito il piano di qualcun altro per creare un gioco, quindi ora è il momento di farlo tuo. Quali funzionalità o sfide aggiuntive desideri creare?
       CSD games platform challenge choice_2022:
         display_name: Sfide
+        description: Migliora il tuo gioco con queste sfide!
       CSD web draw loop practice choice_2022:
-        display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        display_name: Applicazioni pratiche
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web movement practice choice_2022:
-        display_name: Pratica
-        description: Prova a usare il disegno ciclico con queste attività.
+        display_name: Applicazioni pratiche
+        description: Prova a usare la funzione ciclica draw con queste attività.
       CSD web text practice choice_2022:
-        display_name: Pratica
+        display_name: Applicazioni pratiche
+        description: In queste attività, metti alla prova le tue abilità la gestione
+          del testo.
       CSP PD Example Question 1:
         answers:
         - {}
@@ -11499,7 +11778,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       aiml-ch1-pulse-survey-q4_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -11517,7 +11796,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       aiml-ch1-pulse-survey-q5_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -11725,7 +12004,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       aiml-pulse-check-survey-1-q3 Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -11743,7 +12022,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       aiml-pulse-check-survey-1-q4 Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -11761,7 +12040,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       aiml-pulse-check-survey-1-q5 Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -12505,7 +12784,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-post-survey-2019-I want more cs:
         answers:
         - text: Sono del tutto d'accordo
@@ -12541,7 +12820,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-post-survey-2019-comfort in cs class:
         answers:
         - text: Sono del tutto d'accordo
@@ -12559,7 +12838,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -12712,7 +12991,7 @@ it-IT:
       csd-post-survey-unit6-preamble:
         content1: descrizione qui
       csd-pre-survey-levelgroup_21_22_2022:
-        title: Alla Scoperta dell'Informatica - Indagine preliminare
+        title: Alla Scoperta dell'Informatica - Sondaggio di inizio corso
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -13540,7 +13819,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U1Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -13558,7 +13837,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U1Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13576,7 +13855,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U1Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13594,7 +13873,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -13612,7 +13891,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13630,7 +13909,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13648,7 +13927,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -13666,7 +13945,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -13684,7 +13963,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13702,7 +13981,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U2Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13720,7 +13999,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -13738,7 +14017,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13756,7 +14035,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13774,7 +14053,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -13792,7 +14071,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -13810,7 +14089,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13828,7 +14107,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U3Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13846,7 +14125,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -13864,7 +14143,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -13882,7 +14161,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13900,7 +14179,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -13918,7 +14197,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -13936,7 +14215,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -13954,7 +14233,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -13972,7 +14251,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -13990,7 +14269,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U4Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14008,7 +14287,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14026,7 +14305,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14044,7 +14323,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14062,7 +14341,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14080,7 +14359,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -14098,7 +14377,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14116,7 +14395,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14134,7 +14413,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14152,7 +14431,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U5Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14170,7 +14449,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14188,7 +14467,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14206,7 +14485,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14224,7 +14503,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14242,7 +14521,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
         answers:
         - text: Sono del tutto d'accordo
@@ -14260,7 +14539,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14278,7 +14557,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14296,7 +14575,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14314,7 +14593,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q2 U6Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14332,7 +14611,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       csd-pulse-check-survey-1-q3 U1Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14350,7 +14629,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U1Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14368,7 +14647,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U1Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14386,7 +14665,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U1Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14404,7 +14683,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14422,7 +14701,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14440,7 +14719,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14458,7 +14737,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -14476,7 +14755,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14494,7 +14773,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14512,7 +14791,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U2Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14530,7 +14809,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14548,7 +14827,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14566,7 +14845,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14584,7 +14863,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -14602,7 +14881,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14620,7 +14899,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14638,7 +14917,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U3Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14656,7 +14935,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14674,7 +14953,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14692,7 +14971,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14710,7 +14989,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14728,7 +15007,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -14746,7 +15025,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14764,7 +15043,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14782,7 +15061,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14800,7 +15079,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U4Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14818,7 +15097,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14836,7 +15115,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14854,7 +15133,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14872,7 +15151,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14890,7 +15169,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -14908,7 +15187,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -14926,7 +15205,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -14944,7 +15223,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -14962,7 +15241,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U5Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -14980,7 +15259,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -14998,7 +15277,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15016,7 +15295,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15034,7 +15313,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15052,7 +15331,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
         answers:
         - text: Sono del tutto d'accordo
@@ -15070,7 +15349,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15088,7 +15367,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15106,7 +15385,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15124,7 +15403,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q3 U6Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15142,7 +15421,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       csd-pulse-check-survey-1-q4 U1Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15160,7 +15439,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U1Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15178,7 +15457,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U1Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15196,7 +15475,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U1Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15214,7 +15493,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -15232,7 +15511,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15250,7 +15529,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15268,7 +15547,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -15286,7 +15565,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15304,7 +15583,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15322,7 +15601,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U2Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15340,7 +15619,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -15358,7 +15637,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch1_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15376,7 +15655,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15394,7 +15673,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -15412,7 +15691,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15430,7 +15709,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch2_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15448,7 +15727,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U3Ch2_2019_pilot_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15466,7 +15745,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -15484,7 +15763,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15502,7 +15781,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15520,7 +15799,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15538,7 +15817,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -15556,7 +15835,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15574,7 +15853,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15592,7 +15871,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15610,7 +15889,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U4Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15628,7 +15907,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -15646,7 +15925,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15664,7 +15943,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15682,7 +15961,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15700,7 +15979,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch1_2022:
         answers:
         - text: Sono del tutto d'accordo
@@ -15718,7 +15997,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15736,7 +16015,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15754,7 +16033,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15772,7 +16051,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U5Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15790,7 +16069,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch1:
         answers:
         - text: Sono del tutto d'accordo
@@ -15808,7 +16087,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch1_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15826,7 +16105,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch1_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15844,7 +16123,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch1_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15862,7 +16141,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
         answers:
         - text: Sono del tutto d'accordo
@@ -15880,7 +16159,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -15898,7 +16177,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch2_2018:
         answers:
         - text: Sono del tutto d'accordo
@@ -15916,7 +16195,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch2_2018_2019:
         answers:
         - text: Sono del tutto d'accordo
@@ -15934,7 +16213,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q4 U6Ch2_2021:
         answers:
         - text: Sono del tutto d'accordo
@@ -15952,7 +16231,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: In questo corso di informatica mi sento a mio agio.
       csd-pulse-check-survey-1-q5 U1Ch2:
         answers:
         - text: Sono del tutto d'accordo
@@ -19277,7 +19556,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Questo corso di informatica mi piace.
       interest-connected-to-life:
         answers:
         - correct: true
@@ -19856,7 +20135,7 @@ it-IT:
         - text: Sono del tutto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Ho le capacità per imparare l'informatica.
       reasons-took-course:
         answers:
         - text: Alcuni miei amici si sono iscritti
@@ -21125,7 +21404,7 @@ it-IT:
 
           |Esempio 1| Esempio 2|Esempio 3|
           |-|-|-|
-          | [! [] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view) | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view) | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view) |
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
 
 
       CSD U2 Sample CSS layout_2022:
@@ -21136,37 +21415,37 @@ it-IT:
 
           |Esempio 1| Esempio 2|Esempio 3|
           |-|-|-|
-          | [! [] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view) | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view) | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view) |
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
 
 
       CSD U2 Sample CSS text_2021:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito Web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
-          [! [] (https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2022:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito Web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
-          [! [] (https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample classes_2021:
         markdown: |
           # Sito web di esempio
 
           Fai clic sul sito web qui sotto per scoprire alcuni nuovi modi per modellare gli elementi.
 
-          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Sample classes_2022:
         markdown: |
           # Sito web di esempio
 
           Fai clic sul sito web qui sotto per scoprire alcuni nuovi modi per modellare gli elementi.
 
-          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Top Websites_2018_2019_pilot_2021:
         markdown: |
           # Risoluzione dei problemi sui siti web
@@ -21277,7 +21556,7 @@ it-IT:
         markdown: |+
           # Sondaggio post-corso Alla scoperta dell'informatica
 
-          **Il tuo contributo e il tuo riscontro sono importanti per noi! ** Lo usiamo per:
+          **Il tuo contributo e i tuoi commenti sono importanti per noi! ** Li usiamo per:
 
           *   comprendere la tua esperienza
           *   apportare miglioramenti al corso
@@ -21292,6 +21571,17 @@ it-IT:
 
 
 
+
+
+        teacher_markdown: |+
+          Questo esercizio si presenta alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità! ** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.
+
+          * I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.
+          * Ci sarà anche un sondaggio per insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.
+
+          **Istruzioni per sbloccare il sondaggio per studenti: ** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Se gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni sopra per sbloccare il sondaggio per gli studenti.
 
 
       CSD Games Parameters challenge_2021:
@@ -21318,3 +21608,575 @@ it-IT:
       CSD U3 drawing challenges_2022:
         description: Prova alcune sfide!
         display_name: Sfide di disegno
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |
+          **Sondaggi di fine unità per gli insegnanti:** mentre i tuoi studenti completano il sondaggio, ti saremmo grati se completassi un breve sondaggio per gli insegnanti
+
+          ## [Fare clic qui per il sondaggio degli insegnanti](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD Games Properties challenge_2021:
+        description: Prova queste nuove sfide con le proprietà dei personaggi
+        display_name: 'Sfide: proprietà dei personaggi'
+      CSD Games Properties challenge_2022:
+        description: Prova queste nuove sfide con le proprietà dei personaggi
+        display_name: 'Sfide: proprietà dei personaggi'
+      CSD Games Sprites Challenges_2021:
+        description: Prova queste sfide extra che ti aiuteranno a rendere i tuoi personaggi
+          ancora più speciali.
+        display_name: 'Sfida: personaggi e animazioni'
+      CSD Games Sprites Challenges_2022:
+        description: Prova queste sfide extra che ti aiuteranno a rendere i tuoi personaggi
+          ancora più speciali.
+        display_name: 'Sfida: personaggi e animazioni'
+      CSD Games Sprites practice_2021:
+        description: |-
+          Utilizza le tue nuove conoscenze su personaggi e animazioni per completare i seguenti
+          esercizi.
+        display_name: Creare personaggi e animazioni
+      CSD Games Sprites practice_2022:
+        description: |-
+          Utilizza le tue nuove conoscenze su personaggi e animazioni per completare i seguenti
+          esercizi.
+        display_name: Creare personaggi e animazioni
+      CSD Games variables challenge_2021:
+        description: Espandi le tue competenze in materia di variabili con queste
+          sfide.
+        display_name: Sfide con le variabili
+      CSD Games variables challenge_2022:
+        description: Espandi le tue competenze in materia di variabili con queste
+          sfide.
+        display_name: Sfide con le variabili
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: Sondaggio di fine corso "Alla Scoperta dell'Informatica"!
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Pianifica il tuo progetto
+
+          Guarda alla guida al progetto, che è già stata compilata per te.
+
+          * La guida al progetto descrive gli stessi personaggi a cui hai pensato?
+          * Utilizza le stesse variabili per memorizzare i dati necessari al funzionamento del gioco?
+          * Le funzioni che descrive sono le stesse che hai descritto?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Pianifica il tuo progetto
+
+          Guarda alla guida al progetto, che è già stata compilata per te.
+
+          * La guida al progetto descrive gli stessi personaggi a cui hai pensato?
+          * Utilizza le stesse variabili per memorizzare i dati necessari al funzionamento del gioco?
+          * Le funzioni che descrive sono le stesse che hai descritto?
+      CSD games collisions challenge choice_2021:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games collisions challenge choice_2022:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games collisions practice choice_2021:
+        description: Esercitarsi con i nuovi blocchi di istruzione per le collisioni.
+        display_name: Esercizi sulle collisioni
+      CSD games collisions practice choice_2022:
+        description: Esercitarsi con i nuovi blocchi di istruzione per le collisioni.
+        display_name: Esercizi sulle collisioni
+      CSD games functions challenge choice_2021:
+        description: Migliora il tuo gioco e prova queste sfide con le funzioni.
+        display_name: Sfide con le funzioni
+      CSD games functions challenge choice_2022:
+        description: Migliora il tuo gioco e prova queste sfide con le funzioni.
+        display_name: Sfide con le funzioni
+      CSD games functions practice choice_2021:
+        description: Esercitati con le funzioni e scopri di più su cosa le rende così
+          utili.
+        display_name: Esercitarsi con le funzioni
+      CSD games functions practice choice_2022:
+        description: Esercitati con le funzioni e scopri di più su cosa le rende così
+          utili.
+        display_name: Esercitarsi con le funzioni
+      CSD games istouching challenge choice_2021:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games istouching challenge choice_2022:
+        description: Prova questi nuovi blocchi di istruzione e affronta la sfida
+          con le collisioni.
+        display_name: Sfide con le collisioni
+      CSD games istouching practice choice_2021:
+        description: Esercitati a utilizzare il rilevamento delle collisioni con queste
+          attività.
+        display_name: Esercizi sulle collisioni
+      CSD games istouching practice choice_2022:
+        description: Esercitati a utilizzare il rilevamento delle collisioni con queste
+          attività.
+        display_name: Esercizi sulle collisioni
+      CSD games movement2 challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste sfide con la velocità e lo
+          schema a contatore.
+        display_name: Sfide su un movimento più complesso dei personaggi
+      CSD games movement2 challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste sfide con la velocità e lo
+          schema a contatore.
+        display_name: Sfide su un movimento più complesso dei personaggi
+      CSD games movement2 practice choice_2021:
+        description: Esercitati su nuovi metodi per far muovere i personaggi.
+        display_name: Esercizi sul movimento del personaggi
+      CSD games movement2 practice choice_2022:
+        description: Esercitati su nuovi metodi per far muovere i personaggi.
+        display_name: Esercizi sul movimento del personaggi
+      CSD games random challenge_2021:
+        description: Tenta queste sfide supplementari con numeri casuali
+        display_name: 'Sfide: numeri casuali'
+      CSD games random challenge_2022:
+        description: Tenta queste sfide supplementari con numeri casuali
+        display_name: 'Sfide: numeri casuali'
+      CSD games random practice_2021:
+        description: Metti alla prova le tue nuove abilità su questi esercizi.
+        display_name: Esercitati con numeri casuali
+      CSD games random practice_2022:
+        description: Metti alla prova le tue nuove abilità su questi esercizi.
+        display_name: Esercitati con numeri casuali
+      CSD games velocity challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste nuove sfide con velocità.
+        display_name: Sfide con la velocità
+      CSD games velocity challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste nuove sfide con velocità.
+        display_name: Sfide con la velocità
+      CSD games velocity practice choice_2021:
+        description: Esercitati a usare i blocchi di velocità con queste attività.
+        display_name: Esercizi con la velocità
+      CSD games velocity practice choice_2022:
+        description: Esercitati a usare i blocchi di velocità con queste attività.
+        display_name: Esercizi con la velocità
+      CSD web conditionals challenge choice_2021:
+        description: Prova queste sfide con le istruzioni condizionali.
+        display_name: Sfide con le istruzioni condizionali
+      CSD web conditionals challenge choice_2022:
+        description: Prova queste sfide con le istruzioni condizionali.
+        display_name: Sfide con le istruzioni condizionali
+      CSD web conditionals practice choice_2021:
+        description: Esercitati ad utilizzare le espressioni booleane e le istruzioni
+          condizionali in queste attività.
+        display_name: Esercizi sulle istruzioni condizionali
+      CSD web conditionals practice choice_2022:
+        description: Esercitati ad utilizzare le espressioni booleane e le istruzioni
+          condizionali in queste attività.
+        display_name: Esercizi sulle istruzioni condizionali
+      CSD web draw loop challenge choice_2021:
+        description: Prova queste sfide di funzione ciclica draw.
+        display_name: Sfide di funzione ciclica draw
+      CSD web draw loop challenge choice_2022:
+        description: Prova queste sfide di funzione ciclica draw.
+        display_name: Sfide di funzione ciclica draw
+      CSD web keyboard challenge choice_2021:
+        description: Prova questi nuovi blocchi e queste sfide con gli input da tastiera.
+        display_name: Sfide – Input da tastiera
+      CSD web keyboard challenge choice_2022:
+        description: Prova questi nuovi blocchi e queste sfide con gli input da tastiera.
+        display_name: Sfide – Input da tastiera
+      CSD web keyboard practice choice_2021:
+        description: Fai pratica con gli input da tastiera in queste attività.
+        display_name: Pratica con gli input da tastiera
+      CSD web keyboard practice choice_2022:
+        description: Fai pratica con gli input da tastiera in queste attività.
+        display_name: Pratica con gli input da tastiera
+      CSD web mouse challenge choice_2021:
+        description: Prova le nuove istruzioni che troverai in queste sfide con il
+          mouse.
+        display_name: Sfide con il mouse
+      CSD web mouse challenge choice_2022:
+        description: Prova le nuove istruzioni che troverai in queste sfide con il
+          mouse.
+        display_name: Sfide con il mouse
+      CSD web mouse practice choice_2021:
+        description: Esercitati a inserire la tastiera e a usare il blocco if/else
+          con queste attività.
+        display_name: Inserimento con il mouse ed esercitazione If/else
+      CSD web mouse practice choice_2022:
+        display_name: Inserimento con il mouse ed esercitazione If/else
+      CSD web movement challenge choice_2021:
+        description: Aggiungi altro alla tua scena di pesci o crea qualcosa di nuovo.
+        display_name: Sfide sul movimento dei personaggi
+      CSD web movement challenge choice_2022:
+        description: Aggiungi altro alla tua scena di pesci o crea qualcosa di nuovo.
+        display_name: Sfide sul movimento dei personaggi
+      CSD web text challenge choice_2021:
+        description: Prova questi nuovi blocchi e nuove sfide.
+        display_name: Sfide con il testo
+      CSD web text challenge choice_2022:
+        description: Prova questi nuovi blocchi e nuove sfide.
+        display_name: Sfide con il testo
+      CSDU6 Innovation_2021:
+        markdown: |
+          # Ricerca sull'innovazione
+
+          Scegli uno dei seguenti argomenti da esaminare. Ti consigliamo di trovare informazioni su alcuni dei più recenti dispositivi informatici innovativi relativi alla tua categoria.
+
+          ## Tecnologia indossabile
+          La tecnologia indossabile include qualsiasi forma di elaborazione progettata per essere indossata dall'utente, sia essa incorporata negli abiti o indossata come accessorio. Molti dispositivi indossabili, come i pedometri intelligenti, si sovrappongono in qualche modo alla salute e alla sicurezza in quanto il dispositivo è sia indossabile sia destinato a contribuire a migliorare la salute personale.
+
+          ## Salute e sicurezza
+          L'argomento più ampio include sia la tecnologia di consumo (elementi che potresti usare per migliorare la tua salute o la tua sicurezza) sia la tecnologia professionale (attrezzatura che un medico o un altro professionista potrebbe usare).
+
+          ## Agricoltura
+          L'agricoltura potrebbe non essere un argomento ovvio, ma le innovazioni tecnologiche hanno avuto un impatto enorme sul modo in cui affrontiamo l'agricoltura. Ciò include l'integrazione di computer nelle attrezzature agricole esistenti, l'utilizzo di sensori e robotica per monitorare le colture e l'analisi dei dati per migliorare l'efficienza e la sostenibilità.
+
+          ## Produzione
+          I progressi nella prototipazione rapida, nella robotica industriale e nell'automazione hanno avuto un impatto notevole sul modo in cui vengono prodotti i beni. Che si tratti della tecnologia per consentire la produzione su piccola scala a prezzi accessibili (come stampanti 3D e taglierine laser) o dell'integrazione dei computer nel lavoro di fabbrica, ci sono molte aree interessanti da ricercare qui.
+
+          ## Arte e design
+          L'intersezione tra espressione artistica e informatica può produrre risultati impressionanti e inaspettati. Sebbene sia meno probabile trovare prodotti disponibili in commercio legati all'arte e al design, troverai un'ampia varietà di creazioni fatte in casa che utilizzano tutti i tipi di dispositivi informatici in modi creativi ed espressivi.
+
+          ## Casa intelligente
+          Il sogno di una casa che capisca e addirittura anticipi le tue esigenze è più vicino che mai. Che siano controllati esplicitamente tramite comandi vocali o utilizzando sensori per monitorare e rispondere alle mutevoli condizioni, i dispositivi domestici intelligenti si occupano di qualsiasi numero di attività banali o ripetitive in casa.
+
+
+          # Considerazioni sulla ricerca
+
+          Mentre cerchi dispositivi sul tuo argomento, tieni a mente le seguenti considerazioni:
+
+          * Concentrati sulle soluzioni basate sull'hardware rispetto ai programmi software
+          * Concentrati sulle innovazioni recenti rispetto alle notizie più vecchie
+          * Segui ciò che ti interessa
+
+          # Iniziare la ricerca
+
+          Rivolgiti al tuo insegnante per i siti web consigliati per inizia la tua ricerca. Puoi anche utilizzare alcune delle parole chiave sopra riportate per iniziare a cercare idee specifiche su Internet. Ad esempio, considera di dare un'occhiata ai vari siti di raccolta fondi (come Kickstarter e Indiegogo) per vedere i prodotti che non sono ancora stati lanciati.
+      Design a Screen for your App_2018:
+        markdown: |
+          # Simulazione della tua app
+
+          Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
+
+          Dal momento che dividerai il lavoro, ti consigliamo di fare un po' di pianificazione in anticipo per decidere l'aspetto comune delle tue pagine. Ad esempio, vorrai essere d'accordo su cose come:
+
+          * In che posizione inserire i pulsanti di navigazione?
+          * Quali colori utilizzar per sfondi, testo e pulsanti
+          * Qual è lo stile e la disposizione generale delle pagine?
+
+          # Definire i namespace (serie omodenea di nomi di entità)
+
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |
+          #### Definire i "namespace"
+
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+
+          #### Lavorare insieme... separatamente
+
+          Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
+      Design a Screen for your App_2018_2019:
+        markdown: |
+          # Simulazione della tua app
+
+          Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
+
+          Dal momento che dividerai il lavoro, ti consigliamo di fare un po' di pianificazione in anticipo per decidere l'aspetto comune delle tue pagine. Ad esempio, vorrai essere d'accordo su cose come:
+
+          * In che posizione inserire i pulsanti di navigazione?
+          * Quali colori utilizzar per sfondi, testo e pulsanti
+          * Qual è lo stile e la disposizione generale delle pagine?
+
+          # Definire i namespace (serie omodenea di nomi di entità)
+
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |
+          #### Definire i "namespace"
+
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+
+          #### Lavorare insieme... separatamente
+
+          Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
+      Design a Screen for your App_2021:
+        markdown: |
+          # Simulazione della tua app
+
+          Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
+
+          Dal momento che dividerai il lavoro, ti consigliamo di fare un po' di pianificazione in anticipo per decidere l'aspetto comune delle tue pagine. Ad esempio, vorrai essere d'accordo su cose come:
+
+          * In che posizione inserire i pulsanti di navigazione?
+          * Quali colori utilizzar per sfondi, testo e pulsanti
+          * Qual è lo stile e la disposizione generale delle pagine?
+
+          # Definire i namespace (serie omodenea di nomi di entità)
+
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |
+          #### Definire i "namespace"
+
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+
+          #### Lavorare insieme... separatamente
+
+          Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
+      Design a Screen for your App_2022:
+        markdown: |
+          # Simulazione della tua app
+
+          Ora che hai fatto un po' di pratica nel disporre gli elementi in Sviluppo App, puoi iniziare a lavorare sulla simulazione della tua app. Con il tuo gruppo, distribuitevi su più schermi in modo che tutti possano lavorare su uno schermo diverso.
+
+          Dal momento che dividerai il lavoro, ti consigliamo di fare un po' di pianificazione in anticipo per decidere l'aspetto comune delle tue pagine. Ad esempio, vorrai essere d'accordo su cose come:
+
+          * In che posizione inserire i pulsanti di navigazione?
+          * Quali colori utilizzar per sfondi, testo e pulsanti
+          * Qual è lo stile e la disposizione generale delle pagine?
+
+          # Definire i namespace (serie omodenea di nomi di entità)
+
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |
+          #### Definire i "namespace"
+
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+
+          #### Lavorare insieme... separatamente
+
+          Ancor più dell'attività di prototipazione su carta, è facile per gli studenti di questa lezione dimenticare che devono considerare come le loro scelte influiranno su tutta la loro squadra. Incoraggia una discussione attiva tra le squadre durante la progettazione delle schermate per assicurarti che lavorino tutti verso un obiettivo comune.
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |
+          **Sondaggio di fine unità per gli insegnanti:** mentre i tuoi studenti completano il sondaggio, ti saremmo grati se completassi un breve sondaggio per gli insegnanti
+
+          ## [Fare clic qui per il sondaggio degli insegnanti](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
+        teacher_markdown: |
+          **Sondaggio di fine unità per gli insegnanti:** mentre i tuoi studenti completano il sondaggio, ti saremmo grati se completassi un breve sondaggio per gli insegnanti
+
+          ## [Fare clic qui per il sondaggio degli insegnanti](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      aiml-ch1-pulse-survey_2021:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-ch1-pulse-survey_2022:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-intro-pulse-survey_2021:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-intro-pulse-survey_2022:
+        title: Sondaggio rapido su intelligenza artificiale e apprendimento automatico!
+      aiml-pulse-check-survey-preamble_2021:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-post-survey-markdown-with-link-to-survey_2022:
+        markdown: |+
+          # Sondaggio di fine corso "Alla Scoperta dell'Informatica"
+
+          Il tuo contributo e il tuo riscontro sono importanti per noi!** Li utilizziamo per:
+
+          *   comprendere la qualità della tua esperienza
+          *   apportare miglioramenti al corso
+
+          Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2022/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+
+          (si apre in una nuova scheda)
+
+          <br>
+
+
+
+
+
+        teacher_markdown: |+
+          Questo esercizio si presenta alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità! ** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.
+
+          * I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.
+          * Ci sarà anche un sondaggio per insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.
+
+          **Istruzioni per sbloccare il sondaggio per studenti: ** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Se gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni sopra per sbloccare il sondaggio per gli studenti.
+
+
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: Sondaggio rapido "Alla Scoperta dell'Informatica"!
+      csd-pulse-check-survey-preamble:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2018:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2018_2019:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2019:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_2021:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_2022:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2021:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2022:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      csd-pulse-check-survey-preamble_2222:
+        markdown: |
+          ### Per favore, prenditi un momento per rispondere a queste **cinque brevi domande**.
+
+          <small>
+          <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+          </small>
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe
+      ml-models-shoe survey_2022:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe
+      CSD-U5-SFLP Combining Representations:
+        teacher_markdown: "* [Registro per animali domestici](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
+          - Esempio ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))\n"

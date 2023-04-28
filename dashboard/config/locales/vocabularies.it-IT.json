@@ -844,6 +844,37 @@
           "word": "Binario",
           "definition": "Un modo di rappresentare i dati usando solo due opzioni."
         },
+        "decode/csd/2022": {
+          "word": "Decodifica",
+          "definition": "modificare il modo in cui le informazioni vengono rappresentate in modo che possano essere lette da una persona"
+        },
+        "encode/csd/2022": {
+          "word": "Codifica",
+          "definition": "modificare il modo in cui le informazioni vengono rappresentate in modo che possano essere lette da un computer"
+        },
+        "ascii/csd/2022": {
+          "definition": "un sistema popolare per rappresentare il testo in formato binario"
+        },
+        "binary_system/csd/2022": {
+          "word": "Sistema binario",
+          "definition": "un modo per rappresentare le informazioni utilizzando solo due opzioni"
+        },
+        "bit/csd/2022": {
+          "word": "Bit",
+          "definition": "un singolo pezzetto di informazione binaria"
+        },
+        "pixel/csd/2022": {
+          "word": "Pixel",
+          "definition": "un piccolo quadrato o punto che contiene un singolo punto di colore di un'immagine più grande."
+        },
+        "decrypt/csd/2022": {
+          "word": "Decrittare",
+          "definition": "modificare le informazioni in modo da mostrarne il significato nascosto"
+        },
+        "encrypt/csd/2022": {
+          "word": "Crittografare",
+          "definition": "modificare le informazioni in modo da nasconderne il significato"
+        },
         "computer/csd/2022": {
           "word": "Computer",
           "definition": "Una macchina che elabora dati."
@@ -861,7 +892,7 @@
           "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
         },
         "storage/csd/2022": {
-          "word": "memorizzazione",
+          "word": "memoria",
           "definition": "salvataggio di dati da utilizzare in futuro"
         },
         "bug/csd/2022": {
@@ -920,8 +951,8 @@
           "definition": "Un titolo o un riepilogo per un documento o una sezione di un documento."
         },
         "digital_footprint/csd/2022": {
-          "word": "Orme digitali",
-          "definition": "Le informazioni raccolte su un individuo su più siti web su Internet."
+          "word": "Tracce digitali",
+          "definition": "I dati di un individuo raccolti su più siti web su Internet."
         },
         "css/csd/2022": {
           "word": "CSS",
@@ -974,6 +1005,9 @@
         "machine_learning/csd/2022": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+        },
+        "unsupervised_learning/csd/2022": {
+          "definition": "Individuazione di modelli nei dati sprovvisti di etichette"
         },
         "code/poem-art/unversioned": {
           "word": "Codice",
@@ -1527,6 +1561,9 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "unsupervised_learning/csd/2021": {
+          "definition": "Individuazione di modelli nei dati sprovvisti di etichette"
+        },
         "empathy/csd/2021": {
           "word": "Empatia",
           "definition": "Durante la fase di progettazione, prestare attenzione alla sensibilità e alle esigenze dell'utente mentre viene progettato un prodotto."
@@ -1554,6 +1591,37 @@
         "for_loop/csd/2021": {
           "word": "Cicli con contatore",
           "definition": "Un’istruzione di ripetizione (ciclo) basata su una variabile contatore, caratterizzata da un valore iniziale, un valore finale ed un “passo” (la quantità di cui viene incrementata o decrementata ad ogni ripetizione)."
+        },
+        "decode/csd/2021": {
+          "word": "Decodifica",
+          "definition": "modificare il modo in cui le informazioni vengono rappresentate in modo che possano essere lette da una persona"
+        },
+        "encode/csd/2021": {
+          "word": "Codifica",
+          "definition": "modificare il modo in cui le informazioni vengono rappresentate in modo che possano essere lette da un computer"
+        },
+        "binary_system/csd/2021": {
+          "word": "Sistema binario",
+          "definition": "un modo per rappresentare le informazioni utilizzando solo due opzioni"
+        },
+        "ascii/csd/2021": {
+          "definition": "un sistema popolare per rappresentare il testo in formato binario"
+        },
+        "bit/csd/2021": {
+          "word": "Bit",
+          "definition": "un singolo pezzetto di informazione binaria"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel",
+          "definition": "un piccolo quadrato o punto che contiene un singolo punto di colore di un'immagine più grande."
+        },
+        "decrypt/csd/2021": {
+          "word": "Decrittare",
+          "definition": "modificare le informazioni in modo da mostrarne il significato nascosto"
+        },
+        "encrypt/csd/2021": {
+          "word": "Crittografare",
+          "definition": "modificare le informazioni in modo da nasconderne il significato"
         },
         "debugging/csd/2021": {
           "word": "Correzione errori (debugging)",
@@ -1599,7 +1667,7 @@
           "definition": "Il ragionamento svolto dai computer per trasformare i dati in ingresso (input) in dati in uscita (output)."
         },
         "storage/csd/2021": {
-          "word": "memorizzazione",
+          "word": "memoria",
           "definition": "salvataggio di dati da utilizzare in futuro"
         },
         "html/csd/2021": {
@@ -1627,8 +1695,8 @@
           "definition": "Un titolo o un riepilogo per un documento o una sezione di un documento."
         },
         "digital_footprint/csd/2021": {
-          "word": "Orme digitali",
-          "definition": "Le informazioni raccolte su un individuo su più siti web su Internet."
+          "word": "Tracce digitali",
+          "definition": "I dati di un individuo raccolti su più siti web su Internet."
         },
         "css/csd/2021": {
           "word": "CSS",
