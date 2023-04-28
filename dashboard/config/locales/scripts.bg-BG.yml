@@ -2613,3 +2613,7 @@ bg:
           title: AI и Машинно Обучение
         microbit-2023:
           title: микробит
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Въведение
