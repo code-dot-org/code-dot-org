@@ -58,6 +58,7 @@ export default class JavabuilderConnection {
     this.sawValidationTests = false;
     this.allValidationPassed = true;
     this.seenMessage = false;
+    this.hadWebsocketConnectionError = false;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -151,7 +152,7 @@ export default class JavabuilderConnection {
 
     try {
       const result = await $.ajax(ajaxPayload);
-      this.seenMessage = false;
+      this.resetRunState();
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
@@ -196,7 +197,7 @@ export default class JavabuilderConnection {
     // the request will be queued to execute when an instance is available. Notify the user that this may
     // be the case.
     setTimeout(() => {
-      if (!this.seenMessage) {
+      if (!this.seenMessage && this.socket.readyState === WebSocket.OPEN) {
         this.onOutputMessage(
           `${STATUS_MESSAGE_PREFIX} ${javalabMsg.waitingForServer()}`
         );
@@ -341,15 +342,19 @@ export default class JavabuilderConnection {
       console.log(
         `[close] Connection died. code=${event.code} reason=${event.reason}`
       );
-      // Notify the user that their program ended unexpectedly
-      // and set the run state to false.
-      this.onOutputMessage(
-        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programEndedUnexpectedly()}`
-      );
-      // Add two newlines so there is a blank line between program executions.
-      this.onNewlineMessage();
-      this.onNewlineMessage();
-      this.setIsRunning(false);
+      // If we had a websocket connection error, we already sent a message to the
+      // user and handled stopping the program.
+      if (!this.hadWebsocketConnectionError) {
+        // Notify the user that their program ended unexpectedly
+        // and set the run state to false.
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programEndedUnexpectedly()}`
+        );
+        // Add two newlines so there is a blank line between program executions.
+        this.onNewlineMessage();
+        this.onNewlineMessage();
+        this.setIsRunning(false);
+      }
     }
   }
 
@@ -432,18 +437,7 @@ export default class JavabuilderConnection {
     } else if (this.sawValidationTests) {
       this.onValidationFailed();
     }
-    this.sawValidationTests = false;
-    this.allValidationPassed = true;
-    this.seenUnsupportedNeighborhoodMessage = false;
-    this.seenUnsupportedTheaterMessage = false;
-    switch (this.executionType) {
-      case ExecutionType.RUN:
-        this.setIsRunning(false);
-        break;
-      case ExecutionType.TEST:
-        this.setIsTesting(false);
-        break;
-    }
+    this.toggleOffRunningOrTesting();
   }
 
   onAuthorizerMessage(value, detail) {
@@ -482,7 +476,7 @@ export default class JavabuilderConnection {
     this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
     if (stopProgram) {
-      this.setIsRunning(false);
+      this.toggleOffRunningOrTesting();
     }
   }
 
@@ -514,6 +508,7 @@ export default class JavabuilderConnection {
   }
 
   reportWebSocketConnectionError(errorMessage) {
+    this.hadWebsocketConnectionError = true;
     logToCloud.addPageAction(
       logToCloud.PageAction.JavabuilderWebSocketConnectionError,
       {
@@ -521,5 +516,25 @@ export default class JavabuilderConnection {
         channelId: this.channelId,
       }
     );
+  }
+
+  resetRunState() {
+    this.seenMessage = false;
+    this.hadWebsocketConnectionError = false;
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
+  }
+
+  toggleOffRunningOrTesting() {
+    switch (this.executionType) {
+      case ExecutionType.RUN:
+        this.setIsRunning(false);
+        break;
+      case ExecutionType.TEST:
+        this.setIsTesting(false);
+        break;
+    }
   }
 }
