@@ -124,12 +124,12 @@ export function soundField(onChange) {
         pathStringArray[2].replace('category_', '').replaceAll('_', ' ') + ': '
       );
     }
-    // Example: 'card_dealing_multiple.mp3' becomes 'Card dealing multiple'
+    // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
     const soundName = pathStringArray[pathStringArray.length - 1].replace(
       '.mp3',
       ''
     );
-    // Examples: 'Board Games: Card dealing multiple', 'Default'
+    // Examples: 'Board games: card_dealing_multiple', 'default'
     const fieldText = `${category}${soundName}`;
     return fieldText;
   };
