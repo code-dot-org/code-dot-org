@@ -682,9 +682,9 @@ es-ES:
 
           **¡Ahora inténtalo!**
         teacher_markdown: |
-          ###Primero Diseña
+          ### Primero el diseño
 
-          Algunos estudiantes pueden tener la tentación de comenzar a jugar en el Modo Código desde el principio, pero para esta lección nos centraremos únicamente en bosquejar una Interfaz de Usuario. Hágales saber a los estudiantes que llegarán al código pronto. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en App Lab sin preocuparse por la aplicación en si que están creando.
+          Algunos alumnos pueden tener la tentación de empezar a trabajar con el Modo Código desde el principio, pero en esta lección nos vamos a centrar únicamente en la creación de una Interfaz de Usuario. Diles que pronto llegarán al código. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en el Laboratorio de Aplicaciones sin preocuparse por la aplicación real que están creando.
       CSD - Getters and Setters:
         markdown: |
           # Getters y Setters
