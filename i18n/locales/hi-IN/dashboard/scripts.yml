@@ -4215,3 +4215,36 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: इनपुट्स और आउटपुट्स
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: स्वागत है
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: परिचय
+          lesson_groups:
+            lessonGroup-2:
+              display_name: दिन 1
+          title: दिन 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: समाप्ति
+          lesson_groups:
+            lessonGroup-2:
+              display_name: दिन 2
+          title: दिन 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: दिन 3
+          title: दिन 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: समाप्ति
+          lesson_groups:
+            lessonGroup-2:
+              display_name: दिन 4
+          title: दिन 4
