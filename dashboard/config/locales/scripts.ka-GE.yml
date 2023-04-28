@@ -3366,3 +3366,19 @@ ka:
           lesson_groups:
             lessonGroup-3:
               display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კეთილი იყოს თქვენი მობრძანება
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: შესავალი
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: შეჯამება
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: შეჯამება
