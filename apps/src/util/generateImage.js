@@ -1,10 +1,10 @@
 /* globals appOptions */
 
-export const generateOpenAIImage = prompt => {
+export const generateOpenAIImage = (prompt, opts = {}) => {
   return $.ajax({
     url: '/openai/image_generate',
     method: 'POST',
-    data: {prompt},
+    data: {prompt, profanityCheckEnabled: !!opts.profanityCheckEnabled},
     headers: {
       'X-CSRF-Token': appOptions.authenticityToken
     }
