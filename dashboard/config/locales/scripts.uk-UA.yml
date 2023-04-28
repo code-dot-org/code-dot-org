@@ -3629,3 +3629,30 @@ uk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ласкаво просимо
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Вступ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 1
+          title: День 1
+        pl-csd-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 2
+          title: День 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 3
+          title: День 3
+        pl-csd-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 4
+          title: День 4
