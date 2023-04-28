@@ -1,4 +1,5 @@
 /* eslint-disable react/no-is-mounted */
+/* global dashboard */
 
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* global p5 */
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';

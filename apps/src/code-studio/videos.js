@@ -1,3 +1,5 @@
+/* global Dialog, YT */
+
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
 import React from 'react';

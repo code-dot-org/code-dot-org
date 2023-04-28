@@ -1,3 +1,6 @@
+/* global dashboard */
+/* global appOptions */
+
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';

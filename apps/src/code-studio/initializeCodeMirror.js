@@ -1,6 +1,7 @@
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
+/* global inlineAttach */
 import $ from 'jquery';
 import CodeMirror from 'codemirror';
 import CodeMirrorSpellChecker from 'codemirror-spell-checker';

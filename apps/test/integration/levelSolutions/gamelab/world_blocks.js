@@ -2,6 +2,7 @@ import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
+/* global Gamelab */
 
 module.exports = {
   app: 'gamelab',

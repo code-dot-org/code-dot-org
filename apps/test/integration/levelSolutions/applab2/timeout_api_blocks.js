@@ -1,5 +1,6 @@
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
+/* global Applab */
 
 /**
  * @param {!string} testName

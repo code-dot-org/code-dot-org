@@ -1,3 +1,4 @@
+/* global appOptions */
 import {
   isUnsupportedBrowser,
   isIE11,

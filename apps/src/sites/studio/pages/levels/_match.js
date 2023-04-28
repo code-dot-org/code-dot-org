@@ -1,3 +1,4 @@
+/* global appOptions */
 import React from 'react';
 import {showDialog} from '@cdo/apps/code-studio/levels/dialogHelper';
 import {LegacyMatchAngiGifDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';

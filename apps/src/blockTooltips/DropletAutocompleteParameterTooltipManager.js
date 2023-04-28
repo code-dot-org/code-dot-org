@@ -1,3 +1,4 @@
+/* global ace */
 import $ from 'jquery';
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');

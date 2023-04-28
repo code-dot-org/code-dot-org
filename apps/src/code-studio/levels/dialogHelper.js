@@ -1,3 +1,4 @@
+/* globals appOptions */
 import $ from 'jquery';
 import React from 'react';
 import PlayZone from '../components/playzone';

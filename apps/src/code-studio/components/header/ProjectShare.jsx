@@ -1,3 +1,5 @@
+/* globals dashboard */
+
 import React from 'react';
 import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';

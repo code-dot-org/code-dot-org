@@ -1,3 +1,4 @@
+/* global window */
 var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
 
 // It is more accurate to use performance.now(), but we use Date.now()

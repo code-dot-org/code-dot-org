@@ -1,3 +1,5 @@
+/* global ga */
+
 var userTimings = {};
 
 module.exports = {
