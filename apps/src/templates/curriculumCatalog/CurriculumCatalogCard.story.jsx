@@ -3,25 +3,36 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 
 export default {
   title: 'CurriculumCatalogCard',
-  component: CurriculumCatalogCard
+  component: CurriculumCatalogCard,
 };
 
 const Template = args => <CurriculumCatalogCard {...args} />;
 
 const defaultArgs = {
-  courseName: 'Express Course',
-  duration: 'Quarter',
-  gradeOrAgeRange: 'Grades 4-12',
-  imageName: 'another-hoc',
-  topic: 'Programming',
-  quickViewButtonText: 'Quick View',
-  assignButtonText: 'Assign',
-
-  // for screenreaders
-  quickViewButtonDescription: 'View more details about the Express Course',
-  assignButtonDescription: 'Assign the Express Course'
+  courseDisplayName: 'Computer Science Principles',
+  duration: 'school_year',
+  gradesArray: ['1', '2', '3', '4'],
+  topics: ['programming', 'artificial_intelligence', 'art_and_design'],
+  isTranslated: true,
+  isEnglish: true,
 };
 
-export const BaseCard = Template.bind({});
-BaseCard.args = defaultArgs;
-BaseCard.storyName = 'CurriculumCatalogCard – Base';
+export const AllOptionsCard = Template.bind({});
+AllOptionsCard.args = defaultArgs;
+AllOptionsCard.storyName = 'CurriculumCatalogCard – All Options';
+
+export const NotTranslatedCard = Template.bind({});
+NotTranslatedCard.args = {...defaultArgs, isTranslated: false};
+NotTranslatedCard.storyName = 'CurriculumCatalogCard – Not Translated';
+
+export const NonEnglishCard = Template.bind({});
+NonEnglishCard.args = {...defaultArgs, isEnglish: false};
+NonEnglishCard.storyName = 'CurriculumCatalogCard – Not English Format';
+
+export const OneGradeCard = Template.bind({});
+OneGradeCard.args = {...defaultArgs, gradesArray: ['K']};
+OneGradeCard.storyName = 'CurriculumCatalogCard – One Grade';
+
+export const NoLabelsCard = Template.bind({});
+NoLabelsCard.args = {...defaultArgs, topics: []};
+NoLabelsCard.storyName = 'CurriculumCatalogCard – No Labels';

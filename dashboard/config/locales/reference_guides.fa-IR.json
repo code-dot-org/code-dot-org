@@ -58,6 +58,10 @@
           "content": ""
         },
         "csd-2022/circuit-playground": {
+          "display_name": "مرور کلی زمین بازی مدار",
+          "content": ""
+        },
+        "csd-2022/circuit-playground-parent": {
           "display_name": "",
           "content": ""
         },
@@ -239,6 +243,34 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "بررسی اجمالی",
+          "content": ""
+        },
+        "csd-2022/microbit-circuits-buttons": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-circuits-leds": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-display": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-overview": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-parent": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-physical-input": {
+          "display_name": "",
+          "content": ""
+        },
+        "csd-2022/microbit-sensors": {
+          "display_name": "",
           "content": ""
         },
         "csd-2022/model-cards-in-ai-lab": {

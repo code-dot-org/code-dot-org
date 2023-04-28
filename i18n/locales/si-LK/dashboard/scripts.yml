@@ -1415,6 +1415,14 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1447,6 +1455,10 @@ si:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ඇගයීම්
         pre-express-2023:
           lesson_groups:
             csf_loops:

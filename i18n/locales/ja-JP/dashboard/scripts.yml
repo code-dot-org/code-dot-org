@@ -106,6 +106,10 @@ ja:
           student_description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
         text-compression:
           title: テキスト圧縮
+        allthethings:
+          lessons:
+            lesson-49:
+              name: 音楽
         asUnplugged:
           description_audience: 6才-13才
         afterschool1:
@@ -3935,6 +3939,21 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: 代替レッスン
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 知的財産
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-4:
+              display_name: アンケート
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:
@@ -4071,6 +4090,10 @@ ja:
               display_name: コース終了後アンケート
         csp-post-survey-2023:
           title: CS原則 のコース後アンケート
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: 評価
         csp-playground:
           title: CSPプレイグラウンド
           description_audience: カリキュラム ライター
@@ -4272,3 +4295,207 @@ ja:
               display_name: 第一章
             lessonGroup-4:
               display_name: 第二章
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: ウェブページの作成'
+            lessonGroup-3:
+              display_name: '第2章: マルチページのウェブサイト'
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1 章: 画像とアニメーション'
+            lessonGroup-3:
+              display_name: '第2章: ゲームを作る'
+          student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-3:
+              display_name: 第 2 章コンピューターと問題解決
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章：情報を表現する
+            lessonGroup-3:
+              display_name: 第 2 章：データ問題を解決
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章：情報を表現する
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章：情報を表現する
+            lessonGroup-3:
+              display_name: 第 2 章：データ問題を解決
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: アプリラボの紹介
+            lessonGroup-3:
+              display_name: 第一章
+            lessonGroup-4:
+              display_name: 第二章
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: ウェブページの作成'
+            lessonGroup-3:
+              display_name: '第2章: マルチページのウェブサイト'
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：ユーザーを中心にしたデザイン
+            lessonGroup-3:
+              display_name: 第 2 章：アプリのプロトタイピング
+          student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: ウェブページの作成'
+            lessonGroup-3:
+              display_name: '第2章: マルチページのウェブサイト'
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1 章: 画像とアニメーション'
+            lessonGroup-3:
+              display_name: '第2章: ゲームを作る'
+          student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第 1章: 問題解決プロセス'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：ユーザーを中心にしたデザイン
+            lessonGroup-3:
+              display_name: 第 2 章：アプリのプロトタイピング
+          student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章：情報を表現する
+            lessonGroup-3:
+              display_name: 第 2 章：データ問題を解決
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一章
+            lessonGroup-3:
+              display_name: アプリラボの紹介
+            lessonGroup-4:
+              display_name: 第二章
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '第 2 章: 物理プロパティの構築'
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+        vpl-csd-ci-1:
+          title: 'モジュール 1: 問題解決と計算を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
+          student_description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ウェブ開発を教える
+          title: 'モジュール 2: ウェブ開発を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgのウェブ開発ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   ウェブ開発を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Web Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+          student_description: "この専門学習モジュールは、Code.orgのウェブ開発ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   ウェブ開発を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Web Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: インタラクティブなアニメーションとゲームを教える準備をする
+          title: 'モジュール3: インタラクティブなアニメーションとゲームを教える準備をする '
+          description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+        vpl-csd-ci-4:
+          title: " モジュール 4: デザインプロセスを教えるための準備"
+          description: "この専門学習モジュールは、Code.orgのデザインプロセスユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   デザインプロセスを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   App Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+          student_description: "この専門学習モジュールは、Code.orgのデザインプロセスユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   デザインプロセスを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   App Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+        vpl-csd-ci-5:
+          title: 'モジュール 5: データとソサエティを教えるための準備'
+          description: "この専門学習モジュールは、Code.orgのデータとソサエティユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   データとソサエティを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 90分"
+          student_description: "この専門学習モジュールは、Code.orgのデータとソサエティユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   データとソサエティを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 90分"
+        vpl-csd-ci-7:
+          title: 'モジュール 7: AIと機械学習を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '第 2 章: 物理プロパティの構築'
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入力と出力

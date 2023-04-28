@@ -12,7 +12,7 @@ class ManageStudentAgeCell extends Component {
     editedValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
-    setSharingDefault: PropTypes.func.isRequired
+    setSharingDefault: PropTypes.func.isRequired,
   };
 
   // For privacy reasons, we disable sharing by default if the student is
@@ -58,6 +58,6 @@ export default connect(
     },
     setSharingDefault(id) {
       dispatch(setSharingDefault(id));
-    }
+    },
   })
 )(ManageStudentAgeCell);

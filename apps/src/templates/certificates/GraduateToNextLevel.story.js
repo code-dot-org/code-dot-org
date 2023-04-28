@@ -14,7 +14,7 @@ export default storybook => {
             courseTitle="Course 2"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course 3',
@@ -24,7 +24,7 @@ export default storybook => {
             courseTitle="Course 3"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course 4',
@@ -34,7 +34,7 @@ export default storybook => {
             courseTitle="Course 4"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course B',
@@ -44,7 +44,7 @@ export default storybook => {
             courseTitle="Course B"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course C',
@@ -54,7 +54,7 @@ export default storybook => {
             courseTitle="Course C"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course D',
@@ -64,7 +64,7 @@ export default storybook => {
             courseTitle="Course D"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course E',
@@ -74,7 +74,7 @@ export default storybook => {
             courseTitle="Course E"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'Course F',
@@ -84,7 +84,7 @@ export default storybook => {
             courseTitle="Course F"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
+        ),
       },
       {
         name: 'App Lab Intro',
@@ -94,7 +94,7 @@ export default storybook => {
             courseTitle="App Lab Intro"
             courseDesc="Ready for the next level? Students will do lots of things and use their brains to solve even more complex problems. By the end of this course, students will be able to do more things. Recommended for lots of grades."
           />
-        )
-      }
+        ),
+      },
     ]);
 };

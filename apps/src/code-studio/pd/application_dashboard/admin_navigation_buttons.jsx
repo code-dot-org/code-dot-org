@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 
 export default class AdminNavigationButtons extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleFitClick = event => {
@@ -29,9 +29,9 @@ export default class AdminNavigationButtons extends React.Component {
 
 const styles = {
   buttonContainer: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   button: {
-    marginRight: '10px'
-  }
+    marginRight: '10px',
+  },
 };

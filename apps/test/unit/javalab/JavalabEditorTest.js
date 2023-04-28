@@ -8,17 +8,19 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
 import javalab, {
-  setDisplayTheme,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview,
+  setBackpackEnabled,
+} from '@cdo/apps/javalab/redux/javalabRedux';
+import javalabEditor, {
   sourceFileOrderUpdated,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
-  setIsReadOnlyWorkspace,
-  setHasOpenCodeReview,
   setEditTabKey,
   setOrderedTabKeys,
   setFileMetadata,
@@ -26,16 +28,17 @@ import javalab, {
   setAllEditorMetadata,
   setAllSourcesAndFileMetadata,
   setAllValidation,
-  setBackpackEnabled,
-  openEditorDialog
-} from '@cdo/apps/javalab/javalabRedux';
+  openEditorDialog,
+} from '@cdo/apps/javalab/redux/editorRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
+
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
-import {JavalabEditorDialog} from '@cdo/apps/javalab/JavalabEditorDialogManager';
+import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
 import {darkMode, lightMode} from '@cdo/apps/javalab/editorThemes';
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 
@@ -49,7 +52,7 @@ describe('Java Lab Editor Test', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
-    registerReducers({javalab});
+    registerReducers({javalab, javalabEditor, javalabView});
     store = getStore();
     defaultProps = {
       onCommitCode: () => {},
@@ -57,13 +60,13 @@ describe('Java Lab Editor Test', () => {
       showProjectTemplateWorkspaceIcon: false,
       isProjectTemplateLevel: false,
       height: 400,
-      handleClearPuzzle: () => {}
+      handleClearPuzzle: () => {},
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
     store.dispatch(
       setPageConstants({
-        isEditingStartSources: false
+        isEditingStartSources: false,
       })
     );
 
@@ -95,7 +98,7 @@ describe('Java Lab Editor Test', () => {
     '#javalab-editor-create-file',
     '#data-mode-versions-header',
     '#javalab-editor-save',
-    backpackHeaderButtonId
+    backpackHeaderButtonId,
   ];
 
   describe('Editing Mode', () => {
@@ -117,10 +120,10 @@ describe('Java Lab Editor Test', () => {
               getBoundingClientRect: () => {
                 return {
                   bottom: 2,
-                  left: 4
+                  left: 4,
                 };
-              }
-            }
+              },
+            },
           });
         expect(editor.find('JavalabEditor').instance().state.showMenu).to.be
           .true;
@@ -131,7 +134,7 @@ describe('Java Lab Editor Test', () => {
           editor.find('JavalabEditor').instance().state.menuPosition
         ).to.deep.equal({
           top: '2px',
-          left: '4px'
+          left: '4px',
         });
       });
 
@@ -145,8 +148,8 @@ describe('Java Lab Editor Test', () => {
             contextTarget: 'file-0',
             menuPosition: {
               top: '2px',
-              left: '4px'
-            }
+              left: '4px',
+            },
           });
         const firstTab = editor.find('NavItem').first();
         firstTab
@@ -159,10 +162,10 @@ describe('Java Lab Editor Test', () => {
               getBoundingClientRect: () => {
                 return {
                   bottom: 2,
-                  left: 4
+                  left: 4,
                 };
-              }
-            }
+              },
+            },
           });
         expect(editor.find('JavalabEditor').instance().state.showMenu).to.be
           .false;
@@ -179,12 +182,12 @@ describe('Java Lab Editor Test', () => {
         const newFilename = 'NewFilename.java';
 
         // should have default file in redux
-        expect(store.getState().javalab.sources[oldFilename]).to.not.be
+        expect(store.getState().javalabEditor.sources[oldFilename]).to.not.be
           .undefined;
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.RENAME_FILE));
         store.dispatch(setEditTabKey('file-0'));
@@ -192,23 +195,24 @@ describe('Java Lab Editor Test', () => {
         store.dispatch(
           setFileMetadata({
             'file-0': oldFilename,
-            'file-1': 'AnotherClass.java'
+            'file-1': 'AnotherClass.java',
           })
         );
 
         javalabEditor.onRenameFile(newFilename);
-        expect(store.getState().javalab.sources[newFilename]).to.not.be
+        expect(store.getState().javalabEditor.sources[newFilename]).to.not.be
           .undefined;
-        expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
-        expect(store.getState().javalab.editorOpenDialogName).to.be.null;
-        expect(store.getState().javalab.renameFileError).to.be.null;
+        expect(store.getState().javalabEditor.sources[oldFilename]).to.be
+          .undefined;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.be.null;
+        expect(store.getState().javalabEditor.renameFileError).to.be.null;
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
-          'file-1'
+          'file-1',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': newFilename,
-          'file-1': 'AnotherClass.java'
+          'file-1': 'AnotherClass.java',
         });
       });
 
@@ -221,37 +225,37 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.RENAME_FILE));
         // we are trying to update Class1.java -> Class2.java here
         javalabEditor.onRenameFile('Class2.java');
         // after rename with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.renameFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
-          'file-1'
+          'file-1',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
-          'file-1': 'Class2.java'
+          'file-1': 'Class2.java',
         });
       });
 
@@ -264,8 +268,8 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
 
@@ -275,27 +279,27 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 1,
               isVisible: false,
-              isValidation: true
-            }
+              isValidation: true,
+            },
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.RENAME_FILE));
         // we are trying to update Class1.java -> Validation.java here
         javalabEditor.onRenameFile('Validation.java');
         // after rename with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.renameFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-0']);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
       });
 
@@ -308,34 +312,34 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.RENAME_FILE));
 
-        expect(store.getState().javalab.renameFileError).to.be.null;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.be.null;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
 
         // We are trying to rename Class1.java -> ''
         javalabEditor.onRenameFile('');
 
-        expect(store.getState().javalab.renameFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
       });
 
@@ -348,34 +352,34 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.RENAME_FILE));
 
-        expect(store.getState().javalab.renameFileError).to.be.null;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.be.null;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
 
         // We are trying to rename Class1.java -> ''
         javalabEditor.onRenameFile('an invalid file name .java');
 
-        expect(store.getState().javalab.renameFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.renameFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.RENAME_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
       });
     });
@@ -390,15 +394,13 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            darkMode
-          )
+          effects:
+            javalabEditor.editorModeConfigCompartment.reconfigure(darkMode),
         });
         store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            lightMode
-          )
+          effects:
+            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode),
         });
         dispatchSpy.restore();
       });
@@ -434,22 +436,26 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.onCreateFile(first);
         javalabEditor.onCreateFile(second);
 
-        expect(store.getState().javalab.sources[first].isVisible).to.be.true;
-        expect(store.getState().javalab.sources[first].isValidation).to.be
+        expect(store.getState().javalabEditor.sources[first].isVisible).to.be
+          .true;
+        expect(store.getState().javalabEditor.sources[first].isValidation).to.be
           .false;
         store.dispatch(sourceVisibilityUpdated(first, false));
-        expect(store.getState().javalab.sources[first].isVisible).to.be.false;
-        expect(store.getState().javalab.sources[first].isValidation).to.be
+        expect(store.getState().javalabEditor.sources[first].isVisible).to.be
+          .false;
+        expect(store.getState().javalabEditor.sources[first].isValidation).to.be
           .false;
 
-        expect(store.getState().javalab.sources[second].isVisible).to.be.true;
-        expect(store.getState().javalab.sources[second].isValidation).to.be
-          .false;
+        expect(store.getState().javalabEditor.sources[second].isVisible).to.be
+          .true;
+        expect(store.getState().javalabEditor.sources[second].isValidation).to
+          .be.false;
         store.dispatch(sourceVisibilityUpdated(second, false));
         store.dispatch(sourceValidationUpdated(second, true));
-        expect(store.getState().javalab.sources[second].isVisible).to.be.false;
-        expect(store.getState().javalab.sources[second].isValidation).to.be
-          .true;
+        expect(store.getState().javalabEditor.sources[second].isVisible).to.be
+          .false;
+        expect(store.getState().javalabEditor.sources[second].isValidation).to
+          .be.true;
       });
     });
 
@@ -459,7 +465,7 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         javalabEditor.setState({
           showMenu: true,
-          contextTarget: 'file-0'
+          contextTarget: 'file-0',
         });
         store.dispatch(
           setAllSourcesAndFileMetadata({
@@ -467,14 +473,14 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         store.dispatch(setActiveTabKey('file-0'));
@@ -483,7 +489,7 @@ describe('Java Lab Editor Test', () => {
         expect(javalabEditor.props.activeTabKey).to.equal('file-1');
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-1',
-          'file-0'
+          'file-0',
         ]);
         expect(javalabEditor.state.showMenu).to.be.false;
         expect(javalabEditor.state.contextTarget).to.be.null;
@@ -493,7 +499,7 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         javalabEditor.setState({
           showMenu: true,
-          contextTarget: 'file-0'
+          contextTarget: 'file-0',
         });
         store.dispatch(
           setAllSourcesAndFileMetadata({
@@ -501,25 +507,25 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'ClassName2.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'ClassName3.java': {
               text: '',
               tabOrder: 2,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         store.dispatch(setOrderedTabKeys(['file-2', 'file-0', 'file-1']));
         store.dispatch(sourceFileOrderUpdated());
-        const sources = store.getState().javalab.sources;
+        const sources = store.getState().javalabEditor.sources;
         const file0 = sources['ClassName1.java'];
         const file1 = sources['ClassName2.java'];
         const file2 = sources['ClassName3.java'];
@@ -542,20 +548,20 @@ describe('Java Lab Editor Test', () => {
                 text: '',
                 tabOrder: 0,
                 isVisible: true,
-                isValidation: false
+                isValidation: false,
               },
               'Class2.java': {
                 text: '',
                 tabOrder: 1,
                 isVisible: true,
-                isValidation: false
+                isValidation: false,
               },
               'Class3.java': {
                 text: '',
                 tabOrder: 2,
                 isVisible: true,
-                isValidation: false
-              }
+                isValidation: false,
+              },
             })
           );
         });
@@ -563,7 +569,7 @@ describe('Java Lab Editor Test', () => {
         it('When moveTabLeft is called, activeTab is swapped with tab to the left', () => {
           javalabEditor.setState({
             showMenu: true,
-            contextTarget: 'file-1'
+            contextTarget: 'file-1',
           });
           store.dispatch(setActiveTabKey('file-1'));
           javalabEditor.moveTabLeft();
@@ -571,7 +577,7 @@ describe('Java Lab Editor Test', () => {
           expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
             'file-1',
             'file-0',
-            'file-2'
+            'file-2',
           ]);
           expect(javalabEditor.state.showMenu).to.be.false;
           expect(javalabEditor.state.contextTarget).to.be.null;
@@ -580,7 +586,7 @@ describe('Java Lab Editor Test', () => {
         it('When moveTabRight is called, activeTab is swapped with tab to the right', () => {
           javalabEditor.setState({
             showMenu: true,
-            contextTarget: 'file-1'
+            contextTarget: 'file-1',
           });
           store.dispatch(setActiveTabKey('file-1'));
           javalabEditor.moveTabRight();
@@ -588,7 +594,7 @@ describe('Java Lab Editor Test', () => {
           expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
             'file-0',
             'file-2',
-            'file-1'
+            'file-1',
           ]);
           expect(javalabEditor.state.showMenu).to.be.false;
           expect(javalabEditor.state.contextTarget).to.be.null;
@@ -597,7 +603,7 @@ describe('Java Lab Editor Test', () => {
         it('When moveTabLeft is called and activeTab is leftmost tab, no change occurs', () => {
           javalabEditor.setState({
             showMenu: true,
-            contextTarget: 'file-0'
+            contextTarget: 'file-0',
           });
           store.dispatch(setActiveTabKey('file-0'));
           javalabEditor.moveTabLeft();
@@ -605,7 +611,7 @@ describe('Java Lab Editor Test', () => {
           expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
             'file-0',
             'file-1',
-            'file-2'
+            'file-2',
           ]);
           expect(javalabEditor.state.showMenu).to.be.false;
           expect(javalabEditor.state.contextTarget).to.be.null;
@@ -614,7 +620,7 @@ describe('Java Lab Editor Test', () => {
         it('When moveTabRight is called and activeTab is rightmost tab, no change occurs', () => {
           javalabEditor.setState({
             showMenu: true,
-            contextTarget: 'file-2'
+            contextTarget: 'file-2',
           });
           store.dispatch(setActiveTabKey('file-2'));
           javalabEditor.moveTabRight();
@@ -622,7 +628,7 @@ describe('Java Lab Editor Test', () => {
           expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
             'file-0',
             'file-1',
-            'file-2'
+            'file-2',
           ]);
           expect(javalabEditor.state.showMenu).to.be.false;
           expect(javalabEditor.state.contextTarget).to.be.null;
@@ -635,7 +641,7 @@ describe('Java Lab Editor Test', () => {
           const javalabEditor = editor.find('JavalabEditor').instance();
           javalabEditor.setState({
             showMenu: true,
-            contextTarget: 'file-0'
+            contextTarget: 'file-0',
           });
           store.dispatch(setActiveTabKey('file-0'));
           store.dispatch(setOrderedTabKeys(['file-0']));
@@ -661,31 +667,31 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               tabOrder: 2,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class3.java': {
               text: '',
               tabOrder: 4,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
-          'file-2'
+          'file-2',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java',
-          'file-2': 'Class3.java'
+          'file-2': 'Class3.java',
         });
       });
       it('When file tabOrders are invalid - tabOrders undefined', () => {
@@ -696,29 +702,29 @@ describe('Java Lab Editor Test', () => {
             'Class1.java': {
               text: '',
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class3.java': {
               text: '',
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
-          'file-2'
+          'file-2',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java',
-          'file-2': 'Class3.java'
+          'file-2': 'Class3.java',
         });
       });
       it('When file tabOrders are invalid - duplicate tabOrders', () => {
@@ -730,31 +736,31 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class3.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
-          'file-2'
+          'file-2',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java',
-          'file-2': 'Class3.java'
+          'file-2': 'Class3.java',
         });
       });
     });
@@ -766,13 +772,13 @@ describe('Java Lab Editor Test', () => {
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.CREATE_FILE));
 
         const fileMetadata = {
           'file-0': 'Class1.java',
-          'file-1': 'Class2.java'
+          'file-1': 'Class2.java',
         };
         const orderedTabKeys = ['file-0', 'file-1'];
         const activeTabKey = 'file-0';
@@ -788,18 +794,18 @@ describe('Java Lab Editor Test', () => {
 
         const newFilename = 'Class3.java';
         javalabEditor.onCreateFile(newFilename);
-        expect(store.getState().javalab.sources[newFilename]).to.not.be
+        expect(store.getState().javalabEditor.sources[newFilename]).to.not.be
           .undefined;
-        expect(store.getState().javalab.editorOpenDialogName).to.be.null;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.be.null;
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
           'file-1',
-          'file-2'
+          'file-2',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java',
-          'file-2': newFilename
+          'file-2': newFilename,
         });
       });
 
@@ -809,12 +815,12 @@ describe('Java Lab Editor Test', () => {
         store.dispatch(
           setAllSourcesAndFileMetadata({
             'Class1.java': {text: '', isVisible: true, isValidation: false},
-            'Class2.java': {text: '', isVisible: true, isValidation: false}
+            'Class2.java': {text: '', isVisible: true, isValidation: false},
           })
         );
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.CREATE_FILE));
         const newFilename = 'Class2.java';
@@ -823,17 +829,17 @@ describe('Java Lab Editor Test', () => {
 
         // after create with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.newFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([
           'file-0',
-          'file-1'
+          'file-1',
         ]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
-          'file-1': 'Class2.java'
+          'file-1': 'Class2.java',
         });
       });
 
@@ -842,21 +848,21 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllValidation({
-            'Validation.java': {text: '', isVisible: false, isValidation: true}
+            'Validation.java': {text: '', isVisible: false, isValidation: true},
           })
         );
         store.dispatch(setAllEditorMetadata({}, [], null, 0));
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.CREATE_FILE));
         javalabEditor.onCreateFile('Validation.java');
 
         // after create with existing filename, dialog should not close and
         // error message should be populated
-        expect(store.getState().javalab.newFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([]);
@@ -868,32 +874,32 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {text: '', isVisible: true, isValidation: false},
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.CREATE_FILE));
 
-        expect(store.getState().javalab.newFileError).to.be.null;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.be.null;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
 
         javalabEditor.onCreateFile('');
 
-        expect(store.getState().javalab.newFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
       });
 
@@ -902,32 +908,32 @@ describe('Java Lab Editor Test', () => {
         const javalabEditor = editor.find('JavalabEditor').instance();
         store.dispatch(
           setAllSourcesAndFileMetadata({
-            'Class1.java': {text: '', isVisible: true, isValidation: false}
+            'Class1.java': {text: '', isVisible: true, isValidation: false},
           })
         );
 
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.CREATE_FILE));
 
-        expect(store.getState().javalab.newFileError).to.be.null;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.be.null;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
 
         javalabEditor.onCreateFile('an invalid file name .java');
 
-        expect(store.getState().javalab.newFileError).to.exist;
-        expect(store.getState().javalab.editorOpenDialogName).to.equal(
+        expect(store.getState().javalabEditor.newFileError).to.exist;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.equal(
           JavalabEditorDialog.CREATE_FILE
         );
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         });
       });
     });
@@ -940,7 +946,7 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          fileToDelete: 'file-0'
+          fileToDelete: 'file-0',
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.DELETE_FILE));
         store.dispatch(
@@ -949,23 +955,24 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'Class2.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         store.dispatch(setActiveTabKey('file-0'));
         javalabEditor.onDeleteFile();
-        expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
-        expect(store.getState().javalab.editorOpenDialogName).to.be.null;
+        expect(store.getState().javalabEditor.sources['Class1.java']).to.be
+          .undefined;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.be.null;
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal(['file-1']);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({
-          'file-1': 'Class2.java'
+          'file-1': 'Class2.java',
         });
       });
 
@@ -976,12 +983,12 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          fileToDelete: 'file-0'
+          fileToDelete: 'file-0',
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.DELETE_FILE));
 
         const fileMetadata = {
-          'file-0': 'Class1.java'
+          'file-0': 'Class1.java',
         };
         const orderedTabKeys = ['file-0'];
         const activeTabKey = 'file-0';
@@ -996,8 +1003,9 @@ describe('Java Lab Editor Test', () => {
         );
 
         javalabEditor.onDeleteFile();
-        expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
-        expect(store.getState().javalab.editorOpenDialogName).to.be.null;
+        expect(store.getState().javalabEditor.sources['Class1.java']).to.be
+          .undefined;
+        expect(store.getState().javalabEditor.editorOpenDialogName).to.be.null;
         expect(javalabEditor.props.activeTabKey).to.be.null;
         expect(javalabEditor.props.orderedTabKeys).to.deep.equal([]);
         expect(javalabEditor.props.fileMetadata).to.deep.equal({});
@@ -1009,7 +1017,7 @@ describe('Java Lab Editor Test', () => {
         javalabEditor.setState({
           showMenu: false,
           contextTarget: null,
-          fileToDelete: 'file-0'
+          fileToDelete: 'file-0',
         });
         store.dispatch(openEditorDialog(JavalabEditorDialog.DELETE_FILE));
         store.dispatch(
@@ -1018,29 +1026,30 @@ describe('Java Lab Editor Test', () => {
               text: '',
               tabOrder: 0,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'ClassName2.java': {
               text: '',
               tabOrder: 1,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
             'ClassName3.java': {
               text: '',
               tabOrder: 2,
               isVisible: true,
-              isValidation: false
-            }
+              isValidation: false,
+            },
           })
         );
         javalabEditor.onDeleteFile();
         store.dispatch(sourceFileOrderUpdated());
-        const sources = store.getState().javalab.sources;
+        const sources = store.getState().javalabEditor.sources;
         const file1 = sources['ClassName2.java'];
         const file2 = sources['ClassName3.java'];
 
-        expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
+        expect(store.getState().javalabEditor.sources['Class1.java']).to.be
+          .undefined;
         expect(file1.tabOrder).to.equal(0);
         expect(file2.tabOrder).to.equal(1);
       });
@@ -1058,19 +1067,19 @@ describe('Java Lab Editor Test', () => {
             'Class1.java': {
               text: oldText,
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
-            'Class2.java': {text: '', isVisible: true, isValidation: false}
+            'Class2.java': {text: '', isVisible: true, isValidation: false},
           })
         );
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
         javalabEditor.onImportFile('Class1.java', newText);
-        expect(store.getState().javalab.sources['Class1.java'].text).to.equal(
-          newText
-        );
+        expect(
+          store.getState().javalabEditor.sources['Class1.java'].text
+        ).to.equal(newText);
         expect(javalabEditor.props.orderedTabKeys.length).to.equal(2);
       });
 
@@ -1083,28 +1092,29 @@ describe('Java Lab Editor Test', () => {
             'Class1.java': {
               text: '',
               isVisible: true,
-              isValidation: false
+              isValidation: false,
             },
-            'Class2.java': {text: '', isVisible: true, isValidation: false}
+            'Class2.java': {text: '', isVisible: true, isValidation: false},
           })
         );
         javalabEditor.setState({
           showMenu: false,
-          contextTarget: null
+          contextTarget: null,
         });
 
         javalabEditor.onImportFile('Class3.java', 'hello');
-        expect(store.getState().javalab.sources['Class3.java'].text).to.equal(
-          'hello'
-        );
+        expect(
+          store.getState().javalabEditor.sources['Class3.java'].text
+        ).to.equal('hello');
         expect(javalabEditor.props.orderedTabKeys.length).to.equal(3);
       });
     });
 
     it('is editable', () => {
       const editor = createWrapper();
-      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-        .editors;
+      const javalabCodeMirrors = editor
+        .find('JavalabEditor')
+        .instance().editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
@@ -1117,10 +1127,9 @@ describe('Java Lab Editor Test', () => {
           headerButtonId === backpackHeaderButtonId
             ? 'isButtonDisabled'
             : 'isDisabled';
-        const isButtonDisabled = editor
-          .find(headerButtonId)
-          .first()
-          .props()[propName];
+        const isButtonDisabled = editor.find(headerButtonId).first().props()[
+          propName
+        ];
 
         expect(isButtonDisabled).to.be.false;
       });
@@ -1147,8 +1156,9 @@ describe('Java Lab Editor Test', () => {
 
     it('is not editable', () => {
       const editor = createWrapper();
-      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-        .editors;
+      const javalabCodeMirrors = editor
+        .find('JavalabEditor')
+        .instance().editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
@@ -1162,10 +1172,9 @@ describe('Java Lab Editor Test', () => {
           headerButtonId === backpackHeaderButtonId
             ? 'isButtonDisabled'
             : 'isDisabled';
-        const isButtonDisabled = editor
-          .find(headerButtonId)
-          .first()
-          .props()[propName];
+        const isButtonDisabled = editor.find(headerButtonId).first().props()[
+          propName
+        ];
 
         expect(isButtonDisabled).to.be.true;
       });
@@ -1207,7 +1216,7 @@ describe('Java Lab Editor Test', () => {
       expect(
         banner.contains(
           javalabMsg.codeReviewingPeer({
-            peerName: 'George'
+            peerName: 'George',
           })
         )
       ).to.be.true;

@@ -1212,6 +1212,9 @@ se:
       body_markdown: Du kontos ii leat epoastačujuhus. Mana [fina iežat kontohuksehusas](%{user_registration})
         bidjan dihte iežat epoastačujuhusa ovdal go gárvet dán skovi.
   courses_category: Ollislaš Kurssat
+  course_offering:
+    headers:
+      minecraft: Minecraft
   cookie_banner:
     message: Jus joatkát geavahit min neahttasiiddu dahje deaddilat "Mun dohkkehan,"
       don dohkkehat ahte diehtočoahkut vurkejuvvojit du dihtorii dahje reidui.

@@ -455,6 +455,8 @@
           "type": "Guía"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF - Curso F - Diapositivas 2022-2023",
+          "url": "https://docs.google.com/presentation/d/1MMT5npnQb5bWPmUGia4YT_mYMiFczu1HbL-KCShsxYU/template/preview",
           "type": "Diapositivas"
         },
         "exploring_apps/coursef/2022": {
@@ -554,10 +556,12 @@
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "Proyecto final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Rúbrica"
         },
         "final_project_design_1/coursef/2022": {
           "name": "Guía del proyecto de fin de curso",
+          "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit",
           "type": "Guía de Actividades"
         },
         "2022_change_log/coursee/2022": {
@@ -739,10 +743,12 @@
         },
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "Proyecto final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/10G5rzAr3L3atKbp5JPIX9VyYIPhRwwxpCkzhIVlyHag/edit",
           "type": "Rúbrica"
         },
         "end_of_course_project_guide/coursee/2022": {
           "name": "Guía del proyecto de fin de curso",
+          "url": "https://docs.google.com/document/d/1vNbI3RosjA5K2nQRoCTYGFmVReUvdubavvObCIljxuU/edit",
           "type": "Guía de Actividades"
         },
         "2022_change_log/courseb/2022": {
@@ -6621,7 +6627,7 @@
         },
         "all_code_5/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd7-2021/código"
+          "url": "/s/csd7-2021/code"
         },
         "all_resources_7/csd/2021": {
           "name": "Todos los Recursos",
@@ -7036,7 +7042,7 @@
         },
         "all_code_3/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd4-2021/código"
+          "url": "/s/csd4-2021/code"
         },
         "all_resources_4/csd/2021": {
           "name": "Todos los Recursos",
@@ -7396,7 +7402,7 @@
         },
         "all_code_4/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd6-2021/código"
+          "url": "/s/csd6-2021/code"
         },
         "all_resources_6/csd/2021": {
           "name": "Todos los Recursos",
@@ -7957,7 +7963,7 @@
         },
         "all_code_1/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd2-2021/código"
+          "url": "/s/csd2-2021/code"
         },
         "all_resources_2/csd/2021": {
           "name": "Todos los Recursos",
@@ -8529,7 +8535,7 @@
         },
         "all_code_2/csd/2021": {
           "name": "Todo el Código",
-          "url": "/s/csd2-2021/código"
+          "url": "/s/csd2-2021/code"
         },
         "all_resources_3/csd/2021": {
           "name": "Todos los Recursos",

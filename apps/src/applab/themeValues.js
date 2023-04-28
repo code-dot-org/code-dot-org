@@ -41,7 +41,7 @@ const STANDARD_FONT_SIZE_THEME_VALUES = {
   darkscheme: 13,
   twoTone: 13,
   pastel: 13,
-  peachy: 13
+  peachy: 13,
 };
 
 const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
@@ -74,7 +74,7 @@ const TEXT_INPUT_BORDER_COLOR_THEME_VALUES = {
   darkscheme: '#B22D2D',
   twoTone: '#000000',
   pastel: '#C87FDB',
-  peachy: '#DF6C06'
+  peachy: '#DF6C06',
 };
 
 const themeValues = {
@@ -109,8 +109,8 @@ const themeValues = {
       darkscheme: '#000000',
       twoTone: '#FFFFFF',
       pastel: '#89BFEC',
-      peachy: '#FFBE7B'
-    }
+      peachy: '#FFBE7B',
+    },
   },
   label: {
     textColor: {
@@ -143,7 +143,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#000000',
       pastel: '#A065AF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     backgroundColor: {
       type: 'color',
@@ -175,7 +175,7 @@ const themeValues = {
       darkscheme: '#707070',
       twoTone: '#FFFFFF',
       pastel: '#D1F3DF',
-      peachy: '#FBEFB4'
+      peachy: '#FBEFB4',
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -207,7 +207,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 0,
@@ -238,7 +238,7 @@ const themeValues = {
       darkscheme: 0,
       twoTone: 0,
       pastel: 2,
-      peachy: 1
+      peachy: 1,
     },
     fontFamily: {
       default: 'Arial Black',
@@ -269,7 +269,7 @@ const themeValues = {
       darkscheme: 'Trebuchet',
       twoTone: 'Trebuchet',
       pastel: 'Trebuchet',
-      peachy: 'Verdana'
+      peachy: 'Verdana',
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -301,8 +301,8 @@ const themeValues = {
       darkscheme: NEW_THEME_LABEL_PADDING,
       twoTone: NEW_THEME_LABEL_PADDING,
       pastel: NEW_THEME_LABEL_PADDING,
-      peachy: NEW_THEME_LABEL_PADDING
-    }
+      peachy: NEW_THEME_LABEL_PADDING,
+    },
   },
   textInput: {
     textColor: {
@@ -335,7 +335,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#000000',
       pastel: '#A065AF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     backgroundColor: {
       type: 'color',
@@ -367,7 +367,7 @@ const themeValues = {
       darkscheme: '#707070',
       twoTone: '#FFFFFF',
       pastel: '#D1F3DF',
-      peachy: '#FBEFB4'
+      peachy: '#FBEFB4',
     },
     borderColor: TEXT_INPUT_BORDER_COLOR_THEME_VALUES,
     borderRadius: {
@@ -399,7 +399,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 1,
@@ -430,7 +430,7 @@ const themeValues = {
       darkscheme: 2,
       twoTone: 1,
       pastel: 2,
-      peachy: 1
+      peachy: 1,
     },
     fontFamily: {
       default: 'Arial',
@@ -461,7 +461,7 @@ const themeValues = {
       darkscheme: 'Trebuchet',
       twoTone: 'Trebuchet',
       pastel: 'Trebuchet',
-      peachy: 'Verdana'
+      peachy: 'Verdana',
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -493,8 +493,8 @@ const themeValues = {
       darkscheme: NEW_THEME_TEXT_INPUT_PADDING,
       twoTone: NEW_THEME_TEXT_INPUT_PADDING,
       pastel: NEW_THEME_TEXT_INPUT_PADDING,
-      peachy: NEW_THEME_TEXT_INPUT_PADDING
-    }
+      peachy: NEW_THEME_TEXT_INPUT_PADDING,
+    },
   },
   dropdown: {
     backgroundColor: {
@@ -527,7 +527,7 @@ const themeValues = {
       darkscheme: '#B22D2D',
       twoTone: '#000000',
       pastel: '#C87FDB',
-      peachy: '#FFA351'
+      peachy: '#FFA351',
     },
     textColor: {
       type: 'color',
@@ -559,7 +559,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#FFFFFF',
       pastel: '#FFFFFF',
-      peachy: '#FFFFFF'
+      peachy: '#FFFFFF',
     },
     borderColor: {
       type: 'color',
@@ -591,7 +591,7 @@ const themeValues = {
       darkscheme: '#000000',
       twoTone: '#000000',
       pastel: '#D1F3DF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     borderRadius: {
       default: 4,
@@ -622,7 +622,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 1,
@@ -653,7 +653,7 @@ const themeValues = {
       darkscheme: 0,
       twoTone: 0,
       pastel: 0,
-      peachy: 0
+      peachy: 0,
     },
     fontFamily: {
       default: 'Arial',
@@ -684,7 +684,7 @@ const themeValues = {
       darkscheme: 'Trebuchet',
       twoTone: 'Trebuchet',
       pastel: 'Trebuchet',
-      peachy: 'Verdana'
+      peachy: 'Verdana',
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -716,8 +716,8 @@ const themeValues = {
       darkscheme: NEW_THEME_DROPDOWN_PADDING,
       twoTone: NEW_THEME_DROPDOWN_PADDING,
       pastel: NEW_THEME_DROPDOWN_PADDING,
-      peachy: NEW_THEME_DROPDOWN_PADDING
-    }
+      peachy: NEW_THEME_DROPDOWN_PADDING,
+    },
   },
   photoSelect: {
     backgroundColor: {
@@ -750,7 +750,7 @@ const themeValues = {
       darkscheme: '#B22D2D',
       twoTone: '#000000',
       pastel: '#C87FDB',
-      peachy: '#FFA351'
+      peachy: '#FFA351',
     },
     textColor: {
       type: 'color',
@@ -782,7 +782,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#FFFFFF',
       pastel: '#FFFFFF',
-      peachy: '#FFFFFF'
+      peachy: '#FFFFFF',
     },
     borderColor: {
       type: 'color',
@@ -814,7 +814,7 @@ const themeValues = {
       darkscheme: '#000000',
       twoTone: '#000000',
       pastel: '#D1F3DF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     borderRadius: {
       default: 4,
@@ -845,7 +845,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 1,
@@ -876,8 +876,8 @@ const themeValues = {
       darkscheme: 0,
       twoTone: 0,
       pastel: 0,
-      peachy: 0
-    }
+      peachy: 0,
+    },
   },
   button: {
     backgroundColor: {
@@ -910,7 +910,7 @@ const themeValues = {
       darkscheme: '#B22D2D',
       twoTone: '#000000',
       pastel: '#C87FDB',
-      peachy: '#FFA351'
+      peachy: '#FFA351',
     },
     textColor: {
       type: 'color',
@@ -942,7 +942,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#FFFFFF',
       pastel: '#FFFFFF',
-      peachy: '#FFFFFF'
+      peachy: '#FFFFFF',
     },
     borderColor: {
       type: 'color',
@@ -974,7 +974,7 @@ const themeValues = {
       darkscheme: '#000000',
       twoTone: '#000000',
       pastel: '#D1F3DF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     borderRadius: {
       default: 4,
@@ -1005,7 +1005,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 1,
@@ -1036,7 +1036,7 @@ const themeValues = {
       darkscheme: 0,
       twoTone: 0,
       pastel: 0,
-      peachy: 0
+      peachy: 0,
     },
     fontFamily: {
       default: 'Arial Black',
@@ -1067,7 +1067,7 @@ const themeValues = {
       darkscheme: 'Trebuchet',
       twoTone: 'Trebuchet',
       pastel: 'Trebuchet',
-      peachy: 'Verdana'
+      peachy: 'Verdana',
     },
     fontSize: {
       default: 15,
@@ -1098,8 +1098,8 @@ const themeValues = {
       darkscheme: 15,
       twoTone: 15,
       pastel: 15,
-      peachy: 15
-    }
+      peachy: 15,
+    },
   },
   textArea: {
     backgroundColor: {
@@ -1132,7 +1132,7 @@ const themeValues = {
       darkscheme: '#707070',
       twoTone: '#FFFFFF',
       pastel: '#D1F3DF',
-      peachy: '#FBEFB4'
+      peachy: '#FBEFB4',
     },
     textColor: {
       type: 'color',
@@ -1164,7 +1164,7 @@ const themeValues = {
       darkscheme: '#FFFFFF',
       twoTone: '#000000',
       pastel: '#A065AF',
-      peachy: '#DF6C06'
+      peachy: '#DF6C06',
     },
     borderColor: {
       type: 'color',
@@ -1196,7 +1196,7 @@ const themeValues = {
       darkscheme: '#000000',
       twoTone: '#000000',
       pastel: '#C87FDB',
-      peachy: '#CECECC'
+      peachy: '#CECECC',
     },
     borderRadius: {
       default: 2,
@@ -1227,7 +1227,7 @@ const themeValues = {
       darkscheme: 30,
       twoTone: 30,
       pastel: 30,
-      peachy: 30
+      peachy: 30,
     },
     borderWidth: {
       default: 1,
@@ -1258,7 +1258,7 @@ const themeValues = {
       darkscheme: 1,
       twoTone: 1,
       pastel: 0,
-      peachy: 0
+      peachy: 0,
     },
     fontFamily: {
       default: 'Arial',
@@ -1289,7 +1289,7 @@ const themeValues = {
       darkscheme: 'Trebuchet',
       twoTone: 'Trebuchet',
       pastel: 'Trebuchet',
-      peachy: 'Verdana'
+      peachy: 'Verdana',
     },
     fontSize: STANDARD_FONT_SIZE_THEME_VALUES,
     padding: {
@@ -1321,9 +1321,9 @@ const themeValues = {
       darkscheme: NEW_THEME_TEXT_AREA_PADDING,
       twoTone: NEW_THEME_TEXT_AREA_PADDING,
       pastel: NEW_THEME_TEXT_AREA_PADDING,
-      peachy: NEW_THEME_TEXT_AREA_PADDING
-    }
-  }
+      peachy: NEW_THEME_TEXT_AREA_PADDING,
+    },
+  },
 };
 
 export default themeValues;

@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analog Sensorlar"
-        },
         "csd-2022/app-lab": {
           "display_name": "Ilovalar laboratoriyasi"
         },
@@ -97,9 +94,6 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Overview"
-        },
-        "csd-2022/physical-input": {
-          "display_name": "Physical Input"
         },
         "csd-2022/playing-notes": {
           "display_name": "Notalarni ijro etish"

@@ -237,6 +237,10 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compression",
+          "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
+        },
         "event/outbreak/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
@@ -246,7 +250,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "code/sports/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) magsulat ng code o magsulat ng mga tagubilin sa computer."
         },
         "debugging/sports/unversioned": {
           "word": "Pagdedebug",
@@ -309,7 +314,8 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "program/coursed/2022": {
           "word": "Program",
@@ -339,7 +345,8 @@
           "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
         },
         "behavior/coursef/2022": {
-          "word": "Paggawi"
+          "word": "Paggawi",
+          "definition": "Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito."
         },
         "program/coursef/2022": {
           "word": "Program",
@@ -360,7 +367,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2022": {
           "word": "Internet"
@@ -376,10 +384,20 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "function/coursee/2022": {
-          "word": "Function"
+          "word": "Function",
+          "definition": "Isang piraso ng code na maaari mong tawagin nang paulit-ulit."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Tumawag ng Function",
+          "definition": "Ginamit ang pangalan ng function upang sabihin sa computer na patakbuhin ang code na nakasulat sa function."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Magdeklara ng Function",
+          "definition": "Punan ang isang function na may code at bigyan ang function ng pangalan."
         },
         "condition/coursee/2022": {
-          "word": "Condition"
+          "word": "Condition",
+          "definition": "Isang pahayag na sinusuri ng program upang makita kung ito ay totoo o mali. Kung totoo, may gagawing aksiyon. Kung hindi, ang aksiyon ay hindi papansinin"
         },
         "conditionals/coursee/2022": {
           "word": "Mga conditional",
@@ -493,6 +511,13 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "persistence/coursec/2022": {
+          "definition": "Hindi pagsuko."
+        },
+        "angle/coursec/2022": {
+          "word": "Anggulo",
+          "definition": "Kung saan nagsasama-sama ang dalawang panig ng hugis, na sinusukat sa mga degree."
+        },
         "loop/coursec/2022": {
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
@@ -502,7 +527,12 @@
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "data/coursec/2022": {
-          "word": "Data"
+          "word": "Data",
+          "definition": "Isang koleksiyon ng impormasyon"
+        },
+        "graph/coursec/2022": {
+          "word": "Graph",
+          "definition": "Isang larawan o diagram na kumakatawan sa data o mga value sa organisadong paraan"
         },
         "binary/coursec/2022": {
           "word": "Binary"
@@ -546,7 +576,8 @@
           "word": "Interface ng User"
         },
         "machine_learning/csd/2022": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "code/poem-art/unversioned": {
           "word": "Code",
@@ -594,7 +625,8 @@
           "definition": "isang programa na nagrereplika o ginagaya ang mga pangunahing tampok ng isang totoong kaganapan sa mundo upang siyasatin ang pag-uugali nito nang walang gastos, oras, o panganib ng pagpapatakbo ng isang eksperimento sa totoong buhay."
         },
         "machine_learning/coursef/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -772,7 +804,8 @@
           "word": "magtakda"
         },
         "machine_learning/csd/2021": {
-          "word": "Pag-Aaral Ng Makina"
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "user_interface/csd/2021": {
           "word": "Interface ng User"

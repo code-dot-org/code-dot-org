@@ -376,7 +376,10 @@
         "physcomp-temp": "physcomp-temp",
         "hello-world-soccer": "Hola Mundo Fútbol",
         "csa-collegeboard-labs": "AP CSA Laboratorio Magpie",
-        "playground": "Zona de juegos"
+        "playground": "Zona de juegos",
+        "blockchain": "Blockchain (cadena de bloques)",
+        "poemmaker": "poeta",
+        "web-development": "Desarrollo Web"
       }
     }
   }

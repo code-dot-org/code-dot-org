@@ -20,7 +20,8 @@
         "type": "Location"
       },
       {
-        "name": "SPEED"
+        "name": "SPEED",
+        "type": "Number"
       },
       {
         "name": "DIRECTION",

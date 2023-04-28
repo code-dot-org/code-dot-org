@@ -16,7 +16,7 @@ import {getStore} from '../../redux';
 class ScreenProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -76,7 +76,7 @@ class ScreenEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   // The screen click event handler code currently receives clicks to any
@@ -135,7 +135,7 @@ export default {
   EventTab: ScreenEvents,
   themeValues: themeValues.screen,
 
-  create: function() {
+  create: function () {
     const width = applabConstants.getAppWidth(
       getStore().getState().pageConstants
     );
@@ -164,7 +164,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'screen-image', url);
@@ -182,22 +182,23 @@ export default {
     }
 
     if (element.style.backgroundColor === '') {
-      element.style.backgroundColor = this.themeValues.backgroundColor[
-        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
-      ];
+      element.style.backgroundColor =
+        this.themeValues.backgroundColor[
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+        ];
     }
   },
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     if (name === 'theme') {
       return element.getAttribute('data-theme');
     }
     throw `unknown property name ${name}`;
   },
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     if (name === 'theme') {
       designMode.changeThemeForScreen(element, value);
       return true;
     }
     return false;
-  }
+  },
 };

@@ -21,7 +21,7 @@ class DropdownProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -135,7 +135,7 @@ class DropdownEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getChangeEventCode() {
@@ -183,7 +183,7 @@ export default {
   EventTab: DropdownEvents,
   themeValues: themeValues.dropdown,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
@@ -205,7 +205,7 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set it on create:
@@ -222,7 +222,7 @@ export default {
     }
 
     // In the future we may want to trigger this on focus events as well.
-    $(element).on('mousedown', function(e) {
+    $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable dropdown menu unless running
         e.preventDefault();
@@ -232,7 +232,7 @@ export default {
     });
   },
 
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -255,7 +255,7 @@ export default {
     return true;
   },
 
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     switch (name) {
       case 'value':
         return element.value;
@@ -264,5 +264,5 @@ export default {
       default:
         throw `unknown property name ${name}`;
     }
-  }
+  },
 };

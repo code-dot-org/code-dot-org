@@ -148,6 +148,9 @@ sv:
           description: Alla typer av nivå för UI-tester
           description_short: Alla typer av nivå för UI-tester
           student_description: Alla typer av nivå för UI-tester
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
           title: Datavetenskap i Algebra PD
         asUnplugged:
@@ -1912,6 +1915,14 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1960,6 +1971,10 @@ sv:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bedömningar
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2051,6 +2066,56 @@ sv:
         aiml-2023:
           lesson_groups:
             lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2

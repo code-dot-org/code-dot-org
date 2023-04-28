@@ -973,6 +973,11 @@
         opt_in_yes: 'Ja'
         opt_in_no: 'Nei'
   courses_category: 'Alle kurs'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sport'
+      csf: 'Grunnleggende informatikk'
   cookie_banner:
     accept: 'Jeg samtykker'
   page_not_found_title: "Side Ikke Funnet"

@@ -10,7 +10,8 @@ theme: responsive
 
 - आम्ही तुमच्या शाळेसाठी किमान 15 Mbit/सेकंद इंटरनेट कनेक्शनची शिफारस करतो.
 - आम्ही सपोर्ट करत असलेला सर्वात लहान स्क्रीनचा आकार 1024 x 728 px आहे.
-- आमच्या मध्यम आणि उच्च माध्यमिक स्तरावरील अभ्यासक्रमांसाठी तुम्हाला माऊस (किंवा टचपॅड) आणि कीबोर्डसह डेस्कटॉप किंवा लॅपटॉप संगणकाची आवश्यकता असेल: CS डिस्कव्हरीज, CS प्रिंसिपल्स आणि अॅप लॅबचा परिचय. बहुतांश टॅब्लेट आणि मोबाइल डिव्हाइस या अभ्यासक्रमांना सपोर्ट करत नाहीत. डिव्हाइस-विशिष्ट अपवादांसाठी खाली "मोबाइल आणि टॅबलेट सपोर्ट तपशील" पहा.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. डिव्हाइस-विशिष्ट अपवादांसाठी खाली "मोबाइल आणि टॅबलेट सपोर्ट तपशील" पहा.
 - इतर सर्व सामग्री, जसे की K-5 अभ्यासक्रम (संगणक विज्ञानाची मूलभूत तत्त्वे) आणि अवर ऑफ कोड उपक्रम, इतर सर्व आधुनिक टॅब्लेट आणि लॅपटॉप किंवा डेस्कटॉप संगणकांव्यतिरिक्त आयपॅड आणि क्रोमबुक्स वर सुसंगत आहेत.
 - मोबाईल डिव्‍हाइस सपोर्ट डिटेल्स शोधत आहात का? खाली वाचा.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## मोबाइल आणि टॅब्लेट सपोर्ट तपशील
 
-सर्व सीएस डिस्कव्हरीज, सीएस प्रिंसिपल्स आणि अॅप लॅब कोर्सेसचा परिचय टॅब्लेट किंवा मोबाइल डिव्हाइसशी सुसंगत नाहीत - एक संपूर्ण कीबोर्ड आणि माउस (किंवा टचपॅड, जसे की मॅकबुकवर) आवश्यक आहे. खालील अपवादांसह बहुतेक टॅब्लेट सपोर्ट करत नाहीत:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. खालील अपवादांसह बहुतेक टॅब्लेट सपोर्ट करत नाहीत:
 
 - बाह्य कीबोर्डसह मायक्रोसॉफ्ट सर्फेस प्रो
 - बाह्य कीबोर्ड आणि बाह्य माउस किंवा टचपॅडसह iPadOS 13.4 किंवा नंतर चालणारे आयपॅड
 
-इतर सर्व सामग्री, जसे की K-5 अभ्यासक्रम (संगणक विज्ञानाची मूलभूत तत्त्वे) आणि अवर ऑफ कोड उपक्रम, इतर सर्व आधुनिक टॅब्लेट आणि लॅपटॉप किंवा डेस्कटॉप संगणकांव्यतिरिक्त आयपॅड आणि क्रोमबुक्स वर सुसंगत आहेत.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### मोबाइल फोन्स
 

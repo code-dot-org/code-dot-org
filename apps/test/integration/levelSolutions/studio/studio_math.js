@@ -10,14 +10,14 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   timeoutFailureTick: 200,
   freePlay: true,
   edgeCollisions: true,
   allowSpritesOutsidePlayspace: false,
   spritesHiddenToStart: true,
-  customGameType: 'Rocket Height'
+  customGameType: 'Rocket Height',
 };
 
 module.exports = {
@@ -69,7 +69,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // Validate that we use parens correctly. (Otherwise we'd end up with
         // 2 + 4 / 2 = 4).
         var height = Studio.Globals.rocket_height(1);
@@ -78,8 +78,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'empty start',
@@ -88,7 +88,7 @@ module.exports = {
         '' +
         '<block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyTopLevelBlock({topLevelBlockName: 'start (function)'})
@@ -97,8 +97,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
     },
 
     {
@@ -152,7 +152,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyBlockInVariable({name: 'foobar'})
@@ -161,8 +161,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
     },
 
     {
@@ -206,7 +206,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Studio.message,
           commonMsg.emptyBlockInFunction({name: 'rocket-height'})
@@ -215,8 +215,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
-    }
-  ]
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
+    },
+  ],
 };

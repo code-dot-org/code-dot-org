@@ -42,7 +42,7 @@ if (IN_UNIT_TEST) {
   let __oldReduxStore;
   let __oldGlobalReducers;
 
-  module.exports.stubRedux = function() {
+  module.exports.stubRedux = function () {
     if (__oldReduxStore) {
       throw new Error(
         'Redux store has already been stubbed. Did you forget to call restore?'
@@ -54,7 +54,7 @@ if (IN_UNIT_TEST) {
     globalReducers = {};
   };
 
-  module.exports.restoreRedux = function() {
+  module.exports.restoreRedux = function () {
     reduxStore = __oldReduxStore;
     globalReducers = __oldGlobalReducers;
     __oldReduxStore = null;
@@ -150,7 +150,7 @@ function createStore(reducer, initialState) {
         }
 
         return newState;
-      }
+      },
     });
 
     return configureStore({
@@ -165,7 +165,7 @@ function createStore(reducer, initialState) {
         // immutability check).
         getDefaultMiddleware({
           immutableCheck: {
-            ignoredPaths: ['jsInterpreter', 'jsdebugger']
+            ignoredPaths: ['jsInterpreter', 'jsdebugger'],
           },
           serializableCheck: {
             ignoredActionPaths: [
@@ -176,7 +176,8 @@ function createStore(reducer, initialState) {
               'runApp',
               'props.showNextHint',
               'props.assetUrl',
-              'props.exportApp'
+              'props.exportApp',
+              'getChanges',
             ],
             ignoredPaths: [
               'hiddenLesson',
@@ -190,10 +191,12 @@ function createStore(reducer, initialState) {
               /animationList\.propsByKey.*\.blob/,
               'maker',
               'data',
-              'screens'
-            ]
-          }
-        }).concat(reduxLogger)
+              'screens',
+              'header.getLevelBuilderChanges',
+              'getChanges',
+            ],
+          },
+        }).concat(reduxLogger),
     });
   }
 
@@ -201,6 +204,6 @@ function createStore(reducer, initialState) {
     reducer: reducer,
     preloadedState: initialState,
     middleware: [reduxThunk],
-    devTools: process.env.NODE_ENV === 'development' // only enable devTools in development
+    devTools: process.env.NODE_ENV === 'development', // only enable devTools in development
   });
 }
