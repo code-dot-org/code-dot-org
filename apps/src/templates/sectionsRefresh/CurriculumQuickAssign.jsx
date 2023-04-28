@@ -8,7 +8,10 @@ import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCurriculumTypes as curriculumTypes,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {BodyOneText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 export const MARKETING_AUDIENCE = {
@@ -23,23 +26,27 @@ export default function CurriculumQuickAssign({
   isNewSection,
   updateSection,
   sectionCourse,
+  initialParticipantType,
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState(null);
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
-  const showPlOfferings = queryParams('participantType') !== 'student';
+  const participantType = isNewSection
+    ? queryParams('participantType')
+    : initialParticipantType;
+
+  const showPlOfferings = participantType !== ParticipantAudience.student;
 
   // Retrieve course offerings on mount and convert to JSON
   useEffect(() => {
-    const participantType = queryParams('participantType');
     fetch(
       `/course_offerings/quick_assign_course_offerings?participantType=${participantType}`
     )
       .then(response => response.json())
       .then(data => setCourseOfferings(data));
-  }, []);
+  }, [participantType]);
 
   useEffect(() => {
     if (!courseOfferings) return;
@@ -68,6 +75,7 @@ export default function CurriculumQuickAssign({
         ],
       };
       const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
+      const plData = {...courseOfferings[MARKETING_AUDIENCE.PL]};
 
       const determineSelectedCourseOffering = (startingData, audience) => {
         const headers = Object.keys(startingData);
@@ -92,6 +100,7 @@ export default function CurriculumQuickAssign({
           MARKETING_AUDIENCE.ELEMENTARY
         );
         determineSelectedCourseOffering(hocData, MARKETING_AUDIENCE.HOC);
+        determineSelectedCourseOffering(plData, MARKETING_AUDIENCE.PL);
       }
     }
     // added all these dependencies given the eslint warning
@@ -239,4 +248,5 @@ CurriculumQuickAssign.propTypes = {
   updateSection: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
   isNewSection: PropTypes.bool,
+  initialParticipantType: PropTypes.string,
 };
