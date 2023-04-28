@@ -2,7 +2,7 @@ import GoogleBlockly from 'blockly/core';
 
 const BUTTON_CORNER_RADIUS = 3;
 const BUTTON_INNER_HEIGHT = 16;
-const DEFAULT_SOUND = 'sound://default.mp3';
+import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
@@ -27,7 +27,8 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     if (typeof newValue !== 'string') {
       return null;
     }
-    // handle 'play sound' block with default param from CDO blockly
+    // Handle 'play sound' block with default param from CDO blockly.
+    // TODO: Remove when sprite lab is migrated to Google blockly.
     if (newValue === 'Choose') {
       return DEFAULT_SOUND;
     }
