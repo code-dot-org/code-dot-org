@@ -1,7 +1,7 @@
 /**
  * @file JavaScript loaded in all Widget-type levels.
  */
-/* global appOptions */
+
 import $ from 'jquery';
 import React from 'react';
 import {
