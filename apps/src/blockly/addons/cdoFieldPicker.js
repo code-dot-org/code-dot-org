@@ -5,7 +5,6 @@ const BUTTON_INNER_HEIGHT = 16;
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
-    this.onDisplay = onDisplay;
     this.onChange = onChange;
     this.onDisplay = onDisplay;
     this.buttonIcon = buttonIcon;
