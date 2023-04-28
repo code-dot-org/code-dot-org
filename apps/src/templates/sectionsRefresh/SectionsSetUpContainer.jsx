@@ -95,6 +95,7 @@ const saveSection = (section, isNewSection) => {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    grades: section.grade,
     ...section,
   };
 
