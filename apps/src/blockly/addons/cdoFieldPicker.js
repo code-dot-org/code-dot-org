@@ -1,12 +1,12 @@
 import GoogleBlockly from 'blockly/core';
 
-const CORNER_RADIUS = 3;
-const INNER_HEIGHT = 16;
+const BUTTON_CORNER_RADIUS = 3;
+const BUTTON_INNER_HEIGHT = 16;
 export default class CdoFieldPicker extends GoogleBlockly.Field {
-  constructor(value, onChange, onDisplay, icon) {
+  constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
     this.onDisplay = onDisplay;
-    this.icon = icon;
+    this.buttonIcon = buttonIcon;
     this.onChange = onChange;
     this.onDisplay = onDisplay;
 
@@ -30,16 +30,16 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
 
   initView() {
     super.initView();
-    if (this.icon) {
+    if (this.buttonIcon) {
       this.buttonElement_ = Blockly.utils.dom.createSvgElement(
         'rect',
         {
-          rx: CORNER_RADIUS,
-          ry: CORNER_RADIUS,
+          rx: BUTTON_CORNER_RADIUS,
+          ry: BUTTON_CORNER_RADIUS,
           x: 1,
           y: 1,
-          height: INNER_HEIGHT,
-          width: INNER_HEIGHT,
+          height: BUTTON_INNER_HEIGHT,
+          width: BUTTON_INNER_HEIGHT,
         },
         this.fieldGroup_
       );
@@ -50,7 +50,7 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
       this.textElement_.style.fontSize = '11pt';
       this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
       this.textElement_.textContent = '';
-      this.textElement_.appendChild(this.icon);
+      this.textElement_.appendChild(this.buttonIcon);
 
       this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
     }
@@ -70,9 +70,7 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   }
 
   /**
-   * Contrast background for button with source block,
-   * and match text element to source block each time.
-   * Keeps
+   * Contrast background for button with source block
    * @override
    */
   applyColour() {
