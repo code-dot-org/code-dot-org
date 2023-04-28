@@ -16,6 +16,7 @@ import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
 
 const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
+const SERVER_WAIT_TIME_MS = 10000;
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -205,7 +206,7 @@ export default class JavabuilderConnection {
         );
         this.onNewlineMessage();
       }
-    }, 10000);
+    }, SERVER_WAIT_TIME_MS);
     this.miniApp?.onCompile?.();
   }
 
