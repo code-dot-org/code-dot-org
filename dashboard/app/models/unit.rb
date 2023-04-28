@@ -783,7 +783,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
