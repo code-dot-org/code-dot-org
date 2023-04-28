@@ -10,7 +10,6 @@ import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
-import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
@@ -52,6 +51,7 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import CdoFieldPicker from './addons/cdoFieldPicker';
 
 const options = {
   contextMenu: true,
@@ -234,6 +234,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
+    ['field_picker', 'FieldPicker', CdoFieldPicker],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -242,7 +243,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
   // Code.org custom fields
-  blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
 
   blocklyWrapper.blockly_.registry.register(
@@ -411,6 +411,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
+  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+    return this.setFieldValue(newValue, name);
+  };
+
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.fieldRow;

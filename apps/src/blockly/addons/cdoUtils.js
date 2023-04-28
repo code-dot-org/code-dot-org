@@ -1,6 +1,7 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
-
+import {capitalizeFirstLetter} from '@cdo/apps/block_utils';
+import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
@@ -109,7 +110,41 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-// TODO: Re-define with a new custom field.
 export function soundField(onChange) {
-  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+  const parsePathString = text => {
+    // Example string paths:
+    // 'sound://category_board_games/card_dealing_multiple.mp3'
+    // 'sound://default.mp3'
+    const pathStringArray = text.split('/');
+    let category = '';
+    // Some sounds do not include a category, such as default.mp3
+    if (pathStringArray[2].includes('category_')) {
+      // Example: 'category_board_games' becomes 'Board games: '
+      category = capitalizeFirstLetter(
+        pathStringArray[2].replace('category_', '').replaceAll('_', ' ') + ': '
+      );
+    }
+    // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
+    const soundName = pathStringArray[pathStringArray.length - 1].replace(
+      '.mp3',
+      ''
+    );
+    // Examples: 'Board games: card_dealing_multiple', 'default'
+    const fieldText = `${category}${soundName}`;
+    return fieldText;
+  };
+
+  const onDisplay = soundPath => {
+    return parsePathString(soundPath);
+  };
+  return new Blockly.FieldPicker('Choose', onChange, onDisplay);
+}
+
+export function locationField(buttonIcon, onChange, __, onDisplay) {
+  return new Blockly.FieldPicker(
+    DEFAULT_SOUND,
+    onChange,
+    onDisplay,
+    buttonIcon
+  );
 }
