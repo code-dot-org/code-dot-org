@@ -43,3 +43,6 @@ export const Renderers = {
 //   ClampedNumber(,)
 export const CLAMPED_NUMBER_REGEX =
   /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+
+// Used for custom field type FieldPicker for 'play sound' block
+export const DEFAULT_SOUND = 'sound://default.mp3';
