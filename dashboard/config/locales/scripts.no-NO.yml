@@ -2575,3 +2575,7 @@
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduksjon
