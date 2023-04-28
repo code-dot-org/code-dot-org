@@ -199,11 +199,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Enabled: false
 
-# Offense count: 19
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Rails/NegateInclude:
-  Enabled: false
-
 # Offense count: 41
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: Include.
