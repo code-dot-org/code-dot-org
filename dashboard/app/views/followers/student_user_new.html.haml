@@ -4,7 +4,7 @@
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
-  - display_captcha = current_user && current_user.display_captcha?
+  - display_captcha = current_user && current_user.display_join_section_captcha?
   = form_tag(student_user_new_path) do
     = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
     - if display_captcha
