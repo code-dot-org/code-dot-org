@@ -56,7 +56,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
       'mousedown',
       this,
       function (e) {
-        if (Blockly.utils.isRightButton(e)) {
+        if (Blockly.browserEvents.isRightButton(e)) {
           // Right-click.
           return;
         }
@@ -71,14 +71,12 @@ export default class BlockSvgUnused extends BlockSvgFrame {
     this.bindClickEvent();
     var groupRect = svgGroup.getBoundingClientRect();
     var minWidthAdjustment = this.frameHelp_.getBoundingClientRect().width;
-    var width =
-      Math.max(groupRect.width, minWidthAdjustment) +
-      2 * frameSizes.MARGIN_SIDE;
+    var width = Math.max(groupRect.width, minWidthAdjustment);
     super.render(svgGroup, isRtl, width);
     this.frameHelp_.setAttribute(
       'transform',
       'translate(' +
-        (width - 2 * frameSizes.MARGIN_SIDE) +
+        width +
         ',' +
         -(frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT / 2) +
         ')'
