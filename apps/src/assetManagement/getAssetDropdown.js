@@ -1,5 +1,3 @@
-/* global dashboard */
-
 var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
 import {getStore} from '../redux';
