@@ -15,6 +15,8 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
 
+const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
+
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
   constructor(
@@ -331,7 +333,7 @@ export default class JavabuilderConnection {
     // Event code 1000 is "connection closed normally", so we should treat
     // it as an expected close event. For some reason many close events with code
     // 1000 are not marked as clean. We should treat them as clean.
-    if (event.code === 1000 || event.wasClean) {
+    if (event.code === WEBSOCKET_CLOSED_NORMAL_CODE || event.wasClean) {
       // Don't notify the user here, the program ended as expected.
       // Mini apps handle setting the run state in this case, as the program
       // output may run longer than the program execution.
@@ -353,7 +355,7 @@ export default class JavabuilderConnection {
         // Add two newlines so there is a blank line between program executions.
         this.onNewlineMessage();
         this.onNewlineMessage();
-        this.setIsRunning(false);
+        this.turnOffRunningOrTesting();
       }
     }
   }
@@ -437,7 +439,7 @@ export default class JavabuilderConnection {
     } else if (this.sawValidationTests) {
       this.onValidationFailed();
     }
-    this.toggleOffRunningOrTesting();
+    this.turnOffRunningOrTesting();
   }
 
   onAuthorizerMessage(value, detail) {
@@ -476,7 +478,7 @@ export default class JavabuilderConnection {
     this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
     if (stopProgram) {
-      this.toggleOffRunningOrTesting();
+      this.turnOffRunningOrTesting();
     }
   }
 
@@ -527,7 +529,7 @@ export default class JavabuilderConnection {
     this.seenUnsupportedTheaterMessage = false;
   }
 
-  toggleOffRunningOrTesting() {
+  turnOffRunningOrTesting() {
     switch (this.executionType) {
       case ExecutionType.RUN:
         this.setIsRunning(false);
