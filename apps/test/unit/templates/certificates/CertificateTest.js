@@ -93,9 +93,9 @@ describe('Certificate', () => {
       const expectedData = {name: 'Student', course: 'dance'};
       const encodedData = btoa(JSON.stringify(expectedData));
       const expectedFilename = encodedData
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=+$/g, '');
+        .replaceAll('+', '-')
+        .replaceAll('/', '_')
+        .replaceAll('=', '');
       const expectedSrc = `/certificate_images/${expectedFilename}.jpg`;
       expect(image.prop('src')).to.equal(expectedSrc);
     });
