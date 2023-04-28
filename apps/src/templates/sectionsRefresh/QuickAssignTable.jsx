@@ -4,6 +4,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {renderRows} from './QuickAssignTableHelpers';
+import {Heading4} from '@cdo/apps/componentLibrary/typography';
 
 /*
 Represents the (collection of) tables in Curriculum Quick Assign.
@@ -25,7 +26,7 @@ export default function QuickAssignTable({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <div>{title}</div>
+              <Heading4>{title}</Heading4>
             </td>
           </tr>
         </thead>
