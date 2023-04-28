@@ -2958,6 +2958,8 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Könnun
+            lessonGroup-5:
+              display_name: Annað kennsluefni
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3338,3 +3340,7 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Inntök og Úttök
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kynning
