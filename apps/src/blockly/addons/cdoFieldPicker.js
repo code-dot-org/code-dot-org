@@ -6,9 +6,9 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
     this.onDisplay = onDisplay;
-    this.buttonIcon = buttonIcon;
     this.onChange = onChange;
     this.onDisplay = onDisplay;
+    this.buttonIcon = buttonIcon;
 
     this.SERIALIZABLE = true;
   }
@@ -17,7 +17,8 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     return new CdoFieldPicker(
       options.value,
       options.onChange,
-      options.onDisplay
+      options.onDisplay,
+      options.buttonIcon
     );
   }
 
