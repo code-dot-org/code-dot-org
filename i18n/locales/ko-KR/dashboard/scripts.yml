@@ -4220,6 +4220,8 @@ ko:
               display_name: 컨텐츠
             lessonGroup-4:
               display_name: 설문조사
+            lessonGroup-5:
+              display_name: 대체 레슨
         hello-world-space-2022:
           title: '헬로 월드: 스페이스'
         hello-world-soccer-2022:
@@ -4773,3 +4775,36 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: 인풋 및 아웃풋
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 환영합니다
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: 소개
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1 일차
+          title: 1 일차
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: 마무리
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2 일차
+          title: 2 일차
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3일차
+          title: 3일차
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: 마무리
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4일차
+          title: 4일차
