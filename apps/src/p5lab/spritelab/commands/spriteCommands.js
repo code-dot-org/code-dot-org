@@ -1,5 +1,6 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
@@ -74,7 +75,7 @@ export const commands = {
     for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
         animation,
-        location: locationCommands.randomLocation()
+        location: locationCommands.randomLocation(),
       });
     }
   },
@@ -90,7 +91,7 @@ export const commands = {
       burst: behaviorCommands.burstFunc,
       pop: behaviorCommands.popFunc,
       rain: behaviorCommands.rainFunc,
-      spiral: behaviorCommands.spiralFunc
+      spiral: behaviorCommands.spiralFunc,
     };
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
@@ -105,7 +106,7 @@ export const commands = {
             direction: utils.randomInt(0, 359),
             rotation: utils.randomInt(0, 359),
             delay: utils.randomInt(1, 21),
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -117,9 +118,9 @@ export const commands = {
             direction: utils.randomInt(225, 315),
             location: {
               x: utils.randomInt(0, 400),
-              y: utils.randomInt(450, 500)
+              y: utils.randomInt(450, 500),
             },
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -130,10 +131,10 @@ export const commands = {
             scale: 50,
             location: {
               x: utils.randomInt(0, 400),
-              y: utils.randomInt(-125, -25)
+              y: utils.randomInt(-125, -25),
             },
             rotation: utils.randomInt(-10, 10),
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -144,7 +145,7 @@ export const commands = {
             initialAngle:
               (i * 360) / numSprites - 180 * ((i + 1) % 2) + spiralRandomizer,
             delay: (i * 30) / numSprites,
-            lifetime: 90
+            lifetime: 90,
           };
           break;
         }
@@ -154,7 +155,7 @@ export const commands = {
       const sprite = this.getSpriteArray({id: spriteId})[0];
       this.addBehavior(sprite, {
         func: behaviorFuncs[effectName].apply(this),
-        name: effectName
+        name: effectName,
       });
     }
   },
@@ -173,5 +174,14 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     });
-  }
+  },
+
+  makeNewSpriteGroup(numSprites, animation, layout) {
+    let spriteGroup = [];
+    for (let i = 0; i < numSprites; i++) {
+      const id = this.addSprite({animation});
+      spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
+    }
+    layoutSpriteGroup(spriteGroup, layout, this.p5);
+  },
 };

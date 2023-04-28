@@ -14,13 +14,13 @@ export default connect(
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
     isEditWhileRun: selectors.isEditWhileRun(state),
-    canRunNext: selectors.canRunNext(state)
+    canRunNext: selectors.canRunNext(state),
   }),
   {
     stepIn: actions.stepIn,
     stepOver: actions.stepOver,
     stepOut: actions.stepOut,
-    togglePause: actions.togglePause
+    togglePause: actions.togglePause,
   }
 )(
   class DebugButtons extends React.Component {
@@ -36,7 +36,7 @@ export default connect(
       isPaused: PropTypes.bool.isRequired,
       isEditWhileRun: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
-      canRunNext: PropTypes.bool.isRequired
+      canRunNext: PropTypes.bool.isRequired,
     };
 
     // Wrap button actions to add tracking of presses to investigate student use

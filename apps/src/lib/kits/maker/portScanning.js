@@ -6,7 +6,7 @@ import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
 import {
   getChromeVersion,
-  isChromeOS
+  isChromeOS,
 } from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**

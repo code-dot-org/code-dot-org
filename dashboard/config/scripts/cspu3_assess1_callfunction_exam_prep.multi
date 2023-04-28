@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The name of the function is "drawStar", it does not need to note the type "function" in front of it. For every function, parenthesis follow it. Parameters can be put inside the parenthesis to note any specific boundaries for a particular function. For this language's syntax, each line is followed by a semi-colon ";".
 MARKDOWN
+
+allow_multiple_attempts true

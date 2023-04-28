@@ -50,13 +50,13 @@ module.exports = {
         'getXPosition("id1");\n' +
         'getYPosition("id1");\n',
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -64,8 +64,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getText and setText on text labels.',
@@ -75,9 +75,9 @@ module.exports = {
         "textLabel('idTxt2', '');" +
         "setText('idTxt1', 'test-value');" +
         "setText('idTxt2', getText('idTxt1'));",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(
             document.getElementById('idTxt2').textContent === 'test-value'
           );
@@ -86,8 +86,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on sliders.',
@@ -101,17 +101,17 @@ module.exports = {
         ' step="1" id="idSlider2">\');' +
         "setProperty('idSlider1', 'value', 25);" +
         "setProperty('idSlider2', 'value', getProperty('idSlider1', 'value'));",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(document.getElementById('idSlider2').value === '25');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on text inputs.',
@@ -121,17 +121,17 @@ module.exports = {
         "textInput('idTxt2', '');" +
         "setProperty('idTxt1', 'value', 'test-value');" +
         "setProperty('idTxt2', 'value', getProperty('idTxt1', 'value'));",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(document.getElementById('idTxt2').value === 'test-value');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on dropdowns.',
@@ -141,17 +141,17 @@ module.exports = {
         "dropdown('idDrop2', 'a', 'b');" +
         "setProperty('idDrop1', 'value', 'b');" +
         "setProperty('idDrop2', 'value', getProperty('idDrop1', 'value'));",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(document.getElementById('idDrop2').value === 'b');
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for fit on images.',
@@ -162,9 +162,9 @@ module.exports = {
         "image('idImage3', '');" +
         "setProperty('idImage1', 'fit', 'cover');" +
         "setProperty('idImage2', 'fit', getProperty('idImage1', 'fit'));",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert(
             document
               .getElementById('idImage2')
@@ -180,16 +180,16 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'button',
       editCode: true,
       xml: "button('my_button_id', 'my_button_text');",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('my_button_id');
           assert(button);
           assert.equal(button.textContent, 'my_button_text');
@@ -200,8 +200,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -211,9 +211,9 @@ module.exports = {
         '' +
         "button('id', 'my_button_text');" +
         "setPosition('id', 10, 20, 30, 40);",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('id');
           assert(button);
           assert.equal(button.style.left, '10px');
@@ -226,8 +226,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'testDuplicateNamesWarning',
@@ -236,8 +236,8 @@ module.exports = {
         '' +
         "button('button1', 'Button 1 text');" +
         "button('button1', 'zOMG duplicate');",
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(
             debugOutput.textContent,
@@ -248,18 +248,18 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'testIllegalNameError runButton',
       editCode: true,
       xml: '' + "button('runButton', 'Bad name for a run button');",
-      onExecutionError: function() {
+      onExecutionError: function () {
         // Trigger the custom validator and done callback
         Applab.onPuzzleComplete();
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
@@ -274,18 +274,18 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.RUNTIME_ERROR_FAIL
-      }
+        testResult: TestResults.RUNTIME_ERROR_FAIL,
+      },
     },
     {
       description: 'testIllegalNameError submitButton',
       editCode: true,
       xml: '' + "button('submitButton', 'Bad name for a submit button');",
-      onExecutionError: function() {
+      onExecutionError: function () {
         // Trigger the custom validator and done callback
         Applab.onPuzzleComplete();
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
         assert.equal(
           debugOutput.textContent,
@@ -300,16 +300,16 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.RUNTIME_ERROR_FAIL
-      }
+        testResult: TestResults.RUNTIME_ERROR_FAIL,
+      },
     },
     {
       description: 'setSize',
       editCode: true,
       xml: '' + "button('id', 'my_button_text');" + "setSize('id', 50, 150);",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var button = document.getElementById('id');
           assert(button);
           assert.equal(button.style.width, '50px');
@@ -320,8 +320,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'html sanitization allows whitelisted tags and attributes',
@@ -345,9 +345,9 @@ module.exports = {
         '</div>' +
         "')\n;",
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
           var expectedHtml =
             '' +
@@ -373,7 +373,7 @@ module.exports = {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -381,8 +381,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
@@ -401,9 +401,9 @@ module.exports = {
         '</div>' +
         "')\n;",
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // Element.outerHTML undoes some of the cosmetic changes made by the sanitizer.
           var expectedHtml =
             '' +
@@ -422,7 +422,7 @@ module.exports = {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -430,8 +430,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'substantial changes in html sanitization do cause warnings',
@@ -451,9 +451,9 @@ module.exports = {
         '</div>' +
         "')\n;",
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var expectedHtml =
             '' +
             '<div id="container">' +
@@ -473,7 +473,7 @@ module.exports = {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var expectedOutput =
           '' +
           'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
@@ -497,8 +497,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'invalid ids in html sanitization give specific warnings',
@@ -515,9 +515,9 @@ module.exports = {
         '</div>' +
         "')\n;",
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           var expectedHtml =
             '' +
             '<div id="container">' +
@@ -535,7 +535,7 @@ module.exports = {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var expectedOutput =
           '' +
           'WARNING: Line: 1: The following lines of HTML were modified or removed:\n' +
@@ -556,8 +556,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

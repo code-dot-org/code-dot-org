@@ -7,7 +7,7 @@ import {makeEnum} from '@cdo/apps/utils';
 export const CsaViewMode = {
   NEIGHBORHOOD: 'neighborhood',
   CONSOLE: 'console',
-  THEATER: 'theater'
+  THEATER: 'theater',
 };
 
 export const WebSocketMessageType = {
@@ -19,7 +19,7 @@ export const WebSocketMessageType = {
   STATUS: 'STATUS',
   TEST_RESULT: 'TEST_RESULT',
   AUTHORIZER: 'AUTHORIZER',
-  CONNECTED: 'CONNECTED'
+  CONNECTED: 'CONNECTED',
 };
 
 export const JavabuilderExceptionType = {
@@ -42,7 +42,7 @@ export const JavabuilderExceptionType = {
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TEMP_DIRECTORY_CLEANUP_ERROR: 'TEMP_DIRECTORY_CLEANUP_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
-  UNKNOWN_ERROR: 'UNKNOWN_ERROR'
+  UNKNOWN_ERROR: 'UNKNOWN_ERROR',
 };
 
 export const NeighborhoodSignalType = {
@@ -67,7 +67,7 @@ export const NeighborhoodSignalType = {
   // Show all paint buckets
   SHOW_BUCKETS: 'SHOW_BUCKETS',
   // We will not receive any more commands
-  DONE: 'DONE'
+  DONE: 'DONE',
 };
 
 export const NeighborhoodExceptionType = makeEnum(
@@ -88,7 +88,7 @@ export const TheaterSignalType = {
   // Get an image from the user via Prompter
   GET_IMAGE: 'GET_IMAGE',
   // There is no audio
-  NO_AUDIO: 'NO_AUDIO'
+  NO_AUDIO: 'NO_AUDIO',
 };
 
 export const StatusMessageType = {
@@ -103,18 +103,18 @@ export const StatusMessageType = {
   EXITED: 'EXITED',
   RUNNING_VALIDATION: 'RUNNING_VALIDATION',
   RUNNING_PROJECT_TESTS: 'RUNNING_PROJECT_TESTS',
-  NO_TESTS_FOUND: 'NO_TESTS_FOUND'
+  NO_TESTS_FOUND: 'NO_TESTS_FOUND',
 };
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  THEATER: 'THEATER'
+  THEATER: 'THEATER',
 };
 
 export const InputMessage = {
   // Theater-specific messages
   UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
-  UPLOAD_ERROR: 'UPLOAD_ERROR'
+  UPLOAD_ERROR: 'UPLOAD_ERROR',
 };
 
 export const SoundExceptionType = makeEnum(
@@ -139,23 +139,34 @@ export const ExecutionType = {
   // Compile and run the main method
   RUN: 'RUN',
   // Compile and run tests
-  TEST: 'TEST'
+  TEST: 'TEST',
 };
 
 export const UserTestResultSignalType = {
   TEST_STATUS: 'TEST_STATUS',
-  STATUS_DETAILS: 'STATUS_DETAILS'
+  STATUS_DETAILS: 'STATUS_DETAILS',
 };
 
 export const TestStatus = {
   SUCCESSFUL: 'SUCCESSFUL',
   FAILED: 'FAILED',
-  ABORTED: 'ABORTED'
+  ABORTED: 'ABORTED',
 };
 
 export const AuthorizerSignalType = {
   TOKEN_USED: 'TOKEN_USED',
   NEAR_LIMIT: 'NEAR_LIMIT',
   USER_BLOCKED: 'USER_BLOCKED',
-  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED'
+  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED',
+  USER_BLOCKED_TEMPORARY: 'USER_BLOCKED_TEMPORARY',
+};
+
+export const JavabuilderLockoutType = {
+  PERMANENT: 'PERMANENT',
+  TEMPORARY: 'TEMPORARY',
+};
+
+export const JavabuilderLockoutPeriod = {
+  DAY: 'DAY',
+  HOUR: 'HOUR',
 };

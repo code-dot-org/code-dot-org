@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Services::RegistrationReminderTest < ActiveSupport::TestCase
-  setup do
+  setup_all do
     Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
   end
 
@@ -18,10 +18,9 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
       Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
-      # Fake sending first accepted email by updating the status to accepted and setting sent_at field
+      # Fake send first accepted email
       Timecop.travel 1.day
-      application.update!(status: 'accepted')
-      application.emails.where(email_type: 'accepted').last.mark_sent!
+      create :pd_application_email, application: application, email_type: 'accepted', sent_at: DateTime.now
       Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
@@ -33,35 +32,31 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
       # At 7 days, email is sent on schedule:
       Timecop.travel 1.day
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Next email is due in 7 days.  At 6 days, only the one reminder has been sent:
       Timecop.travel 6.days
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 1, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # At 7 days, the second reminder is sent on schedule:
       Timecop.travel 1.day
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # Immediate re-run does not create another reminder
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
 
       # That's the last one - no more reminders are sent
       Timecop.travel 30.days
       Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 2, application.emails.where(email_type: 'registration_reminder').count
+      assert_equal 2, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
     end
-  end
-
-  test 'applications_needing_first_reminder omits applications with no registration email' do
-    assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits applications with unsent registration email' do
@@ -95,18 +90,6 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     application = create :pd_teacher_application, created_at: DateTime.new(2019, 9, 30)
     create :pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
-  end
-
-  test 'applications_needing_first_reminder omits applications without an RP since the accepted email does not get sent' do
-    Timecop.freeze do
-      application = create :pd_teacher_application
-      application.update!(status: 'accepted')
-      assert_empty application.emails.where(email_type: 'accepted')
-
-      Timecop.travel 7.days
-      Services::RegistrationReminder.send_registration_reminders!
-      assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
-    end
   end
 
   test 'applications_needing_first_reminder includes eligible applications' do

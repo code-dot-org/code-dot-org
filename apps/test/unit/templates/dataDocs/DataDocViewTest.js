@@ -11,7 +11,7 @@ describe('DataDocView', () => {
   beforeEach(() => {
     defaultProps = {
       dataDocName: docName,
-      dataDocContent: docContent
+      dataDocContent: docContent,
     };
   });
 
@@ -19,10 +19,7 @@ describe('DataDocView', () => {
     const wrapper = shallow(<DataDocView {...defaultProps} />);
     expect(wrapper.text()).to.contain(docName);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .first()
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
     ).to.equal(docContent);
   });
 });

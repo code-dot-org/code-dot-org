@@ -4,22 +4,22 @@ var tickWrapper = require('./../integration/util/tickWrapper');
 function createFakeApp() {
   return {
     tickCount: 0,
-    onTick: function() {
+    onTick: function () {
       this.tickCount++;
-    }
+    },
   };
 }
 
-describe('tickWrapper', function() {
-  afterEach(function() {
+describe('tickWrapper', function () {
+  afterEach(function () {
     tickWrapper.reset();
   });
 
-  it('runOnAppTick', function() {
+  it('runOnAppTick', function () {
     var app1 = createFakeApp();
 
     var calledMe = false;
-    tickWrapper.runOnAppTick(app1, 2, function() {
+    tickWrapper.runOnAppTick(app1, 2, function () {
       calledMe = true;
     });
 
@@ -36,14 +36,14 @@ describe('tickWrapper', function() {
     assert.equal(app1.tickCount, 3);
   });
 
-  it('tickAppUntil', function(done) {
+  it('tickAppUntil', function (done) {
     var app1 = createFakeApp();
 
     tickWrapper
-      .tickAppUntil(app1, function() {
+      .tickAppUntil(app1, function () {
         return app1.tickCount === 3;
       })
-      .then(function() {
+      .then(function () {
         // tickCount is 4 because our predicate function runs at the beginning of
         // the loop, and our original onTick is still called before we get to
         // promise resolution
@@ -57,12 +57,12 @@ describe('tickWrapper', function() {
     app1.onTick();
   });
 
-  it('never calls action if reset before tick count', function() {
+  it('never calls action if reset before tick count', function () {
     var app1 = createFakeApp();
     app1.onTick;
 
     var calledMe = false;
-    tickWrapper.runOnAppTick(app1, 3, function() {
+    tickWrapper.runOnAppTick(app1, 3, function () {
       calledMe = true;
     });
 
@@ -81,18 +81,18 @@ describe('tickWrapper', function() {
     );
   });
 
-  it('can have multiple preTick functions, and reset successfully', function() {
+  it('can have multiple preTick functions, and reset successfully', function () {
     var app1 = createFakeApp();
     var originalOnTick = app1.onTick;
 
     var predicate1Calls = 0;
     var predicate2Calls = 0;
 
-    tickWrapper.tickAppUntil(app1, function() {
+    tickWrapper.tickAppUntil(app1, function () {
       predicate1Calls++;
       return false;
     });
-    tickWrapper.tickAppUntil(app1, function() {
+    tickWrapper.tickAppUntil(app1, function () {
       predicate2Calls++;
       return false;
     });

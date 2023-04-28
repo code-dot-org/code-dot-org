@@ -31,3 +31,5 @@ Going through the code line by line:
 * _b_ is set to the value at index 2, which is b = 8
 * Adding a + b, 10 is displayed
 MARKDOWN
+
+allow_multiple_attempts true

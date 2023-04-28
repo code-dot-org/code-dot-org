@@ -11,11 +11,11 @@ class ResourceLink extends React.Component {
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     reference: PropTypes.string.isRequired,
-    openReferenceInNewTab: PropTypes.bool
+    openReferenceInNewTab: PropTypes.bool,
   };
 
   state = {
-    dialogSelected: false
+    dialogSelected: false,
   };
 
   selectResource = e => {
@@ -35,7 +35,7 @@ class ResourceLink extends React.Component {
         .width('100%')
         .attr('src', this.props.reference),
       autoResizeScrollableElement: '.instructions-container',
-      id: 'block-documentation-lightbox'
+      id: 'block-documentation-lightbox',
     });
     dialog.show();
 
@@ -55,11 +55,11 @@ class ResourceLink extends React.Component {
 
     const iconStyle = {
       ...styles.commonIcon,
-      ...(highlight ? styles.mapIcon : styles.resourceIcon)
+      ...(highlight ? styles.mapIcon : styles.resourceIcon),
     };
     const thumbnailStyle = {
       ...styles.commonThumbnail,
-      ...(highlight && styles.mapThumbnail)
+      ...(highlight && styles.mapThumbnail),
     };
 
     return (
@@ -85,30 +85,30 @@ const styles = {
     fontSize: 16,
     lineHeight: '25px',
     cursor: 'pointer',
-    maxWidth: '90%'
+    maxWidth: '90%',
   },
   mapThumbnail: {
-    backgroundColor: color.teal
+    backgroundColor: color.teal,
   },
   commonThumbnail: {
     borderRadius: 5,
     paddingLeft: 26,
     paddingRight: 26,
     paddingTop: 16,
-    paddingBottom: 9
+    paddingBottom: 9,
   },
   commonIcon: {
-    fontSize: 22
+    fontSize: 22,
   },
   mapIcon: {
-    color: color.white
+    color: color.white,
   },
   resourceIcon: {
-    color: color.teal
+    color: color.teal,
   },
   resourceStyle: {
-    margin: 8
-  }
+    margin: 8,
+  },
 };
 
 export default Radium(ResourceLink);

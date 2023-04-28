@@ -20,7 +20,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
     this.frameHelp_ = Blockly.utils.dom.createSvgElement(
       'g',
       {
-        class: 'blocklyHelp'
+        class: 'blocklyHelp',
       },
       this.frameGroup_
     );
@@ -28,7 +28,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
       'circle',
       {
         fill: '#7665a0',
-        r: frameSizes.HEADER_HEIGHT * 0.75 * 0.5
+        r: frameSizes.HEADER_HEIGHT * 0.75 * 0.5,
       },
       this.frameHelp_
     );
@@ -37,7 +37,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
         'text',
         {
           class: 'blocklyText',
-          y: Blockly.utils.userAgent.IE ? 4 : 0 // again, offset text manually in IE
+          y: Blockly.utils.userAgent.IE ? 4 : 0, // again, offset text manually in IE
         },
         this.frameHelp_
       )
@@ -55,7 +55,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
       this.frameHelp_,
       'mousedown',
       this,
-      function(e) {
+      function (e) {
         if (Blockly.utils.isRightButton(e)) {
           // Right-click.
           return;

@@ -13,13 +13,13 @@ export default class SingleCheckbox extends React.Component {
     required: PropTypes.bool,
     validationState: PropTypes.string,
     onChange: PropTypes.func,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   handleChange = event => {
     this.props.onChange &&
       this.props.onChange({
-        [this.props.name]: event.target.checked
+        [this.props.name]: event.target.checked,
       });
   };
 

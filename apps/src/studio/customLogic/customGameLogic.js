@@ -6,7 +6,7 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
  * @param {Studio} studio Reference to global studio object
  * @interface CustomGameLogic
  */
-var CustomGameLogic = function(studio) {
+var CustomGameLogic = function (studio) {
   this.studio_ = studio;
   this.cached_ = {};
 };
@@ -18,19 +18,19 @@ var CustomGameLogic = function(studio) {
  * @name CustomGameLogic#onTick
  */
 
-CustomGameLogic.prototype.onTick = function() {
+CustomGameLogic.prototype.onTick = function () {
   throw new Error('should be overridden by child');
 };
 
 /**
  * Logic to be run when game is reset
  */
-CustomGameLogic.prototype.reset = function() {};
+CustomGameLogic.prototype.reset = function () {};
 
 /**
  * Store a block in our cache, so that it can be called elsewhere
  */
-CustomGameLogic.prototype.cacheBlock = function(key, block) {
+CustomGameLogic.prototype.cacheBlock = function (key, block) {
   this.cached_[key] = block;
 };
 
@@ -40,7 +40,7 @@ CustomGameLogic.prototype.cacheBlock = function(key, block) {
  *   block was a function_pass, this means we get back a function that can
  *   now be called.
  */
-CustomGameLogic.prototype.resolveCachedBlock_ = function(key) {
+CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
   var result = '';
   var block = this.cached_[key];
   if (!block) {
@@ -52,7 +52,7 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function(key) {
     code,
     {
       Studio: api,
-      Globals: Studio.Globals
+      Globals: Studio.Globals,
     },
     {legacy: true}
   );
@@ -62,12 +62,12 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function(key) {
 /**
  * getVar/getFunc just call resolveCachedBlock_, but are provided for clarity
  */
-CustomGameLogic.prototype.getVar_ = function(key) {
+CustomGameLogic.prototype.getVar_ = function (key) {
   return this.resolveCachedBlock_(key);
 };
 
-CustomGameLogic.prototype.getFunc_ = function(key) {
-  return this.resolveCachedBlock_(key) || function() {};
+CustomGameLogic.prototype.getFunc_ = function (key) {
+  return this.resolveCachedBlock_(key) || function () {};
 };
 
 module.exports = CustomGameLogic;
