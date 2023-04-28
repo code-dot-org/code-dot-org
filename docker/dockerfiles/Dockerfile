@@ -34,9 +34,14 @@ RUN apt-get update && \
       libssl-dev \
       libyaml-dev \
       rbenv \
+      sudo \
       zlib1g-dev \
       && true
 
+# add circleci user
+RUN groupadd --gid 3434 ${USER} && \
+    useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
+    printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
 FROM ubuntu:18.04 as node
@@ -70,8 +75,10 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
 #########################################################
 FROM base as rbenv
 #########################################################
-# compile ruby to /rbenv, this layer is merged at the end
+# compile ruby to /home/${USER}/.rbenv
 #########################################################
+
+USER ${USER}
 
 RUN mkdir -p "$(rbenv root)"/plugins && \
     git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
@@ -79,8 +86,7 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
     eval "$(rbenv init -)" && \
     rbenv shell 2.7.5 && \
     rbenv rehash && \
-    gem install bundler -v 2.3.22 && \
-    mv $(rbenv root) /rbenv
+    gem install bundler -v 2.3.22
 
 
 #########################################################
@@ -189,11 +195,6 @@ RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     rm tidy-5.4.0-64bit.deb && \
     mv /usr/bin/gnu_parallel /usr/bin/parallel
 
-# add circleci user
-RUN groupadd --gid 3434 ${USER} && \
-    useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
-    printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
-
 # install https://github.com/boxboat/fixuid
 RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.4-linux-amd64.tar.gz | tar -C /usr/local/bin -xzf - && \
     chown root:root /usr/local/bin/fixuid && \
@@ -203,7 +204,7 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 
 USER ${USER}
 
-WORKDIR /home/{$USER}
+WORKDIR /home/${USER}
 
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
@@ -211,7 +212,7 @@ WORKDIR /home/{$USER}
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Finally, merge in the node & ruby layers
-COPY --from=rbenv --chown=${USER}:${GROUP} /rbenv /home/${USER}/.rbenv
+COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
 COPY --from=node /build /usr/local
 
 COPY entrypoint.sh /entrypoint.sh
