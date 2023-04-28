@@ -508,8 +508,10 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 10,
-    margin: 0,
+    marginTop: 0,
     marginRight: 8,
+    marginBottom: 0,
+    marginLeft: 0,
     verticalAlign: 'top',
   },
   buttonDisabled: {
@@ -519,8 +521,10 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 5,
-    margin: 0,
+    marginTop: 0,
     marginRight: 8,
+    marginBottom: 0,
+    marginLeft: 0,
     verticalAlign: 'top',
   },
   copyButton: {
