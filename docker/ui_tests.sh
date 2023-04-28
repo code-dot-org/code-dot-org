@@ -26,7 +26,7 @@ mkdir $CIRCLE_ARTIFACTS
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 
-bundle install --verbose
+bundle install
 
 # set up locals.yml
 # Need to actually write all the commented out lines also

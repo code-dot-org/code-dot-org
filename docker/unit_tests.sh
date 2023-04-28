@@ -14,7 +14,7 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-mispipe "bundle install --verbose" ts
+mispipe "bundle install" ts
 
 # set up locals.yml
 set +x
