@@ -3485,7 +3485,7 @@ code {
         width: 100%;
 
         li {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .dots {
@@ -3507,6 +3507,18 @@ code {
 
     #noanswer {
       cursor: pointer;
+      border: none;
+      box-shadow: none;
+      font-family: $gotham-bold;
+      font-size: 100%;
+      color: $brand_secondary_default;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    #noanswer:hover {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
     }
   }
 }
