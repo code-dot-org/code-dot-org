@@ -1904,3 +1904,11 @@ se:
           lesson_groups:
             lessonGroup-3:
               display_name: Input:at ja Output:at
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Loahpat
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Loahpat
