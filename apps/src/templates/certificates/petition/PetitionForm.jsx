@@ -13,7 +13,6 @@ import {
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import PropTypes from 'prop-types';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-/* global ga */
 
 const PetitionForm = ({tutorial}) => {
   // data starts with all fields having an empty value to ensure consistent data shape
