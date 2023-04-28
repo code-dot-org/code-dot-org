@@ -9,10 +9,6 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
-      Pd::Application::TeacherApplicationMailer.stubs(:accepted).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
-
       @workshop_admin = create :workshop_admin
       @workshop_organizer = create :workshop_organizer
       @program_manager = create :teacher
@@ -254,10 +250,7 @@ module Api::V1::Pd
     # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can edit their applications as workshop organizers' do
       sign_in @workshop_organizer
-      @csd_teacher_application_with_partner.update(pd_workshop_id: (create :summer_workshop).id)
-      @csd_teacher_application_with_partner.reload
-
-      Pd::Application::TeacherApplicationMailer.stubs(:deliver_email)
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
 
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
@@ -272,10 +265,7 @@ module Api::V1::Pd
 
     test 'regional partners can edit their applications' do
       sign_in @program_manager
-      @csd_teacher_application_with_partner.update(pd_workshop_id: (create :summer_workshop).id)
-      @csd_teacher_application_with_partner.reload
-
-      Pd::Application::TeacherApplicationMailer.stubs(:deliver_email)
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
 
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
@@ -387,10 +377,6 @@ module Api::V1::Pd
 
     test 'update sends a decision email once if status changed to decision and if associated with an RP' do
       sign_in @program_manager
-      summer_workshop = create :summer_workshop
-      @csd_teacher_application_with_partner.update(pd_workshop_id: summer_workshop.id)
-      @csd_teacher_application_with_partner.reload
-
       Pd::Application::TeacherApplicationMailer.expects(:accepted).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
