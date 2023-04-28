@@ -12,10 +12,10 @@ can be difficult for young users to solve. Thus, it should be used sparingly acr
 */
 export default class ReCaptchaDialog extends React.Component {
   static propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func,
+    handleCancel: PropTypes.func,
     isOpen: PropTypes.bool.isRequired,
-    submitText: PropTypes.string.isRequired,
+    submitText: PropTypes.string,
     siteKey: PropTypes.string.isRequired,
   };
 
@@ -64,13 +64,13 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel, submitText} = this.props;
+    const {siteKey, isOpen, handleCancel} = this.props;
     return (
       <div>
         <BaseDialog
           useUpdatedStyles
           fixedWidth={600}
-          uncloseable={true}
+          handleClose={handleCancel}
           style={styles.dialog}
           isOpen={isOpen}
         >
@@ -91,7 +91,7 @@ export default class ReCaptchaDialog extends React.Component {
               color={Button.ButtonColor.gray}
             />
             <Button
-              text={submitText}
+              text={'Submit'}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               disabled={!this.state.submitButtonEnabled}

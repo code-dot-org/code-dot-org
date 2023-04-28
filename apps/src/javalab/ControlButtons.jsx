@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
 import style from './control-buttons.module.scss';
+import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
 export default function ControlButtons({
   isRunning,
@@ -38,9 +39,27 @@ export default function ControlButtons({
     finishButtonId = 'finishButton';
   }
 
+  const [isDialogOpen, setIsDialogOpen] = useState(true);
+
+  // need authenticity token?
+  // does x work?
   return (
     <div>
       <div className={style.leftButtons}>
+        <ReCaptchaDialog
+          isOpen={isDialogOpen}
+          handleCancel={() => setIsDialogOpen(false)}
+          handleSubmit={token => {
+            fetch('/dashboardapi/v1/users/me/verify_captcha', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({'g-recaptcha-response': token}),
+            });
+          }}
+          siteKey="siteKey"
+        />
         <JavalabButton
           id="runButton"
           text={isRunning ? i18n.stop() : i18n.runProgram()}
