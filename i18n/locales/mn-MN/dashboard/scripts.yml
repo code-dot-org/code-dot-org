@@ -3503,3 +3503,36 @@ mn:
           lesson_groups:
             lessonGroup-3:
               display_name: Оролт ба гаралт
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Мэндчилгээ
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Танилцуулга
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-р өдөр
+          title: 1-р өдөр
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2-р өдөр
+          title: 2-р өдөр
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3-р өдөр
+          title: 3-р өдөр
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4-р өдөр
+          title: 4-р өдөр
