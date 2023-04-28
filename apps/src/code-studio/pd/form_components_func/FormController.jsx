@@ -657,7 +657,7 @@ const FormController = props => {
     const submitButton = (
       <Button
         bsStyle="primary"
-        disabled={submitting}
+        disabled={regionalPartner?.are_apps_closed_for_rp || submitting}
         key="submit"
         id="submit"
         type="submit"
