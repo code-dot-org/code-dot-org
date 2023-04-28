@@ -213,4 +213,19 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.has_seen_standards_report_info_dialog = true
     @user.save!
   end
+
+  # POST /dashboardapi/v1/users/<user_id>/verify_captcha
+  # maybe rename to cover that this stores a timestamp
+  def verify_captcha
+    # might need 2 minute buffer timestamp
+    # time.now vs datetime?
+    if verify_recaptcha
+      @user.last_verified_captcha_at = Time.now
+      @user.save
+
+      return head :ok
+    else
+      return head :bad_request
+    end
+  end
 end

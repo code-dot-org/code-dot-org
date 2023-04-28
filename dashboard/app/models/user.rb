@@ -119,6 +119,7 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
+    last_verified_captcha_at
   )
 
   attr_accessor(
