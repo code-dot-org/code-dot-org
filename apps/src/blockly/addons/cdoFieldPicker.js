@@ -2,13 +2,15 @@ import GoogleBlockly from 'blockly/core';
 
 const BUTTON_CORNER_RADIUS = 3;
 const BUTTON_INNER_HEIGHT = 16;
+const DEFAULT_SOUND = 'sound://default.mp3';
 
 export default class CdoFieldPicker extends GoogleBlockly.Field {
-  constructor(value, onChange, onDisplay, buttonIcon) {
+  constructor(value, onChange, onDisplay, buttonIcon, defaultSound) {
     super(value);
     this.onChange = onChange;
     this.onDisplay = onDisplay;
     this.buttonIcon = buttonIcon;
+    this.defaultSound = defaultSound;
 
     this.SERIALIZABLE = true;
   }
@@ -25,6 +27,10 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   doClassValidation_(newValue) {
     if (typeof newValue !== 'string') {
       return null;
+    }
+    // handle 'play sound' block with default param from CDO blockly
+    if (newValue === 'Choose') {
+      return DEFAULT_SOUND;
     }
     return newValue;
   }
