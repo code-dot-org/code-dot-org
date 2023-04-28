@@ -1,4 +1,3 @@
-/* global appOptions */
 import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
