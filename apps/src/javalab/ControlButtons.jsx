@@ -21,6 +21,7 @@ export default function ControlButtons({
   isSubmittable,
   isSubmitted,
   finishButtonTooltipText,
+  captchaRequired,
 }) {
   /* The ids of these buttons are relied on in other parts of the codebase.
    * All of them are relied on for UI tests
@@ -43,23 +44,26 @@ export default function ControlButtons({
 
   // need authenticity token?
   // does x work?
+  // block run button until submit has finished?
   return (
     <div>
       <div className={style.leftButtons}>
-        <ReCaptchaDialog
-          isOpen={isDialogOpen}
-          handleCancel={() => setIsDialogOpen(false)}
-          handleSubmit={token => {
-            fetch('/dashboardapi/v1/users/me/verify_captcha', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({'g-recaptcha-response': token}),
-            });
-          }}
-          siteKey="siteKey"
-        />
+        {captchaRequired && (
+          <ReCaptchaDialog
+            isOpen={isDialogOpen}
+            handleCancel={() => setIsDialogOpen(false)}
+            handleSubmit={token => {
+              fetch('/dashboardapi/v1/users/me/verify_captcha', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({'g-recaptcha-response': token}),
+              }).then(() => setIsDialogOpen(false));
+            }}
+            siteKey="siteKey"
+          />
+        )}
         <JavalabButton
           id="runButton"
           text={isRunning ? i18n.stop() : i18n.runProgram()}
@@ -114,4 +118,5 @@ ControlButtons.propTypes = {
   isSubmittable: PropTypes.bool,
   isSubmitted: PropTypes.bool,
   finishButtonTooltipText: PropTypes.string,
+  captchaRequired: PropTypes.bool,
 };

@@ -31,7 +31,8 @@ export default class JavabuilderConnection {
     csrfToken,
     onValidationPassed,
     onValidationFailed,
-    onConnectDone
+    onConnectDone,
+    setCaptchaRequired
   ) {
     this.channelId = project.getCurrentId();
     this.onOutputMessage = onMessage;
@@ -49,6 +50,7 @@ export default class JavabuilderConnection {
     this.onValidationPassed = onValidationPassed;
     this.onValidationFailed = onValidationFailed;
     this.onConnectDone = onConnectDone;
+    this.setCaptchaRequired = setCaptchaRequired;
 
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
@@ -151,7 +153,11 @@ export default class JavabuilderConnection {
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
-        this.displayUnauthorizedMessage(error);
+        if (error.responseJSON.captcha_required === true) {
+          this.setCaptchaRequired();
+        } else {
+          this.displayUnauthorizedMessage(error);
+        }
       } else {
         this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
         this.onNewlineMessage();

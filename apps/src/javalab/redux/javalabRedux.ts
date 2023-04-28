@@ -17,6 +17,7 @@ interface JavalabState {
   validationPassed: boolean;
   hasRunOrTestedCode: boolean;
   isJavabuilderConnecting: boolean;
+  isCaptchaRequired: boolean;
 }
 
 const initialState: JavalabState = {
@@ -32,6 +33,7 @@ const initialState: JavalabState = {
   validationPassed: false,
   hasRunOrTestedCode: false,
   isJavabuilderConnecting: false,
+  isCaptchaRequired: false,
 };
 
 const javalabSlice = createSlice({
@@ -84,6 +86,9 @@ const javalabSlice = createSlice({
     setHasRunOrTestedCode(state, action: PayloadAction<boolean>) {
       state.hasRunOrTestedCode = action.payload;
     },
+    setCaptchaRequired(state, action: PayloadAction<boolean>) {
+      state.isCaptchaRequired = action.payload;
+    },
   },
 });
 
@@ -99,6 +104,7 @@ export const {
   setCommitSaveStatus,
   setValidationPassed,
   setHasRunOrTestedCode,
+  setCaptchaRequired,
 } = javalabSlice.actions;
 
 export default javalabSlice.reducer;
