@@ -22,6 +22,7 @@ export default function ControlButtons({
   isSubmitted,
   finishButtonTooltipText,
   captchaRequired,
+  recaptchaSiteKey,
 }) {
   /* The ids of these buttons are relied on in other parts of the codebase.
    * All of them are relied on for UI tests
@@ -61,7 +62,7 @@ export default function ControlButtons({
                 body: JSON.stringify({'g-recaptcha-response': token}),
               }).then(() => setIsDialogOpen(false));
             }}
-            siteKey="siteKey"
+            siteKey={recaptchaSiteKey}
           />
         )}
         <JavalabButton
@@ -119,4 +120,5 @@ ControlButtons.propTypes = {
   isSubmitted: PropTypes.bool,
   finishButtonTooltipText: PropTypes.string,
   captchaRequired: PropTypes.bool,
+  recaptchaSiteKey: PropTypes.string,
 };
