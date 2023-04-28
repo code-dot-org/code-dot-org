@@ -112,7 +112,6 @@ const customInputTypes = {
       );
       const fieldRow = currentInputRow.getFieldRow();
       const label = fieldRow[fieldRow.length - 1];
-      console.log('label assigned', label);
       const buttonIcon = document.createElementNS(SVG_NS, 'tspan');
       buttonIcon.style.fontFamily = 'FontAwesome';
       buttonIcon.textContent = '\uf276';
