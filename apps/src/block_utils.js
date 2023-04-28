@@ -1338,7 +1338,3 @@ const sanitizeOptions = function (dropdownOptions) {
     option.length === 1 ? [option[0], option[0]] : option
   );
 };
-
-export const capitalizeFirstLetter = function (string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};

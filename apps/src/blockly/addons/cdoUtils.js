@@ -1,6 +1,5 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
-import {capitalizeFirstLetter} from '@cdo/apps/block_utils';
 import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
 export function setHSV(block, h, s, v) {
@@ -112,6 +111,9 @@ export function getCode(workspace) {
 }
 
 export function soundField(onChange) {
+  const capitalizeFirstLetter = function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
   const parsePathString = text => {
     // Example string paths:
     // 'sound://category_board_games/card_dealing_multiple.mp3'
