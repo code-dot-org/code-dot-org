@@ -68,7 +68,19 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     if (!text) {
       return GoogleBlockly.Field.NBSP;
     }
+    // The onDisplay function customizes the text for display.
     return this.onDisplay(text);
+  }
+
+  doValueUpdate_(newValue) {
+    if (this.value_ !== newValue) {
+      this.value_ = newValue;
+      if (this.buttonIcon) {
+        // For location picker, update coordinates of block when dragged out from toolbox.
+        this.onDisplay(newValue);
+      }
+      this.isDirty_ = true; // Block needs to be re-rendered.
+    }
   }
 
   showEditor_() {
