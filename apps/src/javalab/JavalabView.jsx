@@ -61,6 +61,7 @@ class JavalabView extends React.Component {
     hasOpenCodeReview: PropTypes.bool,
     isJavabuilderConnecting: PropTypes.bool,
     captchaRequired: PropTypes.bool,
+    recaptchaSiteKey: PropTypes.string,
   };
 
   componentDidMount() {
@@ -166,6 +167,7 @@ class JavalabView extends React.Component {
       hasOpenCodeReview,
       isJavabuilderConnecting,
       captchaRequired,
+      recaptchaSiteKey,
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -258,6 +260,7 @@ class JavalabView extends React.Component {
                     isSubmitted={isSubmitted}
                     finishButtonTooltipText={finishButtonTooltipText}
                     captchaRequired={captchaRequired}
+                    recaptchaSiteKey={recaptchaSiteKey}
                   />
                 }
               />
@@ -338,6 +341,7 @@ export default connect(
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isJavabuilderConnecting: state.javalab.isJavabuilderConnecting,
     captchaRequired: state.javalab.isCaptchaRequired,
+    recaptchaSiteKey: state.pageConstants.recaptchaSiteKey,
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

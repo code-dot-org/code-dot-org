@@ -193,6 +193,7 @@ Javalab.prototype.init = function (config) {
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
   registerReducers({javalab, javalabConsole, javalabEditor, javalabView});
