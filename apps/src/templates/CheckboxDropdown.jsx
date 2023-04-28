@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from './FontAwesome';
+import {Dropdown} from 'react-bootstrap';
 import i18n from '@cdo/locale';
 import style from './checkbox-dropdown.module.scss';
 
@@ -12,19 +13,26 @@ const CheckboxDropdown = ({
   onChange,
   handleSelectAll,
   handleClearAll,
-}) => (
-  <div id={`${name}-dropdown`} className="dropdown">
-    <button
-      id={`${name}-dropdown-button`}
-      type="button"
-      className="selectbox"
-      data-toggle="dropdown"
-    >
-      {checkedOptions.length > 0 && <FontAwesome icon="check-circle" />}
-      {label}
-    </button>
-    <ul className="dropdown-menu">
-      <form>
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <Dropdown id={name}>
+      <Dropdown.Toggle noCaret useAnchor={true}>
+        <button
+          id={`${name}-dropdown-button`}
+          type="button"
+          className="selectbox"
+          data-toggle="dropdown"
+          onClick={() => setIsExpanded(!isExpanded)}
+          onBlur={() => setIsExpanded(false)}
+        >
+          {checkedOptions.length > 0 && <FontAwesome icon="check-circle" />}
+          {label}
+          <FontAwesome icon={isExpanded ? 'chevron-up' : 'chevron-down'} />
+        </button>
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
         {Object.keys(allOptions).map(optionKey => (
           <li key={optionKey} className="checkbox form-group">
             <input
@@ -58,10 +66,10 @@ const CheckboxDropdown = ({
             {i18n.clearAll()}
           </button>
         )}
-      </form>
-    </ul>
-  </div>
-);
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+};
 CheckboxDropdown.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
