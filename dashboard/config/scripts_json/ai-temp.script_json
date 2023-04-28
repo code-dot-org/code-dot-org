@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-27 02:56:57 UTC",
+    "serialized_at": "2023-04-28 01:12:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -293,6 +293,42 @@
       "seeding_key": {
         "lesson_activity.key": "aec17932-137c-4f4a-940c-e6941ec16520",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2af49e2d-d6d1-4c3e-88c6-d668a47f4996",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2af49e2d-d6d1-4c3e-88c6-d668a47f4996",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "ai-temp"
       }
@@ -1718,6 +1754,50 @@
       }
     },
     {
+      "key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "8d6cd89d-990a-4dc1-a261-03a0611d458d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d6cd89d-990a-4dc1-a261-03a0611d458d",
+        "lesson_activity.key": "2af49e2d-d6d1-4c3e-88c6-d668a47f4996"
+      }
+    },
+    {
+      "key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+      "position": 1,
+      "properties": {
+        "description": "(Thomas - when you get to the part of the lesson where the recommendation widget is needed: move this to that spot and delete this text)",
+        "progression_name": "Beta: WeTube Video Recommendations (Widget)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+      "position": 2,
+      "properties": {
+        "description": "(Thomas - when you get to the part of the lesson where the recommendation widget is needed: move this to that spot and delete this text)",
+        "progression_name": "WeTube Video Recommendations (Widget)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
       "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
       "position": 1,
       "properties": {
@@ -3135,6 +3215,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Beta: WeTube Video Recommendations (Widget)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Beta"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
+      },
+      "level_keys": [
+        "Neural Networks - Perceptron - Beta"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "WeTube Video Recommendations (Widget)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
+      },
+      "level_keys": [
+        "Neural Networks - Perceptron - Full"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
@@ -3155,7 +3279,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3180,7 +3304,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -3240,6 +3364,30 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "143fb379-8c75-4d60-b1e5-eed9887455e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neural Networks - Perceptron - Beta",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Beta"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neural Networks - Perceptron - Full",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
       }
     },
     {
