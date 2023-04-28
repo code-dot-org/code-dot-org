@@ -137,6 +137,7 @@ class LoginTypePicker extends Component {
           <p>
             <span
               className="fa fa-exclamation-triangle"
+              aria-hidden="true"
               style={style.warningIcon}
             />
             <span style={style.warningHeader}>
