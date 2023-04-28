@@ -188,7 +188,7 @@ class ManageStudentsTable extends Component {
   }
 
   // Showing secret picture is disabled if the "student" in the section is a teacher
-  isSecretPictureDisabled(userType) {
+  isSecretLoginDisabled(userType) {
     return userType === 'teacher';
   }
 
@@ -235,12 +235,9 @@ class ManageStudentsTable extends Component {
   }
 
   passwordFormatter(loginType, {rowData}) {
-    console.log(`ROW DATA: ${JSON.stringify(rowData)}`);
     const {sectionId} = this.props;
     const resetDisabled = this.isEditingDisabled(rowData.userType);
-    const secretPictureDisabled = this.isSecretPictureDisabled(
-      rowData.userType
-    );
+    const secretLoginDisabled = this.isSecretLoginDisabled(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -266,7 +263,7 @@ class ManageStudentsTable extends Component {
                 id={rowData.id}
                 sectionId={sectionId}
                 resetDisabled={resetDisabled}
-                secretPictureDisabled={secretPictureDisabled}
+                secretLoginDisabled={secretLoginDisabled}
               />
             )}
           </div>

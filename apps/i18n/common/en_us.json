@@ -1886,7 +1886,7 @@
   "reset": "Reset",
   "resetProgram": "Reset",
   "resetPassword": "Reset password",
-  "resetTeacherPasswordTooltip": "You cannot reset passwords for teacher accounts in your section.",
+  "secretLoginTooltip": "Secret login disabled for teachers",
   "resources": "Resources",
   "response": "Response",
   "responsesForClassSection": "Responses shown for class section:",

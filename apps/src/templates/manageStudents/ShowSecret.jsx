@@ -18,8 +18,7 @@ class ShowSecret extends Component {
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    resetDisabled: PropTypes.bool,
-    secretPictureDisabled: PropTypes.bool,
+    secretLoginDisabled: PropTypes.bool,
 
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
@@ -112,10 +111,8 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const {resetDisabled} = this.props;
-    const {secretPictureDisabled} = this.props;
-    const resetTooltipId = resetDisabled && _.uniqueId();
-    const secretPicTooltipId = secretPictureDisabled && _.uniqueId();
+    const {secretLoginDisabled} = this.props;
+    const tooltipId = secretLoginDisabled ? _.uniqueId() : '';
     const showButtonText =
       this.props.loginType === SectionLoginType.word
         ? i18n.showWords()
@@ -128,17 +125,16 @@ class ShowSecret extends Component {
     return (
       <div>
         {!this.state.isShowing && (
-          <span data-for={secretPicTooltipId} data-tip>
+          <span data-for={tooltipId} data-tip>
             <Button
               __useDeprecatedTag
               onClick={this.show}
               color={Button.ButtonColor.white}
               text={showButtonText}
-              disabled={secretPictureDisabled}
+              disabled={secretLoginDisabled}
             />
-            <ReactTooltip id={secretPicTooltipId} role="tooltip" effect="solid">
-              {/* TODO: Move this message to i18n.teacherSecretPictureTooltip */}
-              <div>{'Secret Picture Login disabled for teachers'}</div>
+            <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+              <div>{i18n.secretLoginTooltip()}</div>
             </ReactTooltip>
           </span>
         )}
@@ -153,22 +149,14 @@ class ShowSecret extends Component {
                 style={styles.image}
               />
             )}
-            <span data-for={resetTooltipId} data-tip>
-              <Button
-                __useDeprecatedTag
-                onClick={this.reset}
-                color={Button.ButtonColor.blue}
-                text={i18n.reset()}
-                style={styles.reset}
-                disabled={resetDisabled}
-                className="uitest-reset-password"
-              />
-              {resetDisabled && (
-                <ReactTooltip id={resetTooltipId} role="tooltip" effect="solid">
-                  <div>{i18n.resetTeacherPasswordTooltip()}</div>
-                </ReactTooltip>
-              )}
-            </span>
+            <Button
+              __useDeprecatedTag
+              onClick={this.reset}
+              color={Button.ButtonColor.blue}
+              text={i18n.reset()}
+              style={styles.reset}
+              className="uitest-reset-password"
+            />
             <Button
               __useDeprecatedTag
               onClick={this.hide}
