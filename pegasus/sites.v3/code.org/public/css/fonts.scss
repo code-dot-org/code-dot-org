@@ -1,22 +1,18 @@
+@import 'font';
+
 /*
    Note: do not inline the contents of this file, as @import statements do not work when inlined.
    FontAwesome icons will fail to load.
 
-   If you are changing the location of these files, we also need to update:
-   Applab Exporter: apps/src/applab/Exporter.js
-   hourofcode.com: pegasus/sites.v3/hourofcode.com/styles/030-font-awesome-min.css
-   code.org: pegasus/sites.v3/code.org/public/css/font-awesome.css
-             pegasus/sites.v3/code.org/public/css/font-awesome.min.css
-   dashboard: dashboard/app/stylesheets/application.scss
-
-   Also see readme in this directory for more detail on manual steps to when uploading new files.
+   If you are changing the location of these files,
+   see readme in the top-level shared/css directory for more detail on manual steps to when uploading new files.
  */
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/fontawesome.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/brands.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/solid.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/regular.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/v4-font-face.min.css");
-@import url("https://dsco.code.org/assets/font-awesome-pro/1682441295/css/v4-shims.min.css");
+@import url($font-awesome-core-url);
+@import url($font-awesome-brands-url);
+@import url($font-awesome-solid-url);
+@import url($font-awesome-regular-url);
+@import url($font-awesome-v4-fonts-url);
+@import url($font-awesome-v4-shims-url);
 
 /*
 	Copyright (C) 2011-2014 Hoefler & Co.
