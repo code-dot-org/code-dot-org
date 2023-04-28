@@ -1,52 +1,47 @@
-import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
+
 import {createUuid} from '@cdo/apps/utils';
-import FontAwesome from '../../templates/FontAwesome';
+import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import msg from '@cdo/locale';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 
 import {
   select,
   GENERATOR_DROPDOWNS_PREFIX
 } from './animationPickerImageGeneratorDropdowns';
-
 import {
   generateOpenAIImage,
   uploadGeneratedBase64Image
-  // uploadGeneratedImageUrl
 } from '../../util/generateImage.js';
 import {
-  hide,
-  pickNewAnimation,
-  pickLibraryAnimation,
   beginUpload,
   handleUploadComplete,
   handleUploadError,
   saveSelectedAnimations
 } from '../redux/animationPicker.js';
-
-import msg from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import SearchBar from '@cdo/apps/templates/SearchBar';
 import TabView from '../../componentLibrary/TabView.jsx';
-
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
-import project from '@cdo/apps/code-studio/initApp/project';
-import {connect} from 'react-redux';
-
-// import AnimationPreview from './AnimationPreview.jsx';
 
 class AnimationPickerImageGenerator extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      useDropdowns: false,
       query: '',
       results: [],
-      loading: false
+      loading: false,
+      profanityCheckEnabled: true,
+      errorMessage: ''
     };
   }
 
-  static propTypes = {};
+  static propTypes = {
+    onUploadStart: PropTypes.func.isRequired,
+    onUploadDone: PropTypes.func.isRequired,
+    channelId: PropTypes.string.isRequired
+  };
 
   handleUploadClick = idx => {
     const filename = createUuid() + '.png';
@@ -56,66 +51,51 @@ class AnimationPickerImageGenerator extends React.Component {
       filename,
       this.state.results[idx].b64_json
     ).then(result => {
-      console.log('before JSON parse ', result);
       const jsResult = JSON.parse(result);
-      console.log('uploaded! result ' + jsResult);
       this.props.onUploadDone(jsResult);
     });
   };
 
   onSearchQueryChange = ({target: {value}}) => {
-    this.setState({query: value});
+    this.setState({query: value, errorMessage: ''});
   };
 
   handleGenerateClick = () => {
-    this.setState({loading: true});
-    console.log('selecting your animations!');
-    console.log('query: ', this.state.query);
-    const prompt = generateOpenAIImage(this.state.query)
-      .then(results => {
-        console.log('here are my results', results);
-        this.setState({results, query: '', loading: false});
-      })
-      .catch(err => {
-        console.log('error: ', err);
-      });
-  };
+    const {query, profanityCheckEnabled} = this.state;
+    this.setState({loading: true, errorMessage: '', results: []});
 
-  handleDropdownChange = ({target: {value}}) => {
-    var emotion = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-emotions`
-    ).value;
-    var color = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-colors`
-    ).value;
-    var animal = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-animals`
-    ).value;
-    // var number = document.getElementById(
-    //   `${GENERATOR_DROPDOWNS_PREFIX}-number`
-    // ).value;
-    // var bodyPart = document.getElementById(
-    //   `${GENERATOR_DROPDOWNS_PREFIX}-bodyParts`
-    // ).value;
-    var artisticStyle = document.getElementById(
-      `${GENERATOR_DROPDOWNS_PREFIX}-artisticStyles`
-    ).value;
-    console.log(
-      'setting State',
-      `${emotion} ${color} ${animal} ${artisticStyle}`
+    generateOpenAIImage(query, {profanityCheckEnabled}).then(
+      result => {
+        this.setState({results: result, loading: false});
+      },
+      jqXHR => {
+        const errorMessage = jqXHR.responseJSON && jqXHR.responseJSON.error;
+        this.setState({
+          loading: false,
+          errorMessage: errorMessage || 'An error occurred'
+        });
+      }
     );
-    this.setState({
-      query: `${emotion} ${color} ${animal} ${artisticStyle}`
-    });
   };
 
-  renderGeneratedImages = () => {
-    let elements;
-    const {results} = this.state;
-    console.log('results: ', results);
-    // let openAISrc = 'https://picsum.photos/200/300';
+  handleDropdownChange = () => {
+    let query = '';
+    Object.keys(select).forEach(key => {
+      console.log('checking key', key);
+      const value = document.getElementById(
+        `${GENERATOR_DROPDOWNS_PREFIX}-${key}`
+      ).value;
+      query += `${value} `;
+    });
 
-    elements = results.map((result, index) => {
+    this.setState({query});
+  };
+
+  // TODO: Update to use existing Animation Preview component?
+  renderGeneratedImages = () => {
+    const {results} = this.state;
+
+    return results.map((result, index) => {
       let src = `data:image/png;base64,${result.b64_json}`;
       return (
         <button
@@ -128,25 +108,34 @@ class AnimationPickerImageGenerator extends React.Component {
         </button>
       );
     });
-    console.log('elements: ', elements);
-    return elements;
   };
 
+  renderProfanityCheckbox = () => (
+    <div
+      styles={{
+        verticalAlign: 'top',
+        marginRight: 15
+      }}
+    >
+      <label htmlFor="profanityCheckEnabled">
+        <input
+          type="checkbox"
+          id="profanityCheckEnabled"
+          name="profanityCheckEnabled"
+          checked={this.state.profanityCheckEnabled}
+          onChange={() => {
+            const {profanityCheckEnabled} = this.state;
+            this.setState({profanityCheckEnabled: !profanityCheckEnabled});
+          }}
+        />
+        Enable profanity checking
+      </label>
+    </div>
+  );
+
   render() {
-    console.log('!!this.state.results.length: ', !!this.state.results.length);
     return (
       <>
-        {/* <div>
-          {this.state.useDropdowns ? (
-            <div>
-            </div>
-          ) : (
-            <SearchBar
-              placeholderText={msg.animationGeneratePlaceholder()}
-              onChange={this.onSearchQueryChange}
-            />
-          )}
-        </div> */}
         <TabView
           tabs={[
             {
@@ -158,6 +147,7 @@ class AnimationPickerImageGenerator extends React.Component {
                     placeholderText={msg.animationGeneratePlaceholder()}
                     onChange={this.onSearchQueryChange}
                   />
+                  {this.renderProfanityCheckbox()}
                 </div>
               )
             },
@@ -165,16 +155,16 @@ class AnimationPickerImageGenerator extends React.Component {
               key: 'dropdowns',
               name: 'Dropdowns',
               renderFn: () => (
-                <form style={{marginTop: 10}}>
-                  I would like a {select.emotions(this.handleDropdownChange)}{' '}
-                  {select.colors(this.handleDropdownChange)}{' '}
-                  {select.animals(this.handleDropdownChange)}
-                  {/* with{' '}
-                  {select.number(this.handleDropdownChange)}{' '}
-                  {select.bodyParts(this.handleDropdownChange)}. */}
-                  in the style of
-                  {select.artisticStyles(this.handleDropdownChange)}
-                </form>
+                <>
+                  <form style={{marginTop: 10}}>
+                    I would like a {select.emotions(this.handleDropdownChange)}{' '}
+                    {select.colors(this.handleDropdownChange)}{' '}
+                    {select.animals(this.handleDropdownChange)}
+                    in the style of
+                    {select.artisticStyles(this.handleDropdownChange)}
+                  </form>
+                  {this.renderProfanityCheckbox()}
+                </>
               )
             }
           ]}
@@ -187,6 +177,9 @@ class AnimationPickerImageGenerator extends React.Component {
         {this.state.loading && (
           <FontAwesome icon="spinner" className="fa-fw fa-spin" />
         )}
+        {!!this.state.errorMessage.length && (
+          <span>{this.state.errorMessage}</span>
+        )}
         {!!this.state.results.length && this.renderGeneratedImages()}
       </>
     );
@@ -194,32 +187,11 @@ class AnimationPickerImageGenerator extends React.Component {
 }
 
 export default connect(null, dispatch => ({
-  onClose() {
-    dispatch(hide());
-  },
-  onPickNewAnimation() {
-    dispatch(pickNewAnimation());
-  },
-  // onPickLibraryAnimation(animation) {
-  //   dispatch(pickLibraryAnimation(animation));
-  // },
   onUploadStart(filename) {
-    // console.log('here is my data in onUploadStart', data);
-    // if (data.files[0].size >= MAX_UPLOAD_SIZE) {
-    //   dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
-    // } else if (
-    //   data.files[0].type === 'image/png' ||
-    //   data.files[0].type === 'image/jpeg'
-    // ) {
-    //   dispatch(beginUpload(data.files[0].name));
-    //   data.submit();
-    // } else {
-    //   dispatch(handleUploadError(msg.animationPicker_unsupportedType()));
-    // }
+    // TODO: Check filesize and filetype?
     dispatch(beginUpload(filename));
   },
   onUploadDone(result) {
-    console.log('result in onUploadDone: ', result);
     dispatch(handleUploadComplete(result));
   },
   onUploadError(status) {
