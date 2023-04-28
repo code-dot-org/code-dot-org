@@ -1536,6 +1536,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -1791,6 +1792,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -1845,3 +1847,7 @@ el:
               display_name: Συναρτήσεις
             csf_nested_loops:
               display_name: Συνθήκες
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Εισαγωγή
