@@ -354,25 +354,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   ) {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
-    this.unusedSvg_.render(this.svgGroup_, this.RTL);
-  };
-
-  const googleBlocklyRender = blocklyWrapper.BlockSvg.prototype.render;
-  blocklyWrapper.BlockSvg.prototype.render = function (opt_bubble) {
-    googleBlocklyRender.call(this, opt_bubble);
-    this.removeUnusedBlockFrame();
-  };
-
-  // The original Google Blockly dispose() is defined at:
-  // https://github.com/google/blockly/blob/1f862cb878f7eec36b71c638b85d5199bff01fcb/core/block_svg.ts#L863
-  const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
-  // if param healStack is true, then tries to heal any gap by connecting the next
-  // statement with the previous statement
-  // if param animate is true, shows a disposal animation and sound
-  blocklyWrapper.BlockSvg.prototype.dispose = function (healStack, animate) {
-    googleBlocklyDispose.call(this, healStack, animate);
-    this.removeUnusedBlockFrame();
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function () {
@@ -605,6 +588,22 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    // When a block is clicked, dragged or deleted, we remove any "Unused clock" frame.
+    function onBlockClickDragDelete(event) {
+      if (
+        event.type === blocklyWrapper.blockly_.Events.BLOCK_CLICK ||
+        event.type === blocklyWrapper.blockly_.Events.BLOCK_DRAG ||
+        event.type === blocklyWrapper.blockly_.Events.BLOCK_DELETE
+      ) {
+        const block = workspace.getBlockById(event.blockId);
+        if (!block) {
+          return;
+        }
+        block.removeUnusedBlockFrame();
+      }
+    }
+    workspace.addChangeListener(onBlockClickDragDelete);
 
     // Initialize plugin.
     blocklyWrapper.navigationController.init();
