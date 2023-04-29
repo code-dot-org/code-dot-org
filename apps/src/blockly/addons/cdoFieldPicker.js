@@ -4,8 +4,14 @@ const BUTTON_CORNER_RADIUS = 3;
 const BUTTON_INNER_HEIGHT = 16;
 import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
-// This is a customized field which the user clicks to select an option for a customized picker,
-// for example, the location of a sprite or a sound file from a customized modal.
+/**
+ * This is a customized field which the user clicks to select an option from a customized picker,
+ * for example, the location of a sprite from a grid or a sound file from a customized modal.
+ * @param value The initial value of the field.
+ * @param onChange The function that handles the field's editor.
+ * @param onDisplay The function tht handles how the field text is displayed.
+ * @param buttonIcon If the field displyas a button, this is the string that is displayed on the button.
+ */
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
@@ -103,7 +109,7 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   }
 
   /**
-   * Creates an editor for the field.
+   * Create an editor for the field.
    * @override
    */
   showEditor_() {
