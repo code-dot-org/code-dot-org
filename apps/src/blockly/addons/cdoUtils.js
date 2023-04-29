@@ -140,11 +140,11 @@ export function soundField(onChange) {
   const onDisplay = soundPath => {
     return parsePathString(soundPath);
   };
-  return new Blockly.FieldButton('Choose', onChange, onDisplay);
+  return new Blockly.FieldPicker('Choose', onChange, onDisplay);
 }
 
 export function locationField(buttonIcon, onChange, __, onDisplay) {
-  return new Blockly.FieldButton(
+  return new Blockly.FieldPicker(
     DEFAULT_SOUND,
     onChange,
     onDisplay,
