@@ -4,6 +4,8 @@ const BUTTON_CORNER_RADIUS = 3;
 const BUTTON_INNER_HEIGHT = 16;
 import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
+// This is a customized field which the user clicks to select an option for a customized picker,
+// for example, the location of a sprite or a sound file from a customized modal.
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
@@ -23,6 +25,10 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     );
   }
 
+  /**
+   * Validate the changes to a field's value before they are set.
+   * @override
+   */
   doClassValidation_(newValue) {
     if (typeof newValue !== 'string') {
       return null;
@@ -35,6 +41,10 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     return newValue;
   }
 
+  /**
+   * Create the block UI for this field.
+   * @override
+   */
   initView() {
     super.initView();
     if (this.buttonIcon) {
@@ -63,6 +73,11 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   *  Get the text from this field to display on the block. May differ from
+   * `getText` with call to `this.onDisplay` which can change format of text.
+   * @override
+   */
   getDisplayText_() {
     let text = this.getText();
     if (!text) {
@@ -73,8 +88,8 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   }
 
   /**
-Expand All
-	@@ -51,38 +79,20 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
+   * Used to update the value of a field.
+   * @override
    */
   doValueUpdate_(newValue) {
     if (this.value_ !== newValue) {
@@ -88,15 +103,11 @@ Expand All
   }
 
   /**
+   * Creates an editor for the field.
    * @override
    */
   showEditor_() {
     this.onChange();
-  }
-
-  /**
-Expand All
-	@@ -99,18 +109,13 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
