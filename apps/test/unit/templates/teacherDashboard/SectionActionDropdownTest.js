@@ -4,6 +4,7 @@ import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import sinon from 'sinon';
 
 const sections = [
   {
@@ -54,7 +55,7 @@ const sections = [
 
 const DEFAULT_PROPS = {
   sectionData: sections[0],
-  onEdit: () => {},
+  handleEdit: () => {},
   removeSection: () => {},
   toggleSectionHidden: () => {},
   updateRoster: () => {},
@@ -62,6 +63,8 @@ const DEFAULT_PROPS = {
 };
 
 describe('SectionActionDropdown', () => {
+  const onEditFunction = sinon.fake();
+
   it('renders the delete option when a section is not a third party and has zero students', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
@@ -132,5 +135,36 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     expect(wrapper).to.contain('Restore Section');
+  });
+
+  it('sends selected user to the new edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[3]}
+        userId={1539340}
+      />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
+
+  // this test can be deleted once we fully switch over to the new flow
+  it('sends user to the old edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[3]}
+        userId={1539347}
+        handleEdit={onEditFunction}
+      />
+    );
+    expect(wrapper).to.contain('Edit Section Details');
+    wrapper.find('.edit-section-details-link').simulate('click');
+    expect(onEditFunction).to.have.been.calledOnce;
   });
 });
