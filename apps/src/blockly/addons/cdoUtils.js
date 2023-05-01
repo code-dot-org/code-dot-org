@@ -109,40 +109,11 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-export function soundField(onChange) {
-  const capitalizeFirstLetter = function (string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-  const parsePathString = text => {
-    // Example string paths:
-    // 'sound://category_board_games/card_dealing_multiple.mp3'
-    // 'sound://default.mp3'
-    const pathStringArray = text.split('/');
-    let category = '';
-    // Some sounds do not include a category, such as default.mp3
-    if (pathStringArray[2].includes('category_')) {
-      // Example: 'category_board_games' becomes 'Board games: '
-      category = capitalizeFirstLetter(
-        pathStringArray[2].replace('category_', '').replaceAll('_', ' ') + ': '
-      );
-    }
-    // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
-    const soundName = pathStringArray[pathStringArray.length - 1].replace(
-      '.mp3',
-      ''
-    );
-    // Examples: 'Board games: card_dealing_multiple', 'default'
-    const fieldText = `${category}${soundName}`;
-    return fieldText;
-  };
-
-  const onDisplay = soundPath => {
-    return parsePathString(soundPath);
-  };
-  return new Blockly.FieldPicker('Choose', onChange, onDisplay);
+export function soundField(onChange, onDisplay) {
+  return new Blockly.FieldButton('Choose', onChange, onDisplay);
 }
 
 export function locationField(buttonIcon, onChange, __, onDisplay) {
-  // FieldPicker(value, onChange, onDisplay, buttonIcon)
-  return new Blockly.FieldPicker({x: 0, y: 0}, onChange, onDisplay, buttonIcon);
+  // FieldButton(value, onChange, onDisplay, buttonIcon)
+  return new Blockly.FieldButton({x: 0, y: 0}, onChange, onDisplay, buttonIcon);
 }

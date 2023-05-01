@@ -12,7 +12,7 @@ import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
  * @param onDisplay The function tht handles how the field text is displayed.
  * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
-export default class CdoFieldPicker extends GoogleBlockly.Field {
+export default class CdoFieldButton extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
     super(value);
     this.onChange = onChange;
@@ -23,7 +23,7 @@ export default class CdoFieldPicker extends GoogleBlockly.Field {
   }
 
   static fromJson(options) {
-    return new CdoFieldPicker(
+    return new CdoFieldButton(
       options.value,
       options.onChange,
       options.onDisplay,

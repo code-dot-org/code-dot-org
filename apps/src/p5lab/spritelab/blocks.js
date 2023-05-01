@@ -196,9 +196,41 @@ const customInputTypes = {
           libraryOnly: true,
         });
       };
+      const capitalizeFirstLetter = function (string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      };
+      const parsePathString = text => {
+        // Example string paths:
+        // 'sound://category_board_games/card_dealing_multiple.mp3'
+        // 'sound://default.mp3'
+        const pathStringArray = text.split('/');
+        let category = '';
+        // Some sounds do not include a category, such as default.mp3
+        if (pathStringArray[2].includes('category_')) {
+          // Example: 'category_board_games' becomes 'Board games: '
+          category = capitalizeFirstLetter(
+            pathStringArray[2].replace('category_', '').replaceAll('_', ' ') +
+              ': '
+          );
+        }
+        // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
+        const soundName = pathStringArray[pathStringArray.length - 1].replace(
+          '.mp3',
+          ''
+        );
+        // Examples: 'Board games: card_dealing_multiple', 'default'
+        const fieldText = `${category}${soundName}`;
+        return fieldText;
+      };
+      const onDisplay = soundPath => {
+        return parsePathString(soundPath);
+      };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(Blockly.cdoUtils.soundField(onChange), inputConfig.name);
+        .appendField(
+          Blockly.cdoUtils.soundField(onChange, onDisplay),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
