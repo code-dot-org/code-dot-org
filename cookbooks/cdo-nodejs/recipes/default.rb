@@ -18,6 +18,7 @@ if is_ubuntu_18_04 && is_node_18
     url 'https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz'
     checksum '6a4f5c5d76e5c50cef673099e56f19bc3266ae363f56ca0ab77dd2f3c5088c6d'
     version '18.16.0'
+    # compile with all 8 cores on our adhoc instances, but only a fraction of prod/staging
     make_opts ['-j 8']
     path '/usr/local/nodejs-source-18.16.0'
     action :install_with_make
