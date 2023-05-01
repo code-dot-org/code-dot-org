@@ -392,6 +392,7 @@ it:
         csd_external_waze_data: Perché così tanti utenti sono fissati con Waze?
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_drawloop: Introduzione alla funzione ciclica draw
+        csd_gamelab_sprites_1: Introduzione ai personaggi
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
@@ -482,7 +483,7 @@ it:
         applab_intro_sounds: Sviluppo App - Immagini e suoni
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
-        csd_applab_arrays: Introduzione agli array
+        csd_applab_arrays: Introduzione alle matrici (array)
         CSF_skinOverview_Harvester: La contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8

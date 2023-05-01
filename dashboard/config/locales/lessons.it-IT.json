@@ -1200,9 +1200,9 @@
         },
         "csd5-2022/Representing Images": {
           "name": "Rappresentazione di immagini",
-          "overview": "**Domanda del giorno: quale sistema usano i computer per rappresentare le immagini?**\n\nIn questa lezione gli studenti imparano come i computer rappresentano le immagini. Per iniziare la lezione considerano la sfida di trasformare tutta la complessità della visione in uno schema binario. Attraverso una serie di immagini che mostrano come viene effettuata questa trasformazione, gli studenti vengono introdotti al concetto di suddivisione delle immagini in quadrati o «pixel» che possono poi essere attivati o disattivati singolarmente per creare l'intera immagine. Gli studenti eseguono quindi una breve serie di sfide utilizzando il componente di pixelizzazione per disegnare immagini in bianco e nero. Gli esercizi sono progettati per affrontare alcune delle sfide legate alla rappresentazione delle immagini in questo modo. In conclusione, gli studenti stabiliscono collegamenti tra il sistema per la rappresentazione delle immagini e il sistema per la rappresentazione del testo appreso nella lezione precedente.",
-          "preparation": "-   Esercitati a utilizzare per circa 10 minuti il Componente di Pixelizzazione, in modo da prepararti a rispondere alle domande\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
-          "purpose": "Questa lezione introduce un altro sistema comunemente usato per rappresentare i dati in formato binario. Le conclusioni più ovvie del \"Componente di pixelizzazione\" saranno ovviamente che un 1 significa «On» e uno 0 significa «Off». Ciò che potrebbe essere meno ovvio, tuttavia, è che la larghezza e l'altezza dell'immagine devono essere concordate per interpretare anche  i dati sull'immagine binaria. Infine, questa è un'opportunità per esplorare come vengono creati i sistemi per la rappresentazione de i dati. Un'immagine «grezza» è davvero difficile da rappresentare. L'idea di trasformare un'immagine in una griglia di quadrati bianchi e neri semplifica notevolmente questa sfida e la trasforma nel tipo di problema che gli informatici hanno saputo risolvere. Sebbene l'attività di questa lezione possa sembrare come digitare semplicemente 0 e 1, in realtà rivela molto su come le persone pensano alla rappresentazione de i dati in formato binario e quali sfide e compromessi si creano di conseguenza.",
+          "overview": "**Domanda del giorno: quale sistema usano i computer per rappresentare le immagini?**\n\nIn questa lezione gli studenti imparano come i computer rappresentano le immagini. Per iniziare la lezione considerano la sfida di trasformare tutta la complessità della visione in uno schema binario. Attraverso una serie di immagini che mostrano come viene effettuata questa trasformazione, gli studenti vengono introdotti al concetto di suddivisione delle immagini in quadrati o «pixel» che possono poi essere attivati o disattivati singolarmente per creare l'intera immagine. Gli studenti eseguono quindi una breve serie di sfide utilizzando il Componente per la conversione di pixel per disegnare immagini in bianco e nero. Gli esercizi sono progettati per affrontare alcune delle sfide legate alla rappresentazione delle immagini in questo modo. In conclusione, gli studenti stabiliscono collegamenti tra il sistema per la rappresentazione delle immagini e il sistema per la rappresentazione del testo appreso nella lezione precedente.",
+          "preparation": "-   Esercitati a utilizzare per circa 10 minuti il Componente per la conversione di pixel, in modo da prepararti a rispondere alle domande\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "purpose": "Questa lezione introduce un altro sistema comunemente usato per rappresentare i dati in formato binario. Le conclusioni più ovvie del \"Componente per la conversione di pixel\" saranno ovviamente che un 1 significa «On» e uno 0 significa «Off». Ciò che potrebbe essere meno ovvio, tuttavia, è che la larghezza e l'altezza dell'immagine devono essere concordate per interpretare anche  i dati sull'immagine binaria. Infine, questa è un'opportunità per esplorare come vengono creati i sistemi per la rappresentazione de i dati. Un'immagine «grezza» è davvero difficile da rappresentare. L'idea di trasformare un'immagine in una griglia di quadrati bianchi e neri semplifica notevolmente questa sfida e la trasforma nel tipo di problema che gli informatici hanno saputo risolvere. Sebbene l'attività di questa lezione possa sembrare come digitare semplicemente 0 e 1, in realtà rivela molto su come le persone pensano alla rappresentazione de i dati in formato binario e quali sfide e compromessi si creano di conseguenza.",
           "student_overview": "\\*\\*Domanda del giorno: quale sistema usano i computer per rappresentare le immagini? \\*\\*\n\nIn questa lezione, continuerai a esplorare come creare sistemi per rappresentare i dati usando il sistema binario: questa volta si tratta di immagini!"
         },
         "csd5-2022/Representing Numbers": {
@@ -1221,7 +1221,7 @@
           "student_overview": "\\*\\*Domanda del giorno: come possiamo mantenere segreti i dati e proteggerli da un uso improprio? \\*\\*\n\nIn questa lezione, esplorerai diversi livelli di sicurezza, esaminerai l'importanza della privacy e imparerai a crittografare i dati!"
         },
         "csd5-2022/Create a Representation": {
-          "overview": "\\*\\*Domanda del giorno: come posso rappresentare informazioni complesse usando sistemi binari? \\*\\*\n\nIn questa lezione gli studenti progettano una struttura per rappresentare il loro giorno perfetto utilizzando i sistemi di rappresentazione binaria che hanno appreso in questo capitolo. Gli studenti scriveranno prima una breve descrizione della loro giornata perfetta e poi la esamineranno con un partner per identificare i dati chiave che ritengono possano essere acquisiti da un computer. Durante la lezione, gli studenti decideranno come interpretare una scheda perforata di byte di dati per rappresentare tali informazioni. Gli studenti useranno quindi i formati ASCII, numeri binari e immagini che hanno imparato per rappresentare i loro giorni perfetti. Gli studenti si scambiano quindi le schede perforate e cercano di decodificare com'è la giornata perfetta dell'altro studente. La lezione termina con una riflessione.",
+          "overview": "\\*\\*Domanda del giorno: come posso rappresentare dati complessi usando sistemi binari? \\*\\*\n\nIn questa lezione gli studenti progettano una struttura per rappresentare il loro giorno perfetto utilizzando i sistemi di rappresentazione binaria che hanno appreso in questo capitolo. Gli studenti scriveranno prima una breve descrizione della loro giornata perfetta e poi la esamineranno con un partner per identificare i dati chiave che ritengono possano essere acquisiti da un computer. Durante la lezione, gli studenti decideranno come interpretare una scheda perforata di byte di dati per rappresentare tali dati. Gli studenti useranno quindi i formati ASCII, numeri binari e immagini che hanno imparato per rappresentare i loro giorni perfetti. Gli studenti si scambiano quindi le schede perforate e cercano di decodificare com'è la giornata perfetta dell'altro studente. La lezione termina con una riflessione.",
           "student_overview": "\\*\\*Domanda del giorno: come posso rappresentare informazioni complesse usando sistemi binari? \\*\\*\n\nIn questa lezione, scoprirai come usare i formati ASCII, binari e di immagine per rappresentare il tuo giorno perfetto!"
         },
         "csd5-2022/Problem Solving and Data": {
@@ -1382,7 +1382,7 @@
         "csd3-2022/Random Numbers": {
           "name": "Numeri Casuali",
           "overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nGli studenti vengono introdotti al blocco [\\`randomNumber()\\`(#FFB74D)](/docs/gamelab/randomNumber/) e a come può essere usato per creare nuovi comportamenti nei loro programmi. Quindi imparano come aggiornare le variabili durante un programma. Combinando tutte queste abilità, gli studenti disegnano immagini create in modalità casuale.",
-          "student_overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nIn questa lezione imparerai come usare il blocco `randomNumber ()` per creare nuovi comportamenti nei tuoi programmi!"
+          "student_overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nIn questa lezione imparerai come usare il blocco `randomNumber()` per creare nuovi comportamenti nei tuoi programmi!"
         },
         "csd3-2022/Sprites": {
           "name": "Personaggi",
@@ -1446,7 +1446,7 @@
         },
         "csd3-2022/Collision Detection": {
           "name": "Rilevamento delle collisioni",
-          "overview": "\\*\\*Domanda del giorno: in che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nGli studenti vengono a conoscenza del rilevamento delle collisioni sul computer. Lavorando in coppia, esplorano come un computer potrebbe utilizzare le proprietà di posizione e dimensione del personaggio e la matematica per rilevare se due personaggi si toccano. Quindi usano il blocco [\\`isTouching ()\\`(#f78183)](/docs/gamelab/isTouching/) per creare effetti diversi quando i personaggi si scontrano e si esercitano a usare i blocchi delle istruzioni per modellare varie interazioni.",
+          "overview": "\\*\\*Domanda del giorno: in che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nGli studenti vengono a conoscenza del rilevamento delle collisioni sul computer. Lavorando in coppia, esplorano come un computer potrebbe utilizzare le proprietà di posizione e dimensione del personaggio e la matematica per rilevare se due personaggi si toccano. Quindi usano il blocco [\\`isTouching()\\`(#f78183)](/docs/gamelab/isTouching/) per creare effetti diversi quando i personaggi si scontrano e si esercitano a usare i blocchi delle istruzioni per modellare varie interazioni.",
           "student_overview": "\\*\\*Domanda del giorno: In che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nIn questa lezione imparerai a riconoscere le collisioni esplorando come un computer potrebbe utilizzare la matematica, la posizione e le dimensioni dei personaggi per rilevare se i personaggi si toccano. "
         },
         "csd3-2022/Mini-Project - Side Scroller": {
@@ -1745,14 +1745,26 @@
         "csd4-2022/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd6-2022/Innovations in Computing": {
+          "name": "Innovazioni nell'informatica",
+          "student_overview": "In questa lezione, esplorerai un'ampia varietà di piattaforme informatiche nuove e innovative, ampliando al contempo la tua comprensione di cosa può essere un computer."
+        },
+        "csd6-2022/The Circuit Playground": {
+          "name": "Il Circuit Playground",
+          "student_overview": "In questa lezione conoscerai il Circuit Playground, la scheda integrata che verrà utilizzata nel resto di questa unità. "
+        },
         "csd6-2022/Updating Screen Elements": {
           "name": "Aggiornamento delle schermate"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Eventi della scheda",
+          "student_overview": "In questa lezione imparerai come usare i pulsanti hardware e l'interruttore del Circuit Playground che forniranno l'input al Circuit Playground."
         },
         "csd6-2022/Mini-Project: On-The-Go App": {
           "name": "Mini-progetto: app di rilevamento sul campo"
         },
         "csd6-2022/Color LEDs": {
-          "name": "LED colorati"
+          "name": "LED a colori"
         },
         "csd6-2022/Project: Human Device Interaction": {
           "name": "Progetto: interazione uomo macchina"
@@ -1760,11 +1772,24 @@
         "csd6-2022/Board Sensors": {
           "name": "Sensori della scheda"
         },
+        "csd6-2022/Accelerometer": {
+          "name": "Accelerometro"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Fare musica",
+          "student_overview": "In questa lezione, utilizzerai appieno la funzionalità del cicalino (buzzer) di Circuit Playground producendo suoni, note e canzoni. "
+        },
         "csd6-2022/Functions": {
           "name": "Funzioni"
         },
         "csd6-2022/Physical Inputs and Buttons": {
           "name": "Ingressi fisici e pulsanti"
+        },
+        "csd6-2022/Project - Prototype an Innovation": {
+          "name": "Progetto - Prototipare un'innovazione",
+          "overview": "In questo progetto conclusivo del corso, gli studenti collaborano per sviluppare e collaudare il prototipo di un dispositivo informatico innovativo basato su Circuit Playground. Utilizzando gli ingressi e le uscite disponibili sulla scheda, i gruppi creeranno programmi che consentiranno interazioni utente interessanti e uniche. ",
+          "purpose": "Questa lezione costituisce il momento più important dell'Unità 6 e offre agli studenti l'opportunità di costruire un proprio progetto Maker Toolkit da zero. Questo progetto è un'opportunità per mostrare le competenze tecniche, ma dovranno anche dimostrare collaborazione, riscontri costruttivi tra pari e risoluzione iterativa dei problemi man mano che incontrano ostacoli lungo il percorso. Questo progetto dovrebbe essere diretto dagli studenti ogni volta che è possibile e fornire una conclusione potente e memorabile all'unità finale di \"Alla scoperta dell'Informatica\".",
+          "student_overview": "In questo progetto finale, la tua sfida sarà sviluppare e collaudare un prototipo di dispositivo che interagisca con il mondo fisico attraverso vari tipi di ingressi e uscite e che consenta interazioni utente interessanti e uniche. "
         },
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -2396,8 +2421,47 @@
         "csd3-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd6-2018/Innovations in Computing": {
+          "name": "Innovazioni nell'informatica"
+        },
+        "csd6-2018/Designing Screens with Code": {
+          "name": "Progettare schermate in modalità codice"
+        },
+        "csd6-2018/The Circuit Playground": {
+          "name": "Il Circuit Playground"
+        },
+        "csd6-2018/Input Unplugged": {
+          "name": "Lezione traduzionale sulla gestione degli ingressi"
+        },
+        "csd6-2018/Board Events": {
+          "name": "Eventi della scheda"
+        },
+        "csd6-2018/Getting Properties": {
+          "name": "Impostare le proprietà"
+        },
+        "csd6-2018/Analog Input": {
+          "name": "Ingresso analogico"
+        },
+        "csd6-2018/The Program Design Process": {
+          "name": "Il processo di progettazione del programma"
+        },
+        "csd6-2018/Arrays and Color LEDs": {
+          "name": "Matrici e LED a colori"
+        },
+        "csd6-2018/Making Music": {
+          "name": "Fare musica"
+        },
+        "csd6-2018/Arrays and For Loops": {
+          "name": "Matrici e cicli con contatore"
+        },
+        "csd6-2018/Accelerometer": {
+          "name": "Accelerometro"
+        },
         "csd6-2018/Functions with Parameters": {
           "name": "Funzioni con parametri"
+        },
+        "csd6-2018/Circuits and Physical Prototypes": {
+          "name": "Circuiti e prototipi fisici"
         },
         "csd6-2018/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -2987,8 +3051,47 @@
         "csd3-2019/Project - Design a Game": {
           "name": "Progetto - Progetta un gioco"
         },
+        "csd6-2019/Innovations in Computing": {
+          "name": "Innovazioni nell'informatica"
+        },
+        "csd6-2019/Designing Screens with Code": {
+          "name": "Progettare schermate in modalità codice"
+        },
+        "csd6-2019/The Circuit Playground": {
+          "name": "Il Circuit Playground"
+        },
+        "csd6-2019/Input Unplugged": {
+          "name": "Lezione traduzionale sulla gestione degli ingressi"
+        },
+        "csd6-2019/Board Events": {
+          "name": "Eventi della scheda"
+        },
+        "csd6-2019/Getting Properties": {
+          "name": "Impostare le proprietà"
+        },
+        "csd6-2019/Analog Input": {
+          "name": "Ingresso analogico"
+        },
+        "csd6-2019/The Program Design Process": {
+          "name": "Il processo di progettazione del programma"
+        },
+        "csd6-2019/Arrays and Color LEDs": {
+          "name": "Matrici e LED a colori"
+        },
+        "csd6-2019/Making Music": {
+          "name": "Fare musica"
+        },
+        "csd6-2019/Arrays and For Loops": {
+          "name": "Matrici e cicli con contatore"
+        },
+        "csd6-2019/Accelerometer": {
+          "name": "Accelerometro"
+        },
         "csd6-2019/Functions with Parameters": {
           "name": "Funzioni con parametri"
+        },
+        "csd6-2019/Circuits and Physical Prototypes": {
+          "name": "Circuiti e prototipi fisici"
         },
         "csd4-2019/Understanding Your User": {
           "name": "Comprendere il tuo utente"
@@ -3647,8 +3750,47 @@
         "csd3-2017/Project - Design a Game": {
           "name": "Progetto - Progetta un gioco"
         },
+        "csd6-2017/Innovations in Computing_": {
+          "name": "Innovazioni nell'informatica"
+        },
+        "csd6-2017/Designing Screens with Code_": {
+          "name": "Progettare schermate in modalità codice"
+        },
+        "csd6-2017/The Circuit Playground_": {
+          "name": "Il Circuit Playground"
+        },
+        "csd6-2017/Input Unplugged_": {
+          "name": "Lezione traduzionale sulla gestione degli ingressi"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Eventi della scheda"
+        },
+        "csd6-2017/Getting Properties_": {
+          "name": "Impostare le proprietà"
+        },
+        "csd6-2017/Analog Input_": {
+          "name": "Ingresso analogico"
+        },
+        "csd6-2017/The Program Design Process_": {
+          "name": "Il processo di progettazione del programma"
+        },
+        "csd6-2017/Arrays and Color LEDs__": {
+          "name": "Matrici e LED a colori"
+        },
+        "csd6-2017/Making Music_": {
+          "name": "Fare musica"
+        },
+        "csd6-2017/Arrays and For Loops_": {
+          "name": "Matrici e cicli con contatore"
+        },
+        "csd6-2017/Accelerometer_": {
+          "name": "Accelerometro"
+        },
         "csd6-2017/Functions with Parameters_": {
           "name": "Funzioni con parametri"
+        },
+        "csd6-2017/Circuits and Physical Prototypes_": {
+          "name": "Circuiti e prototipi fisici"
         },
         "csd2-2017/Exploring Websites": {
           "name": "Esplorando siti web"
@@ -5267,8 +5409,104 @@
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
         },
+        "csd6-2021/Innovations in Computing": {
+          "name": "Innovazioni nell'informatica",
+          "assessment_opportunities": "1.  **Individua le innovazioni informatiche all'interno di un determinato campo**\n\n     Guida alle attività, pagina 2: la descrizione del dispositivo, il suo scopo e il tipo di innovazione dovrebbero dimostrare chiaramente cosa fa e perché è innovativo.\n\n2.  **Per un dato dispositivo, articola i probabili input e output**\n\n     Guida alle attività, pagina 2: la descrizione dell'interazione dell'utente dovrebbe identificare molteplici possibili input e output per il dispositivo.\n\n3.  **Suggerisci miglioramenti per aiutare un dispositivo a risolvere meglio un problema specifico**\n\n     Guida alle attività, pagina 2: i miglioramenti suggeriti dovrebbero riguardare lo scopo del dispositivo e il modo in cui viene utilizzato.",
+          "overview": "Per dare il via all'unità finale di questo corso, gli studenti faranno alcune ricerche su alcune interessanti innovazioni nell'informatica. Questa lezione metterà gli studenti di fronte a una più ampia varietà di fattori di natura informatica (l'aspetto di un computer) e a degli ambiti che sono influenzati dall'informatica. Più avanti in questa unità gli studenti esamineranno i dispositivi che hanno incontrato in questa lezione mentre sviluppano i propri dispositivi informatici fisici.",
+          "preparation": "-   Consulta le pagine delle risorse collegate in Code Studio\n-   Trova spunti nei materiali [L'Internet delle cose - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [L'informatica sta cambiando tutto - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Stampa una copia della guida alle attività per ogni studente",
+          "purpose": "Questa lezione getterà le basi per la comprensione da parte degli studenti di come il loro circuito stampato potrebbe essere utilizzato per modellare un dispositivo informatico innovativo. L'obiettivo è indurli a pensare a come i computer possono essere integrati in qualsiasi cosa e iniziare a considerare i potenziali impatti di tali applicazioni.",
+          "student_overview": "In questa lezione, esplorerai un'ampia varietà di piattaforme informatiche nuove e innovative, ampliando al contempo la tua comprensione di cosa può essere un computer."
+        },
+        "csd6-2021/Designing Screens with Code": {
+          "name": "Progettare schermate in modalità codice",
+          "assessment_opportunities": "1.  \\*\\* Impostare le proprietà degli elementi dell'interfaccia utente programmando\\*\\*\n\n    Code Studio: guarda la tabella alla casella 3\n\n2.  **Reagire all'input dell'utente utilizzando un gestore di eventi**\n\n    Code Studio: guarda la tabella alla casella 7\n\n3.  **Scrivere programmi che modificano più elementi su un'unica schermata invece di cambiare schermata**\n\n    Code Studio: guarda la tabella alla casella 12",
+          "overview": "Nell'Unità 4 gli studenti hanno appreso un approccio molto semplice allo sviluppo di app in \"Sviluppo App\" che richiedeva una schermata separato per la maggior parte delle interazioni. Per aumentare i tipi di app che gli studenti possono realizzare e per incoraggiarli a pensare in modi nuovi al modo in cui gli utenti interagiscono con le app, introduciamo il blocco [\\`setProperty()\\`(#fff176)](/docs/applab/setProperty/) block. Questa istruzione può essere utilizzata per impostare il contenuto e le proprietà di vari elementi dell'interfaccia utente, consentendo agli studenti di scrivere programmi che aggiornano le informazioni su una singola schermata, invece di creare manualmente schermate duplicate. In questa lezione gli studenti costruiscono app semplici che richiedono solo un'unica schermata, il cui contenuto viene modificato utilizzando [\\`setProperty()\\`(#fff176)](/docs/applab/setProperty/).",
+          "purpose": "Questa lezione concede agli studenti un po' di tempo per riprendere a programmare con Sviluppo App prima di introdurre Circuit Playground, ma introduce anche l'utile concetto di _\"setter\"_. INell'Unità 4, gli studenti hanno utilizzato principalmente [\\`setScreen()\\`(#fff176)](/docs/applab/setScreen/) per far sì che le loro app rispondano all'interazione dell'utente. Sebbene questa sia una tecnica semplice e utile, può portare a molte duplicazioni di contenuti su più schermi. Utilizzando i _setter_, e successivamente i _getters_, gli studenti possono scrivere app che modificano effettivamente il contenuto su una singola schermata, mostrando e nascondendo o modificando il contenuto o l'aspetto di vari elementi.\n\nUna volta che gli studenti hanno imparato a utilizzare \"getter\" e \"setter\" con elementi dell'interfaccia utente, incoraggiali a riflettere in modo critico su quando utilizzare uno schermata separato nella fase di progettazione di un'app. Se gli schermate sono più simili che diversi, potrebbe essere più efficace cambiare semplicemente gli elementi su una schermata in reazione all'input invece di duplicare il contenuto su più schermate. Mentre agli studenti viene solo presentato [\\`setProperty()\\`(#fff176)](/docs/applab/setProperty/) in questo momento, impareranno in seguito il comando del compagno [\\`getProperty()\\`(#fff176)](/docs/applab/getProperty/).",
+          "student_overview": "In questa lezione, inizierai a creare app che consentono molte interazioni e funzionalità con gli utenti... anche se hanno una sola schermata!"
+        },
+        "csd6-2021/The Circuit Playground": {
+          "name": "Il Circuit Playground",
+          "assessment_opportunities": "1.  **connettere e risolvere i problemi dei dispositivi esterni**\n\n    All'inizio dell'attività online, gli studenti devono connettere le schede da soli, utilizzando la pagina di configurazione per risolvere i problemi più comuni.\n\n2.  **accenderei e spegnerei un LED con codice**\n\n    Code Studio: guarda la tabella alla casella 7.\n\n3.  **utilizzare un programma per controllare un dispositivo fisico**\n\n    Code Studio: guarda la tabella alla casella 12.",
+          "overview": "In questa lezione gli studenti hanno la prima opportunità di scrivere programmi che utilizzano Circuit Playground. Dopo aver prima ispezionato visivamente la scheda e aver ipotizzato le possibili funzionalità, gli studenti vanno online per imparare a scrivere applicazioni che controllano un LED. Combinando gli schermi di Sviluppo App con i Circuit Playgrounds, gli studenti possono iniziare gradualmente a integrare elementi della lavagna come dispositivo di output facendo affidamento su Sviluppo App per l'input dell'utente.",
+          "student_overview": "In questa lezione conoscerai il Circuit Playground, la scheda integrata che verrà utilizzata nel resto di questa unità. "
+        },
+        "csd6-2021/Input Unplugged": {
+          "name": "Lezione traduzionale sulla gestione degli ingressi",
+          "overview": "In vista di approfondire la programmazione con Sviluppo App, gli studenti esploreranno come una manciata di programmi diversi scritti sia in Sviluppo Giochi che in Sviluppo App gestiscono l'acquisizione di input dall'utente. Dopo aver confrontato e confrontato gli approcci che hanno visto nelle app di esempio, gli studenti si raggruppano per mettere in pratica i due diversi modelli di input (condizionali in un ciclo infinito ed eventi asincroni) per comprendere meglio come funzionano.",
+          "student_overview": "In questa lezione, scoprirai due modi diversi in cui un'app può raccogliere input da un utente, mentre imparerai di più sul modello di programmazione basato sugli eventi utilizzato in Sviluppo App."
+        },
+        "csd6-2021/Board Events": {
+          "name": "Eventi della scheda",
+          "assessment_opportunities": "1.  **Collegare un gestore di eventi a un ingresso hardware**\n\n    Code Studio: guarda la tabella alla casella 3.\n\n2.  **Scegliere l'evento appropriato per un determinato scenario**\n\n    Conclusione: gli studenti dovrebbero descrivere diversi scenari che sarebbero più appropriati per diversi eventi.",
+          "overview": "Questa lezione fa si' che gli studenti passino dal considerare il Circuit Playground come strettamente un dispositivo di output all'utilizzarlo come strumento sia per l'input che per l'output. Partendo dai pulsanti hardware e dallo switch, usando i pulsanti hardware e gli switch, gli studenti imparano a usare [\\`onboardEvent()\\`(#f78183)](/docs/applab/onBoardEvent/), analogamente a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), per trarre input dai loro Circuit Playgrounds.",
+          "student_overview": "In questa lezione imparerai come usare i pulsanti hardware e l'interruttore del Circuit Playground che forniranno l'input al Circuit Playground."
+        },
+        "csd6-2021/Getting Properties": {
+          "name": "Impostare le proprietà",
+          "assessment_opportunities": "1.  **Utilizzare i metodi di accesso (getters) degli attributi di una classe per accedere e manipolare le proprietà degli elementi di un sistema**\n\n    Code Studio: guarda la tabella alla casella 5"
+        },
+        "csd6-2021/Analog Input": {
+          "name": "Ingresso analogico",
+          "assessment_opportunities": "1.  **Sviluppare programmi che rispondono agli input analogici**\n\n    Code Studio: guarda la tabella alla casella 11\n\n2.  **Ridimensionare una gamma di numeri per soddisfare un'esigenza specifica**\n\n    Code Studio: guarda la tabella alla casella 11\n\n3.  **Rappresentare in modi diversi il valore di un sensore**\n\n    Code Studio: guarda la tabella alla casella 11",
+          "overview": "In questa lezione, gli studenti esplorano come utilizzare i tre sensori analogici (suono, luce e temperatura) per scrivere programmi che rispondono ai cambiamenti dell'ambiente. L'uso di questi sensori segna una transizione in termini di modalità di interazione degli utenti con un programma. Utilizzando i sensori come input, l'utente di un'app non deve interagire direttamente con essa o può interagire senza rendersene conto.",
+          "preparation": "-   Dai un'idea con il [r analog-digital-video/csd/2021]\n-   Se la tua stanza non è molto luminosa, è utile avere a portata di mano delle torce elettriche o altre fonti di luce per testare il sensore di luce",
+          "purpose": "Questa lezione si basa sulla precedente e introduce i sensori analogici come nuova forma di input. Questi sensori eseguono tutti la conversione da analogico a digitale, consentendo ai programmi di rilevare le cose come rappresentate da un numero a 10 bit (0-1023).",
+          "student_overview": "In questa lezione, esplorerai gli ingressi analogici del Circuit Playground, scrivendo programmi che reagiscono all'ambiente tramite sensori."
+        },
+        "csd6-2021/The Program Design Process": {
+          "name": "Il processo di progettazione del programma",
+          "assessment_opportunities": "1.  **Implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto**\n\n    Il programma finale dovrebbe riflettere le funzioni, gli eventi e la progettazione della schermata come mostrato nella guida del progetto.\n\n2.  **Sviluppare un programma che risponda agli eventi da un input hardware**\n\n    Code Studio: guarda la tabella alla casella 12\n\n3.  **Creare una funzione che utilizza i parametri per generalizzare il comportamento**\n\n    Code Studio: guarda la tabella alla casella 12",
+          "overview": "Questa lezione introduce gli studenti al processo che utilizzeranno per progettare i propri programmi durante questa unità. Questo processo è incentrato su una guida al progetto che chiede agli studenti di progettare le loro schermate, identificare gli elementi del Circuit Playground da utilizzare, definire le variabili e descrivere gli eventi prima di iniziare a programmare. Questo processo è simile al processo di progettazione del gioco che abbiamo usato nell'Unità 3. In questa lezione gli studenti iniziano giocando a un gioco in stile tiro alla fune in cui il codice è nascosto. Discutono di ciò che ritengono debbano essere i componenti, gli eventi e le variabili della scheda per creare il programma. Viene quindi fornita loro una guida completa che mostra un modo per implementare il progetto. Gli studenti vengono quindi guidati attraverso questo processo attraverso una serie di esercizi. Alla fine della lezione gli studenti hanno l'opportunità di apportare miglioramenti al programma per renderlo proprio.",
+          "preparation": "-   Fornisci agli studenti le copie della guida al progetto",
+          "purpose": "Questa lezione dà modo agli studenti di esercitarsi nello sviluppo di un programma su larga scala per prepararli a farlo in modo indipendente. Mentre le lezioni precedenti si sono concentrate sullo sviluppo di competenze relative all'uso di elementi specifici del Circuit Playground e dei relativi concetti di programmazione, questa lezione si concentra sulla combinazione di tutto ciò che è stato appreso finora in un programma più complesso. La lezione approfondisce il processo di sviluppo del software fornendo agli studenti una guida completa al progetto, fornendo un codice iniziale e guidando gli studenti nella sua implementazione. Nelle lezioni successive gli studenti dovranno completare una parte maggiore di questa guida in modo indipendente e per il progetto finale seguiranno questo processo in gran parte in modo indipendente.",
+          "student_overview": "In questa lezione, scoprirai il processo che utilizzerai per progettare i programmi personalizzati di questa unità. "
+        },
+        "csd6-2021/Project: Make a Game": {
+          "name": "Progetto - Crea un gioco",
+          "overview": "Per questo progetto, gli studenti progettano e creano un gioco che sfrutta i nuovi input e output a loro disposizione. Questo progetto è stato volutamente lasciato molto aperto per consentire agli studenti di pensare in modo ampio a come l'output fisico possa essere utile in un'app, dando loro comunque la possibilità di rivedere il processo di sviluppo del programma e provare le nuove funzionalità disponibili tramite Circuit Playground.",
+          "preparation": "-   Stampa una copia della guida al progetto per ogni gruppo di studenti\n-   Stampa una copia della tablla di controllo per ogni studente",
+          "purpose": "Questa valutazione di fine capitolo è un ottimo modo per gli studenti di riunire tutte le cose che hanno imparato (gestori di eventi, uso della lavagna come output, ecc.) in un unico posto. Questo progetto è stato volutamente lasciato molto aperto per consentire agli studenti di pensare in generale a come l'output fisico possa essere utile in un'app: questa è una grande opportunità per incoraggiare gli studenti a rivisitare i programmi che hanno scritto in precedenza in questa unità o nell'Unità 4 che trarrebbero beneficio dall'uso della lavagna per produrre informazioni.",
+          "student_overview": "In questa lezione, prenderai spunto da ciò che hai imparato nel primo capitolo e svilupperai un'app progettata da te che utilizza la lavagna per generare informazioni."
+        },
+        "csd6-2021/Arrays and Color LEDs": {
+          "name": "Matrici e LED a colori",
+          "overview": "Una matrice è una raccolta ordinata di elementi, di solito dello stesso tipo. In questa lezione, gli studenti imparano come accedere a un valore specifico o casuale da un elenco utilizzando il relativo indice. Quindi imparano come accedere alla matrice ColorLEDs che controlla il comportamento dei LED a colori sul Circuit Playground. Gli studenti controlleranno il colore e l'intensità di ogni LED, quindi useranno ciò che hanno imparato per programmare gli schemi luminosi per creare uno spettacolo di luci nel loro Circuit Playground.",
+          "student_overview": "In questa lezione imparerai come accedere alla matrice ColorLEDs che controlla il comportamento dei LED a colori sul Circuit Playground. "
+        },
+        "csd6-2021/Making Music": {
+          "name": "Fare musica",
+          "assessment_opportunities": "1.  **Creare e modificare matrici (array)**\n\n    Code Studio: guarda la tabella alla casella 7\n\n2.  **Utilizzare il cicalino per produrre sequenze di note**\n\n    Code Studio: guarda la tabella alla casella 11\n\n3.  **Riconoscere una matrice (array) come un elenco di elementi su cui è possibile operare in sequenza.**\n\n    Conclusione:  gli studenti dovrebbero riconoscere che il blocco `playNotes` suona in sequenza ogni nota della matrice",
+          "overview": "In questa lezione gli studenti useranno il cicalino al massimo del volume producendo suoni, note e canzoni con il cicalino. Gli studenti iniziano con una breve rassegna dei parametri di frequenza e durata del cicalino, quindi passano al concetto di note. Le note consentono agli studenti di limitarsi alle frequenze utilizzate nella musica occidentale e forniscono uno strato di astrazione che li aiuta a capire quali frequenze potrebbero suonare bene insieme. Una volta che gli studenti sono in grado di suonare le note sul campanello, usano le matrici per mantenere e suonare sequenze di note, riproducendo dei semplici motivi musicali.",
+          "purpose": "Questa lezione consente agli studenti di essere più creativi con il cicalino introducendo il concetto di «nota» e utilizzando matrici per contenere raccolte sequenziali di note. L'uso delle note anziché delle frequenze fornisce uno strato di astrazione che rende più facile per gli studenti identificare i suoni che possono essere usati per fare musica. Le matrici forniscono un modo per raggruppare i suoni in sequenza, in modo che possano essere riprodotti come musica. L'uso del blocco `PlayNotes` per iterare su una serie di note fornisce una base concettuale per lavorare nella prossima lezione con i cicli con contatore `for`.",
+          "student_overview": "In questa lezione, utilizzerai appieno la funzionalità del cicalino (buzzer) di Circuit Playground producendo suoni, note e canzoni. "
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "name": "Matrici e cicli con contatore",
+          "assessment_opportunities": "1.  **Modificare la condizione di uscita di un ciclo con contatore per controllare quante volte si ripete**\n\n    Code Studio: guarda la tabella alla casella 12\n\n2.  **Utilizzare un ciclo con contatore per iterare su una matrice**\n\n    Code Studio: guarda la tabella alla casella 12"
+        },
+        "csd6-2021/Accelerometer": {
+          "name": "Accelerometro",
+          "overview": "In questa lezione, gli studenti esploreranno l'accelerometro e le sue capacità. Acquisiranno familiarità con i suoi eventi e le sue proprietà e creeranno più programmi utilizzando l'accelerometro simili a quelli che probabilmente hanno incontrato nelle applicazioni del mondo reale.",
+          "purpose": "Questa lezione offre agli studenti l'opportunità di lavorare con il sensore dell'accelerometro ed esplorarne le proprietà di orientamento e gli eventi della scheda specifici dell'accelerometro. Gli studenti vedranno lo scopo e gli usi di un accelerometro in dispositivi e programmi del mondo reale e creeranno le proprie versioni di alcune di queste applicazioni. Per fare ciò, gli studenti dovranno fare riferimento alle loro conoscenze passate del contatore per creare app funzionali basate su accelerometri. "
+        },
         "csd6-2021/Functions with Parameters": {
-          "name": "Funzioni con parametri"
+          "name": "Funzioni con parametri",
+          "overview": "La lezione inizia con un rapido ripasso dei parametri, nel contesto dei blocchi di Sviluppo App che gli studenti hanno osservato di recente. Gli studenti esaminano quindi esempi di parametri all'interno delle funzioni create dagli utenti in Sviluppo App e creano e richiamano funzioni con parametri propri, utilizzandoli per controllare più elementi sull'area di gioco. Successivamente, gli studenti usano i cicli per iterare su una matrice, collocando ogni elemento in una funzione. Infine, gli studenti usano ciò che hanno imparato per creare un gioco per catturare le stelle.",
+          "purpose": "Nelle lezioni precedenti, gli studenti hanno utilizzato funzioni per definire blocchi di codice che possono essere utilizzati in più punti di un programma. In questa lezione, gli studenti imparano a utilizzare i parametri per generalizzare lo scopo di una funzione. I parametri consentono a un programma di specificare i dettagli del funzionamento di una funzione quando viene chiamata, anziché quando il programma viene definito. Sebbene gli studenti abbiano visto funzioni con parametri in precedenza nell'unità, questa è la prima volta che ci si aspetta che definiscano e chiamino propri. Gli studenti imparano anche come utilizzare un ciclo con contatore per passare iterativamente gli elementi di una matrice come parametri di una funzione, consentendo loro di utilizzare la stessa funzione su più elementi della schermata.",
+          "student_overview": "In questa lezione, creerai e richiamerai funzioni con parametri, utilizzerai i cicli per iterare su una matrice e infine utilizzerai ciò che hai imparato per creare un gioco per catturare le stelle."
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
+          "name": "Circuiti e prototipi fisici",
+          "overview": "Per prepararsi al progetto finale di questo capitolo, gli studenti impareranno a sviluppare un prototipo di un oggetto fisico che include la scheda Circuit Playground. Utilizzando una guida modellata alla pianificazione del progetto, gli studenti impareranno a cablare un paio di semplici circuiti e a costruire prototipi in grado di esprimere l'aspetto e il funzionamento previsto di un prodotto, utilizzando materiali economici e facilmente reperibili come cartone e nastro adesivo.",
+          "preparation": "-   Raccogli materiali di prototipazione, come:\n    -   Cancelleria (cartoncino, carta da modelli, ecc.)\n    -   Materiale adesivo (nastro, colla, colla a caldo, ecc.)\n    -   Strumenti da bricolage (forbici, cucitrici, ecc.)\n    -   Altri materiali (tazze, fermagli per raccoglitori, lastre di carta, ecc.)\n-   Prepara i materiali per il cablaggio del circuito, come:\n    -   Fili con clip a coccodrillo (inclusi in Circuit Playground kit per l'aula)\n    -   LED (inclusi nel kit per l'aula Circuit Playground)\n    -   Altro materiale conduttivo (filo, graffette, carta d'alluminio, ecc.)\n    -   (opzionale) Pulsanti o interruttori\n-   Stampa una copia della guida al progetto per ogni gruppo di 2-3 studenti\n-   Prepara un modello di pulsante da mostrare alla classe",
+          "purpose": "L'obiettivo di questa lezione è sia quello di illustrare agli studenti l'impatto della progettazione fisica di un prodotto sul processo di prototipazione, sia quello di introdurre alcune abilità pratiche che faciliteranno la creazione dei progetti finali."
+        },
+        "csd6-2021/Project: Prototype an Innovation": {
+          "name": "Progetto - Prototipare un'innovazione",
+          "overview": "In questo progetto conclusivo del corso, gli studenti collaborano per sviluppare e collaudare il prototipo di un dispositivo informatico innovativo basato su Circuit Playground. Utilizzando gli ingressi e le uscite disponibili sulla scheda, i gruppi creeranno programmi che consentiranno interazioni utente interessanti e uniche. ",
+          "preparation": "-   Raccogliere materiali per la prototipazione fisica, ad es.\n    -   Cartone\n    -   Forbici\n    -   Nastro\n    -   Colla\n    -   Fogli\n-   per ogni coppia di studenti stampa una copia della guida al progetto\n-   per ogni studente stampa una copia del foglio di revisione tra pari\n-   per ogni studente stampa una copia della tabella di controllo",
+          "purpose": "Questa lezione costituisce il momento più important dell'Unità 6 e offre agli studenti l'opportunità di costruire un proprio progetto Maker Toolkit da zero. Questo progetto è un'opportunità per mostrare le competenze tecniche, ma dovranno anche dimostrare collaborazione, riscontri costruttivi tra pari e risoluzione iterativa dei problemi man mano che incontrano ostacoli lungo il percorso. Questo progetto dovrebbe essere diretto dagli studenti ogni volta che è possibile e fornire una conclusione potente e memorabile all'unità finale di \"Alla scoperta dell'Informatica\".",
+          "student_overview": "In questo progetto finale, la tua sfida sarà sviluppare e collaudare un prototipo di dispositivo che interagisca con il mondo fisico attraverso vari tipi di ingressi e uscite e che consenta interazioni utente interessanti e uniche. "
         },
         "csd6-2021/CS Discoveries Post-Course Survey": {
           "name": "Sondaggio Post-corso di Alla Scoperta dell'Informatica"
@@ -5290,9 +5528,9 @@
         },
         "csd5-2021/Representing Images": {
           "name": "Rappresentazione di immagini",
-          "overview": "**Domanda del giorno: quale sistema usano i computer per rappresentare le immagini?**\n\nIn questa lezione gli studenti imparano come i computer rappresentano le immagini. Per iniziare la lezione considerano la sfida di trasformare tutta la complessità della visione in uno schema binario. Attraverso una serie di immagini che mostrano come viene effettuata questa trasformazione, gli studenti vengono introdotti al concetto di suddivisione delle immagini in quadrati o «pixel» che possono poi essere attivati o disattivati singolarmente per creare l'intera immagine. Gli studenti eseguono quindi una breve serie di sfide utilizzando il componente di pixelizzazione per disegnare immagini in bianco e nero. Gli esercizi sono progettati per affrontare alcune delle sfide legate alla rappresentazione delle immagini in questo modo. In conclusione, gli studenti stabiliscono collegamenti tra il sistema per la rappresentazione delle immagini e il sistema per la rappresentazione del testo appreso nella lezione precedente.",
-          "preparation": "-   Esercitati per circa 10 minuti a usare il Componente di pixelizzazione in modo da prepararti a rispondere alle domande",
-          "purpose": "Questa lezione introduce un altro sistema comunemente usato per rappresentare i dati in formato binario. Le conclusioni più ovvie del \"Componente di pixelizzazione\" saranno ovviamente che un 1 significa «On» e uno 0 significa «Off». Ciò che potrebbe essere meno ovvio, tuttavia, è che la larghezza e l'altezza dell'immagine devono essere concordate per interpretare anche  i dati sull'immagine binaria. Infine, questa è un'opportunità per esplorare come vengono creati i sistemi per la rappresentazione de i dati. Un'immagine «grezza» è davvero difficile da rappresentare. L'idea di trasformare un'immagine in una griglia di quadrati bianchi e neri semplifica notevolmente questa sfida e la trasforma nel tipo di problema che gli informatici hanno saputo risolvere. Sebbene l'attività di questa lezione possa sembrare come digitare semplicemente 0 e 1, in realtà rivela molto su come le persone pensano alla rappresentazione de i dati in formato binario e quali sfide e compromessi si creano di conseguenza.",
+          "overview": "**Domanda del giorno: quale sistema usano i computer per rappresentare le immagini?**\n\nIn questa lezione gli studenti imparano come i computer rappresentano le immagini. Per iniziare la lezione considerano la sfida di trasformare tutta la complessità della visione in uno schema binario. Attraverso una serie di immagini che mostrano come viene effettuata questa trasformazione, gli studenti vengono introdotti al concetto di suddivisione delle immagini in quadrati o «pixel» che possono poi essere attivati o disattivati singolarmente per creare l'intera immagine. Gli studenti eseguono quindi una breve serie di sfide utilizzando il Componente per la conversione di pixel per disegnare immagini in bianco e nero. Gli esercizi sono progettati per affrontare alcune delle sfide legate alla rappresentazione delle immagini in questo modo. In conclusione, gli studenti stabiliscono collegamenti tra il sistema per la rappresentazione delle immagini e il sistema per la rappresentazione del testo appreso nella lezione precedente.",
+          "preparation": "-   Esercitati per circa 10 minuti a usare il Componente per la conversione di pixel in modo da prepararti a rispondere alle domande",
+          "purpose": "Questa lezione introduce un altro sistema comunemente usato per rappresentare i dati in formato binario. Le conclusioni più ovvie del \"Componente per la conversione di pixel\" saranno ovviamente che un 1 significa «On» e uno 0 significa «Off». Ciò che potrebbe essere meno ovvio, tuttavia, è che la larghezza e l'altezza dell'immagine devono essere concordate per interpretare anche  i dati sull'immagine binaria. Infine, questa è un'opportunità per esplorare come vengono creati i sistemi per la rappresentazione de i dati. Un'immagine «grezza» è davvero difficile da rappresentare. L'idea di trasformare un'immagine in una griglia di quadrati bianchi e neri semplifica notevolmente questa sfida e la trasforma nel tipo di problema che gli informatici hanno saputo risolvere. Sebbene l'attività di questa lezione possa sembrare come digitare semplicemente 0 e 1, in realtà rivela molto su come le persone pensano alla rappresentazione de i dati in formato binario e quali sfide e compromessi si creano di conseguenza.",
           "student_overview": "\\*\\*Domanda del giorno: quale sistema usano i computer per rappresentare le immagini? \\*\\*\n\nIn questa lezione, continuerai a esplorare come creare sistemi per rappresentare i dati usando il sistema binario: questa volta si tratta di immagini!"
         },
         "csd5-2021/Representing Numbers": {
@@ -5312,7 +5550,7 @@
         },
         "csd5-2021/Project - Create a Representation": {
           "name": "Creare una rappresentazione",
-          "overview": "\\*\\*Domanda del giorno: come posso rappresentare informazioni complesse usando sistemi binari? \\*\\*\n\nIn questa lezione gli studenti progettano una struttura per rappresentare il loro giorno perfetto utilizzando i sistemi di rappresentazione binaria che hanno appreso in questo capitolo. Gli studenti scriveranno prima una breve descrizione della loro giornata perfetta e poi la esamineranno con un partner per identificare i dati chiave che ritengono possano essere acquisiti da un computer. Durante la lezione, gli studenti decideranno come interpretare una scheda perforata di byte di dati per rappresentare tali informazioni. Gli studenti useranno quindi i formati ASCII, numeri binari e immagini che hanno imparato per rappresentare i loro giorni perfetti. Gli studenti si scambiano quindi le schede perforate e cercano di decodificare com'è la giornata perfetta dell'altro studente. La lezione termina con una riflessione.",
+          "overview": "\\*\\*Domanda del giorno: come posso rappresentare dati complessi usando sistemi binari? \\*\\*\n\nIn questa lezione gli studenti progettano una struttura per rappresentare il loro giorno perfetto utilizzando i sistemi di rappresentazione binaria che hanno appreso in questo capitolo. Gli studenti scriveranno prima una breve descrizione della loro giornata perfetta e poi la esamineranno con un partner per identificare i dati chiave che ritengono possano essere acquisiti da un computer. Durante la lezione, gli studenti decideranno come interpretare una scheda perforata di byte di dati per rappresentare tali dati. Gli studenti useranno quindi i formati ASCII, numeri binari e immagini che hanno imparato per rappresentare i loro giorni perfetti. Gli studenti si scambiano quindi le schede perforate e cercano di decodificare com'è la giornata perfetta dell'altro studente. La lezione termina con una riflessione.",
           "student_overview": "\\*\\*Domanda del giorno: come posso rappresentare informazioni complesse usando sistemi binari? \\*\\*\n\nIn questa lezione, scoprirai come usare i formati ASCII, binari e di immagine per rappresentare il tuo giorno perfetto!"
         },
         "csd5-2021/Problem Solving and Data": {
@@ -5392,7 +5630,7 @@
         "csd3-2021/Random Numbers": {
           "name": "Numeri Casuali",
           "overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nGli studenti vengono introdotti al blocco [\\`randomNumber()\\`(#FFB74D)](/docs/gamelab/randomNumber/) e a come può essere usato per creare nuovi comportamenti nei loro programmi. Quindi imparano come aggiornare le variabili durante un programma. Combinando tutte queste abilità, gli studenti disegnano immagini create in modalità casuale.",
-          "student_overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nIn questa lezione imparerai come usare il blocco `randomNumber ()` per creare nuovi comportamenti nei tuoi programmi!"
+          "student_overview": "**Domanda del giorno: come possiamo fare in modo che i nostri programmi si comportino in modo diverso ogni volta che vengono eseguiti?**\n\nIn questa lezione imparerai come usare il blocco `randomNumber()` per creare nuovi comportamenti nei tuoi programmi!"
         },
         "csd3-2021/Sprites": {
           "name": "Personaggi",
@@ -5456,7 +5694,7 @@
         },
         "csd3-2021/Collision Detection": {
           "name": "Rilevamento delle collisioni",
-          "overview": "\\*\\*Domanda del giorno: in che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nGli studenti vengono a conoscenza del rilevamento delle collisioni sul computer. Lavorando in coppia, esplorano come un computer potrebbe utilizzare le proprietà di posizione e dimensione del personaggio e la matematica per rilevare se due personaggi si toccano. Quindi usano il blocco [\\`isTouching ()\\`(#f78183)](/docs/gamelab/isTouching/) per creare effetti diversi quando i personaggi si scontrano e si esercitano a usare i blocchi delle istruzioni per modellare varie interazioni.",
+          "overview": "\\*\\*Domanda del giorno: in che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nGli studenti vengono a conoscenza del rilevamento delle collisioni sul computer. Lavorando in coppia, esplorano come un computer potrebbe utilizzare le proprietà di posizione e dimensione del personaggio e la matematica per rilevare se due personaggi si toccano. Quindi usano il blocco [\\`isTouching()\\`(#f78183)](/docs/gamelab/isTouching/) per creare effetti diversi quando i personaggi si scontrano e si esercitano a usare i blocchi delle istruzioni per modellare varie interazioni.",
           "student_overview": "\\*\\*Domanda del giorno: In che modo la programmazione può aiutare a semplificare problemi complicati? \\*\\*\n\nIn questa lezione imparerai a riconoscere le collisioni esplorando come un computer potrebbe utilizzare la matematica, la posizione e le dimensioni dei personaggi per rilevare se i personaggi si toccano. "
         },
         "csd3-2021/Mini-Project: Side Scroller": {

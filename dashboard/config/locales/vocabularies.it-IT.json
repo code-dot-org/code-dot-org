@@ -907,24 +907,44 @@
           "word": "Programma",
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
+        "parameter/csd/2022": {
+          "word": "Parametro"
+        },
         "variable/csd/2022": {
           "word": "Variabile",
           "definition": "Un nome (o etichetta) per un valore che può cambiare."
         },
+        "dot_notation/csd/2022": {
+          "word": "Notazione con il punto",
+          "definition": "Il modo in cui le proprietà dei personaggi vengono utilizzate nell’ambiente Sviluppo Giochi, collegando il nome del personaggio e la relativa proprietà con un punto."
+        },
+        "property/csd/2022": {
+          "word": "Proprietà",
+          "definition": "Un'etichetta per una caratteristica di un personaggio, come la posizione e l'aspetto"
+        },
         "sprite/csd/2022": {
-          "word": "Personaggio"
+          "word": "Personaggio",
+          "definition": "Un personaggio sullo schermo con proprietà che ne descrivono la posizione, il movimento e l'aspetto."
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Espressione booleana",
+          "definition": "in programmazione, un'espressione che restituisce \"vero\" o \"falso\". "
         },
         "condition/csd/2022": {
-          "word": "Condizione"
+          "word": "Condizione",
+          "definition": "Qualcosa che un programma controlla per decidere se permettere o meno una certa azione."
         },
         "conditionals/csd/2022": {
-          "word": "Istruzioni condizionali"
+          "word": "Istruzioni condizionali",
+          "definition": "Dichiarazioni che vengono eseguite solo quando determinate condizioni risultano vere."
         },
         "abstraction/csd/2022": {
-          "word": "Astrazione"
+          "word": "Astrazione",
+          "definition": "una rappresentazione semplificata di qualcosa di più complesso. Le astrazioni ti consentono di nascondere i dettagli per aiutarti a gestire la complessità, concentrarti su concetti pertinenti e ragionare sui problemi a un livello più alto."
         },
         "function/csd/2022": {
-          "word": "Funzione"
+          "word": "Funzione",
+          "definition": "Una parte di codice alla quale è associato un nome e che può essere richiamata più volte."
         },
         "html/csd/2022": {
           "word": "HTML",
@@ -1001,6 +1021,13 @@
         "user_interface/csd/2022": {
           "word": "Interfaccia Utente",
           "definition": "Gli elementi visivi di un programma attraverso i quali un utente controlla o comunica con l'applicazione. Interfaccia utente spesso abbreviata in UI (User Interface)."
+        },
+        "innovation/csd/2022": {
+          "word": "Innovazione"
+        },
+        "circuit/csd/2022": {
+          "word": "Circuito",
+          "definition": "Un dispositivo che fornisce un percorso per il flusso di corrente elettrica, spesso modificando quella corrente. Nei computer, i circuiti consentono semplici operazioni logiche e matematiche utilizzando l'elettricità."
         },
         "machine_learning/csd/2022": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
@@ -1588,9 +1615,33 @@
           "word": "Bug (errore)",
           "definition": "Parte di un programma che non funziona correttamente."
         },
+        "innovation/csd/2021": {
+          "word": "Innovazione",
+          "definition": "Un'idea, un dispositivo, un prodotto, ecc. nuovi o migliorati o il relativo sviluppo"
+        },
+        "analog/csd/2021": {
+          "word": "Analogico",
+          "definition": "Qualsiasi segnale in continuo cambiamento che non è limitato a un insieme finito di valori. Ad esempio, le forme d'onda delle parole pronunciate sono un segnale analogico."
+        },
+        "digital/csd/2021": {
+          "word": "Digitale",
+          "definition": "Dati o segnali rappresentati da un numero finito di valori. I segnali analogici (che possono avere valori infiniti) devono essere convertiti in digitali per poter essere calcolati con essi."
+        },
+        "array/csd/2021": {
+          "word": "Matrice (Array)",
+          "definition": "Una struttura dati in JavaScript utilizzata per rappresentare un elenco."
+        },
         "for_loop/csd/2021": {
           "word": "Cicli con contatore",
           "definition": "Un’istruzione di ripetizione (ciclo) basata su una variabile contatore, caratterizzata da un valore iniziale, un valore finale ed un “passo” (la quantità di cui viene incrementata o decrementata ad ogni ripetizione)."
+        },
+        "parameter/csd/2021": {
+          "word": "Parametro",
+          "definition": "Dato aggiuntivo che può essere passato ad un’istruzione o ad una funzione per personalizzarne il comportamento"
+        },
+        "circuit/csd/2021": {
+          "word": "Circuito",
+          "definition": "Un dispositivo che fornisce un percorso per il flusso di corrente elettrica, spesso modificando quella corrente. Nei computer, i circuiti consentono semplici operazioni logiche e matematiche utilizzando l'elettricità."
         },
         "decode/csd/2021": {
           "word": "Decodifica",
@@ -1635,20 +1686,37 @@
           "word": "Variabile",
           "definition": "Un nome (o etichetta) per un valore che può cambiare."
         },
+        "property/csd/2021": {
+          "word": "Proprietà",
+          "definition": "Un'etichetta per una caratteristica di un personaggio, come la posizione e l'aspetto"
+        },
         "sprite/csd/2021": {
-          "word": "Personaggio"
+          "word": "Personaggio",
+          "definition": "Un personaggio sullo schermo con proprietà che ne descrivono la posizione, il movimento e l'aspetto."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Notazione con il punto",
+          "definition": "Il modo in cui le proprietà dei personaggi vengono utilizzate nell’ambiente Sviluppo Giochi, collegando il nome del personaggio e la relativa proprietà con un punto."
         },
         "condition/csd/2021": {
-          "word": "Condizione"
+          "word": "Condizione",
+          "definition": "Qualcosa che un programma controlla per decidere se permettere o meno una certa azione."
         },
         "conditionals/csd/2021": {
-          "word": "Istruzioni condizionali"
+          "word": "Istruzioni condizionali",
+          "definition": "Dichiarazioni che vengono eseguite solo quando determinate condizioni risultano vere."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Espressione booleana",
+          "definition": "in programmazione, un'espressione che restituisce \"vero\" o \"falso\". "
         },
         "abstraction/csd/2021": {
-          "word": "Astrazione"
+          "word": "Astrazione",
+          "definition": "una rappresentazione semplificata di qualcosa di più complesso. Le astrazioni ti consentono di nascondere i dettagli per aiutarti a gestire la complessità, concentrarti su concetti pertinenti e ragionare sui problemi a un livello più alto."
         },
         "function/csd/2021": {
-          "word": "Funzione"
+          "word": "Funzione",
+          "definition": "Una parte di codice alla quale è associato un nome e che può essere richiamata più volte."
         },
         "computer/csd/2021": {
           "word": "Computer",

@@ -204,13 +204,15 @@
           "rubric_performance_level_1": "Tutti e cinque i pulsanti funzionano come descritto utilizzando i cicli con contatore e i cicli utilizzano la lunghezza della matrice come condizione di uscita, senza errori o codice non necessario.",
           "rubric_performance_level_2": "I pulsanti di accensione e spegnimento funzionano come descritto utilizzando i loop con contatore e non ci sono errori nel codice.",
           "rubric_performance_level_3": "I cicli con contatore vengono utilizzati per accendere e spegnere i LED, ma potrebbero esserci degli errori che impediscono ai pulsanti di funzionare come descritto.",
-          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice."
+          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice.",
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
         },
         "CSD U6 for loop led personalize_2021": {
           "rubric_performance_level_1": "Tutti e cinque i pulsanti funzionano come descritto utilizzando i cicli con contatore e i cicli utilizzano la lunghezza della matrice come condizione di uscita, senza errori o codice non necessario.",
           "rubric_performance_level_2": "I pulsanti di accensione e spegnimento funzionano come descritto utilizzando i loop con contatore e non ci sono errori nel codice.",
           "rubric_performance_level_3": "I cicli con contatore vengono utilizzati per accendere e spegnere i LED, ma potrebbero esserci degli errori che impediscono ai pulsanti di funzionare come descritto.",
-          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice."
+          "rubric_performance_level_4": "Non ci sono cicli con contatore nel codice.",
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
         },
         "CSD U6 getProperty buzzer_2019": {
           "rubric_key_concept": "Usa Utilizza i metodi di accesso (getters) degli attributi di una classe per accedere e manipolare le proprietà degli elementi di un sistema.",
@@ -349,6 +351,12 @@
           "rubric_performance_level_2": "Viene creata una nuova matrice e memorizzata in una variabile, ma potrebbero esserci errori non correlati che impediscono la riproduzione di una nota quando si preme il pulsante destro.",
           "rubric_performance_level_3": "Viene creata una nuova matrice, ma non è memorizzata in un elemento oppure è vuota, quindi il programma non può funzionare come descritto.",
           "rubric_performance_level_4": "Nel programma non ci sono matrici."
+        },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "utilizzare un ciclo con contatore per iterare su una matrice"
         }
       }
     }

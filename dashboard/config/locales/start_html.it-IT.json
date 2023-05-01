@@ -1569,7 +1569,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Informazioni",
@@ -1583,7 +1584,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Informazioni",
@@ -1597,28 +1599,32 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Nascondi",
@@ -1628,19 +1634,22 @@
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Informazioni",
@@ -1649,7 +1658,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Informazioni",
@@ -1658,7 +1669,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Informazioni",
@@ -1667,7 +1680,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -2482,6 +2497,18 @@
           "Dollars per person": "Dollari a persona",
           "Where Should I Eat?": "Dove devo mangiare?",
           "$15": "$15"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Gara degli Emoji"
         }
       }
     }

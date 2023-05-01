@@ -1297,10 +1297,28 @@ it-IT:
         content1: descrizione qui
       CSD U6 LED create intro:
         content1: descrizione qui
+        markdown: |
+          # App per i LED
+
+          Nell'ultimo esercizi, hai creato un'app per controllare il LED con diversi pulsanti sullo schermo. Nei prossimi due esercizi, vedrai altri esempi di app, quindi avrai la possibilità di crearne una tua.
+
+          Mentre guardi gli esempi, pensa a quale codice potrebbe essere utile per l'app che tu e il tuo compagno volete creare.
       CSD U6 LED create intro_2018:
         content1: descrizione qui
+        markdown: |
+          # App per i LED
+
+          Nell'ultimo esercizi, hai creato un'app per controllare il LED con diversi pulsanti sullo schermo. Nei prossimi due esercizi, vedrai altri esempi di app, quindi avrai la possibilità di crearne una tua.
+
+          Mentre guardi gli esempi, pensa a quale codice potrebbe essere utile per l'app che tu e il tuo compagno volete creare.
       CSD U6 LED create intro_2018_2019:
         content1: descrizione qui
+        markdown: |
+          # App per i LED
+
+          Nell'ultimo esercizi, hai creato un'app per controllare il LED con diversi pulsanti sullo schermo. Nei prossimi due esercizi, vedrai altri esempi di app, quindi avrai la possibilità di crearne una tua.
+
+          Mentre guardi gli esempi, pensa a quale codice potrebbe essere utile per l'app che tu e il tuo compagno volete creare.
       CSD U6 array multi:
         answers:
         - {}
@@ -1308,7 +1326,10 @@ it-IT:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: Cosa visualizzerà Sviluppo App quando verrà eseguito il codice a sinistra?
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        title: Utilizzo delle matrici (array)
       CSD U6 array multi_2018:
         answers:
         - {}
@@ -1316,7 +1337,10 @@ it-IT:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: Cosa visualizzerà Sviluppo App quando verrà eseguito il codice a sinistra?
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        title: Utilizzo delle matrici (array)
       CSD U6 array multi_2018_2019:
         answers:
         - {}
@@ -1324,39 +1348,138 @@ it-IT:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: Cosa visualizzerà Sviluppo App quando verrà eseguito il codice a sinistra?
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        title: Utilizzo delle matrici (array)
       CSD U6 final intro:
         content1: descrizione qui
+        markdown: |
+          # Prototipa la tua innovazione
+
+          Ora che hai tutte le competenze di cui hai bisogno, è il momento di creare il tuo gioco!
+
+          Con un compagno o in gruppo, fai un riflessione su diversi dispositivi fisici che potresti prototipare. Puoi basarti sui programmi che hai già creato nelle lezioni precedenti, sui dispositivi innovativi che hai visto nel mondo reale o su qualsiasi idea folle che ti venga in mente.
+
+          Una volta stabilita un'idea con il tuo gruppo di lavoro, compila la Guida al progetto con l bozze dei componenti fisici del tuo dispositivo, gli input e gli output di cui avrai bisogno e pianifica le informazioni che dovrai elaborare.
+
+          ## Idee per l'innovazione
+
+          Per aiutarti a dare il via alla tua attività di riflessione, dai un'occhiata a questi progetti di esempio:
+
+          ### Luce notturna automatica
+
+          Utilizzando filo conduttivo, LED e sensore di luce, crea un'opera decorativa da parete che diventa una luce notturna quando le luci si spengono. Questo è progettato per assomigliare a lucciole tremolanti.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Strumento musicale
+
+          Progetta uno strumento musicale che può essere suonato come preferisci, usando sensori o pulsanti per l'input. In questo caso abbiamo creato cinque nuovi pulsanti utilizzando nastro conduttivo in rame, anche se è possibile utilizzare anche un foglio di alluminio o qualsiasi altro materiale conduttivo.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Crea un gioco! Questo utilizza un array per memorizzare i diversi comandi, che vengono scelti a caso ogni volta che si seguono correttamente le istruzioni sullo schermo.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018:
         content1: descrizione qui
+        markdown: |
+          # Prototipa la tua innovazione
+
+          Ora che hai tutte le competenze di cui hai bisogno, è il momento di creare il tuo gioco!
+
+          Con un compagno o in gruppo, fai un riflessione su diversi dispositivi fisici che potresti prototipare. Puoi basarti sui programmi che hai già creato nelle lezioni precedenti, sui dispositivi innovativi che hai visto nel mondo reale o su qualsiasi idea folle che ti venga in mente.
+
+          Una volta stabilita un'idea con il tuo gruppo di lavoro, compila la Guida al progetto con l bozze dei componenti fisici del tuo dispositivo, gli input e gli output di cui avrai bisogno e pianifica le informazioni che dovrai elaborare.
+
+          ## Idee per l'innovazione
+
+          Per aiutarti a dare il via alla tua attività di riflessione, dai un'occhiata a questi progetti di esempio:
+
+          ### Luce notturna automatica
+
+          Utilizzando filo conduttivo, LED e sensore di luce, crea un'opera decorativa da parete che diventa una luce notturna quando le luci si spengono. Questo è progettato per assomigliare a lucciole tremolanti.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Strumento musicale
+
+          Progetta uno strumento musicale che può essere suonato come preferisci, usando sensori o pulsanti per l'input. In questo caso abbiamo creato cinque nuovi pulsanti utilizzando nastro conduttivo in rame, anche se è possibile utilizzare anche un foglio di alluminio o qualsiasi altro materiale conduttivo.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Crea un gioco! Questo utilizza un array per memorizzare i diversi comandi, che vengono scelti a caso ogni volta che si seguono correttamente le istruzioni sullo schermo.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018_2019:
         content1: descrizione qui
+        markdown: |
+          # Prototipa la tua innovazione
+
+          Ora che hai tutte le competenze di cui hai bisogno, è il momento di creare il tuo gioco!
+
+          Con un compagno o in gruppo, fai un riflessione su diversi dispositivi fisici che potresti prototipare. Puoi basarti sui programmi che hai già creato nelle lezioni precedenti, sui dispositivi innovativi che hai visto nel mondo reale o su qualsiasi idea folle che ti venga in mente.
+
+          Una volta stabilita un'idea con il tuo gruppo di lavoro, compila la Guida al progetto con l bozze dei componenti fisici del tuo dispositivo, gli input e gli output di cui avrai bisogno e pianifica le informazioni che dovrai elaborare.
+
+          ## Idee per l'innovazione
+
+          Per aiutarti a dare il via alla tua attività di riflessione, dai un'occhiata a questi progetti di esempio:
+
+          ### Luce notturna automatica
+
+          Utilizzando filo conduttivo, LED e sensore di luce, crea un'opera decorativa da parete che diventa una luce notturna quando le luci si spengono. Questo è progettato per assomigliare a lucciole tremolanti.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Strumento musicale
+
+          Progetta uno strumento musicale che può essere suonato come preferisci, usando sensori o pulsanti per l'input. In questo caso abbiamo creato cinque nuovi pulsanti utilizzando nastro conduttivo in rame, anche se è possibile utilizzare anche un foglio di alluminio o qualsiasi altro materiale conduttivo.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Crea un gioco! Questo utilizza un array per memorizzare i diversi comandi, che vengono scelti a caso ogni volta che si seguono correttamente le istruzioni sullo schermo.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
-        - {}
+        - text: Leggi il programma e prevedi come apparirà questa app quando verrà
+            eseguita.
         title: Fai una previsione
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
-        - {}
+        - text: Leggi il programma e prevedi come apparirà questa app quando verrà
+            eseguita.
         title: Fai una previsione
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
-        - {}
+        - text: Leggi il programma e prevedi come apparirà questa app quando verrà
+            eseguita.
         title: Fai una previsione
       Dance_Party_extras_intro:
         markdown: |
@@ -7467,13 +7590,35 @@ it-IT:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorando
           in gruppo scrivete programmi per disegnare immagini. "
       Social Sleuth_2018_2019:
-        markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
-          Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
-          Profili\n\nClicca sull'immagine di ogni profilo per aprirlo.\n\n### FaceSpace\n\n|
-          FaceSpace: Lizzie Dell | FaceSpace: John T | FaceSpace: Haley G. |\n| ---------
-          | ------ | ------ |\n| <a href=\"https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/\"
-          target=\"_blank\"> <img src=\"https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11
-          PM.png\" style=\"width:400px\"> </a> | <a "
+        markdown: |+
+          # Investigatore Social
+
+          Avrai bisogno del <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#"> Foglio di lavoro dell'Investigatore Social </a> to complete this activity.
+
+          ## Profili
+
+          Clicca sull'immagine di ciascun profilo per aprirlo.
+
+          ### Spazio del volto (FaceSpace)
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Cinguettio (Chirpr)
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### Cornice istantanea (instantframe)
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
         teacher_markdown: |-
           #### Social Sleuth
 
@@ -10044,6 +10189,12 @@ it-IT:
         title: Test Post-Progetto su Dati e Società
       CSD U6 LED create intro_2021:
         content1: descrizione qui
+        markdown: |
+          # App per i LED
+
+          Nell'ultimo esercizi, hai creato un'app per controllare il LED con diversi pulsanti sullo schermo. Nei prossimi due esercizi, vedrai altri esempi di app, quindi avrai la possibilità di crearne una tua.
+
+          Mentre guardi gli esempi, pensa a quale codice potrebbe essere utile per l'app che tu e il tuo compagno volete creare.
       CSD U6 array multi_2021:
         answers:
         - {}
@@ -10051,17 +10202,52 @@ it-IT:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: Cosa visualizzerà Sviluppo App quando verrà eseguito il codice a sinistra?
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        title: Utilizzo delle matrici (array)
       CSD U6 final intro_2021:
         content1: descrizione qui
+        markdown: |
+          # Prototipa la tua innovazione
+
+          Ora che hai tutte le competenze di cui hai bisogno, è il momento di creare il tuo gioco!
+
+          Con un compagno o in gruppo, fai un riflessione su diversi dispositivi fisici che potresti prototipare. Puoi basarti sui programmi che hai già creato nelle lezioni precedenti, sui dispositivi innovativi che hai visto nel mondo reale o su qualsiasi idea folle che ti venga in mente.
+
+          Una volta stabilita un'idea con il tuo gruppo di lavoro, compila la Guida al progetto con l bozze dei componenti fisici del tuo dispositivo, gli input e gli output di cui avrai bisogno e pianifica le informazioni che dovrai elaborare.
+
+          ## Idee per l'innovazione
+
+          Per aiutarti a dare il via alla tua attività di riflessione, dai un'occhiata a questi progetti di esempio:
+
+          ### Luce notturna automatica
+
+          Utilizzando filo conduttivo, LED e sensore di luce, crea un'opera decorativa da parete che diventa una luce notturna quando le luci si spengono. Questo è progettato per assomigliare a lucciole tremolanti.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Strumento musicale
+
+          Progetta uno strumento musicale che può essere suonato come preferisci, usando sensori o pulsanti per l'input. In questo caso abbiamo creato cinque nuovi pulsanti utilizzando nastro conduttivo in rame, anche se è possibile utilizzare anche un foglio di alluminio o qualsiasi altro materiale conduttivo.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Crea un gioco! Questo utilizza un array per memorizzare i diversi comandi, che vengono scelti a caso ogni volta che si seguono correttamente le istruzioni sullo schermo.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 setProperty predict multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
-        - {}
+        - text: Leggi il programma e prevedi come apparirà questa app quando verrà
+            eseguita.
         title: Fai una previsione
       CSD User Centered Design Post-Project Test_2021:
         title: 'Design Centrato dell''Utente: Test Post-Progetto'
@@ -11359,37 +11545,39 @@ it-IT:
       CSD U5 test_2022:
         title: Test Post-Progetto su Dati e Società
       CSD U6 - Accelerometer - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Board Inputs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Board Outputs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Color LEDs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Combine Inputs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - If Variables - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Music - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Physical Input - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Physical Output - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Screen Inputs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Screen Outputs - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 - Sensors - Chal_2222:
-        display_name: Livelli della Sfida
+        display_name: Esercizi con sfida
       CSD U6 setProperty predict multi_2222:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
-        - {}
+        - text: Leggi il programma e prevedi come apparirà questa app quando verrà
+            eseguita.
         title: Fai una previsione
       CSD U6 test algorithms multi2:
         answers:
@@ -11421,112 +11609,168 @@ it-IT:
             i più utili per scrivere questo programma?
       CSD U6 test debugging multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Il pulsante destro sulla scheda non funziona.
+          correct: true
+        - text: Gli altoparlanti del computer non funzionano.
+        - text: Il nome del file per la canzone triste non è corretto.
+        - text: La scheda non è collegata al computer.
+        - text: Il gestore eventi non dispone dei parametri corretti.
         questions:
-        - {}
+        - text: Una squadra sta creando un prototipo che riproduce un suono allegro
+            sul computer quando si preme il pulsante sinistro della scheda e una canzone
+            triste sul computer quando si preme il pulsante della scheda destra. La
+            canzone felice funziona, ma la canzone triste no. Scegli un problema HARDWARE
+            che potrebbe determinare questo bug.
       CSD U6 test debugging multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Il pulsante destro sulla scheda non funziona.
+          correct: true
+        - text: Gli altoparlanti del computer non funzionano.
+        - text: Il nome del file per la canzone triste non è corretto.
+        - text: La scheda non è collegata al computer.
+        - text: Il gestore eventi non dispone dei parametri corretti.
         questions:
-        - {}
+        - text: Una squadra sta creando un prototipo che riproduce un suono allegro
+            sul computer quando si preme il pulsante sinistro della scheda e una canzone
+            triste sul computer quando si preme il pulsante della scheda destra. La
+            canzone felice funziona, ma la canzone triste no. Scegli un problema HARDWARE
+            che potrebbe determinare questo bug.
       CSD U6 test debugging multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Il pulsante destro sulla scheda non funziona.
+          correct: true
+        - text: Gli altoparlanti del computer non funzionano.
+        - text: Il nome del file per la canzone triste non è corretto.
+        - text: La scheda non è collegata al computer.
+        - text: Il gestore eventi non dispone dei parametri corretti.
         questions:
-        - {}
+        - text: Una squadra sta creando un prototipo che riproduce un suono allegro
+            sul computer quando si preme il pulsante sinistro della scheda e una canzone
+            triste sul computer quando si preme il pulsante della scheda destra. La
+            canzone felice funziona, ma la canzone triste no. Scegli un problema HARDWARE
+            che potrebbe determinare questo bug.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Solo I
+        - text: Solo II
+        - text: I e II
+        - text: I e III
+          correct: true
+        - text: I, II e III
         questions:
         - {}
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Solo I
+        - text: Solo II
+        - text: I e II
+        - text: I e III
+          correct: true
+        - text: I, II e III
         questions:
-        - {}
+        - text: "Cosa deve sapere un programmatore quando crea un event listener (ascoltatore
+            di eventi)?  \n&nbsp;&nbsp;&nbsp;I. L'evento che attiverà la modifica
+            \ \n&nbsp;&nbsp;&nbsp;II. Quando nel programma verrà attivato l'evento
+            \ \n&nbsp;&nbsp;&nbsp;III. Cosa dovrebbe fare il programma quando viene
+            attivato l'evento"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Solo I
+        - text: Solo II
+        - text: I e II
+        - text: I e III
+          correct: true
+        - text: I, II e III
         questions:
-        - {}
+        - text: "Cosa deve sapere un programmatore quando crea un event listener (ascoltatore
+            di eventi)?  \n&nbsp;&nbsp;&nbsp;I. L'evento che attiverà la modifica
+            \ \n&nbsp;&nbsp;&nbsp;II. Quando nel programma verrà attivato l'evento
+            \ \n&nbsp;&nbsp;&nbsp;III. Cosa dovrebbe fare il programma quando viene
+            attivato l'evento"
       CSD U6 test hardware multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: L'hardware deve essere controllato fisicamente da una persona e il
+            software può essere controllato tramite codice.
+        - text: L'hardware consente al software di interagire con il mondo fisico
+            in molti modi diversi.
+          correct: true
+        - text: L'hardware è il tipo di software utilizzato nei prototipi fisici.
+        - text: Hardware e software collaborano per rendere utili i dispositivi informatici.
+          correct: true
+        - text: Nei dispositivi informatici, l'hardware controlla le uscite (output)
+            e il software controlla gli ingressi (input).
         questions:
-        - {}
+        - text: Quali DUE RISPOSTE descrivono meglio la relazione tra hardware (dispositivi
+            fisici) e software (programmi)?
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: L'hardware deve essere controllato fisicamente da una persona e il
+            software può essere controllato tramite codice.
+        - text: L'hardware consente al software di interagire con il mondo fisico
+            in molti modi diversi.
+          correct: true
+        - text: L'hardware è il tipo di software utilizzato nei prototipi fisici.
+        - text: Hardware e software collaborano per rendere utili i dispositivi informatici.
+          correct: true
+        - text: Nei dispositivi informatici, l'hardware controlla le uscite (output)
+            e il software controlla gli ingressi (input).
         questions:
-        - {}
+        - text: Quali DUE RISPOSTE descrivono meglio la relazione tra hardware (dispositivi
+            fisici) e software (programmi)?
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: L'hardware deve essere controllato fisicamente da una persona e il
+            software può essere controllato tramite codice.
+        - text: L'hardware consente al software di interagire con il mondo fisico
+            in molti modi diversi.
+          correct: true
+        - text: L'hardware è il tipo di software utilizzato nei prototipi fisici.
+        - text: Hardware e software collaborano per rendere utili i dispositivi informatici.
+          correct: true
+        - text: Nei dispositivi informatici, l'hardware controlla le uscite (output)
+            e il software controlla gli ingressi (input).
         questions:
-        - {}
+        - text: Quali DUE RISPOSTE descrivono meglio la relazione tra hardware (dispositivi
+            fisici) e software (programmi)?
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Possono essere utilizzati con dispositivi fisici o hardware.
+        - text: Possono essere utilizzati all'interno di un ciclo con contatore
+        - text: Possono essere usati come soluzione generale per problemi con diversi
+            dettagli specifici.
+          correct: true
+        - text: Possono essere usati per eseguire lo stesso codice in molti punti
+            diversi del programma.
+        - text: Possono essere usati per rilevare quando l'utente ha fornito un input.
         questions:
-        - {}
+        - text: Cos'è che fa si' che le funzioni con parametri siano più utili rispetto
+            alle funzioni senza parametri?
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Possono essere utilizzati con dispositivi fisici o hardware.
+        - text: Possono essere utilizzati all'interno di un ciclo con contatore
+        - text: Possono essere usati come soluzione generale per problemi con diversi
+            dettagli specifici.
+          correct: true
+        - text: Possono essere usati per eseguire lo stesso codice in molti punti
+            diversi del programma.
+        - text: Possono essere usati per rilevare quando l'utente ha fornito un input.
         questions:
-        - {}
+        - text: Cos'è che fa si' che le funzioni con parametri siano più utili rispetto
+            alle funzioni senza parametri?
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Possono essere utilizzati con dispositivi fisici o hardware.
+        - text: Possono essere utilizzati all'interno di un ciclo con contatore
+        - text: Possono essere usati come soluzione generale per problemi con diversi
+            dettagli specifici.
+          correct: true
+        - text: Possono essere usati per eseguire lo stesso codice in molti punti
+            diversi del programma.
+        - text: Possono essere usati per rilevare quando l'utente ha fornito un input.
         questions:
-        - {}
+        - text: Cos'è che fa si' che le funzioni con parametri siano più utili rispetto
+            alle funzioni senza parametri?
       CSD User Centered Design Post-Project Test_2022:
         title: 'Design Centrato dell''Utente: Test Post-Progetto'
       CSD Web Development Post-Project Test_pilot_2022:
@@ -12638,25 +12882,28 @@ it-IT:
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Intelligenza artificiale e apprendimento automatico
       csd-post-survey-2018-topic-cryptocurrency:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Criptovalute
       csd-post-survey-2018-topic-cybersecurity:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
         - text: Sicurezza informatica
       csd-post-survey-2018-topic-databases:
@@ -12665,79 +12912,88 @@ it-IT:
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Banche dati
       csd-post-survey-2018-topic-datascience:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Scienza dei dati
       csd-post-survey-2018-topic-gamedev:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Sviluppo di giochi
       csd-post-survey-2018-topic-hardware:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Hardware
       csd-post-survey-2018-topic-internet:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Rete e Internet
       csd-post-survey-2018-topic-mobile:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Progettazione di app per dispositivi mobili
       csd-post-survey-2018-topic-parallel:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Elaborazione in parallelo e distribuita
       csd-post-survey-2018-topic-programming:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
-        - {}
+        - text: Programmazione informatica
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sì
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
         - text: Robotica
       csd-post-survey-2018-topic-web:
@@ -12746,7 +13002,8 @@ it-IT:
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: Non sono sicuro di cosa si tratti
+          correct: true
         questions:
         - {}
       csd-post-survey-2019-I like cs:
@@ -21841,6 +22098,41 @@ it-IT:
           # Iniziare la ricerca
 
           Rivolgiti al tuo insegnante per i siti web consigliati per inizia la tua ricerca. Puoi anche utilizzare alcune delle parole chiave sopra riportate per iniziare a cercare idee specifiche su Internet. Ad esempio, considera di dare un'occhiata ai vari siti di raccolta fondi (come Kickstarter e Indiegogo) per vedere i prodotti che non sono ancora stati lanciati.
+        teacher_markdown: |+
+          Di seguito sono riportati diversi siti web che gli studenti possono utilizzare per iniziare la loro ricerca. Non li abbiamo forniti direttamente agli studenti perché a volte questi siti sono bloccati da programmi di filtraggio distrettuali o l'ultima innovazione degna di nota potrebbe non essere appropriata per la scuola media. **Ti consigliamo vivamente di controllare ogni sito per contenuti inappropriati e di assicurarti che venga caricato sui computer della classe prima di condividerlo con gli studenti**.
+
+          Utilizzando l'elenco seguente come punto di partenza, consigliamo di fornire agli studenti un elenco digitale di siti web di ricerca. Può includere i siti web di seguito e qualsiasi risorsa aggiuntiva che potresti trovare nella tua ricerca.
+
+          ### Tecnologia indossabile
+
+          * [Wareable.com](https://www.wareable.com/)
+
+          ### Salute e sicurezza
+
+          * [Salute moderna](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricoltura
+
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Industria
+
+          * [Settimana dell'impresa](https://www.industryweek.com/technology-and-iiot)
+          * [Stampa 3D](https://3dprinting.com/)
+
+          ### Arte e Design
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa intelligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
       Design a Screen for your App_2018:
         markdown: |
           # Simulazione della tua app
@@ -21853,17 +22145,17 @@ it-IT:
           * Quali colori utilizzar per sfondi, testo e pulsanti
           * Qual è lo stile e la disposizione generale delle pagine?
 
-          # Definire i namespace (serie omodenea di nomi di entità)
+          # Definire lo spazio dei nomi (namespace, ossia la serie omogenea di nomi di entità)
 
-          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "spazio dei nomi" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
 
           * "home_title"
           * "home_loginButton"
           * "home_logo"
         teacher_markdown: |
-          #### Definire i "namespace"
+          #### Definire lo spazio dei nomi (namespace)
 
-          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(spazio dei nomi o namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
 
           #### Lavorare insieme... separatamente
 
@@ -21880,17 +22172,17 @@ it-IT:
           * Quali colori utilizzar per sfondi, testo e pulsanti
           * Qual è lo stile e la disposizione generale delle pagine?
 
-          # Definire i namespace (serie omodenea di nomi di entità)
+          # Definire lo spazio dei nomi (namespace, ossia la serie omogenea di nomi di entità)
 
-          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "spazio dei nomi" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
 
           * "home_title"
           * "home_loginButton"
           * "home_logo"
         teacher_markdown: |
-          #### Definire i "namespace"
+          #### Definire lo spazio dei nomi (namespace)
 
-          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(spazio dei nomi o namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
 
           #### Lavorare insieme... separatamente
 
@@ -21907,17 +22199,17 @@ it-IT:
           * Quali colori utilizzar per sfondi, testo e pulsanti
           * Qual è lo stile e la disposizione generale delle pagine?
 
-          # Definire i namespace (serie omodenea di nomi di entità)
+          # Definire lo spazio dei nomi (namespace, ossia la serie omogenea di nomi di entità)
 
-          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "spazio dei nomi" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
 
           * "home_title"
           * "home_loginButton"
           * "home_logo"
         teacher_markdown: |
-          #### Definire i "namespace"
+          #### Definire lo spazio dei nomi (namespace)
 
-          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(spazio dei nomi o namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
 
           #### Lavorare insieme... separatamente
 
@@ -21934,17 +22226,17 @@ it-IT:
           * Quali colori utilizzar per sfondi, testo e pulsanti
           * Qual è lo stile e la disposizione generale delle pagine?
 
-          # Definire i namespace (serie omodenea di nomi di entità)
+          # Definire lo spazio dei nomi (namespace, ossia la serie omogenea di nomi di entità)
 
-          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "namespace" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
+          Nella prossima lezione metterai insieme tutti le schermate dei membri della tua squadra in un'unica app. Per assicurarti che gli ID su una pagina non siano in conflitto con un'altra, dovrai includere un _"namespace"_ univoco per la tua pagina. Questo sarà qualcosa che aggiungi all'inizio di ogni ID in modo che i tuoi ID elemento non siano in conflitto con gli altri quando unisci insieme le schermate di tutti. Il tuo "spazio dei nomi" dovrebbe essere l'ID della tua schermata con un carattere di sottolineatura alla fine. Ad esempio, se stai creando la home page, potresti utilizzare "home_" come spazio dei nomi, portando a ID come:
 
           * "home_title"
           * "home_loginButton"
           * "home_logo"
         teacher_markdown: |
-          #### Definire i "namespace"
+          #### Definire lo spazio dei nomi (namespace)
 
-          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
+          Garantire che tutti gli studenti creino ID univoci per tutti gli elementi e assegnando loro un corretta definizione omogenea dei nomi **(spazio dei nomi o namespacing)** contribuirà notevolmente a evitare problemi nella prossima lezione, quindi vale la pena essere più rigorosi. Puoi fornire agli studenti la guida opzionale alle attività di progettazione delle schermate per tenere traccia degli ID dei loro elementi.
 
           #### Lavorare insieme... separatamente
 
@@ -22180,3 +22472,78 @@ it-IT:
       CSD-U5-SFLP Combining Representations:
         teacher_markdown: "* [Registro per animali domestici](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
           - Esempio ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))\n"
+      CSD U3 AnimationsMulti STOP project guide:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U3 AnimationsMulti STOP project guide_2018:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U3 AnimationsMulti STOP project guide_2018_2019:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 circuit smart bike blinker build:
+        markdown: |
+          # Costruisci le tue frecce
+
+          Usando il circuito che hai appena costruito, torna al prototipo della tua bici intelligente e aggiungi le frecce.
+      CSD U6 circuit smart bike blinker build_2018:
+        markdown: |
+          # Costruisci le tue frecce
+
+          Usando il circuito che hai appena costruito, torna al prototipo della tua bici intelligente e aggiungi le frecce.
+      CSD U6 circuit smart bike blinker build_2018_2019:
+        markdown: |
+          # Costruisci le tue frecce
+
+          Usando il circuito che hai appena costruito, torna al prototipo della tua bici intelligente e aggiungi le frecce.
+      CSD U6 circuit smart bike blinker build_2021:
+        markdown: |
+          # Costruisci le tue frecce
+
+          Usando il circuito che hai appena costruito, torna al prototipo della tua bici intelligente e aggiungi le frecce.
+      CSD U6 game project stop:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 game project stop_2018:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 game project stop_2018_2019:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 game project stop_2021:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 tugowar stop:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 tugowar stop_2018:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 tugowar stop_2018_2019:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.
+      CSD U6 tugowar stop_2021:
+        markdown: |
+          # Fermati
+
+          Prima di andare avanti con questo progetto, dovrai consultare la Guida al progetto. Attendi anche le indicazioni del tuo insegnante.

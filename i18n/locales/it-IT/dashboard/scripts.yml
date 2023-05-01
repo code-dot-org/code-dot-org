@@ -492,9 +492,9 @@ it:
         csd6-draft:
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -504,9 +504,9 @@ it:
         csd6-2017:
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
             csd_survey:
               display_name: Sondaggio Post-corso
         csd3-draft:
@@ -799,9 +799,9 @@ it:
         csd6-old:
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         csd3-1819draft:
           title: Unità 3 - Animazioni e giochi
           description_short: Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi.
@@ -870,11 +870,12 @@ it:
           description_audience: Da 6 a 10 anni
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         csd6-2018:
+          title: Unità 6 - Informatica fisica ('18-'19)
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
             cspSurvey:
               display_name: Sondaggio
         coursee-2018:
@@ -1363,9 +1364,9 @@ it:
         csd6-2019:
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
             cspSurvey:
               display_name: Sondaggio
         csp4-pilot:
@@ -1871,9 +1872,9 @@ it:
         csd6-2020:
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
             cspSurvey:
               display_name: Sondaggio
         csd3-2020:
@@ -2166,7 +2167,7 @@ it:
               display_name: Correzione errori (debugging)
         csd1-2021:
           title: Risoluzione dei problemi e informatica ('21-'22)
-          description: "Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta. \n\n**Guida all'implementazione per l'Unità 1**\n\n-   Il Capitolo 1 dell'Unità 1 deve essere completato prima di qualsiasi altra unità di \"Alla scoperta dell'informatica\"\n-   Sono previste lezioni alternative per alcune lezioni dell'Unità 1, a seconda del contesto della classe\n-   Puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e la [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) completa per ulteriori informazioni su questa unità"
+          description: "Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta. \n\n**Guida all'organizzazione del corso per l'Unità 1**\n\n-   Il Capitolo 1 dell'Unità 1 deve essere completato prima di qualsiasi altra unità di \"Alla scoperta dell'informatica\"\n-   Sono previste lezioni alternative per alcune lezioni dell'Unità 1, a seconda del contesto della classe\n-   Puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) completa per ulteriori informazioni su questa unità"
           lesson_groups:
             cspSurvey:
               display_name: Sondaggio
@@ -2213,12 +2214,12 @@ it:
           description: |2-
              Nell'Unità 3, svilupperai la tua esperienza di programmazione programmando animazioni, grafica interattiva e giochi in Sviluppo Giochi. L'unità ha inizio con forme semplici e si sviluppa fino a giochi basati su personaggi più sofisticati, utilizzando gli stessi concetti di programmazione e il processo di progettazione che gli informatici utilizzano quotidianamente. Nel progetto finale, svilupperai un programma interattivo personalizzato.
 
-            **Guida all'implementazione dell'Unità 3**
+            **Guida all'organizzazione del corso dell'Unità 3**
 
             -   Completa il Capitolo 1 dell'l'Unità 1 prima di iniziare questa unità
             -   Il Capitolo 1 di questa unità è un prerequisito per l'Unità 6
             -   Le linee guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
-            -   È possibile visualizzare la versione completa della [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e della [Guida all'implementazione](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa unità
+            -   È possibile visualizzare la versione completa della [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e della [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa unità
           description_short: Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi.
           lesson_groups:
             csd3_1:
@@ -2244,11 +2245,11 @@ it:
           description: |-
             L'Unità 4 introduce l'ampio impatto sociale che può avere l'informatica. Attraverso una serie di sfide di progettazione, imparerai a comprendere meglio le esigenze degli altri mentre sviluppi una soluzione a un problema. La seconda metà dell'unità consiste in un progetto iterativo di squadra, durante il quale i gruppi di lavoro hanno l'opportunità di identificare un'esigenza a cui tengono, prototipare soluzioni sia su carta che su Sviluppo App e verificare soluzioni con utenti reali per ottenere commenti di riscontro e promuovere ulteriori iterazioni.
 
-            **Guida all'implementazione per l'Unità 4**
+            **Guida all'organizzazione del corso per l'Unità 4**
 
             -   Completa il Capitolo 1 dell'Unità 1 prima di iniziare questa unità
             -   Questa unità è un prerequisito per passare all'Unità 6 e all'Unità 7
-            -   Per ulteriori informazioni su questa unità è possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
+            -   Per ulteriori informazioni su questa unità è possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2273,10 +2274,10 @@ it:
           description: |-
             L'Unità 5 tratta dell'importanza dei dati nella risoluzione dei problemi ed evidenzia come i computer possono aiutare in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati per rappresentare le informazioni in un computer e le sfide e i compromessi posti dal loro utilizzo. Nel secondo capitolo scoprirai come le raccolte di dati vengono utilizzate per risolvere i problemi e come i computer aiutano ad automatizzare le fasi di questo processo. Il capitolo si conclude considerando come il processo di risoluzione dei problemi relativi ai dati può essere applicato a un ambito a tua scelta.
 
-            **Guida all'implementazione per l'Unità 5**
+            **Guida all'organizzazione del corso per l'Unità 5**
 
             -   Completa il capitolo 1 dell'Unità 1 prima di iniziare questa unità
-            -   Questa unità potrebbe essere sostituita con l'Unità 7 - consulta la [Guida all'implementazione](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa opzione
+            -   Questa unità potrebbe essere sostituita con l'Unità 7 - consulta la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa opzione
             -   Per ulteriori informazioni su questa unità, puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) completa
           lesson_groups:
             csd5_1:
@@ -2299,11 +2300,23 @@ it:
               display_name: Sondaggio
           student_description: L'Unità 5 tratta dell'importanza dei dati nella risoluzione dei problemi ed evidenzia come i computer possono aiutare in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati per rappresentare i dati in un computer e le sfide e i compromessi posti dal loro utilizzo. Nel secondo capitolo scoprirai come le raccolte di dati vengono utilizzate per risolvere i problemi e come i computer aiutano ad automatizzare le fasi di questo processo. Il capitolo si conclude tenendo conto che il processo di risoluzione dei problemi relativi ai dati può essere applicato a un qualsiasi ambito a tua scelta.
         csd6-2021:
+          title: Informatica fisica ('21-'22)
+          description: "L'Unità 6 esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire elaborare flussi di dati in ingresso e in uscita (input e output) più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, vedendo come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale che consiste nell'utilizzare il Circuit Playground come base per un'innovazione della propria progettazione.\n\n**Guida all'organizzazione del corso dell'Unità 6**\n\n-   Prima di iniziare questa unità, completa il Capitolo 1  dell'Unità 1\n-   Questa unità presuppone che gli studenti abbiano completato l'Unità 3, il Capitolo 1 e tutta l'Unità 4. Gli studenti senza questo background potrebbero avere difficoltà in questa unità.\n-   Questa unità richiede che gli studenti abbiano accesso a Circuit Playground - Per ulteriori informazioni sull'uso di Circuit Playground in classe [clicca qui](https://code.org/circuitplayground) \n-   Questa unità potrebbe essere sostituita con l'Unità 7 - consulta la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa opzione\n-   Le linee guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida alla correzione degli errori](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   È possibile visualizzare la [Guida al Piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) completa per ulteriori informazioni su questa unità"
           lesson_groups:
             csd6_1:
-              display_name: 'Capitolo 1: Output Hardware'
+              display_name: 'Capitolo 1: programmare con l''hardware'
+              big_questions: |-
+                -   In che modo il software interagisce con l'hardware?
+                -   In che modo i computer possono percepire e rispondere all'ambiente in cui si trovano?
+                -   Che tipo di informazioni possono essere comunicate con semplici uscite hardware?
+              description: Questa unità inizia con un'attività che incoraggia gli studenti a esplorare un'ampia varietà di piattaforme informatiche non tradizionali, prima di dare il via a una revisione della programmazione in Sviluppo App, con particolare attenzione a una migliore comprensione del modello di programmazione basato sugli eventi introdotto per la prima volta nell'Unità 4. Gli studenti imparano tecniche per rendere più flessibili le app che scrivono modificando gli elementi di progettazione tramite codice anziché affidarsi sempre alla modalità di progettazione. Utilizzando Circuit Playground, esplorano quindi diversi approcci per ricevere input e produrre output utilizzando l'hardware. Alla fine di questo capitolo, gli studenti progetteranno e svilupperanno un gioco che utilizza l'hardware fisico per l'input e l'output.
             csd6_2:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
+              big_questions: |-
+                -   Come fanno i programmatori a lavorare con quantità maggiori di valori simili?
+                -   Come possono essere rappresentate in codice informazioni complesse del mondo reale?
+                -   Come si può utilizzare un hardware semplice per sviluppare nuovi prodotti innovativi?
+              description: Con la comprensione di come utilizzare l'hardware per ricevere input e produrre output, gli studenti passano a pensare a programmi più complessi che integrano hardware e software. Utilizzando i LED a colori come esempio di un gruppo di oggetti simili, gli studenti imparano a usare l matrici per tenere traccia degli elenchi di valori. Da lì introduciamo i cicli con contatore, prima semplicemente come modo per ripetere un blocco di codice e poi come modo per eseguire il codice su ogni elemento di una matrice. Alla fine di questo capitolo gli studenti avranno esplorato tutti i componenti delle loro schede imparando a strutturare il loro codice utilizzando matrici, cicli e funzioni parametriche. Nelle ultime due lezioni gli studenti hanno l'opportunità di approfondire la costruzione di prototipi fisici utilizzando le loro tavole.
             cspSurvey:
               display_name: Sondaggio
         csp1-2021:
@@ -3343,7 +3356,7 @@ it:
         csd6-2022:
           lesson_groups:
             lessonGroup-3:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
             lessonGroup-4:
               display_name: Sondaggio
         csd-post-survey-2022:
@@ -3516,7 +3529,7 @@ it:
         csd6-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3528,7 +3541,7 @@ it:
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -3610,13 +3623,13 @@ it:
         devices-2022:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
               display_name: Ingressi e uscite
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -3830,7 +3843,7 @@ it:
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-hardware1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3847,7 +3860,7 @@ it:
         focus-on-hardware3a-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3891,7 +3904,7 @@ it:
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3912,7 +3925,7 @@ it:
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3941,7 +3954,7 @@ it:
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3982,7 +3995,7 @@ it:
         devices-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: 'Capitolo 2: Input Hardware'
+              display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4013,6 +4026,10 @@ it:
           lessons:
             lesson-10:
               name: Conclusione
+        pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: 'Conclusione '
         pl-csd-summer-day4:
           lessons:
             lesson-12:

@@ -8,7 +8,7 @@ it:
       'AI for Oceans: Types of Fish': 'Intelligenza Artificiale per gli oceani: tipi di pesci'
       'AI: Impact on Society - Video': 'IA: impatto sulla società - Video'
       'AI: Training Data & Bias - Video': 'IA: dati di training e bias - video'
-      Accelerometer Events: Eventi Accelerometro
+      Accelerometer Events: Eventi dell'accelerometro
       Add Content and HTML: Aggiungi contenuto e HTML
       Add Content and Structure to Your Page: Aggiungi contenuto e struttura alla tua pagina
       Add Movement: Aggiungi movimento
@@ -20,6 +20,7 @@ it:
       Adding Pages: Aggiungere pagine
       Adding Screens: Aggiungere Schermate
       Alien Defender: Difensore Alieno
+      Analog Sensors: Sensori analogici
       Animate Your Scene: Animare la Tua Scena
       App Lab Intro - Video: 'App di Introduzione al Laboratorio: video'
       'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
@@ -55,26 +56,30 @@ it:
       Binary Number Widget: Componente per numeri binari
       Binary Numbers: Numeri Binari
       Binary and Data: Sistema binario e dati
-      Board Input and Output: Input e Output del Circuito
+      Board Events: Eventi della scheda
+      Board Input and Output: Ingressi e uscite (input e output) della scheda
       Boolean Comparison: Confronto Booleano
+      Booleans and Comparison Operators: Condizioni logiche (o espressioni booleane) e operatori di confronto
       Build a Platform Jumper: Costruisci un gioco di salto tra piattaforme
       Build a Screen: Costruire una Schermata
-      Building an App: Creare un'App
+      Building an App: Creazione di un'app
       'Bunny ': 'Flipper'
+      Button Circuits: Circuiti con i pulsanti
       CS Discoveries Post-Course Survey: Sondaggio Post-corso di Alla Scoperta dell'Informatica
       CS Discoveries Post-course Survey: Sondaggio Post-corso di Alla Scoperta dell'Informatica
       CSS Classes: Classi CSS
       Cake Defender: Difensore della Torta
       Challenge: Sfida
-      Challenge Levels: Livelli della Sfida
+      Challenge Levels: Esercizi con sfida
       'Challenge: Draw an Image': 'Sfida: Disegna un''Immagine'
       'Challenge: Lists': 'Sfida: elenchi'
       'Challenge: RGB Colors': 'Sfida: colori RGB'
       Challenges: Sfide
       Change: Modifica
       Changing Screens: Modificare le schermate
+      Changing Sensor Scale: Modificare la scala del sensore
       Check Your Work: Controlla il tuo lavoro
-      Checking for a Winner: Cercando un Vincitore
+      Checking for a Winner: Alla ricerca di un vincitore
       'Circuit Playground: Introduction': 'Circuito parco giochi: Introduzione'
       Code Prediction: Prevedere il programma
       Code Your Own Flappy Game: Programma il Tuo Gioco in Stile Flappy Bird
@@ -83,7 +88,7 @@ it:
       Collision Detection: Rilevamento delle collisioni
       Collisions: collisioni
       Collisions in Games: Collisioni nei Giochi
-      Color LEDs: LED colorati
+      Color LEDs: LED a colori
       Combining Projects: Riunificare i progetti
       Combining Representations: Combinazione di rappresentazioni
       Conditionals with Cards - Unplugged Activity: Istruzioni condizionali con le carte da gioco - Attività tradizionale
@@ -106,10 +111,13 @@ it:
       De-bugging with the Step Button: Debugging con il Pulsante di Fase
       Debugging: Correzione errori (debugging)
       Debugging with the Step Button: Debugging con il Pulsante di Fase
+      Demo - Bug Grab: Demo - Afferra l'insetto
       'Demo App: Interactive Card': 'App demo: scheda interattiva'
       Demo Apps: App Demo
       Design Mode: Design Mode
+      Design Your Prototype: Progetta il tuo prototipo
       Design a Screen for your App: Progettare una schermata per la tua app
+      Designing Screens with Code: Progettare schermate in modalità codice
       Designing for Accessibility: Progettare per l'accessibilità
       Digital Sharing - Unplugged Activity: Condivisione digitale - Attività tradizionale
       Dogger Example: È pericoloso attraversare
@@ -117,10 +125,11 @@ it:
       Draw a Background: Disegna uno sfondo
       Drawing: Disegni
       Drawing Shapes: Disegnare Forme
+      Emotion Machine Example: Esempio di macchina delle emozioni
       End of Course Projects: Progetto di Fine Corso
       Events: Eventi
       Events and Linking Screens: Eventi e collegare schermate
-      Events and Properties: Eventi e Proprietà
+      Events and Properties: Eventi e proprietà
       Example: Esempio
       Example Animated Scene: Esempio di scena animata
       Example Apps: App di esempio
@@ -138,11 +147,13 @@ it:
       Explore HTML: Esplora l'HTML
       Exploring more CSS: Esplorare altri CSS
       Extra: Supplementare
+      Extra Challenge: Sfide extra
+      'Extra Challenge: Sound Board': 'Sfida extra: suoni della scheda'
       Finish a Screen: Termina una schermata
-      Finish the Prototype: Finisci un Prototipo
-      Finishing Functions: Finire le Funzioni
-      Finishing Touches: Finire Tocchi
-      Flyer Game: Gioco del Volantino
+      Finish the Prototype: Completa il prototipo
+      Finishing Functions: Funzioni di finitura
+      Finishing Touches: Ritocchi finali
+      Flyer Game: Gioco con personaggi volanti
       Follow the Algorithm - Unplugged Activity: Segui l'algoritmo - Attività tradizionale
       Follow the Mouse: Segui il Topo
       Fonts and Style: Caratteri e Stile
@@ -158,22 +169,27 @@ it:
       Functions with Parameters: Funzioni con parametri
       Geometric Sun: Sole geometrico
       Get In Formation: Tutti in formazione!
+      Getting Properties: Impostare le proprietà
       Graph Paper Programming - Unplugged Activity: Programmazione su carta a quadretti - Attività tradizionale
       Green Glass Door: Porta in vetro verde
       HTML Tags: Tag HTML
+      Hardware and Software: Hardware e software
       Headings: Intestazioni
       Headings in HTML: Intestazioni in HTML
       Hello World: Ciao mondo
       How to Create a Simple Function: Come Creare una Semplice Funzione
       How to Make a Sprite: Come creare un personaggio
       Ice Age Loops: Cicli dell'Era Glaciale
+      If Statements: Istruzioni condizionali
       Images and Sounds: Immagini e Suoni
       Images in HTML: Immagini in HTML
       Importing Screens: Importare le schermate
       Incorporate Feedback: Incorpora commento
-      Input Examples: Esempi di Input
+      Innovation Research: Ricerca sull'innovazione
+      Input Examples: Esempi di input
       Input with If-Else: Input con If-Else
       Inspiration!: Ispirazione!
+      Interactive Card: Scheda interattiva
       Intro to Design Mode: Introduzione alla modalità Design
       Intro to Flyer Game: Introduzione a un gioco di personaggi volanti
       Intro to For Loops: Introduzione ai Cicli Per
@@ -181,8 +197,9 @@ it:
       Intro to Sprites: Introduzione agli Sprite
       Intro to Variables: Introduzione alle Variabili
       Introducing Sprite Lab: Introduzione al Laboratorio dei personaggi
-      Introduction to Arrays: Introduzione agli array
+      Introduction to Arrays: Introduzione alle matrici (array)
       Introduction to Game Lab: Introduzione a Sviluppo Giochi
+      Introduction to Variables: Introduzione alle variabili
       Iteration and Parameters: Iterazione e Parametri
       Keeping Data Secret: Mantenere segreti i dati
       Keyboard Input: Input da tastiera
@@ -191,7 +208,7 @@ it:
       Layout with CSS: Layout con CSS
       Learning from Simulations: Imparare dalle simulazioni
       Lesson Extras: Esercizi supplementari
-      Lesson Overview: Panoramica della Lezione
+      Lesson Overview: Panoramica della lezione
       Levels: Esercizi
       Light Show: Spettacolo di Luci
       Linking Pages: Creare collegamenti alle pagine
@@ -203,9 +220,11 @@ it:
       Make a Prediction: Fai una previsione
       Make an Interactive Card: Crea un biglietto d'auguri interattivo
       Make it Interactive: Rendilo Interattivo
+      Make it Your Own: Personalizzalo
+      Making Music: Fare musica
       Making Scenes: Creare Scene
       Making Songs: Creare Canzoni
-      Making Sounds: Creare Suoni
+      Making Sounds: Creare suoni
       'Maze Intro: Programming with Blocks': 'Introduzione al Labirinto: Programmare con i Blocchi'
       Measures: Battute
       'Minecraft: Hero''s Journey': 'Minecraft: Il viaggio dell''eroe'
@@ -229,6 +248,7 @@ it:
       'Mini-project: Sticker Art': 'Mini progetto - L''arte degli adesivi'
       'Mini-project: Sticker Design': 'Mini progetto - Progettazione degli adesivi'
       Modify simulation variables: Modifica le variabili di simulazione
+      Modifying Arrays: Modifica delle matrici (array)
       More Buttons: Più pulsanti
       More Input: Altri Input
       More Parameters: Più Parametri
@@ -236,7 +256,7 @@ it:
       Move It Move it Video  - Unplugged Activity: Video - Muovilo Muovilo - Attività tradizionale
       Movement with the Counter Pattern: Movimento con lo Schema Contatore
       Multiframe Animations: Animazioni Multi-Fotogramma
-      Musical Arrays: Insiemi Musicali
+      Musical Arrays: Matrici musicali
       My Loopy Robotic Friends - Unplugged Activity: I miei ciclici amici robotici - Attività tradizionale
       My Online Neighborhood: Il mio quartiere digitale
       My Robotic Friends - Unplugged Activity: I miei amici robotici - Attività tradizionale
@@ -258,7 +278,7 @@ it:
       Platform Jumper Review: Revisione di Salto tra piattaforme
       Player Controls: Controlli del personaggio protagonista
       Playing Notes: Riprodurre Note
-      Playing with Notes: Giocare con le Note
+      Playing with Notes: Suonare con le note
       Plotting Shapes in Game Lab: Traccia le Forme nel Game Lab
       Post-Course Survey Instructions: Istruzioni per il sondaggio post-corso
       Practice: Applicazioni pratiche
@@ -272,12 +292,13 @@ it:
       Project Guide: Guida al progetto
       Project Work: Lavoro di progetto
       Properties: Proprietà
+      Prototype an Innovation: Prototipare un'innovazione
       Publishing Your Website: Pubblicare il tuo sito web
       Quarter Notes: Quartine
       Quick Check: Controllo rapido
       RGB Exploration: Esplorazione RGB
       Random Numbers: Numeri Casuali
-      Reading Sensors: Leggere i Sensori
+      Reading Sensors: Sensori di lettura
       Reflection: Riflessione
       Relay Programming - Unplugged Activity: Programmazione a staffetta - Attività tradizionale
       Repeat Blocks: Blocchi Ripeti
@@ -306,26 +327,28 @@ it:
       Sample Personal Web Pages: Pagine Web personali di esempio
       Sample Personal Websites: Sito web personale di esempio
       Sample Platform Jumper Game: Esempio di gioco in salto tra piattaforme
+      Sample Program: Programma di esempio
       Sample Programs: Programmi di esempio
       Sample Web Page: Pagina Web di esempio
       Sample Website: Sito Web di esempio
       Scoring & Scoreboard: Visualizzazione del punteggio
       Screen Design: Progettazione della schermata
-      Sensor Events: Eventi del Sensore
-      Sensors to Colors: Sensori a Colori
+      Sensor Events: Sensori di evento
+      Sensor Experiment: Esperimento con sensori
+      Sensors to Colors: Sensori di colore
       Set Up Sprites: Impostazione dei personaggi
-      Setting Properties: Impostare le Proprietà
+      Setting Properties: Impostazione delle proprietà
       Shapes and Parameters: Forme e Parametri
       Shapes and the Draw Loop: Forme e Cicli Infiniti
       Share Your App: Condividi la Tua App
       Share Your Pages: Condividi le tue pagine
       Share Your Stylesheets: Condividi i tuoi fogli di stile
-      Side Scroller: Scorrimento Laterale
-      Simple Circuits: Circuiti Semplici
+      Side Scroller: Gioco a scorrimento laterale
+      Simple Circuits: Circuiti semplici
       Skill Building: Esercizi per lo sviluppo delle competenze
       Skill-Building: Esercizi per lo sviluppo delle competenze
       Sliders: Cursori
-      Smart Bike - Blinkers: Bici Intelligente - Frecce
+      Smart Bike - Blinkers: Bici Intelligente - Indicatori di direzione (frecce )
       Social Sleuth: Investigatore social
       Songwriting - Functions Unplugged Activity: Composizione di canzoni - Attività tradizionale sulle funzioni
       Speed it Up, Slow it Down: Accelerare, rallentare
@@ -343,10 +366,11 @@ it:
       Teach A.I. a new word: 'Insegna una nuova parola: Intelligenza Artificiale (IA)'
       Teach AI a New Word: 'Apprendimento automatico IA: video'
       Text Compression: Compressione del testo
+      The Accelerometer: L'accelerometro
       The Animation Tab: The Animation Tab
       The Artist in Code Studio: L'Artista in Code Studio
       The Big Event - Unplugged Activity: Il grande evento - Attività tradizionale
-      The Buzzer: Il Cicalino
+      The Buzzer: Il cicalino
       The Collector: Il Collezionista
       The Draw Loop: La funzione ciclica `draw()`
       The Harvester: La contadina
@@ -360,12 +384,13 @@ it:
       Updating Your Prototype: Aggiornamento del tuo prototipo
       Upload Your Images: Carica le tue immagini
       User Interface: Interfaccia Utente
+      Using Arrays: Utilizzo delle matrici (array)
       Using Getters and Setters: Usare Getter e Setter
       Using HTML Tags: Usare Tag HTML
       Using Random Numbers: Usare i Numeri Casuali
       Using Training Data: Utilizzo dei dati di apprendimento
       Using the Grid: Utilizzo della griglia
-      Using the LED: Usare i LED
+      Using the LED: Utilizzo del LED
       Using the Repeat Block: Uso del blocco Ripeti
       Using the Switch: Usare l'Interruttore
       Variables: Variabili
@@ -382,6 +407,7 @@ it:
       'Video: Artist Intro with JR Hildebrande': 'Video - JR Hildebrand presenta l''artista'
       'Video: Booleans': 'Video: condizioni logiche (valori booleani)'
       'Video: CS Matters': 'Video: L''importanza dell''informatica'
+      'Video: Circuits and Logic': 'Video: circuiti e logica'
       'Video: Code Your Own Flappy Game': 'Video - Programma il tuo gioco in stile Flappy'
       'Video: Conditional Statements': 'Video: istruzioni conditionali'
       'Video: Conditionals: If Statements': 'Video - Istruzioni conditionali: le istruzioni "se"'
@@ -421,7 +447,7 @@ it:
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a "Sviluppo Web" - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a "Sviluppo Web - Parte 2'
       'Video: Introducing Sprite Lab': 'Video - Introduzione al Laboratorio dei personaggi'
-      'Video: Introduction to Arrays': 'Video: introduzione agli Insiemi'
+      'Video: Introduction to Arrays': 'Video: Introduzione alle matrici (array)'
       'Video: Introduction to Play Lab': 'Video - Introduzione al Laboratorio'
       'Video: Introduction to Sprites': 'Video: introduzione ai personaggi'
       'Video: Introduction to Variables': 'Video: introduzione alle variabili'

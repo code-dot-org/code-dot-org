@@ -1418,6 +1418,9 @@
         "a2eaee21-e82f-4b0d-aae4-dc6ebc2280c0": {
           "description": "utilizzare un sistema di coordinate per posizionare gli elementi sullo schermo."
         },
+        "13503201-2764-45e3-b644-2f5fd993f710": {
+          "description": "implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
         "14cb0543-587a-4d56-9495-f11715494118": {
           "description": "individuare i motivi per cui qualcuno potrebbe creare un determinato sito web"
         },
@@ -1633,6 +1636,30 @@
         },
         "9cffd1e7-8cf5-43a8-800e-2aab85f50f5b": {
           "description": "presentare informazioni tecniche in modo chiaro agli utenti non tecnici"
+        },
+        "3f866c04-e2cf-4699-9575-cce49347325a": {
+          "description": "riconoscere le innovazioni informatiche in un determinato campo"
+        },
+        "0f02698b-9d9b-490c-8823-ee026fad162d": {
+          "description": "accenderei e spegnerei un LED con codice"
+        },
+        "2ec25831-a76d-4ea0-903c-3083f9308f66": {
+          "description": "connettere e risolverei i problemi dei dispositivi esterni"
+        },
+        "ce118709-28f6-4348-9a5e-a7376dc85e5c": {
+          "description": "impostare le proprietà degli elementi dell'interfaccia utente programmando"
+        },
+        "78d91696-530a-4830-bbdc-3a45ff7bb276": {
+          "description": "ridimensionare una gamma di numeri per soddisfare un'esigenza specifica"
+        },
+        "063186ca-fd1a-4987-8e3a-1591d644f5f1": {
+          "description": "utilizzare l'evento data per aggiornare continuamente le proprietà di un elemento."
+        },
+        "bb2ce050-aadf-4e28-a0f3-ffc7f2bd5a9f": {
+          "description": "prototipare un dispositivo informatico fisico"
+        },
+        "bbfa6e4b-af5f-4688-95df-db2e80a875fe": {
+          "description": "implementare un piano per lo sviluppo di un software che integri ingressi e uscite hardware"
         },
         "90a07378-8a2f-4986-9124-1b14f1f57de9": {
           "description": "mettere in pratica il processo di risoluzione dei problemi per addestrare un computer a risolvere un problema"
@@ -2942,6 +2969,111 @@
         "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
           "description": "riflettiere sullo sviluppo di un progetto in corso"
         },
+        "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
+          "description": "riconoscere le innovazioni informatiche in un determinato campo"
+        },
+        "494a4afe-5479-4e4f-b656-99ddc4781740": {
+          "description": "definire gli ingressi e le uscite più adeguati per un determinato dispositivo"
+        },
+        "c06e8dad-fa68-43cd-a53a-ed66bd90cee4": {
+          "description": "suggerire miglioramenti per aiutare un dispositivo a risolvere meglio un problema specifico"
+        },
+        "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
+          "description": "impostare le proprietà degli elementi dell'interfaccia utente programmando"
+        },
+        "04724c46-add4-4ec1-af15-4c44eed0a91b": {
+          "description": "reagire all'input dell'utente utilizzando un gestore di eventi"
+        },
+        "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
+          "description": "scrivere programmi che modificano più elementi su un'unica schermata invece di cambiare schermata"
+        },
+        "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
+          "description": "connettere e risolverei i problemi dei dispositivi esterni"
+        },
+        "d69128fd-98d6-4897-966d-76362dbaf0ac": {
+          "description": "accenderei e spegnerei un LED con codice"
+        },
+        "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
+          "description": "utilizzare un programma per controllare un dispositivo fisico"
+        },
+        "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
+          "description": "collegare un gestore di eventi a un ingresso hardware"
+        },
+        "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
+          "description": "scegliere l'evento appropriato per un determinato scenario"
+        },
+        "21ba6c31-018e-4d23-b652-77d6ef65324d": {
+          "description": "utilizzare i metodi di accesso (getters) degli attributi di una classe per accedere e manipolare le proprietà degli elementi di un sistema"
+        },
+        "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
+          "description": "sviluppare programmi che rispondono agli input analogici"
+        },
+        "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
+          "description": "ridimensionare una gamma di numeri per soddisfare un'esigenza specifica"
+        },
+        "5b183dd0-2691-4e31-81d2-74139e335e46": {
+          "description": "rappresentare in modi diversi il valore di un sensore"
+        },
+        "52c81204-19e3-433f-a6f2-9c7342c37b72": {
+          "description": "implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
+        },
+        "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
+          "description": "sviluppare un programma che risponda agli eventi da un input hardware"
+        },
+        "5e15877a-55c0-434e-b794-1277ca716016": {
+          "description": "creare una funzione che utilizza i parametri per generalizzare il comportamento"
+        },
+        "ae74915c-b485-44a1-a60b-a4051c1abca7": {
+          "description": "usare i gestori di eventi per reagire all'interazione dell'utente"
+        },
+        "a36af5cd-1af2-482c-8475-ebd96ef5ebf9": {
+          "description": "progettare un software che utilizzi hardware per input e output non tradizionali"
+        },
+        "84079c5a-326d-4fda-9439-acd6478673b3": {
+          "description": "prototipare un programma che integri software e hardware"
+        },
+        "5f30c244-1a5b-4db9-87bf-71b0e651d2f1": {
+          "description": "creare e modificare matrici (array)"
+        },
+        "f739947f-be77-462b-b0ef-3823349016ef": {
+          "description": "utilizzare il cicalino per produrre sequenze di note"
+        },
+        "4449a257-a6e6-426f-a87b-a1ef39ea777f": {
+          "description": "riconoscere una matrice (array) come un elenco di elementi su cui è possibile operare in sequenza."
+        },
+        "8a9102e9-704c-452b-b063-62f6b63d2627": {
+          "description": "modificare la condizione di uscita di un ciclo con contatore per controllare quante volte si ripete"
+        },
+        "bb5539ee-e0af-4379-9179-2bebc947c741": {
+          "description": "utilizzare un ciclo con contatore per iterare su una matrice"
+        },
+        "eb28a603-8753-4a84-ad3e-fe5566c8ee76": {
+          "description": "riconoscere l'uso e la necessità dell'orientamento dell'accelerometro (come il controllo di beccheggio e rollio: pitch and roll)."
+        },
+        "cbd66e36-6a02-4227-8674-70636d61b455": {
+          "description": "utilizzare l'evento data per aggiornare continuamente le proprietà di un elemento."
+        },
+        "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
+          "description": "utilizzare i parametri per generalizzare lo scopo di una funzione."
+        },
+        "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
+          "description": "elaborare ed eseguire il debug di semplici circuiti"
+        },
+        "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
+          "description": "sviluppare un prototipo fisico interattivo che combini software e hardware"
+        },
+        "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
+          "description": "prendere in considerazione le esigenze di diversi utenti durante la progettazione di un prodotto"
+        },
+        "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
+          "description": "estendere in autonomia le funzionalità di un software"
+        },
+        "46a593f4-3334-477c-9bac-f1fa12e83979": {
+          "description": "prototipare un dispositivo informatico fisico"
+        },
+        "5ae2739b-3776-43ba-973f-50fa22302e32": {
+          "description": "implementare un piano per lo sviluppo di un software che integri ingressi e uscite hardware"
+        },
         "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
           "description": "fornire esempi di come la rappresentazione dei dati in modi diversi può influire sulla loro capacità di risolvere diversi tipi di problemi."
         },
@@ -3058,6 +3190,9 @@
         },
         "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
           "description": "mettere correttamente in sequenza il codice per sovrapporre le forme."
+        },
+        "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
+          "description": "implementare le diverse funzionalità di un programma seguendo una guida strutturata al progetto"
         },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": "  comunicare e collaborare con i compagni di classe per risolvere un problema "
