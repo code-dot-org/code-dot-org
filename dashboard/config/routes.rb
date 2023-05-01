@@ -1039,6 +1039,7 @@ Dashboard::Application.routes.draw do
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
   
-    post '/openai/image_generate', to: 'openai#image_generate'
+    # post '/openai/image_generate', to: 'openai#image_generate'
+    post '/stabilityai/image_generate', to: 'stabilityai#image_generate'
   end
 end

@@ -49,21 +49,27 @@ export const select = {
       <option value="astronaut">Astronaut</option>
       <option value="dancer">Dancer</option>
     </select>
-  ),
-  artisticStyles: changeHandler => (
-    <select
-      name="artisticStyles"
-      id={`${GENERATOR_DROPDOWNS_PREFIX}-artisticStyles`}
-      onChange={changeHandler}
-    >
-      <option value="realistic">Realistic</option>
-      <option value="cartoon">Cartoon</option>
-      <option value="abstract">Abstract</option>
-      <option value="watercolor">Watercolor</option>
-      <option value="graffiti">Graffiti</option>
-      <option value="pixelArt">Pixel Art</option>
-      <option value="sketch">Sketch</option>
-      <option value="robot">Robot</option>
-    </select>
   )
 };
+
+export const stabilityAIStylePresets = (
+  <>
+    <option value="enhance">Enhance</option>
+    <option value="anime">Anime</option>
+    <option value="photographic">Photographic</option>
+    <option value="digital-art">Digital Art</option>
+    <option value="comic-book">Comic Book</option>
+    <option value="fantasy-art">Fantasy Art</option>
+    <option value="line-art">Line Art</option>
+    <option value="analog-film">Analog Film</option>
+    <option value="neon-punk">Neon Punk</option>
+    <option value="isometric">Isometric</option>
+    <option value="low-poly">Low Poly</option>
+    <option value="origami">Origami</option>
+    <option value="modeling-compound">Modeling Compound</option>
+    <option value="cinematic">Cinematic</option>
+    <option value="3d-model">3D Model</option>
+    <option value="pixel-art">Pixel Art</option>
+    <option value="tile-texture">Tile Texture</option>
+  </>
+);

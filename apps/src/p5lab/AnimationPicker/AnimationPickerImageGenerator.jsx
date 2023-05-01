@@ -10,10 +10,11 @@ import SearchBar from '@cdo/apps/templates/SearchBar';
 
 import {
   select,
-  GENERATOR_DROPDOWNS_PREFIX
+  GENERATOR_DROPDOWNS_PREFIX,
+  stabilityAIStylePresets
 } from './animationPickerImageGeneratorDropdowns';
 import {
-  generateOpenAIImage,
+  generateStabilityAIImage,
   uploadGeneratedBase64Image
 } from '../../util/generateImage.js';
 import {
@@ -33,7 +34,8 @@ class AnimationPickerImageGenerator extends React.Component {
       results: [],
       loading: false,
       profanityCheckEnabled: true,
-      errorMessage: ''
+      errorMessage: '',
+      stylePreset: ''
     };
   }
 
@@ -49,7 +51,7 @@ class AnimationPickerImageGenerator extends React.Component {
     uploadGeneratedBase64Image(
       this.props.channelId,
       filename,
-      this.state.results[idx].b64_json
+      this.state.results[idx].base64
     ).then(result => {
       const jsResult = JSON.parse(result);
       this.props.onUploadDone(jsResult);
@@ -61,14 +63,19 @@ class AnimationPickerImageGenerator extends React.Component {
   };
 
   handleGenerateClick = () => {
-    const {query, profanityCheckEnabled} = this.state;
+    const {query, profanityCheckEnabled, stylePreset} = this.state;
+    console.log('stylePreset: ', stylePreset);
+    console.log('query: ', query);
     this.setState({loading: true, errorMessage: '', results: []});
 
-    generateOpenAIImage(query, {profanityCheckEnabled}).then(
+    generateStabilityAIImage(query, {profanityCheckEnabled, stylePreset}).then(
       result => {
-        this.setState({results: result, loading: false});
+        console.log('result: ', result);
+        this.setState({results: result.artifacts, loading: false});
       },
       jqXHR => {
+        console.log('jqXHR: ', jqXHR);
+        console.log('jqXHR.responseText: ', jqXHR.responseText);
         const errorMessage = jqXHR.responseJSON && jqXHR.responseJSON.error;
         this.setState({
           loading: false,
@@ -80,11 +87,13 @@ class AnimationPickerImageGenerator extends React.Component {
 
   handleDropdownChange = () => {
     let query = '';
+    console.log('Object.keys(select): ', Object.keys(select));
     Object.keys(select).forEach(key => {
       console.log('checking key', key);
       const value = document.getElementById(
         `${GENERATOR_DROPDOWNS_PREFIX}-${key}`
       ).value;
+      console.log('value: ', value);
       query += `${value} `;
     });
 
@@ -96,7 +105,7 @@ class AnimationPickerImageGenerator extends React.Component {
     const {results} = this.state;
 
     return results.map((result, index) => {
-      let src = `data:image/png;base64,${result.b64_json}`;
+      let src = `data:image/png;base64,${result.base64}`;
       return (
         <button
           key={index}
@@ -104,9 +113,16 @@ class AnimationPickerImageGenerator extends React.Component {
             this.handleUploadClick(index);
           }}
         >
-          <img key={index} src={src} />
+          <img
+            key={index}
+            src={src}
+            style={{maxWidth: '200px', maxHeight: '200px'}}
+          />
         </button>
       );
+      {
+        (' ');
+      }
     });
   };
 
@@ -134,6 +150,26 @@ class AnimationPickerImageGenerator extends React.Component {
   );
 
   render() {
+    const STABILITY_AI_STYLES = [
+      'enhance',
+      'anime',
+      'photographic',
+      'digital-art',
+      'comic-book',
+      'fantasy-art',
+      'line-art',
+      'analog-film',
+      'neon-punk',
+      'isometric',
+      'low-poly',
+      'origami',
+      'modeling-compound',
+      'cinematic',
+      '3d-model',
+      'pixel-art',
+      'tile-texture'
+    ];
+
     return (
       <>
         <TabView
@@ -147,7 +183,17 @@ class AnimationPickerImageGenerator extends React.Component {
                     placeholderText={msg.animationGeneratePlaceholder()}
                     onChange={this.onSearchQueryChange}
                   />
-                  {this.renderProfanityCheckbox()}
+                  <select
+                    name="Style Preset"
+                    id="stylePreset"
+                    onChange={({target: {value}}) => {
+                      console.log('trying to change! ', value);
+                      this.setState({stylePreset: value});
+                    }}
+                  >
+                    {stabilityAIStylePresets}
+                  </select>
+                  {/* {this.renderProfanityCheckbox()} */}
                 </div>
               )
             },
@@ -159,11 +205,21 @@ class AnimationPickerImageGenerator extends React.Component {
                   <form style={{marginTop: 10}}>
                     I would like a {select.emotions(this.handleDropdownChange)}{' '}
                     {select.colors(this.handleDropdownChange)}{' '}
-                    {select.animals(this.handleDropdownChange)}
-                    in the style of
-                    {select.artisticStyles(this.handleDropdownChange)}
+                    {select.animals(this.handleDropdownChange)} in the style of
+                    {
+                      <select
+                        name="Style Preset"
+                        id="stylePreset"
+                        onChange={({target: {value}}) => {
+                          console.log('trying to change! ', value);
+                          this.setState({stylePreset: value});
+                        }}
+                      >
+                        {stabilityAIStylePresets}
+                      </select>
+                    }
                   </form>
-                  {this.renderProfanityCheckbox()}
+                  {/* {this.renderProfanityCheckbox()} */}
                 </>
               )
             }
