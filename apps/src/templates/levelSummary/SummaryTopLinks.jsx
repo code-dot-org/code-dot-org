@@ -20,16 +20,18 @@ const SummaryTopLinks = ({
     ? `?section_id=${selectedSection.id}`
     : '';
 
-  const logEvent = useCallback(eventName => {
-    const {level} = scriptData;
-    analyticsReporter.sendEvent(eventName, {
-      levelId: level.id,
-      levelName: level.name,
-      levelType: level.type,
-      ...scriptData.reportingData,
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const logEvent = useCallback(
+    eventName => {
+      const {level} = scriptData;
+      analyticsReporter.sendEvent(eventName, {
+        levelId: level.id,
+        levelName: level.name,
+        levelType: level.type,
+        ...scriptData.reportingData,
+      });
+    },
+    [scriptData]
+  );
 
   const onBackToLevelClick = e => {
     e.preventDefault();
