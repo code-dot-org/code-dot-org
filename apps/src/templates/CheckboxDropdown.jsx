@@ -20,9 +20,11 @@ const CheckboxDropdown = ({
       className="selectbox"
       data-toggle="dropdown"
     >
-      {checkedOptions.length > 0 && <FontAwesome icon="check-circle" />}
+      {checkedOptions.length > 0 && (
+        <FontAwesome id={'check-icon'} icon="check-circle" />
+      )}
       {label}
-      <FontAwesome icon={'chevron-down'} />
+      <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
     </button>
     <ul className="dropdown-menu">
       <form>
