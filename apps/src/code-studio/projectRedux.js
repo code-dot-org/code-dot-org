@@ -1,5 +1,4 @@
 /** Redux actions and reducer for an individual project */
-/* globals dashboard */
 
 const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
