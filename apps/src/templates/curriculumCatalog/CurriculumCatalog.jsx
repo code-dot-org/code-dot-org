@@ -52,6 +52,7 @@ const getEmptyFilters = () => {
 };
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
+  const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
 
   // Selects the given value in the given filter.
@@ -63,13 +64,13 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     if (isChecked) {
       //Add checked item into applied filters
       newFilters[filterKey] = [...appliedFilters[filterKey], value];
-      setAppliedFilters(newFilters);
+      applyFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
       newFilters[filterKey] = appliedFilters[filterKey].filter(
         item => item !== value
       );
-      setAppliedFilters(newFilters);
+      applyFilters(newFilters);
     }
   };
 
@@ -77,19 +78,31 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const handleSelectAllOfFilter = filterKey => {
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
-    setAppliedFilters(newFilters);
+    applyFilters(newFilters);
   };
 
   // Clears all filter selections.
   const handleClear = () => {
-    setAppliedFilters(getEmptyFilters());
+    applyFilters(getEmptyFilters());
   };
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = [];
-    setAppliedFilters(newFilters);
+    applyFilters(newFilters);
+  };
+
+  // Set filters and filter out any Curriculum Catalog Cards of courses that do not
+  // match the filter criteria.
+  const applyFilters = filters => {
+    setAppliedFilters(filters);
+
+    const newFilteredCurricula = curriculaData.filter(curriculum => {
+      return true;
+    });
+
+    setFilteredCurricula(newFilteredCurricula);
   };
 
   return (
@@ -129,7 +142,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       <div className={style.catalogContentContainer}>
         <div className={style.catalogContent}>
           {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
-          {curriculaData
+          {filteredCurricula
             .filter(curriculum => !!curriculum.grade_levels)
             .map(
               ({
