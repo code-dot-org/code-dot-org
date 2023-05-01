@@ -43,6 +43,7 @@ const CheckboxDropdown = ({
         ))}
         {handleSelectAll && (
           <button
+            id={'select-all'}
             className={style.affectAllButton}
             type="button"
             onClick={() => handleSelectAll(name)}
@@ -52,6 +53,7 @@ const CheckboxDropdown = ({
         )}
         {handleClearAll && (
           <button
+            id={'clear-all'}
             className={style.affectAllButton}
             type="button"
             onClick={() => handleClearAll(name)}
