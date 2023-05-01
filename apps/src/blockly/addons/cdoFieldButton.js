@@ -9,17 +9,17 @@ import GoogleBlockly from 'blockly/core';
  * @param onChange The function that handles the field's editor.
  * @param onDisplay The function tht handles how the field text is displayed.
  * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
+ * @param editFieldLabel boolean - true if the label adjacent to this field is updated with change in field value
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(value, validator, onChange, onDisplay, button) {
+  constructor(value, validator, onChange, onDisplay, button, editFieldLabel) {
     super(value, validator);
     this.onChange = onChange;
     this.onDisplay = onDisplay;
     if (button) {
-      this.buttonIcon = button.icon;
-      this.buttonCornerRadius = button.cornerRadius;
-      this.buttonInnerHeight = button.innerHeight;
+      this.button = button;
     }
+    this.editFieldLabel = editFieldLabel;
     this.SERIALIZABLE = true;
   }
 
@@ -38,16 +38,16 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   initView() {
     super.initView();
-    if (this.buttonIcon) {
+    if (this.button) {
       this.buttonElement_ = Blockly.utils.dom.createSvgElement(
         'rect',
         {
-          rx: this.buttonCornerRadius,
-          ry: this.buttonCornerRadius,
+          rx: this.button.cornerRadius,
+          ry: this.button.cornerRadius,
           x: 1,
           y: 1,
-          height: this.buttonInnerHeight,
-          width: this.buttonInnerHeight,
+          height: this.button.innerHeight,
+          width: this.button.innerHeight,
         },
         this.fieldGroup_
       );
@@ -58,7 +58,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
       this.textElement_.style.fontSize = '11pt';
       this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
       this.textElement_.textContent = '';
-      this.textElement_.appendChild(this.buttonIcon);
+      this.textElement_.appendChild(this.button.icon);
 
       this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
     }
@@ -85,7 +85,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   doValueUpdate_(newValue) {
     if (this.value_ !== newValue) {
       this.value_ = newValue;
-      if (this.buttonIcon) {
+      if (this.editFieldLabel) {
         // Update display on block label when block is dragged out from toolbox.
         this.onDisplay(newValue);
       }

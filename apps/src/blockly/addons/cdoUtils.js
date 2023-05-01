@@ -126,12 +126,13 @@ export function soundField(onChange, onDisplay) {
 }
 
 export function locationField(button, onChange, onDisplay) {
-  // FieldButton(value, validator, onChange, onDisplay, buttonIcon)
+  // FieldButton(value, validator, onChange, onDisplay, buttonIcon, editFieldLabel)
   return new Blockly.FieldButton(
     {x: 0, y: 0},
     null,
     onChange,
     onDisplay,
-    button
+    button,
+    true
   );
 }
