@@ -169,6 +169,14 @@
 <%  end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  WriterDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-writer"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_WRITE
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReaderDBProxyEndpoint:
     Type: AWS::RDS::DBProxyEndpoint
     Properties:
