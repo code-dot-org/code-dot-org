@@ -278,8 +278,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     soundField: function (onChange) {
       return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
     },
-    locationField: function (icon, onChange, color, onDisplay) {
-      return new Blockly.FieldButton(icon, onChange, color, onDisplay);
+    locationField: function (button, onChange, color, onDisplay) {
+      return new Blockly.FieldButton(button.icon, onChange, onDisplay, color);
     },
   };
   return blocklyWrapper;

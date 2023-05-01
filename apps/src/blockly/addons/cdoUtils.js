@@ -1,4 +1,4 @@
-import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
+import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 
 export function setHSV(block, h, s, v) {
@@ -110,10 +110,28 @@ export function getCode(workspace) {
 }
 
 export function soundField(onChange, onDisplay) {
-  return new Blockly.FieldButton('Choose', onChange, onDisplay);
+  // Handle 'play sound' block with default param from CDO blockly.
+  // TODO: Remove when sprite lab is migrated to Google blockly.
+  const validator = newValue => {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    if (newValue === 'Choose') {
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  };
+  // FieldButton(value, validator, onChange, onDisplay)
+  return new Blockly.FieldButton(DEFAULT_SOUND, validator, onChange, onDisplay);
 }
 
-export function locationField(buttonIcon, onChange, __, onDisplay) {
-  // FieldButton(value, onChange, onDisplay, buttonIcon)
-  return new Blockly.FieldButton({x: 0, y: 0}, onChange, onDisplay, buttonIcon);
+export function locationField(button, onChange, onDisplay) {
+  // FieldButton(value, validator, onChange, onDisplay, buttonIcon)
+  return new Blockly.FieldButton(
+    {x: 0, y: 0},
+    null,
+    onChange,
+    onDisplay,
+    button
+  );
 }

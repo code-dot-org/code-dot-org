@@ -1,9 +1,5 @@
 import GoogleBlockly from 'blockly/core';
 
-const BUTTON_CORNER_RADIUS = 3;
-const BUTTON_INNER_HEIGHT = 16;
-import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
-
 /**
  * This is a customized field which the user clicks to select an option from a customized picker,
  * for example, the location of a sprite from a grid or a sound file from a customized modal.
@@ -13,12 +9,15 @@ import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
  * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(value, onChange, onDisplay, buttonIcon) {
-    super(value);
+  constructor(value, validator, onChange, onDisplay, button) {
+    super(value, validator);
     this.onChange = onChange;
     this.onDisplay = onDisplay;
-    this.buttonIcon = buttonIcon;
-
+    if (button) {
+      this.buttonIcon = button.icon;
+      this.buttonCornerRadius = button.cornerRadius;
+      this.buttonInnerHeight = button.innerHeight;
+    }
     this.SERIALIZABLE = true;
   }
 
@@ -32,22 +31,6 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
-   * Validate the changes to a field's value before they are set.
-   * @override
-   */
-  doClassValidation_(newValue) {
-    if (typeof newValue !== 'string') {
-      return null;
-    }
-    // Handle 'play sound' block with default param from CDO blockly.
-    // TODO: Remove when sprite lab is migrated to Google blockly.
-    if (newValue === 'Choose') {
-      return DEFAULT_SOUND;
-    }
-    return newValue;
-  }
-
-  /**
    * Create the block UI for this field.
    * @override
    */
@@ -57,12 +40,12 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
       this.buttonElement_ = Blockly.utils.dom.createSvgElement(
         'rect',
         {
-          rx: BUTTON_CORNER_RADIUS,
-          ry: BUTTON_CORNER_RADIUS,
+          rx: this.buttonCornerRadius,
+          ry: this.buttonCornerRadius,
           x: 1,
           y: 1,
-          height: BUTTON_INNER_HEIGHT,
-          width: BUTTON_INNER_HEIGHT,
+          height: this.buttonInnerHeight,
+          width: this.buttonInnerHeight,
         },
         this.fieldGroup_
       );
@@ -101,7 +84,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     if (this.value_ !== newValue) {
       this.value_ = newValue;
       if (this.buttonIcon) {
-        // For location picker, update coordinates of block when dragged out from toolbox.
+        // Update display on block label when block is dragged out from toolbox.
         this.onDisplay(newValue);
       }
       this.isDirty_ = true; // Block needs to be re-rendered.

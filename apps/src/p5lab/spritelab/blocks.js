@@ -112,6 +112,11 @@ const customInputTypes = {
       const buttonIcon = document.createElementNS(SVG_NS, 'tspan');
       buttonIcon.style.fontFamily = 'FontAwesome';
       buttonIcon.textContent = '\uf276';
+      const button = {
+        icon: buttonIcon,
+        cornerRadius: 3,
+        innerHeight: 15,
+      };
       const onChange = () => {
         getLocation(loc => {
           if (loc) {
@@ -132,10 +137,10 @@ const customInputTypes = {
         }
       };
       const fieldButton = Blockly.cdoUtils.locationField(
-        buttonIcon,
+        button,
         onChange,
-        block.getHexColour(), // Google Blockly includes block.getColour
-        onDisplay
+        onDisplay,
+        block.getHexColour() // Google Blockly includes block.getColour
       );
       currentInputRow.appendField(fieldButton, inputConfig.name);
     },
