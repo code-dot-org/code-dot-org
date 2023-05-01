@@ -50,11 +50,10 @@ export default function ControlButtons({
     <p>
       Java usage is limited for new users. Verified teachers have access to a
       much higher quota for themselves and their students without any additional
-      checks. You can learn why verification is needed on this blog pages: link
+      checks. You can learn why verification is needed on this blog page: link
     </p>
   );
 
-  // need authenticity token?
   return (
     <div>
       <div className={style.leftButtons}>

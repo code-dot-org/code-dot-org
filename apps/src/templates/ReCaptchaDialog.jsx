@@ -17,7 +17,7 @@ export default class ReCaptchaDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string,
     siteKey: PropTypes.string.isRequired,
-    body: PropTypes.body,
+    body: PropTypes.node,
   };
 
   constructor(props) {
@@ -36,12 +36,14 @@ export default class ReCaptchaDialog extends React.Component {
     this.mountCaptcha();
   }
 
-  // Force rerender the captcha when we open dialog
+  // The dialog is not fully unmounted when isOpen is set to false
+  // (but the captcha is removed from the DOM),
+  // so we need to force re-rerender the captcha when we open the dialog.
   componentDidUpdate(prevProps) {
-    // went from open to closed
-    if (!prevProps.isOpen && this.props.isOpen) {
-      // maybe do this only when closing
+    if (prevProps.isOpen && !this.props.isOpen) {
       this.unmountCaptcha();
+    }
+    if (!prevProps.isOpen && this.props.isOpen) {
       this.mountCaptcha();
     }
   }
@@ -52,13 +54,11 @@ export default class ReCaptchaDialog extends React.Component {
 
   mountCaptcha() {
     //Add reCaptcha and associated callbacks.
-    // timestamp to avoid caching issues?
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
-    // didn't do anything
-    // script.async = true;
-    // script.defer = true;
+    script.async = true;
+    script.defer = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
     script.onload = () => this.setState({loadedCaptcha: true});
@@ -77,7 +77,6 @@ export default class ReCaptchaDialog extends React.Component {
     this.token = token;
   }
 
-  // what happens if token expires?
   onCaptchaExpiration() {
     this.setState({submitButtonEnabled: false});
   }
