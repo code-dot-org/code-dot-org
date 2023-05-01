@@ -116,7 +116,8 @@ export function sendSuccessReport(appType) {
     );
     const scriptLevelId = currentLevel.id;
 
-    // The server can determine the user ID.
+    // The server does not appear to use the user ID parameter,
+    // so just pass 0, like some other milestone posts do.
     const userId = 0;
 
     // An ideal score.
