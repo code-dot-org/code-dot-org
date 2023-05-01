@@ -12,3 +12,9 @@ sudo chown -R $USER:$GROUP \
         $HOME/.cache
 
 eval "$(rbenv init -)"
+
+# start mysql
+sudo service mysql start && mysql -V
+
+# execute original command
+exec "$@"
