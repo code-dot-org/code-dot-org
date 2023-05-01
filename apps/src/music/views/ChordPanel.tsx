@@ -14,10 +14,10 @@ const START_OCTAVE = 4;
 const MAX_NOTES = 16;
 
 const styleDropdownOptions: [PlayStyle, string][] = [
-  ['arpeggio-up', musicLocale.arpeggioUp()],
-  ['arpeggio-down', musicLocale.arpeggioDown()],
-  ['arpeggio-random', musicLocale.arpeggioRandom()],
-  ['together', musicLocale.together()],
+  ['arpeggio-up', musicLocale.chordArpeggioUp()],
+  ['arpeggio-down', musicLocale.chordArpeggioDown()],
+  ['arpeggio-random', musicLocale.chordArpeggioRandom()],
+  ['together', musicLocale.chordTogether()],
 ];
 
 export interface ChordPanelProps {

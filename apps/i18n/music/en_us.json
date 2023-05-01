@@ -1,12 +1,12 @@
 {
-  "arpeggioUp": "Arpeggio Up",
-  "arpeggioDown": "Arpeggio Down",
-  "arpeggioRandom": "Arpeggio Random",
   "control": "Control",
+  "chordArpeggioUp": "Arpeggio Up",
+  "chordArpeggioDown": "Arpeggio Down",
+  "chordArpeggioRandom": "Arpeggio Random",
+  "chordTogether": "Together",
   "feedback": "Feedback",
   "share": "Share",
   "shareComingSoon": "Sharing is under construction. Check back soon.",
   "startOver": "Start Over",
-  "together": "Together",
   "upload": "Upload"
 }
