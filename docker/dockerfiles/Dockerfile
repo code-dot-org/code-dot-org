@@ -47,7 +47,7 @@ RUN groupadd --gid 3434 ${USER} && \
 #########################################################
 FROM ubuntu:18.04 as node
 #########################################################
-# compile node to /node, this layer is merged at the end
+# compile node to /build, this layer is merged at the end
 #########################################################
 
 RUN apt-get update && \
