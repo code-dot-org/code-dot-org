@@ -100,6 +100,8 @@ const FormController = props => {
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
+  const [showApplicationClosedMessage, setShowApplicationClosedMessage] =
+    useState(regionalPartner?.are_apps_closed_for_rp);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [hasUserChangedData, setHasUserChangedData] = useState(
@@ -416,7 +418,11 @@ const FormController = props => {
    */
   const handleSubmit = event => {
     event.preventDefault();
-    if (validateOnSubmitOnly) {
+    if (regionalPartner?.are_apps_closed_for_rp) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    } else if (validateOnSubmitOnly) {
       setTriedToSubmit(true);
       let invalidPages = validateForm();
 
@@ -601,6 +607,24 @@ const FormController = props => {
   /**
    * @returns {Element|false}
    */
+  const renderApplicationClosedMessage = () =>
+    showApplicationClosedMessage && (
+      <Alert
+        key={3}
+        onDismiss={() => setShowApplicationClosedMessage(false)}
+        bsStyle="danger"
+      >
+        <p>
+          Applications are closed for this region. Join{' '}
+          <a href="https://code.org/about/hear-from-us">our email list</a> to
+          find out when applications open next year.
+        </p>
+      </Alert>
+    );
+
+  /**
+   * @returns {Element|false}
+   */
   const renderDataWasLoadedMessage = () =>
     showDataWasLoadedMessage && (
       <Alert
@@ -657,7 +681,7 @@ const FormController = props => {
     const submitButton = (
       <Button
         bsStyle="primary"
-        disabled={regionalPartner?.are_apps_closed_for_rp || submitting}
+        disabled={submitting}
         key="submit"
         id="submit"
         type="submit"
@@ -705,6 +729,7 @@ const FormController = props => {
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
       {renderDataWasLoadedMessage()}
+      {renderApplicationClosedMessage()}
       {renderMessageOnSave()}
       {renderCurrentPage()}
       {renderControlButtons()}
