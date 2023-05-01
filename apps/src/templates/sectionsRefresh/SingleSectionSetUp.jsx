@@ -5,6 +5,7 @@ import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 export default function SingleSectionSetUp({
   sectionNum,
@@ -30,7 +31,7 @@ export default function SingleSectionSetUp({
           onChange={e => updateSection('name', e.target.value)}
         />
       </label>
-      {participantType !== 'teacher' && (
+      {participantType === ParticipantAudience.student && (
         <MultiSelectGroup
           label={i18n.chooseGrades()}
           name="grades"
