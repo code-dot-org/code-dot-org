@@ -108,7 +108,7 @@ const customInputTypes = {
         `${inputConfig.name}_LABEL`
       );
       const fieldRow = currentInputRow.getFieldRow();
-      const fieldLabel = fieldRow[fieldRow.length - 1];
+      const fieldLabel = fieldRow[fieldRow.length - 1]; // fieldLabel = 'sprite at'
       const buttonIcon = document.createElementNS(SVG_NS, 'tspan');
       buttonIcon.style.fontFamily = 'FontAwesome';
       buttonIcon.textContent = '\uf276';

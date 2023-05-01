@@ -1,6 +1,5 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
-import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
@@ -144,10 +143,6 @@ export function soundField(onChange) {
 }
 
 export function locationField(buttonIcon, onChange, __, onDisplay) {
-  return new Blockly.FieldPicker(
-    DEFAULT_SOUND,
-    onChange,
-    onDisplay,
-    buttonIcon
-  );
+  // FieldPicker(value, onChange, onDisplay, buttonIcon)
+  return new Blockly.FieldPicker({x: 0, y: 0}, onChange, onDisplay, buttonIcon);
 }
