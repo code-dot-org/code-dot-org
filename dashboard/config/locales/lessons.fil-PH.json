@@ -494,10 +494,10 @@
         },
         "coursee-2022/Hello World: Food": {
           "name": "Hello World",
-          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga event.",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan.",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. \n-   [Optional] Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Ang araling ito ay inilaan upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Matututuhan ng mga mag-aaral kung paano magsabi ng mga bagay ang mga sprite, na kasanayang gagamitin nila sa susunod na aralin sa Tungkol sa Akin.",
-          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga event."
+          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan."
         },
         "coursee-2022/Mini-Project: About Me": {
           "name": "Mini-Project: Tungkol sa Akin",

@@ -2252,6 +2252,9 @@ fil-PH:
           correct: true
           feedback: Tama! Ang parehong pag-uugali ay mangyayari nang sabay-sabay.
         - text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
+          feedback: Mali. Sa Sprite Lab, ang mga konektadong block ay nangyayari kaagad
+            pagkatapos ng bawat huli, kaya ang parehong mga pag-uugali ay mangyayari
+            nang sabay-sabay.
         questions:
         - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_labels_predict_multi:
@@ -10026,6 +10029,9 @@ fil-PH:
           correct: true
           feedback: Tama! Ang parehong pag-uugali ay mangyayari nang sabay-sabay.
         - text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
+          feedback: Mali. Sa Sprite Lab, ang mga konektadong block ay nangyayari kaagad
+            pagkatapos ng bawat huli, kaya ang parehong mga pag-uugali ay mangyayari
+            nang sabay-sabay.
         questions:
         - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
@@ -10222,3 +10228,29 @@ fil-PH:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
         display_name: Pagsasanay sa mga Sprite
+      courseF_events_freeplay:
+        description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
+          iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
+        display_name: Mga Kaganapan - Libreng Laro
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
+          iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
+        display_name: Mga Kaganapan - Libreng Laro
+      courseF_events_practice:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
+        display_name: Pagsasanay sa mga Kaganapan
+        teacher_markdown: |-
+          # Pangkalahatang-ideya ng Antas ng Pagpipilian
+          Ang mga antas ng pagpipilian ay nagbibigay ng menu ng mga karagdagang antas upang makumpleto ng mga mag-aaral. Dapat kumpletuhin ng mga mag-aaral ang hindi bababa sa isa sa mga sub-level dito, ngunit maaaring gawin ang lahat ng gusto nila (o mo).
+
+          Maaari mong gamitin ang mga paglalarawan sa ibaba upang matulungan ang mga mag-aaral na pumili ng sarili nilang mga pagpipilian, o upang magtakda ng mga inaasahan tungkol sa kung gaano karaming mga sub-level ang dapat nilang kumpletuhin.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Natututong lumipad|Gumawa ng barrel roll|Lumiit at Lumaki|Palakihin ang isda!|Ang penguin ay gumagalaw|
+          |-|-|-|-|-|-|-|
+          | ***I-type*** |**Repasuhin**|**Debug**|**Debug**|**Debug**|**Opsyonal na Nilalaman**|**Opsyonal na Nilalaman**
+          | ***Konsepto***|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*when/while events*|*kailan/habang na mga kaganapan*|
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
+        display_name: Pagsasanay sa mga Kaganapan

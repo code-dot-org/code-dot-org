@@ -415,7 +415,8 @@
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_choice_conversation": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -2140,7 +2141,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "nagpapatrolya",
@@ -2155,7 +2157,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "nagpapatrolya",
@@ -2172,7 +2175,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "nagpapatrolya",
@@ -2189,7 +2193,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_conflict": {
           "patrolling": "nagpapatrolya",
@@ -2205,7 +2210,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
@@ -2318,7 +2324,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_predict": {
           "wandering": "gumagala",
@@ -2348,7 +2355,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_ship": {
           "patrolling": "nagpapatrolya",
@@ -2365,7 +2373,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_stops": {
           "moving east": "gumagalaw sa silangan",
@@ -2381,7 +2390,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_time": {
           "patrolling": "nagpapatrolya",
@@ -2398,7 +2408,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_label_predict": {
           "moving east": "gumagalaw sa silangan",
@@ -2680,7 +2691,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_choice_color": {
           "patrolling": "nagpapatrolya",
@@ -2696,7 +2708,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_choice_title": {
           "patrolling": "nagpapatrolya",
@@ -2712,7 +2725,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_concat": {
           "patrolling": "nagpapatrolya",
@@ -2728,7 +2742,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_events": {
           "patrolling": "nagpapatrolya",
@@ -2744,7 +2759,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_print": {
           "patrolling": "nagpapatrolya",
@@ -2760,7 +2776,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_prompts": {
           "patrolling": "nagpapatrolya",
@@ -2776,7 +2793,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_review": {
           "patrolling": "nagpapatrolya",
@@ -2792,7 +2810,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_variables_predict": {
           "moving east": "gumagalaw sa silangan",
@@ -2836,7 +2855,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "helloworld_emoji_costumes": {
           "moving east": "gumagalaw sa silangan",
@@ -2867,7 +2887,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "helloworld_food_costumes": {
           "moving east": "gumagalaw sa silangan",
@@ -2898,7 +2919,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "helloworld_retro_costumes": {
           "moving east": "gumagalaw sa silangan",
@@ -2929,7 +2951,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "CourseE_Project_SpriteLab2022": {
           "wandering": "gumagala",
@@ -3483,7 +3506,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_conflict_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -3499,7 +3523,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_penguin_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -3516,7 +3541,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -3533,7 +3559,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_conflict_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -3549,7 +3576,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_freeplay_air_-2022-2": {
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
@@ -3662,7 +3690,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_practice_reorder_-2022-2": {
           "moving east": "gumagalaw sa silangan",
@@ -3681,7 +3710,8 @@
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_predict_-2022-2": {
           "wandering": "gumagala",
@@ -3711,7 +3741,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_ship_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -3728,7 +3759,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_events_stops_-2022-2": {
           "moving east": "gumagalaw sa silangan",
@@ -3761,7 +3793,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_label_predict_-2022-2": {
           "moving east": "gumagalaw sa silangan",
@@ -4030,7 +4063,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_choice_color_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4046,7 +4080,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_choice_conversation_-2022-2": {
           "wandering": "gumagala",
@@ -4157,7 +4192,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_concat_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4173,7 +4209,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_events_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4189,7 +4226,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_print_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4205,7 +4243,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_prompts_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4221,7 +4260,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_text_review_-2022-2": {
           "patrolling": "nagpapatrolya",
@@ -4237,7 +4277,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "courseF_variables_card_-2022-2": {
           "wandering": "gumagala",
@@ -4374,7 +4415,8 @@
           "spinning left": "umiikot pakaliwa",
           "fluttering": "pumapagaspas",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong"
         },
         "simcustom_-2022-2": {
           "wandering": "gumagala",

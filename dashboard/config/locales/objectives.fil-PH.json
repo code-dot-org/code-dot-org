@@ -330,7 +330,7 @@
           "description": "Bumuo ng mga programa na tumutugon sa inoorasang mga event"
         },
         "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
-          "description": "Lumikha ng mga program ng Sprite Lab kung saan ang mga sprite ay nilikha sa mga grupo, at kinokontrol nang paisa-isa gamit ang mga event."
+          "description": "Lumikha ng mga program ng Sprite Lab kung saan ang mga sprite ay nilikha sa mga grupo, at kinokontrol nang paisa-isa gamit ang mga kaganapan."
         },
         "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
           "description": "Gumawa ng clicker game sa Sprite Lab kung saan maaaring alisin ang mga sprite para makaiskor ng mga puntos"
@@ -339,7 +339,7 @@
           "description": "Gumawa ng variable na nag-iimbak ng impormasyon at nagbabago sa paglipas ng panahon"
         },
         "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
-          "description": "Gumawa ng sarili nilang collector game sa Sprite Lab gamit ang maramihang sprites na kinokontrol nang paisa-isa at mga variable para subaybayan ang score ng player"
+          "description": "Gumawa ng sarili nilang collector game sa Sprite Lab gamit ang maramihang mga sprite na kinokontrol nang paisa-isa at mga variable para subaybayan ang score ng player"
         },
         "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
           "description": "Talakayin ang papel na ginagampanan ng artificial intelligence sa kanilang buhay."

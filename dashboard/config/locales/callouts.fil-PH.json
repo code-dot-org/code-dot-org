@@ -1891,6 +1891,42 @@
         },
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Maghanap ng bagong block dito."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Subukang baguhin ang kapag sa habang."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Subukang baguhin ang kapag sa habang."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Mga bagong block dito!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Mga bagong block dito!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Gamitin ang bagong block ng kaganapan na makikita dito."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Gamitin ang bagong block ng kaganapan na makikita dito."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Ang block na ito ay nasa maling pagkakasunud-sunod."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Ang block na ito ay nasa maling pagkakasunud-sunod."
+        },
+        "courseF_events_time": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_text_events": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
         }
       }
     }
