@@ -343,6 +343,7 @@
   "classProgress": "Postępy klasy",
   "classSection": "Sekcja Klasy",
   "classSectionNum": "Sekcja Klasy #{num}",
+  "clearAssignedCurriculum": "Wyczyść przypisany program nauczania",
   "clearTable": "Wyczyść tabelę",
   "clearPuzzle": "Zacznij od nowa",
   "clearPuzzleConfirm": "To spowoduje zresetowanie łamigłówki do stanu początkowego i usunięcie wszystkich bloków, które dodałeś lub zmieniłeś.",
