@@ -46,13 +46,36 @@
     },
     "display_name": "Banana Cafe",
     "bubble_choice_description": "An example project that creates an animation with minions ordering at a cafe.",
-    "thumbnail_url": "https://images.code.org/69cc695dcbdf567edb05fafe213bb549-U7_project3.gif"
+    "thumbnail_url": "https://images.code.org/69cc695dcbdf567edb05fafe213bb549-U7_project3.gif",
+    "starter_assets": {
+      "backOfGru.png": "67ae6a5d-a212-42a2-bf87-b48fc494aade.png",
+      "bananaTree.png": "be183434-ec33-4cf3-a35a-71d1b81be447.png",
+      "bread.png": "dee45be8-e615-424f-a44f-1a813249c5f6.png",
+      "bSmoothie.png": "5b6dffa2-8967-4d2c-9c89-1da6eb96cfac.png",
+      "cheese.png": "a295691e-517a-4ed6-a860-13b160534c84.png",
+      "door.png": "6c55b078-6324-46d0-9f99-86a6cc17abd9.png",
+      "fruit_basket.png": "7bf9f298-51e4-4e0c-9f15-3b55cd7f9fbd.png",
+      "gru.png": "6309f075-ebc3-4df0-a5e3-f74bd3f952f5.png",
+      "kitchen.jpg": "b75155b6-216c-478f-aedf-774b351a5f0e.jpg",
+      "LeftSpeechBubble.png": "f7411154-c643-4472-8c32-bfbb1e74c9b6.png",
+      "lettuce.png": "f436651b-7ae8-4056-81a8-417460c78b86.png",
+      "minion2.png": "d59cfebc-d152-462d-b8fd-e82e77fdcc3b.png",
+      "minions3.png": "3385f29b-1d99-419b-b9d7-04f1d41393d8.png",
+      "minions4.png": "de044420-7c26-49b7-a856-3101c0888bdf.png",
+      "minions5.png": "2fef2608-ad9e-4c57-a94c-3161c9d90b82.png",
+      "plate.png": "b63f5514-04e8-426e-a40b-605a77f51639.png",
+      "RightSpeechBubble.png": "be5825ae-7165-4ad4-ac4d-ed6ff173f1fc.png",
+      "sandwhich.png": "7f6d1445-d96c-4f4c-aad3-b9c99528e693.png",
+      "sbSmoothie.png": "56c9128a-e4bf-491e-8c4f-6761f6f9ddbf.png",
+      "threeBananas.png": "23c921ea-7e7f-47ff-8888-f3dcc183692c.png",
+      "tomatoes.png": "93a1bae8-cba9-4bd5-97ca-c8ee3c9379e1.png"
+    }
   },
   "game_id": 68,
   "created_at": "2023-04-11T13:50:46.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T13:50:46.165+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1b_2023\"},{\"changed_at\":\"2023-04-11 13:50:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:24:05 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:25:37 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:50:46.165+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1b_2023\"},{\"changed_at\":\"2023-04-11 13:50:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:24:05 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:25:37 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:43:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:43:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

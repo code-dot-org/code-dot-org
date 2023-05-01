@@ -1,6 +1,3 @@
-// This file does not pass eslint.
-/* eslint-disable */
-
 /**
  * Pixelation widget for visualizing image encoding.
  *
@@ -51,7 +48,7 @@ function setMinTextValues() {
 }
 
 function isHexSelected() {
-  return 'hex' == document.querySelector('input[name="binHex"]:checked').value;
+  return 'hex' === document.querySelector('input[name="binHex"]:checked').value;
 }
 
 function isHexLevel() {
@@ -76,12 +73,12 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
   var justBits = bitString.replace(/[ \n]/g, '');
   var formattedBits = '';
 
-  if (options.version != '1') {
+  if (options.version !== '1') {
     // First break out first 2 bytes (width, height).
     if (isHexSelected()) {
       formattedBits += justBits.substr(0, 2) + '\n';
       formattedBits += justBits.substr(2, 2) + '\n';
-      if (options.version == '3') {
+      if (options.version === '3') {
         // Break out the next byte (bits per pixel)
         formattedBits += justBits.substr(4, 2) + '\n';
         justBits = justBits.substr(6);
@@ -94,7 +91,7 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
         justBits.substr(0, 4) + ' ' + justBits.substr(4, 4) + '\n';
       formattedBits +=
         justBits.substr(8, 4) + ' ' + justBits.substr(12, 4) + '\n';
-      if (options.version == '3') {
+      if (options.version === '3') {
         formattedBits +=
           justBits.substr(16, 4) + ' ' + justBits.substr(20, 4) + '\n';
         justBits = justBits.substr(24);
@@ -137,7 +134,7 @@ function formatBitDisplay() {
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
-  if (newBits != null) {
+  if (newBits !== null) {
     pixel_data.value = newBits;
   }
 }
@@ -174,7 +171,7 @@ function getColorVal(binVal, bitsPerPixel) {
   var numColors = Math.pow(2, bitsPerPixel);
   var bitsPerColor = parseInt(bitsPerPixel / 3);
 
-  if (bitsPerColor * 3 != bitsPerPixel) {
+  if (bitsPerColor * 3 !== bitsPerPixel) {
     // Greyscale
     var val = (binToInt(binVal) / (numColors - 1)) * 255;
     val = parseInt(val);
@@ -209,7 +206,7 @@ function bitsToColors(bitString, bitsPerPixel) {
       getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel)
     );
   }
-  if (bitString.length / bitsPerPixel != colorList.length) {
+  if (bitString.length / bitsPerPixel !== colorList.length) {
     colorList.pop();
   }
 
@@ -266,7 +263,7 @@ function drawGraph(ctx, exportImage, updateControls) {
     }
     binCode = binCode.substring(16, binCode.length);
 
-    if (options.version != '2') {
+    if (options.version !== '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
       if (updateControls) {
         bitsPerPixelText.value = bitsPerPix;
@@ -703,12 +700,12 @@ function updateBinaryDataToMatchSliders() {
 function changeVal(elementID) {
   var val = -1;
 
-  if (elementID == 'width') {
+  if (elementID === 'width') {
     val = widthRange.value;
-  } else if (elementID == 'bitsPerPixel') {
+  } else if (elementID === 'bitsPerPixel') {
     val = bitsPerPixelRange.value;
 
-    if (val == 0) {
+    if (val === 0) {
       val = 1;
     }
   } else {
@@ -718,7 +715,7 @@ function changeVal(elementID) {
   // Make textbox value match slider value.
   document.getElementById(elementID).value = val;
 
-  if (options.version != '1') {
+  if (options.version !== '1') {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
@@ -727,19 +724,6 @@ function changeVal(elementID) {
 }
 
 window.changeVal = changeVal;
-
-function setSliders() {
-  // Make sure slider value is at least 1
-  heightRange.value = getPositiveValue(heightText);
-  widthRange.value = getPositiveValue(widthText);
-  bitsPerPixelRange.value = getPositiveValue(bitsPerPixelText);
-
-  if (options.version != '1') {
-    updateBinaryDataToMatchSliders();
-    formatBitDisplay();
-  }
-  drawGraph();
-}
 
 /**
  * Creates a PNG the given canvas and opens it in a new window.  Image can be copy/pasted, saved, etc. from there.
