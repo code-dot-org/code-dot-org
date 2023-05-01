@@ -7,6 +7,7 @@ import JavalabSettings from './JavalabSettings';
 import style from './control-buttons.module.scss';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 import {appendOutputLog, appendNewlineToConsoleLog} from './redux/consoleRedux';
+import {setCaptchaRequired} from './redux/javalabRedux';
 import {getStore} from '@cdo/apps/redux';
 
 export default function ControlButtons({
@@ -45,9 +46,15 @@ export default function ControlButtons({
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
+  const dialogBody = (
+    <p>
+      Java usage is limited for new users. Verified teachers have access to a
+      much higher quota for themselves and their students without any additional
+      checks. You can learn why verification is needed on this blog pages: link
+    </p>
+  );
+
   // need authenticity token?
-  // does x work?
-  // need to make captchaRequired modifyable (add to state)
   return (
     <div>
       <div className={style.leftButtons}>
@@ -67,18 +74,13 @@ export default function ControlButtons({
                   appendOutputLog('Verification successful!')
                 );
                 getStore().dispatch(appendNewlineToConsoleLog());
+                getStore().dispatch(setCaptchaRequired(false));
                 setIsDialogOpen(false);
               });
             }}
             siteKey={recaptchaSiteKey}
-          >
-            <p>
-              Java usage is limited for new users. Verified teachers have access
-              to a much higher quota for themselves and their students without
-              any additional checks. You can learn why verification is needed on
-              this blog pages: link
-            </p>
-          </ReCaptchaDialog>
+            body={dialogBody}
+          />
         )}
         <JavalabButton
           id="runButton"

@@ -17,7 +17,7 @@ export default class ReCaptchaDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string,
     siteKey: PropTypes.string.isRequired,
-    children: PropTypes.node,
+    body: PropTypes.body,
   };
 
   constructor(props) {
@@ -33,19 +33,43 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   componentDidMount() {
+    this.mountCaptcha();
+  }
+
+  // Force rerender the captcha when we open dialog
+  componentDidUpdate(prevProps) {
+    // went from open to closed
+    if (!prevProps.isOpen && this.props.isOpen) {
+      // maybe do this only when closing
+      this.unmountCaptcha();
+      this.mountCaptcha();
+    }
+  }
+
+  componentWillUnmount() {
+    this.unmountCaptcha();
+  }
+
+  mountCaptcha() {
     //Add reCaptcha and associated callbacks.
+    // timestamp to avoid caching issues?
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
+    // didn't do anything
+    // script.async = true;
+    // script.defer = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
     script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
   }
 
-  componentWillUnmount() {
+  unmountCaptcha() {
     const captchaScript = document.getElementById('captcha');
-    captchaScript.remove();
+    if (captchaScript) {
+      captchaScript.remove();
+    }
   }
 
   onCaptchaVerification(token) {
@@ -53,6 +77,7 @@ export default class ReCaptchaDialog extends React.Component {
     this.token = token;
   }
 
+  // what happens if token expires?
   onCaptchaExpiration() {
     this.setState({submitButtonEnabled: false});
   }
@@ -65,7 +90,7 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel} = this.props;
+    const {siteKey, isOpen, handleCancel, body} = this.props;
     return (
       <div>
         <BaseDialog
@@ -76,7 +101,7 @@ export default class ReCaptchaDialog extends React.Component {
           isOpen={isOpen}
         >
           <h3>Please confirm you're human</h3>
-          {this.props.children}
+          {body}
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
