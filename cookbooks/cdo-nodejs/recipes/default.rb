@@ -27,6 +27,7 @@ if is_ubuntu_18_04 && is_node_18
     )
   end
 
+  # remove /after/ `make install`, so there's still node if the build fails
   package 'nodejs' do
     action :remove
   end
