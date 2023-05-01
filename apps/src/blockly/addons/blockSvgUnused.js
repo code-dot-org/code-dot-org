@@ -97,13 +97,11 @@ export default class BlockSvgUnused extends BlockSvgFrame {
 // When a block is clicked, dragged or deleted, we remove any "Unused clock" frame.
 export function onBlockClickDragDelete(event) {
   if (
-    event.type === Blockly.Events.BLOCK_CLICK ||
+    event.type === Blockly.Events.CLICK ||
     event.type === Blockly.Events.BLOCK_DRAG ||
     event.type === Blockly.Events.BLOCK_DELETE
   ) {
-    const workspace = Blockly.blockly_.common.getWorkspaceById(
-      event.workspaceId
-    );
+    const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
     const block = workspace.getBlockById(event.blockId);
     if (!block) {
       return;
