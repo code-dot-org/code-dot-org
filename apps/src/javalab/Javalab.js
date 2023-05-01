@@ -14,7 +14,7 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting,
-  setCaptchaRequired,
+  setIsCaptchaDialogOpen,
 } from './redux/javalabRedux';
 import javalabConsole, {
   appendOutputLog,
@@ -390,7 +390,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
     () => this.onValidationPassed(this.studioApp_),
     () => this.onValidationFailed(this.studioApp_),
     () => getStore().dispatch(setIsJavabuilderConnecting(false)),
-    () => getStore().dispatch(setCaptchaRequired(true))
+    () => getStore().dispatch(setIsCaptchaDialogOpen(true))
   );
 
   let connectToJavabuilder;

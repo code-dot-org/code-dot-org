@@ -32,7 +32,7 @@ export default class JavabuilderConnection {
     onValidationPassed,
     onValidationFailed,
     onConnectDone,
-    setCaptchaRequired
+    setIsCaptchaDialogOpen
   ) {
     this.channelId = project.getCurrentId();
     this.onOutputMessage = onMessage;
@@ -50,7 +50,7 @@ export default class JavabuilderConnection {
     this.onValidationPassed = onValidationPassed;
     this.onValidationFailed = onValidationFailed;
     this.onConnectDone = onConnectDone;
-    this.setCaptchaRequired = setCaptchaRequired;
+    this.setIsCaptchaDialogOpen = setIsCaptchaDialogOpen;
 
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
@@ -154,7 +154,7 @@ export default class JavabuilderConnection {
     } catch (error) {
       if (error.status === 403) {
         if (error.responseJSON?.captcha_required === true) {
-          this.setCaptchaRequired();
+          this.setIsCaptchaDialogOpen(true);
           this.onOutputMessage(
             javalabMsg.errorJavabuilderVerificationRequired()
           );
