@@ -19,6 +19,7 @@ if is_ubuntu_18_04 && is_node_18
     checksum '6a4f5c5d76e5c50cef673099e56f19bc3266ae363f56ca0ab77dd2f3c5088c6d'
     version '18.16.0'
     make_opts ['-j 8']
+    path '/usr/local/nodejs-source-18.16.0'
     action :install_with_make
     environment(
       C: '/usr/bin/gcc-8',
@@ -27,7 +28,8 @@ if is_ubuntu_18_04 && is_node_18
     )
   end
 
-  # remove /after/ `make install`, so there's still node if the build fails
+  # remove deb /after/ `make install` to /usr/local/bin/node
+  # so there's still /usr/bin/node if the build fails
   package 'nodejs' do
     action :remove
   end
