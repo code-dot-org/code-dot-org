@@ -30,9 +30,7 @@ export function onBlockClickDragDelete(event) {
     event.type === Blockly.Events.BLOCK_DRAG ||
     event.type === Blockly.Events.BLOCK_DELETE
   ) {
-    const workspace = Blockly.blockly_.common.getWorkspaceById(
-      event.workspaceId
-    );
+    const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
     const block = workspace.getBlockById(event.blockId);
     if (!block) {
       return;

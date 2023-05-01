@@ -149,6 +149,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
+  blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
