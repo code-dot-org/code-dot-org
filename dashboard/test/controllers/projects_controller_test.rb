@@ -379,12 +379,11 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level creates new channel if none exists' do
-    puts "hi"
-    level = create(:level)
-    puts "about to make request"
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
     get :get_or_create_for_level, params: {level_id: level.id}
-    puts "made request"
-    puts @response
     assert_response :success
+    assert_not_nil @response.body['channel']
   end
 end

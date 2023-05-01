@@ -282,21 +282,15 @@ class ProjectsController < ApplicationController
 
   # GET /projects/for_level/:level_id
   def get_or_create_for_level
-    puts "in get_or_create_for_level"
     level = Level.find(params[:level_id])
     return if redirect_under_13_without_tos_teacher(level)
-    puts "current user"
-    puts current_user
-    user_storage_id = current_user ? storage_id_for_user_id(current_user.id) : get_storage_id
-    puts "user storage id is #{user_storage_id}"
+    user_storage_id = get_storage_id
     # find channel for user and level if it exists, or create a new one
-    # how do we get: user storage id (does above work?), script id (do we need this? Can add a param. Can't always infer from level),
+    # how do we get: script id (do we need this? Can add a param. Can't always infer from level),
     # Can hidden always be true? Will we use this api for a standalone project?
-    # always return the channel id
-    #channel = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
-    channel = get_channel_for(level, nil, current_user)
-    puts "created channel with id #{channel.id}"
-    render(status: :ok, json: {channel_id: channel.id})
+    # always return the channel
+    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
+    render(status: :ok, json: {channel: channel_token.channel})
   end
 
   def weblab_footer
