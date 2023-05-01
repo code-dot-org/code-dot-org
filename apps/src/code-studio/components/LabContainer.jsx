@@ -12,18 +12,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import moduleStyles from './LabContainer.module.scss';
+import ProjectContext from './ProjectContext';
 
 const LabContainer = ({children}) => {
   const currentLevelId = useSelector(state => state.progress.currentLevelId);
 
   return (
     <div id="lab-container" className={moduleStyles.labContainer}>
-      {children}
-      <div
-        id="fade-overlay"
-        key={currentLevelId}
-        className={moduleStyles.fadeInBlock}
-      />
+      <ProjectContext.Provider value={{}}>
+        {children}
+        <div
+          id="fade-overlay"
+          key={currentLevelId}
+          className={moduleStyles.fadeInBlock}
+        />
+      </ProjectContext.Provider>
     </div>
   );
 };

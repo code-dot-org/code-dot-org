@@ -49,6 +49,11 @@ export default class ProjectManager {
     this.getProject = getProject;
   }
 
+  async setUpForLevel(levelId: string) {
+    const response = await this.channelsStore.loadForLevel(levelId);
+    console.log(response);
+  }
+
   async load(): Promise<Response> {
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     // If sourceResponse is not ok, we still want to load the channel. Source can
