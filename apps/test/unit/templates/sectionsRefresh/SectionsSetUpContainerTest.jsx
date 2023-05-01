@@ -15,9 +15,9 @@ describe('SectionsSetUpContainer', () => {
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('h1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(1);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
+    expect(wrapper.find('Heading1').length).to.equal(1);
+    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').at(1).props().text).to.equal(
       'Finish creating sections'
     );
   });
@@ -25,9 +25,9 @@ describe('SectionsSetUpContainer', () => {
   it('renders edit header and save button', () => {
     const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
 
-    expect(wrapper.find('h1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(1);
-    expect(wrapper.find('Button').at(0).props().text).to.equal('Save');
+    expect(wrapper.find('Heading1').length).to.equal(1);
+    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').at(1).props().text).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {
@@ -40,7 +40,7 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     wrapper
-      .find('FontAwesome')
+      .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
 
@@ -50,16 +50,12 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Advacned Settings is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'caret-right'
-    );
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
-      .find('FontAwesome')
+      .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'caret-down'
-    );
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
   /*  TO DO: Update these tests when save button works
