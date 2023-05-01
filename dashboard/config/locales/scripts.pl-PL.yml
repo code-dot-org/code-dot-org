@@ -7359,6 +7359,8 @@ pl:
               name: Praktyka FRQ
             lesson-12:
               name: Jednostka 8 Sprawdzian
+            lesson-13:
+              name: Kreatywne kodowanie w programie Console Project [wersja 1-dniowa]
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -8651,6 +8653,8 @@ pl:
               name: "[Lekcja na temat wizji komputerowej]"
             lesson-7:
               name: "[Lekcja na temat generatywnej sztucznej inteligencji]"
+            lesson-8:
+              name: "[Lekcja obrazów generatywnych (dall-e-esque)]"
           name: ai-temp
           title: "[Temp] Wprowadzenie do AI"
         focus-on-coding4b-2023:
@@ -8728,6 +8732,8 @@ pl:
           lessons:
             lesson-3:
               name: Wstęp
+            lesson-4:
+              name: Przegląd CS Discoveries (Odkrycia informatyki)
             lesson-5:
               name: Poruszanie się po platformie Code.org
             lesson-6:
@@ -8736,6 +8742,10 @@ pl:
               name: Wprowadzenie do Jednostki 2
             lesson-8:
               name: Programowanie w parach i debugowanie
+            lesson-9:
+              name: 'Dziennikarstwo i dykusja '
+            lesson-10:
+              name: 'Dzień 1 Podsumowanie '
           lesson_groups:
             lessonGroup-2:
               display_name: Dzień 1
@@ -8745,8 +8755,16 @@ pl:
           lessons:
             lesson-3:
               name: Wprowadzenie do Dnia 2
+            lesson-4:
+              name: Zasoby i sprawdzian
             lesson-5:
               name: Jednostka 2 Powiązania
+            lesson-6:
+              name: 'Jednostka 3 Badanie Curiculum: Kształty i zmienne'
+            lesson-7:
+              name: Przygotowanie do TLO
+            lesson-8:
+              name: Planowanie lekcji - Zapoznanie się ze swoją lekcją
             lesson-9:
               name: Planowanie lekcji - stwórz plan
             lesson-10:
@@ -8787,6 +8805,10 @@ pl:
               name: 'Wstęp do Jednostki 6 - Tworzenie aplikacji na urządzenia '
             lesson-8:
               name: 'Wstęp do Jednostki 7 - Sztuczna inteligencja i uczenie maszynowe '
+            lesson-9:
+              name: Zawartość podsumowanie
+            lesson-10:
+              name: Różnicowanie
             lesson-11:
               name: Bariery, szanse i zobowiązania
             lesson-12:
@@ -8800,10 +8822,16 @@ pl:
           lessons:
             lesson-1:
               name: Wprowadzenie do Dnia 5
+            lesson-2:
+              name: Przygotowanie na rok
             lesson-3:
               name: Sprawdzian
+            lesson-4:
+              name: Powracając do tematów z tygodnia
             lesson-5:
               name: 'Społeczność '
+            lesson-6:
+              name: Podgląd warsztatów roku akademickiego
             lesson-7:
               name: Planowanie na rok
             lesson-8:

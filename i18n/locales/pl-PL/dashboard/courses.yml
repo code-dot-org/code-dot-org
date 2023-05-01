@@ -164,6 +164,9 @@ pl:
           version_title: "'23-'24"
         self-paced-pl-microbit-2023:
           title: self-paced-pl-microbit-2023
+        pl-csd-summer-2023:
+          title: Letnie warsztaty Odkryć Informatyki
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania kursu Odkrycia Informatyki.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania Odkrycia Informatyki.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują podobną pracę."
         virtual-pl-csd-summer-2023:
           title: virtual-pl-csd-summer-2023
     resources:
@@ -233,16 +236,21 @@ pl:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view
       csd_guide_to_code_org_values_and_philosophy/csd/2023:
+        name: Przewodnik CSD dotyczący wartości i filozofii Code.org
         url: https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view
       csd_guide_to_curriculum_videos/csd/2023:
+        name: Przewodnik CSD dotyczący filmów o programach nauczania
         url: https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view
       csd_guide_to_differentiation_1/csd/2023:
         url: https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view
       csd_guide_to_getting_started/csd/2023:
+        name: Przewodnik CSD na początek
         url: https://docs.google.com/document/d/1qRtKnXUl5G_FONrIsJ7Ql-aDYEaEwPOzLV_BhFa4O8A/view
       csd_guide_to_learning_tools/csd/2023:
+        name: Przewodnik CSD dotyczący pomocy edukacyjnych
         url: https://docs.google.com/document/d/1zp_bREstY53dyXoby8MCidBD1iVUoMMGbz5c-kTsL7E/view
       csd_guide_to_teaching_and_learning_strategies/csd/2023:
+        name: Przewodnik CSD dotyczący strategii nauczania i uczenia się
         url: https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view
       csd_guide_to_using_resources_1/csd/2023:
         url: https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view
