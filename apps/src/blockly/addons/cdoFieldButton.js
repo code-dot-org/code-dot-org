@@ -4,6 +4,8 @@ import GoogleBlockly from 'blockly/core';
  * This is a customized field which the user clicks to select an option from a customized picker,
  * for example, the location of a sprite from a grid or a sound file from a customized modal.
  * @param value The initial value of the field.
+ * @param validator A function that is called to validate changes to the field's value.
+ * Takes in a value & returns a validated value, or null to abort a change
  * @param onChange The function that handles the field's editor.
  * @param onDisplay The function tht handles how the field text is displayed.
  * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
