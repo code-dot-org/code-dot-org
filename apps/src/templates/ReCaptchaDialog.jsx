@@ -41,6 +41,7 @@ export default class ReCaptchaDialog extends React.Component {
   // so we need to force re-rerender the captcha when we open the dialog.
   componentDidUpdate(prevProps) {
     if (prevProps.isOpen && !this.props.isOpen) {
+      this.setState({submitButtonEnabled: false});
       this.unmountCaptcha();
     }
     if (!prevProps.isOpen && this.props.isOpen) {
