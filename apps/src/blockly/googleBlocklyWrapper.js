@@ -47,7 +47,7 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused from './addons/blockSvgUnused';
+import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
@@ -589,20 +589,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
-    // When a block is clicked, dragged or deleted, we remove any "Unused clock" frame.
-    function onBlockClickDragDelete(event) {
-      if (
-        event.type === blocklyWrapper.blockly_.Events.BLOCK_CLICK ||
-        event.type === blocklyWrapper.blockly_.Events.BLOCK_DRAG ||
-        event.type === blocklyWrapper.blockly_.Events.BLOCK_DELETE
-      ) {
-        const block = workspace.getBlockById(event.blockId);
-        if (!block) {
-          return;
-        }
-        block.removeUnusedBlockFrame();
-      }
-    }
     workspace.addChangeListener(onBlockClickDragDelete);
 
     // Initialize plugin.
