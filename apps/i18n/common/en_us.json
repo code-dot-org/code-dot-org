@@ -1047,6 +1047,7 @@
   "filterBy": "Filter by:",
   "filterByStudent": "Filter by student:",
   "filterByStage": "Filter by lesson:",
+  "filterCheckIconTitle": "{filter_label} filter applied",
   "finalStage": "Congratulations! You have completed the final puzzle.",
   "finalStageTrophies": "Congratulations! You have completed the final puzzle and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "findCourse": "Find a course",

@@ -66,7 +66,7 @@ describe('CheckboxDropdown', function () {
     assert(checkIcon.exists());
   });
 
-  it('passing in a handleSelectAll function renders the SelectAll button and is called when clicked', function () {
+  it('handleSelectAll funtion is called when SelectAll button is clicked', function () {
     let optionsSelected = [];
     const testHandleSelectAll = () => {
       optionsSelected = Object.keys(colorOptions);
@@ -86,7 +86,7 @@ describe('CheckboxDropdown', function () {
     expect(optionsSelected).to.have.lengthOf(Object.keys(colorOptions).length);
   });
 
-  it('passing in a handleClearAll function renders the ClearAll button and is called when clicked', function () {
+  it('handleClearAll funtion is called when ClearAll button is clicked', function () {
     let optionsSelected = Object.keys(colorOptions);
     const testHandleClearAll = () => {
       optionsSelected = [];

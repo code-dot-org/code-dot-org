@@ -21,7 +21,11 @@ const CheckboxDropdown = ({
       data-toggle="dropdown"
     >
       {checkedOptions.length > 0 && (
-        <FontAwesome id={'check-icon'} icon="check-circle" />
+        <FontAwesome
+          id={'check-icon'}
+          icon="check-circle"
+          title={i18n.filterCheckIconTitle({filter_label: label})}
+        />
       )}
       {label}
       <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
@@ -43,26 +47,22 @@ const CheckboxDropdown = ({
             </label>
           </li>
         ))}
-        {handleSelectAll && (
-          <button
-            id={'select-all'}
-            className={style.affectAllButton}
-            type="button"
-            onClick={() => handleSelectAll(name)}
-          >
-            {i18n.selectAll()}
-          </button>
-        )}
-        {handleClearAll && (
-          <button
-            id={'clear-all'}
-            className={style.affectAllButton}
-            type="button"
-            onClick={() => handleClearAll(name)}
-          >
-            {i18n.clearAll()}
-          </button>
-        )}
+        <button
+          id={'select-all'}
+          className={style.affectAllButton}
+          type="button"
+          onClick={() => handleSelectAll(name)}
+        >
+          {i18n.selectAll()}
+        </button>
+        <button
+          id={'clear-all'}
+          className={style.affectAllButton}
+          type="button"
+          onClick={() => handleClearAll(name)}
+        >
+          {i18n.clearAll()}
+        </button>
       </form>
     </ul>
   </div>
@@ -73,8 +73,8 @@ CheckboxDropdown.propTypes = {
   allOptions: PropTypes.objectOf(PropTypes.string).isRequired,
   checkedOptions: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func.isRequired,
-  handleSelectAll: PropTypes.func,
-  handleClearAll: PropTypes.func,
+  handleSelectAll: PropTypes.func.isRequired,
+  handleClearAll: PropTypes.func.isRequired,
 };
 
 export default CheckboxDropdown;
