@@ -561,7 +561,6 @@ GEM
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
     net-ssh (5.2.0)
-    net_http_ssl_fix (0.0.10)
     netrc (0.11.0)
     newrelic_rpm (6.14.0)
     nio4r (2.5.8)
@@ -868,8 +867,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (3.7.2)
-      net_http_ssl_fix
+    webdrivers (3.9.4)
       nokogiri (~> 1.6)
       rubyzip (~> 1.0)
       selenium-webdriver (~> 3.0)
