@@ -10,7 +10,7 @@ import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
  * @param value The initial value of the field.
  * @param onChange The function that handles the field's editor.
  * @param onDisplay The function tht handles how the field text is displayed.
- * @param buttonIcon If the field displyas a button, this is the string that is displayed on the button.
+ * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
 export default class CdoFieldPicker extends GoogleBlockly.Field {
   constructor(value, onChange, onDisplay, buttonIcon) {
