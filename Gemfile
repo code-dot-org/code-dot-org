@@ -106,7 +106,7 @@ group :development, :test do
   gem 'selenium-webdriver', '3.141.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 4.1.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
