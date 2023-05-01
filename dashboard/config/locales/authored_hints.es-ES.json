@@ -4888,7 +4888,7 @@
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
-          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un \\`avanzar ', otro giro y luego un bucle."
+          "courseC_starWars_loops5_a": "La mejor solución utiliza un giro, luego solo un `avanzar ', otro giro y luego un bucle."
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
@@ -4896,7 +4896,7 @@
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
-          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\\\ \nA esto se le llama **bucle anidado**."
+          "courseC_starWars_loops6_b": "Si deseas utilizar menos código, ¡puedes poner un bucle `repetir'`dentro de otro!\\ \nA esto se le llama **bucle anidado**."
         },
         "courseC_starWars_loops6_2018": {
           "courseC_starWars_loops6_a": "Intenta escribir todos los movimientos en un papel y busca un patrón.",
@@ -4942,7 +4942,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
           "course_starWars_loops8_b": "Piensa en la primera parte de este problema como un problema del escalón. ¿Cómo resolviste eso antes?",
-          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "Echa un vistazo a este camino. \n\n[][0]"
         },
         "courseC_starWars_loops8_2018": {
           "course_starWars_loops8_a": "Trata de pensar sobre este problema en pequeñas partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!",
@@ -5558,7 +5558,7 @@
           "courseD_artist_binary8_c": "¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el desafío."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
+          "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
         },
         "courseD_bee_conditionals1_predict1_2018": {
           "courseD_bee_conditionals1_a": "Tendrás que utilizar un bloque `si` para comprobar si hay una flor debajo de la nube antes de intentar recoger el néctar."
@@ -5633,8 +5633,8 @@
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals4_a": "Todavía puedes tratar cada espacio como si hubiera una nube sobre él, aunque puedas ver todo el camino.",
-          "courseD_bee_conditionals4_b": "Usa una afirmación \\`si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
-          "courseD_bee_conditionals4_c": "Usa un bloque <xml><block type=\"maze_untilBlocked\"/></xml> para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
+          "courseD_bee_conditionals4_b": "Usa una afirmación `si' dentro de tu bucle para comprobar si hay néctar en cada espacio. ",
+          "courseD_bee_conditionals4_c": "Usa un bloque [bloque blockly][0] para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería hacer la abeja?",
           "courseD_bee_conditionals4_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
         "courseD_bee_conditionals4_2018": {
@@ -5662,7 +5662,7 @@
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "¿Necesitas ayuda para comenzar? ¡Ve el vídeo!",
           "courseD_bee_conditionals5_a": "Piensa en cada lado de la ruta rectangular como un camino en sí mismo. Crea un bucle anidado con un bloque `repetir` en el exterior y un bucle`mientras haya camino por delante` en el interior. ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer cada lado con una flor?",
-          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`recoger néctar`.",
+          "courseD_bee_conditionals5_c": "Hay 3 lados del rectángulo con flores, por lo que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá avanzar por el camino, \"mientras haya un camino por delante\". Para continuar por el camino, la abeja deberá 'avanzar'. Mientras recorre el camino, la abeja tiene que comprobar si hay una flor. ` si hay una flor`, la abeja debería` recoger néctar`.",
           "courseD_bee_conditionals5_b": "En el interior del bloque`mientras que haya un camino delante` tendrás que avanzar y comprobar si hay una flor. ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?",
           "courseD_bee_conditionals5_hintVid2": "Ve este vídeo como ayuda para resolver este puzle."
         },
@@ -7090,7 +7090,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "La función que escribes no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixeles.",
           "courseD_artist_functions2_c": "Utiliza el bloque verde 'dibujar un cuadrado' para \"llamar\" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "El programa debe:\n\n-   Usar la función\n-   Avanzar 100 + 75 pixeles\n-   Usar la función"
+          "courseD_artist_functions2_a": "El programa debe:\n\n- Usar la función\n- Avanzar 100 + 75 pixeles\n- Usar la función"
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.",
@@ -8672,31 +8672,31 @@
           "grade5_artist_variables_triangles1_c": "Dentro de tu bucle, tendrás que avanzar 50 píxeles, luego girar a la izquierda 120 grados."
         },
         "iceage_click_hello": {
-          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al hacer click' para completar este desafío."
+          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al pulsar' para completar este rompecabezas."
         },
         "iceage_free_play": {
           "iceage_free_play_a": "¿Puedes hacer que Sid y Manny tengan una lucha de cristales de hielo?  ",
           "iceage_free_play_b": "Haz que Granny persiga a Diego. Termina el juego como una victoria si lo atrapa.",
-          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego se haga más grande cada vez que recibe uno? Termina el juego como una victoria si Diego recibe 5 golpes."
+          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego aumente de tamaño cada vez que uno le dé?  Termina el juego como una victoria si Diego es golpeado 5 veces."
         },
         "iceage_hello1": {
-          "iceage_hello1_a": "Sólo necesitas agregar un bloque para resolver este desafío. Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de evento `cuando ejecuta` que ya se encuentra en el área de trabajo. Luego, escribe \"¡Hola!\" dentro."
+          "iceage_hello1_a": "Sólo tienes que añadir un bloque para resolver este rompecabezas.  Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de eventos `al ejecutar` que ya está en el área de trabajo. A continuación, escribe \"¡Hola! dentro."
         },
         "iceage_hello2": {
-          "iceage_hello2_a": "Para resolver este desafío, necesitarás que Sid diga algo único usando el bloque 'actor 1 dice'. Necesitarás que Manny diga algo con el bloque 'actor 2 dice'. "
+          "iceage_hello2_a": "Para resolver este rompecabezas, tendrás que hacer que Sid diga algo utilizando el bloque \"actor 1 dice\".  También tendrás que hacer que Manny diga algo con el bloque \"actor 2 dice\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_move_to_actor": {
-          "iceage_move_to_actor_a": "En este desafío, puedes mover a Diego hacia abajo 200 pixeles o mover a Manny arriba 200 pixeles.",
-          "iceage_move_to_actor_b": "Conecta el bloque 'reproducir\\_\\_\\_sonido' al evento 'cuando el actor 1 toque al 2' para terminar este reto."
+          "iceage_move_to_actor_a": "Para este rompecabezas, puedes mover a Diego 200 píxeles hacia abajo, o mover a Manny 200 píxeles hacia arriba.",
+          "iceage_move_to_actor_b": "Conecta el bloque `reproduce ___ sonido` al evento `cuando el actor 1 toca al actor 2` para terminar este desafío."
         },
         "iceage_move_to_flag": {
-          "iceage_hello3_a": "Utiliza el bloque de 'mover el actor 1 a la derecha por 200 píxeles' para resolver este desafío."
+          "iceage_hello3_a": "Utiliza el bloque `mover actor 1 a la derecha 200 píxeles` para resolver este rompecabezas."
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este desafío."
+          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este rompecabezas."
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
@@ -8704,11 +8704,11 @@
         },
         "iceage_throw_hearts": {
           "iceage_throw_hearts_a": "¿Cuándo deseas lanzar corazones a la abuela?  ¿Cuando se presiona una flecha? ¿Al hacer clic en Sid?  ¿Al hacer clic en abuela?  ¡La elección es tuya!",
-          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'establecer humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
+          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'configurar humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
         },
         "iceage_warn_ice_age": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
@@ -10664,15 +10664,15 @@
           "card_idea3": "Puedes hacer que tu programa sea interactivo haciendo que ocurran otras cosas cuando el usuario pulse una tecla o después de que haya pasado un tiempo determinado.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"cuando\"</title>\n    <title name=\"KEY\">\"arriba\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"escala\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
           "iceage_sound_and_points_b": "Necesitas los bloques `anotar un punto` y `reproducir \\_\\_\\_\\_ sonido\\` para pasar este nivel."
         },
         "iceage_warn_ice_age_dani": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
