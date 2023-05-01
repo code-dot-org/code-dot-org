@@ -132,6 +132,7 @@ class ShowSecret extends Component {
               color={Button.ButtonColor.white}
               text={showButtonText}
               disabled={secretLoginDisabled}
+              className="uitest-show-picture-or-word"
             />
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
               <div>{i18n.secretLoginTooltip()}</div>

@@ -181,14 +181,8 @@ class ManageStudentsTable extends Component {
     );
   }
 
-  // Editing is disabled if the "student" in the section is a teacher
-  // (e.g., their userType is 'teacher').
-  isEditingDisabled(userType) {
-    return userType === 'teacher';
-  }
-
-  // Showing secret picture is disabled if the "student" in the section is a teacher
-  isSecretLoginDisabled(userType) {
+  // Helper function to determine if user is a teacher
+  isTeacher(userType) {
     return userType === 'teacher';
   }
 
@@ -236,8 +230,8 @@ class ManageStudentsTable extends Component {
 
   passwordFormatter(loginType, {rowData}) {
     const {sectionId} = this.props;
-    const resetDisabled = this.isEditingDisabled(rowData.userType);
-    const secretLoginDisabled = this.isSecretLoginDisabled(rowData.userType);
+    const resetDisabled = this.isTeacher(rowData.userType);
+    const secretLoginDisabled = this.isTeacher(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -262,7 +256,6 @@ class ManageStudentsTable extends Component {
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
-                resetDisabled={resetDisabled}
                 secretLoginDisabled={secretLoginDisabled}
               />
             )}
@@ -328,7 +321,7 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
-        canEdit={!this.isEditingDisabled(rowData.userType)}
+        canEdit={!this.isTeacher(rowData.userType)}
       />
     );
   }

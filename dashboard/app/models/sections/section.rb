@@ -229,7 +229,7 @@ class Section < ApplicationRecord
     name_splitter_proc = ->(student) {FullNameSplitter.split(student.name)}
 
     students_only = students.filter do |user|
-      user.user_type == "student"
+      user.user_type != "teacher"
     end
 
     SafeNames.get_safe_names(students_only, name_splitter_proc).map do |safe_name_and_student|
