@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
-import styles from '@cdo/apps/templates/levelSummary/check-for-understanding.module.scss';
+import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
