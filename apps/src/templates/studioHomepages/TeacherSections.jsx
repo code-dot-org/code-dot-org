@@ -17,6 +17,8 @@ import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
 
 class TeacherSections extends Component {
   static propTypes = {
+    userId: PropTypes.number,
+
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
     studentSectionIds: PropTypes.array,
@@ -36,6 +38,7 @@ class TeacherSections extends Component {
       studentSectionIds,
       hiddenPlSectionIds,
       hiddenStudentSectionIds,
+      userId,
     } = this.props;
 
     const hasSections =
@@ -55,6 +58,7 @@ class TeacherSections extends Component {
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
             <OwnedSections
+              userId={userId}
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
             />
@@ -63,6 +67,7 @@ class TeacherSections extends Component {
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
             <OwnedSections
+              userId={userId}
               isPlSections={true}
               sectionIds={plSectionIds}
               hiddenSectionIds={hiddenPlSectionIds}

@@ -247,7 +247,7 @@ export const UnconnectedTeacherHomepage = ({
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections />
+        <TeacherSections userId={currentUserId} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
