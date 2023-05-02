@@ -54,7 +54,7 @@ steps:
       #MINITEST_REPORTER: JUnitReporter
       #MINITEST_REPORTERS_REPORTS_DIR: $HOME/test-results
       CIRCLECI: true
-      CIRCLE_TEST_REPORTS: $HOME/test-results
+      CIRCLE_TEST_REPORTS: /home/circleci/test-results
     commands:
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
@@ -62,6 +62,7 @@ steps:
       - rm -rf "$(pwd)/home/circleci/.rbenv"
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
+      - mkdir /home/circleci/test-results
       - EXIT_CODE=0
       - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -85,7 +86,7 @@ steps:
     image: plugins/s3
     settings:
       bucket: cdo-test-results-public
-      source: $HOME/test-results/**/*
+      source: /home/circleci/test-results/**/*
       target: /$DRONE_COMMIT_SHA
       region: us-west-2
     when:
