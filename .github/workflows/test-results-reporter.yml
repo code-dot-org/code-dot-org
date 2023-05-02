@@ -17,7 +17,7 @@ jobs:
           # source: s3://cdo-test-results-public/$GITHUB_SHA
           source: s3://cdo-test-results-public/0fd1c41d87ee9662a0474a245324ee0f12be0574/
           destination: ./test-results
-          # aws_region: us-west-2
+          aws_region: us-west-2
           flags: --recursive
 
       - name: Generate Test Report
