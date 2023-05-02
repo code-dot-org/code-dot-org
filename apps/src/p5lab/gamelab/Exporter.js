@@ -1,4 +1,3 @@
-/* global dashboard */
 /* eslint no-unused-vars: ["error", { "ignoreRestSiblings": true }] */
 import $ from 'jquery';
 import JSZip from 'jszip';
