@@ -22,8 +22,7 @@ def saucelabs_browser(test_run_name)
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config)
-  capabilities[:javascript_enabled] = 'true'
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
   if ENV['BROWSER_CONFIG'] == 'Firefox'
     # Firefox >= 66 has an issue with its content blocker causing page loads to block indefinitely.
@@ -44,13 +43,9 @@ def saucelabs_browser(test_run_name)
 
   # Use w3c-spec sauce:options capabilities format for compatible browsers.
   # Ref: https://wiki.saucelabs.com/display/DOCS/Selenium+W3C+Capabilities+Support+-+Beta
-  if $browser_config['w3c']
-    sauce_capabilities['seleniumVersion'] = Selenium::WebDriver::VERSION
-    capabilities['sauce:options'] = sauce_capabilities
-    capabilities['platformName'] = capabilities['platform']
-  else
-    capabilities.merge!(sauce_capabilities)
-  end
+  sauce_capabilities['seleniumVersion'] = Selenium::WebDriver::VERSION
+  capabilities["sauce:options"] ||= {}
+  capabilities["sauce:options"].merge!(sauce_capabilities)
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -58,7 +53,7 @@ def saucelabs_browser(test_run_name)
   with_read_timeout(5.minutes) do
     Selenium::WebDriver.for(:remote,
       url: url,
-      desired_capabilities: capabilities,
+      capabilities: capabilities,
       http_client: $http_client
     )
   end
