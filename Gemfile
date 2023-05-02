@@ -27,6 +27,8 @@ gem 'rails-controller-testing', '~> 1.0.5'
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
 gem 'sprockets-rails', '3.3.0'
 
+gem 'bootsnap', '>= 1.14.0', group: [:development, :adhoc], require: false
+
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'
