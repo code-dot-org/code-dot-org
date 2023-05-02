@@ -1,0 +1,23 @@
+name: Test Results Reporter
+on:
+  check_suite:
+    types: [completed]
+jobs:
+  test-reporter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Test Results
+        uses: keithweaver/aws-s3-github-action@v1.0.0
+        with:
+          command: cp
+          source: s3://cdo-test-results-public/$GITHUB_SHA
+          destination: ./test-results
+          # aws_region: us-west-2
+          flags: --recursive
+
+      - name: Generate Test Report
+        uses: dorny/test-reporter@v1
+        with:
+          name: Tests
+          path: ./test-results/**/*.xml
+          reporter: java-junit
