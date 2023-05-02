@@ -56,7 +56,7 @@ export default class BlockSvgUnused extends BlockSvgFrame {
       'mousedown',
       this,
       function (e) {
-        if (Blockly.utils.isRightButton(e)) {
+        if (Blockly.browserEvents.isRightButton(e)) {
           // Right-click.
           return;
         }
@@ -71,14 +71,12 @@ export default class BlockSvgUnused extends BlockSvgFrame {
     this.bindClickEvent();
     var groupRect = svgGroup.getBoundingClientRect();
     var minWidthAdjustment = this.frameHelp_.getBoundingClientRect().width;
-    var width =
-      Math.max(groupRect.width, minWidthAdjustment) +
-      2 * frameSizes.MARGIN_SIDE;
+    var width = Math.max(groupRect.width, minWidthAdjustment);
     super.render(svgGroup, isRtl, width);
     this.frameHelp_.setAttribute(
       'transform',
       'translate(' +
-        (width - 2 * frameSizes.MARGIN_SIDE) +
+        width +
         ',' +
         -(frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT / 2) +
         ')'
@@ -92,5 +90,22 @@ export default class BlockSvgUnused extends BlockSvgFrame {
     this.frameHeader_ = undefined;
     this.frameText_ = undefined;
     this.frameHelp_ = undefined;
+  }
+}
+
+// Added as a change listener in the wrapper.
+// When a block is clicked, dragged or deleted, we remove any "Unused clock" frame.
+export function onBlockClickDragDelete(event) {
+  if (
+    event.type === Blockly.Events.CLICK ||
+    event.type === Blockly.Events.BLOCK_DRAG ||
+    event.type === Blockly.Events.BLOCK_DELETE
+  ) {
+    const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
+    const block = workspace.getBlockById(event.blockId);
+    if (!block) {
+      return;
+    }
+    block.removeUnusedBlockFrame();
   }
 }
