@@ -32,6 +32,7 @@ function TopInstructionsHeader(props) {
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
+    isOldPurpleColor,
     isMinecraft,
     dynamicInstructions,
     ttsLongInstructionsUrl,
@@ -43,7 +44,7 @@ function TopInstructionsHeader(props) {
     isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
-    collapsible
+    collapsible,
   } = props;
 
   const showContainedLevelAnswer =
@@ -54,12 +55,13 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
-    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
   return (
     <PaneHeader
       hasFocus={false}
+      isOldPurpleColor={isOldPurpleColor}
       teacherOnly={teacherOnly}
       isMinecraft={isMinecraft}
     >
@@ -90,13 +92,14 @@ function TopInstructionsHeader(props) {
         <div
           style={{
             ...styles.helpTabs,
-            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr)
+            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
           }}
         >
           <InstructionsTab
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
             selected={tabSelected === TabType.INSTRUCTIONS}
+            isLegacyTextColor={isOldPurpleColor}
             text={i18n.instructions()}
             teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
@@ -107,6 +110,7 @@ function TopInstructionsHeader(props) {
               className="uitest-helpTab"
               onClick={handleHelpTabClick}
               selected={tabSelected === TabType.RESOURCES}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.helpTips()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -118,6 +122,7 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
+              isLegacyTextColor={isOldPurpleColor}
               text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -128,6 +133,7 @@ function TopInstructionsHeader(props) {
             <InstructionsTab
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.documentation()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -139,6 +145,7 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.review()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -175,9 +182,11 @@ function TopInstructionsHeader(props) {
               src={ttsLongInstructionsUrl}
               style={{
                 ...styles.audio,
-                ...(isRtl ? styles.audioRTL : styles.audioLTR)
+                ...(isRtl ? styles.audioRTL : styles.audioLTR),
               }}
               autoplayTriggerElementId="codeApp"
+              isRoundedVolumeIcon
+              isLegacyStyles={isOldPurpleColor}
             />
           )}
       </div>
@@ -190,42 +199,42 @@ const styles = {
     color: color.default_text,
     display: 'flex',
     width: '100%',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   audioRTL: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   audio: {
     button: {
       height: 24,
       marginTop: '3px',
-      marginBottom: '3px'
+      marginBottom: '3px',
     },
     buttonImg: {
-      lineHeight: '24px',
+      lineHeight: '20px',
       fontSize: 15,
-      paddingLeft: 12
-    }
+      paddingLeft: 12,
+    },
   },
   audioLTR: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   helpTabs: {
     paddingTop: 6,
     width: '100%',
     boxSizing: 'border-box',
     display: 'flex',
-    minWidth: 100
+    minWidth: 100,
   },
   helpTabsLtr: {
-    paddingLeft: 30
+    paddingLeft: 30,
   },
   helpTabsRtl: {
-    paddingRight: 30
+    paddingRight: 30,
   },
   collapserIcon: {
     showHideButton: {
@@ -237,28 +246,28 @@ const styles = {
       fontSize: 18,
       ':hover': {
         cursor: 'pointer',
-        color: color.white
-      }
+        color: color.white,
+      },
     },
     showHideButtonLtr: {
-      left: 8
+      left: 8,
     },
     showHideButtonRtl: {
-      right: 8
+      right: 8,
     },
     teacherOnlyColor: {
       color: color.lightest_cyan,
       ':hover': {
         cursor: 'pointer',
-        color: color.default_text
-      }
-    }
+        color: color.default_text,
+      },
+    },
   },
   documentationButton: {
     order: 4,
     whiteSpace: 'nowrap',
-    minWidth: 'fit-content'
-  }
+    minWidth: 'fit-content',
+  },
 };
 
 TopInstructionsHeader.propTypes = {
@@ -281,6 +290,7 @@ TopInstructionsHeader.propTypes = {
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
+  isOldPurpleColor: PropTypes.bool,
   isMinecraft: PropTypes.bool.isRequired,
   dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,
@@ -292,7 +302,7 @@ TopInstructionsHeader.propTypes = {
   isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
-  collapsible: PropTypes.bool.isRequired
+  collapsible: PropTypes.bool.isRequired,
 };
 
 export default TopInstructionsHeader;

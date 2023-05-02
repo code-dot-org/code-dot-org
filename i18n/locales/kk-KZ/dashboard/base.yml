@@ -613,6 +613,10 @@ kk:
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Спорттар'
   cookie_banner:
     accept: 'Мен келісемін'
   copy: 'Көшіру'

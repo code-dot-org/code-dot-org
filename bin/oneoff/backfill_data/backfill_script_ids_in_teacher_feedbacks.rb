@@ -40,8 +40,8 @@ def update_script_ids
         # case we want the script to stop so that we can investigate.
         script_id = teacher_feedback.script_level.script_id
         teacher_feedback.update!(script_id: script_id)
-      rescue => e
-        puts "Error updating teacher feedback id #{teacher_feedback.id}: #{e}"
+      rescue => exception
+        puts "Error updating teacher feedback id #{teacher_feedback.id}: #{exception}"
       end
 
       raise ActiveRecord::Rollback unless $options[:actually_update]

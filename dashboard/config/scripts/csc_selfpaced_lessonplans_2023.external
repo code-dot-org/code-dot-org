@@ -1,0 +1,21 @@
+name 'CSC-SelfPaced-lessonplans_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Plans
+
+##### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
+
+## Example lesson plan
+
+##### Preview this lesson plan from the module <a href="https://studio.code.org/s/csc-timecapsule-2023/lessons/1" target="blank">Coding a Time Capsule</a>.
+
+##### When exploring the lesson plan, locate...
+* ##### Slide decks
+* ##### Activity guides
+* ##### Answer keys
+
+## Let's keep learning! 
+
+MARKDOWN

@@ -31,20 +31,11 @@ CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
-
 Layout/DotPosition:
   EnforcedStyle: trailing
 
-Style/EmptyElse:
-  EnforcedStyle: empty
-
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
-
-Style/EmptyMethod:
-  EnforcedStyle: expanded
 
 Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
@@ -52,11 +43,8 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
-Style/NumericLiterals:
-  MinDigits: 7
-
-Style/Semicolon:
-  AllowAsExpressionSeparator: true
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
 
 Layout/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
@@ -64,6 +52,24 @@ Layout/SpaceInsideBlockBraces:
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
 
 Style/WordArray:
   MinSize: 5

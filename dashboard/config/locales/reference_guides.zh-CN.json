@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "人工智能实验室"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "模拟传感器"
-        },
         "csd-2022/app-lab": {
           "display_name": "应用实验室"
         },
@@ -32,8 +29,8 @@
         "csd-2022/changing-sensor-scale": {
           "display_name": "改变传感器的级别"
         },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "电路和 LED"
+        "csd-2022/circuit-playground": {
+          "display_name": "电路游戏板概述"
         },
         "csd-2022/classes": {
           "display_name": "班级"
@@ -149,11 +146,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "概览"
         },
-        "csd-2022/physical-input": {
-          "display_name": "物理输入"
-        },
         "csd-2022/playing-notes": {
           "display_name": "角色备注"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "解决问题的过程"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "解决问题的过程"
         },
         "csd-2022/random-numbers": {
           "display_name": "随机数"

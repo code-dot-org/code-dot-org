@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class SampleData
   SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze

@@ -12,7 +12,7 @@ import {
   KeywordPublicModulus,
   KeywordPublicKey,
   KeywordPublicNumber,
-  KeywordSecretNumber
+  KeywordSecretNumber,
 } from './cryptographyFields';
 import {COLORS} from './style';
 
@@ -20,7 +20,7 @@ const INITIAL_STATE = {
   publicModulus: null,
   publicKey: null,
   secretNumber: null,
-  publicNumber: null
+  publicNumber: null,
 };
 
 export default class Bob extends React.Component {
@@ -28,7 +28,7 @@ export default class Bob extends React.Component {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
     setPublicNumber: PropTypes.func.isRequired,
-    runModuloClock: PropTypes.func.isRequired
+    runModuloClock: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};

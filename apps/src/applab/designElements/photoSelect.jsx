@@ -18,7 +18,7 @@ class PhotoChooserProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -105,14 +105,14 @@ class PhotoChooserEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
     const commands = [
       `console.log("${id} photo selected!");`,
-      `console.log(getImageURL("${id}"));`
+      `console.log(getImageURL("${id}"));`,
     ];
     const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
     return `onEvent("${id}", "change", ${callback});`;
@@ -150,7 +150,7 @@ export default {
   EventTab: PhotoChooserEvents,
   themeValues: themeValues.photoSelect,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('label');
     element.setAttribute('class', 'img-upload fa fa-camera');
     element.style.margin = '0';
@@ -178,10 +178,10 @@ export default {
     element.appendChild(newInput);
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     // Disable image upload events unless running
     $(element).on('click', () => {
       element.childNodes[0].disabled = !Applab.isRunning();
     });
-  }
+  },
 };

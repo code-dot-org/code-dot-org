@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "An HR department needs to extract email addresses from a list of job applications.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Job</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">extractEmails()</code> method that finds all email addresses in the list of job applications and returns them in a new list.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">JobRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">extractEmails()</code> method and print the result.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Email Extractor",
+    "bubble_choice_description": "An HR department needs to extract email addresses from a list of job applications.",
+    "thumbnail_url": "https://images.code.org/edfcf40edb38fcc1119740b18ad4065e-resume.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T14:09:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T14:09:33.759+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L7c_2023\\\"\"],\"cloned_from\":\"CSA U6L6-L7c_2023\"},{\"changed_at\":\"2023-04-03 14:09:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 23:27:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

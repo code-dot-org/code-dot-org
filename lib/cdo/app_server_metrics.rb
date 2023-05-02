@@ -39,11 +39,11 @@ module Cdo
     end
 
     def shutdown
-      @task&.shutdown
+      @spawn_reporting_task&.shutdown
     end
 
     def spawn_reporting_task
-      @task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
+      @spawn_reporting_task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
         with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
         execute
     end

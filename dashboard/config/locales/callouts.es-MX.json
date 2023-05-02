@@ -2236,100 +2236,100 @@
           "poetry_remove_sprite": "¡Bloque nuevo!"
         },
         "helloworld_animals_backgrounds": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_animals_click": {
-          "hw_Run": "Pulsa aquí para ejecutar el código."
+          "hw_Run": "Haz click aquí para ejecutar el código."
         },
         "helloworld_animals_events": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_animals_freeplay": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_animals_location": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_animals_multi": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_animals_say": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",
           "hello_world_make_sprite": "Utiliza este bloque para crear un sprite."
         },
         "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_emoji_click": {
-          "hw_Run": "Pulsa aquí para ejecutar el código."
+          "hw_Run": "Haz click aquí para ejecutar el código."
         },
         "helloworld_emoji_events": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_emoji_freeplay": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_emoji_location": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_emoji_multi": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_emoji_say": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",
           "hello_world_make_sprite": "Utiliza este bloque para crear un sprite."
         },
         "helloworld_food_backgrounds": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_food_click": {
-          "hw_Run": "Pulsa aquí para ejecutar el código."
+          "hw_Run": "Haz click aquí para ejecutar el código."
         },
         "helloworld_food_events": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_food_freeplay": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_food_location": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_multi": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_say": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",
           "hello_world_make_sprite": "Utiliza este bloque para crear un sprite."
         },
         "helloworld_retro_backgrounds": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_retro_click": {
-          "hw_Run": "Pulsa aquí para ejecutar el código."
+          "hw_Run": "Haz click aquí para ejecutar el código."
         },
         "helloworld_retro_events": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_retro_freeplay": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_retro_location": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_retro_multi": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_retro_say": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",
@@ -2591,7 +2591,7 @@
           "CSD_AI_L11_weather": "Esta es la característica del clima"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto.",
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto.",
           "make_sprite": "¡Utiliza los bloques aquí para hacer un sprite!"
         },
         "Calc Circles of Eval .2": {
@@ -2876,7 +2876,7 @@
           "pointerlocation": "Arrastre un bloque de sujeto aquí."
         },
         "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
@@ -3072,7 +3072,7 @@
           "": "Estos bloques no tienen números. ¡Puedes usar tantos como quieras!"
         },
         "courseE_aboutme_22022": {
-          "": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "Cuando se ejecuta este bloque verde, todo el código de la función se iniciará- ¿Qué debería hacer el artista después de dibujar el primer cuadrado?"
@@ -3246,10 +3246,10 @@
           "grade2_CaringForNewPet_0_1": "Después de encajar todos los bloques juntos, presiona \"Ejecutar\" para iniciar tu programa."
         },
         "coursee_helloworld_events": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "coursee_helloworld_freeplay": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "coursee_helloworld_say": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",
@@ -3296,19 +3296,19 @@
           "CSD U6L10.2 - add_code": "¡Añade tu código aquí!"
         },
         "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "Utiliza este bloque para configurar un nuevo fondo."
+          "hw_background_location": "Usa este bloque para establecer un nuevo fondo."
         },
         "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los comportamientos siguientes:"
+          "hello_world_behavior_blocks": "Utiliza este bloque con uno de los siguientes comportamientos:"
         },
         "helloworld_food_click_soccer-2022": {
-          "hw_Run": "Pulsa aquí para ejecutar el código."
+          "hw_Run": "Haz click aquí para ejecutar el código."
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "¡Bloque nuevo!"
@@ -3317,28 +3317,28 @@
           "hello_world_new": "¡Bloque nuevo!"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Add this event block to your workspace."
+          "hello_world_click_hint": "Añade este bloque de evento a tu espacio de trabajo."
         },
         "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Pulsa aquí para añadir disfraces a tu proyecto."
+          "costumes_tab": "Haz clic aquí para añadir disfraces a tu proyecto."
         },
         "helloworld_food_location_soccer-2022": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_location_space-2022": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_multi_soccer-2022": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_multi_space-2022": {
-          "pin": "marca"
+          "pin": "pin"
         },
         "helloworld_food_say_soccer-2022": {
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen.",

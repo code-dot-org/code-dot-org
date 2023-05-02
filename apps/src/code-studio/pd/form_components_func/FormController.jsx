@@ -16,7 +16,7 @@ const defaultSubmitButtonText = i18n.submit();
 const scrollToTop = () => {
   $('html, body').animate(
     {
-      scrollTop: 0
+      scrollTop: 0,
     },
     200
   );
@@ -52,7 +52,7 @@ const InvalidPagesSummary = ({pages, setPage}) => (
 
 InvalidPagesSummary.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.number).isRequired,
-  setPage: PropTypes.func.isRequired
+  setPage: PropTypes.func.isRequired,
 };
 
 /**
@@ -82,7 +82,7 @@ const FormController = props => {
     submitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
     validateOnSubmitOnly,
-    warnOnExit
+    warnOnExit,
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
@@ -93,7 +93,7 @@ const FormController = props => {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
     ...getInitialStored(sessionStorageKey, 'data'),
-    ...getInitialData()
+    ...getInitialData(),
   }));
   const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
@@ -112,12 +112,10 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
-  const [updatedApplicationId, setUpdatedApplicationId] = useState(
-    applicationId
-  );
-  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId
-  );
+  const [updatedApplicationId, setUpdatedApplicationId] =
+    useState(applicationId);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] =
+    useState(applicationId);
 
   // do this once on mount only
   useEffect(() => {
@@ -174,7 +172,7 @@ const FormController = props => {
     errors.length,
     previousErrors.length,
     pageComponents.length,
-    pageHasError
+    pageHasError,
   ]);
 
   // on page changed
@@ -218,7 +216,7 @@ const FormController = props => {
       }
       setData({
         ...data,
-        ...pageData
+        ...pageData,
       });
 
       const pageRequiredFields = pageFields.filter(f =>
@@ -300,9 +298,9 @@ const FormController = props => {
         const mergedData = {
           ...{
             currentPage: currentPage,
-            data: data
+            data: data,
           },
-          ...newState
+          ...newState,
         };
         sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
       }
@@ -349,7 +347,7 @@ const FormController = props => {
     return {
       form_data: formData,
       isSaving: isSaving,
-      ...serializeAdditionalData()
+      ...serializeAdditionalData(),
     };
   };
 
@@ -379,7 +377,7 @@ const FormController = props => {
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(data, isSaving))
+        data: JSON.stringify(serializeFormData(data, isSaving)),
       });
 
     return updatedApplicationId
@@ -451,7 +449,7 @@ const FormController = props => {
           'application id': data.id,
           'application status': rp_requires_admin_approval
             ? 'awaiting_admin_approval'
-            : 'unreviewed'
+            : 'unreviewed',
         });
       }
     };
@@ -521,7 +519,7 @@ const FormController = props => {
       onChange: handleChange,
       errors: errors,
       errorMessages: errorMessages,
-      data: data
+      data: data,
     };
   }, [
     currentPage,
@@ -530,7 +528,7 @@ const FormController = props => {
     errorMessages,
     data,
     getAdditionalPageProps,
-    handleChange
+    handleChange,
   ]);
 
   /**
@@ -575,7 +573,7 @@ const FormController = props => {
         if (currentPage !== newPage) {
           analyticsReporter.sendEvent(EVENTS.PAGE_CHANGED_EVENT, {
             'current application page': currentPage + 1,
-            'new application page': newPage + 1
+            'new application page': newPage + 1,
           });
         }
 
@@ -589,7 +587,7 @@ const FormController = props => {
       validateOnSubmitOnly,
       saveToSessionStorage,
       currentPage,
-      validateCurrentPageRequiredFields
+      validateCurrentPageRequiredFields,
     ]
   );
 
@@ -718,16 +716,16 @@ const FormController = props => {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0px 10px 5px'
+    margin: '0px 10px 5px',
   },
   saveButton: {
     marginLeft: '10px',
-    marginRight: '10px'
+    marginRight: '10px',
   },
   spinner: {
     verticalAlign: 'top',
-    marginTop: '5px'
-  }
+    marginTop: '5px',
+  },
 };
 
 FormController.propTypes = {
@@ -749,7 +747,7 @@ FormController.propTypes = {
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,
-  warnOnExit: PropTypes.bool
+  warnOnExit: PropTypes.bool,
 };
 
 FormController.defaultProps = {
@@ -766,7 +764,7 @@ FormController.defaultProps = {
   sessionStorageKey: null,
   submitButtonText: defaultSubmitButtonText,
   validateOnSubmitOnly: false,
-  warnOnExit: false
+  warnOnExit: false,
 };
 
 export default FormController;

@@ -34,7 +34,7 @@ class InstructionsCsfMiddleCol extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
+      isFailure: PropTypes.bool,
     }),
     collapsed: PropTypes.bool.isRequired,
     hints: PropTypes.arrayOf(
@@ -42,7 +42,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         hintId: PropTypes.string.isRequired,
         markdown: PropTypes.string.isRequired,
         block: PropTypes.object, // XML
-        video: PropTypes.string
+        video: PropTypes.string,
       })
     ).isRequired,
     showNextHint: PropTypes.func.isRequired,
@@ -54,7 +54,7 @@ class InstructionsCsfMiddleCol extends React.Component {
     longInstructions: PropTypes.string,
     clearFeedback: PropTypes.func.isRequired,
     hideOverlay: PropTypes.func.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
   };
 
   componentDidUpdate(prevProps) {
@@ -222,16 +222,16 @@ class InstructionsCsfMiddleCol extends React.Component {
 const styles = {
   instructions: {
     padding: '5px 0',
-    minWidth: 40
+    minWidth: 40,
   },
   instructionsWithTips: {
     width: 'calc(100% - 20px)',
-    float: 'right'
+    float: 'right',
   },
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
-    float: 'left'
-  }
+    float: 'left',
+  },
 };
 
 export const UnconnectedInstructionsCsfMiddleCol = InstructionsCsfMiddleCol;
@@ -256,12 +256,12 @@ export default connect(
         state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
-      longInstructions: state.instructions.longInstructions
+      longInstructions: state.instructions.longInstructions,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      hideOverlay: function() {
+      hideOverlay: function () {
         dispatch(instructions.hideOverlay());
       },
       setInstructionsRenderedHeight(height) {
@@ -269,9 +269,9 @@ export default connect(
       },
       clearFeedback() {
         dispatch(instructions.setFeedback(null));
-      }
+      },
     };
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(InstructionsCsfMiddleCol);

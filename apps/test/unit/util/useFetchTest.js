@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
@@ -10,6 +11,12 @@ let useFetchReturnValue = {current: null};
 const UseFetchHarness = ({url, options, deps}) => {
   useFetchReturnValue.current = useFetch(url, options, deps);
   return null;
+};
+
+UseFetchHarness.propTypes = {
+  url: PropTypes.string,
+  options: PropTypes.object,
+  deps: PropTypes.array,
 };
 
 // Convenience method; tests can use "await processEventLoop()" to wait for

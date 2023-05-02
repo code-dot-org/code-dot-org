@@ -37,11 +37,11 @@ module SeleniumBrowser
     # Replaces 'unexpected response' message with the actual parsed error from the JSON response, if provided.
     def create_response(code, body, content_type)
       super
-    rescue Selenium::WebDriver::Error::WebDriverError => e
-      if (msg = e.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
+    rescue Selenium::WebDriver::Error::WebDriverError => exception
+      if (msg = exception.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
         error = msg[:error]
         error = JSON.parse(error)['value']['error'] rescue error
-        e.message.replace("Error #{msg[:code]}: #{error}")
+        exception.message.replace("Error #{msg[:code]}: #{error}")
       end
       raise
     end

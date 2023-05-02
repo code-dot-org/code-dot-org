@@ -6,14 +6,14 @@ import Image from '@cdo/apps/tutorialExplorer/image';
 describe('Image', () => {
   it('renders with minimum opacity at first', () => {
     const wrapper = shallow(<Image style={{}} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     assert(wrapper.containsMatchingElement(<img style={{opacity: 0.1}} />));
   });
 
   it('renders with a transition to full opacity after image loads', () => {
     const wrapper = shallow(<Image style={{}} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     wrapper.instance().onImageLoad();
     assert(
@@ -21,7 +21,7 @@ describe('Image', () => {
         <img
           style={{
             opacity: 1,
-            transition: 'opacity 200ms ease-in'
+            transition: 'opacity 200ms ease-in',
           }}
         />
       )

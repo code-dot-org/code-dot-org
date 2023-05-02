@@ -224,7 +224,7 @@ describe('multi', () => {
         result: true,
         errorDialog: undefined,
         submitted: false,
-        valid: true
+        valid: true,
       });
     });
 

@@ -132,9 +132,9 @@ namespace :build do
         ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
           RakeUtils.rake_stream_output 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
-        rescue => e
-          ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
-          raise e
+        rescue => exception
+          ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
+          raise exception
         end
       end
 

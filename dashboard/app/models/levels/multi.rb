@@ -35,6 +35,7 @@ class Multi < Match
       question 'Question'
       wrong 'wrong answer'
       right 'right answer'
+      allow_multiple_attempts false
     RUBY
   end
 

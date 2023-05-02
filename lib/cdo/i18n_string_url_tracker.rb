@@ -118,10 +118,8 @@ class I18nStringUrlTracker
     end
   end
 
-  private
-
   # Records the log data to a buffer which will eventually be flushed
-  def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
+  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
       # update the buffer size if we are adding any new data to it

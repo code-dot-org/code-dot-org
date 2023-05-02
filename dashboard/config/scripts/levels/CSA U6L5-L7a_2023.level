@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Election</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">voters</code> that represents a list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Voter</code> objects. When an instance of an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Election</code> is created, the list is initialized to an empty list.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Election</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">countVotes()</code> method to count the number of voters who have voted in an election.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ElectionRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">countVotes()</code> method and print the result.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_working_with_arraylist_data",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Voting System",
+    "bubble_choice_description": "A voting system administrator needs to keep track of whether voters have voted in an election.",
+    "thumbnail_url": "https://images.code.org/4e82f82bf9c575d31ff19dfded4a7993-voting-box.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T14:03:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T14:03:00.716+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L6d_2023\\\"\"],\"cloned_from\":\"CSA U6L5-L6d_2023\"},{\"changed_at\":\"2023-04-03 14:03:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:36:07 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 22:51:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

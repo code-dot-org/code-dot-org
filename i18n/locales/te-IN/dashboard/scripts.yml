@@ -157,3 +157,27 @@ te:
           lessons:
             lesson-1:
               name: ఆ శబ్దం ఏమిటి?
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ఈవెంట్లు
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు

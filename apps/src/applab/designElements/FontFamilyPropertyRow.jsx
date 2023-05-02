@@ -5,6 +5,6 @@ export default class FontFamilyPropertyRow extends EnumPropertyRow {
   static defaultProps = {
     desc: 'font family',
     initialValue: fontFamilyOptions[0],
-    options: fontFamilyOptions
+    options: fontFamilyOptions,
   };
 }

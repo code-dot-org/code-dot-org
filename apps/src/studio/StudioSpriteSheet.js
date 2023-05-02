@@ -73,9 +73,8 @@ export default class StudioSpriteSheet {
         this.animations[i].frames,
         this.defaultFramesPerAnimation
       );
-      this.animationFrameCounts[
-        this.animations[i].type
-      ] = framesPerThisAnimationType;
+      this.animationFrameCounts[this.animations[i].type] =
+        framesPerThisAnimationType;
       totalFrames += framesPerThisAnimationType * this.animations[i].count;
     }
     this.totalAnimations = valueOr(options.totalAnimations, totalAnimations);
@@ -168,7 +167,7 @@ export default class StudioSpriteSheet {
       top: y,
       left: x,
       right: x + this.frameWidth,
-      bottom: y + this.frameHeight
+      bottom: y + this.frameHeight,
     };
   }
 }

@@ -12,3 +12,5 @@ ASCII is a character-encoding scheme that uses a numeric value to represent each
 ASCII characters can also be represented by binary numbers. According to ASCII character encoding, which of the following letters is represented by the 8-bit binary value: `0100 0010`
 
 MARKDOWN
+
+allow_multiple_attempts true

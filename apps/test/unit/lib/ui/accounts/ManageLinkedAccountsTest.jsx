@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/deprecatedChai';
 import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
-  ENCRYPTED
+  ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   disconnect: () => {},
   userHasPassword: true,
   isGoogleClassroomStudent: false,
-  isCleverStudent: false
+  isCleverStudent: false,
 };
 
 describe('ManageLinkedAccounts', () => {
@@ -49,8 +49,8 @@ describe('ManageLinkedAccounts', () => {
       1: {
         id: 1,
         credentialType: 'google_oauth2',
-        email: ''
-      }
+        email: '',
+      },
     };
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -71,23 +71,23 @@ describe('ManageLinkedAccounts', () => {
       1: {
         id: 1,
         credentialType: 'google_oauth2',
-        email: 'teacher@google.com'
+        email: 'teacher@google.com',
       },
       2: {
         id: 2,
         credentialType: 'microsoft_v2_auth',
-        email: 'teacher@microsoft.com'
+        email: 'teacher@microsoft.com',
       },
       4: {
         id: 4,
         credentialType: 'clever',
-        email: 'teacher@clever.com'
+        email: 'teacher@clever.com',
       },
       3: {
         id: 3,
         credentialType: 'facebook',
-        email: 'teacher@facebook.com'
-      }
+        email: 'teacher@facebook.com',
+      },
     };
 
     const wrapper = mount(
@@ -130,8 +130,8 @@ describe('ManageLinkedAccounts', () => {
       1: {
         id: 1,
         credentialType: 'google_oauth2',
-        error: 'Oh no!'
-      }
+        error: 'Oh no!',
+      },
     };
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -159,7 +159,7 @@ describe('ManageLinkedAccounts', () => {
   it('posts form data to disconnect endpoint if authentication option is connected', () => {
     const authOptions = {
       1: {id: 1, credentialType: 'google_oauth2', email: 'student@email.com'},
-      2: {id: 2, credentialType: 'facebook', email: 'student@email.com'}
+      2: {id: 2, credentialType: 'facebook', email: 'student@email.com'},
     };
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -173,7 +173,7 @@ describe('ManageLinkedAccounts', () => {
       '/users/auth/1/disconnect',
       '/users/auth/microsoft_v2_auth?action=connect',
       '/users/auth/clever?action=connect',
-      '/users/auth/2/disconnect'
+      '/users/auth/2/disconnect',
     ];
     forms.forEach((form, i) => {
       expect(form.prop('method')).to.equal('POST');
@@ -237,7 +237,7 @@ describe('ManageLinkedAccounts', () => {
     const authOptions = {
       1: {id: 1, credentialType: 'google_oauth2'},
       2: {id: 2, credentialType: 'email'},
-      3: {id: 3, credentialType: 'email'}
+      3: {id: 3, credentialType: 'email'},
     };
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -291,49 +291,28 @@ describe('ManageLinkedAccounts', () => {
         'Microsoft Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(1)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(1).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(1)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(1).find('ReactTooltip')).to.not
+        .exist;
 
       expect(wrapper.find('OauthConnection').at(2)).to.include.text(
         'Clever Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(2)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(2).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(2)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(2).find('ReactTooltip')).to.not
+        .exist;
 
       expect(wrapper.find('OauthConnection').at(3)).to.include.text(
         'Facebook Account'
       );
       expect(
-        wrapper
-          .find('OauthConnection')
-          .at(3)
-          .find('BootstrapButton')
+        wrapper.find('OauthConnection').at(3).find('BootstrapButton')
       ).to.not.be.disabled();
-      expect(
-        wrapper
-          .find('OauthConnection')
-          .at(3)
-          .find('ReactTooltip')
-      ).to.not.exist;
+      expect(wrapper.find('OauthConnection').at(3).find('ReactTooltip')).to.not
+        .exist;
     });
   });
 });

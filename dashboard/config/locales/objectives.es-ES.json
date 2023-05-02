@@ -195,7 +195,7 @@
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
         "50b1fb31-4471-433d-a5f1-74e38886d49f": {
-          "description": "Crear y compartir sus propias aplicaciones en el Laboratorio de aplicaciones mediante características como botones, texto, imágenes, sonido y pantallas."
+          "description": "Crear y compartir sus propias aplicaciones en el Laboratorio de Aplicaciones mediante características como botones, texto, imágenes, sonido y pantallas."
         },
         "f7a3786d-0859-48d5-a4f9-827d6d681133": {
           "description": "Continúa construyendo proyectos completos en el Laboratorio de Aplicaciones utilizando los recursos proporcionados en la página code.org/applab."
@@ -488,11 +488,17 @@
         "ea8b6be7-f51c-420f-a295-ec02488a066f": {
           "description": "Utilice variables junto con las indicaciones."
         },
+        "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
+          "description": "Crea programas en el Laboratorio Sprite en los que los sprites se creen en grupos y se controlen individualmente mediante eventos."
+        },
         "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
           "description": "Crea un juego de clicker en el Laboratorio de Sprite en el que los sprites pueden ser eliminados para obtener puntos"
         },
         "9da7b378-c4e9-4184-b58a-61dfdad47357": {
           "description": "Crea una variable que almacene información y cambie con el tiempo"
+        },
+        "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
+          "description": "Crear su propio juego de coleccionista en el Laboratorio Sprite utilizando múltiples sprites que se controlan individualmente y variables para seguir la puntuación del jugador."
         },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
           "description": "Realizar y probar una predicción modificando variables de simulación"

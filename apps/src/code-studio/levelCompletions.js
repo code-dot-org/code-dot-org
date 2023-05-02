@@ -1,4 +1,3 @@
-/* globals Handsontable */
 import $ from 'jquery';
 
 /**
@@ -8,7 +7,7 @@ import $ from 'jquery';
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-exports.hideAndShowDomElements = function(isSampled, startDatePresent) {
+exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -40,7 +39,7 @@ function successRateRenderer(
     [0.15, '#ff9900'],
     [0.1, '#ff0000'],
     [0.05, '#a61c00'],
-    [0, '#5b0f00']
+    [0, '#5b0f00'],
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
@@ -75,7 +74,7 @@ function uniqueSuccessRateRenderer(
     [0.8, '#ff9900'],
     [0.75, '#ff6900'],
     [0.7, '#ff3a00'],
-    [0, '#ff0000']
+    [0, '#ff0000'],
   ];
   Handsontable.renderers.NumericRenderer.apply(this, arguments);
   var val = parseFloat(value);
@@ -117,7 +116,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-exports.populateTable = function(headers, data) {
+exports.populateTable = function (headers, data) {
   $('#completionTable').handsontable({
     data: data,
     startRows: 10,
@@ -129,48 +128,48 @@ exports.populateTable = function(headers, data) {
     manualColumnResize: true,
     columns: [
       {
-        data: 'Puzzle'
+        data: 'Puzzle',
       },
       {
         data: 'TotalAttempt',
-        type: 'numeric'
+        type: 'numeric',
       },
       {
         data: 'TotalSuccess',
-        type: 'numeric'
+        type: 'numeric',
       },
       {
         data: 'Avg Success Rate',
         type: 'numeric',
-        format: '0.00%'
+        format: '0.00%',
       },
       {
         data: 'Avg attempts per completion',
         type: 'numeric',
-        format: '0.00'
+        format: '0.00',
       },
       {
         data: 'UniqueAttempt',
-        type: 'numeric'
+        type: 'numeric',
       },
       {
         data: 'UniqueSuccess',
-        type: 'numeric'
+        type: 'numeric',
       },
       {
         data: 'Perceived Dropout',
-        type: 'numeric'
+        type: 'numeric',
       },
       {
         data: 'Avg Unique Success Rate',
         type: 'numeric',
-        format: '0.00%'
+        format: '0.00%',
       },
       {
-        data: 'timeOnSite'
-      }
+        data: 'timeOnSite',
+      },
     ],
-    cells: function(row, col, prop) {
+    cells: function (row, col, prop) {
       if (col === 3) {
         return {renderer: successRateRenderer};
       } else if (col === 8) {
@@ -179,6 +178,6 @@ exports.populateTable = function(headers, data) {
         return {renderer: timeOnSiteRenderer};
       }
       return {};
-    }
+    },
   });
 };

@@ -2,25 +2,25 @@
 title: Col·laboradors
 ---
 
-L'Hora del Codi està per al Comitè de Revisió de l'Hora del Codi.
+El Comitè de Revisió de l'Hora del Codi és el responsable de gestionar l'Hora del Codi.
 
-El [Comitè de Revisió]({{ urls/review_committee }}) està compost per 2 educadors actuals i antics dins de la franja de graus K-12 que assessoren i recomanen activitats utilitzant una rúbrica establerta per al comitè assessor. Aquestes activitats de revisió d'educadors dirigides per plans d'alumnes i de professors enviades per centenars de col·laboradors d'activitats, que avaluen el valor educacional de les activitats, la capacitat d'atreure els aprenents i potencial atractiu a grups d'alumnes diversos.
+El [Comitè de Revisió]({{ urls/review_committee }}) consta de 12 educadors que es dediquen o s'han dedicat a l'ensenyament des d'infantil fins a batxillerat i que assessoren i recomanen activitats a partir d'un pla d'estudis establert per un comitè assessor. Aquests educadors revisen les activitats que els alumnes fan de manera autònoma i els plans de lliçons dels professors proporcionats per centenars de socis, i n'avaluen el valor educatiu, la capacitat de guanyar-se l'interès dels alumnes i el potencial d'atraure a grups d'alumnes diversos.
 
-La feina i la dedicació del comitè han contribuït a l'èxit de l'Hora de Codi i la seva visió d'oferir una introducció a les ciències informàtiques per a cada alumne.
+La feina i la dedicació del comitè han contribuït a l'èxit de l'Hora de Codi i a la seva visió d'oferir una porta d'entrada a les ciències informàtiques per a tots els alumnes.
 
-# Socis Principals i Col·laboradors Empresarials
+# Socis principals i col·laboradors corporatius
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# Socis internacionals
+# Socis internacionals de Code.org
 
 {{ partners/international_partners }}
 
 * * *
 
-# Currículum i Col·laboradors de tutories
+# Pla d'estudis i col·laboradors de tutorials
 
 {{ partners/curriculum_tutorial_partners }}
 

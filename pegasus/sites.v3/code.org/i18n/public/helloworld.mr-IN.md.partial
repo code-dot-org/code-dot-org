@@ -18,7 +18,7 @@ social:
 
 कॉम्प्युटर सायन्स 101 मध्ये, अनेक विद्यार्थ्यांनी तयार केलेला पहिला प्रोग्राम हा एक सोपा आहे जो मजकुराची एक आयकॉनीक ओळ आउटपुट करतो: "हॅलो वर्ल्ड!" विद्यार्थ्यांना मूलभूत कोडिंग कौशल्ये आणि अ‍ॅप्स तयार करण्याचा आत्मविश्वास देणार्‍या या प्रास्ताविक क्रियाकलापासह संगणक विज्ञान जगताला हॅलो सांगा. आपण तयार केलेल्या जगात इंटरॲक्टीव करैक्टर कोड करण्यासाठी सहा मजेदार थीममधून निवडा!
 
-# आपली हॅलो वर्ल्ड थीम निवडा
+## Choose your Hello World theme
 
 {{ spritelab_module, title: "नवीन! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", alt_text: "Two cute astronaut and corgi characters floating in space", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 {{ spritelab_module, title: "नवीन! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", alt_text: "Three giraffe, tiger, and rhino characters on a field about to start a game of soccer", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
@@ -37,3 +37,5 @@ social:
 {{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "A student project featuring an animated gif of an underwater scene with dolphin, fish, and jellyfish characters in front of a shipwreck", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "A student project featuring an animated gif of a game of tag with two alien characters on a distant planet", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
+
+{{ helloworld }}

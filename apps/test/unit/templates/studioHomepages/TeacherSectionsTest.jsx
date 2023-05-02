@@ -10,7 +10,7 @@ describe('TeacherSections', () => {
     plSectionIds: [],
     hiddenPlSectionIds: [],
     hiddenStudentSectionIds: [],
-    asyncLoadComplete: true
+    asyncLoadComplete: true,
   };
 
   it('renders spinner if still loading', () => {

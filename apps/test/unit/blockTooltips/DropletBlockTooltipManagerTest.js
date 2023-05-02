@@ -19,7 +19,7 @@ describe('DropletBlockTooltipManager', () => {
       // Mock a DropletTooltipManager.
       let dropletConfig = {};
       let blockInfo = {
-        showCodeLink: 'http://example.com/code'
+        showCodeLink: 'http://example.com/code',
       };
       let tooltipManager = DropletTooltipManagerStub(dropletConfig, blockInfo);
 
@@ -43,7 +43,7 @@ describe('DropletBlockTooltipManager', () => {
       // Mock a DropletTooltipManager.
       let dropletConfig = {};
       let blockInfo = {
-        showExamplesLink: 'http://example.com/examples'
+        showExamplesLink: 'http://example.com/examples',
       };
       let tooltipManager = DropletTooltipManagerStub(dropletConfig, blockInfo);
 

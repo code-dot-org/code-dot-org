@@ -24,8 +24,8 @@ class InstructionsCsfLeftCol extends React.Component {
     failureAvatar: PropTypes.string,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
-    })
+      isFailure: PropTypes.bool,
+    }),
   };
 
   componentDidMount() {
@@ -86,12 +86,12 @@ class InstructionsCsfLeftCol extends React.Component {
         }}
         style={{
           ...commonStyles.bubble,
-          ...(!hasAuthoredHints && styles.noAuthoredHints)
+          ...(!hasAuthoredHints && styles.noAuthoredHints),
         }}
       >
         <div
           className={classNames('prompt-icon-cell', {
-            authored_hints: hasAuthoredHints
+            authored_hints: hasAuthoredHints,
           })}
           onClick={this.handleClickLightbulb}
         >
@@ -113,8 +113,8 @@ class InstructionsCsfLeftCol extends React.Component {
 const styles = {
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
-    cursor: 'default'
-  }
+    cursor: 'default',
+  },
 };
 
 export const UnconnectedInstructionsCsfLeftCol = InstructionsCsfLeftCol;
@@ -126,10 +126,10 @@ export default connect(
       hasAuthoredHints: state.instructions.hasAuthoredHints,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
-      feedback: state.instructions.feedback
+      feedback: state.instructions.feedback,
     };
   },
   null,
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(InstructionsCsfLeftCol);

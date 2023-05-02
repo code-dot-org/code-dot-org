@@ -5,10 +5,9 @@ import moduleStyles from './timeline.module.scss';
 import TimelineElement from './TimelineElement';
 
 const TimelineTrackEvents = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   // useMemo() compares dependency using Object.is() comparison, which won't work correctly
@@ -32,7 +31,7 @@ const TimelineTrackEvents = ({
             name: tracksMetadata[event.trackId].name,
             soundsByTime: {},
             maxConcurrentSounds:
-              tracksMetadata[event.trackId].maxConcurrentSounds
+              tracksMetadata[event.trackId].maxConcurrentSounds,
           };
         }
 
@@ -80,12 +79,11 @@ const TimelineTrackEvents = ({
                     (eventData, index) => (
                       <TimelineElement
                         key={index}
-                        soundId={eventData.id}
+                        eventData={eventData}
                         barWidth={barWidth}
                         height={singleElementHeight}
                         top={index * singleElementHeight}
                         when={eventData.when}
-                        currentPlayheadPosition={currentPlayheadPosition}
                       />
                     )
                   )}
@@ -100,10 +98,9 @@ const TimelineTrackEvents = ({
 };
 
 TimelineTrackEvents.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineTrackEvents;

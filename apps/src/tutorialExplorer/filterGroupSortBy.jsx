@@ -12,7 +12,7 @@ export default class FilterGroupSortBy extends React.Component {
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
       .isRequired,
     sortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
-    onUserInput: PropTypes.func.isRequired
+    onUserInput: PropTypes.func.isRequired,
   };
 
   handleChangeSort = event => {
@@ -28,12 +28,12 @@ export default class FilterGroupSortBy extends React.Component {
     if (this.props.defaultSortBy === TutorialsSortByOptions.popularityrank) {
       sortOptions = [
         {value: 'popularityrank', text: i18n.filterSortByPopularityRank()},
-        {value: 'displayweight', text: i18n.filterSortByDisplayWeight()}
+        {value: 'displayweight', text: i18n.filterSortByDisplayWeight()},
       ];
     } else {
       sortOptions = [
         {value: 'displayweight', text: i18n.filterSortByDisplayWeight()},
-        {value: 'popularityrank', text: i18n.filterSortByPopularityRank()}
+        {value: 'popularityrank', text: i18n.filterSortByPopularityRank()},
       ];
     }
 
@@ -62,6 +62,6 @@ const styles = {
     width: '100%',
     marginTop: 10,
     height: 26,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };
