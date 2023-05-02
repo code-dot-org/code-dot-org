@@ -18,7 +18,7 @@ jobs:
           source: s3://cdo-test-results-public/0fd1c41d87ee9662a0474a245324ee0f12be0574/
           destination: ./test-results
           aws_region: us-west-2
-          flags: --recursive
+          flags: --recursive --no-sign-request
 
       - name: Generate Test Report
         uses: dorny/test-reporter@v1
