@@ -1,19 +1,24 @@
 name: Test Results Reporter
 # on:
-#   check_suite:
-#     types: [completed]
-# on:
 #   push:
 #     branches:
 #       - 'seth/github-action-*'
-# on:
-#   deployment_status:
+
+# Looks like deep in drone go land its generating a GH deployment status update message
+#
+# Drone source, see path schema: https://github.com/drone/go-scm/blob/f4a311024d4ece31370f2bd1bf90d0248852e57a/scm/driver/github/repo.go#L174
+# 	path := fmt.Sprintf("repos/%s/deployments/%d/statuses", repo, input.Number)
+#   this then gets posted
+#
+# GH API docs for creating a deployment status: https://docs.github.com/en/rest/deployments/statuses?apiVersion=2022-11-28#create-a-deployment-status--code-samples
+# POST /repos/{owner}/{repo}/deployments/{deployment_id}/statuses
 on:
-  status
+  deployment_status:
+
 jobs:
   test-reporter:
     if: |
-      ( github.event.state == 'success' || github.event.state == 'failure' ) 
+      ( github.event.deployment_status.state == 'success' || github.event.deployment_status.state == 'failure' ) 
       && contains(github.refs, 'seth')
     runs-on: ubuntu-latest
     steps:
