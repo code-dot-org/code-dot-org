@@ -7,7 +7,7 @@ import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 const defaultProps = {
   levels: fakeLevels(5),
   disabled: false,
-  lessonExtrasEnabled: true
+  lessonExtrasEnabled: true,
 };
 
 describe('ProgressBubbleSet', () => {
@@ -22,7 +22,7 @@ describe('ProgressBubbleSet', () => {
   it('renders a disabled ProgressBubble if this.props.disabled is true', () => {
     const additionalProps = {
       levels: fakeLevels(1),
-      disabled: true
+      disabled: true,
     };
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} {...additionalProps} />
@@ -41,20 +41,5 @@ describe('ProgressBubbleSet', () => {
     assert.equal(wrapper.find('ProgressBubble').length, 1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
     assert.equal(progressBubble.prop('disabled'), false);
-  });
-
-  it('renders a disabled ProgressBubble if this.props.lessonExtrasEnabled is false and level is bonus', () => {
-    let bonusLevel = fakeLevels(1)[0];
-    bonusLevel.bonus = true;
-    const additionalProps = {
-      levels: [bonusLevel],
-      lessonExtrasEnabled: false
-    };
-    const wrapper = shallow(
-      <ProgressBubbleSet {...defaultProps} {...additionalProps} />
-    );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
-    const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), true);
   });
 });

@@ -50,7 +50,7 @@
         %div
           %select#hoc-event-type.form-control{name: "event_type_s", type: "select"}
             %option{value: nil, selected: true}
-            -%w(in_school out_of_school at_home).each do |event_type|
+            -%w(in_school after_school out_of_school at_home).each do |event_type|
               %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
         #event-type-error.error-message{style: "display:none;"}
           = hoc_s(:signup_event_type_error)

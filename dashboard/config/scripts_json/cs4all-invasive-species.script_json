@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "cs4all-invasive-species",
-    "serialized_at": "2022-04-08 15:41:13 UTC",
+    "serialized_at": "2022-10-25 16:11:43 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,7 +92,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
+        "overview": "**IMPORTANT:** Click here to access **[Lesson 0](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing)** to learn about the module before starting Lesson 1.\n\nAfter reviewing Lesson 0, continue to **[Lesson 1](https://docs.google.com/document/d/155tzR7eSCGxLB9lij88CGZjOSJLd03FJ/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true).**  \n\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -108,7 +108,7 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1-ZfE3YI-0WqGP7K_c7zggY42DYz97xpo/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -124,7 +124,7 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1s5DcY8OlQB-a7BKvk6EblfBajIz88arc/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -140,7 +140,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1XQPFx8L0t-snGiMIaAKgp5g3bOL-QIzk/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) the access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -156,7 +156,7 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1qGI4WaJUcPQozSCVAPM_Oavpc5FbZ6GB/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -172,7 +172,7 @@
       "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/16kKfuEg555xVIoF-sTS3luZpC6-M1MDK/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -188,7 +188,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1gtcoLIsc6es4-YR8ECJgqH6Xw6UPb9KR85JEaAk6UJM/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/u/1/d/1BPmFSMBVPR8fHdwVwCFyt2Ye9A7ei5Kv/edit) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -204,7 +204,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1njAzvHI3gS_aSoR2IM8Eeekw4bI6kADxvY2s_96SZCM/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1jzI7Oh7qi0zbu6qUCbyCGez-V9xz7Y8n/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -220,7 +220,7 @@
       "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan."
+        "overview": "Click on this [link](https://docs.google.com/document/d/1O6DhuYdGXHYS-uxelzFHE9LmQ0NVfyAe/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -236,7 +236,7 @@
       "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/10i7tZZXrCIGjCnGvMIoUJ1Y-NlgSVgSi/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -252,7 +252,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1s4pklUxcmnDIjigMXWK-hrBgvuIDRBfEjzEqDAGzx7E/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1kajDyNTYwwxlnPK1G8j0W-OqXSq0EzPx/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -268,7 +268,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1yp9BOEYibCekx80fizqTcEksKqaRxQPMW0HQY7gNc3k/edit?usp=sharing) to access the lesson plan."
+        "overview": "Click on this [link](https://docs.google.com/document/d/1cyRIiu14iLOwa9K9S39rvuTk2R91r09I/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -284,7 +284,7 @@
       "has_lesson_plan": false,
       "relative_position": 13,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1uVOr-XiWHVSnujuHTODBlpPgQpS77r7x/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -300,7 +300,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1o0Ki_9yC2l2S8spL-EUjdEy0xqgP-Y717qoeSBoIEk8/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1BZZ6K5lZDy0itfXYUBNmtiiNoIRZUp0Ah99grzGA8R8/edit?usp=sharing) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -316,7 +316,7 @@
       "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1nPFVtO_Ni-AcFXcmAp7kOj1RqhacVOvo/edit?usp=sharing&ouid=106490959217809051967&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -332,7 +332,7 @@
       "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1EjYLSdluSKh9_K9IJ54t_aAV7_JKH4FR/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-16",
@@ -348,7 +348,7 @@
       "has_lesson_plan": false,
       "relative_position": 17,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1kUgxUW9lHx2RARq93QqlVlA0F33PVI90/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -364,7 +364,7 @@
       "has_lesson_plan": false,
       "relative_position": 18,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1Lh84c59xKwwfo2FhMm2whqfUm-mp0ukI/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
@@ -374,13 +374,13 @@
     },
     {
       "key": "lesson-19",
-      "name": "Debugging",
+      "name": "Debugging My Project",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 19,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/1vqeO9NYYQveoYmDlTUNbUoP5Ned9WQKo/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-19",
@@ -396,7 +396,7 @@
       "has_lesson_plan": false,
       "relative_position": 20,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. "
+        "overview": "Click on this [link](https://docs.google.com/document/d/12xTAm8JxztiCZvl-s1CEMTPmFP4-AHk5/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access the lesson plan. "
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -2952,13 +2952,27 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson 0",
+      "url": "https://docs.google.com/document/u/1/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit",
+      "key": "lesson_0",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "lesson_0"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_0",
+        "script.name": "cs4all-invasive-species"
+      }
+    }
   ],
   "scripts_student_resources": [
 

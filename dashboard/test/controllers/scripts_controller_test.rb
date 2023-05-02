@@ -28,7 +28,7 @@ class ScriptsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:scripts)
-    assert_equal Script.all, assigns(:scripts)
+    assert_equal Unit.all, assigns(:scripts)
   end
 
   test "should redirect when unit has a redirect_to property" do
@@ -59,12 +59,12 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of hoc" do
-    get :show, params: {id: Script::HOC_NAME}
+    get :show, params: {id: Unit::HOC_NAME}
     assert_response :success
   end
 
   test "should get show of k-8" do
-    get :show, params: {id: Script::TWENTY_HOUR_NAME}
+    get :show, params: {id: Unit::TWENTY_HOUR_NAME}
     assert_response :success
   end
 
@@ -108,7 +108,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should redirect to /s/course1" do
-    get :show, params: {id: Script.find_by_name("course1").id}
+    get :show, params: {id: Unit.find_by_name("course1").id}
     assert_redirected_to "/s/course1"
   end
 
@@ -118,26 +118,26 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show of hourofcode by id should redirect to hoc" do
-    get :show, params: {id: Script.find_by_name('hourofcode').id}
+    get :show, params: {id: Unit.find_by_name('hourofcode').id}
     assert_redirected_to '/s/hourofcode'
   end
 
   test "should get show if not signed in" do
-    get :show, params: {id: Script::FLAPPY_NAME}
+    get :show, params: {id: Unit::FLAPPY_NAME}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: Script::FLAPPY_NAME}
+    get :show, params: {id: Unit::FLAPPY_NAME}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {id: Script::FLAPPY_NAME}
+    get :show, params: {id: Unit::FLAPPY_NAME}
     assert_response :forbidden
   end
 
@@ -266,14 +266,14 @@ class ScriptsControllerTest < ActionController::TestCase
   # or has made progress in a different version from the latest stable version. This test verifies that ultimately
   # the student is not redirected if true is returned.
   test "show: do not redirect student to latest stable version in family if they can view the unit version" do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     sign_in create(:student)
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
 
   test "show: do not redirect participant to latest stable version in family if they can view the unit version" do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     sign_in create(:teacher)
     get :show, params: {id: @pl_coursez_2017.name}
     assert_response :ok
@@ -353,7 +353,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
-    unit = Script.find_by_name('course1')
+    unit = Unit.find_by_name('course1')
     get :edit, params: {id: unit.name}
 
     assert_equal unit, assigns(:script)
@@ -414,7 +414,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should redirect old k-8" do
     get :show, params: {id: 1}
-    assert_redirected_to script_path(Script.twenty_hour_unit)
+    assert_redirected_to script_path(Unit.twenty_hour_unit)
   end
 
   test "show should redirect to flappy" do
@@ -439,7 +439,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_redirected_to edit_script_path id: unit_name
 
-    unit = Script.find_by_name(unit_name)
+    unit = Unit.find_by_name(unit_name)
     assert_equal unit_name, unit.name
     assert unit.is_migrated
     assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -468,7 +468,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_redirected_to edit_script_path id: unit_name
 
-    unit = Script.find_by_name(unit_name)
+    unit = Unit.find_by_name(unit_name)
     assert_equal unit_name, unit.name
     assert unit.is_migrated
     assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -487,7 +487,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     assert_response :bad_request
-    refute Script.find_by_name(unit_name)
+    refute Unit.find_by_name(unit_name)
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -500,7 +500,7 @@ class ScriptsControllerTest < ActionController::TestCase
       '../evil_unit_name',
       'subdir/../../../evil_unit_name'
     ].each do |name|
-      evil_unit = Script.new(name: name)
+      evil_unit = Unit.new(name: name)
       evil_unit.save(validate: false)
       assert_raise ArgumentError do
         delete :destroy, params: {id: evil_unit.id}
@@ -860,7 +860,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal teacher_resources.map(&:key), Script.find_by_name(unit.name).resources.map {|r| r[:key]}
+    assert_equal teacher_resources.map(&:key), Unit.find_by_name(unit.name).resources.map {|r| r[:key]}
   end
 
   test 'updates migrated student resources' do
@@ -885,7 +885,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal student_resources.map(&:key), Script.find_by_name(unit.name).student_resources.map {|r| r[:key]}
+    assert_equal student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.map {|r| r[:key]}
   end
 
   test 'updates pilot_experiment' do
@@ -906,9 +906,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
+    assert_equal 'pilot-experiment', Unit.find_by_name(unit.name).pilot_experiment
     # pilot units are always marked with the pilot published state
-    assert_equal Script.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide unit with blank pilot_experiment' do
@@ -929,9 +929,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_nil Script.find_by_name(unit.name).pilot_experiment
+    assert_nil Unit.find_by_name(unit.name).pilot_experiment
     # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Script.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
@@ -954,8 +954,7 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
-      version_year: '2017',
-      is_maker_unit: 'on'
+      version_year: '2017'
     }
     unit.reload
 
@@ -963,7 +962,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'CSF', unit.curriculum_umbrella
     assert_equal 'my-fam', unit.family_name
     assert_equal '2017', unit.version_year
-    assert unit.is_maker_unit
   end
 
   test 'set and unset all general_params' do
@@ -1042,7 +1040,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    Script.any_instance.stubs(:tts_update).once
+    Unit.any_instance.stubs(:tts_update).once
 
     unit = create :script
     stub_file_writes(unit.name)
@@ -1066,7 +1064,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    Script.any_instance.stubs(:tts_update).never
+    Unit.any_instance.stubs(:tts_update).never
 
     unit = create :script, tts: true
     stub_file_writes(unit.name)
@@ -1138,7 +1136,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, is_migrated: true
     stub_file_writes(unit.name)
 
-    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+    Unit.stubs(:merge_and_write_i18n).with do |i18n, name, _|
       name == unit.name &&
         i18n[unit.name]['lessons']['lesson-1']['name'] == 'lesson 1' &&
         i18n[unit.name]['lesson_groups'].empty?
@@ -1183,7 +1181,7 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, is_migrated: true
     stub_file_writes(unit.name)
 
-    Script.stubs(:merge_and_write_i18n).with do |i18n, name, _|
+    Unit.stubs(:merge_and_write_i18n).with do |i18n, name, _|
       name == unit.name &&
         i18n[unit.name]['lessons'].empty? &&
         i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
@@ -1234,7 +1232,7 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
     stub_file_writes(unit.name)
 
-    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+    Unit.stubs(:merge_and_write_i18n).with do |i18n, _, _|
       i18n[unit.name]['lessons'].empty? &&
         i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'updated name'
     end.once
@@ -1286,7 +1284,7 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
     stub_file_writes(unit.name)
 
-    Script.stubs(:merge_and_write_i18n).with do |i18n, _, _|
+    Unit.stubs(:merge_and_write_i18n).with do |i18n, _, _|
       i18n[unit.name]['lessons'].empty? &&
         i18n[unit.name]['lesson_groups']['lesson-group-1']['display_name'] == 'lesson group 1'
     end.once
@@ -1640,23 +1638,25 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
+    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901', is_course: true
     CourseOffering.add_course_offering(dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'ui-test-versioned-script'}
+      get :show, params: {id: 'dogs'}
     end
 
     dogs1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    get :show, params: {id: 'ui-test-versioned-script'}
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    dogs2 = create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs2)
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    dogs3 = create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(dogs3)
+    get :show, params: {id: 'dogs'}
     assert_redirected_to "/s/dogs2"
   end
 
@@ -1778,12 +1778,12 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
 
-    Script.expects(:get_from_cache).never
-    Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
+    Unit.expects(:get_from_cache).never
+    Unit.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
-    Script.expects(:get_without_cache).never
+    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
+    Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
 

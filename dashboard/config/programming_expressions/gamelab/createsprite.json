@@ -65,6 +65,6 @@
   ],
   "return_value": "Returns the sprite and assigns it to the variable specified.",
   "short_description": "Creates a new sprite and assigns it to the variable specified.",
-  "syntax": "var sprite = createSprite(x, y, width, height)",
+  "syntax": "var sprite = createSprite(x, y)",
   "tips": "- Sprites that are created later are displayed in front of sprites created earlier, unless the [`depth`(#f78183)](/docs/gamelab/depth/) property is changed.\r\n- Change the image displayed for the sprite from the default rectangle using the [`setAnimation`(#f78183)](/docs/gamelab/setAnimation/) command. All images must be first loaded and given a label using the Animation tab above the display window in Game Lab.\r\n- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- If you attempt to set a sprite property to an incorrect value the property reverts to its default value."
 }

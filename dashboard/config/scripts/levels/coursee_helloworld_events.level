@@ -77,7 +77,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-27T18:26:52.229+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_events\\\"\"],\"cloned_from\":\"helloworld_food_events\"},{\"changed_at\":\"2022-01-27 18:27:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-18 21:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-27T18:26:52.229+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_events\\\"\"],\"cloned_from\":\"helloworld_food_events\"},{\"changed_at\":\"2022-01-27 18:27:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-18 21:11:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-09-27 23:24:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

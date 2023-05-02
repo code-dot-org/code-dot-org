@@ -8,14 +8,14 @@ const statuses = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.passed,
-  LevelStatus.perfect
+  LevelStatus.perfect,
 ];
 const assessmentStatuses = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.submitted,
   LevelStatus.completed_assessment,
-  LevelStatus.perfect
+  LevelStatus.perfect,
 ];
 
 const wrapperStyle = {
@@ -24,7 +24,7 @@ const wrapperStyle = {
   backgroundColor: color.background_gray,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
 };
 
 function wrapped(component) {
@@ -55,8 +55,8 @@ export default storybook => {
                 title={'3'}
                 url={'/foo/bar'}
               />
-            )
-        }
+            ),
+        },
       ]
         .concat(
           statuses.map(status => ({
@@ -69,7 +69,7 @@ export default storybook => {
                   title={'3'}
                   url={'/foo/bar'}
                 />
-              )
+              ),
           }))
         )
         .concat(
@@ -84,7 +84,7 @@ export default storybook => {
                   url={'/foo/bar'}
                   isConcept={true}
                 />
-              )
+              ),
           }))
         )
         .concat(
@@ -98,7 +98,7 @@ export default storybook => {
                   title={'3'}
                   url={'/foo/bar'}
                 />
-              )
+              ),
           }))
         )
         .concat(
@@ -113,7 +113,7 @@ export default storybook => {
                   url={'/foo/bar'}
                   isPaired={true}
                 />
-              )
+              ),
           }))
         )
         .concat(
@@ -128,7 +128,7 @@ export default storybook => {
                   url={'/foo/bar'}
                   isBonus={true}
                 />
-              )
+              ),
           }))
         )
         .concat(
@@ -143,7 +143,7 @@ export default storybook => {
                   url={'/foo/bar'}
                   isUnplugged={true}
                 />
-              )
+              ),
           }))
         )
         .concat([
@@ -171,9 +171,9 @@ export default storybook => {
                   title={'c'}
                   url={'/foo/bar'}
                   key={3}
-                />
-              ])
-          }
+                />,
+              ]),
+          },
         ])
         .concat([
           {
@@ -201,9 +201,9 @@ export default storybook => {
                   title={'c'}
                   url={'/foo/bar'}
                   key={3}
-                />
-              ])
-          }
+                />,
+              ]),
+          },
         ])
     );
 };

@@ -20,7 +20,7 @@ class ProgressBubbleSet extends React.Component {
     selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
     ]),
     hideToolTips: PropTypes.bool,
     lessonExtrasEnabled: PropTypes.bool,
@@ -28,18 +28,7 @@ class ProgressBubbleSet extends React.Component {
     onBubbleClick: PropTypes.func,
     lessonName: PropTypes.string,
     // Redux
-    isRtl: PropTypes.bool
-  };
-
-  bubbleDisabled = level => {
-    const {disabled, lessonExtrasEnabled} = this.props;
-    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
-    // for the current section.
-    const disableBubble = disabled || (!lessonExtrasEnabled && level.bonus);
-    if (disableBubble) {
-      return true;
-    }
-    return false;
+    isRtl: PropTypes.bool,
   };
 
   renderBubble = (level, index, isSublevel) => {
@@ -62,14 +51,14 @@ class ProgressBubbleSet extends React.Component {
       ...(!isSublevel &&
         !level.sublevels &&
         index === levels.length - 1 &&
-        backgroundLastStyle)
+        backgroundLastStyle),
     };
 
     const containerStyleProp = {
       ...styles.container,
       ...(level.isUnplugged && styles.pillContainer),
       ...(level.isConceptLevel && styles.diamondContainer),
-      ...(isSublevel && styles.containerSublevel)
+      ...(isSublevel && styles.containerSublevel),
     };
 
     return (
@@ -78,7 +67,7 @@ class ProgressBubbleSet extends React.Component {
         <div style={containerStyleProp}>
           <ProgressBubble
             level={level}
-            disabled={this.bubbleDisabled(level)}
+            disabled={this.props.disabled}
             smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
@@ -119,11 +108,11 @@ class ProgressBubbleSet extends React.Component {
 const styles = {
   main: {
     position: 'relative',
-    display: 'inline-block'
+    display: 'inline-block',
   },
   withBackground: {
     display: 'inline-block',
-    position: 'relative'
+    position: 'relative',
   },
   background: {
     height: 10,
@@ -132,43 +121,43 @@ const styles = {
     left: 0,
     right: 0,
     // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2
+    top: (DOT_SIZE + 4 + 6 - 10) / 2,
   },
   backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2
+    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2,
   },
   backgroundPill: {
     // pill has height of 18, border of 2, padding of 6, margin of 3
-    top: (18 + 4 + 12 + 6 - 10) / 2
+    top: (18 + 4 + 12 + 6 - 10) / 2,
   },
   backgroundSublevel: {
-    top: 9
+    top: 9,
   },
   backgroundFirst: {
-    left: 15
+    left: 15,
   },
   backgroundLast: {
-    right: 15
+    right: 15,
   },
   container: {
-    position: 'relative'
+    position: 'relative',
   },
   containerSublevel: {
-    top: 5
+    top: 5,
   },
   diamondContainer: {
     // Height needed only by IE to get diamonds to line up properly
-    height: 36
+    height: 36,
   },
   pillContainer: {
     marginRight: 2,
     // Height needed only by IE to get pill to line up properly
-    height: 37
-  }
+    height: 37,
+  },
 };
 
 export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(ProgressBubbleSet));

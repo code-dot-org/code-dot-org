@@ -1,0 +1,17 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      120,
+      0.6,
+      0.6
+    ],
+    "style": "procedure_blocks",
+    "func": "addOneBlock",
+    "blockText": "addOne",
+    "args": [
+
+    ],
+    "eventBlock": false
+  }
+}

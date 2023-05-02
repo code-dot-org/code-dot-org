@@ -2,7 +2,7 @@ require 'erb'
 require 'ostruct'
 
 def erb_file_to_string(path, binding)
-  ERB.new(File.read(path), nil, '-').
+  ERB.new(File.read(path), trim_mode: '-').
     tap {|erb| erb.filename = path}.
     result(binding)
 end

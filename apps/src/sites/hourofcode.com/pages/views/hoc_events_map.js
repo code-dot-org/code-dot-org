@@ -1,17 +1,15 @@
-/*global mapboxgl*/
-
-$(document).ready(function() {
+$(document).ready(function () {
   // We keep some style elements as a Mapbox style for simplicity.
   const stylePath = 'mapbox://styles/codeorg/cjz36duae88ds1cp7ll7smx6s';
-  var map = new mapboxgl.Map({
+  const map = new mapboxgl.Map({
     container: 'mapbox-map',
     style: stylePath,
     zoom: 1,
     minZoom: 1,
-    center: [-98, 39]
+    center: [-98, 39],
   });
 
-  var popup = null;
+  let popup = null;
 
   map.dragRotate.disable();
   map.scrollZoom.disable();
@@ -21,7 +19,7 @@ $(document).ready(function() {
   // copies of the point are visible, the popup appears
   // over the point clicked on.
   function getPopupCoordinates(clickLngLat, featureCoordinates) {
-    var normalizedCoordinates = featureCoordinates;
+    const normalizedCoordinates = featureCoordinates;
     while (Math.abs(clickLngLat.lng - normalizedCoordinates[0]) > 180) {
       normalizedCoordinates[0] +=
         clickLngLat.lng > normalizedCoordinates[0] ? 360 : -360;
@@ -29,10 +27,31 @@ $(document).ready(function() {
     return normalizedCoordinates;
   }
 
-  map.on('load', function() {
+  function setPopup(e, isSpecialEvent) {
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const organizationName = e.features[0].properties.organization_name;
+    const city = e.features[0].properties.city;
+
+    if (popup) {
+      popup.remove();
+    }
+    const citySuffix = city && city.length > 0 ? ' (' + city + ')' : '';
+    let popupText = organizationName + citySuffix;
+    if (isSpecialEvent) {
+      const eventDescription = e.features[0].properties.description;
+      popupText += '<br>' + eventDescription;
+    }
+
+    popup = new mapboxgl.Popup({closeButton: false})
+      .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
+      .setHTML(popupText)
+      .addTo(map);
+  }
+
+  map.on('load', function () {
     map.addSource('hoctiles', {
       type: 'vector',
-      url: 'mapbox://codeorg.hoctiles'
+      url: 'mapbox://codeorg.hoctiles',
     });
 
     // The order we add layers matters here as layers are added on top of each
@@ -47,9 +66,9 @@ $(document).ready(function() {
         visibility: 'visible',
         'icon-allow-overlap': true,
         'icon-size': 1,
-        'icon-image': 'circle-11-orange'
+        'icon-image': 'circle-11-orange',
       },
-      filter: ['!=', 'review', 'approved']
+      filter: ['!=', 'review', 'approved'],
     });
 
     map.addLayer({
@@ -61,9 +80,9 @@ $(document).ready(function() {
         visibility: 'visible',
         'icon-allow-overlap': true,
         'icon-size': 1.1,
-        'icon-image': 'marker-15-red'
+        'icon-image': 'marker-15-red',
       },
-      filter: ['==', 'review', 'approved']
+      filter: ['==', 'review', 'approved'],
     });
 
     map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
@@ -72,13 +91,11 @@ $(document).ready(function() {
       'bottom-right'
     );
 
-    var legend = document.createElement('div');
+    const legend = document.createElement('div');
     legend.id = 'inmaplegend';
     legend.className = 'inmap-mapbox-legend';
     legend.index = 1;
-    $('#belowmaplegend div')
-      .clone()
-      .appendTo(legend);
+    $('#belowmaplegend div').clone().appendTo(legend);
     document.getElementById('mapbox-map').appendChild(legend);
 
     function enableMouseControls() {
@@ -87,68 +104,35 @@ $(document).ready(function() {
     }
 
     // Enable mouse controls when the map is clicked
-    map.on('click', function(e) {
+    map.on('click', function (e) {
       enableMouseControls();
     });
     // Enable mouse controls when the zoom (+/-) buttons are pressed
-    map.on('zoom', function(e) {
+    map.on('zoom', function (e) {
       enableMouseControls();
     });
     // Enable mouse controls when we go full screen
-    map.on('resize', function(e) {
+    map.on('resize', function (e) {
       enableMouseControls();
     });
 
-    map.on('click', 'hoc-events', function(e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
-      var organizationName = e.features[0].properties.organization_name;
-      var city = e.features[0].properties.city;
+    map.on('click', 'hoc-events', e => setPopup(e, false));
+    map.on('click', 'hoc-special-events', e => setPopup(e, true));
 
-      if (popup) {
-        popup.remove();
-      }
-      const popupText =
-        organizationName + (city.length > 0 ? ' (' + city + ')' : '');
-      popup = new mapboxgl.Popup({closeButton: false})
-        .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
-        .setText(popupText)
-        .addTo(map);
-    });
-
-    map.on('click', 'hoc-special-events', function(e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
-      var organizationName = e.features[0].properties.organization_name;
-      var city = e.features[0].properties.city;
-      var event_description = e.features[0].properties.description;
-
-      if (popup) {
-        popup.remove();
-      }
-      const popupText =
-        organizationName +
-        (city.length > 0 ? ' (' + city + ')' : '') +
-        '<br>' +
-        event_description;
-      popup = new mapboxgl.Popup({closeButton: false})
-        .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
-        .setHTML(popupText)
-        .addTo(map);
-    });
-
-    map.on('mouseenter', 'hoc-events', function() {
+    map.on('mouseenter', 'hoc-events', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
-    map.on('mouseenter', 'hoc-special-events', function() {
+    map.on('mouseenter', 'hoc-special-events', function () {
       map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'hoc-events', function() {
+    map.on('mouseleave', 'hoc-events', function () {
       map.getCanvas().style.cursor = '';
     });
 
-    map.on('mouseleave', 'hoc-special-events', function() {
+    map.on('mouseleave', 'hoc-special-events', function () {
       map.getCanvas().style.cursor = '';
     });
   });

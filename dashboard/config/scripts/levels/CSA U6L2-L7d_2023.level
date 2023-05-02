@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A weather forecaster wants to get the temperature from a weather report.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Temperature</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">report</code>, which stores a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> formatted as <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Temperature: 75 F\"</code>.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Temperature</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTemperature()</code> method to return a substring containing the temperature from the instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">report</code>. For example, the method should return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">75</code> from the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Temperature: 75 F\"</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TemperatureRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTemperature()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Weather Report",
+    "bubble_choice_description": "A weather forecaster wants to get the temperature from a weather report.",
+    "thumbnail_url": "https://images.code.org/dffa86f367cc0a45f12fafb3f8d4e41f-weather-app.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T13:47:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T13:47:55.661+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L7c_2023\\\"\"],\"cloned_from\":\"CSA U6L2-L7c_2023\"},{\"changed_at\":\"2023-04-03 13:47:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:50:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

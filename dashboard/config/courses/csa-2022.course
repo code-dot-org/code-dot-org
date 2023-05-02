@@ -56,6 +56,18 @@
       }
     },
     {
+      "name": "College Board Programming Labs and Code.org's Java Lab",
+      "url": "https://docs.google.com/document/d/1VGHDdpc1Whhq16FBFiT5QhLCDVWW63uRS5LktAmPC3A/edit?usp=sharing",
+      "key": "college_board_programming_labs_and_code_org_s_java_lab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "college_board_programming_labs_and_code_org_s_java_lab"
+      }
+    },
+    {
       "name": "Coverage of Topics in CSA",
       "url": "https://docs.google.com/document/d/1b_1Z5XBIo3jDiWna4zvYZqsM_Uky35q9g3N1enN6ZeI/edit?usp=sharing",
       "key": "coverage_of_topics_in_csa",

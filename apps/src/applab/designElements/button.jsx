@@ -21,7 +21,7 @@ class ButtonProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -153,7 +153,7 @@ class ButtonEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -202,7 +202,7 @@ export default {
   EventTab: ButtonEvents,
   themeValues: themeValues.button,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
@@ -226,7 +226,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);
@@ -235,5 +235,5 @@ export default {
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-  }
+  },
 };

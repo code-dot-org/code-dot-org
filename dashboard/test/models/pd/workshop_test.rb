@@ -14,6 +14,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     @workshop_organizer = create(:workshop_organizer)
     @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
+
+    @regional_partner = create(:regional_partner)
   end
   setup do
     @workshop.reload
@@ -219,7 +221,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'sessions must start and end on the same day' do
     workshop = create :workshop, num_sessions: 0
-    session = build :pd_session, start: Time.zone.now, end: Time.zone.now + 1.day
+    session = build :pd_session, start: Time.zone.now, end: 1.day.from_now
     workshop.sessions << session
 
     refute workshop.valid?
@@ -229,7 +231,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'sessions must start before they end' do
     workshop = create :workshop, num_sessions: 0
-    session = build :pd_session, start: Time.zone.now, end: Time.zone.now - 2.hours
+    session = build :pd_session, start: Time.zone.now, end: 2.hours.ago
     workshop.sessions << session
 
     refute workshop.valid?
@@ -277,18 +279,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'should have ended' do
     workshop_recently_started = create :workshop, num_sessions: 0
     workshop_recently_started.started_at = Time.now
-    workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
+    workshop_recently_started.sessions << (build :pd_session, start: 13.hours.ago, end: 12.hours.ago)
     workshop_recently_started.save!
 
     workshop_should_have_ended = create :workshop, num_sessions: 0
     workshop_should_have_ended.started_at = Time.now
-    workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
+    workshop_should_have_ended.sessions << (build :pd_session, start: 51.hours.ago, end: 50.hours.ago)
     workshop_should_have_ended.save!
 
     workshop_already_ended = create :workshop, num_sessions: 0
     workshop_already_ended.started_at = Time.now
     workshop_already_ended.ended_at = Time.now - 1.hour
-    workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
+    workshop_already_ended.sessions << (build :pd_session, start: 51.hours.ago, end: 50.hours.ago)
     workshop_already_ended.save!
 
     assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.pluck(:id)
@@ -331,10 +333,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     normal_workshop = create :workshop, :ended
     counselor_workshop = create :counselor_workshop, :ended
     admin_workshop = create :admin_workshop, :ended
+    admin_counselor_workshop = create :admin_counselor_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
     refute admin_workshop.account_required_for_attendance?
+    refute admin_counselor_workshop.account_required_for_attendance?
   end
 
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
@@ -351,9 +355,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
-
     refute workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys with attendance but no account gets email for admin/counselor' do
+    workshop = create :admin_counselor_workshop, :ended
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
     workshop.send_exit_surveys
   end
 
@@ -492,7 +507,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
-
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'
@@ -583,7 +597,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
-    workshops = 5.times.map do |i|
+    workshops = Array.new(5) do |i|
       build :workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
     end
     # save out of order
@@ -848,6 +862,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(3)
   end
 
+  test 'CSA teacher pre-work 20 days out' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csa_summer_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).returns(mock_mail).times(3)
+    Pd::Workshop.send_teacher_pre_work_csa
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Date.today + 15.days),
@@ -883,7 +909,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     # 2 enrollments without attendance
-    enrollments = 2.times.map do
+    enrollments = Array.new(2) do
       create :pd_enrollment, workshop: @workshop
     end
 
@@ -1487,6 +1513,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop.third_party_provider = nil
     assert workshop.valid?
+  end
+
+  test 'CSP summer workshop must require teacher application' do
+    workshop = create :csp_summer_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSD academic year workshop must not require teacher application' do
+    workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
+    refute workshop.require_application?
+  end
+
+  test 'CSA summer workshop must require teacher application' do
+    workshop = create :csa_summer_workshop, regional_partner: @regional_partner
+    assert workshop.require_application?
+  end
+
+  test 'CSF workshop must not require teacher application' do
+    workshop = create :csf_workshop, regional_partner: @regional_partner
+    refute workshop.require_application?
+  end
+
+  test 'virtual CSD workshop must not require teacher application' do
+    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
+    refute workshop.require_application?
+  end
+
+  test 'workshop without regional partner must not require teacher application' do
+    workshop = create :csp_summer_workshop
+    refute workshop.require_application?
+  end
+
+  test 'regional partner with partner application must not require teacher application' do
+    rp = create :regional_partner, link_to_partner_application: 'https://example.com'
+    workshop = create :csp_summer_workshop, regional_partner: rp
+    refute workshop.require_application?
   end
 
   private

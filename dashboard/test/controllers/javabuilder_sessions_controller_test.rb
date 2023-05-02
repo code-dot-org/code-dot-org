@@ -83,7 +83,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     get :get_access_token, params: {
       channelId: @fake_channel_id,
       executionType: 'RUN',
-      options: {'useNeighborhood': true},
+      options: {useNeighborhood: true},
       miniAppType: 'console'
     }
 

@@ -1,6 +1,7 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import {P5LabInterfaceMode} from './constants';
 
 /**
  * @typedef {Object} Vector2
@@ -9,7 +10,7 @@ import PropTypes from 'prop-types';
  */
 const Vector2 = PropTypes.shape({
   x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired
+  y: PropTypes.number.isRequired,
 });
 
 /*
@@ -47,6 +48,16 @@ const Vector2 = PropTypes.shape({
 export const AnimationKey = PropTypes.string;
 
 /**
+ * @typedef {Object} CurrentAnimations
+ * @property {AnimationKey} default - The animation key for Animations (Game Lab) or Costumes (Sprite Lab)
+ * @property {AnimationKey} background - The animation key for Backgrounds (Sprite Lab)
+ */
+export const CurrentAnimations = PropTypes.shape({
+  [P5LabInterfaceMode.ANIMATION]: AnimationKey.isRequired,
+  [P5LabInterfaceMode.BACKGROUND]: AnimationKey.isRequired,
+});
+
+/**
  * A subset of AnimationProps that gets saved with the project JSON.
  * @typedef {Object} SerializedAnimationProps
  * @property {string} name
@@ -64,7 +75,7 @@ const serializedAnimationPropsShape = {
   frameCount: PropTypes.number.isRequired,
   looping: PropTypes.bool.isRequired,
   frameDelay: PropTypes.number.isRequired,
-  version: PropTypes.string
+  version: PropTypes.string,
 };
 
 /**
@@ -96,7 +107,7 @@ const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
   saved: PropTypes.bool,
   blob: PropTypes.object,
   dataURI: PropTypes.string,
-  hasNewVersionThisSession: PropTypes.bool
+  hasNewVersionThisSession: PropTypes.bool,
 });
 export const AnimationProps = PropTypes.shape(animationPropsShape);
 
@@ -115,7 +126,7 @@ function getSerializedAnimationProps(animation) {
     'looping',
     'frameDelay',
     'version',
-    'categories'
+    'categories',
   ]);
 }
 
@@ -126,7 +137,7 @@ function getSerializedAnimationProps(animation) {
  */
 export const AnimationList = PropTypes.shape({
   orderedKeys: PropTypes.arrayOf(AnimationKey).isRequired,
-  propsByKey: PropTypes.objectOf(AnimationProps).isRequired
+  propsByKey: PropTypes.objectOf(AnimationProps).isRequired,
 });
 
 /**
@@ -151,7 +162,7 @@ export function getSerializedAnimationList(animationList) {
     propsByKey: _.pick(
       _.mapValues(animationList.propsByKey, getSerializedAnimationProps),
       animationList.orderedKeys
-    )
+    ),
   };
 }
 

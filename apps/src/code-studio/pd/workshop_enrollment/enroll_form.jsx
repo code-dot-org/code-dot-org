@@ -4,11 +4,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {
+  FormGroup,
+  Button,
+  ControlLabel,
+  HelpBlock,
+  Alert,
+} from 'react-bootstrap';
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import QuestionsTable from '../form_components/QuestionsTable';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -23,6 +30,7 @@ const DISTRICT = SubjectNames.SUBJECT_CSF_DISTRICT;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
+const ADMINCOUNSELOR = 'Admin/Counselor Workshop';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -30,22 +38,24 @@ const SCHOOL_TYPES_MAPPING = {
   'Public school': 'public',
   'Private school': 'private',
   'Charter school': 'charter',
-  Other: 'other'
+  Other: 'other',
 };
 
 const DESCRIBE_ROLES = [
   'School Administrator',
   'District Administrator',
   'Parent',
-  'Other'
+  'Other',
 ];
 
-const ROLES = [
+const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
-  'Librarian'
+  'Librarian',
 ].concat(DESCRIBE_ROLES);
+
+const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
 
 const GRADES_TEACHING = [
   'Pre-K',
@@ -56,7 +66,7 @@ const GRADES_TEACHING = [
   'Grade 4',
   'Grade 5',
   'Grade 6-8',
-  'Grade 9-12'
+  'Grade 9-12',
 ];
 
 const CSF_COURSES = {
@@ -67,7 +77,7 @@ const CSF_COURSES = {
   courseE: 'Course E',
   courseF: 'Course F',
   express: 'Express',
-  courses14_accelerated: 'Courses 1-4 or Accelerated'
+  courses14_accelerated: 'Courses 1-4 or Accelerated',
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -75,19 +85,19 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
     'Yes, this year',
   'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
     'Yes, prior year',
-  'Nope, I have never attended a CS Fundamentals workshop.': 'No'
+  'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
 const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
   'Yes, and I will bring it to the workshop.': 'Yes',
-  'Nope. I will need a new copy provided. Thanks!': 'No'
+  'Nope. I will need a new copy provided. Thanks!': 'No',
 };
 
 const REPLACE_EXISTING_OPTIONS = [
   'Yes, this course will replace an existing computer science course',
   'No, this course will be added to the schedule in addition to an existing computer science course',
   'No, this will be the only computer science course on the master schedule',
-  'I don’t know'
+  'I don’t know',
 ];
 
 export default class EnrollForm extends React.Component {
@@ -99,7 +109,7 @@ export default class EnrollForm extends React.Component {
     onSubmissionComplete: PropTypes.func,
     workshop_subject: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    collect_demographics: PropTypes.bool
+    collect_demographics: PropTypes.bool,
   };
 
   constructor(props) {
@@ -109,7 +119,9 @@ export default class EnrollForm extends React.Component {
       first_name: this.props.first_name,
       email: this.props.email,
       isSubmitting: false,
-      errors: {}
+      errors: {},
+      showFormErrorMessage: false,
+      submissionErrorMessage: '',
     };
   }
 
@@ -149,9 +161,13 @@ export default class EnrollForm extends React.Component {
   };
 
   handleClickRegister = () => {
+    this.setState({showFormErrorMessage: false});
+    this.setState({submissionErrorMessage: ''});
     if (this.validateRequiredFields()) {
       this.setState({isSubmitting: true});
       this.submit();
+    } else {
+      this.setState({showFormErrorMessage: true});
     }
   };
 
@@ -237,7 +253,7 @@ export default class EnrollForm extends React.Component {
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
-        school_type: this.schoolType()
+        school_type: this.schoolType(),
       };
     }
     const params = {
@@ -266,7 +282,7 @@ export default class EnrollForm extends React.Component {
       years_teaching: this.state.years_teaching,
       years_teaching_cs: this.state.years_teaching_cs,
       taught_ap_before: this.state.taught_ap_before,
-      planning_to_teach_ap: this.state.planning_to_teach_ap
+      planning_to_teach_ap: this.state.planning_to_teach_ap,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -275,17 +291,23 @@ export default class EnrollForm extends React.Component {
       data: JSON.stringify(params),
       complete: result => {
         this.setState({isSubmitting: false});
+        result?.responseJSON?.workshop_enrollment_status === 'error' &&
+          this.setState({
+            submissionErrorMessage:
+              result?.responseJSON?.error_message || 'unknown error',
+          });
         this.props.onSubmissionComplete(result);
-      }
+      },
     });
   }
 
   validateRequiredFields() {
     let errors = this.getErrors();
     const missingRequiredFields = this.getMissingRequiredFields();
-    const schoolInfoErrors = SchoolAutocompleteDropdownWithCustomFields.validate(
-      this.state.school_info
-    );
+    const schoolInfoErrors =
+      SchoolAutocompleteDropdownWithCustomFields.validate(
+        this.state.school_info
+      );
 
     if (
       missingRequiredFields.length ||
@@ -322,13 +344,13 @@ export default class EnrollForm extends React.Component {
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
         inputValue: this.state.explain_not_teaching,
-        onInputChange: this.handleNotTeachingChange
+        onInputChange: this.handleNotTeachingChange,
       },
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_teaching_other,
-        onInputChange: this.handleTeachingOtherChange
-      }
+        onInputChange: this.handleTeachingOtherChange,
+      },
     ]);
 
     const csfIntroIntentLabel =
@@ -346,14 +368,14 @@ export default class EnrollForm extends React.Component {
       'I have available time on my schedule for teaching computer science.',
       'I want to learn computer science concepts.',
       'Computer science is a required subject in my region.',
-      'I am here to bring information back to my school or district.'
+      'I am here to bring information back to my school or district.',
     ];
 
     const cspReturningTeachersTaughtAPLabel = `Have you taught an Advanced Placement (AP) course before?`;
     const cspReturningTeachersTaughtAPAnswers = [
       'Yes, AP CS Principles or AP CS A',
       'Yes, but in another subject',
-      'No'
+      'No',
     ];
 
     const cspReturningTeachersPlanningAPLabel = `Are you planning to teach CS Principles as an AP course?`;
@@ -361,7 +383,7 @@ export default class EnrollForm extends React.Component {
       'Yes',
       'No',
       'Both AP and non-AP',
-      'Unsure / Still deciding'
+      'Unsure / Still deciding',
     ];
 
     const csfCourses = Object.keys(CSF_COURSES)
@@ -371,12 +393,16 @@ export default class EnrollForm extends React.Component {
         {
           answerText: `${OTHER} ${EXPLAIN}`,
           inputValue: this.state.explain_csf_course_other,
-          onInputChange: this.handleCsfCourseOtherChange
-        }
+          onInputChange: this.handleCsfCourseOtherChange,
+        },
       ]);
     const previousCourses = this.props.previous_courses.concat([
-      'I don’t have experience teaching any of these courses'
+      'I don’t have experience teaching any of these courses',
     ]);
+
+    const roles =
+      (this.props.workshop_course === CSF && CSF_ROLES) ||
+      (this.props.workshop_course === ADMINCOUNSELOR && ADMIN_COUNSELOR_ROLES);
 
     return (
       <form id="enroll-form">
@@ -451,7 +477,8 @@ export default class EnrollForm extends React.Component {
           school_info={this.state.school_info}
           errors={this.state.errors}
         />
-        {this.props.workshop_course === CSF && (
+        {(this.props.workshop_course === CSF ||
+          this.props.workshop_course === ADMINCOUNSELOR) && (
           <FormGroup>
             <FormGroup
               validationState={
@@ -470,7 +497,7 @@ export default class EnrollForm extends React.Component {
                 placeholder={null}
                 value={this.state.role}
                 onChange={this.handleRoleChange}
-                options={ROLES.map(r => ({value: r, label: r}))}
+                options={roles.map(r => ({value: r, label: r}))}
               />
               <HelpBlock>{this.state.errors.role}</HelpBlock>
               {this.state && DESCRIBE_ROLES.includes(this.state.role) && (
@@ -482,22 +509,24 @@ export default class EnrollForm extends React.Component {
                 />
               )}
             </FormGroup>
-            <ButtonList
-              id="grades_teaching"
-              key="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={gradesLabel}
-              onChange={this.handleChange}
-              selectedItems={this.state.grades_teaching}
-              validationState={
-                this.state.errors.hasOwnProperty('grades_teaching')
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-              errorText={this.state.errors.grades_teaching}
-              type="check"
-            />
+            {this.props.workshop_course !== ADMINCOUNSELOR && (
+              <ButtonList
+                id="grades_teaching"
+                key="grades_teaching"
+                answers={gradesTeaching}
+                groupName="grades_teaching"
+                label={gradesLabel}
+                onChange={this.handleChange}
+                selectedItems={this.state.grades_teaching}
+                validationState={
+                  this.state.errors.hasOwnProperty('grades_teaching')
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+                errorText={this.state.errors.grades_teaching}
+                type="check"
+              />
+            )}
           </FormGroup>
         )}
         {this.props.workshop_course === CSF &&
@@ -549,11 +578,11 @@ export default class EnrollForm extends React.Component {
                   'none',
                   'a few lessons',
                   'most lessons',
-                  'all lessons'
+                  'all lessons',
                 ]}
                 questions={Object.keys(CSF_COURSES).map(key => ({
                   label: CSF_COURSES[key],
-                  name: key
+                  name: key,
                 }))}
                 selectedItems={this.state.csf_course_experience}
               />
@@ -609,7 +638,7 @@ export default class EnrollForm extends React.Component {
                 }
                 errorText={this.state.errors.csf_has_physical_curriculum_guide}
                 type="radio"
-                require={true}
+                required={true}
               />
             </FormGroup>
           )}
@@ -742,6 +771,21 @@ export default class EnrollForm extends React.Component {
         >
           Register
         </Button>
+        {this.state.showFormErrorMessage && (
+          <p style={{color: color.bootstrap_v3_error_text}}>
+            Form errors found. Please check your responses above.
+          </p>
+        )}
+        {this.state.submissionErrorMessage && (
+          <Alert bsStyle="danger" style={{marginTop: 10}}>
+            <p>
+              Sorry, we were unable to enroll you in this workshop because
+              {' ' + this.state.submissionErrorMessage}. Please double check
+              your responses, and if the problem persists, contact{' '}
+              <a href="mailto:support@code.org">support@code.org</a>.
+            </p>
+          </Alert>
+        )}
         <br />
         <br />
         <br />

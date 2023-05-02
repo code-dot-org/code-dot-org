@@ -14,7 +14,7 @@ Pd::Application::PrincipalApprovalApplication.find_each do |principal_applicatio
       next
     end
 
-    principal_response = principal_application.sanitize_form_data_hash
+    principal_response = principal_application.sanitized_form_data_hash
 
     response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
     replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
@@ -52,7 +52,7 @@ Pd::Application::TeacherApplication.find_each do |teacher_application|
     principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: teacher_application.application_guid).first
     if principal_application
 
-      principal_response = principal_application.sanitize_form_data_hash
+      principal_response = principal_application.sanitized_form_data_hash
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
       replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')

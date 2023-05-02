@@ -32,7 +32,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     // Constrain the flyout to not be wider than 40% of the total workspace space.
     flyoutWidth = Math.min(
       flyoutWidth,
-      this.targetWorkspace.metricsManager_.getSvgMetrics().width * 0.4
+      this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
     );
     /* End CDO Customization */
 

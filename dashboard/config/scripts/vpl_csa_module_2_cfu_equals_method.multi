@@ -24,7 +24,7 @@ public class Flower{
   private boolean isPerenial;
   private boolean isDroughtResistent; 
 
-  public Flower(String flowerColor, boolean, flowerIsPerenial, boolean flowerIsDroughtResistent){
+  public Flower(String flowerColor, boolean flowerIsPerenial, boolean flowerIsDroughtResistent){
 
   Color = flowerColor;
   isPerennial = flowerIsPerennial;

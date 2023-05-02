@@ -18,14 +18,14 @@ import reducers, {
   moveLevelToActivitySection,
   emptyActivity,
   emptyActivitySection,
-  getSerializedActivities
+  getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {sampleActivities} from './activitiesTestData';
 import _ from 'lodash';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const getInitialState = () => ({
-  activities: _.cloneDeep(sampleActivities)
+  activities: _.cloneDeep(sampleActivities),
 });
 
 const reducer = combineReducers(reducers);
@@ -52,14 +52,13 @@ describe('activitiesEditorRedux reducer tests', () => {
       addTip(1, 2, {
         key: 'new-tip',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
-      'teachingTip',
-      'discussionGoal',
-      'contentCorner'
-    ]);
+    assert.deepEqual(
+      nextState[0].activitySections[1].tips.map(s => s.type),
+      ['teachingTip', 'discussionGoal', 'contentCorner']
+    );
   });
 
   it('update tip', () => {
@@ -68,35 +67,40 @@ describe('activitiesEditorRedux reducer tests', () => {
       updateTip(1, 2, {
         key: 'tip-1',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
     assert.deepEqual(nextState[0].activitySections[1].tips, [
       {
         key: 'tip-1',
         type: 'contentCorner',
-        markdown: 'Programming is about solving puzzles.'
+        markdown: 'Programming is about solving puzzles.',
       },
       {
         key: 'tip-2',
         markdown: 'Discussion Goal content',
-        type: 'discussionGoal'
-      }
+        type: 'discussionGoal',
+      },
     ]);
   });
 
   it('remove tip', () => {
-    const nextState = reducer(initialState, removeTip(1, 2, 'tip-1'))
-      .activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips.map(s => s.type), [
-      'discussionGoal'
-    ]);
+    const nextState = reducer(
+      initialState,
+      removeTip(1, 2, 'tip-1')
+    ).activities;
+    assert.deepEqual(
+      nextState[0].activitySections[1].tips.map(s => s.type),
+      ['discussionGoal']
+    );
   });
 
   describe('levels', () => {
     it('reorder levels', () => {
-      const nextState = reducer(initialState, reorderLevel(1, 3, 2, 1))
-        .activities;
+      const nextState = reducer(
+        initialState,
+        reorderLevel(1, 3, 2, 1)
+      ).activities;
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(l => l.id),
         ['11', '10']
@@ -118,9 +122,9 @@ describe('activitiesEditorRedux reducer tests', () => {
               remarks: true,
               scriptLevels: [],
               text: 'Drawing text',
-              tips: []
-            }
-          ]
+              tips: [],
+            },
+          ],
         });
       });
 
@@ -204,8 +208,8 @@ describe('activitiesEditorRedux reducer tests', () => {
               skin: null,
               videoKey: null,
               concepts: '',
-              conceptDifficulty: ''
-            }
+              conceptDifficulty: '',
+            },
           ],
           position: 4,
           activeId: '4',
@@ -213,7 +217,7 @@ describe('activitiesEditorRedux reducer tests', () => {
           bonus: false,
           assessment: false,
           challenge: false,
-          expand: false
+          expand: false,
         })
       ).activities;
       assert.deepEqual(
@@ -253,8 +257,8 @@ describe('activitiesEditorRedux reducer tests', () => {
           position: 1,
           activitySections: [
             {key: 'a', position: 1, displayName: 'A'},
-            {key: 'b', position: 2, displayName: 'B'}
-          ]
+            {key: 'b', position: 2, displayName: 'B'},
+          ],
         },
         {
           key: 'y',
@@ -262,9 +266,9 @@ describe('activitiesEditorRedux reducer tests', () => {
           position: 2,
           activitySections: [
             {key: 'c', position: 1, displayName: 'C'},
-            {key: 'd', position: 2, displayName: 'D'}
-          ]
-        }
+            {key: 'd', position: 2, displayName: 'D'},
+          ],
+        },
       ];
       initialState.activities = initialActivities;
     });
@@ -341,7 +345,8 @@ describe('activitiesEditorRedux reducer tests', () => {
         );
 
         let expectedState = _.cloneDeep(initialActivities);
-        expectedState[1].activitySections = expectedState[1].activitySections.reverse();
+        expectedState[1].activitySections =
+          expectedState[1].activitySections.reverse();
         expectedState[1].activitySections[0].position = 1;
         expectedState[1].activitySections[1].position = 2;
 
@@ -366,9 +371,8 @@ describe('activitiesEditorRedux reducer tests', () => {
           expectedState[1].activitySections[0]
         );
         expectedState[0].activitySections[2].position = 3;
-        expectedState[1].activitySections = expectedState[1].activitySections.slice(
-          1
-        );
+        expectedState[1].activitySections =
+          expectedState[1].activitySections.slice(1);
         expectedState[1].activitySections[0].position = 1;
 
         assert.deepEqual(expectedState, state.activities);
@@ -378,9 +382,8 @@ describe('activitiesEditorRedux reducer tests', () => {
         let state = reducer(initialState, removeActivitySection(1, 1));
 
         let expectedState = _.cloneDeep(initialActivities);
-        expectedState[0].activitySections = expectedState[0].activitySections.slice(
-          1
-        );
+        expectedState[0].activitySections =
+          expectedState[0].activitySections.slice(1);
         expectedState[0].activitySections[0].position = 1;
 
         assert.deepEqual(expectedState, state.activities);
@@ -416,11 +419,10 @@ describe('activitiesEditorRedux reducer tests', () => {
           initialState,
           addActivitySection(1, 'activitySection-key')
         ).activities;
-        assert.deepEqual(nextState[0].activitySections.map(s => s.key), [
-          'a',
-          'b',
-          'activitySection-key'
-        ]);
+        assert.deepEqual(
+          nextState[0].activitySections.map(s => s.key),
+          ['a', 'b', 'activitySection-key']
+        );
       });
     });
   });

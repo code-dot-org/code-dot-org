@@ -20,8 +20,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## دروس غير برمجية عن أسس علوم الكمبيوتر ٢٠٢١-٢٠٢٢
-يمكن الوصول إلى الدروس التالية في <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank"> أسس علوم الكمبيوتر ٢٠٢١-٢٠٢٢</a>. <br><br>
+## دروس غير برمجية عن أسس علوم الكمبيوتر 2022-2023
+يمكن العثور على الدروس التالية في <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">أساسيات علوم الحاسون 2022-2023</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. لا نملك عادةً كل المعلومات التي نحتاجها عند كتابة برنامج. أحيانًا ستريد أن تفعل شيئًا مختلفًا في موقف ما حتى لو كنت لا تعرف ما هو الموقف الصحيح عند تشغيل الكود الخاص بك. هنا يأتي دور المتغيرات. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. لا نملك عادةً كل المعلومات التي نحتاجها عند كتابة برنامج. أحيانًا ستريد أن تفعل شيئًا مختلفًا في موقف ما حتى لو كنت لا تعرف ما هو الموقف الصحيح عند تشغيل الكود الخاص بك. هنا يأتي دور المتغيرات. تسمح الشروط للكمبيوتر باتخاذ قرار، بناءً على المعلومات الصحيحة في أي وقت يتم فيه تشغيل التعليمات البرمجية الخاصة بك.+</td><td>الشروط</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
+  </tr>
+  <tr>
     <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - كتابة الأغاني</a><br><small>تعد الوظيفة البرمحية واحدة من أروع الهياكل في عالم علوم الكمبيوتر. الوظائف (أحيانًا يُطلق عليها إجراءات) هي برامج صغيرة يمكنك استخدامها مرارًا وتكرارًا داخل برنامجك الأكبر. سيساعد هذا الدرس الطلاب على فهم سبب أن دمج أجزاء من التعليمات البرمجية في وظائف برمجية يمكن أن يكون طريقة مفيدة.</td><td>الوظائف البرمجية</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. الوظائف (أحيانًا يُطلق عليها إجراءات) هي برامج صغيرة يمكنك استخدامها مرارًا وتكرارًا داخل برنامجك الأكبر. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - التصميم لإمكانية الوصول </a><br><small> في هذا الدرس، سيتعرف الطلاب على إمكانية الوصول وقيمة التعاطف من خلال العصف الذهني وتصميم حلول يمكن الوصول إليها للتطبيقات الافتراضية.</td><td>تأثير الحوسبة</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - المشاركة الرقمية</a><br><i>*المستلزمات: هاتف ذكي أو جهاز لوحي</i><br><small>تمت استعارة هذا الدرس إلى "أساسيات علوم الكمبيوتر" من قبل فريق حقوق الطبع والنشر والإبداع، والهدف منه مساعدة الطلاب على فهم التحديات والفوائد المترتبة على احترام الملكية وحقوق النشر، لا سيما في البيئات الرقمية. يجب تشجيع الطلاب على احترام حقوق الفنانين كجزء مهم من كونهم مواطنين أخلاقيين في العالم الرقمي.</td><td>المواطنة الرقمية</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">دورة  تدريبيةF</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -قصص مساحة فارغة</a><br><i>*المستلزمات: 6 أظرف (مناسب أيضًا: ورق أو بطاقات فهرسة، مطوية من المنتصف)</i><br><small>سيستخدم الطلاب قصص ملء الفراغات (على غرار Mad Libs®) كسياق لفهم كيفية أخذ أجهزة الكمبيوتر للمدخلات من المستخدم وتخزينها، ثم استخدامها لاحقًا أثناء تشغيل البرنامج.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. ستسمح هذه الهياكل الجديدة للطلاب بإنشاء رمز أكثر قوة وديناميكية.</td><td>بالنسبة للحلقات</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. في هذا الدرس سيتظاهر الدارسون بأنهم يتدفقون عبر الإنترنت في حين أنهم يتعلمون عن الاتصالات والروابط وIP Addresses والـDNS.</td><td>البيانات</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - الإنترنت</a><br><small>على الرغم من أن العديد من الأشخاص يستخدمون الإنترنت يوميًا، إلا أن الكثيرين لا يعرفون كيف يعمل. في هذا الدرس سيتظاهر الدارسون بأنهم يتدفقون عبر الإنترنت في حين أنهم يتعلمون عن الاتصالات والروابط وIP Addresses والـDNS.</td><td>البيانات</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

@@ -2,7 +2,7 @@ import {assert} from '../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
+import style from '@cdo/apps/templates/button.module.scss';
 import sinon from 'sinon';
 
 describe('Button', () => {
@@ -93,13 +93,9 @@ describe('Button', () => {
         size={Button.ButtonSize.large}
       />
     );
-    assert.strictEqual(regular.props().style.height, 34);
-    assert.strictEqual(regular.props().style.paddingLeft, 24);
-    assert.strictEqual(regular.props().style.paddingRight, 24);
+    assert.include(regular.props().className, style.default);
 
-    assert.strictEqual(large.props().style.height, 40);
-    assert.strictEqual(large.props().style.paddingLeft, 30);
-    assert.strictEqual(large.props().style.paddingRight, 30);
+    assert.include(large.props().className, style.large);
   });
 
   it('renders narrower if we use a narrow size', () => {
@@ -114,20 +110,33 @@ describe('Button', () => {
         size={Button.ButtonSize.narrow}
       />
     );
-    assert.strictEqual(regular.props().style.height, 34);
-    assert.strictEqual(regular.props().style.paddingLeft, 24);
-    assert.strictEqual(regular.props().style.paddingRight, 24);
+    assert.include(regular.props().className, style.default);
 
-    assert.strictEqual(narrow.props().style.height, 40);
-    assert.strictEqual(narrow.props().style.paddingLeft, 10);
-    assert.strictEqual(narrow.props().style.paddingRight, 10);
+    assert.include(narrow.props().className, style.narrow);
+  });
+
+  it('renders smaller if we use a small size', () => {
+    const regular = shallow(
+      <Button __useDeprecatedTag href="/foo/bar" text="Click me" />
+    );
+    const small = shallow(
+      <Button
+        __useDeprecatedTag
+        href="/foo/bar"
+        text="Click me"
+        size={Button.ButtonSize.small}
+      />
+    );
+    assert.include(regular.props().className, style.default);
+
+    assert.include(small.props().className, style.small);
   });
 
   it('renders an orange button by default', () => {
     const wrapper = shallow(
       <Button __useDeprecatedTag href="/foo/bar" text="Click me" />
     );
-    assert.strictEqual(wrapper.props().style.backgroundColor, color.orange);
+    assert.include(wrapper.props().className, style.orange);
   });
 
   it('renders a blue button if we set color to blue', () => {
@@ -139,7 +148,7 @@ describe('Button', () => {
         color={Button.ButtonColor.blue}
       />
     );
-    assert.strictEqual(wrapper.props().style.backgroundColor, color.cyan);
+    assert.include(wrapper.props().className, style.blue);
   });
 
   it('renders a purple button if we set color to purple', () => {
@@ -151,7 +160,7 @@ describe('Button', () => {
         color={Button.ButtonColor.purple}
       />
     );
-    assert.strictEqual(wrapper.props().style.backgroundColor, color.purple);
+    assert.include(wrapper.props().className, style.purple);
   });
 
   it('renders a gray button if we set color to gray', () => {
@@ -163,10 +172,7 @@ describe('Button', () => {
         color={Button.ButtonColor.gray}
       />
     );
-    assert.strictEqual(
-      wrapper.props().style.backgroundColor,
-      color.lightest_gray
-    );
+    assert.include(wrapper.props().className, style.gray);
   });
 
   it('renders a white button if we set color to white', () => {
@@ -178,7 +184,7 @@ describe('Button', () => {
         color={Button.ButtonColor.white}
       />
     );
-    assert.strictEqual(wrapper.props().style.backgroundColor, color.white);
+    assert.include(wrapper.props().className, style.white);
   });
 
   it('renders with an icon if specified', () => {

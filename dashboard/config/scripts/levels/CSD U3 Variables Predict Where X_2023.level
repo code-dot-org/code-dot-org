@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:52:38.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -30,7 +26,7 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "true",
+    "free_play": "false",
     "validation_enabled": "false",
     "text_mode_at_start": "false",
     "submittable": "false",
@@ -45,17 +41,15 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_variables\",\r\n  \"callout_text\": \"Change the number here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"var\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "long_instructions": "# Using Variables\r\n\r\nIn this program, the variable `xPosition` is used to store the x-coordinate of the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n* Change the number that is stored into the variable ([Show me where](#triggercallout=code_triggered)) and run the code again.",
+    "long_instructions": "predict level",
     "parent_level_id": 20661,
     "name_suffix": "_2023",
     "reference_links": [
-      "/docs/csd-1718/drawing_shapes_map/index.html",
-      "/docs/csd-1718/shape_size_map/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html"
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/csd-1718/variables_intro_csd/index.html",
-    "video_key": "csd_gamelab_variables_1",
+    "map_reference": "/courses/csd-2022/guides/variables",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -65,11 +59,19 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:52:38.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:38.282+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where X_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where X_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:38.282+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Predict Where X_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Predict Where X_2022\"},{\"changed_at\":\"2022-10-13 12:54:31 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"callout_json\",\"long_instructions\",\"reference_links\",\"map_reference\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

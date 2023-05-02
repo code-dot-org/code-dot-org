@@ -37,23 +37,17 @@ Bagikan foto acara Anda di Facebook dan Twitter dengan menggunakan tagar **#Hour
 
 * * *
 
-## Adakan Family Code Night dengan Hour of Code dan mintalah orang tua untuk berpartisipasi
+## Example plan for a school assembly or event
 
-Pertimbangkan untuk menyelenggarakan acara malam K-5 dan undang orang tua untuk bergabung dengan siswanya untuk belajar ilmu komputer selama satu jam. Ini merupakan cara yang bagus untuk melibatkan komunitas yang lebih besar dan mendapatkan dukungan dari orang tua terkait ilmu komputer di sekolah Anda. Mitra kami di Family Code Night telah membuat kit acara lengkap dengan checklist perencanaan, naskah presenter, email undangan, poster, powerpoint dan lain-lain untuk menggelar acara Anda sendiri. [ Klik di sini untuk mengunduh Kit Event tersebut](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Contoh rencana untuk pertemuan umum atau acara di sekolah
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Acara:** Pertemuan pembukaan Computer Science Education Week di Sekolah
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Tanggal:** {{ campaign_date/start_short }} (awal Computer Science Education Week)
-
-**Waktu:** Selama hari sekolah. Lebih dianjurkan acara pagi. Kurang lebih satu jam.
-
-**Lokasi:** Aula sekolah (misalnya gedung teater, gedung olah raga, kantin)
-
-## Susunan Acara
+## Run of Show
 
 | Waktu         | Kegiatan                                                                                                                                          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

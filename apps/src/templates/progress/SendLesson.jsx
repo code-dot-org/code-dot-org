@@ -11,7 +11,7 @@ export default class SendLesson extends React.Component {
     lessonTitle: PropTypes.string,
     courseid: PropTypes.number,
     analyticsData: PropTypes.string,
-    buttonStyle: PropTypes.object
+    buttonStyle: PropTypes.object,
   };
 
   constructor(props) {
@@ -19,7 +19,7 @@ export default class SendLesson extends React.Component {
     this.openDialog = this.openDialog.bind(this);
     this.closeDialog = this.closeDialog.bind(this);
     this.state = {
-      isDialogOpen: false
+      isDialogOpen: false,
     };
   }
 
@@ -31,7 +31,7 @@ export default class SendLesson extends React.Component {
         study: 'send-to-students-button',
         study_group: 'v0',
         event: event,
-        data_json: this.props.analyticsData
+        data_json: this.props.analyticsData,
       },
       {includeUserId: true}
     );
@@ -45,7 +45,6 @@ export default class SendLesson extends React.Component {
     return (
       <div className="uitest-sendlesson">
         <Button
-          __useDeprecatedTag
           onClick={this.openDialog}
           text={i18n.sendLessonButton()}
           icon="share-square-o"

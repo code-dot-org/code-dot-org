@@ -1,4 +1,3 @@
-/*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
@@ -19,7 +18,7 @@ export const PublishState = {
   INVALID_INPUT: 'invalid_input',
   PROFANE_INPUT: 'profane_input',
   TOO_LONG: 'too_long',
-  ERROR_UNPUBLISH: 'error_unpublish'
+  ERROR_UNPUBLISH: 'error_unpublish',
 };
 
 /**
@@ -32,7 +31,7 @@ export default class LibraryPublisher extends React.Component {
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired,
-    onShareTeacherLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func,
   };
 
   constructor(props) {
@@ -55,7 +54,7 @@ export default class LibraryPublisher extends React.Component {
       libraryName: libraryParser.suggestName(props.libraryDetails.libraryName),
       libraryDescription: props.libraryDetails.libraryDescription,
       selectedFunctions: validSelectedFunctions,
-      profaneWords: null
+      profaneWords: null,
     };
   }
 
@@ -92,7 +91,7 @@ export default class LibraryPublisher extends React.Component {
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           publishState: PublishState.PROFANE_INPUT,
-          profaneWords
+          profaneWords,
         });
       } else {
         this.publish();
@@ -132,7 +131,7 @@ export default class LibraryPublisher extends React.Component {
           libraryName,
           libraryDescription,
           publishing: true,
-          latestLibraryVersion: data && data.versionId
+          latestLibraryVersion: data && data.versionId,
         });
 
         onPublishSuccess(libraryName);
@@ -151,7 +150,7 @@ export default class LibraryPublisher extends React.Component {
           onChange={this.setLibraryName}
           onBlur={event =>
             this.setState({
-              libraryName: libraryParser.suggestName(event.target.value)
+              libraryName: libraryParser.suggestName(event.target.value),
             })
           }
         />
@@ -271,7 +270,7 @@ export default class LibraryPublisher extends React.Component {
       case PublishState.PROFANE_INPUT:
         errorMessage = i18n.libraryDetailsProfanity({
           profanityCount: profaneWords.length,
-          profaneWords: profaneWords.join(', ')
+          profaneWords: profaneWords.join(', '),
         });
         break;
       case PublishState.ERROR_PUBLISH:
@@ -301,7 +300,7 @@ export default class LibraryPublisher extends React.Component {
           libraryName: undefined,
           libraryDescription: undefined,
           publishing: false,
-          latestLibraryVersion: -1
+          latestLibraryVersion: -1,
         });
         onUnpublishSuccess();
       },
@@ -376,17 +375,15 @@ export default class LibraryPublisher extends React.Component {
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
-            __useDeprecatedTag
             id="ui-test-publish-library"
-            style={{marginTop: 20}}
+            style={styles.button}
             onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
           {onShareTeacherLibrary && (
             <Button
-              __useDeprecatedTag
               id="ui-test-manage-libraries"
-              style={{marginTop: 20, marginLeft: 10}}
+              style={{...styles.button, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
               text={i18n.manageLibraries()}
               color={Button.ButtonColor.gray}
@@ -394,9 +391,8 @@ export default class LibraryPublisher extends React.Component {
           )}
           {alreadyPublished && (
             <Button
-              __useDeprecatedTag
               id="ui-test-unpublish-library"
-              style={styles.unpublishButton}
+              style={{...styles.button, ...styles.unpublishButton}}
               onClick={this.unpublish}
               text={i18n.unpublish()}
               color={Button.ButtonColor.red}
@@ -414,43 +410,46 @@ const styles = {
     color: color.red,
     width: '90%',
     paddingTop: 8,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   functionSelector: {
     display: 'flex',
     alignItems: 'center',
-    margin: '10px 10px 10px 0'
+    margin: '10px 10px 10px 0',
   },
   largerCheckbox: {
     width: 20,
-    height: 20
+    height: 20,
   },
   selectAllFunctionsLabel: {
     margin: 0,
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   functionLabel: {
     margin: 0,
-    fontSize: 20
+    fontSize: 20,
   },
   info: {
     fontSize: 12,
     fontStyle: 'italic',
-    lineHeight: 1.2
+    lineHeight: 1.2,
   },
   textInput: {
     fontSize: 14,
     padding: 6,
-    color: color.dimgray
+    color: color.dimgray,
   },
   description: {
     width: '98%',
-    resize: 'vertical'
+    resize: 'vertical',
   },
   unpublishButton: {
     right: 0,
+    position: 'absolute',
+  },
+  button: {
+    margin: 0,
     marginTop: 20,
-    position: 'absolute'
-  }
+  },
 };

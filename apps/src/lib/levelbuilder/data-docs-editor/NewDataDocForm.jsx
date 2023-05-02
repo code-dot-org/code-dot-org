@@ -10,10 +10,6 @@ const NewDataDocForm = () => {
     <form action="/data_docs" method="post">
       <RailsAuthenticityToken />
       <h1>New Data Doc</h1>
-      <h2>
-        This feature is in progress. It is not ready for use on Levelbuilder
-        yet.
-      </h2>
       <label style={styles.label}>
         Slug
         <input className="input" name="key" required style={styles.input} />
@@ -45,14 +41,14 @@ const NewDataDocForm = () => {
 
 const styles = {
   label: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   input: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   helptip: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };
 
 export default NewDataDocForm;

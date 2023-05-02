@@ -1,9 +1,28 @@
 {
   "key": "mathMin",
-  "name": "Math.min",
+  "name": "Math.min(n1, n2, ..., nX)",
   "category": "Math",
   "category_key": "math",
-  "content": "[name]\n\n## Math.min(n1, n2, ..., nX)\n\n[/name]\n\n[category]\n\nCategory: Math\n\n[/category]\n\n[description]\n\n[short_description]\n\nReturns the minimum value among one or more values n1, n2, ..., nX.\n\n[/short_description]\n\nSome apps need to know the minimum number from a collection of numbers or variables. You can call Math.min with zero, one or more parameters, depending on how many numbers you want to compare.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n\n```\nvar a = Math.min(5, -2);\nconsole.log(a);\nvar x=9;\nvar y=12;\nvar b = Math.max(x,y);\nconsole.log(b);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n```\nvar a = Math.min(5, 0, 21.5, 13, -2);\nconsole.log(a);\n```\n\n[/example]\n\n____________________________________________________\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| n1, n2,..., nX | number | No | One or more numbers or variables to compare. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nA number representing the lowest of the values given as parameters, or infinity if no arguments are given, or NaN if one or more arguments are not numbers.\n\n[/returns]\n\n",
-  "short_description": "\nMath.min(n1, n2, …, nX)\nCategory: Math",
+  "content": "Some apps need to know the minimum number from a collection of numbers or variables. You can call Math.min with zero, one or more parameters, depending on how many numbers you want to compare.",
+  "examples": [
+    {
+      "name": "Example: Typical usage",
+      "code": "```\nvar a = Math.min(5, -2);\nconsole.log(a);\nvar x=9;\nvar y=12;\nvar b = Math.max(x,y);\nconsole.log(b);\n```"
+    },
+    {
+      "name": "Example: Many values",
+      "code": "```\nvar a = Math.min(5, 0, 21.5, 13, -2);\nconsole.log(a);\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "n1, n2,..., nX",
+      "type": "number",
+      "required": false,
+      "description": "One or more numbers or variables to compare."
+    }
+  ],
+  "return_value": "A number representing the lowest of the values given as parameters, or infinity if no arguments are given, or NaN if one or more arguments are not numbers.",
+  "short_description": "Returns the minimum value among one or more values n1, n2, ..., nX.",
   "syntax": "Math.min(n1, n2,..., nX);"
 }

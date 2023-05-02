@@ -18,12 +18,12 @@
     {
       "name": "Fibonacci",
       "description": "Generate the first nine terms of the Fibonacci series.\n",
-      "code": "\n```\n// Generate the first 9 terms of the Fibonacci series.\nvar termA, termB, termC;\ntermA = 1;\ntermB = 1;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\ntermA = termB + termC;\ntermB = termC + termA;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\ntermA = termB + termC;\ntermB = termC + termA;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\n```"
+      "code": "```\n// Generate the first 9 terms of the Fibonacci series.\nvar termA, termB, termC;\ntermA = 1;\ntermB = 1;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\ntermA = termB + termC;\ntermB = termC + termA;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\ntermA = termB + termC;\ntermB = termC + termA;\ntermC = termA + termB;\nconsole.log(termA + \" \" + termB + \" \" + termC);\n```"
     },
     {
       "name": "Message Board",
       "description": "Collect, count and display messages from friends.\n",
-      "code": "\n```\n// Collect, count and display messages from friends.\ntextLabel(\"myTextLabel\", \"Type a message and press press enter\");\ntextInput(\"myTextInput\", \"\");\nvar count;\ncount=1;\nonEvent(\"myTextInput\", \"change\", function(event) {\n  var myText;\n  myText = getText(\"myTextInput\");\n  write(\"Message #\" + count + \": \" + myText);\n  setText(\"myTextInput\", \"\");\n  count = count + 1;\n});\n```"
+      "code": "```\n// Collect, count and display messages from friends.\ntextLabel(\"myTextLabel\", \"Type a message and press press enter\");\ntextInput(\"myTextInput\", \"\");\nvar count;\ncount=1;\nonEvent(\"myTextInput\", \"change\", function(event) {\n  var myText;\n  myText = getText(\"myTextInput\");\n  write(\"Message #\" + count + \": \" + myText);\n  setText(\"myTextInput\", \"\");\n  count = count + 1;\n});\n```"
     }
   ],
   "palette_params": [

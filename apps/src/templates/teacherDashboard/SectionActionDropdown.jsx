@@ -11,7 +11,7 @@ import {
   sectionName,
   removeSection,
   toggleSectionHidden,
-  importOrUpdateRoster
+  importOrUpdateRoster,
 } from './teacherSectionsRedux';
 import {connect} from 'react-redux';
 import PrintCertificates from './PrintCertificates';
@@ -35,11 +35,11 @@ class SectionActionDropdown extends Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     updateRoster: PropTypes.func.isRequired,
-    setRosterProvider: PropTypes.func
+    setRosterProvider: PropTypes.func,
   };
 
   state = {
-    deleting: false
+    deleting: false,
   };
 
   componentDidMount() {
@@ -58,7 +58,7 @@ class SectionActionDropdown extends Component {
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
     })
       .done(() => {
         removeSection(section.id);
@@ -130,7 +130,6 @@ class SectionActionDropdown extends Component {
             )}
           <PrintCertificates
             sectionId={sectionData.id}
-            assignmentName={sectionData.assignmentNames[0]}
             courseVersionName={sectionData.courseVersionName}
           />
           {sectionData.loginType === OAuthSectionTypes.clever && (
@@ -167,18 +166,18 @@ class SectionActionDropdown extends Component {
           <div>{i18n.deleteSectionArchiveSuggestion()}</div>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
               class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
               color="gray"
+              style={{margin: 0}}
             />
             <Button
-              __useDeprecatedTag
               class="ui-test-confirm-delete"
               text={i18n.delete()}
               onClick={this.onConfirmDelete}
               color="red"
+              style={{margin: 0}}
             />
           </DialogFooter>
         </BaseDialog>
@@ -189,7 +188,7 @@ class SectionActionDropdown extends Component {
 
 const styles = {
   xIcon: {
-    paddingRight: 5
+    paddingRight: 5,
   },
   heading: {
     borderTopWidth: 0,
@@ -199,8 +198,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.default_text,
     paddingBottom: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
@@ -208,12 +207,12 @@ export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionData.id),
-    sectionName: sectionName(state, props.sectionData.id)
+    sectionName: sectionName(state, props.sectionData.id),
   }),
   {
     removeSection,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
-    setRosterProvider
+    setRosterProvider,
   }
 )(SectionActionDropdown);

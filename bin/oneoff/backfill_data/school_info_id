@@ -38,12 +38,12 @@ user_ids.each do |user_id|
   # if the user has pd_enrollments whose school_info_id is associated with
   # a school_id, update the user with the most recent of those pd_enrollments' school_info_id
   if enrollments_with_school_id.any?
-    enrollment = enrollments_with_school_id.sort_by(&:updated_at).last
+    enrollment = enrollments_with_school_id.max_by(&:updated_at)
     user.update_column(:school_info_id, enrollment.school_info_id)
   # if user doesn't have a school_info_id at all, update with most recent
   # enrollment school_info_id even though it doesn't have school_id
   elsif user.school_info_id.nil?
-    enrollment = enrollments.sort_by(&:updated_at).last
+    enrollment = enrollments.max_by(&:updated_at)
     user.update_column(:school_info_id, enrollment.school_info_id)
   end
   # if the user has a school_info_id not associated with a school_id, and

@@ -140,14 +140,14 @@ end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
   clear_main_block_space
-  blocks_xml = '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
+  blocks_xml = '<xml><block type="flappy_whenClick" deletable="false" id="whenClick"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle with extra newlines$/ do
   clear_main_block_space
-  blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
+  blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false" id="whenClick"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
@@ -185,6 +185,23 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
   result = @browser.execute_script(code)
   expect(result).to eq(n.to_i)
+end
+
+Then(/^all blocks render with no unknown blocks$/) do
+  code = <<~CODE
+    return Blockly.Workspace.getAll().map(workspace => {
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => !!block.unknownBlock);
+      if (hasUnknownBlock) {
+        // element ID has name of block that is failing to render
+        return workspace.getParentSvg().parentElement.id;
+      } else {
+        return null;
+      }
+    });
+  CODE
+
+  result = @browser.execute_script(code)
+  expect(result.compact.empty?).to eq(true), "Blocks named: #{result.compact.join(', ')} unable to render"
 end
 
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|

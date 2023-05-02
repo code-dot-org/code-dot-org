@@ -114,3 +114,5 @@ Nivåerna 2–4 använder en upplärd modell. från [TensorFlow](https://www.ten
 Nivåerna 6–8 använder en \[stödvektormaskin\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Vi ser på fiskens alla delar (som ögon, mun, kropp) och samlar ihop alla metadata för delarna (som antal tänder och kroppsform) till en siffervektor för varje fisk. Vi använder dessa vektorer för att träna stödvektormaskinen. Baserat på träningsuppgifterna separerar stödvektormaskinen ”fältet” för alla möjliga fiskobservationer i två delar som motsvarar de klasser vi försöker lära ut (som ”blå” eller ”inte blå”).
 
 [[Tillbaka till början]](#top)
+
+{{ visit_partial_event_logger }}

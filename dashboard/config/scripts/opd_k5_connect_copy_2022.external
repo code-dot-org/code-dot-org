@@ -1,18 +1,18 @@
 name 'OPD-K5 Connect_copy_2022'
 skip_dialog true
 markdown <<MARKDOWN
-# Part III:  Next Steps 
+# Part III:  Next Steps
 
 
 ## Take the post-survey
 
-Regardless of how much of this course you completed, we want to hear your feedback. Please submit this short survey to help us improve the course going forward! 
+Regardless of how much of this course you completed, we want to hear your feedback. Please submit this short survey to help us improve the course going forward!
 
 <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/211795510260147?user_id=<user_id/>" target="blank" rel="noopener noreferrer"> Take the post-survey</a>
 
 ## Print a certificate
 Congratulations on completing this professional development online course. Provided you have completed all levels in this training, you can download and print a certificate of accomplishment now by completing the following steps:
-- <a href="https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals" target="blank" rel="noopener noreferrer">Click here to create your certificate.</a>
+- <a href="https://studio.code.org/certificates/batch?course=azUtb25saW5lcGQtMjAyMg==" target="blank" rel="noopener noreferrer">Click here to create your certificate.</a>
 - Enter your name into the input field/box.
 - Click Print Certificates.
 - Right click on the image of the certificate and choose "Save Image As..." to download to your computer.
@@ -21,12 +21,12 @@ Congratulations on completing this professional development online course. Provi
 
 Check out <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">our professional learning map</a> to see the Computer Science Fundamentals workshops that are being offered in your area.
 
-* **CS Fundamentals Intro Workshop** proactively prepares you to successfully 
+* **CS Fundamentals Intro Workshop** proactively prepares you to successfully
 
 	* implement CS Fundamentals courses, regardless of prior computer science experience.
 	* establish an equitable CS Fundamentals classroom.
 
-* **CS Fundamentals Deep Dive Workshop** provides a deeper understanding of 
+* **CS Fundamentals Deep Dive Workshop** provides a deeper understanding of
 
 	* the curriculum and how it supports inclusive learning environments.
 	* computer science teaching practices that support teaching CS Fundamentals courses equitably.
@@ -42,5 +42,5 @@ Check out <a href="http://code.org/professional-development-workshops" target="b
 
 ##### **Remember... you can return to this online course anytime to review your learning, access links or resources, or just refresh your memory!**
 
-## Thank you for your participation! 
+## Thank you for your participation!
 MARKDOWN

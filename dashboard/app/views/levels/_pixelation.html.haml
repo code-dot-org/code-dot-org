@@ -1,0 +1,70 @@
+= stylesheet_link_tag 'levels/pixelation'
+
+#visualizationColumnHeader.responsive.hide_on_v1
+  #file_format
+    %p#file_format_title
+      %strong= I18n.t('pixelation.image_file_format_header')
+    .byte= I18n.t('pixelation.image_file_format_width')
+    .byte= I18n.t('pixelation.image_file_format_height')
+    .byte.hide_on_v1.hide_on_v2= I18n.t('pixelation.image_file_format_bits_per_pixel')
+    %div
+      = I18n.t('pixelation.image_file_format_data_a')
+      %p.hide_on_v2= I18n.t('pixelation.image_file_format_data_b')
+#visualizationEditorHeader.responsive
+  %table#image_controls
+    %tr
+      %td
+        %label{for: 'width'}= I18n.t('pixelation.image_width')
+      %td
+        %input#width{type: 'number', min: '1', max: '255', value: '10', oninput: 'setSliders()', onchange: 'setMinTextValues()', disabled: true}
+      %td.hide_on_v2
+        %input#widthRange.rangeInput{type: 'range', min: '1', max: '255', value: '10', oninput: 'changeVal("width")', onchange: 'changeVal("width")', disabled: true}
+    %tr
+      %td
+        %label{for: 'height'}= I18n.t('pixelation.image_height')
+      %td
+        %input#height{type: 'number', min: '1', max: '255', value: '10', oninput: 'setSliders()', onchange: 'setMinTextValues()', disabled: true}
+      %td.hide_on_v2
+        %input#heightRange.rangeInput{type: 'range', min: '1', max: '255', value: '10', oninput: 'changeVal("height")', onchange: 'changeVal("width")', disabled: true}
+    %tr.hide_on_v1.hide_on_v2
+      %td
+        %label{for: 'bitsPerPixel'}= I18n.t('pixelation.bits_per_pixel_header')
+      %td
+        %input#bitsPerPixel{type: 'number', min: '1', max: '24', value: '1', oninput: 'setSliders()', onchange: 'setMinTextValues()', disabled: true}
+      %td
+        %input#bitsPerPixelSlider.rangeInput{type: 'range', min: '1', max: '24', oninput: 'changeVal("bitsPerPixel")', onchange: 'changeVal("width")', disabled: true}
+  %label.right.hide_on_v1.hide_on_v2
+    = I18n.t('pixelation.pixel_format_header')
+    #pixel_format
+  .label_group.encoding_controls
+    %label
+      = I18n.t('pixelation.binary')
+      %input#hex_to_bin{type: 'radio', name: 'binHex', value: 'bin', checked: 'checked', onchange: 'hexToBin(); drawGraph();', disabled: true}
+    %label
+      = I18n.t('pixelation.hexadecimal')
+      %input#bin_to_hex{type: 'radio', name:'binHex', value: 'hex', onchange: 'binToHex(); drawGraph()', disabled: true}
+.clear.hide_on_v1
+#visualizationColumn.responsive
+  #visualization.responsive
+    %canvas#canvas{width: '400', height: '400'}
+  #belowVisualization
+    %label#actual_size_label.right
+      = I18n.t('pixelation.actual_size')
+      %input#actual_size{type: 'checkbox', onchange: 'drawGraph()', disabled: true}
+    %button#save_image.btn{onclick: 'showPNG()', disabled: true}
+      = I18n.t('pixelation.save_image')
+    #bubble
+      %p#below_viz_instructions{style: 'display: none'}
+  #reference_area_target
+#visualizationEditor.responsive
+  %textarea#pixel_data{oninput: 'drawGraph(null, false, true)', autocapitalize: 'false', autocorrect: 'false', autocomplete: 'false', spellcheck: 'false', disabled: true}
+  %button#readable_format.btn{onclick: 'formatBitDisplay()', title: I18n.t('pixelation.readable_format_alt'), disabled: true}
+    = I18n.t('pixelation.readable_format')
+  %button#raw_format.btn{onclick: 'unformatBits()', title: I18n.t('pixelation.raw_format_alt'), disabled: true}
+    = I18n.t('pixelation.raw_format')
+  %button#start_over.btn.btn-danger{onclick: 'startOverClicked()', disabled: true}
+    = I18n.t('dialog.startover_ok')
+  %button#finished.btn.btn-primary.right{onclick: 'onFinishedButtonClick()', disabled: true}
+    = I18n.t('next_stage')
+
+%script{src: webpack_asset_path('js/levels/_pixelation.js')}

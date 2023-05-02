@@ -2,11 +2,11 @@
 title: பங்காளர்கள்
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+ஹவர் ஆஃப் கோட் ரிவியூ கமிட்டியால் ஹவர் ஆஃப் கோட் இயக்கப்படுகிறது.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[மதிப்பாய்வுக் குழு]({{ urls/review_committee }}) K-12 கிரேடு பேண்டுகளில் உள்ள 12 தற்போதைய மற்றும் முன்னாள் கல்வியாளர்களைக் கொண்டது இந்த ஆசிரியர்கள் மாணவர் தலைமையிலான நடவடிக்கைகள் மற்றும் ஆசிரியர் தலைமையிலான பாடம் திட்டங்கள், செயல்பாடுகள் கல்வி மதிப்பு, கற்போர் மற்றும் சாத்தியமான வேண்டுகோள் மாணவர்கள் பல்வேறு இணை திறன் மதிப்பிடும் செயல் கூட்டாளிகள் நூற்றுக்கணக்கான சமர்ப்பிக்கப்பட்ட ஆய்வு.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+இரு குழுக்கள் உழைப்பு மற்றும் குறியீட்டு மணி வெற்றி மற்றும் கணினி அறிவியல் அறிமுகம் வழங்கும் ஒவ்வொரு மாணவனும் அதன் பார்வை பங்களிப்பு செய்துள்ளன.
 
 # முக்கிய கூட்டாளர்கள் மற்றும் கார்ப்பரேட் ஆதரவாளர்கள்
 

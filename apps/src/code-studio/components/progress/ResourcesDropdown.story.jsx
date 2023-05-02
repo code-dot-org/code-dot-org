@@ -1,44 +1,32 @@
 import React from 'react';
 import ResourcesDropdown from './ResourcesDropdown';
-import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 const migratedSampleResources = [
   {
     key: 'key1',
     name: 'Curriculum',
-    url: 'https://example.com/a'
+    url: 'https://example.com/a',
   },
   {
     key: 'key2',
     name: 'Vocabulary',
-    url: 'https://example.com/b'
-  }
+    url: 'https://example.com/b',
+  },
 ];
 
-export default storybook => {
-  if (IN_UNIT_TEST) {
-    allowConsoleWarnings();
-  }
+export default {
+  title: 'ResourcesDropdown',
+  component: ResourcesDropdown,
+};
 
-  storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
-    {
-      name: 'migrated teacher resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown resources={migratedSampleResources} />
-        </div>
-      )
-    },
-    {
-      name: 'migrated student resources',
-      story: () => (
-        <div>
-          <ResourcesDropdown
-            resources={migratedSampleResources}
-            studentFacing={true}
-          />
-        </div>
-      )
-    }
-  ]);
+// Template
+const Template = args => (
+  <ResourcesDropdown resources={migratedSampleResources} {...args} />
+);
+
+export const MigratedTeacherResources = Template.bind({});
+
+export const MigratedStudentResources = Template.bind({});
+MigratedStudentResources.args = {
+  studentFacing: true,
 };

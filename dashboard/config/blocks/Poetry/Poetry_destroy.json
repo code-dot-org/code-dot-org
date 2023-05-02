@@ -1,11 +1,7 @@
 {
   "category": "Poetry - Sprites",
   "config": {
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "func": "destroy",
     "docFunc": "gamelab_destroy",
     "blockText": "remove {ANIMATION_NAME}",

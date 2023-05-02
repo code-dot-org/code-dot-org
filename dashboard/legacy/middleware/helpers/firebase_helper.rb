@@ -52,7 +52,7 @@ class FirebaseHelper
   end
 
   def escape_table_name(table_name)
-    return URI.escape(table_name).gsub('.', '%252E')
+    return ERB::Util.url_encode(table_name).gsub('.', '%252E')
   end
 
   def unescape_table_name(table_name)
@@ -70,7 +70,7 @@ class FirebaseHelper
 
   def upload_shared_table(table_name, records, columns)
     escaped_table_name = escape_table_name(table_name)
-    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {lastId: records.length, rowCount: records.length})
     return response unless response.success?
     response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
     return response unless response.success?

@@ -6,61 +6,55 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Si te organizojme nje mbledhje ose ngjarje te ores se kodit.
 
-### Get your entire school or community involved in an Hour of Code!
+### Perfshini te gjithe komunitetin ose shkollen tuaj ne nje Ore Kodimi! 
 
 * * *
 
-## 1. Prepare for your event
+## 1. Pergatitu per eventin tend 
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Percaktoni nje vend, date dhe kohe. 
+- Dergoni nje leter kryetarit te komunes tuaj, deputeteve, dhe personave me influence nga bota e biznesit dhe ftoni ata qe te flasin ne kete ngjarje. Shikoni permbledhjen tone te mbajtjes se eventi te Ores se Kodit per me shume informata. 
+- Fto media/shtyp p.sh stacionin vendor te lajmeve, gazeten, bloggeret per edukim/teknologji. Shiko paketen tone njoftuese per ndihme. 
 
-## 2. During your event
+## 2. Gjate ngjarjes 
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Fillo eventin tend me nje nga videot tona inspiruese.
+- Jepni nje hyrje rreth rendesise se shkencave kompjuterike, duke i perdorur keto statistika dhe infografika.   
       
     
-- **Other event ideas**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- **ide te tjera per eventin:**: 
+    - Ftoni nje lider te industrise lokale per te diskutuar punen e tij ose saj duke perfshire shkencat kompjuterike.
+    - Fto nje politikan dhe studentent t'i mesojne atij ose asaj te kodoje.
+    - Bej nje grup studentesh te demonstrojne nje aktivitet te shkeputur.
+    - Beni nje grup studentesh t'i mesojne drejtorit ose nje grup mesuesish te kodojne.
+    - Nese shkolla juaj tashme ligjeron shkencat kompjuterike, be studentent te tregojne projektet e tyre demo ne te cilat kane punuar.
 
-## 3. Share how it went
+## 3. Shperndaje se si shkoi
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Shperndaj foto te eventit ne Facebook dhe Twitter dhe perdor hashtag #OraeKodit
 
 * * *
 
-## Example plan for a school assembly or event
+## Plan shembull per nje asamble shkolle ose event 
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Nisja e asamblese per javen edukative ne shkenca kompjuterike ne te gjithe shkollat. 
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Data:** 8-të Dhj (fillimi i Javes Edukative të Shkencave Kompjuterike)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Koha:** Gjatë ditës së shkollës. Mesdita preferohet për eventin. Afërsisht 1 orë.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Vendi:** Salla e mbledhjeve (p.sh teatri, palestra, kafeneja)
 
 ## Fillimi i shfaqjes
 
 | Koha                   | Veprimet                                                                                                                                                        |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 paradite | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                              |
-| 10:05 - 10:15 paradite | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                           |
+| 10:00 - 10:05 paradite | Fillo eventin tend me nje nga videot tona inspiruese.                                                                                                           |
+| 10:05 - 10:15 paradite | Jepni nje hyrje rreth rendesise se shkencave kompjuterike, duke i perdorur keto statistika dhe infografika.                                                     |
 | 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në jetën e tyre të përditshme. |
-| 10:30 - 10:40 paradite | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                                       |
+| 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                                |
 | 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                               |
 | 11:00 - 11:05 paradite | Mësuesit që ndihmuan në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                     |
 

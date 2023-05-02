@@ -37,23 +37,17 @@ Oszd meg a rendezvényen készült képeket a Facebookon vagy a Twitteren a **#K
 
 * * *
 
-## Rendezz egy családi kódolási estet a Kódolás órájával, és hívd meg a szülőket, vegyenek részt.
+## Example plan for a school assembly or event
 
-Vedd fontolóra egy est megrendezését ovódásoknak és alsó tagozatosoknak, hívd meg a gyerekek szüleit, hogy vegyenek részt egy informatika órán. Ez nagyszerű lehetőség a nagyobb közösség bevonására és a szülők megnyerésére, hogy támogassák az informatika oktatását az iskolában. A Családi kódolás éjszakáját szervező partnereink készítettek egy komplett csomagot, amelyben van egy ellenőrző lista az esemény megtervezéséhez, szövegkönyv az előadóknak, meghívó e-mailek, plakátokat, PowerPoint prezentációk és még sok más az esemény megtartásához. [Kattits ide csomag letöltéséhez](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Mintaterv egy iskolai gyűlés vagy esemény megrendezéséhez
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Esemény:** Az egész iskolára kiterjedő informatikai oktatási hetet megnyitó gyűlés.
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Dátum:** {{ campaign_date/start_short }} Informatikai oktatási hét kezdete)
-
-**Időpont:** Iskolaidőben. Előnyben a délelőtti programok. Körülbelül 1 órásak.
-
-**Helyszín:** Iskola díszterme (színházterem, tornaterem, étkező)
-
-## A műsor programja
+## Run of Show
 
 | Idő           | Program                                                                                                                                               |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |

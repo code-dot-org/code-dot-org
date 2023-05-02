@@ -1,0 +1,171 @@
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
+
+.section-wrapper {
+  margin-top: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+
+  .article-wrapper, .highlights-column {
+    width: 50%;
+
+    @media screen and (max-width: $width-md) {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+  .article-wrapper {
+    margin-top: 20px;
+  }
+}
+
+.highlights-column {
+  text-align: center;
+
+  a.see-more {
+    display: block;
+    margin-top: 1em;
+
+    @media screen and (max-width: $width-md) {
+      float: none;
+      margin: 2em auto 0;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  margin-top: 1em;
+}
+
+.highlights-content {
+  width: 100%;
+}
+
+.highlight-tiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $width-md) {
+    justify-content: center;
+    margin-top: 2em;
+  }
+}
+
+.white-text {
+  color: white;
+}
+
+.highlights-single {
+  display: none;
+  width: 100%;
+}
+
+.highlights-scroll {
+  height: 500px;
+}
+
+.highlight-item {
+  width: 230px;
+  margin: 1.25em 0 0 1.25em;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $width-lg) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: $width-md) {
+    margin: 1em 0.5em 0;
+  }
+}
+
+.highlight-img {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: 50%;
+  width: 230px;
+  height: 230px;
+  background-color: #f0f0f0;
+
+  @media screen and (max-width: $width-lg) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.highlight-caption {
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  line-height: 20px;
+  top: 0px;
+  left: 0px;
+  height: 230px;
+  width: 230px;
+  display: none;
+}
+
+.learnmore-link {
+  color: white;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.caption-headline {
+  color: white;
+  padding: 10px 15px 0px 15px;
+  text-transform: uppercase;
+}
+
+.highlight-description {
+  padding: 5px 15px;
+}
+
+.learn-button {
+  width: 100%;
+  background-color: #7665a0;
+  height: 34px;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  color: white;
+
+  @media screen and (max-width: $width-md) {
+    bottom: 30px;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .highlight-caption {
+    display: inline;
+    width: 210px;
+    background-color: transparent;
+  }
+
+  .caption-headline {
+    display: none;
+  }
+
+  .highlight-description {
+    display: none;
+  }
+
+  .highlights-scroll {
+    display: none;
+  }
+
+  .highlights-single {
+    display: inline-block;
+  }
+
+  .highlights-column {
+    width: 100%;
+  }
+}

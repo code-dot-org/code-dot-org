@@ -6,13 +6,14 @@ export const testSection = {
   unitId: null,
   name: 'my_section',
   loginType: 'word',
-  grade: '3',
+  grades: ['3'],
   providerManaged: false,
   lessonExtras: false,
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 10,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student',
 };
 export const noStudentsSection = {
   id: 11,
@@ -22,13 +23,14 @@ export const noStudentsSection = {
   unitId: null,
   name: 'my_section',
   loginType: 'word',
-  grade: '3',
+  grades: ['3'],
   providerManaged: false,
   lessonExtras: false,
   ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 0,
-  code: 'PMTKVH'
+  code: 'PMTKVH',
+  participantType: 'student',
 };
 
 export const courseOfferings = {
@@ -46,7 +48,7 @@ export const courseOfferings = {
         content_root_id: 1,
         name: 'Course A',
         path: '/s/coursea-2017',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: false,
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
@@ -56,9 +58,9 @@ export const courseOfferings = {
             name: 'Course A',
             path: '/s/coursea-2017',
             lesson_extras_available: true,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       2: {
         id: 2,
@@ -67,7 +69,7 @@ export const courseOfferings = {
         content_root_id: 2,
         name: 'Course A',
         path: '/s/coursea-2018',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: ['English', 'Italiano', 'Slovenčina'],
@@ -77,11 +79,11 @@ export const courseOfferings = {
             name: 'Course A (2018)',
             path: '/s/coursea-2018',
             lesson_extras_available: true,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   2: {
     id: 2,
@@ -108,7 +110,7 @@ export const courseOfferings = {
             path: '/s/csd1-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           4: {
             id: 4,
@@ -116,9 +118,9 @@ export const courseOfferings = {
             path: '/s/csd2-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
+            position: 2,
+          },
+        },
       },
       4: {
         id: 4,
@@ -138,7 +140,7 @@ export const courseOfferings = {
             path: '/s/csd1-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           6: {
             id: 6,
@@ -146,11 +148,11 @@ export const courseOfferings = {
             path: '/s/csd2-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   3: {
     id: 3,
@@ -177,7 +179,7 @@ export const courseOfferings = {
             path: '/s/csa1-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           8: {
             id: 8,
@@ -185,11 +187,11 @@ export const courseOfferings = {
             path: '/s/csa2-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   4: {
     id: 4,
@@ -205,7 +207,7 @@ export const courseOfferings = {
         content_root_id: 9,
         name: 'Flappy',
         path: '/s/flappy',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: false,
         locales: [],
@@ -216,11 +218,11 @@ export const courseOfferings = {
             path: '/s/flappy',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   5: {
     id: 5,
@@ -236,7 +238,7 @@ export const courseOfferings = {
         content_root_id: 10,
         name: 'Hello World',
         path: '/s/hello-world',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -247,11 +249,11 @@ export const courseOfferings = {
             path: '/s/hello-world',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   6: {
     id: 6,
@@ -267,7 +269,7 @@ export const courseOfferings = {
         content_root_id: 11,
         name: 'Poem Art',
         path: '/s/poem-art',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -278,11 +280,11 @@ export const courseOfferings = {
             path: '/s/poem-art',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   7: {
     id: 7,
@@ -298,7 +300,7 @@ export const courseOfferings = {
         content_root_id: 12,
         name: 'Artist',
         path: '/s/artist',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -309,11 +311,11 @@ export const courseOfferings = {
             path: '/s/artist',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   8: {
     id: 8,
@@ -340,7 +342,7 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp1-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           14: {
             id: 14,
@@ -348,11 +350,11 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp2-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   9: {
     id: 9,
@@ -368,7 +370,7 @@ export const courseOfferings = {
         content_root_id: 15,
         name: 'Virtual PL CSP 2020',
         path: '/s/vpl-csp-2020',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -379,9 +381,9 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2020',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       12: {
         id: 12,
@@ -390,7 +392,7 @@ export const courseOfferings = {
         content_root_id: 16,
         name: 'Virtual PL CSP 2021',
         path: '/s/vpl-csp-2021',
-        type: 'Script',
+        type: 'Unit',
         is_stable: true,
         is_recommended: true,
         locales: [],
@@ -401,12 +403,12 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
-  }
+            position: null,
+          },
+        },
+      },
+    },
+  },
 };
 
 export const fakeCoursesWithProgress = [
@@ -418,16 +420,16 @@ export const fakeCoursesWithProgress = [
         version_year: '2018',
         key: 'coursea-2018',
         name: 'Course A (2018)',
-        position: null
+        position: null,
       },
       {
         id: 1,
         version_year: '2017',
         key: 'coursea-2017',
         name: 'Course A (2017)',
-        position: null
-      }
-    ]
+        position: null,
+      },
+    ],
   },
   {
     display_name: 'CS Discoveries 2018',
@@ -437,16 +439,16 @@ export const fakeCoursesWithProgress = [
         version_year: null,
         key: 'csd1-2018',
         name: 'Unit 1',
-        position: 1
+        position: 1,
       },
       {
         id: 6,
         version_year: null,
         key: 'csd2-2018',
         name: 'Unit 2',
-        position: 2
-      }
-    ]
+        position: 2,
+      },
+    ],
   },
   {
     display_name: 'Flappy',
@@ -457,8 +459,8 @@ export const fakeCoursesWithProgress = [
         key: 'flappy',
         name: 'Flappy',
         position: null,
-        description: 'Make a flappy game!'
-      }
-    ]
-  }
+        description: 'Make a flappy game!',
+      },
+    ],
+  },
 ];

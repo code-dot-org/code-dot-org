@@ -1,40 +1,38 @@
 import React from 'react';
 import MiniViewTopRow from './MiniViewTopRow';
 import progress from '@cdo/apps/code-studio/progressRedux';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const initialState = {
   progress: {
     lessonGroups: [],
     lessons: [
       {
-        levels: []
-      }
+        levels: [],
+      },
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    deeperLearningCourse: false
-  }
+    deeperLearningCourse: false,
+  },
 };
 
-export default storybook =>
-  storybook
-    .storiesOf('MiniViewTopRow', module)
-    .withReduxStore({progress}, initialState)
-    .addStoryTable([
-      {
-        name: 'basic',
-        story: () => (
-          <div style={{width: 635, position: 'relative'}}>
-            <MiniViewTopRow scriptName="course1" />
-          </div>
-        )
-      },
-      {
-        name: 'no lines of text',
-        story: () => (
-          <div style={{width: 635, position: 'relative'}}>
-            <MiniViewTopRow scriptName="course1" />
-          </div>
-        )
-      }
-    ]);
+export default {
+  title: 'MiniViewTopRow',
+  component: MiniViewTopRow,
+};
+
+// Template
+const Template = args => (
+  <Provider store={reduxStore({progress}, initialState)}>
+    <div style={{width: 635, position: 'relative'}}>
+      <MiniViewTopRow {...args} />
+    </div>
+  </Provider>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  scriptName: 'course1',
+};

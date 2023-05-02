@@ -1,53 +1,6 @@
----
-title: "Certificate for Completion of One Hour of Code"
-theme: responsive
-social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:image:width" : "640"
-  "twitter:image:height" : "451"
-  "twitter:title": "I just finished the Hour of Code"
-  "twitter:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
-  "og:title": "I just finished the Hour of Code"
-  "og:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
-  "og:image:width": "640"
-  "og:image:height": "451"
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
----
-
 :ruby
   row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
   raise Sinatra::NotFound unless row
-
-  @header["social"]["twitter:url"] = "http://#{request.host_with_port}/certificates/#{row[:session]}"
-  @header["social"]["twitter:image:src"] = "http://#{request.host_with_port}/api/hour/certificate/#{row[:session]}-640.jpg"
-  @header["social"]["og:image"] = "http://#{request.host_with_port}/api/hour/certificate/#{row[:session]}-640.jpg"
-  @header["social"]["og:url"] = "http://#{request.host_with_port}/certificates/#{row[:session]}"
-
-#hoc-certificate
-  %a{:href=>"/printcertificate/#{row[:session]}"}
-    %img{:src=>"/api/hour/certificate/#{row[:session]}.jpg", :alt=>"Certificate for Completion of One Hour of Code"}
-#index
-  #gap.feature-codeorg
-
-  #top
-    #video.col-63.desktop-pad-right
-      = view :index_video
-
-    #start.col-36
-      #blurb.col-mobile-56.mobile-pad-right
-        %br.desktop-feature
-
-        = view :try_hoc_count
-        %br
-
-      #getstarted.col-mobile-44
-        #largegap.mobile-show-medium{:style=>"height:50px"}
-        %a{:href=>'/learn'}
-          %button{:style=>"font-size: 19px; font-family: 'Gotham 5r', sans-serif; height: 50px;"}
-            =I18n.t(:get_started)
-
-    #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
+  params = {name: row[:name].to_s.strip, course: row[:tutorial]}
+  encoded_params = Base64.urlsafe_encode64(params.to_json)
+  redirect CDO.studio_url("/certificates/#{encoded_params}", CDO.default_scheme)

@@ -34,7 +34,7 @@ export default class LabeledFormComponent extends FormComponent {
   indented(depth = 1) {
     return {
       controlWidth: {smOffset: depth},
-      labelWidth: {smOffset: depth}
+      labelWidth: {smOffset: depth},
     };
   }
 
@@ -43,14 +43,14 @@ export default class LabeledFormComponent extends FormComponent {
       name,
       label: props.label || this.labelFor(name),
       controlWidth: {md: 6},
-      required: true
+      required: true,
     };
   }
 
   singleCheckboxFor(name, props = {}) {
     return this.buildSingleCheckbox({
       ...this.defaultOptions(name, props),
-      ...props
+      ...props,
     });
   }
 
@@ -58,7 +58,7 @@ export default class LabeledFormComponent extends FormComponent {
     return this.buildButtonsFromOptions({
       ...this.defaultOptions(name, props),
       type: 'check',
-      ...props
+      ...props,
     });
   }
 
@@ -67,7 +67,7 @@ export default class LabeledFormComponent extends FormComponent {
       ...this.defaultOptions(name, props),
       type: 'check',
       textFieldMap,
-      ...props
+      ...props,
     });
   }
 
@@ -76,7 +76,7 @@ export default class LabeledFormComponent extends FormComponent {
       ...this.defaultOptions(name, props),
       type: 'radio',
       textFieldMap,
-      ...props
+      ...props,
     });
   }
 
@@ -84,7 +84,7 @@ export default class LabeledFormComponent extends FormComponent {
     return this.buildButtonsFromOptions({
       ...this.defaultOptions(name, props),
       type: 'radio',
-      ...props
+      ...props,
     });
   }
 
@@ -99,7 +99,7 @@ export default class LabeledFormComponent extends FormComponent {
       type: 'radio',
       options,
       textFieldMap,
-      ...props
+      ...props,
     });
   }
 
@@ -108,7 +108,7 @@ export default class LabeledFormComponent extends FormComponent {
       ...this.defaultOptions(name, props),
       type: 'check',
       answers: options,
-      ...props
+      ...props,
     });
   }
 
@@ -123,7 +123,7 @@ export default class LabeledFormComponent extends FormComponent {
       type: 'check',
       options,
       textFieldMap,
-      ...props
+      ...props,
     });
   }
 
@@ -131,7 +131,7 @@ export default class LabeledFormComponent extends FormComponent {
     return this.buildSelectFieldGroupFromOptions({
       ...this.defaultOptions(name, props),
       type: 'select',
-      ...props
+      ...props,
     });
   }
 
@@ -139,7 +139,7 @@ export default class LabeledFormComponent extends FormComponent {
     return this.buildFieldGroup({
       ...this.defaultOptions(name, props),
       type: 'text',
-      ...props
+      ...props,
     });
   }
 
@@ -147,7 +147,7 @@ export default class LabeledFormComponent extends FormComponent {
     return this.buildFieldGroup({
       ...this.defaultOptions(name, props),
       type: 'number',
-      ...props
+      ...props,
     });
   }
 
@@ -157,14 +157,14 @@ export default class LabeledFormComponent extends FormComponent {
       controlWidth: {md: 12},
       rows: 4,
       maxLength: 500,
-      ...props
+      ...props,
     });
   }
 
   usPhoneNumberInputFor(name, props = {}) {
     return this.buildUsPhoneNumberInput({
       ...this.defaultOptions(name, props),
-      ...props
+      ...props,
     });
   }
 }

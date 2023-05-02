@@ -114,3 +114,5 @@ Các cấp độ 2-4 sử dụng mô hình đào tạo trước được cung c�
 Cấp độ 6-8 sử dụng \[Máy hỗ trợ vector\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Chúng tôi xem xét từng bộ phận của cá (chẳng hạn như mắt, miệng, cơ thể) và tập hợp tất cả siêu dữ liệu cho các bộ phận (chẳng hạn như số lượng răng, hình dạng cơ thể) thành một vector số cho mỗi con cá. Chúng tôi sử dụng các vector này để đào tạo SVM. Dựa trên dữ liệu đào tạo, SVM tách "không gian" của tất cả các loài cá có thể thành hai phần, tương ứng với các phân lớp mà chúng ta đang cố gắng học (chẳng hạn như "màu xanh" hoặc "không phải màu xanh").
 
 [[Trở lại đầu trang]](#top)
+
+{{ visit_partial_event_logger }}

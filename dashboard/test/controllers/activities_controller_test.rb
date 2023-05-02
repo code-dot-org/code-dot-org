@@ -57,7 +57,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {
       user_id: @user,
       script_level_id: @script_level.id,
-      lines: 20,
       attempt: '1',
       result: 'true',
       testResult: '100',
@@ -107,9 +106,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone, params: @milestone_params
-      end
+      post :milestone, params: @milestone_params
     end
     assert_response :success
 
@@ -227,9 +224,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(UserLevel, UserScript) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, params: @milestone_params
-        end
+        post :milestone, params: @milestone_params
       end
     end
 
@@ -244,9 +239,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(LevelSource) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
-        end
+        post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
       end
     end
 
@@ -271,9 +264,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(Activity, UserLevel, UserScript, LevelSource) do
-      assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
-      end
+      post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
     end
 
     assert_response :success
@@ -286,48 +277,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.send(:milestone_logger).expects(:info).with do |log_string|
       log_string !~ regexp
     end
-  end
-
-  test "logged in milestone does not allow negative lines of code" do
-    expect_controller_logs_milestone_regexp(/-20/)
-
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_no_difference('@user.reload.total_lines') do # update total lines
-        post :milestone, params: @milestone_params.merge(lines: -20)
-      end
-    end
-
-    # pretend it succeeded
-    assert_response :success
-
-    expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
-    )
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    # activity does not have unreasonable lines of code either
-    assert_equal 0, Activity.last.lines
-  end
-
-  test "logged in milestone does not allow unreasonably high lines of code" do
-    expect_controller_logs_milestone_regexp(/9999999/)
-
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_difference('@user.reload.total_lines', 1000) do # update total lines
-        post :milestone, params: @milestone_params.merge(lines: 9_999_999)
-      end
-    end
-
-    # pretend it succeeded
-    assert_response :success
-
-    expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
-    )
-    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    # activity does not have unreasonable lines of code either
-    assert_equal 1000, Activity.last.lines
   end
 
   test "logged in milestone with messed up email" do
@@ -343,10 +292,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource, Activity, UserLevel) do
-      assert_no_difference('@user.reload.total_lines') do # don't update total lines
-        post :milestone,
-          params: @milestone_params.merge(result: 'false', testResult: 10)
-      end
+      post :milestone,
+        params: @milestone_params.merge(result: 'false', testResult: 10)
     end
 
     assert_response :success
@@ -358,14 +305,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource, Activity, UserLevel) do
-      assert_no_difference('@user.reload.total_lines') do # don't update total lines
-        post :milestone,
-          params: @milestone_params.merge(
-            result: 'false',
-            testResult: 10,
-            image: Base64.encode64(@good_image)
-          )
-      end
+      post :milestone,
+        params: @milestone_params.merge(
+          result: 'false',
+          testResult: 10,
+          image: Base64.encode64(@good_image)
+        )
     end
 
     # assert_equal @good_image.size, LevelSourceImage.last.image.size
@@ -386,10 +331,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
-      assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone,
-          params: @milestone_params.merge(image: Base64.encode64(@good_image))
-      end
+      post :milestone,
+        params: @milestone_params.merge(image: Base64.encode64(@good_image))
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
@@ -424,13 +367,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone,
-            params: @milestone_params.merge(
-              program: program,
-              image: Base64.encode64(@good_image)
-            )
-        end
+        post :milestone,
+          params: @milestone_params.merge(
+            program: program,
+            image: Base64.encode64(@good_image)
+          )
       end
     end
 
@@ -458,13 +399,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone,
-            params: @milestone_params.merge(
-              program: program,
-              image: Base64.encode64(@good_image)
-            )
-        end
+        post :milestone,
+          params: @milestone_params.merge(
+            program: program,
+            image: Base64.encode64(@good_image)
+          )
       end
     end
 
@@ -490,13 +429,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone,
-            params: @milestone_params.merge(
-              program: program,
-              image: Base64.encode64(@blank_image)
-            )
-        end
+        post :milestone,
+          params: @milestone_params.merge(
+            program: program,
+            image: Base64.encode64(@blank_image)
+          )
       end
     end
 
@@ -524,13 +461,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone,
-            params: @milestone_params.merge(
-              program: program,
-              image: Base64.encode64(@another_good_image)
-            )
-        end
+        post :milestone,
+          params: @milestone_params.merge(
+            program: program,
+            image: Base64.encode64(@another_good_image)
+          )
       end
     end
 
@@ -568,9 +503,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(UserLevel) do
-        assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, params: @milestone_params
-        end
+        post :milestone, params: @milestone_params
       end
     end
 
@@ -882,7 +815,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
@@ -904,7 +837,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
 
     post :milestone,
       params: @milestone_params.merge(
@@ -949,7 +882,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone with multiple pairings creates multiple new user levels" do
     section = create(:follower, student_user: @user).section
-    pairings = 3.times.map {create(:follower, section: section).student_user}
+    pairings = Array.new(3) {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
     session[:pairing_section_id] = section.id
 

@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
+import classNames from 'classnames';
+import moduleStyles from './instructions-tab.module.scss';
 
 const craftStyles = {
   text: {
-    color: color.white
+    color: color.white,
   },
   highlighted: {
-    color: color.white
+    color: color.white,
   },
   highlightedWrapper: {
-    borderBottom: '2px solid ' + color.white
-  }
+    borderBottom: '2px solid ' + color.white,
+  },
 };
 
 export default class InstructionsTab extends Component {
@@ -21,12 +23,18 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
+    isLegacyTextColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   render() {
+    const {isLegacyTextColor} = this.props;
+
+    const highlightedWrapperStyle = isLegacyTextColor
+      ? styles.legacyHighlightedWrapper
+      : styles.highlightedWrapper;
     const wrapperStyle = {
       ...styles.tabWrapper,
       ...(this.props.isRtl ? styles.tabRtl : styles.tab),
@@ -35,36 +43,47 @@ export default class InstructionsTab extends Component {
           ? styles.teacherHighlightedWrapper
           : this.props.isMinecraft
           ? craftStyles.highlightedWrapper
-          : styles.highlightedWrapper
+          : highlightedWrapperStyle
         : this.props.teacherOnly
         ? styles.teacherText
-        : {})
+        : {}),
     };
+    const highlightedTextStyle = isLegacyTextColor
+      ? styles.legacyHighlightedText
+      : styles.highlighted;
+    const defaultTextStyle = isLegacyTextColor
+      ? styles.legacyText
+      : styles.defaultText;
     const combinedStyle = {
       ...this.props.style,
+      ...styles.text,
       ...(this.props.selected
         ? this.props.teacherOnly
           ? styles.teacherHighlighted
           : this.props.isMinecraft
           ? craftStyles.highlighted
-          : styles.highlighted
+          : highlightedTextStyle
         : this.props.teacherOnly
         ? styles.teacherText
         : this.props.isMinecraft
         ? craftStyles.text
-        : styles.text)
+        : defaultTextStyle),
     };
     return (
-      <div style={wrapperStyle}>
+      <button
+        style={wrapperStyle}
+        onClick={this.props.onClick}
+        className={classNames(moduleStyles.tabButton, 'no-mc')}
+        type="button"
+      >
         <a
           className={this.props.className}
-          onClick={this.props.onClick}
           style={combinedStyle}
           title={this.props.text}
         >
           {this.props.text}
         </a>
-      </div>
+      </button>
     );
   }
 }
@@ -77,7 +96,7 @@ const styles = {
     paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   tabRtl: {
     marginLeft: 5,
@@ -86,29 +105,42 @@ const styles = {
     paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   tabWrapper: {
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    display: 'flex',
+  },
+  defaultText: {
+    color: color.neutral_white,
+  },
+  legacyText: {
+    color: color.charcoal,
   },
   text: {
-    color: color.charcoal
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
   },
   teacherText: {
-    color: color.lightest_cyan
+    color: color.lightest_cyan,
   },
   highlighted: {
-    color: color.default_text
+    color: color.neutral_white,
+  },
+  legacyHighlightedText: {
+    color: color.default_text,
   },
   highlightedWrapper: {
-    borderBottom: '2px solid ' + color.default_text
+    borderBottom: '2px solid ' + color.neutral_white,
+  },
+  legacyHighlightedWrapper: {
+    borderBottom: '2px solid ' + color.default_text,
   },
   teacherHighlighted: {
-    color: color.white
+    color: color.white,
   },
   teacherHighlightedWrapper: {
     color: color.lightest_cyan,
-    borderBottom: '2px solid ' + color.lightest_cyan
-  }
+    borderBottom: '2px solid ' + color.lightest_cyan,
+  },
 };

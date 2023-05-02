@@ -32,12 +32,12 @@ class LogCollector
       "Action '#{action_name}' completed without error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
-  rescue StandardError => e
+  rescue StandardError => exception
     error(
       "Action '#{action_name}' exited with error in"\
       " #{self.class.get_friendly_time(Time.now - start_time)}."
     )
-    record_exception(e)
+    record_exception(exception)
   end
   alias_method :time_and_continue, :time
 

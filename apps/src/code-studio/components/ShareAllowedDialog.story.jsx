@@ -1,317 +1,130 @@
 import React from 'react';
 import {UnconnectedShareAllowedDialog as ShareAllowedDialog} from './ShareAllowedDialog';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 import {action} from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
+import project from '@cdo/apps/code-studio/projectRedux';
 
-export default storybook => {
-  storybook
-    .storiesOf('ShareAllowedDialog', module)
-    .withReduxStore({
-      publishDialog,
-      pageConstants,
-      shareDialog
-    })
-    .addStoryTable([
-      {
-        name: 'basic example',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with thumbnail',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPrint={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              thumbnailUrl="https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'applab',
-        description: `The applab version has an advanced sharing dialog with more options`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="applab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with export for web',
-        description: `The Export for Web section appears in advanced options with an Export button.`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="applab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-              exportApp={action('onClickExport')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with under 13 warning',
-        description: `We hide social sharing buttons and display a warning for users under 13`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              canShareSocial={false}
-              appType="gamelab"
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'abusive',
-        description: `The abusive version shows a warning message`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={true}
-              channelId="some-id"
-              canShareSocial={true}
-              appType="gamelab"
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with icon',
-        description: `An icon can be specified for the dialog`,
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={false}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              canShareSocial={true}
-              appType="gamelab"
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with publish button',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={true}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              thumbnailUrl="https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with disabled publish button',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={true}
-              isPublished={false}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with unpublish button',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={true}
-              isPublished={true}
-              isUnpublishPending={false}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with unpublish pending',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={true}
-              isPublished={true}
-              isUnpublishPending={true}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-            />
-          );
-        }
-      },
-      {
-        name: 'with sharing for user disabled',
-        story: () => {
-          return (
-            <ShareAllowedDialog
-              isOpen={true}
-              canPublish={true}
-              isPublished={true}
-              isUnpublishPending={true}
-              onClose={action('close')}
-              onShowPublishDialog={action('show publish dialog')}
-              onUnpublish={action('unpublish')}
-              openLibraryCreationDialog={action('open library creation dialog')}
-              hideBackdrop={true}
-              shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
-              isAbusive={false}
-              channelId="some-id"
-              appType="gamelab"
-              canShareSocial={true}
-              onClickPopup={action('onClickPopup')}
-              userSharingDisabled={true}
-            />
-          );
-        }
-      }
-    ]);
+export default {
+  title: 'ShareAllowedDialog',
+  component: ShareAllowedDialog,
+};
+
+const defaultArgs = {
+  isOpen: true,
+  canPublish: false,
+  isPublished: false,
+  isUnpublishPending: false,
+  onClose: action('close'),
+  onShowPublishDialog: action('show publish dialog'),
+  onUnpublish: action('unpublish'),
+  openLibraryCreationDialog: action('open library creation dialog'),
+  hideBackdrop: true,
+  shareUrl: 'https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ',
+  isAbusive: false,
+  channelId: 'some-id',
+  appType: 'gamelab',
+  canShareSocial: true,
+  onClickPopup: action('onClickPopup'),
+};
+
+const Template = args => (
+  <Provider
+    store={reduxStore({publishDialog, pageConstants, shareDialog, project})}
+  >
+    {/* ShareAllowedDialog has a marginLeft of -360 so it shows up correctly on the page.
+        Nesting inside a div so it appears in storybook correctly */}
+    <div style={{marginLeft: 360}}>
+      <ShareAllowedDialog {...args} />
+    </div>
+  </Provider>
+);
+
+export const SpriteLab = Template.bind({});
+SpriteLab.args = {
+  ...defaultArgs,
+  appType: 'spritelab',
+};
+
+export const WithThumbnail = Template.bind({});
+WithThumbnail.args = {
+  ...defaultArgs,
+  canPrint: true,
+  thumbnailUrl:
+    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png',
+};
+
+export const AppLab = Template.bind({});
+AppLab.args = {
+  ...defaultArgs,
+  appType: 'applab',
+};
+
+export const WithExportForWeb = Template.bind({});
+WithExportForWeb.args = {
+  ...defaultArgs,
+  appType: 'applab',
+  canShareSocial: true,
+  exportApp: action('onClickExport'),
+};
+
+export const WithUnder13Warning = Template.bind({});
+WithUnder13Warning.args = {
+  ...defaultArgs,
+  canShareSocial: false,
+};
+
+export const Abusive = Template.bind({});
+Abusive.args = {
+  ...defaultArgs,
+  isAbusive: true,
+};
+
+export const WithPublishButton = Template.bind({});
+WithPublishButton.args = {
+  ...defaultArgs,
+  canPublish: true,
+  thumbnailUrl:
+    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png',
+};
+
+export const WithDisabledPublishButton = Template.bind({});
+WithDisabledPublishButton.args = {
+  ...defaultArgs,
+  canPublish: true,
+};
+
+export const WithUnpublishButton = Template.bind({});
+WithUnpublishButton.args = {
+  ...defaultArgs,
+  canPublish: true,
+  isPublished: true,
+};
+
+export const WithUnpublishPending = Template.bind({});
+WithUnpublishPending.args = {
+  ...defaultArgs,
+  canPublish: true,
+  isPublished: true,
+  isUnpublishPending: true,
+};
+
+export const WithSharingForUserDisabled = Template.bind({});
+WithSharingForUserDisabled.args = {
+  ...defaultArgs,
+  canPublish: true,
+  isPublished: true,
+  isUnpublishPending: true,
+  userSharingDisabled: true,
+};
+
+export const InRestrictedShareMode = Template.bind({});
+InRestrictedShareMode.args = {
+  ...defaultArgs,
+  canPublish: true,
+  inRestrictedShareMode: true,
+  appType: 'spritelab',
 };

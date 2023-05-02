@@ -7,13 +7,16 @@ import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();
 
 const scrollToTop = () => {
   $('html, body').animate(
     {
-      scrollTop: 0
+      scrollTop: 0,
     },
     200
   );
@@ -49,7 +52,7 @@ const InvalidPagesSummary = ({pages, setPage}) => (
 
 InvalidPagesSummary.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.number).isRequired,
-  setPage: PropTypes.func.isRequired
+  setPage: PropTypes.func.isRequired,
 };
 
 /**
@@ -79,7 +82,7 @@ const FormController = props => {
     submitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
     validateOnSubmitOnly,
-    warnOnExit
+    warnOnExit,
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
@@ -90,8 +93,9 @@ const FormController = props => {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
     ...getInitialStored(sessionStorageKey, 'data'),
-    ...getInitialData()
+    ...getInitialData(),
   }));
+  const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
@@ -108,14 +112,10 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
-  const [updatedApplicationId, setUpdatedApplicationId] = useState(
-    applicationId
-  );
-  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId
-  );
-  const applicationStatusOnSave = 'incomplete';
-  const applicationStatusOnSubmit = 'unreviewed';
+  const [updatedApplicationId, setUpdatedApplicationId] =
+    useState(applicationId);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] =
+    useState(applicationId);
 
   // do this once on mount only
   useEffect(() => {
@@ -172,7 +172,7 @@ const FormController = props => {
     errors.length,
     previousErrors.length,
     pageComponents.length,
-    pageHasError
+    pageHasError,
   ]);
 
   // on page changed
@@ -216,7 +216,7 @@ const FormController = props => {
       }
       setData({
         ...data,
-        ...pageData
+        ...pageData,
       });
 
       const pageRequiredFields = pageFields.filter(f =>
@@ -298,9 +298,9 @@ const FormController = props => {
         const mergedData = {
           ...{
             currentPage: currentPage,
-            data: data
+            data: data,
           },
-          ...newState
+          ...newState,
         };
         sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
       }
@@ -340,14 +340,14 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = (formData, status) => {
+  const serializeFormData = (formData, isSaving) => {
     if (!formData) {
       throw new Error(`formData cannot be undefined`);
     }
     return {
       form_data: formData,
-      status: status,
-      ...serializeAdditionalData()
+      isSaving: isSaving,
+      ...serializeAdditionalData(),
     };
   };
 
@@ -370,14 +370,14 @@ const FormController = props => {
     setSaving(false);
   };
 
-  const makeRequest = applicationStatus => {
+  const makeRequest = isSaving => {
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(data, applicationStatus))
+        data: JSON.stringify(serializeFormData(data, isSaving)),
       });
 
     return updatedApplicationId
@@ -403,7 +403,7 @@ const FormController = props => {
       onSuccessfulSave(response);
     };
 
-    makeRequest(applicationStatusOnSave)
+    makeRequest(true)
       .done(data => handleSuccessfulSave(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -439,9 +439,22 @@ const FormController = props => {
     const handleSuccessfulSubmit = data => {
       sessionStorage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
+
+      // Log application status change upon submission for Teacher Applications
+      if (window.location.href.includes('teacher')) {
+        const rp_requires_admin_approval =
+          regionalPartner.applications_principal_approval ===
+          'all_teachers_required';
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': data.id,
+          'application status': rp_requires_admin_approval
+            ? 'awaiting_admin_approval'
+            : 'unreviewed',
+        });
+      }
     };
 
-    makeRequest(applicationStatusOnSubmit)
+    makeRequest(false)
       .done(data => handleSuccessfulSubmit(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -506,7 +519,7 @@ const FormController = props => {
       onChange: handleChange,
       errors: errors,
       errorMessages: errorMessages,
-      data: data
+      data: data,
     };
   }, [
     currentPage,
@@ -515,7 +528,7 @@ const FormController = props => {
     errorMessages,
     data,
     getAdditionalPageProps,
-    handleChange
+    handleChange,
   ]);
 
   /**
@@ -557,6 +570,13 @@ const FormController = props => {
       const currentPageValid =
         validateOnSubmitOnly || validateCurrentPageRequiredFields();
       if (currentPageValid) {
+        if (currentPage !== newPage) {
+          analyticsReporter.sendEvent(EVENTS.PAGE_CHANGED_EVENT, {
+            'current application page': currentPage + 1,
+            'new application page': newPage + 1,
+          });
+        }
+
         setCurrentPage(newPage);
 
         saveToSessionStorage({currentPage: newPage});
@@ -566,7 +586,8 @@ const FormController = props => {
       pageComponents,
       validateOnSubmitOnly,
       saveToSessionStorage,
-      validateCurrentPageRequiredFields
+      currentPage,
+      validateCurrentPageRequiredFields,
     ]
   );
 
@@ -695,16 +716,16 @@ const FormController = props => {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0px 10px 5px'
+    margin: '0px 10px 5px',
   },
   saveButton: {
     marginLeft: '10px',
-    marginRight: '10px'
+    marginRight: '10px',
   },
   spinner: {
     verticalAlign: 'top',
-    marginTop: '5px'
-  }
+    marginTop: '5px',
+  },
 };
 
 FormController.propTypes = {
@@ -726,7 +747,7 @@ FormController.propTypes = {
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,
-  warnOnExit: PropTypes.bool
+  warnOnExit: PropTypes.bool,
 };
 
 FormController.defaultProps = {
@@ -743,7 +764,7 @@ FormController.defaultProps = {
   sessionStorageKey: null,
   submitButtonText: defaultSubmitButtonText,
   validateOnSubmitOnly: false,
-  warnOnExit: false
+  warnOnExit: false,
 };
 
 export default FormController;

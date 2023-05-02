@@ -1,0 +1,23 @@
+@use "color.scss";
+
+.catalogFiltersContainer {
+  display: flex;
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+.catalogClearFiltersButton {
+  margin-left: auto;
+}
+
+.catalogContentContainer {
+  max-width: 60em;
+  margin: 1em auto;
+}
+
+.catalogContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}

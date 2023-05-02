@@ -65,14 +65,14 @@
     "parent_level_id": 19231,
     "name_suffix": "_2023",
     "reference_links": [
-      "/docs/csd-1718/sprites/index.html",
-      "/docs/csd-1718/drawing_shapes_map/index.html",
-      "/docs/csd-1718/shape_size_map/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html",
-      "/docs/csd-1718/variables_intro_csd/index.html",
-      "/docs/csd-1718/naming_variables/index.html"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/csd-1718/animation_tab/index.html",
+    "map_reference": "/courses/csd-2022/guides/animation-tab",
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

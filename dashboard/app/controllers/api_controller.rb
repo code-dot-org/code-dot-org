@@ -1,5 +1,5 @@
 require 'cdo/aws/cloudfront'
-require 'google/apis/classroom_v1'
+require 'google-apis-classroom_v1'
 
 class ApiController < ApplicationController
   layout false
@@ -11,8 +11,8 @@ class ApiController < ApplicationController
       auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => e
-      render status: e.response.code, json: {error: e.response.body}
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
     end
   end
 
@@ -50,9 +50,9 @@ class ApiController < ApplicationController
         subdomain: subdomain,
       }
       render json: response
-    rescue RestClient::Exception => e
+    rescue RestClient::Exception => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -61,9 +61,9 @@ class ApiController < ApplicationController
         }
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
-    rescue JSON::JSONError => e
+    rescue JSON::JSONError => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -128,8 +128,8 @@ class ApiController < ApplicationController
 
     begin
       yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
-      render status: :forbidden, json: {error: error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+      render status: :forbidden, json: {error: exception}
     end
   end
 
@@ -270,7 +270,7 @@ class ApiController < ApplicationController
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
         user_levels = script_level.level_ids.map do |id|
-          contained_levels = Script.cache_find_level(id).contained_levels
+          contained_levels = Unit.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
@@ -415,7 +415,7 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
     summary = script.summarize(true, current_user, true)
     summary[:path] = overview_path
@@ -423,7 +423,7 @@ class ApiController < ApplicationController
   end
 
   def script_standards
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
   end
@@ -441,7 +441,7 @@ class ApiController < ApplicationController
         user = current_user
       end
 
-      script = Script.get_from_cache(params[:script])
+      script = Unit.get_from_cache(params[:script])
       teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
@@ -462,10 +462,10 @@ class ApiController < ApplicationController
     prevent_caching
     response = {}
 
-    script = Script.get_from_cache(params[:script])
+    script = Unit.get_from_cache(params[:script])
     lesson = script.lessons[params[:lesson_position].to_i - 1]
     script_level = lesson.cached_script_levels[params[:level_position].to_i - 1]
-    level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
+    level = params[:level] ? Unit.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
       response[:signedIn] = true
@@ -552,8 +552,8 @@ class ApiController < ApplicationController
 
   # GET /api/example_solutions/:script_level_id/:level_id
   def example_solutions
-    script_level = Script.cache_find_script_level params[:script_level_id].to_i
-    level = Script.cache_find_level params[:level_id].to_i
+    script_level = Unit.cache_find_script_level params[:script_level_id].to_i
+    level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
@@ -620,19 +620,17 @@ class ApiController < ApplicationController
     )
   end
 
-  private
-
-  def load_section
+  private def load_section
     section = Section.find(params[:section_id])
     authorize! :read, section
     section
   end
 
-  def load_script(section=nil)
+  private def load_script(section=nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Script.get_from_cache(script_id) if script_id
-    script ||= Script.twenty_hour_unit
+    script = Unit.get_from_cache(script_id) if script_id
+    script ||= Unit.twenty_hour_unit
     script
   end
 end

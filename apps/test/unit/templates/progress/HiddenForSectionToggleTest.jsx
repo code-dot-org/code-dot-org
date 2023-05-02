@@ -14,14 +14,12 @@ describe('HiddenForSectionToggle', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <Button
-          __useDeprecatedTag
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
           disabled={true}
           icon="eye"
         />
         <Button
-          __useDeprecatedTag
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}
           disabled={false}
@@ -34,8 +32,8 @@ describe('HiddenForSectionToggle', () => {
     wrapper.setProps({hidden: true});
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Button __useDeprecatedTag text={i18n.visible()} disabled={false} />
-        <Button __useDeprecatedTag text={i18n.hidden()} disabled={true} />
+        <Button text={i18n.visible()} disabled={false} />
+        <Button text={i18n.hidden()} disabled={true} />
       </div>
     );
   });
@@ -47,21 +45,13 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click the first button
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
     callback.resetHistory();
 
     // Click the second button
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
@@ -72,16 +62,8 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click both buttons
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).not.to.have.been.called;
   });
 });

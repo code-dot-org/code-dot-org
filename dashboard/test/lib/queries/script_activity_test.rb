@@ -77,8 +77,8 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'user should prefer working on 20hour instead of hoc' do
-    twenty_hour = Script.twenty_hour_unit
-    hoc = Script.find_by(name: 'hourofcode')
+    twenty_hour = Unit.twenty_hour_unit
+    hoc = Unit.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
     [twenty_hour, hoc].each do |script|
@@ -89,7 +89,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
-    real_script = Script.starwars_unit
+    real_script = Unit.starwars_unit
     fake_script = create :script
 
     user_script_1 = create :user_script, user: @user, script: real_script
@@ -100,7 +100,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     # Preconditions for test: The script is gone, but the associated UserScript still exists.
     # If we start failing this setup assertion (that is, we do automated cleanup
     # when deleting a script) then we can probably delete this test.
-    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
+    refute Unit.exists?(fake_script.id), "Precondition for test: Expected Unit #{fake_script.id} to be deleted."
     assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
 
     # Test: We only get back the userscript for the script that still exists

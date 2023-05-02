@@ -7,3 +7,7 @@ level 'courseF_sprites_desert_-2022-2'
 level 'courseF_place_fruit_-2022-2'
 level 'courseF_sprites_ship_-2022-2'
 level 'courseF_sprites_clouds_-2022-2'
+
+markdown <<MARKDOWN
+
+MARKDOWN

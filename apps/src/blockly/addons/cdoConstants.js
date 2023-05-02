@@ -2,7 +2,7 @@ export default function initializeCdoConstants(blocklyWrapper) {
   blocklyWrapper.Procedures.DEFINITION_BLOCK_TYPES = [
     'procedures_defnoreturn',
     'procedures_defreturn',
-    'functional_definition'
+    'functional_definition',
   ];
 
   blocklyWrapper.BlockValueType = {
@@ -30,10 +30,24 @@ export default function initializeCdoConstants(blocklyWrapper) {
      * {number} Location.x
      * {number} Location.y
      */
-    LOCATION: 'Location'
+    LOCATION: 'Location',
   };
 
   // Google Blockly defaults to 28, but Cdo Blockly defaults to 15. Some labs set the snap radius
   // by multiplying a scale factor, so it's important that the default value matches what it was on our fork
   blocklyWrapper.SNAP_RADIUS = 15;
 }
+
+// Margins for SVG frames for unused blocks and functions
+export const frameSizes = {
+  MARGIN_SIDE: 15,
+  MARGIN_TOP: 10,
+  MARGIN_BOTTOM: 5,
+  HEADER_HEIGHT: 25,
+};
+
+export const customConnectionBlockTypes = {
+  SPRITE: 'Sprite',
+  BEHAVIOR: 'Behavior',
+  LOCATION: 'Location',
+};

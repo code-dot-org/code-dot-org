@@ -37,7 +37,7 @@ def sync_down
       # download strings not in the regular codeorg project to
       # a specific subdirectory within the locale directory
       case name.to_s
-      when "codeorg-markdown"
+      when "codeorg-markdown-testing", "codeorg-markdown"
         options[:locale_subdir] = "codeorg-markdown"
       when "hour-of-code"
         options[:locale_subdir] = "hourofcode"
@@ -45,18 +45,15 @@ def sync_down
 
       utils = Crowdin::LegacyUtils.new(project, options)
 
-      puts "Fetching list of changed files"
-      elapsed = with_elapsed {utils.fetch_changes}
-      puts "Changes fetched in #{elapsed}"
       puts "Downloading changed files"
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"
     end
 
     puts "Sync down completed successfully"
-  rescue => e
-    puts "Sync down failed from the error: #{e}"
-    raise e
+  rescue => exception
+    puts "Sync down failed from the error: #{exception}"
+    raise exception
   end
 end
 

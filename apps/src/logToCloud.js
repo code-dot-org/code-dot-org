@@ -21,7 +21,8 @@ const PageAction = makeEnum(
   'LoadScriptProgressStarted',
   'LoadScriptProgressFinished',
   'SectionProgressRenderedWithData',
-  'JavabuilderWebSocketConnectionError'
+  'JavabuilderWebSocketConnectionError',
+  'NoValidAmplitudeEventNameError'
 );
 
 const MAX_FIELD_LENGTH = 4095;
@@ -41,7 +42,7 @@ module.exports = {
    *   add for this action
    * @param {number} [sampleRate] - Optional sample rate. Default is 1.0
    */
-  addPageAction: function(actionName, value, sampleRate) {
+  addPageAction: function (actionName, value, sampleRate) {
     if (sampleRate === undefined) {
       sampleRate = 1.0;
     }
@@ -82,7 +83,7 @@ module.exports = {
   /**
    * Sets an attribute that will be included on any subsequent generated events
    */
-  setCustomAttribute: function(key, value) {
+  setCustomAttribute: function (key, value) {
     if (!window.newrelic) {
       return;
     }
@@ -137,5 +138,5 @@ module.exports = {
     } catch (e) {
       this.logError(e);
     }
-  }
+  },
 };

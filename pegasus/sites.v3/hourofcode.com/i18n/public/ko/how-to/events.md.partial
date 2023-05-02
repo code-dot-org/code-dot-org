@@ -37,23 +37,17 @@ nav: how_to_nav
 
 * * *
 
-## 아워오브코드와 함께 패밀리 코드 나이트를 주최하고 학부모를 참여하도록 초대합니다.
+## Example plan for a school assembly or event
 
-K-5 저녁 이벤트 개최를 고려하고 학부모를 초대하여 학생과 함께 아워오브코드에 참여할 수 있게 합니다. 더 큰 커뮤니티의 참여를 이끌고 학부모에게 학교의 컴퓨터 과학을 지지하도록 독려하는 좋은 방법입니다. 패밀리 코드 나이트에서 저희의 파트너사가 기획 체크리스트와 강연자의 대본, 초대 이메일, 포스터, 파워포인트, 기타 이벤트 운영에 필요한 항목 등이 담긴 올인원 이벤트 키트를 만들고 있습니다. [여기를 클릭하여 이벤트 키트를 다운로드하세요](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## 아워오브코드 어셈블리 또는 이벤트 계획의 예
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**이벤트:** 학교 전체 컴퓨터 과학 교육주간 시작 모임
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**날짜:** {{ campaign_date/start_short }} (컴퓨터 과학 교육주간으로 시작)
-
-**시간:** 수업일 중. 아침-점심 사이 선호, 대략 1시간.
-
-**장소:** 학교 강당 (예: 극장, 체육관, 식당)
-
-## 이벤트 일정
+## Run of Show
 
 | 시간               | 내용                                                                                     |
 | ---------------- | -------------------------------------------------------------------------------------- |

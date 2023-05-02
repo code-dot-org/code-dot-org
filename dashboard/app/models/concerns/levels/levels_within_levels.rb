@@ -96,7 +96,7 @@ module Levels
     def contained_levels
       return [] if contained_level_names.blank?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
-      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
         result = child_levels.contained
 
         # attempt to use the new parent-child many-to-many table to retrieve the
@@ -106,7 +106,7 @@ module Levels
         # this fallback.
         if result.blank?
           result = contained_level_names.map do |contained_level_name|
-            Script.cache_find_level(contained_level_name)
+            Unit.cache_find_level(contained_level_name)
           end
         end
 
@@ -119,7 +119,7 @@ module Levels
     def project_template_level
       return nil if try(:project_template_level_name).nil?
       cache_key = "LevelsWithinLevels/project_template/#{project_template_level_name}"
-      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+      Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
         # attempt to use the new parent-child many-to-many table to retrieve
         # the level, but if we have a project_template_level_name property and
         # no actual association, fall back to retrieving the level directly.

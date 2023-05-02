@@ -1,5 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
+reply-to: 'Code.org <support@code.org>'
 subject: "Your gift code"
 ---
 ## Thank you! Use this code to redeem your gift:
@@ -38,7 +39,7 @@ Across all grade levels, find [student-guided learning options](https://code.org
 <% if defined?(event_location_type_s) && ['Public school','Public charter school','Private school','Parochial/Religious school','After school'].include?(event_location_type_s) %>
 
 ## Ask us to visit your school
-While we get asked often, we’re usually not able to speak at school assemblies, but we'd love to help *when* we can. If you’re interested in hosting a Code.org ambassador, [let us know here](http://code.org/visit) and we’ll reach out if a visit becomes possible.
+While we get asked often, we're usually not able to speak at school assemblies, but we'd love to help *when* we can. If you're interested in hosting a Code.org ambassador, [let us know here](http://code.org/visit) and we'll reach out if a visit becomes possible.
 
 <% end %>
 
@@ -46,10 +47,10 @@ While we get asked often, we’re usually not able to speak at school assemblies
 
 ## Add your classroom to the Code.org map
 
-If you’re teaching computer science or computer programming, we’d love to include your class in our classroom database for students and parents. 
+If you're teaching computer science or computer programming, we'd love to include your class in our classroom database for students and parents. 
 
 Step 1) Check if your classroom or course is [already listed on the map](http://code.org/learn/local).  
-Step 2) If it’s not, please [add it by submitting information on your class](http://code.org/schools/new).
+Step 2) If it's not, please [add it by submitting information on your class](http://code.org/schools/new).
 
 <% end %>
 
@@ -63,7 +64,7 @@ Step 2) If it’s not, please [add it by submitting information on your class](h
 <p><br/>
 <hr/></p>
 
-You’re receiving this email because you signed up to host an Hour of Code at [hourofcode.com](https://hourofcode.com/). We’ll send you only a few updates a year on new ways to learn or help. Don’t like these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
+You're receiving this email because you signed up to host an Hour of Code at [hourofcode.com](https://hourofcode.com/). We'll send you only a few updates a year on new ways to learn or help. Don't like these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 
 ![](<%= local_assigns.fetch(:tracking_pixel, "") %>)
 

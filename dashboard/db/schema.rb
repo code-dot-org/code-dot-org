@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_13_225915) do
+ActiveRecord::Schema.define(version: 2023_03_23_175726) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -145,27 +145,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.string "callout_text"
   end
 
-  create_table "census_inaccuracy_investigations", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.text "notes", null: false
-    t.integer "census_submission_id", null: false
-    t.integer "census_override_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["census_override_id"], name: "fk_rails_465d31c61e"
-    t.index ["census_submission_id"], name: "fk_rails_18600827a9"
-    t.index ["user_id"], name: "fk_rails_9c9f685588"
-  end
-
-  create_table "census_overrides", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "school_id", limit: 12, null: false
-    t.integer "school_year", limit: 2, null: false
-    t.string "teaches_cs", limit: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_id"], name: "fk_rails_06131f8f87"
-  end
-
   create_table "census_state_course_codes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "state"
     t.string "course"
@@ -275,6 +254,17 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.integer "code_review_id", null: false
+    t.integer "commenter_id"
+    t.boolean "is_resolved", null: false
+    t.text "comment", size: :medium
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["code_review_id"], name: "index_code_review_comments_on_code_review_id"
+  end
+
   create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "code_review_group_id", null: false
     t.bigint "follower_id", null: false
@@ -290,17 +280,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id"], name: "index_code_review_groups_on_section_id"
-  end
-
-  create_table "code_review_notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.integer "code_review_request_id", null: false
-    t.integer "commenter_id"
-    t.boolean "is_resolved", null: false
-    t.text "comment", size: :medium
-    t.datetime "deleted_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
   create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -422,6 +401,14 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
+    t.string "curriculum_type"
+    t.string "marketing_initiative"
+    t.string "grade_levels"
+    t.string "header"
+    t.string "image"
+    t.string "cs_topic"
+    t.string "school_subject"
+    t.string "device_compatibility"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -447,7 +434,7 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
+    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 
@@ -630,24 +617,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "ib_cs_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "school_code", limit: 6, null: false
-    t.string "level", limit: 2, null: false
-    t.integer "school_year", limit: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_code", "school_year", "level"], name: "index_ib_cs_offerings_on_school_code_and_school_year_and_level", unique: true
-  end
-
-  create_table "ib_school_codes", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "school_code", limit: 6, null: false
-    t.string "school_id", limit: 12, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_code"], name: "index_ib_school_codes_on_school_code", unique: true
-    t.index ["school_id"], name: "index_ib_school_codes_on_school_id", unique: true
-  end
-
   create_table "lesson_activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.string "key", null: false
@@ -800,17 +769,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
-  create_table "other_curriculum_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "curriculum_provider_name", null: false
-    t.string "school_id", limit: 12, null: false
-    t.string "course", null: false
-    t.integer "school_year", limit: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["curriculum_provider_name", "school_id", "course", "school_year"], name: "index_other_curriculum_offerings_unique", unique: true
-    t.index ["school_id"], name: "fk_rails_5682e60354"
-  end
-
   create_table "paired_user_levels", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "driver_user_level_id", unsigned: true
     t.bigint "navigator_user_level_id", unsigned: true
@@ -892,6 +850,13 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.index ["status"], name: "index_pd_applications_on_status"
     t.index ["type"], name: "index_pd_applications_on_type"
     t.index ["user_id"], name: "index_pd_applications_on_user_id"
+  end
+
+  create_table "pd_applications_status_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "pd_application_id", null: false
+    t.string "status", null: false
+    t.datetime "timestamp", null: false
+    t.integer "position", null: false
   end
 
   create_table "pd_attendances", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1479,6 +1444,7 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.index ["project_type"], name: "storage_apps_project_type_index", length: 191
     t.index ["published_at"], name: "storage_apps_published_at_index"
     t.index ["standalone"], name: "storage_apps_standalone_index"
+    t.index ["storage_id", "state"], name: "storage_apps_storage_id_state_index"
     t.index ["storage_id"], name: "storage_apps_storage_id_index"
   end
 
@@ -1537,6 +1503,7 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.datetime "updated_at", null: false
     t.datetime "deleted_at"
     t.text "properties"
+    t.boolean "is_active", null: false
   end
 
   create_table "regional_partners_school_districts", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1846,15 +1813,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
     t.index ["category_id"], name: "index_standards_on_category_id"
     t.index ["description"], name: "index_standards_on_description", type: :fulltext
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
-  end
-
-  create_table "state_cs_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "state_school_id", null: false
-    t.string "course", null: false
-    t.integer "school_year", limit: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["state_school_id", "school_year", "course"], name: "index_state_cs_offerings_on_id_and_year_and_course", unique: true
   end
 
   create_table "studio_people", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -2187,17 +2145,11 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
   end
 
   add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "ib_school_codes", "schools"
   add_foreign_key "level_concept_difficulties", "levels"
-  add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
   add_foreign_key "pd_application_tags_applications", "pd_applications"
@@ -2220,7 +2172,6 @@ ActiveRecord::Schema.define(version: 2022_09_13_225915) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"

@@ -169,13 +169,32 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.send_exit_survey
   end
 
-  test 'send_exit_survey sends email' do
+  test 'send_exit_survey does not send mail for workshops without exit survey URL' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey tries to send email and, if successful, updates survey_sent_at ' do
     enrollment = create :pd_enrollment, user: create(:teacher)
 
     mock_mail = stub(deliver_now: nil)
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
+    assert_not_nil enrollment.reload.survey_sent_at
+  end
+
+  test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
+    enrollment = create :pd_enrollment, user: create(:teacher)
+
+    Pd::WorkshopMailer.expects(:exit_survey).once.returns(nil)
+
+    enrollment.send_exit_survey
+    assert_nil enrollment.reload.survey_sent_at
   end
 
   test 'name is deprecated and calls through to full_name' do
@@ -317,13 +336,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
-  test 'academic year survey filter' do
+  test 'csd academic year survey not filtered out' do
+    workshop = create :csd_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csp academic year survey not filtered out' do
     workshop = create :csp_academic_year_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
-    # academic year surveys should always return [] since we do not show post-surveys in the dashboard
-    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
+  test 'csa academic year survey not filtered out' do
+    workshop = create :csa_academic_year_workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
   test 'enrolling in class automatically enrolls in online learning' do
@@ -501,13 +535,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'old enrollments with school are grandfathered in' do
-    old_enrollment = build :pd_enrollment, school: 'a school'
+    old_enrollment = create :pd_enrollment
+    assert old_enrollment.valid?
+
+    # Enrollments that already have a school are allowed to do so,
+    old_enrollment.school = 'a school'
     old_enrollment.save(validate: false)
     assert old_enrollment.valid?
 
     # but they can't be changed
     old_enrollment.school = 'another school'
     refute old_enrollment.valid?
+
+    # and new enrollments cannot be so created.
+    assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, school: 'a school'
+    end
   end
 
   test 'school info country required on create' do

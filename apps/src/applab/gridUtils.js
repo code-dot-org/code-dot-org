@@ -37,7 +37,7 @@ export function scaledDropPoint(draggedElement) {
 
   return {
     left: left,
-    top: top
+    top: top,
   };
 }
 

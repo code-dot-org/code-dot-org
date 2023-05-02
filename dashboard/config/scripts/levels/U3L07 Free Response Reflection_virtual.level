@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2020-03-17T16:56:13.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection: Looping and Random Numbers",
     "long_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \n\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?\n\n\n",
@@ -11,8 +7,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 16972,
-    "name_suffix": "_virtual"
+    "name_suffix": "_virtual",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:13.000Z",
+  "user_id": 0,
   "published": true
 }]]></config>
 </FreeResponse>

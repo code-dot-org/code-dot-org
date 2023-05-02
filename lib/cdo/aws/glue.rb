@@ -6,8 +6,7 @@ module Cdo
   # AWS Glue Data Catalog table/schema utility functions.
   module Glue
     class << self
-      attr_accessor :s3_client
-      attr_accessor :glue_client
+      attr_accessor :s3_client, :glue_client
     end
 
     EXECUTOR = Concurrent::FixedThreadPool.new(100)
@@ -47,7 +46,7 @@ module Cdo
     # @return [Array<Aws::Glue::Types::Partition>]
     def self.get_partitions(database, table)
       self.glue_client ||= Aws::Glue::Client.new
-      GET_PARTITION_SEGMENTS.times.map do |i|
+      Array.new(GET_PARTITION_SEGMENTS) do |i|
         Concurrent::Future.execute do
           glue_client.get_partitions(
             database_name: database,

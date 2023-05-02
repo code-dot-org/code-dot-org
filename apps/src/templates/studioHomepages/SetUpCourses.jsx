@@ -12,11 +12,11 @@ const SetUpCourses = ({isTeacher, hasCourse}) => (
     }
     buttonText={i18n.findCourse()}
     buttonUrl="/courses"
-    solidBorder={hasCourse}
+    solidBorder={true}
   />
 );
 SetUpCourses.propTypes = {
   isTeacher: PropTypes.bool.isRequired,
-  hasCourse: PropTypes.bool
+  hasCourse: PropTypes.bool,
 };
 export default SetUpCourses;

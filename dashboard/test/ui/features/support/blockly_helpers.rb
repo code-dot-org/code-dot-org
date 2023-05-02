@@ -77,4 +77,13 @@ module BlocklyHelpers
   end
 end
 
+def google_blockly?
+  @browser.execute_script("return Blockly.version === 'Google'")
+end
+
+# Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
+def get_id_selector
+  google_blockly? ? 'data-id' : 'block-id'
+end
+
 World(BlocklyHelpers)

@@ -26,6 +26,7 @@ module UserPermissionGrantee
   end
 
   def permission=(permission)
+    throw 'User must be a teacher' unless user_type == 'teacher'
     @permissions = nil
     permissions << permissions.find_or_create_by(user_id: id, permission: permission)
   end
@@ -56,17 +57,15 @@ module UserPermissionGrantee
     return [:staging, :levelbuilder, :production].include? rack_env
   end
 
-  private
-
   # admin can be nil, which should be treated as false
-  def admin_changed?
+  private def admin_changed?
     # no change: false
     # false <-> nil: false
     # false|nil <-> true: true
     !!changes['admin'].try {|from, to| !!from != !!to}
   end
 
-  def log_admin_save
+  private def log_admin_save
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
       "environment: #{rack_env}, "\

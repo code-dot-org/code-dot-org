@@ -71,7 +71,6 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "true",
-    "makerlab_enabled": "false",
     "long_instructions": "<img src=\"https://images.code.org/3d06b57bcb3ba95619d4c6049fb1f376-image-1649451037700.png\" style=\"float:right; width:250px\">\r\n\r\n### Sign Language Quiz \r\n\r\nThis app allows the user to test their knowledge of the sign language alphabet. The user enter a text guess based on the image. Then an output of a smiley or frowny face is shown. If the answer is incorrect the correct answer is given.\r\n\r\n# Do This\r\n\r\nRewrite the `checkAnswer` function to integrate a parameter so that the `selection` global variable is no longer necessary.\r\n\r\n\r\n",
     "parent_level_id": 18132,
     "mini_rubric": "false",
@@ -86,8 +85,8 @@
     "display_name": "Sign Language Quiz",
     "bubble_choice_description": "Rewrite a function so that one of the global variables is no longer necessary.",
     "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sign_language_A.svg/91px-Sign_language_A.svg.png",
-    "preload_asset_list": null,
-    "encrypted_examples": "BvStPkaYlCDlSnOwZKbGYXzyTLzm/NCwtFKhzvSih+qMFkJtWMuTxeqO0ava\nxJzW2Ym4NsFa+Ni790Sop6gXfg==\n"
+    "encrypted_examples": "7fnJ2akzx0JOzUIM50lC+jia1Ijie2n6lRPK5lxDbqpAF0AdlwrRPsZmicIs\nz+s4zAZtqQX/asjKmP6/PKfrNw==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -95,7 +94,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T20:25:25.549+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Console Choice C\\\"\"],\"cloned_from\":\"U7 Param Return Practice Console Choice C\"},{\"changed_at\":\"2022-04-08 20:28:52 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"data_library_tables\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 20:52:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:00:48 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:32:42 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:37:22 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:37:41 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:39:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 21:29:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T20:25:25.549+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Console Choice C\\\"\"],\"cloned_from\":\"U7 Param Return Practice Console Choice C\"},{\"changed_at\":\"2022-04-08 20:28:52 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"data_library_tables\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 20:52:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:00:48 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:32:42 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:37:22 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:37:41 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-08 21:39:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 21:29:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-11-18 00:59:34 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

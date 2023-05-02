@@ -4,57 +4,86 @@ import React from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
-import {show, Goal} from '../redux/animationPicker';
+import {show, showBackground, Goal} from '../redux/animationPicker';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-
+import {P5LabInterfaceMode} from '../constants';
 /**
  * Vertical scrolling list of animations associated with the project.
  */
 class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
-    selectedAnimation: shapes.AnimationKey,
+    currentAnimations: shapes.CurrentAnimations,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    hideCostumes: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired,
   };
 
   render() {
+    const {
+      animationList,
+      hideBackgrounds,
+      hideCostumes,
+      labType,
+      onNewItemClick,
+      spriteLab,
+      currentAnimations,
+    } = this.props;
+    let newAnimationLabel;
+    if (spriteLab) {
+      newAnimationLabel = hideBackgrounds
+        ? i18n.newCostume()
+        : i18n.newBackground();
+    } else {
+      newAnimationLabel = i18n.newAnimation();
+    }
     let addAnimation = (
       <NewListItem
         key="new_animation"
-        label={this.props.spriteLab ? i18n.newCostume() : i18n.newAnimation()}
-        onClick={() => this.props.onNewItemClick(this.props.spriteLab)}
+        label={newAnimationLabel}
+        onClick={() => onNewItemClick(spriteLab, hideCostumes)}
       />
     );
-    let animationListKeys = this.props.animationList.orderedKeys;
-    if (this.props.hideBackgrounds) {
+    let animationListKeys = animationList.orderedKeys;
+    if (hideBackgrounds) {
       animationListKeys = animationListKeys.filter(key => {
-        return !(
-          this.props.animationList.propsByKey[key].categories || []
-        ).includes('backgrounds');
+        return !this.backgroundCategoryAnimations(key);
+      });
+    } else if (hideCostumes) {
+      animationListKeys = animationListKeys.filter(key => {
+        return this.backgroundCategoryAnimations(key);
       });
     }
     return (
       <ScrollableList style={styles.root} className="animationList">
-        {this.props.spriteLab && addAnimation}
+        {spriteLab && addAnimation}
         {animationListKeys.map(key => (
           <AnimationListItem
             key={key}
             animationKey={key}
-            animationProps={this.props.animationList.propsByKey[key]}
-            isSelected={key === this.props.selectedAnimation}
-            animationList={this.props.animationList}
-            labType={this.props.labType}
+            animationProps={animationList.propsByKey[key]}
+            isSelected={
+              key === currentAnimations[P5LabInterfaceMode.ANIMATION] ||
+              key === currentAnimations[P5LabInterfaceMode.BACKGROUND]
+            }
+            animationList={animationList}
+            labType={labType}
           />
         ))}
-        {!this.props.spriteLab && addAnimation}
+        {!spriteLab && addAnimation}
       </ScrollableList>
     );
+  }
+
+  backgroundCategoryAnimations(key) {
+    return (
+      this.props.animationList.propsByKey?.[key]?.categories || []
+    ).includes('backgrounds');
   }
 }
 
@@ -67,18 +96,22 @@ const styles = {
     borderRight: 'none',
     backgroundColor: color.lightest_gray,
     paddingRight: 10,
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };
 export default connect(
   state => ({
     animationList: state.animationList,
-    selectedAnimation: state.animationTab.selectedAnimation,
-    spriteLab: state.pageConstants.isBlockly
+    currentAnimations: state.animationTab.currentAnimations,
+    spriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => ({
-    onNewItemClick(isSpriteLab) {
-      dispatch(show(Goal.NEW_ANIMATION, isSpriteLab));
-    }
+    onNewItemClick(isSpriteLab, hideCostumes) {
+      if (hideCostumes) {
+        dispatch(showBackground(Goal.NEW_ANIMATION));
+      } else {
+        dispatch(show(Goal.NEW_ANIMATION, isSpriteLab));
+      }
+    },
   })
 )(AnimationList);

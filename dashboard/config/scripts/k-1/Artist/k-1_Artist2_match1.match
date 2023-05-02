@@ -12,3 +12,4 @@ answer 'below'
 
 question '/script_assets/k_1_images/artist_images/square_next_ball.png'
 answer 'next to'
+allow_multiple_attempts true
