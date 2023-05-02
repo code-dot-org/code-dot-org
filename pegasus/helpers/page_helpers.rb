@@ -52,7 +52,7 @@ end
 # Setting `is_retina` to `false` matches non-retina displays.
 def css_retina?(is_retina = true)
   css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
-  css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
+  css_query_parts.map {|q| "#{is_retina ? '' : 'not all and '}(#{q})"}.join(', ')
 end
 
 # Returns a concatenated, minified CSS string from all CSS files in the given paths,

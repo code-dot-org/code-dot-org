@@ -77,7 +77,7 @@ class CurriculumCourse
       lessons.push lesson
     end
     # Just push all the lessons without a number to the end.
-    lessons.sort_by! {|k| k[:number] != "" ? k[:number].to_i : 10000}
+    lessons.sort_by! {|k| k[:number] == "" ? 10000 : k[:number].to_i}
     lessons
   end
 

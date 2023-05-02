@@ -280,8 +280,8 @@ class ChannelsApi < Sinatra::Base
     language = request.language
 
     value = explain_share_failure(id)
-    intl_value = language != 'en' ?
-      explain_share_failure(id, language) : nil
+    intl_value = language == 'en' ?
+      nil : explain_share_failure(id, language)
     {
       share_failure: value,
       intl_share_failure: intl_value,
