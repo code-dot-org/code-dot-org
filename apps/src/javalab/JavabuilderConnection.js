@@ -5,6 +5,7 @@ import {
   ExecutionType,
   AuthorizerSignalType,
   CsaViewMode,
+  JavabuilderLockoutType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -414,24 +415,42 @@ export default class JavabuilderConnection {
 
   onAuthorizerMessage(value, detail) {
     let message = '';
+    let stopProgram = false;
     switch (value) {
       case AuthorizerSignalType.TOKEN_USED:
         message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        message = javalabMsg.authorizerNearLimit({
-          attemptsLeft: detail.remaining,
-        });
+        if (detail.lockout_type === JavabuilderLockoutType.PERMANENT) {
+          message = javalabMsg.authorizerNearLimit({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        } else {
+          message = javalabMsg.authorizerNearLimitTemporary({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        }
         break;
       case AuthorizerSignalType.USER_BLOCKED:
         message = javalabMsg.userBlocked();
+        stopProgram = true;
+        break;
+      case AuthorizerSignalType.USER_BLOCKED_TEMPORARY:
+        message = javalabMsg.userBlockedTemporary();
+        stopProgram = true;
         break;
       case AuthorizerSignalType.CLASSROOM_BLOCKED:
         message = javalabMsg.classroomBlocked();
+        stopProgram = true;
         break;
     }
-    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
+    if (stopProgram) {
+      this.setIsRunning(false);
+    }
   }
 
   displayUnauthorizedMessage(error) {

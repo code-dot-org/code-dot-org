@@ -39,6 +39,7 @@ import KeyHandler from './KeyHandler';
 import {
   levelsForLessonId,
   navigateToLevelId,
+  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
@@ -59,7 +60,6 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
-    onChangeLevel: PropTypes.func,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -81,6 +81,7 @@ class UnconnectedMusicView extends React.Component {
     clearPlaybackEvents: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
+    sendSuccessReport: PropTypes.func,
   };
 
   constructor(props) {
@@ -224,7 +225,13 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onProgressChange = () => {
-    this.props.setCurrentProgressState(this.progressManager.getCurrentState());
+    const currentState = this.progressManager.getCurrentState();
+    this.props.setCurrentProgressState(currentState);
+
+    // Tell the external system (if there is one) about the success.
+    if (this.props.levels && currentState.satisfied) {
+      this.props.sendSuccessReport('music');
+    }
   };
 
   getIsPlaying = () => {
@@ -623,6 +630,7 @@ const MusicView = connect(
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
+    sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
   })
 )(UnconnectedMusicView);
 

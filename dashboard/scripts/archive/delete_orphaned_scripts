@@ -9,7 +9,7 @@ Unit.transaction do # throw this all in a transaction so we roll it back if some
   end.map(&:downcase)
 
   orphans = Unit.all.select do |script|
-    !file_scripts.include?(script.name.downcase)
+    file_scripts.exclude?(script.name.downcase)
   end
 
   puts "deleting scripts: #{orphans.collect(&:name)}"
