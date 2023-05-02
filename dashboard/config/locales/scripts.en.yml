@@ -64,6 +64,8 @@ en:
           description_audience: Ages 9-18
           lesson_groups: {}
           student_description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          lessons: {}
+          name: course4
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -2777,6 +2779,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: deepdive-debugging
         fit-test:
           title: FIT Training Practice PLC Course
           description_audience: Facilitators in Training
@@ -4447,6 +4451,8 @@ en:
           description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
           lesson_groups: {}
           student_description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
+          lessons: {}
+          name: code-break
         code-break-staging:
           title: Code Break Staging
           description_audience: ''
@@ -4468,6 +4474,8 @@ en:
           description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
           lesson_groups: {}
           student_description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
+          lessons: {}
+          name: code-break-younger
         no-lg:
           title: ''
           description_audience: ''
@@ -11794,7 +11802,9 @@ en:
           description: ''
           student_description: ''
         csp-bingo-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: BINGO Review Game by Unit
           lesson_groups: {}
           name: csp-bingo-2023
           title: CSP Vocabulary BINGO
