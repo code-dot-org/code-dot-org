@@ -105,19 +105,14 @@ const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow.appendField(
-        `${inputConfig.label}(0, 0)`,
+        `${inputConfig.label}`,
         `${inputConfig.name}_LABEL`
       );
       const fieldRow = currentInputRow.getFieldRow();
       const fieldLabel = fieldRow[fieldRow.length - 1]; // fieldLabel = 'sprite at'
-      const buttonIcon = document.createElementNS(SVG_NS, 'tspan');
-      buttonIcon.style.fontFamily = 'FontAwesome';
-      buttonIcon.textContent = '\uf276';
-      const button = {
-        icon: buttonIcon,
-        cornerRadius: 3,
-        innerHeight: 15,
-      };
+      const icon = document.createElementNS(SVG_NS, 'tspan');
+      icon.style.fontFamily = 'FontAwesome';
+      icon.textContent = '\uf276';
       const onChange = () => {
         getLocation(loc => {
           if (loc) {
@@ -125,7 +120,17 @@ const customInputTypes = {
           }
         });
       };
-      const onDisplay = value => {
+      const onDisplaySetField = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
+          } catch (e) {
+            // Just ignore bad values
+          }
+        }
+      };
+      const onDisplaySetLabel = value => {
         if (value) {
           try {
             const loc = JSON.parse(value);
@@ -138,9 +143,10 @@ const customInputTypes = {
         }
       };
       const fieldButton = Blockly.cdoUtils.locationField(
-        button,
+        icon,
         onChange,
-        onDisplay,
+        onDisplaySetLabel,
+        onDisplaySetField,
         block.getHexColour() // Google Blockly includes block.getColour
       );
       currentInputRow.appendField(fieldButton, inputConfig.name);

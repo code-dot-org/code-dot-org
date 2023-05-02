@@ -8,27 +8,24 @@ import GoogleBlockly from 'blockly/core';
  * Takes in a value & returns a validated value, or null to abort a change
  * @param onChange The function that handles the field's editor.
  * @param onDisplay The function tht handles how the field text is displayed.
- * @param buttonIcon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
- * @param editFieldLabel boolean - true if the label adjacent to this field is updated with change in field value
+ * @param icon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(value, validator, onChange, onDisplay, button, editFieldLabel) {
+  constructor(value, validator, onChange, onDisplay, icon) {
     super(value, validator);
     this.onChange = onChange;
     this.onDisplay = onDisplay;
-    if (button) {
-      this.button = button;
-    }
-    this.editFieldLabel = editFieldLabel;
+    this.icon = icon;
     this.SERIALIZABLE = true;
   }
 
   static fromJson(options) {
     return new CdoFieldButton(
       options.value,
+      options.validator,
       options.onChange,
       options.onDisplay,
-      options.buttonIcon
+      options.icon
     );
   }
 
@@ -38,29 +35,10 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   initView() {
     super.initView();
-    if (this.button) {
-      this.buttonElement_ = Blockly.utils.dom.createSvgElement(
-        'rect',
-        {
-          rx: this.button.cornerRadius,
-          ry: this.button.cornerRadius,
-          x: 1,
-          y: 1,
-          height: this.button.innerHeight,
-          width: this.button.innerHeight,
-        },
-        this.fieldGroup_
-      );
-      this.buttonElement_.style.fillOpacity = 1;
-      this.buttonElement_.style.fill =
-        this.getSourceBlock().style.colourSecondary;
-
-      this.textElement_.style.fontSize = '11pt';
-      this.textElement_.style.fill = this.getSourceBlock().style.colourPrimary;
-      this.textElement_.textContent = '';
-      this.textElement_.appendChild(this.button.icon);
-
-      this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
+    if (this.icon) {
+      this.icon.textContent = ' ' + this.icon.textContent;
+      this.icon.style.fill = this.getSourceBlock().style.colourPrimary;
+      this.textElement_.appendChild(this.icon);
     }
   }
 
@@ -79,21 +57,6 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
-   * Used to update the value of a field.
-   * @override
-   */
-  doValueUpdate_(newValue) {
-    if (this.value_ !== newValue) {
-      this.value_ = newValue;
-      if (this.editFieldLabel) {
-        // Update display on block label when block is dragged out from toolbox.
-        this.onDisplay(newValue);
-      }
-      this.isDirty_ = true; // Block needs to be re-rendered.
-    }
-  }
-
-  /**
    * Create an editor for the field.
    * @override
    */
@@ -107,8 +70,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
-    if (this.buttonElement_) {
-      this.buttonElement_.style.fill = sourceBlock.style.colourSecondary;
+    if (this.icon) {
+      this.icon.style.fill = sourceBlock.style.colourPrimary;
     }
   }
 }
