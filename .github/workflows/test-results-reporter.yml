@@ -10,6 +10,9 @@ jobs:
   test-reporter:
     runs-on: ubuntu-latest
     steps:
+      # Why does dorny/test-reporter want a git checkout??? heck knows
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Download Test Results
         uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
