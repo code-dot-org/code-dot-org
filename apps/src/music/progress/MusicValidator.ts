@@ -12,18 +12,15 @@ const KnownConditions: KnownConditions = {
 };
 
 export default class MusicValidator extends Validator {
-  private conditionsChecker: ConditionsChecker;
-
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
-    private readonly player: MusicPlayer
+    private readonly player: MusicPlayer,
+    private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
+      KnownConditions
+    )
   ) {
     super();
-
-    this.getIsPlaying = getIsPlaying;
-    this.player = player;
-    this.conditionsChecker = new ConditionsChecker(KnownConditions);
   }
 
   shouldCheckConditions() {

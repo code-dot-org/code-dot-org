@@ -157,6 +157,7 @@ class UnconnectedMusicView extends React.Component {
 
         const musicValidator = new MusicValidator(
           this.getIsPlaying,
+          this.getPlaybackEvents,
           this.player
         );
 
