@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import moduleStyles from './sections-refresh.module.scss';
 import QuickAssignTable from './QuickAssignTable';
@@ -11,6 +12,7 @@ import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {BodyOneText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -73,6 +75,7 @@ export default function CurriculumQuickAssign({
         ],
       };
       const hocData = {...courseOfferings[MARKETING_AUDIENCE.HOC]};
+      const plData = {...courseOfferings[MARKETING_AUDIENCE.PL]};
 
       const determineSelectedCourseOffering = (startingData, audience) => {
         const headers = Object.keys(startingData);
@@ -97,6 +100,7 @@ export default function CurriculumQuickAssign({
           MARKETING_AUDIENCE.ELEMENTARY
         );
         determineSelectedCourseOffering(hocData, MARKETING_AUDIENCE.HOC);
+        determineSelectedCourseOffering(plData, MARKETING_AUDIENCE.PL);
       }
     }
     // added all these dependencies given the eslint warning
@@ -175,22 +179,31 @@ export default function CurriculumQuickAssign({
   };
 
   return (
-    <div>
+    <div className={moduleStyles.containerWithMarginTop}>
       <div className={moduleStyles.input}>
-        <label className={moduleStyles.decideLater} htmlFor="decide-later">
+        <label
+          className={classnames(
+            moduleStyles.decideLater,
+            moduleStyles.typographyLabel
+          )}
+          htmlFor="decide-later"
+        >
           {selectedCourseOffering
             ? i18n.clearAssignedCurriculum()
             : i18n.decideLater()}
         </label>
         <input
           checked={decideLater}
-          className={moduleStyles.inputBox}
+          className={classnames(
+            moduleStyles.inputBox,
+            moduleStyles.withBrandAccentColor
+          )}
           type="checkbox"
           id="decide-later"
           onChange={toggleDecideLater}
         />
-        <h3>{i18n.assignACurriculum()}</h3>
-        <h5>{i18n.useDropdownMessage()}</h5>
+        <Heading3>{i18n.assignACurriculum()}</Heading3>
+        <BodyOneText>{i18n.useDropdownMessage()}</BodyOneText>
       </div>
       <CurriculumQuickAssignTopRow
         showPlOfferings={showPlOfferings}
