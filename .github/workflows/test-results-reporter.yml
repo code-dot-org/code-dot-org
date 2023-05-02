@@ -6,7 +6,7 @@ name: Test Results Reporter
 #   push:
 #     branches:
 #       - 'seth/github-action-*'
-on: [deployment_status]
+on: [ deployment_status ]
 
 jobs:
   test-reporter:
