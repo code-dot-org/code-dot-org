@@ -51,6 +51,10 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
+      #MINITEST_REPORTER: JUnitReporter
+      #MINITEST_REPORTERS_REPORTS_DIR: $HOME/test-results
+      CIRCLECI: true
+      CIRCLE_TEST_REPORTS: $HOME/test-results
     commands:
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
