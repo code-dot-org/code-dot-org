@@ -479,7 +479,7 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the allow-list through.
   private def level_params
     permitted_params = [
       :name,
