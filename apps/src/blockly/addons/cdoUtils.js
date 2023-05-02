@@ -110,26 +110,14 @@ export function getCode(workspace) {
 }
 
 export function soundField(onChange, onDisplay) {
-  // Handle 'play sound' block with default param from CDO blockly.
-  // TODO: Remove when sprite lab is migrated to Google blockly.
-  const validator = newValue => {
-    if (typeof newValue !== 'string') {
-      return null;
-    }
-    if (newValue === 'Choose') {
-      return DEFAULT_SOUND;
-    }
-    return newValue;
-  };
-  // FieldButton(value, validator, onChange, onDisplay)
-  return new Blockly.FieldButton(DEFAULT_SOUND, validator, onChange, onDisplay);
+  // return new Blockly.FieldButton(DEFAULT_SOUND, onChange, onDisplay);
+  return new Blockly.FieldButton(DEFAULT_SOUND, null, onChange, onDisplay);
 }
 
 export function locationField(button, onChange, onDisplay) {
-  // FieldButton(value, validator, onChange, onDisplay, buttonIcon, editFieldLabel)
+  // FieldButton(value, onChange, onDisplay, buttonIcon, editFieldLabel)
   return new Blockly.FieldButton(
     {x: 0, y: 0},
-    null,
     onChange,
     onDisplay,
     button,

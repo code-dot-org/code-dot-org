@@ -12,8 +12,8 @@ import GoogleBlockly from 'blockly/core';
  * @param editFieldLabel boolean - true if the label adjacent to this field is updated with change in field value
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(value, validator, onChange, onDisplay, button, editFieldLabel) {
-    super(value, validator);
+  constructor(value, onChange, onDisplay, button, editFieldLabel) {
+    super(value);
     this.onChange = onChange;
     this.onDisplay = onDisplay;
     if (button) {
