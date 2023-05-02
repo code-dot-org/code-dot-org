@@ -155,9 +155,7 @@ export default class JavabuilderConnection {
       if (error.status === 403) {
         if (error.responseJSON?.captcha_required === true) {
           this.setIsCaptchaDialogOpen(true);
-          this.onOutputMessage(
-            javalabMsg.errorJavabuilderVerificationRequired()
-          );
+          this.onOutputMessage(javalabMsg.verificationRequiredMessage());
           this.onNewlineMessage();
         } else {
           this.displayUnauthorizedMessage(error);

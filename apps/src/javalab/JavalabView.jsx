@@ -149,6 +149,21 @@ class JavalabView extends React.Component {
     );
   };
 
+  // update getStore().dispatch calls
+  onCaptchaSubmit = token => {
+    fetch('/dashboardapi/v1/users/me/verify_captcha', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({'g-recaptcha-response': token}),
+    }).then(() => {
+      getStore().dispatch(appendOutputLog(javalabMsg.verificationSuccessful()));
+      getStore().dispatch(appendNewlineToConsoleLog());
+      this.props.setIsCaptchaDialogOpen(false);
+    });
+  };
+
   render() {
     const {
       displayTheme,
@@ -199,15 +214,6 @@ class JavalabView extends React.Component {
       ? null
       : javalabMsg.testsNotPassing();
 
-    const captchaDialogBody = (
-      <p>
-        Java usage is limited for new users. Verified teachers have access to a
-        much higher quota for themselves and their students without any
-        additional checks. You can learn why verification is needed on this blog
-        page: link
-      </p>
-    );
-
     return (
       <StudioAppWrapper>
         <div
@@ -220,24 +226,12 @@ class JavalabView extends React.Component {
             handleCancel={() => {
               setIsCaptchaDialogOpen(false);
             }}
-            handleSubmit={token => {
-              fetch('/dashboardapi/v1/users/me/verify_captcha', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({'g-recaptcha-response': token}),
-              }).then(() => {
-                getStore().dispatch(
-                  appendOutputLog('Verification successful!')
-                );
-                getStore().dispatch(appendNewlineToConsoleLog());
-                setIsCaptchaDialogOpen(false);
-              });
-            }}
+            handleSubmit={this.onCaptchaSubmit}
             siteKey={recaptchaSiteKey}
-            body={captchaDialogBody}
-          />
+          >
+            <h3>{javalabMsg.verificationHeaderMessage()}</h3>
+            <p>{javalabMsg.verificationDialogMessage()}</p>
+          </ReCaptchaDialog>
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
