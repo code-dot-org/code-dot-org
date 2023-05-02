@@ -4,11 +4,7 @@
 // so this approach is still being investigated. For now, this type
 // is an object whose keys are all functions which return strings,
 // matching what we expect for a locale object.
-//import musicJson from '../../i18n/music/en_us.json';
 
 export type MusicLocale = {
-  // [key in keyof typeof musicJson]: (replaceMap?: {
-  //   [key: string]: string;
-  // }) => string;
   [key: string]: (replaceMap?: {[key: string]: string}) => string;
 };
