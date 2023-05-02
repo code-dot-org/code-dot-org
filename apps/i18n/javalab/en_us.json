@@ -52,7 +52,6 @@
   "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "errorJavabuilderConnectionGeneral": "We hit an error connecting to our server. Try again.",
-  "errorJavabuilderVerificationRequired": "Verification required: please verify you're a human and try again.",
   "errorLoadingClassmates": "There was an error loading the list of your classmates. Please try again.",
   "errorMediaImageLoadError": "There was an error loading the image.",
   "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please contact us at support@code.org, and be sure to include the URL to this page in your message.",
@@ -155,6 +154,10 @@
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
+  "verificationDialogMessage": "Java usage is limited for new users. Verified teachers have access to a much higher quota for themselves and their students without any additional checks. You can learn why verification is needed on this blog page: link",
+  "verificationHeaderMessage": "Please confirm you're human",
+  "verificationRequiredMessage": "Verification required: please verify you're a human and try again.",
+  "verificationSuccessful": "Verification successful!",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }

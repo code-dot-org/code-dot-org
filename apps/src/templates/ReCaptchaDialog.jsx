@@ -17,7 +17,7 @@ export default class ReCaptchaDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     submitText: PropTypes.string,
     siteKey: PropTypes.string.isRequired,
-    body: PropTypes.node,
+    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -33,27 +33,27 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   componentDidMount() {
-    this.mountCaptcha();
+    this.loadCaptcha();
   }
 
-  // The dialog is not fully unmounted when isOpen is set to false
-  // (but the captcha is removed from the DOM),
-  // so we need to force re-rerender the captcha when we open the dialog.
+  // The dialog is not fully unmounted when isOpen is set to false,
+  // but the captcha is removed from the DOM,
+  // so we need to force re-rerender the captcha each time the dialog is opened.
   componentDidUpdate(prevProps) {
     if (prevProps.isOpen && !this.props.isOpen) {
       this.setState({submitButtonEnabled: false});
-      this.unmountCaptcha();
+      this.cleanUpCaptcha();
     }
     if (!prevProps.isOpen && this.props.isOpen) {
-      this.mountCaptcha();
+      this.loadCaptcha();
     }
   }
 
   componentWillUnmount() {
-    this.unmountCaptcha();
+    this.cleanUpCaptcha();
   }
 
-  mountCaptcha() {
+  loadCaptcha() {
     //Add reCaptcha and associated callbacks.
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
@@ -66,7 +66,7 @@ export default class ReCaptchaDialog extends React.Component {
     document.body.appendChild(script);
   }
 
-  unmountCaptcha() {
+  cleanUpCaptcha() {
     const captchaScript = document.getElementById('captcha');
     if (captchaScript) {
       captchaScript.remove();
@@ -90,7 +90,7 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel, body} = this.props;
+    const {siteKey, isOpen, handleCancel, children} = this.props;
     return (
       <div>
         <BaseDialog
@@ -100,8 +100,7 @@ export default class ReCaptchaDialog extends React.Component {
           style={styles.dialog}
           isOpen={isOpen}
         >
-          <h3>Please confirm you're human</h3>
-          {body}
+          {children}
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
