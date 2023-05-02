@@ -20,6 +20,8 @@ steps:
     pull: always
     commands:
       - echo "Yayyyy that was fast :-"
+      - sleep 30s
+      - echo "DONE!"
 trigger:
   branch:
     - "staging"
@@ -245,6 +247,6 @@ trigger:
 #     - pull_request
 ---
 kind: signature
-hmac: ad693bf1e4d2bedfaa4770383b39901e8b9c3041c83211ddf8b5da991fc95e43
+hmac: 17749baa324bcfe069caaedfd079beca731eb16a3d043ade281846131ceb9e4c
 
 ...
