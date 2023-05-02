@@ -3,6 +3,7 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 import sinon from 'sinon';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {
@@ -45,7 +46,7 @@ describe('SingleSectionSetUp', () => {
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
-        section={{participantType: 'teacher'}}
+        section={{participantType: ParticipantAudience.teacher}}
         updateSection={() => {}}
         isNewSection={false}
       />
@@ -59,9 +60,9 @@ describe('SingleSectionSetUp', () => {
     const wrapper = mount(
       <SingleSectionSetUp
         sectionNum={1}
-        section={{}}
+        section={{participantType: ParticipantAudience.student}}
         updateSection={updateSectionSpy}
-        isNewSection={true}
+        isNewSection={false}
       />
     );
 
