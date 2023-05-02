@@ -157,7 +157,7 @@
   "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",  
   "userBlockedTemporary": "You have reached the limit of the number of times you can run Java code in 24 hours. Become a verified teacher to access a much higher quota for yourself and your students.\nLearn more about [how to become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nLearn [why teacher verification is needed](https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nIf you believe this message is in error, contact support@code.org.",
-  "waitingForServer": "Trying to connect to Code.org's servers...",
+  "waitingForServer": "Waiting for a response...",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }
