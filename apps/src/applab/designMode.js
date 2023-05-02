@@ -1,4 +1,3 @@
-/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
