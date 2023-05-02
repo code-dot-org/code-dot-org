@@ -1,6 +1,6 @@
 name 'CSA U6L5-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Getting and Setting Elements'
+description 'Practice using the `get()` and `set()` methods in the `ArrayList` class.'
 
 sublevels
 level 'CSA U6L5-L6a_2023'
