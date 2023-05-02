@@ -28,6 +28,8 @@ RUN apt-get update && \
     build-essential \
     curl \
     git \
+    libaio-dev \
+    libaio1 \
     libffi-dev \
     libgdbm-dev \
     libncurses5-dev \
@@ -102,8 +104,6 @@ RUN apt-get install -y --no-install-recommends \
     gzip \
     imagemagick \
     jq \
-    libaio-dev \
-    libaio1 \
     libicu-dev \
     libmagickwand-dev \
     libsqlite3-dev \
