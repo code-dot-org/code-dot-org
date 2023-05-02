@@ -130,6 +130,7 @@ const customInputTypes = {
           }
         }
       };
+      // TODO: Remove function below when sprite lab migrates to google blockly.
       const onDisplaySetLabel = value => {
         if (value) {
           try {
