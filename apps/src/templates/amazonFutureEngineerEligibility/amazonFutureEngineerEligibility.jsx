@@ -262,7 +262,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 required={true}
                 onChange={this.updateFormData}
                 validationState={
-                  this.state.errors.hasOwnProperty('email')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'email'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -272,7 +275,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
                 value={formData.schoolId}
-                showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+                showErrorMsg={Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'schoolId'
+                )}
                 style={styles.schoolInput}
               />
               <Button
