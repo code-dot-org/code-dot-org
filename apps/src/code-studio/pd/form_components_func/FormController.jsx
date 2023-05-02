@@ -101,7 +101,7 @@ const FormController = props => {
   const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [showApplicationClosedMessage, setShowApplicationClosedMessage] =
-    useState(regionalPartner?.are_apps_closed_for_rp);
+    useState(regionalPartner?.are_apps_closed);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [hasUserChangedData, setHasUserChangedData] = useState(
@@ -418,7 +418,7 @@ const FormController = props => {
    */
   const handleSubmit = event => {
     event.preventDefault();
-    if (regionalPartner?.are_apps_closed_for_rp) {
+    if (regionalPartner?.are_apps_closed) {
       setShowApplicationClosedMessage(true);
       scrollToTop();
       return;

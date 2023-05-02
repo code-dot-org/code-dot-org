@@ -43,7 +43,12 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     [
       {
         expected_output: true,
-        condition_message: 'application exists and is incomplete',
+        condition_message: 'application exists and is incomplete with RP has apps opened',
+        user: @user_with_two_incomplete_apps
+      },
+      {
+        expected_output: true,
+        condition_message: 'application exists and is incomplete with no RP',
         user: @user_with_two_incomplete_apps
       },
       {
@@ -55,6 +60,11 @@ class TeacherApplicationHelperTest < ActionView::TestCase
         expected_output: false,
         condition_message: 'application is in a different year',
         user: @user_with_outdated_incomplete
+      },
+      {
+        expected_output: false,
+        condition_message: 'application exists and is incomplete but RP has apps closed',
+        user: @user_with_rp_apps_closed
       }
     ].each do |test_params|
       sign_in test_params[:user]
