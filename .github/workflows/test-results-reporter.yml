@@ -1,13 +1,18 @@
 name: Test Results Reporter
-on:
-  check_suite:
-    types: [completed]
+# on:
+#   check_suite:
+#     types: [completed]
 # on:
 #   push:
 #     branches:
 #       - 'seth/github-action-*'
+on:
+  deployment_status
 jobs:
   test-reporter:
+    if: |
+      ( github.event.deployment_status.state == 'success' || github.event.deployment_status.state == 'failure' ) 
+      && contains(github.refs, 'seth')
     runs-on: ubuntu-latest
     steps:
       # Why does dorny/test-reporter want a git checkout??? heck knows
