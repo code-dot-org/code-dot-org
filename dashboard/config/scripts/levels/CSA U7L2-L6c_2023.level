@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MessageScene</code> class represents a scene with a message that appears to scroll across the scene. It has an instance variable for a background image and methods to set the background and font styling.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> class represents a message that is drawn in a scene. It has instance variables for the text in the message, and the starting x and y positions of the message.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MessageScene</code> class to display a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> object that moves across the scene. The method should:\r\n\r\n* Have a parameter for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> object to display\r\n\r\n* While the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> object's <code style=\"background-color: #ececec; color: black; font-weight: bold;\">x</code> position is less than the width of the scene,\r\n\r\n   * Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setBackground()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setText()</code> methods in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MessageScene</code> class to set the background image and font styling.\r\n\r\n   * Increase the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">x</code> position of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> object by some amount, like <code style=\"background-color: #ececec; color: black; font-weight: bold;\">10</code>\r\n\r\n   * Draw the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Message</code> object in the scene using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawText()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class. Pause after drawing the text to create the animated effect.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with using object references as parameters.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/object-references-as-parameters"
+    ],
+    "display_name": "Scrolling Message",
+    "bubble_choice_description": "Create a scrolling message effect using The Theater. Write a method to animate a message across a scene."
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T13:56:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:56:33.494+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L2-L6b_2023\"},{\"changed_at\":\"2023-04-11 13:56:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 14:39:53 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

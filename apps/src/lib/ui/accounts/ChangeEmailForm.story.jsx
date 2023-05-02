@@ -6,141 +6,112 @@ const DEFAULT_PROPS = {
   values: {
     newEmail: '',
     currentPassword: '',
-    emailOptIn: ''
+    emailOptIn: '',
   },
   validationErrors: {
     newEmail: undefined,
     currentPassword: undefined,
-    emailOptIn: undefined
+    emailOptIn: undefined,
   },
   userType: 'student',
   isPasswordRequired: true,
   disabled: false,
   onChange: action('onChange'),
-  onSubmit: action('onSubmit')
+  onSubmit: action('onSubmit'),
 };
 
-export default storybook =>
-  storybook.storiesOf('ChangeEmailForm', module).addStoryTable([
-    {
-      name: 'student view, with valid content',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich'
-          }}
-          userType="student"
-        />
-      )
-    },
-    {
-      name: 'student view, with valid content and no password',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich'
-          }}
-          userType="student"
-          isPasswordRequired={false}
-        />
-      )
-    },
-    {
-      name: 'student view, with validation errors',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'robin@bat.cave',
-            currentPassword: 'no1fan'
-          }}
-          validationErrors={{
-            newEmail: 'Robin, get out of here!',
-            currentPassword: "That's totally the wrong password."
-          }}
-          userType="student"
-        />
-      )
-    },
-    {
-      name: 'student view, disabled',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'currently-saving@bat.cave',
-            currentPassword: 'currently-saving'
-          }}
-          userType="student"
-          disabled={true}
-        />
-      )
-    },
-    {
-      name: 'teacher view, with valid content',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich',
-            emailOptIn: 'yes'
-          }}
-          userType="teacher"
-        />
-      )
-    },
-    {
-      name: 'teacher view, with valid content and no password',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich',
-            emailOptIn: 'yes'
-          }}
-          userType="teacher"
-          isPasswordRequired={false}
-        />
-      )
-    },
-    {
-      name: 'teacher view, with validation errors',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'robin@bat.cave',
-            currentPassword: 'no1fan',
-            emailOptIn: 'no'
-          }}
-          validationErrors={{
-            newEmail: 'Robin, get out of here!',
-            currentPassword: "That's totally the wrong password.",
-            emailOptIn: 'We are requiring you to opt in! (Not really)'
-          }}
-          userType="teacher"
-        />
-      )
-    },
-    {
-      name: 'teacher view, disabled',
-      story: () => (
-        <ChangeEmailForm
-          {...DEFAULT_PROPS}
-          values={{
-            newEmail: 'currently-saving@bat.cave',
-            currentPassword: 'currently-saving',
-            emailOptIn: 'yes'
-          }}
-          userType="teacher"
-          disabled={true}
-        />
-      )
-    }
-  ]);
+export default {
+  title: 'ChangeEmailForm',
+  component: ChangeEmailForm,
+};
+
+const Template = args => <ChangeEmailForm {...DEFAULT_PROPS} {...args} />;
+
+export const StudentViewWithValidContent = Template.bind({});
+StudentViewWithValidContent.args = {
+  values: {
+    newEmail: 'batman@bat.cave',
+    currentPassword: 'imsorich',
+  },
+  userType: 'student',
+};
+
+export const StudentViewWithValidContentNoPassword = Template.bind({});
+StudentViewWithValidContentNoPassword.args = {
+  values: {
+    newEmail: 'batman@bat.cave',
+    currentPassword: 'imsorich',
+  },
+  userType: 'student',
+  isPasswordRequired: false,
+};
+
+export const StudentViewWithValidationError = Template.bind({});
+StudentViewWithValidationError.args = {
+  values: {
+    newEmail: 'robin@bat.cave',
+    currentPassword: 'no1fan',
+  },
+  validationErrors: {
+    newEmail: 'Robin, get out of here!',
+    currentPassword: 'Thats totally the wrong password.',
+  },
+  userType: 'student',
+};
+
+export const StudentViewDisabled = Template.bind({});
+StudentViewDisabled.args = {
+  values: {
+    newEmail: 'currently-saving@bat.cave',
+    currentPassword: 'currently-saving',
+  },
+  userType: 'student',
+  disabled: true,
+};
+
+export const TeacherViewWithValidContent = Template.bind({});
+TeacherViewWithValidContent.args = {
+  values: {
+    newEmail: 'batman@bat.cave',
+    currentPassword: 'imsorich',
+    emailOptIn: 'yes',
+  },
+  userType: 'teacher',
+};
+
+export const TeacherViewWithValidContentNoPassword = Template.bind({});
+TeacherViewWithValidContentNoPassword.args = {
+  values: {
+    newEmail: 'batman@bat.cave',
+    currentPassword: 'imsorich',
+    emailOptIn: 'yes',
+  },
+  userType: 'teacher',
+  isPasswordRequired: false,
+};
+
+export const TeacherViewWithValidationErrors = Template.bind({});
+TeacherViewWithValidationErrors.args = {
+  values: {
+    newEmail: 'robin@bat.cave',
+    currentPassword: 'no1fan',
+    emailOptIn: 'no',
+  },
+  validationErrors: {
+    newEmail: 'Robin, get out of here!',
+    currentPassword: "That's totally the wrong password.",
+    emailOptIn: 'We are requiring you to opt in! (Not really)',
+  },
+  userType: 'teacher',
+};
+
+export const TeacherViewDisabled = Template.bind({});
+TeacherViewDisabled.args = {
+  values: {
+    newEmail: 'currently-saving@bat.cave',
+    currentPassword: 'currently-saving',
+    emailOptIn: 'yes',
+  },
+  userType: 'teacher',
+  disabled: true,
+};

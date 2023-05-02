@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A travel app wants to manage its bookings, including creating new bookings and updating existing ones.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createBooking()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Booking</code> class. The method should take a booking number, total cost, and traveler information as parameters.\r\n\r\n✅ **TO DO #2:** Write another <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createBooking()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Booking</code> class. The method should take a booking number as a parameter.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call both versions of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createBooking()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing overloaded methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/overloaded-methods"
+    ],
+    "display_name": "Travel Bookings",
+    "bubble_choice_description": "A travel app wants to manage its bookings, including creating new bookings and updating existing ones."
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T14:03:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:03:00.809+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L7a_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L7a_2023\"},{\"changed_at\":\"2023-04-11 14:03:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 15:26:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

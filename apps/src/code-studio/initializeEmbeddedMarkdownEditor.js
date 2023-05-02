@@ -21,7 +21,11 @@ var initializeCodeMirror = require('./initializeCodeMirror');
  *                                  of textarea where editor will live
  * @param {string} name of the property within the textarea
  */
-module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
+module.exports = function (
+  embeddedElement,
+  markdownTextArea,
+  markdownProperty
+) {
   var regex = new RegExp(
     '^' + markdownProperty + ' <<(\\w*)\\n([\\s\\S]*?)\\n\\1\\s*$',
     'm'
@@ -30,7 +34,7 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
   var dslText = dslElement.val();
 
   var mdEditor = initializeCodeMirror(markdownTextArea, 'markdown', {
-    callback: function(editor, change) {
+    callback: function (editor, change) {
       var editorText = editor.getValue();
       var dslText = dslElement.val();
       var replacedText;
@@ -50,7 +54,7 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
       }
       dslElement.val(replacedText);
     },
-    attachments: true
+    attachments: true,
   });
 
   // Match against markdown heredoc syntax and capture contents in [2].

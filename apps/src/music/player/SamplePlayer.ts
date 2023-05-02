@@ -1,23 +1,23 @@
-interface SampleEvent {
-  offsetSeconds: number;
-  sampleId: string;
-  triggered: boolean;
-}
-
-interface PlayingSample {
-  eventStart: number;
-  uniqueId: number;
-  triggered: boolean;
-}
-
+import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
+export interface SampleEvent {
+  offsetSeconds: number;
+  sampleId: string;
+  triggered: boolean;
+  effects?: Effects;
+}
+
+interface PlayingSample {
+  eventStart: number;
+  uniqueId: number;
+}
+
 const MAIN_AUDIO_GROUP = 'mainaudio';
 const PREVIEW_GROUP = 'preview';
-const GROUP_PREFIX = 'all';
 
 /**
  * Handles playback of individual samples.
@@ -27,12 +27,14 @@ export default class SamplePlayer {
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
+  private groupPath: string;
 
   constructor() {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
+    this.groupPath = '';
   }
 
   initialize(library: MusicLibrary) {
@@ -46,6 +48,8 @@ export default class SamplePlayer {
       })
       .flat(2);
     soundApi.InitSound(soundList);
+
+    this.groupPath = library.groups[0].path;
 
     this.isInitialized = true;
   }
@@ -66,9 +70,11 @@ export default class SamplePlayer {
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);
+
+    soundApi.StartPlayback();
   }
 
-  previewSample(sampleId: string, onStop: () => any) {
+  previewSample(sampleId: string, onStop?: () => void) {
     if (!this.isInitialized) {
       console.warn('Sample player not initialized.');
       return;
@@ -76,7 +82,40 @@ export default class SamplePlayer {
 
     this.cancelPreviews();
 
-    soundApi.PlaySound(GROUP_PREFIX + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
+    soundApi.PlaySound(
+      this.groupPath + '/' + sampleId,
+      PREVIEW_GROUP,
+      0,
+      onStop
+    );
+  }
+
+  previewSamples(events: SampleEvent[], onStop?: () => void) {
+    if (!this.isInitialized) {
+      console.warn('Sample player not initialized.');
+      return;
+    }
+
+    this.cancelPreviews();
+
+    let counter = 0;
+    const onStopWrapper = onStop
+      ? () => {
+          counter++;
+          if (counter === events.length) {
+            onStop();
+          }
+        }
+      : undefined;
+
+    events.forEach(event => {
+      soundApi.PlaySound(
+        this.groupPath + '/' + event.sampleId,
+        PREVIEW_GROUP,
+        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        onStopWrapper
+      );
+    });
   }
 
   playing(): boolean {
@@ -114,19 +153,24 @@ export default class SamplePlayer {
       // Note that we still don't play sounds older than that, because they might
       // have been scheduled for some time ago, and Web Audio will play a
       // sound immediately if its target time is in the past.
-      const delayCompensation = sampleEvent.triggered ? 0.1 : 0;
+      // We have a similar, but smaller, grace period for non-triggered sounds,
+      // since it might take a little time to start playing all the sounds in a
+      // complex song.
+      const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
         const uniqueId = soundApi.PlaySound(
-          GROUP_PREFIX + '/' + sampleEvent.sampleId,
+          this.groupPath + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
-          eventStart
+          eventStart,
+          null,
+          false,
+          sampleEvent.effects
         );
 
         this.playingSamples.push({
           eventStart,
           uniqueId,
-          triggered: sampleEvent.triggered
         });
       }
     }
@@ -144,16 +188,16 @@ export default class SamplePlayer {
     soundApi.StopSound(PREVIEW_GROUP);
   }
 
+  /**
+   * Stops all samples that have not yet been played.
+   */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
       return;
     }
 
     for (const sample of this.playingSamples) {
-      if (
-        !sample.triggered &&
-        sample.eventStart > soundApi.GetCurrentAudioTime()
-      ) {
+      if (sample.eventStart > soundApi.GetCurrentAudioTime()) {
         soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }

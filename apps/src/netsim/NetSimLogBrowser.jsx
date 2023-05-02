@@ -11,8 +11,8 @@ const MAX_TABLE_HEIGHT = 500;
 const style = {
   scrollArea: {
     maxHeight: MAX_TABLE_HEIGHT,
-    overflowY: 'auto'
-  }
+    overflowY: 'auto',
+  },
 };
 
 export default class NetSimLogBrowser extends React.Component {
@@ -29,21 +29,17 @@ export default class NetSimLogBrowser extends React.Component {
     logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
     senderNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     renderedRowLimit: PropTypes.number,
-    teacherView: PropTypes.bool
+    teacherView: PropTypes.bool,
   };
 
   static defaultProps = {
     isAllRouterLogMode: true,
-    currentTrafficFilter: 'none'
+    currentTrafficFilter: 'none',
   };
 
   dialogTitle() {
-    const {
-      i18n,
-      teacherView,
-      isAllRouterLogMode,
-      currentTrafficFilter
-    } = this.props;
+    const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} =
+      this.props;
     if (teacherView) {
       return i18n.logBrowserHeader_teacherView();
     }
@@ -56,15 +52,15 @@ export default class NetSimLogBrowser extends React.Component {
     if (match) {
       if ('from' === match[1]) {
         header += i18n.logBrowserHeader_trafficFromAddress({
-          address: match[2]
+          address: match[2],
         });
       } else if ('to' === match[1]) {
         header += i18n.logBrowserHeader_trafficToAddress({
-          address: match[2]
+          address: match[2],
         });
       } else if ('with' === match[1]) {
         header += i18n.logBrowserHeader_trafficToAndFromAddress({
-          address: match[2]
+          address: match[2],
         });
       }
     }

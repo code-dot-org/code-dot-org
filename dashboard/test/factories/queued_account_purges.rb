@@ -13,13 +13,13 @@
 #  index_queued_account_purges_on_user_id  (user_id) UNIQUE
 #
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :queued_account_purge do
     user
-    reason_for_review "Fake reason."
+    reason_for_review {"Fake reason."}
 
     trait :autoretryable do
-      reason_for_review "Net::ReadTimeout"
+      reason_for_review {"Net::ReadTimeout"}
     end
   end
 end

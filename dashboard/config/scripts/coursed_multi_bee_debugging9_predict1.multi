@@ -4,3 +4,4 @@ wrong 'The bee will turn the wrong way when making a square.', feedback: 'Incorr
 wrong 'The loop does not run long enough for the bee to get to all flower bunches. ', feedback: 'Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.'
 right 'The bee turns the wrong way *and* the loop doesn\'t run long enough to get all of the flowers.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The bee turns the wrong way *and* the loop doesn\'t run long enough to get all of the flowers.'
+allow_multiple_attempts false

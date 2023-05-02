@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   initialUnitId: 2,
   initialCourseId: 3,
   unassignSection: () => {},
-  isRtl: false
+  isRtl: false,
 };
 
 const setUp = (overrideProps = {}) => {

@@ -30,3 +30,5 @@ Making a prediction forces you to study the code and use your intuitions based o
 # What will happen?
 We start you out with code shown here. Notice that both buttons still have the default IDs of "id". You will need to fix this because we know it causes a warning message.  But it turns out the program can still run and it does do something.  
 MARKDOWN
+
+allow_multiple_attempts true

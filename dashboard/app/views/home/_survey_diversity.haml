@@ -22,11 +22,11 @@
             = value
             %br/
 
-      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2022}
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2023}
 
       #submit
         %button.btn-primary#submitSurvey{type: "submit"} Submit
-        %span#noanswer{onclick: "return submitSurvey(false)"} Prefer not to answer
+        %button#noanswer{onclick: "return submitSurvey(false)"} Prefer not to answer
 %br/
 
 :javascript

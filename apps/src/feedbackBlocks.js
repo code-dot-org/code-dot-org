@@ -13,7 +13,7 @@ var parseXmlElement = require('./xml').parseElement;
  * @param {DisplayBlocks} missingRecommendedBlocks
  * @constructor
  */
-var FeedbackBlocks = function(
+var FeedbackBlocks = function (
   options,
   missingRequiredBlocks,
   missingRecommendedBlocks
@@ -58,7 +58,7 @@ var FeedbackBlocks = function(
 
 module.exports = FeedbackBlocks;
 
-FeedbackBlocks.prototype.render = function() {
+FeedbackBlocks.prototype.render = function () {
   // Only render if this.div exists in the DOM
   if (!document.body.contains(this.div)) {
     return;
@@ -72,7 +72,7 @@ FeedbackBlocks.prototype.render = function() {
   this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 
-FeedbackBlocks.prototype.show = function() {
+FeedbackBlocks.prototype.show = function () {
   this.div.style.visibility = '';
   this.div.style.height = '';
   if (this.blockSpaceEditor) {
@@ -80,7 +80,7 @@ FeedbackBlocks.prototype.show = function() {
   }
 };
 
-FeedbackBlocks.prototype.hide = function() {
+FeedbackBlocks.prototype.hide = function () {
   this.div.style.visibility = 'hidden';
   this.div.style.height = '0px';
 };
@@ -90,7 +90,7 @@ FeedbackBlocks.prototype.hide = function() {
  * @param {!TestableBlock[]} blocks An array of blocks to display (with optional args).
  * @return {string} The generated string of XML.
  */
-FeedbackBlocks.generateXMLForBlocks = function(blocks) {
+FeedbackBlocks.generateXMLForBlocks = function (blocks) {
   var blockXMLStrings = ['<xml>'];
   var blockX = 10; // Prevent left output plugs from being cut off.
   var blockY = 0;

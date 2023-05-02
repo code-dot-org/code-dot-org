@@ -5,7 +5,7 @@ import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboa
 
 export default {
   title: 'AssignButton',
-  component: AssignButton
+  component: AssignButton,
 };
 
 export const Basic = () => (

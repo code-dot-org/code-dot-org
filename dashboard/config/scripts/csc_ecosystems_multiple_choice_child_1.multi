@@ -5,3 +5,5 @@ wrong 'If there are any algae, remove all sick coral ', feedback: 'Incorrect.'
 right 'If there are more than 8 algae, change healthy coral to sick coral.', feedback: 'Correct!'
 wrong 'If the coral is dirty, change it to clean coral.', feedback: 'Incorrect.'
 
+
+allow_multiple_attempts false

@@ -1,21 +1,19 @@
 name 'U2L09 Assessment1'
-encrypted 'xv+LQovP8AZOqTt/sbu5PAEGV7iRgtK+wCIBV1PVMvaGiocCrBaSfXXMWQcU
-cFy5Rqvwx999xMlsUoF7Y8x0l4Rk6PaCzIj9V6pJMwylf/xdkO3kJosV0NXF
-Oh5EkzfKSO64o32BCC2B4X83x102x+l4saliw822dBPiMvuRwGp5jj6gd467
-7PL/D6EgCDQUlqNT21ef5ktG0zgarMESEvHUOj+H8JtjqE8lMdQDNTP0JQV8
-v5prXkdGb0igD6BpLMGwx42lwIyd/XvpDmJZzHxVNlnVO5Pzv1+4mvkvkDUi
-LxMSRUUW0/qeQdoXGAUz/JAINYILd5yCL8FO8YMkJLK0HUntkNIeeJN17tEV
-GXMF17lICLhQ7LYJiSYUb+EVka0yqFKgstjruIkoih/MInQPRvwmH3TX7SQk
-25v7UkzrkJL6VG+Gk26ByZC58hhAD8SkTNMdDvR+Ndy5tXR1naOrM2GgF98v
-WbhPCGC2nUQZijkrHNyCWaZB1PqwzMcyu+DJbPXmi2hoxc7yxKgrZWErfTqg
-XBDqnLpLt+ugm6Vp1zghMMNj6mPQ+NcGVkwJv1YvLzmY3bbO2oeFaayjn+fr
-sTIFXqcvbwtiPYciBCcKmqg5ggPZqKZ6A842uBF/mQHkMIbODMzKEdjQ9dL9
-2+4DPyGy7UAbZ8n3buFW6YbyqVHnQmJrAfcaevV9syZY+rjCQyhu5o+YCySR
-OQ1R+Za6YXStyCeClpME4g1AP53ggAEgiRCRw4sxYZw29/zVgyL7BYrxTxjT
-WcMNxCef5vCHtex7rQqiY9MF76SpvVpTFCb64069weksiG9Zo1G0sLv/d7LU
-01LVXm/Mzs9+3fTbaQL0rJ4e3IFfFD/YAI7mR7CA0UZMjEy0tcwtWPChgzqP
-dtR4dlIxLy8pdnkP8j2dc41HquvFobOzoo52/tNxhQltxXgQm7HSI39KuZrZ
-c/8d2zGa2uoymBqSVxJZWC8WYPl3t+DQS5hiB0zo6ZpwK/k6pIVRxKrEx8hx
-2jnu059wyo9/RSKLlaBE05HvOX21JArF/aifbLDWE7WQBIWsl0ezXYD5wkZZ
-OXDWttLMu7zYHGWQNqsjTMT9jTBZBg==
-'
+title 'The Need for DNS: Question 1'
+
+question 'A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?'
+wrong 'A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.'
+right 'B. There are too few IP addresses to meet the current demand.'
+wrong 'C. When someone new joins the Internet they must inform everyone else of the new IP address'
+wrong 'D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- B. There are too few IP addresses to meet the current demand.
+MARKDOWN
+
+allow_multiple_attempts true

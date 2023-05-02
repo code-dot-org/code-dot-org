@@ -22,17 +22,12 @@ class ManageStudentsLoginInfo extends Component {
     studentData: PropTypes.array,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
   };
 
   render() {
-    const {
-      loginType,
-      sectionId,
-      sectionCode,
-      sectionName,
-      studioUrlPrefix
-    } = this.props;
+    const {loginType, sectionId, sectionCode, sectionName, studioUrlPrefix} =
+      this.props;
 
     return (
       <div style={styles.explanation}>
@@ -46,7 +41,7 @@ class ManageStudentsLoginInfo extends Component {
                 printLoginCardLink: teacherDashboardUrl(
                   sectionId,
                   '/login_info'
-                )
+                ),
               })}
             />
             <div style={styles.sublistAlign}>
@@ -63,7 +58,7 @@ class ManageStudentsLoginInfo extends Component {
                 parentLetterLink: teacherDashboardUrl(
                   sectionId,
                   '/parent_letter'
-                )
+                ),
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
@@ -83,13 +78,13 @@ class ManageStudentsLoginInfo extends Component {
                 printLoginCardLink: teacherDashboardUrl(
                   sectionId,
                   '/login_info'
-                )
+                ),
               })}
             />
             <div style={styles.sublistAlign}>
               <InlineMarkdown
                 markdown={i18n.loginExportInstructions({
-                  articleLink: 'support.code.org'
+                  articleLink: 'support.code.org',
                 })}
               />{' '}
               <LoginExport
@@ -104,7 +99,7 @@ class ManageStudentsLoginInfo extends Component {
                 parentLetterLink: teacherDashboardUrl(
                   sectionId,
                   '/parent_letter'
-                )
+                ),
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
@@ -120,12 +115,12 @@ class ManageStudentsLoginInfo extends Component {
             <p>{i18n.setUpClassEmailIntro()}</p>
             <SafeMarkdown
               markdown={i18n.setUpClassEmail1({
-                createAccountLink: `${studioUrlPrefix}/users/sign_up`
+                createAccountLink: `${studioUrlPrefix}/users/sign_up`,
               })}
             />
             <SafeMarkdown
               markdown={i18n.setUpClassEmail2({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`
+                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
               })}
             />
             <SafeMarkdown
@@ -133,7 +128,7 @@ class ManageStudentsLoginInfo extends Component {
                 parentLetterLink: teacherDashboardUrl(
                   sectionId,
                   '/parent_letter'
-                )
+                ),
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
@@ -168,7 +163,7 @@ class ManageStudentsLoginInfo extends Component {
         <span id="uitest-privacy-link">
           <SafeMarkdown
             markdown={i18n.privacyLinkToPolicy({
-              privacyPolicyLink: pegasus('/privacy/student-privacy')
+              privacyPolicyLink: pegasus('/privacy/student-privacy'),
             })}
           />
         </span>
@@ -180,18 +175,18 @@ class ManageStudentsLoginInfo extends Component {
 const styles = {
   explanation: {
     clear: 'both',
-    paddingTop: 20
+    paddingTop: 20,
   },
   heading: {
-    color: color.purple
+    color: color.purple,
   },
   listAlign: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   sublistAlign: {
     marginLeft: 20,
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 };
 
 export default ManageStudentsLoginInfo;

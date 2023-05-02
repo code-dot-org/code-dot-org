@@ -8,11 +8,11 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import reducers, {
   initActivities,
-  initLevelSearching
+  initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 describe('ProgrammingExpressionsEditor', () => {
@@ -23,7 +23,7 @@ describe('ProgrammingExpressionsEditor', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers({
-      ...reducers
+      ...reducers,
     });
 
     store = getStore();
@@ -41,19 +41,19 @@ describe('ProgrammingExpressionsEditor', () => {
           key: '1',
           name: 'playSound',
           category: 'UI controls',
-          programmingEnvironmentName: 'applab'
+          programmingEnvironmentName: 'applab',
         },
         {
           id: 2,
           key: '2',
           name: 'stopSound',
           category: 'UI controls',
-          programmingEnvironmentName: 'applab'
-        }
+          programmingEnvironmentName: 'applab',
+        },
       ],
       programmingEnvironments: [],
       addProgrammingExpression,
-      removeProgrammingExpression
+      removeProgrammingExpression,
     };
   });
 

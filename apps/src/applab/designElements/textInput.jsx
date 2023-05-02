@@ -20,7 +20,7 @@ class TextInputProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -124,7 +124,7 @@ class TextInputEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getChangeEventCode() {
@@ -187,7 +187,7 @@ export default {
   EventTab: TextInputEvents,
   themeValues: themeValues.textInput,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
@@ -201,7 +201,7 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
@@ -212,12 +212,11 @@ export default {
     }
     // Set the background color for older projects that didn't set it on create:
     if (element.style.backgroundColor === '') {
-      element.style.backgroundColor = this.themeValues.backgroundColor[
-        themeOptions[CLASSIC_THEME_INDEX]
-      ];
+      element.style.backgroundColor =
+        this.themeValues.backgroundColor[themeOptions[CLASSIC_THEME_INDEX]];
     }
 
-    $(element).on('mousedown', function(e) {
+    $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running
         e.preventDefault();
@@ -225,14 +224,14 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function(e) {
+    $(element).on('keydown', function (e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
 
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -246,12 +245,12 @@ export default {
     return true;
   },
 
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     switch (name) {
       case 'value':
         return element.value;
       default:
         throw `unknown property name ${name}`;
     }
-  }
+  },
 };

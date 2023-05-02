@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A musician needs to get the first note name from a musical chord.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Music</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">chord</code>, which stores a musical chord formatted as <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"note1/note2/note3\"</code>. For example: <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"C/E/G\"</code>.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Music</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getFirstNote()</code> method to return a substring of the first note from the instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">chord</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MusicRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getFirstNote()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Musical Chords",
+    "bubble_choice_description": "A musician needs to get the first note name from a musical chord.",
+    "thumbnail_url": "https://images.code.org/830d2ed90d39773872820bd137a89d53-music-notes.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T13:47:27.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T13:47:27.309+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L6d_2023\\\"\"],\"cloned_from\":\"CSA U6L2-L6d_2023\"},{\"changed_at\":\"2023-04-03 13:47:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:48:12 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

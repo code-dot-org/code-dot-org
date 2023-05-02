@@ -11,7 +11,7 @@
  * @returns {?} the original argument.
  * @throws {TypeError} if the argument is missing or invalid.
  */
-exports.validateRequired = function(arg, argName, validator) {
+exports.validateRequired = function (arg, argName, validator) {
   if (undefined === arg) {
     throw new TypeError(argName + ' is required.');
   } else if (typeof validator === 'function' && !validator(arg)) {
@@ -31,7 +31,7 @@ exports.validateRequired = function(arg, argName, validator) {
  * @throws {TypeError} if a non-object is passed to the constructor.
  * @throws {Error} if extending the object would overwrite an existing property.
  */
-exports.extendOptionsObject = function(optionsObject) {
+exports.extendOptionsObject = function (optionsObject) {
   // Allow `undefined` and all objects except for `null`
   var isUndefined = optionsObject === undefined;
   var isRealObject =
@@ -62,7 +62,7 @@ exports.extendOptionsObject = function(optionsObject) {
      * @throws {TypeError} if the validator function returns FALSE when called
      *         on the option value.
      */
-    get: function(optionKey, validator, defaultValue) {
+    get: function (optionKey, validator, defaultValue) {
       if (!optionsObject || optionsObject[optionKey] === undefined) {
         return defaultValue;
       }
@@ -77,7 +77,7 @@ exports.extendOptionsObject = function(optionsObject) {
       }
 
       return optionsObject[optionKey];
-    }
+    },
   });
 };
 
@@ -88,7 +88,7 @@ exports.extendOptionsObject = function(optionsObject) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isPositiveNoninfiniteNumber = function(arg) {
+exports.isPositiveNoninfiniteNumber = function (arg) {
   return typeof arg === 'number' && !isNaN(arg) && arg >= 0 && arg !== Infinity;
 };
 
@@ -99,7 +99,7 @@ exports.isPositiveNoninfiniteNumber = function(arg) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isBoolean = function(arg) {
+exports.isBoolean = function (arg) {
   return typeof arg === 'boolean';
 };
 
@@ -109,7 +109,7 @@ exports.isBoolean = function(arg) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isString = function(arg) {
+exports.isString = function (arg) {
   return typeof arg === 'string';
 };
 
@@ -119,7 +119,7 @@ exports.isString = function(arg) {
  * @param {?} arg
  * @returns {boolean} TRUE if the provided argument is an array.
  */
-exports.isArray = function(arg) {
+exports.isArray = function (arg) {
   return Array.isArray(arg);
 };
 
@@ -130,6 +130,6 @@ exports.isArray = function(arg) {
  *          in the array is a string.
  * @static
  */
-exports.isArrayOfStrings = function(arg) {
+exports.isArrayOfStrings = function (arg) {
   return Array.isArray(arg) && arg.every(exports.isString);
 };

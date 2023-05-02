@@ -8,10 +8,10 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {Provider} from 'react-redux';
 
@@ -36,16 +36,16 @@ describe('UnitCard', () => {
           name: 'Lesson A',
           key: 'lesson-1',
           position: 1,
-          levels: []
+          levels: [],
         },
         {
           name: 'Lesson B',
           key: 'lesson-2',
           id: 101,
           position: 2,
-          levels: []
-        }
-      ]
+          levels: [],
+        },
+      ],
     },
     {
       key: 'lg-key-2',
@@ -60,17 +60,17 @@ describe('UnitCard', () => {
           key: 'lesson-3',
           name: 'Lesson C',
           position: 1,
-          levels: []
+          levels: [],
         },
         {
           name: 'Lesson D',
           key: 'lesson-4',
           id: 101,
           position: 2,
-          levels: []
-        }
-      ]
-    }
+          levels: [],
+        },
+      ],
+    },
   ];
 
   beforeEach(() => {
@@ -87,7 +87,7 @@ describe('UnitCard', () => {
       convertGroupToUserFacing,
       convertGroupToNonUserFacing,
       lessonGroups,
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
     };
   });
 
@@ -106,14 +106,16 @@ describe('UnitCard', () => {
 
   it('displays UnitCard correctly when user facing lesson groups', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(2);
+    // There are 2 lesson groups, but they have forwardRefs which causes each component
+    // to be counted twice.
+    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(4);
     expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
     expect(wrapper.find('textarea')).to.have.lengthOf(4);
 
     expect(wrapper.find('button').map(b => b.text())).to.eql([
       'Lesson',
       'Lesson',
-      'Add Lesson Group'
+      'Add Lesson Group',
     ]);
   });
 
@@ -126,18 +128,10 @@ describe('UnitCard', () => {
     );
     expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
     expect(wrapper.find('button')).to.have.lengthOf(2);
-    expect(
-      wrapper
-        .find('button')
-        .at(0)
-        .text()
-    ).to.include('Add Lesson Group');
-    expect(
-      wrapper
-        .find('button')
-        .at(1)
-        .text()
-    ).to.include('Disable Lesson Groups');
+    expect(wrapper.find('button').at(0).text()).to.include('Add Lesson Group');
+    expect(wrapper.find('button').at(1).text()).to.include(
+      'Disable Lesson Groups'
+    );
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {

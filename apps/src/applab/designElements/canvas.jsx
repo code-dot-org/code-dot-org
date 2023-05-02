@@ -12,7 +12,7 @@ class CanvasProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -68,7 +68,7 @@ class CanvasEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -76,7 +76,7 @@ class CanvasEvents extends React.Component {
     const commands = [
       `console.log("${id} clicked at x: " + event.offsetX + " y: " + event.offsetY);`,
       `setActiveCanvas("${id}");`,
-      `circle(event.offsetX, event.offsetY, 10);`
+      `circle(event.offsetX, event.offsetY, 10);`,
     ];
     const callback = `function(event) {\n\t${commands.join('\n\t')}\n}`;
     return `onEvent("${id}", "click", ${callback});`;
@@ -112,7 +112,7 @@ class CanvasEvents extends React.Component {
 export default {
   PropertyTab: CanvasProperties,
   EventTab: CanvasEvents,
-  create: function() {
+  create: function () {
     const element = document.createElement('canvas');
     element.setAttribute('width', '100px');
     element.setAttribute('height', '100px');
@@ -121,5 +121,5 @@ export default {
 
     // Note: we use CSS to make this element have a background in design mode
     // but not in code mode.
-  }
+  },
 };

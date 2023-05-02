@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import announcementsReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
@@ -15,7 +15,7 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
@@ -23,10 +23,10 @@ import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBloc
 import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
 import {
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
-$(document).ready(function() {
+$(document).ready(function () {
   prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();

@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A store clerk needs to get the price from a product label.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Product</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">label</code>, which stores the name of the product and its price as a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> (for example, <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Apple: $9.99\"</code>).\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Product</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPrice()</code> method to return a substring containing the price from the instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">label</code>. For example, the method should return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">$9.99</code> from the label <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Apple: 9.99\"</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ProductRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPrice()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Product Labels",
+    "bubble_choice_description": "A store clerk needs to get the price from a product label.",
+    "thumbnail_url": "https://images.code.org/0fe45e88d82f493dcaf470c2830119d3-product-development.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T13:46:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T13:46:20.465+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L6a_2023\\\"\"],\"cloned_from\":\"CSA U6L2-L6a_2023\"},{\"changed_at\":\"2023-04-03 13:46:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:39:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

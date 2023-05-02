@@ -13,43 +13,42 @@ const announcement = {
   buttonText: 'Go Beyond',
   description:
     "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-  link:
-    'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the'
+  link: 'http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the',
 };
 
 const announcementNoLink = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',
   description:
-    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom."
+    "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
 };
 
 const information = {
   notice: 'Did you know Clark Kent grew up in Kansas?',
   details:
     "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
-  dismissible: true
+  dismissible: true,
 };
 
 const success = {
   notice: 'Wonder Woman Saved the Day',
   details:
     "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
-  dismissible: true
+  dismissible: true,
 };
 
 const failure = {
   notice: 'Lex Luthor Attacked Metropolis',
   details:
     "If you're in the Metropolis area, get to saftey as quickly as possible",
-  dismissible: false
+  dismissible: false,
 };
 
 const warning = {
   notice: 'Batman is on Vacation in the Bahamas',
   details:
     'Now is probably not the best time to be in Gotham City. Watch your back.',
-  dismissible: true
+  dismissible: true,
 };
 
 const findCourse = {
@@ -57,12 +56,12 @@ const findCourse = {
   details: 'Try new courses to add them to your homepage.',
   buttonText: 'Find a course',
   link: '/courses',
-  dismissible: false
+  dismissible: false,
 };
 
 const firehoseAnalyticsData = {
   user_id: 1,
-  important_data_point: 2
+  important_data_point: 2,
 };
 
 const store = createStore(combineReducers({isRtl}));
@@ -306,17 +305,9 @@ describe('Notification', () => {
       />
     );
     expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon
-    ).to.equal('info-circle');
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon
-    ).to.equal('times');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
+      'info-circle'
+    );
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
   });
 });

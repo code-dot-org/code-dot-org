@@ -8,7 +8,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
  */
 export default class PairingDialog extends React.Component {
   static propTypes = {
-    source: PropTypes.string
+    source: PropTypes.string,
   };
 
   state = {isOpen: false};

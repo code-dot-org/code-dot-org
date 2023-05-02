@@ -3,7 +3,6 @@
 # apps directory)
 module AnalyticsConstants
   EVENTS = [
-    HOMEPAGE_VISITED_EVENT = 'Homepage Visited'.freeze,
     ADMIN_PAGE_VISITED_EVENT = 'Administrator Page Visited'.freeze,
     AI_PAGE_VISIT_EVENT = 'AI Page Visited'.freeze,
     CSA_CURRICULUM_PAGE_VISITED_EVENT = 'CSA Curriculum Page Visited'.freeze,

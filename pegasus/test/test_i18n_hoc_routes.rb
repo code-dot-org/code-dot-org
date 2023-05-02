@@ -35,14 +35,14 @@ class I18nHocRoutesTest < Minitest::Test
   def assert_successful_get(path)
     resp = get(path)
     assert_equal 200, resp.status, path
-  rescue Psych::SyntaxError => e
-    flunk "Caught Psych::SyntaxError when parsing YML for #{path}: #{e}. It's likely that a .yml translation file for this language received a formatting error."
-  rescue SyntaxError => e
-    flunk "Caught SyntaxError for #{path}: #{e}. It's likely that a translation incorrectly edited some templating syntax."
-  rescue NameError => e
-    flunk "Caught NameError for #{path}: #{e}. It's likely that a translation translated a template method name."
-  rescue RuntimeError => e
-    flunk "Caught RuntimeError for #{path}: #{e}. It's likely that a translation modified a .md header to introduce an invalid value"
+  rescue Psych::SyntaxError => exception
+    flunk "Caught Psych::SyntaxError when parsing YML for #{path}: #{exception}. It's likely that a .yml translation file for this language received a formatting error."
+  rescue SyntaxError => exception
+    flunk "Caught SyntaxError for #{path}: #{exception}. It's likely that a translation incorrectly edited some templating syntax."
+  rescue NameError => exception
+    flunk "Caught NameError for #{path}: #{exception}. It's likely that a translation translated a template method name."
+  rescue RuntimeError => exception
+    flunk "Caught RuntimeError for #{path}: #{exception}. It's likely that a translation modified a .md header to introduce an invalid value"
   end
 
   def load_hoc_subpages

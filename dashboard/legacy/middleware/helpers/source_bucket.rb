@@ -59,6 +59,13 @@ class SourceBucket < BucketHelper
       end
     end
 
+    if psj.in_restricted_share_mode?
+      project = Project.find_by_channel_id(encrypted_channel_id)
+      unless project.published_at.nil?
+        Projects.new(owner_id).unpublish(encrypted_channel_id)
+      end
+    end
+
     # Write the updated main.json file back to S3 as the latest version
     response = s3.put_object(bucket: @bucket, key: key, body: psj.to_json)
 

@@ -15,7 +15,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderChangeCallback
  * @constructor
  */
-var NetSimBitRateControl = (module.exports = function(
+var NetSimBitRateControl = (module.exports = function (
   rootDiv,
   initialValue,
   sliderChangeCallback
@@ -25,7 +25,7 @@ var NetSimBitRateControl = (module.exports = function(
     value: initialValue,
     min: 1,
     max: 20,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class
@@ -40,6 +40,6 @@ NetSimBitRateControl.inherits(NetSimSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimBitRateControl.prototype.valueToLabel = function(val) {
+NetSimBitRateControl.prototype.valueToLabel = function (val) {
   return NetSimUtils.bitrateToLocalizedRoundedBitrate(val);
 };

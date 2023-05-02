@@ -25,7 +25,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     workshopRollups: PropTypes.object.isRequired,
     courseName: PropTypes.string.isRequired,
     isPerFacilitator: PropTypes.bool.isRequired,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   /**
@@ -117,19 +117,19 @@ export default class SurveyRollupTableFoorm extends React.Component {
                   ? {}
                   : question.type === 'title'
                   ? styles.title
-                  : styles.question
-            })
-          ]
-        }
-      }
+                  : styles.question,
+            }),
+          ],
+        },
+      },
     ];
     this.addThisWorkshopColumns(columns);
     if (INCLUDE_OVERALL) {
       columns.push({
         property: 'overall',
         header: {
-          label: `Average across all ${this.props.courseName} workshops`
-        }
+          label: `Average across all ${this.props.courseName} workshops`,
+        },
       });
     }
     return columns;
@@ -159,9 +159,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
     rows.push({
       question: {
         text: questionData.title,
-        type: 'title'
+        type: 'title',
       },
-      id: questionId
+      id: questionId,
     });
 
     // add individual rows
@@ -170,7 +170,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
       let rowData = {
         question: {
           text: questionData.rows[rowId],
-          type: 'question'
+          type: 'question',
         },
         overall: INCLUDE_OVERALL
           ? this.getFormattedRowData(
@@ -178,7 +178,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
               denominator
             )
           : {},
-        id: rowId
+        id: rowId,
       };
       if (this.props.isPerFacilitator) {
         this.addPerQuestionAverageToRow(
@@ -218,13 +218,13 @@ export default class SurveyRollupTableFoorm extends React.Component {
     let rowData = {
       question: {
         text: questionData.title,
-        type: 'overall'
+        type: 'overall',
       },
       overall: INCLUDE_OVERALL
         ? this.getFormattedRowData(overallQuestionAverage, denominator)
         : {},
       id: questionId,
-      isHeader: true
+      isHeader: true,
     };
 
     if (this.props.isPerFacilitator) {
@@ -265,10 +265,10 @@ export default class SurveyRollupTableFoorm extends React.Component {
     let overallData = {
       question: {
         text: questionData.header,
-        type: 'overall'
+        type: 'overall',
       },
       id: `${questionId}-category`,
-      isHeader: true
+      isHeader: true,
     };
     if (INCLUDE_OVERALL) {
       overallData.overall = this.getFormattedRowData(
@@ -304,9 +304,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
     let responseCounts = {
       question: {
         text: 'Total Responses',
-        type: 'overall'
+        type: 'overall',
       },
-      id: 'total_responses'
+      id: 'total_responses',
     };
     if (INCLUDE_OVERALL) {
       responseCounts.overall = workshopRollups.overall.response_count;
@@ -337,20 +337,16 @@ export default class SurveyRollupTableFoorm extends React.Component {
       columns.push({
         property: 'thisWorkshop',
         header: {
-          label: 'Average for this workshop'
-        }
+          label: 'Average for this workshop',
+        },
       });
     }
     let columnLabels = [];
     for (const facilitator in this.props.facilitators) {
       columnLabels.push({
-        thisWorkshopLabel: `${
-          this.props.facilitators[facilitator]
-        }'s average for this workshop`,
-        averageLabel: `Average across all of ${
-          this.props.facilitators[facilitator]
-        }'s ${this.props.courseName} workshops`,
-        id: facilitator
+        thisWorkshopLabel: `${this.props.facilitators[facilitator]}'s average for this workshop`,
+        averageLabel: `Average across all of ${this.props.facilitators[facilitator]}'s ${this.props.courseName} workshops`,
+        id: facilitator,
       });
     }
     for (const columnLabel of columnLabels) {
@@ -358,15 +354,15 @@ export default class SurveyRollupTableFoorm extends React.Component {
         columns.push({
           property: `thisWorkshop-${columnLabel.id}`,
           header: {
-            label: columnLabel.thisWorkshopLabel
-          }
+            label: columnLabel.thisWorkshopLabel,
+          },
         });
       }
       columns.push({
         property: `facilitatorAverage-${columnLabel.id}`,
         header: {
-          label: columnLabel.averageLabel
-        }
+          label: columnLabel.averageLabel,
+        },
       });
     }
   }
@@ -466,15 +462,15 @@ export default class SurveyRollupTableFoorm extends React.Component {
 
 const styles = {
   title: {
-    paddingLeft: '30px'
+    paddingLeft: '30px',
   },
   question: {
-    paddingLeft: '60px'
+    paddingLeft: '60px',
   },
   headerRow: {
-    borderTop: 'solid'
+    borderTop: 'solid',
   },
   dateNotice: {
-    textAlign: 'right'
-  }
+    textAlign: 'right',
+  },
 };
