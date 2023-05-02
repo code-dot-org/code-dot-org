@@ -24,7 +24,7 @@
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",

@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Potańcówka</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Zakoduj Potańcówkę, aby udostępnić przyjaciołom i rodzinie. Z udziałem Katy Perry, Shawn Mendesa, Panic! Na The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, i 34 więcej!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Wypróbuj tę aktywność</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Zakoduj Potańcówkę, aby udostępnić przyjaciołom i rodzinie. Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka z filmu Disneya "Encanto,” i więcej!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Wypróbuj aktywność</button></a>
     </span>
   </div>
 </div>

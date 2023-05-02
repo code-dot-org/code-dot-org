@@ -4,11 +4,56 @@
       "programming_environments": {
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "Predvaja MP3 zvočno datoteko iz danega URL-ja."
+                }
+              }
+            },
             "groups": {
-              "name": "Skupine"
+              "name": "Skupine",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Spremenljivke"
@@ -21,8 +66,66 @@
         "applab": {
           "description": "App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Predvaja MP3 zvočno datoteko iz danega URL-ja."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Spremenljivke"

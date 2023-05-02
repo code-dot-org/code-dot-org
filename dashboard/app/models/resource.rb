@@ -37,7 +37,7 @@ class Resource < ApplicationRecord
   validates_presence_of :name
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
-  has_and_belongs_to_many :scripts, join_table: :scripts_resources
+  has_and_belongs_to_many :scripts, class_name: 'Unit', join_table: :scripts_resources, association_foreign_key: 'script_id'
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
   belongs_to :course_version, optional: true
 
@@ -146,9 +146,7 @@ class Resource < ApplicationRecord
     end
   end
 
-  private
-
-  def generate_key_from_name
+  private def generate_key_from_name
     # This is a litte silly, but we want to replace all characters in the
     # string that DON'T match our formatting regex, so rather than doing
     # something simple like gsub (which can only do positive matches) we have

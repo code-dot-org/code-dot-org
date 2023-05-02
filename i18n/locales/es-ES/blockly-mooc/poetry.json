@@ -47,7 +47,7 @@
   "poTitle": "Montaña",
   "poem": "Poema:",
   "profanityFoundError": "Tu poema contiene lenguaje inapropiado por lo que no se guardará. Por favor, actualiza tu poema para eliminar las  {wordCount, plural, one {word} other {words}} \"{words}\".",
-  "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para pasar al siguiente nivel.",
+  "reinfFeedbackMsg": "¡Has terminado! Pulsa \"Continuar\" para pasar al siguiente nivel.",
   "removedSprite": "Te falta un sprite. Busca este bloque y añádelo a tu código:\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"ola_océano\"</title><title name=\"LOCATION\">'{\"x\":200,\"y\":243}'</title></block></xml>",
   "riosLines": "La biblioteca es el libro de los libros,\nSus cubiertas de hormigón, madera y vidrio.\n\nManteniendo dentro de ellas la muy grande,\nmuy larga historia de todo.\n\nLa biblioteca es peligrosa, \nllena de respuestas. Si entras,\n\nPuede que no salgas\nSiendo la misma persona que entró.",
   "riosTitle": "No entres en la Biblioteca",

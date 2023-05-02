@@ -1,0 +1,20 @@
+{
+  "no-NO": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Programmeringstenkning"
+        },
+        "L": {
+          "description": "Språk"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "Funksjoner"
+        }
+      }
+    }
+  }
+}

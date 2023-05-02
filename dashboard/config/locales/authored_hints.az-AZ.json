@@ -86,7 +86,8 @@
           "solution": "**Həlli**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">6</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"controls_for_counter\" inline=\"true\">\n                  <mutation counter=\"counter\"></mutation>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">17</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">500</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"procedures_callnoreturn\" inline=\"false\">\n                            <mutation name=\"draw a polygon\">\n                            <arg name=\"length\"></arg>\n                            <arg name=\"sides\"></arg>\n                            </mutation>\n                            <value name=\"ARG0\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">30</title>\n                              </block>\n                            </value>\n                            <value name=\"ARG1\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">20</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">60</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "course1_maze_seq_challenge2": {
           "courseB_maze_seq_challenge1_b": "Başlamaq üçün qərbə doğru hərəkət edin.",
@@ -121,10 +122,12 @@
           "courseA_maze_seq_challenge1_a": "Bu pazl üçün iki həll var."
         },
         "courseB_collector_loops_challenge1": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseB_collector_loops_challenge1_2018": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseD_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_d": "**Həlli:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
@@ -247,10 +250,12 @@
           "courseA_maze_seq_challenge1_a": "Bu pazl üçün iki həll var."
         },
         "courseB_collector_loops_challenge1_2019": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseB_collector_loops_challenge1_2020": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseC_artist_loopsPrePre1a": {
           "courseC_artist_loopsPrePre1a_a": "Ehtiyacının olacaq ilk blok budur:\n![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)",
@@ -269,7 +274,8 @@
           "courseA_maze_seq_challenge1_a": "Bu pazl üçün iki həll var."
         },
         "courseB_collector_loops_challenge1_2021": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseF_artist_for_challenge1_2021": {
           "courseF_artist_for_challenge1_d": "**Həlli:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -325,7 +331,8 @@
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_c": "Donuza necə gedəcəyinizi bilmirsiniz? Bu yolu sınayın.",
-          "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!"
+          "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!",
+          "courseB_maze_seq5_a": "Əgər ilişib qalsanız, yolu kağız üzərində çəkməyə çalışın"
         },
         "courseB_maze_seq6": {
           "courseB_maze_seq5_d": "Donuza necə gedəcəyinizi bilmirsiniz? Bu yolu sınayın!",
@@ -452,19 +459,29 @@
           "courseC_artist_prog5_d": "Hər dönüş 90 dərəcə sağa doğru olmalıdır."
         },
         "courseC_artist_prog7": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_artist_prog7_2018": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_artist_prog7_2019": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_artist_prog7_2020": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_artist_prog7_2021": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
@@ -1121,8 +1138,8 @@
           "courseE_bee_concept3a_b": "Döngələri hara qoyacağınızı anlaya bilmirsinizsə, kodunuzu addım-addım yazmağa və nümunələri axtarmağa çalışın."
         },
         "courseE_bee_functions1": {
-          "courseE_bee_functions1_a": "Sola və sağa dönmələrin arı baxımından olduğunu unutmayın.",
-          "courseE_bee_functions1_b": "Kodunuzu daha qısa etmək üçün nektar toplayarkən bir \"təkrar\" döngədən istifadə edin.",
+          "courseE_bee_functions1_a": "Sola və sağa dönmələrin arı nöqteyi - nəzərindən olduğunu yadda saxlayın.",
+          "courseE_bee_functions1_b": "Kodunuzu daha qısa etmək üçün nektar toplayarkən bir \"təkrar\" dövrdən istifadə edin.",
           "courseE_bee_functions1_c": "Sola və sağa dönmələrin arı baxımından olduğunu unutmayın."
         },
         "courseE_bee_functions10": {
@@ -1152,13 +1169,13 @@
           "courseE_bee_functions5_b": "İşiniz arını etməlidir:\n\n-   dön\n-   önə doğru irəlilə\n-   nektarın hamısını yığın\n-   geriyə doğru hərəkət edin\n-   arının başladığı istiqamətə qayıdın"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_b": "Bu vəziyyətdə funksiyanın içərisində hərəkət etməyə kömək edə bilər, ancaq bütün \"hərəkət\" bloklarınızın orada olmasına ehtiyac yoxdur."
+          "courseE_bee_functions6_b": "Bu vəziyyətdə funksiyanın içərisində hərəkət etməyə kömək edə bilər, ancaq bütün \"hərəkət et\" bloklarınızın orada olmasına ehtiyac yoxdur."
         },
         "courseE_bee_functions7": {
           "courseE_bee_functions7_c": "Bu funksiya arını onu yoldan aşağı salmaq, nektarı toplamaq, bal etmək, sonra arını çevirib geri gətirmək üçün arını çevirməlidir."
         },
         "courseE_bee_functions8": {
-          "courseE_bee_functions8_a": "İşinizdə yalnız nektar toplamaq lazımdır. Təkrar döngə əvəzinə bir müddət döngəsindən istifadə etməyə çalışın.",
+          "courseE_bee_functions8_a": "Sizin funksiyanıza  yalnız nektar toplamaq lazım olacaq. Təkrar dövr əvəzinə bir müddət dövründən istifadə etməyə çalışın.",
           "courseE_bee_functions8_b": "Bütün nektarı aldığınızdan əmin olmaq üçün \\`while nektar> 0 'istifadə edin.",
           "courseE_bee_functions8_c": "Əsas proqramınız bir pilləkən addım hərəkəti modelinə ehtiyac duyacaqdır. Unutmayın, əsas proqram `çalıştırıldığında` bloku altındakı koddur."
         },
@@ -1523,7 +1540,8 @@
           "courseD_bee_nestedLoops2_c": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
         },
         "courseD_farmer_while4_2021": {
-          "courseD_farmer_conditionals4_b": "Bu əvvəlki bir tapmacaya çox bənzəyir, tək fərq sənə lazım olan döngədədir. "
+          "courseD_farmer_conditionals4_b": "Bu əvvəlki bir tapmacaya çox bənzəyir, tək fərq sənə lazım olan döngədədir. ",
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
         },
         "courseD_farmer_while7_2021": {
           "courseD_farmer_conditionals8_c": "Hər yolun sonunda nə etmək lazımdır? "
@@ -1545,10 +1563,12 @@
           "2-3_Maze_6_a": "Bu tapmacanı həll etmək üçün 2 yol var!"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
+          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir.",
+          "challenges": "**Könüllü Məsələlər**\n\n-   Oynamaq üçün fərqli mahnı seçin.\n-   Rəqqasınızı yeni yerə köçürün.\n-   Birdən çox rəqqas edin."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
+          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir.",
+          "challenges": "**Könüllü Məsələlər**\n\n-   Oynamaq üçün fərqli mahnı seçin.\n-   Rəqqasınızı yeni yerə köçürün.\n-   Birdən çox rəqqas edin."
         },
         "CourseD_Dance_2020_04": {
           "validation": "\\*\\*Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Rəqqas 4 addimdan sonra  yeni bir hərəkətə keçməlidir.\n    _Bu səviyyə 7 addimdan sonra bitir._"
@@ -1597,7 +1617,8 @@
           "validation": "\\*\\*Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Sadəcə yaradıcı olun!\n    \\__Bu səviyyə 7 addimdan sonra bitir._"
         },
         "Dance_2019_01": {
-          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
+          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir.",
+          "challenges": "**Könüllü Məsələlər**\n\n-   Oynamaq üçün fərqli mahnı seçin.\n-   Rəqqasınızı yeni yerə köçürün.\n-   Birdən çox rəqqas edin."
         },
         "Dance_2019_04": {
           "validation": "\\*\\*Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Rəqqas 4 addimdan sonra  yeni bir hərəkətə keçməlidir.\n    _Bu səviyyə 7 addimdan sonra bitir._"
@@ -1862,26 +1883,35 @@
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2021": {
           "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
           "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz. Ən az sayda blok hansı yoldan keçir?"
         },
         "Overworld House Frame Chosen": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2019": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2020": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
@@ -1900,13 +1930,19 @@
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2019": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2020": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Shear Sheep": {
           "mc_3_a": "`Qırx` bloku önündəki qoyunu götürür. Qoyunla üz-üzəsən?",
@@ -2192,15 +2228,18 @@
         },
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!",
-          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. "
+          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. ",
+          "courseB_maze_seq5_a": "Əgər ilişib qalsanız, yolu kağız üzərində çəkməyə çalışın"
         },
         "courseB_maze_seq5_2019": {
           "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!",
-          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. "
+          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. ",
+          "courseB_maze_seq5_a": "Əgər ilişib qalsanız, yolu kağız üzərində çəkməyə çalışın"
         },
         "courseB_maze_seq5_2020": {
           "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!",
-          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. "
+          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. ",
+          "courseB_maze_seq5_a": "Əgər ilişib qalsanız, yolu kağız üzərində çəkməyə çalışın"
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Çətinliklə qarşılaşsanız addımları bir kağıza yazmağa çalışın. ",
@@ -2247,7 +2286,8 @@
         },
         "courseB_maze_seq8": {
           "courseB_maze_seq8_b": "Bu tapmacanı həll etmək üçün 2 yol var!",
-          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
+          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!",
+          "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_maze_seq8_2021": {
           "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyi sınayın.",
@@ -2255,16 +2295,24 @@
           "courseB_maze_seq8_c": "Hansı yoldan getməli olduğunuzu bilmirsiniz? Bu yolu yoxlayın!"
         },
         "courseB_maze_seq9": {
-          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var."
+          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var.",
+          "courseB_maze_seq9_a": "Əvvəlcə bütün addımları bir kağız parçasına yazmağa çalışın.",
+          "courseB_maze_seq9_d": "İlişmisiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq9_2018": {
-          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var."
+          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var.",
+          "courseB_maze_seq9_a": "Əvvəlcə bütün addımları bir kağız parçasına yazmağa çalışın.",
+          "courseB_maze_seq9_d": "İlişmisiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq9_2019": {
-          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var."
+          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var.",
+          "courseB_maze_seq9_a": "Əvvəlcə bütün addımları bir kağız parçasına yazmağa çalışın.",
+          "courseB_maze_seq9_d": "İlişmisiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq9_2020": {
-          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var."
+          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var.",
+          "courseB_maze_seq9_a": "Əvvəlcə bütün addımları bir kağız parçasına yazmağa çalışın.",
+          "courseB_maze_seq9_d": "İlişmisiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_a": "Əvvəlcə addımları bir kağıza yazmağa çalışın.",
@@ -2273,16 +2321,20 @@
           "courseB_maze_seq9_d": "İlişibsiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq_challenge1": {
-          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər."
+          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
+          "courseB_maze_seq_challenge1_b": "Başlamaq üçün <xml><block type=\"maze_moveWest\"/></xml> blokundan istifadə etməyi sınayın."
         },
         "courseB_maze_seq_challenge1_2018": {
-          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər."
+          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
+          "courseB_maze_seq_challenge1_b": "Başlamaq üçün <xml><block type=\"maze_moveWest\"/></xml> blokundan istifadə etməyi sınayın."
         },
         "courseB_maze_seq_challenge1_2019": {
-          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər."
+          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
+          "courseB_maze_seq_challenge1_b": "Başlamaq üçün <xml><block type=\"maze_moveWest\"/></xml> blokundan istifadə etməyi sınayın."
         },
         "courseB_maze_seq_challenge1_2020": {
-          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər."
+          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
+          "courseB_maze_seq_challenge1_b": "Başlamaq üçün <xml><block type=\"maze_moveWest\"/></xml> blokundan istifadə etməyi sınayın."
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
@@ -2552,7 +2604,8 @@
         },
         "courseC_starWars_loops4_2021": {
           "courseC_starWars_loops4_a": "İki 'təkrarla' blokundan istifadə edin.",
-          "courseC_starWars_loops4_c": "Dönüş blokundakı \"sol\" un yanındakı kiçik oxu tıklayaraq onu \"sağa\" dəyişə bilərsiniz."
+          "courseC_starWars_loops4_c": "Dönüş blokundakı \"sol\" un yanındakı kiçik oxu tıklayaraq onu \"sağa\" dəyişə bilərsiniz.",
+          "courseC_starWars_loops4_b": "Hər bir 'təkrar et' dövrünün içində yalnız bir əmri olacaq: \" irəli hərəkət et\"."
         },
         "courseC_starWars_loops4_copy": {
           "courseC_starWars_loops4_a": "İki 'tekrarla' bloku istifadə et. "
@@ -2846,7 +2899,7 @@
           "cat_xml": "Kostyumların hər blokda uyğun olduğundan əmin olun."
         },
         "helloworld_animals_say": {
-          "hello-world-first-solution-bear": "Ayıya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\nblok"
+          "hello-world-first-solution-bear": "Ayıya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Emojiyə bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -2885,22 +2938,34 @@
           "alternate": "Alternativ blok \"Rəqqasələr\" kateqoriyasındadır."
         },
         "Overworld Avoid Monsters": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2019": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2020": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Plant Crops": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -2943,52 +3008,67 @@
           "courseD_harvester_nested_loops_challenge1_a": "Yəqin ki, siz artıq ziq-zaq nümunəsi yaratmaq üçün bir döngədən istifadə etmisiniz. Əgər o alqoritmi xatırlayırsınızsa, burada ona bir neçə əlavə edə bilərsiniz"
         },
         "courseA_artist_loops3": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops3_2018": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops3_2019": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops3_2020": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops3_2021": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops4_2021": {
           "courseA_artist_loops4_a": "Döngünün 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops5": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops5_2018": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops5_2019": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops5_2021": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops6": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops6_2018": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops6_2019": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops6_2020": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops6_2021": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops7": {
           "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin."
@@ -3076,10 +3156,12 @@
           "courseA_harvester_loops1_a": "Qarğıdalıya tərəf hərəkət etdikdə, onu toplamaq üçün bu blokdan istifadə edin!\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir."
+          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir.",
+          "courseA_harvester_loops2_b": "Hələ də çətinlik çəkirsinizsə, addımları yüksək səslə deməyə çalışın."
         },
         "courseA_harvester_loops2_2020": {
-          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir."
+          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir.",
+          "courseA_harvester_loops2_b": "Hələ də çətinlik çəkirsinizsə, addımları yüksək səslə deməyə çalışın."
         },
         "courseA_harvester_loops2_2021": {
           "courseA_harvester_loops2_a": "Sənin kodunda _dörd_ `qərbə get` olacaq\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklar və _dörd_ <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blokları.",
@@ -3105,13 +3187,16 @@
           "courseA_harvester_loops6_b": "Bu sənin bütün qarğıdalıları toplamaq üçün keçməli olduğun yoldur."
         },
         "courseA_harvester_loops9": {
-          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!"
+          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!",
+          "courseA_harvester_loops9_b": "Hər hissədən sonra kodunuzu işə salmaqdan və nə olduğunu görməkdən qorxmayın!"
         },
         "courseA_harvester_loops9_2019": {
-          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!"
+          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!",
+          "courseA_harvester_loops9_b": "Hər hissədən sonra kodunuzu işə salmaqdan və nə olduğunu görməkdən qorxmayın!"
         },
         "courseA_harvester_loops9_2020": {
-          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!"
+          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!",
+          "courseA_harvester_loops9_b": "Hər hissədən sonra kodunuzu işə salmaqdan və nə olduğunu görməkdən qorxmayın!"
         },
         "courseA_harvester_seq1": {
           "courseA_harvester_seq1_a": "Qarğıdalı biçən maşın onu tapanda bu bloku istifadə edin!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml> ",
@@ -3376,15 +3461,18 @@
         },
         "courseB_maze_seq8_2018": {
           "courseB_maze_seq8_b": "Bu tapmacanı həll etməyin birdən çox yolu var. ",
-          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
+          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!",
+          "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_maze_seq8_2019": {
           "courseB_maze_seq8_b": "Bu tapmacanı həll etməyin birdən çox yolu var. ",
-          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
+          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!",
+          "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_maze_seq8_2020": {
           "courseB_maze_seq8_b": "Bu tapmacanı həll etməyin birdən çox yolu var. ",
-          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
+          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!",
+          "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_playlab_events7_2021": {
           "courseB_playlab_events7_b": "Səsi oynatmaq üçün lazım olan blok budur.\n\"Blockly\"blok[0]",
@@ -3550,7 +3638,8 @@
           "courseC_starWars_loops6_a": "Bütün hərəkətləri bir kağıza yazmağa və nümunə axtarmağa çalışın."
         },
         "courseD_artist_1_2021": {
-          "courseD_artist_project1_a": "Lazım olan bucağı seçmək üçün \"dönmə\" bloklarında açılan menyudan istifadə edin!"
+          "courseD_artist_project1_a": "Lazım olan bucağı seçmək üçün \"dönmə\" bloklarında açılan menyudan istifadə edin!",
+          "courseD_artist_project1_b": "Yadda saxla ki, 'irəli hərəkət et' xətt çəkir, amma 'irəli hoppan' çəkmir."
         },
         "courseD_artist_2_2021": {
           "courseD_artist_project1_b": "Unutmayın ki, \"hərəkət\" bir xətt çəkir, \"atlama\" isə çəkmir.",
@@ -4412,11 +4501,13 @@
         },
         "courseE_artist_concept4": {
           "courseE_artist_concept4_b": "Bir kvadrat yaratmağa çalışın. Sonra kvadratlardan bir xətt düzəldin. Sonra nə gəlir?",
-          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?"
+          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?",
+          "courseE_artist_concept4_a": "Bu tapmacanı həll etməyin bir neçə yolu var. Plan qura bilərsinizmi?"
         },
         "courseE_artist_concept4_2018": {
           "courseE_artist_concept4_b": "Bir kvadrat yaratmağa çalışın. Sonra kvadratlardan bir xətt düzəldin. Sonra nə gəlir?",
-          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?"
+          "courseE_artist_concept4_c": "Kvadratların xəttini çəkdikdən sonra ya dönüb sola gedən başqa kvadrat xətti çəkə bilərsiniz, ya da sağa gedən kvadratların başqa xəttini çəkmək üçün fiqurun sol tərəfinə geri atlaya bilərsiniz. Hansına üstünlük verirsən?",
+          "courseE_artist_concept4_a": "Bu tapmacanı həll etməyin bir neçə yolu var. Plan qura bilərsinizmi?"
         },
         "courseE_artist_concept_challenge1": {
           "courseE_artist_concept_challenge1_c": "Tam forma vermək üçün təkrarlamaq istədiyiniz dizayn budur:\n\n![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)"
@@ -4874,7 +4965,8 @@
           "courseD_bee_nested_loops_challenge2_d": "**Həlli:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseD_Dance_2020_012022": {
-          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir."
+          "validation": "\\*\\* Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Ekranda rəqqasənin göründüyündən əmin olun.\n\n\\_Bu səviyyə 4 addimdan sonra bitir.",
+          "challenges": "**Könüllü Məsələlər**\n\n-   Oynamaq üçün fərqli mahnı seçin.\n-   Rəqqasınızı yeni yerə köçürün.\n-   Birdən çox rəqqas edin."
         },
         "CourseD_Dance_2020_042022": {
           "validation": "\\*\\*Bu səviyyəni necə keçə bilərəm? \\*\\*\n\n-   Rəqqas 4 addimdan sonra  yeni bir hərəkətə keçməlidir.\n    _Bu səviyyə 7 addimdan sonra bitir._"
@@ -4948,27 +5040,36 @@
           "MC_HOC_2017_08_RY_c": "Lavadan sadə bir yolla keçmək üçün nöqtəli xətti izləməyə çalışın."
         },
         "Overworld Avoid Monsters2022": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Chop Tree2022": {
           "mc_2_a": "Ağacın önündə durmaq üçün iki dəfə `irəli gedin`.",
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees2022": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld House Frame Chosen2022": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep2022": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall2022": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Plant Crops2022": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart2022": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -4988,13 +5089,16 @@
           "mc_10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
         },
         "courseA_artist_loops32022": {
-          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz."
+          "courseA_artist_loops3_b": "Bu tapmacanı həll etmək üçün bunun kimi  bir blokdan istifadə etmək istəyəcəksiniz.",
+          "courseA_artist_loops3_a": "Harada səhv getdiyini görmək üçün proqramı barmağınızla yavaş-yavaş izləyin."
         },
         "courseA_artist_loops52022": {
-          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın."
+          "courseA_artist_loops5_a": "Bu puzzle-ı tamamlamaq üçün <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> haqqında öyrəndiklərinizi istifadə etməyə çalışın.",
+          "courseA_artist_loops5_b": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
         },
         "courseA_artist_loops62022": {
-          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq."
+          "courseA_artist_loops6_b": "Bu tapmacanı həll etmək üçün 2 istiqamətdə 2 bloka ehtiyacınız olacaq.",
+          "courseA_artist_loops6_a": "Təpənin necə qurulacağını anlaya bilmirsiniz? Hər birinin nə çəkdiyini görmək üçün bloklarla bir az oynamağa çalışın."
         },
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_b": "İlk öncə bir dalğa üçün kod yazmağa çalışın, sonra digər ikisini çəkmək üçün həmin kodu təkrar edin."
@@ -5043,10 +5147,12 @@
           "courseA_collector_loops_challenge2kp_a": "Bu pazlı həll etmək üçün dövrləri istifadə edə bilərsinizmi?"
         },
         "courseA_harvester_loops22022": {
-          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir."
+          "courseA_harvester_loops2_a": "Sizin kodunuz  **dört**`qərbə get`\n<xml><block type=\"maze_moveWest\"/></xml>\nbloklarına və **dört**<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> bloklarına sahibdir.",
+          "courseA_harvester_loops2_b": "Hələ də çətinlik çəkirsinizsə, addımları yüksək səslə deməyə çalışın."
         },
         "courseA_harvester_loops92022": {
-          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!"
+          "courseA_harvester_loops9_c": "Bütün qarğıdalını yığmaq üçün bu yolu izlə!",
+          "courseA_harvester_loops9_b": "Hər hissədən sonra kodunuzu işə salmaqdan və nə olduğunu görməkdən qorxmayın!"
         },
         "courseA_harvester_seq12022": {
           "courseA_harvester_seq1_a": "Qarğıdalı biçən maşın onu tapanda bu bloku istifadə edin!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml> ",
@@ -5146,7 +5252,8 @@
           "courseB_collector_loops4_b": "Laurelin nə qədər uzağa getdiyini dəyişmək üçün döngənin neçə dəfə işlədiyini dəyişdirin."
         },
         "courseB_collector_loops_challenge12022": {
-          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "Bunu yoxlayın!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Hər bir yolun arası ilə İki dəfə şərqə hərəkət edin.\n\n[bloklu blok] [0]\n\nSiz bunu yalnız 14 blokla edə bilərsiniz. Həlli görmək üçün daha bir işarə üçün klikləyin."
         },
         "courseB_maze_seq12022": {
           "courseB_maze_seq1_a": "Scratı hərəkət etdirmək üçün blokları <xml><block type=\"when_run\"/></xml> blokuna birləşdirin!"
@@ -5156,7 +5263,8 @@
         },
         "courseB_maze_seq52022": {
           "courseB_maze_seq5_b": "Bu tapmacanı həll etməyin 2 yolu var!",
-          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. "
+          "courseB_maze_seq5_c": "Palıd qozasına necə çatacağınızdan əmin deyilsiz? Bu yolu yoxlayın. ",
+          "courseB_maze_seq5_a": "Əgər ilişib qalsanız, yolu kağız üzərində çəkməyə çalışın"
         },
         "courseB_maze_seq62022": {
           "courseB_maze_seq6_a": "Sizin son kodunuz 3 ədəd hərəkət blokundan ibarət olmalıdır.",
@@ -5169,13 +5277,17 @@
         },
         "courseB_maze_seq82022": {
           "courseB_maze_seq8_b": "Bu tapmacanı həll etməyin birdən çox yolu var. ",
-          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
+          "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!",
+          "courseB_maze_seq8_a": "Tapmacanı həll edənə qədər hər dəfə bir blok əlavə etməyə çalışın."
         },
         "courseB_maze_seq92022": {
-          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var."
+          "courseB_maze_seq9_c": "Bu tapmacanı həll etməyin iki yolu var.",
+          "courseB_maze_seq9_a": "Əvvəlcə bütün addımları bir kağız parçasına yazmağa çalışın.",
+          "courseB_maze_seq9_d": "İlişmisiniz? Bu yolu sınayın!"
         },
         "courseB_maze_seq_challenge12022": {
-          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər."
+          "courseB_maze_seq_challenge1_a": "Ən qısa yol bu dəfə işləməyə bilər.",
+          "courseB_maze_seq_challenge1_b": "Başlamaq üçün <xml><block type=\"maze_moveWest\"/></xml> blokundan istifadə etməyi sınayın."
         },
         "courseB_maze_seq_challenge22022": {
           "courseB_maze_seq_challenge2_a": "Bu tapmacanı həll etmək üçün blok əlavə etmək və ya silmək lazım deyil."
@@ -5246,7 +5358,9 @@
           "courseC_artist_prog5_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
         },
         "courseC_artist_prog72022": {
-          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_artist_prog7_e": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_artist_prog7_a": "Hər bir bucaq 45 və ya 90 dərəcədir.",
+          "courseC_artist_prog7_b": "İlk addımda işləyirmi?\\\nBəs ikincisidə?\\\nHarada səhv gedir?"
         },
         "courseC_collector_prog12022": {
           "courseC_collector_prog1_a": "Xəzinə olan bir məkanda dayandığınız zaman onu götürmək üçün <xml><block type=\"collector_collect\"/></xml> blokundan istifadə edin.",
@@ -5641,6 +5755,512 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Pizzaya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\nblok"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!\n\nBaşlamağınız üçün bəzi nümunələr:\n\n-   6 dəfə 60 dərəcə dönməyə çalışın\n-   8 dəfə 45 dərəcə dönməyə çalışın\n-   12 dəfə 30 dərəcə dönməyə çalışın"
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Bunu asanlıqla etmək üçün:\n\n- 4 dəfə təkrarlayın\n   - bir dairə düzəldin\n   - 50 piksel irəli atlama\n   - 90 dərəcə sağa dönün"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Daxili döngənin kvadratın kodu olduğu bir iç-içə döngədən istifadə edin.\n\n- 6 dəfə təkrarlayın\n   - kvadrat düzəldin\n   - **50 piksel** irəli atlayın\n   - dönmək **60 dərəcə**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "İç-içə döngədən istifadə edin:\n\n   - 8 dəfə təkrarlayın\n     - altıbucaqlı çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "İki iç-içə döngədən istifadə edin:\n   - 8 dəfə təkrarlayın\n     - kvadrat çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün\n   - 8 dəfə təkrarlayın\n     - üçbucaq çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_behavior_hint": "\"Sprite başlayır\" blokunun bir blok \"tıklayan\" əlavə edin. Davranış əlavə unutmayın!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_costume_hint": "\"Kostyum\" blokuna \"tıklayan\" bloku əlavə edin. Siz hadisə blok daxilində tapa bilərsiniz!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_say_hint": "Blok əlavə et \"demək\" blokuna \"tıkladı\". Siz hadisə blok daxilində tapa bilərsiniz!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Hadisələr blokunda ' + ' düyməsini basın. Proqram başa çatdırmaq üçün daxili blok istifadə edin.\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_touch_-2022-2": {
+          "groups_touch_hint": "Siz blok hadisələr lazımdır. Sizin sprites \"Run\" basaraq sonra toxunmaq qədər gözləyin!\"\n\n\\[[Block blok] [0]"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "\\*\\*Bu mərhələni necə keçim? \\*\\*\n\n-   Yalnız \"bitir\" düyməsini sıxınş"
+        },
+        "Farmer for Authored Hint testing": {
+          "second_hint": "Bu ikinci işarədir. Bir ipucu videosu var.",
+          "last_hint": "Bu, üçüncü və son göstərişdir. Xüsusi bir şey yoxdur."
+        },
+        "Farmer for TTS testing": {
+          "last_hint": "Bu, üçüncü və son göstərişdir. Xüsusi bir şey yoxdur."
+        },
+        "course1_artist_loops_challenge3": {
+          "courseA_artist_loops_challenge2_b": "Nə vaxt bir quşun evini bitirsən 'hoppan' digərinə."
+        },
+        "course1_collector_loops_challenge4": {
+          "courseB_collector_loops_challenge2_a": "Əgər nə isə səhv gedirsə yenidən başlamağa qorxmayın. İmtina etməyin.",
+          "courseB_collector_loops_challenge2_d": "Bu həll yolunu cəhd et.\n[Bloklu blok] [0]"
+        },
+        "courseA_artist_loops2": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops22022": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops2_2018": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops2_2019": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops2_2020": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "Xəttin necə çəkiləcəyini anlaya bilmirsiniz? Nə baş verdiyini görmək üçün <xml><block type=\"when_run\"/></xml> blokuna bloklar əlavə etməyə başlayın.",
+          "courseA_artist_loops2_b": "Bu tapmacanı həll etmək üçün bu blokdan <xml><block type=\"simple_move_right\"/></xml> istifadə edin."
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseA_harvester_loops2": {
+          "courseA_harvester_loops2_b": "Hələ də çətinlik çəkirsinizsə, addımları yüksək səslə deməyə çalışın."
+        },
+        "courseA_harvester_loops4": {
+          "courseA_harvester_loops4_a": "Nə baş verdiyini görmək üçün “İcra Et” düyməsinə basmaqdan qorxmayın!"
+        },
+        "courseA_harvester_loops42022": {
+          "courseA_harvester_loops4_a": "Nə baş verdiyini görmək üçün “İcra Et” düyməsinə basmaqdan qorxmayın!"
+        },
+        "courseA_harvester_loops4_2019": {
+          "courseA_harvester_loops4_a": "Nə baş verdiyini görmək üçün “İcra Et” düyməsinə basmaqdan qorxmayın!"
+        },
+        "courseA_harvester_loops4_2020": {
+          "courseA_harvester_loops4_a": "Nə baş verdiyini görmək üçün “İcra Et” düyməsinə basmaqdan qorxmayın!"
+        },
+        "courseA_harvester_loops5": {
+          "courseA_harvester_loops5_c": "Bütün qarğıdalıları yığmaq üçün bu yoldan istifadə edin!"
+        },
+        "courseA_harvester_loops52022": {
+          "courseA_harvester_loops5_c": "Bütün qarğıdalıları yığmaq üçün bu yoldan istifadə edin!"
+        },
+        "courseA_harvester_loops5_2019": {
+          "courseA_harvester_loops5_c": "Bütün qarğıdalıları yığmaq üçün bu yoldan istifadə edin!"
+        },
+        "courseA_harvester_loops5_2020": {
+          "courseA_harvester_loops5_c": "Bütün qarğıdalıları yığmaq üçün bu yoldan istifadə edin!"
+        },
+        "courseA_harvester_loops5a": {
+          "courseA_harvester_loops5a_a": "Bir-birinin ardınca bir \"təkrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngəyə ehtiyacınız olacaq."
+        },
+        "courseA_harvester_loops5a2022": {
+          "courseA_harvester_loops5a_a": "Bir-birinin ardınca bir \"təkrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngəyə ehtiyacınız olacaq."
+        },
+        "courseA_harvester_loops5a_2019": {
+          "courseA_harvester_loops5a_a": "Bir-birinin ardınca bir \"təkrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngəyə ehtiyacınız olacaq."
+        },
+        "courseA_harvester_loops5a_2020": {
+          "courseA_harvester_loops5a_a": "Bir-birinin ardınca bir \"təkrar\" <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> döngəyə ehtiyacınız olacaq."
+        },
+        "courseA_harvester_loops5b": {
+          "courseA_harvester_loops5b_a": "\"Çalıştır\"a bas və nə baş verdiyini gör!",
+          "courseA_harvester_loops5b_b": "Sizin döngələrinin düzgün sayda təkrarlanır?"
+        },
+        "courseA_harvester_loops5b2022": {
+          "courseA_harvester_loops5b_a": "\"Çalıştır\"a bas və nə baş verdiyini gör!",
+          "courseA_harvester_loops5b_b": "Sizin döngələrinin düzgün sayda təkrarlanır?"
+        },
+        "courseA_harvester_loops5b_2019": {
+          "courseA_harvester_loops5b_a": "\"Çalıştır\"a bas və nə baş verdiyini gör!",
+          "courseA_harvester_loops5b_b": "Sizin döngələrinin düzgün sayda təkrarlanır?"
+        },
+        "courseA_harvester_loops5b_2020": {
+          "courseA_harvester_loops5b_a": "\"Çalıştır\"a bas və nə baş verdiyini gör!",
+          "courseA_harvester_loops5b_b": "Sizin döngələrinin düzgün sayda təkrarlanır?"
+        },
+        "courseA_harvester_loops7": {
+          "courseA_harvester_loops7_b": "Bu yolu keçmək üçün iki döngədən istifadə et."
+        },
+        "courseA_harvester_loops72022": {
+          "courseA_harvester_loops7_b": "Bu yolu keçmək üçün iki döngədən istifadə et."
+        },
+        "courseA_harvester_loops7_2019": {
+          "courseA_harvester_loops7_b": "Bu yolu keçmək üçün iki döngədən istifadə et."
+        },
+        "courseA_harvester_loops7_2020": {
+          "courseA_harvester_loops7_b": "Bu yolu keçmək üçün iki döngədən istifadə et."
+        },
+        "courseA_playLab_events3": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseA_playLab_events32022": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseA_playLab_events3_2018": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseA_playLab_events3_2019": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseA_playLab_events3_2020": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Bu bloku <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> kənara dartın və <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>-in altına yapışdırın"
+        },
+        "courseB_artist_loops2": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_artist_loops22022": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_artist_loops2_2018": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_artist_loops2_2019": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_artist_loops2_2020": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Döngənin 4 dəfədən çox təkrarlanmasını istəyirsinizsə, blokun yuxarısındakı nömrəni dəyişə bilərsiniz."
+        },
+        "courseB_collector_loops_challenge2": {
+          "courseB_collector_loops_challenge2_a": "Əgər nə isə səhv gedirsə yenidən başlamağa qorxmayın. İmtina etməyin.",
+          "courseB_collector_loops_challenge2_d": "Bu həll yolunu cəhd et.\n[Bloklu blok] [0]"
+        },
+        "courseB_collector_loops_challenge2a": {
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
+        },
+        "courseB_collector_loops_challenge2a2022": {
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
+        },
+        "courseB_collector_loops_challenge2a_2018": {
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
+        },
+        "courseB_collector_loops_challenge2a_2019": {
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
+        },
+        "courseB_collector_loops_challenge2a_2020": {
+          "courseB_collector_loops_challenge2a_a": "Əgər bir şey səhv gedirsə, onu sazlamağa çalışın. Təslim olmayın!"
+        },
+        "courseB_iceage_loops2": {
+          "courseB_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseB_iceage_loops22022": {
+          "courseB_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseB_iceage_loops3": {
+          "courseB_iceage_loops3_a": "Bu yeni blokdan istifadə edin! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_iceage_loops6": {
+          "courseB_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseB_iceage_loops62022": {
+          "courseB_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseB_iceage_loops6_2019": {
+          "courseB_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseB_iceage_loops6_2020": {
+          "courseB_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseB_iceage_loops9": {
+          "courseB_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseB_iceage_loops92022": {
+          "courseB_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseB_starWars_prog1": {
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə baş verdiyini görmək üçün \"İcra et\" düyməsini basın."
+        },
+        "courseB_starWars_prog12022": {
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə baş verdiyini görmək üçün \"İcra et\" düyməsini basın."
+        },
+        "courseB_starWars_prog1_2018": {
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə baş verdiyini görmək üçün \"İcra et\" düyməsini basın."
+        },
+        "courseB_starWars_prog1_2019": {
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə baş verdiyini görmək üçün \"İcra et\" düyməsini basın."
+        },
+        "courseB_starWars_prog1_2020": {
+          "courseB_starWars_prog1_a": "Blokları bir-bir əlavə etməyə çalışın, sonra nə baş verdiyini görmək üçün \"İcra et\" düyməsini basın."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_c": "Açılan menyunu basanda dönmə blokunun istiqamətini dəyişə bilərsiniz."
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_c": "Açılan menyunu basanda dönmə blokunun istiqamətini dəyişə bilərsiniz."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_c": "Açılan menyunu basanda dönmə blokunun istiqamətini dəyişə bilərsiniz."
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_c": "Açılan menyunu basanda dönmə blokunun istiqamətini dəyişə bilərsiniz."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_c": "Bu yola nəzər sal."
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_b": "Nektar üçün hər bir boşluğu yoxlamaq üçün dövrünün içərisində 'əgər' ifadəsini istifadə et."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_b": "Bu halda, buludların altındakı gülləri yoxlamağa icazə yoxdur.",
+          "courseD_bee_conditionals6_c": "Kodunu sadələşdirmək üçün orada istifadə edə biləcəyin bir dövr varmı?"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Işləmir? Çalış \"Addım\" düyməsini sıxın ki, sətirbəsətir nə baş verdiyini görək.",
+          "courseD_bee_nestedLoops1_c": "Yadda saxla ki, gül ilə kvadratın üzərində olan kimi 'nektarı topla' blokundan istifadə et."
+        },
+        "courseD_bounce_events10s2022": {
+          "courseD_bounce_events10s_a": "Bu əməliyyatların hər ikisi kodunuzda olmalıdır.\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events10s_2018": {
+          "courseD_bounce_events10s_a": "Bu əməliyyatların hər ikisi kodunuzda olmalıdır.\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events10s_2019": {
+          "courseD_bounce_events10s_a": "Bu əməliyyatların hər ikisi kodunuzda olmalıdır.\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events10s_2020": {
+          "courseD_bounce_events10s_a": "Bu əməliyyatların hər ikisi kodunuzda olmalıdır.\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events7s2022": {
+          "courseD_bounce_events7s_a": "İstəyirsinizsə, daha çox yerə səslər əlavə edə bilərsiniz!"
+        },
+        "courseD_bounce_events7s_2018": {
+          "courseD_bounce_events7s_a": "İstəyirsinizsə, daha çox yerə səslər əlavə edə bilərsiniz!"
+        },
+        "courseD_bounce_events7s_2019": {
+          "courseD_bounce_events7s_a": "İstəyirsinizsə, daha çox yerə səslər əlavə edə bilərsiniz!"
+        },
+        "courseD_bounce_events7s_2020": {
+          "courseD_bounce_events7s_a": "İstəyirsinizsə, daha çox yerə səslər əlavə edə bilərsiniz!"
+        },
+        "courseD_farmer_while4": {
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
+        },
+        "courseD_farmer_while42022": {
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
+        },
+        "courseD_farmer_while4_2018": {
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
+        },
+        "courseD_farmer_while4_2019": {
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
+        },
+        "courseD_farmer_while4_2020": {
+          "courseD_farmer_conditionals4_a": "`Təkrar` döngəsindən istifadə etmək əvəzinə, qalaq yox olana qədər qazmağa davam etmək üçün `while` döngəsindən istifadə edin."
+        },
+        "courseD_iceage_loops2": {
+          "courseD_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseD_iceage_loops22022": {
+          "courseD_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseD_iceage_loops2_2019": {
+          "courseD_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseD_iceage_loops2_2020": {
+          "courseD_iceage_loops2_a": "Bu tapmacanı iki hissəyə bölün, biri küncdən əvvəl, digəri küncdən sonra."
+        },
+        "courseD_iceage_loops3": {
+          "courseB_iceage_loops3_a": "Bu yeni blokdan istifadə edin! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
+        },
+        "courseD_iceage_loops6": {
+          "courseD_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseD_iceage_loops62022": {
+          "courseD_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseD_iceage_loops6_2019": {
+          "courseD_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseD_iceage_loops6_2020": {
+          "courseD_iceage_loops6_c": "Son yolunuz bu kimi görünməlidir."
+        },
+        "courseD_iceage_loops9": {
+          "courseD_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseD_iceage_loops92022": {
+          "courseD_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseD_iceage_loops9_2019": {
+          "courseD_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseD_iceage_loops9_2020": {
+          "courseD_iceage_loops9_a": "Çətinlik çəkirsiniz? Bu tapmacanı daha kiçik parçalara ayırmağa çalışın. Kod yazarkən tapmacanızı icra etməkdən qorxmayın!"
+        },
+        "courseD_maze_nestedLoops4": {
+          "courseD_maze_nestedLoops4_a": "Bu yolu labirentdən istifadə etməyə çalışın.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops42022": {
+          "courseD_maze_nestedLoops4_a": "Bu yolu labirentdən istifadə etməyə çalışın.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops4_2018": {
+          "courseD_maze_nestedLoops4_a": "Bu yolu labirentdən istifadə etməyə çalışın.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops4_2019": {
+          "courseD_maze_nestedLoops4_a": "Bu yolu labirentdən istifadə etməyə çalışın.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops4_2020": {
+          "courseD_maze_nestedLoops4_a": "Bu yolu labirentdən istifadə etməyə çalışın.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops6": {
+          "courseD_maze_nestedLoops6_c": "Bu tapmacanı həll etmək üçün iki dəst iç-içə təkrar döngəsi lazımdır"
+        },
+        "courseD_maze_nestedLoops62022": {
+          "courseD_maze_nestedLoops6_c": "Bu tapmacanı həll etmək üçün iki dəst iç-içə təkrar döngəsi lazımdır"
+        },
+        "courseD_maze_nestedLoops6_2018": {
+          "courseD_maze_nestedLoops6_c": "Bu tapmacanı həll etmək üçün iki dəst iç-içə təkrar döngəsi lazımdır"
+        },
+        "courseD_maze_nestedLoops6_2019": {
+          "courseD_maze_nestedLoops6_c": "Bu tapmacanı həll etmək üçün iki dəst iç-içə təkrar döngəsi lazımdır"
+        },
+        "courseD_maze_nestedLoops6_2020": {
+          "courseD_maze_nestedLoops6_c": "Bu tapmacanı həll etmək üçün iki dəst iç-içə təkrar döngəsi lazımdır"
+        },
+        "courseE_artist_concept1": {
+          "courseE_artist_concept1_b": "Burada funksiya istifadə etməyə çalışın ki, altıbucaqlı üçün kodu təkrar-təkrar yazmağa ehtiyac olmasın."
+        },
+        "courseE_artist_concept1_2018": {
+          "courseE_artist_concept1_b": "Burada funksiya istifadə etməyə çalışın ki, altıbucaqlı üçün kodu təkrar-təkrar yazmağa ehtiyac olmasın."
+        },
+        "courseE_farmer_concept3": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": " Yolun sonuna çatdıqdan sonra nə etməlisiniz?",
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "Hər düz yol üçün kodunuzu bir neçə dəfə işlətmək üçün “təkrar” döngəsindən istifadə edin."
+        },
+        "courseE_farmer_concept3_2018": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": " Yolun sonuna çatdıqdan sonra nə etməlisiniz?",
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "Hər düz yol üçün kodunuzu bir neçə dəfə işlətmək üçün “təkrar” döngəsindən istifadə edin."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "\\*\\*360/36 =? \\*\\*"
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_022022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_032022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_062022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_072022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_082022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Dance_2019_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "Dance_2019_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "Dance_2019_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal2022": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Nəyisə yaratmaq üçün nəsə de , kod bloklarını bu şəkildə birləşdir :\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

@@ -4,7 +4,8 @@ import {
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
   AuthorizerSignalType,
-  CsaViewMode
+  CsaViewMode,
+  JavabuilderLockoutType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -80,6 +81,8 @@ export default class JavabuilderConnection {
   connectJavabuilderWithOverrideSources(overrideSources) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
+    // we include the channel id so that assets are available
+    requestData.channelId = this.channelId;
 
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
@@ -133,13 +136,13 @@ export default class JavabuilderConnection {
           data: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRF-Token': this.csrfToken
-          }
+            'X-CSRF-Token': this.csrfToken,
+          },
         }
       : {
           url: url,
           type: 'get',
-          data: data
+          data: data,
         };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
@@ -165,7 +168,7 @@ export default class JavabuilderConnection {
       options: this.options,
       executionType: this.executionType,
       useDashboardSources: false,
-      miniAppType: this.miniAppType
+      miniAppType: this.miniAppType,
     };
   }
 
@@ -206,7 +209,7 @@ export default class JavabuilderConnection {
         break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
-          progressTime: detail.progressTime
+          progressTime: detail.progressTime,
         });
         lineBreakCount = 1;
         break;
@@ -352,7 +355,7 @@ export default class JavabuilderConnection {
     if (!this.seenUnsupportedNeighborhoodMessage) {
       this.onOutputMessage(
         javalabMsg.exceptionMessage({
-          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD),
         })
       );
       this.onNewlineMessage();
@@ -364,7 +367,7 @@ export default class JavabuilderConnection {
     if (!this.seenUnsupportedTheaterMessage) {
       this.onOutputMessage(
         javalabMsg.exceptionMessage({
-          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER),
         })
       );
       this.onNewlineMessage();
@@ -412,24 +415,42 @@ export default class JavabuilderConnection {
 
   onAuthorizerMessage(value, detail) {
     let message = '';
+    let stopProgram = false;
     switch (value) {
       case AuthorizerSignalType.TOKEN_USED:
         message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        message = javalabMsg.authorizerNearLimit({
-          attemptsLeft: detail.remaining
-        });
+        if (detail.lockout_type === JavabuilderLockoutType.PERMANENT) {
+          message = javalabMsg.authorizerNearLimit({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        } else {
+          message = javalabMsg.authorizerNearLimitTemporary({
+            attemptsLeft: detail.remaining,
+            lockoutPeriod: detail.period.toLowerCase(),
+          });
+        }
         break;
       case AuthorizerSignalType.USER_BLOCKED:
         message = javalabMsg.userBlocked();
+        stopProgram = true;
+        break;
+      case AuthorizerSignalType.USER_BLOCKED_TEMPORARY:
+        message = javalabMsg.userBlockedTemporary();
+        stopProgram = true;
         break;
       case AuthorizerSignalType.CLASSROOM_BLOCKED:
         message = javalabMsg.classroomBlocked();
+        stopProgram = true;
         break;
     }
-    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
+    if (stopProgram) {
+      this.setIsRunning(false);
+    }
   }
 
   displayUnauthorizedMessage(error) {
@@ -442,12 +463,15 @@ export default class JavabuilderConnection {
     let unauthorizedMessage;
     if (this.currentUser.signInState === SignInState.SignedIn) {
       if (this.currentUser.userType === 'teacher') {
-        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionTeacher();
+        unauthorizedMessage =
+          javalabMsg.unauthorizedJavabuilderConnectionTeacher();
       } else {
-        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionStudent();
+        unauthorizedMessage =
+          javalabMsg.unauthorizedJavabuilderConnectionStudent();
       }
     } else {
-      unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
+      unauthorizedMessage =
+        javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
     }
 
     // Send unauthorized message as markdown as some unauthorized messages contain links
@@ -461,7 +485,7 @@ export default class JavabuilderConnection {
       logToCloud.PageAction.JavabuilderWebSocketConnectionError,
       {
         errorMessage,
-        channelId: this.channelId
+        channelId: this.channelId,
       }
     );
   }

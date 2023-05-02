@@ -1,0 +1,146 @@
+{
+  "navigateForward": "ဆက်လုပ်ပါ",
+  "tryAgain": "ပြန်လည်ကြိုးစားပါ",
+  "navigateDone": "ပြီးဆုံးပြီ",
+  "modelCardPossibleValuesMinimum": "အနည်းဆုံး",
+  "modelCardPossibleValuesMaximum": "အများဆုံး",
+  "columnInspectorDescription": "ဖော်ပြချက်",
+  "columnDetailsMinimumValue": "အနည်းဆုံး",
+  "columnDetailsMaximumValue": "အများဆုံး",
+  "dataCardLastUpdated": "​နောက်ဆုံးမွမ်းမံထား​သော",
+  "uniqueOptionsWarningNotice": "မှတ်ချက်",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "မိုး​လေဝသ"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "ဖော်ပြချက်"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "အရွယ်အစား"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "ကြက်ကလေး"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "အသက်"
+        },
+        "Gender": {
+          "id": "က်ား/မ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "ကြက်ကလေး"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "အမှတ်"
+        },
+        "Country": {
+          "id": "နိုင်ငံ"
+        },
+        "Name": {
+          "id": "အမည္"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Country": {
+          "id": "နိုင်ငံ"
+        },
+        "Achievements": {
+          "id": "တိုးတက်မှုများ"
+        },
+        "Age": {
+          "id": "အသက်",
+          "description": "အသက်"
+        },
+        "Gender": {
+          "id": "က်ား/မ",
+          "description": "က်ား/မ"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "ငှက်ပျောသီး"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "အရွယ်အစား"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "နိုင်ငံ"
+        }
+      }
+    }
+  }
+}

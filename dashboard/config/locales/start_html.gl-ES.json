@@ -1,0 +1,723 @@
+{
+  "gl-ES": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "Nome",
+          "Color": "Cor",
+          "City": "Cidade",
+          "text": "texto"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "Nome",
+          "Color": "Cor",
+          "City": "Cidade",
+          "text": "texto"
+        },
+        "CSD U1 processing guess_2021": {
+          "text": "texto"
+        },
+        "CSD U1 processing guess_2022": {
+          "text": "texto"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "Perdón!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "Perdón!"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Voltar"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Voltar"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Star Wars",
+          "Yes": "Si",
+          "No": "Non",
+          "text": "texto"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Star Wars",
+          "Yes": "Si",
+          "No": "Non",
+          "text": "texto"
+        },
+        "CSD U1 storage outfit_2021": {
+          "green": "verde",
+          "black": "negro"
+        },
+        "CSD U1 storage outfit_2022": {
+          "green": "verde",
+          "black": "negro"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Medio"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "esquerda",
+          "right": "dereita",
+          "red": "vermello",
+          "green": "verde"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "esquerda",
+          "right": "dereita"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "green": "verde",
+          "blue": "azul"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Nome"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "Salvar"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "negro"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "negro"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "Título"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "arriba",
+          "down": "abaixo",
+          "left": "esquerda",
+          "right": "dereita"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "nome"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "texto"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Actualizar"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "Conseguichelo!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 analog light": {
+          "Update": "Actualizar"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Actualizar"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Actualizar"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Actualizar"
+        },
+        "CSD U6 array piano": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "primeiro"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "primeiro"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Medio"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Medio"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Medio"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Medio"
+        },
+        "CSD U6 getProperty Demo": {
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Save": "Salvar"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Enviar"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "texto"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "texto"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "Título"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "Título"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "Título"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "Título"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Feito!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Feito!"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Cancel": "Cancelar",
+          "Yes": "Si",
+          "No": "Non",
+          "Save": "Salvar"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Cancel": "Cancelar",
+          "Yes": "Si",
+          "No": "Non",
+          "Save": "Salvar"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Cancel": "Cancelar",
+          "Yes": "Si",
+          "No": "Non",
+          "Save": "Salvar"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "Sobre",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "Sobre",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "Sobre",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU4 Functionality visible": {
+          "Show": "Mostrar"
+        },
+        "CSDU4 List App Demo": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Done": "Feito",
+          "Cancel": "Cancelar"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Done": "Feito",
+          "Cancel": "Cancelar"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "Sobre",
+          "About Us": "Quen somos",
+          "Done": "Feito",
+          "Cancel": "Cancelar"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "Sobre",
+          "Submit": "Enviar",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "Sobre",
+          "Submit": "Enviar",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "Sobre",
+          "Submit": "Enviar",
+          "When?": "Cando?",
+          "About Us": "Quen somos"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Voltar"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Feito!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Feito!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Feito!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Feito!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Feito!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "L",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "allthethings design mode elements": {
+          "text": "texto"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Comezar"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Comezar"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Comezar"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Comezar"
+        },
+        "csd-apps for good-2": {
+          "Next": "Seguinte",
+          "Home": "Inicio"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Seguinte",
+          "Home": "Inicio"
+        },
+        "csd-explore ui-2": {
+          "Next": "Seguinte",
+          "Home": "Inicio"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Seguinte",
+          "Home": "Inicio"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "Perdón!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "Perdón!"
+        },
+        "csd-explore ui-6": {
+          "Next": "Seguinte"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Seguinte"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Seguinte"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Seguinte"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "si",
+          "no": "non"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "si",
+          "no": "non"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Continuar",
+          "Loading...": "Cargando..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Continuar",
+          "Loading...": "Cargando..."
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "O",
+          "A": "A",
+          "yes": "si",
+          "no": "non"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "O",
+          "A": "A",
+          "yes": "si",
+          "no": "non"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Voltar"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Voltar"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "Si",
+          "No": "Non",
+          "B": "B"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "Si",
+          "No": "Non",
+          "B": "B"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "Si",
+          "No": "Non"
+        },
+        "ml-use model card-example3A-2021": {
+          "cloudy": "nubrado",
+          "night": "noite"
+        },
+        "ml-use model card-example3A_2022": {
+          "cloudy": "nubrado",
+          "night": "noite"
+        }
+      }
+    }
+  }
+}

@@ -3254,7 +3254,6 @@
         "courseD_artist_42022": "Hãy thêm một hình nhỏ vào cuối dòng của bạn!",
         "courseD_artist_52022": "Hãy vui đùa cùng những bông tuyết nhé!",
         "courseD_artist_62022": "Hãy thử đổi đoạn thẳng dài 150 điểm ảnh của bạn thành 6 đoạn thẳng ngắn **25** điểm ảnh và xoay một chút ở cuối.",
-        "courseD_artist_nestedLoops102022": "Hãy dùng hình vuông trước đó, nhưng lần này chỉ vẽ 7 hình vuông trong số đó và xếp thành một hàng.",
         "courseD_artist_nestedLoops12022": "Hãy vẽ một hình tam giác để khởi động màn này.\\\n(Mỗi cạnh dài 100 điểm ảnh và bạn cần xoay 120 độ cho mỗi góc ngoài.)",
         "courseD_artist_nestedLoops1a2022": "Bây giờ, hãy lặp lại hình tam giác 6 lần.",
         "courseD_artist_nestedLoops22022": "Lần này, hãy hoàn thành bài tập với số khối ít nhất có thể.",
@@ -3515,7 +3514,29 @@
         "ramp_artist_loops72022": "Hãy tìm mẫu và rút gọn mã lệnh này bằng cách dùng vòng lặp!",
         "ramp_artist_loops82022": "Hãy tìm mẫu và rút ngắn mã lệnh bằng cách dùng vòng lặp.",
         "ramp_artist_loops92022": "Hãy giải bài tập này bằng cách vẽ một hình vuông.",
-        "simcustom_-2022-2": "Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây."
+        "simcustom_-2022-2": "Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây.",
+        "helloworld_food_backgrounds_soccer-2022": "Hãy cùng tìm hiểu cách đổi hình nền nhé.",
+        "helloworld_food_backgrounds_space-2022": "Hãy cùng tìm hiểu cách đổi hình nền nhé.",
+        "helloworld_food_behaviors_soccer-2022": "Hãy cùng tìm hiểu cách cho nhân vật chuyển động bằng hành vi.",
+        "helloworld_food_behaviors_space-2022": "Hãy cùng tìm hiểu cách cho nhân vật chuyển động bằng hành vi.",
+        "helloworld_food_click_soccer-2022": "Thao tác nào khiến nhân vật nói chuyện?",
+        "helloworld_food_click_space-2022": "Thao tác nào khiến nhân vật nói chuyện?",
+        "helloworld_food_costumes_soccer-2022": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
+        "helloworld_food_costumes_space-2022": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
+        "helloworld_food_events_soccer-2022": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
+        "helloworld_food_events_space-2022": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
+        "helloworld_food_freeplay_soccer-2022": "Đã đến lúc sáng tạo theo ý muốn rồi!",
+        "helloworld_food_freeplay_space-2022": "Đã đến lúc sáng tạo theo ý muốn rồi!",
+        "helloworld_food_location_soccer-2022": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_food_location_space-2022": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_food_multi_soccer-2022": "Cho hai nhân vật lần lượt nói điều gì đó.",
+        "helloworld_food_multi_space-2022": "Cho hai nhân vật lần lượt nói điều gì đó.",
+        "helloworld_food_say_soccer-2022": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
+        "helloworld_food_say_space-2022": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
+        "helloworld_food_sizes_soccer-2022": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
+        "helloworld_food_sizes_space-2022": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
+        "helloworld_food_sounds_soccer-2022": "Hãy cùng tìm hiểu cách phát âm thanh nhé.",
+        "helloworld_food_sounds_space-2022": "Hãy cùng tìm hiểu cách phát âm thanh nhé."
       }
     }
   }

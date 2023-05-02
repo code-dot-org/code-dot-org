@@ -848,31 +848,31 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -880,7 +880,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -888,7 +888,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4117,15 +4117,15 @@
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -4714,15 +4714,15 @@
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "fijar camino largo"
+            "name": "arreglar camino largo"
           },
           "fix short path": {
-            "name": "fijar camino corto"
+            "name": "arreglar camino corto"
           }
         },
         "MC_HOC_2017_Ali2022": {
           "build short bridge": {
-            "name": "construir puente pequeño"
+            "name": "construir puente corto"
           },
           "build long bridge": {
             "name": "construir puente largo"
@@ -5016,6 +5016,17 @@
         "courseF_bee_for_challenge12022": {
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": "dibuja 3 hexágonos"
+          },
+          "draw 4 hexagons": {
+            "name": "dibuja 4 hexágonos"
+          },
+          "draw 5 hexagons": {
+            "name": "dibuja 5 hexágonos"
           }
         }
       }

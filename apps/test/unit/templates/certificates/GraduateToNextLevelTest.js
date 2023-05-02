@@ -18,7 +18,7 @@ describe('GraduateToNextLevel', () => {
   });
   it('passes App Lab course info to ResourceCard if bogus scriptName is given', () => {
     const propsPassed = propsPassedToVerticalImageResourceCard({
-      scriptName: 'bogusScript'
+      scriptName: 'bogusScript',
     });
     const {id, title, description, link, image} = propsPassed;
     [id, title, description, link, image].forEach(prop => {
@@ -33,13 +33,13 @@ describe('GraduateToNextLevel', () => {
     'coursec-2050',
     'coursed-2011',
     'coursee-2022',
-    'coursef-2001'
+    'coursef-2001',
   ].forEach(scriptName => {
     it(`passes correct course info to ResourceCard for script ${scriptName}`, () => {
       const propsPassed = propsPassedToVerticalImageResourceCard({
         scriptName: scriptName,
         courseTitle: `Localized title of ${scriptName}`,
-        courseDesc: `Localized description of ${scriptName}`
+        courseDesc: `Localized description of ${scriptName}`,
       });
       const {id, title, description, link, image} = propsPassed;
       [id, title, description, link, image].forEach(prop => {

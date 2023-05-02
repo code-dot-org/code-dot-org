@@ -2465,6 +2465,154 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "먼저 여기를 클릭하세요!"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "여기에 if 문을 추가하세요"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "여기에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "플레이사운드 블록을 여기에 추가하세요."
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "플레이사운드 블록을 여기에 추가하세요."
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "여기에 if 문을 추가하세요"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "여기에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "블록을 이 줄 위에 놓으세요"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "이것은 온도 특징입니다."
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "이것은 온도 특징입니다."
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "이것은 시간 특징입니다."
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "이것은 시간 특징입니다."
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "이것은 자동차 수 특징입니다"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "이것은 자동차 수 특징입니다"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "이것은 날씨 특징입니다."
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "이것은 날씨 특징입니다."
         }
       }
     }

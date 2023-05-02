@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Identifying the parts of speech in natural language processing helps us understand the meaning of a sentence and how each word relates to the others.\r\n\r\n✅ **TO DO #1:** Write the method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">tagPartsOfSpeech()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">WordProcessor</code> class to return an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> containing the list of words from <code style=\"background-color: #ececec; color: black; font-weight: bold;\">textList</code> tagged with their parts of speech. The word in each element of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> consists of the character after the colon to the end of the list. The part of speech in each element of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> consists of the beginning of the line up to the colon. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">tagPartsOfSpeech()</code> method should:\r\n\r\n1. Take an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> as its parameter for the parts of speech list.\r\n\r\n2. Search for each word in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">textList</code> in the parts of speech list.\r\n\r\n3. Add the word and its part of speech to the tagged list of words.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">WordRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">tagPartsOfSpeech()</code> method and print the list.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">indexOf()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Parts of Speech",
+    "bubble_choice_description": "Identifying the parts of speech in natural language processing helps us understand the meaning of a sentence and how each word relates to the others.",
+    "thumbnail_url": "https://images.code.org/9325f6d0b240be57c45e590dd59d5c0d-contract.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T13:48:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T13:48:40.251+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L8a_2023\\\"\"],\"cloned_from\":\"CSA U6L2-L8a_2023\"},{\"changed_at\":\"2023-04-03 13:48:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 16:26:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

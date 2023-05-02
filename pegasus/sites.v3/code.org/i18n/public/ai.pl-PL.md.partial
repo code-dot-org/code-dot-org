@@ -114,3 +114,5 @@ Poziomy 2-4 używają wstępnie wytrenowanego modelu dostarczonego przez projekt
 Poziomy 6-8 używają \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Patrzymy na każdy składnik ryby (taki jak oczy, usta, ciało) i łączymy wszystkie metadane dla składników (takich, jak liczba zębów, kształt ciała) w wektor liczb dla każdej ryby. Używamy tych wektorów do trenowania SVM. Na podstawie danych treningowych, SVM rozdziela „przestrzeń” wszystkich możliwych ryb na dwie części, które odpowiadają klasom, których próbujemy się nauczyć (np. „niebieski” lub „nie niebieski”).
 
 [Powrót na górę](#top)
+
+{{ visit_partial_event_logger }}

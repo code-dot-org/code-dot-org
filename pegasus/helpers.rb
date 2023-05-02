@@ -1,10 +1,11 @@
 require 'cdo/aws/s3'
 require 'rack/csrf'
-require_relative '../shared/middleware/helpers/core.rb'
-require_relative '../shared/middleware/helpers/shared_auth_helpers.rb'
+require_relative '../shared/middleware/helpers/core'
+require_relative '../shared/middleware/helpers/shared_auth_helpers'
 require 'cdo/asset_helper'
 require 'cdo/cookie_helpers'
 require 'cdo/language_dir'
+require_relative './helpers/analytics_constants'
 
 def avatar_image(name, width=320, square_photo=false)
   basename = name.downcase.gsub(/\W/, '_').squeeze('_')

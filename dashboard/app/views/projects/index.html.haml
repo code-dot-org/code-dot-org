@@ -3,7 +3,7 @@
   projects_data = {}
   projects_data[:limitedGallery] = @limited_gallery
   projects_data[:currentTab] = @current_tab
-  projects_data[:projectCount] = fetch_project_count['total_projects']
+  projects_data[:projectCount] = @project_count_millions
 
   if current_user
     projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
@@ -14,5 +14,6 @@
 
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
 
 #projects-page

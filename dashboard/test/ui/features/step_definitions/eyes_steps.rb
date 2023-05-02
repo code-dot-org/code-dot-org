@@ -41,8 +41,8 @@ And(/^I close my eyes$/) do
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
   begin
     @eyes.close(fail_on_mismatch)
-  rescue Applitools::TestFailedError => e
-    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{Rinku.auto_link(e.to_s)}</span>"
+  rescue Applitools::TestFailedError => exception
+    puts "<span style=\"color: red;\">#{EYES_ERROR_PREFIX} #{Rinku.auto_link(exception.to_s)}</span>"
   end
 end
 
@@ -50,7 +50,7 @@ end
 And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
-  if stitch_mode === "none"
+  if stitch_mode == "none"
     @eyes.force_full_page_screenshot = false
   else
     @eyes.stitch_mode = stitch_mode == "scroll" ?
@@ -71,8 +71,5 @@ def ensure_eyes_available
   return if @eyes
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
-  # Force eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
   @eyes.log_handler = Logger.new('../../log/eyes.log')
 end

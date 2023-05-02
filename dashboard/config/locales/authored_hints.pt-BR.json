@@ -709,7 +709,7 @@
           "voyage_aquatic_9a": "Que recife de corais bonito! O coral azul parece ser o caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho **esquerdo**."
         },
         "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Arraste um bloco 'mover para a frente' da caixa de ferramentas para a área de trabalho e fixe-o abaixo do bloco 'ao rodar'.",
+          "MC_HOC_2017_01_RETRY_a": "Arraste um bloco 'mover para a frente' da caixa de ferramentas para a área de trabalho e fixe-o abaixo do bloco 'quando executar'.",
           "MC_HOC_2017_01_RETRY_b": "Não esqueça de clicar em \"Executar\" para executar o código para o Agent.",
           "MC_HOC_2017_01_RETRY_c": "Depois que o Agent executar todo o código, você poderá mover o jogador com as teclas de seta!"
         },
@@ -896,17 +896,17 @@
           "MC_HOC_2017_13_Cole_a": "Tente fazer com que o Agente construa algumas pontes para que Alex ou Steve possam andar além dos limites do mapa."
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "O bloco que você precisa adicionar se chama `definir velocidade`. ",
-          "courseC_flappy_events2_b": "Ligue o bloco `definir velocidade` ao bloco`quando correr` para resolver este quebra cabeça."
+          "courseC_flappy_events2_b": "Ligue o bloco `definir velocidade` ao bloco` quando correr` para resolver este quebra cabeça."
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Se algo não estiver funcionando corretamente, verifique se os blocos estão conectados aos eventos corretos no espaço de trabalho."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Conecte o bloco `fim de jogo` a`quando acertar um obstáculo` para resolver este quebra-cabeça."
+          "courseC_flappy_events4_a": "Conecte o bloco `fim de jogo` a` quando acertar um obstáculo` para resolver este quebra-cabeça."
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "Você precisará usar o bloco `marcar um ponto` para passar este nível."
@@ -963,10 +963,10 @@
         "OPD-K5-variables-6": {
           "courseF_artist_variables4_a": "Seu código não será muito diferente do que estava no último desafio, exceto que você precisará virar o artista para baixo, então volte-o para ficar pronto para saltar novamente.",
           "courseF_artist_variables4_c": "Este é o padrão que seu(sua) artista irá seguir:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "A segunda metade do seu código deve parecer quase o mesmo que a primeira metade, exceto você estará virando para _esquerda_, saltando, e depois virando para _direita_.",
+          "courseF_artist_variables5_a": "A segunda metade do seu código deve parecer quase o mesmo que a primeira metade, exceto você estará virando para *esquerda*, saltando, e depois virando para *direita*.",
           "courseF_artist_variables5_b": "A primeira metade do seu código vai desenhar três triângulos, e a segunda metade vai desenhar os outros três.",
           "courseF_artist_variables5_c": "Comece duplicando o código na primeira metade do seu programa, então altere-o para mostrar o design.",
           "courseF_artist_variables5_d": "Este é o padrão que seu(sua) artista irá seguir:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
@@ -4930,7 +4930,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Tente escrever todos os movimentos em um pedaço de papel e procure um padrão.",
-          "courseC_starWars_loops6_b": "Se você quiser usar menos código, você pode colocar um laço `repeat` dentro de outro! \nIsso é chamado de \\*\\* loop aninhado \\*\\*."
+          "courseC_starWars_loops6_b": "Se você quiser usar menos código, você pode colocar um laço `repeat` dentro de outro! \nIsso é chamado de ** loop aninhado **."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Esse padrão parece mais difícil do que realmente é! Comece com um simples degrau de escada. Isso cobre toda a sucata?",
@@ -5615,7 +5615,7 @@
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "Precisa de ajuda para começar? Assista o vídeo!",
           "courseD_bee_conditionals2_a": "Às vezes uma flor vai estar lá, outras vezes não. Se você quiser que seu código seja executado em ambos os casos, certifique-se de usar uma instrução `se`.",
-          "courseD_bee_conditionals2_b": "Você pode usar um laço `repetir` ou`enquanto caminho pela frente` para percorrer este labirinto.",
+          "courseD_bee_conditionals2_b": "Você pode usar um laço `repetir` ou` enquanto caminho pela frente` para percorrer este labirinto.",
           "courseD_bee_conditionals2_c": "Você não precisa verificar se há favos de mel, só haverá flores ou espaços em branco sob as nuvens.",
           "courseD_bee_conditionals2_hintVid2": "Assista este vídeo para obter ajuda de como resolver este quebra-cabeça."
         },
@@ -7136,7 +7136,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "A função que você escreve não deve conter todo o seu programa, apenas a parte que desenha um quadrado com 100 lados de pixels.",
           "courseD_artist_functions2_c": "Use o bloco verde `desenhar um quadrado` para \"chamar\" sua função sob o bloco `quando executar`. Caso contrário, o código na sua função não será executado.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Seu programa deve: \n\\-Usar função\n\n-   Mover para frente 100 + 75 pixels\n-   Usar função"
+          "courseD_artist_functions2_a": "Seu programa deve: \n-Usar função\n- Mover para frente 100 + 75 pixels\n- Usar função"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Para resolver este enigma, você precisa adicionar um laço que repita o código inicial oito vezes.\n\nSe você não consegue se lembrar qual era o código inicial, clique em \"Reiniciar\" no canto superior direito da área de trabalho.",
@@ -10744,7 +10744,7 @@
           "hw_retro_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Cada fada tem uma **location**. Você pode definir a localização clicando no pino deste bloco: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml> \n\n-   Clique no pino ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) do bloco de localização e escolha uma nova posição para sua fada na tela. \n-   Pressione o botão \"Run\" quando seu código estiver completo.",
+          "location_hint": "Cada fada tem uma **location**. Você pode definir a localização clicando no pino deste bloco: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml> \n\n-   Clique no pino ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) do bloco de localização e escolha uma nova posição para sua fada na tela. \n-   Pressione o botão \"Run\" quando seu código estiver completo.",
           "remove_hint": "Você pode remover uma fada de determinado número de linha. Você pode adicionar uma nova fada para tomar o lugar da anterior: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -12563,6 +12563,71 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Para fazer a pizza falar, conecte os blocos de codigo desse jeito:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseF_variables2_set_-2022-2": {
+          "set_block_hint": "Você pode atribuir para uma variável assim:",
+          "say_variable_hint": "Você pode fazer uma figura falar o valor de uma variável assim:"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Você pode mudar o plano de fundo conectando um bloco 'set background’ sob o bloco de evento ‘when clicked’: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Você pode mudar o plano de fundo conectando um bloco 'set background’ sob o bloco de evento ‘when clicked’: \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "_Observação:_ Para dar um comportamento a uma fada, é preciso usar um bloco 'sprite begins’ com um dos blocos de comportamento verdes, como o ‘spinning right’. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "_Observação:_ Para dar um comportamento a uma fada, é preciso usar um bloco 'sprite begins’ com um dos blocos de comportamento verdes, como o ‘spinning right’. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Clique nas sprites enquanto o programa estiver em execução.",
+          "hw_no_changes": "Você não precisa mudar nada no código neste nível."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Clique nas sprites enquanto o programa estiver em execução.",
+          "hw_no_changes": "Você não precisa mudar nada no código neste nível."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Tente conectar um bloco ‘change custom’ sob um bloco de evento 'when clicked’. \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Tente conectar um bloco ‘change custom’ sob um bloco de evento 'when clicked’. \n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Conecte um bloco 'say' sob um bloco de evento 'when clicked': \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Conecte um bloco 'say' sob um bloco de evento 'when clicked': \n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Mude uma fada de lugar, clique no pino no bloco de localização e em seguida, onde você quiser colocá-la. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Mude uma fada de lugar, clique no pino no bloco de localização e em seguida, onde você quiser colocá-la. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Certifique-se de que os trajes correspondem para cada fada.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Certifique-se de que os trajes correspondem para cada fada.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Para definir o tamanho de uma fada somente uma vez, você pode utilizar este bloco: \n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Para definir o tamanho de uma fada somente uma vez, você pode utilizar este bloco: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Para fazer o sprite dizer alguma coisa, conecte os blocos de código da seguinte forma:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Para fazer o sprite dizer alguma coisa, conecte os blocos de código da seguinte forma:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Um círculo tem 360 graus. Multiplique os graus em sua vez pelo número de vezes que você repete. É igual a 360?\nVerifique as rotações sugeridas para ver se isso funciona!\n\nAqui estão alguns exemplos para você começar:\n\n-   Experimente uma curva de 60 graus por 6 vezes em torno de\n-   Experimente uma curva de 45 graus por 8 vezes em torno de\n-   Experimente uma curva de 30 graus por 12 vezes"
         }
       }
     }

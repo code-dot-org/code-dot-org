@@ -15,7 +15,7 @@ module Services
         # translator-readable keys, rather than the basic array that is produced by
         # default.
         def self.serialize
-          Script.all.each do |script|
+          Unit.all.each do |script|
             next unless script.is_migrated?
             next unless ScriptConstants.i18n? script.name
 
@@ -57,7 +57,7 @@ module Services
         # script for the sync in. Note this may be a nested directory like "2021/csf"
         def self.get_script_subdirectory(script)
           # special-case Hour of Code scripts.
-          return "Hour of Code" if Script.unit_in_category?('hoc', script.name)
+          return "Hour of Code" if Unit.unit_in_category?('hoc', script.name)
 
           # catchall for scripts without courses
           return 'other' if script.get_course_version.blank?

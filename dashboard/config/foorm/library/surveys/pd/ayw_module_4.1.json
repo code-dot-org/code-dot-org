@@ -14,7 +14,7 @@
               "visible": "false"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles' ",
+              "visibleIf": "{workshop_course}='CS Principles' or ({workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594')",
               "type": "rating",
               "name": "better_prepared_unit4",
               "title": "I feel better prepared to teach Unit 4 after attending this workshop.",
@@ -36,6 +36,15 @@
               "type": "rating",
               "name": "better_prepared_unit6",
               "title": "I feel prepared to teach Unit 6 (I feel prepared to teach concepts such as algorithms, their efficiency, and the characteristics and uses of different types of algorithms).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
+              "type": "rating",
+              "name": "discuss_roadblocks_successes_m4",
+              "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -78,13 +87,13 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594'",
               "type": "html",
               "name": "question6",
               "html": "<br/><br>After attending this workshop I feel prepared to...</strong>"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594'",
               "type": "rating",
               "name": "promote_active_participation",
               "indent": 3,
@@ -95,7 +104,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594'",
               "type": "rating",
               "name": "promote_communitication_skills",
               "indent": 3,
@@ -106,7 +115,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594'",
               "type": "rating",
               "name": "support_early_finish_fall_behind",
               "indent": 3,
@@ -117,7 +126,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594'",
               "type": "rating",
               "name": "support_problem_solving_processs",
               "indent": 3,
@@ -167,7 +176,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' or ({workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594')",
               "type": "rating",
               "name": "strategies_ensure_inclusion_m4",
               "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
@@ -179,7 +188,43 @@
               "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
               "name": "prepared_to_do_formative_assessment",
-              "title": "As a result of this workshop, I am better prepared to incorporate formative assessments to support learning.",
+              "title": "As a result of this workshop, I am better prepared to utilize formative assessments in the CS Discoveries curriculum to support learning.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
+              "type": "rating",
+              "name": "discuss_giving_feedback",
+              "title": "I had opportunities to discuss giving meaningful and concise feedback to students.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
+              "type": "rating",
+              "name": "use_rubrics_summative_assessments",
+              "title": "As a result of this workshop, I have a deeper understanding of how rubrics are used to summatively assess students in the CS Discoveries curriculum.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
+              "type": "rating",
+              "name": "prepared_to_do_summative_assessments",
+              "title": "After participating in this workshop, I am better prepared to utilize summative assessments in the CS Discoveries curriculum to support learning.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
+              "type": "rating",
+              "name": "peer_discussion_sample_project_summative_assessments",
+              "title": "Through the opportunity to score and discuss a sample student project with my peers, I feel better able to define what success looks like in my classroom and use it for summative assessments.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"

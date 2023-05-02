@@ -86,7 +86,7 @@ Malala, Stephen Curry, Shakira ve daha fazlasını içeren yeni bir poster seti 
 
 Bilgisayarlar her yerdeler ve gezegendeki her sektörü değiştiriyorlar. Fakat liselerin sadece %51'inde bilgisayar bilimi dersi var. Bunu değiştirmeye çalışıyor olmamız iyi haber! Eğer Hour of Code'u duyduysanız tarihe geçtiğini de biliyor olabilirsiniz. Bugüne kadar 100 milyondan fazla öğrenci Hour of Code'u denedi.
 
-Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki her Apple Mağazası Hour of Code'a ev sahipliği yaptı; hatta Başkan Obama ve Kanada Başbakanı Justin Trudeau kampanya kapsamında ilk kod satırlarını yazdı.
+Hour of Code sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki her Apple Mağazası Hour of Code'a ev sahipliği yaptı; hatta Başkan Obama ve Kanada Başbakanı Justin Trudeau kampanya kapsamında ilk kod satırlarını yazdı.
 
 Bu yıl daha da büyütelim. Hour of Code {{ campaign_date/year }} etkinliğine katılmanızı istiyorum. Bilgisayar Bilimi Eğitim Haftası {{ campaign_date/full }} süresince Hour of Code etkinliklerinden birine lütfen katılın.
 
@@ -146,13 +146,13 @@ Ayrıntılar için http://hourofcode.com/{{ country_language }} adresini inceley
 
 Bilgisayarlar her yerde ve gezegendeki her sektörü değiştiriyorlar fakat liselerin sadece %51'inde bilgisayar bilimi dersi var. Genç kadınların ve ötekileştirilen ırk ve etnik gruplardan olan öğrencilerin bilgisayar bilimi sınıflarında ve teknoloji endüstrisinde temsil edilme oranı ciddi ölçüde düşüktür. Bunu değiştirmeye çalışıyor olmamız iyi haber.
 
-Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki tüm Apple mağazaları Kodlama Saatine ev sahipliği yaptı. Hatta Başkan Obama kampanya kapsamında ilk kod satırını yazdı.
+Hour of Code sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki tüm Apple mağazaları Hour of Code'a ev sahipliği yaptı. Hatta Başkan Obama kampanya kapsamında ilk kod satırını yazdı.
 
 Gelmiş geçmiş en geniş çaplı öğrenme etkinliği olan Bilgisayar Bilimleri Eğitimi Haftası (6-12 Aralık) Hour of Code'a, [OKUL ADI] öğrencilerinden [X sayısı] kişinin katılmasının nedeni işte bu.
 
 Size başlangıç komitemize katılmanız için yazıyorum, böylece çocukların [DATE]'ta etkinliğe başlayışını da görebileceksiniz.
 
-Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Kodlama Saati, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
+Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Hour of Code, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
 
 İletişim: [ADINIZ], [TITLE], cep telefonu: (212) 555-5555 Tarih: [etkinliğinizin TARİH ve SAATİ] Yer: [ADRES ve YÖN TARİFİ]
 

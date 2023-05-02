@@ -3,6 +3,7 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-extras/unversioned": {
@@ -14,15 +15,12 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/minecraft/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/minecraft/unversioned": {
           "word": "调试",
           "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/minecraft/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
         },
         "event/minecraft/unversioned": {
           "word": "事件",
@@ -32,20 +30,25 @@
           "word": "循环",
           "definition": "反复做某事的动作。"
         },
+        "program/minecraft/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
         "code/hero/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/hero/unversioned": {
           "word": "调试",
           "definition": "在算法或程序中发现并解决问题。"
         },
-        "program/hero/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
-        },
         "function/hero/unversioned": {
           "word": "函数",
           "definition": "一段可以很容易地反复调用的代码。"
+        },
+        "program/hero/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
         },
         "code/poem-art/2021": {
           "word": "代码",
@@ -80,6 +83,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/hourofcode/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/hourofcode/unversioned": {
@@ -91,6 +95,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/frozen/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/frozen/unversioned": {
@@ -102,6 +107,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/iceage/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/iceage/unversioned": {
@@ -125,6 +131,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/gumball/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/gumball/unversioned": {
@@ -135,6 +142,10 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
+        "code/dance/unversioned": {
+          "word": "代码",
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
         "event/dance/unversioned": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
@@ -143,19 +154,9 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
-        "code/dance/unversioned": {
-          "definition": "(v) 编写代码或编写计算机指令。"
-        },
         "code/aquatic/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "调试",
-          "definition": "在算法或程序中发现并解决问题。"
-        },
-        "program/aquatic/unversioned": {
-          "word": "程序",
-          "definition": "编码为可以由计算机运行的算法。"
         },
         "condition/aquatic/unversioned": {
           "word": "条件",
@@ -165,9 +166,17 @@
           "word": "条件语句",
           "definition": "仅在特定条件下运行的语句。"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
         "loops/aquatic/unversioned": {
           "word": "循环",
           "definition": "反复做某事的动作。"
+        },
+        "program/aquatic/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "凯撒加密法 ",
@@ -194,6 +203,7 @@
           "definition": "将字母表中的每个字母映射到字母表中随机选择的其它字母的一种加密技术。"
         },
         "code/starwars/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/starwars/unversioned": {
@@ -205,6 +215,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/mc/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/mc/unversioned": {
@@ -216,6 +227,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/playlab/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/playlab/unversioned": {
@@ -227,6 +239,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/starwarsblocks/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/starwarsblocks/unversioned": {
@@ -249,10 +262,6 @@
           "word": "模型和模拟",
           "definition": "复制或模仿现实世界事件的关键特征以研究其行为的程序，无需在现实生活中进行实验的成本、时间或危险。"
         },
-        "event/sports/unversioned": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
         "code/sports/unversioned": {
           "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
@@ -261,11 +270,16 @@
           "word": "调试",
           "definition": "在算法或程序中发现并解决问题。"
         },
+        "event/sports/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
         "program/sports/unversioned": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/infinity/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/infinity/unversioned": {
@@ -276,22 +290,24 @@
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
-        "event/basketball/unversioned": {
-          "word": "事件",
-          "definition": "导致某些事情发生的操作。"
-        },
         "code/basketball/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "debugging/basketball/unversioned": {
           "word": "调试",
           "definition": "在算法或程序中发现并解决问题。"
         },
+        "event/basketball/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
         "program/basketball/unversioned": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/dance-extras-2019/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-extras-2019/unversioned": {
@@ -303,6 +319,7 @@
           "definition": "编码为可以由计算机运行的算法。"
         },
         "code/dance-2019/unversioned": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "event/dance-2019/unversioned": {
@@ -354,6 +371,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/coursed/2022": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "repeat/coursed/2022": {
@@ -618,6 +636,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/express/2022": {
+          "word": "代码",
           "definition": "编写代码或编写计算机指令。"
         },
         "loop/express/2022": {
@@ -909,6 +928,10 @@
           "word": "用户",
           "definition": "使用某物（包括软件和硬件）的人。"
         },
+        "algorithm/coursef/2021": {
+          "word": "算法",
+          "definition": "完成任务的步骤列表。"
+        },
         "behavior/coursef/2021": {
           "word": "行为",
           "definition": "精灵图在被告知停止前持续执行的动作。"
@@ -916,10 +939,6 @@
         "program/coursef/2021": {
           "word": "程序",
           "definition": "编码为可以由计算机运行的算法。"
-        },
-        "algorithm/coursef/2021": {
-          "word": "算法",
-          "definition": "完成任务的步骤列表。"
         },
         "event/coursef/2021": {
           "word": "事件",
@@ -961,9 +980,21 @@
           "word": "DNS",
           "definition": "域名系统的缩写，这个系统将域名（如example.com网站）转译为IP地址（如93.184.216.34）"
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/电缆",
+          "definition": "用电话或电视电缆发送信息的一种方法。"
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "光纤电缆",
+          "definition": "利用光来传输信息的连接"
+        },
         "internet/coursef/2021": {
           "word": "互联网",
           "definition": "相互连接的一组计算机和服务器。"
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP地址",
+          "definition": "分配给连接到互联网的任何项目的编号。"
         },
         "packets/coursef/2021": {
           "word": "数据包",
@@ -976,18 +1007,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "用来调用网页的易记地址（比如www.code.org网站）。"
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/电缆",
-          "definition": "用电话或电视电缆发送信息的一种方法。"
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "光纤电缆",
-          "definition": "利用光来传输信息的连接"
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP地址",
-          "definition": "分配给连接到互联网的任何项目的编号。"
         },
         "wi_fi/coursef/2021": {
           "word": "WiFi",
@@ -1025,6 +1044,10 @@
           "word": "点击",
           "definition": "按下鼠标按钮"
         },
+        "double_click/courseb/2021": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
         "drag/courseb/2021": {
           "word": "拖",
           "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
@@ -1032,10 +1055,6 @@
         "drop/courseb/2021": {
           "word": "丢掉",
           "definition": "释放鼠标按钮，“放开”正在拖动的项目"
-        },
-        "double_click/courseb/2021": {
-          "word": "双击",
-          "definition": "快速按下鼠标按钮"
         },
         "program/courseb/2021": {
           "word": "程序",
@@ -1077,6 +1096,10 @@
           "word": "点击",
           "definition": "按下鼠标按钮"
         },
+        "double_click/coursea/2021": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
         "drag/coursea/2021": {
           "word": "拖",
           "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
@@ -1084,10 +1107,6 @@
         "drop/coursea/2021": {
           "word": "丢掉",
           "definition": "释放鼠标按钮，“放开”正在拖动的项目"
-        },
-        "double_click/coursea/2021": {
-          "word": "双击",
-          "definition": "快速按下鼠标按钮"
         },
         "bug/coursea/2021": {
           "word": "Bug/错误",
@@ -1186,6 +1205,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/coursed/2021": {
+          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "repeat/coursed/2021": {
@@ -1253,6 +1273,7 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/express/2021": {
+          "word": "代码",
           "definition": "编写代码或编写计算机指令。"
         },
         "loop/express/2021": {
@@ -1287,13 +1308,13 @@
           "word": "函数",
           "definition": "一段可以很容易地反复调用的代码。"
         },
-        "variable/express/2021": {
-          "word": "变量",
-          "definition": "程序中使用的一段信息的标签。"
-        },
         "prompt/express/2021": {
           "word": "提示符",
           "definition": "计算机屏幕上等待用户输入的消息。"
+        },
+        "variable/express/2021": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
         },
         "for_loop/express/2021": {
           "word": "For循环",
@@ -1319,6 +1340,10 @@
           "word": "点击",
           "definition": "按下鼠标按钮"
         },
+        "double_click/pre-express/2021": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
         "drag/pre-express/2021": {
           "word": "拖",
           "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
@@ -1326,10 +1351,6 @@
         "drop/pre-express/2021": {
           "word": "丢掉",
           "definition": "释放鼠标按钮，“放开”正在拖动的项目"
-        },
-        "double_click/pre-express/2021": {
-          "word": "双击",
-          "definition": "快速按下鼠标按钮"
         },
         "algorithm/pre-express/2021": {
           "word": "算法",
@@ -1367,13 +1388,13 @@
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
-        "behavior/coursee/2021": {
-          "word": "行为",
-          "definition": "精灵图在被告知停止前持续执行的动作。"
-        },
         "algorithm/coursee/2021": {
           "word": "算法",
           "definition": "完成某项任务的一系列步骤。 "
+        },
+        "behavior/coursee/2021": {
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
         },
         "sprite/coursee/2021": {
           "word": "精灵",

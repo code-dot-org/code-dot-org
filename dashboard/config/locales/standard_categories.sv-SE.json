@@ -1,0 +1,20 @@
+{
+  "sv-SE": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Uträkningstänkande"
+        },
+        "L": {
+          "description": "språk"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "funktioner"
+        }
+      }
+    }
+  }
+}

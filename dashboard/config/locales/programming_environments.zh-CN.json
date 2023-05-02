@@ -19,25 +19,682 @@
           "description": "应用实验室是一个应用程序的编程环境，在这里，你可以创造游戏和动画。绘制你的角色，用代码块或 JavaScript来设计好玩的应用程序，然后分享你的应用程序。",
           "categories": {
             "game_lab": {
-              "name": "游戏实验室"
+              "name": "游戏实验室",
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "黑白"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "制作音乐"
+                    }
+                  },
+                  "palette_params": {
+                    "url": {
+                      "type": "字符串"
+                    },
+                    "loop": {
+                      "type": "布尔值"
+                    }
+                  },
+                  "short_description": "从指定的链接播放 MP3 音频文件。"
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "字符串"
+                    },
+                    "gender": {
+                      "type": "字符串"
+                    },
+                    "language": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "布尔值"
+                    },
+                    "dpadVisible": {
+                      "type": "布尔值"
+                    },
+                    "dpadFourWay": {
+                      "type": "布尔值"
+                    },
+                    "mobileOnly": {
+                      "type": "布尔值"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "sprites": {
-              "name": "精灵图"
+              "name": "精灵图",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "螺旋"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "xOffset": {
+                      "type": "数字"
+                    },
+                    "yOffset": {
+                      "type": "数字"
+                    },
+                    "width/radius": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    },
+                    "rotationOffset": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    },
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "width": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "小组"
+              "name": "小组",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "精灵"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "yOffset": {
+                      "type": "数字"
+                    },
+                    "width/radius": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    },
+                    "rotationOffset": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "颜色"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "布尔值"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "数字"
+                    },
+                    "angle": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "颜色"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "布尔值"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "绘画"
+              "name": "绘画",
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    },
+                    "start": {
+                      "type": "数字"
+                    },
+                    "stop": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "数字"
+                    },
+                    "y1": {
+                      "type": "数字"
+                    },
+                    "x2": {
+                      "type": "数字"
+                    },
+                    "y2": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "w": {
+                      "type": "数字"
+                    },
+                    "h": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "sides": {
+                      "type": "数字"
+                    },
+                    "size": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    },
+                    "g": {
+                      "type": "数字"
+                    },
+                    "b": {
+                      "type": "数字"
+                    },
+                    "a": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "踢腿"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "数字"
+                    },
+                    "y1": {
+                      "type": "数字"
+                    },
+                    "x2": {
+                      "type": "数字"
+                    },
+                    "y2": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "字符串"
+                    },
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    },
+                    "width": {
+                      "type": "数字"
+                    },
+                    "height": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "字符串"
+                    },
+                    "vert": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             },
             "control": {
               "name": "控制"
             },
             "math": {
-              "name": "数学"
+              "name": "数学",
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "数字"
+                    },
+                    "value2": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "变量"
+              "name": "变量",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "给已有变量指定一个值（赋值）。"
+                },
+                "declareAssign_x": {
+                  "short_description": "声明并给一个变量分派上初值。"
+                }
+              }
             },
             "functions": {
               "name": "函数"
@@ -49,34 +706,513 @@
           "description": "应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。",
           "categories": {
             "ui_controls": {
-              "name": "UI控制"
+              "name": "UI控制",
+              "expressions": {
+                "button": {
+                  "short_description": "在屏幕上创建一个按钮，在默认位置 (0,0) 显示所提供的文本并引用所用的ID。"
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "property": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "收缩和放大"
+                    }
+                  },
+                  "palette_params": {
+                    "type": {
+                      "type": "字符串"
+                    },
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "制作音乐"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "布尔值"
+                    }
+                  },
+                  "short_description": "从指定的链接播放 MP3 音频文件。"
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "字符串"
+                    },
+                    "gender": {
+                      "type": "字符串"
+                    },
+                    "language": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    },
+                    "g": {
+                      "type": "数字"
+                    },
+                    "b": {
+                      "type": "数字"
+                    },
+                    "a": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "property": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "canvas": {
-              "name": "画布"
+              "name": "画布",
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "圆的半径，以像素为单位。"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "data": {
-              "name": "数据"
+              "name": "数据",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
+                    },
+                    "column": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "字符串"
+                    },
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "对象"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "对象"
+                    }
+                  }
+                }
+              }
             },
             "turtle": {
-              "name": "海龟"
+              "name": "海龟",
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "以平滑的圆弧向前和向左移动海龟。"
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             },
             "control": {
-              "name": "控制"
+              "name": "控制",
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "数字"
+                    },
+                    "callback": {
+                      "type": "函数"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "数学"
+              "name": "数学",
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返回的最小值"
+                    },
+                    "max": {
+                      "description": "返回的最大值"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "变量"
+              "name": "变量",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "选择你自己的冒险"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "声明并给一个变量分派上初值。"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "声明数组并赋值给变量"
+                },
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "字符串"
+                    }
+                  },
+                  "return_value": "没有"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "函数"
             },
             "advanced": {
-              "name": "高级"
+              "name": "高级",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "字符串"
+                    },
+                    "css": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
             },
             "maker": {
-              "name": "制造"
+              "name": "制造",
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "数字"
+                    },
+                    "mode": {
+                      "type": "字符串"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "布尔值"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "布尔值"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "数字"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "字符串"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "数字"
+                    },
+                    "y": {
+                      "type": "数字"
+                    }
+                  }
+                }
+              }
             }
           }
         },

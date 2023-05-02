@@ -21,5 +21,5 @@ export default function ModalHelpTip({children}) {
   );
 }
 ModalHelpTip.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

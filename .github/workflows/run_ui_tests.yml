@@ -1,6 +1,5 @@
 name: Run UI tests
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
   run-ui-tests:
     runs-on: ubuntu-latest

@@ -1,0 +1,80 @@
+{
+  "vi-VN": {
+    "data": {
+      "standard_categories": {
+        "DAT-1": {
+          "description": "Cách máy tính biểu diễn dữ liệu khác với cách dữ liệu được diễn giải và hiển thị cho người dùng. Các chương trình được sử dụng để dịch dữ liệu thành một hình thức mà mọi người dễ hiểu hơn."
+        },
+        "IOC-2": {
+          "description": "Việc sử dụng các tiến bộ về máy tính có thể phát sinh rủi ro đối với sự an toàn và danh tính cá nhân."
+        },
+        "DAT-1.D": {
+          "description": "So sánh các thuật toán nén dữ liệu để xác định thuật toán hiệu quả nhất trong trường hợp cụ thể."
+        },
+        "IOC-2.B": {
+          "description": "Giải thích cách bảo vệ và sử dụng sai mục đích các tài nguyên máy tính."
+        },
+        "CD": {
+          "description": "Máy tính & Thiết bị liên lạc"
+        },
+        "CI": {
+          "description": "Cộng đồng, toàn cầu và tác động đạo đức "
+        },
+        "CL": {
+          "description": "Hợp tác"
+        },
+        "CPP": {
+          "description": "Luyện tập sử dụng máy tính & lập trình"
+        },
+        "CT": {
+          "description": "Tư duy máy tính"
+        },
+        "L": {
+          "description": "Ngôn ngữ"
+        },
+        "RI": {
+          "description": "Đọc cá nhân"
+        },
+        "RL": {
+          "description": "Đọc tác phẩm văn học"
+        },
+        "SL": {
+          "description": "Nói & Nghe"
+        },
+        "W": {
+          "description": "Viết"
+        },
+        "C": {
+          "description": "Đường hầm"
+        },
+        "F": {
+          "description": "Các hàm"
+        },
+        "G": {
+          "description": "Hình học"
+        },
+        "MP": {
+          "description": "Thực hành môn Toán"
+        },
+        "NBT": {
+          "description": "Số và phép toán hệ thập phân"
+        },
+        "OA": {
+          "description": "Phép toán và tư duy đại số"
+        },
+        "1": {
+          "description": "Học sinh thể hiện tư duy sáng tạo, tạo lập kiến thức và phát triển các sản phẩm cũng như quy trình sáng tạo sử dụng công nghệ."
+        },
+        "2": {
+          "description": "Học sinh sử dụng môi trường và phương tiện kỹ thuật số để giao tiếp và làm việc hợp tác, kể cả ở khoảng cách xa, nhằm hỗ trợ việc học tập của cá nhân và đóng góp vào việc học tập của những người khác."
+        },
+        "4": {
+          "description": "Học sinh sử dụng kỹ năng tư duy phản biện để lập kế hoạch và tiến hành nghiên cứu, quản lý dự án, giải quyết vấn đề và đưa ra quyết định sáng suốt bằng cách sử dụng các công cụ và tài nguyên số thích hợp."
+        },
+        "6": {
+          "description": "Học sinh thể hiện sự am hiểu về các khái niệm, hệ thống và hoạt động công nghệ."
+        }
+      }
+    }
+  }
+}

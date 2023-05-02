@@ -40,6 +40,29 @@
         "ai-training/oceans/unversioned": {
           "type": "ვიდეო"
         },
+        "common_core_and_ngss_guidance/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "cross-curricular_extension_activities/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
         "graph_paper_programming/coursed/2022": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
           "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
@@ -122,23 +145,27 @@
         "conditionals_with_cards_sample_program/coursed/2022": {
           "name": "პირობითი ბრძანებები ბანქოს პროგრამის ნიმუშოთ"
         },
-        "common_core_and_ngss_guidance/coursed/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        "common_core_and_ngss_guidance/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
         },
-        "cross-curricular_extension_activities/coursed/2022": {
+        "cross-curricular_extension_activities/coursef/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "debugging_guide/coursed/2022": {
+        "curriculum_guide/coursef/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/coursef/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursed/2022": {
+        "implementation_guide/coursef/2022": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursed/2022": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
         },
-        "teacher_forum/coursed/2022": {
+        "teacher_forum/coursef/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -154,10 +181,6 @@
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "type": "ვიდეო"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "Sprite ლაბორატორია დოკუმენტაცია",
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "blank_space_stories/coursef/2022": {
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
@@ -189,22 +212,33 @@
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "cs_fundamentals_final_project/coursef/2022": {
-          "name": "CS საფუძვლების ფინალური პროექტი"
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
         },
-        "common_core_and_ngss_guidance/coursef/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        "common_core_and_ngss_guidance/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
-        "cross-curricular_extension_activities/coursef/2022": {
+        "cross-curricular_extension_activities/coursee/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "debugging_guide/coursef/2022": {
+        "curriculum_guide/coursee/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/coursee/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursef/2022": {
+        "implementation_guide/coursee/2022": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "teacher_forum/coursef/2022": {
+        "lesson_type_guide/coursee/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursee/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -213,10 +247,6 @@
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2022": {
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "name": "Sprite ლაბორატორია დოკუმენტაცია",
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "pause_and_think_online/coursee/2022": {
           "name": "შეჩერდი და დაფიქრდი",
@@ -251,25 +281,29 @@
           "type": "ვიდეო"
         },
         "cs_fundamentals_final_project/coursee/2022": {
-          "name": "CS საფუძვლების ფინალური პროექტი"
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
         },
-        "common_core_and_ngss_guidance/coursee/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        "common_core_and_ngss_guidance/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
-        "cross-curricular_extension_activities/coursee/2022": {
+        "cross-curricular_extension_activities/courseb/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "debugging_guide/coursee/2022": {
+        "curriculum_guide/courseb/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/courseb/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursee/2022": {
+        "implementation_guide/courseb/2022": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursee/2022": {
+        "lesson_type_guide/courseb/2022": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "teacher_forum/coursee/2022": {
+        "teacher_forum/courseb/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -289,8 +323,7 @@
           "name": "მეტყველი სახეები"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე"
         },
         "pair_programming/courseb/2022": {
           "name": "პროგრამირება წყვილებში",
@@ -356,23 +389,10 @@
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "დიდი მოვლენა (A და B კურსები)"
         },
-        "common_core_and_ngss_guidance/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        "debugging_guide/express/2022": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "cross-curricular_extension_activities/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "debugging_guide/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "დანერგვის ინსტრუქციები",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "teacher_forum/courseb/2022": {
+        "teacher_forum/express/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -419,12 +439,13 @@
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
-        "debugging_guide/express/2022": {
+        "debugging_guide/pre-express/2022": {
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "teacher_forum/express/2022": {
+        "teacher_forum/pre-express/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -450,10 +471,23 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
-        "debugging_guide/pre-express/2022": {
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        "common_core_and_ngss_guidance/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
-        "teacher_forum/pre-express/2022": {
+        "curriculum_guide/coursea/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursea/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -528,20 +562,26 @@
           "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "common_core_and_ngss_guidance/coursea/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        "common_core_and_ngss_guidance/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
-        "debugging_guide/coursea/2022": {
+        "cross-curricular_extension_activities/coursec/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide_1/coursec/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursea/2022": {
+        "implementation_guide/coursec/2022": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursea/2022": {
+        "lesson_type_guide/coursec/2022": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "teacher_forum/coursea/2022": {
+        "teacher_forum/coursec/2022": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -619,25 +659,8 @@
           "name": "ბიტი ბაიტის წინააღმდეგ",
           "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
-        "common_core_and_ngss_guidance/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
-        },
-        "cross-curricular_extension_activities/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "debugging_guide_1/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "დანერგვის ინსტრუქციები",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursec/2022": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "მასწავლებლის ფორუმი",
-          "url": "https://forum.code.org/c/csf/"
+        "teacher_forum/csd/2022": {
+          "name": "მასწავლებლის ფორუმი"
         },
         "representing_information/csd/2022": {
           "name": "ინფორმაციის წარმოდგენა"
@@ -653,6 +676,9 @@
         },
         "computer_science_practices/csd/2022": {
           "type": "არეკვლა"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "რუბრიკა"
         },
         "interpreting_data/csd/2022": {
           "name": "მონაცემთა ინტერპრეტაცია"
@@ -711,8 +737,8 @@
         "make_a_recommendation/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
-        "teacher_forum/csd/2022": {
-          "name": "მასწავლებლის ფორუმი"
+        "make_a_recommendation_1/csd/2022": {
+          "type": "რუბრიკა"
         },
         "intro_to_problem_solving/csd/2022": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
@@ -752,7 +778,8 @@
           "type": "თანატოლის კომენტარი"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "რუბრიკა"
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
@@ -794,6 +821,9 @@
         "text/csd/2022": {
           "name": "ტექსტი"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "ვიდეო"
         },
@@ -812,6 +842,9 @@
         },
         "sprite_movement_1/csd/2022": {
           "name": "სპრაიტების მოძრაობა"
+        },
+        "animated_scene/csd/2022": {
+          "type": "რუბრიკა"
         },
         "boolean_expressions/csd/2022": {
           "name": "ბულის ტიპის გამოთქმები",
@@ -833,6 +866,9 @@
         },
         "interactive_card_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "რუბრიკა"
         },
         "project_-_interactive_card/csd/2022": {
           "name": "პროექტი - ინტერაქტიული ბარათი"
@@ -856,11 +892,17 @@
         "collision_detection_2/csd/2022": {
           "name": "შეჯახების აღმოჩენა"
         },
+        "side_scroller/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "complex_sprite_movement/csd/2022": {
           "name": "სპრაიტების რთული მოძრაობა"
         },
         "collisions/csd/2022": {
           "name": "შეჯახებები"
+        },
+        "flyer_game/csd/2022": {
+          "type": "რუბრიკა"
         },
         "functions/csd/2022": {
           "name": "ფუნქციები",
@@ -880,6 +922,9 @@
         },
         "make_your_own_game_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "რუბრიკა"
         },
         "project_-_design_a_game/csd/2022": {
           "name": "პროექტი - შექმენით თამაშის დიზაინი"
@@ -902,6 +947,9 @@
         "headings/csd/2022": {
           "name": "სათაურები"
         },
+        "html_web_page/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "html_web_page_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -922,6 +970,9 @@
         "styling_text_with_css/csd/2022": {
           "name": "ტექსტის გასტილვა CSS-ით"
         },
+        "your_personal_style/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "your_personal_style_1/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -940,6 +991,9 @@
         "personal_web_page/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
+        "personal_web_page_1/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "publishing_your_website/csd/2022": {
           "type": "ვიდეო"
         },
@@ -955,6 +1009,9 @@
         "classes/csd/2022": {
           "name": "კლასები"
         },
+        "website_for_a_purpose/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "website_for_a_purpose_1/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -965,7 +1022,8 @@
           "name": "მომხმარებლის მოთხოვნილებების განსაზღვრა"
         },
         "paper_prototypes/csd/2022": {
-          "name": "ქაღალდის პროტოტიპები"
+          "name": "ქაღალდის პროტოტიპები",
+          "type": "რუბრიკა"
         },
         "design_mode/csd/2022": {
           "name": "დიზაინის რეჟიმი"
@@ -986,12 +1044,14 @@
           "name": "აპლიკაციების ტესტირება"
         },
         "app_presentation/csd/2022": {
-          "name": "აპლიკაციის პრეზენტაცია"
+          "name": "აპლიკაციის პრეზენტაცია",
+          "type": "რუბრიკა"
         },
         "app_presentation_1/csd/2022": {
           "name": "აპლიკაციის პრეზენტაცია"
         },
         "computer_science_is_changing_everything/csd/2022": {
+          "name": "კომპიუტერული მეცნიერება ცვლის ყველაფერს",
           "type": "ვიდეო"
         },
         "the_internet_of_things/csd/2022": {
@@ -1016,8 +1076,14 @@
           "name": "ცვლადები",
           "type": "ვიდეო"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "input_output_devices/csd/2022": {
           "type": "ვიდეო"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "რუბრიკა"
         },
         "introduction_to_arrays/csd/2022": {
           "name": "შესავალი მასივებში",
@@ -1040,6 +1106,12 @@
         "functions_5/csd/2022": {
           "name": "ფუნქციები"
         },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "რუბრიკა"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "ვიდეო"
         },
@@ -1050,7 +1122,11 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "ვიდეო"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI ლაბორატორიის შესავალი"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI ლაბორატორიის შესავალი",
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
@@ -1065,11 +1141,21 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "ვიდეო"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში",
           "type": "ვიდეო"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "ვიდეო"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "რუბრიკა"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
           "type": "ვიდეო"
@@ -1079,6 +1165,9 @@
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "ვიდეო"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "რუბრიკა"
         },
         "lesson_plans/courseb/2018": {
           "name": "გაკვეთილის გეგმები"
@@ -1248,6 +1337,9 @@
         "vocabulary/csd/2018": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursea/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1259,6 +1351,9 @@
         },
         "vocabulary/coursea/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/courseb/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1272,6 +1367,9 @@
         "vocabulary/courseb/2019": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursed/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursed/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1284,6 +1382,9 @@
         "vocabulary/coursed/2019": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursef/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1295,6 +1396,9 @@
         },
         "vocabulary/coursef/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursee/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1319,6 +1423,9 @@
         },
         "vocabulary/express/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursec/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1485,15 +1592,59 @@
         "vocabulary_3/csd/2017": {
           "name": "ლექსიკონი"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "2021_change_log/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "course_vocabulary/coursef/2021": {
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
+        "debugging_guide/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
         "exploring_apps/coursef/2021": {
           "name": "აპლიკაციების გამოკვლევა"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "type": "ვიდეო"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "აპლიკაციების გამოკვლევა",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "ვიდეო"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Sprite ლაბორატორია დოკუმენტაცია",
@@ -1505,29 +1656,15 @@
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "ვიდეო"
         },
-        "blank_space_stories_-_worksheet/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
-        },
         "blank_space_stories/coursef/2021": {
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "შეჩერდი და დაფიქრდი",
           "type": "ვიდეო"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "ხალისი \"მიზნისთვის\" ციკლით",
-          "url": "https://youtu.be/mX857v5B4gE"
-        },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "სახალისო ციკლები - შეფასების გასაღები"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "ხალისი \"მიზნისთვის\" ციკლით",
-          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "ხალისი \"მიზნისთვის\" ციკლით"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "ხალისი \"მიზნისთვის\" ციკლით"
@@ -1536,28 +1673,42 @@
           "name": "ხალისი \"მიზნისთვის\" ციკლით",
           "type": "შეფასება"
         },
-        "ai-ml/coursef/2021": {
-          "type": "ვიდეო"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "ხალისი \"მიზნისთვის\" ციკლით"
         },
-        "ai-training/coursef/2021": {
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "სახალისო ციკლები - შეფასების გასაღები"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "ხალისი \"მიზნისთვის\" ციკლით",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "ხალისი \"მიზნისთვის\" ციკლით",
+          "url": "https://youtu.be/mX857v5B4gE"
+        },
+        "ai-ml/coursef/2021": {
           "type": "ვიდეო"
         },
         "ai-societal/coursef/2021": {
           "type": "ვიდეო"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "ინტერნეტი",
-          "url": "https://youtu.be/mFOUbqYv1Sc"
+        "ai-training/coursef/2021": {
+          "type": "ვიდეო"
         },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "IP მისამართებისა და მიწოდების ტიპის ბარათები"
+        "assessment-answer-internet/coursef/2021": {
+          "name": "ინტერნეტი"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "ინტერნეტი",
           "type": "შეფასება"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "ინტერნეტი"
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP მისამართებისა და მიწოდების ტიპის ბარათები"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "ინტერნეტი",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "design-process/coursef/2021": {
           "name": "დიზაინის პროცესი",
@@ -1569,43 +1720,44 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
-        "csta_standards_mapping/coursef/2021": {
-          "url": "https://studio.code.org/s/coursef-2021/standards"
+        "2021_change_log/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "common_core_and_ngss_guidance/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
-        "cross-curricular_extension_activities_1/coursef/2021": {
+        "course_vocabulary/courseb/2021": {
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "course_vocabulary/coursef/2021": {
-          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        "csta_standards_mapping/courseb/2021": {
+          "url": "https://studio.code.org/s/courseb-2021/standards"
         },
-        "implementation_guide/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/courseb/2021": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursef/2021": {
+        "lesson_type_guide/courseb/2021": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "2021_change_log/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/courseb/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Sprite ლაბორატორია დოკუმენტაცია",
-          "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "virtual_lesson_modifications/coursef/2021": {
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        "virtual_lesson_modifications/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "ვისწავლოთ გადაადგილება"
@@ -1619,15 +1771,15 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "ვისწავლოთ გადაადგილება"
         },
-        "feeling-faces-image/courseb/2021": {
-          "name": "მეტყველი სახეები"
-        },
         "class-section-video/courseb/2021": {
           "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Blockly-ის ბლოკები უკომპიუტეროდ (საფეხურები K-1)"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "მეტყველი სახეები"
         },
         "pair-programming-vid/courseb/2021": {
           "name": "პროგრამირება წყვილებში",
@@ -1636,11 +1788,11 @@
         "wiggles_-_gonoodle/courseb/2021": {
           "type": "ვიდეო"
         },
-        "happy-map-game-pieces/courseb/2021": {
-          "name": "ბედნიერი რუკის თამაშის ნაწილები"
-        },
         "compass-rose/courseb/2021": {
           "name": "კომპასის ვარდი"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "ბედნიერი რუკის თამაშის ნაწილები"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "სტივი და დიდი პროექტი"
@@ -1650,9 +1802,9 @@
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ვიდეო"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "ჩაციკლვა",
-          "url": "https://youtu.be/JoKTqHCni0M"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "ჩაციკლვა",
@@ -1663,9 +1815,9 @@
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "შეფასება"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "ჩაციკლვა",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
@@ -1676,55 +1828,57 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "დიდი მოვლენა",
-          "url": "https://youtu.be/u0WV9shCoak",
-          "type": "ვიდეო"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "დიდი მოვლენა"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "დიდი მოვლენა",
           "type": "შეფასება"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "დიდი მოვლენა"
-        },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "დიდი მოვლენა (A და B კურსები)"
         },
-        "csta_standards_mapping/courseb/2021": {
-          "url": "https://studio.code.org/s/courseb-2021/standards"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "ვიდეო"
         },
-        "common_core_and_ngss_guidance/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        "2021_change_log/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "cross-curricular_extension_activities/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
-        "course_vocabulary/courseb/2021": {
-          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        "course_vocabulary/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
-        "implementation_guide/courseb/2021": {
+        "csta_standards_mapping/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/courseb/2021": {
+        "lesson_type_guide/coursea/2021": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/courseb/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ვიდეო"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "პროგრამირება წყვილებში",
@@ -1733,21 +1887,17 @@
         "wiggles-go_noodle/coursea/2021": {
           "type": "ვიდეო"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "ვიდეო"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "ბედნიერი რუკები"
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "ბედნიერი რუკის ბარათები"
         },
         "happy-map-cards/coursea/2021": {
           "name": "ბედნიერი რუკის ბარათები"
         },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "ბედნიერი რუკის ბარათები"
-        },
         "happy-map-game-pieces/coursea/2021": {
           "name": "ბედნიერი რუკის თამაშის ნაწილები"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "ბედნიერი რუკები"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blockly-ის ბლოკები უკომპიუტეროდ (საფეხურები K-1)"
@@ -1782,19 +1932,19 @@
         "csf_lesson_recommendations_1/coursea/2021": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "დიდი მოვლენა",
-          "url": "https://youtu.be/u0WV9shCoak"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "დიდი მოვლენა"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "დიდი მოვლენა",
           "type": "შეფასება"
         },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "დიდი მოვლენა"
-        },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "დიდი მოვლენა (A და B კურსები)"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
@@ -1803,39 +1953,49 @@
         "csf_lesson_recommendations_2/coursea/2021": {
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "csta_standards_mapping/coursea/2021": {
-          "url": "https://studio.code.org/s/coursea-2021/standards"
+        "2021_change_log/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "common_core_and_ngss_guidance/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
-        "course_vocabulary/coursea/2021": {
-          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        "course_vocabulary/coursec/2021": {
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
-        "implementation_guide/coursea/2021": {
+        "cross-curricular_extension_activities/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursec/2021": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursea/2021": {
+        "lesson_type_guide/coursec/2021": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursea/2021": {
+        "teacher_forum_1/coursec/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        "virtual_lesson_modifications/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "ჩემი რობოტი-მეგობრები"
         },
         "csf-mrf-symbol-key/coursec/2021": {
@@ -1845,59 +2005,44 @@
           "name": "ჩემი რობოტი-მეგობრები",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
-        "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "ჩემი რობოტი-მეგობრები"
-        },
-        "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "ჩემი რობოტი-მეგობრები"
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "პროგრამირება წყვილებში",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ვიდეო"
         },
-        "csf-lesson-recommend/coursec/2021": {
-          "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
-        },
         "csf-artist-intro-video/coursec/2021": {
           "name": "შესავალი მხატვარში",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "მობრუნება და კუთხეები"
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "მობრუნება და კუთხეები",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
-        "csf-turns-angles-doc/coursec/2021": {
-          "name": "მობრუნება და კუთხეები"
-        },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "დიდი მოვლენა",
-          "url": "https://youtu.be/u0WV9shCoak"
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "დიდი მოვლენა"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "დიდი მოვლენა",
           "type": "შეფასება"
         },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "დიდი მოვლენა"
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "შეჩერდი და დაფიქრდი",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "ბიტი ბაიტის წინააღმდეგ",
-          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "ორობითი სამაჯურები",
-          "url": "https://youtu.be/3S2YfoO4_CM"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "ორობითი სამაჯურები",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "ორობითი სამაჯურები"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "ორობითი სამაჯურები"
@@ -1906,92 +2051,102 @@
           "name": "ორობითი სამაჯურები",
           "type": "შეფასება"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "ორობითი სამაჯურები"
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "ბიტი ბაიტის წინააღმდეგ",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
-        "csta_standards_mapping/coursec/2021": {
-          "url": "https://studio.code.org/s/coursec-2021/standards"
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "ორობითი სამაჯურები",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
-        "common_core_and_ngss_guidance/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "ორობითი სამაჯურები",
+          "url": "https://youtu.be/3S2YfoO4_CM"
         },
-        "cross-curricular_extension_activities/coursec/2021": {
+        "2021_change_log/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "course_vocabulary/coursed/2021": {
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "course_vocabulary/coursec/2021": {
-          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        "csta_standards_mapping/coursed/2021": {
+          "url": "https://studio.code.org/s/coursed-2021/standards"
         },
-        "implementation_guide/coursec/2021": {
+        "curriculum_guide_1/coursed/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "დანერგვის ინსტრუქციები",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursec/2021": {
+        "lesson_type_guide/coursed/2021": {
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "debugging_guide_1/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursec/2021": {
+        "teacher_forum_1/coursed/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "გრაფიკული პროგრამირება ქაღალდზე",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "გრაფიკული პროგრამირება ქაღალდზე",
-          "url": "https://youtu.be/Y_paSrH2ffw"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "გრაფიკული პროგრამირება ქაღალდზე",
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        "virtual_lesson_modifications/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "შეფასება"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
           "name": "გრაფიკული პროგრამირება ქაღალდზე",
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "პროგრამირება წყვილებში",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "პროგრამირება ცვლაში"
         },
         "relay-assessment/coursed/2021": {
           "name": "პროგრამირება ცვლაში"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "პროგრამირება ცვლაში"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "name": "პროგრამირება ცვლაში",
-          "url": "https://youtu.be/l5MKkXbzOsk"
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "პროგრამირება ცვლაში"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "პროგრამირება ცვლაში",
           "url": "https://youtu.be/ZULpfAVJOBo"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "პროგრამირება ცვლაში"
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "პროგრამირება ცვლაში",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "შეჩერდი და დაფიქრდი",
@@ -2009,62 +2164,40 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "პირობები ბარათებით",
-          "url": "https://youtu.be/UymN4lTL50s"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "პირობები ბარათებით",
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "პირობითი ბრძანებები ბანქოს პროგრამის ნიმუშოთ"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "პირობები ბარათებით",
-          "type": "შეფასება"
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "პირობები ბარათებით"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "პირობები ბარათებით",
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "პირობები ბარათებით"
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "პირობები ბარათებით",
+          "type": "შეფასება"
         },
-        "csta_standards_mapping/coursed/2021": {
-          "url": "https://studio.code.org/s/coursed-2021/standards"
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "პირობითი ბრძანებები ბანქოს პროგრამის ნიმუშოთ"
         },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "პირობები ბარათებით",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "პირობები ბარათებით",
+          "url": "https://youtu.be/UymN4lTL50s"
         },
-        "course_vocabulary/coursed/2021": {
-          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        "course_vocabulary_1/express/2021": {
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "დანერგვის ინსტრუქციები",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        "csta_standards_mapping/express/2021": {
+          "url": "https://studio.code.org/s/express-2021/standards"
         },
-        "lesson_type_guide/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        "debugging_guide/express/2021": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "debugging_guide/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "pair_programming/express/2021": {
           "name": "პროგრამირება წყვილებში",
@@ -2113,24 +2246,24 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
-        "csta_standards_mapping/express/2021": {
-          "url": "https://studio.code.org/s/express-2021/standards"
+        "course_vocabulary/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
-        "course_vocabulary_1/express/2021": {
-          "url": "https://studio.code.org/s/express-2021/vocab"
+        "csta_standards_mapping/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
-        "teacher_forum_1/express/2021": {
+        "debugging_guide/pre-express/2021": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum_1/pre-express/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "debugging_guide/express/2021": {
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "პროგრამირება წყვილებში",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        "20_20_20_rule/pre-express/2021": {
+          "type": "ვიდეო"
         },
         "class-section-video/pre-express/2021": {
           "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე",
@@ -2139,8 +2272,9 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "მეტყველი სახეები"
         },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "ვიდეო"
+        "pair-programming-vid/pre-express/2021": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "ვიდეო"
@@ -2150,18 +2284,45 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
-        "csta_standards_mapping/pre-express/2021": {
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        "2021_change_log/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "course_vocabulary/pre-express/2021": {
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "course_vocabulary/coursee/2021": {
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "url": "https://studio.code.org/s/coursee-2021/standards"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "მასწავლებლის ფორუმი",
           "url": "https://forum.code.org/c/csf/"
         },
-        "debugging_guide/pre-express/2021": {
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        "virtual_lesson_modifications/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Sprite ლაბორატორია დოკუმენტაცია",
@@ -2187,74 +2348,36 @@
           "name": "მობრუნება და კუთხეები",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "სიმღერის წერა ფუნქციებით",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
+        "assessment-answer-songwriting/coursee/2021": {
           "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
           "type": "შეფასება"
         },
-        "assessment-answer-songwriting/coursee/2021": {
+        "csf-songwriting-worksheets/coursee/2021": {
           "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
         },
-        "rubric-csf-final-projects/coursee/2021": {
-          "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
         },
-        "design-process/coursee/2021": {
-          "name": "დიზაინის პროცესი",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "სიმღერის წერა ფუნქციებით",
+          "url": "https://youtu.be/5iDCKkI6y2Y"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "ცოდნის გამოვლენის 72 შემოქმედებითი ხერხი თქვენი სტუდენტებისთვის",
           "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
-        "csta_standards_mapping/coursee/2021": {
-          "url": "https://studio.code.org/s/coursee-2021/standards"
+        "design-process/coursee/2021": {
+          "name": "დიზაინის პროცესი",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursee/2021": {
-          "url": "https://studio.code.org/s/coursee-2021/vocab"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "დანერგვის ინსტრუქციები",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "მასწავლებლის ფორუმი",
-          "url": "https://forum.code.org/c/csf/"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Sprite ლაბორატორია დოკუმენტაცია",
-          "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "ვიდეო"
@@ -2266,7 +2389,11 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "ვიდეო"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI ლაბორატორიის შესავალი"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI ლაბორატორიის შესავალი",
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
@@ -2281,17 +2408,33 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "ვიდეო"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში",
           "type": "ვიდეო"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "ვიდეო"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "რუბრიკა"
         },
         "cleaning_survey_data/csd/2021": {
           "type": "ვიდეო"
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "ვიდეო"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "რუბრიკა"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
         },
         "the-design-thinking-process/csd/2021": {
           "type": "ვიდეო"
@@ -2300,7 +2443,8 @@
           "type": "არეკვლა"
         },
         "paper-prototypes/csd/2021": {
-          "name": "ქაღალდის პროტოტიპები"
+          "name": "ქაღალდის პროტოტიპები",
+          "type": "რუბრიკა"
         },
         "design_mode/csd/2021": {
           "name": "დიზაინის რეჟიმი"
@@ -2315,18 +2459,17 @@
           "name": "დიზაინის რეჟიმი"
         },
         "app-presentation/csd/2021": {
-          "name": "აპლიკაციის პრეზენტაცია"
+          "name": "აპლიკაციის პრეზენტაცია",
+          "type": "რუბრიკა"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "აპლიკაციის პრეზენტაცია"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "მასწავლებლის ფორუმი"
         },
         "internet-of-things-video/csd/2021": {
           "type": "ვიდეო"
         },
         "innovation-video-1-1/csd/2021": {
+          "name": "კომპიუტერული მეცნიერება ცვლის ყველაფერს",
           "type": "ვიდეო"
         },
         "how_computers_word_hardware_software/csd/2021": {
@@ -2341,6 +2484,9 @@
         },
         "functions_2/csd/2021": {
           "name": "ფუნქციები"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "შესავალი მასივებში",
@@ -2357,6 +2503,9 @@
           "name": "როგორ მუშაობს კომპიუტერი: სქემები და ლოგიკა",
           "type": "ვიდეო"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "representing-information-1/csd/2021": {
           "name": "ინფორმაციის წარმოდგენა"
         },
@@ -2365,6 +2514,9 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "რიცხვების წარმოდგენა"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "რუბრიკა"
         },
         "interpreting-data-exemplar-2019/csd/2021": {
           "name": "მონაცემთა ინტერპრეტაცია"
@@ -2414,6 +2566,12 @@
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
+        },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "ვიდეო"
         },
@@ -2436,6 +2594,9 @@
         "sprites_1/csd/2021": {
           "name": "სპრაიტები"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "ვიდეო"
         },
@@ -2448,6 +2609,9 @@
         "animating-sprites/csd/2021": {
           "name": "სპრაიტების მოძრაობა",
           "type": "ვიდეო"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "boolean_expressions/csd/2021": {
           "name": "ბულის ტიპის გამოთქმები",
@@ -2464,6 +2628,9 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
+        "interactive_card/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "velocity_1/csd/2021": {
           "name": "სიჩქარე",
           "type": "ვიდეო"
@@ -2477,6 +2644,12 @@
         "collision_detection/csd/2021": {
           "name": "შეჯახების აღმოჩენა"
         },
+        "side-scroller-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "calling_and_defining_functions/csd/2021": {
           "name": "ფუნქციები",
           "type": "ვიდეო"
@@ -2487,8 +2660,8 @@
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
-        "teacher_forum_1/csd/2021": {
-          "name": "მასწავლებლის ფორუმი"
+        "make_your_own_game/csd/2021": {
+          "type": "რუბრიკა"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "ვიდეო"
@@ -2519,7 +2692,8 @@
           "type": "თანატოლის კომენტარი"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "რუბრიკა"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "ვიდეო"
@@ -2532,6 +2706,9 @@
         },
         "video_debugging/csd/2021": {
           "type": "ვიდეო"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "html-web-page/csd/2021": {
           "type": "თანატოლის კომენტარი"
@@ -2550,6 +2727,9 @@
           "name": "შესავალი CSS-ში - ნაწილი 2",
           "type": "ვიდეო"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
@@ -2561,6 +2741,9 @@
         },
         "personal-web-page-1/csd/2021": {
           "type": "თანატოლის კომენტარი"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "რუბრიკა"
         },
         "publishing_your_website/csd/2021": {
           "type": "ვიდეო"
@@ -2576,6 +2759,9 @@
         },
         "classes/csd/2021": {
           "name": "კლასები"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "თანატოლის კომენტარი"
@@ -2604,6 +2790,9 @@
         "vocabulary/express/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/courseb/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2615,6 +2804,9 @@
         },
         "vocabulary/courseb/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursed/2020": {
           "name": "გაკვეთილის გეგმები"
@@ -2628,6 +2820,9 @@
         "vocabulary/coursed/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursec/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursec/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2639,6 +2834,9 @@
         },
         "vocabulary/coursec/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursee/2020": {
           "name": "გაკვეთილის გეგმები"
@@ -2652,6 +2850,9 @@
         "vocabulary/coursee/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursea/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursea/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2663,6 +2864,9 @@
         },
         "vocabulary/coursea/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursef/2020": {
           "name": "გაკვეთილის გეგმები"

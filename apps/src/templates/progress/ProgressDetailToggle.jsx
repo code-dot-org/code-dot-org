@@ -4,6 +4,7 @@ import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
 import {setIsSummaryView, hasGroups} from '@cdo/apps/code-studio/progressRedux';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import summaryActive from './images/toggleSummaryActive.png';
 import summaryInactive from './images/toggleSummaryInactive.png';
@@ -21,14 +22,14 @@ const imageSets = {
     summaryActive,
     summaryInactive,
     detailActive,
-    detailInactive
+    detailInactive,
   },
   purple: {
     summaryActive: groupSummaryActive,
     summaryInactive: groupSummaryInactive,
     detailActive: groupDetailActive,
-    detailInactive: groupDetailInactive
-  }
+    detailInactive: groupDetailInactive,
+  },
 };
 
 /**
@@ -45,7 +46,7 @@ class ProgressDetailToggle extends React.Component {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     hasGroups: PropTypes.bool.isRequired,
-    setIsSummaryView: PropTypes.func.isRequired
+    setIsSummaryView: PropTypes.func.isRequired,
   };
 
   onChange = () => {
@@ -59,7 +60,7 @@ class ProgressDetailToggle extends React.Component {
       {
         study: 'progress-detail-toggle',
         study_group: this.props.toggleStudyGroup,
-        event: isSummary ? 'see-summary' : 'see-detail'
+        event: isSummary ? 'see-summary' : 'see-detail',
       },
       {includeUserId: true}
     );
@@ -89,6 +90,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
+            alt={i18n.summaryView()}
           />
         </button>
         <button
@@ -100,6 +102,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
+            alt={i18n.detailView()}
           />
         </button>
       </ToggleGroup>
@@ -111,7 +114,7 @@ const styles = {
   whiteBorder: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.white
+    borderColor: color.white,
   },
   icon: {
     fontSize: 20,
@@ -120,8 +123,8 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 3,
     // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
@@ -130,7 +133,7 @@ export default connect(
   state => ({
     isPlc: !!state.progress.deeperLearningCourse,
     isSummaryView: state.progress.isSummaryView,
-    hasGroups: hasGroups(state.progress)
+    hasGroups: hasGroups(state.progress),
   }),
   {setIsSummaryView}
 )(ProgressDetailToggle);

@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში და კლუბებში
 
-### შეუერთდით მოძრაობას და გააცანით თქვენს მოსწავლეებს კომპიუტერული მეცნიერება შემდეგი საფეხურების მიხედვით.
+### შეუერთდით მოძრაობას და გააცანით თქვენს მოსწავლეებს კომპიუტერული მეცნიერება შემდეგი ნაბიჯებით.
 
-გამოთვლითი აზროვნება გვეხმარება პრობლემის გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ როგორ შექმნან ტექნოლოგია და არა მარტო გამოიყენონ ის. ბავშვობიდანვე დაწყებით მათ ექნებათ ფუნდამენტი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
+გამოთვლითი აზროვნება გვეხმარება პრობლემების გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ, თუ როგორ შექმნან ტექნოლოგია და არა მხოლოდ გამოიყენონ ის. ადრეულ ასაკში დაწყებით მათ ექნებათ საფუძველი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -65,7 +65,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ** - დაწერეთ ტუტორიალის ბმული დაფაზე. ბმული შეგიძლიათ იპოვოთ[ ტუტორიალის შესახებ ინფორმაციაში]({{ urls/learn }}), მონაწილეთა რაოდენობის ქვემოთ.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. მოდი ერთად მოვიფიქროთ.” - “ტექნოლოგია ყოველთვის არ მუშაობს იმგვარად, როგორც ცვენ გვინდა.” - “პროგრამირების სწავლა ახალი ენის სწავლას ჰგავს; უცბად ვერ დაეუფლები მაღალ დონეზე”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

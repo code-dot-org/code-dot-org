@@ -16,7 +16,7 @@ title: 简介和有用的统计数据
 
 #### 将计算机科学带到你的学校。从《编程一小时》开始。
 
-科技正改变着这星球上的每一行业，计算机知识也已成为人类必备的技能之一。 但是只有一半的学校开设计算机科学！ 好消息是，我们正在着手改变现状。 如果你以前听说过《编程一小时》，你应该知道它创造了历史。 1亿名学生正通过编程一小时活动入门计算机科学并体验着其中的乐趣。
+科技正改变着这星球上的每一行业，计算机知识也已成为人类必备的技能之一。 但是只有一半的学校开设计算机科学！ 好消息是，我们正在着手改变现状。 If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 编程一小时是个一小时的计算机科学介绍活动，希望能揭开编程的神秘面纱，并说明它是任何人都可以学会的基础知识。 在[http://HourOfCode.com](http://HourofCode.com)了解更多信息，自己尝试体验一小时，或者举办一个编程一小时的活动，向他人介绍计算机世界！
 
@@ -30,7 +30,7 @@ title: 简介和有用的统计数据
 
 #### 为什么这很重要？
 
-科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 但是美国有49%的学校不开设计算机科学。 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
 
 #### 你可以在材料中使用的引文
 

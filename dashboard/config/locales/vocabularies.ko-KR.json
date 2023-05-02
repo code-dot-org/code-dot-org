@@ -21,10 +21,6 @@
           "word": "디버깅",
           "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
         },
-        "program/minecraft/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
         "event/minecraft/unversioned": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
@@ -33,6 +29,10 @@
           "word": "루프",
           "definition": "뭔가를 계속 다시 하는 동작."
         },
+        "program/minecraft/unversioned": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
         "code/hero/unversioned": {
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
         },
@@ -40,13 +40,13 @@
           "word": "디버깅",
           "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
         },
-        "program/hero/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
         "function/hero/unversioned": {
           "word": "함수",
           "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
+        },
+        "program/hero/unversioned": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "code/poem-art/2021": {
           "word": "코드",
@@ -136,6 +136,9 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
+        "code/dance/unversioned": {
+          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+        },
         "event/dance/unversioned": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
@@ -144,19 +147,8 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
-        "code/dance/unversioned": {
-          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
         "code/aquatic/unversioned": {
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "디버깅",
-          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
-        },
-        "program/aquatic/unversioned": {
-          "word": "프로그램 ",
-          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "condition/aquatic/unversioned": {
           "word": "조건",
@@ -166,9 +158,17 @@
           "word": "조건",
           "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "디버깅",
+          "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+        },
         "loops/aquatic/unversioned": {
           "word": "반복",
           "definition": "뭔가를 계속 다시 하는 동작."
+        },
+        "program/aquatic/unversioned": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "시저 암호 ",
@@ -250,10 +250,6 @@
           "word": "모델 및 시뮬레이션",
           "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
         },
-        "event/sports/unversioned": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
         "code/sports/unversioned": {
           "word": "코드",
           "definition": "(v) 코드 작성 또는 컴퓨터에게 내릴 지시사항 작성."
@@ -261,6 +257,10 @@
         "debugging/sports/unversioned": {
           "word": "디버깅",
           "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+        },
+        "event/sports/unversioned": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
         },
         "program/sports/unversioned": {
           "word": "프로그램 ",
@@ -277,16 +277,16 @@
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
-        "event/basketball/unversioned": {
-          "word": "이벤트 ",
-          "definition": " 무언가를 일으키는 행위."
-        },
         "code/basketball/unversioned": {
           "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
         },
         "debugging/basketball/unversioned": {
           "word": "디버깅",
           "definition": "알고리즘 또는 프로그램에서 문제를 찾아 고침."
+        },
+        "event/basketball/unversioned": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
         },
         "program/basketball/unversioned": {
           "word": "프로그램 ",
@@ -882,8 +882,49 @@
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
+        "features/csd/2022": {
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
+        },
+        "label/csd/2022": {
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
+        },
+        "model/csd/2022": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "지도형 학습",
+          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
+        },
+        "training/csd/2022": {
+          "word": "교육",
+          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "비지도 학습",
+          "definition": "라벨이 없는 데이터에서 패턴 찾기"
+        },
+        "categorical_data/csd/2022": {
+          "word": "범주형 데이터",
+          "definition": "그룹으로 분리할 수 있는 데이터"
+        },
+        "classification/csd/2022": {
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
+        },
+        "bias/csd/2022": {
+          "word": "편향",
+          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
+        },
+        "numerical_data/csd/2022": {
+          "word": "수치 데이터",
+          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
+        },
         "ethics/csd/2022": {
-          "word": "윤리"
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
         },
         "code/poem-art/unversioned": {
           "word": "코드",
@@ -913,6 +954,10 @@
           "word": "사용자",
           "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
         },
+        "algorithm/coursef/2021": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록."
+        },
         "behavior/coursef/2021": {
           "word": "행동",
           "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
@@ -920,10 +965,6 @@
         "program/coursef/2021": {
           "word": "프로그램 ",
           "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
-        },
-        "algorithm/coursef/2021": {
-          "word": "알고리즘",
-          "definition": "과제를 끝내기 위한 단계 목록."
         },
         "event/coursef/2021": {
           "word": "이벤트 ",
@@ -965,9 +1006,21 @@
           "word": "DNS",
           "definition": "도메인 네임 시스템의 약어, 이 시스템은 도메인 이름 (example.com 등)을 IP 주소 (93.184.216.34 등)로 바꿉니다."
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/케이블",
+          "definition": "전화 또는 텔레비전 선을 사용하여 정보를 전송하는 방식."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "광 케이블",
+          "definition": "빛을 사용해 정보를 전송하는 연결 "
+        },
         "internet/coursef/2021": {
           "word": "인터넷",
           "definition": "서로 연결된 컴퓨터와 서버 그룹"
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP 주소",
+          "definition": "인터넷에 연결된 항목에 배정된 번호."
         },
         "packets/coursef/2021": {
           "word": "패킷",
@@ -980,18 +1033,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "웹페이지를 부르기 위해 쉽게 기억되는 주소 (www.code.org 등)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/케이블",
-          "definition": "전화 또는 텔레비전 선을 사용하여 정보를 전송하는 방식."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "광 케이블",
-          "definition": "빛을 사용해 정보를 전송하는 연결 "
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP 주소",
-          "definition": "인터넷에 연결된 항목에 배정된 번호."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -1029,6 +1070,10 @@
           "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
+        "double_click/courseb/2021": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
         "drag/courseb/2021": {
           "word": "드래그",
           "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
@@ -1036,10 +1081,6 @@
         "drop/courseb/2021": {
           "word": "드롭",
           "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
-        },
-        "double_click/courseb/2021": {
-          "word": "더블 클릭",
-          "definition": "마우스 버튼을 매우 빠르게 누룸."
         },
         "program/courseb/2021": {
           "word": "프로그램 ",
@@ -1081,6 +1122,10 @@
           "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
+        "double_click/coursea/2021": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
         "drag/coursea/2021": {
           "word": "드래그",
           "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
@@ -1088,10 +1133,6 @@
         "drop/coursea/2021": {
           "word": "드롭",
           "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
-        },
-        "double_click/coursea/2021": {
-          "word": "더블 클릭",
-          "definition": "마우스 버튼을 매우 빠르게 누룸."
         },
         "bug/coursea/2021": {
           "word": "버그",
@@ -1291,13 +1332,13 @@
           "word": "함수",
           "definition": "쉽게 계속 다시 호출할 수 있는 코드 부분."
         },
-        "variable/express/2021": {
-          "word": "변수",
-          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
-        },
         "prompt/express/2021": {
           "word": "프롬프트",
           "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
+        },
+        "variable/express/2021": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
         },
         "for_loop/express/2021": {
           "word": "For 루프",
@@ -1323,6 +1364,10 @@
           "word": "클릭",
           "definition": "마우스 버튼을 누룸."
         },
+        "double_click/pre-express/2021": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
         "drag/pre-express/2021": {
           "word": "드래그",
           "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
@@ -1330,10 +1375,6 @@
         "drop/pre-express/2021": {
           "word": "드롭",
           "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
-        },
-        "double_click/pre-express/2021": {
-          "word": "더블 클릭",
-          "definition": "마우스 버튼을 매우 빠르게 누룸."
         },
         "algorithm/pre-express/2021": {
           "word": "알고리즘",
@@ -1371,13 +1412,13 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
-        "behavior/coursee/2021": {
-          "word": "행동",
-          "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
-        },
         "algorithm/coursee/2021": {
           "word": "알고리즘",
           "definition": "과제를 끝내기 위한 단계 목록"
+        },
+        "behavior/coursee/2021": {
+          "word": "행동",
+          "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
         },
         "sprite/coursee/2021": {
           "word": "스프라이트",
@@ -1435,8 +1476,49 @@
           "word": "머신 러닝",
           "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
         },
+        "features/csd/2021": {
+          "word": "특징",
+          "definition": "모델이 의사 결정을 내리는 데 사용하는 입력"
+        },
+        "label/csd/2021": {
+          "word": "라벨",
+          "definition": "모델을 사용하여 결정하거나 예측하려는 결과"
+        },
+        "model/csd/2021": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "지도형 학습",
+          "definition": "사람이 모델에게 예를 가지고 학습하도록 교육시킬 때"
+        },
+        "training/csd/2021": {
+          "word": "교육",
+          "definition": "모델이 학습할 수 있도록 모델에게 예를 제공"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "비지도 학습",
+          "definition": "라벨이 없는 데이터에서 패턴 찾기"
+        },
+        "categorical_data/csd/2021": {
+          "word": "범주형 데이터",
+          "definition": "그룹으로 분리할 수 있는 데이터"
+        },
+        "classification/csd/2021": {
+          "word": "분류",
+          "definition": "다른 특징을 기반으로 카테고리 예측"
+        },
+        "bias/csd/2021": {
+          "word": "편향",
+          "definition": "결정이 어떤 것에는 유리하게 이루어지고 어떤 것에는 우선순위를 낮추거나 제외시키는 경우"
+        },
+        "numerical_data/csd/2021": {
+          "word": "수치 데이터",
+          "definition": "셀 수 있거나 또는 측정할 수 있는 데이터"
+        },
         "ethics/csd/2021": {
-          "word": "윤리"
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
         },
         "user/csd/2021": {
           "word": "사용자",

@@ -1,0 +1,20 @@
+{
+  "nl-NL": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Rekenend Denken"
+        },
+        "L": {
+          "description": "Taal"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "Functies"
+        }
+      }
+    }
+  }
+}

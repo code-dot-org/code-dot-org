@@ -14,12 +14,14 @@ import {
   setInstructionsHeight,
   setInstructionsFullHeight,
   setConsoleHeight,
-  setEditorColumnHeight
-} from './javalabRedux';
+  setEditorColumnHeight,
+} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
-import styleConstants from '../styleConstants';
+import globalStyleConstants from '../styleConstants';
+import styleConstants from './constants.module.scss';
 import {CsaViewMode} from './constants';
+import {resizeCrosshairOverlay} from './JavalabCrosshairOverlay';
 
 // The top Y coordinate of the JavaLab panels.  Above them is just the common site
 // header and then a bit of empty space.
@@ -49,7 +51,7 @@ class JavalabPanels extends React.Component {
     topLeftPanel: PropTypes.func,
     bottomLeftPanel: PropTypes.func,
     topRightPanel: PropTypes.func,
-    bottomRightPanel: PropTypes.func
+    bottomRightPanel: PropTypes.func,
   };
 
   componentDidMount() {
@@ -195,6 +197,16 @@ class JavalabPanels extends React.Component {
         break;
     }
 
+    // Only theater uses the <JavalabCrosshairOverlay> right now, so this will
+    // currently no-op in other viewModes.
+    // The visualization and its overlay have different default sizes and are thus scaled
+    // differently. See ./constants.module.scss for details.
+    const overlayScaleCss = `scale(${
+      scale * parseInt(styleConstants.visualizationOverlayScale)
+    })`;
+    $('#visualizationOverlay').css('transform', overlayScaleCss);
+    resizeCrosshairOverlay();
+
     // Size the visualization div (which will actually set the rendered
     // width of the left side of the screen, since this div determines its
     // size) and center the visualization inside of it.
@@ -202,13 +214,13 @@ class JavalabPanels extends React.Component {
       'max-width': availableWidth,
       'max-height': newVisualizationWidth,
       height: newVisualizationWidth,
-      'margin-left': (availableWidth - newVisualizationWidth) / 2
+      'margin-left': (availableWidth - newVisualizationWidth) / 2,
     });
 
     // Also adjust the width of the small footer at the bottom.
     $('#page-small-footer .small-footer-base').css(
       'max-width',
-      availableWidth - styleConstants['resize-bar-width']
+      availableWidth - globalStyleConstants['resize-bar-width']
     );
 
     this.props.setInstructionsFullHeight(
@@ -222,7 +234,7 @@ class JavalabPanels extends React.Component {
     // The right width can also change at this point, since it takes up the
     // remaining space.
     const actualLeftWidth = this.props.isLeftSideVisible
-      ? this.props.leftWidth + styleConstants['resize-bar-width']
+      ? this.props.leftWidth + globalStyleConstants['resize-bar-width']
       : 0;
     const newRightWidth = window.innerWidth - actualLeftWidth - 20;
     this.props.setRightWidth(newRightWidth);
@@ -240,7 +252,7 @@ class JavalabPanels extends React.Component {
       bottomRightPanel,
       leftWidth,
       rightWidth,
-      editorColumnHeight
+      editorColumnHeight,
     } = this.props;
 
     return (
@@ -257,11 +269,11 @@ class JavalabPanels extends React.Component {
                 resizeItemTop={() => PANELS_TOP_COORDINATE}
                 position={
                   this.getInstructionsHeight() +
-                  styleConstants['resize-bar-width']
+                  globalStyleConstants['resize-bar-width']
                 }
                 onResize={desiredHeight =>
                   this.handleInstructionsHeightResize(
-                    desiredHeight - styleConstants['resize-bar-width']
+                    desiredHeight - globalStyleConstants['resize-bar-width']
                   )
                 }
               />
@@ -272,10 +284,10 @@ class JavalabPanels extends React.Component {
             <HeightResizer
               vertical={true}
               resizeItemTop={() => 10}
-              position={leftWidth + styleConstants['resize-bar-width']}
+              position={leftWidth + globalStyleConstants['resize-bar-width']}
               onResize={desiredWidth =>
                 this.handleWidthResize(
-                  desiredWidth - styleConstants['resize-bar-width']
+                  desiredWidth - globalStyleConstants['resize-bar-width']
                 )
               }
             />
@@ -288,7 +300,7 @@ class JavalabPanels extends React.Component {
               color:
                 displayTheme === DisplayTheme.DARK ? color.white : color.black,
               height: editorColumnHeight,
-              width: rightWidth
+              width: rightWidth,
             }}
             className="editor-column"
           >
@@ -311,11 +323,11 @@ const styles = {
   editorAndVisualization: {
     display: 'flex',
     flexGrow: '1',
-    height: '100%'
+    height: '100%',
   },
   instructionsAndPreview: {
     color: color.black,
-    right: '15px'
+    right: '15px',
   },
   editorAndConsole: {
     right: '15px',
@@ -323,33 +335,33 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: styleConstants['resize-bar-width']
+    marginLeft: globalStyleConstants['resize-bar-width'],
   },
   editorAndConsoleOnly: {
     right: '15px',
     width: '100%',
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   rightResizer: {
-    position: 'static'
-  }
+    position: 'static',
+  },
 };
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    editorColumnHeight: state.javalab.editorColumnHeight,
-    leftWidth: state.javalab.leftWidth,
-    rightWidth: state.javalab.rightWidth,
-    instructionsHeight: state.javalab.instructionsHeight,
-    instructionsFullHeight: state.javalab.instructionsFullHeight,
+    displayTheme: state.javalabView.displayTheme,
+    editorColumnHeight: state.javalabView.editorColumnHeight,
+    leftWidth: state.javalabView.leftWidth,
+    rightWidth: state.javalabView.rightWidth,
+    instructionsHeight: state.javalabView.instructionsHeight,
+    instructionsFullHeight: state.javalabView.instructionsFullHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
-    consoleHeight: state.javalab.consoleHeight,
-    editorColumnFullHeight: state.javalab.editorColumnFullHeight,
-    isVisualizationCollapsed: state.javalab.isVisualizationCollapsed,
-    isInstructionsCollapsed: state.instructions.isCollapsed
+    consoleHeight: state.javalabView.consoleHeight,
+    editorColumnFullHeight: state.javalabView.editorColumnFullHeight,
+    isVisualizationCollapsed: state.javalabView.isVisualizationCollapsed,
+    isInstructionsCollapsed: state.instructions.isCollapsed,
   }),
   dispatch => ({
     setLeftWidth: width => dispatch(setLeftWidth(width)),
@@ -358,6 +370,6 @@ export default connect(
     setInstructionsFullHeight: height =>
       dispatch(setInstructionsFullHeight(height)),
     setConsoleHeight: height => dispatch(setConsoleHeight(height)),
-    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height)),
   })
 )(JavalabPanels);

@@ -25,6 +25,11 @@
         "flappy/Flappy Code": {
           "name": "Flappy Bird"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
         "hourofcode/Maze": {
           "name": "Labirinto",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos jovens, de 4 a 10 anos de idade, mas pode ser adaptada para alunos mais velhos utilizando as sugestões de diferenciação fornecidas.",
@@ -72,6 +77,11 @@
           "overview": "Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet.",
           "student_overview": "Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet."
         },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
         "hello-world-animals-2021/Hello World": {
           "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
           "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
@@ -106,6 +116,12 @@
           "name": "Compressão de texto",
           "student_overview": "Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. "
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
           "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
@@ -126,7 +142,7 @@
           "name": "Hora do Código 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Festa de dança (2019)",
+          "name": "Festa dançante",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música."
@@ -4040,6 +4056,12 @@
         },
         "allthethings/ML Fish": {
           "name": "ML Fish"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poesia"
+        },
+        "allthethings/lesson-49": {
+          "name": "Música"
         },
         "coursef-2021/lesson-6": {
           "name": "Introdução ao Sprite Lab",

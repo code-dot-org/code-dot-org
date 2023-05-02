@@ -1,0 +1,14 @@
+{
+  "te-IN": {
+    "data": {
+      "standard_categories": {
+        "L": {
+          "description": "భాష"
+        },
+        "C": {
+          "description": "సర్కిల్స్"
+        }
+      }
+    }
+  }
+}

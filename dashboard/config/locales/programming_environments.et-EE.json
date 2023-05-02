@@ -6,13 +6,622 @@
           "name": "Game Lab",
           "categories": {
             "game_lab": {
-              "name": "Game Lab"
+              "name": "Game Lab",
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Sõne"
+                    },
+                    "loop": {
+                      "type": "Tõeväärtus"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Sõne"
+                    },
+                    "gender": {
+                      "type": "Sõne"
+                    },
+                    "language": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Tõeväärtus"
+                    },
+                    "dpadVisible": {
+                      "type": "Tõeväärtus"
+                    },
+                    "dpadFourWay": {
+                      "type": "Tõeväärtus"
+                    },
+                    "mobileOnly": {
+                      "type": "Tõeväärtus"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "name": "Spraidid",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiraal"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Sõne"
+                    },
+                    "xOffset": {
+                      "type": "Number"
+                    },
+                    "yOffset": {
+                      "type": "Number"
+                    },
+                    "width/radius": {
+                      "type": "Number"
+                    },
+                    "height": {
+                      "type": "Number"
+                    },
+                    "rotationOffset": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Number"
+                    },
+                    "angle": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "width": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "height": {
+                      "type": "Number"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Rühmad",
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Sõne"
+                    },
+                    "yOffset": {
+                      "type": "Number"
+                    },
+                    "width/radius": {
+                      "type": "Number"
+                    },
+                    "height": {
+                      "type": "Number"
+                    },
+                    "rotationOffset": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Värv"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Tõeväärtus"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Number"
+                    },
+                    "angle": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Värv"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Tõeväärtus"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Number"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Joonistus"
+              "name": "Joonistus",
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "w": {
+                      "type": "Number"
+                    },
+                    "h": {
+                      "type": "Number"
+                    },
+                    "start": {
+                      "type": "Number"
+                    },
+                    "stop": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "w": {
+                      "type": "Number"
+                    },
+                    "h": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Number"
+                    },
+                    "y1": {
+                      "type": "Number"
+                    },
+                    "x2": {
+                      "type": "Number"
+                    },
+                    "y2": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "w": {
+                      "type": "Number"
+                    },
+                    "h": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "sides": {
+                      "type": "Number"
+                    },
+                    "size": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Number"
+                    },
+                    "g": {
+                      "type": "Number"
+                    },
+                    "b": {
+                      "type": "Number"
+                    },
+                    "a": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Täht"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Number"
+                    },
+                    "y1": {
+                      "type": "Number"
+                    },
+                    "x2": {
+                      "type": "Number"
+                    },
+                    "y2": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Sõne"
+                    },
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    },
+                    "width": {
+                      "type": "Number"
+                    },
+                    "height": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Sõne"
+                    },
+                    "vert": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Number"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matemaatika"
+              "name": "Matemaatika",
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Number"
+                    },
+                    "value2": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Muutujad"
@@ -26,14 +635,393 @@
           "name": "App Lab",
           "description": "App Lab on programmeerimise keskkond, milles saab teha lihtsamaid rakendusi. Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Loob ekraanil nupu, kus kuvatakse antud ID-ga viidatud tekst vaikimisi asukohas (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Sõne"
+                    },
+                    "property": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Sõne"
+                    },
+                    "id": {
+                      "type": "Sõne"
+                    },
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Tõeväärtus"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Sõne"
+                    },
+                    "gender": {
+                      "type": "Sõne"
+                    },
+                    "language": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Number"
+                    },
+                    "g": {
+                      "type": "Number"
+                    },
+                    "b": {
+                      "type": "Number"
+                    },
+                    "a": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Sõne"
+                    },
+                    "property": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Ringi raadius pikslites."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "width": {
+                      "description": "Ristküliku horisontaalne laius pikslites."
+                    },
+                    "height": {
+                      "description": "Ristküliku vertikaalne kõrgus pikslites."
+                    }
+                  }
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Andmed",
+              "expressions": {
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Sõne"
+                    },
+                    "column": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "Sõne"
+                    },
+                    "id": {
+                      "type": "Sõne"
+                    },
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Liigutab kilpkonna edasi ja vasakule sujuva, ümara kaarega."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Number"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Tühistada funktsiooni SetTimeout tagastatud väärtus."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "Number"
+                    },
+                    "callback": {
+                      "type": "Funktsioon"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matemaatika"
+              "name": "Matemaatika",
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Väikseim tagastatav number"
+                    },
+                    "max": {
+                      "description": "Suurim tagastatav number"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Muutujad"
+              "name": "Muutujad",
+              "expressions": {
+                "declareAssign_list_123": {
+                  "short_description": "Muutujale massiivi deklareerimine ja määramine"
+                },
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Sõne"
+                    }
+                  },
+                  "return_value": "Mitte ükski"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "Funktsioonid"
+            },
+            "advanced": {
+              "name": "Täpsemad",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Sõne"
+                    },
+                    "css": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Number"
+                    },
+                    "mode": {
+                      "type": "Sõne"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Tõeväärtus"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Tõeväärtus"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Number"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Sõne"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Number"
+                    },
+                    "y": {
+                      "type": "Number"
+                    }
+                  }
+                }
+              }
             }
           }
         },

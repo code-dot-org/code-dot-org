@@ -1,0 +1,26 @@
+{
+  "ro-RO": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "CSTA K-12 Standarde informatică (2017)"
+        },
+        "csp2021": {
+          "name": "Cadru Conceptual CSP"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Standarde în Informatică"
+        },
+        "ccela": {
+          "name": "Standarde Artistice Comune Principale pentru Limba Engleză"
+        },
+        "ccmath": {
+          "name": "Standarde Matematice Comune de Bază"
+        },
+        "iste": {
+          "name": "Standarde ISTE pentru Elevi"
+        }
+      }
+    }
+  }
+}

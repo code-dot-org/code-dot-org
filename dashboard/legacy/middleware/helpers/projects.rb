@@ -6,6 +6,7 @@ require_relative './profanity_privacy_helper'
 # Projects
 #
 class Projects
+  include SharedConstants
   class NotFound < Sinatra::NotFound
   end
 
@@ -307,7 +308,7 @@ class Projects
     end.compact
   end
 
-  # Find the encrypted channel token for most recent project of the given type.
+  # Find the encrypted channel token for most recent project of the given level type.
   def most_recent(key)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
@@ -317,6 +318,13 @@ class Projects
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+  end
+
+  # Find the encrypted channel token for most recent project of the given project_type.
+  def most_recent_project_type(type)
+    row = @table.where(storage_id: @storage_id, project_type: type).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).first
+    return nil unless row
+    JSON.parse(row[:value])['id']
   end
 
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
@@ -395,6 +403,19 @@ class Projects
 
   def self.table
     DASHBOARD_DB[:projects]
+  end
+
+  def self.in_restricted_share_mode(channel_id, project_type)
+    # Only do this check if the project type is one that can be restricted, as this check
+    # requires a call to S3.
+    return false unless RESTRICTED_PUBLISH_PROJECT_TYPES.include?(project_type)
+
+    # Check for restricted share mode
+    source_data = SourceBucket.new.get(channel_id, SourceBucket.main_json_filename)
+    return unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
+    source_body = source_data[:body].string
+    project_src = ProjectSourceJson.new(source_body)
+    return project_src.in_restricted_share_mode?
   end
 
   private

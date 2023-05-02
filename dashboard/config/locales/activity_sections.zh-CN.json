@@ -47,7 +47,7 @@
           "description": "-   提出一个有多个答案的提示，例如“你喜欢今日活动的什么地方？” 或者“创造力和计算机科学之间有什么联系？”"
         },
         "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
@@ -78,7 +78,7 @@
         },
         "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
           "tips": [
-            "你希望花很少的时间在前面加载或介绍你的编程一小时。特别是对于年轻学员，最好是尽快投入。一开始过多的解释或说教会破坏乐趣，而乐趣才是重点！"
+            "建议你花很少的时间在前面介绍你的编程一小时的背景和细节。特别是对于年纪小的学员，最好是尽快开始游戏。一开始过多的解释或说教会破坏他们的兴趣，而兴趣对他们来说才是最重要的！"
           ]
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
@@ -91,15 +91,15 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "汇报",
-          "description": "让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
+          "description": "让学生回顾当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
-          "name": "赞美",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "name": "鼓励",
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "下一步",
@@ -125,7 +125,7 @@
         },
         "4fd098be-b798-4e23-b091-e90c95344d97": {
           "tips": [
-            "你希望花很少的时间在前面加载或介绍你的编程一小时。特别是对于年轻学员，最好是尽快投入。一开始过多的解释或说教会破坏乐趣，而乐趣才是重点！"
+            "建议你花很少的时间在前面介绍你的编程一小时的背景和细节。特别是对于年纪小的学员，最好是尽快开始游戏。一开始过多的解释或说教会破坏他们的兴趣，而兴趣对他们来说才是最重要的！"
           ]
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
@@ -138,18 +138,18 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "《我的世界》: 英雄之旅"
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
           "name": "汇报",
-          "description": "让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
+          "description": "让学生回想当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
-          "name": "赞美",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "name": "鼓励祝贺",
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "下一步",
@@ -243,14 +243,14 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "汇报",
           "description": "促成“转身说话”。让学生与朋友分享他们的游戏、应用程序或最终产品，以获得反馈。然后切换到对方的应用程序或游戏。让一些小组成员分享他们的经验：今天你学习了应用程序和游戏运行方式的哪些东西？你对有机会学习计算机科学有什么感觉？"
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
@@ -264,6 +264,31 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "超越一小时代码",
           "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。"
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "搭建舞台",
+          "description": "欢迎学生来上课，简单介绍当天的活动。"
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_在这个活动中，你将创造一个拥有名为精灵图的有趣角色的互动世界，同时享受乐趣。你将能够让精灵图用你在漫画或连环画小说中看到的语言泡泡说话，你将学会让它们在你或其他人点击它们时自动做出反应。_\n\n_今天你们要写“代码”，也就是一组计算机可以理解的指令。当你写一个故事时，你需要仔细思考你使用的词语。当你写代码时，你需要仔细思考你给电脑的指令。_",
+          "tips": [
+            "你会想花很少的时间来加载或介绍你的编程一小时。特别是对于年轻的学习者来说，最好是尽快开始学习。"
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "一般支持",
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "你好世界",
+          "progression_name": "你好世界"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "反射",
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### 搭建舞台\n\n欢迎学生来上课，简单介绍当天的活动。  \n\n_说：“今天我们要花一个小时学习编码。有人听说过“密码”这个词吗？这是什么意思？“_  \n\n学生们可能会提到“代码”就像一个秘密信息，或者它在某种程度上与计算机有关。"
@@ -291,14 +316,14 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "汇报",
-          "description": "让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
+          "description": "让学生回顾当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
@@ -346,14 +371,14 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "汇报",
           "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
@@ -389,14 +414,14 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "汇报",
           "description": "促成“转身说话”。让学生与朋友分享他们的游戏、应用程序或最终产品，以获得反馈。然后切换到对方的应用程序或游戏。让一些小组成员分享他们的经验：今天你学习了应用程序和游戏运行方式的哪些东西？你对有机会学习计算机科学有什么感觉？"
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
@@ -460,10 +485,10 @@
           "description": "挑战你的学生完成这个[Artist](https://studio.code.org/s/artist/lessons/1/levels/1)活动。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程获得类似的体验。  \n-   对于年长或成年学员，[Artist](https://studio.code.org/s/artist/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
         },
         "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](<>)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](<>)尝试其它教程。"
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？\n\n-   组成正方形的内角是什么？三角形呢？  \n-   在你的纸上画一个简单的形状，设想一下用来绘制它的代码。你能把代码写在形状旁边吗？ \n\n在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？\n\n-   组成正方形的内角是什么？三角形呢？  \n-   在你的纸上画一个简单的形状，设想一下用来绘制它的代码。你能把代码写在形状旁边吗？ \n\n在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
           "description": "#### 编程一小时之后\n\n编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。\n\n利用以下活动来加强学生的学习。 它可以用于课外活动或其他丰富活动。  \n\n**复印机**\n\n-   给学生两张纸  \n-   在一张纸上画一个简单的图像，只使用直线。  \n-   在第二张纸上绘制重建图像的指令，命令笔直地移动，并在各种角度转弯。  \n-   交换指令纸，并尝试仅使用所提供的指令重建图像。"
@@ -490,14 +515,14 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "汇报",
           "description": "促成“转身说话”。让学生与朋友分享他们的游戏、应用程序或最终产品，以获得反馈。然后切换到对方的应用程序或游戏。让一些小组成员分享他们的经验：今天你学习了应用程序和游戏运行方式的哪些东西？你对有机会学习计算机科学有什么感觉？"
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
@@ -587,7 +612,7 @@
           "description": "-   提出一个有多个答案的提示，例如“你喜欢今日活动的什么地方？” 或者“创造力和计算机科学之间有什么联系？”"
         },
         "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
@@ -639,7 +664,7 @@
         },
         "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
           "tips": [
-            "你希望花很少的时间在前面加载或介绍你的编程一小时。特别是对于年轻学员，最好是尽快投入。一开始过多的解释或说教会破坏乐趣，而乐趣才是重点！"
+            "建议你花很少的时间在前面介绍你的编程一小时的背景和细节。特别是对于年纪小的学员，最好是尽快开始游戏。一开始过多的解释或说教会破坏他们的兴趣，而兴趣对他们来说才是最重要的！"
           ]
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
@@ -652,15 +677,15 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "汇报",
-          "description": "让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
+          "description": "让学生回顾当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
-          "name": "赞美",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "name": "鼓励",
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "下一步",
@@ -765,6 +790,31 @@
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**阅读Blown to Bits**  \n\n-   阅读[Blown to Bits, Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)第165-169页\n-   回答阅读指南和[Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/)工作表中的问题。  \n\n**更多Blown to Bits**  \n\n-   Blown to Bits第5章的前面部分提到了911事件后加密的重要性和围绕加密的争议。这篇阅读可能是进一步介绍密码学对现代生活诸多方面影响的有用工具。  \n\n-   让学生回顾他们的网络浏览历史，并大致计算他们认为网络是“私密”的比例。他们有办法确定这是真的吗？在他们访问的网站中，有没有哪个网站会让他们对自己的流量保密更有信心？他们在这个结论中是合理的吗？ "
         },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "搭建舞台",
+          "description": "欢迎学生来上课，简单介绍当天的活动。"
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_在这个活动中，你将创造一个拥有名为精灵图的有趣角色的互动世界，同时享受乐趣。你将能够让精灵图用你在漫画或连环画小说中看到的语言泡泡说话，你将学会让它们在你或其他人点击它们时自动做出反应。_\n\n_今天你们要写“代码”，也就是一组计算机可以理解的指令。当你写一个故事时，你需要仔细思考你使用的词语。当你写代码时，你需要仔细思考你给电脑的指令。_",
+          "tips": [
+            "你会想花很少的时间来加载或介绍你的编程一小时。特别是对于年轻的学习者来说，最好是尽快开始学习。"
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "一般支持",
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "你好世界",
+          "progression_name": "你好世界"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "反射",
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+        },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "搭建舞台",
           "description": "欢迎学生来上课，简单介绍当天的活动。"
@@ -819,7 +869,7 @@
           "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
@@ -847,7 +897,7 @@
         },
         "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
           "tips": [
-            "你希望花很少的时间在前面加载或介绍你的编程一小时。特别是对于年轻学员，最好是尽快投入。一开始过多的解释或说教会破坏乐趣，而乐趣才是重点！"
+            "建议你花很少的时间在前面介绍你的编程一小时的背景和细节。特别是对于年纪小的学员，最好是尽快开始游戏。一开始过多的解释或说教会破坏他们的兴趣，而兴趣对他们来说才是最重要的！"
           ]
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
@@ -858,18 +908,18 @@
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
           "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "汇报",
-          "description": "让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
+          "description": "让学生回顾当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和代码有什么感觉？"
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
-          "name": "赞美",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates?script=mc)。"
+          "name": "鼓励",
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "下一步",
@@ -901,14 +951,14 @@
           ]
         },
         "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
           "name": "汇报",
           "description": "促成“转身说话”。让学生与朋友分享他们的游戏、应用程序或最终产品，以获得反馈。然后切换到对方的应用程序或游戏。让一些小组成员分享他们的经验：今天你学习了应用程序和游戏运行方式的哪些东西？你对有机会学习计算机科学有什么感觉？"
         },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
@@ -1012,7 +1062,7 @@
           "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
@@ -1150,7 +1200,7 @@
           "description": "**正确顺序：D，B，A，C**"
         },
         "11b82689-57e5-404f-8846-51e10f2642d0": {
-          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "e9c48a39-952e-44be-8955-9d012bfa89c1": {
           "description": "#### 编程一小时之后\n\n编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。"
@@ -1180,14 +1230,14 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "如果一个组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试另一个教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "汇报",
           "description": "促成“转身说话”。让学生与朋友分享他们的游戏、应用程序或最终产品，以获得反馈。然后切换到对方的应用程序或游戏。让一些小组成员分享他们的经验：今天你学习了应用程序和游戏运行方式的哪些东西？你对有机会学习计算机科学有什么感觉？"
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
@@ -1239,7 +1289,7 @@
           "description": "**正确顺序：D，B，A，C**"
         },
         "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
-          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://code.org/certificates)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "#### 汇报\n\n让学生反思当天的活动。他们从编码中学到了什么？编程？调试？事件？在花了一个小时探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 庆祝\n\n解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周参与编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch)。\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
           "description": "#### 编程一小时之后\n\n编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://studio.code.org/courses?view=teacher)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。\n\n#### 带我去玩球类游戏\n\n带学生到外面玩一些球类游戏。跟踪事件和行动。例如，在篮球比赛中，不运球会导致移动犯规，而对方得到球。在足球比赛中，把球踢出界外的结果是对方掷界外球。把球踢进球门得一分！如果学生喜欢，就多进行一些活动。当一个队的队长得分时，让所有的学生大喊“耶！”如果一个学生连续进了两个球，让所有人都倒地打滚！"
@@ -1302,7 +1352,7 @@
           "description": "-   提出一个有多个答案的提示，例如“你喜欢今日活动的什么地方？” 或者“创造力和计算机科学之间有什么联系？”"
         },
         "2458fd7f-011d-4251-8877-2e90d5d55684": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "3558b17c-e6ce-4bc8-bb5c-35eed135b8fb": {
@@ -1390,7 +1440,7 @@
           "description": "-   提出一个有多个答案的提示，例如“你喜欢今日活动的什么地方？” 或者“创造力和计算机科学之间有什么联系？”"
         },
         "f6bcac9d-cd44-435f-8565-57a5926542f8": {
-          "name": "赞美",
+          "name": "鼓励",
           "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
@@ -1459,7 +1509,7 @@
           "progression_name": "教人工智能一个新词"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "为学生[Print certificates](https://code.org/certificates?script=oceans)，庆祝成绩。  \n\n在课程结束时，鼓励学生前往[Code.org/learn](http://Code.org/learn)，在那里他们可以获得继续计算机科学冒险的更多思路。"
+          "description": "为学生[Print certificates](https://studio.code.org/certificates/batch?course=b2NlYW5z)，庆祝成绩。  \n\n在课程结束时，鼓励学生前往[Code.org/learn](http://Code.org/learn)，在那里他们可以获得继续计算机科学冒险的更多思路。"
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### 帮助分类斑马山国家公园的动物\n\n Snapshot Safari在南非放置了数百个隐藏摄像机，捕获了数百万只美丽且稀有的动物的图像。通过对这些图像中的不同动物进行分类，学生们可以帮助保护濒临灭绝的海角山斑马。你可以在[here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research)了解此项目，或点击下方内容进行尝试！\n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1637,6 +1687,9 @@
         "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
           "progression_name": "技能建设"
         },
+        "8e887047-0b51-46cf-8c62-4ef56d1b58c0": {
+          "progression_name": "挑战/练习"
+        },
         "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
           "name": "反射"
         },
@@ -1696,6 +1749,9 @@
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
           "progression_name": "技能建设"
+        },
+        "a0c3172d-bf7f-4842-b719-5c987d502489": {
+          "progression_name": "挑战/练习"
         },
         "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
           "name": "反射"
@@ -2419,6 +2475,9 @@
         "56262489-b084-4a55-a4e2-b45138492e6c": {
           "progression_name": "预测"
         },
+        "9a30234f-6c15-4525-aa78-4b8905d29133": {
+          "progression_name": "视频：大量精灵图"
+        },
         "e2e2e67f-7883-47c0-b018-118af90abc79": {
           "progression_name": "技能建设"
         },
@@ -2461,14 +2520,26 @@
         "f621cd05-64b4-41d4-8c9a-b310731edecb": {
           "progression_name": "技能建设"
         },
+        "2203aacd-4e1b-4cb5-ab3e-b0b72011a6f9": {
+          "progression_name": "探索：点击游戏"
+        },
+        "08684dd6-65f9-42b1-877a-05814f08c46c": {
+          "progression_name": "小项目：点击游戏"
+        },
         "30357f1e-97b8-43b2-9fa9-edace8299c36": {
           "name": "反思"
         },
         "37214efe-4044-4968-8924-71472b1d2725": {
           "name": "介绍"
         },
+        "229b6ed8-f28d-4d6b-98ea-39fe3ac44fab": {
+          "name": "小项目：收集游戏"
+        },
         "22b7037c-93fc-4723-a172-22f1501dbf3b": {
           "progression_name": "发现：示例程序"
+        },
+        "61043979-dfcc-47f4-b882-94ea107cd123": {
+          "progression_name": "小项目：收集游戏"
         },
         "0e088be7-4df3-4826-842b-2c6655bc02e9": {
           "name": "展示"
@@ -2521,14 +2592,23 @@
         "fc407406-3b2b-46cd-be85-000640f4f949": {
           "progression_name": "技能建设"
         },
+        "43ec708f-4fc2-467d-b096-303d4f897b68": {
+          "progression_name": "视频：疫情模拟器：活动"
+        },
         "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
           "progression_name": "技能建设"
+        },
+        "29a7a268-d78c-4217-9c8e-42bd781dee2a": {
+          "progression_name": "视频：疫情模拟器：像科学家一样思考"
         },
         "9456da46-d269-42c3-ab51-42e617b07542": {
           "progression_name": "从模拟中学习"
         },
         "7e9c17d4-3d1e-4a6c-a9ef-e1d09bfedee1": {
           "progression_name": "小项目：疫情爆发模拟器"
+        },
+        "50845627-ac76-4f69-b95d-2e3718a6ed49": {
+          "progression_name": "视频：疫情模拟器：自由模式"
         },
         "40fc31a6-1dc5-41dd-88d1-80206579453f": {
           "progression_name": "小项目：疫情爆发模拟器"
@@ -2620,6 +2700,9 @@
           "tips": [
             "回顾聊天问题旨在激发学生对课程与更大的世界和学生更远大未来之间关系的宏观思考。利用你在课堂上的知识来决定你是想在班上讨论这些问题，还是小组讨论，还是和一个搭档讨论。"
           ]
+        },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "发现"
         },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "示例项目"
@@ -2758,13 +2841,20 @@
           "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
-          "name": "你好世界"
+          "name": "你好世界",
+          "progression_name": "视频：你好世界：欢迎来到精灵图实验室"
         },
         "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
           "progression_name": "技能建设"
         },
+        "0a9662e0-8661-4cfe-be3c-e5fe52ed582f": {
+          "progression_name": "视频：你好世界：在活动中编程"
+        },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "progression_name": "技能建设"
+        },
+        "e1fbbc5b-976f-47d0-a9d6-749b9b3c916b": {
+          "progression_name": "视频：你好世界：随心所欲"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "自由发挥"
@@ -3112,6 +3202,9 @@
         },
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "请务必访问[版权与创造力](https://copyrightandcreativity.org)，找到更多关于数字分享和创意权利的课程。"
+        },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "发现"
         },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "示例项目"
@@ -3491,9 +3584,6 @@
           "tips": [
             "提醒学生只与他们亲密的朋友或家人分享他们的作品。更多信息请观看或向班级展示**\\*在线暂停与思考 - 视频**"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "我们提供对非读者来说有困难的多项选择预测级别。这些级别是可选的，你可以与你的班级一起复习，帮助你为即将到来的难做准备。此外，这些也可以在完成这一阶段后用作课堂复习。\n\n**预测级别：** - [课程B，艺术家中的循环](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "视频：编程工作室里的艺术家"
@@ -4514,6 +4604,12 @@
         },
         "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
           "progression_name": "技能建设"
+        },
+        "a88f91f8-569f-40db-a8f8-700323940f53": {
+          "progression_name": "探索：点击游戏"
+        },
+        "92b27a47-c534-4671-afd1-23a3586897c9": {
+          "progression_name": "小项目：点击游戏"
         },
         "b8a87ad4-50ba-433f-8c86-27093af1fafd": {
           "name": "反思"
@@ -6106,6 +6202,9 @@
         "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
           "progression_name": "项目"
         },
+        "4b6c542e-6c02-498e-83bb-7f153f6f8eea": {
+          "progression_name": "附加课程"
+        },
         "e5d05d8d-961f-4885-b074-cfce5bb4f87d": {
           "name": "展示"
         },
@@ -6284,7 +6383,7 @@
           ]
         },
         "8a0f0675-afba-4c25-9de4-b4f8e0eda208": {
-          "progression_name": "8比特二进制数组件"
+          "progression_name": "8 位二进制数控件"
         },
         "6925d871-b4de-4782-ae71-af992d2a3858": {
           "tips": [
@@ -6608,6 +6707,9 @@
           "tips": [
             null
           ]
+        },
+        "1892c7ae-6927-42df-a1ee-d590267476da": {
+          "progression_name": "单元末问卷调查"
         },
         "63bed78d-f5a0-44ae-8f02-99c0bb81ba05": {
           "name": "项目后测试"
@@ -6974,7 +7076,8 @@
           ]
         },
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
-          "name": "反射"
+          "name": "反射",
+          "progression_name": "单元末问卷调查"
         },
         "df73d786-2f5f-4ce6-b86c-63985e354302": {
           "description": "在整个时间段，为了你能够查看学生的作品，以及学生能够访问在线工具和资源，所有的学生需要处于代码工作室的同一个阶段。你需要成为一个“认证教师”，才能查看Code.org提供的评估和答案。"
@@ -8318,7 +8421,8 @@
           "name": "分享"
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
-          "name": "反思"
+          "name": "反思",
+          "progression_name": "单元末问卷调查"
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
           "name": "项目后测试"
@@ -8691,7 +8795,7 @@
           ]
         },
         "52e18e95-1cf2-4bf3-87b2-e171c734938a": {
-          "name": "添加图画",
+          "name": "添加图片",
           "tips": [
             null,
             null
@@ -9051,6 +9155,9 @@
             null
           ],
           "progression_name": "加入反馈"
+        },
+        "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
+          "progression_name": "单元末问卷调查"
         },
         "7d00d4b5-a67a-49b7-8bfd-e9b76f0895d2": {
           "name": "项目后测试"
@@ -9506,6 +9613,9 @@
             null
           ]
         },
+        "17a2215c-52ce-485c-a518-493e2d778803": {
+          "progression_name": "视频 - 程式实验室中的活动"
+        },
         "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d": {
           "tips": [
             null
@@ -9603,6 +9713,9 @@
             null
           ]
         },
+        "78b008c1-6a8f-446c-a9e0-018dbd7c7e6d": {
+          "progression_name": "更新您的原型"
+        },
         "2dfc86e0-a293-4785-b796-da4936c042d9": {
           "tips": [
             null
@@ -9635,6 +9748,9 @@
           "tips": [
             null
           ]
+        },
+        "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "progression_name": "单元末问卷调查"
         },
         "4650c6de-71ab-47d0-bea2-61ff838fba65": {
           "name": "项目后测试"
@@ -9672,7 +9788,8 @@
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "设置"
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
@@ -9795,7 +9912,8 @@
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "视频 - 变量"
         },
         "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
           "progression_name": "技能建设"
@@ -9803,7 +9921,8 @@
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "视频 - 计数器模式"
         },
         "99737e58-9db8-43d5-8437-03794c232a9c": {
           "progression_name": "技能建设"
@@ -9994,7 +10113,8 @@
         "7757e358-925f-460e-8204-919de76b3d9f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "人机互动"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "总结"
@@ -10085,6 +10205,9 @@
           ],
           "progression_name": "预测"
         },
+        "3be863d9-6e87-48f3-a2ed-86a64ccc5ffa": {
+          "progression_name": "调查"
+        },
         "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
           "progression_name": "技能建设"
         },
@@ -10097,7 +10220,8 @@
         "11718267-5da6-4e25-9cf3-0782a3820c8d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "视频 - 数组的简介"
         },
         "1789c265-b590-41c2-856d-381d22646c28": {
           "progression_name": "技能建设"
@@ -10130,7 +10254,8 @@
         "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "视频 - 功能"
         },
         "ee36fb1a-c452-4da6-a983-33c5987f9085": {
           "progression_name": "技能建设"
@@ -10144,7 +10269,8 @@
         "69fa3327-7be1-4285-859c-d2f87a36b550": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "视频 - 参数"
         },
         "f0d4f74c-c410-4931-aef8-6438559f83a4": {
           "progression_name": "技能建设"
@@ -10186,7 +10312,8 @@
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "互动艺术"
         },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
           "name": "反射"
@@ -10195,6 +10322,9 @@
           "tips": [
             null
           ]
+        },
+        "e64406a9-57fb-477d-bdc7-3921a12129cb": {
+          "progression_name": "设置"
         },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
           "tips": [
@@ -10221,6 +10351,9 @@
           "tips": [
             null
           ]
+        },
+        "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
+          "progression_name": "设置"
         },
         "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
           "progression_name": "技能建设"
@@ -10257,6 +10390,9 @@
           "tips": [
             null
           ]
+        },
+        "266e20ca-98da-4140-80a3-b88831c809bc": {
+          "progression_name": "单元末问卷调查"
         },
         "9d25bedc-e25e-4765-933d-124a5f27be74": {
           "name": "项目后测试"
@@ -10586,6 +10722,9 @@
           ],
           "progression_name": "导入你的模型"
         },
+        "6a504836-fcfe-40f8-b4a9-939ed5297fab": {
+          "progression_name": "自定义您的应用程序"
+        },
         "fece7415-7347-404a-b632-72882bdd9667": {
           "progression_name": "示例应用： 动物分类"
         },
@@ -10913,7 +11052,8 @@
           "name": "总结"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
-          "name": "反射"
+          "name": "反射",
+          "progression_name": "单元末问卷调查"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
@@ -11115,7 +11255,7 @@
           "progression_name": "动画标签页"
         },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "0f6d3640-c10a-497b-a1ce-7dcca920ca0d": {
           "progression_name": "制作场景"
@@ -11990,7 +12130,7 @@
           "progression_name": "HTML 中的图像"
         },
         "44a49f5c-5c77-4aae-833c-3288ab973af9": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "92b79761-2b2d-4c02-8d03-1b6bc34363c3": {
           "progression_name": "知识共享检索"
@@ -13216,7 +13356,7 @@
           "progression_name": "动画标签页"
         },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "659bc6e3-ae3c-44c3-83f1-816afa3a113d": {
           "progression_name": "制作场景"
@@ -14124,7 +14264,7 @@
           "progression_name": "课程概述"
         },
         "2a1838a5-708c-4af3-baf7-54864c87153a": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "24179087-12c5-4d00-871f-f7856b5d35b9": {
           "progression_name": "HTML 中的图像"
@@ -14469,7 +14609,7 @@
           "progression_name": "动画标签页"
         },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "64957b25-c71b-4b9c-ab40-16fc9845944d": {
           "progression_name": "精灵图场景"
@@ -15174,7 +15314,7 @@
           "progression_name": "HTML 中的图像"
         },
         "f8c60aab-32aa-4d82-8a8a-8d3ef2d5a467": {
-          "progression_name": "添加图画"
+          "progression_name": "添加图片"
         },
         "a99d76c7-f450-46d6-ac24-13cc17620581": {
           "progression_name": "知识共享检索"
@@ -15559,16 +15699,16 @@
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "诗歌艺术",
-          "description": "#### 常规支持活动结束时，\n\n学生们将编写动画版诗歌，展示他们对所选诗歌的视觉性赏析。本节课的目标是给学生们提供修补代码的机会，查找最喜欢的视觉效果。\n\n在课堂上走动时，鼓励学生们：\n\n-   **慢慢来。**大多数级别的课程要求学生们找出理想的效果，以匹配他们对诗歌的意境赏析。强烈建议学生们维持同一级别并修补他们的代码。\n\n-   **寻找一篇喜欢的诗歌：**适宜高级别学生的诗歌仅供参考。游戏空间的顶部带有一个预带诗歌的下拉列表。要求学生们浏览其中的一些，并找出喜欢的一篇。然后他们可以选择代码来制作诗歌动画场景。\n\n-   **展示已完成的级别：**完全变成绿色的级别气泡表示学生已经成功完成该级别的全部要求。要求学生点击绿色气泡，展示他们的作品。\n\n如果学生不知如何下手：\n\n-   **阅读说明：**这些说明已清晰列明完成该级别的步骤。如果学生不知如何下手，则要求他们大声朗读说明，并使用自己的语言重述说明。\n\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\">学生们还可以点击文字转语言图标，听语音版说明。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **查看提示**：大多数级别至少有一个提示，其中包含更清晰的通关信息。\n\n-   **接受错误：** 代码中出现错误是编程过程中的常见情况。如果程序没有按预想情况运行，要求学生们讲述他们期待的结果，点击运行查看实际结果，然后在代码中找出引起差异的部分。记住，要庆幸能够找出错误并纠正错误。出现错误表示学生们做得不错，已经有能力构建较复杂的程序。"
+          "description": "#### 常规支持活动结束时，\n\n学生们将编写动画版诗歌，展示他们对所选诗歌的视觉性赏析。本节课的目标是给学生们提供修补代码的机会，查找最喜欢的视觉效果。\n\n在课堂上走动时，鼓励学生们：\n\n-   **慢慢来。**大多数级别的课程要求学生们找出理想的效果，以匹配他们对诗歌的意境赏析。强烈建议学生们维持同一级别并修补他们的代码。\n\n-   **寻找一篇喜欢的诗歌：**适宜高级别学生的诗歌仅供参考。游戏空间的顶部带有一个预带诗歌的下拉列表。要求学生们浏览其中的一些，并找出喜欢的一篇。然后他们可以选择代码来制作诗歌动画场景。\n\n-   **展示已完成的级别：**完全变成绿色的级别气泡表示学生已经成功完成该级别的全部要求。要求学生点击绿色气泡，展示他们的作品。\n\n如果学生不知如何下手：\n\n-   **阅读说明：**这些说明已清晰列明完成该级别的步骤。如果学生不知如何下手，则要求他们大声朗读说明，并使用自己的语言重述说明。\n\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\">学生们还可以点击文字转语言图标，听语音版说明。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **查看提示**：大多数级别至少有一个提示，其中包含更清晰的通关信息。\n-   **接受错误：** 代码中出现错误是编程过程中的常见情况。如果程序没有按预想情况运行，要求学生们讲述他们期待的结果，点击运行查看实际结果，然后在代码中找出引起差异的部分。记住，要庆幸能够找出错误并纠正错误。出现错误表示学生们做得不错，已经有能力构建较复杂的程序。"
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### 按级别提供支持\n\n**级别1：**鼓励学生们通读整篇诗歌。然后要求学生们找出一个背景颜色或效果，来匹配所选定诗歌的场景。\n\n**级别2：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。你可以询问学生们所选定程序的声音和效果是否与诗歌的意境相匹配。要求学生们阐述自己的答案。\n\n**级别3：**本级别将引入声音，学生们可以使用耳机（如有）。\n\n**级别4：**要求学生阅读诗歌，找出其中意境发生变化的一行，或者是否引入新画面。使用事件块，为所找出的诗歌行添加相应的效果。\n\n**级别5：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。询问学生们，画面是否与诗歌的文字描述相匹配。要求学生们阐述自己的答案。\n\n**级别6、7、8：**参考常规支持章节中的“接受错误”部分。鼓励学生们利用事件块构建存在多个过渡的程序。\n\n**级别9：**鼓励学生们浏览下拉列表中的全部诗歌，并找出喜欢的一篇。告诉学生们，他们可以与家人和朋友分享最后一级的成果。现在，是时候将所有的编码和ELA技能综合在一起了！"
+          "description": "####按级别提供支持\n\n**级别1：**鼓励学生们通读整篇诗歌。然后要求学生们找出一个背景颜色或效果，来匹配所选定诗歌的场景。\n\n**级别2：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。你可以询问学生们所选定程序的声音和效果是否与诗歌的意境相匹配。要求学生们阐述自己的答案。\n\n**级别3：**本级别将引入声音，学生们可以使用耳机（如有）。\n\n**级别4：**要求学生阅读诗歌，找出其中意境发生变化的一行，或者是否引入新画面。使用事件块，为所找出的诗歌行添加相应的效果。\n\n**级别5：**在本示例中，学生们应首先自行阅读诗歌，然后运行程序。询问学生们，画面是否与诗歌的文字描述相匹配。要求学生们阐述自己的答案。\n\n**级别6、7、8：**参考常规支持章节中的“接受错误”部分。鼓励学生们利用事件块构建存在多个过渡的程序。\n\n**级别9：**鼓励学生们浏览下拉列表中的全部诗歌，并找出喜欢的一篇。告诉学生们，他们可以与家人和朋友分享最后一级的成果。现在，是时候将所有的编码和ELA技能综合在一起了！"
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
           "description": "如果你喜欢今天的编程课程，你可以访问code.org/learn继续学习！如果想与朋友和家人分享自己的作品，点击“分享”按钮，即可将链接发送给他们！"
         },
         "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### （备选）测评：理解能力测验（4分钟）\n\n每个学生2张便签纸。 "
+          "description": "####（备选）测评：理解能力测验（4分钟）\n\n每个学生2张便签纸。 "
         },
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "你可以使用2张便签纸。在其中一张上面，写下你今天所学到的一项编程内容。在另一张上面，写下你今天所学到的一项诗歌内容。\n\n鼓励学生们举手回答问题，与全班同学分享：你希望在接下来的编程和计算机科学课程中学习哪些其他知识？"
@@ -20950,6 +21090,9 @@
         "7d040814-9039-4b26-b0ef-29cb28227d53": {
           "progression_name": "导入你的模型"
         },
+        "1503235c-6a46-401d-85f0-1fa291901771": {
+          "progression_name": "自定义您的应用程序"
+        },
         "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
           "progression_name": "示例应用： 动物分类"
         },
@@ -21801,6 +21944,9 @@
             null
           ]
         },
+        "98d47c66-d1b6-4d05-bada-bd58b317813b": {
+          "progression_name": "更新您的原型"
+        },
         "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
           "tips": [
             null
@@ -22453,7 +22599,7 @@
           ]
         },
         "5b070069-8e80-48a8-8a84-435906d67aef": {
-          "progression_name": "8比特二进制数组件"
+          "progression_name": "8 位二进制数控件"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -24666,7 +24812,7 @@
           ]
         },
         "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
-          "name": "添加图画",
+          "name": "添加图片",
           "tips": [
             null
           ]

@@ -48,7 +48,7 @@
     "fishlong-training-many": "וואו. תראו כמה דגים!",
     "fishlong-predicting-init1": "בעזרת נתוני האימון שלכם, תכנתם את AI לזהות דג {word}.",
     "fishlong-predicting-init2": "בואו נראה את AI מזהה דג {word}.",
-    "fishlong-pond-init1": "בהתבסס על האימון שלכם, AI זיהתה {n, plural,one {הדג הזה} other {הדגים האלה}} דגים כ“{word}”. האם היא הצליחה?",
+    "fishlong-pond-init1": "בהתבסס על האימון שלכם, AI זיהתה את {n, plural,one {הדג הזה} other {הדגים האלה}} כ“{word}”. האם היא הצליחה?",
     "fishlong-pond-init2": "אתם יכולים לבחור ב\"אמן עוד\" אם אתם רוצים לשפר את התוצאות.",
     "fishlong-pond-init3": "או שאתם יכולים ללמד את AI מילה חדשה דרך בחירה ב\"מילה חדשה\".",
     "didYouKnow": "הידעתם?",

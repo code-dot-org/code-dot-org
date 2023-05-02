@@ -1,4 +1,3 @@
-/* global Blockly */
 import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
@@ -7,10 +6,6 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
-  // Reset context menu registry.
-  const registry = JSON.parse(
-    JSON.stringify(GoogleBlockly.ContextMenuRegistry.registry.registry_)
-  );
   beforeEach(() => {
     GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
@@ -18,10 +13,8 @@ describe('Google Blockly Wrapper', () => {
   afterEach(() => {
     // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
-    // Reset content menu for other tests.
-    GoogleBlockly.ContextMenuRegistry.registry.registry_ = JSON.parse(
-      JSON.stringify(registry)
-    );
+    // Reset context menu for other tests.
+    GoogleBlockly.ContextMenuRegistry.registry.reset();
   });
 
   it('readOnly properties cannot be set', () => {
@@ -46,18 +39,13 @@ describe('Google Blockly Wrapper', () => {
       'FieldAngleDropdown',
       'FieldAngleInput',
       'FieldAngleTextInput',
-      'FieldButton',
       'FieldColour',
       'FieldColourDropdown',
-      'FieldDropdown',
       'FieldIcon',
       'FieldImage',
-      'FieldImageDropdown',
       'FieldLabel',
       'FieldParameter',
       'FieldRectangularDropdown',
-      'FieldTextInput',
-      'FieldVariable',
       'fish_locale',
       'Flyout',
       'FunctionalBlockUtils',
@@ -91,7 +79,7 @@ describe('Google Blockly Wrapper', () => {
       'weblab_locale',
       'Workspace',
       'WorkspaceSvg',
-      'Xml'
+      'Xml',
     ];
     readOnlyProperties.forEach(property => {
       expect(() => {

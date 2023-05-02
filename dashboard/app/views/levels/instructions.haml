@@ -31,11 +31,6 @@
             =render partial: 'levels/content', locals: {app: 'external', data: level.properties}
           - if level.properties['title']
             %div= "Title: #{level.properties['title']}"
-          - if level.properties['code_functions']
-            %div Blocks:
-            %ul
-              - level.properties['code_functions'].each do |key, code_function|
-                %li= key
           - if level.properties['long_instructions']
             - markdown = level.properties['long_instructions']
             =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?

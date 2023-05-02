@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "Breite",
+  "dropletBlock_createSprite_param3": "Höhe",
+  "dropletBlock_setCollider_param0": "Art",
+  "dropletBlock_setCollider_param4": "Höhe",
+  "dropletBlock_setColliderEach_param0": "Art",
+  "dropletBlock_setColliderEach_param4": "Höhe",
+  "reinfFeedbackMsg": "Du bist fertig! Klicke auf \"Weiter\" um zum nächsten Level zu gelangen.",
+  "shareGame": "Teile dein Spiel:"
 }

@@ -1,0 +1,17 @@
+{
+  "km-KH": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        },
+        "L": {
+          "description": "ភាសា"
+        },
+        "F": {
+          "description": "អនុ​គមន៍"
+        }
+      }
+    }
+  }
+}

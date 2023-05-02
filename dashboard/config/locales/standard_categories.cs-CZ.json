@@ -1,0 +1,83 @@
+{
+  "cs-CZ": {
+    "data": {
+      "standard_categories": {
+        "DA": {
+          "description": "Data a analýza"
+        },
+        "DAT-1": {
+          "description": "Způsob, jakým počítač reprezentuje data, se liší od toho, jakým tato data interpretuje a zobrazuje uživateli. Programy pak překládají data do podoby, která je srozumitelnější pro uživatele."
+        },
+        "IOC-2": {
+          "description": "Používání počítačových inovací může zahrnovat rizika pro osobní bezpečnost a identitu."
+        },
+        "DAT-1.D": {
+          "description": "Srovnejte algoritmy komprese dat a určete, který je v daném kontextu nejlepší."
+        },
+        "IOC-2.B": {
+          "description": "Vysvětlete, jak můžou být výpočetní prostředky chráněny a zneužívány."
+        },
+        "CD": {
+          "description": "Počítače a komunikační zařízení"
+        },
+        "CI": {
+          "description": "Společenství, globální a etické vlivy"
+        },
+        "CL": {
+          "description": "Spolupráce"
+        },
+        "CPP": {
+          "description": "Počítačová praxe a programování"
+        },
+        "CT": {
+          "description": "Aritmetické Myšlení"
+        },
+        "L": {
+          "description": "Jazyk"
+        },
+        "RI": {
+          "description": "Čtení informačně"
+        },
+        "RL": {
+          "description": "Čtení literatury"
+        },
+        "SL": {
+          "description": "Mluvení a poslech"
+        },
+        "W": {
+          "description": "Psaní"
+        },
+        "C": {
+          "description": "Tunel"
+        },
+        "F": {
+          "description": "Funkce"
+        },
+        "G": {
+          "description": "Geometrie"
+        },
+        "MP": {
+          "description": "Cvičení z matematiky"
+        },
+        "NBT": {
+          "description": "Číslo a operace v desítkové soustavě"
+        },
+        "OA": {
+          "description": "Operace a algebraické myšlení"
+        },
+        "1": {
+          "description": "Studenti prokážou tvůrčí myšlení a znalost konstruktů, vyvinou inovativní produkty a vytvoří procesy, které využívají technologie."
+        },
+        "2": {
+          "description": "Studenti používají digitální média a prostředí ke komunikaci a spolupráci, včetně práce na dálku, k podpoře individuálního učení a rozvoji vzdělání u ostatních."
+        },
+        "4": {
+          "description": "Studenti využijí dovednost kritického myšlení při plánování a vedení výzkumu, správě projektů, řešení problémů a provádění informovaných rozhodnutí za pomoci vhodných digitálních nástrojů a zdrojů."
+        },
+        "6": {
+          "description": "Studenti demonstrují dobré porozumění technologickým konceptům, systémům a operacím."
+        }
+      }
+    }
+  }
+}

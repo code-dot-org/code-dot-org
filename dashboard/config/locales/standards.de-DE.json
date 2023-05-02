@@ -265,6 +265,306 @@
         },
         "csta/1A-CS-03": {
           "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
+        },
+        "1A-AP-09": {
+          "description": "Modellieren Sie die Art und Weise, wie Programme Daten speichern und verarbeiten, indem Sie Zahlen oder andere Symbole zur Darstellung von Informationen verwenden."
+        },
+        "1A-AP-10": {
+          "description": "Programme mit Sequenzen und einfachen Schleifen entwickeln, um Ideen auszudrücken oder ein Problem zu lösen."
+        },
+        "1A-AP-11": {
+          "description": "Zerlegen Sie die zur Lösung eines Problems erforderlichen Schritte in eine präzise Abfolge von Anweisungen."
+        },
+        "1A-AP-14": {
+          "description": "Fehler in einem Algorithmus oder Programm, das Sequenzen und einfache Schleifen enthält, zu identifizieren und zu beheben."
+        },
+        "1A-CS-03": {
+          "description": "Beschreibung grundlegender Hardware- und Softwareprobleme unter Verwendung präziser Terminologie."
+        },
+        "1B-AP-09": {
+          "description": "Programme erstellen, die Variablen zum Speichern und Ändern von Daten verwenden."
+        },
+        "1B-AP-10": {
+          "description": "Programme erstellen, die Sequenzen, Ereignisse, Schleifen und Konditionalitäten enthalten."
+        },
+        "1B-AP-11": {
+          "description": "Dekomposition (Zerlegung) von Problemen in kleinere, überschaubare Teilprobleme, um den Programmentwicklungsprozess zu erleichtern."
+        },
+        "1B-AP-12": {
+          "description": "Teile eines bestehenden Programms ändern, neu mischen oder in die eigene Arbeit integrieren, um etwas Neues zu entwickeln oder erweiterte Funktionen hinzuzufügen."
+        },
+        "1B-AP-14": {
+          "description": "Beachten Sie die Rechte an geistigem Eigentum und geben Sie bei der Erstellung oder beim Remixen von Programmen die entsprechenden Urheberrechte an."
+        },
+        "1B-AP-15": {
+          "description": "Ein Programm oder einen Algorithmus testen und debuggen (Fehler erkennen und beheben), um sicherzustellen, dass er wie vorgesehen läuft."
+        },
+        "1B-AP-17": {
+          "description": "Beschreiben Sie die während der Programmentwicklung getroffenen Entscheidungen anhand von Codekommentaren, Präsentationen und Demonstrationen."
+        },
+        "1B-CS-01": {
+          "description": "Beschreiben Sie, wie interne und externe Teile von Computergeräten funktionieren und ein System bilden."
+        },
+        "1B-CS-02": {
+          "description": "Modellieren, wie Computerhardware und -software als System zusammenarbeiten, um Aufgaben zu bewältigen."
+        },
+        "1B-DA-07": {
+          "description": "Zeigen Sie anhand der Daten Ursache-Wirkungs-Beziehungen oder sagen Sie Ergebnisse vorher oder kommunizieren Sie eine Idee."
+        },
+        "1B-IC-18": {
+          "description": "Bespreche die Computertechnologien welche die Welt verändert haben, und mache deutlich wie diese Technologien die Kultur beeinflussen und, umgekehrt, wie kulturelle Praktiken die Technologie beeinflusst haben."
+        },
+        "1B-IC-21": {
+          "description": "Verwenden Sie gemeinfreie oder Creative-Commons-Medien und unterlassen Sie das Kopieren oder Verwenden von Material, das von anderen ohne Genehmigung erstellt wurde."
+        },
+        "1B-NI-05": {
+          "description": "Erörtern Sie reale Probleme der Cybersicherheit und wie persönliche Daten geschützt werden können."
+        },
+        "3A-DA-10": {
+          "description": "Bewerten Sie die Kompromisse bei der Organisation der Datenelemente und beim Speicherort der Daten."
+        },
+        "3A-NI-06": {
+          "description": "Empfehlen Sie Sicherheitsmaßnahmen für verschiedene Szenarien auf der Grundlage von Faktoren wie Effizienz, Machbarkeit und ethische Auswirkungen."
+        },
+        "3A-NI-07": {
+          "description": "Vergleichen Sie verschiedene Sicherheitsmaßnahmen und berücksichtigen Sie dabei Kompromisse zwischen der Benutzerfreundlichkeit und der Sicherheit eines Computersystems."
+        },
+        "3B-NI-04": {
+          "description": "Vergleichen Sie, wie Softwareentwickler Geräte und Informationen vor unbefugtem Zugriff schützen."
+        },
+        "DAT-1.D.1": {
+          "description": "Datenkomprimierung reduziert die Größe (Anzahl der Bits) der übertragenen oder gespeicherten Daten."
+        },
+        "DAT-1.D.2": {
+          "description": "Weniger Bits bedeutet nicht weniger Informationen."
+        },
+        "DAT-1.D.3": {
+          "description": "Wie stark sich die Größe durch die Komprimierung verringert, hängt sowohl von der Redundanz der ursprünglichen Datendarstellung als auch vom angewendeten Komprimierungsalgorithmus ab."
+        },
+        "DAT-1.D.4": {
+          "description": "Komprimierungsalgorithmen ohne Datenverluste reduzieren in der Regel die Anzahl der gespeicherten und übertragenen Bits und garantieren gleichzeitig die komplette Rekonstruktion der Originaldaten."
+        },
+        "IOC-2.B.5": {
+          "description": "Verschlüsselung ist der Prozess der Verschlüsselung von Daten, um unbefugten Zugriff zu verhindern. Entschlüsselung ist der Prozess der Entschlüsselung der Daten. Es gibt zwei gängige Verschlüsselungsansätze: ● Bei der symmetrischen Verschlüsselung wird ein Schlüssel sowohl für die Verschlüsselung als auch für die Entschlüsselung verwendet.● Bei der Verschlüsselung mit öffentlichem Schlüssel wird ein öffentlicher Schlüssel für die Verschlüsselung und ein privater Schlüssel für die Entschlüsselung verwendet. Der Absender benötigt den privaten Schlüssel des Empfängers nicht, um eine Nachricht zu verschlüsseln, aber der private Schlüssel des Empfängers ist erforderlich, um die Nachricht zu entschlüsseln. AUSSCHLUSSERKLÄRUNG (EKIOC-2.B.5): Spezifische mathematische Verfahren zur Ver- und Entschlüsselung liegen außerhalb des Rahmens dieses Kurses und der AP-Prüfung."
+        },
+        "CD.L1:3-01": {
+          "description": "Benutze standardmäßige Eingabe- und Ausgabegeräte, um Computer und verwandte Techniken erfolgreich zu betreiben."
+        },
+        "CI.L1:3-01": {
+          "description": "Benutze die Prinzipien einer verantwortlichen digitalen Bürgerschaft (rechtliche und ethische Verhaltensweisen) bei der Nutzung von technologischen Systemen und Software."
+        },
+        "CL.L1:6-02": {
+          "description": "Benutze Online-Ressourcen (z.B. E-Mail, Online-Besprechungen, kollaborative Webumgebungen) um an kollaborativen Aktivitäten zur Lösung von Problemen teilzunehmen, zum Zweck der Entwicklung von Lösungen oder Produkten."
+        },
+        "CPP.L1:3-01": {
+          "description": "Benutze technologische Ressourcen, um altersgemäße Forschung auszuführen."
+        },
+        "CPP.L1:3-02": {
+          "description": "Benutze der Entwicklung entsprechende Multimedia-Ressourcen (z.B. interaktive Bücher und Lernsoftware), um lehrplanübergreifendes Lernen zu unterstützen."
+        },
+        "CPP.L1:3-04": {
+          "description": "Baue Einsatz von Statements, welche ausgeführt werden müssen um eine einfache Aufgabe zu erledigen (z.B. turtle (Schildkröte) Anweisungen)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Benutze technologische Ressourcen (z.B. Rechner, Datenerfassungssensoren, mobile Geräte, Videos, Unterrichtssoftware und Webwerkzeuge) für die Lösung von Problemen und selbstgesteuertes Lernen."
+        },
+        "CPP.L1:6-06": {
+          "description": "Implementieren Problemlösungen, unter Einsatz einer Block-basierten, visueller Programmierungssprache."
+        },
+        "CPP.L2:3": {
+          "description": "In Kollaboration mit anderen, entwerfe, entwickele, veröffentliche und zeige Produkte (z.B. Webseiten, mobile Anwendungen, Animationen), welche technologische Ressourcen zu Demonstrationen und der Kommunikation von Lehrplankonzepten benutzen."
+        },
+        "CT.L2:1": {
+          "description": "Um Lösungen zu entwerfen, benutze die grundlegende Schritte einer algorithmischen Methode zur Problemlösung,  (z.B. Problemstellung und -erforschung, Untersuchung von Musterbeispielen, dem Entwurf und die Implementation einer Lösung, sowie dessen Prüfung und Bewertung)."
+        },
+        "CT.L2:12": {
+          "description": "Benutze Abstraktionen, um ein Problem in Subprobleme zu unterteilen."
+        },
+        "CT.L2:6": {
+          "description": "Beschreibe und analysiere eine Sequenz von Anweisungen die befolgt werden müssen (z. B. beschreibe das Verhalten einer Figur in einem Videospiel, dass durch Regeln und Algorithmen gesteuert wird)."
+        },
+        "CT.L2:7": {
+          "description": "Stelle Daten auf mehrere Weisen dar, inklusive Text, Klänge, Bilder und Zahlen."
+        },
+        "CT.L2:8": {
+          "description": "Benutze visuelle Darstellungsformen für den Status, die Struktur und die Daten eines Problems (z.B. Grafiken, Tabellen, Netzwerkdiagramme, Flussdiagramme)."
+        },
+        "1.L.6": {
+          "description": "Um einfache Beziehungen zu signalisieren, benutze Worte und Formulierungen die durch Gespräche, durch Lesen und Texte die vorgelesen werden erlernt wurden, inklusive der Anwendung von öfters auftretenden Konjunktionen (wie z.B., weil, usw.)."
+        },
+        "11-12.L.6": {
+          "description": "Lerne und benutze allgemeine akademische und domänenspezifische Worte und Formulierungen, die ausreichend sind für das Lesen, Schreiben, Sprechen und Zuhören auf der Ebene einer Hochschule und vorbereitend für eine Karriere; zeige Unabhängigkeit in dem Lernen deiner Wortschatz- und Grammatikkenntnisse, und bei der Auswahl "
+        },
+        "2.L.6": {
+          "description": "Benutze Worte und Formulierungen die durch Gespräche, durch Lesen und Texte die vorgelesen werden erlernt wurden, inklusive der Anwendung von Eigenschaftsworten und Umstandsworten in einer Beschreibung (z.B. Es macht glücklich wenn andere Kinder glücklich sind)."
+        },
+        "3.L.6": {
+          "description": "Lerne, und benutze auf korrekte Weise, klassenspezifische, allgemein-akademische und themenspezifische Worte und Formulierungen, inklusive der die räumliche oder zeitliche Beziehungen wiedergeben (z.B. Wir haben nach ihnen gesucht, nach dem Essen an dem Abend). "
+        },
+        "4.L.6": {
+          "description": "Lerne, und benutze auf korrekte Weise, klassenspezifische, allgemein-akademische und themenspezifische Worte und Formulierungen, inklusive der die präzise Aktionen, Emotionen oder Seinszustände signalisieren (z.B. ausgefragt, gewinselt, gestottert), und die grundlegend sind für ein spezifisches Thema (z.B. Wildtiere, Bestandserhaltung und gefährdete Tierarten, bei einer Diskussion von Tierschutz)."
+        },
+        "5.L.6": {
+          "description": "Lerne, und nutze auf genaue Weise, klassengeeignete, allgemein akademische und themenspezifische Wörter und Formulierungen, einschließlich der Worte die einen Kontrast, Addition und andere logische Beziehungen aufzeigen (z.B. allerdings, obwohl, dennoch, ähnlicherweise, außerdem, zusätzlich). "
+        },
+        "9-10.L.6": {
+          "description": "Lerne und benutze allgemeine akademische und domänenspezifische Worte und Formulierungen, die ausreichend sind für das Lesen, Schreiben, Sprechen und Zuhören auf der Ebene einer Hochschule und vorbereitend für eine Karriere; zeige Unabhängigkeit in dem Lernen deiner Wortschatz- und Grammatikkenntnisse, und bei der Auswahl "
+        },
+        "11-12.RI.4": {
+          "description": "Erlerne die Bedeutung von Worten und Formulierungen wie diese üblicherweise in einem Text benutzt werden, einschließlich deren figurative, konnotative und technische Bedeutungen; analysiere wie ein Autor die Bedeutung eines Schlüsselbegriffs oder eines Wortes, über den Verlauf eines Textes benutzt oder präzisiert (z.B. wie Konrad Adenauer "
+        },
+        "3.RL.4": {
+          "description": "Bestimmen Sie die Bedeutung von Wörtern und Sätzen, wie sie in einem Text verwendet werden, und unterscheiden Sie dabei zwischen wörtlicher und nicht-wörtlicher Rede."
+        },
+        "4.RL.7": {
+          "description": "Stellen Sie Verbindungen zwischen dem Text einer Geschichte oder eines Dramas und einer visuellen oder mündlichen Darstellung des Textes her und erkennen Sie, wo jede Version bestimmte Beschreibungen und Anweisungen im Text wiedergibt."
+        },
+        "5.RL.4": {
+          "description": "Bestimmen Sie die Bedeutung von Wörtern und Sätzen, wie sie in einem Text verwendet werden, einschließlich bildhafter Sprache wie Metaphern und Gleichnisse."
+        },
+        "5.RL.7": {
+          "description": "Analysieren Sie, wie visuelle und multimediale Elemente zur Bedeutung, zur Stimmung oder zur Schönheit eines Textes beitragen (z. B. Graphic Novel, multimediale Präsentation von Fiktion, Volksmärchen, Mythen, Gedichten)."
+        },
+        "1.SL.1": {
+          "description": "Beteilige dich an den gemeinsamen Gesprächen mit verschiedenen Partnern, wie Gleichgestellte und Erwachsene in kleinen und größeren Gruppen, und mit Bezug auf die Themen und Texte in Klasse 1."
+        },
+        "2.SL.1": {
+          "description": "Beteilige dich an den gemeinsamen Gesprächen mit verschiedenen Partnern, wie Gleichgestellte und Erwachsene in kleinen und größeren Gruppen, und mit Bezug auf die Themen und Texte in Klasse 2."
+        },
+        "3.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in den Klassen 11-12, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "6.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in der Klasse 6, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "7.SL.1": {
+          "description": "Starte und nimm effektiv teil in einer Reihe von gemeinschaftlichen Diskussionen (Eins-zu-eins, in Gruppen, unter Leitung eines Lehrers) und mit verschiedenen Diskussionspartnern, über Themen, Texte und Probleme in der Klasse 7, aufbauend auf den Ideen von anderen, aber sich selbst deutlich ausdrückend."
+        },
+        "11-12.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um geteilte Texte zu produzieren, veröffentlichen und aktualisieren, als Antwort auf fortgehenden Feedback, einschließlich neuer Argumente oder Informationen."
+        },
+        "3.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "4.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "5.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "6.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "6.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, und auch zur Interaktion und Kollaboration mit anderen; zeige eine angemessene Beherrschung von Maschinenschreibkenntnissen, um mindestens drei Seiten in einer einzigen Sitzung zu tippen."
+        },
+        "7.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "7.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, Mit einer Verbindung zu und Zitierung von Quellen, sowie einer Interaktion und Kollaboration mit anderen Menschen."
+        },
+        "8.W.3": {
+          "description": "Schreibe Erzählungen, um echte oder vorgestellte Erfahrungen oder Ereignissen zu entwickeln, unter Einsatz einer effektiven Technik, beschreibenden Details und einer deutlichen Sequenz der Ereignisse."
+        },
+        "8.W.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um Texte zu erzeugen und zu publizieren, und präsentiere die Beziehungen zwischen der Information und den Ideen auf die effiziente Weise, und in Interaktion und Kollaboration mit anderen Menschen."
+        },
+        "9-10.W.6": {
+          "description": "Benutze verschiedene Technologien, u.a. das Internet, um schriftliche Produkte, die du selbst oder in Kooperation mit anderen erstellt hast, zu produzieren, veröffentlichen und zu aktualisieren, indem du die Vorteile der Technik nutzt, u.a. die Möglichkeit sich mit anderer Information in Verbindung zu setzen, und diese flexibel und auf dynamische Weise zu präsentieren."
+        },
+        "11-12.WHST.6": {
+          "description": "Benutze Technologie, einschließlich des Internets, um geteilte Texte zu produzieren, veröffentlichen und aktualisieren, als Antwort auf fortgehenden Feedback, einschließlich neuer Argumente oder Informationen."
+        },
+        "9-10.WHST.6": {
+          "description": "Benutze verschiedene Technologien, u.a. das Internet, um schriftliche Produkte, die du selbst oder in Kooperation mit anderen erstellt hast, zu produzieren, veröffentlichen und zu aktualisieren, indem du die Vorteile der Technik nutzt, u.a. die Möglichkeit sich mit anderer Information in Verbindung zu setzen, und diese flexibel und auf dynamische Weise zu präsentieren."
+        },
+        "3-5-ETS1-1": {
+          "description": "Definieren Sie ein einfaches Konstruktionsproblem, das einen Bedarf oder einen Wunsch widerspiegelt und bestimmte Erfolgskriterien sowie Einschränkungen in Bezug auf Material, Zeit oder Kosten enthält."
+        },
+        "K-2-ETS1-1": {
+          "description": "Stellen Sie Fragen, machen Sie Beobachtungen und sammeln Sie Informationen über eine Situation, die man verändern möchte, um ein einfaches Problem zu definieren, das durch die Entwicklung eines neuen oder verbesserten Objekts oder Werkzeugs gelöst werden kann."
+        },
+        "K-2-ETS1-2": {
+          "description": "Entwickeln Sie eine einfache Skizze, Zeichnung oder ein physisches Modell, um zu veranschaulichen, wie die Form eines Objekts dazu beiträgt, dass es so funktioniert, wie es zur Lösung eines bestimmten Problems erforderlich ist."
+        },
+        "7.G.2": {
+          "description": "Zeichne (freihändig, mit einem Lineal, einem Winkelmesser und technischen Geräten) geometrische Formen mit vorbestimmten Bedingungen. Konzentriere auf den Aufbau von Dreiecken aus drei Maßen von Winkeln und Seiten, wobei du merkst wenn die Bedingungen ein einzigartiges Dreieck, mehr als ein Dreieck "
+        },
+        "2.MD.10": {
+          "description": "Ein Bilddiagramm und ein Balkendiagramm (mit einstelliger Skala) zeichnen, um einen Datensatz mit bis zu vier Kategorien darzustellen. Einfache Zusammensetzungs-, Zerlegungs- und Vergleichsprobleme4 unter Verwendung der in einem Balkendiagramm dargestellten Informationen lösen."
+        },
+        "4.MD.5.b": {
+          "description": "Ein Winkel, der sich durch n Ein-Grad-Winkel dreht, hat ein Winkelmaß von n Grad."
+        },
+        "4.MD.6": {
+          "description": "Messe Winkel in Ganzzahlgraden unter Anwendung eines Winkelmessers. Zeichne Winkel mit einem spezifischen Maß."
+        },
+        "MP.1": {
+          "description": "Benutze dein Verständnis und deine Ausdauer, um Probleme zu lösen."
+        },
+        "MP.2": {
+          "description": "Argumentiere auf abstrakte und quantitative Weise"
+        },
+        "MP.4": {
+          "description": "Modell mit Mathematik"
+        },
+        "MP.5": {
+          "description": "Die strategische Nutzung von geeigneten Werkzeugen"
+        },
+        "MP.6": {
+          "description": "Pflege die Präzision"
+        },
+        "MP.7": {
+          "description": "Suche nach und benutze Strukturen"
+        },
+        "MP.8": {
+          "description": "Halte Ausschau nach deutlicher Regelmäßigkeit in wiederholter Argumentation"
+        },
+        "4.NBT.4": {
+          "description": "Addiere und subtrahiere mehrstellige Ganzzahlen auf flüssige Weise, unter Anwendung der Standard-Algorithmen."
+        },
+        "4.NBT.5": {
+          "description": "Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular ar"
+        },
+        "1.OA.1": {
+          "description": "Verwenden Sie Addition und Subtraktion im Zahlenraum bis 20, um Textaufgaben zu lösen, die Situationen beim Addieren, Subtrahieren, Zusammenfügen, Zerlegen und Vergleichen mit Unbekannten in allen Positionen beinhalten, z. B. durch Verwendung von Objekten, Zeichnungen und Gleichungen mit einem Symbol für"
+        },
+        "2.OA.1": {
+          "description": "Verwenden Sie Addition und Subtraktion im Zahlenraum bis 100, um Textaufgaben zu lösen, die Situationen beim Addieren, Subtrahieren, Zusammenfügen, Zerlegen und Vergleichen mit Unbekannten in allen Positionen beinhalten, z. B. durch Verwendung von Zeichnungen und Gleichungen mit einem Sy"
+        },
+        "3.OA.3": {
+          "description": "Benutze die Methode 'addiere und subtrahiere innerhalb 100‘ um Probleme mit Wörtern zu lösen, in Situationen mit äquivalenten Gruppen, Datenfeldern und gemessenen Quantitäten, z.B. durch die Anwendung von Zeichnungen und Gleichungen, wobei ein Symbol für die unbekannte Nummer benutzt wird, um das Problem darzustellen.1"
+        },
+        "1.a": {
+          "description": "Benutze bestehendes Wissen, um neue Ideen, Produkte oder Prozesse zu generieren"
+        },
+        "1.b": {
+          "description": "Erstelle originelle Arbeiten, als Mittel zu einer persönlichen Ausdrucksweise oder dem einer Gruppe."
+        },
+        "1.c": {
+          "description": "Benutze Modelle oder Simulationen, um komplexe Systeme oder Themen zu untersuchen."
+        },
+        "2.a": {
+          "description": "Interagiere, kollaboriere und publizieren zusammen mit Gleichgestellten, Experten und anderen Personen, unter Einsatz von verschiedenen Digitalumgebungen und Medien"
+        },
+        "2.b": {
+          "description": "Kommuniziere Informationen und Ideen auf effektive Weise, an mehrere Audienzen und unter Einsatz verschiedener Medien und Formate.."
+        },
+        "4.b": {
+          "description": "Die Planung und das Management von Aktivitäten hilft bei der Entwicklung einer Lösung oder der Abarbeitung eines Projekts."
+        },
+        "4.d": {
+          "description": "Benutze mehrere Prozesse und verschiedene Perspektiven, um alternative Lösungen zu erkunden."
+        },
+        "6.a": {
+          "description": "Verstehe und benutze technologische Systeme."
+        },
+        "6.c": {
+          "description": "Eine Fehlersuche an Systemen und Anwendungen ausführen."
+        },
+        "6.d": {
+          "description": "Übertrage dein jetziges Wissen in das Lernen von neuen Technologien."
         }
       }
     }

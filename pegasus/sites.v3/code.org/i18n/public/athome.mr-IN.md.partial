@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>डान्स पार्टी</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">डान्स पार्टीचा कोड लिहून ती मित्रमैत्रिणींच्या आणि कुटुंबियांच्या बरोबर शेअर करा. केटी पेरी, शॉन मेंडेस, पॅनिक यांचा सहभाग! अॅट द डिस्को, लिल नास एक्स, जोनास ब्रदर्स, निकी मिनाज आणि इतर 34 जण!</div><a class="linktag" id="danceparty" href="/dance" target="_blank"><button>कृती करून पहा</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>डान्स पार्टी</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">डान्स पार्टीचा कोड लिहून ती मित्रमैत्रिणींच्या आणि कुटुंबियांच्या बरोबर शेअर करा. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney च्या "Encanto" मधले संगीत आणि आणखी बरेच काही!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>क्रियाकलाप करून पहा</button></a>
     </span>
   </div>
 </div>

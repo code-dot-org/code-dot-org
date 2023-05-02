@@ -1,0 +1,80 @@
+{
+  "ms-MY": {
+    "data": {
+      "standard_categories": {
+        "DAT-1": {
+          "description": "Cara komputer mewakili data adalah berbeza daripada cara data ditafsir dan dipaparkan untuk pengguna. Program digunakan untuk menterjemah data kepada perwakilan yang lebih mudah difahami oleh orang ramai."
+        },
+        "IOC-2": {
+          "description": "Penggunaan inovasi pengkomputeran mungkin melibatkan risiko kepada keselamatan dan identiti peribadi anda."
+        },
+        "DAT-1.D": {
+          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        },
+        "IOC-2.B": {
+          "description": "Terangkan bagaimana sumber pengkomputeran boleh dilindungi dan boleh disalahgunakan."
+        },
+        "CD": {
+          "description": "Peranti Komputer & Komunikasi"
+        },
+        "CI": {
+          "description": "Kesan kepada Komuniti, Global dan Etika"
+        },
+        "CL": {
+          "description": "Kerjasama"
+        },
+        "CPP": {
+          "description": "Amalan & Pengaturcaraan Pengkomputeran"
+        },
+        "CT": {
+          "description": "Pengiraan pemikiran"
+        },
+        "L": {
+          "description": "Bahasa"
+        },
+        "RI": {
+          "description": "Bacaan Bermaklumat"
+        },
+        "RL": {
+          "description": "Membaca Sastera"
+        },
+        "SL": {
+          "description": "Bercakap & Mendengar"
+        },
+        "W": {
+          "description": "Penulisan"
+        },
+        "C": {
+          "description": "Bulatan"
+        },
+        "F": {
+          "description": "Fungsi"
+        },
+        "G": {
+          "description": "Geometri"
+        },
+        "MP": {
+          "description": "Amalan Matematik"
+        },
+        "NBT": {
+          "description": "Nombor Dan Operasi Dalam Asas Sepuluh"
+        },
+        "OA": {
+          "description": "Operasi Dan Pemikiran Algebra"
+        },
+        "1": {
+          "description": "Pelajar menunjukkan pemikiran kreatif, membina pengetahuan, dan membangunkan produk dan proses inovatif menggunakan teknologi."
+        },
+        "2": {
+          "description": "Pelajar menggunakan media digital dan persekitaran untuk berkomunikasi dan bekerja secara kolaboratif, termasuk pada jarak jauh, untuk menyokong pembelajaran individu dan menyumbang kepada pembelajaran orang lain."
+        },
+        "4": {
+          "description": "Pelajar menggunakan kemahiran berfikir kritis untuk merancang dan menjalankan penyelidikan, mengurus projek, menyelesaikan masalah, dan membuat keputusan termaklum menggunakan alat dan sumber digital yang sesuai."
+        },
+        "6": {
+          "description": "Pelajar menunjukkan pemahaman yang baik tentang konsep, sistem dan operasi teknologi."
+        }
+      }
+    }
+  }
+}

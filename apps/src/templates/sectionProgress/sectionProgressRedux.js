@@ -14,19 +14,19 @@ const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({type: FINISH_LOADING_PROGRESS});
 export const startRefreshingProgress = () => ({
-  type: START_REFRESHING_PROGRESS
+  type: START_REFRESHING_PROGRESS,
 });
 export const finishRefreshingProgress = () => ({
-  type: FINISH_REFRESHING_PROGRESS
+  type: FINISH_REFRESHING_PROGRESS,
 });
 export const setLessonOfInterest = lessonOfInterest => ({
   type: SET_LESSON_OF_INTEREST,
-  lessonOfInterest
+  lessonOfInterest,
 });
 export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
 export const addDataByUnit = data => ({
   type: ADD_DATA_BY_UNIT,
-  data
+  data,
 });
 
 const INITIAL_LESSON_OF_INTEREST = 1;
@@ -40,50 +40,50 @@ const initialState = {
   studentLastUpdateByUnit: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
-  isRefreshingProgress: false
+  isRefreshingProgress: false,
 };
 
 export default function sectionProgress(state = initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      lessonOfInterest: INITIAL_LESSON_OF_INTEREST
+      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
   if (action.type === SET_CURRENT_VIEW) {
     return {
       ...state,
-      currentView: action.viewType
+      currentView: action.viewType,
     };
   }
   if (action.type === START_LOADING_PROGRESS) {
     return {
       ...state,
-      isLoadingProgress: true
+      isLoadingProgress: true,
     };
   }
   if (action.type === FINISH_LOADING_PROGRESS) {
     return {
       ...state,
-      isLoadingProgress: false
+      isLoadingProgress: false,
     };
   }
   if (action.type === START_REFRESHING_PROGRESS) {
     return {
       ...state,
-      isRefreshingProgress: true
+      isRefreshingProgress: true,
     };
   }
   if (action.type === FINISH_REFRESHING_PROGRESS) {
     return {
       ...state,
-      isRefreshingProgress: false
+      isRefreshingProgress: false,
     };
   }
   if (action.type === SET_LESSON_OF_INTEREST) {
     return {
       ...state,
-      lessonOfInterest: action.lessonOfInterest
+      lessonOfInterest: action.lessonOfInterest,
     };
   }
   if (action.type === ADD_DATA_BY_UNIT) {
@@ -91,20 +91,20 @@ export default function sectionProgress(state = initialState, action) {
       ...state,
       unitDataByUnit: {
         ...state.unitDataByUnit,
-        ...action.data.unitDataByUnit
+        ...action.data.unitDataByUnit,
       },
       studentLevelProgressByUnit: {
         ...state.studentLevelProgressByUnit,
-        ...action.data.studentLevelProgressByUnit
+        ...action.data.studentLevelProgressByUnit,
       },
       studentLessonProgressByUnit: {
         ...state.studentLessonProgressByUnit,
-        ...action.data.studentLessonProgressByUnit
+        ...action.data.studentLessonProgressByUnit,
       },
       studentLastUpdateByUnit: {
         ...state.studentLastUpdateByUnit,
-        ...action.data.studentLastUpdateByUnit
-      }
+        ...action.data.studentLastUpdateByUnit,
+      },
     };
   }
 
@@ -125,8 +125,8 @@ export const jumpToLessonDetails = lessonOfInterest => {
           section_id: state.teacherSections.selectedSectionId,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
-          script_id: state.unitSelection.scriptId
-        })
+          script_id: state.unitSelection.scriptId,
+        }),
       },
       {includeUserId: true}
     );

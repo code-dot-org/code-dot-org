@@ -55,20 +55,20 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="flappy_whenClick" id="14" deletable="false">
+        <block type="flappy_whenClick" id="whenClick" deletable="false">
 
   </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="flappy_flap"/>
-        <block type="flappy_playSound"/>
+        <block type="flappy_flap" id="flap"/>
+        <block type="flappy_playSound" id="playSound"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="flappy_flap"/>
+        <block type="flappy_flap" id="flap"/>
       </xml>
     </required_blocks>
   </blocks>

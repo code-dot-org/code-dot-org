@@ -1,5 +1,4 @@
 /** @file Some misc. browser check methods for maker */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 
 export function gtChrome33() {
@@ -14,7 +13,7 @@ export function isCodeOrgBrowser() {
   return !!window.MakerBridge;
 }
 
-function getChromeVersion() {
+export function getChromeVersion() {
   const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
   return raw ? parseInt(raw[2], 10) : false;
 }

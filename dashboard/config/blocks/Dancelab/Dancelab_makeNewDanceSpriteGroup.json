@@ -4,11 +4,7 @@
     "func": "makeNewDanceSpriteGroup",
     "inline": false,
     "blockText": "make {N} new {COSTUME}\n in a {LAYOUT}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "args": [
       {
         "name": "N",

@@ -9,25 +9,25 @@ class TestDMS < Minitest::Test
     @task_arn = 'arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL'
 
     @task_starting = {
-      "replication_task_identifier": "my-favorite-task",
-      "source_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL",
-      "target_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ZYXWVUTSRQPO",
-      "replication_instance_arn": "arn:aws:dms:us-east-1:1234567890:task:LKJIHGFEDCBA",
-      "migration_type": "full-load",
-      "table_mappings": "{\"escapedJSON\": true}",
-      "replication_task_settings": "{\"escapedJSON\": true}",
-      "status": "starting",
-      "stop_reason": "",
-      "replication_task_creation_date": Time.parse("2020-01-01T00:00:00.000-00:00"),
-      "replication_task_start_date": Time.parse("2020-01-01T16:20:00.000-00:00"),
-      "replication_task_arn": @task_arn,
-      "replication_task_stats": {
-        "full_load_progress_percent": 0,
-        "elapsed_time_millis": 1,
-        "tables_loaded": 0,
-        "tables_loading": 0,
-        "tables_queued": 2,
-        "tables_errored": 0
+      replication_task_identifier: "my-favorite-task",
+      source_endpoint_arn: "arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL",
+      target_endpoint_arn: "arn:aws:dms:us-east-1:1234567890:task:ZYXWVUTSRQPO",
+      replication_instance_arn: "arn:aws:dms:us-east-1:1234567890:task:LKJIHGFEDCBA",
+      migration_type: "full-load",
+      table_mappings: "{\"escapedJSON\": true}",
+      replication_task_settings: "{\"escapedJSON\": true}",
+      status: "starting",
+      stop_reason: "",
+      replication_task_creation_date: Time.parse("2020-01-01T00:00:00.000-00:00"),
+      replication_task_start_date: Time.parse("2020-01-01T16:20:00.000-00:00"),
+      replication_task_arn: @task_arn,
+      replication_task_stats: {
+        full_load_progress_percent: 0,
+        elapsed_time_millis: 1,
+        tables_loaded: 0,
+        tables_loading: 0,
+        tables_queued: 2,
+        tables_errored: 0
       }
     }
 
@@ -58,38 +58,38 @@ class TestDMS < Minitest::Test
 
     @task_completed_successfully_table_statistics = [
       {
-        "schema_name": "my_favorite_schema",
-        "table_name": "my_favorite_table",
-        "inserts": 0,
-        "deletes": 0,
-        "updates": 0,
-        "ddls": 0,
-        "full_load_rows": 2_147_483_647,
-        "full_load_condtnl_chk_failed_rows": 0,
-        "full_load_error_rows": 0,
-        "last_update_time": Time.parse("2020-01-01T17:20:00.000-00:00"),
-        "table_state": "Table completed",
-        "validation_pending_records": 0,
-        "validation_failed_records": 0,
-        "validation_suspended_records": 0,
-        "validation_state": "Not enabled"
+        schema_name: "my_favorite_schema",
+        table_name: "my_favorite_table",
+        inserts: 0,
+        deletes: 0,
+        updates: 0,
+        ddls: 0,
+        full_load_rows: 2_147_483_647,
+        full_load_condtnl_chk_failed_rows: 0,
+        full_load_error_rows: 0,
+        last_update_time: Time.parse("2020-01-01T17:20:00.000-00:00"),
+        table_state: "Table completed",
+        validation_pending_records: 0,
+        validation_failed_records: 0,
+        validation_suspended_records: 0,
+        validation_state: "Not enabled"
       },
       {
-        "schema_name": "my_favorite_schema",
-        "table_name": "my_bestie_table",
-        "inserts": 0,
-        "deletes": 0,
-        "updates": 0,
-        "ddls": 0,
-        "full_load_rows": 314159,
-        "full_load_condtnl_chk_failed_rows": 0,
-        "full_load_error_rows": 0,
-        "last_update_time": Time.parse("2020-01-01T17:21:00.000-00:00"),
-        "table_state": "Table completed",
-        "validation_pending_records": 0,
-        "validation_failed_records": 0,
-        "validation_suspended_records": 0,
-        "validation_state": "Not enabled"
+        schema_name: "my_favorite_schema",
+        table_name: "my_bestie_table",
+        inserts: 0,
+        deletes: 0,
+        updates: 0,
+        ddls: 0,
+        full_load_rows: 314159,
+        full_load_condtnl_chk_failed_rows: 0,
+        full_load_error_rows: 0,
+        last_update_time: Time.parse("2020-01-01T17:21:00.000-00:00"),
+        table_state: "Table completed",
+        validation_pending_records: 0,
+        validation_failed_records: 0,
+        validation_suspended_records: 0,
+        validation_state: "Not enabled"
       }
     ]
 
@@ -107,19 +107,19 @@ class TestDMS < Minitest::Test
     )
 
     @task_completed_unsuccessfully_table_statistics = @task_completed_successfully_table_statistics.deep_dup
-    @task_completed_unsuccessfully_table_statistics[0].deep_merge({"table_state": "Before load"})
+    @task_completed_unsuccessfully_table_statistics[0].deep_merge({table_state: "Before load"})
 
     @start_task_response = {
-      "migration_type": "full-load",
-      "replication_instance_arn": "arn:aws:dms:us-east-1:1234567890:task:LKJIHGFEDCBA",
-      "replication_task_arn": @task_arn,
-      "replication_task_creation_date": Time.parse("2020-01-01T00:00:00.000-00:00"),
-      "replication_task_identifier": "my-favorite-task",
-      "replication_task_settings": "{\"escapedJSON\": true}",
-      "source_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL",
-      "status": "starting",
-      "table_mappings": "{\"escapedJSON\": true}",
-      "target_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ZYXWVUTSRQPO"
+      migration_type: "full-load",
+      replication_instance_arn: "arn:aws:dms:us-east-1:1234567890:task:LKJIHGFEDCBA",
+      replication_task_arn: @task_arn,
+      replication_task_creation_date: Time.parse("2020-01-01T00:00:00.000-00:00"),
+      replication_task_identifier: "my-favorite-task",
+      replication_task_settings: "{\"escapedJSON\": true}",
+      source_endpoint_arn: "arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL",
+      status: "starting",
+      table_mappings: "{\"escapedJSON\": true}",
+      target_endpoint_arn: "arn:aws:dms:us-east-1:1234567890:task:ZYXWVUTSRQPO"
     }
   end
 
@@ -127,11 +127,11 @@ class TestDMS < Minitest::Test
     dms_client = Aws::DatabaseMigrationService::Client.new(
       stub_responses:
       {
-        describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
+        describe_replication_tasks: {replication_tasks: [@task_completed_successfully]},
         describe_table_statistics:
           {
-            "replication_task_arn": @task_arn,
-            "table_statistics": @task_completed_successfully_table_statistics
+            replication_task_arn: @task_arn,
+            table_statistics: @task_completed_successfully_table_statistics
           }
       }
     )
@@ -149,11 +149,11 @@ class TestDMS < Minitest::Test
       stub_responses:
       {
         start_replication_task: {replication_task: @start_task_response},
-        describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
+        describe_replication_tasks: {replication_tasks: [@task_completed_successfully]},
         describe_table_statistics:
           {
-            "replication_task_arn": @task_arn,
-            "table_statistics": @task_completed_successfully_table_statistics
+            replication_task_arn: @task_arn,
+            table_statistics: @task_completed_successfully_table_statistics
           }
       }
     )
@@ -167,11 +167,11 @@ class TestDMS < Minitest::Test
       stub_responses:
       {
         start_replication_task: {replication_task: @start_task_response},
-        describe_replication_tasks: {"replication_tasks": [@task_completed_unsuccessfully]},
+        describe_replication_tasks: {replication_tasks: [@task_completed_unsuccessfully]},
         describe_table_statistics:
           {
-            "replication_task_arn": @task_arn,
-            "table_statistics": @task_completed_unsuccessfully_table_statistics
+            replication_task_arn: @task_arn,
+            table_statistics: @task_completed_unsuccessfully_table_statistics
           }
       }
     )

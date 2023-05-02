@@ -280,7 +280,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :order_by,
     ]
 
-    params expected_keys.map {|k| [k, 'some value']}.to_h
+    params expected_keys.index_with('some value')
     assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 

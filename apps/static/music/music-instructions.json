@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "path": "initial-instructions",
+      "panels": [
+        {
+          "text": "These are the first instructions.",
+          "imageSrc": "instructions0.png"
+        },
+        {
+          "text": "These are the second instructions.",
+          "imageSrc": "instructions1.png"
+        },
+        {
+          "text": "These are the third instructions.",
+          "imageSrc": "instructions2.png"
+        },
+        {
+          "text": "These are the fourth instructions."
+        }
+      ]
+    }
+  ]
+}

@@ -1,24 +1,11 @@
 /** @file Dropdown for selecting design mode screens */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '../util/color';
-import commonStyles from '../commonStyles';
 import * as constants from './constants';
 import {connect} from 'react-redux';
+import style from './screen-selector.module.scss';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
-
-export const styles = {
-  dropdown: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    width: '100%',
-    height: 28,
-    marginBottom: 6,
-    borderColor: color.light_gray
-  }
-};
 
 /**
  * The dropdown that appears above the visualization in design mode, used
@@ -37,7 +24,7 @@ class ScreenSelector extends React.Component {
 
     // passed explicitly
     screenIds: PropTypes.array.isRequired,
-    onCreate: PropTypes.func.isRequired
+    onCreate: PropTypes.func.isRequired,
   };
 
   handleChange = evt => {
@@ -52,7 +39,11 @@ class ScreenSelector extends React.Component {
   };
 
   render() {
-    const options = this.props.screenIds.map(function(item) {
+    if (!this.props.hasDesignMode) {
+      return null;
+    }
+
+    const options = this.props.screenIds.map(function (item) {
       return (
         <option key={item} value={item}>
           {item}
@@ -60,13 +51,9 @@ class ScreenSelector extends React.Component {
       );
     });
 
-    const defaultScreenId =
-      elementUtils
-        .getScreens()
-        .first()
-        .attr('id') || '';
+    const defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
 
-    options.sort(function(a, b) {
+    options.sort(function (a, b) {
       if (a.key === defaultScreenId) {
         return -1;
       } else if (b.key === defaultScreenId) {
@@ -82,10 +69,7 @@ class ScreenSelector extends React.Component {
     return (
       <select
         id="screenSelector"
-        style={[
-          styles.dropdown,
-          !this.props.hasDesignMode && commonStyles.hidden
-        ]}
+        className={style.dropdown}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}
@@ -104,17 +88,17 @@ export default connect(
       currentScreenId: state.screens.currentScreenId,
       interfaceMode: state.interfaceMode,
       hasDesignMode: state.pageConstants.hasDesignMode,
-      isRunning: state.runState.isRunning
+      isRunning: state.runState.isRunning,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      onScreenChange: function(screenId) {
+      onScreenChange: function (screenId) {
         dispatch(screens.changeScreen(screenId));
       },
       onImport() {
         dispatch(screens.toggleImportScreen(true));
-      }
+      },
     };
   }
-)(Radium(ScreenSelector));
+)(ScreenSelector);

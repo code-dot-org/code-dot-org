@@ -459,9 +459,9 @@ DB[:forms].where(kind: @census_form_kinds).each do |form|
     puts "Skipping form #{form_id} becasue it has already been migrated to census submission #{previous_migrations[0].census_submission_id}" if @verbose
     skips += 1
   end
-rescue Exception => e
-  puts "Error processing form id #{form[:id]}: #{e.message}"
-  puts e.backtrace if @verbose
+rescue Exception => exception
+  puts "Error processing form id #{form[:id]}: #{exception.message}"
+  puts exception.backtrace if @verbose
   failures += 1
 end
 

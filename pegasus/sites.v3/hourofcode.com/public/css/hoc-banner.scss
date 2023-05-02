@@ -1,0 +1,108 @@
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
+
+#fullwidth {
+  overflow: hidden;
+  background: url('/images/hoc2022-hero-banner.svg') no-repeat center center;
+  background-size: cover;
+
+  @media screen and (max-width: $width-sm) {
+    background: url('/images/hoc2022-hero-banner-mobile.svg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+section.banner.homepage {
+  padding: 0;
+
+  h1 {
+    font-size: 4em;
+    margin: 0.5em auto 0;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 3.5em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 2.75em;
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 1.25em;
+    }
+  }
+
+  .wrapper {
+    padding: 3em 0 6em;
+    width: 100%;
+
+    @media screen and (max-width: $width-sm) {
+      padding: 3em 1em;
+    }
+  }
+}
+
+section.banner {
+  text-align: center;
+  color: $darkest_gray;
+
+  &.hoc-mode {
+
+    @media screen and (max-width: $width-md) {
+      padding: 1.25em 0;
+    }
+  }
+
+  h1, h2 {
+    color: $darkest_gray;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 2.5em;
+    }
+  }
+
+  h2 {
+    font-family: $gotham-regular;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 1em auto 2em;
+  }
+
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 0 7em;
+
+    @media screen and (max-width: $width-md) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      padding: 1em 1em 3em;
+      width: 88%;
+    }
+  }
+
+  a {
+    color: $darkest_gray;
+    text-decoration: underline;
+    font-family: $gotham-bold;
+
+    &.ctabuttonatag {
+      text-decoration: none;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

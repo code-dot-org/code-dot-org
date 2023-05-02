@@ -33,10 +33,10 @@ class AccountPurger
   end
 
   # Purge information for an individual user account.
-  def purge_data_for_account(user)
+  def purge_data_for_account(user, reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO)
     @log.puts "Purging user_id #{user.id}#{@dry_run ? ' (dry-run)' : ''}"
     purged_account_log = PurgedAccountLog.new user,
-      reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
+      reason: reason
 
     really_purge_data_for_account user unless @dry_run
 

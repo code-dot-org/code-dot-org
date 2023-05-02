@@ -4,14 +4,14 @@
 
 # Skip if this is running a Rake task (e.g. rake db:setup) or when caching is disabled
 if File.basename($0) != 'rake' &&
-    Script.should_cache? &&
+    Unit.should_cache? &&
     !Rails.application.config.skip_script_preload
   # Populate the shared in-memory cache from the database.
-  Script.unit_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
-  Script.script_cache
-  Script.script_level_cache
-  Script.level_cache
-  Script.unit_family_cache
+  Unit.unit_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
+  Unit.script_cache
+  Unit.script_level_cache
+  Unit.level_cache
+  Unit.unit_family_cache
   UnitGroup.course_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
   UnitGroup.course_cache
 end

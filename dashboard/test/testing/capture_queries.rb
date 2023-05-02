@@ -16,31 +16,31 @@ module CaptureQueries
 
     def logger
       @output ||= StringIO.new
-      @log ||= Logger.new(@output).tap do |l|
+      @logger ||= Logger.new(@output).tap do |l|
         l.level = Logger::DEBUG
         l.formatter = ->(*, msg) {msg}
       end
     end
   end
 
-  def assert_queries(num, *args, &block)
+  def assert_queries(num, *args, **kwargs, &block)
     return yield if num.nil?
-    queries = capture_queries(*args, &block)
+    queries = capture_queries(*args, **kwargs, &block)
     assert_equal num, queries.count, "Wrong query count:\n#{queries.join("\n")}\n"
   end
 
-  def assert_cached_queries(num, *args, &block)
+  def assert_cached_queries(num, *args, **kwargs, &block)
     Retryable.retryable(on: Minitest::Assertion, matching: /Wrong query count/, tries: 2, sleep: 0) do
-      assert_queries(num, *args, &block)
+      assert_queries(num, *args, **kwargs, &block)
     end
   end
 
   IGNORE_FILTERS = [
-    # Script/course-cache related queries don't count.
-    /(script|unit_group)\.rb.*get_from_cache/,
-    /(script|unit_group)\.rb.*all_(scripts|courses)/,
+    # Unit/course-cache related queries don't count.
+    /(unit|unit_group)\.rb.*get_from_cache/,
+    /(unit|unit_group)\.rb.*all_(scripts|courses)/,
     # Level-cache queries don't count.
-    /script\.rb.*cache_find_(script_level|level)/,
+    /unit\.rb.*cache_find_(script_level|level)/,
     # Ignore random updates to experiment cache.
     /experiment\.rb.*update_cache/
   ]

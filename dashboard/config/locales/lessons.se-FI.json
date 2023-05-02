@@ -29,6 +29,12 @@
         "text-compression/Text Compression": {
           "name": "TeakstaKomprimeren"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinitiija Speallan-lab"
         },
@@ -1243,6 +1249,9 @@
         },
         "allthethings/ML Fish": {
           "name": "ML Guolli"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musihkka"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Suohttasat Mohkiid váste"

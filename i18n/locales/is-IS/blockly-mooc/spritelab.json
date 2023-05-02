@@ -1,7 +1,6 @@
 {
   "clicked": "smellt á",
   "clickedSprite": "ásmelltur kviki",
-  "errorLoadingAnimation": "Við virðumst vera í vandræðum með að hlaða inn hreyfimyndina þína \"{animationName}\". Gættu þess að netsambandið sé í lagi og prófaðu að hlaða síðunni inn aftur. Ef þetta vandamál heldur áfram er hugsanlegt að hreyfimyndin virki ekki. Í því tilfelli, gætir þú þurft að fjarlægja hreyfimyndina til að halda áfram.",
   "object": "þolandi ",
   "objectSprite": "þolandi kviki",
   "outbreakChangeHealthy": "Prófaðu að breyta fjölda skrímslakvikanna.",

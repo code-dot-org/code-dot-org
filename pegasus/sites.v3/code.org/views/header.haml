@@ -41,10 +41,10 @@
           #logo-wrapper
             - if current_user
               %a.linktag#logo-signedin{:href=>CDO.studio_url("/home")}
-                %img#logo{:src=>'/images/logo.svg'}
+                %img#logo{:src=>'/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
             - else
               %a.linktag#logo-signedout{:href=>CDO.code_org_url}
-                %img#logo{:src=>'/images/logo.svg'}
+                %img#logo{:src=>'/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
           #headerlinks.desktop-feature
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
               %a.headerlink.linktag{id: entry[:id], href: entry[:url]}= entry[:title]

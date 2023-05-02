@@ -55,12 +55,27 @@ export function searchAssets(
     results: results.slice(
       currentPage * maxResults,
       (currentPage + 1) * maxResults
-    )
+    ),
   };
 }
 
-export function filterOutBackgrounds(assets) {
+export function filterAnimations(assets, props) {
+  if (props.hideBackgrounds) {
+    return filterOutBackgrounds(assets);
+  } else if (props.hideCostumes) {
+    return filterOutCostumes(assets);
+  } else {
+    return assets;
+  }
+}
+
+function filterOutBackgrounds(assets) {
   return assets.filter(
     animation => !animation.categories.includes('backgrounds')
+  );
+}
+function filterOutCostumes(assets) {
+  return assets.filter(animation =>
+    animation.categories.includes('backgrounds')
   );
 }

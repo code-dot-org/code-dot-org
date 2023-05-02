@@ -1,4 +1,6 @@
 require 'cdo/aws/rds'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :rds do
   # Provide all 3 arguments
@@ -8,7 +10,7 @@ namespace :rds do
   # Use default clone id (suffix source cluster id with '-clone')
   # bundle exec rake rds:clone_cluster SOURCE_CLUSTER_ID=my-favorite-cluster
   desc 'Clone SOURCE_CLUSTER_ID to optional CLONE_CLUSTER_ID with optional INSTANCE_TYPE.'
-  task :clone_cluster do
+  timed_task_with_logging :clone_cluster do
     options = {
       source_cluster_id: ENV['SOURCE_CLUSTER_ID'],
       clone_cluster_id: ENV['CLONE_CLUSTER_ID'],
@@ -18,7 +20,7 @@ namespace :rds do
   end
 
   desc 'Delete CLUSTER_ID'
-  task :delete_cluster do
+  timed_task_with_logging :delete_cluster do
     Cdo::RDS.delete_cluster(ENV['CLUSTER_ID'])
   end
 end

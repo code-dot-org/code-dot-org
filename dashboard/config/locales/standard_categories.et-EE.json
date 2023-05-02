@@ -1,0 +1,17 @@
+{
+  "et-EE": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Arvutuslik mõtlemine"
+        },
+        "L": {
+          "description": "Keel"
+        },
+        "F": {
+          "description": "Funktsioonid"
+        }
+      }
+    }
+  }
+}

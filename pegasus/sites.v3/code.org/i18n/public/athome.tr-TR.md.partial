@@ -15,18 +15,18 @@ theme: responsive
 
 <p>İster bir ebeveyn/veli, ister bağımsız öğrenen bir öğrenci olun, aşağıdaki seçenekler bilgisayar bilimlerini keşfetmeye başlamanın ilgi çekici ve denemesi kolay yollarıdır.</p>
 <ul>
-    <li><a class="linktag" id="hoc-nav" href="#hoc">Bir Kod Saati Deneyin</a></li>
-    <li><a class="linktag" id="videos-nav" href="#videos">CS'nin temelleri hakkında kısa bir video serisini izleyin</a></li>
+    <li><a class="linktag" id="hoc-nav" href="#hoc">Bir Hour of Code  Deneyin</a></li>
+    <li><a class="linktag" id="videos-nav" href="#videos">BB'nin temelleri hakkında kısa bir video serisini izleyin</a></li>
     <li><a class="linktag" id="self-paced-nav" href="#express">Giriş seviyesinde, kendi hızınızda bir kursa katılın</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Bir oyun veya uygulama oluşturun</a></li>
-    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Bilgisayarsız CS'yi deneyin ('Bağlantısızl' ve mobil seçenekler)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org ekibinden ve özel konuklardan CS öğrenin</a></li>
+    <li><a class="linktag" id="unplugged-nav" href="#unplugged">Bilgisayarsız BB'yi deneyin ('Bağlantısızl' ve mobil seçenekler)</a></li>
+    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org ekibinden ve özel konuklardan BB öğrenin</a></li>
 </ul>
 
 <br>
 
 <a id="hoc"></a>
-<h2>Bu eğlenceli tanıtım öğreticisiyle bir Kod Saati deneyin</h2>
+<h2>Bu eğlenceli tanıtım öğreticisiyle bir Hour of Code deneyin</h2>
 <p>Minecraft, Frozen ve Star Wars gibi popüler oyunları ve filmleri içeren <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> deneyin. Birçok öğretici, temel bilgisayar bilimi kavramlarını eğlenceli ve ilgi çekici yollarla öğretmek için tasarlanmış oyunlar gibi yapılandırılmıştır.</p>
 
 <br>
@@ -39,8 +39,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Arkadaşlarınız ve ailenizle paylaşmak için bir Dance Party kodlayın. Katy Perry, Shawn Mendes, Panic özelliği! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj ve 34 daha fazlası!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Arkadaşlarınız ve ailenizle paylaşmak için bir Dance Party kodlayın. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney'in "Encanto"sundan müzikler ve daha fazlası!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Aktiviteyi dene</button></a>
     </span>
   </div>
 </div>
@@ -54,9 +54,9 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Kod Saati</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft yepyeni bir etkinlikle Kod Saati için geri döndü! Minecraft'ta kodla yolculuk.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft yepyeni bir etkinlikle Hour of Code için geri döndü! Minecraft'ta kodla yolculuk.</div>
         <br>
-        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Try activity</button></a>
+        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>etkinliği dene </button></a>
     </span>
   </div>
 </div>
@@ -70,8 +70,8 @@ theme: responsive
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Okyanuslar için AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">A.I.'ye yardım edin. çöpleri algılaması için eğiterek okyanusları temizleyin! Eğitim verileri ve önyargı ile AI'nın dünya sorunlarını nasıl çözebileceği hakkında bilgi edinin. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ders planını görün</a>.</div>
-        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Etkinliği dene</button></a>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">A.I.'ye yardım edin. çöpleri algılaması için eğiterek okyanusları temizleyin! Eğitim verileri ve önyargı ile AI'nın dünya sorunlarını nasıl çözebileceği hakkında bilgi edinin. Gör<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ders planı</a>.</div>
+        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Etkinliği dene </button></a>
     </span>
   </div>
 </div>
@@ -79,7 +79,7 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <br>
 <br>
@@ -96,7 +96,7 @@ theme: responsive
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Bilgisayarlar Bill Gates ile Nasıl Çalışır">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/athome/computers-video.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt=" Bill Gates ile Bilgisayarlar Nasıl Çalışır">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
@@ -142,7 +142,7 @@ theme: responsive
 
 <p>Steph Curry ve Shakira gibi ünlülerin yer aldığı kısa ilham verici videolar da dâhil olmak üzere daha fazla videoyu <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">burada</a> izleyin.</p>
 <br>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 </div></p>
 
@@ -237,7 +237,7 @@ theme: responsive
   <br>
 </p>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <p spaces-before="0">
   <hr />
@@ -287,7 +287,7 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <p spaces-before="0">
   <a id="unplugged"></a>
@@ -298,12 +298,12 @@ theme: responsive
 <p spaces-before="0">
   <div class="col-25" style="padding-bottom:15px; text-align:center">
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">
-    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Kod Saati için bağlantısız etkinlikler">
+    <img src="/images/athome/hoc-unplugged.png" style="width:90%; border: 2px solid black" alt="Hour of Code için bağlantısız etkinlikler">
   </a>
   <p><i>PDF olarak görüntülemek için resme tıklayın</i></p>
 </div>
 <div class="col-75" style="padding-left:15px">
-  <p>Ekran yok, sorun yok! Bir cihaz olmadan yapabileceğiniz hızlı, eğlenceli CS etkinliklerinden oluşan bir "örnekleyici" bir araya getirdik. Etkinlikleri öğrenirken bir aile Dance Party partisi yapın ya da resim çizmek için birbirinizi 'programlayın'!</p>
+  <p>Ekran yok, sorun yok! Bir cihaz olmadan yapabileceğiniz hızlı, eğlenceli BB etkinliklerinden oluşan bir "örnekleyici" bir araya getirdik. Etkinlikleri öğrenirken bir aile Dance Party partisi yapın ya da resim çizmek için birbirinizi 'programlayın'!</p>
   <br>
   <a class="linktag" id="unplugged-packet" href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank"><button>Bağlantısız etkinlikleri görüntüleyin</button></a>
 </div></p>
@@ -313,11 +313,11 @@ theme: responsive
 <p spaces-before="0">
   <p>Veya diğer kuruluşlardan bu bağlantısız seçenekleri görüntüleyin:</p>
 <ul>
-  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Merhaba Ruby</a> - Bilgisayarlar, teknoloji ve programlama hakkında bilgi edinmek için dünyanın en tuhaf yolu. Bir problemi parçalara ayırma, nokta örüntüleri, algoritmik olarak düşünme, problemleri çözme ve birlikte çalışma gibi bir dizi CS konusuna dair aktiviteler. (4-10 yaş için)</li>
-  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Bağlantısız</a> - Kartlar, ipler, boya kalemleri ve çok sayıda koşuşturma kullanan ilgi çekici oyunlar ve bulmacalar yoluyla bilgisayar bilimini öğreten ücretsiz öğretim materyali koleksiyonu. (5-14 yaş için)</li>
+  <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Merhaba Ruby</a> - Bilgisayarlar, teknoloji ve programlama hakkında bilgi edinmek için dünyanın en tuhaf yolu. Bir problemi parçalara ayırma, nokta örüntüleri, algoritmik olarak düşünme, problemleri çözme ve birlikte çalışma gibi bir dizi BB  konusuna dair aktiviteler. (4-10 yaş için)</li>
+  <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">BB Bağlantısız</a> - Kartlar, ipler, boya kalemleri ve çok sayıda koşuşturma kullanan ilgi çekici oyunlar ve bulmacalar yoluyla bilgisayar bilimini öğreten ücretsiz öğretim materyali koleksiyonu. (5-14 yaş için)</li>
 </ul></p>
 
-<h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda CS'yi deneyin</h2>
+<h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda BB'yi deneyin</h2>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
   <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Algoritmalar, örüntü tanıma, diziler, döngüler ve koşullar gibi kodlamanın temellerini öğretirken öğrencileri heyecan verici bir maceraya çıkaran büyüleyici bir mobil kodlama oyunu. <i>(tüm yaşlar için)</i>
@@ -333,7 +333,7 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <p spaces-before="0">
   <a id="livecoding"></a>
@@ -375,6 +375,6 @@ theme: responsive
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <p spaces-before="0">
-  <a href="#top">[Back to top]</a>
+  <a href="#top">[Başa dön]</a>
 <br>
 </p>

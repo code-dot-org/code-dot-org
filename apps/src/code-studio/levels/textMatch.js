@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
-var TextMatch = function(levelId, id, app, standalone, answers, lastAttempt) {
+var TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
   // The dashboard levelId.
   this.levelId = levelId;
 
@@ -18,14 +19,14 @@ var TextMatch = function(levelId, id, app, standalone, answers, lastAttempt) {
   this.answers = answers;
 
   $(document).ready(
-    $.proxy(function() {
+    $.proxy(function () {
       this.ready();
     }, this)
   );
 };
 
 // called on $.ready
-TextMatch.prototype.ready = function() {
+TextMatch.prototype.ready = function () {
   // Pre-fill text area with previous response content
   $('#' + this.id + ' textarea.response').val(this.lastAttempt);
 
@@ -42,25 +43,27 @@ TextMatch.prototype.ready = function() {
   textarea.on('input', null, null, () => {
     onAnswerChanged(this.levelId, false);
   });
+
+  reportTeacherReviewingStudentNonLabLevel();
 };
 
-TextMatch.prototype.getAppName = function() {
+TextMatch.prototype.getAppName = function () {
   return this.app;
 };
 
-TextMatch.prototype.getResult = function() {
+TextMatch.prototype.getResult = function () {
   var response = $('#' + this.id + ' textarea.response').val();
   var answers = this.answers;
   if (answers && answers.length > 0) {
     response = response.replace(/\s+/g, '');
-    var result = answers.some(function(element) {
+    var result = answers.some(function (element) {
       return response === element.replace(/\s+/g, '');
     });
     return {
       // Note: embedded version of this level shouldn't encode response.
       response: this.standalone ? encodeURIComponent(response) : response,
       result: result,
-      valid: response.length > 0
+      valid: response.length > 0,
     };
   } else {
     // Always succeed for any non-empty response to open-ended question without answer(s)
@@ -68,17 +71,17 @@ TextMatch.prototype.getResult = function() {
       // Note: embedded version of this level shouldn't encode response.
       response: this.standalone ? encodeURIComponent(response) : response,
       result: response.length > 0,
-      valid: response.length > 0
+      valid: response.length > 0,
     };
   }
 };
 
-TextMatch.prototype.lockAnswers = function() {
+TextMatch.prototype.lockAnswers = function () {
   // Not implemented
 };
 
 // called by external code that will display answer feedback
-TextMatch.prototype.getCurrentAnswerFeedback = function() {
+TextMatch.prototype.getCurrentAnswerFeedback = function () {
   // Not implemented
 };
 

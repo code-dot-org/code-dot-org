@@ -12,6 +12,9 @@ class SpriteManagementController < ApplicationController
   def default_sprites_editor
   end
 
+  def release_default_sprites_to_production
+  end
+
   def select_start_animations
   end
 end

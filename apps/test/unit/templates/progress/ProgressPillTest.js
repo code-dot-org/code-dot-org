@@ -15,7 +15,7 @@ const unpluggedLevel = {
   isUnplugged: true,
   status: LevelStatus.perfect,
   isLocked: false,
-  teacherFeedbackReviewState: undefined
+  teacherFeedbackReviewState: undefined,
 };
 
 const assessmentLevel = {
@@ -24,17 +24,17 @@ const assessmentLevel = {
   isUnplugged: false,
   status: LevelStatus.perfect,
   isLocked: false,
-  teacherFeedbackReviewState: undefined
+  teacherFeedbackReviewState: undefined,
 };
 
 const keepWorkingLevel = {
   ...unpluggedLevel,
-  teacherFeedbackReviewState: ReviewStates.keepWorking
+  teacherFeedbackReviewState: ReviewStates.keepWorking,
 };
 
 const levelWithUrl = {
   ...unpluggedLevel,
-  url: '/foo/bar'
+  url: '/foo/bar',
 };
 
 const DEFAULT_PROPS = {
@@ -42,7 +42,7 @@ const DEFAULT_PROPS = {
   icon: 'desktop',
   text: '1',
   fontSize: 12,
-  disabled: false
+  disabled: false,
 };
 
 describe('ProgressPill', () => {
@@ -63,20 +63,8 @@ describe('ProgressPill', () => {
       />
     );
     assert.equal(wrapper.find('ReactTooltip').length, 1);
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-tip'],
-      true
-    );
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-for'],
-      123
-    );
+    assert.equal(wrapper.find('div').first().props()['data-tip'], true);
+    assert.equal(wrapper.find('div').first().props()['data-for'], 123);
   });
 
   it('has an href when single level with url', () => {
@@ -142,7 +130,7 @@ describe('ProgressPill', () => {
   it('has an keep working icon when single level is assessment and has keepWorking feedback', () => {
     const level = {
       ...assessmentLevel,
-      teacherFeedbackReviewState: ReviewStates.keepWorking
+      teacherFeedbackReviewState: ReviewStates.keepWorking,
     };
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[level]} />

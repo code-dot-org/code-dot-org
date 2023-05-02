@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">AddressBook</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">contacts</code> that represents a list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Contact</code> objects. When an instance of an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">AddressBook</code> is created, the list is initialized to an empty list.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">AddressBook</code> class with the following:\r\n\r\n* a method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getContact()</code> that takes an index as a parameter and returns the contact at that index in the list\r\n\r\n* a method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">editContact()</code> that takes an index and a new name as parameters and replaces the contact at that index with the new name\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">AddressBookRunner</code> class,\r\n\r\n1. Instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">AddressBook</code> object.\r\n\r\n2. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getContact()</code> method to get a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Contact</code> object from the list.\r\n\r\n3. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">editContact()</code> method to edit a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Contact</code> object in the list.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">get()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">set()</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_working_with_arraylist_data",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Phone Contacts",
+    "bubble_choice_description": "Create an `AddressBook` class that contains an `ArrayList` to store phone contacts.",
+    "thumbnail_url": "https://images.code.org/dec185013c1f1d297828a77223c08174-phone-book.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T14:02:01.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T14:02:01.364+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-ArrayLists PBT_2023\\\"\"],\"cloned_from\":\"CSA U6L5-ArrayLists PBT_2023\"},{\"changed_at\":\"2023-04-03 14:02:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:35:34 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 22:41:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

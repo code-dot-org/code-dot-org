@@ -8,7 +8,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {
   GameController,
   EventType,
-  utils as CraftUtils
+  utils as CraftUtils,
 } from '@code-dot-org/craft';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 var dom = require('../../dom');
@@ -43,7 +43,7 @@ var characters = {
     smallStaticAvatar:
       MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
     failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png'
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png',
   },
   Alex: {
     name: 'Alex',
@@ -51,8 +51,8 @@ var characters = {
     smallStaticAvatar:
       MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
     failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png'
-  }
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png',
+  },
 };
 
 var interfaceImages = {
@@ -68,7 +68,7 @@ var interfaceImages = {
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
     MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
   ],
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
@@ -76,7 +76,7 @@ var interfaceImages = {
     characters.Steve.staticAvatar,
     characters.Steve.smallStaticAvatar,
     characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar
+    characters.Alex.smallStaticAvatar,
   ],
   2: [
     // TODO(bjordan): find different pre-load point for feedback images,
@@ -84,13 +84,13 @@ var interfaceImages = {
     characters.Alex.winAvatar,
     characters.Steve.winAvatar,
     characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar
+    characters.Steve.failureAvatar,
   ],
   6: [
     MEDIA_URL + 'Sliced_Parts/House_Option_A_v3.png',
     MEDIA_URL + 'Sliced_Parts/House_Option_B_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png'
-  ]
+    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png',
+  ],
 };
 
 var MUSIC_METADATA = [
@@ -100,7 +100,7 @@ var MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: 'vignette4-intro'},
   {volume: 1, hasOgg: true, name: 'vignette5-shortpiano'},
   {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short'},
-  {volume: 1, hasOgg: true, name: 'vignette8-free-play'}
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play'},
 ];
 
 var CHARACTER_STEVE = 'Steve';
@@ -110,7 +110,7 @@ var DEFAULT_CHARACTER = CHARACTER_STEVE;
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
-Craft.init = function(config) {
+Craft.init = function (config) {
   if (config.level.puzzle_number === 1 && config.level.lesson_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -125,7 +125,7 @@ Craft.init = function(config) {
   config.level.disableFinalLessonMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function() {
+  var getIEVersion = function () {
     return document.documentMode;
   };
 
@@ -150,7 +150,7 @@ Craft.init = function(config) {
         };
         handlePlayerSelection(DEFAULT_CHARACTER, onPlayerSelected);
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
-        Craft.showHouseSelectionPopup(function(selectedHouse) {
+        Craft.showHouseSelectionPopup(function (selectedHouse) {
           trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             Object.assign(config.level, houseLevels[selectedHouse]);
@@ -194,14 +194,14 @@ Craft.init = function(config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
 
   Craft.musicController = new MusicController(
     Sounds.getSingleton(),
-    function(filename) {
+    function (filename) {
       return config.skin.assetUrl(`music/${filename}`);
     },
     levelTracks,
@@ -209,23 +209,23 @@ Craft.init = function(config) {
     muteCookieWithLevel(Craft.level)
   );
 
-  config.muteBackgroundMusic = function() {
+  config.muteBackgroundMusic = function () {
     Craft.musicController.setMuteMusic(true);
   };
 
-  config.unmuteBackgroundMusic = function() {
+  config.unmuteBackgroundMusic = function () {
     var songToPlayFirst = Craft.getFirstSong();
     Craft.musicController.setMuteMusic(false, songToPlayFirst);
   };
 
   // Play music when the instructions are shown
-  Craft.beginBackgroundMusic = function() {
+  Craft.beginBackgroundMusic = function () {
     var songToPlayFirst = Craft.getFirstSong();
     Craft.musicController.play(songToPlayFirst);
   };
 
-  Craft.getFirstSong = function() {
-    Sounds.getSingleton().whenAudioUnlocked(function() {
+  Craft.getFirstSong = function () {
+    Sounds.getSingleton().whenAudioUnlocked(function () {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
       return hasSongInLevel ? Craft.level.songs[0] : null;
     });
@@ -342,20 +342,20 @@ Craft.init = function(config) {
         '',
         '',
         '',
-        ''
+        '',
       ];
       break;
   }
 
-  var onMount = function() {
+  var onMount = function () {
     studioApp().init(
       Object.assign({}, config, {
         forceInsertTopBlock: 'when_run',
         appStrings: {
-          generatedCodeDescription: craftMsg.generatedCodeDescription()
+          generatedCodeDescription: craftMsg.generatedCodeDescription(),
         },
-        loadAudio: function() {},
-        afterInject: function() {
+        loadAudio: function () {},
+        afterInject: function () {
           // NaN if not set
           var slowMotionURLParam = parseFloat(
             (location.search.split('customSlowMotion=')[1] || '').split('&')[0]
@@ -366,7 +366,7 @@ Craft.init = function(config) {
             assetRoot: Craft.skin.assetUrl(''),
             audioPlayer: {
               register: studioApp().registerAudio.bind(studioApp()),
-              play: studioApp().playAudio.bind(studioApp())
+              play: studioApp().playAudio.bind(studioApp()),
             },
             debug: false,
             customSlowMotion: config.level.isTestLevel
@@ -380,13 +380,13 @@ Craft.init = function(config) {
             earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
               levelConfig.puzzle_number
             ),
-            afterAssetsLoaded: function() {
+            afterAssetsLoaded: function () {
               // preload music after essential game asset downloads completely finished
               Craft.musicController.preload();
             },
             earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
               levelConfig.puzzle_number
-            )
+            ),
           });
 
           if (!config.level.showPopupOnLoad) {
@@ -412,8 +412,8 @@ Craft.init = function(config) {
         },
         twitter: {
           text: 'Share on Twitter',
-          hashtag: 'Craft'
-        }
+          hashtag: 'Craft',
+        },
       })
     );
 
@@ -431,13 +431,13 @@ Craft.init = function(config) {
       );
     }
 
-    interfaceImagesToLoad.forEach(function(url) {
+    interfaceImagesToLoad.forEach(function (url) {
       preloadImage(url);
     });
 
     var shareButton = $('.mc-share-button');
     if (shareButton.length) {
-      dom.addClickTouchEvent(shareButton[0], function() {
+      dom.addClickTouchEvent(shareButton[0], function () {
         Craft.reportResult(true);
       });
     }
@@ -445,7 +445,7 @@ Craft.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    isMinecraft: true
+    isMinecraft: true,
   });
 
   ReactDOM.render(
@@ -466,33 +466,33 @@ Craft.init = function(config) {
   );
 };
 
-var preloadImage = function(url) {
+var preloadImage = function (url) {
   var img = new Image();
   img.src = url;
 };
 
-Craft.getAppReducers = function() {
+Craft.getAppReducers = function () {
   return reducers;
 };
 
-Craft.characterAssetPackName = function(playerName) {
+Craft.characterAssetPackName = function (playerName) {
   return 'player' + playerName;
 };
 
-Craft.getCurrentCharacter = function() {
+Craft.getCurrentCharacter = function () {
   return (
     window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
   );
 };
 
-Craft.setCurrentCharacter = function(name) {
+Craft.setCurrentCharacter = function (name) {
   trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
 };
 
-Craft.updateUIForCharacter = function(character) {
+Craft.updateUIForCharacter = function (character) {
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
   Craft.initialConfig.skin.smallStaticAvatar =
     characters[character].smallStaticAvatar;
@@ -502,32 +502,32 @@ Craft.updateUIForCharacter = function(character) {
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
 };
 
-Craft.showHouseSelectionPopup = function(onSelectedCallback) {
+Craft.showHouseSelectionPopup = function (onSelectedCallback) {
   var popupDiv = document.createElement('div');
   popupDiv.innerHTML = require('./dialogs/houseSelection.html.ejs')({
-    image: studioApp().assetUrl()
+    image: studioApp().assetUrl(),
   });
   var selectedHouse = 'houseA';
 
   var popupDialog = studioApp().createModalDialog({
     contentDiv: popupDiv,
     defaultBtnSelector: '#choose-house-a',
-    onHidden: function() {
+    onHidden: function () {
       onSelectedCallback(selectedHouse);
     },
     id: 'craft-popup-house-selection',
-    icon: characters[Craft.getCurrentCharacter()].staticAvatar
+    icon: characters[Craft.getCurrentCharacter()].staticAvatar,
   });
 
   dom.addClickTouchEvent(
     $('#close-house-select')[0],
-    function() {
+    function () {
       popupDialog.hide();
     }.bind(this)
   );
   dom.addClickTouchEvent(
     $('#choose-house-a')[0],
-    function() {
+    function () {
       selectedHouse = 'houseA';
       trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
@@ -535,7 +535,7 @@ Craft.showHouseSelectionPopup = function(onSelectedCallback) {
   );
   dom.addClickTouchEvent(
     $('#choose-house-b')[0],
-    function() {
+    function () {
       selectedHouse = 'houseB';
       trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
@@ -543,7 +543,7 @@ Craft.showHouseSelectionPopup = function(onSelectedCallback) {
   );
   dom.addClickTouchEvent(
     $('#choose-house-c')[0],
-    function() {
+    function () {
       selectedHouse = 'houseC';
       trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
@@ -553,18 +553,18 @@ Craft.showHouseSelectionPopup = function(onSelectedCallback) {
   popupDialog.show();
 };
 
-Craft.clearPlayerState = function() {
+Craft.clearPlayerState = function () {
   window.localStorage.removeItem('craftHouseBlocks');
   window.localStorage.removeItem('craftPlayerInventory');
   window.localStorage.removeItem('craftSelectedPlayer');
   window.localStorage.removeItem('craftSelectedHouse');
 };
 
-Craft.onHouseSelected = function(houseType) {
+Craft.onHouseSelected = function (houseType) {
   trySetLocalStorage('craftSelectedHouse', houseType);
 };
 
-Craft.initializeAppLevel = function(levelConfig) {
+Craft.initializeAppLevel = function (levelConfig) {
   CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   var houseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks'));
@@ -582,7 +582,7 @@ Craft.initializeAppLevel = function(levelConfig) {
 
   var levelAssetPacks = {
     beforeLoad: Craft.minAssetsForLevelWithCharacter(levelConfig.puzzle_number),
-    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
+    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number),
   };
 
   Craft.gameController.loadLevel({
@@ -603,17 +603,17 @@ Craft.initializeAppLevel = function(levelConfig) {
         ? [levelConfig.gridWidth, levelConfig.gridHeight]
         : null,
     // eslint-disable-next-line no-eval
-    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
+    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
   });
 };
 
-Craft.minAssetsForLevelWithCharacter = function(levelNumber) {
+Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
   return Craft.minAssetsForLevelNumber(levelNumber).concat([
-    Craft.characterAssetPackName(Craft.getCurrentCharacter())
+    Craft.characterAssetPackName(Craft.getCurrentCharacter()),
   ]);
 };
 
-Craft.minAssetsForLevelNumber = function(levelNumber) {
+Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['adventurerLevelOneAssets'];
@@ -626,7 +626,7 @@ Craft.minAssetsForLevelNumber = function(levelNumber) {
   }
 };
 
-Craft.afterLoadAssetsForLevel = function(levelNumber) {
+Craft.afterLoadAssetsForLevel = function (levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
   switch (levelNumber) {
     case 1:
@@ -640,7 +640,7 @@ Craft.afterLoadAssetsForLevel = function(levelNumber) {
   }
 };
 
-Craft.earlyLoadAssetsForLevel = function(levelNumber) {
+Craft.earlyLoadAssetsForLevel = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return Craft.minAssetsForLevelNumber(levelNumber);
@@ -649,7 +649,7 @@ Craft.earlyLoadAssetsForLevel = function(levelNumber) {
   }
 };
 
-Craft.niceToHaveAssetsForLevel = function(levelNumber) {
+Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['playerSteve', 'playerAlex'];
@@ -658,9 +658,9 @@ Craft.niceToHaveAssetsForLevel = function(levelNumber) {
   }
 };
 
-Craft.foldInCustomHouseBlocks = function(houseBlockMap, levelConfig) {
+Craft.foldInCustomHouseBlocks = function (houseBlockMap, levelConfig) {
   var planesToCustomize = [levelConfig.groundPlane, levelConfig.actionPlane];
-  planesToCustomize.forEach(function(plane) {
+  planesToCustomize.forEach(function (plane) {
     for (var i = 0; i < plane.length; i++) {
       var item = plane[i];
       if (item.match(/house/)) {
@@ -677,7 +677,7 @@ Craft.foldInCustomHouseBlocks = function(houseBlockMap, levelConfig) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first true if first reset
  */
-Craft.reset = function(first) {
+Craft.reset = function (first) {
   if (first) {
     return;
   }
@@ -685,7 +685,7 @@ Craft.reset = function(first) {
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
-Craft.phaserLoaded = function() {
+Craft.phaserLoaded = function () {
   return (
     Craft.gameController &&
     Craft.gameController.game &&
@@ -696,7 +696,7 @@ Craft.phaserLoaded = function() {
 /**
  * Click the run button.  Start the program.
  */
-Craft.runButtonClick = function() {
+Craft.runButtonClick = function () {
   if (!Craft.phaserLoaded()) {
     return;
   }
@@ -732,7 +732,7 @@ Craft.runButtonClick = function() {
   }
 };
 
-Craft.executeUserCode = function() {
+Craft.executeUserCode = function () {
   if (Craft.initialConfig.level.edit_blocks) {
     this.reportResult(true);
     return;
@@ -779,43 +779,43 @@ Craft.executeUserCode = function() {
   CustomMarshalingInterpreter.evalWith(
     code,
     {
-      moveForward: function(blockID) {
+      moveForward: function (blockID) {
         appCodeOrgAPI.moveForward(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      turnLeft: function(blockID) {
+      turnLeft: function (blockID) {
         appCodeOrgAPI.turnLeft(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      turnRight: function(blockID) {
+      turnRight: function (blockID) {
         appCodeOrgAPI.turnRight(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      destroyBlock: function(blockID) {
+      destroyBlock: function (blockID) {
         appCodeOrgAPI.destroyBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      shear: function(blockID) {
+      shear: function (blockID) {
         appCodeOrgAPI.use(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      tillSoil: function(blockID) {
+      tillSoil: function (blockID) {
         appCodeOrgAPI.tillSoil(
           studioApp().highlight.bind(studioApp(), blockID),
           'Player'
         );
       },
-      ifLavaAhead: function(callback, blockID) {
+      ifLavaAhead: function (callback, blockID) {
         appCodeOrgAPI.ifBlockAhead(
           studioApp().highlight.bind(studioApp(), blockID),
           'lava',
@@ -823,7 +823,7 @@ Craft.executeUserCode = function() {
           callback
         );
       },
-      ifBlockAhead: function(blockType, callback, blockID) {
+      ifBlockAhead: function (blockType, callback, blockID) {
         appCodeOrgAPI.ifBlockAhead(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
@@ -831,39 +831,39 @@ Craft.executeUserCode = function() {
           callback
         );
       },
-      placeBlock: function(blockType, blockID) {
+      placeBlock: function (blockType, blockID) {
         appCodeOrgAPI.placeBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
           'Player'
         );
       },
-      plantCrop: function(blockID) {
+      plantCrop: function (blockID) {
         appCodeOrgAPI.placeBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           'cropWheat',
           'Player'
         );
       },
-      placeTorch: function(blockID) {
+      placeTorch: function (blockID) {
         appCodeOrgAPI.placeBlock(
           studioApp().highlight.bind(studioApp(), blockID),
           'torch',
           'Player'
         );
       },
-      placeBlockAhead: function(blockType, blockID) {
+      placeBlockAhead: function (blockType, blockID) {
         appCodeOrgAPI.placeInFront(
           studioApp().highlight.bind(studioApp(), blockID),
           blockType,
           'Player'
         );
-      }
+      },
     },
     {legacy: true}
   );
   appCodeOrgAPI.startAttempt(
-    function(success, levelModel) {
+    function (success, levelModel) {
       if (Craft.level.freePlay) {
         return;
       }
@@ -889,7 +889,7 @@ Craft.executeUserCode = function() {
       var newInventorySet = {};
       attemptInventoryTypes
         .concat(playerInventoryTypes)
-        .forEach(function(type) {
+        .forEach(function (type) {
           newInventorySet[type] = true;
         });
 
@@ -901,7 +901,7 @@ Craft.executeUserCode = function() {
   );
 };
 
-Craft.getTestResultFrom = function(success, studioTestResults) {
+Craft.getTestResultFrom = function (success, studioTestResults) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
@@ -913,7 +913,7 @@ Craft.getTestResultFrom = function(success, studioTestResults) {
   return studioTestResults;
 };
 
-Craft.reportResult = function(success) {
+Craft.reportResult = function (success) {
   var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
@@ -930,11 +930,11 @@ Craft.reportResult = function(success) {
     testResult: testResultType,
     image: encodedImage,
     program: encodeURIComponent(
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
     ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
-    onComplete: function(response) {
+    onComplete: function (response) {
       const isSignedIn =
         getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
@@ -945,17 +945,17 @@ Craft.reportResult = function(success) {
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
-            puzzleNumber: Craft.initialConfig.level.puzzle_number
+            puzzleNumber: Craft.initialConfig.level.puzzle_number,
           }),
           tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
-          generatedCodeDescription: craftMsg.generatedCodeDescription()
+          generatedCodeDescription: craftMsg.generatedCodeDescription(),
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
-        disableSaveToGallery: !isSignedIn
+        disableSaveToGallery: !isSignedIn,
       });
-    }
+    },
   });
 };
 
@@ -965,7 +965,7 @@ Craft.reportResult = function(success) {
  * @param {string} testResultType TestResults type of this level completion
  * @returns {boolean} whether to continue
  */
-Craft.shouldDefaultToContinue = function(testResultType) {
+Craft.shouldDefaultToContinue = function (testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;

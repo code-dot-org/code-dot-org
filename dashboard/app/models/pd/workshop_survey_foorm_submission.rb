@@ -58,13 +58,11 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     !facilitator_id.nil?
   end
 
-  private
-
-  def day_for_workshop
+  private def day_for_workshop
     if pd_workshop && !day.nil?
       session_count = pd_workshop.sessions.count
       if day > session_count
-        errors[:day] << "#{day} is not valid for workshop #{pd_workshop.id}"
+        errors.add(:day, "#{day} is not valid for workshop #{pd_workshop.id}")
         Honeybadger.notify("Foorm was submitted for day #{day} for workshop #{pd_workshop.id}, which only had #{session_count} sessions.")
       end
     end

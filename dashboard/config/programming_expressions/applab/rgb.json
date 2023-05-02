@@ -34,13 +34,13 @@
     {
       "name": "g",
       "type": "Number",
-      "required": false,
+      "required": true,
       "description": "The amount of green (0-255) in the color, or if the last parameter the alpha transparency for grayscale "
     },
     {
       "name": "b",
       "type": "Number",
-      "required": false,
+      "required": true,
       "description": "The amount of blue (0-255) in the color."
     },
     {

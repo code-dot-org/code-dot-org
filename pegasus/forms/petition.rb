@@ -57,7 +57,7 @@ class Petition < Form
   def self.get_location(zip_code_or_country)
     # Note that, empirically, we see non-US zip codes so we check for
     # numerality and length.
-    unless /^\d{5}$/ =~ zip_code_or_country
+    unless /^\d{5}$/.match?(zip_code_or_country)
       return {country_s: zip_code_or_country}
     end
 

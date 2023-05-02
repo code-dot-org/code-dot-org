@@ -1,0 +1,17 @@
+{
+  "kk-KZ": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Есептегіштік ойлау"
+        },
+        "L": {
+          "description": "Тілі"
+        },
+        "F": {
+          "description": "Функциялар"
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ driver:
 provisioner:
   name: chef_zero
   data_path: test/shared
-  require_chef_omnibus: 15.2.20
+  require_chef_omnibus: 17.6.18
 
 platforms:
   - name: ubuntu-18.04

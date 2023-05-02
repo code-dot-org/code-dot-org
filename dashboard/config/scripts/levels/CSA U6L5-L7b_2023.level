@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Library</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">books</code> that represents a list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Book</code> objects. When an instance of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Library</code> is created, the list is initialized to an empty list.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Library</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findBook()</code> method that takes a book title as a parameter and searches the books list for that book title. If the matching book is found, return the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Book</code> object. Otherwise, return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">null</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">LibraryRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findBook()</code> method and print the result.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_working_with_arraylist_data",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Library System",
+    "bubble_choice_description": "A librarian needs to keep track of books in a library system.",
+    "thumbnail_url": "https://images.code.org/b9f465059a27f74c2debff69d9ccf31f-book-stack.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T14:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T14:03:09.411+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L7a_2023\\\"\"],\"cloned_from\":\"CSA U6L5-L7a_2023\"},{\"changed_at\":\"2023-04-03 14:03:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:36:16 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 22:51:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

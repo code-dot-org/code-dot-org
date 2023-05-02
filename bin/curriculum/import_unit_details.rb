@@ -85,7 +85,7 @@ def main(options)
   cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
 
   options.unit_names.each do |unit_name|
-    script = Script.find_by_name!(unit_name)
+    script = Unit.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
     raise "Only hidden scripts can be imported" unless script.hidden
@@ -300,7 +300,7 @@ def canonicalize(str)
   str = match&.captures&.last if match
   str.gsub!(/[-:]/, ' ')
   # deduplicate spaces
-  str = str.split(' ').compact.join(' ')
+  str = str.split.compact.join(' ')
   str.downcase.strip
 end
 

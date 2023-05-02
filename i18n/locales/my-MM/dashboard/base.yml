@@ -21,13 +21,16 @@ my:
     attributes:
       user:
         email: 'email လိပ္စာ'
+        parent_email: 'မိဘ/အုပ်ထိန်းသူ အီးမေး'
         username: 'အသုံးပြုမည့်အမည်'
+        current_password: 'စကားဝှက်အဟောင်း'
         locale: 'ဘာသာစကား'
         age: 'အသက်'
         gender: 'က်ား/မ'
   hello: "မဂၤလာပါ ကမာၻၾကီး"
   submit: ပေးပို့ပါ
   cancel: "ပယ်ဖျတ်သည်"
+  okay: "ဟုတ်ပြီ"
   or: "သို့မဟုတ်"
   appname: "Code.org"
   stage_number: "သင်ခန်းစာ %{number}"
@@ -76,6 +79,7 @@ my:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
   user:
+    parent_guardian_email_label: "မိဘ/အုပ်ထိန်းသူ အီးမေး"
     none: "ဘာမှမရှိ"
   home:
     trynow: 'ဆက်သင်ယူရန်'
@@ -88,30 +92,39 @@ my:
   share_code:
     flappy_og_title: "ကျွန်ုပ် ဖလပ်ပီ ဂိမ်း ကိုကြည့်ပါ။"
   upsell:
-    hoc:
-      title: 'ဂန္တဝင် ဝင်္ကပါ'
-      body: 'ကွန်ပြူတာပညာရပ်၏ အခြေခံများကို စမ်းသုံးကြည့်ပါ။ သန်းပေါင်းများစွာက အဲဒါကို ကစားခဲ့ကြယ်။'
     flappy:
       title: 'ဖလပ်ပီ ကုပ်'
       body: 'သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။'
-    hoc2014:
-      try_frozen: 'Frozen မှ အနုပညာရှင် Anna နှင့် Elsa တို့နှင့်အတူ '
-    hoc-encryption:
-      body: "ကျောင်းသားများသည် ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်များကို ဖန်တီးရန်နှင့် crack လုပ်ရန် နည်းပညာများကို သင်ယူရပါမည်။"
     frozen:
       title: "Frozen"
-    starwars:
-      title: "Star Wars"
-    infinity:
-      title: "အဆုံးမရှိ ကစားရသည့် စမ်းသပ်ခန်း"
     hero:
       body: "Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်"
+    hoc-encryption:
+      body: "ကျောင်းသားများသည် ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်များကို ဖန်တီးရန်နှင့် crack လုပ်ရန် နည်းပညာများကို သင်ယူရပါမည်။"
+    hoc:
+      title: 'ဂန္တဝင် ဝင်္ကပါ'
+      body: 'ကွန်ပြူတာပညာရပ်၏ အခြေခံများကို စမ်းသုံးကြည့်ပါ။ သန်းပေါင်းများစွာက အဲဒါကို ကစားခဲ့ကြယ်။'
+    hoc2014:
+      try_frozen: 'Frozen မှ အနုပညာရှင် Anna နှင့် Elsa တို့နှင့်အတူ '
+    infinity:
+      title: "အဆုံးမရှိ ကစားရသည့် စမ်းသပ်ခန်း"
     sports:
       body: "ဘတ်စ့်ကပ်ဘောဂိမ်း တစ်ခု ပြုလုပ်ပါ သို့မဟုတ် အားကစားများ ရောနှောပြီး ယှဉ်ပြိုင်ပါ။"
+    starwars:
+      title: "Star Wars"
     text-compression:
       body: "ဤသင်ခန်းစာတွင်၊ ကျောင်းသားများသည် သင်္ကေတများဖြင့် ပုံစံများကို အစားထိုးခြင်းဖြင့် စာသားချုံ့ရန် Text Compression Widget ကို အသုံးပြုရပါမည်။"
     unplugged_conditionals:
       body: "ကတ်များကို အသုံးပြု၍ ဤ \"unplugged\" လုပ်ဆောင်ချက်တွင် algorithms နှင့် conditional statements များအကြောင်း လေ့လာပါ။"
+  multi-submittable:
+    wrong_title: "ကျေးဇူးတင်ပါတယ်"
+    correct_title: "ကျေးဇူးတင်ပါတယ်"
+  level_group:
+    wrong_title: "ကျေးဇူးတင်ပါတယ်"
+    correct_title: "ကျေးဇူးတင်ပါတယ်"
+  level_group-submittable:
+    wrong_title: "ကျေးဇူးတင်ပါတယ်"
+    correct_title: "ကျေးဇူးတင်ပါတယ်"
   dialog:
     ok: "​ကောင်းပြီ"
     startover_title: "အစက ပြန်စချင်တာ သေချာရဲ့လား?"

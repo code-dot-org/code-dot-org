@@ -32,7 +32,7 @@
   "playSoundJingle": "झनझनाने की ध्वनि प्ले करें",
   "playSoundSplash": "छपछपाने की ध्वनि प्ले करें",
   "playSoundLaser": "लेज़र ध्वनि प्ले करें",
-  "playSoundTooltip": "चुनिंदा ध्वनि बजाए",
+  "playSoundTooltip": "चुनी हुई आवाज़ बजाएं।",
   "reinfFeedbackMsg": "वापस जाने और अपनी गेम प्ले करने के लिए \"दुबारा प्ले करने की कोशिश करें” को दबाएं।",
   "scoreText": "स्कोर: {playerScore}",
   "setBackground": "दृश्य सेट करें",

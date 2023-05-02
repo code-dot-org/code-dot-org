@@ -21,7 +21,7 @@ Parliamo di lezioni in cui gli studenti non lavorano al computer in quanto “un
 
 ***
 ## Lezioni unplugged in CS Fundamentals 2021-22
-Le seguenti lezioni si trovano in <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Fundamentals 2021-22</a>. <br><br>
+Le seguenti lezioni si possono trovare in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -65,12 +65,12 @@ th, td {
     <th width=20%><center><big>Video</th>
      <tr>
     <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Gli studenti si eserciteranno a scrivere istruzioni precise lavorando per tradurre le istruzioni nei simboli forniti. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Gli studenti si eserciteranno a scrivere istruzioni precise lavorando per tradurre le istruzioni nei simboli forniti. Se sorgono problemi nel codice, gli studenti dovranno anche lavorare insieme per identificare bugs e risolverli..</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>Quest'attività è una rivisitazione di Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. A volte si desidera che il programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. A volte si desidera che il proprio programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
     <th rowspan="3" id="t02">Course B</th>
@@ -90,7 +90,7 @@ th, td {
 Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
   </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. A volte si desidera che il programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. A volte si desidera che il proprio programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
    </tr>
        </tr>
      <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Opzionale - 18 perline nere/18 bianche, 1 scovolino per studente</i><br><small>Il binario è estremamente importante nel mondo dei computer. La maggior parte dei computer di oggi memorizza ogni tipo di informazione in forma binaria. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Non sempre abbiamo tutte le informazioni di cui abbiamo bisogno quando scriviamo un programma. A volte vorrete fare qualcosa di diverso in una situazione piuttosto che in un'altra, anche se non sapete quale situazione sarà vera quando il vostro codice verrà eseguito. Ecco dove entrano in gioco i condizionali. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Non sempre abbiamo tutte le informazioni di cui abbiamo bisogno quando scriviamo un programma. A volte vorrete fare qualcosa di diverso in una situazione piuttosto che in un'altra, anche se non sapete quale situazione sarà vera quando il vostro codice verrà eseguito. Ecco dove entrano in gioco i condizionali. I condizionali consentono a un computer di prendere una decisione, in base alle informazioni che sono vere ogni volta che viene eseguito il codice.+</td><td>Condizionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Le funzioni (a volte chiamate procedure) sono mini programmi che potete usare più e più volte all'interno del vostro programma più grande. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Course E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Scrittura di canzoni</a><br><small>Una delle strutture più magnifiche nel mondo dell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono mini programmi che potete usare più e più volte all'interno del vostro programma più grande. Questa lezione aiuterà gli studenti a capire intuitivamente perché combinare blocchi di codice in funzioni può essere una pratica così utile.</td><td>Funzioni</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Progettare per l'accessibilità</a><br><small>In questa lezione, gli studenti impareranno l'accessibilità e il valore dell'empatia attraverso il brainstorming e la progettazione di soluzioni accessibili per ipotetiche app.</td><td>Impatti dell'informatica</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Condivisione digitale</a><br><i>*Forniture: Smartphone o tablet</i><br><small>In prestito a Computer Science Fundamentals dal team di Copyright e creatività, questa lezione esiste per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà e del copyright, in particolare negli ambienti digitali. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come una parte importante dell'essere un cittadino digitale etico.</td><td>Cittadinanza digitale</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 - Storie di spazi vuoti</a><br><i>*Materiali di consumo: 6 buste (adatti anche: carta o schede, piegate a metà)</i><br><small>Gli studenti useranno storie da riempire (simili a Mad Libs®) come contesto per capire come i computer prendono e memorizzano l'input di un utente, quindi lo useranno in seguito durante l'esecuzione di un programma.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Queste nuove strutture consentiranno agli studenti di creare codice più potente e dinamico.</td><td>Per i loop</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. In questa lezione, gli studenti faranno finta di navigare in Internet, mentre imparano a conoscere le connessioni, gli URL, gli indirizzi IP e i DNS.</td><td>Dati</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Internet</a><br><small>Anche se molte persone usano Internet ogni giorno, non molti sanno come funziona. In questa lezione, gli studenti faranno finta di navigare in Internet, mentre imparano a conoscere le connessioni, gli URL, gli indirizzi IP e i DNS.</td><td>Dati</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

@@ -19,6 +19,18 @@
   font-size: 12px;
   color: $default_text;
 }
+
+#race-modal .modal-content .custom-h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+
+#race-modal .modal-content p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 #terms-modal .left,
 #school-info-modal .left,
 #race-modal .left {
@@ -75,11 +87,25 @@
   background-image: none;
   margin-top: 10px;
 }
-#terms-modal .disabled-button,
-#race-modal .disabled-button {
+
+#race-modal .primary-button {
+  background-color: $brand_secondary_default;
+  border-color: $brand_secondary_default;
+  color: $neutral_white;
+  font-family: $gotham-bold;
+}
+
+#terms-modal .disabled-button {
   background-color: $lighter_gray;
   border-color: $lighter_gray;
   color: $dark_charcoal;
+}
+
+#race-modal .disabled-button {
+  color: $neutral_white;
+  border-color: $neutral_dark20;
+  background-color: $neutral_dark20;
+  cursor: not-allowed;
 }
 #terms-modal .custom-h1,
 #race-modal .custom-h1 {

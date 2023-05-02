@@ -1,0 +1,17 @@
+{
+  "si-LK": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "සංඛ්‍යාත්මක සිතීම"
+        },
+        "L": {
+          "description": "භාෂාව"
+        },
+        "F": {
+          "description": "ශ්‍රිතයන්"
+        }
+      }
+    }
+  }
+}

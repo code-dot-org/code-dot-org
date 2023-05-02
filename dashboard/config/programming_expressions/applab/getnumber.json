@@ -6,9 +6,9 @@
   "content": "Gets the number from the specified screen element.\n\nTo capture numeric data entered by the user your apps will need to read data from [`textInput()`(#fff176)](/docs/applab/textInput/) or slider screen elements*. [`getNumber()`(#fff176)](/docs/applab/getNumber/) is usually used in an [`onEvent()`(#fff176)](/docs/applab/onEvent/) callback function, and returns a number that can be stored in a variable, used as a parameter in another function call, or used in an arithmetic expression.\n\n*The slider design element was contributed by Mike and Mitchell Schmidt.",
   "examples": [
     {
-      "name": "Example: Fahrenheit to Celcius",
+      "name": "Example: Fahrenheit to Celsius",
       "description": "Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.",
-      "code": "```\n// Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.\r\nvar todayTemp=50;\r\ntextLabel(\"id\", \"Choose a temperature (in F) with the slider:\");\r\ntextLabel(\"displayTemp\", todayTemp);\r\nonEvent(\"todayTempID\", \"change\", function() {\r\n  todayTemp=getNumber(\"todayTempID\");\r\n  setText(\"displayTemp\",todayTemp);\r\n});\r\nbutton(\"convert\", \"Convert\");\r\nsetPosition(\"convert\", 210, 20);\r\nonEvent(\"convert\", \"click\", function() {\r\n  var celcius=(todayTemp-32)/1.8;\r\n  write(todayTemp+ \" Fahrenheit is \" + celcius + \" Celcius\");\r\n});\r\n\n```",
+      "code": "```\n// Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.\nvar todayTemp=50;\ntextLabel(\"id\", \"Choose a temperature (in F) with the slider:\");\ntextLabel(\"displayTemp\", todayTemp);\nonEvent(\"todayTempID\", \"change\", function() {\n  todayTemp=getNumber(\"todayTempID\");\n  setText(\"displayTemp\",todayTemp);\n});\nbutton(\"convert\", \"Convert\");\nsetPosition(\"convert\", 210, 20);\nonEvent(\"convert\", \"click\", function() {\n  var celsius=(todayTemp-32)/1.8;\n  write(todayTemp+ \" Fahrenheit is \" + celsius + \" Celsius\");\n});\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -31,6 +31,9 @@
       "required": true,
       "description": "The unique identifier for the screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _."
     }
+  ],
+  "parameters": [
+    "id"
   ],
   "return_value": "A number containing the contents of the screen element.",
   "short_description": "Gets the number from the specified screen element.",

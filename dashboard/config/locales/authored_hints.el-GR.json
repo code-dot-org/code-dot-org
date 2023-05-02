@@ -274,7 +274,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_03": {
@@ -362,7 +362,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "Dance_2019_02": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "Dance_2019_03": {
@@ -696,7 +696,7 @@
           "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
+          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n- Να χρησιμοποιήσει την συνάρτηση\n- Να κινηθεί εμπρός κατά 100 + 75 pixels\n- Να χρησιμοποιήσει την συνάρτηση"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -772,7 +772,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_03_2021": {
@@ -923,7 +923,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_022022": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_032022": {
@@ -1055,6 +1055,186 @@
         },
         "courseE_artist_functions82022": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "coursee_helloworld_say": {
+          "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Βεβαιωθείτε ότι τα κοστούμια ταιριάζουν σε κάθε τετράγωνο.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Για να κάνετε την αρκούδα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Για να κάνετε το emoji να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Για να κάνετε το sprite να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Για να κάνετε το sprite να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Για να κάνετε το πλάσμα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

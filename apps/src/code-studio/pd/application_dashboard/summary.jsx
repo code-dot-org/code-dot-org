@@ -9,7 +9,7 @@ import SummaryTable from './summary_table';
 import {Row, Col} from 'react-bootstrap';
 import {mapValues, omit} from 'lodash';
 import RegionalPartnerDropdown, {
-  RegionalPartnerPropType
+  RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
@@ -23,7 +23,7 @@ export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType.isRequired,
     showRegionalPartnerDropdown: PropTypes.bool,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
   };
 
   constructor(props) {
@@ -31,7 +31,7 @@ export class Summary extends React.Component {
 
     this.state = {
       loading: true,
-      applications: null
+      applications: null,
     };
   }
 
@@ -62,20 +62,20 @@ export class Summary extends React.Component {
     let url = '/api/v1/pd/applications';
     if (this.props.showRegionalPartnerDropdown) {
       url += `?${$.param({
-        regional_partner_value: regionalPartnerFilter.value
+        regional_partner_value: regionalPartnerFilter.value,
       })}`;
     }
 
     this.loadRequest = $.ajax({
       method: 'GET',
       url,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
         applications: this.props.isWorkshopAdmin
           ? data
-          : removeIncompleteApplications(data)
+          : removeIncompleteApplications(data),
       });
     });
   }
@@ -97,7 +97,7 @@ export class Summary extends React.Component {
               caption="CS Discoveries Teachers"
               data={this.state.applications['csd_teachers']}
               path="csd_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
           <Col sm={6}>
@@ -106,7 +106,7 @@ export class Summary extends React.Component {
               caption="CS Principles Teachers"
               data={this.state.applications['csp_teachers']}
               path="csp_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
           <Col sm={6}>
@@ -115,7 +115,7 @@ export class Summary extends React.Component {
               caption="Computer Science A Teachers"
               data={this.state.applications['csa_teachers']}
               path="csa_teachers"
-              applicationType="teacher"
+              isWorkshopAdmin={this.props.isWorkshopAdmin}
             />
           </Col>
         </Row>
@@ -131,6 +131,6 @@ export default connect(state => {
     regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
     isWorkshopAdmin,
     showRegionalPartnerDropdown:
-      isWorkshopAdmin || state.regionalPartners.regionalPartners.length > 1
+      isWorkshopAdmin || state.regionalPartners.regionalPartners.length > 1,
   };
 })(Summary);

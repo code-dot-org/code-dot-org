@@ -60,7 +60,7 @@ class SchoolStatsByYear < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.read(filename, options).each do |row|
         parsed = yield row
-        loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
+        loaded = find_by(primary_keys.map(&:to_sym).index_with {|k| parsed[k]})
         if loaded.nil?
           begin
             SchoolStatsByYear.new(parsed).save!
@@ -105,7 +105,7 @@ class SchoolStatsByYear < ApplicationRecord
   # Percentage of underrepresented minorities students
   # Note these are values between 0-100, not 0-1!
   def urm_percent
-    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.sum)
   end
 
   # Percentage of free/reduced lunch eligible students

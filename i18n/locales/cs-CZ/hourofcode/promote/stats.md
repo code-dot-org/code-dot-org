@@ -16,7 +16,7 @@ title: Fakta a užitečné statistiky
 
 #### Dostaňtě počítačovou vědu do vaší školy. Začněte Hodinou kódu!
 
-Technologie mění prakticky všechny obory na této planetě, takže znalost programování se stává nezbytnou součástí všeobecného vzdělání. Ale jen polovina škol počítačovou vědu vyučuje. Dobrá zpráva je, že se to chystáme změnit. Pokud jste slyšeli o loňské Hodině kódu, možná víte, že se zapsala do historie. Už 100 milionů studentů objevilo, jak přístupné a zábavné může být učení při Hodině kódu.
+Technologie mění prakticky všechny obory na této planetě, takže znalost programování se stává nezbytnou součástí všeobecného vzdělání. Ale jen polovina škol počítačovou vědu vyučuje. Dobrá zpráva je, že se to chystáme změnit. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Hodina kódu představuje hodinový úvod do informatiky. Jejím cílem je demystifikovat kód a ukázat, že základy se může naučit kdokoli. Další informace najdete na [http://HourOfCode.com](http://HourofCode.com), vyzkoušejte si hodinu sami nebo připravte událost Hodina kódu, kde představíte svět počítačů ostatním.
 
@@ -30,7 +30,7 @@ Doufáme, že událost podnítí zájem studentů, aby se učili dál. Výzkumy 
 
 #### Proč je to důležité?
 
-Technologie proměňují každičký obor na planetě. Sedm milionů volných pracovních míst ve Spojených státech v roce 2015 bylo v povoláních, ve kterých se uplatní znalosti programování – včetně umění a designu. Přesto 49 % škol ve Spojených státech počítačovou vědu nevyučuje. Je čas přizpůsobit se životu ve 21. století. Nehledě na to, co budou studenti dělat, až vyrostou, ať už se budou věnovat medicíně, obchodu, politice, nebo umění, schopnost vytvářet technologie jim dodá sebejistotu a zvýší jejich konkurenceschopnost. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Nehledě na to, co budou studenti dělat, až vyrostou, ať už se budou věnovat medicíně, obchodu, politice, nebo umění, schopnost vytvářet technologie jim dodá sebejistotu a zvýší jejich konkurenceschopnost. <br /> <br />
 
 #### Citace, kterou můžete použít v materiálech
 

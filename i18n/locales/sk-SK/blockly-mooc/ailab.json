@@ -1,1 +1,15 @@
-{}
+{
+  "selectDataset": "Vyber množinu údajov, ktorú chceš používať.",
+  "uploadedDataset": "Práve sa ti podarilo nahrať množinu údajov.",
+  "selectedDataset": "Práve sa ti podarilo vybrať množinu údajov.",
+  "dataDisplayLabel": "Vyber jeden stĺpec pre predpoveď.",
+  "dataDisplayFeatures": "Vyber jeden alebo viac stĺpcov, ktoré sa použijú ako vstupy pre predpoveď.",
+  "selectedFeatureNumerical": "Práve sa ti podarilo vybrať číselnú vlastnosť.",
+  "selectedFeatureCategorical": "Práve sa ti podarilo vybrať kategorickú vlastnosť.",
+  "trainModel": "Prebieha trénovanie tvojho modelu.",
+  "generateResults": "Prebieha testovanie tvojho modelu.",
+  "results": "Skontroluj výsledky.",
+  "resultsDetails": "Zobrazujú sa podrobnosti o výsledkoch.",
+  "saveModel": "Ulož vytrénovaný model, nech ho môžeš použiť v App Labe.",
+  "modelSummary": "Podarilo sa ti vytrénovať a uložiť svoj model. Skontroluj podrobnosti modelu a klikni na Dokončiť, nech svoj vytrénovaný model môžeš použiť v App Labe."
+}

@@ -620,7 +620,8 @@
             "parameters": {
               "length": "длина",
               "sides": "стороны"
-            }
+            },
+            "description": "Фигура меняется в зависимости от того, сколько сторон у нее в данный момент. Она принимает два параметра: длину и количество сторон. Длина "
           },
           "draw a loop": {
             "name": "нарисовать цикл",
@@ -645,7 +646,8 @@
             }
           },
           "n-sided shape": {
-            "name": "фигура с n сторонами"
+            "name": "фигура с n сторонами",
+            "description": "Фигура меняется в зависимости от того, сколько сторон у нее в данный момент. Она принимает два параметра: длину и количество сторон. Длина "
           },
           "draw spiral circle": {
             "name": "Нарисовать спиральный круг ",
@@ -1824,6 +1826,9 @@
           },
           "draw a line of squares": {
             "name": "нарисовать линию из квадратов"
+          },
+          "draw a plane of squares": {
+            "name": "нарисуйте плоскость из квадратов"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1832,6 +1837,9 @@
           },
           "draw a line of squares": {
             "name": "нарисовать линию из квадратов"
+          },
+          "draw a plane of squares": {
+            "name": "нарисуйте плоскость из квадратов"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -2470,6 +2478,9 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "get pumpkin": {
+            "name": "получить тыкву"
           }
         },
         "courseE_farmer_concept3": {
@@ -4581,6 +4592,11 @@
         "courseF_bee_for_challenge12022": {
           "move and get nectar with counter": {
             "name": "двигаться и собирать нектар со счетчиком"
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "получить тыкву"
           }
         }
       }

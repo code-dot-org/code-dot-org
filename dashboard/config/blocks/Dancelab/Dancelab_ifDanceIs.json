@@ -4,11 +4,7 @@
     "func": "ifDanceIs",
     "blockText": "if {SPRITE} is doing {DANCE}\n {DO1} {DO2}",
     "inline": true,
-    "color": [
-      210,
-      0.43,
-      0.64
-    ],
+    "style": "logic_blocks",
     "args": [
       {
         "name": "SPRITE",

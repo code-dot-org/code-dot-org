@@ -240,6 +240,10 @@ lt:
             '"space"': kosmosas
             '"enter"': įveskite
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': širdelės
       gamelab_atTime:
         options:
           UNIT:
@@ -567,3 +571,7 @@ lt:
         text: judėk į priekį
       craft_placeTorch:
         text: padėk deglą
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': širdelės

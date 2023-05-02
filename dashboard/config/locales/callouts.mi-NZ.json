@@ -361,6 +361,26 @@
         },
         "Underground Iron2022": {
           "craft_what_is_iron": "Mainahia tēnei rino!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "He paraka/wahanga hou!"
         }
       }
     }

@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "lăţime",
+  "dropletBlock_createSprite_param3": "înălțime",
+  "dropletBlock_setCollider_param0": "tip",
+  "dropletBlock_setCollider_param4": "înălțime",
+  "dropletBlock_setColliderEach_param0": "tip",
+  "dropletBlock_setColliderEach_param4": "înălțime",
+  "reinfFeedbackMsg": "Ai terminat! Apasă \"Continuă\" pentru a avansa la nivelul următor.",
+  "shareGame": "condivide jocul tău:"
 }

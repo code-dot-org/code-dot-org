@@ -1,0 +1,101 @@
+{
+  "de-DE": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "Algorithmen und Programmierung"
+        },
+        "CS": {
+          "description": "Computersysteme"
+        },
+        "DA": {
+          "description": "Daten und Analyse"
+        },
+        "NI": {
+          "description": "Netzwerke und das Internet"
+        },
+        "DAT-1": {
+          "description": "Der Computer stellt die Daten anders dar, als sie für den Benutzer interpretiert und ihm angezeigt. Die Daten des Computers werden von Programmen in eine Darstellung übersetzt, die für uns leicht verständlich ist."
+        },
+        "IOC-2": {
+          "description": "Die Nutzung innovativer Computer-Tools kann mit Risiken für Ihre persönliche Sicherheit und Identität verbunden sein."
+        },
+        "DAT-1.D": {
+          "description": "Vergleichen Sie den Algorithmus der Datenkomprimierung, der am besten in einen bestimmten Kontext passt."
+        },
+        "IOC-2.B": {
+          "description": "Erklären Sie, wie Computerressourcen geschützt und wie sie missbraucht werden können."
+        },
+        "CD": {
+          "description": "Computer und Kommunikationsgeräte"
+        },
+        "CI": {
+          "description": "Gesellschaftliche, globale und ethische Auswirkungen"
+        },
+        "CL": {
+          "description": "Zusammenarbeit"
+        },
+        "CPP": {
+          "description": "Praxis und Programmierung in der Datenverarbeitung"
+        },
+        "CT": {
+          "description": "Computerorientiertes Denken"
+        },
+        "L": {
+          "description": "Sprache"
+        },
+        "RI": {
+          "description": "Lesen von informativen"
+        },
+        "RL": {
+          "description": "Lesen von Literatur"
+        },
+        "SL": {
+          "description": "Sprechen und zuhören"
+        },
+        "W": {
+          "description": "Schreiben"
+        },
+        "ETS": {
+          "description": "Konstruktion in der Wissenschaft"
+        },
+        "ETS1": {
+          "description": "Konstruktive Gestaltung"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "Funktionen"
+        },
+        "G": {
+          "description": "Geometrie"
+        },
+        "MD": {
+          "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
+        },
+        "MP": {
+          "description": "Mathematische Übungen"
+        },
+        "NBT": {
+          "description": "Zahlen und Operationen im Dezimalsystem"
+        },
+        "OA": {
+          "description": "Operationen und mathematisches Denken"
+        },
+        "1": {
+          "description": "Unter Einsatz von Technologie Zeigen Studenten kreative Denkweisen, bauen Wissen auf und entwickeln innovative Produkte und Prozesse."
+        },
+        "2": {
+          "description": "Um ein individuelles Lernen zu unterstützen, und um einen Beitrag zu dem Wissen von anderen zu erbringen, benutzen Studenten digitale Medien und Umgebungen in der Kommunikation und der gemeinsamen Arbeit."
+        },
+        "4": {
+          "description": "Studenten benutzen kritische Denkfähigkeiten in der Planung und Ausführung von Forschungsarbeiten, dem Management von Projekten, der Lösung von Problemen und dem Treffen von unterbauten Entscheidungen, unter Einsatz von geeigneten digitalen Werkzeugen und Ressourcen.."
+        },
+        "6": {
+          "description": "Schüler zeigen ein gesundes Verständnis von technologischen Konzepten, Systemen und Operationen."
+        }
+      }
+    }
+  }
+}

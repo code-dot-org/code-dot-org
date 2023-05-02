@@ -1,6 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
 import tickWrapper from './tickWrapper';
-/* global Gamelab */
 
 /**
  * @param {!string} testName
@@ -22,20 +21,20 @@ export function testAsyncProgramGameLab(
     description: testName,
     editCode: true,
     xml: program,
-    runBeforeClick: function(assert) {
+    runBeforeClick: function (assert) {
       // add a completion on timeout since this is a freeplay level
       tickWrapper
         .tickAppUntil(Gamelab, doneCondition.bind(null, assert))
         .then(() => Gamelab.onPuzzleComplete());
     },
-    customValidator: function(assert) {
+    customValidator: function (assert) {
       validator(assert);
       return true;
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }
 
@@ -69,7 +68,7 @@ export function testApplabConsoleOutput({testName, source, expect, ticks = 2}) {
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }

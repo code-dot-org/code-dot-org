@@ -22,7 +22,7 @@ Hodinu kódu si môžete vyskúšať na počítači, tablete, smartfóne alebo a
 
 ## 1) Prezrite si aktivity a lekcie
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Ak máte k dispozícii počítač s pripojením na internet, môžete využiť nespočetné množstvo [aktivít k Hodine kódu](https://hourofcode.com/us/learn). Prezrite si ich vopred, aby ste vedeli svoje dieťa nasmerovať k takej aktivite, ktorá ho zaručene zaujme.
 
@@ -36,7 +36,7 @@ Všetky naše aktivity zábavnou a tvorivou formou rozvíjajú kritické myslen
 
 Ak máte obmedzený alebo žiadny prístup k technológiám, pri filtrovaní [aktivít k Hodine kódu](https://hourofcode.com/us/learn) vyberte v sekcii *Použité technológie* možnosť „Bez počítačov či iných ziariadení“.
 
-[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
+[![](/images/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
 Ak chcete získať viac nápadov, ako sa doma zúčastniť Hodiny kódu aj bez počítača, prezrite si naše [krátke videá](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu).
 
@@ -58,7 +58,7 @@ Máte výbornú príležitosť oživiť deťom dni novou aktivitou. Aktivity už
 
 - Pustite deťom [inšpiratívne video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) so známymi osobnosťami, ktoré sú pre ne vzorom.
 - Inšpirujte ich jedným z našich videí prezentujúcich [množstvo povolaní](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP), ku ktorým informatika otvára dvere.
-- [Objednajte im zaujímavé reklamné predmety](https://store.code.org/). Vybrať si môžete z ponuky tričiek, nálepiek aj dočasných tetovačiek. Rozdajte ich deťom na začiatok ako motiváciu alebo ich predmetmi odmeňte až po Hodine kódu. 
+- [Objednajte im zaujímavé reklamné predmety](https://store.code.org/). Vybrať si môžete z ponuky tričiek, nálepiek aj dočasných tetovačiek. Rozdajte ich deťom na začiatok ako motiváciu alebo ich predmetmi odmeňte až po Hodine kódu.
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
@@ -85,9 +85,9 @@ V informatike je dôležité naučiť sa riešiť situácie, keď veci nejdú p
 
 Hodina kódu je celosvetovým podujatím, takže s rodinou máte dôvod na oslavu. Pripravili sme pre vás zopár tipov, ako si Hodinu kódu ešte viac spríjemniť:
 
-- Vytlačte [certifikáty k Hodine kódu](https://staging.code.org/certificates), ktoré deťom odovzdáte po dokončení aktivít. 
-- Prekvapte deti [nálepkami, ktoré si môžete vytlačiť doma](https://staging.hourofcode.com/us/promote/resources#stickers) alebo [kúpiť cez internet](https://store.code.org/). 
-- Zdieľajte na sociálnych sieťach fotky a videá z vašej domácej Hodiny kódu. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
+- Vytlačte [certifikáty k Hodine kódu](https://staging.code.org/certificates), ktoré deťom odovzdáte po dokončení aktivít.
+- Prekvapte deti [nálepkami, ktoré si môžete vytlačiť doma](https://staging.hourofcode.com/us/promote/resources#stickers) alebo [kúpiť cez internet](https://store.code.org/).
+- Zdieľajte na sociálnych sieťach fotky a videá z vašej domácej Hodiny kódu. Použite [#HourOfCode](https://twitter.com/hashtag/hourofcode) a [@codeorg](https://twitter.com/codeorg), aby sme tiež mohli vyzdvihnúť váš úspech!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

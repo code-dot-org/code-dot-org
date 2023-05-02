@@ -7,7 +7,7 @@ import FontAwesome from '../../templates/FontAwesome';
 export default class ZOrderRow extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -27,14 +27,14 @@ export default class ZOrderRow extends React.Component {
       height: 42,
       marginLeft: 0,
       marginRight: 10,
-      backgroundColor: color.cyan
+      backgroundColor: color.cyan,
     };
 
     const squareButtonDisabled = {
       width: 42,
       height: 42,
       marginLeft: 0,
-      marginRight: 10
+      marginRight: 10,
     };
 
     return (

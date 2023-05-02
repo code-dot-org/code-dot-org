@@ -23,15 +23,15 @@ export default class TeacherResources extends Component {
             title={i18n.professionalLearning()}
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
-            buttonText={i18n.learnMore()}
-            link="/my-professional-learning"
+            buttonText={i18n.exploreProfessionalLearning()}
+            link={pegasus('/educate/professional-learning')}
           />
           <ImageResourceCard
             title={i18n.csJourneys()}
             callout={i18n.newExclame()}
             description={i18n.csJourneysDescription()}
             image="csjourneys.png"
-            buttonText={i18n.learnMore()}
+            buttonText={i18n.learnMoreCsJourneys()}
             link={pegasus('/csjourneys')}
           />
           <ImageResourceCard
@@ -52,6 +52,6 @@ const styles = {
     width: contentWidth,
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

@@ -5,7 +5,7 @@ class HtmlParsingTest < Minitest::Test
   include Rack::Test::Methods
 
   def build_rack_mock_session
-    @session ||= Rack::MockSession.new(app)
+    @build_rack_mock_session ||= Rack::MockSession.new(app)
   end
 
   # LibXML bug (?): <span> in head gets (correctly) moved to body element,

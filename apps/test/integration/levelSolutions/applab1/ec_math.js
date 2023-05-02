@@ -24,13 +24,13 @@ module.exports = {
         'var d = Math.abs(-3);\n' +
         'var e = Math.max(1, 2, 3);\n' +
         'var f = Math.min(4, 5, 6);\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -38,8 +38,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -50,13 +50,13 @@ module.exports = {
         '  var val = Math.random();\n' +
         '  if (val < 0 || val >= 1) throw new Error("fail");\n' +
         '}\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -64,8 +64,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Deprecated randomNumber still works',
@@ -76,15 +76,15 @@ module.exports = {
         '  var val = randomNumber(MAX);\n' +
         '  if (val < 0 || val > MAX) throw new Error("fail");\n' +
         '}\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         var randomNumberSpy = sinon.spy(globalFunctions, 'randomNumber');
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.strictEqual(randomNumberSpy.callCount, 100);
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -92,8 +92,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -101,7 +101,7 @@ module.exports = {
         'randomNumber and Math.random show up in autocomplete by matching ran',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.ace_autocomplete').is(':visible'),
@@ -134,11 +134,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -146,15 +146,15 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'randomNumber shows up in autocomplete by matching Numb',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.ace_autocomplete').is(':visible'),
@@ -177,11 +177,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -189,8 +189,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -198,7 +198,7 @@ module.exports = {
         'randomNumber does not show up in autocomplete when typing omNumb',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.ace_autocomplete').is(':visible'),
@@ -217,11 +217,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -229,15 +229,15 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'randomNumber tooltip shows up with 2 params',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.tooltipster-content').text(),
@@ -255,11 +255,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -267,15 +267,15 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'Math.min tooltip shows up',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.tooltipster-content').text(),
@@ -299,11 +299,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -311,8 +311,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -320,7 +320,7 @@ module.exports = {
         'Math.min and Math.max shows up in autocomplete by matching math',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#show-code-header').click();
         assert.equal(
           $('.ace_autocomplete').is(':visible'),
@@ -348,11 +348,11 @@ module.exports = {
         // clear contents before run
         testUtils.setAceText('');
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -360,8 +360,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

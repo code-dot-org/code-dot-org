@@ -54,9 +54,9 @@ class HintViewRequestsControllerTest < ActionController::TestCase
       post :create, params: params, format: :json
     end
 
-    assert HintViewRequest.where(user_id: @student.id).exists?
-    assert HintViewRequest.where(user_id: classmate_1.id).exists?
-    assert HintViewRequest.where(user_id: classmate_2.id).exists?
+    assert HintViewRequest.exists?(user_id: @student.id)
+    assert HintViewRequest.exists?(user_id: classmate_1.id)
+    assert HintViewRequest.exists?(user_id: classmate_2.id)
 
     assert_response :created
   end

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-extras-2019",
-    "serialized_at": "2022-03-18 18:39:01 UTC",
+    "serialized_at": "2022-11-07 20:23:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -37,7 +37,7 @@
   "lessons": [
     {
       "key": "Dance Party - Go Further",
-      "name": "Keep on Dancing (2019)",
+      "name": "Keep on Dancing",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -45,7 +45,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
-        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n* Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019)\n\n* Be sure to test it first before asking your students to complete it. \n\n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://code.org/certificates). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* (optional) Encourage students to bring in headphones to use during the activity.\n",
+        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n* Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019)\n\n* Be sure to test it first before asking your students to complete it. \n\n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://studio.code.org/certificates/batch). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* (optional) Encourage students to bring in headphones to use during the activity.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
         "student_overview": "Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. "
       },

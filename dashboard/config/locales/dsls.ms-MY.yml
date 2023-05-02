@@ -11651,22 +11651,14 @@ ms-MY:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
-          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
             yang salah.
           correct: true
-          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
             tidak mencukupi.
-          correct: true
-          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
-            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - text: Scrat tidak akan bergerak daripada blok pertama.
-          feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
-            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
-            mencapai buah oak itu.
+          feedback: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke
+            arah yang salah.
         questions:
         - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
             terdapat masalah?
@@ -11858,20 +11850,12 @@ ms-MY:
             anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik untuk
-            selama-lamanya.
-          correct: true
+        - correct: true
           feedback: Betul!
         - text: Zombi akan berjaya sampai kepada bunga matahari.
-          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
-            untuk selama-lamanya.
         - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
             bulatan untuk selama-lamanya.
-          feedback: Salah. Zombi akan melepasi laluan yang betul dan akhirnya berulang-alik
-            untuk selama-lamanya.
         - text: Zombi akan menghadapi kesulitan di hujung laluan ke hadapan.
-          feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
-            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
         - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?

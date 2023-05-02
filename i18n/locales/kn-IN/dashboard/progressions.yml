@@ -77,7 +77,7 @@ kn:
       Challenge Levels: ಚಾಲೆಂಜ್ ಲೆವೆಲ್‌ಗಳು
       'Challenge: Lists': 'ಸವಾಲು: ಪಟ್ಟಿಗಳು'
       'Challenge: RGB Colors': 'ಸವಾಲು: RGB ಬಣ್ಣಗಳು'
-      Challenges: ಚಾಲೆಂಜ್‌ಗಳು
+      Challenges: ಸವಾಲು
       Change: ಬದಲಿಸಿ
       Check Your Work: ನಿಮ್ಮ ಕೆಲಸವನ್ನು ಪರಿಶೀಲಿಸಿ
       Check-In Survey: ಚೆಕ್-ಇನ್ ಸಮೀಕ್ಷೆ
@@ -115,6 +115,7 @@ kn:
       Drawing: ಡ್ರಾಯಿಂಗ್‌
       Events: ಈವೆಂಟ್‌ಗಳು
       Example: ಉದಾಹರಣೆ
+      For Loops: ಲೂಪ್ಸಗಾಗಿ
       Get In Formation: ಒಟ್ಟಾಗಿಸಿ
       Hello World: ಹಲೋ ವರ್ಲ್ಡ್
       Learning from Simulations: ಸಿಮ್ಯುಲೇಶನ್‌ಗಳಿಂದ ಕಲಿಯುವುದು
@@ -133,6 +134,7 @@ kn:
       Sprite Properties: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
       Teach AI a New Word: ಎಐ ಗೆ ಹೊಸ ಶಬ್ದವನ್ನು ಬೋಧಿಸಿ
       Train an AI to Clean the Ocean: ಸಮುದ್ರವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲು AI ಗೆ ತರಬೇತಿ ನೀಡಿ
+      Using the Repeat Block: ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸುವುದು
       Variables: ವೇರಿಯಬಲ್‌ಗಳು
       Video: ವೀಡಿಯೊ
       'Video: Outbreak Simulator: Introduction': 'ವಿಡಿಯೋ: ಔಟ್‌ಬ್ರೇಕ್‌ ಸಿಮ್ಯುಲೇಟರ್: ಪರಿಚಯ'

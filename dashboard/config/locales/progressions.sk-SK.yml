@@ -19,7 +19,7 @@ sk:
       Add Style to Your Page: Pridaj na svoju stránku štýl
       Add Text: Pridaj text
       Add a Welcome Screen: Pridaj uvítaciu obrazovku
-      Adding Images: Pridanie obrázkov
+      Adding Images: Pridávanie obrázkov
       Adding New Screens: Pridávanie nových obrazoviek
       Adding Pages: Pridávanie stránok
       Adding Screens: Pridanie obrazoviek
@@ -147,6 +147,7 @@ sk:
       Expanding Your Website: Rozšírenie tvojej webstránky
       Experiment with Web Lab: Experimentuj s Web Labom
       Exploration: Objavovanie
+      'Exploration: Adding Style': 'Skúmame: Pridávanie štýlov'
       'Exploration: For Loops': 'Objavovanie: Cykly for'
       'Exploration: Rikki''s Poster': 'Preskúmanie: Rikkiin plagát'
       'Exploration: Sample Apps': 'Objavovanie: Vzorové aplikácie'
@@ -202,7 +203,7 @@ sk:
       Intro to Design Mode: Úvod do dizajnového módu
       Intro to Flyer Game: Úvod do Lietacej hry
       Intro to For Loops: Predstavenie cyklov "for"
-      Intro to Side Scrollers: Úvod do side-scrollerov
+      Intro to Side Scrollers: Úvod do plošinoviek
       Intro to Sprites: Predstavenie "sprite" objektov
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
@@ -213,7 +214,7 @@ sk:
       Isaac's Survey Data: Isaacove údaje z dotazníka
       Iteration and Parameters: Opakovanie a parametre
       Keep On Dancing!: Neprestávaj tancovať!
-      Keyboard Input: Stlačenie kláves ako vstup
+      Keyboard Input: Vstup z klávesnice
       Kim's Survey: Kimin dotazník
       Kim's Survey Data: Kimine údaje z dotazníka
       LED Apps: Appky s LEDkami
@@ -281,7 +282,7 @@ sk:
       New Shapes: Nové tvary
       Orientation: Orientácia
       Overview: Prehľad
-      Pair Programming: Programovanie v páre
+      Pair Programming: Párové programovanie
       Pet Recommender: Odporúčanie domáceho zvieratka
       Picturing Data: Zobrazenie dát v grafoch
       Pizza Recommendations: Odporúčanie pizze
@@ -296,7 +297,7 @@ sk:
       Player Controls: Ovládanie hry
       Playing Notes: Hranie nôt
       Playing with Notes: Hranie pomocou nôt
-      Plotting Shapes in Game Lab: Tvorba tvarov v Game Labe
+      Plotting Shapes in Game Lab: Kreslenie tvarov v Game Labe
       Post-Course Survey Instructions: Pokyny na vyplnenie záverečného dotazníka
       Practice: Cvičenie
       Predict: Predpoveď
@@ -365,7 +366,7 @@ sk:
       Share Your Stylesheets: Zdieľaj svoje súbory štýlov
       Shoe Recommendation Survey: Odporúčanie topánok – dotazník
       Shoe Recommender: Program na odporúčanie topánok
-      Side Scroller: Posúvačka (side-scroller)
+      Side Scroller: Plošinovka
       Simple Circuits: Jednoduché el. obvody
       Skill Building: Budovanie zručností
       Skill-Building: Budovanie zručností
@@ -379,7 +380,7 @@ sk:
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
       Sprite Movement: Pohyb sprajtov
-      Sprite Properties: Vlastnosti postáv
+      Sprite Properties: Vlastnosti sprajtov
       Sprite Scenes: Scény so sprajtmi
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'

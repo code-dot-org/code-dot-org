@@ -39,7 +39,7 @@ export default class StudioAnimation {
      * playing.
      * @private {number}
      */
-    this.currentAnimationType_ = 0;
+    this.interfaceMode_ = 0;
 
     /**
      * An object of special animations.
@@ -151,24 +151,22 @@ export default class StudioAnimation {
 
   /** @returns {number} the count of frames for the current animation */
   getAnimationFrameCount() {
-    var specialFrames = this.specialAnimations_[this.currentAnimationType_];
+    var specialFrames = this.specialAnimations_[this.interfaceMode_];
     if (specialFrames) {
       return specialFrames[this.currentAnimationIndex_].length;
     } else {
-      return this.spriteSheet_.getAnimationFrameCount(
-        this.currentAnimationType_
-      );
+      return this.spriteSheet_.getAnimationFrameCount(this.interfaceMode_);
     }
   }
 
   /** @returns {object} the frame rectangle from the sprite sheet for a frame */
   getFrame(frameIndex) {
-    var specialFrames = this.specialAnimations_[this.currentAnimationType_];
+    var specialFrames = this.specialAnimations_[this.interfaceMode_];
     if (specialFrames) {
       return specialFrames[this.currentAnimationIndex_][frameIndex];
     } else {
       return this.spriteSheet_.getFrame(
-        this.currentAnimationType_,
+        this.interfaceMode_,
         this.currentAnimationIndex_,
         frameIndex
       );
@@ -208,7 +206,7 @@ export default class StudioAnimation {
     // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
     var topLeft = {
       x: center.x - (frame.width / 2) * scale,
-      y: center.y - (frame.height / 2) * (2 * scale - 1)
+      y: center.y - (frame.height / 2) * (2 * scale - 1),
     };
 
     // Offset the spritesheet DOM element by the inverse of the offset of the
@@ -232,7 +230,7 @@ export default class StudioAnimation {
    * @param {!number} animationIndex
    */
   setCurrentAnimation(animationType, animationIndex) {
-    this.currentAnimationType_ = animationType;
+    this.interfaceMode_ = animationType;
     this.currentAnimationIndex_ = animationIndex;
   }
 

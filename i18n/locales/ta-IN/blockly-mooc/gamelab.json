@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "அகலம்",
+  "dropletBlock_createSprite_param3": "உயரம்",
+  "dropletBlock_setCollider_param0": "வகை",
+  "dropletBlock_setCollider_param4": "உயரம்",
+  "dropletBlock_setColliderEach_param0": "வகை",
+  "dropletBlock_setColliderEach_param4": "உயரம்",
+  "reinfFeedbackMsg": "நீங்கள் முடித்துவிட்டீர்கள்! அடுத்த நிலைக்குச் செல்ல \"தொடரவும்\" என்பதைக் கிளிக் செய்யவும் ",
+  "shareGame": "உங்கள் விளையாட்டை பகிருங்கள்:"
 }

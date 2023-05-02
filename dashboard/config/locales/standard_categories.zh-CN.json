@@ -1,0 +1,101 @@
+{
+  "zh-CN": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "算法与编程"
+        },
+        "CS": {
+          "description": "计算系统"
+        },
+        "DA": {
+          "description": "数据和分析"
+        },
+        "NI": {
+          "description": "网络与互联网"
+        },
+        "DAT-1": {
+          "description": "计算机表示数据的方式与为用户解释和显示数据的方式不同。程序被用来将数据转换成人们更容易理解的表示形式。"
+        },
+        "IOC-2": {
+          "description": "使用计算机创新可能会危及你的个人安全和身份信息。"
+        },
+        "DAT-1.D": {
+          "description": "比较数据压缩算法，以确定在特定背景中哪种算法最佳。"
+        },
+        "IOC-2.B": {
+          "description": "解释计算资源如何被保护和如何被滥用。"
+        },
+        "CD": {
+          "description": "计算机与通信设备"
+        },
+        "CI": {
+          "description": "社区、全球与伦理影响"
+        },
+        "CL": {
+          "description": "协作"
+        },
+        "CPP": {
+          "description": "计算实践与程序设计"
+        },
+        "CT": {
+          "description": "计算式思维技巧"
+        },
+        "L": {
+          "description": "语言"
+        },
+        "RI": {
+          "description": "阅读信息类文本"
+        },
+        "RL": {
+          "description": "阅读文献"
+        },
+        "SL": {
+          "description": "口语和听力"
+        },
+        "W": {
+          "description": "写作"
+        },
+        "ETS": {
+          "description": "科学工程"
+        },
+        "ETS1": {
+          "description": "工程设计"
+        },
+        "C": {
+          "description": "隧道"
+        },
+        "F": {
+          "description": "函数"
+        },
+        "G": {
+          "description": "几何"
+        },
+        "MD": {
+          "description": "利用概率做决定"
+        },
+        "MP": {
+          "description": "数学实践"
+        },
+        "NBT": {
+          "description": "数字和十进制运算"
+        },
+        "OA": {
+          "description": "运算和代数思维"
+        },
+        "1": {
+          "description": "学生们展示创造性思维、构建知识，并使用技术开发创新性产品和工艺。"
+        },
+        "2": {
+          "description": "学生们使用数字媒体与环境进行交流与协作，包括远程交流与写作，以支持个人学习和帮助他人学习。"
+        },
+        "4": {
+          "description": "学生们运用批判性思维能力来计划和研究、管理项目、解决问题，并利用适当的数字工具和资源做出明智的决定。"
+        },
+        "6": {
+          "description": "学生展现出对技术概念、系统和运行的良好理解。 "
+        }
+      }
+    }
+  }
+}

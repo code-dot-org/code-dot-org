@@ -17,6 +17,14 @@
         "loops/aquatic/unversioned": {
           "word": "Kartojimas"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Kodavimas"
         },
@@ -75,7 +83,24 @@
           "word": "Autorinės teisės"
         },
         "code/poem-art/unversioned": {
-          "word": "Kodavimas"
+          "word": "Kodavimas",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Kintamasis"

@@ -20,10 +20,6 @@
           "word": "Sazlama",
           "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
         },
-        "program/minecraft/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
         "event/minecraft/unversioned": {
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
@@ -32,6 +28,10 @@
           "word": "Dövr",
           "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
         },
+        "program/minecraft/unversioned": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
         "code/hero/unversioned": {
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
         },
@@ -39,13 +39,13 @@
           "word": "Sazlama",
           "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
         },
-        "program/hero/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
         "function/hero/unversioned": {
           "word": "Funksiya",
           "definition": "Dəfələrlə asanlıqla zəng edə biləcəyiniz kod parçası."
+        },
+        "program/hero/unversioned": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -68,6 +68,7 @@
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
         },
         "code/flappy/unversioned": {
+          "word": "kod",
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
         },
         "debugging/flappy/unversioned": {
@@ -134,6 +135,9 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
+        "code/dance/unversioned": {
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
         "event/dance/unversioned": {
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
@@ -142,19 +146,8 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
-        "code/dance/unversioned": {
-          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
         "code/aquatic/unversioned": {
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Sazlama",
-          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
         "condition/aquatic/unversioned": {
           "word": "şərt",
@@ -164,9 +157,17 @@
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
         "loops/aquatic/unversioned": {
           "word": "dövrlər",
           "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "Sezar Şifrəsi",
@@ -244,10 +245,6 @@
           "word": "Modellər və Simulyasiyalar",
           "definition": "real həyatda eksperiment aparmaq üçün xərc, vaxt və ya təhlükə olmadan onun davranışını araşdırmaq üçün real dünya hadisəsinin əsas xüsusiyyətlərini təkrarlayan və ya təqlid edən proqram."
         },
-        "event/sports/unversioned": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
         "code/sports/unversioned": {
           "word": "Kod",
           "definition": "(v) kompüter üçün kod yazmaq və ya təlimatlar yazmaq."
@@ -255,6 +252,10 @@
         "debugging/sports/unversioned": {
           "word": "Sazlama",
           "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "event/sports/unversioned": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
         "program/sports/unversioned": {
           "word": "Proqram",
@@ -271,16 +272,16 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
-        "event/basketball/unversioned": {
-          "word": "Hadisə",
-          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
-        },
         "code/basketball/unversioned": {
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
         },
         "debugging/basketball/unversioned": {
           "word": "Sazlama",
           "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "event/basketball/unversioned": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
         "program/basketball/unversioned": {
           "word": "Proqram",
@@ -529,6 +530,9 @@
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
+        "code/express/2022": {
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
         "loop/express/2022": {
           "word": "Dövr",
           "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
@@ -744,6 +748,9 @@
           "word": "İstifadəçi",
           "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
         },
+        "user_interface/csd/2022": {
+          "word": "İstifadəçi interfeysi"
+        },
         "machine_learning/csd/2022": {
           "word": "Avtomatlaşdırılmış Öyrənmə",
           "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
@@ -753,7 +760,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
-          "definition": "(v) kompüter üçün təlimatlar yazmaq."
+          "definition": "(v) kompüter üçün təlimatlar yazmaq.\n\n"
         },
         "event/poem-art/unversioned": {
           "word": "Hadisə",
@@ -761,15 +768,15 @@
         },
         "program/poem-art/unversioned": {
           "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar.\n"
         },
         "mood/poem-art/unversioned": {
           "word": "əhval",
-          "definition": "bir hissin, atmosferin və ya duyğunun sənətdə və ya yazıda ifadəsi."
+          "definition": "bir hissin, atmosferin və ya duyğunun sənətdə və ya yazıda ifadəsi.\n"
         },
         "line/poem-art/unversioned": {
           "word": "Xətt",
-          "definition": "(şeir yaradıcılığı) - cərgədə düzülmüş şeirin sağ kənarında bitən bölməsi."
+          "definition": "(şeir yaradıcılığı) - cərgədə düzülmüş şeirin sağ kənarında bitən bölməsi.\n"
         },
         "sprite/coursef/2021": {
           "word": "Sprayt",
@@ -779,16 +786,16 @@
           "word": "İstifadəçi",
           "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
         },
+        "algorithm/coursef/2021": {
+          "word": "Alqoritm",
+          "definition": "Tapşırığı tamamlamaq üçün addımların siyahısı."
+        },
         "behavior/coursef/2021": {
           "word": "Davranış "
         },
         "program/coursef/2021": {
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Alqoritm",
-          "definition": "Tapşırığı tamamlamaq üçün addımların siyahısı."
         },
         "event/coursef/2021": {
           "word": "Hadisə",
@@ -845,6 +852,10 @@
           "word": "Bas",
           "definition": "Siçanın düyməsini basın"
         },
+        "double_click/courseb/2021": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
         "drag/courseb/2021": {
           "word": "çəkmək",
           "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
@@ -852,10 +863,6 @@
         "drop/courseb/2021": {
           "word": "Burax",
           "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
-        },
-        "double_click/courseb/2021": {
-          "word": "iki dəfə bas",
-          "definition": "Siçanın düyməsini çox tez basın"
         },
         "program/courseb/2021": {
           "word": "Proqram",
@@ -897,6 +904,10 @@
           "word": "Bas",
           "definition": "Siçanın düyməsini basın"
         },
+        "double_click/coursea/2021": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
         "drag/coursea/2021": {
           "word": "çəkmək",
           "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
@@ -904,10 +915,6 @@
         "drop/coursea/2021": {
           "word": "Burax",
           "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
-        },
-        "double_click/coursea/2021": {
-          "word": "iki dəfə bas",
-          "definition": "Siçanın düyməsini çox tez basın"
         },
         "bug/coursea/2021": {
           "word": "Səhv",
@@ -1051,6 +1058,9 @@
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
+        "code/express/2021": {
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
         "loop/express/2021": {
           "word": "Dövr",
           "definition": "Bir şeyi təkrar-təkrar etmək hərəkəti."
@@ -1071,12 +1081,12 @@
           "word": "Funksiya",
           "definition": "Dəfələrlə asanlıqla zəng edə biləcəyiniz kod parçası."
         },
+        "prompt/express/2021": {
+          "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
+        },
         "variable/express/2021": {
           "word": "Dəyişən",
           "definition": "Proqramda istifadə olunan məlumat üçün etiket."
-        },
-        "prompt/express/2021": {
-          "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
         },
         "define/express/2021": {
           "word": "Təyin et"
@@ -1085,6 +1095,10 @@
           "word": "Bas",
           "definition": "Siçanın düyməsini basın"
         },
+        "double_click/pre-express/2021": {
+          "word": "iki dəfə bas",
+          "definition": "Siçanın düyməsini çox tez basın"
+        },
         "drag/pre-express/2021": {
           "word": "çəkmək",
           "definition": "Siçan göstəricisini yeni bir yerə köçürdənədək siçan düyməsini  basıb saxlayın"
@@ -1092,10 +1106,6 @@
         "drop/pre-express/2021": {
           "word": "Burax",
           "definition": "Sürüklədiyiniz elementi \"buraxmaq\" üçün siçan düyməsini buraxın"
-        },
-        "double_click/pre-express/2021": {
-          "word": "iki dəfə bas",
-          "definition": "Siçanın düyməsini çox tez basın"
         },
         "algorithm/pre-express/2021": {
           "word": "Alqoritm",
@@ -1133,12 +1143,12 @@
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
-        "behavior/coursee/2021": {
-          "word": "Davranış "
-        },
         "algorithm/coursee/2021": {
           "word": "Alqroritm",
           "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "behavior/coursee/2021": {
+          "word": "Davranış "
         },
         "sprite/coursee/2021": {
           "word": "Sprayt",
@@ -1184,6 +1194,9 @@
         "user/csd/2021": {
           "word": "İstifadəçi",
           "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
+        "user_interface/csd/2021": {
+          "word": "İstifadəçi interfeysi"
         },
         "bug/csd/2021": {
           "word": "Səhv",

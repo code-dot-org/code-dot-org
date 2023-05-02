@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you think is the purpose of the `<Book>`(#e7e8ea) when the `ArrayList`(#e7e8ea) is created on **Line 10**? Delete both `<Book>`(#e7e8ea) from this line of code then run the program. Does it still work? Why do you think this happened?\r\n\r\n2. After the `add()`(#e7e8ea) methods, add the line `myBooks.add(myPet);`(#e7e8ea) then run the program. What is printed? Why do you think this happened?\r\n\r\n3. Add the `<Book>`(#e7e8ea) back to the `ArrayList`(#e7e8ea) declaration and initialization on **Line 10** then run the program again. What is printed? Why do you think this happened?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you think is the purpose of the `<Book>`(#e7e8ea) when the `ArrayList`(#e7e8ea) is created on **Line 12**? Delete both `<Book>`(#e7e8ea) from this line of code then run the program. Does it still work? Why do you think this happened?\r\n\r\n2. After the `add()`(#e7e8ea) methods, add the line `myBooks.add(myPet);`(#e7e8ea) then run the program. What is printed? Why do you think this happened?\r\n\r\n3. Add the `<Book>`(#e7e8ea) back to the `ArrayList`(#e7e8ea) declaration and initialization on **Line 12** then run the program again. What is printed? Why do you think this happened?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -21,16 +21,17 @@
         "isVisible": true
       }
     },
+    "name_suffix": "_2022",
     "encrypted_examples": [
 
     ],
-    "name_suffix": "_2022"
+    "teacher_markdown": "##Investigate and Modify\r\n\r\n\r\n1. When we delete the `\\<Book>`(#e7e8ea) tag from the ArrayList declaration and initialization, we can still add `Book`(#e7e8ea) objects into the ArrayList. However, we can also add other types of objects. This type of ArrayList would be *non-generic*. When we add a tag like `\\<Book>`(#e7e8ea), it becomes a *generic* ArrayList and can only hold objects of that type.\r\n\r\n2. We receive an error message that our program uses *unchecked or unsafe operations*. It will compile, but we are at high risk for programming errors since we have different object types in one ArrayList. This is an example of a *non-generic* ArrayList.\r\n\r\n3. If we add the `<Book>`(#e7e8ea) back to the `ArrayList`(#e7e8ea) declaration and initialization on **Line 12**, we get the error *Pet cannot be converted to Book* when we attempt to add a `Pet`(#e7e8ea) object to a generic ArrayList of type `Book`(#e7e8ea). This is because the ArrayList can now only contain `Book`(#e7e8ea) objects.\r\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-26T00:28:18.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:18.308+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L1\\\"\"],\"cloned_from\":\"CSA U6L5-L1\"},{\"changed_at\":\"2022-05-04 19:39:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:44:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:49:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:55:52 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 15:27:39 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:18.308+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L1\\\"\"],\"cloned_from\":\"CSA U6L5-L1\"},{\"changed_at\":\"2022-05-04 19:39:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:44:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:49:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 19:55:52 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 15:27:39 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-01 19:05:55 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 20:52:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 22:52:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

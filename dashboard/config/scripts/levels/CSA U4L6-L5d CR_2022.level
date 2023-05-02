@@ -11,15 +11,28 @@
     "display_name": "Combine Sounds",
     "bubble_choice_description": "Write a static method to combine two sounds into one sound.",
     "thumbnail_url": "https://images.code.org/0bc6a9c78cafd85438c4475174e6d17f-image-1650634348178.png",
-    "encrypted_examples": [
-
-    ]
+    "starter_assets": {
+      "beat.wav": "e29dc73f-b533-469f-b8e5-7666075cc196.wav",
+      "welcome.wav": "05a75453-c9f0-489e-ba3a-9eb4b910e2cb.wav"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    // TO DO #2: Use SoundLoader.read() to extract the samples from the sound files into double arrays.\n\n\n    // TO DO #3: Call your combineSounds() method on your arrays.\n\n    \n    Scene myScene = new Scene();\n    myScene.playSound(newSound);\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "SoundEditor.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\n/*\n * Edits sound samples to create effects\n */\npublic class SoundEditor {\n\n  // TO DO #1: Write the static method combineSounds to combine two sounds into one.\n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T18:19:06.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:19:06.923+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L5c CR_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L5c CR_2022\"},{\"changed_at\":\"2022-04-07 18:19:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:25:30 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:36:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:03:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:19:06.923+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L5c CR_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L5c CR_2022\"},{\"changed_at\":\"2022-04-07 18:19:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:25:30 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:36:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:03:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-21 16:02:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

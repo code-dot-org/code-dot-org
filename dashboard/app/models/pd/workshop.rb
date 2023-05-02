@@ -128,6 +128,14 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
+  # Whether enrollment in this workshop requires an application
+  def require_application?
+    courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
+    subjects = [SUBJECT_SUMMER_WORKSHOP]
+    courses.include?(course) && subjects.include?(subject) &&
+      regional_partner && regional_partner.link_to_partner_application.blank?
+  end
+
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
   end
@@ -270,7 +278,7 @@ class Pd::Workshop < ApplicationRecord
   # Filters those those workshops that have not yet ended, but whose
   # final session was scheduled to end more than two days ago
   def self.should_have_ended
-    in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
+    in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(2.days.ago)
   end
 
   # Find the workshop that is closest in time to today
@@ -446,23 +454,23 @@ class Pd::Workshop < ApplicationRecord
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "facilitator #{facilitator.id} - #{exception.message}"
         end
       end
 
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-      rescue => e
-        errors << "organizer workshop #{workshop.id} - #{e.message}"
+      rescue => exception
+        errors << "organizer workshop #{workshop.id} - #{exception.message}"
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
@@ -471,8 +479,8 @@ class Pd::Workshop < ApplicationRecord
         next unless facilitator.email
         begin
           Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "pre email for facilitator #{facilitator.id} - #{exception.message}"
         end
       end
     end
@@ -485,8 +493,8 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     should_have_ended.each do |workshop|
       Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-    rescue => e
-      errors << "organizer should close workshop #{workshop.id} - #{e.message}"
+    rescue => exception
+      errors << "organizer should close workshop #{workshop.id} - #{exception.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
@@ -505,9 +513,9 @@ class Pd::Workshop < ApplicationRecord
 
         email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-        Honeybadger.notify(e,
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+        Honeybadger.notify(exception,
           error_message: 'Failed to send follow up email to teacher',
           context: {pd_enrollment_id: enrollment.id}
         )
@@ -517,11 +525,27 @@ class Pd::Workshop < ApplicationRecord
     raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
+  def self.send_teacher_pre_work_csa
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    scheduled_start_in_days(20).each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+      end
+    rescue => exception
+      errors << "teacher workshop #{workshop.id} - #{exception.message}"
+    end
+    raise "Failed to send CSA pre-work: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
+    send_teacher_pre_work_csa if course == COURSE_CSA
   end
 
   # Updates enrollments with resolved users.
@@ -583,9 +607,9 @@ class Pd::Workshop < ApplicationRecord
             result = Geocoder.search(location_address).try(:first)
           end
         end
-      rescue StandardError => e
+      rescue StandardError => exception
         # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(e,
+        Honeybadger.notify(exception,
           error_message: 'Error geocoding workshop location_address',
           context: {
             pd_workshop_id: id,
@@ -640,13 +664,13 @@ class Pd::Workshop < ApplicationRecord
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
-    actual_hours = sessions.map(&:hours).reduce(&:+)
+    actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
-    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
+    [Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].exclude?(course)
   end
 
   def workshop_starting_date
@@ -697,11 +721,10 @@ class Pd::Workshop < ApplicationRecord
     end
 
     # Get number of sessions attended by teacher
-    attendance_count_by_teacher = Hash[
-      teachers_attending.uniq.map do |teacher|
-        [teacher, teachers_attending.count(teacher)]
+    attendance_count_by_teacher =
+      teachers_attending.uniq.index_with do |teacher|
+        teachers_attending.count(teacher)
       end
-    ]
 
     # Return only teachers who attended all sessions
     attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
@@ -806,8 +829,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    return false if [SUBJECT_CSP_FOR_RETURNING_TEACHERS, SUBJECT_CSA_CAPSTONE].include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 

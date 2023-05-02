@@ -2,31 +2,31 @@
   "haw-HI": {
     "data": {
       "vocabularies": {
-        "caesar_cipher_/hoc-encryption/unversioned": {
+        "event/outbreak/unversioned": {
           "word": "",
           "definition": ""
         },
-        "cipher/hoc-encryption/unversioned": {
+        "models_and_simulations/outbreak/unversioned": {
           "word": "",
           "definition": ""
         },
-        "cracking_encryption/hoc-encryption/unversioned": {
+        "code/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },
-        "decryption/hoc-encryption/unversioned": {
+        "event/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },
-        "encryption/hoc-encryption/unversioned": {
+        "program/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
+        "mood/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },
-        "lossless_compression/text-compression/unversioned": {
+        "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
         }

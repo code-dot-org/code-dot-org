@@ -21,14 +21,13 @@ module AzureTextToSpeech
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
       token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-      token_http_request.read_timeout = default_timeout
+      token_http_request.write_timeout = default_timeout
       token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
       token_http_request.request(token_request)&.body
     end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for authentication token from Azure Speech Service failed')
     nil
   end
 
@@ -52,7 +51,7 @@ module AzureTextToSpeech
     http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
     http_request.read_timeout = speech_timeout
     headers = {
-      'Authorization': 'Bearer ' + token,
+      Authorization: 'Bearer ' + token,
       'Content-Type': 'application/ssml+xml',
       'X-Microsoft-OutputFormat': 'audio-16khz-32kbitrate-mono-mp3'
     }
@@ -61,8 +60,8 @@ module AzureTextToSpeech
     return yield(nil) if request.body.nil_or_empty?
 
     yield(http_request.request(request)&.body)
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for speech from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for speech from Azure Speech Service failed')
     yield(nil)
   end
 
@@ -78,7 +77,7 @@ module AzureTextToSpeech
       voice_http_request.use_ssl = true
       voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
       voice_http_request.read_timeout = default_timeout
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {Authorization: 'Bearer ' + token})
 
       response = voice_http_request.request(voice_request)&.body
       voices = response.length > 2 ? JSON.parse(response) : nil
@@ -97,8 +96,8 @@ module AzureTextToSpeech
       # Only keep voices that contain 2+ genders and a locale
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for list of voices from Azure Speech Service failed')
     nil
   end
 

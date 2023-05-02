@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../deployment.rb'
+require_relative '../deployment'
 require 'cdo/geocoder'
 
 def main

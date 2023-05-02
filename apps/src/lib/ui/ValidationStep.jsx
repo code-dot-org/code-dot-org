@@ -10,7 +10,7 @@ export const Status = {
   FAILED: 'FAILED',
   CELEBRATING: 'CELEBRATING',
   UNKNOWN: 'UNKNOWN',
-  ALERT: 'ALERT'
+  ALERT: 'ALERT',
 };
 
 const style = {
@@ -18,25 +18,25 @@ const style = {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
   header: {
     fontSize: 26,
-    lineHeight: 'normal'
+    lineHeight: 'normal',
   },
   body: {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 40,
     marginRight: 0,
-    fontSize: 14
+    fontSize: 14,
   },
   icon: {
-    float: 'left'
+    float: 'left',
   },
   headerText: {
-    marginLeft: 40
-  }
+    marginLeft: 40,
+  },
 };
 
 export default class ValidationStep extends Component {
@@ -45,7 +45,8 @@ export default class ValidationStep extends Component {
     stepName: PropTypes.string.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     alwaysShowChildren: PropTypes.bool,
-    hideWaitingSteps: PropTypes.bool
+    hideWaitingSteps: PropTypes.bool,
+    percentComplete: PropTypes.number,
   };
 
   render() {
@@ -54,8 +55,14 @@ export default class ValidationStep extends Component {
       stepStatus,
       alwaysShowChildren,
       children,
-      hideWaitingSteps
+      hideWaitingSteps,
+      percentComplete,
     } = this.props;
+
+    const displayPercentComplete = () => {
+      return percentComplete > 0 ? ` ${percentComplete}%` : '';
+    };
+
     // By default, we only show the children if the step failed or alerted.
     // If alwaysShowChildren is set, show them regardless
     let showChildren =
@@ -71,7 +78,9 @@ export default class ValidationStep extends Component {
       <div style={style.root}>
         <div style={{...style.header, ...styleFor(stepStatus)}}>
           <div style={style.icon}>{iconFor(stepStatus)}</div>
-          <div style={style.headerText}>{stepName}</div>
+          <div style={style.headerText}>
+            {`${stepName}${displayPercentComplete()}`}
+          </div>
         </div>
         {showChildren && (
           <div style={style.body} className="validation-children">
@@ -102,7 +111,7 @@ function styleFor(stepStatus) {
     default:
       return {
         color: color.red,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       };
   }
 }
@@ -113,7 +122,7 @@ function styleFor(stepStatus) {
  */
 function iconFor(stepStatus) {
   const iconStyle = {
-    marginRight: 6
+    marginRight: 6,
   };
   switch (stepStatus) {
     case Status.WAITING:

@@ -1,7 +1,7 @@
 name 'csp-u3-exam1-comments2022'
 height 'auto'
 
-question ‘Which of the following is NOT a reason to include comments in programs’
+question ‘Which of the following is NOT a reason to include comments in programs?’
 
 right ‘Comments help the computer decide whether certain components of a program are important.’
 wrong ’Comments help programmers debug issues in their own code’

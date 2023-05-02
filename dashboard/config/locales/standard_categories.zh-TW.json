@@ -1,0 +1,83 @@
+{
+  "zh-TW": {
+    "data": {
+      "standard_categories": {
+        "DA": {
+          "description": "數據和分析"
+        },
+        "DAT-1": {
+          "description": "電腦表示數據的方式與為使用者解釋和顯示數據的方式不同。程式被用來將數據轉換成人們更容易理解的表示形式。"
+        },
+        "IOC-2": {
+          "description": "使用電腦創新可能會危及你的個人安全和身份。"
+        },
+        "DAT-1.D": {
+          "description": "比較數據壓縮算法，以確定在特定背景中哪種演算法最佳。"
+        },
+        "IOC-2.B": {
+          "description": "解釋計算資源如何被保護和如何被濫用。"
+        },
+        "CD": {
+          "description": "電腦與通訊裝置"
+        },
+        "CI": {
+          "description": "社群、全球與倫理影響"
+        },
+        "CL": {
+          "description": "協同合作"
+        },
+        "CPP": {
+          "description": "運算練習與程式設計"
+        },
+        "CT": {
+          "description": "計算機式思維"
+        },
+        "L": {
+          "description": "語言"
+        },
+        "RI": {
+          "description": "閱讀資訊文件"
+        },
+        "RL": {
+          "description": "閱讀文獻"
+        },
+        "SL": {
+          "description": "說話與聆聽"
+        },
+        "W": {
+          "description": "寫作"
+        },
+        "C": {
+          "description": "隧道"
+        },
+        "F": {
+          "description": "函式"
+        },
+        "G": {
+          "description": "幾何"
+        },
+        "MP": {
+          "description": "數學實務"
+        },
+        "NBT": {
+          "description": "數字和十進字運算"
+        },
+        "OA": {
+          "description": "運算與代數思維"
+        },
+        "1": {
+          "description": "學生展現出創意思維、建構知識，以及使用科技來開發創新產品與流程。"
+        },
+        "2": {
+          "description": "學生會使用數位媒體與環境一起溝通和合作，包括遠端合作，以支援個人學習並協助別人學習。"
+        },
+        "4": {
+          "description": "學生運用批判思維技巧，計畫與進行研究、管理專案、解決問題，並使用適當的數位工具和資源做出知情的決定。"
+        },
+        "6": {
+          "description": "學生展現出對技術概念、系統和運行的良好理解。"
+        }
+      }
+    }
+  }
+}

@@ -228,20 +228,12 @@ mi:
             MOVES.XArmsUp: Totoro
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
-      Dancelab_everyMeasuresRange:
-        text: 'māhia ia wāhanga e {N} a muri i te {START} '
       Dancelab_everySeconds:
         text: 'māhia ia {N} {UNIT} '
         options:
           UNIT:
             '"measures"': wāhanga
             '"seconds"': ngā hēkona
-      Dancelab_everySecondsRange:
-        text: 'ia {N} {UNIT} mai i te {START} ki te {STOP} '
-        options:
-          UNIT:
-            measures: Wāhanga
-            seconds: Hēkona
       Dancelab_everyVerseChorus:
         text: 'ia {UNIT} '
         options:
@@ -982,6 +974,14 @@ mi:
         text: tatūnga
       Dancelab_whenSetup2:
         text: tatūnga
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū
       gamelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1112,12 +1112,37 @@ mi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: takotohia {GROUP} ki te {FORMAT}
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': pae
+            '"circle"': porpwhita
+            '"grid"': tukutuku
+            '"top"': rārangi runga
+            '"row"': rārangi
+            '"bottom"': rārangi raro
+            '"left"': pou māui
+            '"column"': pou
+            '"right"': pou mātau
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1480,6 +1505,11 @@ mi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:
@@ -1621,3 +1651,11 @@ mi:
           DIR:
             right: matau ↻
             left: maui ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
+            '"starburst"': Pāpahu Whetū

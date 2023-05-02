@@ -193,8 +193,6 @@ ne:
             MOVES.Kick: तारा
             MOVES.XArmsUp: तन्काउनुहोस्
             MOVES.ThisOrThat: यो वा त्यो
-      Dancelab_everyMeasuresRange:
-        text: "{START}  पछि प्रत्येक {N} मापनहरु दोहो¥याउनुहोस् "
       Dancelab_everySeconds:
         text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
@@ -464,6 +462,10 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       gamelab_atTime:
         options:
           UNIT:
@@ -785,3 +787,7 @@ ne:
         text: move forward
       craft_placeTorch:
         text: place torch
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': hearts

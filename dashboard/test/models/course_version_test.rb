@@ -130,7 +130,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal course_version, course_version.content_root.course_version
 
     course_version = create :course_version, :with_unit
-    assert_instance_of Script, course_version.content_root
+    assert_instance_of Unit, course_version.content_root
     assert_equal course_version, course_version.content_root.course_version
   end
 
@@ -164,10 +164,10 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     refute script.course_version.recommended?('en-us')
     assert script2.course_version.recommended?('en-us')
-    assert_equal script2.course_version.content_root, Script.latest_stable_version('ss')
+    assert_equal script2.course_version.content_root, Unit.latest_stable_version('ss')
     assert script.course_version.recommended?('fake-locale')
     refute script2.course_version.recommended?('fake-locale')
-    assert_equal script.course_version.content_root, Script.latest_stable_version('ss', locale: 'fake-locale')
+    assert_equal script.course_version.content_root, Unit.latest_stable_version('ss', locale: 'fake-locale')
   end
 
   test "recommended? is true if its the latest stable version of unit group in the family" do

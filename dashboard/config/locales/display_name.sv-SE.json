@@ -294,7 +294,16 @@
         "courseF_sprites_freeplay_aquatic_-2022-2": "Vatten",
         "courseF_sprites_freeplay_space_-2022-2": "Intergalaktisk",
         "courseF_text_choice_title_-2022-2": "Stor text",
-        "ramp_artist_loops42022": "Stjärna"
+        "ramp_artist_loops42022": "Stjärna",
+        "helloworld_food_costumes_soccer-2022": "Kostymer",
+        "helloworld_food_costumes_space-2022": "Kostymer",
+        "helloworld_food_sizes_soccer-2022": "Storlek",
+        "helloworld_food_sizes_space-2022": "Storlek",
+        "helloworld_food_sounds_soccer-2022": "Ljud",
+        "helloworld_food_sounds_space-2022": "Ljud",
+        "helloworld_food_backgrounds": "Klicka på Händelser",
+        "helloworld_food_backgrounds_soccer-2022": "Klicka på Händelser",
+        "helloworld_food_backgrounds_space-2022": "Klicka på Händelser"
       }
     }
   }

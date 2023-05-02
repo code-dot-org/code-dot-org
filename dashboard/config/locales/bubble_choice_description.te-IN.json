@@ -1,2 +1,20 @@
 {
+  "te-IN": {
+    "data": {
+      "bubble_choice_description": {
+        "helloworld_animals_costumes": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_animals_sounds": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి.",
+        "helloworld_emoji_costumes": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_emoji_sounds": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి.",
+        "helloworld_food_costumes": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_food_costumes_soccer-2022": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_food_costumes_space-2022": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_food_sounds": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి.",
+        "helloworld_food_sounds_soccer-2022": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి.",
+        "helloworld_food_sounds_space-2022": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి.",
+        "helloworld_retro_costumes": "స్ప్రిట్స్ రూపాన్ని మార్చడం నేర్చుకోండి.",
+        "helloworld_retro_sounds": "శబ్దాలను ఎలా ప్లే చేయాలో తెలుసుకోండి."
+      }
+    }
+  }
 }

@@ -1883,6 +1883,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "கருவிப்பெட்டியில் இருந்து தொகுதிகளை உங்கள் பணியிடத்திற்கு இழுக்கவும்."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "முதலில் இங்கே கிளிக் செய்யவும்!"
         }
       }
     }

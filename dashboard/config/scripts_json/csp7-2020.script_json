@@ -10,21 +10,24 @@
           "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "9d36600e-cf47-48b3-bd42-d92ac21ccc9f"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csp-post-survey-2020",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "538b175a-f2af-4976-bb19-2edddd7d0862"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
           "link": "https://studio.code.org/s/csp-post-survey-2020",
           "type": "feedback",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "e0b69653-c8f5-4cf7-9db7-76a5a12a01df"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit7/{LESSON}",
@@ -38,7 +41,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 21:16:39 UTC",
+    "serialized_at": "2022-09-28 14:31:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/daily_survey_joiner.rb'
+require 'pd/survey_pipeline/daily_survey_joiner'
 
 module Pd::SurveyPipeline
   class DailySurveyJoinerTest < ActiveSupport::TestCase

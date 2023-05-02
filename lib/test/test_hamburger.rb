@@ -156,10 +156,6 @@ class HamburgerTest < Minitest::Test
   def test_hamburger_content_nolevel
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert_includes_id contents[:entries], "learn"
-  end
-
-  def test_hamburger_content_nolevel
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert_includes_id contents[:entries], "report-bug"
   end
 

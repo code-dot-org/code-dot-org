@@ -18,6 +18,7 @@
         ]
       }
     ],
-    "returnType": "Number"
+    "returnType": "Number",
+    "style": "math_blocks"
   }
 }

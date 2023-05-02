@@ -2,8 +2,38 @@
 pl:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': następuje
+            '"avoids"': unika
+      AmysBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           jeśli za dużo{SPRITE}
+          {STATEMENT}w przeciwnym razie jeśli w sam raz
+          {STATEMENT3}w przeciwnym razie za mało
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): przenoszenie NSEW za pomocą klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}powiedz {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -252,20 +282,12 @@ pl:
             "-1": "←"
       Dancelab_eval:
         text: oceń {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'powtórz co {N} takty po {START} '
       Dancelab_everySeconds:
         text: 'powtarzaj co {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
-      Dancelab_everySecondsRange:
-        text: 'co {N} {UNIT} od {START} do {STOP} '
-        options:
-          UNIT:
-            measures: Takty
-            seconds: Sekundy
       Dancelab_everyVerseChorus:
         text: 'co {UNIT} '
         options:
@@ -1028,6 +1050,62 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
             '"peas"': The Black Eyed Peas - Mam przeczucie
+      DansBlocks_getMicroscope:
+        text: Mikroskop ma {INPUT1}
+        options:
+          INPUT1:
+            '1': sok cytrynowy
+            '3': proszek do pieczenia
+            '5': oba
+      DansBlocks_setForegroundEffect2:
+        text: wykonaj efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts"': serca
+            '"emojis"': Szczęśliwe emotikony
+            '"rain"': deszcz
+            '"starburst"': Rozprysk
+            '"glass"': Rozbijające się szkło
+            '"twinkling"': Migotliwy
+      DansBlocks_setMicroscope:
+        text: Ustaw mikroskop na {INPUT1}
+        options:
+          INPUT1:
+            '1': sok cytrynowy
+            '3': proszek do pieczenia
+            '5': oba
+      DansBlocks_testRectangle:
+        text: 'utwórz prostokąt x: {X} y: {Y} w: {W} h: {H} kolor: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: AddEight
+      FunctionBlocks_addFiveBlock:
+        text: AddFive
+      FunctionBlocks_addFourBlock:
+        text: AddFour
+      FunctionBlocks_addNineBlock:
+        text: AddNine
+      FunctionBlocks_addOneBlock:
+        text: AddOne
+      FunctionBlocks_addSevenBlock:
+        text: AddSeven
+      FunctionBlocks_addSixBlock:
+        text: AddSix
+      FunctionBlocks_addThreeBlock:
+        text: AddThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
+      FunctionBlocks_communicate:
+        text: Komunikuj {VAR1} z {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: representuj {NUM} nowe {ANIMATION_NAME} duszki [BEHAVIOR][2]
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] reprezentują {NUM} nowe {ANIMATION_NAME} duszki"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}powiedz {TEXT1}"
       gamelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       gamelab_addTarget:
@@ -1048,6 +1126,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1113,6 +1193,8 @@ pl:
         text: idąc za celami
       gamelab_getAllSprites:
         text: wszystkie duszki
+      gamelab_getCostume:
+        text: duszki z kostiumem {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1241,6 +1323,19 @@ pl:
             '"z"': z
       gamelab_layoutGrid:
         text: układ duszków jako siatka
+      gamelab_layoutSprites:
+        text: formacja {GROUP} jako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_locationAt:
         text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1267,8 +1362,23 @@ pl:
             '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        text: zrób {N} nową {GROUP} w {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       gamelab_makeProjectile:
         text: |-
           utworzyć pocisk
@@ -1356,6 +1466,34 @@ pl:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny bas
             "'sound://category_digital/jump_7.mp3'": skocz
+      gamelab_playSoundOptionsSoccer:
+        text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": radosne okrzyki
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kopnięcie
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dwa gwizdki
+            "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
+      gamelab_playSoundOptionsSpace:
+        text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Gromada galaktyk 1E0657-558
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Kasjopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Mgławica Kraba
+            "'sound://category_space/Galactic_center_SFX.mp3'": centrum galaktyczne
+            "'sound://category_space/Launch_SFX.mp3'": wystrzelenie
+            "'sound://category_space/Lift_Off.mp3'": wystartowanie
+            "'sound://category_space/Pillars_SFX.mp3'": filary
+            "'sound://category_space/Southern_ring_SFX.mp3'": Mgławica NGC 3132
+            "'sound://category_space/Supernova_SFX.mp3'": Supernowa
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaktyka jacuzzi
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
       gamelab_playerBehaviors:
@@ -1440,6 +1578,8 @@ pl:
             '100': duży
       gamelab_setPrompt:
         text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWith2Choices:
+        text: poproś użytkownika {QUESTION} o zmienną {VAR} z wyborami {A}{B}
       gamelab_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       gamelab_setProp:
@@ -1630,6 +1770,18 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do łowienia ryb.
+      KatiesBlocks_tumbling:
+        text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1985,6 +2137,41 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
+      ParticlesBlocks_getMicroscope:
+        text: Mikroskop ma {INPUT1}
+        options:
+          INPUT1:
+            '1': sok cytrynowy
+            '3': proszek do pieczenia
+            '5': oba
+      ParticlesBlocks_setMicroscope:
+        text: Ustaw mikroskop na {INPUT1}
+        options:
+          INPUT1:
+            '1': sok cytrynowy
+            '3': proszek do pieczenia
+            '5': oba
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): trwały
+            new Behavior(liquid, []): ciecz
+            new Behavior(wandering, []): gaz
+      ParticlesBlocks_statesOfMatter2:
+        text: Ustaw {COSTUME} na zachowanie {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': stała cząstka
+            '"liquid"': płynna cząstka
+            '"gas"': gazowa cząstka
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Ustaw {COSTUME} na zachowanie {BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            '"solid"': stała cząstka
+            '"liquid"': płynna cząstka
+            '"gas"': gazowa cząstka
       Poetry_addFrame:
         text: dodaj zarys {BRUSH}
         options:
@@ -2074,6 +2261,23 @@ pl:
             '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
             '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
+      Poetry_playSoundOptionsSpace:
+        text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Gromada galaktyk 1E0657-558
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Kasjopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Mgławica Kraba
+            "'sound://category_space/Galactic_center_SFX.mp3'": centrum galaktyczne
+            "'sound://category_space/Launch_SFX.mp3'": wystrzelenie
+            "'sound://category_space/Lift_Off.mp3'": wystartowanie
+            "'sound://category_space/Pillars_SFX.mp3'": filary
+            "'sound://category_space/Southern_ring_SFX.mp3'": Mgławica NGC 3132
+            "'sound://category_space/Supernova_SFX.mp3'": Supernowa
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaktyka jacuzzi
       Poetry_setAuthor:
         text: ustaw autora {AUTHOR}
       Poetry_setBackground:
@@ -2210,6 +2414,11 @@ pl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
@@ -2218,8 +2427,6 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
-      SpriteLab2Beta_spriteSay:
-        text: duszek {SPRITE} mówi {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utwórz duszka
@@ -2325,6 +2532,33 @@ pl:
             '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
             '"none"': nie ruszać się
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+      adaptations_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do łowienia ryb.
+      adaptations_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': zaczyna się
+            '"stops"': zatrzymuje się
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2467,7 +2701,34 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
-      validation_validatedBackground:
-        text: ustaw tło na {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}
+      ecosystems_catchMe:
+        text: złap {THIS}
+      ecosystems_eat:
+        text: jedz {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      storylab_clearHeadings:
+        text: wyczyść nagłówki
+      storylab_setForegroundEffect2:
+        text: wykonaj efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts"': serca
+            '"rain"': deszcz
+            '"starburst"': Rozprysk
+            '"twinkling"': Migotliwy
+      storylab_setHeading:
+        text: ustaw tytuł {HEADING}
+      storylab_setPromptWithChoice:
+        text: monit użytkownika {QUESTION} o zmienną {VAR} z wyborem {A}
+      storylab_setSubheading:
+        text: ustaw podtytuł {SUBHEADING}
