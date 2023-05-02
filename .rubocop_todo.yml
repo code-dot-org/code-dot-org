@@ -430,11 +430,6 @@ Style/MultilineTernaryOperator:
 Style/MutableConstant:
   Enabled: false
 
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-Style/NegatedIfElseCondition:
-  Enabled: false
-
 # Offense count: 80
 Style/OpenStructUse:
   Enabled: false

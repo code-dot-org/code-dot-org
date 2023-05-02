@@ -270,7 +270,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end

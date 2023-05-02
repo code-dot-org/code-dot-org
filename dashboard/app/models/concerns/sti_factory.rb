@@ -11,11 +11,11 @@ module StiFactory
     end
 
     def with_type(type)
-      if self.type != type
+      if self.type == type
+        self
+      else
         self.type = type
         becomes(type.constantize)
-      else
-        self
       end
     end
   end
