@@ -15,7 +15,7 @@ function TeacherInfoBanner({header, primaryButton, secondaryButton, children}) {
             onClick={primaryButton['onClick']}
             href={primaryButton['href']}
             style={styles.button}
-            size="large"
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={primaryButton['text']}
             disabled={primaryButton['disabled']}
           />
@@ -26,8 +26,7 @@ function TeacherInfoBanner({header, primaryButton, secondaryButton, children}) {
             onClick={secondaryButton['onClick']}
             href={secondaryButton['href']}
             style={styles.button}
-            color={Button.ButtonColor.gray}
-            size="large"
+            color={Button.ButtonColor.white}
             text={secondaryButton['text']}
           />
         )}
@@ -56,7 +55,12 @@ export default TeacherInfoBanner;
 
 const styles = {
   heading: {
-    marginTop: 25,
+    marginTop: 16,
+    marginBottom: 16,
+    fontSize: 24,
+    lineHeight: '26px',
+    fontFamily: 'Gotham 4r',
+    color: color.neutral_dark,
   },
   button: {
     marginLeft: 7,

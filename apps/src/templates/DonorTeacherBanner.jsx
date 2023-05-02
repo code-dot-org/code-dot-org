@@ -5,6 +5,7 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {putRecord} from '../lib/util/firehose';
 import TeacherInfoBanner from './TeacherInfoBanner';
+import color from '../util/color';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
@@ -179,6 +180,10 @@ export default class DonorTeacherBanner extends Component {
 const styles = {
   paragraph: {
     marginBottom: 10,
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
+    lineHeight: '22px',
+    color: color.neutral_dark,
   },
   label: {
     fontFamily: '"Gotham 4r", sans-serif',
