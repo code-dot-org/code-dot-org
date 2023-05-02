@@ -540,7 +540,7 @@ GEM
     minitest (5.16.3)
     minitest-around (0.5.0)
       minitest (~> 5.0)
-    minitest-reporters (1.2.0)
+    minitest-reporters (1.6.0)
       ansi
       builder
       minitest (>= 5.0)
@@ -977,7 +977,7 @@ DEPENDENCIES
   mini_racer
   minitest (~> 5.15)
   minitest-around
-  minitest-reporters (~> 1.2.0.beta3)
+  minitest-reporters (~> 1.6.0)
   mocha
   mysql2 (>= 0.4.1)
   nakayoshi_fork
