@@ -13,19 +13,19 @@ export default class ParticipantSections extends Component {
     isTeacher: PropTypes.bool,
     isPlSections: PropTypes.bool,
     updateSectionsResult: PropTypes.func.isRequired,
-    updateSections: PropTypes.func.isRequired
+    updateSections: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      viewHidden: false
+      viewHidden: false,
     };
   }
 
   toggleViewHidden = () => {
     this.setState({
-      viewHidden: !this.state.viewHidden
+      viewHidden: !this.state.viewHidden,
     });
   };
 
@@ -45,19 +45,19 @@ export default class ParticipantSections extends Component {
         width: styleConstants['content-width'],
         textAlign: 'right',
         paddingTop: 10,
-        paddingBottom: 10
+        paddingBottom: 10,
       },
       hiddenSectionLabel: {
         fontSize: 18,
         paddingBottom: 10,
-        color: color.charcoal
+        color: color.charcoal,
       },
       hiddenSectionDesc: {
         fontSize: 14,
         lineHeight: '22px',
         paddingBottom: 10,
-        color: color.charcoal
-      }
+        color: color.charcoal,
+      },
     };
 
     // Sort student's sections based on whether they are live or archived

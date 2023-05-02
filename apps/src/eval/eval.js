@@ -64,7 +64,7 @@ Eval.encodedFeedbackImage = null;
 /**
  * Initialize Blockly and the Eval.  Called on page load.
  */
-Eval.init = function(config) {
+Eval.init = function (config) {
   studioApp().runButtonClick = this.runButtonClick.bind(this);
 
   skin = config.skin;
@@ -80,13 +80,13 @@ Eval.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
     studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     var svg = document.getElementById('svgEval');
     if (!svg) {
       throw 'something bad happened';
@@ -115,7 +115,7 @@ Eval.init = function(config) {
         origin: -200,
         firstLabel: -100,
         lastLabel: 100,
-        increment: 100
+        increment: 100,
       });
       background.setAttribute('visibility', 'visible');
     }
@@ -243,14 +243,14 @@ function displayCallAndExample() {
 /**
  * Click the run button.  Start the program.
  */
-Eval.runButtonClick = function() {
+Eval.runButtonClick = function () {
   studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
   Eval.execute();
 };
 
-Eval.clearCanvasWithID = function(canvasID) {
+Eval.clearCanvasWithID = function (canvasID) {
   var element = document.getElementById(canvasID);
   while (element.firstChild) {
     element.removeChild(element.firstChild);
@@ -260,7 +260,7 @@ Eval.clearCanvasWithID = function(canvasID) {
  * App specific reset button click logic.  studioApp().resetButtonClick will be
  * called first.
  */
-Eval.resetButtonClick = function() {
+Eval.resetButtonClick = function () {
   resetExampleDisplay();
   Eval.clearCanvasWithID('user');
   Eval.feedbackImage = null;
@@ -280,7 +280,7 @@ function evalCode(code) {
     CustomMarshalingInterpreter.evalWith(
       code,
       {
-        Eval: api
+        Eval: api,
       },
       {legacy: true}
     );
@@ -316,7 +316,7 @@ function evalCode(code) {
 function getDrawableFromBlockspace() {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', [
     'functional_display',
-    'functional_definition'
+    'functional_definition',
   ]);
   var result = evalCode(code);
   return result;
@@ -324,7 +324,7 @@ function getDrawableFromBlockspace() {
 
 function getDrawableFromBlock(block) {
   var definitionCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-    'functional_definition'
+    'functional_definition',
   ]);
   var blockCode = Blockly.Generator.blocksToCode('JavaScript', [block]);
   var lines = blockCode.split('\n');
@@ -354,7 +354,7 @@ function getDrawableFromBlockXml(blockXml) {
   var result = getDrawableFromBlockspace();
 
   // Remove the blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) {
     b.dispose();
   });
 
@@ -365,7 +365,7 @@ function getDrawableFromBlockXml(blockXml) {
  * Recursively parse an EvalObject looking for EvalText objects. For each one,
  * extract the text content.
  */
-Eval.getTextStringsFromObject_ = function(evalObject) {
+Eval.getTextStringsFromObject_ = function (evalObject) {
   if (!evalObject) {
     return [];
   }
@@ -375,7 +375,7 @@ Eval.getTextStringsFromObject_ = function(evalObject) {
     strs.push(evalObject.getText());
   }
 
-  evalObject.getChildren().forEach(function(child) {
+  evalObject.getChildren().forEach(function (child) {
     strs = strs.concat(Eval.getTextStringsFromObject_(child));
   });
   return strs;
@@ -385,7 +385,7 @@ Eval.getTextStringsFromObject_ = function(evalObject) {
  * @returns True if two eval objects have sets of text strings that differ
  *   only in case
  */
-Eval.haveCaseMismatch_ = function(object1, object2) {
+Eval.haveCaseMismatch_ = function (object1, object2) {
   var strs1 = Eval.getTextStringsFromObject_(object1);
   var strs2 = Eval.getTextStringsFromObject_(object2);
 
@@ -417,7 +417,7 @@ Eval.haveCaseMismatch_ = function(object1, object2) {
  *   vs. from boolean blocks
  * @returns {boolean} True if two eval objects are both booleans, but have different values.
  */
-Eval.haveBooleanMismatch_ = function(object1, object2) {
+Eval.haveBooleanMismatch_ = function (object1, object2) {
   var strs1 = Eval.getTextStringsFromObject_(object1);
   var strs2 = Eval.getTextStringsFromObject_(object2);
 
@@ -441,7 +441,7 @@ Eval.haveBooleanMismatch_ = function(object1, object2) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Eval.execute = function() {
+Eval.execute = function () {
   Eval.result = ResultType.UNSET;
   Eval.testResults = TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
@@ -449,9 +449,8 @@ Eval.execute = function() {
   if (studioApp().hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = studioApp().getUnfilledFunctionalBlockError(
-      'functional_display'
-    );
+    Eval.message =
+      studioApp().getUnfilledFunctionalBlockError('functional_display');
   } else if (studioApp().hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -496,8 +495,7 @@ Eval.execute = function() {
     }
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
 
   var reportData = {
     app: 'eval',
@@ -506,7 +504,7 @@ Eval.execute = function() {
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete,
-    image: Eval.encodedFeedbackImage
+    image: Eval.encodedFeedbackImage,
   };
 
   // don't try it if function is not defined, which should probably only be
@@ -515,14 +513,14 @@ Eval.execute = function() {
     studioApp().report(reportData);
   } else {
     document.getElementById('svgEval').toDataURL('image/png', {
-      callback: function(pngDataUrl) {
+      callback: function (pngDataUrl) {
         Eval.feedbackImage = pngDataUrl;
         Eval.encodedFeedbackImage = encodeURIComponent(
           Eval.feedbackImage.split(',')[1]
         );
 
         studioApp().report(reportData);
-      }
+      },
     });
   }
 
@@ -535,7 +533,7 @@ Eval.execute = function() {
   }
 };
 
-Eval.checkExamples_ = function(resetPlayspace) {
+Eval.checkExamples_ = function (resetPlayspace) {
   if (!level.examplesRequired) {
     return;
   }
@@ -545,7 +543,7 @@ Eval.checkExamples_ = function(resetPlayspace) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
     Eval.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless
+      functionName: exampleless,
     });
     return;
   }
@@ -572,7 +570,7 @@ Eval.checkExamples_ = function(resetPlayspace) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
     Eval.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName
+      functionName: failingBlockName,
     });
     return;
   }
@@ -626,7 +624,7 @@ function canvasesMatch(canvasA, canvasB) {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function(response) {
+var displayFeedback = function (response) {
   if (Eval.result === ResultType.UNSET) {
     // This can happen if we hit reset before our dialog popped up.
     return;
@@ -651,8 +649,8 @@ var displayFeedback = function(response) {
     showingSharing: !level.disableSharing && level.freePlay,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
-      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})
-    }
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText}),
+    },
   };
   if (Eval.message && !level.edit_blocks) {
     options.message = Eval.message;
@@ -670,7 +668,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
 
   // Add a short delay so that user gets to see their finished drawing.
-  setTimeout(function() {
+  setTimeout(function () {
     displayFeedback(response);
   }, 2000);
 }

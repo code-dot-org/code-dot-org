@@ -4,35 +4,40 @@ import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGr
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 export default function SingleSectionSetUp({
   sectionNum,
   section,
-  updateSection
+  updateSection,
 }) {
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
 
   return (
     <div>
-      <h2>{i18n.classSection()}</h2>
-      <label>
-        {i18n.className()}
-        <input
+      <div className={moduleStyles.containerWithMarginTop}>
+        <Heading2>{i18n.classSection()}</Heading2>
+        <label className={moduleStyles.typographyLabel}>
+          {i18n.className()}
+          <input
+            required
+            type="text"
+            className={moduleStyles.classNameTextField}
+            value={section.name}
+            onChange={e => updateSection('name', e.target.value)}
+          />
+        </label>
+      </div>
+      <div className={moduleStyles.containerWithMarginTop}>
+        <MultiSelectGroup
           required
-          type="text"
-          className={moduleStyles.classNameTextField}
-          value={section.name}
-          onChange={e => updateSection('name', e.target.value)}
+          label={i18n.chooseGrades()}
+          name="grades"
+          options={gradeOptions}
+          values={section.grade || []}
+          setValues={g => updateSection('grade', g)}
         />
-      </label>
-      <MultiSelectGroup
-        label={i18n.chooseGrades()}
-        name="grades"
-        required={true}
-        options={gradeOptions}
-        values={section.grades || []}
-        setValues={g => updateSection('grades', g)}
-      />
+      </div>
     </div>
   );
 }
@@ -40,5 +45,5 @@ export default function SingleSectionSetUp({
 SingleSectionSetUp.propTypes = {
   sectionNum: PropTypes.number.isRequired,
   section: PropTypes.object.isRequired,
-  updateSection: PropTypes.func.isRequired
+  updateSection: PropTypes.func.isRequired,
 };

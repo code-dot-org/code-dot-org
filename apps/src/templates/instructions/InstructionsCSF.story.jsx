@@ -5,7 +5,7 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setFeedback,
   setHasAuthoredHints,
-  setInstructionsConstants
+  setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
@@ -14,7 +14,7 @@ import InstructionsCSF from './InstructionsCSF';
 
 export default {
   title: 'InstructionsCSF',
-  component: InstructionsCSF
+  component: InstructionsCSF,
 };
 
 /**
@@ -32,7 +32,7 @@ export default {
  * @param {boolean} options.subInstructions
  * @param {boolean} options.tts
  */
-const createCommonStore = function(options = {}) {
+const createCommonStore = function (options = {}) {
   const store = createStore(combineReducers({...commonReducers, isRtl}));
   const pageConstants = {};
   const instructionsConstants = {};
@@ -61,12 +61,12 @@ const createCommonStore = function(options = {}) {
           {
             hintId: 'first',
             markdown:
-              'this is the first hint. It has **some** _simple_ formatting'
+              'this is the first hint. It has **some** _simple_ formatting',
           },
           {
             hintId: 'second',
             markdown:
-              'This is the second hint. It has an image.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)'
+              'This is the second hint. It has an image.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)',
           },
           {
             hintId: 'third',
@@ -75,8 +75,8 @@ const createCommonStore = function(options = {}) {
               <xml>
                 <block type="maze_moveForward" />
               </xml>
-            )
-          }
+            ),
+          },
         ],
         []
       )
@@ -103,7 +103,7 @@ const createCommonStore = function(options = {}) {
     store.dispatch(
       setFeedback({
         message:
-          'some simple, plaintext feedback, used to indicate that something went wrong'
+          'some simple, plaintext feedback, used to indicate that something went wrong',
       })
     );
   }
@@ -142,45 +142,45 @@ MinimalExample.args = {};
 
 export const RightToLeft = Template.bind({});
 RightToLeft.args = {
-  rtl: true
+  rtl: true,
 };
 
 export const MarkdownInstructions = Template.bind({});
 MarkdownInstructions.args = {
-  longInstructions: true
+  longInstructions: true,
 };
 
 export const OnlyLongInstructionsNoShort = Template.bind({});
 OnlyLongInstructionsNoShort.args = {
   longInstructions: true,
-  disableShortInstructions: true
+  disableShortInstructions: true,
 };
 
 export const Avatar = Template.bind({});
 Avatar.args = {
-  avatar: true
+  avatar: true,
 };
 
 export const Feedback = Template.bind({});
 Feedback.args = {
-  feedback: true
+  feedback: true,
 };
 
 export const FeedbackWithFailureAvatar = Template.bind({});
 FeedbackWithFailureAvatar.args = {
   avatar: true,
   failureAvatar: true,
-  feedback: true
+  feedback: true,
 };
 
 export const Hints = Template.bind({});
 Hints.args = {
-  hints: true
+  hints: true,
 };
 
 export const SubInstructions = Template.bind({});
 SubInstructions.args = {
-  subInstructions: true
+  subInstructions: true,
 };
 
 export const FullFeaturedExample = Template.bind({});
@@ -189,7 +189,7 @@ FullFeaturedExample.args = {
   failureAvatar: true,
   feedback: true,
   hints: true,
-  longInstructions: true
+  longInstructions: true,
 };
 
 export const FullFeaturedRightToLeftExample = Template.bind({});
@@ -199,5 +199,5 @@ FullFeaturedRightToLeftExample.args = {
   feedback: true,
   hints: true,
   longInstructions: true,
-  rtl: true
+  rtl: true,
 };

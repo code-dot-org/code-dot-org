@@ -16,7 +16,7 @@ export default levels;
 levels.simple = {
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   freePlay: true,
   toolbox: tb(
@@ -24,7 +24,8 @@ levels.simple = {
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 
 levels.custom = {
@@ -38,7 +39,7 @@ levels.custom = {
    * They are defined in Applab.rb, and generated into a static JS file via
    * generateSharedConstants.rb
    */
-  codeFunctions: ApplabBlocks
+  codeFunctions: ApplabBlocks,
 
   // "randomNumber_max": null, // DEPRECATED
 };
@@ -46,7 +47,7 @@ levels.custom = {
 levels.ec_simple = utils.extend(levels.custom, {});
 
 levels.ec_goals = utils.extend(levels.custom, {
-  codeFunctions: {...ApplabBlocks, ...ApplabGoalBlocks}
+  codeFunctions: {...ApplabBlocks, ...ApplabGoalBlocks},
 });
 
 // Functions in Advanced category currently disabled in all levels:
@@ -64,7 +65,7 @@ levels.full_sandbox = {
   scrollbars: true,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   minWorkspaceHeight: 1400,
@@ -143,5 +144,6 @@ levels.full_sandbox = {
       createCategory(msg.catVariables(), '', 'VARIABLE') +
       createCategory(msg.catProcedures(), '', 'PROCEDURE')
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };

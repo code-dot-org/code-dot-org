@@ -10,7 +10,7 @@ import {
   deleteAnimation,
   setAnimationFrameDelay,
   setAnimationLooping,
-  isNameUnique
+  isNameUnique,
 } from '../redux/animationList';
 import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
@@ -42,7 +42,7 @@ class AnimationListItem extends React.Component {
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     isSpriteLab: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   getAnimationProps(props) {
@@ -56,7 +56,7 @@ class AnimationListItem extends React.Component {
     this.state = {
       frameDelay: frameDelay,
       name: name,
-      isNameValid: true
+      isNameValid: true,
     };
   }
 
@@ -68,7 +68,7 @@ class AnimationListItem extends React.Component {
     if (this.props.isSelected && !nextProps.isSelected) {
       this.setState({
         name: this.getAnimationProps(this.props).name,
-        isNameValid: true
+        isNameValid: true,
       });
     }
   }
@@ -181,13 +181,8 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {
-      allAnimationsSingleFrame,
-      isSelected,
-      isSpriteLab,
-      labType,
-      style
-    } = this.props;
+    const {allAnimationsSingleFrame, isSelected, isSpriteLab, labType, style} =
+      this.props;
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
@@ -262,10 +257,10 @@ const styles = {
     position: 'relative',
 
     border: 0,
-    margin: '5px 0 0 0'
+    margin: '5px 0 0 0',
   },
   selectedTile: {
-    backgroundColor: color.purple
+    backgroundColor: color.purple,
   },
   nameLabel: {
     marginLeft: 4,
@@ -274,12 +269,12 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     overflow: 'hidden',
-    fontSize: '13px'
+    fontSize: '13px',
   },
   nameInputWrapper: {
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 4
+    marginTop: 4,
   },
   nameInput: {
     width: '100%',
@@ -287,7 +282,7 @@ const styles = {
     padding: 0,
     textAlign: 'center',
     border: 'none',
-    borderRadius: 9
+    borderRadius: 9,
   },
   rightArrow: {
     width: 0,
@@ -297,8 +292,8 @@ const styles = {
     borderLeft: '10px solid ' + color.purple,
     position: 'absolute',
     right: '-10px',
-    top: 80
-  }
+    top: 80,
+  },
 };
 export default connect(
   state => ({
@@ -306,7 +301,7 @@ export default connect(
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
-    isSpriteLab: state.pageConstants.isBlockly
+    isSpriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => {
     return {
@@ -330,7 +325,7 @@ export default connect(
       },
       setAnimationFrameDelay(animationKey, frameDelay) {
         dispatch(setAnimationFrameDelay(animationKey, frameDelay));
-      }
+      },
     };
   }
 )(AnimationListItem);

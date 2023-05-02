@@ -342,7 +342,7 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+    has_lesson_plan && ScriptConfig.hoc_scripts.exclude?(script.name) ?
       script_lesson_edit_path(script, self) :
       edit_lesson_path(id: id)
   end
@@ -891,12 +891,10 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  private
-
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

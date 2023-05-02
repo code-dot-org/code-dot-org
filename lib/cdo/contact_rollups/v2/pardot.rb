@@ -259,11 +259,11 @@ class PardotV2
     # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
     post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
     true
-  rescue StandardError => e
+  rescue StandardError => exception
     # If the input pardot_id does not exist, Pardot will response with
     # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
-    return false if /Pardot request failed with HTTP 400/.match?(e.message)
-    raise e
+    return false if /Pardot request failed with HTTP 400/.match?(exception.message)
+    raise exception
   end
 
   # Finds prospects using email address and extract their Pardot ids.
@@ -272,11 +272,11 @@ class PardotV2
   def self.retrieve_pardot_ids_by_email(email)
     doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
     doc.xpath('//prospect/id').map(&:text)
-  rescue StandardError => e
+  rescue StandardError => exception
     # If the input email does not exist, Pardot will response with
     # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
-    return [] if /Pardot request failed with HTTP 400/.match?(e.message)
-    raise e
+    return [] if /Pardot request failed with HTTP 400/.match?(exception.message)
+    raise exception
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.

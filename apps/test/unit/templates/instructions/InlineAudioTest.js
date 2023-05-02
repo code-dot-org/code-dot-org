@@ -13,9 +13,9 @@ const DEFAULT_PROPS = {
   textToSpeechEnabled: true,
   style: {
     button: {},
-    buttonImg: {}
+    buttonImg: {},
   },
-  ttsAutoplayEnabled: false
+  ttsAutoplayEnabled: false,
 };
 
 // this is a helper function which is used in a test to
@@ -29,7 +29,7 @@ function getComponent(element) {
   return wrapper.at(0);
 }
 
-describe('InlineAudio', function() {
+describe('InlineAudio', function () {
   setExternalGlobals();
 
   let windowAudio;
@@ -43,11 +43,11 @@ describe('InlineAudio', function() {
     window.Audio = windowAudio;
   });
 
-  it('uses a given src if there is one', function() {
+  it('uses a given src if there is one', function () {
     const src = 'test';
     const component = getComponent(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         isK1={true}
         locale="en_us"
         src={src}
@@ -57,10 +57,10 @@ describe('InlineAudio', function() {
     assert.equal(src, result);
   });
 
-  it('generates a src from message text if none is given', function() {
+  it('generates a src from message text if none is given', function () {
     const component = getComponent(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         isK1={true}
         locale="en_us"
         message={'test'}
@@ -74,10 +74,10 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('does not generate src from message text if no voice is available for locale', function() {
+  it('does not generate src from message text if no voice is available for locale', function () {
     const component = getComponent(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         isK1={true}
         locale="aa_aa"
         message={'test'}
@@ -88,10 +88,10 @@ describe('InlineAudio', function() {
     assert.equal(result, undefined);
   });
 
-  it('can handle (select) non-english locales', function() {
+  it('can handle (select) non-english locales', function () {
     const component = getComponent(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         isK1={true}
         locale="it_it"
         message={'test'}
@@ -105,7 +105,7 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
+  it('renders controls if text-to-speech is enabled and sound is loaded', function () {
     const wrapper = mount(
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
@@ -116,7 +116,7 @@ describe('InlineAudio', function() {
     expect(wrapper.find('.inline-audio').exists()).to.be.true;
   });
 
-  it('can toggle audio', async function() {
+  it('can toggle audio', async function () {
     const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
@@ -128,10 +128,10 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.false;
   });
 
-  it('autoplays if autoplay of text-to-speech is enabled', async function() {
+  it('autoplays if autoplay of text-to-speech is enabled', async function () {
     const component = mount(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         ttsAutoplayEnabled={true}
       />
     );
@@ -143,7 +143,7 @@ describe('InlineAudio', function() {
   it('when playAudio resolves, state.playing set to true', async () => {
     const component = mount(
       <StatelessInlineAudio
-        assetUrl={function() {}}
+        assetUrl={function () {}}
         ttsAutoplayEnabled={false}
       />
     );
@@ -153,7 +153,7 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.true;
   });
 
-  it('only initializes Audio once', function() {
+  it('only initializes Audio once', function () {
     sinon.spy(window, 'Audio');
     const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
@@ -167,7 +167,7 @@ describe('InlineAudio', function() {
     sinon.restore();
   });
 
-  it('handles source update gracefully, stopping audio', async function() {
+  it('handles source update gracefully, stopping audio', async function () {
     const wrapper = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
     const component = wrapper.at(0);
     await component.instance().playAudio();

@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 export const freeResponsesDataPropType = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
-  response: PropTypes.string
+  response: PropTypes.string,
 });
 
 // Shapes for multiple choice overview
@@ -21,7 +21,7 @@ const multipleChoiceAnswerDataPropType = PropTypes.shape({
   numAnswered: PropTypes.number,
   isCorrect: PropTypes.bool,
   percentAnswered: PropTypes.number,
-  text: PropTypes.string
+  text: PropTypes.string,
 });
 
 // Represents a single question and a section summary of answers
@@ -31,7 +31,7 @@ export const multipleChoiceDataPropType = PropTypes.shape({
   questionNumber: PropTypes.number,
   answers: PropTypes.arrayOf(multipleChoiceAnswerDataPropType),
   totalAnswered: PropTypes.number.isRequired,
-  notAnswered: PropTypes.number.isRequired
+  notAnswered: PropTypes.number.isRequired,
 });
 
 // Shapes for single student multiple choice tables
@@ -43,7 +43,7 @@ export const multipleChoiceDataPropType = PropTypes.shape({
  */
 export const studentMCResponsePropType = PropTypes.shape({
   isCorrect: PropTypes.bool,
-  responses: PropTypes.string
+  responses: PropTypes.string,
 });
 
 // Represents a single student and a set of the student's answers for
@@ -51,14 +51,14 @@ export const studentMCResponsePropType = PropTypes.shape({
 export const studentWithMCResponsesPropType = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
-  studentResponses: PropTypes.arrayOf(studentMCResponsePropType)
+  studentResponses: PropTypes.arrayOf(studentMCResponsePropType),
 });
 
 // Represents a single multiple choice question structure
 export const multipleChoiceQuestionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
-  correctAnswer: PropTypes.string.isRequired
+  correctAnswer: PropTypes.string.isRequired,
 });
 
 // Summary of student answers for match and multiple choice questions
@@ -73,7 +73,7 @@ export const studentOverviewDataPropType = PropTypes.shape({
   submissionTimeStamp: PropTypes.instanceOf(Date).isRequired,
   isSubmitted: PropTypes.bool.isRequired,
   inProgress: PropTypes.bool.isRequired,
-  url: PropTypes.string
+  url: PropTypes.string,
 });
 
 // Shapes for match overview
@@ -82,7 +82,7 @@ export const studentOverviewDataPropType = PropTypes.shape({
 const answerMatchDataPropType = PropTypes.shape({
   answer: PropTypes.string,
   isCorrect: PropTypes.bool,
-  numAnswered: PropTypes.number
+  numAnswered: PropTypes.number,
 });
 
 // Represents a single option of a match question and a section summary of answers
@@ -91,7 +91,7 @@ export const optionDataPropTypeMatch = PropTypes.shape({
   totalAnswered: PropTypes.number,
   notAnswered: PropTypes.number,
   id: PropTypes.number,
-  answers: PropTypes.arrayOf(answerMatchDataPropType)
+  answers: PropTypes.arrayOf(answerMatchDataPropType),
 });
 
 // Represents a single match question and a section summary of answers
@@ -99,7 +99,7 @@ export const matchDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   questionNumber: PropTypes.number,
-  options: PropTypes.arrayOf(optionDataPropTypeMatch)
+  options: PropTypes.arrayOf(optionDataPropTypeMatch),
 });
 
 // Represents a single match question structure
@@ -107,7 +107,7 @@ export const matchDetailsQuestionPropType = PropTypes.shape({
   question: PropTypes.string.isRequired,
   questionType: PropTypes.string,
   answers: PropTypes.array,
-  options: PropTypes.array
+  options: PropTypes.array,
 });
 
 // Shapes for single student match tables
@@ -117,7 +117,7 @@ export const matchDetailsQuestionPropType = PropTypes.shape({
  * match question.
  */
 export const studentMatchResponsePropType = PropTypes.shape({
-  responses: PropTypes.array
+  responses: PropTypes.array,
 });
 
 // Represents a single student and a set of the student's answers for
@@ -125,7 +125,7 @@ export const studentMatchResponsePropType = PropTypes.shape({
 export const studentWithMatchResponsesPropType = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
-  studentResponses: PropTypes.arrayOf(studentMatchResponsePropType)
+  studentResponses: PropTypes.arrayOf(studentMatchResponsePropType),
 });
 
 // Represents a single match question structure
@@ -134,7 +134,7 @@ export const matchQuestionPropType = PropTypes.shape({
   question: PropTypes.string.isRequired,
   questionNumber: PropTypes.number.isRequired,
   answers: PropTypes.array,
-  options: PropTypes.array
+  options: PropTypes.array,
 });
 
 export const QUESTION_CHARACTER_LIMIT = 110;

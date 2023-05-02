@@ -67,8 +67,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
         send_as_csv_attachment workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
       end
     end
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   # GET /api/v1/pd/workshops/upcoming_teachercons
@@ -104,8 +104,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
-  rescue ArgumentError => e
-    render json: {error: e.message}, status: :bad_request
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   def to_geojson(workshops)
@@ -175,7 +175,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
       current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
-    if @workshop.update(workshop_params(can_update_regional_partner))
+    new_workshop_params = workshop_params(can_update_regional_partner)
+
+    workshop_start_date = Date.parse(new_workshop_params[:sessions_attributes].select {|s| s.key?(:start)}.min_by {|s| Date.parse(s[:start])}[:start])
+
+    if @workshop.virtual != new_workshop_params[:virtual] && user_cannot_freely_edit_virtual(new_workshop_params[:course], new_workshop_params[:subject], workshop_start_date)
+      render json: {error: "non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting."}, status: :bad_request
+    elsif @workshop.update(new_workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -187,7 +193,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-    if @workshop.save
+
+    if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
+      render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
+    elsif @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
@@ -236,9 +245,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
   end
 
-  private
-
-  def load_workshops
+  private def load_workshops
     # Load the workshop collection through scopes that include all associated users, not just the current user.
     #
     # Since CanCanCan filters collections with INNER JOIN on associations, loading a workshop
@@ -258,11 +265,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       end
   end
 
-  def should_notify?
+  private def should_notify?
     ActiveRecord::Type::Boolean.new.deserialize(params[:notify])
   end
 
-  def notify
+  private def notify
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
@@ -272,7 +279,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
   end
 
-  def adjust_facilitators
+  private def adjust_facilitators
     supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
     return unless supplied_facilitator_ids
 
@@ -294,7 +301,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
   end
 
-  def workshop_params(can_update_regional_partner = true)
+  private def workshop_params(can_update_regional_partner = true)
     allowed_params = [
       :location_name,
       :location_address,
@@ -311,12 +318,29 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :virtual,
       :suppress_email,
       :third_party_provider,
-      sessions_attributes: [:id, :start, :end, :_destroy],
+      {sessions_attributes: [:id, :start, :end, :_destroy]},
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
     allowed_params.delete :organizer_id unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     params.require(:pd_workshop).permit(*allowed_params)
+  end
+
+  # Determine if the 'virtual' workshop field cannot be freely set/updated by the user.
+  # Returns true if the following are all true:
+  #   - it is a CSP or CSA Summer Workshop
+  #   - the user is not a Workshop Admin
+  #   - it is being created within a month of it starting
+  # If true, then setting/updating 'virtual' is limited:
+  #   - when creating this workshop, 'virtual' can only be set as false (i.e. 'in-person').
+  #   - when editing this workshop, 'virtual' cannot be changed.
+  private def user_cannot_freely_edit_virtual(course, subject, start_date)
+    (
+      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(course) &&
+      subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP &&
+      !current_user.permission?(UserPermission::WORKSHOP_ADMIN) &&
+      (start_date - 1.month <= Time.zone.now && Time.zone.now <= start_date)
+    )
   end
 end

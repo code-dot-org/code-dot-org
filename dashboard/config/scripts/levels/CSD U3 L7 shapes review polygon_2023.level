@@ -52,7 +52,6 @@
     "long_instructions": "<img src=\"https://images.code.org/d1a93722806f1dab50a897dee280b107-image-1566945343071.PNG\" style=\"float:right;width:150px;\">\r\n\r\n# Review Regular Polygons\r\n\r\nReview how to use the [`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon) block to make even more shapes that you can use on your robot face!\r\n\r\nClick on the block and to view the documentation and remind yourself how it works!\r\n\r\n# Do This\r\n\r\n1) Read the code that makes the the current image.\r\n2) Add code to finish the drawing so it matches the picture\r\n\t- Use the [`regularPolygon()`(#4dd0e1)](/docs/ide/gamelab/expressions/regularPolygon) block to finish the code!\r\n\r\n",
     "parent_level_id": 19160,
     "name_suffix": "_2023",
-    "map_reference": "/courses/csd-2022/guides/shapes-and-parameters",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -64,7 +63,11 @@
     "encrypted_examples": "6mT6EL2Hwvxcx8dLar5rZUQe5zifMpZowCiXZFfgUqmv77tFtxghibW9C377\nuY7D+eUiFpPamPY7pGAYivpz/g==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/drawing-shapes"
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "bubble_choice_description": "Review how to create polygons with any number of sides. How can you use this block with your robot face?",
     "validation_enabled": "false",
@@ -76,7 +79,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-06T22:33:51.164+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes polygon_2023\\\"\"],\"cloned_from\":\"CSD U3 shapes polygon_2023\"},{\"changed_at\":\"2023-03-06 22:35:21 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 22:36:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:03:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:06:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-06T22:33:51.164+00:00\",\"changed\":[\"cloned from \\\"CSD U3 shapes polygon_2023\\\"\"],\"cloned_from\":\"CSD U3 shapes polygon_2023\"},{\"changed_at\":\"2023-03-06 22:35:21 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 22:36:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:03:55 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:06:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 00:07:54 +0000\",\"changed\":[\"code_functions\",\"map_reference\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

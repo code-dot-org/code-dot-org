@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import PatternPanel from '../views/PatternPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
+import {generateGraphDataFromPattern} from '../utils/Patterns';
+
+const FIELD_WIDTH = 32;
+const FIELD_HEIGHT = 18;
+const FIELD_PADDING = 2;
 
 /**
  * A custom field that renders the pattern editing UI, used in the
@@ -15,6 +20,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.options = options;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
+    this.backgroundElement = null;
   }
 
   saveState() {
@@ -35,6 +41,16 @@ class FieldPattern extends GoogleBlockly.Field {
     if (this.borderRect_) {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
+
+    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+      'g',
+      {
+        transform: 'translate(1,1)',
+      },
+      this.fieldGroup_
+    );
+
+    this.updateSize_();
   }
 
   applyColour() {
@@ -73,7 +89,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = 'white';
-    this.newDiv_.style.width = '400px';
+    this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = 'black';
     this.newDiv_.style.padding = '5px';
 
@@ -89,6 +105,10 @@ class FieldPattern extends GoogleBlockly.Field {
       <PatternPanel
         library={this.options.getLibrary()}
         initValue={this.getValue()}
+        bpm={this.options.getBPM()}
+        previewSound={this.options.previewSound}
+        previewPattern={this.options.previewPattern}
+        cancelPreviews={this.options.cancelPreviews}
         onChange={value => {
           this.setValue(value);
         }}
@@ -107,12 +127,63 @@ class FieldPattern extends GoogleBlockly.Field {
   }
 
   render_() {
-    super.render_();
+    if (this.backgroundElement) {
+      this.backgroundElement.innerHTML = '';
+    }
+
+    GoogleBlockly.utils.dom.createSvgElement(
+      'rect',
+      {
+        fill: '#292F36',
+        x: 1,
+        y: 1,
+        width: FIELD_WIDTH,
+        height: FIELD_HEIGHT,
+        rx: 3,
+      },
+      this.backgroundElement
+    );
+
+    const graphNotes = generateGraphDataFromPattern({
+      patternEventValue: this.getValue(),
+      width: FIELD_WIDTH,
+      height: FIELD_HEIGHT,
+      padding: FIELD_PADDING,
+      eventScale: 2,
+      library: this.options.getLibrary(),
+    });
+
+    graphNotes.forEach(graphNote => {
+      GoogleBlockly.utils.dom.createSvgElement(
+        'rect',
+        {
+          fill: 'white',
+          x: graphNote.x,
+          y: graphNote.y,
+          width: graphNote.width,
+          height: graphNote.height,
+          rx: 2,
+        },
+        this.backgroundElement
+      );
+    });
+
     this.renderContent();
   }
 
   getText() {
     return this.getValue().kit;
+  }
+
+  updateSize_() {
+    const width = FIELD_WIDTH + 2 * FIELD_PADDING;
+    const height = FIELD_HEIGHT + 2 * FIELD_PADDING;
+
+    this.borderRect_?.setAttribute('width', '' + width);
+    this.borderRect_?.setAttribute('height', '' + height);
+
+    this.size_.width = width;
+    this.size_.height = height;
   }
 }
 

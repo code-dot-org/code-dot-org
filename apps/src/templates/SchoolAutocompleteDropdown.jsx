@@ -14,28 +14,28 @@ export default class SchoolAutocompleteDropdown extends Component {
     fieldName: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
   };
 
   state = {
     knownValue: null,
-    knownLabel: null
+    knownLabel: null,
   };
 
   static defaultProps = {
     fieldName: 'nces_school_s',
-    schoolFilter: () => true
+    schoolFilter: () => true,
   };
 
   constructSchoolOption = school => ({
     value: school.nces_id.toString(),
     label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`,
-    school: school
+    school: school,
   });
 
   constructSchoolNotFoundOption = () => ({
     value: '-1',
-    label: i18n.schoolNotFound()
+    label: i18n.schoolNotFound(),
   });
 
   /**
@@ -80,7 +80,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     if (q.length === 0 && this.props.value) {
       if (this.props.value === '-1') {
         return Promise.resolve({
-          options: [this.constructSchoolNotFoundOption()]
+          options: [this.constructSchoolNotFoundOption()],
         });
       } else {
         const getUrl = `/dashboardapi/v1/schools/${this.props.value}`;

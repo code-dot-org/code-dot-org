@@ -7,23 +7,23 @@ describe('Matrix Choice Responses', () => {
   const sampleMatrixAnswers = {
     best_pd: {7: 2},
     feel_community: {2: 1, 7: 1},
-    more_prepared: {4: 1, 5: 1}
+    more_prepared: {4: 1, 5: 1},
   };
 
   const sampleFacilitators = {
-    '1': 'Facilitator 1',
-    '2': 'Facilitator 2'
+    1: 'Facilitator 1',
+    2: 'Facilitator 2',
   };
 
   const sampleQuestion = {
     columns: {
-      '1': 'Strongly Disagree',
-      '2': 'Disagree',
-      '3': 'Slightly Disagree',
-      '4': 'Neutral',
-      '5': 'Slightly Agree',
-      '6': 'Agree',
-      '7': 'Strongly Agree'
+      1: 'Strongly Disagree',
+      2: 'Disagree',
+      3: 'Slightly Disagree',
+      4: 'Neutral',
+      5: 'Slightly Agree',
+      6: 'Agree',
+      7: 'Strongly Agree',
     },
     rows: {
       best_pd:
@@ -33,9 +33,9 @@ describe('Matrix Choice Responses', () => {
       more_prepared:
         'I feel more prepared to teach the material covered in this workshop than before I came.',
       suitable_my_level:
-        'This professional development was suitable for my level of experience with teaching CS.'
+        'This professional development was suitable for my level of experience with teaching CS.',
     },
-    title: 'sample'
+    title: 'sample',
   };
 
   it('only renders matrix rows with answers', () => {
@@ -59,17 +59,17 @@ describe('Matrix Choice Responses', () => {
 
   it('pulls out facilitator data correctly', () => {
     const facilitatorMatrixData = {
-      '1': {
+      1: {
         best_pd: {7: 2},
         feel_community: {2: 1, 7: 1},
-        more_prepared: {4: 1, 5: 1}
+        more_prepared: {4: 1, 5: 1},
       },
-      '2': {
+      2: {
         best_pd: {6: 1},
         feel_community: {1: 1, 2: 1, 3: 1},
         more_prepared: {6: 1, 7: 1},
-        suitable_my_level: {5: 2}
-      }
+        suitable_my_level: {5: 2},
+      },
     };
 
     const matrixChoiceResponses = mount(
@@ -87,25 +87,19 @@ describe('Matrix Choice Responses', () => {
     expect(choiceResponses).to.have.length(4);
 
     const expectedPdAnswers = {
-      '1': {7: 2},
-      '2': {6: 1}
+      1: {7: 2},
+      2: {6: 1},
     };
-    expect(
-      choiceResponses
-        .first()
-        .props()
-        .answers.toString()
-    ).to.equal(expectedPdAnswers.toString());
+    expect(choiceResponses.first().props().answers.toString()).to.equal(
+      expectedPdAnswers.toString()
+    );
 
     // suitable_my_level only had a response for facilitator 2
     const expectedSuitableAnswers = {
-      '2': {5: 2}
+      2: {5: 2},
     };
-    expect(
-      choiceResponses
-        .last()
-        .props()
-        .answers.toString()
-    ).to.equal(expectedSuitableAnswers.toString());
+    expect(choiceResponses.last().props().answers.toString()).to.equal(
+      expectedSuitableAnswers.toString()
+    );
   });
 });

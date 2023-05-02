@@ -3,11 +3,11 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import ImageInput from './ImageInput';
+import ImageInput from '../ImageInput';
 
 const APP_DISPLAY_OPTIONS = {
   embedAppWithCode: 'Embed app with code directly',
-  codeFromCodeField: 'Display app with code from code field above'
+  codeFromCodeField: 'Display app with code from code field above',
 };
 
 const DEFAULT_EMBED_HEIGHT = 400;
@@ -86,7 +86,7 @@ export default function ExampleEditor({example, updateExample}) {
 
 ExampleEditor.propTypes = {
   example: PropTypes.object,
-  updateExample: PropTypes.func
+  updateExample: PropTypes.func,
 };
 
 const styles = {
@@ -97,7 +97,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -106,6 +106,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginLeft: 5,
-    width: 350
-  }
+    width: 350,
+  },
 };

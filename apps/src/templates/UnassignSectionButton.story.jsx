@@ -13,7 +13,7 @@ export default storybook => {
           sectionId={assignedSection.id}
           unassignSection={action('unassignSection')}
         />
-      )
-    }
+      ),
+    },
   ]);
 };

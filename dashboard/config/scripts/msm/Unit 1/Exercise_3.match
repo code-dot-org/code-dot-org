@@ -15,3 +15,4 @@ answer '(480, 100)'
 
 question "Ninjacat"
 answer '(320, 240)'
+allow_multiple_attempts true

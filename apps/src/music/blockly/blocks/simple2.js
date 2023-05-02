@@ -6,15 +6,17 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
-  FIELD_EFFECTS_VALUE
+  FIELD_EFFECTS_VALUE,
+  FIELD_CHORD_NAME,
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
-  fieldRestDurationDefinition
+  fieldRestDurationDefinition,
+  fieldChordDefinition,
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
-import {DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -87,7 +89,7 @@ export const whenRunSimple2 = {
     nextStatement: null,
     style: 'setup_blocks',
     tooltip: 'when run',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: () =>
     `
@@ -100,7 +102,7 @@ export const whenRunSimple2 = {
       ProgramSequencer.init();
       ProgramSequencer.playSequential();
       RandomSkipManager.init();
-    `
+    `,
 };
 
 export const triggeredAtSimple2 = {
@@ -110,14 +112,14 @@ export const triggeredAtSimple2 = {
     args0: [
       {
         type: 'input_dummy',
-        name: TRIGGER_FIELD
-      }
+        name: TRIGGER_FIELD,
+      },
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: 'at trigger',
-    extensions: [DYNAMIC_TRIGGER_EXTENSION]
+    extensions: [DYNAMIC_TRIGGER_EXTENSION],
   },
   generator: block =>
     ` var __insideWhenRun = false;
@@ -125,13 +127,12 @@ export const triggeredAtSimple2 = {
         name: '${block.getFieldValue(TRIGGER_FIELD)}',
         uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
       };
+      var __effects = {};
       ProgramSequencer.playSequentialWithMeasure(
-        Math.ceil(
-          MusicPlayer.getCurrentPlayheadPosition()
-        )
+        Math.ceil(startPosition)
       );
       RandomSkipManager.init();
-    `
+    `,
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -144,7 +145,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'play sound',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block =>
     `
@@ -155,28 +156,28 @@ export const playSoundAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
-        MusicPlayer.getLengthForId(
+        MusicLibrary.getLengthForId(
           "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
         )
       );
-    `
+    `,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'play pattern %1',
+    message0: 'play drums %1',
     args0: [fieldPatternDefinition],
-
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'play pattern',
-    helpUrl: ''
+    tooltip: 'play drums',
+    helpUrl: '',
   },
   generator: block =>
     `
@@ -187,12 +188,43 @@ export const playPatternAtCurrentLocationSimple2 = {
         null,
         __currentFunction,
         RandomSkipManager.getSkipContext(),
-        __effects
+        __effects,
+        "${block.id}"
       );
       ProgramSequencer.updateMeasureForPlayByLength(
         ${DEFAULT_PATTERN_LENGTH}
       );
+    `,
+};
+
+export const playChordAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: 'play notes %1',
+    args0: [fieldChordDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: 'play notes',
+    helpUrl: '',
+  },
+  generator: block =>
     `
+      MusicPlayer.playChordAtMeasure(
+        ${JSON.stringify(block.getFieldValue(FIELD_CHORD_NAME))},
+        ProgramSequencer.getCurrentMeasure(),
+        __insideWhenRun,
+        null,
+        __currentFunction,
+        RandomSkipManager.getSkipContext(),
+        __effects,
+        "${block.id}"
+      );
+      ProgramSequencer.updateMeasureForPlayByLength(
+        ${DEFAULT_CHORD_LENGTH}
+      );
+    `,
 };
 
 export const playRestAtCurrentLocationSimple2 = {
@@ -205,14 +237,14 @@ export const playRestAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'rest',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block =>
     `
       ProgramSequencer.updateMeasureForPlayByLength(
         ${block.getFieldValue(FIELD_REST_DURATION_NAME)}
       );
-    `
+    `,
 };
 
 export const setEffectAtCurrentLocationSimple2 = {
@@ -226,21 +258,25 @@ export const setEffectAtCurrentLocationSimple2 = {
         options: [
           ['volume', 'volume'],
           ['filter', 'filter'],
-          ['delay', 'delay']
-        ]
+          ['delay', 'delay'],
+        ],
       },
       {
         type: 'field_dropdown',
         name: FIELD_EFFECTS_VALUE,
-        options: [['normal', ''], ['medium', 'medium'], ['low', 'low']]
-      }
+        options: [
+          ['normal', ''],
+          ['medium', 'medium'],
+          ['low', 'low'],
+        ],
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: 'set effect',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
@@ -248,7 +284,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     return `
       __effects.${effectName} = '${effectValue}';
     `;
-  }
+  },
 };
 
 export const playSoundsTogether = {
@@ -260,21 +296,21 @@ export const playSoundsTogether = {
     args1: [
       {
         type: 'input_statement',
-        name: 'code'
-      }
+        name: 'code',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: 'play sounds together',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block =>
     ` ProgramSequencer.playTogether();
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endTogether();
-    `
+    `,
 };
 
 export const playSoundsSequential = {
@@ -286,21 +322,21 @@ export const playSoundsSequential = {
     args1: [
       {
         type: 'input_statement',
-        name: 'code'
-      }
+        name: 'code',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: 'play sounds sequentially',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block =>
     ` ProgramSequencer.playSequential();
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       ProgramSequencer.endSequential();
-      `
+      `,
 };
 
 export const playSoundsRandom = {
@@ -312,15 +348,15 @@ export const playSoundsRandom = {
     args1: [
       {
         type: 'input_statement',
-        name: 'code'
-      }
+        name: 'code',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: 'play sound randomly',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block => {
     const resultArray = [];
@@ -346,7 +382,7 @@ export const playSoundsRandom = {
       ProgramSequencer.endTogether();
       RandomSkipManager.endRandomContext();
       `;
-  }
+  },
 };
 
 export const repeatSimple2 = {
@@ -355,31 +391,29 @@ export const repeatSimple2 = {
     message0: 'repeat %1 times',
     args0: [
       {
-        type: 'input_value',
-        name: 'times'
-      }
+        type: 'field_number',
+        name: 'times',
+        value: 1,
+        min: 0,
+        max: 100,
+      },
     ],
     message1: 'do %1',
     args1: [
       {
         type: 'input_statement',
-        name: 'code'
-      }
+        name: 'code',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
     tooltip: 'repeat',
-    helpUrl: ''
+    helpUrl: '',
   },
   generator: block => {
-    const repeats =
-      Blockly.JavaScript.valueToCode(
-        block,
-        'times',
-        Blockly.JavaScript.ORDER_ASSIGNMENT
-      ) || 0;
+    const repeats = block.getFieldValue('times');
 
     let branch = Blockly.JavaScript.statementToCode(block, 'code');
     branch = Blockly.JavaScript.addLoopTrap(branch, block);
@@ -389,13 +423,11 @@ export const repeatSimple2 = {
       Blockly.Names.NameType.VARIABLE
     );
     let endVar = repeats;
-    if (!repeats.match(/^\w+$/) && !Blockly.utils.string.isNumber(repeats)) {
-      endVar = Blockly.JavaScript.nameDB_.getDistinctName(
-        'repeat_end',
-        Blockly.Names.NameType.VARIABLE
-      );
-      code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    }
+    endVar = Blockly.JavaScript.nameDB_.getDistinctName(
+      'repeat_end',
+      Blockly.Names.NameType.VARIABLE
+    );
+    code += 'var ' + endVar + ' = ' + repeats + ';\n';
     code +=
       'for (var ' +
       loopVar +
@@ -414,5 +446,5 @@ export const repeatSimple2 = {
       ${code}
       ProgramSequencer.endSequential();
       `;
-  }
+  },
 };

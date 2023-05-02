@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-09-21T13:17:40.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -15,7 +11,7 @@
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -48,7 +44,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "see contained level",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -67,11 +63,19 @@
       "CSD U6 - Music - PredictSong_2023"
     ],
     "teacher_markdown": "This level formally introduces students to arrays, which are like lists. Students have already been using arrays without realizing it - the [`colorLeds`(#f78183)](/docs/applab/colorLeds/) are an array of lights on the Circuit Playground. The array in this level works similar to the colorLeds. Help students notice the following:\r\n- Both arrays use square brackets `[]` with numbers inside to represent the position in the array\r\n- Both arrays seem to start with 0\r\n- The `notes` array is defined at the top of the code with a `var` block, but `colorLEDs` aren't defined anyway\r\n\r\nStudents will learn more about arrays in the video in the next lesson",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "video_key": "csd_applab_arrays"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-09-21T13:17:40.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.870+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.1_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:40.870+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.1_2022\"},{\"changed_at\":\"2023-03-15 18:37:28 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"makerlab_enabled\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

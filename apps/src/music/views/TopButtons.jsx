@@ -5,6 +5,7 @@ import {AnalyticsContext} from '../context';
 import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
+import musicLocale from '../locale';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
@@ -52,7 +53,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={startOverClicked}
       >
         <FontAwesome icon={'refresh'} />
-        &nbsp; Start Over
+        &nbsp; {musicLocale.startOver()}
       </button>
       <button
         type="button"
@@ -60,7 +61,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onShareClicked}
       >
         <FontAwesome icon={'share-square-o'} />
-        &nbsp; Share
+        &nbsp; {musicLocale.share()}
         <div
           className={classNames(
             moduleStyles.shareComingSoon,
@@ -68,7 +69,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
           )}
         >
           <FontAwesome icon={'clock-o'} />
-          &nbsp; Sharing is under construction. Check back soon.
+          &nbsp; {musicLocale.shareComingSoon()}
         </div>
       </button>
       <button
@@ -77,7 +78,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onFeedbackClicked}
       >
         <FontAwesome icon={'commenting'} />
-        &nbsp; Feedback
+        &nbsp; {musicLocale.feedback()}
       </button>
       {showUploadSound && (
         <fieldset>
@@ -94,7 +95,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
             id="compress_btn"
             className={moduleStyles.button}
           >
-            Upload
+            {musicLocale.upload()}
           </button>
         </fieldset>
       )}
@@ -104,7 +105,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
 
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
-  uploadSound: PropTypes.func.isRequired
+  uploadSound: PropTypes.func.isRequired,
 };
 
 export default TopButtons;

@@ -18,7 +18,7 @@ describe('StudentHomepage', () => {
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
     isEnglish: true,
-    showVerifiedTeacherWarning: false
+    showVerifiedTeacherWarning: false,
   };
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
@@ -27,7 +27,7 @@ describe('StudentHomepage', () => {
     assert.deepEqual(headerBanner.props(), {
       headingText: 'My Dashboard',
       short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg'
+      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg',
     });
   });
 
@@ -43,7 +43,7 @@ describe('StudentHomepage', () => {
       courses: courses,
       topCourse: topCourse,
       isTeacher: false,
-      hasFeedback: false
+      hasFeedback: false,
     });
   });
 
@@ -56,7 +56,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const joinSectionArea = wrapper.find('JoinSectionArea');
     assert.deepEqual(joinSectionArea.props(), {
-      initialJoinedStudentSections: joinedSections
+      initialJoinedStudentSections: joinedSections,
     });
   });
 

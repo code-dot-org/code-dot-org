@@ -1,5 +1,5 @@
 module Pd::Payment
-  # Payment model for counselor and admin workshops.
+  # Payment model for Admin/Counselor workshops.
   class PaymentCalculatorCounselorAdmin < PaymentCalculatorBase
     PLP_URBAN_MULTIPLIER = 1.25
     FOOD_PAYMENT_PER_TEACHER_PER_DAY = 20

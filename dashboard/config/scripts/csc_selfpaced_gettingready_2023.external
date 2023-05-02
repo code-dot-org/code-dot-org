@@ -1,0 +1,45 @@
+name 'CSC-SelfPaced-gettingready_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Ready 
+
+<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" alt="Image of a cartoon bird wearing a hat" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+## Suggested Planning Activities
+
+<hr style="clear:left">
+
+#### **Pick a module to add to your scope and sequence** 
+##### When does the module best fit into what you are already teaching?
+
+#### **Consider co-teaching** 
+##### What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
+
+#### **Make modifications or accomodations**
+##### How will you adapt the lessons to best meet your students' needs?
+
+
+
+## Suggested Preparing Activities
+
+<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
+<hr style="clear:left">
+
+#### **Preview lessons**
+##### What lessons (CS or core content) might you need to teach before teaching the module?
+##### What CS concepts or skills might be challenging for your students?  
+##### When will students need support debugging?
+
+#### **Develop a general lesson flow**
+##### When will teacher-led learning happen as a whole group?  
+##### When will student-led learning happen for individual students or pairs?
+
+#### **Keep the end in mind**
+##### What final project are students working towards?  
+##### How will students showcase and share their final projects?
+
+
+MARKDOWN

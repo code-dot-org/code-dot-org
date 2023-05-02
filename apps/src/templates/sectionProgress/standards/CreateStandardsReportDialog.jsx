@@ -13,11 +13,11 @@ export class CreateStandardsReportDialog extends Component {
     handleConfirm: PropTypes.func.isRequired,
     handleNext: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    onCommentChange: PropTypes.func.isRequired
+    onCommentChange: PropTypes.func.isRequired,
   };
 
   state = {
-    currentPage: 1
+    currentPage: 1,
   };
 
   handleNext = () => {
@@ -66,17 +66,18 @@ export class CreateStandardsReportDialog extends Component {
 
 const styles = {
   description: {
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+  },
 };
 
-export const UnconnectedCreateStandardsReportDialog = CreateStandardsReportDialog;
+export const UnconnectedCreateStandardsReportDialog =
+  CreateStandardsReportDialog;
