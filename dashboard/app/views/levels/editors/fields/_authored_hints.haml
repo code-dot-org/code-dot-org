@@ -67,6 +67,15 @@
             'markdown',
             {
               callback: function(editor, change) {
+                //Looking for `.markdown_preview div --> div --> [XML Blockly divs]` structure
+                //gets .markdown_preview div
+                let parent = space.find('.markdown_preview').get(0); 
+                //When XML is inserted, it creates a smaller div
+                let subParent = parent.querySelector("div");
+                //And then inside that div is where all of the Blockly XML divs are located that I want to delete
+                //If there aren't any divs: the querySelectors will gracefull fail without erroring because there's nothing to query or remove
+                subParent.querySelectorAll("div").forEach((e) => {e.remove()});
+                //Original code follows
                 convertXmlToBlockly(space.find('.markdown_preview').get(0));
                 space.find('.hint_markdown').val(editor.getValue());
                 space.find('.hint_markdown').trigger('change');
