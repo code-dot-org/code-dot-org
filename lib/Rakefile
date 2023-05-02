@@ -1,6 +1,6 @@
 require 'rake/testtask'
 
-desc 'Run tests for lib directory'
+desc 'Run tests for lib/ directory'
 task :test do
   puts 'starting test task'
   Rake::TestTask.new do |t|
