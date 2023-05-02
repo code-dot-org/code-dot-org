@@ -1,11 +1,11 @@
 name: Test Results Reporter
-# on:
-#   check_suite:
-#     types: [completed]
 on:
-  push:
-    branches:
-      - 'seth/github-action-*'
+  check_suite:
+    types: [completed]
+# on:
+#   push:
+#     branches:
+#       - 'seth/github-action-*'
 jobs:
   test-reporter:
     runs-on: ubuntu-latest
@@ -17,8 +17,8 @@ jobs:
         uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
-          # source: s3://cdo-test-results-public/$GITHUB_SHA
-          source: s3://cdo-test-results-public/0fd1c41d87ee9662a0474a245324ee0f12be0574/
+          source: s3://cdo-test-results-public/$GITHUB_SHA
+          # source: s3://cdo-test-results-public/0fd1c41d87ee9662a0474a245324ee0f12be0574/
           destination: ./test-results
           aws_region: us-west-2
           flags: --recursive --no-sign-request
