@@ -176,7 +176,8 @@ Then produce a build:
 npm run build
 ```
 
-Then publish the build, skipping the option to adjust the build version:
+Then publish the build, skipping the option to adjust the build version.
+User name and password for shared account are available in password manager:
 
 ```
 yarn publish
