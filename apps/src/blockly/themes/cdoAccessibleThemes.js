@@ -1,54 +1,55 @@
 import GoogleBlockly from 'blockly/core';
+import {Themes} from '../constants';
 import {
   deuteranopiaBlockStyles,
   protanopiaBlockStyles,
-  tritanopiaBlockStyles
+  tritanopiaBlockStyles,
 } from './cdoAccessibleStyles';
 
 export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdoprotanopia',
+  Themes.PROTANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: protanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: '"Gotham 4r", sans-serif',
     },
-    startHats: null
+    startHats: null,
   }
 );
 
 export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdodeuteranopia',
+  Themes.DEUTERANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: deuteranopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: '"Gotham 4r", sans-serif',
     },
-    startHats: null
+    startHats: null,
   }
 );
 
 export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
-  'cdotritanopia',
+  Themes.TRITANOPIA,
   {
     base: GoogleBlockly.Themes.Classic,
     blockStyles: tritanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: '"Gotham 4r", sans-serif',
     },
-    startHats: null
+    startHats: null,
   }
 );

@@ -24,7 +24,7 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   gamelab: 'https://code.org/educate/gamelab',
   gamelab_legacy: 'https://code.org/educate/gamelab',
   playlab: '/p/playlab',
-  playlab_legacy: '/s/playlab'
+  playlab_legacy: '/s/playlab',
 };
 
 /**
@@ -34,12 +34,12 @@ export default class WireframeButtons extends React.Component {
   static propTypes = {
     channelId: PropTypes.string,
     appType: PropTypes.string.isRequired,
-    isLegacyShare: PropTypes.bool.isRequired
+    isLegacyShare: PropTypes.bool.isRequired,
   };
 
   state = {
     // "Send to phone" button is a toggle that shows and hides send to phone form.
-    clickedSendToPhone: false
+    clickedSendToPhone: false,
   };
 
   handleClickSendToPhone = () => {
@@ -93,7 +93,7 @@ const NewProjectButton = ({url}) => (
   </span>
 );
 NewProjectButton.propTypes = {
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 const SendToPhoneButton = ({active, onClick}) => (
@@ -108,7 +108,7 @@ const SendToPhoneButton = ({active, onClick}) => (
 );
 SendToPhoneButton.propTypes = {
   active: PropTypes.bool,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 // ESLint doesn't seem to understand our inherited-proptypes pattern here
@@ -126,23 +126,23 @@ const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
 SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
   'appType',
   'channelId',
-  'isLegacyShare'
+  'isLegacyShare',
 ]);
 /* eslint-enable react/prop-types */
 
 const styles = {
   main: {
-    font: '12pt "Gotham 5r", sans-serif'
+    font: '12pt "Gotham 5r", sans-serif',
   },
   sendToPhone: {
     label: {
       font: '12pt "Gotham 5r", sans-serif',
       lineHeight: 'normal',
-      cursor: 'default'
+      cursor: 'default',
     },
     div: {
       margin: 0,
-      lineHeight: 'normal'
-    }
-  }
+      lineHeight: 'normal',
+    },
+  },
 };

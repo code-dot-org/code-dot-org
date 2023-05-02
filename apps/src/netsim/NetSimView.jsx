@@ -9,7 +9,7 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 export default class NetSimView extends React.Component {
   static propTypes = {
     generateCodeAppHtml: PropTypes.func.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {

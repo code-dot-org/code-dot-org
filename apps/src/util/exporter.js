@@ -5,7 +5,8 @@ import $ from 'jquery';
 import download from '../assetManagement/download';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
-const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
+const soundRegex =
+  /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
 
 export function extractSoundAssets(options) {
   const {sources, rootRelativeAssetPrefix, zipAssetPrefix} = options;
@@ -23,13 +24,13 @@ export function extractSoundAssets(options) {
       zipPath: zipAssetPrefix + filename,
       dataType: 'binary',
       filename,
-      searchUrl: soundProtocolUrl
+      searchUrl: soundProtocolUrl,
     };
   });
 }
 
 export function rewriteAssetUrls(appAssets, data) {
-  return appAssets.reduce(function(data, assetToDownload) {
+  return appAssets.reduce(function (data, assetToDownload) {
     const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
     data = data.replace(
       new RegExp(`["|']${assetToDownload.url}["|']`, 'g'),

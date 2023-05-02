@@ -3,8 +3,8 @@
 var assert = require('assert');
 import ProgramSequencer from '@cdo/apps/music/player/ProgramSequencer';
 
-describe('Music program sequencer tests', function() {
-  it('nesting test', function() {
+describe('Music program sequencer tests', function () {
+  it('nesting test', function () {
     const programSequencer = new ProgramSequencer();
     programSequencer.init();
 

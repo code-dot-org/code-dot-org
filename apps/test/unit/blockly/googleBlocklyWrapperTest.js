@@ -1,4 +1,3 @@
-/* global Blockly */
 import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
@@ -80,7 +79,7 @@ describe('Google Blockly Wrapper', () => {
       'weblab_locale',
       'Workspace',
       'WorkspaceSvg',
-      'Xml'
+      'Xml',
     ];
     readOnlyProperties.forEach(property => {
       expect(() => {

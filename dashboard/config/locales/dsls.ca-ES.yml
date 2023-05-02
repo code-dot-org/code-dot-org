@@ -829,6 +829,7 @@ ca-ES:
         - correct: true
         questions:
         - {}
+        title: Fes una predicció
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -837,6 +838,7 @@ ca-ES:
         - correct: true
         questions:
         - {}
+        title: Fes una predicció
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -845,6 +847,7 @@ ca-ES:
         - correct: true
         questions:
         - {}
+        title: Fes una predicció
       Internet Simulator Setup:
         content1: Descripció aquí
       Internet Simulator Setup 2:
@@ -1368,7 +1371,7 @@ ca-ES:
         - text: El BB-8 es mourà 5 vegades i recollirà tota la ferralla.
           correct: true
           feedback: Correcte!
-        - {}
+        - text: No ho sé
         questions:
         - text: Què creus que passarà quan facis clic a "Executar"?
       courseC_multi_starWars_predict1_2018:
@@ -1380,7 +1383,7 @@ ca-ES:
         - text: El BB-8 es mourà 5 vegades i recollirà tota la ferralla.
           correct: true
           feedback: Correcte!
-        - {}
+        - text: No ho sé
         questions:
         - text: Què creus que passarà quan facis clic a "Executar"?
       courseC_multi_starWars_predict1_2018_2019:
@@ -1392,7 +1395,7 @@ ca-ES:
         - text: El BB-8 es mourà 5 vegades i recollirà tota la ferralla.
           correct: true
           feedback: Correcte!
-        - {}
+        - text: No ho sé
         questions:
         - text: Què creus que passarà quan facis clic a "Executar"?
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1404,7 +1407,7 @@ ca-ES:
         - text: El BB-8 es mourà 5 vegades i recollirà tota la ferralla.
           correct: true
           feedback: Correcte!
-        - {}
+        - text: No ho sé
         questions:
         - text: Què creus que passarà quan facis clic a "Executar"?
       courseC_multi_starWars_predict2:
@@ -2770,8 +2773,115 @@ ca-ES:
         display_name: Joc lliure
       CourseF_outbreak_story:
         content1: Descripció aquí
+        markdown: "# Brot: Programa la teva simulació\n\n## Benvinguts a la Ciutat
+          dels Monstres!\nLa Ciutat dels Monstres sempre ha estat un lloc alegre i
+          segur. Als monstres de la Ciutat dels Monstres els agradava molt deambular
+          d’aquí cap allà i anar a veure els seus amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn dia, un dels monstres es va començar a trobar
+          malament. Havia agafat un **virus**! Un virus és un germen diminut que pot
+          fer que et posis malalt. Els altres monstres no es van preocupar gaire,
+          i van seguir anant a veure els amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUns dies més tard, dos monstres més es van posar
+          malalts. Tenien el mateix virus! Sembla ser que el van agafar del seu amic.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nA poc a poc, el virus es va anar escampant cap als
+          altres monstres que vivien a prop. Els monstres sans es van començar a preocupar
+          per si tothom es posava malalt. Els monstres malalts es van començar a preocupar
+          per si contagiaven els altres del virus.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Frenem els contagis\nPer sort, després
+          d’analitzar el virus, els veïns de la Ciutat dels Monstres van fer un descobriment
+          molt important. Es van adonar que era menys probable que agafessin el virus
+          si es tapaven la boca amb una mascareta. Amb las mascaretes posades, era
+          menys probable que els monstres malalts contagiessin els monstres sans.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          I què passarà ara?\n\nAvui escriuràs codi per crear i executar la vostra
+          pròpia **simulació** del brot víric de la Ciutat dels Monstres. Una simulació
+          és un model informàtic d’un procés o un sistema. Aprèn a programar-ne una
+          i fes prediccions sobre què els passarà als veïns de la Ciutat dels Monstres.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Com de ràpid s’escamparà el virus?*\n\n*
+          *Tothom es posarà malalt?* \n\n* *Ajudaran les mascaretes?*\n\n\nQuan acabis,
+          comparteix la teva simulació. Comparteix el teu missatge sobre què creus
+          que podem fer per ajudar els altres a mantenir la salut quan arriba un virus."
       CourseF_outbreak_story2:
         content1: Descripció aquí
+        markdown: |-
+          # Brot: Pensa com un científic
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Les simulacions ens permeten aprendre coses que poden ser difícils d’observar en el món real. Ajuden els científics a resoldre problemes i posar a prova idees noves d’una manera segura i efectiva. Aquesta simulació és una manera de mostrar quin aspecte podria tenir un brot víric a la Ciutat dels Monstres.
+
+          ## Torna a començar i juga-hi un altre cop!
+          Fins i tot quan tu mateix has escrit el codi, és impossible saber què passarà exactament quan facis clic a Executar. Els monstres deambulen aleatòriament, de manera que no sabem si el virus s’escamparà ràpida o lentament. Facis els canvis que facis al teu codi, assegura’t d’executar la simulació més d’una vegada. Res no passarà igual dues vegades!
+
+          ## Recopilació de dades
+          Prova de prendre nota de les teves observacions mentre executes la simulació. Pots comptar quants monstres es posen malalts o fer servir un cronòmetre per veure a quina velocitat passen les coses. Per exemple, quanta estona passa normalment fins que tots els monstres es posin malalts si cap porta mascareta?
+
+          ## Fer prediccions
+          Si entens bé el teu model, el podràs utilitzar per fer prediccions. Fins i tot podràs canviar com s’executa la simulació i esbrinar què funcionarà diferent. Per exemple:
+          * Què passaria si hi hagués el doble de monstres?
+          * Què passaria si els monstres es moguessin a la meitat de velocitat?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## La Ciutat dels Monstres és com el món real?
+          Sempre hi ha un límit de com de realistes poden ser els models.
+          * Què té en comú la teva simulació d’un brot amb els brots vírics del món real?
+          * En què es diferencien?
+          Quan acabis l’activitat, comenta aquestes qüestions amb els teus professor o familiars!
+
+          ## Sobre què més es poden fer models?
+          Ara ja has crear un model d’un brot víric a la Ciutat dels Monstres. Quines coses no pot fer o mostrar la teva simulació que t’agradaria que pogués fer? Fes clic a continuar per seguir avançant i aprendre a fer un model més complet:
+          * Augmentar el nombre de monstres de la simulació
+          * Ajudar els monstres a recuperar-se del virus
+          * Probabilitat, immunitat, vacunes i molt més!
+
+          També pots compartir el teu model de simulació amb qui vulguis, o compartir un missatge sobre què creus que podem fer per ajudar els altres a mantenir-se sans quan arriba un virus.
       OPD-K5 Stage3aGo_dani:
         content1: Descripció aquí
       courseC_multi_artist_prog6_predict1_2021:
@@ -2921,13 +3031,20 @@ ca-ES:
         - text: Llegeix el codi i fes una predicció.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Una pizza en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables no coincideixen.
+        - text: '"Un àpat en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+        - text: '"Un menjar en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+        - text: '"Un  en marxa!"'
+          correct: true
+          feedback: Correcte! Les etiquetes de les variables no coincideixen.
+        - text: No s'escriurà res.
+          feedback: Incorrecte. L'esdeveniment i el bloc d'escriure seguiran funcionant.
         questions:
-        - {}
+        - text: Aquest codi potser et sona, però llegeix-lo detingudament. Què s'escriurà
+            si l'usuari introdueix "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artista dibuixarà un triangle amb costats de 50 píxels.
@@ -3002,6 +3119,22 @@ ca-ES:
             passarà un cop hagis respost a la pregunta?'
       courseF_variables_stop:
         content1: Descripció aquí
+        markdown: |-
+          # Ep!
+
+          ## Estàs segur que ho tens tot llest per avançar?
+
+
+          Al nivell següent començaràs a escriure el codi del teu projecte, i sempre és millor fer-ho quan ens planifiquem bé.
+
+          La teva planificació hauria d’incloure:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * El tipus de projecte que estàs desenvolupant. Per exemple, una targeta de felicitació, un xat bot, o una història d’espais buits.
+          * La llista de preguntes que faràs a l’usuari.
+          * Qualsevol altre text que mostraràs en pantalla.
+          * Una descripció o dibuix dels sprites que necessitaràs (i dels seus comportaments).
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Descripció aquí
         markdown: |-
@@ -3422,6 +3555,7 @@ ca-ES:
         - correct: true
         questions:
         - {}
+        title: Fes una predicció
       Choose 2 Test:
         answers:
         - correct: true
@@ -3448,16 +3582,17 @@ ca-ES:
         - text: blau
         - text: verd
         - {}
-        - {}
+        - text: groc
         - correct: true
         - text: vermell
         questions:
         - {}
       Test Contained Multi:
         answers:
-        - {}
+        - text: '0'
         - text: '1'
-        - correct: true
+        - text: '2'
+          correct: true
         - text: '4'
         questions:
         - {}
@@ -3520,7 +3655,7 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Entrada
         - {}
         - {}
         - {}
@@ -3531,7 +3666,7 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Entrada
         - {}
         - {}
         - {}
@@ -3542,7 +3677,7 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
+        - text: Entrada
         - {}
         - {}
         - {}
@@ -3553,9 +3688,9 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Preparar-se
+        - text: Reflexionar
+        - text: Provar
         - text: Defineix
       CSD U1 Test PSP match_2021:
         answers:
@@ -3564,9 +3699,9 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Preparar-se
+        - text: Reflexionar
+        - text: Provar
         - text: Defineix
       CSD U1 Test PSP match_2022:
         answers:
@@ -3575,9 +3710,9 @@ ca-ES:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Preparar-se
+        - text: Reflexionar
+        - text: Provar
         - text: Defineix
       CSD U1 Test define a computer:
         answers:
@@ -4216,30 +4351,30 @@ ca-ES:
       CSD U5 test crosstab multi:
         answers:
         - text: gos
-        - {}
+        - text: pingüí
         - text: Granota
           correct: true
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
       CSD U5 test crosstab multi_2021:
         answers:
         - text: gos
-        - {}
+        - text: pingüí
         - text: Granota
           correct: true
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
       CSD U5 test crosstab multi_2022:
         answers:
         - text: gos
-        - {}
+        - text: pingüí
         - text: Granota
           correct: true
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
@@ -4247,9 +4382,9 @@ ca-ES:
         answers:
         - text: gos
           correct: true
-        - {}
+        - text: pingüí
         - text: Granota
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
@@ -4257,9 +4392,9 @@ ca-ES:
         answers:
         - text: gos
           correct: true
-        - {}
+        - text: pingüí
         - text: Granota
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
@@ -4267,9 +4402,9 @@ ca-ES:
         answers:
         - text: gos
           correct: true
-        - {}
+        - text: pingüí
         - text: Granota
-        - {}
+        - text: girafa
         - {}
         questions:
         - {}
@@ -4335,6 +4470,7 @@ ca-ES:
         - correct: true
         questions:
         - {}
+        title: Fes una predicció
       CSD U6 test algorithms multi2:
         answers:
         - {}
@@ -9917,10 +10053,12 @@ ca-ES:
         answers:
         - text: '8'
           correct: true
-        - correct: true
+        - text: '9'
+          correct: true
         - text: '10'
           correct: true
-        - correct: true
+        - text: '11'
+          correct: true
         - text: '12'
           correct: true
         - text: Altres
@@ -9952,11 +10090,14 @@ ca-ES:
       pre-assessment survey q30:
         answers:
         - correct: true
+        - text: Asiàtic
+          correct: true
+        - text: Negre o afroamericà
+          correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Blanc
+          correct: true
         - correct: true
         - text: Altres
           correct: true
@@ -10096,7 +10237,8 @@ ca-ES:
           correct: true
         - text: 'No'
           correct: true
-        - correct: true
+        - text: No ho sé
+          correct: true
         questions:
         - {}
       taken-other-cs:
@@ -10210,8 +10352,115 @@ ca-ES:
         - {}
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: Descripció aquí
+        markdown: "# Brot: Programa la teva simulació\n\n## Benvinguts a la Ciutat
+          dels Monstres!\nLa Ciutat dels Monstres sempre ha estat un lloc alegre i
+          segur. Als monstres de la Ciutat dels Monstres els agradava molt deambular
+          d’aquí cap allà i anar a veure els seus amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn dia, un dels monstres es va començar a trobar
+          malament. Havia agafat un **virus**! Un virus és un germen diminut que pot
+          fer que et posis malalt. Els altres monstres no es van preocupar gaire,
+          i van seguir anant a veure els amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUns dies més tard, dos monstres més es van posar
+          malalts. Tenien el mateix virus! Sembla ser que el van agafar del seu amic.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nA poc a poc, el virus es va anar escampant cap als
+          altres monstres que vivien a prop. Els monstres sans es van començar a preocupar
+          per si tothom es posava malalt. Els monstres malalts es van començar a preocupar
+          per si contagiaven els altres del virus.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Frenem els contagis\nPer sort, després
+          d’analitzar el virus, els veïns de la Ciutat dels Monstres van fer un descobriment
+          molt important. Es van adonar que era menys probable que agafessin el virus
+          si es tapaven la boca amb una mascareta. Amb las mascaretes posades, era
+          menys probable que els monstres malalts contagiessin els monstres sans.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          I què passarà ara?\n\nAvui escriuràs codi per crear i executar la vostra
+          pròpia **simulació** del brot víric de la Ciutat dels Monstres. Una simulació
+          és un model informàtic d’un procés o un sistema. Aprèn a programar-ne una
+          i fes prediccions sobre què els passarà als veïns de la Ciutat dels Monstres.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Com de ràpid s’escamparà el virus?*\n\n*
+          *Tothom es posarà malalt?* \n\n* *Ajudaran les mascaretes?*\n\n\nQuan acabis,
+          comparteix la teva simulació. Comparteix el teu missatge sobre què creus
+          que podem fer per ajudar els altres a mantenir la salut quan arriba un virus."
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
         content1: Descripció aquí
+        markdown: |-
+          # Brot: Pensa com un científic
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Les simulacions ens permeten aprendre coses que poden ser difícils d’observar en el món real. Ajuden els científics a resoldre problemes i posar a prova idees noves d’una manera segura i efectiva. Aquesta simulació és una manera de mostrar quin aspecte podria tenir un brot víric a la Ciutat dels Monstres.
+
+          ## Torna a començar i juga-hi un altre cop!
+          Fins i tot quan tu mateix has escrit el codi, és impossible saber què passarà exactament quan facis clic a Executar. Els monstres deambulen aleatòriament, de manera que no sabem si el virus s’escamparà ràpida o lentament. Facis els canvis que facis al teu codi, assegura’t d’executar la simulació més d’una vegada. Res no passarà igual dues vegades!
+
+          ## Recopilació de dades
+          Prova de prendre nota de les teves observacions mentre executes la simulació. Pots comptar quants monstres es posen malalts o fer servir un cronòmetre per veure a quina velocitat passen les coses. Per exemple, quanta estona passa normalment fins que tots els monstres es posin malalts si cap porta mascareta?
+
+          ## Fer prediccions
+          Si entens bé el teu model, el podràs utilitzar per fer prediccions. Fins i tot podràs canviar com s’executa la simulació i esbrinar què funcionarà diferent. Per exemple:
+          * Què passaria si hi hagués el doble de monstres?
+          * Què passaria si els monstres es moguessin a la meitat de velocitat?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## La Ciutat dels Monstres és com el món real?
+          Sempre hi ha un límit de com de realistes poden ser els models.
+          * Què té en comú la teva simulació d’un brot amb els brots vírics del món real?
+          * En què es diferencien?
+          Quan acabis l’activitat, comenta aquestes qüestions amb els teus professor o familiars!
+
+          ## Sobre què més es poden fer models?
+          Ara ja has crear un model d’un brot víric a la Ciutat dels Monstres. Quines coses no pot fer o mostrar la teva simulació que t’agradaria que pogués fer? Fes clic a continuar per seguir avançant i aprendre a fer un model més complet:
+          * Augmentar el nombre de monstres de la simulació
+          * Ajudar els monstres a recuperar-se del virus
+          * Probabilitat, immunitat, vacunes i molt més!
+
+          També pots compartir el teu model de simulació amb qui vulguis, o compartir un missatge sobre què creus que podem fer per ajudar els altres a mantenir-se sans quan arriba un virus.
       courseC_multi_artist_prog6_predict12022:
         answers:
         - text: L'artista dibuixarà un triangle amb tres costats iguals.
@@ -10552,13 +10801,20 @@ ca-ES:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Una pizza en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables no coincideixen.
+        - text: '"Un àpat en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+        - text: '"Un menjar en marxa!"'
+          feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+        - text: '"Un  en marxa!"'
+          correct: true
+          feedback: Correcte! Les etiquetes de les variables no coincideixen.
+        - text: No s'escriurà res.
+          feedback: Incorrecte. L'esdeveniment i el bloc d'escriure seguiran funcionant.
         questions:
-        - {}
+        - text: Aquest codi potser et sona, però llegeix-lo detingudament. Què s'escriurà
+            si l'usuari introdueix "pizza"?
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - text: L'artista dibuixarà un triangle amb costats de 50 píxels.
@@ -10649,6 +10905,22 @@ ca-ES:
             passarà un cop hagis respost a la pregunta?'
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: Descripció aquí
+        markdown: |-
+          # Ep!
+
+          ## Estàs segur que ho tens tot llest per avançar?
+
+
+          Al nivell següent començaràs a escriure el codi del teu projecte, i sempre és millor fer-ho quan ens planifiquem bé.
+
+          La teva planificació hauria d’incloure:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * El tipus de projecte que estàs desenvolupant. Per exemple, una targeta de felicitació, un xat bot, o una història d’espais buits.
+          * La llista de preguntes que faràs a l’usuari.
+          * Qualsevol altre text que mostraràs en pantalla.
+          * Una descripció o dibuix dels sprites que necessitaràs (i dels seus comportaments).
       coursee_prediction_artistfunction22022:
         answers:
         - text: L'artista resoldrà el trencaclosques correctament.
@@ -10919,19 +11191,19 @@ ca-ES:
           dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
       courseE_EOC2022:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_2020:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_2021:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_examples2022:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_examples_2021:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseExpress_EOC_2020:
         display_name: Projecte de final de curs
@@ -10939,12 +11211,15 @@ ca-ES:
           que vols crear.
       courseF_EOC_2020:
         display_name: Projecte de final de curs
+        description: Has arribat al final del Curs F! Tria el projecte que vols crear.
       courseF_EOC_2021:
         display_name: Projecte de final de curs
+        description: Has arribat al final del Curs F! Tria el projecte que vols crear.
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projecte de final de curs
       courseF_EOC_examples_2021:
         display_name: Projecte de final de curs
+        description: Has arribat al final del Curs F! Tria el projecte que vols crear.
       courseF_EOC_samples2022:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ull als projectes d'exemple.
@@ -10984,10 +11259,10 @@ ca-ES:
 
           ## Com naveguem per internet de manera segura?
       express_EOC2022:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       express_EOC_2021:
-        description: 'Has arribat al final del Curs E! Tria el projecte que vols crear:'
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       express_EOC_examples2022:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
@@ -11225,3 +11500,253 @@ ca-ES:
           # Composició de cançons
 
           Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Afegir imatges
+      CSD U2 Image challenge_pilot_2022:
+        display_name: Afegir imatges
+      CSD U2 Image practice_pilot_2021:
+        display_name: Afegir imatges
+      CSD U2 Image practice_pilot_2022:
+        display_name: Afegir imatges
+      CSD U6 - Accelerometer - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Board Inputs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Board Outputs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Color LEDs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Combine Inputs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - If Variables - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Music - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Physical Input - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Physical Output - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Screen Inputs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Screen Outputs - Chal_2222:
+        display_name: Nivells de repte
+      CSD U6 - Sensors - Chal_2222:
+        display_name: Nivells de repte
+      CSD games cake challenge choice_2021:
+        display_name: Reptes
+      CSD games cake challenge choice_2022:
+        display_name: Reptes
+      CSD games platform challenge choice_2021:
+        display_name: Reptes
+      CSD games platform challenge choice_2022:
+        display_name: Reptes
+      CourseE_Artist_Practice_2022:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb bucles i l'Artista!
+        display_name: Pràctica amb l'Artista
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: Pràctica amb l'Artista
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Pràctica amb l'Artista
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Històries d'espais buits
+
+          En aquesta lliçó, aprendràs a fer servir i a escriure històries d'espais buits. Mira aquest vídeo per aprendre quina relació tenen amb la informàtica.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # Històries d'espais buits
+
+          En aquesta lliçó, aprendràs a fer servir i a escriure històries d'espais buits. Mira aquest vídeo per aprendre quina relació tenen amb la informàtica.
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Diversió amb bucles "for"
+
+          Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Diversió amb bucles "for"
+
+          Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # Diversió amb bucles "for"
+
+          Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior
+      Internet-Unplugged:
+        markdown: |-
+          # Internet
+
+          Construeix el teu propi internet a la classe amb trossos de paper.
+      Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Internet
+
+          Construeix el teu propi internet a la classe amb trossos de paper.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # Internet
+
+          Construeix el teu propi internet a la classe amb trossos de paper.
+      Internet-Unplugged_2021:
+        markdown: |-
+          # Internet
+
+          Construeix el teu propi internet a la classe amb trossos de paper.
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # El poder de les paraules
+
+          ## Què has de fer quan algú fa servir paraules cruels o un llenguatge ofensiu a internet?
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # El poder de les paraules
+
+          ## Què has de fer quan algú fa servir paraules cruels o un llenguatge ofensiu a internet?
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # El poder de les paraules
+
+          ## Què has de fer quan algú fa servir paraules cruels o un llenguatge ofensiu a internet?
+      courseF_artist_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb bucles i l'Artista!
+        display_name: Pràctica amb l'Artista
+      courseF_beeFor_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els bucles "for" i l'Abella!
+        display_name: Pràctica amb l'Abella
+      courseF_beeVar_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb les variables i l'Abella!
+        display_name: Pràctica amb l'Abella
+      courseF_bee_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els bucles i l'Abella!
+        display_name: Pràctica amb l'Abella
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: Exploració - Programes d'exemple
+      courseF_events_freeplay:
+        description: Ara pots aplicar tot el que has après per fer que el teu projecte
+          sigui encara millor! Afegeix més coses al teu programa o comença'n un de
+          nou!
+        display_name: Esdeveniments - Joc lliure
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Ara pots aplicar tot el que has après per fer que el teu projecte
+          sigui encara millor! Afegeix més coses al teu programa o comença'n un de
+          nou!
+        display_name: Esdeveniments - Joc lliure
+      courseF_events_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els esdeveniments!
+        display_name: Pràctica amb esdeveniments
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però en poden fer tants com vulguin (o com els demaneu).
+
+          Podeu fer servir les descripcions que trobareu a continuació per ajudar els alumnes a triar l’opció que vulguin o per establir quants subnivells hauran de fer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |A tota màquina!|Aprèn a valor|Tombarelles aèries|Crèixer i encongir-se|Infla el peix|Pingüí cap aquí i cap allà|
+          |-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+          | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els esdeveniments!
+        display_name: Pràctica amb esdeveniments
+      courseF_intro_apps:
+        description: Benvingut al curs de Fonaments de la Informàtica! Tots aquests
+          projectes s'han creat amb el Laboratori d'Sprites. Prova'ls ara per descobrir
+          totes les possibilitats que existeixen. Al final d'aquest curs, podràs fer
+          projectes com aquests tu mateix... i molts més!
+        display_name: Aplicacions del Laboratori d'Sprites
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però en poden fer tants com vulguin (o com els demaneu).
+
+          En aquest cas, les diferents opcions porten els alumnes a aplicacions d’exemple que poden explorar. Aquesta activitat està pensada per combinar-se amb la fitxa Explorem Aplicacions, la qual es troba a la [guia de la lliçó](.././).
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Aplicacions del Laboratori d'Sprites
+      courseF_sprites_freeplay:
+        description: Ara et toca a tu fer el que vulguis! Quin tipus de projecte faràs?
+        display_name: Sprites - Joc lliure
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: Ara et toca a tu fer el que vulguis! Quin tipus de projecte faràs?
+        display_name: Sprites - Joc lliure
+      courseF_sprites_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els sprites i els comportaments!
+        display_name: Pràctica amb sprites
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però en poden fer tants com vulguin (o com els demaneu).
+
+          Podeu fer servir les descripcions que trobareu a continuació per ajudar els alumnes a triar l’opció que vulguin o per establir quants subnivells hauran de fer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Paisatge desèrtic|Canvia la mida de la fruita.|Animació d’un veler|Un dia de vent|
+          |-|-|-|-|-| | ***Type*** |**Review**|**Review**|**Review**|**Review**|
+          | ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els sprites i els comportaments!
+        display_name: Pràctica amb sprites
+      courseF_text_practice:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb text i preguntes!
+        display_name: Pràctica amb text i preguntes
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però en poden fer tants com vulguin (o com els demaneu).
+
+          Podeu fer servir les descripcions que trobareu a continuació per ajudar els alumnes a triar l’opció que vulguin o per establir quants subnivells hauran de fer.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fem servir text per parlar|Text amb preguntes|Posa nom al robot!!|Etiquetes de variables|Text gran|Preguntar colors|Començar des de zero|
+          |-|-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+          | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb text i preguntes!
+        display_name: Pràctica amb text i preguntes
+      courseF_variables_projects:
+        description: Crearàs o bé una targeta de felicitació, o bé un xat bot, o bé
+          una història d'espais buits. Si ja has acabat la \"Part 1"\ del teu projecte,
+          passa a la \"Part 2"\.
+        display_name: Escull un projecte
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però se'ls hauria d'animar a fer **dos** nivells del mateix projecte.
+
+           És possible que hagueu de donar instruccions molt clares per tal que els alumnes entenguin com seleccionar les opcions disponibles. Cadascuna de les opcions dels projectes inclou dos subnivells. Primer, han de triar un dels nivells de la “Part 1”. Un cop fet aquest nivell, han de tornar enrere i seleccionar la “Part 2” del mateix projecte. El primer nivell de cada opció donarà informació als alumnes a mesura que defineixin els elements bàsics del projecte. La segona part és de joc lliure i està pensada per deixar que facin els canvis que vulguin al seu codi.
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Crearàs o bé una targeta de felicitació, o bé un xat bot, o bé
+          una història d'espais buits. Si ja has acabat la \"Part 1"\ del teu projecte,
+          passa a la \"Part 2"\.
+        display_name: Escull un projecte
+      courseF_variables_samples:
+        description: Crearàs o bé una targeta de felicitació, o un xat bot, o una
+          història d'espais buits. Abans de començar, fes una ullada als projectes
+          d'exemple que trobaràs a continuació per veure què t'interessa fer. Fes
+          clic a \"Acabar\" quan estiguis preparat per començar a planificar el teu
+          propi programa.
+        display_name: Exploració - Programes d'exemple
+        teacher_markdown: |-
+          # Resum dels nivells d'elecció
+          Els nivells d'elecció proporcionen un seguit de nivells addicionals per fer. Els alumnes hauran de fer com a mínim un dels subnivells, però en poden fer tants com vulguin (o com els demaneu).
+
+          Els alumnes hauran de fixar-se bé en aquests projectes abans de decidir quin en volen fer. Podeu veure'ls tots junts o demanar-los que els descobreixin per tots sols.
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Crearàs o bé una targeta de felicitació, o un xat bot, o una
+          història d'espais buits. Abans de començar, fes una ullada als projectes
+          d'exemple que trobaràs a continuació per veure què t'interessa fer. Fes
+          clic a \"Acabar\" quan estiguis preparat per començar a planificar el teu
+          propi programa.
+        display_name: Exploració - Programes d'exemple
+      ml-club app-choice parent:
+        display_name: Personalitza la teva aplicació
+      ml-club app-choice parent_2022:
+        display_name: Personalitza la teva aplicació
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personalitza la teva aplicació
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Personalitza la teva aplicació

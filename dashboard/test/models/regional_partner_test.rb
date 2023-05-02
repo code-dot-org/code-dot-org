@@ -19,25 +19,27 @@ class RegionalPartnerTest < ActiveSupport::TestCase
         city: 'Seattle',
         state: 'WA',
         zip_code: '98101',
-        phone_number: '555-111-2222'
+        phone_number: '555-111-2222',
+        is_active: true
     end
   end
 
   test "create regional partner with invalid attributes does not create" do
     regional_partner = RegionalPartner.new
     assert_does_not_create RegionalPartner do
-      regional_partner.update(name: "", group: "fish", phone_number: 'fish')
+      regional_partner.update(name: "", group: "fish", phone_number: 'fish', is_active: nil)
     end
     refute regional_partner.valid?
     assert_includes regional_partner.errors.full_messages, "Name is too short (minimum is 1 character)"
     assert_includes regional_partner.errors.full_messages, "Group is not a number"
     assert_includes regional_partner.errors.full_messages, "Phone number is invalid"
+    assert_includes regional_partner.errors.full_messages, "Is active is required"
   end
 
   test "create regional partner with programs offered cleans empties" do
     regional_partner = RegionalPartner.new
     assert_creates RegionalPartner do
-      regional_partner.update(name: "valid regional partner", pl_programs_offered: ['', 'Fish'])
+      regional_partner.update(name: "valid regional partner", pl_programs_offered: ['', 'Fish'], is_active: true)
     end
     assert regional_partner.valid?
     assert_includes regional_partner.pl_programs_offered, "Fish"

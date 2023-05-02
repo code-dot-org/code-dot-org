@@ -10,7 +10,7 @@ title: Gràcies per registrar-se per acollir una Hora de Codi!
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. No cal estar estudiant per aprendre adquirir coneixements nous. Invite a local politician or policy maker to visit your school for the Hour of Code. En fer-ho, contribuireu a solidificar el compromís amb la informàtica al vostre entorn més enllà de l'esdeveniment.
 
 Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 

@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'ConfirmEnableMakerDialog',
-  component: ConfirmEnableMakerDialog
+  component: ConfirmEnableMakerDialog,
 };
 
 // Template
@@ -14,5 +14,5 @@ const Template = args => <ConfirmEnableMakerDialog isOpen {...args} />;
 export const Overview = Template.bind({});
 Overview.args = {
   handleConfirm: action('Confirm'),
-  handleCancel: action('Cancel')
+  handleCancel: action('Cancel'),
 };

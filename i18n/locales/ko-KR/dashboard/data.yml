@@ -646,6 +646,7 @@ ko:
         CSA-PL-Printing-in-Java: 자바로 인쇄
         CSA-PL-multi-selection-statements: 복수 선택 문
         CS_Changing_Everything: 컴퓨터 과학은 모든 것을 바꾸고 있습니다.  
+        csd_sprite_properties: 스프라이트 속성
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

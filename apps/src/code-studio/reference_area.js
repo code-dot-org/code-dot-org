@@ -3,28 +3,28 @@ var showVideoDialog = require('./videos').showVideoDialog;
 
 // It would be nice if we could share this with the addClickTouchEvent in
 // apps/src/dom.js
-var addClickTouchEvent = function(element, handler) {
-  var wrapper = function(e) {
+var addClickTouchEvent = function (element, handler) {
+  var wrapper = function (e) {
     handler(e);
     e.preventDefault();
   };
   element.on({
     touchstart: wrapper,
-    click: wrapper
+    click: wrapper,
   });
 };
 
 module.exports = function activateReferenceAreaOnLoad() {
-  $(window).load(function() {
+  $(window).load(function () {
     // Do nothing if we don't  have a reference area
     if ($('#reference_area').length === 0) {
       return;
     }
 
-    $('.video_link').each(function() {
+    $('.video_link').each(function () {
       addClickTouchEvent(
         $(this),
-        $.proxy(function() {
+        $.proxy(function () {
           showVideoDialog(
             {
               src: $(this).attr('data-src'),
@@ -33,7 +33,7 @@ module.exports = function activateReferenceAreaOnLoad() {
               download: $(this).attr('data-download'),
               thumbnail: $(this).attr('data-thumbnail'),
               enable_fallback: true,
-              autoplay: true
+              autoplay: true,
             },
             true
           );

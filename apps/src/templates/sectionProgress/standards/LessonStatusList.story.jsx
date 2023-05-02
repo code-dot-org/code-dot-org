@@ -17,15 +17,15 @@ export default storybook => {
       sectionStandardsProgress,
       unitSelection,
       teacherSections,
-      currentUser
+      currentUser,
     }),
     {
       teacherSections: {
-        selectedSectionId: 11
+        selectedSectionId: 11,
       },
       unitSelection: {
-        scriptId: 1
-      }
+        scriptId: 1,
+      },
     }
   );
 

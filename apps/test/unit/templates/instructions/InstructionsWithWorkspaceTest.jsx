@@ -27,7 +27,7 @@ describe('InstructionsWithWorkspace', () => {
     );
     expect(wrapper.state()).to.deep.equal({
       windowWidth: undefined,
-      windowHeight: undefined
+      windowHeight: undefined,
     });
   });
 
@@ -48,7 +48,7 @@ describe('InstructionsWithWorkspace', () => {
 
     function setupComponent({
       instructionsHeight = 400,
-      codeWorkspaceHeight = 100
+      codeWorkspaceHeight = 100,
     } = {}) {
       const wrapper = shallow(
         <InstructionsWithWorkspace
@@ -59,9 +59,7 @@ describe('InstructionsWithWorkspace', () => {
 
       // Fake ref to inner object, since we're shallow rendering.
       wrapper.instance().codeWorkspaceContainer = {
-        getWrappedInstance: () => ({
-          getRenderedHeight: () => codeWorkspaceHeight
-        })
+        getRenderedHeight: () => codeWorkspaceHeight,
       };
 
       return wrapper;
@@ -72,7 +70,7 @@ describe('InstructionsWithWorkspace', () => {
 
       wrapper.setState({
         windowWidth: 640,
-        windowHeight: 480
+        windowHeight: 480,
       });
       $.fn.width.returns(640);
       $.fn.height.returns(480);
@@ -96,7 +94,7 @@ describe('InstructionsWithWorkspace', () => {
 
       wrapper = setupComponent({
         instructionsHeight: 18,
-        codeWorkspaceHeight: 400
+        codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
@@ -105,7 +103,7 @@ describe('InstructionsWithWorkspace', () => {
 
       wrapper = setupComponent({
         instructionsHeight: 19,
-        codeWorkspaceHeight: 400
+        codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
@@ -114,7 +112,7 @@ describe('InstructionsWithWorkspace', () => {
 
       wrapper = setupComponent({
         instructionsHeight: 20,
-        codeWorkspaceHeight: 400
+        codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
@@ -123,7 +121,7 @@ describe('InstructionsWithWorkspace', () => {
 
       wrapper = setupComponent({
         instructionsHeight: 21,
-        codeWorkspaceHeight: 400
+        codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);

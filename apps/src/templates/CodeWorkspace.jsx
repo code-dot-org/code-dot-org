@@ -41,7 +41,7 @@ class CodeWorkspace extends React.Component {
     autogenerateML: PropTypes.func,
     closeWorkspaceAlert: PropTypes.func,
     workspaceAlert: PropTypes.object,
-    isProjectTemplateLevel: PropTypes.bool
+    isProjectTemplateLevel: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -50,7 +50,7 @@ class CodeWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // isRunning and style only affect style, and can be updated
         // workspaceAlert is involved in displaying or closing workspace alert
         // therefore this key can be updated
@@ -102,13 +102,13 @@ class CodeWorkspace extends React.Component {
       readonlyWorkspace,
       withSettingsCog,
       showMakerToggle,
-      autogenerateML
+      autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevronButton,
-      runModeIndicators && isRunning && styles.runningIcon
+      runModeIndicators && isRunning && styles.runningIcon,
     ];
 
     const settingsCog = showSettingsCog && (
@@ -157,7 +157,7 @@ class CodeWorkspace extends React.Component {
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
         <span>{settingsCog}</span>
-      </PaneSection>
+      </PaneSection>,
     ];
   }
 
@@ -297,10 +297,13 @@ class CodeWorkspace extends React.Component {
 
 const styles = {
   headerIcon: {
-    fontSize: 18
+    fontSize: 18,
   },
   runningIcon: {
-    color: color.dark_charcoal
+    color: color.neutral_white,
+    ':hover': {
+      color: color.neutral_dark20,
+    },
   },
   oldVersionWarning: {
     zIndex: 99,
@@ -309,7 +312,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.8,
-    position: 'relative'
+    position: 'relative',
   },
   studentNotStartedWarning: {
     zIndex: 99,
@@ -317,7 +320,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
   },
   startBlocksBanner: {
     zIndex: 99,
@@ -325,7 +328,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
   },
   chevronButton: {
     padding: 0,
@@ -333,19 +336,19 @@ const styles = {
     border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
-    color: color.lighter_purple,
+    color: color.neutral_white,
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white,
-      boxShadow: 'none'
-    }
+      color: color.neutral_dark20,
+      boxShadow: 'none',
+    },
   },
   toolboxHeaderContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
@@ -363,15 +366,15 @@ export default connect(
       state.pageConstants.showDebugConsole
     ),
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.showProjectTemplateWorkspaceIcon,
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
     workspaceAlert: state.project.workspaceAlert,
-    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel
+    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
   }),
   dispatch => ({
-    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),
   })
 )(Radium(CodeWorkspace));

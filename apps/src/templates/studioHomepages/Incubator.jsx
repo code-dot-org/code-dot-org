@@ -44,8 +44,8 @@ class Incubator extends Component {
             buttons={[
               {
                 url: '/projectbeats',
-                text: 'Try it out!'
-              }
+                text: 'Try it out!',
+              },
             ]}
           />
         </div>

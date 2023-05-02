@@ -173,12 +173,12 @@ class ChannelsApi < Sinatra::Base
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
-      if e.class == ProfanityPrivacyError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => exception
+      if exception.class == ProfanityPrivacyError
         dont_cache
         status 422
         content_type :json
-        return {nameFailure: e.flagged_text}.to_json
+        return {nameFailure: exception.flagged_text}.to_json
       else
         bad_request
       end

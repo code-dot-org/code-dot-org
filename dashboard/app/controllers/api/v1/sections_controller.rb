@@ -269,9 +269,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success', expiration: @section.code_review_expires_at}
   end
 
-  private
-
-  def find_follower
+  private def find_follower
     unless current_user
       render_404
       return
@@ -279,7 +277,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 
-  def get_course_and_unit
+  private def get_course_and_unit
     return head :forbidden if current_user.nil?
 
     if params[:course_version_id]

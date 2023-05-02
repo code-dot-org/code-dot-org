@@ -5,7 +5,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import {
   showDialog,
-  getSuccessDialog
+  getSuccessDialog,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
@@ -87,32 +87,30 @@ describe('dialogHelper', () => {
         answers: [
           {
             text: 'I feel like I could teach this right now',
-            correct: true
+            correct: true,
           },
           {
-            text:
-              'I feel like I need to do SOME review of lessons, content, etc before I teach this',
-            correct: true
+            text: 'I feel like I need to do SOME review of lessons, content, etc before I teach this',
+            correct: true,
           },
           {
-            text:
-              'I feel like I need to do A LOT of review of lessons, content, etc before I teach this',
-            correct: true
-          }
+            text: 'I feel like I need to do A LOT of review of lessons, content, etc before I teach this',
+            correct: true,
+          },
         ],
-        ...levelOptions
+        ...levelOptions,
       },
       dialog: {
-        app
-      }
+        app,
+      },
     });
 
     it('has the right title/body when using success_title/success_body', () => {
       const appOptions = fakeAppOptions('multi', {
         options: {
           success_title: 'Customized success title',
-          success_body: 'Customized success body'
-        }
+          success_body: 'Customized success body',
+        },
       });
       const dialog = getSuccessDialog(appOptions);
       assert.equal(dialog.props.title, 'Customized success title');
@@ -133,7 +131,7 @@ describe('dialogHelper', () => {
       // string "true" rather than boolean true here.
       const appOptions = fakeAppOptions('multi', {
         submittable: 'true',
-        answers: undefined
+        answers: undefined,
       });
       const dialog = getSuccessDialog(appOptions);
       assert.equal(dialog.props.title, 'Thank you');
@@ -144,7 +142,7 @@ describe('dialogHelper', () => {
       // Worth noting that I only see 3 levels that meet this criteria and dont
       // have skip_dialog: true
       const appOptions = fakeAppOptions('text_match', {
-        answers: undefined
+        answers: undefined,
       });
       const dialog = getSuccessDialog(appOptions);
       assert.equal(dialog.props.title, 'Thank you');

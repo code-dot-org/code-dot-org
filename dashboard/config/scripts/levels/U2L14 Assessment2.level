@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2016-04-13T21:08:21.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Vigenere Key Length",
     "long_instructions": "Using the Vigenere cipher, does the length of the key matter? \r\nFor example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning.",
@@ -12,8 +8,13 @@
     "skip_sound": true,
     "submittable": "false",
     "allow_user_uploads": "false",
-    "peer_reviewable": "false"
+    "peer_reviewable": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2016-04-13T21:08:21.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

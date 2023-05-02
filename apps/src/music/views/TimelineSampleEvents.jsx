@@ -8,10 +8,9 @@ import TimelineElement from './TimelineElement';
  * Renders timeline events, organized by unique sample ID.
  */
 const TimelineSampleEvents = ({
-  currentPlayheadPosition,
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
   const playerUtils = useContext(PlayerUtilsContext);
   const soundEvents = playerUtils.getPlaybackEvents();
@@ -21,9 +20,8 @@ const TimelineSampleEvents = ({
   // we call during render don't need to recalculate it.  This also ensures
   // that we recalculate unique sounds, even when there are no entries to
   // render.
-  const currentUniqueSounds = uniqueSoundsRef.current.getUniqueSounds(
-    soundEvents
-  );
+  const currentUniqueSounds =
+    uniqueSoundsRef.current.getUniqueSounds(soundEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -48,7 +46,6 @@ const TimelineSampleEvents = ({
           top={20 + getVerticalOffsetForEventId(eventData.id)}
           left={barWidth * (eventData.when - 1)}
           when={eventData.when}
-          currentPlayheadPosition={currentPlayheadPosition}
         />
       ))}
     </>
@@ -56,10 +53,9 @@ const TimelineSampleEvents = ({
 };
 
 TimelineSampleEvents.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineSampleEvents;

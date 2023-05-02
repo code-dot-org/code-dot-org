@@ -18,7 +18,7 @@ import {
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
-  getDynamicInstructions
+  getDynamicInstructions,
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -50,19 +50,19 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only'
+  TEACHER_ONLY: 'teacher-only',
 };
 
 // Minecraft-specific styles
 const craftStyles = {
   instructionsBody: {
     // $below-header-background from craft/style.scss
-    backgroundColor: '#646464'
+    backgroundColor: '#646464',
   },
   headerBar: {
     color: color.white,
-    backgroundColor: '#3b3b3b'
-  }
+    backgroundColor: '#3b3b3b',
+  },
 };
 
 class TopInstructions extends Component {
@@ -99,6 +99,7 @@ class TopInstructions extends Component {
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
+    isOldPurpleColorHeader: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -117,13 +118,13 @@ class TopInstructions extends Component {
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
     explicitHeight: PropTypes.number,
-    inLessonPlan: PropTypes.bool
+    inLessonPlan: PropTypes.bool,
   };
 
   static defaultProps = {
     resizable: true,
     collapsible: true,
-    inLessonPlan: false
+    inLessonPlan: false,
   };
 
   constructor(props) {
@@ -138,7 +139,7 @@ class TopInstructions extends Component {
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
-      this.props.readOnlyWorkspace &&
+      !!this.props.readOnlyWorkspace &&
       studentUserIdIncluded;
 
     this.state = {
@@ -153,7 +154,7 @@ class TopInstructions extends Component {
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
-      token: null
+      token: null,
     };
 
     this.instructions = null;
@@ -168,12 +169,8 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {
-      user,
-      serverLevelId,
-      serverScriptId,
-      dynamicInstructions
-    } = this.props;
+    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+      this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -204,7 +201,7 @@ class TopInstructions extends Component {
               this.setState({
                 latestFeedback: data[0],
                 tabSelected: TabType.COMMENTS,
-                token: request.getResponseHeader('csrf-token')
+                token: request.getResponseHeader('csrf-token'),
               });
               this.incrementFeedbackVisitCount();
             }
@@ -238,7 +235,7 @@ class TopInstructions extends Component {
           .done((data, textStatus, request) => {
             this.setState({
               latestFeedback: request.status === 204 ? null : data,
-              token: request.getResponseHeader('csrf-token')
+              token: request.getResponseHeader('csrf-token'),
             });
           })
       );
@@ -327,7 +324,7 @@ class TopInstructions extends Component {
       [TabType.COMMENTS]: this.commentTab,
       [TabType.DOCUMENTATION]: this.documentationTab,
       [TabType.REVIEW]: this.reviewTab,
-      [TabType.TEACHER_ONLY]: this.teacherOnlyTab
+      [TabType.TEACHER_ONLY]: this.teacherOnlyTab,
     };
 
     return tabRefs[this.state.tabSelected];
@@ -346,7 +343,7 @@ class TopInstructions extends Component {
       longInstructions,
       hasContainedLevels,
       maxNeededHeight,
-      setInstructionsMaxHeightNeeded
+      setInstructionsMaxHeightNeeded,
     } = this.props;
 
     // if not showing the instructions area the max needed height should be 0
@@ -383,7 +380,7 @@ class TopInstructions extends Component {
       toggleInstructionsCollapsed,
       isCollapsed,
       noInstructionsWhenCollapsed,
-      expandedHeight
+      expandedHeight,
     } = this.props;
 
     toggleInstructionsCollapsed();
@@ -395,8 +392,8 @@ class TopInstructions extends Component {
 
     this.recordEvent(eventName, {
       data_json: JSON.stringify({
-        csfStyleInstructions: !noInstructionsWhenCollapsed
-      })
+        csfStyleInstructions: !noInstructionsWhenCollapsed,
+      }),
     });
 
     // adjust rendered height based on next collapsed state
@@ -423,7 +420,7 @@ class TopInstructions extends Component {
     const record = {
       study: 'top-instructions',
       event: eventName,
-      ...additionalData
+      ...additionalData,
     };
     firehoseClient.putRecord(record);
   }
@@ -498,7 +495,8 @@ class TopInstructions extends Component {
       hasContainedLevels,
       isEmbedView,
       isBlockly,
-      noInstructionsWhenCollapsed
+      noInstructionsWhenCollapsed,
+      isOldPurpleColorHeader,
     } = this.props;
     const {teacherViewingStudentWork, tabSelected} = this.state;
 
@@ -545,6 +543,8 @@ class TopInstructions extends Component {
             instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
+            isImmersiveButtonHasRoundBorders
+            isLegacyImmersiveStyles={isOldPurpleColorHeader}
             isBlockly={isBlockly}
             noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
           />
@@ -572,6 +572,9 @@ class TopInstructions extends Component {
       levelVideos,
       mapReference,
       referenceLinks,
+      // TODO: [Phase 2] Legacy header color logic. Delete once get rid of legacy header colors.
+      //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+      isOldPurpleColorHeader,
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
@@ -585,7 +588,7 @@ class TopInstructions extends Component {
       standalone,
       displayDocumentationTab,
       displayReviewTab,
-      explicitHeight
+      explicitHeight,
     } = this.props;
 
     const {
@@ -594,7 +597,7 @@ class TopInstructions extends Component {
       rubric,
       tabSelected,
       fetchingData,
-      token
+      token,
     } = this.state;
 
     // TODO: find a more straight forward way to determine CSF/D/P
@@ -606,13 +609,13 @@ class TopInstructions extends Component {
       isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
-        height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT
+        height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
       },
       noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
       dynamicInstructions &&
         overlayVisible &&
-        styles.dynamicInstructionsWithOverlay
+        styles.dynamicInstructionsWithOverlay,
     ];
 
     const instructionsContainerStyle = [
@@ -620,7 +623,7 @@ class TopInstructions extends Component {
         ? styles.csfBody
         : containerStyle || styles.body,
       isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.REVIEW && styles.commitAndReview
+      tabSelected === TabType.REVIEW && styles.commitAndReview,
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -664,7 +667,7 @@ class TopInstructions extends Component {
       isCollapsed,
       hasBackgroundMusic,
       dynamicInstructions,
-      dynamicInstructionsKey
+      dynamicInstructionsKey,
     };
 
     return (
@@ -675,6 +678,7 @@ class TopInstructions extends Component {
       >
         <TopInstructionsHeader
           teacherOnly={teacherOnly}
+          isOldPurpleColor={isOldPurpleColorHeader}
           tabSelected={tabSelected}
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
@@ -790,21 +794,21 @@ const styles = {
     position: 'absolute',
     marginLeft: 15,
     top: 0,
-    right: 0
+    right: 0,
     // left handled by media queries for .editor-column
   },
   mainRtl: {
     position: 'absolute',
     marginRight: 15,
     top: 0,
-    left: 0
+    left: 0,
     // right handled by media queries for .editor-column
   },
   noViz: {
     left: 0,
     right: 0,
     marginRight: 0,
-    marginLeft: 0
+    marginLeft: 0,
   },
   body: {
     backgroundColor: 'white',
@@ -815,7 +819,7 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   csfBody: {
     backgroundColor: '#ddd',
@@ -824,7 +828,7 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   commitAndReview: {
     backgroundColor: color.background_gray,
@@ -833,26 +837,26 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    overflowY: 'auto'
+    overflowY: 'auto',
   },
   embedView: {
     height: undefined,
-    bottom: 0
+    bottom: 0,
   },
   title: {
     textAlign: 'center',
     height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px'
+    lineHeight: HEADER_HEIGHT + 'px',
   },
   dynamicInstructionsWithOverlay: {
-    zIndex: OVERLAY_Z_INDEX + 1
+    zIndex: OVERLAY_Z_INDEX + 1,
   },
   exampleSolutions: {
-    marginTop: 10
+    marginTop: 10,
   },
   exampleSolutionButton: {
-    marginLeft: 20
-  }
+    marginLeft: 20,
+  },
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
@@ -897,7 +901,7 @@ export default connect(
     isViewingAsInstructorInTraining:
       (state.pageConstants &&
         state.pageConstants.isViewingAsInstructorInTraining) ||
-      false
+      false,
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
@@ -911,8 +915,8 @@ export default connect(
     },
     setAllowInstructionsResize(allowResize) {
       dispatch(setAllowInstructionsResize(allowResize));
-    }
+    },
   }),
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(Radium(TopInstructions));

@@ -156,8 +156,8 @@ namespace :seed do
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       custom_scripts.each do |filepath|
         Services::ScriptSeed.seed_from_json_file(filepath)
-      rescue => e
-        raise e, "Error parsing script file #{filepath}: #{e}"
+      rescue => exception
+        raise exception, "Error parsing script file #{filepath}: #{exception}"
       end
     rescue
       rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
