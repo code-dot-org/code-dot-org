@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-15 16:17:45 UTC",
+    "serialized_at": "2023-04-30 17:59:52 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -193,9 +193,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Why does an `ArrayList` only store objects?\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they discover why an `ArrayList` can only store objects and learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
+        "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-7-lists-of-objects/37928) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Why does an `ArrayList` only store objects?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you discover why an `ArrayList` can only store objects and learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
+        "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -6791,18 +6791,6 @@
       }
     },
     {
-      "name": "[KEY] Project Characteristics",
-      "url": "https://docs.google.com/document/d/1qK7GgOOjGm5XF2cXcFN2NeA6fE-Mfptnk6vmAm8rC5s/edit?usp=share_link",
-      "key": "_key_project_characteristics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_project_characteristics"
-      }
-    },
-    {
       "name": "[KEY] TemperatureAction FRQ",
       "url": "https://docs.google.com/document/d/1pzeGQOXDhZqUr_HcAaaKSXldM2FiEAdDxkkzo7gCknc/edit?usp=share_link",
       "key": "_key_temperatureaction_frq",
@@ -7505,12 +7493,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_project_characteristics"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
