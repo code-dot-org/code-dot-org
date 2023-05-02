@@ -26,13 +26,23 @@
     },
     "display_name": "Impact of Recycling",
     "bubble_choice_description": "An example project that demonstrates recycling cans.",
-    "thumbnail_url": "https://images.code.org/1d2f7fce169ebd1caf043c2cd7dce61f-U7_project1.gif"
+    "thumbnail_url": "https://images.code.org/1d2f7fce169ebd1caf043c2cd7dce61f-U7_project1.gif",
+    "starter_assets": {
+      "cans.png": "3cea340a-bda5-4906-8c45-6054f179cd0d.png",
+      "coke.png": "c749f67e-5be1-4db6-b070-434ae1143080.png",
+      "drPepper.png": "1b6fc6f4-115b-4a0b-bafe-5a2c3aac6b66.png",
+      "fanta.png": "176ef883-07ab-4098-8b7b-71582250aab1.png",
+      "Machine.png": "a80e253a-a9ca-45ab-8615-ebecf887cbb8.png",
+      "pepsi.png": "f112c4ea-bc9a-452f-b229-df0358eef719.png",
+      "sprite.png": "a25eac91-0597-45d8-bdf1-f5019130d389.png",
+      "coinSound.wav": "833e1c70-88b1-43e9-bd42-2208c229add0.wav"
+    }
   },
   "game_id": 68,
   "created_at": "2023-04-11T13:50:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T13:50:24.029+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2023-04-11 13:50:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:24:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:25:54 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:30:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:50:24.029+00:00\",\"changed\":[\"cloned from \\\"CSA Practice Level Template\\\"\"],\"cloned_from\":\"CSA Practice Level Template\"},{\"changed_at\":\"2023-04-11 13:50:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:24:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:25:54 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:29:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:30:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:35:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:36:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:36:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

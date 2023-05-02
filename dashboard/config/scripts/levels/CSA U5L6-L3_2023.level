@@ -14,16 +14,17 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U5L6-Image Filters PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U5L6-Image Filters PBT_2023"
+    "teacher_markdown": "1. These rows and columns are directly related to the width and height of the image file. If we were to change this value, it would change the proportion of the image that will be brightened when we call the `brightenColors()` method.\r\n\r\n2. The reason that we use `getPixel(col, row)` instead of `getPixel(row, col)` is because `col` refers to the `x` value and `row` refers to the `y` value. The arguments that we pass into the `getPixel()` method should be formatted as follows: `public Pixel getPixel(int x, int y)`. When we switch the `col` and `row` order as arguments in this method, the image is going to appear the same in the output window. However, the data that is arranged in the 2D array `imagePixels` will be changed."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-28T00:00:37.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-28T00:00:37.341+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L4_2023\"},{\"changed_at\":\"2023-03-28 00:00:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:33:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:36:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-28T00:00:37.341+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L4_2023\"},{\"changed_at\":\"2023-03-28 00:00:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:33:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:36:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 17:34:10 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
