@@ -5,12 +5,9 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {
-  setIsRunning,
-  setIsTesting,
-  setIsCaptchaDialogOpen,
-} from './redux/javalabRedux';
-import {appendNewlineToConsoleLog, appendOutputLog} from './redux/consoleRedux';
+import JavalabCaptchaDialog from './JavalabCaptchaDialog';
+import {setIsRunning, setIsTesting} from './redux/javalabRedux';
+import {appendOutputLog} from './redux/consoleRedux';
 import {setDisplayTheme} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
@@ -24,8 +21,6 @@ import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
-import {getStore} from '@cdo/apps/redux';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -66,9 +61,6 @@ class JavalabView extends React.Component {
     hasRunOrTestedCode: PropTypes.bool,
     hasOpenCodeReview: PropTypes.bool,
     isJavabuilderConnecting: PropTypes.bool,
-    recaptchaSiteKey: PropTypes.string,
-    isCaptchaDialogOpen: PropTypes.bool,
-    setIsCaptchaDialogOpen: PropTypes.func,
   };
 
   componentDidMount() {
@@ -149,21 +141,6 @@ class JavalabView extends React.Component {
     );
   };
 
-  // update getStore().dispatch calls
-  onCaptchaSubmit = token => {
-    fetch('/dashboardapi/v1/users/me/verify_captcha', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({'g-recaptcha-response': token}),
-    }).then(() => {
-      getStore().dispatch(appendOutputLog(javalabMsg.verificationSuccessful()));
-      getStore().dispatch(appendNewlineToConsoleLog());
-      this.props.setIsCaptchaDialogOpen(false);
-    });
-  };
-
   render() {
     const {
       displayTheme,
@@ -188,9 +165,6 @@ class JavalabView extends React.Component {
       hasRunOrTestedCode,
       hasOpenCodeReview,
       isJavabuilderConnecting,
-      recaptchaSiteKey,
-      isCaptchaDialogOpen,
-      setIsCaptchaDialogOpen,
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -214,6 +188,7 @@ class JavalabView extends React.Component {
       ? null
       : javalabMsg.testsNotPassing();
 
+    // update dialog message to have link
     return (
       <StudioAppWrapper>
         <div
@@ -221,17 +196,7 @@ class JavalabView extends React.Component {
             ...styles.javalab,
           }}
         >
-          <ReCaptchaDialog
-            isOpen={isCaptchaDialogOpen}
-            handleCancel={() => {
-              setIsCaptchaDialogOpen(false);
-            }}
-            handleSubmit={this.onCaptchaSubmit}
-            siteKey={recaptchaSiteKey}
-          >
-            <h3>{javalabMsg.verificationHeaderMessage()}</h3>
-            <p>{javalabMsg.verificationDialogMessage()}</p>
-          </ReCaptchaDialog>
+          <JavalabCaptchaDialog />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
@@ -293,7 +258,6 @@ class JavalabView extends React.Component {
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                     finishButtonTooltipText={finishButtonTooltipText}
-                    recaptchaSiteKey={recaptchaSiteKey}
                   />
                 }
               />
@@ -373,15 +337,11 @@ export default connect(
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isJavabuilderConnecting: state.javalab.isJavabuilderConnecting,
-    recaptchaSiteKey: state.pageConstants.recaptchaSiteKey,
-    isCaptchaDialogOpen: state.javalab.isCaptchaDialogOpen,
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
-    setIsCaptchaDialogOpen: isDialogOpen =>
-      dispatch(setIsCaptchaDialogOpen(isDialogOpen)),
   })
 )(UnconnectedJavalabView);

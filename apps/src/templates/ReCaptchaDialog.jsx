@@ -37,8 +37,8 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   // The dialog is not fully unmounted when isOpen is set to false,
-  // but the captcha is removed from the DOM,
-  // so we need to force re-rerender the captcha each time the dialog is opened.
+  // but the captcha is removed from the DOM.
+  // Thus, we need to force re-rerender the captcha each time the dialog is opened.
   componentDidUpdate(prevProps) {
     if (prevProps.isOpen && !this.props.isOpen) {
       this.setState({submitButtonEnabled: false});
@@ -90,7 +90,7 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel, children} = this.props;
+    const {siteKey, isOpen, handleCancel, submitText, children} = this.props;
     return (
       <div>
         <BaseDialog
@@ -117,7 +117,7 @@ export default class ReCaptchaDialog extends React.Component {
               color={Button.ButtonColor.gray}
             />
             <Button
-              text={'Submit'}
+              text={submitText}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               disabled={!this.state.submitButtonEnabled}
