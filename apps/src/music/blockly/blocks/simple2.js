@@ -17,6 +17,7 @@ import {
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
+import musicI18n from '../../locale';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -84,11 +85,11 @@ export class GeneratorHelpersSimple2 {
 export const whenRunSimple2 = {
   definition: {
     type: BlockTypes.WHEN_RUN_SIMPLE2,
-    message0: 'when run',
+    message0: musicI18n.blockly_blockWhenRun(),
     inputsInline: true,
     nextStatement: null,
     style: 'setup_blocks',
-    tooltip: 'when run',
+    tooltip: musicI18n.blockly_blockWhenRunTooltip(),
     helpUrl: '',
   },
   generator: () =>
@@ -108,7 +109,7 @@ export const whenRunSimple2 = {
 export const triggeredAtSimple2 = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
-    message0: '%1 triggered',
+    message0: `%1 ${musicI18n.blockly_blockTriggered()}`,
     args0: [
       {
         type: 'input_dummy',
@@ -118,7 +119,7 @@ export const triggeredAtSimple2 = {
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
-    tooltip: 'at trigger',
+    tooltip: musicI18n.blockly_blockTriggeredTooltip(),
     extensions: [DYNAMIC_TRIGGER_EXTENSION],
   },
   generator: block =>
@@ -138,13 +139,13 @@ export const triggeredAtSimple2 = {
 export const playSoundAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'play %1',
+    message0: `${musicI18n.blockly_blockPlaySound()} %1`,
     args0: [fieldSoundsDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'play sound',
+    tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
     helpUrl: '',
   },
   generator: block =>
@@ -170,13 +171,13 @@ export const playSoundAtCurrentLocationSimple2 = {
 export const playPatternAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'play drums %1',
+    message0: `${musicI18n.blockly_blockPlayPattern()} %1`,
     args0: [fieldPatternDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'play drums',
+    tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
     helpUrl: '',
   },
   generator: block =>
@@ -200,13 +201,13 @@ export const playPatternAtCurrentLocationSimple2 = {
 export const playChordAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'play notes %1',
+    message0: `${musicI18n.blockly_blockPlayChord()} %1`,
     args0: [fieldChordDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'play notes',
+    tooltip: musicI18n.blockly_blockPlayChordTooltip(),
     helpUrl: '',
   },
   generator: block =>
@@ -230,13 +231,13 @@ export const playChordAtCurrentLocationSimple2 = {
 export const playRestAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'rest for %1',
+    message0: `${musicI18n.blockly_blockRest()} %1`,
     args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'rest',
+    tooltip: musicI18n.blockly_blockRestTooltip(),
     helpUrl: '',
   },
   generator: block =>
@@ -250,7 +251,7 @@ export const playRestAtCurrentLocationSimple2 = {
 export const setEffectAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: 'set %1 to %2',
+    message0: musicI18n.blockly_blockSetEffect({effect: '%1', value: '%2'}),
     args0: [
       {
         type: 'field_dropdown',
@@ -275,7 +276,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
-    tooltip: 'set effect',
+    tooltip: musicI18n.blockly_blockSetEffectTooltip(),
     helpUrl: '',
   },
   generator: block => {
@@ -290,7 +291,7 @@ export const setEffectAtCurrentLocationSimple2 = {
 export const playSoundsTogether = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
-    message0: 'play together',
+    message0: musicI18n.blockly_blockPlaySoundsTogether(),
     args0: [],
     message1: '%1',
     args1: [
@@ -303,7 +304,7 @@ export const playSoundsTogether = {
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
-    tooltip: 'play sounds together',
+    tooltip: musicI18n.blockly_blockPlaySoundsTogether(),
     helpUrl: '',
   },
   generator: block =>
@@ -316,7 +317,7 @@ export const playSoundsTogether = {
 export const playSoundsSequential = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-    message0: 'play sequential',
+    message0: musicI18n.blockly_blockPlaySoundsSequential(),
     args0: [],
     message1: '%1',
     args1: [
@@ -329,7 +330,7 @@ export const playSoundsSequential = {
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
-    tooltip: 'play sounds sequentially',
+    tooltip: musicI18n.blockly_blockPlaySoundsSequentialTooltip(),
     helpUrl: '',
   },
   generator: block =>
@@ -342,7 +343,7 @@ export const playSoundsSequential = {
 export const playSoundsRandom = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_RANDOM,
-    message0: 'play random',
+    message0: musicI18n.blockly_blockPlaySoundsRandom(),
     args0: [],
     message1: '%1',
     args1: [
@@ -355,7 +356,7 @@ export const playSoundsRandom = {
     previousStatement: null,
     nextStatement: null,
     style: 'logic_blocks',
-    tooltip: 'play sound randomly',
+    tooltip: musicI18n.blockly_blockPlaySoundsRandomTooltip(),
     helpUrl: '',
   },
   generator: block => {
@@ -388,7 +389,7 @@ export const playSoundsRandom = {
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: 'repeat %1 times',
+    message0: '%{BKY_CONTROLS_REPEAT_TITLE}',
     args0: [
       {
         type: 'field_number',
@@ -398,7 +399,7 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: 'do %1',
+    message1: '%{BKY_CONTROLS_REPEAT_INPUT_DO} %1',
     args1: [
       {
         type: 'input_statement',
@@ -409,7 +410,7 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: 'repeat',
+    tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
     helpUrl: '',
   },
   generator: block => {
