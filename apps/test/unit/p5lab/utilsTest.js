@@ -1,20 +1,22 @@
 import {expect} from '../../util/reconfiguredChai';
-import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 import * as utils from '@cdo/apps/p5lab/utils';
 const {parsePathString} = utils;
 
 describe('the parsePathString function', () => {
-  it('returns ', () => {
+  it('for a valid path to sound file, returns a user-friendly sound name with category', () => {
     expect(
       parsePathString('sound://category_board_games/card_dealing_multiple.mp3')
     ).to.equal('Board games: card_dealing_multiple');
   });
 
-  it('returns ', () => {
+  it('for a valid path to sound file, returns a user-friendly sound name when no category is included', () => {
     expect(parsePathString('sound://default.mp3')).to.equal('default');
   });
 
-  it('returns DEFAULT_SOUND when not a valid sound file path', () => {
-    expect(parsePathString('Choose')).to.equal(DEFAULT_SOUND);
+  it('for an invalid path to sound file, throws an error', () => {
+    const errMsg = 'This is not a valid path to a sound file.';
+    expect(() => {
+      parsePathString('sound');
+    }).to.throw(Error, errMsg);
   });
 });

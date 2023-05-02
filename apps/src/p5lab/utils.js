@@ -1,5 +1,3 @@
-import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
-
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -29,7 +27,7 @@ export function parsePathString(text) {
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
   if (!text.includes('.mp3')) {
-    return DEFAULT_SOUND;
+    throw new Error('This is not a valid path to a sound file.');
   }
   const pathStringArray = text.split('/');
   let category = '';
