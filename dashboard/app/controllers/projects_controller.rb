@@ -286,9 +286,6 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(level)
     user_storage_id = get_storage_id
     # find channel for user and level if it exists, or create a new one
-    # how do we get: script id (do we need this? Can add a param. Can't always infer from level),
-    # Can hidden always be true? Will we use this api for a standalone project?
-    # always return the channel
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
     render(status: :ok, json: {channel: channel_token.channel})
   end
