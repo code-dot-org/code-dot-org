@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
@@ -55,6 +55,32 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
 
+  // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
+  useEffect(() => {
+    const newFilteredCurricula = curriculaData.filter(curriculum => {
+      // Filter by device
+      const deviceFilters = appliedFilters['device'];
+      if (deviceFilters.length > 0) {
+        const curriculumDevComp = JSON.parse(curriculum.device_compatibility);
+        if (!curriculumDevComp) {
+          return false;
+        } else {
+          let hasFilteredCompatibleDevice = deviceFilters.some(
+            currDevice => curriculumDevComp[currDevice] === 'ideal'
+          );
+          if (!hasFilteredCompatibleDevice) {
+            return false;
+          }
+        }
+      }
+
+      // HAVE LAST CHECK JUST RETURN THAT CHECK RATHER THAN JUST 'TRUE'
+      return true;
+    });
+
+    setFilteredCurricula(newFilteredCurricula);
+  }, [curriculaData, appliedFilters]);
+
   // Selects the given value in the given filter.
   const handleSelect = (event, filterKey) => {
     const value = event.target.value;
@@ -64,45 +90,32 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     if (isChecked) {
       //Add checked item into applied filters
       newFilters[filterKey] = [...appliedFilters[filterKey], value];
-      applyFilters(newFilters);
     } else {
       //Remove unchecked item from applied filters
       newFilters[filterKey] = appliedFilters[filterKey].filter(
         item => item !== value
       );
-      applyFilters(newFilters);
     }
+    setAppliedFilters(newFilters);
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = Object.keys(filterTypes[filterKey].options);
-    applyFilters(newFilters);
+    setAppliedFilters(newFilters);
   };
 
   // Clears all filter selections.
   const handleClear = () => {
-    applyFilters(getEmptyFilters());
+    setAppliedFilters(getEmptyFilters());
   };
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
     let newFilters = {...appliedFilters};
     newFilters[filterKey] = [];
-    applyFilters(newFilters);
-  };
-
-  // Set filters and filter out any Curriculum Catalog Cards of courses that do not
-  // match the filter criteria.
-  const applyFilters = filters => {
-    setAppliedFilters(filters);
-
-    const newFilteredCurricula = curriculaData.filter(curriculum => {
-      return true;
-    });
-
-    setFilteredCurricula(newFilteredCurricula);
+    setAppliedFilters(newFilters);
   };
 
   return (
