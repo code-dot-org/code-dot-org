@@ -12,4 +12,4 @@ require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 # at least initially. The benefit is greatest here, and long-running
 # environments like staging/prod/testing raise concerns with clearing
 # the tmp/cache folder.
-require ‘bootsnap/setup’ if Gem.loaded_specs.has_key? ‘bootsnap’
+require 'bootsnap/setup' if Gem.loaded_specs.key? 'bootsnap'
