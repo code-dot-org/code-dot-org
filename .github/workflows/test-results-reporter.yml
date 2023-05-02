@@ -10,9 +10,9 @@ on:
   deployment_status
 jobs:
   test-reporter:
-    if: |
-      ( github.event.deployment_status.state == 'success' || github.event.deployment_status.state == 'failure' ) 
-      && contains(github.refs, 'seth')
+    # if: |
+    #   ( github.event.deployment_status.state == 'success' || github.event.deployment_status.state == 'failure' ) 
+    #   && contains(github.refs, 'seth')
     runs-on: ubuntu-latest
     steps:
       # Why does dorny/test-reporter want a git checkout??? heck knows
