@@ -144,9 +144,9 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders a CensusTeacherBanner if showCensusBanner is true', () => {
+  it('does not render a CensusTeacherBanner even if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
   });
 
   it('renders a DonorTeacherBanner if isEnglish and afeEligible is true', () => {
