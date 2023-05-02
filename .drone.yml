@@ -20,6 +20,12 @@ steps:
     pull: always
     commands:
       - echo "Yayyyy that was fast :-"
+trigger:
+  branch:
+    - "staging"
+    - "staging-next"
+  event:
+    - pull_request
 # ---
 # kind: pipeline
 # type: docker
@@ -239,6 +245,6 @@ steps:
 #     - pull_request
 ---
 kind: signature
-hmac: d3bc2aafd95ed020b08ff2f493f59b7951dc1569363162983a56c07d54aba421
+hmac: ad693bf1e4d2bedfaa4770383b39901e8b9c3041c83211ddf8b5da991fc95e43
 
 ...
