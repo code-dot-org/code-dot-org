@@ -48,14 +48,14 @@ GIT
     full-name-splitter (0.1.2)
 
 GIT
-  remote: https://github.com/wjordan/gctools.git
+  remote: https://github.com/code-dot-org/-org/gctools.git
   revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
   ref: ruby-2.5
   specs:
     gctools (0.2.4)
 
 GIT
-  remote: https://github.com/wjordan/image_optim.git
+  remote: https://github.com/code-dot-org/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
   specs:
@@ -67,7 +67,7 @@ GIT
       progress (~> 3.0, >= 3.0.1)
 
 GIT
-  remote: https://github.com/wjordan/image_optim_pack.git
+  remote: https://github.com/code-dot-org/image_optim_pack.git
   revision: 41e063908e1b038a852f18504dd52721aac5ea6a
   ref: guetzli
   specs:
@@ -76,7 +76,7 @@ GIT
       image_optim (~> 0.19)
 
 GIT
-  remote: https://github.com/wjordan/lograge.git
+  remote: https://github.com/code-dot-org/lograge.git
   revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
   ref: debug_exceptions
   specs:
@@ -87,7 +87,7 @@ GIT
       request_store (~> 1.0)
 
 GIT
-  remote: https://github.com/wjordan/omniauth-openid-connect.git
+  remote: https://github.com/code-dot-org/omniauth-openid-connect.git
   revision: 2397b1415896e2639a7582a36e26c90b9211f99f
   ref: cdo
   specs:
@@ -97,7 +97,7 @@ GIT
       openid_connect (~> 1.0, >= 1.0.3)
 
 GIT
-  remote: https://github.com/wjordan/omniauth-windowslive.git
+  remote: https://github.com/code-dot-org/omniauth-windowslive.git
   revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
   specs:
@@ -106,14 +106,14 @@ GIT
       omniauth-oauth2 (~> 1.4)
 
 GIT
-  remote: https://github.com/wjordan/puma.git
+  remote: https://github.com/code-dot-org/puma.git
   revision: 29a576120b30c34db7706c062ddf9a046723789f
   branch: debugging
   specs:
     puma (3.12.0)
 
 GIT
-  remote: https://github.com/wjordan/sprockets.git
+  remote: https://github.com/code-dot-org/sprockets.git
   revision: 35caa45a78b739362b7db087b141f89e27d107c7
   ref: concurrent_asset_bundle_3.x
   specs:
