@@ -23,23 +23,23 @@ ENV \
 # just enough to compile ruby: other deps => primary-layer below
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    autoconf \
-    bison \
-    build-essential \
-    curl \
-    git \
-    libaio-dev \
-    libaio1 \
-    libffi-dev \
-    libgdbm-dev \
-    libncurses5-dev \
-    libreadline-dev \
-    libssl-dev \
-    libyaml-dev \
-    rbenv \
-    sudo \
-    zlib1g-dev \
-    && true
+        autoconf \
+        bison \
+        build-essential \
+        curl \
+        git \
+        libaio-dev \
+        libaio1 \
+        libffi-dev \
+        libgdbm-dev \
+        libncurses5-dev \
+        libreadline-dev \
+        libssl-dev \
+        libyaml-dev \
+        rbenv \
+        sudo \
+        zlib1g-dev \
+        && true
 
 # add circleci user
 RUN groupadd --gid 3434 ${USER} && \
