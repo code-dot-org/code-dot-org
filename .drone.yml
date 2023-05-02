@@ -81,6 +81,18 @@ steps:
       mount:
         - /home/circleci/.rbenv
 
+  - name: upload-test-results
+    image: plugins/s3
+    settings:
+      bucket: cdo-test-results-public
+      source: $HOME/test-results/**/*
+      target: /$DRONE_COMMIT_SHA
+      # region: us-west-2
+    when:
+      status:
+      - failure
+      - success
+
 volumes:
   - name: rbenv
     temp: {}
