@@ -20,6 +20,9 @@ export enum ProjectManagerEvent {
 }
 
 export default class ProjectManager {
+  // Channel id can be provided at initialization, or set later via load(levelId).
+  // We support both paths so that /projects can be created with a specific channel id,
+  // or we can load a channel for a level.
   channelId: string | undefined;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
@@ -45,21 +48,17 @@ export default class ProjectManager {
     this.getProject = getProject;
   }
 
-  async setLevel(levelId: string) {
-    const response = await this.channelsStore.loadForLevel(levelId);
-    if (response.ok) {
-      const responseBody = await response.json();
-      console.log(responseBody);
-      if (responseBody && responseBody.channel) {
-        this.channelId = responseBody.channel;
-      }
-    }
-  }
-
+  // Load the project from the sources and channels store. If a level id is provided,
+  // load the channel for that level first.
   async load(levelId?: string): Promise<Response> {
     if (levelId) {
-      await this.setLevel(levelId);
+      const setLevelResponse = await this.setLevel(levelId);
+      if (!setLevelResponse.ok) {
+        return setLevelResponse;
+      }
     }
+    // It's possible to not have a channel id set if a level id was not provided
+    // or we were not given a channelId on initialization.
     if (!this.channelId) {
       return this.getNoChannelResponse();
     }
@@ -168,6 +167,22 @@ export default class ProjectManager {
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );
+  }
+
+  // Given a level id, get the channel id for that level and set it as the current channel.
+  // This is private because it is only called from load(levelId). It could be made public
+  // if we see a need to call it directly from a lab.
+  private async setLevel(levelId: string) {
+    const response = await this.channelsStore.loadForLevel(levelId);
+    if (response.ok) {
+      const responseBody = await response.json();
+      if (responseBody && responseBody.channel) {
+        this.channelId = responseBody.channel;
+      }
+      return response;
+    } else {
+      return response;
+    }
   }
 
   addEventListener(type: ProjectManagerEvent, listener: () => void) {

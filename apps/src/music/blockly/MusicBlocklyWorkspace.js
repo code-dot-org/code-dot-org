@@ -20,8 +20,8 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManagerFactory from '../../labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '../../labs/types';
+import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
+import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 
@@ -351,7 +351,6 @@ export default class MusicBlocklyWorkspace {
   }
 
   async loadCode(levelId) {
-    console.log(`Loading code for level ${levelId}`);
     const projectResponse = await this.projectManager.load(levelId);
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
@@ -386,7 +385,7 @@ export default class MusicBlocklyWorkspace {
       // Force a save with the current code before changing panels.
       await this.projectManager.save(true);
     }
-    // Now that we've saved (if we needed to), load the code for this level
+    // Now that we've saved (if we needed to), load the code for this level.
     this.loadCode(newLevelId);
   }
 
