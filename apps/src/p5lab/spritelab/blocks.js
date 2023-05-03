@@ -1,7 +1,7 @@
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
-import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
@@ -108,11 +108,9 @@ const customInputTypes = {
         `${inputConfig.label}`,
         `${inputConfig.name}_LABEL`
       );
-      const fieldRow = currentInputRow.getFieldRow();
-      const fieldLabel = fieldRow[fieldRow.length - 1]; // fieldLabel = 'sprite at'
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
-      icon.textContent = '\uf276';
+      icon.textContent = '\uf276'; // map-pin
       const onChange = () => {
         getLocation(loc => {
           if (loc) {
@@ -120,35 +118,12 @@ const customInputTypes = {
           }
         });
       };
-      const onDisplaySetField = value => {
-        if (value) {
-          try {
-            const loc = JSON.parse(value);
-            return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
-          } catch (e) {
-            // Just ignore bad values
-          }
-        }
-      };
-      // TODO: Remove function below when sprite lab migrates to google blockly.
-      const onDisplaySetLabel = value => {
-        if (value) {
-          try {
-            const loc = JSON.parse(value);
-            fieldLabel.setValue(
-              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
-            );
-          } catch (e) {
-            // Just ignore bad values
-          }
-        }
-      };
       const fieldButton = Blockly.cdoUtils.locationField(
         icon,
         onChange,
-        onDisplaySetLabel,
-        onDisplaySetField,
-        block.getHexColour() // Google Blockly includes block.getColour
+        block,
+        inputConfig,
+        currentInputRow
       );
       currentInputRow.appendField(fieldButton, inputConfig.name);
     },
@@ -201,6 +176,9 @@ const customInputTypes = {
   },
   soundPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const icon = document.createElementNS(SVG_NS, 'tspan');
+      icon.style.fontFamily = 'FontAwesome';
+      icon.textContent = '\uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
@@ -215,7 +193,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          Blockly.cdoUtils.soundField(onChange, onDisplay),
+          Blockly.cdoUtils.soundField(onChange, onDisplay, icon),
           inputConfig.name
         );
     },

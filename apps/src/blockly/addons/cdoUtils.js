@@ -1,6 +1,6 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
-
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
@@ -109,7 +109,7 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-export function soundField(onChange, onDisplay) {
+export function soundField(onChange, onDisplay, icon) {
   // Handle 'play sound' block with default param from CDO blockly.
   // TODO: Remove when sprite lab is migrated to Google blockly.
   const validator = newValue => {
@@ -121,11 +121,27 @@ export function soundField(onChange, onDisplay) {
     }
     return newValue;
   };
-  // FieldButton(value, validator, onChange, onDisplay)
-  return new Blockly.FieldButton(DEFAULT_SOUND, validator, onChange, onDisplay);
+  // FieldButton(value, validator, onChange, onDisplay, icon)
+  return new Blockly.FieldButton(
+    DEFAULT_SOUND,
+    validator,
+    onChange,
+    onDisplay,
+    icon
+  );
 }
 
-export function locationField(icon, onChange, _, onDisplaySetField) {
+export function locationField(icon, onChange) {
+  const onDisplaySetField = value => {
+    if (value) {
+      try {
+        const loc = JSON.parse(value);
+        return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
+      } catch (e) {
+        // Just ignore bad values
+      }
+    }
+  };
   // FieldButton(value, validator, onChange, onDisplay, icon)
   return new Blockly.FieldButton(null, null, onChange, onDisplaySetField, icon);
 }

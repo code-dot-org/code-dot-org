@@ -1,5 +1,6 @@
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -278,7 +279,28 @@ function initializeBlocklyWrapper(blocklyInstance) {
     soundField: function (onChange) {
       return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
     },
-    locationField: function (icon, onChange, onDisplaySetLabel, _, color) {
+    locationField: function (
+      icon,
+      onChange,
+      block,
+      inputConfig,
+      currentInputRow
+    ) {
+      const fieldRow = currentInputRow.getFieldRow();
+      const fieldLabel = fieldRow[fieldRow.length - 1];
+      const onDisplaySetLabel = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            fieldLabel.setValue(
+              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
+            );
+          } catch (e) {
+            // Just ignore bad values
+          }
+        }
+      };
+      const color = block.getHexColour();
       return new Blockly.FieldButton(icon, onChange, color, onDisplaySetLabel);
     },
   };
