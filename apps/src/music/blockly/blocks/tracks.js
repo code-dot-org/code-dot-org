@@ -1,4 +1,3 @@
-import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
@@ -12,6 +11,7 @@ import {
   TRIGGER_FIELD,
 } from '../constants';
 import {fieldRestDurationDefinition} from '../fields';
+import musicI18n from '../../locale';
 
 const getCurrentTrackId = ctx => {
   let block = ctx;
@@ -35,7 +35,7 @@ const getCurrentTrackId = ctx => {
 export const newTrackAtStart = {
   definition: {
     type: BlockTypes.NEW_TRACK_AT_START,
-    message0: `${musicI18n.blockly_blockNewTrackAtStart()} %1`,
+    message0: musicI18n.blockly_blockNewTrackAtStart({name: '%1'}),
     args0: [
       {
         type: 'field_input',
@@ -130,7 +130,7 @@ export const newTrackOnTrigger = {
 export const playSoundInTrack = {
   definition: {
     type: BlockTypes.PLAY_SOUND_IN_TRACK,
-    message0: `${musicI18n.blockly_blockPlaySound()} %1`,
+    message0: musicI18n.blockly_blockPlaySound({sound: '%1'}),
     args0: [
       {
         type: 'input_value',
@@ -172,7 +172,7 @@ export const playSoundInTrack = {
 export const restInTrack = {
   definition: {
     type: BlockTypes.REST_IN_TRACK,
-    message0: `${musicI18n.blockly_blockRest()} %1`,
+    message0: musicI18n.blockly_blockRest({duration: '%1'}),
     args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,

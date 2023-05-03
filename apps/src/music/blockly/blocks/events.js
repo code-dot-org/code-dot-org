@@ -1,6 +1,6 @@
-import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {TRIGGER_FIELD} from '../constants';
+import musicI18n from '../../locale';
 
 export const whenRun = {
   definition: {
@@ -50,7 +50,7 @@ export const triggeredAt = {
 export const triggeredAtSimple = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE,
-    message0: `%1 ${musicI18n.blockly_blockTriggered()}`,
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
     args0: [
       {
         type: 'input_dummy',

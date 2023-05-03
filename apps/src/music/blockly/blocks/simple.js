@@ -1,13 +1,13 @@
-import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {isBlockInsideWhenRun} from '../blockUtils';
 import {FIELD_SOUNDS_NAME} from '../constants';
 import {fieldSoundsDefinition} from '../fields';
+import musicI18n from '../../locale';
 
 export const playSoundAtCurrentLocation = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
-    message0: `${musicI18n.blockly_blockPlaySound()} %1`,
+    message0: musicI18n.blockly_blockPlaySound({sound: '%1'}),
     args0: [fieldSoundsDefinition],
     inputsInline: true,
     previousStatement: null,

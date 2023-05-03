@@ -109,7 +109,7 @@ export const whenRunSimple2 = {
 export const triggeredAtSimple2 = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
-    message0: `%1 ${musicI18n.blockly_blockTriggered()}`,
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
     args0: [
       {
         type: 'input_dummy',
@@ -139,7 +139,7 @@ export const triggeredAtSimple2 = {
 export const playSoundAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: `${musicI18n.blockly_blockPlaySound()} %1`,
+    message0: musicI18n.blockly_blockPlaySound({sound: '%1'}),
     args0: [fieldSoundsDefinition],
     inputsInline: true,
     previousStatement: null,
@@ -171,7 +171,7 @@ export const playSoundAtCurrentLocationSimple2 = {
 export const playPatternAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: `${musicI18n.blockly_blockPlayPattern()} %1`,
+    message0: musicI18n.blockly_blockPlayPattern({pattern: '%1'}),
     args0: [fieldPatternDefinition],
     inputsInline: true,
     previousStatement: null,
@@ -201,7 +201,7 @@ export const playPatternAtCurrentLocationSimple2 = {
 export const playChordAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: `${musicI18n.blockly_blockPlayChord()} %1`,
+    message0: musicI18n.blockly_blockPlayChord({chord: '%1'}),
     args0: [fieldChordDefinition],
     inputsInline: true,
     previousStatement: null,
@@ -231,7 +231,7 @@ export const playChordAtCurrentLocationSimple2 = {
 export const playRestAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: `${musicI18n.blockly_blockRest()} %1`,
+    message0: musicI18n.blockly_blockRest({duration: '%1'}),
     args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,
