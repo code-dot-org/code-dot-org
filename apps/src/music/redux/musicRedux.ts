@@ -22,14 +22,23 @@ export const InstructionsPositions = {
 };
 
 interface MusicState {
+  /** If the song is currently playing */
   isPlaying: boolean;
+  /** The current 1-based playhead position, scaled to measures */
   currentPlayheadPosition: number;
+  /** The ID of the currently selected block, or undefined if no block is selected */
   selectedBlockId: string | undefined;
+  /** If the timeline should be positioned at the top above the workspace */
   timelineAtTop: boolean;
+  /** If instructions should be shown */
   showInstructions: boolean;
+  /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
+  /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
+  /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The current last measure of the song */
   lastMeasure: number;
   // TODO: Currently Music Lab is the only Lab that uses
   // this progres system, but in the future, we may want to
