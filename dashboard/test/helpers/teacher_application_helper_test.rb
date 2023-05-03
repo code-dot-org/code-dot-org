@@ -16,7 +16,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     @user_with_incomplete_closed_app = create :teacher
     regional_partner_with_closed_apps = create :regional_partner, apps_close_date_teacher: (Date.current - 3.days).strftime("%Y-%m-%d")
     hash_with_rp_closed_apps = build :pd_teacher_application_hash, regional_partner_id: regional_partner_with_closed_apps.id
-    @incomplete_application = create TEACHER_APPLICATION_FACTORY,
+    create TEACHER_APPLICATION_FACTORY,
       user: @user_with_incomplete_closed_app,
       status: 'incomplete',
       regional_partner: regional_partner_with_closed_apps,
@@ -25,7 +25,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     @user_with_incomplete_open_app = create :teacher
     regional_partner_with_open_apps = create :regional_partner, apps_close_date_teacher: (Date.current + 3.days).strftime("%Y-%m-%d")
     hash_with_rp_open_apps = build :pd_teacher_application_hash, regional_partner_id: regional_partner_with_open_apps.id
-    @incomplete_application = create TEACHER_APPLICATION_FACTORY,
+    create TEACHER_APPLICATION_FACTORY,
       user: @user_with_incomplete_open_app,
       status: 'incomplete',
       form_data_hash: hash_with_rp_open_apps
