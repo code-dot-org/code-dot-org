@@ -17,11 +17,9 @@
   .videothumbnail {
     cursor: pointer;
     width: #{width};
-
     .thumbnail-wrapper {
       position: relative;
       overflow: hidden;
-
       .thumbnail-image {
         width: 100%;
       }
@@ -31,6 +29,7 @@
   .play-button-wrapper {
     all: unset;
     position: absolute;
+    border-radius: 100%;
     transition: background ease-in-out .2s;
 
     &:focus {
@@ -55,7 +54,6 @@
       transform: translate(-50%, -50%);
       width: 6em;
       height: 5.95em;
-      border-radius: 100%;
     }
   }
 
@@ -102,7 +100,7 @@
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
     %img.thumbnail-image{:src => image, :alt => "video thumbnail"}
-    %button.play-button-wrapper{type: "button"}
+    %button.play-button-wrapper
       %img.play{:src => "/shared/images/play-button.png", :alt => "play button"}
     .video_caption_link= caption
 
