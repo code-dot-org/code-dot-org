@@ -253,6 +253,10 @@ class UnconnectedMusicView extends React.Component {
     this.clearCode();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
+    if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
+      // force a save with the current code before changing panels.
+      this.musicBlocklyWorkspace.saveCode(true);
+    }
   };
 
   setToolboxForProgress = () => {

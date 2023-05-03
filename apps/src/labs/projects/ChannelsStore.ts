@@ -15,16 +15,19 @@ export interface ChannelsStore {
   save: (channel: Channel) => Promise<Response>;
 }
 
-// Note: This is a stubbed implementation of ChannelsStore because
-// we currently don't have or need the concept of a channel for
-// projects stored locally.
+// Note: We don't need to actually save a channel for local storage.
+// However, we want to ensure we keep track of the original local storage
+// key when switching levels, so we store it here.
 export class LocalChannelsStore implements ChannelsStore {
-  load() {
+  localStorageKey: string | undefined = undefined;
+
+  load(key: string) {
+    this.localStorageKey = key;
     return Promise.resolve(new Response('{}'));
   }
 
   loadForLevel() {
-    return Promise.resolve(new Response('{}'));
+    return Promise.resolve(new Response(`{channel: ${this.localStorageKey}}`));
   }
 
   save() {

@@ -11,7 +11,6 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Project} from '../types';
-import {AppOptionsStore} from '../AppOptionsStore';
 
 export enum ProjectManagerEvent {
   SaveStart,
@@ -21,10 +20,9 @@ export enum ProjectManagerEvent {
 }
 
 export default class ProjectManager {
-  channelId: string;
+  channelId: string | undefined;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
-  appOptionsStore: AppOptionsStore;
   getProject: () => Project;
 
   private nextSaveTime: number | null = null;
@@ -36,16 +34,14 @@ export default class ProjectManager {
   } = {};
 
   constructor(
-    channelId: string,
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
-    appOptionsStore: AppOptionsStore,
-    getProject: () => Project
+    getProject: () => Project,
+    channelId: string | undefined
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
-    this.appOptionsStore = appOptionsStore;
     this.getProject = getProject;
   }
 
@@ -55,6 +51,9 @@ export default class ProjectManager {
   }
 
   async load(): Promise<Response> {
+    if (!this.channelId) {
+      return this.getNoChannelResponse();
+    }
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     // If sourceResponse is not ok, we still want to load the channel. Source can
     // return not found if the project is new.
@@ -69,8 +68,6 @@ export default class ProjectManager {
     }
 
     const channel = await channelResponse.json();
-    // ensure the project type is set on the channel
-    channel.projectType = this.appOptionsStore.getProjectType();
     const project = {source, channel};
     const blob = new Blob([JSON.stringify(project)], {
       type: 'application/json',
@@ -95,6 +92,9 @@ export default class ProjectManager {
    * will be empty, otherwise it will contain failure information.
    */
   async save(forceSave = false): Promise<Response> {
+    if (!this.channelId) {
+      return this.getNoChannelResponse();
+    }
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
@@ -174,5 +174,9 @@ export default class ProjectManager {
     response: Response = new Response()
   ) {
     this.eventListeners[type]?.forEach(listener => listener(response));
+  }
+
+  private getNoChannelResponse() {
+    return new Response('No channel id', {status: 404});
   }
 }

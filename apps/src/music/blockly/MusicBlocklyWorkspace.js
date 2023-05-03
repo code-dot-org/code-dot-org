@@ -30,12 +30,12 @@ import {Renderers} from '@cdo/apps/blockly/constants';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor(appOptions) {
+  constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
     this.channel = {};
-    this.projectManager = this.getProjectManager(appOptions);
+    this.projectManager = this.getProjectManager();
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -399,7 +399,7 @@ export default class MusicBlocklyWorkspace {
 
   // Get the project manager for the current storage type.
   // If no storage type is specified in AppConfig, use local storage.
-  getProjectManager(appOptions) {
+  getProjectManager() {
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
       storageType = LOCAL_STORAGE;
@@ -409,16 +409,13 @@ export default class MusicBlocklyWorkspace {
     if (storageType === REMOTE_STORAGE) {
       return ProjectManagerFactory.getProjectManager(
         ProjectManagerStorageType.REMOTE,
-        appOptions,
-        appOptions.channel,
         this.getProject.bind(this)
       );
     } else {
       return ProjectManagerFactory.getProjectManager(
         ProjectManagerStorageType.LOCAL,
-        appOptions,
-        this.getLocalStorageKeyName(),
-        this.getProject.bind(this)
+        this.getProject.bind(this),
+        this.getLocalStorageKeyName()
       );
     }
   }
