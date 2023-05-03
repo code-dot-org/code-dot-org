@@ -60,6 +60,15 @@ export const UnconnectedTeacherHomepage = ({
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
+  /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
+   * when we want to show the Census banner again set this to true
+   */
+  const showPLBanner = false;
+
+  /* We are hiding the Census banner to free up space on the Teacher Homepage (May 2023)
+   * when we want to show the Census banner again remove the next line
+   */
+  showCensusBanner = false;
   const [displayCensusBanner, setDisplayCensusBanner] =
     useState(showCensusBanner);
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
@@ -202,7 +211,7 @@ export const UnconnectedTeacherHomepage = ({
             solidBorder={true}
           />
         )}
-        <ProfessionalLearningSkinnyBanner />
+        {showPLBanner && <ProfessionalLearningSkinnyBanner />}
         {showReturnToReopenedTeacherApplication && (
           <BorderedCallToAction
             headingText="Return to Your Application"

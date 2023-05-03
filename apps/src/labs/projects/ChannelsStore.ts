@@ -16,11 +16,11 @@ export interface ChannelsStore {
 // we currently don't have or need the concept of a channel for
 // projects stored locally.
 export class LocalChannelsStore implements ChannelsStore {
-  load(_key: string) {
+  load() {
     return Promise.resolve(new Response('{}'));
   }
 
-  save(_channel: Channel) {
+  save() {
     return Promise.resolve(new Response(''));
   }
 }
