@@ -44,6 +44,7 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
+import {isEqual} from 'lodash';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -209,6 +210,15 @@ class UnconnectedMusicView extends React.Component {
       !this.props.isPlaying
     ) {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
+    }
+
+    if (
+      !isEqual(
+        prevProps.currentlyPlayingBlockIds,
+        this.props.currentlyPlayingBlockIds
+      )
+    ) {
+      this.updateHighlightedBlocks();
     }
   }
 
@@ -386,7 +396,6 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
-      this.updateHighlightedBlocks();
     }
   };
 
