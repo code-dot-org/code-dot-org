@@ -1,11 +1,11 @@
 name 'CSA U5L2-L5_2023'
 title 'Check for Understanding'
 
-wrong '14'
-right '56'
-wrong '20'
-wrong '63'
-wrong '18'
+wrong '`14`'
+right '`56`'
+wrong '`20`'
+wrong '`63`'
+wrong '`18`'
 
 allow_multiple_attempts nil
 

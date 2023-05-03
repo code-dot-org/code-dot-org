@@ -108,7 +108,7 @@ Dashboard::Application.routes.draw do
     get '/catalog', to: 'curriculum_catalog#index'
 
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -1041,5 +1041,9 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+
+    get '/get_token', to: 'authenticity_token#get_token'
   end
 end

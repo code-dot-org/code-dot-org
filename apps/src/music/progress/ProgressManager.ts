@@ -103,9 +103,11 @@ export default class ProgressManager {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
-          this.currentProgressState.satisfied = validation.next;
-          this.currentProgressState.message = validation.message;
-          this.onProgressChange();
+          if (!this.currentProgressState.satisfied) {
+            this.currentProgressState.satisfied = validation.next;
+            this.currentProgressState.message = validation.message;
+            this.onProgressChange();
+          }
           return;
         }
       } else {

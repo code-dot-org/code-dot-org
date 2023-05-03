@@ -1,4 +1,3 @@
-/* global mapboxgl */
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';

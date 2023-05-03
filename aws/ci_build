@@ -186,7 +186,7 @@ def main
 
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
-        ChatClient.log "*** Before you manually re-run a test, please ensure that the cabal who owns that test is actively tracking de-flaking. ***", color: 'yellow'
+        ChatClient.log "*** Before you manually re-run a test, please ensure that the team who owns that test is actively tracking de-flaking. ***", color: 'yellow'
       end
     end
 
