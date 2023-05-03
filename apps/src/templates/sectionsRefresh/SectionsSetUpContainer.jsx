@@ -68,12 +68,10 @@ const useSections = section => {
 };
 
 const saveSection = (
-  e,
   section,
   isNewSection,
   shouldShowCelebrationDialogOnRedirect
 ) => {
-  e.preventDefault();
   // Determine data sources and save method based on new vs edit section
   const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
   const method = isNewSection ? 'POST' : 'PATCH';
