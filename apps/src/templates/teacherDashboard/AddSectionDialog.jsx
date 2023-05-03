@@ -19,16 +19,10 @@ import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
-// Checks if experiment is enabled and navigates to the new section setup page
-// if both params are non-null.
+// Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
-  if (
-    experiments.isEnabled('sectionSetupRefresh') &&
-    !!participantType &&
-    !!loginType
-  ) {
+  if (!!participantType && !!loginType) {
     navigateToHref(
       `/sections/new?participantType=${participantType}&loginType=${loginType}`
     );
@@ -118,11 +112,7 @@ const AddSectionDialog = ({
     return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  if (
-    participantType &&
-    loginType &&
-    experiments.isEnabled('sectionSetupRefresh')
-  ) {
+  if (participantType && loginType) {
     return null;
   } else {
     return (
