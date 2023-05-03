@@ -246,6 +246,6 @@ export default class AnalyticsReporter {
   }
 
   log(message: string) {
-    console.debug(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
   }
 }
