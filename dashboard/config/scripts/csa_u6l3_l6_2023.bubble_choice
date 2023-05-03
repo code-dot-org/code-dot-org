@@ -1,6 +1,6 @@
 name 'CSA U6L3-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: The Integer Class'
+description 'Practice working with the `Integer` class and its methods.'
 
 sublevels
 level 'CSA U6L3-L6a_2023'
