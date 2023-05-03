@@ -9,7 +9,7 @@ const rubricLevels = [
   'performanceLevel1',
   'performanceLevel2',
   'performanceLevel3',
-  'performanceLevel4'
+  'performanceLevel4',
 ];
 
 class TeacherFeedbackRubric extends Component {
@@ -17,7 +17,7 @@ class TeacherFeedbackRubric extends Component {
     rubric: rubricShape,
     performance: PropTypes.string,
     isEditable: PropTypes.bool,
-    onRubricChange: PropTypes.func
+    onRubricChange: PropTypes.func,
   };
 
   render() {
@@ -67,30 +67,30 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 8px 16px'
+    margin: '0px 16px 8px 16px',
   },
   keyConceptArea: {
     marginRight: 28,
-    flexBasis: '40%'
+    flexBasis: '40%',
   },
   h1: {
     color: color.charcoal,
     fontSize: 18,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
   },
   keyConcepts: {
     fontSize: 12,
     color: color.charcoal,
-    margin: 0
+    margin: 0,
   },
   rubricArea: {
-    flexBasis: '60%'
+    flexBasis: '60%',
   },
   form: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };
 
 export default TeacherFeedbackRubric;

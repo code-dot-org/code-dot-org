@@ -27,7 +27,7 @@ class StudentLessonOverview extends Component {
     // from redux
     lessonLevels: PropTypes.arrayOf(levelWithProgressType),
     announcements: PropTypes.arrayOf(announcementShape),
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
   };
 
   renderLevels = () => {
@@ -82,7 +82,7 @@ class StudentLessonOverview extends Component {
         <h1>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
-            lessonName: lesson.displayName
+            lessonName: lesson.displayName,
           })}
         </h1>
         {lesson.overview && (
@@ -142,17 +142,17 @@ const styles = {
   header: {
     margin: '10px 0px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
     color: color.purple,
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   titleNoTopMargin: {
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
@@ -160,5 +160,5 @@ export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 export default connect((state, ownProps) => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id)
+  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id),
 }))(StudentLessonOverview);

@@ -14,7 +14,7 @@ const HideToolbarHelperCookieName = 'hide_toolbar_helper';
  */
 export default class HideToolbarHelper extends React.Component {
   state = {
-    showHelper: false
+    showHelper: false,
   };
 
   constructor(props) {
@@ -136,6 +136,6 @@ const styles = {
     position: 'absolute',
     top: 5,
     right: 5,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

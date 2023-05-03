@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
@@ -12,7 +10,7 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 

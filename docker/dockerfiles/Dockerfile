@@ -28,6 +28,8 @@ RUN apt-get update && \
         build-essential \
         curl \
         git \
+        libaio-dev \
+        libaio1 \
         libffi-dev \
         libgdbm-dev \
         libncurses5-dev \
@@ -47,7 +49,7 @@ RUN groupadd --gid 3434 ${USER} && \
 #########################################################
 FROM ubuntu:18.04 as node
 #########################################################
-# compile node to /node, this layer is merged at the end
+# compile node to /build, this layer is merged at the end
 #########################################################
 
 RUN apt-get update && \
@@ -98,35 +100,33 @@ FROM base as primary-layer
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
 RUN apt-get install -y --no-install-recommends \
-        apt-transport-https \
-        ca-certificates \
-        enscript \
-        ghostscript \
-        gnupg \
-        gzip \
-        imagemagick \
-        jq \
-        libaio-dev \
-        libaio1 \
-        libicu-dev \
-        libmagickwand-dev \
-        libsqlite3-dev \
-        locales \
-        moreutils \
-        openssh-client \
-        parallel \
-        python \
-        python-dev \
-        software-properties-common \
-        sudo \
-        tar \
-        tzdata \
-        unzip \
-        vim \
-        xvfb \
-        xz-utils \
-        zlib1g-dev \
-        && true
+    apt-transport-https \
+    ca-certificates \
+    enscript \
+    ghostscript \
+    gnupg \
+    gzip \
+    imagemagick \
+    jq \
+    libicu-dev \
+    libmagickwand-dev \
+    libsqlite3-dev \
+    locales \
+    moreutils \
+    openssh-client \
+    parallel \
+    python \
+    python-dev \
+    software-properties-common \
+    sudo \
+    tar \
+    tzdata \
+    unzip \
+    vim \
+    xvfb \
+    xz-utils \
+    zlib1g-dev \
+    && true
 
 WORKDIR /tmp
 

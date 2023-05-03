@@ -23,7 +23,7 @@ import {
   getProjectDatabase,
   getSharedDatabase,
   getPathRef,
-  unescapeFirebaseKey
+  unescapeFirebaseKey,
 } from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -53,13 +53,13 @@ import {
   updateTableColumns,
   updateTableRecords,
   updateKeyValueData,
-  setLibraryManifest
+  setLibraryManifest,
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
@@ -133,12 +133,12 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 // Default Scalings
 Applab.scale = {
   snapRadius: 1,
-  stepSpeed: 0
+  stepSpeed: 0,
 };
 
 var twitterOptions = {
   text: applabMsg.shareApplabTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: 'ApplabCode'
+  hashtag: 'ApplabCode',
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
@@ -190,29 +190,29 @@ Applab.makeFooterMenuItems = function (isIframeEmbed) {
       key: 'how-it-works',
       text: commonMsg.howItWorks(),
       link: project.getProjectUrl('/view'),
-      newWindow: true
+      newWindow: true,
     },
     isIframeEmbed &&
       !dom.isMobile() && {
         text: applabMsg.makeMyOwnApp(),
-        link: '/projects/applab/new'
+        link: '/projects/applab/new',
       },
     {
       key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
-      newWindow: true
+      newWindow: true,
     },
     {
       text: commonMsg.copyright(),
       link: '#',
-      copyright: true
+      copyright: true,
     },
     {
       text: commonMsg.privacyPolicy(),
       link: 'https://code.org/privacy',
-      newWindow: true
-    }
+      newWindow: true,
+    },
   ].filter(item => item);
 
   const channelId = project.getCurrentId();
@@ -247,7 +247,7 @@ function renderFooterInSharedGame() {
       style={{fontSize: 18}}
       baseStyle={{
         width: $('#divApplab').width(),
-        paddingLeft: 0
+        paddingLeft: 0,
       }}
       className="dark"
       menuItems={menuItems}
@@ -399,7 +399,7 @@ Applab.init = function (config) {
   getStore().dispatch(
     actions.setLevelData({
       name: config.level.name,
-      isStartMode: config.isStartMode
+      isStartMode: config.isStartMode,
     })
   );
 
@@ -418,7 +418,7 @@ Applab.init = function (config) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
       start_html: Applab.getHtml(),
-      start_libraries: JSON.stringify(project.getProjectLibraries())
+      start_libraries: JSON.stringify(project.getProjectLibraries()),
     }));
   }
   Applab.channelId = config.channel;
@@ -428,7 +428,7 @@ Applab.init = function (config) {
     firebaseAuthToken: config.firebaseAuthToken,
     firebaseSharedAuthToken: config.firebaseSharedAuthToken,
     firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-    showRateLimitAlert: studioApp().showRateLimitAlert
+    showRateLimitAlert: studioApp().showRateLimitAlert,
   });
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
@@ -445,7 +445,7 @@ Applab.init = function (config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
-    isSignedIn: config.isSignedIn
+    isSignedIn: config.isSignedIn,
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
 
@@ -480,7 +480,7 @@ Applab.init = function (config) {
   if (showDebugButtons || showDebugConsole) {
     getStore().dispatch(
       jsDebugger.initialize({
-        runApp: Applab.runButtonClick
+        runApp: Applab.runButtonClick,
       })
     );
     if (config.level.expandDebugger) {
@@ -511,7 +511,7 @@ Applab.init = function (config) {
         // If this is a share page, autostart the app after warnings closed.
         window.setTimeout(Applab.runButtonClick.bind(studioApp()), 0);
       }
-    }
+    },
   };
 
   config.afterInject = function () {
@@ -629,7 +629,7 @@ Applab.init = function (config) {
     initializeSubmitHelper({
       studioApp: studioApp(),
       onPuzzleComplete: this.onPuzzleComplete.bind(this),
-      unsubmitUrl: level.unsubmitUrl
+      unsubmitUrl: level.unsubmitUrl,
     });
 
     setupReduxSubscribers(getStore());
@@ -682,7 +682,7 @@ Applab.init = function (config) {
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
     validationEnabled: !!config.level.validationEnabled,
     widgetMode: config.level.widgetMode,
-    isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled)
+    isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled),
   });
 
   config.dropletConfig = dropletConfig;
@@ -760,7 +760,7 @@ Applab.init = function (config) {
   );
 
   Applab.reactInitialProps_ = {
-    onMount: onMount
+    onMount: onMount,
   };
 
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
@@ -978,7 +978,7 @@ Applab.render = function () {
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
     handleVersionHistory: Applab.handleVersionHistory,
-    autogenerateML: autogenerateML
+    autogenerateML: autogenerateML,
   });
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1180,7 +1180,7 @@ Applab.runButtonClick = function () {
       logToCloud.PageAction.RunButtonClick,
       {
         usingBlocks: studioApp().editor.session.currentlyUsingBlocks,
-        app: 'applab'
+        app: 'applab',
       },
       1 / 100
     );
@@ -1207,9 +1207,9 @@ var displayFeedback = function () {
       message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
-        sharingText: applabMsg.shareGame()
+        sharingText: applabMsg.shareGame(),
       },
-      hideXButton: true
+      hideXButton: true,
     });
   }
 };
@@ -1257,7 +1257,7 @@ Applab.execute = function () {
       shouldRunAtMaxSpeed: function () {
         return getCurrentTickLength() === 0;
       },
-      maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
+      maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
     });
 
     // Register to handle interpreter events
@@ -1273,7 +1273,7 @@ Applab.execute = function () {
       projectLibraries: level.projectLibraries,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-      enableEvents: true
+      enableEvents: true,
     });
     // Maintain a reference here so we can still examine this after we
     // discard the JSInterpreter instance during reset
@@ -1287,7 +1287,7 @@ Applab.execute = function () {
     makerToolkit
       .connect({
         interpreter: Applab.JSInterpreter,
-        onDisconnect: () => studioApp().resetButtonClick()
+        onDisconnect: () => studioApp().resetButtonClick(),
       })
       .then(Applab.beginVisualizationRun)
       .catch(error => {
@@ -1455,7 +1455,7 @@ Applab.onPuzzleComplete = function (submit) {
 
   if (Applab.executionError) {
     Applab.testResults = studioApp().getTestResults(levelComplete, {
-      executionError: Applab.executionError
+      executionError: Applab.executionError,
     });
   } else if (level.logConditions) {
     var results = executionLog.getResultsFromLog(
@@ -1527,7 +1527,7 @@ Applab.onPuzzleComplete = function (submit) {
         program: encodeURIComponent(program),
         image: Applab.encodedFeedbackImage,
         containedLevelResultsInfo: containedLevelResultsInfo,
-        onComplete
+        onComplete,
       });
     }
   };
@@ -1539,7 +1539,7 @@ Applab.executeCmd = function (id, name, opts) {
   var cmd = {
     id: id,
     name: name,
-    opts: opts
+    opts: opts,
   };
   return Applab.callCmd(cmd);
 };

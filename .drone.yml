@@ -45,7 +45,8 @@ steps:
       filename: unit-tests-cache.tar
 
   - name: unit-tests
-    image: codedotorg/code-dot-org:node-18.16.0 # see docker/dockerfiles/Dockerfile
+    # see: docker/dockerfiles/Dockerfile
+    image: codedotorg/code-dot-org:1.6.0
     pull: always
     volumes:
       - name: rbenv
@@ -142,7 +143,8 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:node-18.16.0 # see docker/dockerfiles/Dockerfile
+    # see: docker/dockerfiles/Dockerfile
+    image: codedotorg/code-dot-org:1.6.0
     pull: always
     volumes:
       - name: rbenv
@@ -208,6 +210,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: f09c48a32c65697d0720dc938009729a2387d624c5c6ccf025518ccd604729d1
+hmac: f41d9538d818dee7235b88cf0db385d9109ada844a4121c02586481a105f54cd
 
 ...

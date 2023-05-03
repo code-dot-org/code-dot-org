@@ -12,15 +12,15 @@ import {
   cancelRenamingProject,
   saveProjectName,
   remix,
-  unsetNameFailure
+  unsetNameFailure,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
 export const styles = {
   xIcon: {
-    paddingRight: 5
-  }
+    paddingRight: 5,
+  },
 };
 
 export class PersonalProjectsTableActionsCell extends Component {
@@ -36,7 +36,7 @@ export class PersonalProjectsTableActionsCell extends Component {
     saveProjectName: PropTypes.func.isRequired,
     remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
-    unsetNameFailure: PropTypes.func.isRequired
+    unsetNameFailure: PropTypes.func.isRequired,
   };
 
   onDelete = () => {
@@ -133,6 +133,6 @@ export default connect(
     },
     unsetNameFailure(projectId) {
       dispatch(unsetNameFailure(projectId));
-    }
+    },
   })
 )(PersonalProjectsTableActionsCell);

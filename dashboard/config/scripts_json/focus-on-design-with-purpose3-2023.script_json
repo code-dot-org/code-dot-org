@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 19:51:44 UTC",
+    "serialized_at": "2023-05-02 19:37:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7006,6 +7006,17 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/focus-on-design-with-purpose3-2023/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
       "name": "All Standards",
       "url": "/s/focus-on-design-with-purpose3-2023/standards",
       "key": "all_standards_3",
@@ -7014,6 +7025,17 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/focus-on-design-with-purpose3-2023/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -7177,13 +7199,25 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide\t",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view\t",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_3"
       }
     },
     {
@@ -7191,29 +7225,43 @@
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
       }
     },
     {
-      "name": "CSD Implementation Guide\t",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view\t",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Differentiation ",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_differentiation_3"
       }
     },
     {
-      "name": "CSD Learning Frameworks\t",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view\t",
-      "key": "csd_learning_frameworks",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_3"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4"
       }
     },
     {
@@ -7715,6 +7763,16 @@
       },
       "seeding_key": {
         "resource.key": "phone_paper_prototype"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_for_design_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_1"
       }
     },
     {
@@ -8781,13 +8839,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_standards_3",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "all_vocabulary_3",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_3",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_3",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },
@@ -8799,13 +8875,25 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_differentiation_3",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_3",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4",
+        "script.name": "focus-on-design-with-purpose3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_1",
         "script.name": "focus-on-design-with-purpose3-2023"
       }
     },

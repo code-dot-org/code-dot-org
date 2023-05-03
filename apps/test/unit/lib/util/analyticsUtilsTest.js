@@ -8,7 +8,7 @@ describe('AnalyticsUtils', () => {
   it('reports teacher viewing student work on a dsl level when needed', () => {
     window.appOptions = {
       readonlyWorkspace: true,
-      submitted: false
+      submitted: false,
     };
     const queryParamsSpy = sinon.stub(utils, 'queryParams');
     queryParamsSpy.withArgs('user_id').returns('123');

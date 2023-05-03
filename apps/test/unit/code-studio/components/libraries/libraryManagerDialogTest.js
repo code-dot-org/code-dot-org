@@ -3,7 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import LibraryManagerDialog, {
-  mapUserNameToProjectLibraries
+  mapUserNameToProjectLibraries,
 } from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
@@ -91,8 +91,8 @@ describe('LibraryManagerDialog', () => {
       replaceOnWindow('dashboard', {
         project: {
           getProjectLibraries: () => {},
-          setProjectLibraries: () => {}
-        }
+          setProjectLibraries: () => {},
+        },
       });
       getProjectLibrariesStub = sinon.stub(
         window.dashboard.project,
@@ -122,7 +122,7 @@ describe('LibraryManagerDialog', () => {
     it('displays LibraryListItem when the project contains libraries', () => {
       getProjectLibrariesStub.returns([
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
-        {name: 'second', channelId: 'def456', sectionName: 'section'}
+        {name: 'second', channelId: 'def456', sectionName: 'section'},
       ]);
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -138,7 +138,7 @@ describe('LibraryManagerDialog', () => {
       getClassLibrariesStub.callsFake(callback =>
         callback([
           {channel: '1', sectionName: 'section'},
-          {channel: '2', sectionName: 'section'}
+          {channel: '2', sectionName: 'section'},
         ])
       );
       const wrapper = shallow(
@@ -153,12 +153,12 @@ describe('LibraryManagerDialog', () => {
     it('displays all libraries from the project and the class', () => {
       getProjectLibrariesStub.returns([
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
-        {name: 'second', channelId: 'def456', sectionName: 'section'}
+        {name: 'second', channelId: 'def456', sectionName: 'section'},
       ]);
       getClassLibrariesStub.callsFake(callback =>
         callback([
           {channel: '1', sectionName: 'section'},
-          {channel: '2', sectionName: 'section'}
+          {channel: '2', sectionName: 'section'},
         ])
       );
       const wrapper = shallow(
@@ -177,7 +177,7 @@ describe('LibraryManagerDialog', () => {
           {channel: 'abc123', sectionName: 'section1'},
           {channel: 'def456', sectionName: 'section2'},
           {channel: 'ghi789', sectionName: 'section1'},
-          {channel: 'jkl1011', sectionName: 'section3'}
+          {channel: 'jkl1011', sectionName: 'section3'},
         ])
       );
       const wrapper = shallow(
@@ -240,7 +240,7 @@ describe('LibraryManagerDialog', () => {
     it('removeLibrary calls setProjectLibrary without the given library', () => {
       const projectLibraries = [
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
-        {name: 'second', channelId: 'def456', sectionName: 'section'}
+        {name: 'second', channelId: 'def456', sectionName: 'section'},
       ];
       getProjectLibrariesStub.returns(projectLibraries);
       let setProjectLibraries = sinon.spy(
@@ -276,12 +276,12 @@ describe('LibraryManagerDialog', () => {
     it('sets updatedLibraryChannels in state', () => {
       const libraries = [
         {channelId: 'abc123', versionId: '1'},
-        {channelId: 'def456', versionId: '2'}
+        {channelId: 'def456', versionId: '2'},
       ];
       server.respondWith('GET', /\/libraries\/get_updates\?libraries=.+/, [
         200,
         {'Content-Type': 'application/json'},
-        '["abc123"]'
+        '["abc123"]',
       ]);
 
       wrapper.instance().fetchUpdates(libraries);
@@ -312,7 +312,7 @@ describe('LibraryManagerDialog', () => {
       library = {
         name: 'MyLibrary',
         description: 'Very fun!',
-        source: 'function myLibrary() {};'
+        source: 'function myLibrary() {};',
       };
     });
 

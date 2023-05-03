@@ -106,7 +106,7 @@ export default class MusicPlayer {
       effects,
       length: soundData.length,
       soundType: soundData.type,
-      blockId
+      blockId,
     };
 
     this.addNewEvent(soundEvent);
@@ -146,7 +146,7 @@ export default class MusicPlayer {
       effects,
       length: constants.DEFAULT_PATTERN_LENGTH,
       blockId,
-      id: JSON.stringify(value)
+      id: JSON.stringify(value),
     };
 
     this.addNewEvent(patternEvent);
@@ -186,7 +186,7 @@ export default class MusicPlayer {
       effects,
       length: constants.DEFAULT_CHORD_LENGTH,
       blockId,
-      id: JSON.stringify(value)
+      id: JSON.stringify(value),
     };
 
     this.addNewEvent(chordEvent);
@@ -213,7 +213,7 @@ export default class MusicPlayer {
       value: chordValue,
       triggered: false,
       length: constants.DEFAULT_CHORD_LENGTH,
-      id: 'preview'
+      id: 'preview',
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -237,7 +237,7 @@ export default class MusicPlayer {
       value: patternValue,
       triggered: false,
       length: constants.DEFAULT_PATTERN_LENGTH,
-      id: 'preview'
+      id: 'preview',
     };
 
     this.samplePlayer.previewSamples(
@@ -355,7 +355,7 @@ export default class MusicPlayer {
       name,
       insideWhenRun,
       currentMeasure: measureStart,
-      maxConcurrentSounds: 0
+      maxConcurrentSounds: 0,
     };
   }
 
@@ -469,8 +469,8 @@ export default class MusicPlayer {
           sampleId: soundEvent.id,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
           triggered: soundEvent.triggered,
-          effects: soundEvent.effects
-        }
+          effects: soundEvent.effects,
+        },
       ];
     } else if (event.type === 'pattern') {
       const patternEvent = event as PatternEvent;
@@ -486,7 +486,7 @@ export default class MusicPlayer {
             patternEvent.when + (event.tick - 1) / 16
           ),
           triggered: patternEvent.triggered,
-          effects: patternEvent.effects
+          effects: patternEvent.effects,
         };
 
         results.push(resultEvent);
@@ -528,7 +528,7 @@ export default class MusicPlayer {
         results.push({
           sampleId,
           offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
-          ...event
+          ...event,
         });
       }
     });

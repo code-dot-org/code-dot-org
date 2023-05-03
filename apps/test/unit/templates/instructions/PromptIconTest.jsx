@@ -14,7 +14,7 @@ describe('PromptIcon', () => {
         id="prompt-icon"
         style={{
           maxWidth: 50,
-          marginLeft: 5
+          marginLeft: 5,
         }}
       />
     );

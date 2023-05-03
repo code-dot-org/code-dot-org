@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
@@ -244,7 +242,7 @@ reporting.sendReport = function (report) {
     'timeSinceLastMilestone',
     'lines',
     'attempt',
-    'image'
+    'image',
   ];
 
   validateReport(report);
@@ -338,7 +336,7 @@ reporting.sendReport = function (report) {
         }
         reportComplete(report, response);
       },
-      error: xhr => onNoSuccess(xhr)
+      error: xhr => onNoSuccess(xhr),
     });
 
     lastAjaxRequest = thisAjax;

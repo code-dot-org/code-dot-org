@@ -25,13 +25,13 @@ describe('Authored Hints', () => {
   beforeEach(() => {
     studioApp = {
       config: {
-        level: {}
-      }
+        level: {},
+      },
     };
     hint = {
       content: 'sample hint text',
       hintId: 'some hint',
-      alreadySeen: false
+      alreadySeen: false,
     };
 
     authoredHints = new AuthoredHints(studioApp);

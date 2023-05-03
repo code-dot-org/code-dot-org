@@ -26,7 +26,7 @@ class TeacherContentToggle extends React.Component {
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenLesson: PropTypes.bool.isRequired,
     isLockedLesson: PropTypes.bool.isRequired,
-    isCodeReviewing: PropTypes.bool
+    isCodeReviewing: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -51,18 +51,18 @@ class TeacherContentToggle extends React.Component {
       isLockedLesson,
       isHiddenLesson,
       isBlocklyOrDroplet,
-      isCodeReviewing
+      isCodeReviewing,
     } = this.props;
 
     const frameStyle = {
       position: 'relative',
       zIndex: 1,
       backgroundColor: getComputedStyle(document.body).backgroundColor,
-      height: window.screen.height
+      height: window.screen.height,
     };
 
     let contentStyle = {
-      height: '100%'
+      height: '100%',
     };
     let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
@@ -111,11 +111,11 @@ class TeacherContentToggle extends React.Component {
 
 const styles = {
   container: {
-    height: '100%'
+    height: '100%',
   },
   hidden: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
@@ -149,7 +149,7 @@ export const mapStateToProps = state => {
     hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
     isHiddenLesson,
     isLockedLesson,
-    isCodeReviewing: state.pageConstants?.isCodeReviewing
+    isCodeReviewing: state.pageConstants?.isCodeReviewing,
   };
 };
 

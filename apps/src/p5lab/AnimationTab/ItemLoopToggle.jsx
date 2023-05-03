@@ -14,7 +14,7 @@ class ItemLoopToggle extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onToggleChange: PropTypes.func.isRequired,
-    looping: PropTypes.bool.isRequired
+    looping: PropTypes.bool.isRequired,
   };
 
   toggleClicked = () => this.props.onToggleChange(!this.props.looping);
