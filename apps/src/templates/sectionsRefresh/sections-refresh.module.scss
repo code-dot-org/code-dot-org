@@ -68,11 +68,11 @@ label.typographyLabel {
   background-color: $white;
   padding: 10px;
   color: inherit;
-  // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
   border: none;
   font-size: 14px;
 
   &:active {
+    // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
     border: none !important;
   }
 }
