@@ -233,14 +233,12 @@ export default function CurriculumQuickAssign({
           sectionCourse={sectionCourse}
         />
       )}
-      {marketingAudience && (
-        <VersionUnitDropdowns
-          courseOffering={selectedCourseOffering}
-          updateCourse={course => updateSection('course', course)}
-          sectionCourse={sectionCourse}
-          isNewSection={isNewSection}
-        />
-      )}
+      <VersionUnitDropdowns
+        courseOffering={selectedCourseOffering}
+        updateCourse={course => updateSection('course', course)}
+        sectionCourse={sectionCourse}
+        isNewSection={isNewSection}
+      />
     </div>
   );
 }
