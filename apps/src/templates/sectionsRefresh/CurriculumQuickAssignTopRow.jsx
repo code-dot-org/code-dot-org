@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
@@ -37,7 +38,10 @@ export default function CurriculumQuickAssignTopRow({
       <div className={moduleStyles.buttonsInRow}>
         <Button
           id={'uitest-elementary-button'}
-          className={moduleStyles.buttonStyle}
+          className={classnames(
+            moduleStyles.buttonStyle,
+            moduleStyles.activeMarketingAudienceButton
+          )}
           text={i18n.courseBlocksGradeBandsElementary()}
           size={Button.ButtonSize.large}
           icon={marketingAudienceIcon(MARKETING_AUDIENCE.ELEMENTARY)}
