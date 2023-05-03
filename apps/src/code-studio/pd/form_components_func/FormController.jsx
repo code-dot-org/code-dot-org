@@ -125,6 +125,15 @@ const FormController = props => {
     onSetPageInternal(initialPage);
   }, [onInitialize, onSetPageInternal, initialPage]);
 
+  // on matching to an RP with apps closed
+  useEffect(() => {
+    if (regionalPartner?.are_apps_closed) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    }
+  }, [regionalPartner]);
+
   useEffect(() => {
     if (
       !isEqual(
@@ -138,6 +147,7 @@ const FormController = props => {
     }
   }, [autoComputedFields, data, savedData]);
 
+  // on exiting application with unsaved data
   useEffect(() => {
     const showWarningOnExit =
       warnOnExit && !submitting && !saving && hasUserChangedData;
