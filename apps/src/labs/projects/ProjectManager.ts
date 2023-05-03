@@ -23,6 +23,7 @@ export default class ProjectManager {
   channelId: string | undefined;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
+  getProject: () => Project;
 
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
@@ -35,11 +36,13 @@ export default class ProjectManager {
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
+    getProject: () => Project,
     channelId: string | undefined
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
+    this.getProject = getProject;
   }
 
   async setLevel(levelId: string) {
@@ -58,7 +61,6 @@ export default class ProjectManager {
       await this.setLevel(levelId);
     }
     if (!this.channelId) {
-      console.log("don't have channel id");
       return this.getNoChannelResponse();
     }
     const sourceResponse = await this.sourcesStore.load(this.channelId);
@@ -98,13 +100,13 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(getProject: () => Project, forceSave = false): Promise<Response> {
+  async save(forceSave = false): Promise<Response> {
     if (!this.channelId) {
       return this.getNoChannelResponse();
     }
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
-        this.enqueueSave(getProject);
+        this.enqueueSave();
       }
       const noopResponse = new Response(null, {status: 304});
       this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
@@ -115,7 +117,7 @@ export default class ProjectManager {
     this.saveQueued = false;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
-    const project = getProject();
+    const project = this.getProject();
     const sourceResponse = await this.sourcesStore.save(
       this.channelId,
       project.source
@@ -157,12 +159,12 @@ export default class ProjectManager {
     return true;
   }
 
-  private enqueueSave(getProject: () => Project) {
+  private enqueueSave() {
     this.saveQueued = true;
 
     setTimeout(
       () => {
-        this.save(getProject);
+        this.save();
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );

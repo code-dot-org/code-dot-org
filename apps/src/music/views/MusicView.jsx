@@ -38,7 +38,6 @@ import {
   navigateToLevelId,
   sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
-import {getProjectManager} from '../utils/ProjectHelper';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -88,8 +87,9 @@ class UnconnectedMusicView extends React.Component {
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.projectManager = getProjectManager(this.props.channelId);
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(this.projectManager);
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(
+      this.props.channelId
+    );
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
 

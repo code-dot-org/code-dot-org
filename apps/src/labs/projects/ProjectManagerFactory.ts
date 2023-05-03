@@ -7,7 +7,7 @@
 import {RemoteChannelsStore, LocalChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';
 import {RemoteSourcesStore, LocalSourcesStore} from './SourcesStore';
-import {ProjectManagerStorageType} from '../types';
+import {Project, ProjectManagerStorageType} from '../types';
 
 export default class ProjectManagerFactory {
   /**
@@ -18,18 +18,21 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
+    getProject: () => Project,
     projectId?: string
   ) {
     if (projectManagerStorageType === ProjectManagerStorageType.LOCAL) {
       return new ProjectManager(
         new LocalSourcesStore(),
         new LocalChannelsStore(),
+        getProject,
         projectId
       );
     } else {
       return new ProjectManager(
         new RemoteSourcesStore(),
         new RemoteChannelsStore(),
+        getProject,
         projectId
       );
     }

@@ -5,8 +5,8 @@ import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
-import {getBlockMode} from '../appConfig';
-import {BlockMode} from '../constants';
+import AppConfig, {getBlockMode} from '../appConfig';
+import {BlockMode, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -22,18 +22,20 @@ import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
+import ProjectManagerFactory from '../../labs/projects/ProjectManagerFactory';
+import {ProjectManagerStorageType} from '../../labs/types';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor(projectManager) {
+  constructor(channelId) {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
     this.channel = {};
-    this.projectManager = projectManager;
+    this.projectManager = this.getProjectManager(channelId);
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -365,7 +367,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   saveCode(forceSave = false) {
-    this.projectManager.save(this.getProject.bind(this), forceSave);
+    this.projectManager.save(forceSave);
   }
 
   hasUnsavedChanges() {
@@ -375,7 +377,7 @@ export default class MusicBlocklyWorkspace {
   async changeLevels(newLevelId) {
     if (this.hasUnsavedChanges()) {
       // Force a save with the current code before changing panels.
-      await this.projectManager.save(this.getProject.bind(this), true);
+      await this.projectManager.save(true);
     }
     // Now that we've saved (if we needed to), load the code for this level
     this.loadCode(newLevelId);
@@ -402,5 +404,35 @@ export default class MusicBlocklyWorkspace {
   updateToolbox(allowList) {
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
+  }
+
+  // Get the project manager for the current storage type.
+  // If no storage type is specified in AppConfig, use remote storage.
+  getProjectManager(projectId) {
+    let storageType = AppConfig.getValue('storage-type');
+    if (!storageType) {
+      storageType = REMOTE_STORAGE;
+    }
+    storageType = storageType.toLowerCase();
+
+    if (storageType === REMOTE_STORAGE) {
+      return ProjectManagerFactory.getProjectManager(
+        ProjectManagerStorageType.REMOTE,
+        this.getProject.bind(this),
+        projectId
+      );
+    } else {
+      return ProjectManagerFactory.getProjectManager(
+        ProjectManagerStorageType.LOCAL,
+        this.getProject.bind(this),
+        projectId || this.getLocalStorageKeyName()
+      );
+    }
+  }
+
+  getLocalStorageKeyName() {
+    // Save code for each block mode in a different local storage item.
+    // This way, switching block modes will load appropriate user code.
+    return 'musicLabSavedCode' + getBlockMode();
   }
 }
