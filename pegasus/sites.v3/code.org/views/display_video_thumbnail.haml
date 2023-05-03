@@ -99,9 +99,9 @@
 
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
-    %img.thumbnail-image{:src => image, :alt => "video thumbnail"}
+    %img.thumbnail-image{:src => image, :alt => ""}
     %button.play-button-wrapper
-      %img.play{:src => "/shared/images/play-button.png", :alt => "play button"}
+      %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
     .video_caption_link= caption
 
 - unless thumbnail_only
