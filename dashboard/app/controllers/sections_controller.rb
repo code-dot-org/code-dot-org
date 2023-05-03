@@ -14,8 +14,6 @@ class SectionsController < ApplicationController
   def edit
     return head :forbidden unless current_user&.admin
 
-    redirect_to '/home' unless params[:loginType] && params[:participantType]
-
     existing_section = Section.find_by(
       id: params[:id]
     )

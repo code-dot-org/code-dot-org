@@ -1,5 +1,3 @@
-/* global CanvasPixelArray */
-
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 

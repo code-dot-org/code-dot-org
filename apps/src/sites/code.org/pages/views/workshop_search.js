@@ -1,5 +1,3 @@
-/* globals mapboxgl, MapboxGeocoder */
-
 import $ from 'jquery';
 import colors from '@cdo/apps/util/color';
 
