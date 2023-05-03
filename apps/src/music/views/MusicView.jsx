@@ -117,52 +117,30 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession()
     );
 
+    const musicValidator = new MusicValidator(this.getIsPlaying, this.player);
+
+    this.progressManager = new ProgressManager(
+      this.props.currentLevelIndex,
+      musicValidator,
+      this.onProgressChange
+    );
+
     const promises = [];
+
+    // Load library data.
     promises.push(this.loadLibrary());
 
-    let loadProgressionStep = false;
-    if (this.props.levels) {
-      // Since we have levels, we'll asynchronously retrieve the current level data.
-      promises.push(this.loadLevelData());
-      loadProgressionStep = true;
-    } else if (AppConfig.getValue('load-progression') === 'true') {
-      promises.push(this.loadProgressionFile());
-      loadProgressionStep = true;
-    }
+    // Load progress data for current step.
+    promises.push(this.loadProgressionStep());
 
     Promise.all(promises).then(values => {
-      // Process library, which includes setting up the toolbox.
       const libraryJson = values[0];
       this.library = new MusicLibrary(libraryJson);
 
-      // Process progression step first, if there is one, since
-      // it might affect the toolbox.
-      if (loadProgressionStep) {
-        const musicValidator = new MusicValidator(
-          this.getIsPlaying,
-          this.player
-        );
-
-        this.progressManager = new ProgressManager(
-          this.props.currentLevelIndex,
-          musicValidator,
-          this.onProgressChange
-        );
-
-        let progressionStep;
-        if (this.props.levels) {
-          progressionStep = values[1].properties.level_data;
-        } else if (AppConfig.getValue('load-progression') === 'true') {
-          progressionStep = values[1].steps[0];
-        }
-        this.progressManager.setProgressionStep(progressionStep);
-
-        this.props.setShowInstructions(!!progressionStep);
-        this.setAllowedSoundsForProgress();
-      }
-
       Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
+
+      this.setAllowedSoundsForProgress();
 
       this.musicBlocklyWorkspace.init(
         document.getElementById('blockly-div'),
@@ -246,9 +224,12 @@ class UnconnectedMusicView extends React.Component {
   };
 
   // Handle a change in panel.
-  handlePanelChange = () => {
+  handlePanelChange = async () => {
     this.stopSong();
     this.clearCode();
+
+    await this.loadProgressionStep();
+
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
   };
@@ -272,6 +253,23 @@ class UnconnectedMusicView extends React.Component {
   updateHighlightedBlocks = () => {
     const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
     this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
+  };
+
+  loadProgressionStep = async () => {
+    let progressionStep = undefined;
+    if (this.props.levels) {
+      // Since we have levels, we'll asynchronously retrieve the current level data.
+      const response = await this.loadLevelData();
+      progressionStep = response.properties.level_data;
+    } else if (AppConfig.getValue('load-progression') === 'true') {
+      // Let's load from the file.
+      const response = await this.loadProgressionFile();
+      progressionStep = response.steps[this.props.currentLevelIndex];
+    }
+
+    this.progressManager.setProgressionStep(progressionStep);
+
+    this.props.setShowInstructions(!!progressionStep);
   };
 
   loadLibrary = async () => {
