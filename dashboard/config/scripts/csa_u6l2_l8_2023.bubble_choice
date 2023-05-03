@@ -1,6 +1,6 @@
 name 'CSA U6L2-L8_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: String Methods'
+description 'Practice using the `indexOf()` and `substring()` methods to work with `String` objects.'
 
 sublevels
 level 'CSA U6L2-L8a_2023'
