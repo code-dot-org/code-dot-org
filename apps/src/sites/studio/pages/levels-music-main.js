@@ -18,7 +18,7 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={getStore()}>
       <LabContainer>
-        <MusicLabView appConfig={appConfig} appOptions={appOptions} />
+        <MusicLabView appConfig={appConfig} channelId={appOptions.channelId} />
       </LabContainer>
     </Provider>,
     document.getElementById('musiclab-container')
