@@ -19,18 +19,15 @@ export interface ChannelsStore {
 // we currently don't have or need the concept of a channel for
 // projects stored locally.
 export class LocalChannelsStore implements ChannelsStore {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  load(_key: string) {
+  load() {
     return Promise.resolve(new Response('{}'));
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  loadForLevel(_levelId: string) {
+  loadForLevel() {
     return Promise.resolve(new Response('{}'));
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  save(_channel: Channel) {
+  save() {
     return Promise.resolve(new Response(''));
   }
 }

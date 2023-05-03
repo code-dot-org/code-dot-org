@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:54:52 UTC",
+    "serialized_at": "2023-05-02 19:31:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11706,6 +11706,28 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
+      }
+    },
+    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
@@ -11726,13 +11748,25 @@
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4"
       }
     },
     {
@@ -12214,6 +12248,28 @@
       },
       "seeding_key": {
         "resource.key": "printable_model_cards"
+      }
+    },
+    {
+      "name": "Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
+      "key": "problem_solving_process_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_4"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "problem_solving_process_with_data_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_2"
       }
     },
     {
@@ -13033,6 +13089,18 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_debugging",
         "script.name": "focus-on-impact-in-society4-2023"
       }
@@ -13045,7 +13113,25 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_2",
         "script.name": "focus-on-impact-in-society4-2023"
       }
     },
