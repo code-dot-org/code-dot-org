@@ -20,10 +20,10 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import FieldChord from './FieldChord';
-import {Renderers} from '@cdo/apps/blockly/constants';
 import ProjectManagerFactory from '../../labs/projects/ProjectManagerFactory';
 import {ProjectManagerStorageType} from '../../labs/types';
+import FieldChord from './FieldChord';
+import {Renderers} from '@cdo/apps/blockly/constants';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -344,6 +344,12 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  getLocalStorageKeyName() {
+    // Save code for each block mode in a different local storage item.
+    // This way, switching block modes will load appropriate user code.
+    return 'musicLabSavedCode' + getBlockMode();
+  }
+
   async loadCode(levelId) {
     console.log(`Loading code for level ${levelId}`);
     const projectResponse = await this.projectManager.load(levelId);
@@ -352,6 +358,7 @@ export default class MusicBlocklyWorkspace {
         // This is expected if the user has never saved before.
         this.loadDefaultCode();
       }
+
       // TODO: Error handling
       return;
     }
@@ -428,11 +435,5 @@ export default class MusicBlocklyWorkspace {
         projectId || this.getLocalStorageKeyName()
       );
     }
-  }
-
-  getLocalStorageKeyName() {
-    // Save code for each block mode in a different local storage item.
-    // This way, switching block modes will load appropriate user code.
-    return 'musicLabSavedCode' + getBlockMode();
   }
 }
