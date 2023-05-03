@@ -88,11 +88,14 @@ module TextToSpeech
     VOICES[loc]
   end
 
-  def self.tts_upload_to_s3(text, filename, context = nil)
+  def self.tts_upload_to_s3(text, filename, context = nil, production)
     return if text.blank?
+    exists = AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
+    puts exists
+    return if exists
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
-    return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
+    return unless production
     loc_voice = TextToSpeech.localized_voice
     url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
     return if url.nil?

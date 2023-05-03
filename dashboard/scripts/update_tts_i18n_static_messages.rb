@@ -11,6 +11,8 @@ require_relative('../config/environment')
 # TODO: (elijah) formalize a process for flagging these strings somewhere
 # in apps code, rather than maintaining this ugly manual Hash
 
+production = ARGV[0]
+
 FEEDBACK_MESSAGES = {
   jigsaw: {
     reinfFeedbackMsg: "You can press the \"Try again\" button to go back to playing your game."
@@ -114,7 +116,7 @@ TextToSpeech::VOICES.each do |lang, _voice|
       # Sanitize the text after generating the filename to keep the content hash
       # consistent with original text
       text = TextToSpeech.sanitize(text)
-      TextToSpeech.tts_upload_to_s3(text, filename, 'update_i18n_static_messages')
+      TextToSpeech.tts_upload_to_s3(text, filename, 'update_i18n_static_messages', production)
     end
   end
 end
