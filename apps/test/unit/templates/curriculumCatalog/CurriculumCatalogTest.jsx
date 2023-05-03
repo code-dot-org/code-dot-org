@@ -8,83 +8,15 @@ import responsive, {
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
+import {
+  allCurricula,
+  grades2And3Curricula,
+  physicalCompCurricula,
+  nonNullSchoolSubjectCurricula,
+  tabletAndNoDeviceCurricula,
+} from './CurriculumCatalogTestHelper';
 
 describe('CurriculumCatalog', () => {
-  const makerCurriculum = {
-    key: 'devices',
-    display_name: 'Creating Apps for Devices',
-    grade_levels: '6,7,8,9,10,11,12',
-    image: 'devices.png',
-    cs_topic: 'art_and_design,app_design,physical_computing,programming',
-    school_subject: null,
-  };
-
-  const countingCurriculum = {
-    key: 'counting-csc',
-    display_name: 'Computer Science Connections',
-    grade_levels: '3,4,5',
-    image: 'csc.png',
-    cs_topic: 'programming',
-    school_subject: 'math',
-  };
-
-  const course1Curriculum = {
-    key: 'course1',
-    display_name: 'Course 1',
-    grade_levels: 'K,1',
-    image: null,
-    cs_topic: 'programming',
-    school_subject: null,
-    device_compatibility:
-      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  };
-
-  const course2Curriculum = {
-    key: 'course2',
-    display_name: 'Course 2',
-    grade_levels: '2,3,4,5',
-    image: 'course2.png',
-    cs_topic: 'programming',
-    school_subject: null,
-    device_compatibility:
-      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  };
-
-  const course3Curriculum = {
-    key: 'course3',
-    display_name: 'Course 3',
-    grade_levels: '3,4,5',
-    image: 'course3.png',
-    cs_topic: 'programming',
-    school_subject: null,
-    device_compatibility:
-      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  };
-
-  const course4Curriculum = {
-    key: 'course4',
-    display_name: 'Course 4',
-    grade_levels: '4,5',
-    image: 'course4.png',
-    cs_topic: 'programming',
-    school_subject: null,
-    device_compatibility:
-      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  };
-
-  const allCurricula = [
-    makerCurriculum,
-    countingCurriculum,
-    course1Curriculum,
-    course2Curriculum,
-    course3Curriculum,
-    course4Curriculum,
-  ];
-  // const curriculaWithGrades2And3 = [
-  //   countingCurriculum,
-  //   course2Curriculum,
-  //   course3Curriculum,
-  // ];
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
 
   beforeEach(() => {
@@ -127,8 +59,86 @@ describe('CurriculumCatalog', () => {
   });
 
   it('filtering by grade level shows any course that supports one of the selected grades', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select "Grade 2" and "Grade 3" in grade level filter
     const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
     fireEvent.click(grade2FilterCheckbox);
     assert(grade2FilterCheckbox.checked);
+    const grade3FilterCheckbox = screen.getByDisplayValue('grade_3');
+    fireEvent.click(grade3FilterCheckbox);
+    assert(grade3FilterCheckbox.checked);
+
+    // Filters for all courses for grades 2 and/or 3
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(grades2And3Curricula.length);
+  });
+
+  it('filtering by topic shows any course with at least 1 of the selected topics', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select "Physical Computing" in topic filter
+    const physicalCompFilterCheckbox =
+      screen.getByDisplayValue('physical_computing');
+    fireEvent.click(physicalCompFilterCheckbox);
+    assert(physicalCompFilterCheckbox.checked);
+
+    // Filters for all courses with the physical_computing topic
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(physicalCompCurricula.length);
+  });
+
+  it('filtering by Interdisciplinary topic shows any course labeled with school subjects', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select "Interdisciplinary" in topic filter
+    const interdisciplinaryFilterCheckbox =
+      screen.getByDisplayValue('interdisciplinary');
+    fireEvent.click(interdisciplinaryFilterCheckbox);
+    assert(interdisciplinaryFilterCheckbox.checked);
+
+    // Filters for all courses with school subjects
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(
+      nonNullSchoolSubjectCurricula.length
+    );
+  });
+
+  it('filtering by device compatibility shows any course with at least 1 of the selected devices', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select "Tablet" and "No Device" in device filter
+    const tabletFilterCheckbox = screen.getByDisplayValue('tablet');
+    fireEvent.click(tabletFilterCheckbox);
+    assert(tabletFilterCheckbox.checked);
+    const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
+    fireEvent.click(noDeviceFilterCheckbox);
+    assert(noDeviceFilterCheckbox.checked);
+
+    // Filters for all courses compatible with chromebooks and tablets
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(
+      tabletAndNoDeviceCurricula.length
+    );
   });
 });
