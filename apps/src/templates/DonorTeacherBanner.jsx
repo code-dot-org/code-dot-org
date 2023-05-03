@@ -222,7 +222,9 @@ const styles = {
     marginRight: 7,
     fontFamily: '"Gotham 5r", sans-serif',
     lineHeight: '30px',
-    border: '2px solid ' + Button.ButtonColor.brandSecondaryDefault,
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: Button.ButtonColor.brandSecondaryDefault,
   },
   secondaryButton: {
     marginLeft: 7,
@@ -230,8 +232,11 @@ const styles = {
     marginTop: 5,
     boxShadow: 'none',
     fontFamily: '"Gotham 5r", sans-serif',
+    color: color.neutral_dark,
     lineHeight: '30px',
-    border: '2px solid ' + color.black,
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: color.neutral_dark,
   },
   clear: {
     clear: 'both',
