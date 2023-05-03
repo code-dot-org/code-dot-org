@@ -19,4 +19,18 @@ describe('the parsePathString function', () => {
       parsePathString('sound');
     }).to.throw(Error, errMsg);
   });
+
+  it('for an invalid path to sound file (no mp3 file extension), throws an error', () => {
+    const errMsg = 'This is not a valid path to a sound file.';
+    expect(() => {
+      parsePathString('sound://default');
+    }).to.throw(Error, errMsg);
+  });
+
+  it('for an invalid path to sound file (does not begin with sound://), throws an error', () => {
+    const errMsg = 'This is not a valid path to a sound file.';
+    expect(() => {
+      parsePathString('default.mp3');
+    }).to.throw(Error, errMsg);
+  });
 });

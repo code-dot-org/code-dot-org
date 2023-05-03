@@ -26,7 +26,7 @@ export function parsePathString(text) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
-  if (!text.includes('.mp3')) {
+  if (!text.startsWith('sound://') || !text.endsWith('.mp3')) {
     throw new Error('This is not a valid path to a sound file.');
   }
   const pathStringArray = text.split('/');
