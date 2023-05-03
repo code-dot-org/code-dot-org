@@ -272,28 +272,6 @@ describe('FormController', () => {
       server.restore();
     });
 
-    it('Shows apps closed message if', async () => {
-      // const server = sinon.fakeServer.create();
-      // server.respondWith(serverResponse(200, {}));
-
-      sinon
-        .stub(window, 'fetch')
-        .returns(Promise.resolve({ok: true, partner: {are_apps_closed: true}}));
-
-      const initialData = {
-        school: 'New School',
-      };
-      form = isolateComponent(
-        <FormController {...defaultProps} getInitialData={() => initialData} />
-      );
-      await form.waitForRender();
-
-      // maybe wait 500 seconds to force a rerender
-      // set timeout
-      const alerts = form.findAll('Alert');
-      console.log('alerts are', alerts);
-    });
-
     it('Shows error message if user tries to save an application that already exists', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
 
