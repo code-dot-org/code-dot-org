@@ -63,7 +63,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.2'
+  gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
   gem 'web-console', '~> 4.2.0'
 end
