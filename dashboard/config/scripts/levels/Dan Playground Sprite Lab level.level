@@ -73,7 +73,8 @@
       "downButton"
     ],
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_code": "//Validate that a student created a sprite, then clicked a sprite to trigger a sprite to speak.\r\nif (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(1);\r\n  }, \"noSprites\");\r\n  addCriteria(function() {\r\n    return anySpriteClicked();\r\n  }, \"clickAnySprite\");\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, \"clickButNoEvent\");\r\n  addCriteria(function(){\r\n    return clickEventFound() && anySpriteSpeaks();\r\n  }, \"clickButNoSay\");\r\n}\r\n\r\ncheck();\r\n"
   },
   "game_id": 64,
   "published": true,
@@ -81,7 +82,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-05-01T16:26:04.368+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_migration\\\"\"],\"cloned_from\":\"csc_animal_adaptations_migration\"},{\"changed_at\":\"2023-05-01 16:26:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-05-01T16:26:04.368+00:00\",\"changed\":[\"cloned from \\\"csc_animal_adaptations_migration\\\"\"],\"cloned_from\":\"csc_animal_adaptations_migration\"},{\"changed_at\":\"2023-05-01 16:26:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-02 19:04:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
