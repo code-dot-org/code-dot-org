@@ -198,8 +198,8 @@ export function throwIfSerializedAnimationListIsInvalid(
     ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(
       requiredPropName => {
         if (
-          Object.prototype.hasOwnProperty.call(
-            !propsByKey[animationKey],
+          !Object.prototype.hasOwnProperty.call(
+            propsByKey[animationKey],
             requiredPropName
           )
         ) {
