@@ -5,7 +5,7 @@
     "preload_asset_list": null,
     "background": "music-black",
     "level_data": {
-      "text": "First, please play a sound.",
+      "text": "First, please play one sound.",
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"]
       },
@@ -18,7 +18,7 @@
           "message": "Nice work.",
           "next": "true"
         },
-        {"message": "Please play a sound."}
+        {"message": "Please play one sound."}
       ],
       "starterCode": {
         "blocks": {

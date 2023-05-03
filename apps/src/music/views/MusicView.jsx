@@ -119,8 +119,15 @@ class UnconnectedMusicView extends React.Component {
 
     const promises = [];
     promises.push(this.loadLibrary());
-    if (AppConfig.getValue('load-progression') === 'true') {
-      promises.push(this.loadProgression());
+
+    let loadProgressionStep = false;
+    if (this.props.levels) {
+      // Since we have levels, we'll asynchronously retrieve the current level data.
+      promises.push(this.loadLevelData());
+      loadProgressionStep = true;
+    } else if (AppConfig.getValue('load-progression') === 'true') {
+      promises.push(this.loadProgressionFile());
+      loadProgressionStep = true;
     }
 
     Promise.all(promises).then(values => {
@@ -128,23 +135,29 @@ class UnconnectedMusicView extends React.Component {
       const libraryJson = values[0];
       this.library = new MusicLibrary(libraryJson);
 
-      // Process progression first, if there is one, since
+      // Process progression step first, if there is one, since
       // it might affect the toolbox.
-      if (AppConfig.getValue('load-progression') === 'true') {
-        const progression = values[1];
-
+      if (loadProgressionStep) {
         const musicValidator = new MusicValidator(
           this.getIsPlaying,
           this.player
         );
 
         this.progressManager = new ProgressManager(
-          progression,
           this.props.currentLevelIndex,
           musicValidator,
           this.onProgressChange
         );
-        this.props.setShowInstructions(!!progression);
+
+        let progressionStep;
+        if (this.props.levels) {
+          progressionStep = values[1].properties.level_data;
+        } else if (AppConfig.getValue('load-progression') === 'true') {
+          progressionStep = values[1].steps[0];
+        }
+        this.progressManager.setProgressionStep(progressionStep);
+
+        this.props.setShowInstructions(!!progressionStep);
         this.setAllowedSoundsForProgress();
       }
 
@@ -277,7 +290,7 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  loadProgression = async () => {
+  loadProgressionFile = async () => {
     if (AppConfig.getValue('local-progression') === 'true') {
       const defaultProgressionFilename = 'music-progression';
       const progression = require(`@cdo/static/music/${defaultProgressionFilename}.json`);
@@ -291,6 +304,17 @@ class UnconnectedMusicView extends React.Component {
       const progression = await response.json();
       return progression;
     }
+  };
+
+  loadLevelData = async () => {
+    const currentPath = new URL(document.location).pathname;
+    const currentPathNoTrailingSlash = currentPath.endsWith('/')
+      ? currentPath.slice(0, -1)
+      : currentPath;
+    const levelDataPath = `${currentPathNoTrailingSlash}/level_data`;
+    const response = await fetch(levelDataPath);
+    const levelData = await response.json();
+    return levelData;
   };
 
   clearCode = () => {
@@ -452,8 +476,9 @@ class UnconnectedMusicView extends React.Component {
         )}
       >
         <Instructions
-          progression={this.progressManager.getProgression()}
+          progressionStep={this.progressManager.getProgressionStep()}
           currentLevelIndex={this.props.currentLevelIndex}
+          levelCount={this.props.levels.length}
           onNextPanel={this.onNextPanel}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
