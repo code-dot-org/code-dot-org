@@ -18,6 +18,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
+const NEW = 'New';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -154,6 +155,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
       });
     }
     /*
@@ -182,6 +184,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         newCourseId: section.course?.courseOfferingId,
         newCourseVersionId: section.course?.courseVersionId,
         newVersionYear: null,
+        flowVersion: NEW,
       });
     }
   };
