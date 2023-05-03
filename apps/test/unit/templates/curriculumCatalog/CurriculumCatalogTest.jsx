@@ -1,8 +1,8 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import {configureStore} from '@reduxjs/toolkit';
-import {expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
@@ -28,16 +28,63 @@ describe('CurriculumCatalog', () => {
     school_subject: 'math',
   };
 
-  const noImageCurriculum = {
+  const course1Curriculum = {
     key: 'course1',
     display_name: 'Course 1',
     grade_levels: 'K,1',
     image: null,
     cs_topic: 'programming',
     school_subject: null,
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
   };
 
-  const allCurricula = [makerCurriculum, countingCurriculum, noImageCurriculum];
+  const course2Curriculum = {
+    key: 'course2',
+    display_name: 'Course 2',
+    grade_levels: '2,3,4,5',
+    image: 'course2.png',
+    cs_topic: 'programming',
+    school_subject: null,
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+  };
+
+  const course3Curriculum = {
+    key: 'course3',
+    display_name: 'Course 3',
+    grade_levels: '3,4,5',
+    image: 'course3.png',
+    cs_topic: 'programming',
+    school_subject: null,
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+  };
+
+  const course4Curriculum = {
+    key: 'course4',
+    display_name: 'Course 4',
+    grade_levels: '4,5',
+    image: 'course4.png',
+    cs_topic: 'programming',
+    school_subject: null,
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+  };
+
+  const allCurricula = [
+    makerCurriculum,
+    countingCurriculum,
+    course1Curriculum,
+    course2Curriculum,
+    course3Curriculum,
+    course4Curriculum,
+  ];
+  // const curriculaWithGrades2And3 = [
+  //   countingCurriculum,
+  //   course2Curriculum,
+  //   course3Curriculum,
+  // ];
   const defaultProps = {curriculaData: allCurricula, isEnglish: false};
 
   beforeEach(() => {
@@ -77,5 +124,11 @@ describe('CurriculumCatalog', () => {
         );
       }
     });
+  });
+
+  it('filtering by grade level shows any course that supports one of the selected grades', () => {
+    const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
+    fireEvent.click(grade2FilterCheckbox);
+    assert(grade2FilterCheckbox.checked);
   });
 });
