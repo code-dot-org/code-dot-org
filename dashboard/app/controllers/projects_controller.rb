@@ -281,11 +281,16 @@ class ProjectsController < ApplicationController
   end
 
   # GET /projects/for_level/:level_id
+  # Given a level_id and the current user (or signed out user), get the existing project
+  # or create a new project for that level and user.
+  # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     level = Level.find(params[:level_id])
     return if redirect_under_13_without_tos_teacher(level)
+    # get_storage_id works for signed out users as well, it uses the cookie to determine
+    # the storage id.
     user_storage_id = get_storage_id
-    # find channel for user and level if it exists, or create a new one
+    # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
     render(status: :ok, json: {channel: channel_token.channel})
   end
