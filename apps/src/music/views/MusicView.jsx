@@ -51,7 +51,6 @@ const baseUrl = 'https://curriculum.code.org/media/musiclab/';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    appOptions: PropTypes.object,
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
@@ -256,13 +255,7 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
-    if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
-      // force a save with the current code before changing panels.
-      this.musicBlocklyWorkspace.saveCode(true);
-    }
-    // TODO: SET LOAD STATE HERE
-    // Tell music blockly workspace to load the code for the new level.
-    this.musicBlocklyWorkspace.loadCode(this.props.currentLevelId);
+    this.musicBlocklyWorkspace.changeLevels(this.props.currentLevelId);
   };
 
   setToolboxForProgress = () => {

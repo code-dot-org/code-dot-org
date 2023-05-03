@@ -5,8 +5,8 @@ import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
-import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -350,7 +350,6 @@ export default class MusicBlocklyWorkspace {
         // This is expected if the user has never saved before.
         this.loadDefaultCode();
       }
-
       // TODO: Error handling
       return;
     }
@@ -371,6 +370,15 @@ export default class MusicBlocklyWorkspace {
 
   hasUnsavedChanges() {
     return this.projectManager.hasQueuedSave();
+  }
+
+  async changeLevels(newLevelId) {
+    if (this.hasUnsavedChanges()) {
+      // Force a save with the current code before changing panels.
+      await this.projectManager.save(this.getProject.bind(this), true);
+    }
+    // Now that we've saved (if we needed to), load the code for this level
+    this.loadCode(newLevelId);
   }
 
   loadDefaultCode() {
