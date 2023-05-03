@@ -3,17 +3,16 @@ class SectionsController < ApplicationController
   before_action :load_section_by_code, only: [:log_in, :show]
 
   def new
-    return head :forbidden unless current_user
+    authorize! :create, Section
 
     redirect_to '/home' unless params[:loginType] && params[:participantType]
   end
 
   def edit
-    return head :forbidden unless current_user
-
     existing_section = Section.find_by(
       id: params[:id]
     )
+    authorize! :manage, existing_section
 
     @section = existing_section.attributes
 
