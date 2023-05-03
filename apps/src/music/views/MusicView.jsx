@@ -38,6 +38,7 @@ import {
   navigateToLevelId,
   sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
+import {getProjectManager} from '../utils/ProjectHelper';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -54,6 +55,7 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
+    channelId: PropTypes.string,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -73,22 +75,24 @@ class UnconnectedMusicView extends React.Component {
     setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
     sendSuccessReport: PropTypes.func,
+    currentLevelId: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
 
+    if (this.props.appConfig) {
+      setAppConfig(this.props.appConfig);
+    }
+
     this.player = new MusicPlayer();
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.appOptions);
+    this.projectManager = getProjectManager(this.props.channelId);
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(this.projectManager);
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
-
-    if (this.props.appConfig) {
-      setAppConfig(this.props.appConfig);
-    }
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(
@@ -164,7 +168,8 @@ class UnconnectedMusicView extends React.Component {
         document.getElementById('blockly-div'),
         this.onBlockSpaceChange,
         this.player,
-        this.progressManager?.getCurrentStepDetails().toolbox
+        this.progressManager?.getCurrentStepDetails().toolbox,
+        this.props.currentLevelId
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -228,7 +233,6 @@ class UnconnectedMusicView extends React.Component {
     this.progressManager?.next();
     this.handlePanelChange();
 
-    // Tell the external system (if there is one) about the new level.
     if (this.props.levels && this.props.navigateToLevelId) {
       const progressState = this.progressManager.getCurrentState();
       const currentPanel = progressState.step;
@@ -250,13 +254,15 @@ class UnconnectedMusicView extends React.Component {
   // Handle a change in panel.
   handlePanelChange = () => {
     this.stopSong();
-    this.clearCode();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
     if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
       // force a save with the current code before changing panels.
       this.musicBlocklyWorkspace.saveCode(true);
     }
+    // TODO: SET LOAD STATE HERE
+    // Tell music blockly workspace to load the code for the new level.
+    this.musicBlocklyWorkspace.loadCode(this.props.currentLevelId);
   };
 
   setToolboxForProgress = () => {
@@ -592,6 +598,7 @@ const MusicView = connect(
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
+    currentLevelId: state.progress.currentLevelId,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

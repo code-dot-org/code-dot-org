@@ -20,8 +20,6 @@ import {
 } from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 
@@ -30,12 +28,12 @@ import {Renderers} from '@cdo/apps/blockly/constants';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor() {
+  constructor(projectManager) {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
     this.channel = {};
-    this.projectManager = this.getProjectManager();
+    this.projectManager = projectManager;
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -49,7 +47,13 @@ export default class MusicBlocklyWorkspace {
    * @param {*} player reference to a {@link MusicPlayer}
    * @param {*} toolboxAllowList optional object with allowed toolbox entries
    */
-  init(container, onBlockSpaceChange, player, toolboxAllowList) {
+  init(
+    container,
+    onBlockSpaceChange,
+    player,
+    toolboxAllowList,
+    currentLevelId
+  ) {
     this.container = container;
 
     Blockly.Extensions.register(
@@ -104,7 +108,7 @@ export default class MusicBlocklyWorkspace {
     this.resizeBlockly();
 
     // Set initial blocks.
-    this.loadCode();
+    this.loadCode(currentLevelId);
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 
@@ -338,14 +342,9 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  getLocalStorageKeyName() {
-    // Save code for each block mode in a different local storage item.
-    // This way, switching block modes will load appropriate user code.
-    return 'musicLabSavedCode' + getBlockMode();
-  }
-
-  async loadCode() {
-    const projectResponse = await this.projectManager.load();
+  async loadCode(levelId) {
+    console.log(`Loading code for level ${levelId}`);
+    const projectResponse = await this.projectManager.load(levelId);
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
         // This is expected if the user has never saved before.
@@ -367,7 +366,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   saveCode(forceSave = false) {
-    this.projectManager.save(forceSave);
+    this.projectManager.save(this.getProject.bind(this), forceSave);
   }
 
   hasUnsavedChanges() {
@@ -395,28 +394,5 @@ export default class MusicBlocklyWorkspace {
   updateToolbox(allowList) {
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
-  }
-
-  // Get the project manager for the current storage type.
-  // If no storage type is specified in AppConfig, use local storage.
-  getProjectManager() {
-    let storageType = AppConfig.getValue('storage-type');
-    if (!storageType) {
-      storageType = LOCAL_STORAGE;
-    }
-    storageType = storageType.toLowerCase();
-
-    if (storageType === REMOTE_STORAGE) {
-      return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
-        this.getProject.bind(this)
-      );
-    } else {
-      return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.LOCAL,
-        this.getProject.bind(this),
-        this.getLocalStorageKeyName()
-      );
-    }
   }
 }

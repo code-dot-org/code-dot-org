@@ -26,6 +26,8 @@ export class LocalChannelsStore implements ChannelsStore {
     return Promise.resolve(new Response('{}'));
   }
 
+  // We don't support changing keys for local storage, so we just return the
+  // existing key, if we have one.
   loadForLevel() {
     return Promise.resolve(new Response(`{channel: ${this.localStorageKey}}`));
   }
