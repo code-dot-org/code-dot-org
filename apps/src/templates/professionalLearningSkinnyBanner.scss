@@ -1,7 +1,4 @@
-$width-xxl: 2560px; // Desktop - 2XL
-$width-lg: 1024px; // Desktop
-$width-md: 992px; // Tablet
-$width-sm: 640px; // Mobile
+@import "font", "breakpoints";
 
 .professional-learning-banner {
   margin: 0 auto 3em;
@@ -61,8 +58,10 @@ $width-sm: 640px; // Mobile
     }
   }
 
-  a:hover {
-    text-decoration: none;
+  a,
+  a:hover,
+  a:visited {
+    text-decoration: none !important;
   }
 
   .text-wrapper {
@@ -81,7 +80,7 @@ $width-sm: 640px; // Mobile
   h1 {
     color: black;
     position: relative;
-    font-family: "Gotham 4r", sans-serif;
+    font-family: $gotham-regular;
     font-size: 18px;
     line-height: 40px;
     margin: 0;
@@ -100,6 +99,7 @@ $width-sm: 640px; // Mobile
     color: black;
     position: relative;
     font-size: 14px;
+    font-family: $gotham-regular;
 
     @media screen and (max-width: $width-md) {
       color: white;
@@ -112,8 +112,8 @@ $width-sm: 640px; // Mobile
     border-color: white;
     border-radius: 4px;
     color: black;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: $gotham-bold;
+    font-size: 14px;
     text-align: center;
     padding: 10px;
     margin: 0 2em;
