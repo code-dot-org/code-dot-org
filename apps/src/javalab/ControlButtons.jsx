@@ -95,5 +95,4 @@ ControlButtons.propTypes = {
   isSubmittable: PropTypes.bool,
   isSubmitted: PropTypes.bool,
   finishButtonTooltipText: PropTypes.string,
-  recaptchaSiteKey: PropTypes.string,
 };

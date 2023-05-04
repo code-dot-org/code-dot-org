@@ -12,7 +12,7 @@ import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
 const BLOG_URL = 'https://support.code.org/hc/en-us/articles/6104078305549';
 
-function JavalabCaptchaDialog({
+function UnconnectedJavalabCaptchaDialog({
   isCaptchaDialogOpen,
   setIsCaptchaDialogOpen,
   appendNewlineToConsoleLog,
@@ -46,12 +46,13 @@ function JavalabCaptchaDialog({
     >
       <SafeMarkdown
         markdown={javalabMsg.verificationDialogMessage({blogUrl: BLOG_URL})}
+        openExternalLinksInNewTab
       />
     </ReCaptchaDialog>
   );
 }
 
-JavalabCaptchaDialog.propTypes = {
+UnconnectedJavalabCaptchaDialog.propTypes = {
   isCaptchaDialogOpen: PropTypes.bool.isRequired,
   setIsCaptchaDialogOpen: PropTypes.func.isRequired,
   appendNewlineToConsoleLog: PropTypes.func.isRequired,
@@ -70,4 +71,4 @@ export default connect(
     setIsCaptchaDialogOpen: isDialogOpen =>
       dispatch(setIsCaptchaDialogOpen(isDialogOpen)),
   })
-)(JavalabCaptchaDialog);
+)(UnconnectedJavalabCaptchaDialog);

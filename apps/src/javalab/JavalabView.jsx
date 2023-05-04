@@ -188,7 +188,6 @@ class JavalabView extends React.Component {
       ? null
       : javalabMsg.testsNotPassing();
 
-    // update dialog message to have link
     return (
       <StudioAppWrapper>
         <div
@@ -312,10 +311,9 @@ const styles = {
   },
 };
 
-// We use the UnconnectedJavalabView to make this component's methods testable.
-// This is a deprecated pattern but calling shallow().dive().instance() on the
-// connected JavalabView does not give us access to the methods owned by JavalabView.
+// Exported for tests
 export const UnconnectedJavalabView = JavalabView;
+
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
