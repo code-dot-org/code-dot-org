@@ -1,3 +1,18 @@
+@import 'font';
+
+/*
+   Note: do not inline the contents of this file, as @import statements do not work when inlined.
+   FontAwesome icons will fail to load.
+
+   If you are changing the location of these files,
+   see readme in the top-level shared/css directory for more detail on manual steps to take when uploading new files.
+ */
+@import url($font-awesome-core-url);
+@import url($font-awesome-brands-url);
+@import url($font-awesome-solid-url);
+@import url($font-awesome-regular-url);
+@import url($font-awesome-v4-fonts-url);
+@import url($font-awesome-v4-shims-url);
 
 /*
 	Copyright (C) 2011-2014 Hoefler & Co.

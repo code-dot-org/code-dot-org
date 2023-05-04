@@ -15,6 +15,9 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
 
+const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
+const SERVER_WAIT_TIME_MS = 10000;
+
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
   constructor(
@@ -57,6 +60,8 @@ export default class JavabuilderConnection {
     this.seenUnsupportedTheaterMessage = false;
     this.sawValidationTests = false;
     this.allValidationPassed = true;
+    this.seenMessage = false;
+    this.hadWebsocketConnectionError = false;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -150,12 +155,15 @@ export default class JavabuilderConnection {
 
     try {
       const result = await $.ajax(ajaxPayload);
+      this.resetRunState();
       this.establishWebsocketConnection(result.token);
     } catch (error) {
       if (error.status === 403) {
         this.displayUnauthorizedMessage(error);
       } else {
-        this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
+        );
         this.onNewlineMessage();
         console.error(error.responseText);
       }
@@ -188,12 +196,24 @@ export default class JavabuilderConnection {
     // happen if our token was somehow valid for the initial Javabuilder HTTP request and
     // then became invalid when establishing the WebSocket connection.
     this.sendMessage(WebSocketMessageType.CONNECTED);
+    // If we don't receive a message back within 10 seconds, Javabuilder may be at maximum capacity and
+    // the request will be queued to execute when an instance is available. Notify the user that this may
+    // be the case.
+    setTimeout(() => {
+      if (!this.seenMessage && this.socket.readyState === WebSocket.OPEN) {
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.waitingForServer()}`
+        );
+        this.onNewlineMessage();
+      }
+    }, SERVER_WAIT_TIME_MS);
     this.miniApp?.onCompile?.();
   }
 
   onStatusMessage(messageKey, detail) {
     let message;
     let lineBreakCount = 0;
+    this.seenMessage = true;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
@@ -311,12 +331,33 @@ export default class JavabuilderConnection {
   }
 
   onClose(event) {
-    if (event.wasClean) {
+    // Event code 1000 is "connection closed normally", so we should treat
+    // it as an expected close event. For some reason many close events with code
+    // 1000 are not marked as clean. We should treat them as clean.
+    if (event.code === WEBSOCKET_CLOSED_NORMAL_CODE || event.wasClean) {
+      // Don't notify the user here, the program ended as expected.
+      // Mini apps handle setting the run state in this case, as the program
+      // output may run longer than the program execution.
       console.log(`[close] code=${event.code} reason=${event.reason}`);
     } else {
       // e.g. server process ended or network down
       // event.code is usually 1006 in this case
-      console.log(`[close] Connection died. code=${event.code}`);
+      console.log(
+        `[close] Connection died. code=${event.code} reason=${event.reason}`
+      );
+      // If we had a websocket connection error, we already sent a message to the
+      // user and handled stopping the program.
+      if (!this.hadWebsocketConnectionError) {
+        // Notify the user that their program ended unexpectedly
+        // and set the run state to false.
+        this.onOutputMessage(
+          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programEndedUnexpectedly()}`
+        );
+        // Add two newlines so there is a blank line between program executions.
+        this.onNewlineMessage();
+        this.onNewlineMessage();
+        this.turnOffRunningOrTesting();
+      }
     }
   }
 
@@ -339,7 +380,7 @@ export default class JavabuilderConnection {
 
   onError(error) {
     this.onOutputMessage(
-      'We hit an error connecting to our server. Try again.'
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`
     );
     this.onNewlineMessage();
     this.handleExecutionFinished();
@@ -399,18 +440,7 @@ export default class JavabuilderConnection {
     } else if (this.sawValidationTests) {
       this.onValidationFailed();
     }
-    this.sawValidationTests = false;
-    this.allValidationPassed = true;
-    this.seenUnsupportedNeighborhoodMessage = false;
-    this.seenUnsupportedTheaterMessage = false;
-    switch (this.executionType) {
-      case ExecutionType.RUN:
-        this.setIsRunning(false);
-        break;
-      case ExecutionType.TEST:
-        this.setIsTesting(false);
-        break;
-    }
+    this.turnOffRunningOrTesting();
   }
 
   onAuthorizerMessage(value, detail) {
@@ -449,7 +479,7 @@ export default class JavabuilderConnection {
     this.onMarkdownLog(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
     if (stopProgram) {
-      this.setIsRunning(false);
+      this.turnOffRunningOrTesting();
     }
   }
 
@@ -481,6 +511,7 @@ export default class JavabuilderConnection {
   }
 
   reportWebSocketConnectionError(errorMessage) {
+    this.hadWebsocketConnectionError = true;
     logToCloud.addPageAction(
       logToCloud.PageAction.JavabuilderWebSocketConnectionError,
       {
@@ -488,5 +519,25 @@ export default class JavabuilderConnection {
         channelId: this.channelId,
       }
     );
+  }
+
+  resetRunState() {
+    this.seenMessage = false;
+    this.hadWebsocketConnectionError = false;
+    this.sawValidationTests = false;
+    this.allValidationPassed = true;
+    this.seenUnsupportedNeighborhoodMessage = false;
+    this.seenUnsupportedTheaterMessage = false;
+  }
+
+  turnOffRunningOrTesting() {
+    switch (this.executionType) {
+      case ExecutionType.RUN:
+        this.setIsRunning(false);
+        break;
+      case ExecutionType.TEST:
+        this.setIsTesting(false);
+        break;
+    }
   }
 }

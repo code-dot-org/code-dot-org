@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 19:42:53 UTC",
+    "serialized_at": "2023-04-29 16:45:02 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1536,6 +1536,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the MCQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board.",
+        "progression_name": "CSA Curriculum Videos",
         "tips": [
           {
             "type": "teachingTip",
@@ -2676,10 +2677,42 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSA Curriculum Videos"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Curriculum Videos"
+        ],
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3a7ec511-feb7-4c1d-9023-378b1139df87"
+      },
+      "level_keys": [
+        "CSA Curriculum Videos"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA Curriculum Videos",
+        "script_level.level_keys": [
+          "CSA Curriculum Videos"
+        ],
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-2023",
+        "activity_section.key": "3a7ec511-feb7-4c1d-9023-378b1139df87"
+      }
+    }
   ],
   "resources": [
     {
