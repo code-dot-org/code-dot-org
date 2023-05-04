@@ -44,8 +44,9 @@ a.third-rule {
 
 const STYLE_CSS_CONTENT = `@font-face {
   font-family: 'FontAwesome';
-  font-display: block;
-  src: url("applab/fa-brands-400.woff2") format('woff2');
+  src: url("applab/fontawesome-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 `;
 
@@ -91,7 +92,7 @@ describe('Applab Exporter,', function () {
     );
     server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
-      /^https:\/\/dsco.code.org\/assets\/font-awesome-pro/,
+      /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
     );
     server.respondWith(
@@ -336,10 +337,7 @@ describe('Applab Exporter,', function () {
           'my-app/applab/assets/blockly/media/bar.jpg',
           'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
-          'my-app/applab/fa-brands-400.woff2',
-          'my-app/applab/fa-regular-400.woff2',
-          'my-app/applab/fa-solid-900.woff2',
-          'my-app/applab/fa-v4compatibility.woff2',
+          'my-app/applab/fontawesome-webfont.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
           'my-app/assets/default.mp3',
