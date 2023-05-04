@@ -44,7 +44,6 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import {isEqual} from 'lodash';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -212,11 +211,10 @@ class UnconnectedMusicView extends React.Component {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
     }
 
+    // Using stringified JSON for deep comparison
     if (
-      !isEqual(
-        prevProps.currentlyPlayingBlockIds,
-        this.props.currentlyPlayingBlockIds
-      )
+      JSON.stringify(prevProps.currentlyPlayingBlockIds) !==
+      JSON.stringify(this.props.currentlyPlayingBlockIds)
     ) {
       this.updateHighlightedBlocks();
     }
