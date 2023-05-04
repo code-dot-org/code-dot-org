@@ -3497,6 +3497,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: pluralsight
         express-2018-vn:
           title: Express For Vietnam (2018)
           description_audience: ''
