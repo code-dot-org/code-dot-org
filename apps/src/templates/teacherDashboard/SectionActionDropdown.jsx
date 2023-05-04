@@ -111,15 +111,18 @@ class SectionActionDropdown extends Component {
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          {userId % 10 === 0 && (
+          {/* Note that this should be uncommented when
+          ready to launch.  Also, remove line 125 for launch */}
+          {/* {userId % 10 === 0 && (
             <PopUpMenu.Item
               href={this.editRedirectUrl(sectionData.id)}
               className="edit-section-details-link"
             >
               {i18n.editSectionDetails()}
             </PopUpMenu.Item>
-          )}
-          {userId % 10 !== 0 && (
+          )} */}
+          {/* {userId % 10 !== 0 && ( */}
+          {userId && (
             <PopUpMenu.Item
               onClick={this.onClickEditPopUp}
               className="edit-section-details-link"

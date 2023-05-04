@@ -28,6 +28,7 @@ class TeacherDashboardHeader extends React.Component {
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
     assignmentName: PropTypes.string,
+    userId: PropTypes.number,
   };
 
   constructor(props) {
@@ -88,6 +89,13 @@ class TeacherDashboardHeader extends React.Component {
       />
     );
   }
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    const editSectionUrl = '/sections/' + sectionId + '/edit';
+    return editSectionUrl;
+  };
 
   render() {
     return (
@@ -118,6 +126,20 @@ class TeacherDashboardHeader extends React.Component {
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
+              {/* Uncomment when ready to launch */}
+              {/* {this.props.userId % 10 === 0 && (
+                <Button
+                  __useDeprecatedTag
+                  href={this.editRedirectUrl(this.props.selectedSection.id)}
+                  className="edit-section-details-link"
+                  icon="gear"
+                  size="narrow"
+                  color="gray"
+                  text={i18n.editSectionDetails()}
+                  style={styles.buttonWithMargin}
+                />
+              )}
+              {this.props.userId % 10 !== 0 && ( */}
               <Button
                 onClick={() => {
                   this.props.openEditSectionDialog(
@@ -134,6 +156,7 @@ class TeacherDashboardHeader extends React.Component {
                 text={i18n.editSectionDetails()}
                 style={styles.buttonWithMargin}
               />
+              {/* )} */}
               <DropdownButton
                 size="narrow"
                 color="gray"
@@ -185,8 +208,9 @@ export default connect(
     );
     let selectedSectionId = state.teacherSections.selectedSectionId;
     let selectedSection = state.teacherSections.sections[selectedSectionId];
+    let userId = state.currentUser.userId;
     let assignmentName = getAssignmentName(state, selectedSectionId);
-    return {sections, selectedSection, assignmentName};
+    return {sections, selectedSection, assignmentName, userId};
   },
   dispatch => {
     return {
