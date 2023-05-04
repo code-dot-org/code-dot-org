@@ -38,7 +38,7 @@ import {
   navigateToLevelId,
   sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
-import {setLoading} from '@cdo/apps/code-studio/labRedux';
+import {setIsLoading, setIsPageError} from '@cdo/apps/code-studio/labRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -74,7 +74,8 @@ class UnconnectedMusicView extends React.Component {
     setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
     sendSuccessReport: PropTypes.func,
-    setLoading: PropTypes.func,
+    setIsLoading: PropTypes.func,
+    setIsPageError: PropTypes.func,
   };
 
   constructor(props) {
@@ -245,14 +246,14 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.clearCode();
 
-    this.props.setLoading(true);
+    this.props.setIsLoading(true);
 
     await this.loadProgressionStep();
 
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
 
-    this.props.setLoading(false);
+    this.props.setIsLoading(false);
   };
 
   setToolboxForProgress = () => {
@@ -332,6 +333,10 @@ class UnconnectedMusicView extends React.Component {
       : currentPath;
     const levelDataPath = `${currentPathNoTrailingSlash}/level_data`;
     const response = await fetch(levelDataPath);
+    if (!response.ok) {
+      this.props.setIsPageError(true);
+      return undefined;
+    }
     const levelData = await response.json();
     return levelData;
   };
@@ -632,7 +637,8 @@ const MusicView = connect(
       dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
-    setLoading: isLoading => dispatch(setLoading(isLoading)),
+    setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
+    setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
   })
 )(UnconnectedMusicView);
 

@@ -17,6 +17,7 @@ import moduleStyles from './LabContainer.module.scss';
 const LabContainer = ({children}) => {
   const currentLevelId = useSelector(state => state.progress.currentLevelId);
   const isLabLoading = useSelector(state => state.lab.isLoading);
+  const isPageError = useSelector(state => state.lab.isPageError);
 
   const uniqueKey =
     currentLevelId + (isLabLoading ? '-loading' : '-notloading');
@@ -32,6 +33,21 @@ const LabContainer = ({children}) => {
         key={uniqueKey}
         className={classNames(moduleStyles.solidBlock, overlayStyle)}
       />
+
+      {isPageError && (
+        <div
+          id="page-error-container"
+          className={moduleStyles.pageErrorContainer}
+        >
+          <div id="page-error" className={moduleStyles.pageError}>
+            <img
+              className={moduleStyles.pageErrorImage}
+              src="/shared/images/sad-bee-avatar.png"
+            />
+            An error has occured. Please reload the page to continue.
+          </div>
+        </div>
+      )}
     </div>
   );
 };
