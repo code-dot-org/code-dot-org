@@ -118,10 +118,27 @@ const tabletAndNoDeviceCurricula = [
   course4Curriculum,
 ];
 
+// Filters for grades 2 or 3, physical computing or interdisciplinary, and tablet or no device curricula.
+const multipleFiltersAppliedCurricula = [poemArtCurriculum];
+
+// If every filter is applied, only curricula that have null for the properties associated with the filters
+// will be filtered out.
+const allFiltersAppliedCurricula = [
+  countingCurriculum,
+  poemArtCurriculum,
+  danceUnpluggedCurriculum,
+  course1Curriculum,
+  course2Curriculum,
+  course3Curriculum,
+  course4Curriculum,
+];
+
 export default {
   allCurricula,
   grades2And3Curricula,
   physicalCompCurricula,
   nonNullSchoolSubjectCurricula,
   tabletAndNoDeviceCurricula,
+  multipleFiltersAppliedCurricula,
+  allFiltersAppliedCurricula,
 };

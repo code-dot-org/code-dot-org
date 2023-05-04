@@ -14,6 +14,8 @@ import {
   physicalCompCurricula,
   nonNullSchoolSubjectCurricula,
   tabletAndNoDeviceCurricula,
+  multipleFiltersAppliedCurricula,
+  allFiltersAppliedCurricula,
 } from './CurriculumCatalogTestHelper';
 
 describe('CurriculumCatalog', () => {
@@ -139,6 +141,71 @@ describe('CurriculumCatalog', () => {
     }).length;
     expect(numFilteredCurriculumCards).to.equal(
       tabletAndNoDeviceCurricula.length
+    );
+  });
+
+  it('filtering by each filter shows subset of courses that match the filters', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select "Grade 2" and "Grade 3" in grade level filter
+    const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
+    fireEvent.click(grade2FilterCheckbox);
+    assert(grade2FilterCheckbox.checked);
+    const grade3FilterCheckbox = screen.getByDisplayValue('grade_3');
+    fireEvent.click(grade3FilterCheckbox);
+    assert(grade3FilterCheckbox.checked);
+
+    // Select "Physical Computing" and "Interdisciplinary" in topic filter
+    const physicalCompFilterCheckbox =
+      screen.getByDisplayValue('physical_computing');
+    fireEvent.click(physicalCompFilterCheckbox);
+    assert(physicalCompFilterCheckbox.checked);
+    const interdisciplinaryFilterCheckbox =
+      screen.getByDisplayValue('interdisciplinary');
+    fireEvent.click(interdisciplinaryFilterCheckbox);
+    assert(interdisciplinaryFilterCheckbox.checked);
+
+    // Select "Tablet" and "No Device" in device filter
+    const tabletFilterCheckbox = screen.getByDisplayValue('tablet');
+    fireEvent.click(tabletFilterCheckbox);
+    assert(tabletFilterCheckbox.checked);
+    const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
+    fireEvent.click(noDeviceFilterCheckbox);
+    assert(noDeviceFilterCheckbox.checked);
+
+    // Filters for all courses that support:
+    // - Grades 2 or 3
+    // - Physical Computing or Interdisciplinary topics
+    // - Chromebooks or tablets
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(
+      multipleFiltersAppliedCurricula.length
+    );
+  });
+
+  it('applying every filter only filters out courses that have null for one of the filtered properties', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allCurricula.length);
+
+    // Select all checkboxes
+    screen.getAllByRole('checkbox').forEach(checkbox => {
+      fireEvent.click(checkbox);
+      assert(checkbox.checked);
+    });
+
+    // With every filter applied
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(
+      allFiltersAppliedCurricula.length
     );
   });
 });
