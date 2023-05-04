@@ -48,7 +48,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       application_year: '2018-2019'
   end
 
-  teardown do
+  teardown_all do
     Timecop.return
   end
 
