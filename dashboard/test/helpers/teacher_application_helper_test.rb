@@ -9,8 +9,6 @@ class TeacherApplicationHelperTest < ActionView::TestCase
   end
 
   setup_all do
-    Timecop.freeze
-    puts "time at beginning of setup all is #{Time.now}"
     @user_with_two_incomplete_apps = create :teacher
     @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete'
     create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete', application_year: '2018-2019'
@@ -48,20 +46,14 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       application_year: '2018-2019'
   end
 
-  teardown do
-    Timecop.return
-  end
-
   test 'current application returns user\'s application from this year' do
     sign_in @user_with_two_incomplete_apps
     assert_equal @incomplete_application.id, current_application.id
-    puts "time at end of first test is #{Time.now}"
   end
 
   test 'current application returns nil if user has no application from this year' do
     sign_in @user_with_outdated_incomplete
     assert_nil current_application
-    puts "time at end of second test is #{Time.now}"
   end
 
   test "has_incomplete_open_application" do
@@ -99,7 +91,6 @@ class TeacherApplicationHelperTest < ActionView::TestCase
         msg: "expected #{test_params[:expected_output]} when #{test_params[:condition_message]}"
       )
     end
-    puts "time at end of incomplete tests is #{Time.now}"
   end
 
   test "has_reopened_application" do
@@ -126,7 +117,6 @@ class TeacherApplicationHelperTest < ActionView::TestCase
         has_reopened_application?,
         msg: "expected #{test_params[:expected_output]} when #{test_params[:condition_message]}"
       )
-      puts "time at end of reopened tests is #{Time.now}"
     end
   end
 end
