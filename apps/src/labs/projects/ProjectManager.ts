@@ -110,6 +110,7 @@ export default class ProjectManager {
     const channelChanged = this.channelChanged(project);
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
+      this.saveInProgress = false;
       return this.getNoopResponse();
     }
     // Only save the source if it has changed.
