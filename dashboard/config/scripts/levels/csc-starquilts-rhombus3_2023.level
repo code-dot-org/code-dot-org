@@ -46,6 +46,7 @@
     "encrypted_examples": [
 
     ],
+    "short_instructions": "Code the artist to repeat the pattern to create a 6-point star.",
     "preload_asset_list": null
   },
   "game_id": 23,
@@ -54,7 +55,7 @@
   "level_num": "custom",
   "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:48.519+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus3_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus3_2022\"},{\"changed_at\":\"2023-04-12 19:36:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-17 20:51:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:48.519+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus3_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus3_2022\"},{\"changed_at\":\"2023-04-12 19:36:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-17 20:51:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-03 22:47:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
