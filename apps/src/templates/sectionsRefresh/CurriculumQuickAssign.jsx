@@ -30,7 +30,7 @@ export default function CurriculumQuickAssign({
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
-  const [marketingAudience, setMarketingAudience] = useState(null);
+  const [marketingAudience, setMarketingAudience] = useState('');
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
   const participantType = isNewSection
