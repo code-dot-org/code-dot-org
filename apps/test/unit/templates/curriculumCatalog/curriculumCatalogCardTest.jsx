@@ -2,7 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {subjectsAndTopicsOrder} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {
+  subjectsAndTopicsOrder,
+  translatedCourseOfferingCsTopics,
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -84,9 +87,14 @@ describe('CurriculumCatalogCard', () => {
   it('renders one topic, the first available from ordered list, if no subject present', () => {
     render(<CurriculumCatalogCard {...defaultProps} topics={topics} />);
 
-    screen.getByText(subjectsAndTopicsOrder[firstTopicIndexUsed], {
-      exact: false,
-    });
+    screen.getByText(
+      translatedCourseOfferingCsTopics[
+        subjectsAndTopicsOrder[firstTopicIndexUsed]
+      ],
+      {
+        exact: false,
+      }
+    );
   });
 
   it('does not render label of remaining subjects and topics when exactly one subject or topic is present', () => {
