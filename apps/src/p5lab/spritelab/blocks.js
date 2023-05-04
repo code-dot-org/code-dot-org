@@ -9,7 +9,7 @@ import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import experiments from '@cdo/apps/util/experiments';
-import {parsePathString} from '@cdo/apps/p5lab/utils';
+import {parseSoundPathString} from '@cdo/apps/p5lab/utils';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -110,7 +110,7 @@ const customInputTypes = {
       );
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
-      icon.textContent = '\uf276'; // map-pin
+      icon.textContent = ' \uf276'; // map-pin
       const onChange = () => {
         getLocation(loc => {
           if (loc) {
@@ -178,7 +178,7 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
-      icon.textContent = '\uf08e '; // arrow-up-right-from-square
+      icon.textContent = ' \uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
@@ -188,7 +188,7 @@ const customInputTypes = {
         });
       };
       const transformText = soundPath => {
-        return parsePathString(soundPath);
+        return parseSoundPathString(soundPath);
       };
       currentInputRow
         .appendField(inputConfig.label)

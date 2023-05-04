@@ -11,11 +11,11 @@ import GoogleBlockly from 'blockly/core';
  * @param icon Optional. SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(options) {
-    super(options.value, options.validator);
-    this.onClick = options.onClick;
-    this.transformText = options.transformText;
-    this.icon = options.icon;
+  constructor({value, validator, onClick, transformText, icon}) {
+    super(value, validator);
+    this.onClick = onClick;
+    this.transformText = transformText;
+    this.icon = icon;
     this.SERIALIZABLE = true;
   }
 
@@ -30,7 +30,6 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
-      this.icon.textContent = ' ' + this.icon.textContent;
       this.icon.style.fill = this.getSourceBlock().style.colourPrimary;
       this.textElement_.appendChild(this.icon);
     }

@@ -24,7 +24,7 @@ export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function parsePathString(text) {
+export function parseSoundPathString(text) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
