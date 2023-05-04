@@ -351,7 +351,13 @@ class UnconnectedMusicView extends React.Component {
       ? currentPath.slice(0, -1)
       : currentPath;
     const levelDataPath = `${currentPathNoTrailingSlash}/level_data`;
-    const response = await fetch(levelDataPath);
+    let response;
+    try {
+      response = await fetch(levelDataPath);
+    } catch (e) {
+      this.props.setIsPageError(true);
+      return undefined;
+    }
     if (!response.ok) {
       this.props.setIsPageError(true);
       return undefined;
