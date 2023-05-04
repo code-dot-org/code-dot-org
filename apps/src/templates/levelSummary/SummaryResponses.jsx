@@ -52,6 +52,19 @@ const SummaryResponses = ({
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
 
+  useEffect(() => {
+    const correctAnswerElement = document.getElementById(
+      'summary-correct-answer'
+    );
+    if (showCorrectAnswer) {
+      correctAnswerElement.classList.add(styles.correctAnswersContainer);
+      correctAnswerElement.classList.remove('hide');
+    } else {
+      correctAnswerElement.classList.add('hide');
+      correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+    }
+  }, [showCorrectAnswer]);
+
   return (
     <div className={styles.summaryContainer} id="summary-container">
       {/* Student Responses */}
@@ -90,6 +103,7 @@ const SummaryResponses = ({
                 setShowCorrectAnswer(!showCorrectAnswer);
               }}
               label={i18n.showAnswer()}
+              expands="summary-correct-answer"
             />
           </div>
         )}
