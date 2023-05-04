@@ -109,6 +109,8 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
+    this.props.setIsLoading(true);
+
     this.analyticsReporter.startSession().then(() => {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -170,6 +172,8 @@ class UnconnectedMusicView extends React.Component {
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
+
+      this.props.setIsLoading(false);
     });
   }
 
@@ -290,7 +294,7 @@ class UnconnectedMusicView extends React.Component {
     if (this.props.levels) {
       // Since we have levels, we'll asynchronously retrieve the current level data.
       const response = await this.loadLevelData();
-      progressionStep = response.properties.level_data;
+      progressionStep = response.level_data;
 
       // Also, just set the number of levels.
       this.setState({levelCount: this.props.levels.length});
