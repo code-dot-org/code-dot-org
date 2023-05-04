@@ -188,7 +188,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    render json: {data: "hello world", properties: @level.properties}
+    render json: {level_data: @level.properties["level_data"]}
   end
 
   # Get a list of hidden lessons for the current users section
