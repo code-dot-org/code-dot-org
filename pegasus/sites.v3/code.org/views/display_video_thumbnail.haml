@@ -19,31 +19,38 @@
     width: #{width};
     .thumbnail-wrapper {
       position: relative;
-      overflow: hidden;
       .thumbnail-image {
         width: 100%;
       }
     }
   }
 
-  .play-button-wrapper {
-    all: unset;
-    position: absolute;
-    border-radius: 100%;
-    transition: background ease-in-out .2s;
+  .video-thumbnail-wrapper {
+    position: relative;
 
-    &:focus {
-      outline: #009EB0 solid 2px;
-      outline-offset: 2px;
-      background: #6F488E;
-    }
-
-    img.play {
+    .play-button-wrapper {
+      all: unset;
       position: absolute;
-      top: 0 !important;
-      left: 0;
-      width: 100%;
-      z-index: 100;
+      border-radius: 100%;
+      transition: background ease-in-out .2s;
+
+      &:hover {
+        background: #6F488E;
+      }
+
+      &:focus {
+        outline: #009EB0 solid 2px;
+        outline-offset: 2px;
+        background: #6F488E;
+      }
+
+      img.play {
+        position: absolute;
+        top: 0 !important;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+      }
     }
   }
 
@@ -65,7 +72,7 @@
       height: 40px;
     }
 
-    .video_caption_link::after {
+    .thumbnail-wrapper .video_caption_link::after {
       content: ' ';
       position: absolute;
       left: 0;
@@ -78,7 +85,7 @@
       z-index: -1;
     }
 
-    .video_caption_link {
+    .thumbnail-wrapper .video_caption_link {
       position: absolute;
       bottom: 0;
       height: 50px;
@@ -99,9 +106,10 @@
 
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
-    %img.thumbnail-image{:src => image, :alt => ""}
-    %button.play-button-wrapper
-      %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
+    %div.video-thumbnail-wrapper
+      %img.thumbnail-image{:src => image, :alt => ""}
+      %button.play-button-wrapper
+        %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
     .video_caption_link= caption
 
 - unless thumbnail_only
