@@ -1,3 +1,5 @@
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,9 +28,10 @@ export function parsePathString(text) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
-  if (!text.startsWith('sound://') || !text.endsWith('.mp3')) {
+  if (!text.startsWith(SOUND_PREFIX) || !text.endsWith('.mp3')) {
     throw new Error('This is not a valid path to a sound file.');
   }
+  //throw new Error('This is not a valid path to a sound file.');
   const pathStringArray = text.split('/');
   let category = '';
   // Some sounds do not include a category, such as default.mp3

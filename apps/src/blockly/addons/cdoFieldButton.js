@@ -3,30 +3,24 @@ import GoogleBlockly from 'blockly/core';
 /**
  * This is a customized field which the user clicks to select an option from a customized picker,
  * for example, the location of a sprite from a grid or a sound file from a customized modal.
- * @param value The initial value of the field.
- * @param validator A function that is called to validate changes to the field's value.
+ * @param value Optional. The initial value of the field.
+ * @param validator Optional. A function that is called to validate changes to the field's value.
  * Takes in a value & returns a validated value, or null to abort a change
- * @param onChange The function that handles the field's editor.
- * @param onDisplay The function tht handles how the field text is displayed.
- * @param icon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
+ * @param onClick The function that handles the field's editor.
+ * @param transformText Optional. The function that handles how the field text is displayed.
+ * @param icon Optional. SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
  */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(value, validator, onChange, onDisplay, icon) {
-    super(value, validator);
-    this.onChange = onChange;
-    this.onDisplay = onDisplay;
-    this.icon = icon;
+  constructor(options) {
+    super(options.value, options.validator);
+    this.onClick = options.onClick;
+    this.transformText = options.transformText;
+    this.icon = options.icon;
     this.SERIALIZABLE = true;
   }
 
   static fromJson(options) {
-    return new CdoFieldButton(
-      options.value,
-      options.validator,
-      options.onChange,
-      options.onDisplay,
-      options.icon
-    );
+    return new CdoFieldButton(options);
   }
 
   /**
@@ -44,7 +38,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
 
   /**
    *  Get the text from this field to display on the block. May differ from
-   * `getText` with call to `this.onDisplay` which can change format of text.
+   * `getText` with call to `this.transformText` which can change format of text.
    * @override
    */
   getDisplayText_() {
@@ -52,8 +46,11 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     if (!text) {
       return GoogleBlockly.Field.NBSP;
     }
-    // The onDisplay function customizes the text for display.
-    return this.onDisplay(text);
+    // The transformText function customizes the text for display.
+    if (this.transformText) {
+      return this.transformText(text);
+    }
+    return text;
   }
 
   /**
@@ -61,7 +58,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   showEditor_() {
-    this.onChange();
+    this.onClick();
   }
 
   /**

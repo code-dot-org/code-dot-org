@@ -412,6 +412,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.setOutput(isOutput, check);
   };
 
+  // A field's 'value' used to be called its 'title' in older versions of Blockly.
   blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
   };

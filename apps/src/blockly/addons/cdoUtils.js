@@ -1,6 +1,8 @@
 import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
@@ -109,30 +111,32 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-export function soundField(onChange, onDisplay, icon) {
+export function soundField(onClick, transformText, icon) {
   // Handle 'play sound' block with default param from CDO blockly.
   // TODO: Remove when sprite lab is migrated to Google blockly.
   const validator = newValue => {
     if (typeof newValue !== 'string') {
       return null;
     }
-    if (newValue === 'Choose') {
+    if (!newValue.startsWith(SOUND_PREFIX) || !newValue.endsWith('.mp3')) {
+      console.error(
+        'An invalid sound value was selected. Therefore, the default sound value will be used.'
+      );
       return DEFAULT_SOUND;
     }
     return newValue;
   };
-  // FieldButton(value, validator, onChange, onDisplay, icon)
-  return new Blockly.FieldButton(
-    DEFAULT_SOUND,
+  return new Blockly.FieldButton({
+    value: DEFAULT_SOUND,
     validator,
-    onChange,
-    onDisplay,
-    icon
-  );
+    onClick,
+    transformText,
+    icon,
+  });
 }
 
-export function locationField(icon, onChange) {
-  const onDisplaySetField = value => {
+export function locationField(icon, onClick) {
+  const transformTextSetField = value => {
     if (value) {
       try {
         const loc = JSON.parse(value);
@@ -142,6 +146,9 @@ export function locationField(icon, onChange) {
       }
     }
   };
-  // FieldButton(value, validator, onChange, onDisplay, icon)
-  return new Blockly.FieldButton(null, null, onChange, onDisplaySetField, icon);
+  return new Blockly.FieldButton({
+    onClick,
+    transformText: transformTextSetField,
+    icon,
+  });
 }

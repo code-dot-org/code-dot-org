@@ -276,19 +276,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getCode: function (workspace) {
       return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
     },
-    soundField: function (onChange) {
-      return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+    soundField: function (onClick) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], onClick);
     },
     locationField: function (
       icon,
-      onChange,
+      onClick,
       block,
       inputConfig,
       currentInputRow
     ) {
       const fieldRow = currentInputRow.getFieldRow();
       const fieldLabel = fieldRow[fieldRow.length - 1];
-      const onDisplaySetLabel = value => {
+      const transformTextSetLabel = value => {
         if (value) {
           try {
             const loc = JSON.parse(value);
@@ -301,7 +301,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
         }
       };
       const color = block.getHexColour();
-      return new Blockly.FieldButton(icon, onChange, color, onDisplaySetLabel);
+      return new Blockly.FieldButton(
+        icon,
+        onClick,
+        color,
+        transformTextSetLabel
+      );
     },
   };
   return blocklyWrapper;
