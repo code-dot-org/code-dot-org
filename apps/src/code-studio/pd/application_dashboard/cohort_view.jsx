@@ -11,7 +11,7 @@ import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import {Button, Col, Row} from 'react-bootstrap';
+import {Button, Col, Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 class CohortView extends React.Component {
   static propTypes = {

@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Button} from 'react-bootstrap';
+import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import color from '@cdo/apps/util/color';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';

@@ -5,7 +5,7 @@ import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
 import SubmissionsDownloadForm from './submissions_download_form';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {PermissionPropType, WorkshopAdmin} from '../../permission';
 import {connect} from 'react-redux';
 

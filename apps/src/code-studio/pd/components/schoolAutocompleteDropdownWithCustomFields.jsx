@@ -4,7 +4,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import CustomSchoolInfo from './customSchoolInfo';
 import {SchoolInfoPropType} from './constants';

@@ -7,7 +7,7 @@ import {
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import {FormGroup, Row, Col} from 'react-bootstrap';
+import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import SummaryTable from './summary_table';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {mapValues, omit} from 'lodash';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Tab, Tabs} from 'react-bootstrap';
+import {Tab, Tabs} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import SectionResults from './section_results';
 import SurveyRollupTableFoorm from '../../components/survey_results/survey_rollup_table_foorm';
 

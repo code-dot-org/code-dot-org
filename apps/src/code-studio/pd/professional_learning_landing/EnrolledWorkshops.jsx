@@ -3,7 +3,7 @@ import React from 'react';
 import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table, Button, Modal} from 'react-bootstrap';
+import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import {

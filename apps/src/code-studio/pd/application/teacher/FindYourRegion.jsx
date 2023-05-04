@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   ControlLabel,
@@ -8,6 +9,7 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {styles} from './TeacherApplicationConstants';
 import {
   PageLabels,

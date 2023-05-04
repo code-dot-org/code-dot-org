@@ -7,7 +7,7 @@ import {
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {PROGRAM_CSA} from './TeacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {

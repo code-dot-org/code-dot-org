@@ -3,7 +3,7 @@ import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';

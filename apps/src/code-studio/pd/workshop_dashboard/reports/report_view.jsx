@@ -10,7 +10,7 @@ import moment from 'moment';
 import WorkshopSummaryReport from './workshop_summary_report';
 import TeacherAttendanceReport from './teacher_attendance_report';
 import DatePicker from '../components/date_picker';
-
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -19,6 +19,7 @@ import {
   ControlLabel,
   FormControl,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {
   QUERY_BY_OPTIONS,
   QUERY_BY_VALUES,

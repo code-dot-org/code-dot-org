@@ -4,6 +4,7 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ConfirmationDialog from '../../../components/confirmation_dialog';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Modal,
   FormGroup,
@@ -11,6 +12,7 @@ import {
   Button,
   FormControl,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../../constants';
 import 'react-select/dist/react-select.css';
