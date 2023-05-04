@@ -19,8 +19,6 @@ const LabContainer = ({children}) => {
   const isLabLoading = useSelector(state => state.lab.isLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
-  const uniqueKey =
-    currentLevelId + (isLabLoading ? '-loading' : '-notloading');
   const overlayStyle = isLabLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
@@ -30,7 +28,7 @@ const LabContainer = ({children}) => {
       {children}
       <div
         id="fade-overlay"
-        key={uniqueKey}
+        key={currentLevelId}
         className={classNames(moduleStyles.solidBlock, overlayStyle)}
       />
 

@@ -104,6 +104,7 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       updateNumber: 0,
       showingVideo: true,
+      levelCount: 0,
     };
   }
 
@@ -131,19 +132,26 @@ class UnconnectedMusicView extends React.Component {
 
     const musicValidator = new MusicValidator(this.getIsPlaying, this.player);
 
-    this.progressManager = new ProgressManager(
-      this.props.currentLevelIndex,
-      musicValidator,
-      this.onProgressChange
-    );
-
     const promises = [];
 
     // Load library data.
     promises.push(this.loadLibrary());
 
-    // Load progress data for current step.
-    promises.push(this.loadProgressionStep());
+    // There are two ways to have a progression: have levels, or be directed
+    // to load a progression.
+    if (
+      this.props.levels ||
+      AppConfig.getValue('load-progression') === 'true'
+    ) {
+      this.progressManager = new ProgressManager(
+        this.props.currentLevelIndex,
+        musicValidator,
+        this.onProgressChange
+      );
+
+      // Load progress data for current step.
+      promises.push(this.loadProgressionStep());
+    }
 
     Promise.all(promises).then(values => {
       const libraryJson = values[0];
@@ -283,10 +291,17 @@ class UnconnectedMusicView extends React.Component {
       // Since we have levels, we'll asynchronously retrieve the current level data.
       const response = await this.loadLevelData();
       progressionStep = response.properties.level_data;
+
+      // Also, just set the number of levels.
+      this.setState({levelCount: this.props.levels.length});
     } else if (AppConfig.getValue('load-progression') === 'true') {
-      // Let's load from the file.
+      // Let's load from the file.  We'll grab the entire progression
+      // but just extract the current step's data.
       const response = await this.loadProgressionFile();
       progressionStep = response.steps[this.props.currentLevelIndex];
+
+      // Also, set the number of levels while we have the whole progression available.
+      this.setState({levelCount: response.steps.length});
     }
 
     this.progressManager.setProgressionStep(progressionStep);
@@ -502,7 +517,7 @@ class UnconnectedMusicView extends React.Component {
         <Instructions
           progressionStep={this.progressManager.getProgressionStep()}
           currentLevelIndex={this.props.currentLevelIndex}
-          levelCount={this.props.levels.length}
+          levelCount={this.state.levelCount}
           onNextPanel={this.onNextPanel}
           baseUrl={baseUrl}
           vertical={position !== InstructionsPositions.TOP}
