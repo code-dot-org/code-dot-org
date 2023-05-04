@@ -16,6 +16,9 @@ class SectionsControllerTest < ActionController::TestCase
 
     @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
+
+    @sections = create_list :section, 3, user: @teacher
+    @section = @sections.first
   end
 
   setup do
@@ -215,5 +218,12 @@ class SectionsControllerTest < ActionController::TestCase
 
     get :new, params: {loginType: 'word', participantType: 'student'}
     assert_response :success
+  end
+
+  test 'returns forbidden if requested edit section does not belong to teacher' do
+    sign_in @teacher
+    other_teacher_section = create :section
+    get :edit, params: {section_id: other_teacher_section.id}
+    assert_response :forbidden
   end
 end
