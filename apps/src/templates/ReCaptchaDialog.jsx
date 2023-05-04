@@ -12,11 +12,12 @@ can be difficult for young users to solve. Thus, it should be used sparingly acr
 */
 export default class ReCaptchaDialog extends React.Component {
   static propTypes = {
-    handleSubmit: PropTypes.func,
-    handleCancel: PropTypes.func,
+    handleSubmit: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    submitText: PropTypes.string,
+    submitText: PropTypes.string.isRequired,
     siteKey: PropTypes.string.isRequired,
+    title: PropTypes.string,
     children: PropTypes.node,
   };
 
@@ -90,7 +91,8 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   render() {
-    const {siteKey, isOpen, handleCancel, submitText, children} = this.props;
+    const {siteKey, isOpen, handleCancel, submitText, title, children} =
+      this.props;
     return (
       <div>
         <BaseDialog
@@ -100,6 +102,7 @@ export default class ReCaptchaDialog extends React.Component {
           style={styles.dialog}
           isOpen={isOpen}
         >
+          <h3>{title || i18n.verifyNotBot()}</h3>
           {children}
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (

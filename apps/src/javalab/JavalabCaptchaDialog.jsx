@@ -1,13 +1,16 @@
 import React from 'react';
-import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
-import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import javalabMsg from '@cdo/javalab/locale';
 import {
   appendNewlineToConsoleLog,
   appendOutputLog,
 } from '@cdo/apps/javalab/redux/consoleRedux.ts';
 import {setIsCaptchaDialogOpen} from '@cdo/apps/javalab/redux/javalabRedux.ts';
-import PropTypes from 'prop-types';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+
+const BLOG_URL = 'https://support.code.org/hc/en-us/articles/6104078305549';
 
 function JavalabCaptchaDialog({
   isCaptchaDialogOpen,
@@ -39,9 +42,11 @@ function JavalabCaptchaDialog({
       }}
       handleSubmit={onCaptchaSubmit}
       siteKey={recaptchaSiteKey}
+      title={javalabMsg.verificationHeaderMessage()}
     >
-      <h3>{javalabMsg.verificationHeaderMessage()}</h3>
-      <p>{javalabMsg.verificationDialogMessage()}</p>
+      <SafeMarkdown
+        markdown={javalabMsg.verificationDialogMessage({blogUrl: BLOG_URL})}
+      />
     </ReCaptchaDialog>
   );
 }
@@ -51,7 +56,7 @@ JavalabCaptchaDialog.propTypes = {
   setIsCaptchaDialogOpen: PropTypes.func.isRequired,
   appendNewlineToConsoleLog: PropTypes.func.isRequired,
   appendOutputLog: PropTypes.func.isRequired,
-  recaptchaSiteKey: PropTypes.func.isRequired,
+  recaptchaSiteKey: PropTypes.string.isRequired,
 };
 
 export default connect(
