@@ -8,10 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- * Application assets
- *= require_self
- *= require_directory .
- *
  * Gem assets
  *= require jquery-ui
  *
@@ -19,6 +15,10 @@
  *= require add2home
  *= require gotham-font
  *= require jquery.qtip.min
+ *
+ * Application assets
+ *= require_self
+ *= require_directory .
  *
  * Shared
  *= require barlow-semi-condensed-font
@@ -28,25 +28,11 @@
  *= require details-polyfill
  *= require warning-banner
  */
+
 @import "color";
 @import "font";
 @import "mixins";
 @import "style-constants";
-
-/*
-   Note: these CSS @imports need to stay at the top of this file
-   (but below the @import "font" statement, as that file contains constants used below),
-   as @import statements must come before other CSS at-rules are used.
-
-   If you are changing the location of these files,
-   see readme in the top-level shared/css directory for more detail on manual steps to take when uploading new files.
- */
-@import url($font-awesome-core-url);
-@import url($font-awesome-brands-url);
-@import url($font-awesome-solid-url);
-@import url($font-awesome-regular-url);
-@import url($font-awesome-v4-fonts-url);
-@import url($font-awesome-v4-shims-url);
 
 $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
@@ -61,6 +47,8 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
+// Font-awesome 4.6.3
+@import "font-awesome";
 
 p,pre,span {
   @include selectable;
