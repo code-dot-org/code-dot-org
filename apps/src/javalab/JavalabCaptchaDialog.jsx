@@ -12,15 +12,17 @@ import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
 const BLOG_URL = 'https://support.code.org/hc/en-us/articles/6104078305549';
 
-function UnconnectedJavalabCaptchaDialog({
+// exported for tests
+export function UnconnectedJavalabCaptchaDialog({
   isCaptchaDialogOpen,
   setIsCaptchaDialogOpen,
   appendNewlineToConsoleLog,
   appendOutputLog,
   recaptchaSiteKey,
 }) {
+  // return promise for tests
   const onCaptchaSubmit = token => {
-    fetch('/dashboardapi/v1/users/me/verify_captcha', {
+    return fetch('/dashboardapi/v1/users/me/verify_captcha', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

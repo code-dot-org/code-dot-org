@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
 import JavalabCaptchaDialog from '@cdo/apps/javalab/JavalabCaptchaDialog';
 
-describe('Javalab View Test', () => {
+describe('Javalab View', () => {
   let defaultProps;
 
   beforeEach(() => {
