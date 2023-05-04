@@ -95,7 +95,11 @@ describe('SectionActionDropdown', () => {
 
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
-      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[1]}
+        userId={1539347}
+      />
     );
     expect(wrapper).to.contain('View Progress');
     expect(wrapper).to.contain('Manage Students');
@@ -110,7 +114,11 @@ describe('SectionActionDropdown', () => {
 
   it('renders the five standard options for not a third party section', () => {
     const wrapper = shallow(
-      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[0]}
+        userId={1539347}
+      />
     );
     expect(wrapper).to.contain('View Progress');
     expect(wrapper).to.contain('Manage Students');
