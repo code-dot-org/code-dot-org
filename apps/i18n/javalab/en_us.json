@@ -154,7 +154,7 @@
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
-  "verificationDialogMessage": "Java usage is limited for new users. Verified teachers have access to a much higher quota for themselves and their students without any additional checks. You can learn why verification is needed on this blog page: link",
+  "verificationDialogMessage": "Java usage is limited for new users. Verified teachers have access to a much higher quota for themselves and their students without any additional checks. You can learn why verification is needed on [this blog page.]({blogUrl})",
   "verificationHeaderMessage": "Please confirm you're human",
   "verificationRequiredMessage": "Verification required: please verify you're a human and try again.",
   "verificationSuccessful": "Verification successful!",
