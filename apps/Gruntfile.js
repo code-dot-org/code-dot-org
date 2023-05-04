@@ -658,6 +658,7 @@ describe('entry tests', () => {
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
+    'levels/_single_multi': './src/sites/studio/pages/levels/_single_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
