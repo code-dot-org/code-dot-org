@@ -70,6 +70,7 @@
       left: 5px;
       width: 40px;
       height: 40px;
+      z-index: 100;
     }
 
     .thumbnail-wrapper .video_caption_link::after {
@@ -107,7 +108,7 @@
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
     %div.video-thumbnail-wrapper
-      %img.thumbnail-image{:src => image, :alt => ""}
+      %img.thumbnail-image{:src => image, :alt => "Video thumbnail"}
       %button.play-button-wrapper
         %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
     .video_caption_link= caption
