@@ -306,11 +306,7 @@ export default function SectionsSetUpContainer({
             e.preventDefault();
             setIsSaveInProgress(true);
             recordSectionSetupEvent(sections[0]);
-            saveSection(
-              sections[0],
-              isNewSection,
-              !!isUsersFirstSection && isNewSection
-            );
+            saveSection(sections[0], isNewSection, !!isUsersFirstSection);
           }}
         />
       </div>
