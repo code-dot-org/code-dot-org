@@ -214,13 +214,12 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.save!
   end
 
+  # Expects a param with the key "g-recaptcha-response" that is used
+  # to validate whether a user isn't a bot
   # POST /dashboardapi/v1/users/<user_id>/verify_captcha
-  # maybe rename to cover that this stores a timestamp
   def verify_captcha
-    # might need 2 minute buffer timestamp
-    # time.now vs datetime?
     if verify_recaptcha
-      @user.last_verified_captcha_at = Time.now
+      @user.last_verified_captcha_at = Time.now.utc
       @user.save
 
       return head :ok

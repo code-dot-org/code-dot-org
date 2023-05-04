@@ -64,7 +64,7 @@ class JavabuilderSessionsController < ApplicationController
       javabuilder_url = CDO.javabuilder_url
       javabuilder_upload_url = CDO.javabuilder_upload_url
     else
-      if !current_user.last_verified_captcha_at || (Time.now - 24.hours) > current_user.last_verified_captcha_at
+      if !current_user.last_verified_captcha_at || (Time.now.utc - 24.hours) > current_user.last_verified_captcha_at
         return render(status: :forbidden, json: {captcha_required: true})
       end
       javabuilder_url = CDO.javabuilder_demo_url
