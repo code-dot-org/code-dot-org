@@ -184,7 +184,6 @@ class ScriptLevelsController < ApplicationController
     @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    puts @script_level.to_json
 
     @level = @script_level.level
 
