@@ -3497,6 +3497,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: pluralsight
         express-2018-vn:
           title: Express For Vietnam (2018)
           description_audience: ''
@@ -10393,8 +10395,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching CS Connections
-          title: Teaching CS Connections
-          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview features and resources.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
+          title: Teaching CS Connections for Facilitators Only
+          description: "## **This self-paced online module is intended only for facilitators.**\n\nThis professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview features and resources.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\n* Preview features and resources.\n\n\nConsider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
           description_short: ''
           description_audience: ''
@@ -11002,7 +11004,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('22-'23)
+          title: Teaching Computer Science Fundamentals ('23-'24)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '

@@ -95,6 +95,7 @@ const saveSection = (section, isNewSection) => {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    grades: section.grade,
     ...section,
   };
 
@@ -120,6 +121,7 @@ const saveSection = (section, isNewSection) => {
 export default function SectionsSetUpContainer({sectionToBeEdited}) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
+  const [isSaveInProgress, setIsSaveInProgress] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -210,6 +212,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionNum={1}
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
+        isNewSection={isNewSection}
       />
 
       <CurriculumQuickAssign
@@ -277,10 +280,18 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         this might mean creating a different button for the "edit" page
         */}
         <Button
-          text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
+          text={
+            isSaveInProgress
+              ? i18n.saving()
+              : isNewSection
+              ? i18n.finishCreatingSections()
+              : i18n.save()
+          }
           color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={isSaveInProgress}
           onClick={e => {
             e.preventDefault();
+            setIsSaveInProgress(true);
             recordSectionSetupEvent(sections[0]);
             saveSection(sections[0], isNewSection);
           }}
