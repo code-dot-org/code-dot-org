@@ -165,10 +165,13 @@ export default function CurriculumQuickAssign({
   };
 
   // When selecting a marketing audience, ensure 'decide later' is unchecked
-  const updateMarketingAudience = marketingAudience => {
-    setMarketingAudience(marketingAudience);
-    setDecideLater(false);
-  };
+  const updateMarketingAudience = useCallback(
+    marketingAudience => {
+      setMarketingAudience(marketingAudience);
+      setDecideLater(false);
+    },
+    [setDecideLater, setMarketingAudience]
+  );
 
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const isPlOrHoc = () => {
