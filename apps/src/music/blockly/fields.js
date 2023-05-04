@@ -60,10 +60,10 @@ export const fieldRestDurationDefinition = {
   type: 'field_dropdown',
   name: FIELD_REST_DURATION_NAME,
   options: [
-    [`\u00bd ${musicI18n.blockly_fieldRestBeat()}`, '0.125'],
-    [`1 ${musicI18n.blockly_fieldRestBeat()}`, '0.25'],
-    [`2 ${musicI18n.blockly_fieldRestBeats()}`, '0.5'],
-    [`1 ${musicI18n.blockly_fieldRestMeasure()}`, '1'],
-    [`2 ${musicI18n.blockly_fieldRestMeasures()}`, '2'],
+    [musicI18n.blockly_fieldRestHalfBeat(), '0.125'],
+    [musicI18n.blockly_fieldRestOneBeat(), '0.25'],
+    [musicI18n.blockly_fieldRestBeats({num: 2}), '0.5'],
+    [musicI18n.blockly_fieldRestOneMeasure(), '1'],
+    [musicI18n.blockly_fieldRestMeasures({num: 2}), '2'],
   ],
 };
