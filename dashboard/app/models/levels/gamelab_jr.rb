@@ -50,6 +50,10 @@ class GamelabJr < Gamelab
     return standalone_app_name || 'spritelab'
   end
 
+  def project_type
+    return standalone_app_name_or_default
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
