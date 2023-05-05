@@ -351,7 +351,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   async loadCode(levelId) {
-    const projectResponse = await this.projectManager.load(levelId);
+    const projectResponse = await this.projectManager.loadForLevel(levelId);
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
         // This is expected if the user has never saved before.

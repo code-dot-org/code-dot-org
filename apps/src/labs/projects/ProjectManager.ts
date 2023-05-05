@@ -50,16 +50,21 @@ export default class ProjectManager {
     this.getProject = getProject;
   }
 
-  // Load the project from the sources and channels store. If a level id is provided,
-  // load the channel for that level first.
-  async load(levelId?: string): Promise<Response> {
-    if (levelId) {
-      const setLevelResponse = await this.setLevel(levelId);
-      if (!setLevelResponse.ok) {
-        return setLevelResponse;
-      }
+  // First, get the channel id associated with the level and script
+  // (or just the level if no script was provided).
+  // Then, load the project from the sources and channels store.
+  async loadForLevel(levelId: string, scriptName?: string): Promise<Response> {
+    const setLevelResponse = await this.setLevel(levelId, scriptName);
+    if (!setLevelResponse.ok) {
+      return setLevelResponse;
     }
-    // It's possible to not have a channel id set if a level id was not provided
+
+    return await this.load();
+  }
+
+  // Load the project from the sources and channels store.
+  async load(): Promise<Response> {
+    // It's possible to not have a channel id set if the level has not been set already
     // or we were not given a channelId on initialization.
     if (!this.channelId) {
       return this.getNoChannelResponse();
@@ -189,8 +194,8 @@ export default class ProjectManager {
   // Given a level id, get the channel id for that level and set it as the current channel.
   // This is private because it is only called from load(levelId). It could be made public
   // if we see a need to call it directly from a lab.
-  private async setLevel(levelId: string) {
-    const response = await this.channelsStore.loadForLevel(levelId);
+  private async setLevel(levelId: string, scriptName?: string) {
+    const response = await this.channelsStore.loadForLevel(levelId, scriptName);
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {

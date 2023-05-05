@@ -10,7 +10,7 @@ import * as projectsApi from './projectsApi';
 export interface ChannelsStore {
   load: (key: string) => Promise<Response>;
 
-  loadForLevel: (levelId: string) => Promise<Response>;
+  loadForLevel: (levelId: string, scriptName?: string) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
 }
@@ -40,8 +40,8 @@ export class LocalChannelsStore implements ChannelsStore {
 export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(levelId: string) {
-    return projectsApi.getForLevel(levelId);
+  loadForLevel(levelId: string, scriptName?: string) {
+    return projectsApi.getForLevel(levelId, scriptName);
   }
 
   load(channelId: string) {
