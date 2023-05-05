@@ -952,6 +952,19 @@ module LevelsHelper
     error_message = under_13_without_tos_teacher?(level)
     return false unless error_message
 
+    if error_message == I18n.t("errors.messages.too_young")
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: "redirect_under_13",
+          event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
+          data_json: {
+            game: level.game.name
+          }.to_json
+        }
+      )
+    end
     redirect_to '/', flash: {alert: error_message}
     return true
   end
