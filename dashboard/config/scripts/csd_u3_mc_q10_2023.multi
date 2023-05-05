@@ -8,3 +8,5 @@ wrong '![](https://images.code.org/4695aeb79a351056af610ab2b34551f1-Q7d.png)'
 teacher_markdown <<MARKDOWN
 **Content: Unit 3 Lesson 6**
 MARKDOWN
+
+allow_multiple_attempts true

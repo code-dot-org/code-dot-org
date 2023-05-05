@@ -7,7 +7,7 @@ wrong '`arr` contains only positive values.'
 right '`arr` contains only negative values.'
 wrong '`largestNum` always works as intended.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

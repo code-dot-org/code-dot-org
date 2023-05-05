@@ -7,7 +7,7 @@ wrong '`Charlie`'
 wrong 'The code will not compile.'
 wrong 'The code will throw a `NullPointerException`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following method.
