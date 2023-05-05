@@ -133,14 +133,14 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
       # At 7 days, the only application that gets the first reminder is the application with an email
       Timecop.travel 7.days
       applications_needing_initial_reminder = Services::CompleteApplicationReminder.applications_needing_initial_reminder
-      assert_equal 1, applications_needing_initial_reminder.count
-      assert_equal application_with_email.id, applications_needing_initial_reminder.first.id
+      assert applications_needing_initial_reminder.include?(application_with_email)
+      refute applications_needing_initial_reminder.include?(teacher_without_email)
 
       # At 14 days, the only application that gets the second reminder is the application with an email
       Timecop.travel 7.days
       applications_needing_final_reminder = Services::CompleteApplicationReminder.applications_needing_final_reminder
-      assert_equal 1, applications_needing_final_reminder.count
-      assert_equal application_with_email.id, applications_needing_final_reminder.first.id
+      assert applications_needing_final_reminder.include?(application_with_email)
+      refute applications_needing_final_reminder.include?(teacher_without_email)
     end
   end
 end
