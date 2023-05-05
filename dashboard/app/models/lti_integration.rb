@@ -1,0 +1,2 @@
+class LtiIntegration < ApplicationRecord
+end
