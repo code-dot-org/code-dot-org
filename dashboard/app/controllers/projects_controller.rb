@@ -283,21 +283,22 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects/level/:level_id
+  # GET /projects/level/:level_id or GET /projects/level/:level_id?script_name=:script_name
   # Given a level_id and the current user (or signed out user), get the existing project
-  # or create a new project for that level and user.
+  # or create a new project for that level and user. If a script_name is provided, get or
+  # create the project for that level, script and user
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
-    find_or_create_project(params[:level_id])
-  end
-
-  # GET projects/s/:script_id/level/:level_id
-  # Given a script name (script_id is actually the name), level_id and the current user
-  # (or signed out user), get the existing project or create a new project for that script, level and user.
-  # Returns json: {channel: <encrypted-channel-token>}
-  def get_or_create_for_script_level
-    script_id = Unit.find_by_name(params[:script_id])&.id
-    find_or_create_project(params[:level_id], script_id)
+    script_id = Unit.find_by_name(params[:script_name])&.id
+    level = Level.find(params[:level_id])
+    error_message = under_13_without_tos_teacher?(level)
+    return render(status: :forbidden, json: {error: error_message}) if error_message
+    # get_storage_id works for signed out users as well, it uses the cookie to determine
+    # the storage id.
+    user_storage_id = get_storage_id
+    # Find the channel for the user and level if it exists, or create a new one.
+    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
+    render(status: :ok, json: {channel: channel_token.channel})
   end
 
   def weblab_footer
@@ -526,18 +527,6 @@ class ProjectsController < ApplicationController
   # For certain actions, check a special permission before proceeding.
   private def authorize_load_project!
     authorize! :load_project, params[:key]
-  end
-
-  private def find_or_create_project(level_id, script_id = nil)
-    level = Level.find(level_id)
-    error_message = under_13_without_tos_teacher?(level)
-    return render(status: :forbidden, json: {error: error_message}) if error_message
-    # get_storage_id works for signed out users as well, it uses the cookie to determine
-    # the storage id.
-    user_storage_id = get_storage_id
-    # Find the channel for the user and level if it exists, or create a new one.
-    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    render(status: :ok, json: {channel: channel_token.channel})
   end
 
   # Automatically catch authorization exceptions on any methods in this controller
