@@ -863,11 +863,7 @@ class Unit < ApplicationRecord
   end
 
   def duration_in_minutes
-    total_unit_duration = 0
-    lessons.each do |lesson|
-      total_unit_duration += lesson.total_lesson_duration
-    end
-    total_unit_duration
+    lessons.sum(&:total_lesson_duration)
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)

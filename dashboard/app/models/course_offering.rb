@@ -213,9 +213,9 @@ class CourseOffering < ApplicationRecord
   end
 
   def duration
-    co_units = most_recent_version_in_published_state.units
+    co_units = latest_published_version.units
     co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
-    co_duration_in_minutes
+    DURATION_MINUTES_CAP_TO_LABEL.keys.find {|dur| co_duration_in_minutes <= DURATION_MINUTES_CAP_TO_LABEL[dur]}
   end
 
   def summarize_for_edit
@@ -228,7 +228,6 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative:  marketing_initiative,
       grade_levels: grade_levels,
-      duration: duration,
       header: header,
       image: image,
       cs_topic: cs_topic,
@@ -242,6 +241,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       grade_levels: grade_levels,
+      duration: duration,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
@@ -260,7 +260,6 @@ class CourseOffering < ApplicationRecord
       curriculum_type: curriculum_type,
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
-      duration: duration,
       header: header,
       image: image,
       cs_topic: cs_topic,
