@@ -10,7 +10,6 @@ export default class CdoPathObjectGeras extends GoogleBlockly.geras.PathObject {
   // The built-in function adds a light filter over the whole block. We want to match our old
   // behavior where highlighting the block adds the same yellow outline as selecting.
   updateHighlighted(highlighted) {
-    console.log('updateHighlighted - cdoPathObject - geras');
     this.setClass_('blocklySelected', highlighted);
   }
 }
