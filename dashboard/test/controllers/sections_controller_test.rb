@@ -216,4 +216,11 @@ class SectionsControllerTest < ActionController::TestCase
     get :new, params: {loginType: 'word', participantType: 'student'}
     assert_response :success
   end
+
+  test 'returns forbidden if requested edit section does not belong to teacher' do
+    sign_in @teacher
+    other_teacher_section = create :section
+    get :edit, params: {id: other_teacher_section.id}
+    assert_response :forbidden
+  end
 end
