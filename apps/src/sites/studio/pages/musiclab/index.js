@@ -13,7 +13,7 @@ $(document).ready(function () {
     <Provider store={getStore()}>
       <MusicLabView
         appOptions={{channel: channelId, app: 'music'}}
-        standalone={true}
+        inIncubator={true}
       />
     </Provider>,
     document.getElementById('musiclab-container')

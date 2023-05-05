@@ -65,8 +65,11 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     appOptions: PropTypes.object,
     appConfig: PropTypes.object,
-    /** If Music Lab is being rendered as a standalone lab (i.e. under /projectbeats) */
-    standalone: PropTypes.bool,
+    /**
+     * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
+     * false/undefined if as part of a script or standalone level.
+     * */
+    inIncubator: PropTypes.bool,
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
@@ -123,10 +126,8 @@ class UnconnectedMusicView extends React.Component {
       showingVideo: true,
     };
 
-    if (props.appOptions.channel) {
-      // Music Lab currently does not support share and remix
-      header.showHeaderForProjectBacked({showShareAndRemix: false});
-    }
+    // Music Lab currently does not support share and remix
+    header.showHeaderForProjectBacked({showShareAndRemix: false});
   }
 
   componentDidMount() {
@@ -618,7 +619,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={this.props.standalone}
+                  canShowSaveStatus={this.props.inIncubator}
                 />
               </div>
               <div id="blockly-div" />
