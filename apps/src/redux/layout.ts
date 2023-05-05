@@ -1,5 +1,5 @@
 /** @file Track the app's layout */
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 
 interface LayoutState {
   visualizationScale: number | null;
@@ -20,5 +20,12 @@ const layoutSlice = createSlice({
 });
 
 export const {setVisualizationScale} = layoutSlice.actions;
+
+const selectSelf = (state: LayoutState) => state;
+
+export const getVisualizationScale = createSelector(
+  selectSelf,
+  state => state?.visualizationScale
+);
 
 export default layoutSlice.reducer;
