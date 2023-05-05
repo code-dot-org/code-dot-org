@@ -12,11 +12,11 @@ import RandomSkipManager from '../player/RandomSkipManager';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
-import {AnalyticsContext, PlayerUtilsContext} from '../context';
+import {AnalyticsContext} from '../context';
 import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig, {setAppConfig} from '../appConfig';
+import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import ProgressManager from '../progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
@@ -31,12 +31,19 @@ import {
   setInstructionsPosition,
   InstructionsPositions,
   setCurrentProgressState,
+  addPlaybackEvents,
+  clearPlaybackEvents,
+  getCurrentlyPlayingBlockIds,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
   levelsForLessonId,
   navigateToLevelId,
+  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
+import {BlockMode} from '../constants';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -53,7 +60,6 @@ class UnconnectedMusicView extends React.Component {
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
-    onChangeLevel: PropTypes.func,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -72,6 +78,10 @@ class UnconnectedMusicView extends React.Component {
     setInstructionsPosition: PropTypes.func,
     setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
+    clearPlaybackEvents: PropTypes.func,
+    addPlaybackEvents: PropTypes.func,
+    currentlyPlayingBlockIds: PropTypes.array,
+    sendSuccessReport: PropTypes.func,
   };
 
   constructor(props) {
@@ -98,7 +108,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      updateNumber: 0,
       showingVideo: true,
     };
   }
@@ -136,6 +145,12 @@ class UnconnectedMusicView extends React.Component {
       const libraryJson = values[0];
       this.library = new MusicLibrary(libraryJson);
 
+      if (getBlockMode() === BlockMode.SIMPLE2) {
+        this.sequencer = new Simple2Sequencer(this.library);
+      } else {
+        this.sequencer = new MusicPlayerStubSequencer();
+      }
+
       // Process progression first, if there is one, since
       // it might affect the toolbox.
       if (AppConfig.getValue('load-progression') === 'true') {
@@ -143,6 +158,7 @@ class UnconnectedMusicView extends React.Component {
 
         const musicValidator = new MusicValidator(
           this.getIsPlaying,
+          this.getPlaybackEvents,
           this.player
         );
 
@@ -194,6 +210,14 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.musicBlocklyWorkspace.selectBlock(this.props.selectedBlockId);
     }
+
+    // Using stringified JSON for deep comparison
+    if (
+      JSON.stringify(prevProps.currentlyPlayingBlockIds) !==
+      JSON.stringify(this.props.currentlyPlayingBlockIds)
+    ) {
+      this.updateHighlightedBlocks();
+    }
   }
 
   updateTimer = () => {
@@ -209,11 +233,21 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onProgressChange = () => {
-    this.props.setCurrentProgressState(this.progressManager.getCurrentState());
+    const currentState = this.progressManager.getCurrentState();
+    this.props.setCurrentProgressState(currentState);
+
+    // Tell the external system (if there is one) about the success.
+    if (this.props.levels && currentState.satisfied) {
+      this.props.sendSuccessReport('music');
+    }
   };
 
   getIsPlaying = () => {
     return this.props.isPlaying;
+  };
+
+  getPlaybackEvents = () => {
+    return this.sequencer.getPlaybackEvents();
   };
 
   // When the user initiates going to the next panel in the app.
@@ -265,8 +299,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   updateHighlightedBlocks = () => {
-    const playingBlockIds = this.player.getCurrentlyPlayingBlockIds();
-    this.musicBlocklyWorkspace.updateHighlightedBlocks(playingBlockIds);
+    this.musicBlocklyWorkspace.updateHighlightedBlocks(
+      this.props.currentlyPlayingBlockIds
+    );
   };
 
   loadLibrary = async () => {
@@ -329,13 +364,15 @@ class UnconnectedMusicView extends React.Component {
     if (codeChanged) {
       this.executeCompiledSong();
 
+      // If code has changed mid-playback, clear and re-queue all events in the player
+      if (this.props.isPlaying) {
+        this.player.stopAllSoundsStillToPlay();
+        this.player.playEvents(this.sequencer.getPlaybackEvents());
+      }
+
       this.analyticsReporter.onBlocksUpdated(
         this.musicBlocklyWorkspace.getAllBlocks()
       );
-
-      // This is a way to tell React to re-render the scene, notably
-      // the timeline.
-      this.setState({updateNumber: this.state.updateNumber + 1});
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -357,7 +394,6 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
-      this.updateHighlightedBlocks();
     }
   };
 
@@ -371,7 +407,15 @@ class UnconnectedMusicView extends React.Component {
     }
     this.analyticsReporter.onButtonClicked('trigger', {id});
     const currentPosition = this.player.getCurrentPlayheadPosition();
+
+    this.sequencer.clear();
     this.musicBlocklyWorkspace.executeTrigger(id, currentPosition);
+    const playbackEvents = this.sequencer.getPlaybackEvents();
+    this.props.addPlaybackEvents({
+      events: playbackEvents,
+      lastMeasure: this.sequencer.getLastMeasure(),
+    });
+    this.player.playEvents(playbackEvents);
 
     this.playingTriggers.push({
       id,
@@ -381,19 +425,21 @@ class UnconnectedMusicView extends React.Component {
 
   compileSong = () => {
     return this.musicBlocklyWorkspace.compileSong({
-      MusicPlayer: this.player,
-      ProgramSequencer: this.programSequencer,
-      RandomSkipManager: this.randomSkipManager,
       getTriggerCount: () => this.playingTriggers.length,
-      MusicLibrary: this.library,
+      Sequencer: this.sequencer,
     });
   };
 
   executeCompiledSong = () => {
     // Clear the events list because it will be populated next.
-    this.player.clearAllEvents();
+    this.props.clearPlaybackEvents();
 
+    this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
+    this.props.addPlaybackEvents({
+      events: this.sequencer.getPlaybackEvents(),
+      lastMeasure: this.sequencer.getLastMeasure(),
+    });
   };
 
   playSong = () => {
@@ -404,7 +450,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.executeCompiledSong();
 
-    this.player.playSong();
+    this.player.playSong(this.sequencer.getPlaybackEvents());
 
     this.props.setIsPlaying(true);
     this.props.setCurrentPlayheadPosition(1);
@@ -484,7 +530,7 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
-          instructionsAvailable={!!this.state.instructions}
+          instructionsAvailable={!!this.progressManager}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
@@ -501,59 +547,51 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        <PlayerUtilsContext.Provider
-          value={{
-            getPlaybackEvents: () => this.player.getPlaybackEvents(),
-            getTracksMetadata: () => this.player.getTracksMetadata(),
-            getLastMeasure: () => this.player.getLastMeasure(),
-          }}
-        >
-          <KeyHandler
-            togglePlaying={this.togglePlaying}
-            playTrigger={this.playTrigger}
-          />
-          <div id="music-lab-container" className={moduleStyles.container}>
-            {showInstructions &&
-              instructionsPosition === InstructionsPositions.TOP &&
-              this.renderInstructions(InstructionsPositions.TOP)}
+        <KeyHandler
+          togglePlaying={this.togglePlaying}
+          playTrigger={this.playTrigger}
+        />
+        <div id="music-lab-container" className={moduleStyles.container}>
+          {showInstructions &&
+            instructionsPosition === InstructionsPositions.TOP &&
+            this.renderInstructions(InstructionsPositions.TOP)}
 
-            {showVideo && (
-              <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+          {showVideo && (
+            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+          )}
+
+          {timelineAtTop &&
+            this.renderTimelineArea(
+              true,
+              instructionsPosition === InstructionsPositions.RIGHT
             )}
 
-            {timelineAtTop &&
-              this.renderTimelineArea(
-                true,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
+          <div className={moduleStyles.middleArea}>
+            {showInstructions &&
+              instructionsPosition === InstructionsPositions.LEFT &&
+              this.renderInstructions(InstructionsPositions.LEFT)}
 
-            <div className={moduleStyles.middleArea}>
-              {showInstructions &&
-                instructionsPosition === InstructionsPositions.LEFT &&
-                this.renderInstructions(InstructionsPositions.LEFT)}
-
-              <div id="blockly-area" className={moduleStyles.blocklyArea}>
-                <div className={moduleStyles.topButtonsContainer}>
-                  <TopButtons
-                    clearCode={this.clearCode}
-                    uploadSound={file => this.soundUploader.uploadSound(file)}
-                  />
-                </div>
-                <div id="blockly-div" />
+            <div id="blockly-area" className={moduleStyles.blocklyArea}>
+              <div className={moduleStyles.topButtonsContainer}>
+                <TopButtons
+                  clearCode={this.clearCode}
+                  uploadSound={file => this.soundUploader.uploadSound(file)}
+                />
               </div>
-
-              {showInstructions &&
-                instructionsPosition === InstructionsPositions.RIGHT &&
-                this.renderInstructions(InstructionsPositions.RIGHT)}
+              <div id="blockly-div" />
             </div>
 
-            {!timelineAtTop &&
-              this.renderTimelineArea(
-                false,
-                instructionsPosition === InstructionsPositions.RIGHT
-              )}
+            {showInstructions &&
+              instructionsPosition === InstructionsPositions.RIGHT &&
+              this.renderInstructions(InstructionsPositions.RIGHT)}
           </div>
-        </PlayerUtilsContext.Provider>
+
+          {!timelineAtTop &&
+            this.renderTimelineArea(
+              false,
+              instructionsPosition === InstructionsPositions.RIGHT
+            )}
+        </div>
       </AnalyticsContext.Provider>
     );
   }
@@ -581,6 +619,7 @@ const MusicView = connect(
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
+    currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -595,6 +634,10 @@ const MusicView = connect(
     setCurrentProgressState: progressState =>
       dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
+    clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
+    addPlaybackEvents: playbackEvents =>
+      dispatch(addPlaybackEvents(playbackEvents)),
+    sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
   })
 )(UnconnectedMusicView);
 

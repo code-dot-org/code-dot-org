@@ -8,6 +8,7 @@ import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 import {
   BodyOneText,
   Heading1,
@@ -18,6 +19,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
+const NEW = 'New';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -66,7 +68,11 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-const saveSection = (section, isNewSection) => {
+const saveSection = (
+  section,
+  isNewSection,
+  shouldShowCelebrationDialogOnRedirect
+) => {
   // Determine data sources and save method based on new vs edit section
   const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
   const method = isNewSection ? 'POST' : 'PATCH';
@@ -95,6 +101,7 @@ const saveSection = (section, isNewSection) => {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    grades: section.grade,
     ...section,
   };
 
@@ -106,10 +113,16 @@ const saveSection = (section, isNewSection) => {
     },
     body: JSON.stringify(section_data),
   })
-    .then(response => response.json())
+    .then(response => {
+      return response.json();
+    })
     .then(data => {
       // Redirect to the sections list.
-      window.location.href = window.location.origin + '/home';
+      let redirectUrl = window.location.origin + '/home';
+      if (shouldShowCelebrationDialogOnRedirect) {
+        redirectUrl += '?showSectionCreationDialog=true';
+      }
+      navigateToHref(redirectUrl);
     })
     .catch(err => {
       // TODO: Design how we want to show errors.
@@ -117,9 +130,13 @@ const saveSection = (section, isNewSection) => {
     });
 };
 
-export default function SectionsSetUpContainer({sectionToBeEdited}) {
+export default function SectionsSetUpContainer({
+  isUsersFirstSection,
+  sectionToBeEdited,
+}) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
+  const [isSaveInProgress, setIsSaveInProgress] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -152,6 +169,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
       });
     }
     /*
@@ -180,6 +198,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         newCourseId: section.course?.courseOfferingId,
         newCourseVersionId: section.course?.courseVersionId,
         newVersionYear: null,
+        flowVersion: NEW,
       });
     }
   };
@@ -210,6 +229,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionNum={1}
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
+        isNewSection={isNewSection}
       />
 
       <CurriculumQuickAssign
@@ -277,12 +297,20 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         this might mean creating a different button for the "edit" page
         */}
         <Button
-          text={isNewSection ? i18n.finishCreatingSections() : i18n.save()}
+          text={
+            isSaveInProgress
+              ? i18n.saving()
+              : isNewSection
+              ? i18n.finishCreatingSections()
+              : i18n.save()
+          }
           color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={isSaveInProgress}
           onClick={e => {
             e.preventDefault();
+            setIsSaveInProgress(true);
             recordSectionSetupEvent(sections[0]);
-            saveSection(sections[0], isNewSection);
+            saveSection(sections[0], isNewSection, !!isUsersFirstSection);
           }}
         />
       </div>
@@ -291,5 +319,6 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
 }
 
 SectionsSetUpContainer.propTypes = {
+  isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
 };
