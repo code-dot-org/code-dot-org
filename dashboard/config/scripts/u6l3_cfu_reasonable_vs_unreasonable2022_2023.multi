@@ -4,3 +4,4 @@ right '2^n'
 wrong '2n'
 wrong 'n^2'
 wrong 'n^20'
+allow_multiple_attempts true

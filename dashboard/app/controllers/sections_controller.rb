@@ -1,6 +1,7 @@
 class SectionsController < ApplicationController
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
+  load_and_authorize_resource :section, only: [:edit]
   authorize_resource :section, only: [:new]
 
   def new

@@ -47,3 +47,5 @@ To print quotation marks ( `"` ), the escape sequence `\"` is needed.
 
 The escape sequence `\n` can be used to print a new line.
 MARKDOWN
+
+allow_multiple_attempts true
