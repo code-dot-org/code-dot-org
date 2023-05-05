@@ -5,7 +5,7 @@ import {
   FormGroup,
   ControlLabel,
   FormControl,
-  Button
+  Button,
 } from 'react-bootstrap';
 import $ from 'jquery';
 import {Link} from 'react-router';
@@ -17,7 +17,7 @@ export default class ApplicantSearch extends React.Component {
     this.state = {
       email: '',
       results: [],
-      lastSearch: null
+      lastSearch: null,
     };
   }
 
@@ -25,7 +25,7 @@ export default class ApplicantSearch extends React.Component {
     this.setState({
       email: event.target.value,
       results: [],
-      lastSearch: null
+      lastSearch: null,
     });
   };
 
@@ -38,13 +38,13 @@ export default class ApplicantSearch extends React.Component {
     $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications/search?${$.param({
-        email: this.state.email
+        email: this.state.email,
       })}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         lastSearch: this.state.email,
-        results: data
+        results: data,
       });
     });
   };
@@ -93,6 +93,6 @@ export default class ApplicantSearch extends React.Component {
 
 const styles = {
   notFound: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

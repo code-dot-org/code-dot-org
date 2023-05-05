@@ -42,5 +42,5 @@ export default class ConditionsChecker {
 }
 
 export interface KnownConditions {
-  [key: string]: string
+  [key: string]: string;
 }

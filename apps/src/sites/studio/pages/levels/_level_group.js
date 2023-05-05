@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import React from 'react';
 import throttle from 'lodash/throttle';
@@ -90,7 +88,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
         pass: subLevelResult,
         testResult: testResult,
         submitted: submitted,
-        onComplete: handleSublevelComplete
+        onComplete: handleSublevelComplete,
       });
     }
   }
@@ -133,7 +131,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       lastAttempt[levelId] = {
         result: levelResult,
         valid,
-        optional
+        optional,
       };
     });
 
@@ -174,7 +172,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       result: true,
       submitted: window.appOptions.level.submittable,
       confirmationDialog: confirmationDialog,
-      beforeProcessResultsHook: submitSublevelResults
+      beforeProcessResultsHook: submitSublevelResults,
     };
   }
 

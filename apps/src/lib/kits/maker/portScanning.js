@@ -1,12 +1,12 @@
 /** @file Serialport scanning logic for Maker Toolkit */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
+
 import DCDO from '@cdo/apps/dcdo';
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
 import {
   getChromeVersion,
-  isChromeOS
+  isChromeOS,
 } from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**

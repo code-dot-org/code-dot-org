@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-07 19:43:06 UTC",
+    "serialized_at": "2023-04-18 13:48:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4781,7 +4782,7 @@
       "key": "8658f7a1-39ce-405c-b6fc-6d4b31d4dea4",
       "position": 3,
       "properties": {
-        "description": "**Store Management Project:** Use the rubric on the last page of the Store Management Project Planning Guide to assess the projects.",
+        "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -6772,6 +6773,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2-2023"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -7811,6 +7815,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_store_management_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1TXYNiTnbkFzpuEvReolnu7mrtd8LU6hE1iqx91mNUno/edit?usp=share_link",
+      "key": "_exemplar_unit_2_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide"
       }
     },
     {
@@ -8990,6 +9006,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide",
+        "script.name": "csa2-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_2",

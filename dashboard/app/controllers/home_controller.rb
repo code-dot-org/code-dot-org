@@ -119,6 +119,8 @@ class HomeController < ApplicationController
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+    @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
+    @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
     student_sections = current_user.sections_as_student.map(&:summarize_without_students)
 
@@ -166,11 +168,11 @@ class HomeController < ApplicationController
       end
 
       unless current_user.donor_teacher_banner_dismissed
-        donor_banner_name = current_user.school_donor_name
+        afe_eligible = current_user&.school_info&.school&.afe_high_needs?
       end
 
-      donor_banner_name ||= params[:forceDonorTeacherBanner]
-      show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
+      afe_eligible ||= params[:forceAFEBanner]
+      show_census_banner = !!current_user.show_census_teacher_banner?
 
       # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
       # specific banner content.
@@ -186,9 +188,9 @@ class HomeController < ApplicationController
       @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
-      @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
-      @homepage_data[:donorBannerName] = donor_banner_name
+      @homepage_data[:afeEligible] = afe_eligible
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
@@ -202,8 +204,6 @@ class HomeController < ApplicationController
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
-      elsif donor_banner_name
-        @homepage_data[:teacherId] = current_user.id
       end
     else
       @homepage_data[:isTeacher] = false

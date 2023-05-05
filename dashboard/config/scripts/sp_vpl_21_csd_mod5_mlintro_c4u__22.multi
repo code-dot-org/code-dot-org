@@ -1,5 +1,5 @@
 name 'SP-VPL-21-CSD-mod5-MLintro-c4u_-22'
-title 'Check for understanding'
+title 'Check for Understanding'
 description ''
 question '**Which of the following responses indicates an understanding of how machine learning works?**'
 wrong '"There is probably a bug in the code. We should email Code.org."'
@@ -29,3 +29,5 @@ teacher_markdown <<MARKDOWN
 **Explanation:** A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn.
 
 MARKDOWN
+
+allow_multiple_attempts true

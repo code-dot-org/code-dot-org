@@ -9,15 +9,15 @@ export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
   };
 
   static defaultProps = {
-    canViewAdvancedTools: true
+    canViewAdvancedTools: true,
   };
 
   state = {
-    showFullList: false
+    showFullList: false,
   };
 
   toggleShowFullList = () => {
@@ -32,14 +32,14 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'artist',
       'applab',
-      'gamelab'
+      'gamelab',
     ];
 
     const DEFAULT_PROJECT_TYPES_BASIC = [
       'spritelab',
       'artist',
       'dance',
-      'playlab'
+      'playlab',
     ];
 
     const defaultProjectTypes = canViewAdvancedTools
@@ -50,7 +50,7 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'dance',
       'poetry',
-      'thebadguys'
+      'thebadguys',
     ];
 
     const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
@@ -59,7 +59,7 @@ export default class StartNewProject extends React.Component {
       'minecraft_adventurer',
       'minecraft_designer',
       'minecraft_hero',
-      'minecraft_aquatic'
+      'minecraft_aquatic',
     ];
 
     const GAMES_AND_EVENTS_PROJECT_TYPES = [
@@ -67,7 +67,7 @@ export default class StartNewProject extends React.Component {
       'starwarsblocks',
       'bounce',
       'sports',
-      'basketball'
+      'basketball',
     ];
 
     const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
@@ -140,7 +140,7 @@ const styles = {
   button: {
     float: 'right',
     margin: '0 1px 0 0',
-    padding: '0 16px'
+    padding: '0 16px',
   },
   headingStartNew: {
     paddingRight: 10,
@@ -148,11 +148,11 @@ const styles = {
     fontSize: 16,
     fontFamily: '"Gotham 4r"',
     color: color.neutral_dark,
-    marginBottom: -10
+    marginBottom: -10,
   },
   spacer: {
     paddingTop: 10,
     clear: 'both',
-    width: '100%'
-  }
+    width: '100%',
+  },
 };

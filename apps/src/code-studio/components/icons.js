@@ -15,7 +15,7 @@ module.exports = {
       'volume-off',
       'volume-down',
       'volume-up',
-      'play'
+      'play',
     ],
     note: ['music', 'comment', 'comment-o'],
     sound: [
@@ -26,7 +26,7 @@ module.exports = {
       'volume-up',
       'play',
       'microphone',
-      'microphone-slash'
+      'microphone-slash',
     ],
     search: ['search'],
     magnify: ['search', 'search-plus', 'search-minus'],
@@ -45,7 +45,7 @@ module.exports = {
       'medkit',
       'question',
       'ticket',
-      'life-ring'
+      'life-ring',
     ],
     'e-mail': ['envelope-o', 'envelope'],
     letter: ['envelope-o', 'envelope'],
@@ -66,7 +66,7 @@ module.exports = {
       'flag-o',
       'flag-checkered',
       'exclamation',
-      'dot-circle-o'
+      'dot-circle-o',
     ],
     heart: ['heart', 'gratipay'],
     love: ['heart', 'heart-o', 'gratipay'],
@@ -80,7 +80,7 @@ module.exports = {
       'star-half',
       'trophy',
       'star-half-o',
-      'shield'
+      'shield',
     ],
     night: ['star', 'star-o', 'moon-o'],
     rating: [
@@ -90,7 +90,7 @@ module.exports = {
       'smile-o',
       'frown-o',
       'meh-o',
-      'star-half-o'
+      'star-half-o',
     ],
     score: ['star', 'star-o', 'star-half', 'star-half-o'],
     'star-o': ['star-o'],
@@ -121,7 +121,7 @@ module.exports = {
       'check-square-o',
       'check-circle',
       'check-circle-o',
-      'check-square'
+      'check-square',
     ],
     todo: [
       'th-list',
@@ -134,7 +134,7 @@ module.exports = {
       'bars',
       'list-ul',
       'list-ol',
-      'check-square'
+      'check-square',
     ],
     check: ['check'],
     checkmark: ['check', 'check-square'],
@@ -145,21 +145,21 @@ module.exports = {
       'check-circle-o',
       'thumbs-o-up',
       'check-square',
-      'thumbs-up'
+      'thumbs-up',
     ],
     accept: [
       'check',
       'check-square-o',
       'check-circle',
       'check-circle-o',
-      'check-square'
+      'check-square',
     ],
     confirm: [
       'check',
       'check-square-o',
       'check-circle',
       'check-circle-o',
-      'check-square'
+      'check-square',
     ],
     tick: ['check'],
     ok: [
@@ -168,7 +168,7 @@ module.exports = {
       'check-circle',
       'check-circle-o',
       'check-square',
-      'calendar-check-o'
+      'calendar-check-o',
     ],
     times: ['times'],
     close: ['times', 'times', 'times-circle', 'times-circle-o'],
@@ -184,7 +184,7 @@ module.exports = {
       'chain-broken',
       'minus-square',
       'minus-square-o',
-      'trash'
+      'trash',
     ],
     'search-plus': ['search-plus'],
     'search-minus': ['search-minus'],
@@ -205,7 +205,7 @@ module.exports = {
       'minus',
       'minus-square',
       'minus-square-o',
-      'trash'
+      'trash',
     ],
     trash: [
       'trash-o',
@@ -214,7 +214,7 @@ module.exports = {
       'minus',
       'minus-square',
       'minus-square-o',
-      'trash'
+      'trash',
     ],
     hide: [
       'trash-o',
@@ -227,7 +227,7 @@ module.exports = {
       'minus-square',
       'minus-square-o',
       'minus-square-o',
-      'trash'
+      'trash',
     ],
     home: ['home'],
     main: ['home'],
@@ -243,7 +243,7 @@ module.exports = {
       'external-link-square',
       'file',
       'file-text',
-      'plus-square-o'
+      'plus-square-o',
     ],
     page: ['file-o', 'file-text-o', 'file', 'file-text'],
     pdf: ['file-o', 'file-text-o', 'file', 'file-text'],
@@ -259,7 +259,7 @@ module.exports = {
       'download',
       'arrow-circle-o-down',
       'arrow-down',
-      'arrow-circle-down'
+      'arrow-circle-down',
     ],
     import: ['download', 'upload', 'cloud-download', 'cloud-upload'],
     'arrow-circle-o-down': ['arrow-circle-o-down'],
@@ -281,7 +281,7 @@ module.exports = {
       'angle-right',
       'chevron-circle-right',
       'caret-square-o-right',
-      'arrow-circle-o-right'
+      'arrow-circle-o-right',
     ],
     'rotate-right': ['repeat'],
     refresh: ['refresh', 'retweet'],
@@ -325,7 +325,7 @@ module.exports = {
       'video-camera',
       'camera-retro',
       'microphone',
-      'microphone-slash'
+      'microphone-slash',
     ],
     font: ['font'],
     text: [
@@ -334,7 +334,7 @@ module.exports = {
       'align-center',
       'align-right',
       'align-justify',
-      'mobile'
+      'mobile',
     ],
     bold: ['bold'],
     italic: ['italic'],
@@ -366,7 +366,7 @@ module.exports = {
       'thumb-tack',
       'globe',
       'location-arrow',
-      'compass'
+      'compass',
     ],
     coordinates: ['map-marker', 'thumb-tack', 'globe', 'location-arrow'],
     localize: ['map-marker', 'globe'],
@@ -406,7 +406,7 @@ module.exports = {
       'chevron-circle-left',
       'long-arrow-left',
       'arrow-circle-o-left',
-      'caret-square-o-left'
+      'caret-square-o-left',
     ],
     beginning: ['step-backward', 'fast-backward'],
     start: [
@@ -414,7 +414,7 @@ module.exports = {
       'fast-backward',
       'play',
       'play-circle',
-      'youtube-play'
+      'youtube-play',
     ],
     first: ['step-backward', 'fast-backward'],
     'fast-backward': ['fast-backward'],
@@ -440,7 +440,7 @@ module.exports = {
       'angle-right',
       'chevron-circle-right',
       'caret-square-o-right',
-      'arrow-circle-o-right'
+      'arrow-circle-o-right',
     ],
     'fast-forward': ['fast-forward'],
     end: ['fast-forward', 'step-forward'],
@@ -461,7 +461,7 @@ module.exports = {
       'chevron-circle-left',
       'long-arrow-left',
       'arrow-circle-o-left',
-      'caret-square-o-left'
+      'caret-square-o-left',
     ],
     'chevron-right': ['chevron-right'],
     'plus-circle': ['plus-circle'],
@@ -473,7 +473,7 @@ module.exports = {
       'plus',
       'arrows-alt',
       'plus-square',
-      'plus-square-o'
+      'plus-square-o',
     ],
     'minus-circle': ['minus-circle'],
     'times-circle': ['times-circle'],
@@ -485,7 +485,7 @@ module.exports = {
       'ambulance',
       'medkit',
       'question',
-      'info'
+      'info',
     ],
     information: ['question-circle', 'info-circle', 'question', 'info'],
     unknown: ['question-circle', 'question'],
@@ -496,7 +496,7 @@ module.exports = {
       'sort-desc',
       'info',
       'chevron-circle-down',
-      'caret-square-o-down'
+      'caret-square-o-down',
     ],
     details: ['info-circle', 'asterisk', 'info'],
     'times-circle-o': ['times-circle-o'],
@@ -523,7 +523,7 @@ module.exports = {
       'exclamation-circle',
       'exclamation-triangle',
       'exclamation-triangle',
-      'exclamation'
+      'exclamation',
     ],
     error: ['exclamation-circle', 'exclamation-triangle', 'exclamation'],
     problem: ['exclamation-circle', 'exclamation-triangle', 'exclamation'],
@@ -532,7 +532,7 @@ module.exports = {
       'exclamation-triangle',
       'bell',
       'bell-o',
-      'exclamation'
+      'exclamation',
     ],
     gift: ['gift'],
     present: ['gift'],
@@ -575,7 +575,7 @@ module.exports = {
       'comment-o',
       'comments-o',
       'commenting',
-      'commenting-o'
+      'commenting-o',
     ],
     texting: ['comment', 'comments', 'comment-o', 'comments-o'],
     sms: ['comment', 'comments', 'comment-o', 'comments-o'],
@@ -604,7 +604,7 @@ module.exports = {
       'twitter',
       'facebook',
       'google-plus-square',
-      'google-plus'
+      'google-plus',
     ],
     'facebook-square': ['facebook-square'],
     'camera-retro': ['camera-retro'],
@@ -746,7 +746,7 @@ module.exports = {
       'sort-desc',
       'chevron-circle-down',
       'compass',
-      'caret-square-o-down'
+      'caret-square-o-down',
     ],
     drag: ['bars'],
     hamburger: ['bars'],
@@ -776,7 +776,7 @@ module.exports = {
       'caret-down',
       'sort-desc',
       'chevron-circle-down',
-      'caret-square-o-down'
+      'caret-square-o-down',
     ],
     'triangle down': ['caret-down'],
     'caret-up': ['caret-up'],
@@ -1347,7 +1347,7 @@ module.exports = {
     hashtag: ['hashtag'],
     bluetooth: ['bluetooth'],
     'bluetooth-b': ['bluetooth-b'],
-    percent: ['percent']
+    percent: ['percent'],
   },
   unicode: {
     music: 'f001',
@@ -1936,6 +1936,6 @@ module.exports = {
     hashtag: 'f292',
     bluetooth: 'f293',
     'bluetooth-b': 'f294',
-    percent: 'f295'
-  }
+    percent: 'f295',
+  },
 };

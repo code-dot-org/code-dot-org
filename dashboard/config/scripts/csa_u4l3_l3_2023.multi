@@ -29,3 +29,5 @@ Finally, it adds `num2` raised to the power of `2` using `Math.pow(num2, 2)`, wh
 
 The final result is the sum of these three values, which is `23.0` + `5.0` + `4.0` = `32.0`.
 MARKDOWN
+
+allow_multiple_attempts true

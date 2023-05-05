@@ -4,7 +4,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {
   fakeStudentAnnouncement,
-  fakeTeacherAndStudentAnnouncement
+  fakeTeacherAndStudentAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
 import Button from '@cdo/apps/templates/Button';
@@ -29,18 +29,18 @@ describe('StudentLessonOverview', () => {
                   position: 1,
                   displayName: 'Lesson 1',
                   link: '/lessons/1',
-                  lockable: false
+                  lockable: false,
                 },
                 {
                   key: 'lesson-2',
                   position: 2,
                   displayName: 'Lesson 2',
                   link: '/lessons/2',
-                  lockable: false
-                }
-              ]
-            }
-          ]
+                  lockable: false,
+                },
+              ],
+            },
+          ],
         },
         id: 1,
         key: 'lesson-1',
@@ -53,36 +53,36 @@ describe('StudentLessonOverview', () => {
             name: 'Student Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
+            type: 'Activity Guide',
           },
           {
             key: 'all-resource',
             name: 'All Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ],
         vocabularies: [
           {
             key: 'Algorithm',
             word: 'Algorithm',
-            definition: 'A list of steps to finish a task.'
-          }
+            definition: 'A list of steps to finish a task.',
+          },
         ],
         programmingExpressions: [
           {
             name: 'playSound',
             syntax: 'playSound',
-            link: '/docs/applab/playSound'
-          }
+            link: '/docs/applab/playSound',
+          },
         ],
         studentLessonPlanPdfUrl:
-          'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
+          'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf',
       },
       activities: [],
       announcements: [],
-      isSignedIn: true
+      isSignedIn: true,
     };
   });
 
@@ -152,7 +152,7 @@ describe('StudentLessonOverview', () => {
         {...defaultProps}
         announcements={[
           fakeStudentAnnouncement,
-          fakeTeacherAndStudentAnnouncement
+          fakeTeacherAndStudentAnnouncement,
         ]}
       />
     );

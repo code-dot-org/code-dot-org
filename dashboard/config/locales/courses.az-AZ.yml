@@ -172,6 +172,12 @@ az:
         name: Kurikulum
       teacher_forum/csd/2019:
         name: Müəllim Forumu
+      all_resources_2/csd/2023:
+        name: Bütün Resurslar
+      all_standards_2/csd/2023:
+        name: Bütün Standartlar
+      all_vocabulary_2/csd/2023:
+        name: Bütün Lüğət
       all_resources_1/csd/2021:
         name: Bütün Resurslar
       all_standards_1/csd/2021:

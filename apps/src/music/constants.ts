@@ -10,45 +10,45 @@ export const Triggers: Trigger[] = [
     id: 'trigger1',
     dropdownLabel: '1',
     buttonLabel: '1',
-    keyboardKey: '1'
+    keyboardKey: '1',
   },
   {
     id: 'trigger2',
     dropdownLabel: '2',
     buttonLabel: '2',
-    keyboardKey: '2'
+    keyboardKey: '2',
   },
   {
     id: 'trigger3',
     dropdownLabel: '3',
     buttonLabel: '3',
-    keyboardKey: '3'
+    keyboardKey: '3',
   },
   {
     id: 'trigger4',
     dropdownLabel: '4',
     buttonLabel: '4',
-    keyboardKey: '4'
+    keyboardKey: '4',
   },
   {
     id: 'trigger5',
     dropdownLabel: '5',
     buttonLabel: '5',
-    keyboardKey: '5'
+    keyboardKey: '5',
   },
   {
     id: 'trigger6',
     dropdownLabel: '6',
     buttonLabel: '6',
-    keyboardKey: '6'
-  }
+    keyboardKey: '6',
+  },
 ];
 
 export const BlockMode = {
   ADVANCED: 'Advanced',
   SIMPLE: 'Simple',
   SIMPLE2: 'Simple2',
-  TRACKS: 'Tracks'
+  TRACKS: 'Tracks',
 };
 
 export const DEFAULT_SOUND = 'beats/groovy_beat';
@@ -57,7 +57,7 @@ export const DEFAULT_SOUND = 'beats/groovy_beat';
 // events: [{src: 'sound_1', tick: 3}]
 export const DEFAULT_PATTERN = {
   kit: 'glitch',
-  events: []
+  events: [],
 };
 
 export const DEFAULT_PATTERN_LENGTH = 1;
@@ -66,7 +66,10 @@ export const DEFAULT_PATTERN_LENGTH = 1;
 export const DEFAULT_CHORD = {
   instrument: 'piano',
   notes: [],
-  playStyle: 'arpeggio-up'
+  playStyle: 'arpeggio-up',
 };
 
 export const DEFAULT_CHORD_LENGTH = 1;
+
+export const LOCAL_STORAGE = 'local';
+export const REMOTE_STORAGE = 'remote';

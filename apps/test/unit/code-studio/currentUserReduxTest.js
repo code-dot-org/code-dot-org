@@ -7,7 +7,7 @@ import currentUser, {
   setCurrentUserName,
   setInitialData,
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
@@ -77,7 +77,7 @@ describe('currentUserRedux', () => {
       id: 1,
       username: 'test_user',
       user_type: 'teacher',
-      is_signed_in: true
+      is_signed_in: true,
     };
     const action = setInitialData(serverUser);
     const nextState = currentUser(initialState, action);

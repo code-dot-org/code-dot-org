@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-04-03 20:33:02 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-04-28 18:53:17 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,6 +45,7 @@
       "properties": {
         "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. First, students will read and detect the mood of a famous poem. Then, they will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate new images in a poem.",
         "preparation": "- Review and complete the **Animate a Poem** tutorial yourself\n- Determine in advance which levels might be challenging for students.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n#####Optional\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "purpose": "The purpose of this lesson is to teach students how to create poem art by using code to animate the mood of a poem. This provides an engaging and interactive learning experience that integrates language arts and computer science. By combining poetry analysis with coding, the lesson aims to help students develop a deeper understanding of the emotional impact of language and to express this impact through visual art.",
         "student_overview": "Poetry is making art with words. You will use code to add visual effects and images to animate a poem. "
       },
       "seeding_key": {
@@ -61,6 +64,7 @@
       "properties": {
         "overview": "In this lesson, students will plan and write their own poem. Students will reflect on their life and personal experiences to select an important idea for a short poem that they can animate. In the next lesson, students will code their poems, so it is important that they have drafted a short poem.",
         "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Poem Handout** for each student.\n",
+        "purpose": "By combining poetry writing with coding, the lesson aims to help students develop a deeper understanding of the creative process and to express their ideas and emotions through both language and technology. As students make decisions about word choice, they are encouraged to plan how to use their code creatively and meaningfully to create a visual representation of their poem's emotional impact. ",
         "student_overview": "Today you will write your own poem. As you plan, think about what topics are important to you. What do you want to share with readers?. Next class you will code your poem. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
       "seeding_key": {
@@ -98,6 +102,7 @@
       "properties": {
         "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
         "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "purpose": "Sharing their poem art projects with peers is an important aspect of the creative process. It allows students to receive feedback, collaborate with others, reflect on their own work, and celebrate their accomplishments. By sharing their work with others, students can grow and improve as creative thinkers and develop important communication and interpersonal skills.",
         "student_overview": "Share your new poem apps with your friends! "
       },
       "seeding_key": {
@@ -328,7 +333,7 @@
       "key": "182b31a3-ea9b-4bd5-b846-a259ce445d39",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show a couple poetry slides\n\n**Read poetry together:** Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show a couple poetry slides\n\n**Read poetry together:** Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems."
       },
       "seeding_key": {
         "activity_section.key": "182b31a3-ea9b-4bd5-b846-a259ce445d39",
@@ -2239,6 +2244,16 @@
       }
     },
     {
+      "key": "2ef99265-af55-4a2d-8719-58d4451f0610",
+      "properties": {
+        "description": "Understand the power of being able to write programs to animate text"
+      },
+      "seeding_key": {
+        "lesson.key": "Poetry Circle",
+        "objective.key": "2ef99265-af55-4a2d-8719-58d4451f0610"
+      }
+    },
+    {
       "key": "4903767c-89c4-4fbf-8879-93cf977803ae",
       "properties": {
         "description": "Describe how visual and multimedia elements contribute to the meaning, tone, or beauty of a text. "
@@ -2299,13 +2314,23 @@
       }
     },
     {
-      "key": "e4a5634d-653c-4a30-975d-182ef5272dc2",
+      "key": "a4fa2434-b9c5-4e36-819b-50398d230730",
       "properties": {
-        "description": "Define a poem"
+        "description": "Share their apps with one another"
+      },
+      "seeding_key": {
+        "lesson.key": "Poetry Circle",
+        "objective.key": "a4fa2434-b9c5-4e36-819b-50398d230730"
+      }
+    },
+    {
+      "key": "db6ecf8b-0374-46ea-b6cd-d59ac77879a1",
+      "properties": {
+        "description": "Develop critical thinking and problem-solving skills by requiring students to make choices about how to represent their poem using code and art."
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
-        "objective.key": "e4a5634d-653c-4a30-975d-182ef5272dc2"
+        "objective.key": "db6ecf8b-0374-46ea-b6cd-d59ac77879a1"
       }
     }
   ],

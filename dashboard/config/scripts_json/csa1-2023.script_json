@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-08 13:48:31 UTC",
+    "serialized_at": "2023-04-15 16:16:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2021,7 +2022,7 @@
       "key": "8cd52d1e-03e5-4c59-9395-6eae7402e05f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
         "tips": [
           {
             "type": "teachingTip",
@@ -2974,7 +2975,7 @@
       "key": "a8354d39-d35e-4b7c-9e97-246221f30435",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "a8354d39-d35e-4b7c-9e97-246221f30435",
@@ -5955,7 +5956,7 @@
       "key": "40c4203e-b918-4c71-8ec5-8004174984eb",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -5971,6 +5972,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7892,6 +7896,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1-2023"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
@@ -8907,6 +8914,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_asphalt_art_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit 1 Guide",
+      "url": "https://docs.google.com/document/d/1WZnHVMvSLXphwZM0eb0EjZwZ72IQEBtxm2TL_zb8c-4/edit?usp=share_link",
+      "key": "_exemplar_unit_1_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_1_guide"
       }
     },
     {
@@ -10641,6 +10660,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_1_guide",
+        "script.name": "csa1-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_1",

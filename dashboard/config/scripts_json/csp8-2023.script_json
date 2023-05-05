@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-04 17:04:35 UTC",
-    "published_state": null,
+    "serialized_at": "2023-04-25 23:04:12 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -56,7 +56,7 @@
   "lessons": [
     {
       "key": "Project   Innovation Simulation Part 1",
-      "name": "Project   Innovation Simulation Part 1",
+      "name": "Project - Innovation Simulation Part 1",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -64,9 +64,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. ",
-        "preparation": "* Prepare the role badges\n* Review the Innovation Simulation Planning Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "In this unit students will cover information related to computing innovations needed for the Curricular Requirement for the AP Computer Science Principles exam. This lesson sets the stage for the simulation. ",
+        "overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. \n\nOn the first two day, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. Then the second day is focused on researching three different computing innovations and discussing these innovations with team members. ",
+        "preparation": "* Prepare the role badges\n* Review the Innovation Simulation Planning Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking out the Virtual Modifications for [Day 1](https://docs.google.com/document/d/10ONABikrWm3Jp3ZAv3nPL1mEKk1rPbGXiEYUwileB4E/edit?usp=sharing)) and [Day 2](https://docs.google.com/document/d/1YprvsDoMi3_FyqcMfvN2vN-uHDeLVAg4BbKQmadJmP4/edit?usp=sharing)",
+        "purpose": "In this unit students will cover information related to computing innovations needed for the Curricular Requirement for the AP Computer Science Principles exam. This lesson sets the stage for the simulation and has them begin their research.",
         "student_overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. "
       },
       "seeding_key": {
@@ -76,33 +76,12 @@
       }
     },
     {
-      "key": "Project   Innovation Simulation Part 2",
-      "name": "Project   Innovation Simulation Part 2",
+      "key": "Data Policies and Privacy",
+      "name": "Data Policies and Privacy",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Today is focused on researching three different computing innovations and discussing these innovations with team members. ",
-        "preparation": "* Organize the badges and nameplates for quick distribution at the beginning of class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
-        "purpose": "In this lesson, students investigate computing innovations, as required by the College Board to meet the Curricular Requirement. They will add to their research throughout the unit. ",
-        "student_overview": "Today is focused on researching three different computing innovations and discussing these innovations with team members. "
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "Data Policies and Privacy",
-      "name": "Data Policies and Privacy",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power.",
@@ -119,10 +98,10 @@
     {
       "key": "The Value of Privacy",
       "name": "The Value of Privacy",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns.",
@@ -139,16 +118,16 @@
     },
     {
       "key": "Project   Innovation Simulation Part 3",
-      "name": "Project   Innovation Simulation Part 3",
-      "absolute_position": 5,
+      "name": "Project - Innovation Simulation Part 2",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students make further progress on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
-        "preparation": "* Ensure students have access to their project guides.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "overview": "On Day 3 of the project, students make further progress on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
+        "preparation": "* Ensure students have access to their project guides.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers.",
         "purpose": "In previous lessons students have been considering the ways that computing innovations may risk their privacy. This lesson further builds on those questions by asking students to think more broadly about the ways computing innovations may have unintended consequences.\r\n\r\nThe next project lesson will be spent primarily working on one-pagers. That lesson and the second half of this one are the largest chunks of class time dedicated to students completing those individual projects.",
         "student_overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose."
       },
@@ -161,10 +140,10 @@
     {
       "key": "Security Risks Part 1",
       "name": "Security Risks Part 1",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. ",
@@ -181,10 +160,10 @@
     {
       "key": "Security Risks Part 2",
       "name": "Security Risks Part 2",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity & Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. ",
@@ -201,11 +180,11 @@
     },
     {
       "key": "Project   Innovation Simulation Part 4",
-      "name": "Project   Innovation Simulation Part 4",
-      "absolute_position": 8,
+      "name": "Project - Innovation Simulation Part 3",
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -222,10 +201,10 @@
     {
       "key": "Protecting Data Part 1",
       "name": "Protecting Data Part 1",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. ",
@@ -242,10 +221,10 @@
     {
       "key": "Protecting Data Part 2",
       "name": "Protecting Data Part 2",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. ",
@@ -262,17 +241,16 @@
     },
     {
       "key": "Project   Innovation Simulation Part 5",
-      "name": "Project   Innovation Simulation Part 5",
-      "absolute_position": 11,
+      "name": "Project - Innovation Simulation Part 4",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. ",
-        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "In this lesson students finish writing their one-pagers and meet to begin developing their group presentation. The goal of this collaborative process is to force students to think about the overall collective impact of their innovations, force them to continue to take multiple perspectives, and encourage collaboration for this last major project of the year.",
+        "overview": "This lesson covers the final three days of the Innovation Simulation Project.\n* On Day 5, students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. \n* On Day 6, students will get feedback on their group innovation proposal from one other group. They will then have the remainder of the class to finalize their group presentation and individual proposals which will be presented and submitted in the following class.\n* On Day 7, students present the group Innovation Proposal they have been working on throughout the units. After each group does a brief presentation students do a gallery walk of their classmates' projects, asking questions and reviewing any materials. Students then vote for the unified project and overall innovation they found most compelling. At the end of the lesson students will submit their projects for grading. ",
+        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this lesson virtually, consider checking out the Virtual Modifications for [Day 5](https://docs.google.com/document/d/1c-qP2Z7gitco2CkMqa3rL29KKy4mvctmY3yTC7oP9B0/edit?usp=sharing), [Day 6](https://docs.google.com/document/d/1Sq842H0XRpSYMRAkZMyKmKH3g4HR_X0v8Pm12CrJjAE/edit?usp=sharing), and[Day 7](https://docs.google.com/document/d/1wjD0LTmCtcOkPLyyXzeE5rw9MnRfYoioJdtMQA366L8/edit?usp=sharing).",
         "student_overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. "
       },
       "seeding_key": {
@@ -282,59 +260,17 @@
       }
     },
     {
-      "key": "Project   Innovation Simulation Part 6",
-      "name": "Project   Innovation Simulation Part 6",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will get feedback on their group innovation proposal from one other group. They will then have the remainder of the class to finalize their group presentation and individual proposals which will be presented and submitted in the following class",
-        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is primarily a work day but students get some early feedback from another group to enable them to make final adjustments to their projects.",
-        "student_overview": "Lesson Overview"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "Project   Innovation Simulation Part 7",
-      "name": "Project   Innovation Simulation Part 7",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
-      "properties": {
-        "assessment": true,
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students present the group Innovation Proposal they have been working on throughout the units. After each group does a brief presentation students do a gallery walk of their classmates' projects, asking questions and reviewing any materials. Students then vote for the unified project and overall innovation they found most compelling. At the end of the lesson students will submit their projects for grading. ",
-        "preparation": "* Ensure students have printed their one-pagers or can otherwise make their one-pagers available for their classmates to review during the gallery walk.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-innovation-simulation-unit-10-lessons-1-2-3-8-11-13/36491) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to share their work throughout the unit and wrap up their study of the ways computing innovations can be used to benefit society, even as they pose potential risks. Aim to make this an exciting and celebratory end to the year.",
-        "student_overview": "Lesson Overview"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
       "key": "Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 14,
+      "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 11,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1ulxdCKEwlIaMnXtb9mZcygINW7-hC1QftjLKxvFYC3M/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -346,10 +282,10 @@
     {
       "key": "CS Principles Post-Course Survey",
       "name": "CS Principles Post-Course Survey",
-      "absolute_position": 15,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -361,24 +297,11 @@
   ],
   "lesson_activities": [
     {
-      "key": "4aebe9c3-57b3-4470-8c4c-c32c2d2d7f65",
+      "key": "43d389f7-0327-42f0-85bc-f61e00f2b289",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4aebe9c3-57b3-4470-8c4c-c32c2d2d7f65",
-        "lesson.key": "Project   Innovation Simulation Part 1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "43d389f7-0327-42f0-85bc-f61e00f2b289",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289",
@@ -389,107 +312,14 @@
     },
     {
       "key": "7c4d651e-afa0-46a4-b249-f586f15c246c",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Day 2"
       },
       "seeding_key": {
         "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c",
         "lesson.key": "Project   Innovation Simulation Part 1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0",
-        "lesson.key": "Project   Innovation Simulation Part 1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "c635575b-1519-4ba7-a7b7-222885982530",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c635575b-1519-4ba7-a7b7-222885982530",
-        "lesson.key": "Project   Innovation Simulation Part 1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "b27dc738-8a5b-43ca-b6fc-01ae3c2f9766",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b27dc738-8a5b-43ca-b6fc-01ae3c2f9766",
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "883137e3-9e6a-4d1c-9f13-90a334782a1d",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "883137e3-9e6a-4d1c-9f13-90a334782a1d",
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "20ffb6e6-67ba-4de2-9f12-55335ba25b3f",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "20ffb6e6-67ba-4de2-9f12-55335ba25b3f",
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "532a20bb-39a0-4c1d-b77a-73bf9bf4bb9b",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "532a20bb-39a0-4c1d-b77a-73bf9bf4bb9b",
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "64e4e325-d7cd-40f0-aac3-7537bc1cdce7",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "64e4e325-d7cd-40f0-aac3-7537bc1cdce7",
-        "lesson.key": "Project   Innovation Simulation Part 2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023"
       }
@@ -982,24 +812,11 @@
       }
     },
     {
-      "key": "c5d9b501-e8b0-4466-bc44-659c26b8eabf",
+      "key": "15298e76-bdc1-4ec8-aa82-f257ef92594c",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c5d9b501-e8b0-4466-bc44-659c26b8eabf",
-        "lesson.key": "Project   Innovation Simulation Part 5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "15298e76-bdc1-4ec8-aa82-f257ef92594c",
-      "position": 2,
-      "properties": {
-        "duration": 3,
-        "name": "Warm Up"
+        "duration": 45,
+        "name": "Day 5"
       },
       "seeding_key": {
         "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c",
@@ -1010,10 +827,10 @@
     },
     {
       "key": "bf63fd96-e263-48a4-92d4-9c3341095cc5",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "duration": 37,
-        "name": "Activity"
+        "duration": 45,
+        "name": "Day 6"
       },
       "seeding_key": {
         "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5",
@@ -1023,145 +840,22 @@
       }
     },
     {
-      "key": "7329ac16-a65c-46cc-8c39-b6fb104369fd",
-      "position": 4,
+      "key": "975fcfcd-c102-4e87-9a93-797c8526583a",
+      "position": 3,
       "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
+        "duration": 45,
+        "name": "Day 7"
       },
       "seeding_key": {
-        "lesson_activity.key": "7329ac16-a65c-46cc-8c39-b6fb104369fd",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a",
         "lesson.key": "Project   Innovation Simulation Part 5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023"
       }
     },
     {
-      "key": "a0cf54db-f6e8-434b-ae62-c81621365bc8",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a0cf54db-f6e8-434b-ae62-c81621365bc8",
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "476fea3d-96d3-456f-b6f6-1ca81fb6bb42",
-      "position": 2,
-      "properties": {
-        "duration": 3,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "476fea3d-96d3-456f-b6f6-1ca81fb6bb42",
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "67c70c6f-0116-45b8-932f-35ba501341c1",
-      "position": 3,
-      "properties": {
-        "duration": 37,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "67c70c6f-0116-45b8-932f-35ba501341c1",
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "eb89a811-c3a4-4526-9233-9042186e660a",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "eb89a811-c3a4-4526-9233-9042186e660a",
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "5c02a03a-42d8-4a77-8882-7373d9452c8c",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5c02a03a-42d8-4a77-8882-7373d9452c8c",
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "3868ed20-9ccf-4241-8eae-fb7c0ba8aec1",
-      "position": 2,
-      "properties": {
-        "duration": 2,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3868ed20-9ccf-4241-8eae-fb7c0ba8aec1",
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "0ee62c3f-3cea-4214-800a-0f8c71b55a99",
-      "position": 3,
-      "properties": {
-        "duration": 38,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0ee62c3f-3cea-4214-800a-0f8c71b55a99",
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2",
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
-      "key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
       "key": "e5f2af15-ff99-4df9-ab65-b770b3356dbc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -1175,7 +869,7 @@
     },
     {
       "key": "2c459c38-3d78-45d6-9587-0fff1ecff9fb",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1202,22 +896,23 @@
   ],
   "activity_sections": [
     {
-      "key": "0776bf97-7a16-48f4-9245-40e0a9b793b1",
+      "key": "3a7d61d5-f9d3-4847-8a8d-6023fc025082",
       "position": 1,
       "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/10ONABikrWm3Jp3ZAv3nPL1mEKk1rPbGXiEYUwileB4E/edit?usp=sharing) to access the modifications."
+        "description": "#### Start the Simulation",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "0776bf97-7a16-48f4-9245-40e0a9b793b1",
-        "lesson_activity.key": "4aebe9c3-57b3-4470-8c4c-c32c2d2d7f65"
+        "activity_section.key": "3a7d61d5-f9d3-4847-8a8d-6023fc025082",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
       "key": "d1fe515b-efda-416c-ab04-6cd9ac2de7ff",
-      "position": 1,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Welcome to the Future School Convention. You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on a the Future School. At the end of the convention, your team will pitch your best idea to a panel of judges.",
-        "name": "Start the Simulation\r",
         "remarks": true
       },
       "seeding_key": {
@@ -1227,7 +922,7 @@
     },
     {
       "key": "4f2194cc-1e89-40f6-b49f-bbcbdab15959",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Group:** Place students in groups of 5-6.",
         "tips": [
@@ -1244,7 +939,7 @@
     },
     {
       "key": "d14e6564-8b46-4846-9f77-ae046fc9366c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Distribute:** Hand out a random role card to each group. Each group should have at least one *TEACHER*, *STUDENT*, *STAFF*, *PARENT*, and *ADMIN*. Students will need\n\n* A character bio from [CSP Innovation Simulation Character Bios](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/)\n* A nameplate from [CSP Innovation Simulation Nameplates](\thttps://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/)\n* A badge from [\tCSP Innovation Simulation Badges](\thttps://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Each students should tape their badge to their shirt and place their nameplate on their desk after folding on the marked lines. When the nameplates and badges are out, students should be in simulation mode."
       },
@@ -1255,7 +950,7 @@
     },
     {
       "key": "edd388a6-01b1-4e67-8312-56d093bc5a2c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Discussion Goal:** The introductory activity sets the stage for the simulation project, which will run throughout the unit. Encourage students to stay in their roles and speak from their specific points of view.  For example, when talking students might say \"As the art teacher, I think... \" or \"As a parent, I know what is best for my student and that is... \"\n"
       },
@@ -1266,7 +961,7 @@
     },
     {
       "key": "c4c1f840-2b04-4d27-86c8-96cb5966ddd8",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read over your role sheet and introduce yourself to your group.",
         "tips": [
@@ -1282,55 +977,56 @@
       }
     },
     {
-      "key": "76a24770-829b-4c0f-942b-745a6aa6a26a",
-      "position": 1,
+      "key": "e6cf6b04-11c6-4c8d-86d0-ddfe51937084",
+      "position": 7,
       "properties": {
         "description": "Computing Innovations are created by people to solve problems. They include programs as part of how they function. They can be physical (e.g., self-driving car), non-physical computing software (e.g., picture editing software), or non-physical computing concepts (e.g., e-commerce). The way lives are lived has changed because of computing innovations. Let's rewatch a video to remind ourselves of this fact.",
+        "duration": "35",
+        "name": "Activity",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "76a24770-829b-4c0f-942b-745a6aa6a26a",
-        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
+        "activity_section.key": "e6cf6b04-11c6-4c8d-86d0-ddfe51937084",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "c5350a4e-923d-40ca-a3fd-b3c9ad5923b5",
-      "position": 2,
+      "key": "c14b000c-fdc8-4db5-9bf0-3e663c0b23c1",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything.](https://youtu.be/QvyTEx1wyOY) (End at 4:40)"
       },
       "seeding_key": {
-        "activity_section.key": "c5350a4e-923d-40ca-a3fd-b3c9ad5923b5",
-        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
+        "activity_section.key": "c14b000c-fdc8-4db5-9bf0-3e663c0b23c1",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "9eb19d22-895b-4360-a7f8-418ac963ef5c",
-      "position": 3,
+      "key": "c9356b4d-8481-4f56-8c56-3a8c24be8b4c",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide/csp/2023]\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
-        "name": "Innovation Simulation Project\r"
+        "description": "####Innovation Simulation Project\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \n\n**Distribute:** [r csp_innovation_simulation_project_guide/csp/2023]\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide."
       },
       "seeding_key": {
-        "activity_section.key": "9eb19d22-895b-4360-a7f8-418ac963ef5c",
-        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
+        "activity_section.key": "c9356b4d-8481-4f56-8c56-3a8c24be8b4c",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "f8959bd9-45f2-46f0-8107-4003d52e94d6",
-      "position": 4,
+      "key": "97a1d954-f848-47b5-a08c-75e9c736dc9b",
+      "position": 10,
       "properties": {
         "description": "Before your teams get started investigating computing innovations for Future School, we want to make sure everyone understands how to conduct the necessary research. Let's examine an innovation that is not related to schools. Let's consider an innovation that would benefit long distance travel.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f8959bd9-45f2-46f0-8107-4003d52e94d6",
-        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
+        "activity_section.key": "97a1d954-f848-47b5-a08c-75e9c736dc9b",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "ccc4321c-9162-4ce9-9a6d-fd844e7638a2",
-      "position": 5,
+      "key": "5888b248-da82-4a1e-96a3-7b5bdc3c10e8",
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 2 - Research (10 mins):** Model doing a Google search with your students to determine a computing innovation related to long distance travel. You might directly Google the term, search out articles, or turn to Wikipedia. After you have found a computing innovation that is promising, model filling out the table in the Project Guide. You can project a copy of the Project Guide while doing this, flipping back and forth between the guide and the website you are using. You do not need to fill out the last section in the table, but you should discuss with your students how they will fill this section out. It is important to note that students will have the next lesson to conduct their own research.  Today, your goal is to only model how to approach this research and using the Project Guide.",
         "tips": [
@@ -1341,166 +1037,151 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ccc4321c-9162-4ce9-9a6d-fd844e7638a2",
-        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
+        "activity_section.key": "5888b248-da82-4a1e-96a3-7b5bdc3c10e8",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "86082beb-13da-4735-9fb3-48eaf7228203",
-      "position": 1,
+      "key": "b3685d63-47d7-4479-83bb-bde13261d783",
+      "position": 12,
       "properties": {
         "description": "Thank you delegates for beginning the process of identifying computing innovations for The Future School. I'm looking forward to hearing your proposals soon. \r\n\r\nAs a team, you will need to work effectively together, evaluating and considering these computing innovations. Effective teams work on communication, consensus buildng, conflict resolution, and negotiation. You will address these skills throughout the project!",
+        "duration": "5",
+        "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "86082beb-13da-4735-9fb3-48eaf7228203",
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0"
+        "activity_section.key": "b3685d63-47d7-4479-83bb-bde13261d783",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "e261da4e-9bc9-47c7-a42e-d6687e2d43e6",
-      "position": 2,
+      "key": "206f02f6-864e-47b2-8969-5e4a76e3d43e",
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** End the day by instructing students to put away their badges and nameplates. You may want to collect them so they are not lost."
       },
       "seeding_key": {
-        "activity_section.key": "e261da4e-9bc9-47c7-a42e-d6687e2d43e6",
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0"
+        "activity_section.key": "206f02f6-864e-47b2-8969-5e4a76e3d43e",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "ebdb2d01-00ce-4aa5-983e-7aff93c96f7e",
-      "position": 3,
+      "key": "42e078cf-e4b1-43cb-8ce9-345a2685bd48",
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the purpose of a computing innovation?*\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
       },
       "seeding_key": {
-        "activity_section.key": "ebdb2d01-00ce-4aa5-983e-7aff93c96f7e",
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0"
+        "activity_section.key": "42e078cf-e4b1-43cb-8ce9-345a2685bd48",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "472020e5-3558-4823-b179-f2318e37535f",
-      "position": 4,
+      "key": "b573ba06-5e1c-4710-8e7f-90a48e31a7ef",
+      "position": 15,
       "properties": {
         "description": "**Journal:** (Click through animation to see definition). Students add to their journal the definition for computing innovation.    \r\n\r\n---"
       },
       "seeding_key": {
-        "activity_section.key": "472020e5-3558-4823-b179-f2318e37535f",
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0"
+        "activity_section.key": "b573ba06-5e1c-4710-8e7f-90a48e31a7ef",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "f2249438-cc4a-42f5-94be-ec631837773c",
-      "position": 5,
+      "key": "2e776118-97e1-4110-bc94-0e8ca8535700",
+      "position": 16,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How has your life benefited from a computing innovation? **Note:** You are out of the simulation for this question! Speak from your own personal experiences.",
         "name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
-        "activity_section.key": "f2249438-cc4a-42f5-94be-ec631837773c",
-        "lesson_activity.key": "a838e4d6-7360-4b2f-87fc-cfcbaa8c6df0"
+        "activity_section.key": "2e776118-97e1-4110-bc94-0e8ca8535700",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "a3957243-8735-4435-ac4b-3280ae7e8507",
-      "position": 1,
+      "key": "b8b7c6b7-09d8-4d38-9175-773a790d4766",
+      "position": 17,
       "properties": {
-        "progression_name": "Check For Understanding"
+        "progression_name": "Check For Understanding - Day 1"
       },
       "seeding_key": {
-        "activity_section.key": "a3957243-8735-4435-ac4b-3280ae7e8507",
-        "lesson_activity.key": "c635575b-1519-4ba7-a7b7-222885982530"
+        "activity_section.key": "b8b7c6b7-09d8-4d38-9175-773a790d4766",
+        "lesson_activity.key": "43d389f7-0327-42f0-85bc-f61e00f2b289"
       }
     },
     {
-      "key": "13327096-fca9-4a83-84c5-c3bf66acdd60",
+      "key": "31e51d73-3a02-47a0-97eb-e86c736f49a4",
       "position": 1,
       "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1YprvsDoMi3_FyqcMfvN2vN-uHDeLVAg4BbKQmadJmP4/edit?usp=sharing) to access the modifications."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n\n**Group:** Instruct students to sit with their team from the previous lesson.",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "13327096-fca9-4a83-84c5-c3bf66acdd60",
-        "lesson_activity.key": "b27dc738-8a5b-43ca-b6fc-01ae3c2f9766"
+        "activity_section.key": "31e51d73-3a02-47a0-97eb-e86c736f49a4",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
-      "key": "b091db7f-05bd-496a-9ab5-85933f9f20c8",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson."
-      },
-      "seeding_key": {
-        "activity_section.key": "b091db7f-05bd-496a-9ab5-85933f9f20c8",
-        "lesson_activity.key": "883137e3-9e6a-4d1c-9f13-90a334782a1d"
-      }
-    },
-    {
-      "key": "0a24aefa-b30d-4b0a-a039-961f9a5cbb1f",
+      "key": "11c36860-682c-4692-aead-c718440c810c",
       "position": 2,
       "properties": {
         "description": "Welcome back to day two of the Future School Convention. I hope you enjoyed your first day getting to know your fellow participants. Today the real work begins - you will be researching the computing innovations that you believe will benefit the Future School. I'm sure you have lots of ideas. Let's get started!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "0a24aefa-b30d-4b0a-a039-961f9a5cbb1f",
-        "lesson_activity.key": "883137e3-9e6a-4d1c-9f13-90a334782a1d"
+        "activity_section.key": "11c36860-682c-4692-aead-c718440c810c",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
-      "key": "f01a1bca-3e89-481e-b373-65e8c4c136e5",
+      "key": "0856e04e-85bc-496e-96e0-4da1b7403f51",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   * help schools run more efficiently\n   * help certain groups gain a voice and be heard\n   * make learning more fun!\n   * save time and money\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "f01a1bca-3e89-481e-b373-65e8c4c136e5",
-        "lesson_activity.key": "883137e3-9e6a-4d1c-9f13-90a334782a1d"
+        "activity_section.key": "0856e04e-85bc-496e-96e0-4da1b7403f51",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
-      "key": "3cd6bac7-61cf-4470-b23b-68352a948185",
-      "position": 1,
+      "key": "4e94255d-2ad3-4b05-826a-2b2d3fbb2b78",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:**  Students research three different innovations that they believe their character would recommend for the Future School. \r\n\r\nIn their Project Guides they mark down:\r\n\r\n* The name of the innovation\r\n* Sources\r\n* What data is being collected\r\n* Brief descriptions of the function and purpose of the innovation\r\n* Why their character would recommend it \r\n \r\nStudents should regularly check in with their group to make sure no one else is researching the same innovation. For each group, there should be a total of 15 (or three times the amount of group members) innovations researched."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:**  Students research three different innovations that they believe their character would recommend for the Future School. \n\nIn their Project Guides they mark down:\n\n* The name of the innovation\n* Sources\n* What data is being collected\n* Brief descriptions of the function and purpose of the innovation\n* Why their character would recommend it \n \nStudents should regularly check in with their group to make sure no one else is researching the same innovation. For each group, there should be a total of 15 (or three times the amount of group members) innovations researched.",
+        "duration": "35",
+        "name": "Activity"
       },
       "seeding_key": {
-        "activity_section.key": "3cd6bac7-61cf-4470-b23b-68352a948185",
-        "lesson_activity.key": "20ffb6e6-67ba-4de2-9f12-55335ba25b3f"
+        "activity_section.key": "4e94255d-2ad3-4b05-826a-2b2d3fbb2b78",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
-      "key": "063eaf8b-49d7-4b6a-8486-f0fb02e4dbb7",
-      "position": 1,
+      "key": "dd8e46b4-0019-400b-b561-4136812711be",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group. *\n\nWith your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group. *\n\nWith your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \n\n---",
+        "duration": "5",
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "063eaf8b-49d7-4b6a-8486-f0fb02e4dbb7",
-        "lesson_activity.key": "532a20bb-39a0-4c1d-b77a-73bf9bf4bb9b"
+        "activity_section.key": "dd8e46b4-0019-400b-b561-4136812711be",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
-      "key": "708e7fa3-d46e-43e0-b810-fc73c3f138cd",
-      "position": 2,
+      "key": "86c2e955-bc3d-4546-9dec-4b63459712c7",
+      "position": 6,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Considering your character's perspective, which computing ideas of your team members seem the best? Which ones are you concerned about?",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Considering your character's perspective, which computing ideas of your team members seem the best? Which ones are you concerned about?"
       },
       "seeding_key": {
-        "activity_section.key": "708e7fa3-d46e-43e0-b810-fc73c3f138cd",
-        "lesson_activity.key": "532a20bb-39a0-4c1d-b77a-73bf9bf4bb9b"
-      }
-    },
-    {
-      "key": "a61282b6-8fa0-4ff1-9d15-e5fa19b8411f",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "a61282b6-8fa0-4ff1-9d15-e5fa19b8411f",
-        "lesson_activity.key": "64e4e325-d7cd-40f0-aac3-7537bc1cdce7"
+        "activity_section.key": "86c2e955-bc3d-4546-9dec-4b63459712c7",
+        "lesson_activity.key": "7c4d651e-afa0-46a4-b249-f586f15c246c"
       }
     },
     {
@@ -2693,21 +2374,12 @@
       }
     },
     {
-      "key": "8df23157-b9e3-4d0a-959b-2a742aed32b6",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1c-qP2Z7gitco2CkMqa3rL29KKy4mvctmY3yTC7oP9B0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "8df23157-b9e3-4d0a-959b-2a742aed32b6",
-        "lesson_activity.key": "c5d9b501-e8b0-4466-bc44-659c26b8eabf"
-      }
-    },
-    {
       "key": "3caf4cdf-cdce-4173-aae6-bd578c7c395b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams",
+        "duration": "3",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "3caf4cdf-cdce-4173-aae6-bd578c7c395b",
@@ -2727,31 +2399,33 @@
       }
     },
     {
-      "key": "772a5eed-6ff5-4def-8ea6-624f95fa04c2",
-      "position": 1,
+      "key": "ced00703-46be-4f59-8f89-492d4200287e",
+      "position": 3,
       "properties": {
-        "description": "**Distribute:** Give students back [CSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) if they don't already have them on hand."
+        "description": "**Distribute:** Give students back [CSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) if they don't already have them on hand.",
+        "duration": "37",
+        "name": "Activity"
       },
       "seeding_key": {
-        "activity_section.key": "772a5eed-6ff5-4def-8ea6-624f95fa04c2",
-        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
+        "activity_section.key": "ced00703-46be-4f59-8f89-492d4200287e",
+        "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c"
       }
     },
     {
-      "key": "81c40463-1095-46ff-81ff-bbee55685e07",
-      "position": 2,
+      "key": "cc4b4669-7a5d-4232-be09-bb6c6d19893c",
+      "position": 4,
       "properties": {
         "description": "Before you start preparing for your group presentation, take a few minutes to finish filling out the \"Addressing Concerns\" section in your One Pager. Once you're done, move on to Step 5.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "81c40463-1095-46ff-81ff-bbee55685e07",
-        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
+        "activity_section.key": "cc4b4669-7a5d-4232-be09-bb6c6d19893c",
+        "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c"
       }
     },
     {
-      "key": "e5be6170-a795-41e4-8d97-f293317813ca",
-      "position": 3,
+      "key": "8502478c-44e1-4d2a-9f0c-13f65cbf082c",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 5 - Preparing Your Group Presentation - 5 mins:** As a class review the instructions in their project guides. Highlight the fact that they have a lot of freedom to choose their presentation format.",
         "tips": [
@@ -2762,251 +2436,230 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e5be6170-a795-41e4-8d97-f293317813ca",
-        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
+        "activity_section.key": "8502478c-44e1-4d2a-9f0c-13f65cbf082c",
+        "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c"
       }
     },
     {
-      "key": "91d6809e-8662-42ef-8fd6-aac549f20c58",
-      "position": 4,
+      "key": "e3a2a848-725f-4808-94eb-0b6e002a480f",
+      "position": 6,
       "properties": {
         "description": "Have groups fill out the two reflection questions on their project guides to lock down their unified theme and also find the connections between their theme and the innovation they chose.\r\n\r\n**Work Time - 35 minutes:** Groups should get 35 minutes to work on designing their presentation."
       },
       "seeding_key": {
-        "activity_section.key": "91d6809e-8662-42ef-8fd6-aac549f20c58",
+        "activity_section.key": "e3a2a848-725f-4808-94eb-0b6e002a480f",
+        "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c"
+      }
+    },
+    {
+      "key": "3367cf57-6c31-4d56-8a11-b7d88e856b94",
+      "position": 7,
+      "properties": {
+        "description": "Great work today delegates. Next time we meet you'll have a chance to get feedback on your draft presentations from another group. Then you'll have work time to finish your presentations and make any final edits to your one-pagers because after that it'll be time for the big convention!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3367cf57-6c31-4d56-8a11-b7d88e856b94",
+        "lesson_activity.key": "15298e76-bdc1-4ec8-aa82-f257ef92594c"
+      }
+    },
+    {
+      "key": "c13b5eaa-6cad-48fe-9da4-05ea6e5c8a7b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n",
+        "duration": "3",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "c13b5eaa-6cad-48fe-9da4-05ea6e5c8a7b",
         "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
       }
     },
     {
-      "key": "da6ba635-3f35-42f8-98f9-dc9c46440fd9",
-      "position": 1,
-      "properties": {
-        "description": "Great work today delegates. Next time we meet you'll have a chance to get feedback on your draft presentations from another group. Then you'll have work time to finish your presentations and make any final edits to your one-pagers because after that it'll be time for the big convention!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "da6ba635-3f35-42f8-98f9-dc9c46440fd9",
-        "lesson_activity.key": "7329ac16-a65c-46cc-8c39-b6fb104369fd"
-      }
-    },
-    {
-      "key": "2bd2e3ec-e2a8-4a40-ab25-853dfc741361",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Sq842H0XRpSYMRAkZMyKmKH3g4HR_X0v8Pm12CrJjAE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "2bd2e3ec-e2a8-4a40-ab25-853dfc741361",
-        "lesson_activity.key": "a0cf54db-f6e8-434b-ae62-c81621365bc8"
-      }
-    },
-    {
-      "key": "9317306a-0dbb-49a5-9d83-ea30e3ccc149",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
-      },
-      "seeding_key": {
-        "activity_section.key": "9317306a-0dbb-49a5-9d83-ea30e3ccc149",
-        "lesson_activity.key": "476fea3d-96d3-456f-b6f6-1ca81fb6bb42"
-      }
-    },
-    {
-      "key": "b17b5207-91ce-4dac-ac1f-5f3d66afbeb0",
+      "key": "fcf3cfe8-854e-48bd-85f0-15aba557a62e",
       "position": 2,
       "properties": {
         "description": "Delegates today is primarily a work day, but to begin you'll be meeting briefly with another group. You'll share the overall theme for your presentation, the way the different innovations tie into that theme, and the way you intend to present your vision for the Future School. You'll use the feedback you share with one another to make final changes to your project before presenting.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b17b5207-91ce-4dac-ac1f-5f3d66afbeb0",
-        "lesson_activity.key": "476fea3d-96d3-456f-b6f6-1ca81fb6bb42"
+        "activity_section.key": "fcf3cfe8-854e-48bd-85f0-15aba557a62e",
+        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
       }
     },
     {
-      "key": "d4ff06b0-3c8c-4504-96fe-44d8ef55905f",
-      "position": 1,
+      "key": "81547757-e530-43bd-bb96-ec5ff88c252d",
+      "position": 3,
       "properties": {
+        "duration": "37",
+        "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Time Expectations:** Make sure to set clear expectations with your students about how much time they'll have to present. This curriculum assumes roughly 20-30 minutes for all groups to present.\r\n\r\n**Encouraging Creative Presentations:** Depending on your students' interests and skills you may encourage a wide variety of presentation types. While students have clear expectations on making sure they present a unified theme and briefly mention all innovations in their proposal, \r\n"
+            "markdown": "**Time Expectations:** Make sure to set clear expectations with your students about how much time they'll have to present. This curriculum assumes roughly 20-30 minutes for all groups to present.\n\n**Encouraging Creative Presentations:** Depending on your students' interests and skills you may encourage a wide variety of presentation types. While students have clear expectations on making sure they present a unified theme and briefly mention all innovations in their proposal, "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "d4ff06b0-3c8c-4504-96fe-44d8ef55905f",
-        "lesson_activity.key": "67c70c6f-0116-45b8-932f-35ba501341c1"
+        "activity_section.key": "81547757-e530-43bd-bb96-ec5ff88c252d",
+        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
       }
     },
     {
-      "key": "c2e84ef8-8d60-4a4b-987c-6f868cc86033",
-      "position": 2,
+      "key": "34a94a3b-1725-4c47-84d8-7b1ac30beec6",
+      "position": 4,
       "properties": {
         "description": "**Distribute:** Give students back [CSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) if they don't already have them on hand.\n\n**Group:** Have 2 - 3 members of each project team meet with 2 - 3 members of another project team, forming groups of 4 - 6. Ideally groups will get feedback from multiple other groups but this may be difficult to guarantee.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Feedback - 10 Mins:** Groups should spend at most 10 minutes, 5 minutes on each project, sharing their project team's overall vision, the innovations they'll be presenting, and the high level format of their presentation. Members of the other group should provide critiques and suggestions, in particular any feedback from the perspective of their character about how they could benefit or be harmed by the proposed innovation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Work Time - 30 minutes:** Groups should get 30 minutes to work on finish designing their presentations and making any final edits to their one-pagers."
       },
       "seeding_key": {
-        "activity_section.key": "c2e84ef8-8d60-4a4b-987c-6f868cc86033",
-        "lesson_activity.key": "67c70c6f-0116-45b8-932f-35ba501341c1"
+        "activity_section.key": "34a94a3b-1725-4c47-84d8-7b1ac30beec6",
+        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
       }
     },
     {
-      "key": "4823d48c-3875-466a-877f-624be256f881",
-      "position": 1,
+      "key": "3a187725-d82d-46ed-92b5-9d057a51bd0f",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Thank you delegates for your hard work today. Next time we meet it will be for the actual presentations and to decide on the strongest overall presentations in our Future School Convention. I look forward to seeing you there!",
+        "duration": "5",
+        "name": "Wrap Up",
         "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Printing / Digital Access to One Pagers:** Make sure students print or are ready to digitally share 1-pagers for the next class.\r\n"
+            "markdown": "**Printing / Digital Access to One Pagers:** Make sure students print or are ready to digitally share 1-pagers for the next class."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4823d48c-3875-466a-877f-624be256f881",
-        "lesson_activity.key": "eb89a811-c3a4-4526-9233-9042186e660a"
+        "activity_section.key": "3a187725-d82d-46ed-92b5-9d057a51bd0f",
+        "lesson_activity.key": "bf63fd96-e263-48a4-92d4-9c3341095cc5"
       }
     },
     {
-      "key": "7a75879e-fec2-4054-87e0-1bc73ca5b22c",
+      "key": "4f825f4b-1d5d-40cc-86a7-4b09dedd1923",
       "position": 1,
       "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1wjD0LTmCtcOkPLyyXzeE5rw9MnRfYoioJdtMQA366L8/edit?usp=sharing) to access the modifications."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n\n**Group:** Instruct students to sit with their project teams",
+        "duration": "2",
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "7a75879e-fec2-4054-87e0-1bc73ca5b22c",
-        "lesson_activity.key": "5c02a03a-42d8-4a77-8882-7373d9452c8c"
+        "activity_section.key": "4f825f4b-1d5d-40cc-86a7-4b09dedd1923",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "ec824fbf-bbab-4902-8e54-2a1adb503502",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec824fbf-bbab-4902-8e54-2a1adb503502",
-        "lesson_activity.key": "3868ed20-9ccf-4241-8eae-fb7c0ba8aec1"
-      }
-    },
-    {
-      "key": "5949b6c2-db14-406c-8616-d6a36a61a83d",
+      "key": "48c9bae8-7591-416a-97cc-9958fbc424b2",
       "position": 2,
       "properties": {
         "description": "Delegates today it's time for the actual convention. Each group will have a couple minutes to present their overall vision for the Future School to the entire audience. Afterwards we'll leave their proposals around the room and you'll have time to review each of them to identify the group and individual innovation (outside your group) that you believe is best. Let's get to it!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5949b6c2-db14-406c-8616-d6a36a61a83d",
-        "lesson_activity.key": "3868ed20-9ccf-4241-8eae-fb7c0ba8aec1"
+        "activity_section.key": "48c9bae8-7591-416a-97cc-9958fbc424b2",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "279dcea2-8bad-417e-9c62-cbc5b70fcf55",
-      "position": 1,
+      "key": "3281c7b8-8160-4c3e-9e3e-f68750c0b0cf",
+      "position": 3,
       "properties": {
+        "duration": "38",
+        "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Supporting Notes:** Encourage students to take notes on individual presentations they want to look at more closely during the gallery walk as well as their overall impression of each of the presentations. A good rule is that by the end of the presentations students should have written down at least three individual innovations they want to look at more closely because it would be of interest to their character.\r\n\r\n**Running the Gallery Walk:** Depending on your classroom setup you may want students to move around the room in an organized fashion, e.g. rotating through each project with their groups, or you might encourage students to move around the room as they wish.\r\n\r\n"
+            "markdown": "**Supporting Notes:** Encourage students to take notes on individual presentations they want to look at more closely during the gallery walk as well as their overall impression of each of the presentations. A good rule is that by the end of the presentations students should have written down at least three individual innovations they want to look at more closely because it would be of interest to their character.\n\n**Running the Gallery Walk:** Depending on your classroom setup you may want students to move around the room in an organized fashion, e.g. rotating through each project with their groups, or you might encourage students to move around the room as they wish."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "279dcea2-8bad-417e-9c62-cbc5b70fcf55",
-        "lesson_activity.key": "0ee62c3f-3cea-4214-800a-0f8c71b55a99"
+        "activity_section.key": "3281c7b8-8160-4c3e-9e3e-f68750c0b0cf",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "8b393a50-2397-48d4-9df8-0ea610c9d114",
-      "position": 2,
+      "key": "016dda9f-9e0b-480f-b9ae-e19c093a7a58",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Presentations - 25 mins:** One by one have each group present to the class as a whole.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Gallery Walk - 15 mins:** Have groups leave their one-pagers and any presentation materials around the room, collected by team. Give students time to walk around the room, review the materials, and try to identify the overall group and individual innovation, other than their own, that they believe is best based on the perspective of their character."
       },
       "seeding_key": {
-        "activity_section.key": "8b393a50-2397-48d4-9df8-0ea610c9d114",
-        "lesson_activity.key": "0ee62c3f-3cea-4214-800a-0f8c71b55a99"
+        "activity_section.key": "016dda9f-9e0b-480f-b9ae-e19c093a7a58",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "7f913d53-3d61-4684-8ed6-caef386d9c2d",
-      "position": 1,
+      "key": "db5df2d9-6a5f-4a51-9157-bb6cc257b928",
+      "position": 5,
       "properties": {
-        "description": "**Step 7 - Evaluate:** Ask students to record the best project and best individual innovation based on what the saw in the presentations and the gallery walk."
+        "description": "**Step 7 - Evaluate:** Ask students to record the best project and best individual innovation based on what the saw in the presentations and the gallery walk.",
+        "duration": "5",
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "7f913d53-3d61-4684-8ed6-caef386d9c2d",
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2"
+        "activity_section.key": "db5df2d9-6a5f-4a51-9157-bb6cc257b928",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "226a8155-b715-4cea-a75a-db91d734b2aa",
-      "position": 2,
+      "key": "ff8a3aa6-febb-4eda-b616-e068d54e59d6",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Thank you delegates for an amazing convention. We will be excited to share the results of our convention next time we meet. For now thank you for your incredibly hard work to help us improve schools for all. Give yourselves a round of applause!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "226a8155-b715-4cea-a75a-db91d734b2aa",
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2"
+        "activity_section.key": "ff8a3aa6-febb-4eda-b616-e068d54e59d6",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "ddb90ed7-92bc-4ba7-87e2-e93fbd8ae5fb",
-      "position": 3,
+      "key": "2fc40173-8437-41bd-9d3a-c06aaffcf68a",
+      "position": 7,
       "properties": {
         "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "ddb90ed7-92bc-4ba7-87e2-e93fbd8ae5fb",
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2"
+        "activity_section.key": "2fc40173-8437-41bd-9d3a-c06aaffcf68a",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "d4e06251-05ea-436f-bd49-500601d7419e",
-      "position": 4,
+      "key": "ac01215b-da15-4e4b-b249-7a298eee7a41",
+      "position": 8,
       "properties": {
-        "description": "**Collect:** Collect students' project guides, one-pagers, and any materials related to their presentations that can be collected.\r\n\r\n**Rubric:** Projects can be assessed using the provided rubric.",
-        "name": "Assessment\r"
+        "description": "####Assessment\n\n**Collect:** Collect students' project guides, one-pagers, and any materials related to their presentations that can be collected.\n\n**Rubric:** Projects can be assessed using the provided rubric."
       },
       "seeding_key": {
-        "activity_section.key": "d4e06251-05ea-436f-bd49-500601d7419e",
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2"
+        "activity_section.key": "ac01215b-da15-4e4b-b249-7a298eee7a41",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
-      "key": "4e112762-f326-4bb1-9f3a-7cd371cf1c5e",
-      "position": 5,
+      "key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
+      "position": 9,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "4e112762-f326-4bb1-9f3a-7cd371cf1c5e",
-        "lesson_activity.key": "cb03c685-93ab-47d4-9cab-3e44d7c9d0c2"
-      }
-    },
-    {
-      "key": "d2911e14-9c88-4b2e-8d30-583294c330ca",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ulxdCKEwlIaMnXtb9mZcygINW7-hC1QftjLKxvFYC3M/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "d2911e14-9c88-4b2e-8d30-583294c330ca",
-        "lesson_activity.key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa"
+        "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
     {
       "key": "f8e31b1c-c837-4ac5-bed9-b1db30a2deb3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 10 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
-        "progression_name": "Unit 10 Exam",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit Exam - Cybersecurity and Global Impacts",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics10.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://images.code.org/5843e95342dbf0f156eb7a95490c9344-Screenshot 2023-04-25 at 3.42.55 PM.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing)\n\n"
           }
         ]
       },
@@ -3054,7 +2707,7 @@
         "level_keys": [
           "U10 L01 CFU innovations_2023"
         ],
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -3064,7 +2717,7 @@
         "lesson.key": "Project   Innovation Simulation Part 1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "a3957243-8735-4435-ac4b-3280ae7e8507"
+        "activity_section.key": "b8b7c6b7-09d8-4d38-9175-773a790d4766"
       },
       "level_keys": [
         "U10 L01 CFU innovations_2023"
@@ -3072,24 +2725,23 @@
     },
     {
       "chapter": 2,
-      "position": 1,
+      "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "U10 L02 CFU innovations part 2_2023"
-        ],
-        "progression": "Check For Understanding"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2_2023"
         ],
-        "lesson.key": "Project   Innovation Simulation Part 2",
+        "lesson.key": "Project   Innovation Simulation Part 1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "a61282b6-8fa0-4ff1-9d15-e5fa19b8411f"
+        "activity_section.key": "86c2e955-bc3d-4546-9dec-4b63459712c7"
       },
       "level_keys": [
         "U10 L02 CFU innovations part 2_2023"
@@ -3353,18 +3005,17 @@
       "properties": {
         "level_keys": [
           "Student End of Unit Survey_csp10_2023"
-        ],
-        "progression": "End-of-Unit Survey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Student End of Unit Survey_csp10_2023"
         ],
-        "lesson.key": "Project   Innovation Simulation Part 7",
+        "lesson.key": "Project   Innovation Simulation Part 5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "4e112762-f326-4bb1-9f3a-7cd371cf1c5e"
+        "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf"
       },
       "level_keys": [
         "Student End of Unit Survey_csp10_2023"
@@ -3379,7 +3030,7 @@
         "level_keys": [
           "CSP 20-21 Unit 10 Assessment2022_2023"
         ],
-        "progression": "Unit 10 Exam"
+        "progression": "Unit Exam - Cybersecurity and Global Impacts"
       },
       "bonus": false,
       "seeding_key": {
@@ -3431,7 +3082,7 @@
         "lesson.key": "Project   Innovation Simulation Part 1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "a3957243-8735-4435-ac4b-3280ae7e8507"
+        "activity_section.key": "b8b7c6b7-09d8-4d38-9175-773a790d4766"
       }
     },
     {
@@ -3440,10 +3091,10 @@
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2_2023"
         ],
-        "lesson.key": "Project   Innovation Simulation Part 2",
+        "lesson.key": "Project   Innovation Simulation Part 1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "a61282b6-8fa0-4ff1-9d15-e5fa19b8411f"
+        "activity_section.key": "86c2e955-bc3d-4546-9dec-4b63459712c7"
       }
     },
     {
@@ -3572,10 +3223,10 @@
         "script_level.level_keys": [
           "Student End of Unit Survey_csp10_2023"
         ],
-        "lesson.key": "Project   Innovation Simulation Part 7",
+        "lesson.key": "Project   Innovation Simulation Part 5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csp8-2023",
-        "activity_section.key": "4e112762-f326-4bb1-9f3a-7cd371cf1c5e"
+        "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf"
       }
     },
     {
@@ -3762,7 +3413,7 @@
       }
     },
     {
-      "name": "CSP Unit 10 Project Overview",
+      "name": "CSP Innovation Simulation Project Overview",
       "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
       "key": "csp_unit_10_project_overview",
       "properties": {
@@ -3801,33 +3452,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 12 - Project: Innovation Simulation Part 6",
-      "url": "https://docs.google.com/presentation/d/1G96Omk0PD28kMmgn6RXR9d0O-iEaojW5HJkEVW4-rcE/copy",
-      "key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1G96Omk0PD28kMmgn6RXR9d0O-iEaojW5HJkEVW4-rcE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6"
-      }
-    },
-    {
-      "name": "CSP Unit 8 - Lesson 13 - Project: Innovation Simulation Part 7",
-      "url": "https://docs.google.com/presentation/d/1vLwcs9Gl2Rm8DW43EajtUkTFS2I6ddEixORXoF-fl88/copy",
-      "key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1vLwcs9Gl2Rm8DW43EajtUkTFS2I6ddEixORXoF-fl88/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7"
-      }
-    },
-    {
-      "name": "CSP Unit 8 - Lesson 14 - Assessment Day",
+      "name": "CSP Unit 8 - Lesson 11 - Assessment Day",
       "url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/copy",
       "key": "csp_unit_8_-_lesson_14_-_assessment_day",
       "properties": {
@@ -3850,19 +3475,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
-      }
-    },
-    {
-      "name": "CSP Unit 8 - Lesson 2 - Project: Innovation Simulation Part 2",
-      "url": "https://docs.google.com/presentation/d/1B-lh4rYidcYvKIrEDzO2BokEmQ_FSDZfaHkzrdBA7u4/copy",
-      "key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1B-lh4rYidcYvKIrEDzO2BokEmQ_FSDZfaHkzrdBA7u4/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2"
       }
     },
     {
@@ -4107,24 +3719,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "resource.key": "csp_unit_10_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "resource.key": "csp_unit_8_-_lesson_2_-_project_innovation_simulation_part_2"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 3",
         "resource.key": "csp_innovation_simulation_project_guide"
       }
@@ -4175,42 +3769,6 @@
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 5",
         "resource.key": "csp_unit_8_-_lesson_11_-_project_innovation_simulation_part_5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "resource.key": "csp_unit_10_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "resource.key": "csp_unit_8_-_lesson_12_-_project_innovation_simulation_part_6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "resource.key": "csp_innovation_simulation_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "resource.key": "csp_unit_10_project_overview"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "resource.key": "csp_unit_8_-_lesson_13_-_project_innovation_simulation_part_7"
       }
     },
     {
@@ -4350,6 +3908,16 @@
   ],
   "objectives": [
     {
+      "key": "009f4935-d77f-4089-a3b5-11b6b84daa43",
+      "properties": {
+        "description": "Research computing innovations through the lens of one beneficiary"
+      },
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "objective.key": "009f4935-d77f-4089-a3b5-11b6b84daa43"
+      }
+    },
+    {
       "key": "03adfde7-d55e-4316-9a0d-a89bf522ff9f",
       "properties": {
         "description": "Explain the difference between asymmetrical and symmetrical encryption"
@@ -4430,16 +3998,6 @@
       }
     },
     {
-      "key": "3a37a21e-74e0-4ea0-8b06-733b35ff833b",
-      "properties": {
-        "description": "Evaluate innovations for its potential benefits and harms based on the perspective of a specific audience"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "objective.key": "3a37a21e-74e0-4ea0-8b06-733b35ff833b"
-      }
-    },
-    {
       "key": "3f2b4f0d-c969-4037-aaaa-53dc7d951083",
       "properties": {
         "description": "Thoughtfully answer a stimulus question"
@@ -4470,16 +4028,6 @@
       }
     },
     {
-      "key": "6c80a22a-4ca4-4264-883b-2bfbb1655aa5",
-      "properties": {
-        "description": "Research computing innovations through the lens of one beneficiary"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "objective.key": "6c80a22a-4ca4-4264-883b-2bfbb1655aa5"
-      }
-    },
-    {
       "key": "6cd13fec-2c26-46fa-9361-ceb00e2e3cad",
       "properties": {
         "description": "Explain the benefits of multifactor authentication"
@@ -4487,16 +4035,6 @@
       "seeding_key": {
         "lesson.key": "Protecting Data Part 2",
         "objective.key": "6cd13fec-2c26-46fa-9361-ceb00e2e3cad"
-      }
-    },
-    {
-      "key": "98238625-4879-48ca-98d3-ad8836bb7e77",
-      "properties": {
-        "description": "Students will have completed designing and preparing for their group presentation."
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "objective.key": "98238625-4879-48ca-98d3-ad8836bb7e77"
       }
     },
     {
@@ -4560,16 +4098,6 @@
       }
     },
     {
-      "key": "d24437c6-7ace-454f-b695-bae9d8f89025",
-      "properties": {
-        "description": "Objective 3"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "objective.key": "d24437c6-7ace-454f-b695-bae9d8f89025"
-      }
-    },
-    {
       "key": "d589b720-460f-4fb9-a531-260a47fdb3ea",
       "properties": {
         "description": "Identify a computing innovation"
@@ -4607,16 +4135,6 @@
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
         "objective.key": "e7eb651d-f532-4edd-ad4f-27555753b562"
-      }
-    },
-    {
-      "key": "ea8eb44f-bb9a-49ef-9002-ef1984e8a583",
-      "properties": {
-        "description": "Identify benefits of a computing innovation"
-      },
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "objective.key": "ea8eb44f-bb9a-49ef-9002-ef1984e8a583"
       }
     },
     {
@@ -4850,27 +4368,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 3",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.A.4"
@@ -4970,48 +4467,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project   Innovation Simulation Part 7",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-25"
       }

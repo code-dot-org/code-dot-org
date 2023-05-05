@@ -10,7 +10,7 @@ export default class TextResponses extends React.Component {
     answers: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
       .isRequired,
     showAverage: PropTypes.bool,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   renderResponseBullets() {

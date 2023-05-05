@@ -16,10 +16,10 @@ export default storybook => {
               [1, 'accepted'],
               [2, 'rejected'],
               [3, 'escalated'],
-              [4, '']
+              [4, ''],
             ]}
           />
-        )
+        ),
       },
       {
         name: 'Peer Review Links for escalated submissions',
@@ -31,10 +31,10 @@ export default storybook => {
               [1, 'accepted'],
               [2, 'rejected'],
               [3, 'escalated'],
-              [4, '']
+              [4, ''],
             ]}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

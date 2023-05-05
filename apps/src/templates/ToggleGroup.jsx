@@ -34,7 +34,7 @@ class ToggleGroup extends Component {
       return error;
     },
     // Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   setSelected(selected) {
@@ -84,16 +84,16 @@ class ToggleGroup extends Component {
 
 const styles = {
   flexButtons: {
-    display: 'flex'
+    display: 'flex',
   },
   flexButtonReverse: {
     display: 'flex',
-    flexDirection: 'row-reverse'
-  }
+    flexDirection: 'row-reverse',
+  },
 };
 
 export const UnconnectedToggleGroup = ToggleGroup;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(ToggleGroup);

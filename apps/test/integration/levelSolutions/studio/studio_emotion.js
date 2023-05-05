@@ -11,10 +11,10 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 16, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   freePlay: true,
-  isK1: false
+  isK1: false,
 };
 
 module.exports = {
@@ -71,8 +71,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Validate emotions: angry',
@@ -123,8 +123,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Validate emotions: sad',
@@ -175,8 +175,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

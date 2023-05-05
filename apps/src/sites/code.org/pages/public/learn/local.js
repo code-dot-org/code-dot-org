@@ -1,5 +1,3 @@
-/* global mapboxgl, MapboxGeocoder */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
@@ -23,7 +21,7 @@ if (!('remove' in Element.prototype)) {
 
 $(function () {
   selectize = $('#class-search-facets select').selectize({
-    plugins: ['remove_button']
+    plugins: ['remove_button'],
   });
 
   setFacetDefaults();
@@ -32,7 +30,7 @@ $(function () {
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
     marker: false,
-    types: 'country,region,district,postcode,locality,place'
+    types: 'country,region,district,postcode,locality,place',
   });
   geocoder.on('result', function (result) {
     var loc = result.result.geometry.coordinates;
@@ -59,7 +57,7 @@ $(function () {
 
 function stickMap() {
   $('#map').sticky({
-    bottomSpacing: $('#pagefooter').height() + 50
+    bottomSpacing: $('#pagefooter').height() + 50,
   });
 }
 
@@ -84,7 +82,7 @@ function getParams(form_data) {
 
   params.push({
     name: 'coordinates',
-    value: map_loc
+    value: map_loc,
   });
 
   $.each(form_data, function (key, field) {
@@ -152,19 +150,19 @@ function loadMap(locations) {
     properties: {
       description: location.html,
       title: location.title,
-      index
+      index,
     },
     geometry: {
       type: 'Point',
-      coordinates: [parseFloat(location.lon), parseFloat(location.lat)]
-    }
+      coordinates: [parseFloat(location.lon), parseFloat(location.lat)],
+    },
   }));
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     zoom: 10,
     minZoom: 1,
-    center: [lng, lat]
+    center: [lng, lat],
   });
   map.on('load', function () {
     map.loadImage(
@@ -174,7 +172,7 @@ function loadMap(locations) {
           logToCloud.addPageAction(
             logToCloud.PageAction.MapboxMarkerLoadError,
             {
-              error
+              error,
             }
           );
           throw error;
@@ -184,8 +182,8 @@ function loadMap(locations) {
           type: 'geojson',
           data: {
             type: 'FeatureCollection',
-            features: featureList
-          }
+            features: featureList,
+          },
         });
         // Add a layer showing the places.
         map.addLayer({
@@ -194,8 +192,8 @@ function loadMap(locations) {
           source: 'places',
           layout: {
             'icon-image': 'dot-marker',
-            'icon-allow-overlap': true
-          }
+            'icon-allow-overlap': true,
+          },
         });
 
         // When a click event occurs on a feature in the places layer, open a popup at the
@@ -241,7 +239,7 @@ function setDetailsTrigger() {
 function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 15
+    zoom: 15,
   });
 }
 
@@ -276,7 +274,7 @@ function resultList(featureList, lng, lat, activeIndex) {
         clearPopUp();
         map.flyTo({
           center: [lng, lat],
-          zoom: 10
+          zoom: 10,
         });
       }}
     />,

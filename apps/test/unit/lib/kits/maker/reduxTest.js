@@ -14,7 +14,7 @@ import {
   isConnected,
   hasConnectionError,
   getConnectionError,
-  shouldRunWithVirtualBoard
+  shouldRunWithVirtualBoard,
 } from '@cdo/apps/lib/kits/maker/redux';
 
 describe('maker/redux.js', () => {

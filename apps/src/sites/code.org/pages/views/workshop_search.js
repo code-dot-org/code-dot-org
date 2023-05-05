@@ -1,5 +1,3 @@
-/* globals mapboxgl, MapboxGeocoder */
-
 import $ from 'jquery';
 import colors from '@cdo/apps/util/color';
 
@@ -15,7 +13,7 @@ function initializeMapboxMap() {
     container: 'mapbox-map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-95.665, 37.6],
-    zoom: 3
+    zoom: 3,
   });
 
   map.dragRotate.disable();
@@ -38,7 +36,7 @@ function initializeMapboxMap() {
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
     marker: false,
-    types: 'country,region,district,postcode,locality,place'
+    types: 'country,region,district,postcode,locality,place',
   });
   document.getElementById('mapboxgeocoder').appendChild(geocoder.onAdd(map));
 }
@@ -56,8 +54,8 @@ function loadMapboxWorkshops() {
     clusterRadius: 20,
     clusterMaxZoom: 12,
     clusterProperties: {
-      clustered_workshop_count: ['+', ['get', 'workshop_count']]
-    }
+      clustered_workshop_count: ['+', ['get', 'workshop_count']],
+    },
   });
 
   placeClusters();
@@ -74,8 +72,8 @@ function placeClusters() {
     paint: {
       'circle-color': colors.purple,
       'circle-radius': 20,
-      'circle-blur': 0.75
-    }
+      'circle-blur': 0.75,
+    },
   });
   map.addLayer({
     id: 'workshop-clusters-count',
@@ -86,12 +84,12 @@ function placeClusters() {
       'text-field': ['get', 'clustered_workshop_count'],
       'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
       'text-size': 12,
-      'text-allow-overlap': true
-    }
+      'text-allow-overlap': true,
+    },
   });
   map.on('click', 'workshop-clusters', function (e) {
     var features = map.queryRenderedFeatures(e.point, {
-      layers: ['workshop-clusters']
+      layers: ['workshop-clusters'],
     });
     var clusterId = features[0].properties.cluster_id;
     map
@@ -104,7 +102,7 @@ function placeClusters() {
 
         map.easeTo({
           center: features[0].geometry.coordinates,
-          zoom: zoom
+          zoom: zoom,
         });
       });
   });
@@ -127,13 +125,13 @@ function placeIntroWorkshops() {
       filter: [
         'all',
         ['==', 'show_deep_dive_marker', 'false'],
-        ['!has', 'point_count']
+        ['!has', 'point_count'],
       ],
       layout: {
         'icon-image': 'marker',
         'icon-anchor': 'bottom',
-        'icon-allow-overlap': true
-      }
+        'icon-allow-overlap': true,
+      },
     });
   });
   map.on('click', 'intro-workshops', onMarkerClick);
@@ -156,13 +154,13 @@ function placeDeepDiveWorkshops() {
       filter: [
         'all',
         ['==', 'show_deep_dive_marker', 'true'],
-        ['!has', 'point_count']
+        ['!has', 'point_count'],
       ],
       layout: {
         'icon-image': 'star-marker',
         'icon-anchor': 'bottom',
-        'icon-allow-overlap': true
-      }
+        'icon-allow-overlap': true,
+      },
     });
   });
   map.on('click', 'deep-dive-workshops', onMarkerClick);

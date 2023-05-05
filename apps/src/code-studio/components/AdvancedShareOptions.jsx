@@ -16,7 +16,7 @@ const style = {
       marginTop: 0,
       marginLeft: 0,
       marginRight: 0,
-      marginBottom: 10
+      marginBottom: 10,
     },
     li: {
       display: 'inline-block',
@@ -25,48 +25,48 @@ const style = {
       fontSize: 'larger',
       fontWeight: 'bold',
       marginRight: 10,
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
-    selectedLi: {color: color.brand_secondary_default}
+    selectedLi: {color: color.brand_secondary_default},
   },
   ol: {
-    marginLeft: 15
+    marginLeft: 15,
   },
   p: {
     fontSize: 'inherit',
     lineHeight: 'inherit',
     color: color.neutral_dark,
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   root: {
-    marginTop: 20
+    marginTop: 20,
   },
   expand: {
     color: color.brand_secondary_default,
     fontFamily: "'Gotham 5r', sans-serif",
     cursor: 'pointer',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   embedInput: {
     cursor: 'copy',
     width: 465,
     height: 80,
-    margin: 0
+    margin: 0,
   },
   shareLibraryButton: {
     margin: 0,
     fontSize: 'large',
-    height: 40
-  }
+    height: 40,
+  },
 };
 
 const ShareOptions = {
   EXPORT: 'export',
   EMBED: 'embed',
-  LIBRARY: 'library'
+  LIBRARY: 'library',
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -80,8 +80,8 @@ class AdvancedShareOptions extends React.Component {
     channelId: PropTypes.string.isRequired,
     embedOptions: PropTypes.shape({
       iframeHeight: PropTypes.number.isRequired,
-      iframeWidth: PropTypes.number.isRequired
-    }).isRequired
+      iframeWidth: PropTypes.number.isRequired,
+    }).isRequired,
   };
 
   constructor(props) {
@@ -92,7 +92,7 @@ class AdvancedShareOptions extends React.Component {
         : ShareOptions.EMBED,
       exporting: false,
       exportError: null,
-      embedWithoutCode: false
+      embedWithoutCode: false,
     };
   }
 
@@ -103,7 +103,7 @@ class AdvancedShareOptions extends React.Component {
       .then(this.setState.bind(this, {exporting: false}), () => {
         this.setState({
           exporting: false,
-          exportError: 'Failed to export project. Please try again later.'
+          exportError: 'Failed to export project. Please try again later.',
         });
       });
   };
@@ -173,7 +173,7 @@ class AdvancedShareOptions extends React.Component {
             margin: 0,
             paddingRight: 11,
             fontSize: 'large',
-            height: 40
+            height: 40,
           }}
         >
           {spinner}
@@ -207,7 +207,7 @@ class AdvancedShareOptions extends React.Component {
       <li
         style={[
           style.nav.li,
-          this.state.selectedOption === option && style.nav.selectedLi
+          this.state.selectedOption === option && style.nav.selectedLi,
         ]}
         onClick={() => this.setState({selectedOption: option})}
       >
@@ -282,12 +282,12 @@ class AdvancedShareOptions extends React.Component {
 
 export default connect(
   state => ({
-    librariesEnabled: state.pageConstants.librariesEnabled
+    librariesEnabled: state.pageConstants.librariesEnabled,
   }),
   dispatch => ({
     openLibraryCreationDialog() {
       dispatch(showLibraryCreationDialog());
       dispatch(hideShareDialog());
-    }
+    },
   })
 )(Radium(AdvancedShareOptions));

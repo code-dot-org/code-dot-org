@@ -5,7 +5,7 @@ import {testSection, courseOfferings} from './teacherDashboardTestHelpers';
 
 export default {
   title: 'EditSectionForm',
-  component: EditSectionForm
+  component: EditSectionForm,
 };
 
 const Template = args => (
@@ -29,58 +29,58 @@ export const GenericEmail = Template.bind({});
 GenericEmail.args = {
   section: {
     ...testSection,
-    loginType: 'email'
+    loginType: 'email',
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const GenericWord = Template.bind({});
 GenericWord.args = {
   section: {
     ...testSection,
-    loginType: 'word'
+    loginType: 'word',
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const GenericPicture = Template.bind({});
 GenericPicture.args = {
   section: {
     ...testSection,
-    loginType: 'picture'
+    loginType: 'picture',
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const GenericGoogle = Template.bind({});
 GenericGoogle.args = {
   section: {
     ...testSection,
-    loginType: 'google_classroom'
+    loginType: 'google_classroom',
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const GenericClever = Template.bind({});
 GenericClever.args = {
   section: {
     ...testSection,
-    loginType: 'clever'
+    loginType: 'clever',
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const NoStudents = Template.bind({});
 NoStudents.args = {
   section: {
     ...testSection,
-    studentCount: 0
+    studentCount: 0,
   },
-  isSaveInProgress: false
+  isSaveInProgress: false,
 };
 
 export const Saving = Template.bind({});
 Saving.args = {
   section: testSection,
-  isSaveInProgress: true
+  isSaveInProgress: true,
 };

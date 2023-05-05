@@ -7,9 +7,10 @@
     "vpl-csd-ci-4",
     "vpl-csd-ci-5",
     "vpl-csd-ci-6",
+    "vpl-csd-ci-6b",
     "vpl-csd-ci-7"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

@@ -2415,6 +2415,10 @@ th:
               name: อาร์เรย์มิติเดียว (1D)
             lesson-3:
               name: การวนรอบ
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         hello-world-space-2022:
           title: 'สวัสดีชาวโลก: จักรวาล'
         hello-world-soccer-2022:

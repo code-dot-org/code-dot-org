@@ -1003,6 +1003,7 @@ es-MX:
         csa-pl-compareTo: El método compareTo()
         enter_your_own_poem: Ingresa Tu Propio Poema
         csd_sprite_properties: Propiedades de Sprite
+        csc-ecosystems-intro: Introducción a los Ecosistemas
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

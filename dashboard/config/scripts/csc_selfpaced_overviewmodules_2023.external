@@ -3,71 +3,77 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# CS Connections Modules
+# Sample Projects
 
-##### The dropdown menu below provides a quick overview of CS Connections modules, connections to core content, and high level student learning objectives.
+#####  CS Connections integrates computer science into other subjects like math, science, ELA, and social studies.  These modules are designed especially for educators who are new to coding and use fun and engaging ways to teach coding to students in a visual, block-based coding environment.
 
-## Overview of Modules
+## Preview of Modules
 
-##### Click the dropdown arrows below to view module overviews.
-
-<details>
-<summary><strong>Modeling Animal Adaptations</strong></summary>
-
-Students create an interactive animation of cause-and effect models to represent biological adapations and evolution in Sprite Lab.
-
-<img src="https://images.code.org/8979d9d9853041dace44ea1c962c5eff-image-1680730179051.gif" alt="Image of a bird in the sky and a deer in a green field" width="300px;">
-
-</details>
-
-<div style="clear:both"/>
+##### Click the dropdown arrows to view sample end-of-module projects.
+<hr style="clear:both">
 
 
 <details>
 
 <summary><strong>Coding a Time Capsule</strong></summary>
 
-Students animate a digital time capsule with images, sounds, and effects to enhance the imagery and mood of their poems.
+##### Students create a digital time capsule with images, sounds, and effects to enhance the imagery and mood of poems they write to capture an event or moment in time.
 
-<img src="https://images.code.org/1b3b840611059c5d37ac1cf4ad685e68-image-1680730761355.gif" alt="Image of a bird in the sky and a deer in a green field" width="300px;">
+<img src="https://images.code.org/1b3b840611059c5d37ac1cf4ad685e68-image-1680730761355.gif" alt="Gif of star burst" width="300px;">
 
 
 </details>
 
 <div style="clear:both"/>
+<hr style="clear:both">
 
 
 <details>
 
 <summary><strong>Coding a Geometric Star Quilt</strong></summary>
 
-Students program an 8-pointed Native American Star Quilt to gift to someone.
+##### Students use angles and shapes to create an 8-pointed star to represent a Native American star quilt.
 
-<img src="https://images.code.org/e8f8c539d9fc7ee83df23d7af02033f7-image-1680731362485.gif" alt="Image of a bird in the sky and a deer in a green field" width="300px;">
+<img src="https://images.code.org/e8f8c539d9fc7ee83df23d7af02033f7-image-1680731362485.gif" alt="Gif of 8-pointed star" width="300px;">
 
 </details>
 
 <div style="clear:both"/>
+<hr style="clear:both">
 
 <details>
 <summary><strong>Coding Interactive Maps</strong></summary>
 
-Students create a digital map with a tour guide that highlights landmarks.
+##### Students create a digital map with a tour guide that tells a story about a place.
 
-<img src="https://images.code.org/6dea5ced2f6892572561171a345f2dd5-image-1680731924182.gif" alt="Image of a person with map of the United States and a compass" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 60px;">
+<img src="https://images.code.org/6dea5ced2f6892572561171a345f2dd5-image-1680731924182.gif" alt="Image of a person with map of the United States and a compass" width="300px">
 
 
 </details>
 
 <div style="clear:both"/>
+<hr style="clear:both">
 
 <details>
 <summary><strong>Coding with Poetry</strong></summary>
 
-Students animate poems with images, sounds, and effects to enhance the word choice in their poems.
+##### Students animate poems with images, sounds, and effects to reveal mood and imagery in their poems.
 
 
-<img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Gif of marshmallows burst" width="300px">
+
+</details>
+
+<div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Modeling Animal Adaptations</strong></summary>
+
+##### Students code animal behaviors to model how species survive in their environments.
+
+
+<img src="https://images.code.org/e72ce377731a6887b285252d923068a7-image-1682033456371.gif" alt="Meadow with a bear and rabbit" width="300px">
 
 
 </details>

@@ -4,7 +4,8 @@ import {
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels,
-  translatedCourseOfferingDurations
+  translatedCourseOfferingDurations,
+  subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CourseOfferingHelpers', () => {
@@ -42,5 +43,14 @@ describe('CourseOfferingHelpers', () => {
         expect(course_duration).to.not.equal('');
       }
     );
+  });
+
+  it('subjectsAndTopicsOrder contains every subject and topic', () => {
+    expect(
+      [
+        ...Object.keys(translatedCourseOfferingSchoolSubjects),
+        ...Object.keys(translatedCourseOfferingCsTopics),
+      ].sort()
+    ).to.deep.equal([...subjectsAndTopicsOrder].sort());
   });
 });

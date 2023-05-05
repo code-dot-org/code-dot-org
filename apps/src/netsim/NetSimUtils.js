@@ -163,7 +163,7 @@ var NUMBER_SERIALIZATION_RULES = [
   {jsVal: Infinity, jsonVal: 'Infinity'},
   {jsVal: -Infinity, jsonVal: '-Infinity'},
   {jsVal: NaN, jsonVal: 'NaN'},
-  {jsVal: undefined, jsonVal: 'undefined'}
+  {jsVal: undefined, jsonVal: 'undefined'},
 ];
 
 /**
@@ -401,7 +401,7 @@ exports.makeContinueButton = function (onPanel) {
     },
     {
       secondary: false,
-      classes: ['submitButton']
+      classes: ['submitButton'],
     }
   );
 };

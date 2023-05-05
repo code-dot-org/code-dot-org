@@ -21,12 +21,12 @@ export default class TeacherSectionSelector extends Component {
     courseOfferingId: PropTypes.number,
     courseOfferingParticipantType: PropTypes.string,
     courseVersionId: PropTypes.number,
-    unitId: PropTypes.number
+    unitId: PropTypes.number,
   };
 
   state = {
     isMenuOpen: false,
-    targetPoint: {top: 0, left: 0}
+    targetPoint: {top: 0, left: 0},
   };
 
   handleMouseDown = e => {
@@ -49,11 +49,11 @@ export default class TeacherSectionSelector extends Component {
     const rect = this.select.getBoundingClientRect();
     const targetPoint = {
       top: rect.bottom + window.pageYOffset,
-      left: rect.left + window.pageXOffset
+      left: rect.left + window.pageXOffset,
     };
     this.setState({
       isMenuOpen: true,
-      targetPoint
+      targetPoint,
     });
   }
 
@@ -76,14 +76,14 @@ export default class TeacherSectionSelector extends Component {
       selectedSection,
       courseOfferingId,
       courseVersionId,
-      unitId
+      unitId,
     } = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
     const queryParams = queryString.stringify({
       courseOfferingId,
       courseVersionId,
-      unitId
+      unitId,
     });
 
     return (
@@ -134,7 +134,7 @@ const styles = {
   select: {
     height: 34,
     width: 300,
-    marginBottom: 0
+    marginBottom: 0,
   },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
@@ -142,6 +142,6 @@ const styles = {
     paddingBottom: 8,
     paddingLeft: 20,
     paddingRight: 12,
-    width: 268
-  }
+    width: 268,
+  },
 };

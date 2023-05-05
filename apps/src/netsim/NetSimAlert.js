@@ -1,7 +1,6 @@
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */
-/* global setTimeout */
 
 import $ from 'jquery';
 var markup = require('./NetSimAlert.html.ejs');
@@ -76,7 +75,7 @@ NetSimAlert.create_ = function (body, flavor, options) {
     markup({
       flavor: flavor,
       body: body,
-      title: options.get('title', ArgumentUtils.isString)
+      title: options.get('title', ArgumentUtils.isString),
     })
   );
 
