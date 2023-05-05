@@ -8,6 +8,7 @@ import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 import {
   BodyOneText,
   Heading1,
@@ -67,7 +68,11 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-const saveSection = (section, isNewSection) => {
+const saveSection = (
+  section,
+  isNewSection,
+  shouldShowCelebrationDialogOnRedirect
+) => {
   // Determine data sources and save method based on new vs edit section
   const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
   const method = isNewSection ? 'POST' : 'PATCH';
@@ -108,10 +113,16 @@ const saveSection = (section, isNewSection) => {
     },
     body: JSON.stringify(section_data),
   })
-    .then(response => response.json())
+    .then(response => {
+      return response.json();
+    })
     .then(data => {
       // Redirect to the sections list.
-      window.location.href = window.location.origin + '/home';
+      let redirectUrl = window.location.origin + '/home';
+      if (shouldShowCelebrationDialogOnRedirect) {
+        redirectUrl += '?showSectionCreationDialog=true';
+      }
+      navigateToHref(redirectUrl);
     })
     .catch(err => {
       // TODO: Design how we want to show errors.
@@ -119,7 +130,10 @@ const saveSection = (section, isNewSection) => {
     });
 };
 
-export default function SectionsSetUpContainer({sectionToBeEdited}) {
+export default function SectionsSetUpContainer({
+  isUsersFirstSection,
+  sectionToBeEdited,
+}) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -296,7 +310,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
             e.preventDefault();
             setIsSaveInProgress(true);
             recordSectionSetupEvent(sections[0]);
-            saveSection(sections[0], isNewSection);
+            saveSection(sections[0], isNewSection, !!isUsersFirstSection);
           }}
         />
       </div>
@@ -305,5 +319,6 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
 }
 
 SectionsSetUpContainer.propTypes = {
+  isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
 };
