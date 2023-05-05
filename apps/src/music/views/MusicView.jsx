@@ -36,6 +36,7 @@ import KeyHandler from './KeyHandler';
 import {
   levelsForLessonId,
   navigateToLevelId,
+  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -49,10 +50,10 @@ const baseUrl = 'https://curriculum.code.org/media/musiclab/';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    appOptions: PropTypes.object,
     appConfig: PropTypes.object,
     levels: PropTypes.array,
     currentLevelIndex: PropTypes.number,
-    onChangeLevel: PropTypes.func,
 
     // populated by Redux
     userId: PropTypes.number,
@@ -71,6 +72,7 @@ class UnconnectedMusicView extends React.Component {
     setInstructionsPosition: PropTypes.func,
     setCurrentProgressState: PropTypes.func,
     navigateToLevelId: PropTypes.func,
+    sendSuccessReport: PropTypes.func,
   };
 
   constructor(props) {
@@ -80,7 +82,7 @@ class UnconnectedMusicView extends React.Component {
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.appOptions);
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
 
@@ -113,9 +115,16 @@ class UnconnectedMusicView extends React.Component {
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
-    window.addEventListener('beforeunload', () =>
-      this.analyticsReporter.endSession()
-    );
+    window.addEventListener('beforeunload', event => {
+      this.analyticsReporter.endSession();
+      // Force a save before the page unloads, if there are unsaved changes.
+      // If we need to force a save, prevent navigation so we can save first.
+      if (this.musicBlocklyWorkspace.hasUnsavedChanges()) {
+        this.musicBlocklyWorkspace.saveCode(true);
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    });
 
     const promises = [];
     promises.push(this.loadLibrary());
@@ -201,7 +210,13 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onProgressChange = () => {
-    this.props.setCurrentProgressState(this.progressManager.getCurrentState());
+    const currentState = this.progressManager.getCurrentState();
+    this.props.setCurrentProgressState(currentState);
+
+    // Tell the external system (if there is one) about the success.
+    if (this.props.levels && currentState.satisfied) {
+      this.props.sendSuccessReport('music');
+    }
   };
 
   getIsPlaying = () => {
@@ -294,7 +309,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.resetCode();
+    this.musicBlocklyWorkspace.loadDefaultCode();
 
     this.setPlaying(false);
   };
@@ -339,7 +354,7 @@ class UnconnectedMusicView extends React.Component {
       }
     }
 
-    // Save the workspace.
+    // This may no-op due to throttling.
     this.musicBlocklyWorkspace.saveCode();
   };
 
@@ -587,6 +602,7 @@ const MusicView = connect(
     setCurrentProgressState: progressState =>
       dispatch(setCurrentProgressState(progressState)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
+    sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
   })
 )(UnconnectedMusicView);
 

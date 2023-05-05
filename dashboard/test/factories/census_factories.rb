@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   factory :census_submission_school_info, parent: :school_info_us do
     transient do

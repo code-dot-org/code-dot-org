@@ -4,7 +4,7 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
-/* global Promise */
+
 import {quote} from '../utils';
 
 import GoogleChart from './GoogleChart';
