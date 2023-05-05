@@ -16,9 +16,6 @@ class SectionsControllerTest < ActionController::TestCase
 
     @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
-
-    @sections = create_list :section, 3, user: @teacher
-    @section = @sections.first
   end
 
   setup do
