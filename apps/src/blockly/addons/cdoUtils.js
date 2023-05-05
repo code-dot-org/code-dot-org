@@ -118,7 +118,8 @@ export function getCode(workspace) {
 
 function testJsonSerialization(workspace) {
   const FIREHOSE_STUDY = 'blockly-json';
-  const FIREHOSE_EVENT = 'compare-blocks';
+  const FIREHOSE_EVENT_PASS = 'blocks-identical';
+  const FIREHOSE_EVENT_FAIL = 'differences-found';
   Blockly.Events.disable();
 
   // Create an array of blocks based on JSON serialization of the current workspace.
@@ -135,7 +136,8 @@ function testJsonSerialization(workspace) {
 
   // compareBlockArrays returns an array of differences found.
   const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
-
+  const result =
+    differences.length > 0 ? FIREHOSE_EVENT_FAIL : FIREHOSE_EVENT_PASS;
   // Log a record to Firehose/Redshift.
   const recordData = {
     projectUrl: dashboard.project.getShareUrl(),
@@ -145,7 +147,7 @@ function testJsonSerialization(workspace) {
   firehoseClient.putRecord(
     {
       study: FIREHOSE_STUDY,
-      event: FIREHOSE_EVENT,
+      event: result,
       data_json: JSON.stringify(recordData),
     },
     {
