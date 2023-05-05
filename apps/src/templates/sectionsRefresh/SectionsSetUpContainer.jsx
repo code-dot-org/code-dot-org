@@ -72,7 +72,6 @@ export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
 }) {
-
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -198,7 +197,7 @@ export default function SectionsSetUpContainer({
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (shouldShowCelebrationDialogOnRedirect) {
-        redirectUrl += '?showSectionCreationDialog=true';
+          redirectUrl += '?showSectionCreationDialog=true';
         }
         navigateToHref(redirectUrl);
       })
