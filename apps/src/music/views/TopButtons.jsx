@@ -6,16 +6,23 @@ import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
 import musicI18n from '../locale';
+import commonI18n from '@cdo/locale';
+import {useSelector} from 'react-redux';
+import Spinner from '../../code-studio/pd/components/spinner';
+import {projectUpdatedStatuses} from '../../code-studio/projectRedux';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
  * including Start Over, Share, Feedback, and optionally Upload Sound.
  */
-const TopButtons = ({clearCode, uploadSound}) => {
+const TopButtons = ({clearCode, uploadSound, canShowSaving}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
   const showUploadSound = AppConfig.getValue('show-upload') === 'true';
+  const updatedStatus = useSelector(
+    state => state.project.projectUpdatedStatus
+  );
 
   const startOverClicked = () => {
     analyticsReporter.onButtonClicked('start-over');
@@ -80,6 +87,18 @@ const TopButtons = ({clearCode, uploadSound}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; {musicI18n.feedback()}
       </button>
+      {canShowSaving && (
+        <div
+          className={classNames(
+            moduleStyles.saving,
+            updatedStatus === projectUpdatedStatuses.saving &&
+              moduleStyles.savingShow
+          )}
+        >
+          <Spinner size={'small'} />
+          <div className={moduleStyles.savingText}>{commonI18n.saving()}</div>
+        </div>
+      )}
       {showUploadSound && (
         <fieldset>
           <input
@@ -106,6 +125,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
   uploadSound: PropTypes.func.isRequired,
+  canShowSaving: PropTypes.bool,
 };
 
 export default TopButtons;
