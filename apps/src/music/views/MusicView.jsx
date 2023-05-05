@@ -38,7 +38,7 @@ import {
   navigateToLevelId,
   sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
-import {setIsLoading, setIsPageError} from '@cdo/apps/code-studio/labRedux';
+import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
