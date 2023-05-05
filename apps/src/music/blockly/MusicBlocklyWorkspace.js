@@ -377,7 +377,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   hasUnsavedChanges() {
-    return this.projectManager.hasQueuedSave();
+    return this.projectManager.hasUnsavedChanges();
   }
 
   async changeLevels(newLevelId) {

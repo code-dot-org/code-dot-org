@@ -7,7 +7,7 @@ wrong 'The elements will be sorted in descending order.'
 right 'The first three elements will be sorted in ascending order, but the remaining elements will be in random order.'
 wrong 'The first three elements will be sorted in descending order, but the remaining elements will be in random order.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

@@ -34,6 +34,7 @@ describe('CurriculumCatalogCard', () => {
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
+      pathToCourse: '/s/course',
     };
   });
 
@@ -166,9 +167,10 @@ describe('CurriculumCatalogCard', () => {
   it('renders Quick View button with descriptive label', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
-    screen.getByRole('button', {
+    const link = screen.getByRole('link', {
       name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
     });
+    expect(link).to.have.property('href').to.contain(defaultProps.pathToCourse);
   });
 
   it('renders Assign button with descriptive label', () => {

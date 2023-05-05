@@ -78,6 +78,16 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
+  def latest_published_version
+    course_versions.select do |cv|
+      cv.content_root.launched?
+    end.max_by(&:version_year)
+  end
+
+  def path_to_latest_published_version
+    latest_published_version.content_root.link
+  end
+
   def self.should_cache?
     Unit.should_cache?
   end
@@ -208,6 +218,19 @@ class CourseOffering < ApplicationRecord
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility
+    }
+  end
+
+  def summarize_for_catalog
+    {
+      key: key,
+      display_name: display_name,
+      grade_levels: grade_levels,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility,
+      course_version_path: path_to_latest_published_version
     }
   end
 
