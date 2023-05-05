@@ -127,6 +127,7 @@ module Curriculum
       artificial_intelligence
       cybersecurity
       data
+      digital_literacy
       games_and_animations
       internet
       physical_computing
