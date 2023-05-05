@@ -13,6 +13,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './LabContainer.module.scss';
+import i18n from '@cdo/locale';
 
 const LabContainer = ({children}) => {
   const currentLevelId = useSelector(state => state.progress.currentLevelId);
@@ -42,7 +43,7 @@ const LabContainer = ({children}) => {
               className={moduleStyles.pageErrorImage}
               src="/shared/images/sad-bee-avatar.png"
             />
-            An error has occured. Please reload the page to continue.
+            {i18n.loadingError()}
           </div>
         </div>
       )}
