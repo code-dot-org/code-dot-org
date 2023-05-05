@@ -56,12 +56,14 @@ const SummaryResponses = ({
     const correctAnswerElement = document.getElementById(
       'summary-correct-answer'
     );
-    if (showCorrectAnswer) {
-      correctAnswerElement.classList.add(styles.correctAnswersContainer);
-      correctAnswerElement.classList.remove('hide');
-    } else {
-      correctAnswerElement.classList.add('hide');
-      correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+    if (correctAnswerElement) {
+      if (showCorrectAnswer) {
+        correctAnswerElement.classList.add(styles.correctAnswersContainer);
+        correctAnswerElement.classList.remove('hide');
+      } else {
+        correctAnswerElement.classList.add('hide');
+        correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+      }
     }
   }, [showCorrectAnswer]);
 
