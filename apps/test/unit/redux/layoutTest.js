@@ -1,31 +1,41 @@
-import reducer, * as layout from '@cdo/apps/redux/layout';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import layout, {
+  getVisualizationScale,
+  setVisualizationScale,
+} from '@cdo/apps/redux/layout';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('layout redux module', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({layout});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   it('has expected default state', () => {
-    expect(reducer(undefined, {})).to.deep.equal({
+    expect(getStore().getState().layout).to.deep.equal({
       visualizationScale: null,
     });
   });
 
-  it('returns original state on unhandled action', () => {
-    const state = {};
-    expect(reducer(state, {})).to.equal(state);
-  });
-
   describe('action: setVisualizationScale', () => {
-    const state = {visualizationScale: 1};
-    it('changes the visualization scale', () => {
-      const newState = reducer(state, layout.setVisualizationScale(0.5));
-      expect(newState).to.deep.equal({
-        visualizationScale: 0.5,
-      });
-      expect(layout.getVisualizationScale({layout: newState})).to.equal(0.5);
-    });
+    const store = getStore();
 
-    it('produces a new object', () => {
-      const newState = reducer(state, layout.setVisualizationScale(0.5));
-      expect(newState).not.to.equal(state);
+    it('changes the visualization scale', () => {
+      const newState = store.dispatch(setVisualizationScale(0.5));
+      expect(newState).to.deep.equal({
+        payload: 0.5,
+        type: 'layout/setVisualizationScale',
+      });
+      expect(getVisualizationScale(store.getState())).to.equal(0.5);
     });
   });
 });
