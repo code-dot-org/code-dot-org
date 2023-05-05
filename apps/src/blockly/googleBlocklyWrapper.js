@@ -4,6 +4,7 @@ import {
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
@@ -43,14 +44,14 @@ import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
+import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused from './addons/blockSvgUnused';
+import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
-import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 
 const options = {
   contextMenu: true,
@@ -148,6 +149,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
+  blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -269,6 +271,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
+    'cdo_connection_checker',
+    CdoConnectionChecker,
+    true /* opt_allowOverrides */
+  );
 
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -347,25 +355,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   ) {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
-    this.unusedSvg_.render(this.svgGroup_, this.RTL);
-  };
-
-  const googleBlocklyRender = blocklyWrapper.BlockSvg.prototype.render;
-  blocklyWrapper.BlockSvg.prototype.render = function (opt_bubble) {
-    googleBlocklyRender.call(this, opt_bubble);
-    this.removeUnusedBlockFrame();
-  };
-
-  // The original Google Blockly dispose() is defined at:
-  // https://github.com/google/blockly/blob/1f862cb878f7eec36b71c638b85d5199bff01fcb/core/block_svg.ts#L863
-  const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
-  // if param healStack is true, then tries to heal any gap by connecting the next
-  // statement with the previous statement
-  // if param animate is true, shows a disposal animation and sound
-  blocklyWrapper.BlockSvg.prototype.dispose = function (healStack, animate) {
-    googleBlocklyDispose.call(this, healStack, animate);
-    this.removeUnusedBlockFrame();
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function () {
@@ -400,6 +391,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
     return this.setCheck(check);
+  };
+  blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
+    return this.setOutput(isOutput, check);
   };
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
@@ -576,6 +570,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       plugins: {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager,
+        connectionChecker: CdoConnectionChecker,
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false,
@@ -594,6 +589,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    workspace.addChangeListener(onBlockClickDragDelete);
 
     // Initialize plugin.
     blocklyWrapper.navigationController.init();

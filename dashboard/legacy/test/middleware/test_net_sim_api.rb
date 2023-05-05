@@ -903,7 +903,7 @@ class NetSimApiTest < Minitest::Test
 
   def record_exists(table_name, record_id)
     @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}/#{record_id}"
-    200 == @net_sim_api.last_response.status
+    @net_sim_api.last_response.status == 200
   end
 
   def create_node(record, node_type = nil)
