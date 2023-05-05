@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-05-03 23:14:18 UTC",
+    "serialized_at": "2023-05-04 16:12:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3039,7 +3039,7 @@
       "properties": {
         "description": "Most of the things that generate text today use a Large Language Model, but before we had the computing power to allow models to learn from the entire text of wikipedia, there were text-based AIs that were not based on Large Language Models.\n\nInstead, these programs have rules for what sorts of text make sense at different times.\n\nOne of the most famous examples is Eliza, who was a computer program that was supposed to sound like a therapist that was invented in 1966. It was very impressive in its time. Let’s explore what Eliza is and is not capable of.\n",
         "duration": "10",
-        "name": "(Optional) Generative text that is not an LLM – Eliza",
+        "name": "(Optional) A Chatbot that is not an LLM – Eliza",
         "remarks": true
       },
       "seeding_key": {
