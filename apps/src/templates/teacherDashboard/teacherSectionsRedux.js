@@ -103,8 +103,11 @@ const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED =
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 /** Reports request to import a roster has started */
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
-/** Reports request to import a roster has succeeded */
+/** Reports request to import a roster has succeeded and starts the edit-section process*/
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+/** Reports request to import a roster has succeeded */
+const IMPORT_ROSTER_SUCCESS_NEW_SECTION =
+  'teacherSections/IMPORT_ROSTER_SUCCESS_NEW_SECTION';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -543,22 +546,34 @@ export const beginGoogleImportRosterFlow = () => dispatch => {
  * @return {function():Promise}
  */
 export const importOrUpdateRoster =
-  (courseId, courseName) => (dispatch, getState) => {
+  (courseId, courseName, redirectToNewEditPage) => (dispatch, getState) => {
     const state = getState();
     const provider = getRoot(state).rosterProvider;
     const importSectionUrl = importUrlByProvider[provider];
     let sectionId;
 
     dispatch({type: IMPORT_ROSTER_REQUEST});
-    return fetchJSON(importSectionUrl, {courseId, courseName})
-      .then(newSection => (sectionId = newSection.id))
-      .then(() => dispatch(asyncLoadSectionData()))
-      .then(() =>
-        dispatch({
-          type: IMPORT_ROSTER_SUCCESS,
-          sectionId,
-        })
-      );
+    if (redirectToNewEditPage) {
+      return fetchJSON(importSectionUrl, {courseId, courseName})
+        .then(newSection => (sectionId = newSection.id))
+        .then(() => dispatch(asyncLoadSectionData()))
+        .then(() =>
+          dispatch({
+            type: IMPORT_ROSTER_SUCCESS_NEW_SECTION,
+            sectionId,
+          })
+        );
+    } else {
+      return fetchJSON(importSectionUrl, {courseId, courseName})
+        .then(newSection => (sectionId = newSection.id))
+        .then(() => dispatch(asyncLoadSectionData()))
+        .then(() =>
+          dispatch({
+            type: IMPORT_ROSTER_SUCCESS,
+            sectionId,
+          })
+        );
+    }
   };
 
 /**
@@ -1109,6 +1124,17 @@ export default function teacherSections(state = initialState, action) {
       isRosterDialogOpen: false,
       sectionBeingEdited: {
         ...state.sections[action.sectionId],
+        // explicitly unhide section after importing
+        hidden: false,
+      },
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_SUCCESS_NEW_SECTION) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      sectionBeingEdited: {
         // explicitly unhide section after importing
         hidden: false,
       },

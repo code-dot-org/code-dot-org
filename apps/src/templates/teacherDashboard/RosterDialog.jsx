@@ -151,11 +151,12 @@ class RosterDialog extends React.Component {
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    userId: PropTypes.number,
   };
 
   state = {selectedId: null};
 
-  importClassroom = () => {
+  importClassroom = redirect => {
     this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
     const selectedName =
@@ -163,9 +164,22 @@ class RosterDialog extends React.Component {
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-
-    this.props.handleImport(this.state.selectedId, selectedName);
+    this.props.handleImport(this.state.selectedId, selectedName, redirect);
     this.setState({selectedId: null});
+  };
+
+  // create new function for redirect to NewEditPage
+  redirectToEditSectionPage = sectionId => {
+    const redirectUrl = '/sections/' + sectionId + '/edit';
+    console.log(redirectUrl);
+    window.location.href = redirectUrl;
+  };
+
+  // Need to update with section ID
+  handleRedirect = () => {
+    const redirect = true;
+    this.importClassroom(redirect);
+    this.redirectToEditSectionPage(/*sectionId*/);
   };
 
   cancel = () => {
@@ -235,19 +249,36 @@ class RosterDialog extends React.Component {
           >
             {locale.dialogCancel()}
           </button>
-          <button
-            id="import-button"
-            type="button"
-            onClick={this.importClassroom}
-            style={Object.assign(
-              {},
-              styles.buttonPrimary,
-              !this.state.selectedId && {opacity: 0.5}
-            )}
-            disabled={!this.state.selectedId}
-          >
-            {locale.chooseSection()}
-          </button>
+          {this.props.userId % 10 === 0 && (
+            <button
+              id="import-button"
+              type="button"
+              onClick={this.handleRedirect}
+              style={Object.assign(
+                {},
+                styles.buttonPrimary,
+                !this.state.selectedId && {opacity: 0.5}
+              )}
+              disabled={!this.state.selectedId}
+            >
+              {locale.chooseSection()}
+            </button>
+          )}
+          {this.props.userId % 10 !== 0 && (
+            <button
+              id="import-button"
+              type="button"
+              onClick={() => this.importClassroom(false)}
+              style={Object.assign(
+                {},
+                styles.buttonPrimary,
+                !this.state.selectedId && {opacity: 0.5}
+              )}
+              disabled={!this.state.selectedId}
+            >
+              {locale.chooseSection()}
+            </button>
+          )}
         </div>
       </BaseDialog>
     );
