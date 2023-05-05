@@ -19,3 +19,5 @@ wrong 'public String setTopping()'
 wrong 'private void setTopping()'
 wrong 'private void setTopping(String topping)'
 right 'public void setTopping(String topping)'
+
+allow_multiple_attempts true
