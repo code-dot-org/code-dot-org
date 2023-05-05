@@ -4,6 +4,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {MARKETING_AUDIENCE} from './CurriculumQuickAssign';
 import {renderRows} from './QuickAssignTableHelpers';
+import {Heading4} from '@cdo/apps/componentLibrary/typography';
 
 const TABLE_COUNT = 3;
 /*
@@ -39,7 +40,7 @@ export default function QuickAssignTableHocPl({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <div>{title}</div>
+              <Heading4>{title}</Heading4>
             </td>
           </tr>
         </thead>
