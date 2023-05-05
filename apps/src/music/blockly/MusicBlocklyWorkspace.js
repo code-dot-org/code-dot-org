@@ -6,7 +6,7 @@ import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
 import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, REMOTE_STORAGE} from '../constants';
+import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -35,7 +35,7 @@ export default class MusicBlocklyWorkspace {
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
     this.channel = {};
-    this.projectManager = this.getProjectManager(channelId);
+    this.projectManager = null;
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -49,12 +49,14 @@ export default class MusicBlocklyWorkspace {
    * @param {*} player reference to a {@link MusicPlayer}
    * @param {*} toolboxAllowList optional object with allowed toolbox entries
    */
-  init(
+  async init(
     container,
     onBlockSpaceChange,
     player,
     toolboxAllowList,
-    currentLevelId
+    currentLevelId,
+    currentScriptName,
+    channelId
   ) {
     this.container = container;
 
@@ -110,7 +112,12 @@ export default class MusicBlocklyWorkspace {
     this.resizeBlockly();
 
     // Set initial blocks.
-    this.loadCode(currentLevelId);
+    this.projectManager = await this.getProjectManager(
+      channelId,
+      currentLevelId,
+      currentScriptName
+    );
+    this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 
@@ -350,8 +357,8 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  async loadCode(levelId) {
-    const projectResponse = await this.projectManager.loadForLevel(levelId);
+  async loadCode() {
+    const projectResponse = await this.projectManager.load();
     if (!projectResponse.ok) {
       if (projectResponse.status === 404) {
         // This is expected if the user has never saved before.
@@ -365,8 +372,9 @@ export default class MusicBlocklyWorkspace {
     const {source, channel} = await projectResponse.json();
     this.channel = channel;
     if (source && source.source) {
-      const exitingCodeJson = JSON.parse(source.source);
-      Blockly.serialization.workspaces.load(exitingCodeJson, this.workspace);
+      const existingCodeJson = JSON.parse(source.source);
+      console.log(`going to load code`, existingCodeJson);
+      Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
     } else {
       this.loadDefaultCode();
     }
@@ -380,13 +388,21 @@ export default class MusicBlocklyWorkspace {
     return this.projectManager.hasUnsavedChanges();
   }
 
-  async changeLevels(newLevelId) {
+  async changeLevels(newLevelId, newScriptName) {
     if (this.hasUnsavedChanges()) {
-      // Force a save with the current code before changing panels.
+      // Force a save with the current code before changing panels if there are unsaved changes.
       await this.projectManager.save(true);
     }
-    // Now that we've saved (if we needed to), load the code for this level.
-    this.loadCode(newLevelId);
+    // Clear out any remaining enqueud saves from the existing project manager.
+    this.projectManager.destroy();
+    // Now that we've saved (if we needed to), create a new ProjectManager and
+    // load the code for this level.
+    this.projectManager = await this.getProjectManager(
+      undefined,
+      newLevelId,
+      newScriptName
+    );
+    await this.loadCode();
   }
 
   loadDefaultCode() {
@@ -414,24 +430,39 @@ export default class MusicBlocklyWorkspace {
 
   // Get the project manager for the current storage type.
   // If no storage type is specified in AppConfig, use remote storage.
-  getProjectManager(projectId) {
+  async getProjectManager(channelId, currentLevelId, currentScriptName) {
+    console.log(
+      `creating project manager, channelId is ${channelId}, currentLevelId is ${currentLevelId}, currentScriptName is ${currentScriptName}`
+    );
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
       storageType = REMOTE_STORAGE;
     }
     storageType = storageType.toLowerCase();
+    const projectManagerStorageType =
+      storageType === LOCAL_STORAGE
+        ? ProjectManagerStorageType.LOCAL
+        : ProjectManagerStorageType.REMOTE;
+    if (projectManagerStorageType === ProjectManagerStorageType.LOCAL) {
+      // If we're using local storage, we will always define the channel ID as
+      // the local storage key name.
+      channelId = this.getLocalStorageKeyName();
+    }
 
-    if (storageType === REMOTE_STORAGE) {
+    // If we have a channel id, create a project manager with that channel id.
+    // Otherwise, create a project manager with the current level id and script.
+    if (channelId) {
       return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
+        projectManagerStorageType,
         this.getProject.bind(this),
-        projectId
+        channelId
       );
     } else {
-      return ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.LOCAL,
+      return await ProjectManagerFactory.getProjectManagerForLevel(
+        projectManagerStorageType,
         this.getProject.bind(this),
-        projectId || this.getLocalStorageKeyName()
+        currentLevelId,
+        currentScriptName
       );
     }
   }

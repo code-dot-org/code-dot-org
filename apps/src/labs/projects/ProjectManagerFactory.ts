@@ -11,31 +11,77 @@ import {Project, ProjectManagerStorageType} from '../types';
 
 export default class ProjectManagerFactory {
   /**
+   * Get a project manager for a specific storage type and project identitifer.
    * @param projectManagerStorageType The storage type for the project manager
    * @param getProject A method which returns the project sources and channel.
-   * @param projectId The identifier for the project. This parameter is optional, as
-   * the projectId can be determined later based on levelId.
-   * @returns A project manager for the given storage type.
+   * @param projectId The identifier for the project.
+   * @returns A project manager
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
     getProject: () => Project,
-    projectId?: string
+    projectId: string
+  ): ProjectManager {
+    return new ProjectManager(
+      this.getSourcesStore(projectManagerStorageType),
+      this.getChannelsStore(projectManagerStorageType),
+      getProject,
+      projectId
+    );
+  }
+
+  /**
+   * Get a project manager for a storage type and level/script identifier (script can be undefined).
+   * Fetches the channel for that level and script first, and is therefore asynchronous and could
+   * throw an error if the channel request fails.
+   * @param projectManagerStorageType The storage type for the project manager.
+   * @param getProject A method which returns the project sources and channel.
+   * @param levelId The identifier for the level.
+   * @param scriptName The name of the script. Can be undefined if the level is not in the context of a script.
+   * @returns A project manager
+   */
+  static async getProjectManagerForLevel(
+    projectManagerStorageType: ProjectManagerStorageType,
+    getProject: () => Project,
+    levelId: string,
+    scriptName?: string
+  ): Promise<ProjectManager> {
+    const channelsStore = this.getChannelsStore(projectManagerStorageType);
+    let channelId: string | undefined = undefined;
+    const response = await channelsStore.loadForLevel(levelId, scriptName);
+    if (response.ok) {
+      const responseBody = await response.json();
+      if (responseBody && responseBody.channel) {
+        channelId = responseBody.channel;
+      }
+    }
+    if (!channelId) {
+      throw new Error('Could not load channel for level');
+    }
+    console.log(`creating a new ProjectManager for channel ${channelId}`);
+    return new ProjectManager(
+      this.getSourcesStore(projectManagerStorageType),
+      channelsStore,
+      getProject,
+      channelId
+    );
+  }
+
+  static getSourcesStore(projectManagerStorageType: ProjectManagerStorageType) {
+    if (projectManagerStorageType === ProjectManagerStorageType.LOCAL) {
+      return new LocalSourcesStore();
+    } else {
+      return new RemoteSourcesStore();
+    }
+  }
+
+  static getChannelsStore(
+    projectManagerStorageType: ProjectManagerStorageType
   ) {
     if (projectManagerStorageType === ProjectManagerStorageType.LOCAL) {
-      return new ProjectManager(
-        new LocalSourcesStore(),
-        new LocalChannelsStore(),
-        getProject,
-        projectId
-      );
+      return new LocalChannelsStore();
     } else {
-      return new ProjectManager(
-        new RemoteSourcesStore(),
-        new RemoteChannelsStore(),
-        getProject,
-        projectId
-      );
+      return new RemoteChannelsStore();
     }
   }
 }

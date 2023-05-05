@@ -83,6 +83,7 @@ class UnconnectedMusicView extends React.Component {
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
     currentLevelId: PropTypes.string,
+    currentScriptName: PropTypes.string,
   };
 
   constructor(props) {
@@ -96,9 +97,7 @@ class UnconnectedMusicView extends React.Component {
     this.programSequencer = new ProgramSequencer();
     this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
-    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(
-      this.props.channelId
-    );
+    this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
 
@@ -183,7 +182,9 @@ class UnconnectedMusicView extends React.Component {
         this.onBlockSpaceChange,
         this.player,
         this.progressManager?.getCurrentStepDetails().toolbox,
-        this.props.currentLevelId
+        this.props.currentLevelId,
+        this.props.currentScriptName,
+        this.props.channelId
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -623,6 +624,7 @@ const MusicView = connect(
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
     currentLevelId: state.progress.currentLevelId,
+    currentScriptName: state.progress.scriptName,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
   }),
   dispatch => ({

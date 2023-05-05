@@ -23,7 +23,7 @@ export default class ProjectManager {
   // Channel id can be provided at initialization, or set later via load(levelId).
   // We support both paths so that /projects can be created with a specific channel id,
   // or we can load a channel for a level.
-  channelId: string | undefined;
+  channelId: string;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
   getProject: () => Project;
@@ -37,12 +37,13 @@ export default class ProjectManager {
   } = {};
   private lastSource: string | undefined;
   private lastChannel: string | undefined;
+  private timeoutId: number | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     getProject: () => Project,
-    channelId: string | undefined
+    channelId: string
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
@@ -50,25 +51,8 @@ export default class ProjectManager {
     this.getProject = getProject;
   }
 
-  // First, get the channel id associated with the level and script
-  // (or just the level if no script was provided).
-  // Then, load the project from the sources and channels store.
-  async loadForLevel(levelId: string, scriptName?: string): Promise<Response> {
-    const setLevelResponse = await this.setLevel(levelId, scriptName);
-    if (!setLevelResponse.ok) {
-      return setLevelResponse;
-    }
-
-    return await this.load();
-  }
-
   // Load the project from the sources and channels store.
   async load(): Promise<Response> {
-    // It's possible to not have a channel id set if the level has not been set already
-    // or we were not given a channelId on initialization.
-    if (!this.channelId) {
-      return this.getNoChannelResponse();
-    }
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     // If sourceResponse is not ok, we still want to load the channel. Source can
     // return not found if the project is new.
@@ -97,6 +81,16 @@ export default class ProjectManager {
     return this.sourceChanged(project) || this.channelChanged(project);
   }
 
+  // Shut down this project manager. All we do here is clear any existing
+  // timeouts.
+  destroy(): void {
+    console.log('in destroy');
+    if (this.timeoutId) {
+      console.log(`clearing timeout with id ${this.timeoutId}`);
+      window.clearTimeout(this.timeoutId);
+    }
+  }
+
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
@@ -110,9 +104,6 @@ export default class ProjectManager {
    * will be empty, otherwise it will contain failure information.
    */
   async save(forceSave = false): Promise<Response> {
-    if (!this.channelId) {
-      return this.getNoChannelResponse();
-    }
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
@@ -120,6 +111,11 @@ export default class ProjectManager {
       return this.getNoopResponse();
     }
     this.saveInProgress = true;
+    if (this.timeoutId) {
+      window.clearTimeout(this.timeoutId);
+      console.log(`clearing timeout with id ${this.timeoutId}`);
+      this.timeoutId = undefined;
+    }
     this.saveQueued = false;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
@@ -183,28 +179,13 @@ export default class ProjectManager {
   private enqueueSave() {
     this.saveQueued = true;
 
-    setTimeout(
+    this.timeoutId = window.setTimeout(
       () => {
         this.save();
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );
-  }
-
-  // Given a level id, get the channel id for that level and set it as the current channel.
-  // This is private because it is only called from load(levelId). It could be made public
-  // if we see a need to call it directly from a lab.
-  private async setLevel(levelId: string, scriptName?: string) {
-    const response = await this.channelsStore.loadForLevel(levelId, scriptName);
-    if (response.ok) {
-      const responseBody = await response.json();
-      if (responseBody && responseBody.channel) {
-        this.channelId = responseBody.channel;
-      }
-      return response;
-    } else {
-      return response;
-    }
+    console.log(`setting timeout with id ${this.timeoutId}`);
   }
 
   addEventListener(type: ProjectManagerEvent, listener: () => void) {
@@ -220,10 +201,6 @@ export default class ProjectManager {
     response: Response = new Response()
   ) {
     this.eventListeners[type]?.forEach(listener => listener(response));
-  }
-
-  private getNoChannelResponse() {
-    return new Response('No channel id', {status: 404});
   }
 
   private getNoopResponse() {

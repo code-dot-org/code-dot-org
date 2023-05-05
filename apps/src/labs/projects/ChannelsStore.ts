@@ -27,9 +27,10 @@ export class LocalChannelsStore implements ChannelsStore {
   }
 
   // We don't support changing keys for local storage, so we just return the
-  // existing key, if we have one.
+  // existing key, if we have one. If we don't have one, we return a default key.
   loadForLevel() {
-    return Promise.resolve(new Response(`{channel: ${this.localStorageKey}}`));
+    const key = this.localStorageKey || 'savedCodeLocal';
+    return Promise.resolve(new Response(`{channel: ${key}}`));
   }
 
   save() {
