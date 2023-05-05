@@ -26,7 +26,7 @@ export const playSound = {
     helpUrl: '',
   },
   generator: ctx =>
-    'MusicPlayer.playSoundAtMeasureById("' +
+    'Sequencer.playSoundAtMeasureById("' +
     ctx.getFieldValue(FIELD_SOUNDS_NAME) +
     '", ' +
     Blockly.JavaScript.valueToCode(

@@ -138,6 +138,14 @@ a.link-button {
       background: $neutral_dark10;
     }
   }
+
+  &.has-icon {
+    .flex-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0 .75em;
+    }
+  }
 }
 
 // Basic hero banner

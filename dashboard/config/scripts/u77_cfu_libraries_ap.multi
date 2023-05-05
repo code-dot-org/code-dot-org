@@ -34,3 +34,5 @@ An error was made in writing this function so that it does not work as intended.
 12 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

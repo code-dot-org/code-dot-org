@@ -16,7 +16,6 @@ import {
   fieldChordDefinition,
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
-import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import musicI18n from '../../locale';
 
 // Some helpers used when generating code to be used by the interpreter.
@@ -28,14 +27,11 @@ export class GeneratorHelpersSimple2 {
   static getFunctionImplementation(functionName, functionCode) {
     const actualFunctionName = this.getSafeFunctionName(functionName);
     return `function ${actualFunctionName}() {
-      var __currentFunction = {
-        name: '${functionName}',
-        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
-      };
-      var __effects = {};
-      ProgramSequencer.playSequential();
+      Sequencer.startFunctionContext('${functionName}');
+      Sequencer.playSequential();
       ${functionCode}
-      ProgramSequencer.endSequential();
+      Sequencer.endSequential();
+      Sequencer.endFunctionContext();
     }
     `;
   }
@@ -49,15 +45,9 @@ export class GeneratorHelpersSimple2 {
     functionImplementationsCode
   ) {
     return `
-    var __insideWhenRun = true;
-    var __currentFunction = {
-      name: 'when_run',
-      uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
-    };
-    var __effects = {};
-    ProgramSequencer.init();
-    ProgramSequencer.playTogether();
-    RandomSkipManager.init();
+    Sequencer.newSequence();
+    Sequencer.playTogether();
+    Sequencer.startFunctionContext('when_run');
     ${functionCallsCode}
     ${functionImplementationsCode}
   `;
@@ -94,15 +84,9 @@ export const whenRunSimple2 = {
   },
   generator: () =>
     `
-      var __insideWhenRun = true;
-      var __currentFunction = {
-        name: 'when_run',
-        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
-      };
-      var __effects = {};
-      ProgramSequencer.init();
-      ProgramSequencer.playSequential();
-      RandomSkipManager.init();
+      Sequencer.newSequence();
+      Sequencer.startFunctionContext('when_run');
+      Sequencer.playSequential();
     `,
 };
 
@@ -123,16 +107,10 @@ export const triggeredAtSimple2 = {
     extensions: [DYNAMIC_TRIGGER_EXTENSION],
   },
   generator: block =>
-    ` var __insideWhenRun = false;
-      var __currentFunction = {
-        name: '${block.getFieldValue(TRIGGER_FIELD)}',
-        uniqueInvocationId: MusicPlayer.getUniqueInvocationId()
-      };
-      var __effects = {};
-      ProgramSequencer.playSequentialWithMeasure(
-        Math.ceil(startPosition)
-      );
-      RandomSkipManager.init();
+    `
+      Sequencer.newSequence(Math.ceil(startPosition), true);
+      Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
+      Sequencer.playSequential();
     `,
 };
 
@@ -149,23 +127,9 @@ export const playSoundAtCurrentLocationSimple2 = {
     helpUrl: '',
   },
   generator: block =>
-    `
-      MusicPlayer.playSoundAtMeasureById(
-        "${block.getFieldValue(FIELD_SOUNDS_NAME)}",
-        ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun,
-        null,
-        __currentFunction,
-        RandomSkipManager.getSkipContext(),
-        __effects,
-        "${block.id}"
-      );
-      ProgramSequencer.updateMeasureForPlayByLength(
-        MusicLibrary.getLengthForId(
-          "${block.getFieldValue(FIELD_SOUNDS_NAME)}"
-        )
-      );
-    `,
+    `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
+      block.id
+    }");`,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {
@@ -181,21 +145,9 @@ export const playPatternAtCurrentLocationSimple2 = {
     helpUrl: '',
   },
   generator: block =>
-    `
-      MusicPlayer.playPatternAtMeasureById(
-        ${JSON.stringify(block.getFieldValue(FIELD_PATTERN_NAME))},
-        ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun,
-        null,
-        __currentFunction,
-        RandomSkipManager.getSkipContext(),
-        __effects,
-        "${block.id}"
-      );
-      ProgramSequencer.updateMeasureForPlayByLength(
-        ${DEFAULT_PATTERN_LENGTH}
-      );
-    `,
+    `Sequencer.playPattern(${JSON.stringify(
+      block.getFieldValue(FIELD_PATTERN_NAME)
+    )}, "${block.id}");`,
 };
 
 export const playChordAtCurrentLocationSimple2 = {
@@ -211,21 +163,9 @@ export const playChordAtCurrentLocationSimple2 = {
     helpUrl: '',
   },
   generator: block =>
-    `
-      MusicPlayer.playChordAtMeasure(
-        ${JSON.stringify(block.getFieldValue(FIELD_CHORD_NAME))},
-        ProgramSequencer.getCurrentMeasure(),
-        __insideWhenRun,
-        null,
-        __currentFunction,
-        RandomSkipManager.getSkipContext(),
-        __effects,
-        "${block.id}"
-      );
-      ProgramSequencer.updateMeasureForPlayByLength(
-        ${DEFAULT_CHORD_LENGTH}
-      );
-    `,
+    `Sequencer.playChord(${JSON.stringify(
+      block.getFieldValue(FIELD_CHORD_NAME)
+    )},  "${block.id}");`,
 };
 
 export const playRestAtCurrentLocationSimple2 = {
@@ -241,11 +181,7 @@ export const playRestAtCurrentLocationSimple2 = {
     helpUrl: '',
   },
   generator: block =>
-    `
-      ProgramSequencer.updateMeasureForPlayByLength(
-        ${block.getFieldValue(FIELD_REST_DURATION_NAME)}
-      );
-    `,
+    `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)})`,
 };
 
 export const setEffectAtCurrentLocationSimple2 = {
@@ -282,9 +218,7 @@ export const setEffectAtCurrentLocationSimple2 = {
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
     const effectValue = block.getFieldValue(FIELD_EFFECTS_VALUE);
-    return `
-      __effects.${effectName} = '${effectValue}';
-    `;
+    return `Sequencer.setEffect('${effectName}', '${effectValue}');`;
   },
 };
 
@@ -308,9 +242,9 @@ export const playSoundsTogether = {
     helpUrl: '',
   },
   generator: block =>
-    ` ProgramSequencer.playTogether();
+    ` Sequencer.playTogether();
       ${Blockly.JavaScript.statementToCode(block, 'code')}
-      ProgramSequencer.endTogether();
+      Sequencer.endTogether();
     `,
 };
 
@@ -334,9 +268,9 @@ export const playSoundsSequential = {
     helpUrl: '',
   },
   generator: block =>
-    ` ProgramSequencer.playSequential();
+    ` Sequencer.playSequential();
       ${Blockly.JavaScript.statementToCode(block, 'code')}
-      ProgramSequencer.endSequential();
+      Sequencer.endSequential();
       `,
 };
 
@@ -372,16 +306,16 @@ export const playSoundsRandom = {
     for (const result of resultArray) {
       code += `
         ${result}
-        RandomSkipManager.next();
+        Sequencer.nextRandom();
         `;
     }
 
     return `
-      ProgramSequencer.playTogether();
-      RandomSkipManager.beginRandomContext(${resultArray.length});
+      Sequencer.playTogether();
+      Sequencer.startRandom(${resultArray.length});
       ${code}
-      ProgramSequencer.endTogether();
-      RandomSkipManager.endRandomContext();
+      Sequencer.endRandom();
+      Sequencer.endTogether();
       `;
   },
 };
@@ -443,9 +377,9 @@ export const repeatSimple2 = {
       '}\n';
 
     return `
-      ProgramSequencer.playSequential();
+      Sequencer.playSequential();
       ${code}
-      ProgramSequencer.endSequential();
+      Sequencer.endSequential();
       `;
   },
 };

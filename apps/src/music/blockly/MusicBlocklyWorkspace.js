@@ -6,7 +6,7 @@ import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
 import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
+import {BlockMode, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
@@ -403,11 +403,11 @@ export default class MusicBlocklyWorkspace {
   }
 
   // Get the project manager for the current storage type.
-  // If no storage type is specified in AppConfig, use local storage.
+  // If no storage type is specified in AppConfig, use remote storage.
   getProjectManager(appOptions) {
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
-      storageType = LOCAL_STORAGE;
+      storageType = REMOTE_STORAGE;
     }
     storageType = storageType.toLowerCase();
 

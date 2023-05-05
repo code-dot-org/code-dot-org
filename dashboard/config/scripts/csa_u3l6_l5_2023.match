@@ -14,3 +14,4 @@ answer 'a copy of the value is given to where the method is called'
 
 question 'reference type'
 answer 'a data type that contains a pointer to the memory location of an object'
+allow_multiple_attempts true
