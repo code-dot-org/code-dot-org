@@ -267,9 +267,11 @@ Dashboard::Application.routes.draw do
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
       end
     end
-
-    # Get or create a project for the given level_id
-    get 'projects/for_level/:level_id', to: 'projects#get_or_create_for_level'
+    # Get or create a project for the given level_id.
+    get "projects/level/:level_id", to: 'projects#get_or_create_for_level'
+    # Get or create a project for the given script and level. script_id should be the name
+    # of the script.
+    get "projects/s/:script_id/level/:level_id", to: 'projects#get_or_create_for_script_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
