@@ -1,4 +1,5 @@
 name 'CSA U6L1-L3_2023'
+allow_multiple_attempts true
 title 'Check for Understanding'
 
 wrong '`/* Precondition: index > numbers.length */`'
@@ -6,8 +7,6 @@ wrong '`/* Precondition: index >= numbers.length */`'
 right '`/* Precondition: 0 <= index <= numbers.length - 1 */`'
 wrong '`/* Precondition: 0 < index < numbers.length - 1 */`'
 wrong '`/* Precondition: 0 <= index <= numbers.length */`'
-
-allow_multiple_attempts nil
 
 markdown <<MARKDOWN
 The following method is intended to return an `int` containing the element at position `index` in the array `numbers`. For example, if `numbers` contains `[1, 2, 3, 4, 5]`, then `getValue(numbers, 3)` should return `4`.

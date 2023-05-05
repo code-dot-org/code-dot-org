@@ -195,7 +195,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
-  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :redirect
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :teacher, response: :forbidden
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success

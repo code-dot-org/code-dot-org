@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A student writing a research paper needs to check their spelling before submitting it to their teacher.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Essay</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkSpelling()</code> method that takes a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> parameter representing the word to be checked, and checks if the word is spelled correctly.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">EssayRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkSpelling()</code> method and print the result.",
+    "long_instructions": "A student writing a research paper needs to check their spelling before submitting it to their teacher.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Essay</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkSpelling()</code> method that takes a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> parameter representing the word to be checked. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkSpelling()</code> method should:\r\n\r\n1. Traverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dictionary</code> list.\r\n\r\n2. Compare each letter of a word in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dictionary</code> list to each letter of the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">wordToCheck</code>.\r\n\r\n3. Return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if each letter of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">wordToCheck</code> matches each letter of a word in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dictionary</code> list, otherwise return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code> if no matches are found.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">EssayRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkSpelling()</code> method and print the result.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,18 +14,18 @@
         "tabOrder": 0
       }
     },
-    "encrypted_examples": [
-
-    ],
     "display_name": "Spell Checker",
     "bubble_choice_description": "A student writing a research paper needs to check their spelling before submitting it to their teacher.",
-    "thumbnail_url": "https://images.code.org/e658d98bf401010d87fc3f48c5c5b5e9-contract.png"
+    "thumbnail_url": "https://images.code.org/e658d98bf401010d87fc3f48c5c5b5e9-contract.png",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-03T14:09:15.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-03T14:09:15.653+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L7a_2023\\\"\"],\"cloned_from\":\"CSA U6L6-L7a_2023\"},{\"changed_at\":\"2023-04-03 14:09:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 23:28:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-03T14:09:15.653+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L7a_2023\\\"\"],\"cloned_from\":\"CSA U6L6-L7a_2023\"},{\"changed_at\":\"2023-04-03 14:09:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 23:28:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-05 00:49:07 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-05 01:06:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

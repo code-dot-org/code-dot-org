@@ -7,7 +7,7 @@ wrong '`[22032, 30351, 24301]`'
 right '`[22032, 30351]`'
 wrong '`[22032, 24301]`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is printed as a result of the following code segment?
