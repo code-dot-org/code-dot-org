@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A movie theater needs to keep track of the movies showing at the theater. They currently have two 1D arrays to store the titles and showtimes of the movies, and they need to convert these to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code>s to make it easier to add and remove movies.\r\n\r\n✅ **TO DO #1:** Refactor the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Theater</code> class to use an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> for the list of movies instead of a 1D array.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Theater</code> object and print the list of movies.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Movie Theater",
+    "bubble_choice_description": "A movie theater needs to keep track of the movies showing at the theater. They currently have two 1D arrays to store the titles and showtimes of the movies, and they need to convert these to `ArrayList`s.",
+    "thumbnail_url": "https://images.code.org/a7727575f0e4895b222bb03c6d722f25-watching-a-movie.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T15:50:43.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T15:50:43.812+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L6b_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L6b_2023\"},{\"changed_at\":\"2023-04-03 15:50:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 12:08:50 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

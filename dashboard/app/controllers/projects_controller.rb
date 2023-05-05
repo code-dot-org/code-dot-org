@@ -25,6 +25,9 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
   # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
+    adaptations: {
+      name: 'New Adaptations Project'
+    },
     artist: {
       name: 'New Artist Project',
       i18n: true
@@ -162,6 +165,9 @@ class ProjectsController < ApplicationController
     science: {
       name: 'New Science Project'
     },
+    time_capsule: {
+      name: 'New Time Capsule Project'
+    }
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
@@ -275,6 +281,21 @@ class ProjectsController < ApplicationController
       channel_id: channel,
       enableMaker: params['enableMaker'] ? true : nil
     )
+  end
+
+  # GET /projects/for_level/:level_id
+  # Given a level_id and the current user (or signed out user), get the existing project
+  # or create a new project for that level and user.
+  # Returns json: {channel: <encrypted-channel-token>}
+  def get_or_create_for_level
+    level = Level.find(params[:level_id])
+    return if redirect_under_13_without_tos_teacher(level)
+    # get_storage_id works for signed out users as well, it uses the cookie to determine
+    # the storage id.
+    user_storage_id = get_storage_id
+    # Find the channel for the user and level if it exists, or create a new one.
+    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, nil, {hidden: true})
+    render(status: :ok, json: {channel: channel_token.channel})
   end
 
   def weblab_footer
@@ -392,6 +413,8 @@ class ProjectsController < ApplicationController
       return head :bad_request
     end
     project_type = params[:key]
+    return head :forbidden if Projects.in_restricted_share_mode(src_channel_id, project_type)
+
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       Projects.new(get_storage_id),
@@ -412,7 +435,12 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
   end
 
   private def uses_file_bucket?(project_type)
@@ -472,12 +500,10 @@ class ProjectsController < ApplicationController
     !project_validator && limited_project_gallery
   end
 
-  private
-
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.
   # @returns [String] A string representing the project view event type.
-  def project_view_event_type(iframe_embed, sharing)
+  private def project_view_event_type(iframe_embed, sharing)
     if iframe_embed
       'iframe_embed'
     elsif sharing
@@ -487,7 +513,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def get_from_cache(key)
+  private def get_from_cache(key)
     if Unit.should_cache?
       @@project_level_cache[key] ||= Level.find_by_key(key)
     else
@@ -496,7 +522,7 @@ class ProjectsController < ApplicationController
   end
 
   # For certain actions, check a special permission before proceeding.
-  def authorize_load_project!
+  private def authorize_load_project!
     authorize! :load_project, params[:key]
   end
 

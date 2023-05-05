@@ -18,7 +18,7 @@ export default class Assigned extends Component {
 
 const styles = {
   checkmark: {
-    padding: 5
+    padding: 5,
   },
   assigned: {
     color: color.level_perfect,
@@ -28,6 +28,6 @@ const styles = {
     marginLeft: 10,
     verticalAlign: 'top',
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

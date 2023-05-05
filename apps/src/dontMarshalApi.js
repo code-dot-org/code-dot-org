@@ -1,7 +1,7 @@
 import {
   OPTIONAL,
   apiValidateType,
-  outputWarning
+  outputWarning,
 } from './lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -73,7 +73,7 @@ function dmapiValidateType(_, funcName, varName, varValue, expectedType, opt) {
 
 // Array functions
 
-var getInt = function(obj, def, calledWithinInterpreter) {
+var getInt = function (obj, def, calledWithinInterpreter) {
   // Return an integer, or the default.
   let n;
   if (calledWithinInterpreter) {
@@ -337,7 +337,7 @@ const interpreterFunctions = {
   setGreen: interpreterSetGreen,
   setBlue: interpreterSetBlue,
   setAlpha: interpreterSetAlpha,
-  setRGB: interpreterSetRGB
+  setRGB: interpreterSetRGB,
 };
 
 export default interpreterFunctions;

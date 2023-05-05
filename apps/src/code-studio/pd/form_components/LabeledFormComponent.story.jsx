@@ -19,7 +19,7 @@ class CheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {checkBoxesWithOther: 'Select options and add text'};
   render = () =>
     this.checkBoxesWithAdditionalTextFieldsFor('checkBoxesWithOther', {
-      [OTHER]: 'other'
+      [OTHER]: 'other',
     });
 }
 
@@ -32,13 +32,13 @@ class RadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {radioButtonsWithOther: 'Select an option and add text'};
   render = () =>
     this.checkBoxesWithAdditionalTextFieldsFor('radioButtonsWithOther', {
-      [OTHER]: 'other'
+      [OTHER]: 'other',
     });
 }
 
 class DynamicRadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {
-    dynamicRadioButtonsWithOther: 'Select a dynamic option and add text'
+    dynamicRadioButtonsWithOther: 'Select a dynamic option and add text',
   };
   render = () =>
     this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
@@ -59,7 +59,7 @@ class DynamicCheckboxesComponent extends LabeledFormComponent {
 
 class DynamicCheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
   static labels = {
-    dynamicCheckboxesWithOther: 'Select a dynamic option and add text'
+    dynamicCheckboxesWithOther: 'Select a dynamic option and add text',
   };
   render = () =>
     this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
@@ -95,7 +95,7 @@ export default storybook => {
     errorMessages: {},
     data: {},
     options: {},
-    onChange: action('onChange')
+    onChange: action('onChange'),
   };
 
   storybook
@@ -104,7 +104,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Single Checkbox',
-        story: () => <SingleCheckboxComponent {...defaultProps} />
+        story: () => <SingleCheckboxComponent {...defaultProps} />,
       },
       {
         name: 'Checkboxes',
@@ -112,10 +112,10 @@ export default storybook => {
           <CheckboxesComponent
             {...defaultProps}
             options={{
-              checkBoxes: ['option 1', 'option 2', 'option 3']
+              checkBoxes: ['option 1', 'option 2', 'option 3'],
             }}
           />
-        )
+        ),
       },
       {
         name: 'CheckboxesWithAdditionalFields',
@@ -123,10 +123,10 @@ export default storybook => {
           <CheckboxesWithAdditionalTextComponent
             {...defaultProps}
             options={{
-              checkBoxesWithOther: ['option 1', 'option 2', OTHER]
+              checkBoxesWithOther: ['option 1', 'option 2', OTHER],
             }}
           />
-        )
+        ),
       },
       {
         name: 'RadioButtons',
@@ -134,10 +134,10 @@ export default storybook => {
           <RadioButtonsComponent
             {...defaultProps}
             options={{
-              radioButtons: ['option 1', 'option 2', 'option 3']
+              radioButtons: ['option 1', 'option 2', 'option 3'],
             }}
           />
-        )
+        ),
       },
       {
         name: 'RadioButtonsWithAdditionalFields',
@@ -145,26 +145,26 @@ export default storybook => {
           <RadioButtonsWithAdditionalTextComponent
             {...defaultProps}
             options={{
-              radioButtonsWithOther: ['option 1', 'option 2', OTHER]
+              radioButtonsWithOther: ['option 1', 'option 2', OTHER],
             }}
           />
-        )
+        ),
       },
       {
         name: 'DynamicRadioButtonsWithAdditionalFields',
         story: () => (
           <DynamicRadioButtonsWithAdditionalTextComponent {...defaultProps} />
-        )
+        ),
       },
       {
         name: 'DynamicCheckboxes',
-        story: () => <DynamicCheckboxesComponent {...defaultProps} />
+        story: () => <DynamicCheckboxesComponent {...defaultProps} />,
       },
       {
         name: 'DynamicCheckboxesWithAdditionalFields',
         story: () => (
           <DynamicCheckboxesWithAdditionalTextComponent {...defaultProps} />
-        )
+        ),
       },
       {
         name: 'Select',
@@ -172,22 +172,22 @@ export default storybook => {
           <SelectComponent
             {...defaultProps}
             options={{
-              select: ['option 1', 'option 2', 'option 3']
+              select: ['option 1', 'option 2', 'option 3'],
             }}
           />
-        )
+        ),
       },
       {
         name: 'Input',
-        story: () => <InputComponent {...defaultProps} />
+        story: () => <InputComponent {...defaultProps} />,
       },
       {
         name: 'LargeInput',
-        story: () => <LargeInputComponent {...defaultProps} />
+        story: () => <LargeInputComponent {...defaultProps} />,
       },
       {
         name: 'UsPhoneNumber',
-        story: () => <UsPhoneNumberComponent {...defaultProps} />
-      }
+        story: () => <UsPhoneNumberComponent {...defaultProps} />,
+      },
     ]);
 };

@@ -1,3 +1,5 @@
+import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+
 export const SENSOR_CHANNELS = {
   accelX: 8,
   accelY: 9,
@@ -5,7 +7,7 @@ export const SENSOR_CHANNELS = {
   lightSensor: 11,
   tempSensor: 12,
   magX: 13,
-  magY: 14
+  magY: 14,
 };
 export const EXTERNAL_PINS = [0, 1, 2];
 
@@ -29,7 +31,7 @@ export const MB_COMPONENTS = [
   'LightSensor',
   'ExternalButton',
   'ExternalLed',
-  'CapacitiveTouchSensor'
+  'CapacitiveTouchSensor',
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
@@ -50,7 +52,7 @@ const SENSOR_EVENTS = ['change', 'data'];
 export const MB_COMPONENT_EVENTS = {
   buttonA: BUTTON_EVENTS,
   buttonB: BUTTON_EVENTS,
-  accelerometer: ['change', 'data', 'shake']
+  accelerometer: ['change', 'data', 'shake'],
 };
 MB_SENSOR_VARS.forEach(sensor => (MB_COMPONENT_EVENTS[sensor] = SENSOR_EVENTS));
 
@@ -72,7 +74,7 @@ export const SQUARE_LEDS = [
   [4, 0],
   [3, 0],
   [2, 0],
-  [1, 0]
+  [1, 0],
 ];
 
 export const CHECKMARK_LEDS = [
@@ -82,7 +84,7 @@ export const CHECKMARK_LEDS = [
   [3, 1],
   [4, 0],
   [0, 2],
-  [0, 3]
+  [0, 3],
 ];
 
 let allLeds = [];
@@ -92,3 +94,16 @@ for (let i = 0; i < 5; i++) {
   }
 }
 export const ALL_LEDS = allLeds;
+
+export const MICROBIT_FIRMATA_V1_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v1-ver1.2.hex`;
+export const MICROBIT_FIRMATA_V2_URL = `${DOWNLOAD_PREFIX}microbit-firmata-v2-ver1.2.hex`;
+export const MICROBIT_IDS_V1 = ['9900', '9901'];
+export const MICROBIT_IDS_V2 = ['9903', '9904', '9905', '9906'];
+export const MICROBIT_V1 = 'v1';
+export const MICROBIT_V2 = 'v2';
+
+// Any USB device (including a micro:bit) will identify itself on connection to the
+// host computer through three numbers: Vendor ID, Product ID, and serial number.
+// We check if the connected board is a micro:bit with the following constants.
+export const MICROBIT_VENDOR_ID = 0x0d28;
+export const MICROBIT_PRODUCT_ID = 0x0204;

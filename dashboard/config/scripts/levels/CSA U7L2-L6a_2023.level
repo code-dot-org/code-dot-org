@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class represents a sponsor of a school club and has instance variables for the name of the sponsor and the list of club members.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> class represents a member of a school club and has instance variables for the name of the club member and the number of community service hours the club member has.\r\n\r\nA club sponsor needs to add service hours to the members of the school club.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> class to add a specified number of hours to a club member. The method should:\r\n\r\n* Have parameters for a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object and the number of hours to add\r\n\r\n* Add the specified number of hours to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubMember</code> object's current service hours\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addServiceHours()</code> method to add hours to one or more of the club members and print the updated <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClubSponsor</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with using object references as parameters.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/object-references-as-parameters"
+    ],
+    "display_name": "School Club",
+    "bubble_choice_description": "A club sponsor needs to add service hours to the members of the school club. Write a method to add hours to a member of a school club.",
+    "thumbnail_url": "https://images.code.org/e97cd19f35028d0042d2b252a0811754-public-service.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T13:56:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:56:12.282+00:00\",\"changed\":[\"cloned from \\\"CSA U7L8-L1_2023\\\"\"],\"cloned_from\":\"CSA U7L8-L1_2023\"},{\"changed_at\":\"2023-04-11 13:56:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 13:38:56 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 14:37:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

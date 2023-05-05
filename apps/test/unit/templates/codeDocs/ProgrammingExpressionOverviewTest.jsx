@@ -21,16 +21,16 @@ describe('ProgrammingExpressionOverview', () => {
           name: 'param1',
           type: 'string',
           required: true,
-          description: 'description'
+          description: 'description',
         },
-        {name: 'param2'}
+        {name: 'param2'},
       ],
       examples: [
         {
           name: 'Example 1',
-          description: 'the first example'
-        }
-      ]
+          description: 'the first example',
+        },
+      ],
     };
   });
 
@@ -50,32 +50,20 @@ describe('ProgrammingExpressionOverview', () => {
       'Parameters',
       'Returns',
       'Tips',
-      'Additional Information'
+      'Additional Information',
     ]);
 
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal(defaultProgrammingExpression.content);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.contain(defaultProgrammingExpression.syntax);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(2)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
     ).to.equal(defaultProgrammingExpression.tips);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(3)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown
     ).to.contain(defaultProgrammingExpression.externalDocumentation);
 
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.category);
@@ -156,7 +144,7 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={{
           ...defaultProgrammingExpression,
           blockName: 'gamelab_location_picker',
-          imageUrl: 'images.code.org/img'
+          imageUrl: 'images.code.org/img',
         }}
       />
     );
@@ -172,7 +160,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          imageUrl: 'images.code.org/img'
+          imageUrl: 'images.code.org/img',
         }}
       />
     );
@@ -195,7 +183,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: [355, '.7', '.7']
+          color: [355, '.7', '.7'],
         }}
       />
     );
@@ -209,7 +197,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: '#fff176'
+          color: '#fff176',
         }}
       />
     );
@@ -223,7 +211,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: null
+          color: null,
         }}
       />
     );

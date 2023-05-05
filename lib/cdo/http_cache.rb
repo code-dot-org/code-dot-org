@@ -40,6 +40,8 @@ class HttpCache
     'offline_pilot',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
+    # Feature flag for the Colorado Privacy Act (CPA)
+    'cpa_experience',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
@@ -167,8 +169,6 @@ class HttpCache
             # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
               /amazon-future-engineer*
-              /create-company-profile*
-              /edit-company-profile*
               /review-hociyskvuwa*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*

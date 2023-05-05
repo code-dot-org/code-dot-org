@@ -241,6 +241,7 @@ mr:
         CSA-PL-Printing-in-Java: जावा मध्ये प्रिंटिंग
         CSA-PL-multi-selection-statements: मल्टी सिलेक्शन स्टेटमेंट्स
         CS_Changing_Everything: संगणक शास्त्रामुळे सगळे काही बदलत आहे
+        csd_sprite_properties: स्प्राईट प्रॉपर्टीज
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

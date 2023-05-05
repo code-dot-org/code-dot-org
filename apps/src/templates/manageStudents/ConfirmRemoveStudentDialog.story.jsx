@@ -1,11 +1,11 @@
 import React from 'react';
 import ConfirmRemoveStudentDialog, {
-  MINIMUM_TEST_PROPS
+  MINIMUM_TEST_PROPS,
 } from './ConfirmRemoveStudentDialog';
 
 export default {
   title: 'ManageStudents/ConfirmRemoveStudentDialog',
-  component: ConfirmRemoveStudentDialog
+  component: ConfirmRemoveStudentDialog,
 };
 
 const Template = args => (
@@ -18,16 +18,16 @@ const Template = args => (
 
 export const NeverSignedInStudent = Template.bind({});
 NeverSignedInStudent.args = {
-  hasEverSignedIn: false
+  hasEverSignedIn: false,
 };
 
 export const EverSignedInStudent = Template.bind({});
 EverSignedInStudent.args = {
-  hasEverSignedIn: true
+  hasEverSignedIn: true,
 };
 
 export const SectionSignedInStudent = Template.bind({});
 SectionSignedInStudent.args = {
   hasEverSignedIn: true,
-  dependsOnThisSectionForLogin: true
+  dependsOnThisSectionForLogin: true,
 };

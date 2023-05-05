@@ -3,7 +3,7 @@ import {UnconnectedControlProjectSharingDialog as ControlProjectSharingDialog} f
 
 export default {
   title: 'ManageStudents/ControlProjectSharingDialog',
-  component: ControlProjectSharingDialog
+  component: ControlProjectSharingDialog,  
 };
 
 const Template = args => (

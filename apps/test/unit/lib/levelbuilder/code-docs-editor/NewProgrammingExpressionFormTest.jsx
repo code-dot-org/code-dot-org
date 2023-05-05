@@ -9,7 +9,7 @@ describe('NewProgrammingExpressionForm', () => {
       <NewProgrammingExpressionForm
         programmingEnvironmentsForSelect={[
           {id: 1, name: 'gamelab'},
-          {id: 2, name: 'spritelab'}
+          {id: 2, name: 'spritelab'},
         ]}
       />
     );

@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A survey company needs to keep track of responses to a survey. They currently have a 1D array to store the responses, and they need to convert it to an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> to make it easier for more people to respond.\r\n\r\n✅ **TO DO #1:** Refactor the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Survey</code> class to use an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> for the list of responses instead of a 1D array.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SurveyRunner</code> class, create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Survey</code> object and print the list of responses.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Survey Responses",
+    "bubble_choice_description": "A survey company needs to keep track of responses to a survey. They currently have a 1D array to store the responses, and they need to convert it to an `ArrayList` to make it easier for more people to respond.",
+    "thumbnail_url": "https://images.code.org/50b5e438c55ac6dc20172f6f245e2033-completed-task.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T15:50:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T15:50:35.260+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L6a_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L6a_2023\"},{\"changed_at\":\"2023-04-03 15:50:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 12:08:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

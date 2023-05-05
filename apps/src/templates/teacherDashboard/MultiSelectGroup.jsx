@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
@@ -8,39 +8,42 @@ import styles from './multi-select-group.module.scss';
 // NOTE: The `name` will show up in the DOM with an appended `[]`, so Rails
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
-// For an example of `values` format, see this component's storybook file.
+// You probably want `values` to start out as an empty array.
 export default function MultiSelectGroup({
   label,
   name,
   required,
   options,
   values,
-  setValues
+  setValues,
 }) {
   const inputName = `${name}[]`;
 
   return (
     <div className={styles.multiSelectGroup}>
       <fieldset>
-        <label>{label}</label>
+        <label className={styles.typographyLabel}>{label}</label>
         {options.map(option => (
           <MultiSelectButton
             label={option.label}
             name={inputName}
             value={option.value}
             key={option.value}
-            checked={values[option.value]}
+            checked={values.includes(option.value)}
             // The child's `required` prop will be set to `false` if the
             // Group's `required` prop is falsy. It will be set to `true` if
             // the Group's `required` prop is truthy AND none of the options
             // are `checked`, or `false` if at least one of the options is
             // `checked`.
-            required={required ? !Object.values(values).some(v => !!v) : false}
+            required={required ? values.length === 0 : false}
             onCheckedChange={checked => {
-              setValues({
-                ...values,
-                [option.value]: checked
-              });
+              if (checked) {
+                // Add this value to the `values` array.
+                setValues(_.uniq([...values, option.value]));
+              } else {
+                // Remove this value from the `values` array.
+                setValues(values.filter(v => v !== option.value));
+              }
             }}
           />
         ))}
@@ -55,9 +58,19 @@ function MultiSelectButton({
   value,
   checked,
   required,
-  onCheckedChange
+  onCheckedChange,
 }) {
-  const uniqueId = _.uniqueId();
+  const uniqueId = `multi-${_.uniqueId()}`;
+
+  useEffect(() => {
+    // Reset validity on every render so it gets checked again.
+    // Otherwise, removing the `required` attribute doesn't work as expected.
+    const input = document.querySelector(`input#${uniqueId}`);
+    if (input) {
+      input.setCustomValidity('');
+    }
+  });
+
   return (
     <div>
       <input
@@ -84,8 +97,8 @@ MultiSelectGroup.propTypes = {
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
-  values: PropTypes.object.isRequired,
-  setValues: PropTypes.func.isRequired
+  values: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setValues: PropTypes.func.isRequired,
 };
 
 MultiSelectButton.propTypes = {
@@ -94,5 +107,5 @@ MultiSelectButton.propTypes = {
   value: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
   required: PropTypes.bool.isRequired,
-  onCheckedChange: PropTypes.func.isRequired
+  onCheckedChange: PropTypes.func.isRequired,
 };

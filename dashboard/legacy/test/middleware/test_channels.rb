@@ -312,6 +312,28 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
+  def test_restricted_publish_permissions
+    # sprite lab projects require talking to S3
+    AWS::S3.stubs :create_client
+
+    # under 13 sharing enabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    stub_project_body(true)
+    # stubbed project has restricted share mode set to true, this means we cannot publish
+    assert_cannot_publish('spritelab')
+    stub_project_body(false)
+    # stubbed project has restricted share mode set to false, this means we can publish
+    assert_can_publish('spritelab')
+
+    SourceBucket.any_instance.unstub(:get)
+    AWS::S3.unstub(:create_client)
+  end
+
   def test_disable_and_enable_content_moderation
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -472,5 +494,11 @@ class ChannelsTest < Minitest::Test
   def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
+  end
+
+  def stub_project_body(should_restrict_share)
+    sample_project = StringIO.new
+    sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
+    SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 end

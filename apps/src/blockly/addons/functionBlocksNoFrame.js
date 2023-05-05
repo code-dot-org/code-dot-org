@@ -4,7 +4,7 @@
  * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/blocks/procedures.js#L449-L490
  */
 export const FUNCTION_BLOCK_NO_FRAME = {
-  init: function() {
+  init: function () {
     const initName = Blockly.Procedures.findLegalName('', this);
     const nameField = new Blockly.FieldTextInput(
       initName,
@@ -20,5 +20,5 @@ export const FUNCTION_BLOCK_NO_FRAME = {
     this.argumentVarModels_ = [];
     this.setStatements_(true);
     this.statementConnection_ = null;
-  }
+  },
 };

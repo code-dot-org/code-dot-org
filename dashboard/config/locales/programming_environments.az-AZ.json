@@ -1645,7 +1645,7 @@
                 "timedLoop": {
                   "examples": {
                     "Seconds Elapsed": {
-                      "name": "Saniyələr keçdi"
+                      "name": "saniyə keçdi"
                     }
                   },
                   "palette_params": {
@@ -2377,6 +2377,54 @@
                 },
                 "toggleSwitch.isOpen": {
                   "return_value": "Boolean"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Nömrə"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Simli"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nömrə"
+                    },
+                    "y": {
+                      "type": "Nömrə"
+                    }
+                  }
                 }
               }
             }

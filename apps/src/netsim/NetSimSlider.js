@@ -48,7 +48,7 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  * @param {boolean} [options.isDisabled] - if TRUE the slider value is locked
  *        and cannot be changed.
  */
-var NetSimSlider = (module.exports = function(rootDiv, options) {
+var NetSimSlider = (module.exports = function (rootDiv, options) {
   /**
    * Unique instance ID for this panel, in case we have several
    * of them on a page.
@@ -70,7 +70,7 @@ var NetSimSlider = (module.exports = function(rootDiv, options) {
    * @type {function}
    * @private
    */
-  this.changeCallback_ = utils.valueOr(options.onChange, function() {});
+  this.changeCallback_ = utils.valueOr(options.onChange, function () {});
 
   /**
    * A function invoked only when the slider-handle is released by the student.
@@ -78,7 +78,7 @@ var NetSimSlider = (module.exports = function(rootDiv, options) {
    * @type {function}
    * @private
    */
-  this.stopCallback_ = utils.valueOr(options.onStop, function() {});
+  this.stopCallback_ = utils.valueOr(options.onStop, function () {});
 
   /**
    * @type {number}
@@ -146,14 +146,14 @@ NetSimSlider.uniqueIDCounter = 0;
  * @returns {boolean} TRUE if the step value is less than zero.
  * @private
  */
-NetSimSlider.prototype.isStepNegative_ = function() {
+NetSimSlider.prototype.isStepNegative_ = function () {
   return this.step_ < 0;
 };
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimSlider.prototype.render = function() {
+NetSimSlider.prototype.render = function () {
   var minValue = this.isLowerBoundInfinite_ ? -Infinity : this.minValue_;
   var maxValue = this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
   var minPosition = this.valueToSliderPosition(
@@ -171,7 +171,7 @@ NetSimSlider.prototype.render = function() {
       ),
       maxValue: this.valueToShortLabel(
         this.isStepNegative_() ? minValue : maxValue
-      )
+      ),
     })
   );
   this.rootDiv_.html(renderedMarkup);
@@ -183,7 +183,7 @@ NetSimSlider.prototype.render = function() {
     step: Math.abs(this.step_),
     slide: this.onSliderValueChange_.bind(this),
     stop: this.onSliderStop_.bind(this),
-    disabled: this.isDisabled_
+    disabled: this.isDisabled_,
   });
 
   // Use wider labels if we have an infinite bound
@@ -197,7 +197,7 @@ NetSimSlider.prototype.render = function() {
 /**
  * Disable this slider, so the user can't change its value
  */
-NetSimSlider.prototype.disable = function() {
+NetSimSlider.prototype.disable = function () {
   this.isDisabled_ = true;
   this.rootDiv_.find('.slider').slider('option', 'disabled', true);
 };
@@ -205,7 +205,7 @@ NetSimSlider.prototype.disable = function() {
 /**
  * Enable this slider, so the user can change its value
  */
-NetSimSlider.prototype.enable = function() {
+NetSimSlider.prototype.enable = function () {
   this.isDisabled_ = false;
   this.rootDiv_.find('.slider').slider('option', 'disabled', false);
 };
@@ -214,7 +214,7 @@ NetSimSlider.prototype.enable = function() {
  * External access to set the value of the slider.
  * @param {number} newValue
  */
-NetSimSlider.prototype.setValue = function(newValue) {
+NetSimSlider.prototype.setValue = function (newValue) {
   if (this.value_ === newValue) {
     return;
   }
@@ -227,7 +227,7 @@ NetSimSlider.prototype.setValue = function(newValue) {
 };
 
 /** @private */
-NetSimSlider.prototype.onSliderValueChange_ = function(event, ui) {
+NetSimSlider.prototype.onSliderValueChange_ = function (event, ui) {
   var newValue = this.sliderPositionToValue(ui.value);
   this.value_ = newValue;
   this.setLabelFromValue_(newValue);
@@ -235,7 +235,7 @@ NetSimSlider.prototype.onSliderValueChange_ = function(event, ui) {
 };
 
 /** @private */
-NetSimSlider.prototype.onSliderStop_ = function() {
+NetSimSlider.prototype.onSliderStop_ = function () {
   this.stopCallback_(this.value_);
 };
 
@@ -244,7 +244,7 @@ NetSimSlider.prototype.onSliderStop_ = function() {
  * @param {number} val - slider value to display
  * @private
  */
-NetSimSlider.prototype.setLabelFromValue_ = function(val) {
+NetSimSlider.prototype.setLabelFromValue_ = function (val) {
   this.rootDiv_.find('.slider-value').text(this.valueToLabel(val));
 };
 
@@ -254,7 +254,7 @@ NetSimSlider.prototype.setLabelFromValue_ = function(val) {
  * @param {number} val - external-facing value
  * @returns {number} - internal slider value
  */
-NetSimSlider.prototype.valueToSliderPosition = function(val) {
+NetSimSlider.prototype.valueToSliderPosition = function (val) {
   if (this.isUpperBoundInfinite_ && val > this.maxValue_) {
     return this.valueToSliderPosition(this.maxValue_) + this.step_;
   } else if (this.isLowerBoundInfinite_ && val < this.minValue_) {
@@ -273,7 +273,7 @@ NetSimSlider.prototype.valueToSliderPosition = function(val) {
  * @param {number} pos - internal slider value
  * @returns {number} - external-facing value
  */
-NetSimSlider.prototype.sliderPositionToValue = function(pos) {
+NetSimSlider.prototype.sliderPositionToValue = function (pos) {
   if (this.isStepNegative_()) {
     if (pos < this.valueToSliderPosition(this.maxValue_)) {
       return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
@@ -297,7 +297,7 @@ NetSimSlider.prototype.sliderPositionToValue = function(pos) {
  * @param {number} val - numeric value of the control
  * @returns {string} - localized string representation of value
  */
-NetSimSlider.prototype.valueToLabel = function(val) {
+NetSimSlider.prototype.valueToLabel = function (val) {
   if (val === Infinity || val === -Infinity) {
     return i18n.unlimited();
   }
@@ -309,7 +309,7 @@ NetSimSlider.prototype.valueToLabel = function(val) {
  * @param {number} val - numeric value of the control
  * @returns {string} - localized string representation of value
  */
-NetSimSlider.prototype.valueToShortLabel = function(val) {
+NetSimSlider.prototype.valueToShortLabel = function (val) {
   return this.valueToLabel(val);
 };
 
@@ -325,7 +325,7 @@ NetSimSlider.prototype.valueToShortLabel = function(val) {
  *        step value).  Default 2.
  * @constructor
  */
-NetSimSlider.DecimalPrecisionSlider = function(rootDiv, options) {
+NetSimSlider.DecimalPrecisionSlider = function (rootDiv, options) {
   /**
    * Number of decimal places of precision added to the default slider
    * functionality.
@@ -347,7 +347,7 @@ NetSimSlider.DecimalPrecisionSlider.inherits(NetSimSlider);
  * @returns {number} - internal slider value
  * @override
  */
-NetSimSlider.DecimalPrecisionSlider.prototype.valueToSliderPosition = function(
+NetSimSlider.DecimalPrecisionSlider.prototype.valueToSliderPosition = function (
   val
 ) {
   // Use clamping from parent class, which should be applied before our transform.
@@ -363,7 +363,7 @@ NetSimSlider.DecimalPrecisionSlider.prototype.valueToSliderPosition = function(
  * @returns {number} - external-facing value
  * @override
  */
-NetSimSlider.DecimalPrecisionSlider.prototype.sliderPositionToValue = function(
+NetSimSlider.DecimalPrecisionSlider.prototype.sliderPositionToValue = function (
   pos
 ) {
   // Use clamping from parent class, which should be applied before our transform.
@@ -396,7 +396,7 @@ var LOGARITHMIC_DEFAULT_BASE = 2;
  * @constructor
  * @augments NetSimSlider
  */
-NetSimSlider.LogarithmicSlider = function(rootDiv, options) {
+NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
   options.min = utils.valueOr(options.min, LOGARITHMIC_DEFAULT_MIN_VALUE);
   NetSimSlider.call(this, rootDiv, options);
 
@@ -423,7 +423,7 @@ NetSimSlider.LogarithmicSlider.inherits(NetSimSlider);
  * boundary values once and use them later.
  * @private
  */
-NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function() {
+NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function () {
   // Pick boundary slider values
   this.maxSliderPosition = this.logFloor_(this.maxValue_);
   // Add a step if we don't already land exactly on a step, to
@@ -446,7 +446,7 @@ NetSimSlider.LogarithmicSlider.prototype.calculateSliderBounds_ = function() {
  * @returns {number}
  * @private
  */
-NetSimSlider.LogarithmicSlider.prototype.logFloor_ = function(val) {
+NetSimSlider.LogarithmicSlider.prototype.logFloor_ = function (val) {
   // JavaScript floating-point math causes this logarithm calculation to
   // sometimes return slightly imprecise values. For example:
   // log(1000) / log(10) === 2.9999999999999996
@@ -469,7 +469,9 @@ NetSimSlider.LogarithmicSlider.prototype.logFloor_ = function(val) {
  * @returns {number} - internal slider value
  * @override
  */
-NetSimSlider.LogarithmicSlider.prototype.valueToSliderPosition = function(val) {
+NetSimSlider.LogarithmicSlider.prototype.valueToSliderPosition = function (
+  val
+) {
   if (val > this.maxValue_) {
     return this.isUpperBoundInfinite_
       ? this.infinitySliderPosition
@@ -494,7 +496,9 @@ NetSimSlider.LogarithmicSlider.prototype.valueToSliderPosition = function(val) {
  * @returns {number} - external-facing value
  * @override
  */
-NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function(pos) {
+NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (
+  pos
+) {
   if (pos > this.maxSliderPosition) {
     return this.isUpperBoundInfinite_ ? Infinity : this.maxValue_;
   } else if (pos === this.maxSliderPosition) {

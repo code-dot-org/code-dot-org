@@ -71,6 +71,7 @@ class CourseVersion < ApplicationRecord
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
   delegate :included_in_units?, to: :content_root, allow_nil: true
+  delegate :link, to: :content_root, allow_nil: false
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
@@ -184,20 +185,6 @@ class CourseVersion < ApplicationRecord
     ]
   end
 
-  def summarize_for_quick_assign(user, locale_code)
-    {
-      id: id,
-      key: key,
-      version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
-      name: content_root.localized_title,
-      path: content_root.link,
-      type: content_root_type,
-      is_stable: stable?,
-      is_recommended: recommended?(locale_code),
-      locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names
-    }
-  end
-
   def self.unit_group_course_versions_with_units(unit_ids)
     CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
@@ -214,6 +201,6 @@ class CourseVersion < ApplicationRecord
   end
 
   def hoc?
-    course_offering&.category == 'hoc'
+    !!course_offering&.hoc?
   end
 end

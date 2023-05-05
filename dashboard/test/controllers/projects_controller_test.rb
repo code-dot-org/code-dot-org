@@ -25,7 +25,7 @@ class ProjectsControllerTest < ActionController::TestCase
     # them specific content.
     ProjectsController::STANDALONE_PROJECTS.each do |type, config|
       next if Level.exists?(name: config[:name])
-      factory = FactoryGirl.factories.registered?(type) ? type : :level
+      factory = FactoryBot.factories.registered?(type) ? type : :level
       create(factory, name: config[:name])
     end
 
@@ -376,5 +376,14 @@ class ProjectsControllerTest < ActionController::TestCase
     get :create_new, params: {key: 'applab', enableMaker: 'true'}
     assert_response :redirect
     assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
+  end
+
+  test 'get_or_create_for_level creates new channel if none exists' do
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {level_id: level.id}
+    assert_response :success
+    assert_not_nil @response.body['channel']
   end
 end

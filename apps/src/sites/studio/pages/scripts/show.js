@@ -4,26 +4,26 @@ import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import announcementsReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import plcHeaderReducer, {
-  setPlcHeader
+  setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import googlePlatformApi, {
-  loadGooglePlatformApi
+  loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {
   selectSection,
   setSections,
   setPageType,
-  pageTypes
+  pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import progress from '@cdo/apps/code-studio/progress';
@@ -134,6 +134,7 @@ function initPage() {
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
+        participantAudience={scriptData.participantAudience}
       />
     </Provider>,
     mountPoint
@@ -164,7 +165,7 @@ function initializeStoreWithSections(store, sections, currentSection) {
   if (idx >= 0) {
     sections[idx] = {
       ...sections[idx],
-      ...currentSection
+      ...currentSection,
     };
   }
   store.dispatch(setSections(sections));

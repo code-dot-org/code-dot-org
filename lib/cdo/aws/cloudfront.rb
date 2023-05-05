@@ -22,7 +22,7 @@ module AWS
     ).freeze
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
-    CACHE_INVALIDATION_MAX_RETRIES = 5
+    CACHE_INVALIDATION_MAX_RETRIES = 10
 
     # CloudFront distribution config (`pegasus` and `dashboard`):
     # - `aliases`: whitelist of domains this distribution will use (`*`-wildcards are allowed, e.g. `*.example.com`).

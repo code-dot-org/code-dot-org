@@ -2645,7 +2645,7 @@ bg-BG:
         questions:
         - text: Поле за въвеждане
         - {}
-        - {}
+        - text: Съхранение
         - {}
         title: Въпрос 2
       CSD U1 IOSP match_2021:
@@ -2657,7 +2657,7 @@ bg-BG:
         questions:
         - text: Поле за въвеждане
         - {}
-        - {}
+        - text: Съхранение
         - {}
         title: Въпрос 2
       CSD U1 IOSP match_2022:
@@ -2669,7 +2669,7 @@ bg-BG:
         questions:
         - text: Поле за въвеждане
         - {}
-        - {}
+        - text: Съхранение
         - {}
         title: Въпрос 2
       CSD U1 Test PSP match:

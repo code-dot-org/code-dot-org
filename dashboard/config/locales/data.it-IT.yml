@@ -880,7 +880,7 @@ it:
         hoc_dance_events_2019: Dance Party - Eventi
         hoc_dance_measures_2019: Ballando col codice - Battute
         hoc_dance_properties_2019: Dance Party - Proprietà
-        csd_what_computers_do: Cosa Fanno i Computer?
+        csd_what_computers_do: Cosa fanno i computer?
         csf_my_online_neighborhood_2020: Il mio quartiere digitale
         csf_follow_the_digital_trail: Segui le tue tracce digitali
         csf_private_and_personal_information: Dati personali e altri dati
@@ -892,8 +892,8 @@ it:
         codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice
           Keeler'
         codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
-        csd_how_teamwork_works: Come Funziona il Lavoro di Squadra
-        csd_teamwork_and_disagreement: Lavoro di Squadra - Affrontare il Disaccordo
+        csd_how_teamwork_works: Come funziona il lavoro di squadra
+        csd_teamwork_and_disagreement: Lavoro di squadra - Gestire i disaccordi
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
@@ -961,6 +961,7 @@ it:
         CSA-PL-conditionals: Istruzioni Condizionali in Java
         CSA-PL-Printing-in-Java: Stampa in Java
         CS_Changing_Everything: L'informatica sta cambiando ogni cosa
+        csd_sprite_properties: Proprietà del personaggio
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

@@ -18,3 +18,5 @@ z = y * 4 - (15 % x + z);
 
 What is the value of `z` after this code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

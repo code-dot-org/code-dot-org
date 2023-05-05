@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Stop word removal is the process of removing commonly used words from a list before or after processing text.\r\n\r\nA search engine wants to use stop word removal to improve the accuracy of its search results.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SearchEngine</code> class, write the method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">removeStopWords()</code> to find and remove all occurrences of each stop word in the search query words.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SearchEngineRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">removeStopWords()</code> method and print the results.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Search Results",
+    "bubble_choice_description": "A search engine wants to use stop word removal to improve the accuracy of its search results.",
+    "thumbnail_url": "https://images.code.org/2b8b2b851973224c1741ee8536a71b62-google.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T15:59:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T15:59:40.297+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-NLP PBT_2023\\\"\"],\"cloned_from\":\"CSA U6L9-NLP PBT_2023\"},{\"changed_at\":\"2023-04-03 15:59:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 13:34:41 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

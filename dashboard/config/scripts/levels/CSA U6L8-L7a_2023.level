@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A company is analyzing customer feedback and needs to classify messages into positive, negative, or neutral categories. They first need to remove all non-relevant words from the messages.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Feedback</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">removeIrrelevantWords()</code> method to remove all non-relevant words from the messages and return the new <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FeedbackRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">removeIrrelevantWords()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">remove()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_remving_data_from_an_arraylist",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Feedback Analysis",
+    "bubble_choice_description": "A company is analyzing customer feedback and needs to classify messages into positive, negative, or neutral categories. They first need to remove all non-relevant words from the messages.",
+    "thumbnail_url": "https://images.code.org/61982b237a6dd15de1b1ea3d309e31d3-sentiment-analysis.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-03T15:56:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-03T15:56:46.887+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L6d_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L6d_2023\"},{\"changed_at\":\"2023-04-03 15:56:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:38:05 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 13:20:23 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

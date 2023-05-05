@@ -4,19 +4,19 @@ import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
 import {
   blankStudentTransfer,
   blankStudentTransferStatus,
-  TransferStatus
+  TransferStatus,
 } from './manageStudentsRedux';
 
 const studentData = [
   {id: 1, name: 'Student A'},
   {id: 3, name: 'Student C'},
-  {id: 2, name: 'Student B'}
+  {id: 2, name: 'Student B'},
 ];
 
 const sections = [
   {id: 1, name: 'Section A', loginType: 'email'},
   {id: 2, name: 'Section B', loginType: 'word'},
-  {id: 3, name: 'Section C', loginType: 'picture'}
+  {id: 3, name: 'Section C', loginType: 'picture'},
 ];
 
 const transferToOtherTeacher = {
@@ -24,18 +24,18 @@ const transferToOtherTeacher = {
   studentIds: [1, 2, 3],
   otherTeacher: true,
   otherTeacherSection: 'ABCDEF',
-  copyStudents: false
+  copyStudents: false,
 };
 
 const errorTransferStatus = {
   status: TransferStatus.FAIL,
   error:
-    'You cannot move these students because they are already in the new section.'
+    'You cannot move these students because they are already in the new section.',
 };
 
 export default {
   title: 'ManageStudents/MoveStudents',
-  component: MoveStudents
+  component: MoveStudents,
 };
 
 const Template = args => (
@@ -52,17 +52,17 @@ const Template = args => (
 export const MoveStudentsEmptyDialog = Template.bind({});
 MoveStudentsEmptyDialog.args = {
   transferData: blankStudentTransfer,
-  transferStatus: blankStudentTransferStatus
+  transferStatus: blankStudentTransferStatus,
 };
 
 export const MoveStudentsDialogToOtherTeacher = Template.bind({});
 MoveStudentsDialogToOtherTeacher.args = {
   transferData: transferToOtherTeacher,
-  transferStatus: blankStudentTransferStatus
+  transferStatus: blankStudentTransferStatus,
 };
 
 export const MoveStudentsDialogWithError = Template.bind({});
 MoveStudentsDialogWithError.args = {
   transferData: transferToOtherTeacher,
-  transferStatus: errorTransferStatus
+  transferStatus: errorTransferStatus,
 };

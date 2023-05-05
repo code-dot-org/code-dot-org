@@ -6,6 +6,10 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null
+  "grade_levels": "9,10,11,12",
+  "header": null,
+  "image": "https://images.code.org/42075dad0776adcecd074f3e6514cafc-High School Image 3.png",
+  "cs_topic": "data,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
 }

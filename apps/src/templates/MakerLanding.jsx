@@ -8,7 +8,7 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class MakerLanding extends Component {
   static propTypes = {
-    topCourse: shapes.topCourse
+    topCourse: shapes.topCourse,
   };
 
   render() {
@@ -20,22 +20,22 @@ export default class MakerLanding extends Component {
         description: i18n.makerNewProjectDesc(),
         link: '/projects/applab/new?enableMaker=true',
         image: 'applab-project',
-        buttonText: i18n.makerNewProjectButton()
+        buttonText: i18n.makerNewProjectButton(),
       },
       {
         title: i18n.makerViewProjectsTitle(),
         description: i18n.makerViewProjectsDesc(),
         link: '/projects',
         image: 'applab-marketing',
-        buttonText: i18n.makerViewProjectsButton()
+        buttonText: i18n.makerViewProjectsButton(),
       },
       {
         title: i18n.makerSetupTitle(),
         description: i18n.makerSetupDesc(),
         link: '/maker/setup',
         image: 'maker',
-        buttonText: i18n.makerSetupButton()
-      }
+        buttonText: i18n.makerSetupButton(),
+      },
     ];
 
     return (
@@ -63,9 +63,9 @@ export default class MakerLanding extends Component {
 
 const styles = {
   title: {
-    fontSize: 30
+    fontSize: 30,
   },
   container: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };

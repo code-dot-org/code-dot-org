@@ -20,7 +20,7 @@
             {
               "type": "rating",
               "name": "csdpilot_discuss_with_peers_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786')",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
               "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -29,7 +29,7 @@
             {
               "type": "rating",
               "name": "better_prepared_unit6csd_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
               "title": "I feel prepared to teach Unit 6 after attending this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -38,7 +38,7 @@
             {
               "type": "rating",
               "name": "unit6_level_types_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
               "title": "I recognize different lesson level types and how to use each of them to support Unit 6 instruction.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -47,7 +47,7 @@
             {
               "type": "rating",
               "name": "problem_solve_proc_prog_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786'",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
               "title": "Through this workshop, I feel prepared to use the Problem Solving Process for Programming to reinforce persistence and support students when facing challenges.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -74,7 +74,7 @@
             {
               "type": "rating",
               "name": "csdpilot_cs_concepts_for_teaching_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786')",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
               "title": "As a result of this workshop, I feel confident about the computer science concepts I need to master before teaching CS Discoveries next week.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -83,7 +83,7 @@
             {
               "type": "rating",
               "name": "find_resources_m8",
-              "visibleIf": "({workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786') or {workshop_course}='CS Principles' ",
+              "visibleIf": "({workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094') or {workshop_course}='CS Principles' ",
               "title": "I know where to find resources to help me teach the units we have covered.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -128,7 +128,7 @@
             {
               "type": "rating",
               "name": "csdpilot_cs_ed_community_m8",
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786')",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
               "title": "I have a plan to connect to the CS Education community and develop new skills after this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",

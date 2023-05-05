@@ -9,3 +9,5 @@ wrong 'There is no purpose because the main method is not required.'
 markdown <<MARKDOWN
 Which of the following is **TRUE** about the `main` method?
 MARKDOWN
+
+allow_multiple_attempts true

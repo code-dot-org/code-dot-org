@@ -9,7 +9,7 @@ class ToggleSwitch extends React.Component {
   static propTypes = {
     isToggledOn: PropTypes.bool.isRequired,
     onToggle: PropTypes.func.isRequired,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
   };
 
   render() {
@@ -27,10 +27,10 @@ class ToggleSwitch extends React.Component {
         style={styles.button}
         className="button-active-no-border toggle-input"
       >
-        <div style={styles.label}>{label}</div>
         <div className="toggle-display">
           <i className={'fa fa-toggle-on'} style={iconStyle} />
         </div>
+        <div style={styles.label}>{label}</div>
       </button>
     );
   }
@@ -45,29 +45,29 @@ const styles = {
     background: 'transparent',
     font: 'inherit',
     ':hover': {
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
     ':focus': {
       outline: 0,
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
     textAlign: 'center',
     alignItems: 'center',
-    display: 'flex'
+    display: 'flex',
   },
   toggledOnIcon: {
-    color: color.default_blue
+    color: color.default_blue,
   },
   toggledOffIcon: {
     color: color.charcoal,
-    transform: 'rotate(180deg)'
+    transform: 'rotate(180deg)',
   },
   icon: {
     fontSize: '24px',
-    width: '32px'
+    width: '32px',
   },
   label: {
-    marginRight: 5,
-    padding: 0
-  }
+    marginLeft: 5,
+    padding: 0,
+  },
 };

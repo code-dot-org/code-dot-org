@@ -31,6 +31,6 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:03.903+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 1_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 1_2022\"},{\"changed_at\":\"2023-02-21 23:28:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:28:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:23:03.903+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag 1_2022\\\"\"],\"cloned_from\":\"CSD U2 Image Tag 1_2022\"},{\"changed_at\":\"2023-02-21 23:28:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:28:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-28 00:48:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

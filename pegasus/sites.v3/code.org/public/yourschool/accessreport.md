@@ -64,7 +64,7 @@ An overview of each tab is as follows:
 	vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
 
-Preliminary data for the current school year can be viewed on our [interactive map](https://code.org/yourschool). Learn more about our [data sources](https://code.org/yourschool/about). Underlying data was contributed by various organizations, including the Computer Science Teachers Association (CSTA), University of Texas at Austin, the College Board, Technology Education and Literacy in Schools (TEALS), Project Lead the Way, BootUp PD, and many state education agencies. 
+Learn more about our [data sources](https://code.org/yourschool/about). Underlying data was contributed by various organizations, including the Computer Science Teachers Association (CSTA), University of Texas at Austin, the College Board, Technology Education and Literacy in Schools (TEALS), Project Lead the Way, BootUp PD, and many state education agencies. 
 
 Suggested citation: 
 Code.org. (2022). *Computer science access report data*. Retrieved from code.org/yourschool/accessreport. 

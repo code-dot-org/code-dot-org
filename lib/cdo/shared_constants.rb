@@ -97,7 +97,6 @@ module SharedConstants
     artist_k1
     playlab_k1
     dance
-    spritelab
     poetry
     poetry_hoc
     thebadguys
@@ -109,17 +108,20 @@ module SharedConstants
     gamelab
   ).freeze
 
+  # For privacy reasons, sprite lab projects can only be published if they are not in "restricted share mode".
+  # This mode is triggered if the user is a student and has uploaded an image to their project.
+  RESTRICTED_PUBLISH_PROJECT_TYPES = %w(spritelab).freeze
+
   UNPUBLISHABLE_PROJECT_TYPES = %w(
     algebra_game
     calc
     eval
     minecraft_codebuilder
-    spritelab
     weblab
   )
 
   ALL_PUBLISHABLE_PROJECT_TYPES =
-    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES + RESTRICTED_PUBLISH_PROJECT_TYPES
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 

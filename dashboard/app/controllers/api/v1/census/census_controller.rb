@@ -1,9 +1,9 @@
 class Api::V1::Census::CensusController < ApplicationController
   include SchoolInfoDeduplicator
+  require 'census_helper'
   skip_before_action :verify_authenticity_token
 
   CENSUS_FIELDS = [
-    :school_year,
     :submitter_email_address,
     :submitter_name,
     :submitter_role,
@@ -104,6 +104,7 @@ class Api::V1::Census::CensusController < ApplicationController
       census_params[field] = census_params[field].strip_utf8mb4 unless census_params[field].nil?
     end
 
+    census_params[:school_year] = current_census_year
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
