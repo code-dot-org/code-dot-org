@@ -34,6 +34,8 @@ export default class ProjectManager {
   private eventListeners: {
     [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void];
   } = {};
+  private lastSource: string | undefined;
+  private lastChannel: string | undefined;
 
   constructor(
     channelId: string,
@@ -56,6 +58,7 @@ export default class ProjectManager {
     let source = {};
     if (sourceResponse.ok) {
       source = await sourceResponse.json();
+      this.lastSource = JSON.stringify(source);
     }
 
     const channelResponse = await this.channelsStore.load(this.channelId);
@@ -64,6 +67,7 @@ export default class ProjectManager {
     }
 
     const channel = await channelResponse.json();
+    this.lastChannel = JSON.stringify(channel);
     // ensure the project type is set on the channel
     channel.projectType = this.appOptionsStore.getProjectType();
     const project = {source, channel};
@@ -73,8 +77,9 @@ export default class ProjectManager {
     return new Response(blob);
   }
 
-  hasQueuedSave(): boolean {
-    return this.saveQueued;
+  hasUnsavedChanges(): boolean {
+    const project = this.getProject();
+    return this.sourceChanged(project) || this.channelChanged(project);
   }
 
   // TODO: Add functionality to reduce channel updates during
@@ -94,29 +99,40 @@ export default class ProjectManager {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
-      const noopResponse = new Response(null, {status: 304});
-      this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
-      return noopResponse;
+      return this.getNoopResponse();
     }
-
     this.saveInProgress = true;
     this.saveQueued = false;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
     const project = this.getProject();
-    const sourceResponse = await this.sourcesStore.save(
-      this.channelId,
-      project.source
-    );
-    if (!sourceResponse.ok) {
+    const sourceChanged = this.sourceChanged(project);
+    const channelChanged = this.channelChanged(project);
+    // If neither source nor channel has actually changed, no need to save again.
+    if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
-      this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
+      return this.getNoopResponse();
+    }
+    // Only save the source if it has changed.
+    if (sourceChanged) {
+      const sourceResponse = await this.sourcesStore.save(
+        this.channelId,
+        project.source
+      );
+      if (!sourceResponse.ok) {
+        this.saveInProgress = false;
+        this.executeListeners(ProjectManagerEvent.SaveFail, sourceResponse);
 
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return sourceResponse;
+        // TODO: Should we wrap this response in some way?
+        // Maybe add a more specific statusText to the response?
+        return sourceResponse;
+      }
+      this.lastSource = JSON.stringify(project.source);
     }
 
+    // Always save the channel--either the channel has changed and/or the source changed.
+    // Even if only the source changed, we still update the channel to modify the last
+    // updated time.
     const channelResponse = await this.channelsStore.save(project.channel);
     if (!channelResponse.ok) {
       this.saveInProgress = false;
@@ -126,6 +142,7 @@ export default class ProjectManager {
       // Maybe add a more specific statusText to the response?
       return channelResponse;
     }
+    this.lastChannel = JSON.stringify(project.channel);
 
     this.saveInProgress = false;
     this.executeListeners(ProjectManagerEvent.SaveSuccess);
@@ -169,5 +186,19 @@ export default class ProjectManager {
     response: Response = new Response()
   ) {
     this.eventListeners[type]?.forEach(listener => listener(response));
+  }
+
+  private getNoopResponse() {
+    const noopResponse = new Response(null, {status: 304});
+    this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
+    return noopResponse;
+  }
+
+  private sourceChanged(project: Project): boolean {
+    return this.lastSource !== JSON.stringify(project.source);
+  }
+
+  private channelChanged(project: Project): boolean {
+    return this.lastChannel !== JSON.stringify(project.channel);
   }
 }

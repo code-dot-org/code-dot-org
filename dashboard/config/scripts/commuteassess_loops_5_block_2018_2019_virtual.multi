@@ -20,3 +20,5 @@ wrong 'it will be different each time you run it'
 markdown <<MARKDOWN
 ![](https://images.code.org/da1c6db6f537c72748389671691619a0-image-1483468367249.png)
 MARKDOWN
+
+allow_multiple_attempts true
