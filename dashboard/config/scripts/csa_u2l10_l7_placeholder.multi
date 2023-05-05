@@ -23,3 +23,4 @@ wrong 'II only'
 wrong 'IV only'
 right 'I and II'
 wrong 'I and III'
+allow_multiple_attempts true

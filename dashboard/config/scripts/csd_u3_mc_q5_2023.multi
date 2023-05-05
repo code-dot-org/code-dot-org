@@ -20,3 +20,5 @@ teacher_markdown <<MARKDOWN
 
 Since the background is yellow, `drawBackground()` must be called. Since the red rectangle is on top of the green ellipse, `drawTwo()` is called after `drawOne()`.
 MARKDOWN
+
+allow_multiple_attempts true

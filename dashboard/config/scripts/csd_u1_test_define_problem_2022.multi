@@ -5,3 +5,5 @@ right 'Lunch line, because it is clear how you would know that people are waitin
 wrong 'Lunch line, because it is easier to create rules around standing in line, but harder to make rules about school spirit'
 wrong 'School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible'
 wrong 'School spirit, because it is a better thing for students to do, but the adults should be in charge of the lunch line'
+
+allow_multiple_attempts true
