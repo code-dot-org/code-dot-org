@@ -3,6 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
+import sinon from 'sinon';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -61,6 +62,14 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 
 describe('SummaryResponses', () => {
   it('renders elements', () => {
+    const element = sinon.stub(document, 'getElementById');
+    element.returns({
+      classList: {
+        add: () => {},
+        remove: () => {},
+      },
+    });
+
     const wrapper = setUpWrapper();
 
     // Student responses.
@@ -71,9 +80,19 @@ describe('SummaryResponses', () => {
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
+
+    element.restore();
   });
 
   it('applies correct classes when rtl', () => {
+    const element = sinon.stub(document, 'getElementById');
+    element.returns({
+      classList: {
+        add: () => {},
+        remove: () => {},
+      },
+    });
+
     const wrapper = setUpWrapper({
       isRtl: true,
       progress: {
@@ -93,9 +112,19 @@ describe('SummaryResponses', () => {
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
     expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(1);
+
+    element.restore();
   });
 
   it('does not render response counter/text if no section selected', () => {
+    const element = sinon.stub(document, 'getElementById');
+    element.returns({
+      classList: {
+        add: () => {},
+        remove: () => {},
+      },
+    });
+
     const wrapper = setUpWrapper({
       teacherSections: {
         selectedStudents: [{id: 0}],
@@ -107,5 +136,7 @@ describe('SummaryResponses', () => {
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
     expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
+
+    element.restore();
   });
 });
