@@ -24,15 +24,32 @@
   }
 }
 
-.saving {
+.saveMessageContainer {
+  position: relative;
+}
+
+.saveMessage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
   display: flex;
   flex-direction: row;
-  color: $neutral_white;
+  justify-content: flex-end;
   align-items: center;
   padding: 5px;
 
+  &Saving {
+    color: $neutral-white;
+  }
+
+  &Error {
+    color: $red;
+  }
+
   &Text {
     padding-left: 5px;
+    text-align: right;
   }
 
   opacity: 0;

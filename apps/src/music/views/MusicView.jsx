@@ -620,7 +620,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaving={this.props.standalone}
+                  canShowSaveStatus={this.props.standalone}
                 />
               </div>
               <div id="blockly-div" />

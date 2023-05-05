@@ -15,7 +15,7 @@ import {projectUpdatedStatuses} from '../../code-studio/projectRedux';
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
  * including Start Over, Share, Feedback, and optionally Upload Sound.
  */
-const TopButtons = ({clearCode, uploadSound, canShowSaving}) => {
+const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
@@ -50,6 +50,38 @@ const TopButtons = ({clearCode, uploadSound, canShowSaving}) => {
     }
 
     uploadSound(inputRef.current.files[0]);
+  };
+
+  const renderSaveMessage = () => {
+    return (
+      <div className={moduleStyles.saveMessageContainer}>
+        <div
+          className={classNames(
+            moduleStyles.saveMessage,
+            moduleStyles.saveMessageSaving,
+            updatedStatus === projectUpdatedStatuses.saving &&
+              moduleStyles.saveMessageShow
+          )}
+        >
+          <Spinner size={'small'} />
+          <div className={moduleStyles.saveMessageText}>
+            {commonI18n.saving()}
+          </div>
+        </div>
+        <div
+          className={classNames(
+            moduleStyles.saveMessage,
+            moduleStyles.saveMessageError,
+            updatedStatus === projectUpdatedStatuses.error &&
+              moduleStyles.saveMessageShow
+          )}
+        >
+          <div className={moduleStyles.saveMessageText}>
+            {commonI18n.projectSaveError()}
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -87,18 +119,7 @@ const TopButtons = ({clearCode, uploadSound, canShowSaving}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; {musicI18n.feedback()}
       </button>
-      {canShowSaving && (
-        <div
-          className={classNames(
-            moduleStyles.saving,
-            updatedStatus === projectUpdatedStatuses.saving &&
-              moduleStyles.savingShow
-          )}
-        >
-          <Spinner size={'small'} />
-          <div className={moduleStyles.savingText}>{commonI18n.saving()}</div>
-        </div>
-      )}
+      {canShowSaveStatus && renderSaveMessage()}
       {showUploadSound && (
         <fieldset>
           <input
@@ -125,7 +146,7 @@ const TopButtons = ({clearCode, uploadSound, canShowSaving}) => {
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
   uploadSound: PropTypes.func.isRequired,
-  canShowSaving: PropTypes.bool,
+  canShowSaveStatus: PropTypes.bool,
 };
 
 export default TopButtons;
