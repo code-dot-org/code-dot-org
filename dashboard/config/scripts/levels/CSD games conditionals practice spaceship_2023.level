@@ -32,7 +32,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -120,7 +120,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:37.719+00:00\",\"changed\":[\"cloned from \\\"CSD games conditionals practice spaceship_2022\\\"\"],\"cloned_from\":\"CSD games conditionals practice spaceship_2022\"},{\"changed_at\":\"2023-01-14 18:30:11 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:37.719+00:00\",\"changed\":[\"cloned from \\\"CSD games conditionals practice spaceship_2022\\\"\"],\"cloned_from\":\"CSD games conditionals practice spaceship_2022\"},{\"changed_at\":\"2023-01-14 18:30:11 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:44:01 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

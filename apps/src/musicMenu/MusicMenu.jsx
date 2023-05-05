@@ -89,8 +89,8 @@ const optionsList = [
     name: 'storage-type',
     type: 'radio',
     values: [
-      {value: LOCAL_STORAGE, description: 'Save to local storage (default).'},
-      {value: REMOTE_STORAGE, description: 'Save to remote storage.'},
+      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
+      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
     ],
   },
 ];

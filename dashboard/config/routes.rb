@@ -268,6 +268,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Get or create a project for the given level_id
+    get 'projects/for_level/:level_id', to: 'projects#get_or_create_for_level'
+
     post '/locale', to: 'home#set_locale', as: 'locale'
 
     # quick links for cartoon network arabic
