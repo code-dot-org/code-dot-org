@@ -19,7 +19,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.6'
+gem 'rails', '6.1.4.7'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -63,7 +63,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.2'
+  gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
   gem 'web-console', '~> 4.2.0'
 end
@@ -284,7 +284,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy

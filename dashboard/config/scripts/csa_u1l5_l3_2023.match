@@ -14,3 +14,4 @@ answer 'determines whether or not to execute a block of code'
 
 question 'method'
 answer 'a named set of instructions to perform a task'
+allow_multiple_attempts true

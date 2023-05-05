@@ -35,6 +35,10 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  puts "updating TTS I18n Static Messages (should usually be a no-op)"
+  I18nScriptUtils.with_synchronous_stdout do
+    I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
+  end
   clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
 rescue => exception

@@ -7,7 +7,7 @@ right '`population.size();`'
 wrong '`size(population);`'
 wrong '`length(population);`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following correctly returns the total number of elements in the `ArrayList` `population`?

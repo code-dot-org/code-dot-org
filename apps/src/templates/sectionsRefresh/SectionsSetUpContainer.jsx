@@ -8,6 +8,7 @@ import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 import {
   BodyOneText,
   Heading1,
@@ -18,6 +19,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
+const NEW = 'New';
 
 // Custom hook to update the list of sections to create
 // Currently, this hook returns two things:
@@ -66,7 +68,11 @@ const useSections = section => {
   return [sections, updateSection];
 };
 
-export default function SectionsSetUpContainer({sectionToBeEdited}) {
+export default function SectionsSetUpContainer({
+  isUsersFirstSection,
+  sectionToBeEdited,
+}) {
+
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -102,6 +108,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionLockSelection: section.restrictSection,
         sectionName: section.name,
         sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
       });
     }
     /*
@@ -130,11 +137,13 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         newCourseId: section.course?.courseOfferingId,
         newCourseVersionId: section.course?.courseVersionId,
         newVersionYear: null,
+        flowVersion: NEW,
       });
     }
   };
 
   const saveSection = section => {
+    const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
       ? SECTIONS_API
@@ -181,11 +190,17 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
       },
       body: JSON.stringify(section_data),
     })
-      .then(response => response.json())
+      .then(response => {
+        return response.json();
+      })
       .then(data => {
         recordSectionSetupEvent(section);
         // Redirect to the sections list.
-        window.location.href = window.location.origin + '/home';
+        let redirectUrl = window.location.origin + '/home';
+        if (shouldShowCelebrationDialogOnRedirect) {
+        redirectUrl += '?showSectionCreationDialog=true';
+        }
+        navigateToHref(redirectUrl);
       })
       .catch(err => {
         setIsSaveInProgress(false);
@@ -219,6 +234,7 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
         sectionNum={1}
         section={sections[0]}
         updateSection={(key, val) => updateSection(0, key, val)}
+        isNewSection={isNewSection}
       />
 
       <CurriculumQuickAssign
@@ -307,5 +323,6 @@ export default function SectionsSetUpContainer({sectionToBeEdited}) {
 }
 
 SectionsSetUpContainer.propTypes = {
+  isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
 };
