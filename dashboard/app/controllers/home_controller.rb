@@ -186,7 +186,7 @@ class HomeController < ApplicationController
       @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
-      @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:afeEligible] = afe_eligible
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")

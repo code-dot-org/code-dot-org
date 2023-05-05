@@ -36,6 +36,23 @@ describe('CurriculumQuickAssign', () => {
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
+  it('opens and closes version dropdowns with table open and collapse', () => {
+    const wrapper = mount(
+      <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
+    );
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+  });
+
   it('clears decide later when marketing audience selected', () => {
     const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
