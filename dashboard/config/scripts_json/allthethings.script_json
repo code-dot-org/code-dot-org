@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 18:41:45 UTC",
+    "serialized_at": "2023-05-05 13:06:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4427,6 +4427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4448,6 +4451,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1 Contained_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5449,6 +5455,48 @@
     },
     {
       "chapter": 146,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PS predictive Applab level test retriable"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      },
+      "level_keys": [
+        "PS predictive Applab level test retriable"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test GameLab Retriable Multi"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      },
+      "level_keys": [
+        "Test GameLab Retriable Multi"
+      ]
+    },
+    {
+      "chapter": 148,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5472,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 149,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5496,7 +5544,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 150,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5520,7 +5568,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5544,7 +5592,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 152,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5568,7 +5616,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 153,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5592,7 +5640,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 154,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5616,7 +5664,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 155,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5640,7 +5688,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 156,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5664,7 +5712,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 157,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -5688,7 +5736,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 158,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -5712,7 +5760,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 159,
       "position": 9,
       "activity_section_position": 10,
       "assessment": false,
@@ -5736,7 +5784,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 160,
       "position": 10,
       "activity_section_position": 11,
       "assessment": false,
@@ -5760,7 +5808,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 161,
       "position": 11,
       "activity_section_position": 12,
       "assessment": false,
@@ -5784,7 +5832,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 162,
       "position": 12,
       "activity_section_position": 13,
       "assessment": false,
@@ -5808,7 +5856,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5832,7 +5880,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 164,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5856,7 +5904,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 165,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5880,7 +5928,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 166,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5904,7 +5952,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 167,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5928,7 +5976,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 168,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5952,7 +6000,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 169,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5976,7 +6024,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 170,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7299,7 +7347,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7312,7 +7360,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7455,7 +7503,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 1",
+        "level.key": "4-5 Maze 4",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7468,7 +7516,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 4",
+        "level.key": "4-5 Maze 1",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7860,6 +7908,30 @@
         "level.key": "Video - The Future of Big Data",
         "script_level.level_keys": [
           "Video - The Future of Big Data"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PS predictive Applab level test retriable",
+        "script_level.level_keys": [
+          "PS predictive Applab level test retriable"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Test GameLab Retriable Multi",
+        "script_level.level_keys": [
+          "Test GameLab Retriable Multi"
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
