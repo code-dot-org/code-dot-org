@@ -34,7 +34,6 @@ import {
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
-  setProjectSaveState,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -92,7 +91,6 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
-    setProjectSaveState: PropTypes.func,
     setProjectUpdatedSaving: PropTypes.func,
     setProjectUpdatedAt: PropTypes.func,
     setProjectUpdatedError: PropTypes.func,
@@ -683,7 +681,6 @@ const MusicView = connect(
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
-    setProjectSaveState: saveState => dispatch(setProjectSaveState(saveState)),
     setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
