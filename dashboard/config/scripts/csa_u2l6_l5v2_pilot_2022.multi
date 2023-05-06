@@ -9,3 +9,5 @@ wrong 'A has-a relationship. The `Mariachi` class has a `Genre` attribute.'
 markdown <<MARKDOWN
 An online music application wants to show information about genres, like mariachi which is a genre of Mexican music. What kind of relationship would a `Genre` and `Mariachi` class have?
 MARKDOWN
+
+allow_multiple_attempts true

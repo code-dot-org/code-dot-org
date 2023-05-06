@@ -7,3 +7,5 @@ answer '`true`'
 
 question '`num % 5 != 0`'
 answer '`false`'
+
+allow_multiple_attempts true
