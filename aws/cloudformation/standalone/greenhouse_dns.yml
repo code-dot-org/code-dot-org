@@ -15,6 +15,16 @@ Resources:
       HostedZoneConfig: 
         Comment: Records for Greenhouse mail integration
 
+  NameServerRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName : code.org.
+      Name: gh-mail.code.org
+      Comment: Records for Greenhouse mail integration
+      ResourceRecords: !GetAtt GreenhouseHostedZone.NameServers
+      TTL: 3600
+      Type: NS
+
   GreenhouseRecords:
     Type: AWS::Route53::RecordSetGroup
     Properties:
