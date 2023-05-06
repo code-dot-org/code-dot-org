@@ -16,3 +16,5 @@ teacher_markdown <<MARKDOWN
 
 The font size in `<h1>` is smaller than the font size in `<p>`, and the color is blue in `<p>`.
 MARKDOWN
+
+allow_multiple_attempts true

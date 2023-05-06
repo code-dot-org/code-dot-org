@@ -19,3 +19,4 @@ wrong 'private void getFruit()'
 wrong 'public void getFruit()'
 right 'public String getFruit()'
 wrong 'public String getFruit(String fruit)'
+allow_multiple_attempts true

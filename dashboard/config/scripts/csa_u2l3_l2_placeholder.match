@@ -13,3 +13,4 @@ answer 'allows other classes to access'
 
 question 'constructor'
 answer 'tells the computer how to create a new object'
+allow_multiple_attempts true

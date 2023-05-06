@@ -12,16 +12,15 @@ const KnownConditions: KnownConditions = {
 };
 
 export default class MusicValidator extends Validator {
-  private player: MusicPlayer;
-  private getIsPlaying: () => boolean;
-  private conditionsChecker: ConditionsChecker;
-
-  constructor(getIsPlaying: () => boolean, player: MusicPlayer) {
+  constructor(
+    private readonly getIsPlaying: () => boolean,
+    private readonly getPlaybackEvents: () => PlaybackEvent[],
+    private readonly player: MusicPlayer,
+    private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
+      KnownConditions
+    )
+  ) {
     super();
-
-    this.getIsPlaying = getIsPlaying;
-    this.player = player;
-    this.conditionsChecker = new ConditionsChecker(KnownConditions);
   }
 
   shouldCheckConditions() {
@@ -29,7 +28,7 @@ export default class MusicValidator extends Validator {
   }
 
   checkConditions() {
-    if (this.player.getPlaybackEvents().length > 0) {
+    if (this.getPlaybackEvents().length > 0) {
       this.conditionsChecker.addSatisfiedCondition(
         KnownConditions.PLAYED_ONE_SOUND
       );
@@ -40,7 +39,7 @@ export default class MusicValidator extends Validator {
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
 
-    this.player.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
+    this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       const length = eventData.length;
 
       if (
