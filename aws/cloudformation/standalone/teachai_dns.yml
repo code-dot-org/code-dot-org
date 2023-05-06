@@ -1,0 +1,55 @@
+# TeachAI DNS Configuration
+# This template is manually deployed to the 'teachai-dns' stack.
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: DNS Records for the teachai.org domain.
+
+Resources:
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: teachai.org.
+
+  RecordSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref HostedZone
+      RecordSets:
+        - Name: teachai.org.
+          Type: A
+          TTL: '300'
+          ResourceRecords:
+            - '141.193.213.10'
+            - '141.193.213.11'
+        - Name: www.teachai.org.
+          Type: A
+          TTL: '300'
+          ResourceRecords:
+            - '141.193.213.10'
+            - '141.193.213.11'
+        - Name: teachai.org.
+          Type: TXT
+          TTL: '3600'
+          ResourceRecords:
+            - '"google-site-verification=TqkM4Ab7lI1uZRCVMbkTdtVkiQ27k0wPu9bX3wtv_eE"'
+            - '"v=spf1 include:_spf.google.com ~all"'
+        - Name: 44644295.teachai.org
+          Type: CNAME
+          TTL: '300'
+          ResourceRecords:
+            - 'google.com'
+        - Name: teachai.org.
+          Type: MX
+          TTL: '3600'
+          ResourceRecords:
+            - '1 ASPMX.L.GOOGLE.COM'
+            - '5 ALT1.ASPMX.L.GOOGLE.COM'
+            - '5 ALT2.ASPMX.L.GOOGLE.COM'
+            - '10 ALT3.ASPMX.L.GOOGLE.COM'
+            - '10 ALT4.ASPMX.L.GOOGLE.COM'
+        - Name: _dmarc.teachai.org
+          Type: TXT
+          TTL: '3600'
+          ResourceRecords:
+            - '"v=DMARC1; p=none; rua=mailto:dmarc-reports@teachai.org"'
