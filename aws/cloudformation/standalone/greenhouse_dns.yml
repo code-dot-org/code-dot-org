@@ -1,5 +1,10 @@
 # Greenhouse DNS Configuration
+# This template is deployed manually to the 'greenhouse-dns' stack.
 # See: https://support.greenhouse.io/hc/en-us/articles/201111684-Email-domain-verification
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: DNS Records for the Greenhouse applicant tracking system.
 
 Resources:
 
@@ -9,16 +14,6 @@ Resources:
       Name: gh-mail.code.org.
       HostedZoneConfig: 
         Comment: Records for Greenhouse mail integration
-
-  NameServerRecord:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      HostedZoneName : code.org.
-      Name: gh-mail.code.org
-      Comment: Records for Greenhouse mail integration
-      ResourceRecords: !GetAtt GreenhouseHostedZone.NameServers
-      TTL: 3600
-      Type: NS
 
   GreenhouseRecords:
     Type: AWS::Route53::RecordSetGroup
