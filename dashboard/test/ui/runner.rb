@@ -65,9 +65,12 @@ def main(options)
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
   rescue => exception
+    Infrastructure::Logger.flush
     ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
   end
+  # Flush metrics about feature runs into cloudwatch
+  Infrastructure::Logger.flush
 
   # Produce a final report if we aborted due to excess failures
   if $failed_features > options.abort_when_failures_exceed
@@ -336,7 +339,14 @@ def run_tests(env, feature, arguments, log_prefix)
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
     eyes_succeeded = count_eyes_errors(stdout) == 0
-    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
+    duration = Time.now - start_time
+    extra_dimensions = {test_type: test_type,
+                        feature_name: feature}
+    # Metrics for individual feature runs. They will be flushed once all of them run
+    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
 end
 
