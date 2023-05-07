@@ -83,6 +83,11 @@
                   }
                 },
                 "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Fare musica"
+                    }
+                  },
                   "palette_params": {
                     "url": {
                       "type": "Stringa"
@@ -705,6 +710,9 @@
             "ui_controls": {
               "name": "Controlli UI",
               "expressions": {
+                "button": {
+                  "short_description": "Crea un pulsante sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0)."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -714,6 +722,10 @@
                       "type": "Stringa"
                     }
                   }
+                },
+                "hideElement": {
+                  "content": "## hideElement(id)\n\nNasconde l'elemento con l'id fornito in modo che non venga visualizzato sullo schermo.\n\nGli elementi dell'interfaccia utente posizionati sullo schermo non sono statici. La tua app a volte deve spostarli, ridimensionarli, nasconderli o mostrarli. Tutti gli elementi dell'interfaccia utente (button(), textInput(), textLabel(), dropDown(), checkBox(), radioButton(), image()) possono essere nascosti.",
+                  "short_description": "hideElement(id)\nNasconde l'elemento con l'id fornito in modo che non venga visualizzato sullo schermo."
                 },
                 "onEvent": {
                   "examples": {
@@ -734,6 +746,11 @@
                   }
                 },
                 "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Fare musica"
+                    }
+                  },
                   "palette_params": {
                     "loop": {
                       "type": "Booleano"
@@ -779,6 +796,10 @@
                       "type": "Stringa"
                     }
                   }
+                },
+                "textLabel": {
+                  "content": "Crea un'etichetta di testo sullo schermo che mostra il _testo_ fornito e referenziato dal _id_ specificato nella posizione predefinita (0,0).\n\nA volte le tue app avranno bisogno di titoli su uno schermo o di parole accanto ad altri elementi dell'interfaccia utente come pulsanti di opzione, caselle di controllo, input di testo ed elenchi a discesa. Se desideri che l'etichetta di testo attivi anche gli eventi con un elemento dell'interfaccia utente diverso, puoi fare riferimento a quell'id utilizzando il terzo parametro opzionale _forID_.",
+                  "short_description": "Crea un'etichetta di testo sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0)."
                 }
               }
             },
@@ -1102,9 +1123,17 @@
               }
             },
             "circuit": {
+              "name": "Circuito",
               "expressions": {
                 "isPressed": {
                   "return_value": "Booleano"
+                },
+                "buzzer.note": {
+                  "examples": {
+                    "Circuit Piano ": {
+                      "name": "Circuit Piano "
+                    }
+                  }
                 },
                 "buzzer.play": {
                   "palette_params": {
