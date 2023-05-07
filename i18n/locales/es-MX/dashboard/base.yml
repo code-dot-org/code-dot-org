@@ -172,7 +172,6 @@ es-MX:
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
     visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
-    additional_information: "Necesitamos más información para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "Estudiante"
@@ -1187,4 +1186,6 @@ es-MX:
     image_file_format_width: "Ancho: 1 byte"
     image_file_format_height: "Altura: 1 byte"
     image_file_format_bits_per_pixel: "Bits por Pixel: 1 byte"
+    image_width: "Ancho de imagen"
+    image_height: "Altura de la imagen"
     binary: "Binario"
