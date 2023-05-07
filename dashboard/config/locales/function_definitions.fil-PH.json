@@ -2373,6 +2373,21 @@
           "end game": {
             "name": "tapusin ang laro"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "i-reset ang laro"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "i-reset ang laro"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "i-reset ang laro"
+          }
         }
       }
     }
