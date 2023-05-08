@@ -17,8 +17,15 @@ class HoneybadgerFaultAnalyzer
       next_url = get_faults_url(project_id)
       puts next_url
       while next_url
+        puts "https://app.honeybadger.io#{next_url}"
+
         response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
+        puts "response&11"
         puts response
+        puts "response&"
+        unless response
+          break
+        end
         parsed_response = JSON.parse response
         parsed_response['results'].each do |fault|
           faults << HoneybadgerFault.new(fault)
@@ -47,6 +54,6 @@ class HoneybadgerFaultAnalyzer
   end
 
   def get_faults_url(project_id)
-    "/v2/projects/#{project_id}/faults?q=#{get_query}"
+    "/v2/projects/#{project_id}/faults&q=#{get_query}"
   end
 end
