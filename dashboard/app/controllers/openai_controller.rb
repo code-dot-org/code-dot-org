@@ -1,5 +1,4 @@
 class OpenaiController < ApplicationController
-  SYSTEM_PROMPT = ''
 
   # POST /openai/chat_completion
   def chat_completion
@@ -16,7 +15,7 @@ class OpenaiController < ApplicationController
       model: 'gpt-3.5-turbo',
       temperature: 0,
       messages: [
-        {role: 'system', content: SYSTEM_PROMPT},
+        {role: 'system', content: params[:preprompt]},
         {role: 'user', content: params[:prompt]}
       ],
     }

@@ -13,7 +13,6 @@ import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
 import CommitsAndReviewTab from './CommitsAndReviewTab';
-import {AiTab} from './AiTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
