@@ -1378,6 +1378,18 @@
             "parameters": {
               "length": "haba"
             }
+          },
+          "small flower": {
+            "name": "maliit na bulaklak"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "MGA LOGIC FLOWER2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "MGA LOGIC FLOWER"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2174,6 +2186,18 @@
             "parameters": {
               "length": "haba"
             }
+          },
+          "small flower": {
+            "name": "maliit na bulaklak"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "MGA LOGIC FLOWER2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "MGA LOGIC FLOWER"
           }
         },
         "CourseD_EOC_artist2022": {

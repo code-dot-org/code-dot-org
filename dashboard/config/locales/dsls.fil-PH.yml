@@ -2205,12 +2205,17 @@ fil-PH:
         - {}
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - feedback: Mali. Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+        - text: Ang alien ay magsisimulang magpatrolya mula kanan hanggang kaliwa.
+          feedback: Mali. Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+        - text: Ang alien ay magsisimulang gumalaw pataas at pababa sa screen.
+          correct: true
+        - text: Mawawala ang alien sa tuktok ng screen.
+          feedback: Mali. Ang asul na alien ay magsisimulang gumalaw pataas at pababa
+            sa screen.
         questions:
-        - {}
+        - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
+            mag-click sa alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - {}
@@ -10476,3 +10481,8 @@ fil-PH:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
         display_name: Mga Halimbawa ng Proyekto
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Sundin ang Algorithm
+
+          Maglaro ng laro at isipin kung anong mga command ang kailangan para makuha ang tamang resulta.
