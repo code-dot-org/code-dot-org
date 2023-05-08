@@ -26,7 +26,7 @@ end
 
 Around do |_, block|
   block.call
-rescue Selenium::WebDriver::Error::TimeOutError => exception
+rescue Selenium::WebDriver::Error::TimeoutError => exception
   check_window_for_js_errors('after timeout')
   raise exception
 end
