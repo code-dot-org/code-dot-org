@@ -99,7 +99,6 @@ eu:
     valid_password: Pasahitza zuzena!
     invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
     mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
-    additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
     user_type_student: Ikaslea
     user_type_teacher: Irakaslea
     field_is_required: beharrezkoa da

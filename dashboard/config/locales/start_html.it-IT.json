@@ -330,7 +330,8 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -420,7 +421,8 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
@@ -1567,7 +1569,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Informazioni",
@@ -1581,7 +1584,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Informazioni",
@@ -1595,28 +1599,32 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Nascondi",
@@ -1626,19 +1634,22 @@
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Informazioni",
@@ -1647,7 +1658,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Informazioni",
@@ -1656,7 +1669,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Informazioni",
@@ -1665,7 +1680,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1770,19 +1787,63 @@
         },
         "csd u5 recommender sample": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2019": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2021": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2022": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd-apps for good-2": {
           "Next": "Seguente",
@@ -2172,11 +2233,13 @@
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Seguente"
@@ -2187,12 +2250,24 @@
         "ml-customize-raspado-2021": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:"
         },
         "ml-customize-raspado_2022": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Prosegui",
@@ -2215,14 +2290,30 @@
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "O",
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Sciocco",
@@ -2236,51 +2327,59 @@
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sì",
@@ -2316,7 +2415,13 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:"
         },
         "ml-use model card-example3A_2022": {
           "rain": "pioggia",
@@ -2324,7 +2429,13 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:"
         },
         "CSD U1 processing countries_2021": {
           "have more than a billion people?": "ha più di un miliardo di persone?",
@@ -2386,6 +2497,18 @@
           "Dollars per person": "Dollari a persona",
           "Where Should I Eat?": "Dove devo mangiare?",
           "$15": "$15"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Gara degli Emoji"
         }
       }
     }
