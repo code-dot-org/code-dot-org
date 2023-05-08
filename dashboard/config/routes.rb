@@ -318,6 +318,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 

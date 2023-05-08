@@ -140,6 +140,12 @@ class LevelsController < ApplicationController
     )
   end
 
+  # Get a JSON summary of a level's information, used in modern labs that don't
+  # reload the page between level views.
+  def level_data
+    render json: {level_data: @level.properties["level_data"]}
+  end
+
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean

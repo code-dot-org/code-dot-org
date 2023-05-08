@@ -152,7 +152,7 @@
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
       #{!script_level}
-    )
+    );
     //]]>
 
 - elsif @is_code_reviewing
@@ -164,6 +164,7 @@
 - elsif level
   :javascript
     dashboard.header.buildProjectInfoOnly()
+    dashboard.lab.init("#{@level.id}");
 
 -# If the page is cached, the sign-in button / user menu must be loaded separately
 -# by the client.
