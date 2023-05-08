@@ -33,16 +33,19 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param element xml
    */
   fromXml(element) {
-    // call super so value is set
+    // Call super so value is set.
     super.fromXml(element);
-    // options must be an array of arrays
-    // assume config = "a,b,c"
-    // options should be [[aVal, a], [bVal, b], [cVal, c]]
-    // where aVal is either the value from the original
-    // options included in the block definition, or
-    // just 'a' itself if it wasn't present
-    // see also https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
-    const originalOptions = Array.isArray(this.menuGenerator_)
+    // If `menuGenerator_` is an array, it is an array of options with
+    // each option represented as an array containing a human-readable string,
+    // and a language-neutral string. For example,
+    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']]
+    // Options are included in the block definition.
+    // But if the field xml contains `config`, then the dropdown options
+    // are determined by `config`.
+    // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
+    // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
+    // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
+    const originalOptionsMap = Array.isArray(this.menuGenerator_)
       ? this.menuGenerator_.reduce((optionsMap, curr) => {
           optionsMap[curr[1]] = curr[0];
           return optionsMap;
@@ -52,43 +55,45 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     let options = null;
     if (config) {
       options = this.printerStyleNumberRangeToList(config);
-      // `options` is not a number range, it is a customized config string
+      // `options` is not a number range, it is a customized config string.
       if (options.length === 0) {
         options = config.split(',').map(val => {
           val = val.trim();
           // If val is a one of the options in this.menuGenerator_,
-          // user-friendly string is displayed.
-          if (originalOptions[val]) {
-            return [originalOptions[val], val];
+          // human-readable string is displayed.
+          if (originalOptionsMap[val]) {
+            return [originalOptionsMap[val], val];
           } else {
             // Remove quotes and display option with lowercase characters.
-            const displayVal = val.slice(1, -1).toLowerCase();
-            return [displayVal, val];
+            // For example, "GIRAFFE" would be transformed to giraffe.
+            const humanReadableVal = val.replace(/['"]+/g, '').toLowerCase();
+            return [humanReadableVal, val];
           }
         });
       } else {
         // `options` is a list of numbers
         options = options.map(num => {
-          return [num.toString(), num.toString()];
+          const numString = num.toString();
+          return [numString, numString];
         });
       }
     }
 
-    // If the config attribute is present in XML, set the menuGenerator_ to those config options.
+    // If the config attribute is present in xml, set the menuGenerator_ to those config options.
     if (options) {
       this.menuGenerator_ = options;
     }
   }
 
   /**
-   * Converts dropdown field into xml element
+   * Converts dropdown field options into xml element
    * @param element xml
    * @return element
    */
   toXml(element) {
     super.toXml(element);
     if (Array.isArray(this.menuGenerator_)) {
-      // convert array of options back into string config
+      // Convert options (array of arrays) back into string config.
       const config = this.menuGenerator_
         .map(val => {
           return val[1];
@@ -101,9 +106,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
 
   /**
    * Converts a printer-style string range to an array of numbers
-   * e.g., "1,2,3-5" becomes [1,2,3,4,5]
-   * @param rangeString {string} printer-style range, e.g., "1,2,3-5"
-   * @returns  {Array.<!Number>}
+   * e.g., "1,2,4-6" becomes [1,2,4,5,6]
+   * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
+   * @returns  array of numbers
    */
   printerStyleNumberRangeToList = function (rangeString) {
     const rangeStringNoSpaces = rangeString.replace(/ /g, '');
