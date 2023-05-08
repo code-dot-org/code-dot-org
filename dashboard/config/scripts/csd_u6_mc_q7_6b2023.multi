@@ -9,3 +9,5 @@ wrong '`updateScore 10`'
 teacher_markdown <<MARKDOWN
 **Content: Unit 6 Lesson 14**
 MARKDOWN
+
+allow_multiple_attempts true

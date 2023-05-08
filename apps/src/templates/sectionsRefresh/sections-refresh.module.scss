@@ -28,6 +28,12 @@ input.classNameTextField {
   font-family: $gotham-regular;
   line-height: 1.5;
   font-size: 1em;
+
+  &:invalid:focus {
+    border-color: $neutral_dark;
+    box-shadow: unset;
+    color: $neutral_dark;
+  }
 }
 
 // TODO: once we agree and receive a final approve on what styles of typography
@@ -40,7 +46,11 @@ label.typographyLabel {
 
 .buttonsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  button {
+    font-size: 16px;
+  }
 }
 
 .buttonRow {
@@ -60,6 +70,16 @@ label.typographyLabel {
   color: inherit;
   border: none;
   font-size: 14px;
+
+  &:active {
+    // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
+    border: none !important;
+  }
+}
+
+.buttonsInRow .buttonStyle.activeMarketingAudienceButton {
+  color: $brand_primary_default;
+  border-bottom: 2px solid $brand_primary_default;
 }
 
 .buttonsInRow .buttonStyle:hover {
@@ -103,6 +123,7 @@ label.typographyLabel {
   h4 {
     color: $neutral_white;
     margin-bottom: 0;
+    margin-left: 10px;
   }
 }
 
@@ -111,18 +132,27 @@ label.typographyLabel {
   display: grid;
 }
 
+.courseTableRow {
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
 .courseHeaders {
   position: relative;
   left: 10px;
 }
 
+.courseOption {
+  margin-top: 10px;
+}
+
 .flexDisplay .radio {
-  min-height: 40px;
   margin: 0 0 0 0;
 }
 
-.label {
-  margin: 10px 10px 0 5px;
+.courseOptionLabel {
+  margin: 0 10px 0 5px;
 }
 
 .unitDropdown {
