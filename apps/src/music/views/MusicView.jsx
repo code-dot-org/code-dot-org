@@ -666,7 +666,7 @@ const MusicView = connect(
       : undefined,
 
     // When we are editing a single level, this will be its ID.
-    currentLevelId: state.lab.currentLevelId,
+    currentLevelId: state.progress.currentLevelId,
 
     // The number of levels.
     levelCount: state.music.levelCount,
