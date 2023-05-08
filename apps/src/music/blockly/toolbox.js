@@ -7,6 +7,7 @@ import {
   PRIMARY_SOUND_INPUT_NAME,
   FIELD_EFFECTS_NAME,
 } from './constants';
+import musicI18n from '../locale';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -325,7 +326,7 @@ function generateToolbox(categoryBlocksMap, options) {
 
     toolbox.contents.push({
       kind: 'category',
-      name: category,
+      name: getCategoryName(category),
       cssConfig: baseCategoryCssConfig,
       contents: categoryContents,
     });
@@ -334,7 +335,7 @@ function generateToolbox(categoryBlocksMap, options) {
   if (options?.includeVariables) {
     toolbox.contents.push({
       kind: 'category',
-      name: 'Variables',
+      name: getCategoryName('Variables'),
       cssConfig: baseCategoryCssConfig,
       custom: 'VARIABLE',
     });
@@ -345,7 +346,7 @@ function generateToolbox(categoryBlocksMap, options) {
     if (!options.allowList || options.allowList['Functions']) {
       toolbox.contents.push({
         kind: 'category',
-        name: 'Functions',
+        name: getCategoryName('Functions'),
         cssConfig: baseCategoryCssConfig,
         custom: 'PROCEDURE',
       });
@@ -353,6 +354,23 @@ function generateToolbox(categoryBlocksMap, options) {
   }
 
   return toolbox;
+}
+
+function getCategoryName(category) {
+  const categoryTypeToLocalizedName = {
+    Control: musicI18n.blockly_toolboxCategoryControl(),
+    Effects: musicI18n.blockly_toolboxCategoryEffects(),
+    Events: musicI18n.blockly_toolboxCategoryEvents(),
+    Functions: musicI18n.blockly_toolboxCategoryFunctions(),
+    Logic: musicI18n.blockly_toolboxCategoryLogic(),
+    Math: musicI18n.blockly_toolboxCategoryMath(),
+    Play: musicI18n.blockly_toolboxCategoryPlay(),
+    Simple: musicI18n.blockly_toolboxCategorySimple(),
+    Tracks: musicI18n.blockly_toolboxCategoryTracks(),
+    Variables: musicI18n.blockly_toolboxCategoryVariables(),
+  };
+
+  return categoryTypeToLocalizedName[category];
 }
 
 export function getToolbox(allowList) {
