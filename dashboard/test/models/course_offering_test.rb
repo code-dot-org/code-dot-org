@@ -213,6 +213,50 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
+  test "latest_published_version returns most recent published course version with unit group" do
+    offering = create :course_offering, :with_unit_groups
+
+    most_recent_version = offering.course_versions[2]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[0]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[1]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[3]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit" do
+    offering = create :course_offering, :with_units
+
+    most_recent_version = offering.course_versions[1]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[2]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[3]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[0]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@student)
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@teacher)

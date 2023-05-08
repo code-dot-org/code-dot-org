@@ -130,7 +130,10 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         <div className={style.catalogContent}>
           {/*TODO [MEG]: calculate and pass in duration and translated from backend */}
           {curriculaData
-            .filter(curriculum => !!curriculum.grade_levels)
+            .filter(
+              curriculum =>
+                !!curriculum.grade_levels && !!curriculum.course_version_path
+            )
             .map(
               ({
                 key,
@@ -139,6 +142,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 grade_levels,
                 school_subject,
                 cs_topic,
+                course_version_path,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -150,9 +154,11 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   topics={cs_topic?.split(',')}
                   isTranslated={false} // TODO [MEG]: actually pass in this data
                   isEnglish={isEnglish}
+                  pathToCourse={course_version_path}
                 />
               )
             )}
+          }
         </div>
       </div>
     </>

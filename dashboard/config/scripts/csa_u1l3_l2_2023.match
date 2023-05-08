@@ -14,3 +14,4 @@ answer 'to call the constructor to create an object'
 
 question 'object-oriented programming'
 answer 'an approach to creating and using models of physical or imagined objects'
+allow_multiple_attempts true
