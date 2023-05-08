@@ -46,6 +46,7 @@ import {
   levelsForLessonId,
   navigateToLevelId,
   sendSuccessReport,
+  getLevelDataPath,
 } from '@cdo/apps/code-studio/progressRedux';
 import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
@@ -63,18 +64,11 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     appOptions: PropTypes.object,
     appConfig: PropTypes.object,
-
-    // Populated by Redux:
-
-    // In a lesson with multiple levels:
     currentLevelIndex: PropTypes.number,
     levels: PropTypes.array,
-
-    // In a single level:
     currentLevelId: PropTypes.string,
-
     levelCount: PropTypes.number,
-
+    levelDataPath: PropTypes.string,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -364,6 +358,7 @@ class UnconnectedMusicView extends React.Component {
       try {
         const result = await loadProgressionStepFromSource(
           progressionSource,
+          this.props.levelDataPath,
           // Special case: used for progression file:
           this.props.currentLevelIndex
         );
@@ -670,6 +665,9 @@ const MusicView = connect(
 
     // The number of levels.
     levelCount: state.music.levelCount,
+
+    // The URL path for retrieving level_data from the server.
+    levelDataPath: getLevelDataPath(state),
 
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
