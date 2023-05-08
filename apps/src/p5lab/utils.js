@@ -37,9 +37,9 @@ export function parseSoundPathString(text) {
   if (pathStringArray[2].includes('category_')) {
     category = pathStringArray[2];
     // Example: 'category_board_games' becomes 'Board games: '
-    category = capitalizeFirstLetter(
-      category.replace('category_', '').replaceAll('_', ' ') + ': '
-    );
+    category = category.replace('category_', '');
+    category = category.replaceAll('_', ' ');
+    category = capitalizeFirstLetter(category) + ': ';
   }
   // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
   const soundName = pathStringArray[pathStringArray.length - 1].replace(
