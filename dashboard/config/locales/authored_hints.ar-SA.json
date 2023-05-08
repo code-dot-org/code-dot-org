@@ -1958,8 +1958,8 @@
           "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq10": {
-          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
-          "courseA_maze_seq10_b": "أنت بحاجة للتحرك في 3 اتجاهات لحل هذا اللغز."
+          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً\n",
+          "courseA_maze_seq10_b": "أنت بحاجة للتحرك في 3 اتجاهات لحل هذا اللغز.\n"
         },
         "courseA_maze_seq10_2018": {
           "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
@@ -2023,8 +2023,8 @@
           "courseA_maze_seq4_b": "حاول تشغيل التعليمات البرمجية كما هي. هل حصل خطأ ما؟ أي قطعة برمجية قمت بإزالتها؟ كيف يمكن أصلاحها؟"
         },
         "courseA_maze_seq5": {
-          "courseA_maze_seq5_a": "حاول كتابة الخطوات على ورقة للعثور على حل!",
-          "courseA_maze_seq5_b": "ستحتاج إلى قطعتين، يشيران إلى اتجاهين."
+          "courseA_maze_seq5_a": "حاول كتابة الخطوات على ورقة للعثور على حل!\n",
+          "courseA_maze_seq5_b": "ستحتاج إلى قطعتين، يشيران إلى اتجاهين.\n"
         },
         "courseA_maze_seq5_2018": {
           "1": "حاول كتابة الخطوات على ورقة للعثور على حل!",
@@ -2052,8 +2052,8 @@
           "1": "قل الخطوات بصوت مرتفع، واكتشف ما إذا كان ذلك سيساعدك في معرفة الإجابة أم لا."
         },
         "courseA_maze_seq6": {
-          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
-          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية."
+          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.\n",
+          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
         },
         "courseA_maze_seq6_2018": {
           "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
@@ -2072,15 +2072,15 @@
           "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
         },
         "courseA_maze_seq7": {
-          "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.",
-          "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك."
+          "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.\n",
+          "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك.\n"
         },
         "courseA_maze_seq7_copy": {
           "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.\n",
           "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك.\n"
         },
         "courseA_maze_seq8": {
-          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
+          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير.\n"
         },
         "courseA_maze_seq8_2018": {
           "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
@@ -6985,8 +6985,8 @@
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_b": "الوظيفة التي تكتبها يجب ألّا تحتوي على برنامجك الكامل، بل تحتوي فقط على القسم الذي يرسم المربع الذي قياس جوانبه 100 بِكسِل.",
-          "courseD_artist_functions2_c": "استخدم القطعة البرمجية \"ارسم مربعًا\" باللون الأخضر لـ\"استدعاء\" وظيفتك تحت القطعة \"عند التشغيل\". وإلا، لن تعمل الأوامر البرمجية في وظيفتك.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "يجب على برنامجك:\n\n-   استخدام وظيفة \n-   التحرك إلى الأمام 100 + 75 نقطة\n-   استخدام وظيفة "
+          "courseD_artist_functions2_c": "استخدم القطعة البرمجية \"ارسم مربعًا\" باللون الأخضر لـ\"استدعاء\" وظيفتك تحت القطعة \"عند التشغيل\". وإلا، لن تعمل الأوامر البرمجية في وظيفتك.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "يجب على برنامجك:\n- استخدام وظيفة \n- التحرك إلى الأمام 100 + 75 نقطة\n- استخدام وظيفة "
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "من المفترض ألّا تحتوي الوظيفة على برنامجك كاملاً، بل الجزء الذي يرسم مربعًا بأضلاع قدرها 100 بكسل.",
@@ -9665,7 +9665,7 @@
           "courseC_maze_debugging5_b": "قل بصوت مرتفع ماذا يتوجب على سكرات أن يفعل. هل هو نفس الكود الموجود في مساحة العمل؟ ما الخطأ الذي يحدث؟"
         },
         "courseC_maze_debugging6_2021": {
-          "courseC_maze_debugging6_a": "ما الذي تفعله الأوامر البرمجية؟\nما الذي يفترض فيها أن تعمل؟\nما الذي يقول لك ذلك؟",
+          "courseC_maze_debugging6_a": "ما الذي تفعله الأوامر البرمجية?\\\nما الذي يفترض فيها أن تعمل?\\\nما الذي يقول لك ذلك?",
           "courseC_maze_debugging6_b": "بمجرد العثور على الخطأ الأول وتصحيحه، ادخل إلى عملية تصحيح الأخطاء مرة أخرى للعثور الخطأ الثاني.\n\nكرر العملية حتى يعمل البرنامج!"
         },
         "courseC_maze_debugging7_2021": {
@@ -9675,7 +9675,7 @@
         },
         "courseC_maze_debugging_challenge1_2021": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
-          "courseC_maze_debugging_challenge1_b": "مسار سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
+          "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
           "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge2_2021": {
@@ -9698,7 +9698,7 @@
           "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلتحذف بلوكة من منتصف الكود البرمجي, اسحب القطعة البرمجة التي تريد حفها مع ما تحتها إلى أي مكان في مساحة العمل.\n\nومن ثم اسحب القطعة البرمجية التي تريد حذفها إلى صندوق الأدوات.\n\nأخيرا, أعد القطع البرمجية الأخرى إلى مكانها."
         },
         "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_a": "تذكر أنه عند الالتفاف فإنك تتجه من وجهة نظر _الطائر_، إذا اتجهت لليمين سيتجه الطائر إلى أسفل.",
+          "courseC_maze_programming4_a": "تذكر أنه عند الالتفاف فإنك تتجه من وجهة نظر الطائر, إذا اتجهت لليمين سيتجه الطائر إلى أسفل.",
           "courseC_maze_programming4_b": "لتتبع الطريق:\n\n-   تحرك إلى الأمام\n-   اتجه نحو أحد الجهات\n-   تحرك إلى الأمام\n-   اتجه إلى عكس الجهة السابقة\n-   تحرك إلى الأمام"
         },
         "courseC_maze_programming5_2021": {
@@ -9983,7 +9983,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "ستحتاج إلى تكرار خيار \"الحصول على رحيق العسل\" داخل مربع \"تكرار\" آخر الذي يكون لديه كذلك مربع برمجي \"التحرك إلى الأمام\" بداخله.",
           "courseD_bee_nestedLoops7_b": "ستحتاج إلى استخدام كل القطع البرمجية \"تكرار\" المتاحة البالغ عددها ثلاثة لحل هذا اللغز.",
-          "courseD_bee_nestedLoops7_c": "قم ببناء المربعات البرمجية الثلاثة الخاصة بك، على هذا النحو:\n\n-   تكرار 4\n-   تكرار 3\n-   تكرار 12\n-   الحصول على رحيق العسل\n-   التحرك إلى الأمام\n-   الدوران لليمين"
+          "courseD_bee_nestedLoops7_c": "قم بوضع القطع البرمجية في ثلاث مستويات مختلفة، على هذا النحو:\n-    تكرار ٤    \n  -   تكرار ٣        \n    -   تكرار ١٢           \n      -   الحصول على رحيق العسل        \n   -   التحرك إلى الأمام    \n -   الدوران لليمين"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "من المفترض أن يكون لديك كلا الحدثين البرمجيين في الكود البرمجي الخاص بك:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10437,11 +10437,11 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "هل يمكن أن تجد النمط ما بين عدد الخطوات التي تحتاج لاتخاذها، وعدد مقادير رحيق العسل التي تريد جمعها؟",
           "courseF_bee_for10_b": "المجموعة الأولى من الزهور لديها عدد إجمالي من \"14 زهرة\". للحصول على المجموعة الأولى هذه، يجب على النحل إصدار طنين لأسفل بمقدار **7 مربعات** (أو 14 مربع مقسم على 2.) كم عدد الزهور في المجموعة التالية، وما مقدار المربعات التي ستسافر خلالها النحلة للوصول إلى هناك؟",
-          "courseF_bee_for10_c": "في هذا اللغز، توجد لدى المجموعة الأولى من الزهور عدد **زهرة**، والمجموعة الثانية لديها **10** زهرات، والمجموعة الثالثة لديها **6** زهرات، والمجموعة الرابعة لديها عدد **2** زهرة.\n\nفي هذا الرسم، ستلاحظ أنه يوجد **7** من  المربعات الحمراء، وعدد **5** من المربعات البرتقالية، و**3** من المربعات الخضراء، و**1** مربع برمجي أزرق. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nكيف ترتبط الأعداد؟",
+          "courseF_bee_for10_c": "في هذا اللغز، توجد لدى المجموعة الأولى من الزهور ** ١٤ ** زهرة، والمجموعة الثانية لديها **١٠** زهرات، والمجموعة الثالثة لديها **٦** زهرات، والمجموعة الرابعة لديها عدد **٢** زهرة.\n\nفي هذا الرسم، ستلاحظ أنه يوجد **٧** مربعات حمراء،  **٥** مربعات برتقالية، و**٣** مربعات خضراء، و**١** مربع برمجي أزرق. \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nكيف ترتبط الأعداد؟",
           "courseF_bee_for10_d": "ستحتاج إلى عمليّتي تكرار، علمية تكرار واحدة ستستخدم القطعة البرمجية \"رياضيات\"."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "بِكَم تقلّ 12 عن 15؟\\\nو بِكَم تقلّ 9 عن 12؟\n\nهل ترى النمط؟"
+          "courseF_bee_for11_a": "بِكَم تقلّ ١٢ عن ١٥؟\nو بِكَم تقلّ ٩ عن ١٢؟\n\nهل ترى النمط؟"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "سوف تحتاج إلى قطعتين برمجيتين في حلقة \"التكرار\" من أجل تجميع كل رحيق العسل."
@@ -10473,7 +10473,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "إذا كنت حلقتك في حالة عد لأعلى، فستتم إضافة مقدار الزيادة إلى متغير \"العداد\" الخاص بك في كل مرة. ما الذي تحتاج لإضافة كل رقم من أجل الحصول على الكمية التالية من رحيق العسل؟",
           "courseF_bee_for8_b": "في هذا اللغز، ستحتاج إلى التحرك في نمط السلم للوصول إلى الزهور.",
-          "courseF_bee_for8_c": "سيكون عد الحلقة الخاصة بك من\\_ 3 إلى 15 \\_مع بعض زيادة. ما هي؟"
+          "courseF_bee_for8_c": "سوف تعد حلقة التكرار الخاصة بك من_ ٣ إلى ١٥ _مع بعض الزيادة. ما هي؟"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "جرب استخدام بعض الرياضيات مع المتغير \"عداد\"ما الذي يجب عليك فعله بالعداد في كل زهرة من أجل معادلة رحيق النحل الذي تحتاج لتجميعه؟",
@@ -10653,7 +10653,7 @@
           "courseF_bee_variables_3_2021_1": "لتضيف واحدًا الى المتغيِّر، يمكنك استخدام هذا الكود البرمجي في برنامجك:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "ستحتاج الي هذه القطعة أيضاً:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"قياس\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"كائن ـ١٨ـ١\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">٥</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -10681,7 +10681,7 @@
           "courseF_bee_variables_4_2021_1": "بدلًا من إضافة ١ إلى المتغير، أضف ٢ في كل مرة بدلاً من ذلك."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "حاول تغيير تسمية المتغير في قطعة \"عند الإجابة\". نظرًا لوجود محفزات متعددة، استخدم تسمية المحفز \\* الأخير \\* الذي سيتم الرد عليه.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "حاول تغيير تسمية المتغير في قطعة \"عند الإجابة\". نظرًا لوجود محفزات متعددة، استخدم تسمية المحفز * الأخير * الذي سيتم الرد عليه.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">؟؟؟</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "هناك طريقتان لحل هذا اللغز!"

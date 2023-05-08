@@ -815,7 +815,7 @@
           "moving west": "التحرك ناحية الغرب",
           "patrolling": "التجوُّل",
           "moving east": "التحرك ناحية الشرق",
-          "swimming left and right": "السباحة لليسار ولليمين"
+          "swimming left and right": "السباحة ناحية اليسار واليمين"
         },
         "courseF_label_predict": {
           "mystery behavior": "سلوك غامِض",
@@ -838,7 +838,7 @@
           "running east": "الجري نحو الشرق",
           "moving east": "التحرك ناحية الشرق",
           "moving west": "التحرك ناحية الغرب",
-          "wandering": "التجوُّل",
+          "wandering": "التحرك",
           "spinning left": "الدوران ناحية اليسار",
           "spinning right": "الدوران ناحية اليمين",
           "shrinking": "الانقباض",
@@ -1873,7 +1873,7 @@
           "moving south2": "التحرك باتجاه الجنوب ٢",
           "swimming left and right2": "السباحة لليسار ولليمين ٢",
           "moving north2": "التحرك باتجاه الشمال ٢",
-          "jittering2": "النرفزة ٢",
+          "jittering2": "الغضب ٢",
           "moving west2": "التحرك باتجاه الغرب ٢",
           "patrolling2": "الدوريات ٢"
         },
