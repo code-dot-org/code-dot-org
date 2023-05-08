@@ -45,17 +45,16 @@ export default class TutorialSet extends React.Component {
       `[data-tutorial-code="${this.state.chosenItem.code}"]`
     )[0];
 
-    this.setState({showingDetail: false, chosenItem: null});
-
-    if (
-      document.activeElement.hasAttribute('data-tutorial-code') &&
-      document.activeElement !== tutorialDiv
-    ) {
-      tutorialDiv.focus();
-      if (!isInViewport(tutorialDiv)) {
-        tutorialDiv.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    this.setState({showingDetail: false, chosenItem: null}, () => {
+      if (document.activeElement !== tutorialDiv) {
+        setTimeout(() => {
+          tutorialDiv.focus();
+          if (!isInViewport(tutorialDiv)) {
+            tutorialDiv.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+          }
+        }, 0);
       }
-    }
+    });
   };
 
   changeTutorial = delta => {
