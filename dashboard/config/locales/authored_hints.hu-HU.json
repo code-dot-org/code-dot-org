@@ -5661,6 +5661,33 @@
         "courseE_artist_concept_challenge2_2018": {
           "courseE_artist_concept_challenge2_a": "Az első lépés a függvény **definíció**ja (meghatározása), utána bármikor újra és újra **meghívhatod**!",
           "courseE_artist_concept_challenge2_b": "Ezzel a paranccsal a vászon bármelyik helyére odaugorhatsz:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
+        },
+        "NEW Course 4 Artist Params 11": {
+          "NEW_Course_4_Artist_Params_11_a": "Több számot is változóvá kell alakítanod a függvényen belül."
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nEzzel az `ugrás a következő helyre` blokkal a zombi művész a képernyő bármelyik pontjára el tud ugrani. Mindig a bal felső sarokból számoljuk, hogy mennyit ugrik előre (vagyis jobbra), és mennyit lefelé. Ilyenkor egyáltalán nem számít, hogy a zombi művész hol volt a parancs kiadása _előtt_!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         }
       }
     }

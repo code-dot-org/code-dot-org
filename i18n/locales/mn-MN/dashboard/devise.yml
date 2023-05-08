@@ -50,9 +50,6 @@ mn:
       expired: "хугацаа дууссан, шинийг захиалаарай"
       not_found: "олдсонгүй"
       not_locked: "түгжээгүй байна"
-      not_saved:
-        one: "1 алдаа энэхүү %{resource}-г хадгалагдахад саад боллоо:"
-        other: "%{count} алдаанууд энэхүү %{resource}-г хадгалагдахад саад боллоо:"
     invitations:
       send_instructions: 'Урилгын цахим шуудан %{email} руу илгээгдлээ.'
       invitation_token_invalid: 'Ирүүлсэн урилгын токен хүчингүй байна!'
