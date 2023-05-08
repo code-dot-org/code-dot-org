@@ -59,7 +59,7 @@ export default class MusicBlocklyWorkspace {
     player,
     toolboxAllowList,
     currentLevelId,
-    currentScriptName,
+    currentScriptId,
     channelId
   ) {
     this.container = container;
@@ -120,7 +120,7 @@ export default class MusicBlocklyWorkspace {
     this.projectManager = await this.getProjectManager(
       channelId,
       currentLevelId,
-      currentScriptName
+      currentScriptId
     );
     this.loadCode();
 
@@ -393,7 +393,7 @@ export default class MusicBlocklyWorkspace {
     return this.projectManager.hasUnsavedChanges();
   }
 
-  async changeLevels(newLevelId, newScriptName) {
+  async changeLevels(newLevelId, newScriptId) {
     if (this.hasUnsavedChanges()) {
       // Force a save with the current code before changing panels if there are unsaved changes.
       await this.projectManager.save(true);
@@ -405,7 +405,7 @@ export default class MusicBlocklyWorkspace {
     this.projectManager = await this.getProjectManager(
       undefined,
       newLevelId,
-      newScriptName
+      newScriptId
     );
     await this.loadCode();
   }
@@ -435,9 +435,9 @@ export default class MusicBlocklyWorkspace {
 
   // Get the project manager for the current storage type.
   // If no storage type is specified in AppConfig, use remote storage.
-  async getProjectManager(channelId, currentLevelId, currentScriptName) {
+  async getProjectManager(channelId, currentLevelId, currentScriptId) {
     console.log(
-      `creating project manager, channelId is ${channelId}, currentLevelId is ${currentLevelId}, currentScriptName is ${currentScriptName}`
+      `creating project manager, channelId is ${channelId}, currentLevelId is ${currentLevelId}, currentScriptId is ${currentScriptId}`
     );
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
@@ -467,7 +467,7 @@ export default class MusicBlocklyWorkspace {
         projectManagerStorageType,
         this.getProject.bind(this),
         currentLevelId,
-        currentScriptName
+        currentScriptId
       );
     }
   }

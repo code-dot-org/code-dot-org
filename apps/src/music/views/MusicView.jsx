@@ -83,7 +83,7 @@ class UnconnectedMusicView extends React.Component {
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
     currentLevelId: PropTypes.string,
-    currentScriptName: PropTypes.string,
+    currentScriptId: PropTypes.number,
   };
 
   constructor(props) {
@@ -183,7 +183,7 @@ class UnconnectedMusicView extends React.Component {
         this.player,
         this.progressManager?.getCurrentStepDetails().toolbox,
         this.props.currentLevelId,
-        this.props.currentScriptName,
+        this.props.currentScriptId,
         this.props.channelId
       );
       this.player.initialize(this.library);
@@ -283,7 +283,10 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
-    this.musicBlocklyWorkspace.changeLevels(this.props.currentLevelId);
+    this.musicBlocklyWorkspace.changeLevels(
+      this.props.currentLevelId,
+      this.props.currentScriptId
+    );
   };
 
   setToolboxForProgress = () => {
@@ -624,7 +627,7 @@ const MusicView = connect(
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
     currentLevelId: state.progress.currentLevelId,
-    currentScriptName: state.progress.scriptName,
+    currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
   }),
   dispatch => ({

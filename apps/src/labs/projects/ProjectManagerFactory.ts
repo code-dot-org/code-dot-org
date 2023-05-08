@@ -43,12 +43,12 @@ export default class ProjectManagerFactory {
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
     getProject: () => Project,
-    levelId: string,
-    scriptName?: string
+    levelId: number,
+    scriptId?: number
   ): Promise<ProjectManager> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
-    const response = await channelsStore.loadForLevel(levelId, scriptName);
+    const response = await channelsStore.loadForLevel(levelId, scriptId);
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {
