@@ -14,6 +14,8 @@ const BLOG_URL = 'https://support.code.org/hc/en-us/articles/6104078305549';
 
 // exported for tests
 export function UnconnectedJavalabCaptchaDialog({
+  onVerify,
+  onCancel,
   isCaptchaDialogOpen,
   setIsCaptchaDialogOpen,
   appendNewlineToConsoleLog,
@@ -31,18 +33,24 @@ export function UnconnectedJavalabCaptchaDialog({
     }).then(() => {
       appendOutputLog(javalabMsg.verificationSuccessful());
       appendNewlineToConsoleLog();
+      onVerify();
       setIsCaptchaDialogOpen(false);
     });
+  };
+
+  const onCaptchaCancel = () => {
+    appendOutputLog(javalabMsg.verificationIncomplete());
+    appendNewlineToConsoleLog();
+    onCancel();
+    setIsCaptchaDialogOpen(false);
   };
 
   return (
     <ReCaptchaDialog
       submitText={javalabMsg.submit()}
       isOpen={isCaptchaDialogOpen}
-      handleCancel={() => {
-        setIsCaptchaDialogOpen(false);
-      }}
       handleSubmit={onCaptchaSubmit}
+      handleCancel={onCaptchaCancel}
       siteKey={recaptchaSiteKey}
       title={javalabMsg.verificationHeaderMessage()}
     >
@@ -55,6 +63,8 @@ export function UnconnectedJavalabCaptchaDialog({
 }
 
 UnconnectedJavalabCaptchaDialog.propTypes = {
+  onVerify: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
   isCaptchaDialogOpen: PropTypes.bool.isRequired,
   setIsCaptchaDialogOpen: PropTypes.func.isRequired,
   appendNewlineToConsoleLog: PropTypes.func.isRequired,

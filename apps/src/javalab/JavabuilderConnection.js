@@ -165,7 +165,6 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         console.error(error.responseText);
       }
-      this.handleExecutionFinished();
     }
   }
 

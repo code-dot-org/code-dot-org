@@ -141,6 +141,26 @@ class JavalabView extends React.Component {
     );
   };
 
+  onCaptchaVerify = () => {
+    const {isRunning, isTesting, onRun, onTest} = this.props;
+    if (isRunning) {
+      onRun();
+    }
+    if (isTesting) {
+      onTest();
+    }
+  };
+
+  onCaptchaCancel = () => {
+    const {isRunning, isTesting, setIsRunning, setIsTesting} = this.props;
+    if (isRunning) {
+      setIsRunning(false);
+    }
+    if (isTesting) {
+      setIsTesting(false);
+    }
+  };
+
   render() {
     const {
       displayTheme,
@@ -195,7 +215,10 @@ class JavalabView extends React.Component {
             ...styles.javalab,
           }}
         >
-          <JavalabCaptchaDialog />
+          <JavalabCaptchaDialog
+            onVerify={this.onCaptchaVerify}
+            onCancel={this.onCaptchaCancel}
+          />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
