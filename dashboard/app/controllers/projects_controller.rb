@@ -283,13 +283,13 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects/level/:level_id or GET /projects/level/:level_id?script_name=:script_name
+  # GET /projects/level/:level_id or GET /projects/level/:level_id(/script_id/:script_id)
   # Given a level_id and the current user (or signed out user), get the existing project
-  # or create a new project for that level and user. If a script_name is provided, get or
+  # or create a new project for that level and user. If a script_id is provided, get or
   # create the project for that level, script and user
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
-    script_id = Unit.find_by_name(params[:script_name])&.id
+    script_id = params[:script_id]
     level = Level.find(params[:level_id])
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message

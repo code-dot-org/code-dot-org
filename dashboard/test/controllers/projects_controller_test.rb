@@ -401,7 +401,7 @@ class ProjectsControllerTest < ActionController::TestCase
     script = create(:script)
     level = create(:level, :blockly)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_level, params: {script_name: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
   end
@@ -411,7 +411,7 @@ class ProjectsControllerTest < ActionController::TestCase
     script = create(:script)
     level = create(:applab)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_level, params: {script_name: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :forbidden
   end
 
@@ -420,7 +420,7 @@ class ProjectsControllerTest < ActionController::TestCase
     script = create(:script)
     level = create(:applab)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_level, params: {script_name: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
   end
