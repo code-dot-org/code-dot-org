@@ -283,7 +283,7 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects/level/:level_id(/script_id/:script_id)
+  # GET /projects(/script/:script_id)/level/:level_id
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
   # create the project for that level, script and user
