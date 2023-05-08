@@ -32,9 +32,10 @@ export function parseSoundPathString(text) {
     throw new Error('This is not a valid path to a sound file.');
   }
   const pathStringArray = text.split('/');
-  let category = pathStringArray[2];
+  let category = '';
   // Some sounds do not include a category, such as default.mp3
   if (pathStringArray[2].includes('category_')) {
+    category = pathStringArray[2];
     // Example: 'category_board_games' becomes 'Board games: '
     category = capitalizeFirstLetter(
       category.replace('category_', '').replaceAll('_', ' ') + ': '
