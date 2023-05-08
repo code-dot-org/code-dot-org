@@ -873,6 +873,12 @@
         },
         "courseF_groups_size_-2022-2": {
           "mini-toolbox-blue-button": "Натиснете синия бутон, за да отворите или затворите."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Тези блокове са заключени и не могат да бъдат изтрити!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "След като съедините всички блокчета, натиснете \"Старт\" за да стартирате програмата си."
         }
       }
     }
