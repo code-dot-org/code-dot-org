@@ -52,6 +52,7 @@ window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
+window.dashboard.lab = require('@cdo/apps/code-studio/lab').default;
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import {

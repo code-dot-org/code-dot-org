@@ -57,7 +57,7 @@ export default class ProgressManager {
     this.validator = validator;
     this.onProgressChange = onProgressChange;
     this.currentProgressState = initialProgressState;
-    if (initialStep) {
+    if (initialStep !== undefined) {
       this.currentProgressState.step = initialStep;
     }
   }

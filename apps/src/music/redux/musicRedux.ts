@@ -40,8 +40,10 @@ interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
+  /** The number of levels in the current progression */
+  levelCount: number | undefined;
   // TODO: Currently Music Lab is the only Lab that uses
-  // this progres system, but in the future, we may want to
+  // this progress system, but in the future, we may want to
   // move this into a more generic, high-level, lab-agnostic
   // reducer.
   currentProgressState: ProgressState;
@@ -57,6 +59,7 @@ const initialState: MusicState = {
   isBeatPadShowing: false,
   playbackEvents: [],
   lastMeasure: 0,
+  levelCount: undefined,
   currentProgressState: {...initialProgressState},
 };
 
@@ -135,6 +138,9 @@ const musicSlice = createSlice({
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
     },
+    setLevelCount: (state, action: PayloadAction<number>) => {
+      state.levelCount = action.payload;
+    },
   },
 });
 
@@ -181,4 +187,5 @@ export const {
   setCurrentProgressState,
   clearPlaybackEvents,
   addPlaybackEvents,
+  setLevelCount,
 } = musicSlice.actions;
