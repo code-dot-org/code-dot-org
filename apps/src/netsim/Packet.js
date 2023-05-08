@@ -173,7 +173,7 @@ Packet.Encoder.prototype.validateSpec = function () {
       );
     }
 
-    if (keyCache.hasOwnProperty(this.headerSpec_[i])) {
+    if (Object.prototype.hasOwnProperty.call(keyCache, this.headerSpec_[i])) {
       throw new Error('Invalid packet format: Field keys must be unique.');
     } else {
       keyCache[this.headerSpec_[i]] = 'used';
@@ -304,7 +304,7 @@ Packet.Encoder.prototype.getFieldBitWidth = function (headerType) {
 Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
   var binaryHeaders = {};
   this.headerSpec_.forEach(function (headerField) {
-    if (headers.hasOwnProperty(headerField)) {
+    if (Object.prototype.hasOwnProperty.call(headers, headerField)) {
       // Convert differently for address and packet fields?
       if (Packet.isAddressField(headerField)) {
         binaryHeaders[headerField] = this.addressStringToBinary(
@@ -354,7 +354,10 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
     // Get header value from provided headers, if it exists.
     // If not, we'll start with an empty string and pad it to the correct
     // length, below.
-    var fieldBits = binaryHeaders.hasOwnProperty(fieldSpec)
+    var fieldBits = Object.prototype.hasOwnProperty.call(
+      binaryHeaders,
+      fieldSpec
+    )
       ? binaryHeaders[fieldSpec]
       : '';
 
