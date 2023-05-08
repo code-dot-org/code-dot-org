@@ -51,13 +51,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
           return optionsMap;
         }, {})
       : {};
-    const config = element.getAttribute('config');
+    this.config = element.getAttribute('config');
     let options = null;
-    if (config) {
-      options = this.printerStyleNumberRangeToList(config);
+    if (this.config) {
+      options = this.printerStyleNumberRangeToList(this.config);
       // `options` is not a number range, it is a customized config string.
       if (options.length === 0) {
-        options = config.split(',').map(val => {
+        options = this.config.split(',').map(val => {
           val = val.trim();
           // If val is a one of the options in this.menuGenerator_,
           // human-readable string is displayed.
@@ -90,19 +90,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param element xml
    * @return element
    */
-  // toXml(element) {
-  //   super.toXml(element);
-  //   if (Array.isArray(this.menuGenerator_)) {
-  //     // Convert options (array of arrays) back into string config.
-  //     const config = this.menuGenerator_
-  //       .map(val => {
-  //         return val[1];
-  //       })
-  //       .join();
-  //     element.setAttribute('config', config);
-  //   }
-  //   return element;
-  // }
+  toXml(element) {
+    super.toXml(element);
+    if (this.config) {
+      element.setAttribute('config', this.config);
+    }
+    return element;
+  }
 
   /**
    * Converts a printer-style string range to an array of numbers
