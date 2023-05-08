@@ -289,11 +289,9 @@ const styles = {
   tutorialDetailModalHeader: {
     borderBottomWidth: 0,
     paddingTop: 0,
-    paddingBottom: 4,
-    height: 48,
     paddingBottom: 0,
     height: 44,
-    paddingRight: 11
+    paddingRight: 11,
   },
   tutorialDetailModalBody: {
     paddingTop: 0,
@@ -316,21 +314,21 @@ const styles = {
     width: 36,
     fontSize: 36,
     marginTop: 6,
-    marginRight: 6
+    marginRight: 6,
   },
   tutorialDetailImageOuterContainer: {
     float: 'left',
     paddingBottom: 10,
     paddingLeft: 0,
     paddingRight: 0,
-    marginBottom: 6
+    marginBottom: 6,
   },
   tutorialDetailImageLink: {
     display: 'inline-block',
     width: '100%',
     height: '100%',
     padding: 4,
-    marginTop: 4
+    marginTop: 4,
   },
   tutorialDetailImageBounds: {
     position: 'relative',
@@ -355,9 +353,8 @@ const styles = {
   },
   tutorialDetailInfoContainer: {
     float: 'left',
-    paddingLeft: 20,
     paddingTop: 8,
-    paddingLeft: 20
+    paddingLeft: 20,
   },
   tutorialDetailStartButton: {
     display: 'inline-block',
@@ -366,7 +363,7 @@ const styles = {
     backgroundColor: '#ffa400',
     borderColor: '#ffa400',
     borderRadius: 4,
-    marginTop: 20
+    marginTop: 20,
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
