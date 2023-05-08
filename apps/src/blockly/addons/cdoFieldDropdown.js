@@ -90,19 +90,19 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param element xml
    * @return element
    */
-  toXml(element) {
-    super.toXml(element);
-    if (Array.isArray(this.menuGenerator_)) {
-      // Convert options (array of arrays) back into string config.
-      const config = this.menuGenerator_
-        .map(val => {
-          return val[1];
-        })
-        .join();
-      element.setAttribute('config', config);
-    }
-    return element;
-  }
+  // toXml(element) {
+  //   super.toXml(element);
+  //   if (Array.isArray(this.menuGenerator_)) {
+  //     // Convert options (array of arrays) back into string config.
+  //     const config = this.menuGenerator_
+  //       .map(val => {
+  //         return val[1];
+  //       })
+  //       .join();
+  //     element.setAttribute('config', config);
+  //   }
+  //   return element;
+  // }
 
   /**
    * Converts a printer-style string range to an array of numbers
