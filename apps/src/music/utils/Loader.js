@@ -1,8 +1,6 @@
 // Utilities for retrieving various types of data for Music Lab.
 
-import {getStore} from '@cdo/apps/redux';
 import AppConfig from '../appConfig';
-import {levelsForLessonId} from '@cdo/apps/code-studio/progressRedux';
 
 export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -42,26 +40,7 @@ const loadProgressionFile = async () => {
 };
 
 // Loads level data from the dashboard, for a script level or a level.
-const loadLevelData = async levelSource => {
-  const state = getStore().getState();
-
-  let levelDataPath;
-  if (levelSource === 'levels') {
-    const scriptName = state.progress.scriptName;
-    const lessonPosition = state.progress.lessons?.find(
-      lesson => lesson.id === state.progress.currentLessonId
-    ).relative_position;
-    const levelNumber =
-      levelsForLessonId(
-        state.progress,
-        state.progress.currentLessonId
-      ).findIndex(level => level.isCurrentLevel) + 1;
-    levelDataPath = `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
-  } else if (levelSource === 'level') {
-    const levelId = state.progress.currentLevelId;
-    levelDataPath = `/levels/${levelId}/level_data`;
-  }
-
+const loadLevelData = async levelDataPath => {
   const response = await fetch(levelDataPath);
 
   if (!response.ok) {
@@ -75,6 +54,7 @@ const loadLevelData = async levelSource => {
 // Loads a progression step.
 export const loadProgressionStepFromSource = async (
   levelSource,
+  levelDataPath,
   currentLevelIndex
 ) => {
   let progressionStep = undefined;
@@ -82,11 +62,11 @@ export const loadProgressionStepFromSource = async (
 
   if (levelSource === 'levels') {
     // Since we have levels, we'll asynchronously retrieve the current level data.
-    const response = await loadLevelData(levelSource);
+    const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
   } else if (levelSource === 'level') {
     // Since we have a level, we'll asynchronously retrieve the current level data.
-    const response = await loadLevelData(levelSource);
+    const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
     levelCount = 1;
   } else if (levelSource === 'file') {
