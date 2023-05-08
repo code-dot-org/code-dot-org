@@ -854,7 +854,13 @@
         "CSD Web Headings hr_2021": "Додатковий код: горизонтальна лінія",
         "CSD Web Headings hr_2022": "Додатковий код: горизонтальна лінія",
         "CSD Web Headings line break_2021": "Додатковий код: Розрив рядка",
-        "CSD Web Headings line break_2022": "Додатковий код: Розрив рядка"
+        "CSD Web Headings line break_2022": "Додатковий код: Розрив рядка",
+        "CSD U2 Image Tag Inconsistent Spelling_2021": "Відлагодження відсутнього зображення 3",
+        "CSD U2 Image Tag Inconsistent Spelling_2022": "Відлагодження відсутнього зображення 3",
+        "CSD U2 Image Tag Mispelled src_2021": "Відлагодження відсутнього зображення 2",
+        "CSD U2 Image Tag Mispelled src_2022": "Відлагодження відсутнього зображення 2",
+        "CSD U2 Image Tag No End Quote_2021": "Відлагодьте відсутнє зображення",
+        "CSD U2 Image Tag No End Quote_2022": "Відлагодьте відсутнє зображення"
       }
     }
   }

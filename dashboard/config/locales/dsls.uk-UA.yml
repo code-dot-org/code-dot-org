@@ -3125,9 +3125,10 @@ uk-UA:
         display_name: Додавання зображень
       CSD U2 Image practice_pilot_2021:
         display_name: Додавання зображень
+        description: Потренуйте свої нові навички тут.
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
             PM.png">
         - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
@@ -3494,6 +3495,7 @@ uk-UA:
         display_name: Додавання зображень
       CSD U2 Image practice_pilot_2022:
         display_name: Додавання зображень
+        description: Потренуйте свої нові навички тут.
       CSD U2 Test Classes:
         answers:
         - {}
@@ -10716,3 +10718,11 @@ uk-UA:
       ml-models in applab-choice parent_2022:
         description: Випробуйте те, чого ви навчилися, в одній або кількох наступних
           вправах.
+      CSD U2 layout style practice_pilot_2021:
+        description: Потренуйте свої нові навички тут.
+      CSD U2 layout style practice_pilot_2022:
+        description: Потренуйте свої нові навички тут.
+      CSD web classes practice_2021:
+        description: Потренуйте свої нові навички тут.
+      CSD web classes practice_2022:
+        description: Потренуйте свої нові навички тут.
