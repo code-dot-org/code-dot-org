@@ -8,13 +8,11 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 interface LabState {
   isLoading: boolean;
   isPageError: boolean;
-  currentLevelId: string | undefined;
 }
 
 const initialState: LabState = {
   isLoading: false,
   isPageError: false,
-  currentLevelId: undefined,
 };
 
 const labSlice = createSlice({
@@ -27,13 +25,9 @@ const labSlice = createSlice({
     setIsPageError(state, action: PayloadAction<boolean>) {
       state.isPageError = action.payload;
     },
-    setCurrentLevelId(state, action: PayloadAction<string>) {
-      state.currentLevelId = action.payload;
-    },
   },
 });
 
-export const {setIsLoading, setIsPageError, setCurrentLevelId} =
-  labSlice.actions;
+export const {setIsLoading, setIsPageError} = labSlice.actions;
 
 export default labSlice.reducer;

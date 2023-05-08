@@ -58,7 +58,7 @@ const loadLevelData = async levelSource => {
       ).findIndex(level => level.isCurrentLevel) + 1;
     levelDataPath = `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
   } else if (levelSource === 'level') {
-    const levelId = state.lab.currentLevelId;
+    const levelId = state.progress.currentLevelId;
     levelDataPath = `/levels/${levelId}/level_data`;
   }
 
