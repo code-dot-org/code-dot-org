@@ -65,8 +65,6 @@
     Properties:
       DBProxyName: !Sub "${AWS::StackName}-reporting"
       EngineFamily: MYSQL
-      # TODO: Remove this debug.
-      DebugLogging: true
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
@@ -179,8 +177,6 @@
     Properties:
       DBProxyName: !Ref AWS::StackName
       EngineFamily: MYSQL
-      # TODO: Remove this debug.
-      DebugLogging: true
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretAdmin, IAMAuth: DISABLED}
