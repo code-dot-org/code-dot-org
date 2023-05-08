@@ -132,9 +132,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           {curriculaData
             .filter(
               curriculum =>
-                !!curriculum.grade_levels &&
-                !!curriculum.course_version_path &&
-                !!curriculum.duration
+                !!curriculum.grade_levels && !!curriculum.course_version_path
             )
             .map(
               ({
