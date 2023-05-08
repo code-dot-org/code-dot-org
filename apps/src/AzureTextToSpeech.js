@@ -140,7 +140,7 @@ export default class AzureTextToSpeech {
     }
 
     // Otherwise, check the text for profanity and request the TTS sound.
-    const soundPromiseGenerator = async resolve => {
+    const soundPromiseGenerator = async () => {
       try {
         const profaneWords = await findProfanity(
           text,
@@ -154,8 +154,7 @@ export default class AzureTextToSpeech {
           });
           onFailure(soundResponse.profanityMessage());
           wrappedSetCachedSound(soundResponse);
-          resolve(soundResponse);
-          return;
+          return soundResponse;
         }
 
         const bytes = await this.convertTextToSpeech(
@@ -170,11 +169,11 @@ export default class AzureTextToSpeech {
           bytes,
         });
         wrappedSetCachedSound(soundResponse);
-        resolve(soundResponse);
+        return soundResponse;
       } catch (error) {
         const soundResponse = wrappedCreateSoundResponse({onComplete, error});
         onFailure(soundResponse.errorMessage());
-        resolve(soundResponse);
+        return soundResponse;
       }
     };
 
