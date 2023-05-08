@@ -31,14 +31,13 @@ export function parseSoundPathString(text) {
   if (!text.startsWith(SOUND_PREFIX) || !text.endsWith('.mp3')) {
     throw new Error('This is not a valid path to a sound file.');
   }
-  //throw new Error('This is not a valid path to a sound file.');
   const pathStringArray = text.split('/');
-  let category = '';
+  let category = pathStringArray[2];
   // Some sounds do not include a category, such as default.mp3
   if (pathStringArray[2].includes('category_')) {
     // Example: 'category_board_games' becomes 'Board games: '
     category = capitalizeFirstLetter(
-      pathStringArray[2].replace('category_', '').replaceAll('_', ' ') + ': '
+      category.replace('category_', '').replaceAll('_', ' ') + ': '
     );
   }
   // Example: 'card_dealing_multiple.mp3' becomes 'card_dealing_multiple'
