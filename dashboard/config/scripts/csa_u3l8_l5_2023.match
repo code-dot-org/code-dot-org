@@ -14,3 +14,4 @@ answer 'a condition that must always be true just after the execution of a code 
 
 question 'off-by-one error'
 answer 'an error that occurs when a loop repeats one time too many or one time too few'
+allow_multiple_attempts true

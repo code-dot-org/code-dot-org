@@ -66,3 +66,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Instance variables for a class should be declared `private`, while the constructor should be declared `public`.
 MARKDOWN
+
+allow_multiple_attempts true

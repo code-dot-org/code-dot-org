@@ -645,7 +645,7 @@ export default class CdoBramble {
       // Regex: Compare without whitespace.
       const projectChanged = Object.keys(startObj).reduce(
         (hasChanged, currentFilename) => {
-          if (!userObj.hasOwnProperty(currentFilename)) {
+          if (!Object.prototype.hasOwnProperty.call(userObj, currentFilename)) {
             hasChanged = true;
           } else {
             const dataChanged =

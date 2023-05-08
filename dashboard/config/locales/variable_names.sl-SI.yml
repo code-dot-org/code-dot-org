@@ -6,6 +6,7 @@ sl:
       age: starost
       answer: odgovor
       binary: binarno
+      birds: ptice
       cats: muce
       color: barva
       counter: števec

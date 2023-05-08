@@ -1118,3 +1118,7 @@ eu:
               display_name: Funtzioak
             csf_nested_loops:
               display_name: Baldintzak
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Sarrera

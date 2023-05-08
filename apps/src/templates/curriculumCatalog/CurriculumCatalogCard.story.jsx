@@ -15,6 +15,7 @@ const defaultArgs = {
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
   isTranslated: true,
   isEnglish: true,
+  pathToCourse: '/s/course',
 };
 
 export const AllOptionsCard = Template.bind({});
