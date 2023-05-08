@@ -22,3 +22,5 @@ for (int i = 0; i <= grades.length; i++) {
 
 The code segment does not work as intended. Which of the following changes should be made so the code segment works correctly?
 MARKDOWN
+
+allow_multiple_attempts true

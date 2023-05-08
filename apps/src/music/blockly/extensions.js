@@ -20,7 +20,7 @@ export const dynamicTriggerExtension = function () {
 export const getDefaultTrackNameExtension = player =>
   function () {
     this.getField(TRACK_NAME_FIELD).setValue(
-      `track ${Object.keys(player.getTracksMetadata()).length + 1}`
+      `track 1` // TODO: Replace with Sequencer output when re-enabling Tracks mode
     );
   };
 

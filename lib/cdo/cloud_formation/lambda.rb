@@ -17,7 +17,7 @@ module Cdo::CloudFormation
       str =
         if uglify
           RakeUtils.npm_install
-          `$(npm bin)/uglifyjs --compress --mangle -- #{filename}`
+          `npx uglifyjs --compress --mangle -- #{filename}`
         else
           File.read(filename)
         end

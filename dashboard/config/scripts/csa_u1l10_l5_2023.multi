@@ -31,3 +31,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Since the error is related to the direction that the `Painter` object is moving, printing the `Painter` object's direction would be most helpful to identify where the issue is occurring.
 MARKDOWN
+
+allow_multiple_attempts true
