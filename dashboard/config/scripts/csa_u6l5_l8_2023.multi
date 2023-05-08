@@ -7,7 +7,7 @@ wrong '`hedgehog and otter`'
 wrong '`hedgehog and koala`'
 wrong 'Nothing is printed due to an `IndexOutOfBoundsException`.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

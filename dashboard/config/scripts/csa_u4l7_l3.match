@@ -11,3 +11,4 @@ question 'static method'
 answer 'a method that is called by the class instead of by an instance of the class'
 question 'truncate'
 answer 'remove everything to the right of the decimal point'
+allow_multiple_attempts true

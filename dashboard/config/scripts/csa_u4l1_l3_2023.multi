@@ -41,3 +41,5 @@ index++;
 
 **Option III:** Change the test for the `while` loop to `while (index <= numbers.length)`
 MARKDOWN
+
+allow_multiple_attempts true

@@ -213,6 +213,50 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
+  test "latest_published_version returns most recent published course version with unit group" do
+    offering = create :course_offering, :with_unit_groups
+
+    most_recent_version = offering.course_versions[2]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[0]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[1]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[3]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit" do
+    offering = create :course_offering, :with_units
+
+    most_recent_version = offering.course_versions[1]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[2]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[3]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[0]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@student)
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@teacher)
@@ -525,6 +569,52 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
 
     Unit.clear_cache
+  end
+
+  test 'duration returns label associated with sum of units duration' do
+    # Create a unit with multiple lessons, each with a different number of lesson activities.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 40)
+
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+
+    # A course_offering of this unit should have a 'week' duration since a week is labeled as 91-250 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 120, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :week, co.duration
+  end
+
+  test 'duration returns lesson if sum of units duration is 0' do
+    # Create a unit with single lesson with an unspecified duration (defaults to 0).
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson)
+
+    # A course_offering of this unit should have a 'lesson' duration since a lesson is labeled as 0-90 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 0, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :lesson, co.duration
+  end
+
+  test 'duration returns school_year if sum of units duration is greater than 5000' do
+    # Create a unit with multiple lessons with durations that sum up to >5000.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+
+    # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 6000, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :school_year, co.duration
   end
 
   test "can serialize and seed course offerings" do
