@@ -394,14 +394,14 @@
   "csc-pilot-fa2022-ecosystem": "csc-pilot-fa2022-ecosystem",
   "csp-playground": "csp-playground",
   "csc-pilot-fa2022-particles": "csc-pilot-fa2022-particles",
-  "devices": "Creating Apps for Devices",
+  "devices": "Creating Apps for Devices (Circuit Playground)",
   "allthevalidation": "allthevalidation",
   "katies-playground": "katies-playground",
   "microbit": "Creating Apps with Devices (micro:bit)",
   "microbit-temp": "microbit-temp",
   "csc-mappinglandmarks": "csc-mappinglandmarks",
   "blockchain": "Blockchain",
-  "self-paced-pl-csc": "self-paced-pl-csc",
+  "self-paced-pl-csc": "Teaching CS Connections",
   "csc-adaptations": "csc-adaptations",
   "poemmaker": "poemmaker",
   "testing-digital-information": "testing-digital-information",
@@ -426,5 +426,6 @@
   "virtual-pl-csd-summer": "virtual-pl-csd-summer",
   "pl-csd-summer": "pl-csd-summer",
   "self-paced-pl-csd": "self-paced-pl-csd",
-  "self-paced-pl-microbit": "self-paced-pl-microbit"
+  "self-paced-pl-microbit": "self-paced-pl-microbit",
+  "seesaw-adaptations": "seesaw-adaptations"
 }
