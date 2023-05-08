@@ -271,6 +271,9 @@
           "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
+        "making_sprites/coursef/2022": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "ai_impact_on_society/coursef/2022": {
           "name": "AI: Epekto sa Lipunan",
           "url": "https://youtu.be/ng4c1g3COfs",
@@ -1832,6 +1835,9 @@
           "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
+        "making_sprites/coursef/2021": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
         },
@@ -2192,6 +2198,9 @@
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "making_sprites/express/2021": {
+          "name": "Paggawa ng mga Sprite"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"

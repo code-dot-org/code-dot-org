@@ -124,6 +124,14 @@ ko:
   call_to_action_learn_more: 더보기
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
+  call_to_action_explore_unit: Explore unit
+  call_to_action_view_lesson_plan: View lesson plan
+  call_to_action_self_paced_pl: Start self-paced professional learning
+  call_to_action_watch_panel: Watch panel
+  call_to_action_learn_about_challenge: Learn about challenge
+  call_to_action_explore_website: Explore website
+  call_to_action_read_more: 자세히 보기
+  call_to_action_special_announcement: See special announcement
   social_hoc2019_oceans_title: '바다환경을 위한 AI #CSforGood'
   social_hoc2019_oceans_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고
     AI로 세계적 문제를 어떻게 해결할지 알아보세요. 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다!  우리의 커리큘럼 전체에서 AI에 관한
@@ -136,9 +144,14 @@ ko:
   social_blockchain_title: How Blockchain Works
   social_blockchain_desc: Videos and lessons that explore what blockchain is and why
     it's important.
+  social_ai_title: Learn about artificial intelligence (AI) | Code.org
+  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
+  teach_ai_homepage_banner_title: AI education for the world
+  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
+    educators everywhere to teach with AI and about AI.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -174,6 +187,97 @@ ko:
   blockchain_resources_03_heading: Hour of Code Activity
   blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
   blockchain_resources_03_button_label: Try the Crypto Memory Game activity
+  ai_2023_banner_title: AI education for the world
+  ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
+    everywhere.
+  teachai_launch_blog_title: Introducing TeachAI!
+  teachai_launch_blog_desc_01: Education, nonprofit, and tech leaders come together
+    to offer guidance on integrating AI safely into classrooms worldwide
+  teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
+    and secondary curricula around the world through new reports, policy recommendations,
+    and public engagement opportunities.
+  ai_hero_heading: Artificial intelligence isn't magic… It's just code!
+  ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
+    the ways we live, work, and learn.
+  ai_intro_heading: Why learn about AI?
+  ai_intro_video_title: Why AI Matters with Deb Raji
+  ai_intro_video_caption_link: Check out the full Intro to AI series
+  ai_intro_list_title_01: Foundational knowledge
+  ai_intro_list_desc_01: Spark students' interest in technology and help them understand
+    the world around them in a deeper way.
+  ai_intro_list_title_02: Creativity and innovation
+  ai_intro_list_desc_02: Inspire students to think creatively and innovate, as they
+    explore the potential applications of AI.
+  ai_intro_list_title_03: Problem solving and critical thinking
+  ai_intro_list_desc_03: Encourage students to develop essential skills as they learn
+    to design, build, and evaluate AI systems.
+  ai_why_heading: Why teach AI with Code.org?
+  ai_why_desc: All the resources you need in one place! Explore our curriculum offerings,
+    professional learning courses, and video series designed for you and your students.
+  ai_why_link_01: Explore AI curricula
+  ai_why_link_02: See professional learning options
+  ai_why_link_03: Watch AI videos
+  ai_curricula_heading: AI Curricula
+  ai_curricula_desc: Explore the different AI curriculum offerings which meet diverse
+    classroom needs.
+  ai_curriculum_title_01: AI 및 머신러닝
+  ai_curriculum_desc_01: Explore how computers learn from data. Develop machine learning
+    projects around real-world data. Design a machine learning app to solve a personally
+    relevant problem.
+  ai_curriculum_grades_01: 'Grade Levels: 6-12'
+  ai_curriculum_duration_01: 'Duration: 20 hours'
+  ai_curriculum_btn_aria_label_01: Explore the AI and Machine Learning unit
+  ai_curriculum_title_02: AI and Ethics
+  ai_curriculum_desc_02: Reflect on the ethical implications of AI, then work together
+    to create an "AI Code of Ethics" resource for AI creators and legislators everywhere.
+  ai_curriculum_grades_02: 'Grade Levels: 5-12'
+  ai_curriculum_duration_02: 'Duration: 1 hour'
+  ai_curriculum_btn_aria_label_02: View the lesson plan for AI and Ethics
+  ai_curriculum_title_03: 바다환경을 위한 AI
+  ai_curriculum_desc_03: Help A.I. clean the oceans by training it to detect trash!
+    Learn about training data and bias, and how AI can address world problems.
+  ai_curriculum_grades_03: 'Grade Levels: 3-12'
+  ai_curriculum_duration_03: 'Duration: 1 hour'
+  ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_carousel_heading: 'What teachers say about AI with Code.org:'
+  ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
+    there is an element of opinion in classification systems. Later, when we started
+    to see how bias can end up in AI, I was able to pull them back and remind them
+    that the data used to train their models was based on choices.
+  ai_carousel_quote_02: My students learned that they don't have to just be consumers
+    when it comes to technological advances that they are experiencing on almost a
+    daily basis. They can actually be creators!
+  ai_pl_heading: Preparing to teach AI
+  ai_pl_subheading: Prepare to teach AI using our self-paced online module.
+  ai_pl_list_01: Get an introduction to artificial intelligence and machine learning.
+  ai_pl_list_02: Train a machine learning model using AI Lab.
+  ai_pl_list_03: Engage with machine learning apps.
+  ai_pl_list_04: Consider real-world implications of AI and machine learning.
+  ai_pl_list_05: Explore end of chapter projects.
+  ai_pl_duration: 'Duration: 2 hours'
+  ai_video_series_title: How AI Works
+  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
+    series of short videos will introduce you to how artificial intelligence works
+    and why it matters. Then delve into issues like algorithmic bias and the ethics
+    of AI decision-making.
+  ai_resources_heading: Additional resources
+  ai_resources_desc: Interested in learning more about AI? Here are some additional
+    resources that can help extend your students' learning.
+  ai_resources_title_01: Ethics of AI Panel
+  ai_resources_desc_01: Go deeper with some of our favorite AI experts! This panel
+    discussion touches on important issues like algorithmic bias and the future of
+    work.
+  ai_resources_btn_aria_label_01: Watch the Ethics of AI panel
+  ai_resources_title_02: Imagine Cup Junior
+  ai_resources_desc_02: This global AI for Good challenge introduces students to Microsoft's
+    AI for Good initiatives, empowering them to solve a problem in the world with
+    the power of AI.
+  ai_resources_btn_aria_label_02: Learn about the Imagine Cup Junior challenge
+  ai_resources_title_03: AI for Teachers
+  ai_resources_desc_03: Supports integration of Artificial Intelligence knowledge
+    throughout K-12. Offer free professional development, webinars, conference presentations,
+    and peer-to-peer learning opportunities.
+  ai_resources_btn_aria_label_03: Explore the AI for Teachers website
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -251,8 +355,8 @@ ko:
   codeorg_homepage_hoc2018_musician_before: 출연
   codeorg_homepage_hoc2018_musician_after: 그 이상!
   codeorg_homepage_hoc2018_video: 비디오 시청
-  hourofcode_homepage_hoc2018_header_line1: 누구든 어디에서나 아워 오브 코드 (Hour of Code) 행사를
-    개최할 수 있습니다. 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공되며, 사전 학습은 필요하지 않습니다.
+  hourofcode_homepage_hoc2018_header_line1: 누구든 어디에서나 아워 오브 코드(Hour of Code) 행사를 개최할
+    수 있습니다. 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공되며, 사전 학습은 필요하지 않습니다.
   hourofcode_homepage_hoc2018_header_line2: 4세부터 104세까지 사용할 수 있습니다.
   codeorg_homepage_hoc_is_coming: 아워오브코드가 다가오고 있습니다!
   codeorg_homepage_celebrate_cse: 어디에서나 컴퓨터 과학을 좋아해주세요!
@@ -499,11 +603,11 @@ ko:
   cta_try_more_activities: 더 많은 활동 시도해보기
   cta_try_an_activity: 활동 시도해보기
   hoc_homepage_join_the_movement_heading: 운동에 참여하세요
-  hoc_homepage_join_the_movement_description: 아워 오브 코드(Hour of Code)는 일년 내내 이용 가능하지만,
-    매년 12월에는 전세계 수백만의 학생들과 아워 오브 코드에서 컴퓨터과학교육주간을 기념하는 행사에 함께 참여할 수 있습니다. 행사 등록은 매년
-    10월에 시작됩니다.
+  hoc_homepage_join_the_movement_description: 아워 오브 코드(Hour of Code)는 일 년 내내 이용할 수
+    있지만, 매년 12월에는 전 세계 수백만의 학생들과 아워 오브 코드에서 컴퓨터과학 교육주간을 기념하는 행사에 함께 참여할 수 있습니다. 행사
+    등록은 매년 10월에 시작됩니다.
   hoc_homepage_what_is_hoc_subhead: 45개 이상의 언어로 진행되는 한 시간 분량의 튜토리얼. 경험이 없어도 됩니다. 아워오브코드는
-    연중 내내 무료로 이용 가능합니다.
+    연중 내내 무료로 이용할 수 있습니다.
   hoc_homepage_what_is_hoc_description: 아워오브코드는 누구나 기초를 배울 수 있음을 보여주는 재미있는 튜토리얼을 이용하여
     한 시간 동안 컴퓨터과학을 소개합니다. 이 풀뿌리 캠페인은 전 세계 400곳 이상의 파트너와 20만 명이 넘는 교육자들이 지원합니다.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[저희의 How-to 가이드](%{howto_guide_url})를
@@ -595,7 +699,7 @@ ko:
     위한 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공됩니다.
   map_title: 아워오브코드 맵
   map_header: "# 아워오브코드 2017에 등록된 이벤트"
-  map_header_count_year: "%{year}년에 등록됭 %{event_count}개의 이벤트. "
+  map_header_count_year: "%{year}년에 등록된 %{event_count}개의 이벤트"
   see_all_events: 모든 이벤트 살펴보기
   map_header_company: "# 회사 조직 위원이 운영하고 있습니다."
   map_header_country: "# %{country}에서"
@@ -803,15 +907,15 @@ ko:
     준수하길 바랍니다. [사용 가이드라인](%{logo_url})을 확인해 주십시오.
   stats_hoc_2013_image_alt: Hour of Code 2013 부터의 통계들
   stats_growth: 가장 빠르게 1천5백만 사용자에 도달하였습니다.
-  stats_i18n: 학생들은 40개 언어로 공부하고 있습니다.
+  stats_i18n: 학생들은 45개 언어로 배웁니다
   stats_tumblr: 'Tumblr: 3.5년'
   stats_facebook: 'Facebook: 3년'
   stats_twitter: 'Twitter: 2.5년'
   stats_pinterest: 'Pinterest: 2년'
   stats_instagram: 'Instagram: 14개월'
   stats_hoc: 'The Hour of Code: 5일'
-  stats_global: 1억명 이상의 학생들이 Hour of Code를 경험해 보았습니다.
-  stats_girls_more: 지난 70여년 동안 보다도 더 많은 여학생들이 컴퓨터과학(정보과학) 을 경험해 보았습니다.
+  stats_global: 1억명 이상의 학생들이 아워 오브 코드에 참여했습니다
+  stats_girls_more: 지난 70여년 동안 보다도 더 많은 여학생들이 컴퓨터과학을 경험했습니다
   stats_females: 컴퓨터 과학에서 여학생의 참여는 고등학교 과정과 대학과정, 직장에서 단지 20-25%에 불과합니다.
   stats_females_more: 아워오브코드 동안, 여학생은 전체 참가자의 <b>50%를 차지합니다 </b>!
   stats_females_more_markdown: 아워오브코드 동안, 여학생은  **전체 참가자의 <b>50%**를 차지합니다!

@@ -1652,7 +1652,7 @@
         "ramp_artist_loops32022": "គូរបន្ទាត់ពណ៌ ៥ដង​ ម្តងទៀត តែនៅពេលនេះប្រើ​ `ធ្វើឡើងវិញ` រង្វិលជុំ។",
         "ramp_artist_loops52022": "Loops sure make writing code\neasier!\\\r\n\\\r\nUse loops to draw this staircase.\\\r\n\n-   Each stairstep is 50\n    pixels long and 50 pixels tall\\\r\n-   You will need to turn 90 degrees in each\n    direction",
         "ramp_artist_loops72022": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (loop) !",
-        "ramp_artist_loops82022": "\\*\\* ការប្រកួតប្រជែង៖ \\*\\* រកមើលគំរូមួយហើយធ្វើឱ្យកូដនេះខ្លីដោយប្រើរង្វិលជុំ (Loop)។",
+        "ramp_artist_loops82022": "** ការប្រកួតប្រជែង៖ ** រកមើលគំរូមួយហើយធ្វើឱ្យកូដនេះខ្លីដោយប្រើរង្វិលជុំ (Loop)។",
         "ramp_artist_loops92022": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េដែលមានជ្រុង ២០០ Pixel",
         "courseA_maze_seq12_2021": "ទៅកាន់តួអង្គជ្រូក!",
         "courseA_maze_seq5_2021": "សូម​សាកល្បង​ចំណោទមួយ​នេះ។",
@@ -1662,7 +1662,16 @@
         "courseB_Scrat_ramp3b_2021": "មានកូដប្លុកមួយលើសនៅខាងក្រោមបង្អស់នៃកូដ!\n\nអូស កូដប្លុកដែលលើសត្រឡប់ទៅប្រអប់កូដប្លុក​ ដើម្បីដកវាចេញ។",
         "courseB_Scrat_ramp4a_2021": "តើអ្នកអាចដឹងទេថា តើប្លុកមួយណាដែលអ្នកត្រូវបន្ថែមទៅផ្នែកខាងក្រោមនៃប្លុកផ្សេងទៀតដើម្បីបញ្ចប់កូដនេះ?",
         "courseB_Scrat_ramp5a_2021": "សាកល្បងវិធីនេះដោយខ្លួនឯងទាំងអស់គ្នា!",
-        "ramp_artist_loops62022": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle."
+        "courseA_maze_seq52022": "សូម​សាកល្បង​ចំណោទមួយ​នេះ។",
+        "courseA_maze_seq5a2022": "_\"អ៊ូកៗៗ!\"_\n\n\\_\"តើ​អ្នក​គួរតែបន្ថែម​ កូដប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseA_maze_seq5a_2018": "_\"អ៊ូកៗៗ!\"_\n\n\\_\"តើ​អ្នក​គួរតែបន្ថែម​ កូដប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseA_maze_seq5a_2019": "_\"អ៊ូកៗៗ!\"_\n\n\\_\"តើ​អ្នក​គួរតែបន្ថែម​ កូដប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseA_maze_seq5a_2020": "_\"អ៊ូកៗៗ!\"_\n\n\\_\"តើ​អ្នក​គួរតែបន្ថែម​ កូដប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseA_maze_seq5a_2021": "_\"អ៊ូកៗៗ!\"_\n\n\\_\"តើ​អ្នក​គួរតែបន្ថែម​ កូដប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseB_Scrat_ramp12022": "ដើម្បីឱ្យកំប្រុកអាចទៅដល់ ផ្លែ ផ្លេសេនបាន សូមភ្ជាប់កូដប្លុក <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> ទៅខាងក្រោមនៃកូដប្លុក <xml><block type=\"when_run\" block-text=\"when run\"/></xml>  ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2018": "ដើម្បីឱ្យកំប្រុកអាចទៅដល់ ផ្លែ ផ្លេសេនបាន សូមភ្ជាប់កូដប្លុក <xml><block type=\"maze_moveEast\"/></xml> ទៅខាងក្រោមនៃកូដប្លុក <xml><block type=\"when_run\"/></xml>  ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2019": "ដើម្បីឱ្យកំប្រុកអាចទៅដល់ ផ្លែ ផ្លេសេនបាន សូមភ្ជាប់កូដប្លុក <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> ទៅខាងក្រោមនៃកូដប្លុក <xml><block type=\"when_run\" block-text=\"when run\"/></xml>  ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2020": "ដើម្បីឱ្យកំប្រុកអាចទៅដល់ ផ្លែ ផ្លេសេនបាន សូមភ្ជាប់កូដប្លុក <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> ទៅខាងក្រោមនៃកូដប្លុក <xml><block type=\"when_run\" block-text=\"when run\"/></xml>  ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!"
       }
     }
   }
