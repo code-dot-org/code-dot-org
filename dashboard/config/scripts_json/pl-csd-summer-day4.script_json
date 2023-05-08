@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-27 11:37:56 UTC",
+    "serialized_at": "2023-05-07 14:21:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -162,7 +162,7 @@
     },
     {
       "key": "Introduction to Machine Learning",
-      "name": "TLO 7 - U7L2 Introduction to Machine Learning",
+      "name": "TLO 6 - U7L2 Introduction to Machine Learning",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
