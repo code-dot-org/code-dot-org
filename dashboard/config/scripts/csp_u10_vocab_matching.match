@@ -27,3 +27,4 @@ question 'symmetric key encryption'
 answer 'Involves one key for both encryption and decryption.'
 question 'public key encryption'
 answer 'Pairs a public key for encryption and a private key for decryption. The sender does not need the receiver\'s private key to encrypt a message, but the receiver\'s private key is required to decrypt the message.'
+allow_multiple_attempts true

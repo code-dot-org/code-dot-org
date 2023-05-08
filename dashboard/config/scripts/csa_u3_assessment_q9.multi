@@ -32,3 +32,5 @@ public static String[] reverse(String[] arr) {
 Which code segment should replace `/* missing statement */`?
 
 MARKDOWN
+
+allow_multiple_attempts true
