@@ -16,7 +16,7 @@ export interface ChannelsStore {
 }
 
 // Note: We don't need to actually save a channel for local storage.
-// However, we want to ensure we keep track of the original local storage
+// However, we want to make a best effort to keep track of the original local storage
 // key when switching levels, so we store it here.
 export class LocalChannelsStore implements ChannelsStore {
   localStorageKey: string | undefined = undefined;

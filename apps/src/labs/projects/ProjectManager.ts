@@ -84,9 +84,7 @@ export default class ProjectManager {
   // Shut down this project manager. All we do here is clear any existing
   // timeouts.
   destroy(): void {
-    console.log('in destroy');
     if (this.timeoutId) {
-      console.log(`clearing timeout with id ${this.timeoutId}`);
       window.clearTimeout(this.timeoutId);
     }
   }
@@ -113,7 +111,6 @@ export default class ProjectManager {
     this.saveInProgress = true;
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
-      console.log(`clearing timeout with id ${this.timeoutId}`);
       this.timeoutId = undefined;
     }
     this.saveQueued = false;
@@ -185,7 +182,6 @@ export default class ProjectManager {
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );
-    console.log(`setting timeout with id ${this.timeoutId}`);
   }
 
   addEventListener(type: ProjectManagerEvent, listener: () => void) {

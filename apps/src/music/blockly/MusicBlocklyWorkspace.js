@@ -378,7 +378,6 @@ export default class MusicBlocklyWorkspace {
     this.channel = channel;
     if (source && source.source) {
       const existingCodeJson = JSON.parse(source.source);
-      console.log(`going to load code`, existingCodeJson);
       Blockly.serialization.workspaces.load(existingCodeJson, this.workspace);
     } else {
       this.loadDefaultCode();
@@ -436,9 +435,6 @@ export default class MusicBlocklyWorkspace {
   // Get the project manager for the current storage type.
   // If no storage type is specified in AppConfig, use remote storage.
   async getProjectManager(channelId, currentLevelId, currentScriptId) {
-    console.log(
-      `creating project manager, channelId is ${channelId}, currentLevelId is ${currentLevelId}, currentScriptId is ${currentScriptId}`
-    );
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
       storageType = REMOTE_STORAGE;

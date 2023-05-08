@@ -529,18 +529,6 @@ class ProjectsController < ApplicationController
     authorize! :load_project, params[:key]
   end
 
-  private def find_or_create_project(level_id, script_id = nil)
-    level = Level.find(level_id)
-    error_message = under_13_without_tos_teacher?(level)
-    return render(status: :forbidden, json: {error: error_message}) if error_message
-    # get_storage_id works for signed out users as well, it uses the cookie to determine
-    # the storage id.
-    user_storage_id = get_storage_id
-    # Find the channel for the user and level if it exists, or create a new one.
-    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    render(status: :ok, json: {channel: channel_token.channel})
-  end
-
   # Automatically catch authorization exceptions on any methods in this controller
   # Overrides handler defined in application_controller.rb.
   # Special for projects controller - when forbidden, redirect to home instead
