@@ -573,8 +573,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'duration returns label associated with sum of units duration' do
     # Create a unit with multiple lessons, each with a different number of lesson activities.
-    unit = create(:script, name: 'unit1', family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
-    lesson_group = create(:lesson_group, key: 'lesson_group1', script: unit)
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
 
     lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
     create(:lesson_activity, lesson: lesson1, duration: 40)
@@ -591,8 +591,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'duration returns lesson if sum of units duration is 0' do
     # Create a unit with single lesson with an unspecified duration (defaults to 0).
-    unit = create(:script, name: 'unit1', family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
-    lesson_group = create(:lesson_group, key: 'lesson_group1', script: unit)
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
 
     lesson = create(:lesson, script: unit, lesson_group: lesson_group)
     create(:lesson_activity, lesson: lesson)
@@ -605,8 +605,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'duration returns school_year if sum of units duration is greater than 5000' do
     # Create a unit with multiple lessons with durations that sum up to >5000.
-    unit = create(:script, name: 'unit1', family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
-    lesson_group = create(:lesson_group, key: 'lesson_group1', script: unit)
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
 
     lesson = create(:lesson, script: unit, lesson_group: lesson_group)
     6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
