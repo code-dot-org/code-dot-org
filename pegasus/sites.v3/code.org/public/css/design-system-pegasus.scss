@@ -580,8 +580,10 @@ form {
 // Note: set the height of the <p> tag inline to maintain
 // height consistency between cards in a wrapper
 .action-block--one-col {
-  flex-wrap: wrap;
   padding: 1em 1.5em;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media screen and (max-width: $width-md) {
     height: 100%;
