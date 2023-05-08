@@ -147,8 +147,7 @@ export default class JavabuilderConnection {
 
     try {
       const result = await $.ajax(ajaxPayload);
-      this.javabuilderUrl = result.javabuilder_url;
-      this.establishWebsocketConnection(result.token);
+      this.establishWebsocketConnection(result.javabuilder_url, result.token);
     } catch (error) {
       if (error.status === 403) {
         this.displayUnauthorizedMessage(error);
@@ -170,8 +169,8 @@ export default class JavabuilderConnection {
     };
   }
 
-  establishWebsocketConnection(token) {
-    const url = `${this.javabuilderUrl}?Authorization=${token}`;
+  establishWebsocketConnection(javabuilderUrl, token) {
+    const url = `${javabuilderUrl}?Authorization=${token}`;
     this.socket = new WebSocket(url);
     this.socket.onopen = this.onOpen.bind(this);
     this.socket.onmessage = this.onMessage.bind(this);

@@ -60,7 +60,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    if can?(:use_main_javabuilder, :javabuilder_session)
+    if can?(:use_unrestricted_javabuilder, :javabuilder_session)
       javabuilder_url = CDO.javabuilder_url
       javabuilder_upload_url = CDO.javabuilder_upload_url
     else
