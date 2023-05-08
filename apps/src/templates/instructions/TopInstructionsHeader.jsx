@@ -48,8 +48,8 @@ function TopInstructionsHeader(props) {
     collapsible,
   } = props;
 
-  const displayAiTab =
-    window.location.pathname === '/s/csd3-2022/lessons/17/levels/7';
+  // const displayAiTab =
+  //   window.location.pathname === '/s/csd3-2022/lessons/17/levels/7';
 
   const showContainedLevelAnswer =
     hasContainedLevels && $('#containedLevelAnswer0').length > 0;
@@ -170,13 +170,13 @@ function TopInstructionsHeader(props) {
                 isRtl={isRtl}
               />
             )}
-          {displayAiTab && isViewingAsTeacher && (
+          {
             <InstructionsTab
               onClick={handleAiTabClick}
               selected={tabSelected === TabType.AI}
-              text={'AI Assistant'}
+              text={'EduBot'}
             />
-          )}
+          }
         </div>
         {hasBackgroundMusic && (
           <BackgroundMusicMuteButton

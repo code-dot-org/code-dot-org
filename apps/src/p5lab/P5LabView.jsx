@@ -25,6 +25,7 @@ import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 import experiments from '@cdo/apps/util/experiments';
+import EduBot from '../templates/instructions/EduBot';
 
 /**
  * Top-level React wrapper for GameLab
@@ -204,6 +205,7 @@ class P5LabView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <EduBot />
         </InstructionsWithWorkspace>
       </div>
     );
