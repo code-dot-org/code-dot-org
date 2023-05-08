@@ -694,6 +694,66 @@
         },
         "6.d": {
           "description": "Przekazuj aktualną wiedzę, aby poznawać nowe technologie."
+        },
+        "D2.Eco.10.K-2": {
+          "description": "Wyjaśnij, dlaczego ludzie oszczędzają."
+        },
+        "D2.Eco.6.K-2": {
+          "description": "Wyjaśnij, w jaki sposób ludzie zarabiają."
+        },
+        "D2.Eco.9.K-2": {
+          "description": "Opisz rolę banków w gospodarce."
+        },
+        "D2.Geo.1.K-2": {
+          "description": "Konstruuj mapy, wykresy i inne reprezentacje znanych miejsc."
+        },
+        "D2.His.2.K-2": {
+          "description": "Porównaj życie w przeszłości do życia dzisiaj."
+        },
+        "D2.His.10.K-2": {
+          "description": "Wyjaśnij, w jaki sposób źródła historyczne można wykorzystać do badania przeszłości."
+        },
+        "D2.Eco.10.3-5": {
+          "description": "Wyjaśnij, co to są stopy procentowe."
+        },
+        "D4.4.3-5": {
+          "description": "Argumenty krytyczne."
+        },
+        "D4.5.3-5": {
+          "description": "Wyjaśnienia krytyczne."
+        },
+        "D2.His.10.9-12": {
+          "description": "Wykryj możliwe ograniczenia w różnego rodzaju dowodach historycznych i różnych interpretacjach wtórnych."
+        },
+        "D2.His.14.9-12": {
+          "description": "Analizuj liczne i złożone przyczyny i skutki wydarzeń w przeszłości."
+        },
+        "D2.His.15.9-12": {
+          "description": "Rozróżnij przyczyny długoterminowe i wywołujące zdarzenia w opracowywaniu argumentu historycznego."
+        },
+        "D2.His.2.9-12": {
+          "description": "Analizuj zmiany i ciągłość w epokach historycznych"
+        },
+        "D2.His.5.9-12": {
+          "description": "Przeanalizuj, w jaki sposób konteksty historyczne kształtowały i nadal kształtują perspektywy ludzi"
+        },
+        "D2.His.6.9-12": {
+          "description": "Przeanalizuj, w jaki sposób perspektywy osób piszących historię ukształtowały historię, którą stworzyli"
+        },
+        "D2.His.7.9-12": {
+          "description": "Wyjaśnij, w jaki sposób perspektywy ludzi w teraźniejszości kształtują interpretacje przeszłości"
+        },
+        "D2.His.9.9-12": {
+          "description": "Przeanalizuj związek między źródłami historycznymi a dokonanymi na ich podstawie wtórnymi interpretacjami."
+        },
+        "D3.2.9-12": {
+          "description": "Oceń wiarygodność źródła, badając, jak eksperci ceniają to źródło."
+        },
+        "D4.4.9-12": {
+          "description": "Oceń krytycznie wykorzystania twierdzeń i dowodów w argumentach za wiarygodnością."
+        },
+        "D4.5.9-12": {
+          "description": "Oceń krytycznie użycie rozumowania, sekwencjonowanie i dodatkowe szczegóły wyjaśnień."
         }
       }
     }

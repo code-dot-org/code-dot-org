@@ -257,6 +257,8 @@ pl:
       all_vocabulary_2/csd/2023:
         name: Całe słownictwo
         url: "/courses/csd-2023/vocab"
+      csd_changelog_23-_24/csd/2023:
+        url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
       csd_guide_to_assessment/csd/2023:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view

@@ -96,6 +96,7 @@ pl:
             Do czasu ukończenia tego Kursu, uczniowie utworzą programy, w których
             zademonstrują wiele umiejętności, w tym z wykorzystaniem pętli i funkcji
             z parametrami. Zalecany dla klas 4-8.
+          name: course4
         Course4pre:
           title: Wymagania wstępne dla Kursu 4
           description: Krótkie przypomnienie pojęć dla uczniów, którzy nie ukończyli
@@ -2528,6 +2529,7 @@ pl:
             udostępnić.
         deepdive-debugging:
           title: Lekcje debudowania dla edukatorów
+          name: deepdive-debugging
         fit-test:
           title: Kurs "FIT praktyka szkoleniowa PLC"
           description_audience: " Prowadzący na szkoleniu"
@@ -4293,6 +4295,7 @@ pl:
               display_name: 'Rozdział 2: Budowanie gier'
         code-break:
           title: Code Break
+          name: code-break
         code-break-staging:
           title: Podział na etapy Code Break
         code-break-younger-staging:
@@ -4309,6 +4312,7 @@ pl:
             na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła
             jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o
             różnych umiejętnościach, nawet tych bez komputerów.
+          name: code-break-younger
         csp5-virtual-part2:
           title: Wprowadzenie do App Lab we własnym tempie
           description_short: Poznaj fundamentalne pojęcia programowania komputerów
@@ -8853,6 +8857,8 @@ pl:
               name: Jednostka 3 Powiązania
             lesson-9:
               name: Kultura w klasie
+            lesson-11:
+              name: Dzień 3 Podsumowanie
           lesson_groups:
             lessonGroup-2:
               display_name: Dzień 3
@@ -8906,17 +8912,38 @@ pl:
               display_name: 'Dzień 5 '
           name: pl-csd-summer-day5
           title: 'Dzień 5 '
+        self-paced-pl-microbit1:
+          name: self-paced-pl-microbit1
+        self-paced-pl-microbit2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń
+                z micro:bitami
+          name: self-paced-pl-microbit2
+          title: Przygotowanie do nauczania Tworzenie aplikacji dla urządzeń z micro:bitami
+        seesaw-adaptations:
+          name: seesaw-adaptations
+          title: Huśtawka - adaptacje zwierząt
+        csp-bingo-2023:
+          name: csp-bingo-2023
         csd-post-survey-2023:
+          name: csd-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-data-post-survey-2023:
+          name: focus-on-data-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-impact-in-society-post-survey-2023:
+          name: focus-on-impact-in-society-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-coding-post-survey-2023:
+          name: focus-on-coding-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-design-with-purpose-post-survey-2023:
+          name: focus-on-design-with-purpose-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-hardware-post-survey-2023:
+          name: focus-on-hardware-post-survey-2023
           title: Ankieta po odbyciu kursu
         focus-on-creativity-post-survey-2023:
+          name: focus-on-creativity-post-survey-2023
           title: Ankieta po odbyciu kursu
