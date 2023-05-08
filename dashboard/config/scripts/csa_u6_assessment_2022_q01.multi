@@ -56,3 +56,5 @@ for (Book b : bookList) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

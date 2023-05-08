@@ -6,3 +6,4 @@ right 'Everyone who uses it must agree on the rules of the system.'
 right 'The rules of the system must clear, so that there\’s only one way to interpret encoded information.'
 wrong 'The system should have a pattern, so that it is easy to remember.'
 wrong 'The key for the system should be kept secret so that people cannot spy on the information.'
+allow_multiple_attempts true

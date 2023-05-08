@@ -22,3 +22,5 @@ answer 'saving information to use in the future'
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

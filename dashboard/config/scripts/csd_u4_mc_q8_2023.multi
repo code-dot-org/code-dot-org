@@ -8,3 +8,5 @@ right 'When users touch the screen to make a selection, the inputs are very clos
 teacher_markdown <<MARKDOWN
 **Content: Unit 4 Lesson 19**
 MARKDOWN
+
+allow_multiple_attempts true
