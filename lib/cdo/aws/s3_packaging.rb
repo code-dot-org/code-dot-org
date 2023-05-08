@@ -54,7 +54,7 @@ class S3Packaging
   # Uploads the created package to s3
   # @return package
   def upload_package_to_s3(package)
-    raise "Generated different package for same contents" unless package_matches_download(package)
+    @logger.warn "Different package found on S3 for the same contents" unless package_matches_download(package)
     upload_package(package)
     package
   end
@@ -176,6 +176,7 @@ class S3Packaging
         output
       end
     end
+    @logger.warn "Packages are not equivalent:\n#{diff}" unless diff.empty?
     diff.empty?
   end
 
