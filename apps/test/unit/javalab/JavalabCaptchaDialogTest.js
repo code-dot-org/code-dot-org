@@ -8,6 +8,7 @@ import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
 describe('JavalabCaptchaDialog', () => {
   let defaultProps,
+    onVerifySpy,
     appendNewlineToConsoleLogSpy,
     appendOutputLogSpy,
     setDialogOpenSpy,
@@ -19,11 +20,14 @@ describe('JavalabCaptchaDialog', () => {
       .withArgs('/dashboardapi/v1/users/me/verify_captcha')
       .returns(Promise.resolve({ok: true}));
 
+    onVerifySpy = sinon.spy();
     appendNewlineToConsoleLogSpy = sinon.spy();
     appendOutputLogSpy = sinon.spy();
     setDialogOpenSpy = sinon.spy();
 
     defaultProps = {
+      onVerify: onVerifySpy,
+      onCancel: () => {},
       isCaptchaDialogOpen: true,
       setIsCaptchaDialogOpen: setDialogOpenSpy,
       appendNewlineToConsoleLog: appendNewlineToConsoleLogSpy,
@@ -51,6 +55,7 @@ describe('JavalabCaptchaDialog', () => {
       .props()
       .handleSubmit()
       .then(() => {
+        expect(onVerifySpy.calledOnce).to.be.true;
         expect(
           appendOutputLogSpy.calledOnceWith(javalabMsg.verificationSuccessful())
         ).to.be.true;
