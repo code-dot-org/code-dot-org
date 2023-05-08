@@ -2,14 +2,12 @@
  */
 
 import PropTypes from 'prop-types';
-import React, {createRef} from 'react';
+import React from 'react';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
-
-const QUERYABLE_ELEMENTS =
-  'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
+import FocusTrap from 'focus-trap-react';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -22,28 +20,12 @@ export default class TutorialDetail extends React.Component {
     grade: PropTypes.string.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.containerRef = createRef();
-  }
-
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('focusin', this.focusIn);
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('focusin', this.focusIn);
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    // If we weren't previously showing and are now, then keep track of our scroll position.
-    // This is because if we tab off the first element or past the last tutorial on the screen, it can adjust the
-    // scroll position, and we'll use this later to reset to where we started from.
-    if (this.props.showing && !prevProps.showing) {
-      this.startingScroll = [window.scrollX, window.scrollY];
-    }
   }
 
   onKeyDown = ({keyCode}) => {
@@ -57,45 +39,6 @@ export default class TutorialDetail extends React.Component {
       this.props.changeTutorial(-1);
     } else if (keyCode === 39) {
       this.props.changeTutorial(1);
-    }
-  };
-
-  focusIn = event => {
-    if (!this.props.showing) {
-      return;
-    }
-
-    // First of all, if we've drifted from it (by tabbing before the first tutorial or past one at the end of the
-    // window), then reset our scroll position.
-    if (this.startingScroll && window.scrollY !== this.startingScroll[1]) {
-      window.scrollTo(...this.startingScroll);
-    }
-
-    /*
-      We've kept a ref to our dialog container, so when the user is adjusting focus we look to see if we're
-      focusing onto an element that's still in the modal. If so, then awesome! We're done. If not, then we look
-      in our modal and find the first button (which is the X to close) or the last link (which could vary based upon
-      what's in there).
-
-      If we're shifting focus away from the first button (and have left the modal), then we wrap around to the last link.
-      Otherwise, if we're leaving, we return to the start at the first button.
-
-      But it's to ensure that the user can only tab within the modal while it is open and cannot shift focus outside.
-
-     */
-    if (this.containerRef.current) {
-      const inModal = this.containerRef.current.contains(event.target);
-      if (!inModal) {
-        const queryables =
-          this.containerRef.current.querySelectorAll(QUERYABLE_ELEMENTS);
-        const first = queryables[0];
-        const last = queryables[queryables.length - 1];
-        if (event.relatedTarget === first) {
-          last.focus();
-        } else {
-          first.focus();
-        }
-      }
     }
   };
 
@@ -164,187 +107,180 @@ export default class TutorialDetail extends React.Component {
       .replace('.png', '.jpg');
 
     const imageComponent = (
-      <div
-        style={styles.tutorialDetailImageOuterContainer}
-        className="col-xs-12 col-sm-6"
-      >
-        <div style={styles.tutorialDetailImageContainer}>
-          <div style={styles.tutorialDetailImageBackground} />
-          <Image style={styles.tutorialDetailImage} src={imageSrc} />
-        </div>
+      <div style={styles.tutorialDetailImageBounds}>
+        <div style={styles.tutorialDetailImageBackground} />
+        <Image style={styles.tutorialDetailImage} src={imageSrc} />
       </div>
     );
 
     return (
-      <div
-        id="tutorialPopupFullWidth"
-        style={styles.popupFullWidth}
-        ref={this.containerRef}
-      >
-        <div
-          className="modal"
-          id="tutorialPopup"
-          style={{display: 'block'}}
-          onClick={this.props.closeClicked}
-        >
+      <FocusTrap>
+        <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
           <div
-            className="modal-dialog modal-lg"
-            onClick={e => e.stopPropagation()}
+            className="modal"
+            id="tutorialPopup"
+            style={{display: 'block'}}
+            onClick={this.props.closeClicked}
           >
-            <div className="modal-content">
-              <div
-                className="modal-header"
-                style={styles.tutorialDetailModalHeader}
-              >
-                <button
-                  className="close"
-                  data-dismiss="modal"
-                  style={{height: 48}}
-                  type="button"
-                  onClick={this.props.closeClicked}
-                >
-                  <span aria-hidden="true" style={{fontSize: 48}}>
-                    ×
-                  </span>
-                  <span className="sr-only">Close</span>
-                </button>
-                <div style={{clear: 'both'}} />
-              </div>
-              <div
-                className="modal-body"
-                style={styles.tutorialDetailModalBody}
-              >
-                {!this.props.disabledTutorial && (
-                  <a
-                    href={this.props.item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={this.startTutorialClicked}
-                  >
-                    {imageComponent}
-                  </a>
-                )}
-                {this.props.disabledTutorial && imageComponent}
-
+            <div
+              className="modal-dialog modal-lg"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="modal-content">
                 <div
-                  style={styles.tutorialDetailInfoContainer}
-                  className="col-xs-12 col-sm-6"
+                  className="modal-header"
+                  style={styles.tutorialDetailModalHeader}
                 >
-                  <div style={styles.tutorialDetailName}>
-                    {this.props.item.name}
-                  </div>
-                  {this.props.item.orgname !== DoNotShow && (
-                    <div style={styles.tutorialDetailPublisher}>
-                      {this.props.item.orgname}
-                    </div>
-                  )}
-                  <div style={styles.tutorialDetailSub}>
-                    {getTutorialDetailString(this.props.item)}
-                  </div>
-                  <div style={styles.tutorialDetailDescription}>
-                    {this.props.item.longdescription}
-                  </div>
-                  {this.props.disabledTutorial && (
-                    <div style={styles.tutorialDetailDisabled}>
-                      <i
-                        className="fa fa-warning warning-sign"
-                        style={styles.tutorialDetailDisabledIcon}
-                      />
-                      &nbsp;
-                      {i18n.tutorialDetailDisabled()}
-                    </div>
-                  )}
-                  {!this.props.disabledTutorial && (
-                    <a
-                      href={this.props.item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={this.startTutorialClicked}
-                    >
-                      <button
-                        type="button"
-                        style={{marginTop: 20}}
-                        tabIndex={-1}
-                      >
-                        {i18n.startButton()}
-                      </button>
-                    </a>
-                  )}
+                  <button
+                    className="close"
+                    data-dismiss="modal"
+                    style={styles.tutorialDetailCloseButton}
+                    type="button"
+                    onClick={this.props.closeClicked}
+                  >
+                    <i className="fa fa-close" aria-hidden={true} />
+                    <span className="sr-only">Close</span>
+                  </button>
+                  <div style={{clear: 'both'}} />
                 </div>
-                <div style={{clear: 'both'}} />
-                <table style={styles.tutorialDetailsTable}>
-                  <tbody>
-                    {this.props.item.teachers_notes && (
-                      <tr key={0}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {i18n.tutorialDetailsMoreResources()}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          <a
-                            href={this.props.item.teachers_notes}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <i
-                              className="fa fa-external-link"
-                              aria-hidden={true}
-                            />
-                            &nbsp;
-                            {i18n.tutorialDetailsTeacherNotes()}
-                          </a>
-                        </td>
-                      </tr>
+                <div
+                  className="modal-body"
+                  style={styles.tutorialDetailModalBody}
+                  tabIndex={-1}
+                >
+                  <div
+                    style={styles.tutorialDetailImageOuterContainer}
+                    className="col-xs-12 col-sm-6"
+                  >
+                    {!this.props.disabledTutorial && (
+                      <a
+                        href={this.props.item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={styles.tutorialDetailImageLink}
+                        onClick={this.startTutorialClicked}
+                      >
+                        {imageComponent}
+                      </a>
                     )}
-                    {!this.props.disabledTutorial &&
-                      this.props.item.tags_activity_type
-                        .split(',')
-                        .indexOf('online-tutorial') !== -1 && (
-                        <tr key={1}>
+                    {this.props.disabledTutorial && imageComponent}
+                  </div>
+                  <div
+                    style={styles.tutorialDetailInfoContainer}
+                    className="col-xs-12 col-sm-6"
+                  >
+                    <div style={styles.tutorialDetailName}>
+                      {this.props.item.name}
+                    </div>
+                    {this.props.item.orgname !== DoNotShow && (
+                      <div style={styles.tutorialDetailPublisher}>
+                        {this.props.item.orgname}
+                      </div>
+                    )}
+                    <div style={styles.tutorialDetailSub}>
+                      {getTutorialDetailString(this.props.item)}
+                    </div>
+                    <div style={styles.tutorialDetailDescription}>
+                      {this.props.item.longdescription}
+                    </div>
+                    {this.props.disabledTutorial && (
+                      <div style={styles.tutorialDetailDisabled}>
+                        <i
+                          className="fa fa-warning warning-sign"
+                          style={styles.tutorialDetailDisabledIcon}
+                        />
+                        &nbsp;
+                        {i18n.tutorialDetailDisabled()}
+                      </div>
+                    )}
+                    {!this.props.disabledTutorial && (
+                      <a
+                        href={this.props.item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={this.startTutorialClicked}
+                      >
+                        <div style={styles.tutorialDetailStartButton}>
+                          {i18n.startButton()}
+                        </div>
+                      </a>
+                    )}
+                  </div>
+                  <div style={{clear: 'both'}} />
+                  <table style={styles.tutorialDetailsTable}>
+                    <tbody>
+                      {this.props.item.teachers_notes && (
+                        <tr key={0}>
                           <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailsShortLink()}
+                            {i18n.tutorialDetailsMoreResources()}
                           </td>
                           <td style={styles.tutorialDetailsTableBody}>
                             <a
-                              href={`https://hourofcode.com/${this.props.item.short_code}`}
+                              href={this.props.item.teachers_notes}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {`https://hourofcode.com/${this.props.item.short_code}`}
+                              <i
+                                className="fa fa-external-link"
+                                aria-hidden={true}
+                              />
+                              &nbsp;
+                              {i18n.tutorialDetailsTeacherNotes()}
                             </a>
                           </td>
                         </tr>
                       )}
-                    {tableEntries.map(item => (
-                      <tr key={item.key}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {item.title}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          {item.body}
-                        </td>
-                      </tr>
-                    ))}
-                    {this.props.localeEnglish &&
-                      this.props.item.string_standards && (
-                        <tr key={8}>
+                      {!this.props.disabledTutorial &&
+                        this.props.item.tags_activity_type
+                          .split(',')
+                          .indexOf('online-tutorial') !== -1 && (
+                          <tr key={1}>
+                            <td style={styles.tutorialDetailsTableTitle}>
+                              {i18n.tutorialDetailsShortLink()}
+                            </td>
+                            <td style={styles.tutorialDetailsTableBody}>
+                              <a
+                                href={`https://hourofcode.com/${this.props.item.short_code}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {`https://hourofcode.com/${this.props.item.short_code}`}
+                              </a>
+                            </td>
+                          </tr>
+                        )}
+                      {tableEntries.map(item => (
+                        <tr key={item.key}>
                           <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailStandards()}
+                            {item.title}
                           </td>
-                          <td style={styles.tutorialDetailsTableBodyNoWrap}>
-                            {this.props.item.string_standards}
+                          <td style={styles.tutorialDetailsTableBody}>
+                            {item.body}
                           </td>
                         </tr>
-                      )}
-                  </tbody>
-                </table>
-                <div style={styles.tutorialDetailsAsReported}>
-                  {i18n.tutorialDetailAsReported()}
+                      ))}
+                      {this.props.localeEnglish &&
+                        this.props.item.string_standards && (
+                          <tr key={8}>
+                            <td style={styles.tutorialDetailsTableTitle}>
+                              {i18n.tutorialDetailStandards()}
+                            </td>
+                            <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                              {this.props.item.string_standards}
+                            </td>
+                          </tr>
+                        )}
+                    </tbody>
+                  </table>
+                  <div style={styles.tutorialDetailsAsReported}>
+                    {i18n.tutorialDetailAsReported()}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </FocusTrap>
     );
   }
 }
@@ -355,6 +291,9 @@ const styles = {
     paddingTop: 0,
     paddingBottom: 4,
     height: 48,
+    paddingBottom: 0,
+    height: 44,
+    paddingRight: 11
   },
   tutorialDetailModalBody: {
     paddingTop: 0,
@@ -369,11 +308,31 @@ const styles = {
     top: 0,
     width: '100%',
   },
+  tutorialDetailCloseButton: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    height: 36,
+    width: 36,
+    fontSize: 36,
+    marginTop: 6,
+    marginRight: 6
+  },
   tutorialDetailImageOuterContainer: {
     float: 'left',
     paddingBottom: 10,
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 6
   },
-  tutorialDetailImageContainer: {
+  tutorialDetailImageLink: {
+    display: 'inline-block',
+    width: '100%',
+    height: '100%',
+    padding: 4,
+    marginTop: 4
+  },
+  tutorialDetailImageBounds: {
     position: 'relative',
     width: '100%',
     height: 0,
@@ -397,6 +356,17 @@ const styles = {
   tutorialDetailInfoContainer: {
     float: 'left',
     paddingLeft: 20,
+    paddingTop: 8,
+    paddingLeft: 20
+  },
+  tutorialDetailStartButton: {
+    display: 'inline-block',
+    padding: '6px 12px',
+    color: 'white',
+    backgroundColor: '#ffa400',
+    borderColor: '#ffa400',
+    borderRadius: 4,
+    marginTop: 20
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
