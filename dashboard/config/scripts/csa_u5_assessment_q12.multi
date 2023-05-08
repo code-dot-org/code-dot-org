@@ -37,3 +37,5 @@ Consider the following code segment:
 What is printed as a result of running this code segment?
 
 MARKDOWN
+
+allow_multiple_attempts true
