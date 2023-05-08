@@ -33,8 +33,6 @@ module Infrastructure
       begin
         flush!
       rescue => exception
-        # debugging - Remove before merging
-        puts exception
         Honeybadger.notify(
           exception,
           error_message: "Failed to log rake task information in cloudwatch",
