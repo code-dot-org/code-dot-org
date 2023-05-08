@@ -6,7 +6,7 @@
 // For now, it's only used for the "music" app, and facilitates instant switching
 // between "music" levels in the same lesson.
 //
-// It plays a fade-in animation when levels are switched.
+// It hides the level while loading, and plays a fade-in animation as the level appears.
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -16,7 +16,6 @@ import moduleStyles from './LabContainer.module.scss';
 import i18n from '@cdo/locale';
 
 const LabContainer = ({children}) => {
-  const currentLevelId = useSelector(state => state.progress.currentLevelId);
   const isLabLoading = useSelector(state => state.lab.isLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
@@ -29,7 +28,6 @@ const LabContainer = ({children}) => {
       {children}
       <div
         id="fade-overlay"
-        key={currentLevelId}
         className={classNames(moduleStyles.solidBlock, overlayStyle)}
       />
 
@@ -52,7 +50,6 @@ const LabContainer = ({children}) => {
 };
 
 LabContainer.propTypes = {
-  currentLevelId: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
