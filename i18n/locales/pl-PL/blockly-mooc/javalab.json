@@ -152,6 +152,7 @@
   "unknownError": "Ups. Natrafiliśmy na błąd po naszej stronie. Spróbuj ponownie uruchomić program. Jeśli ten błąd będzie się powtarzał, skontaktuj się z nami pod adresem support@code.org. Pamiętaj o podaniu w wiadomości identyfikatora połączenia {connectionId}.\n{type}",
   "unsupportedMiniAppMessage": "Niezgodność typu poziomów: {miniAppType} projekty nie są obsługiwane na poziomie nie-{miniAppType} .",
   "userBlocked": "Uruchomiłeś kod zbyt wiele razy i Twoje konto zostało zablokowane. Skontaktuj się z support@code.org, aby odblokować swoje konto.",
+  "waitingForServer": "Oczekanie na odpowiedź...",
   "youHaveProjectsToReview": "Masz projekty do sprawdzenia...",
   "yourPeer": "twój rówieśnik"
 }
