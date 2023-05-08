@@ -140,8 +140,7 @@ export default class AzureTextToSpeech {
     }
 
     // Otherwise, check the text for profanity and request the TTS sound.
-    // eslint-disable-next-line no-async-promise-executor
-    return new Promise(async resolve => {
+    const soundPromiseGenerator = async resolve => {
       try {
         const profaneWords = await findProfanity(
           text,
@@ -177,7 +176,9 @@ export default class AzureTextToSpeech {
         onFailure(soundResponse.errorMessage());
         resolve(soundResponse);
       }
-    });
+    };
+
+    return soundPromiseGenerator();
   };
 
   /**
