@@ -737,7 +737,10 @@ export default class JSInterpreter {
         //      in the doneLeft value, because the expression kind of looks like i = i + 1 which
         //      has a left (i = ) and a right (i + 1) side, and the left side is where the assignment
         //      actually takes place.
-        this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+        this.atInterstitialNode = Object.prototype.hasOwnProperty.call(
+          INTERSTITIAL_NODES,
+          nodeType
+        );
         if (inUserCode && !doneUserLine) {
           doneUserLine =
             this.atInterstitialNode ||

@@ -1057,3 +1057,7 @@ lv:
               display_name: Funkcijas
             csf_nested_loops:
               display_name: Sazarojumi
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Ievads

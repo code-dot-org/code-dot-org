@@ -378,14 +378,14 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
   end
 
-  test 'get_or_create_for_level creates new channel if none exists' do
+  test 'get_or_create_for_level without script creates new channel if none exists' do
     level = create(:level, :blockly)
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
   end
 
-  test 'get_or_create_for_level returns existing channel' do
+  test 'get_or_create_for_level without script returns existing channel' do
     level = create(:level, :blockly)
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
@@ -397,30 +397,30 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_equal channel_id, @response.body['channel']
   end
 
-  test 'get_or_create_for_script_level creates new channel if none exists' do
+  test 'get_or_create_for_level with script creates new channel if none exists' do
     script = create(:script)
     level = create(:level, :blockly)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_script_level, params: {script_id: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
   end
 
-  test 'get_or_create_for_script_level restricts usage for young students in app lab' do
+  test 'get_or_create_for_level with script restricts usage for young students in app lab' do
     sign_in_with_request create(:young_student)
     script = create(:script)
     level = create(:applab)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_script_level, params: {script_id: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :forbidden
   end
 
-  test 'get_or_create_for_script_level allows usage for young students with tos teacher in app lab' do
+  test 'get_or_create_for_level with script allows usage for young students with tos teacher in app lab' do
     sign_in_with_request create(:young_student_with_tos_teacher)
     script = create(:script)
     level = create(:applab)
     create(:script_level, script: script, levels: [level])
-    get :get_or_create_for_script_level, params: {script_id: script.name, level_id: level.id}
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     assert_not_nil @response.body['channel']
   end

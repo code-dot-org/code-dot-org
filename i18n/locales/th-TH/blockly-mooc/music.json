@@ -1,1 +1,20 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "เล่นเสียง",
+  "blockly_blockPlaySoundAtMeasureTooltip": "เล่นเสียง",
+  "blockly_blockRepeatTooltip": "ทำซ้ำ",
+  "blockly_blockRestTooltip": "พักผ่อน",
+  "blockly_blockWhenRun": "เมื่อเล่น",
+  "blockly_blockWhenRunTooltip": "เมื่อเล่น",
+  "blockly_functionNamePlaceholder": "ฟังก์ชันของฉัน",
+  "blockly_toolboxCategoryEffects": "เอฟเฟกต์",
+  "blockly_toolboxCategoryEvents": "เหตุการณ์",
+  "blockly_toolboxCategoryFunctions": "ฟังก์ชัน",
+  "blockly_toolboxCategoryLogic": "ตรรกะ",
+  "blockly_toolboxCategoryMath": "คณิตศาสตร์",
+  "blockly_toolboxCategoryPlay": "เล่น",
+  "blockly_toolboxCategoryVariables": "ตัวแปร",
+  "feedback": "ข้อเสนอแนะ",
+  "share": "แบ่งปัน",
+  "startOver": "เริ่มใหม่",
+  "upload": "อัปโหลด"
+}

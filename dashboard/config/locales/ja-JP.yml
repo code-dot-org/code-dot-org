@@ -165,7 +165,6 @@ ja:
 '
     visit_privacy: 詳細は Code.org の [プライバシーポリシー](%{privacy_url}) にアクセスしてください。
     student_terms_markdown: メールアドレスは私たちが生徒に連絡できるような形式では保存されません。パスワードの回復を除き生徒はCode.orgからメールを受信することはありません。詳しくは、私たちの[プライバシーポリシー](http://code.org/privacy)をご覧ください。
-    additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
     user_type_button: アカウントタイプを更新
     user_type_label: アカウントの種類
     user_type_student: 生徒

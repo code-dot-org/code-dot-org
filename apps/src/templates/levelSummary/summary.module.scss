@@ -27,11 +27,24 @@ h2 {
   color: $neutral_dark;
   margin-top: 32px;
   margin-bottom: 0.5em;
-  border-bottom: 1px solid $neutral_dark20;
   line-height: 1.2;
 }
 
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 34px;
+  border-bottom: 1px solid $neutral_dark20;
+}
+
 /* stylelint-disable selector-pseudo-class-no-unknown */
+:global(.multi) h1,
+:global(.multi) h2 {
+  text-align: start;
+}
+
 .levelTitle,
 .markdown h1,
 .markdown h2,
@@ -43,14 +56,6 @@ h2 {
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */
 
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 34px;
-}
-
 p,
 label,
 ul,
@@ -60,6 +65,26 @@ textarea {
   color: $neutral_dark;
   font-size: 16px;
   line-height: 24px;
+}
+
+label.sectionSelector {
+  display: inline-block;
+}
+
+.toggleContainer {
+  float: right;
+}
+
+[dir="rtl"] .toggleContainer {
+  float: left;
+}
+
+.correctAnswersContainer {
+  background: $neutral_light;
+  border: 2px solid $neutral_dark20;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
 }
 
 .studentResponses {
@@ -94,7 +119,7 @@ textarea {
     height: 40px; // h2 line-height
     line-height: 40px; // h2 line-height
     position: relative;
-    top: -56px; // h2 height+margins
+    margin-top: -56px; // h2 height+margins
   }
 
   .studentsSubmittedLeft {
@@ -122,4 +147,15 @@ textarea {
     color: $brand_primary_default;
   }
   /* stylelint-enable selector-pseudo-class-no-unknown */
+}
+
+.multiChart {
+  margin-bottom: 48px;
+  clear: both;
+}
+
+// Hack to fix the annotation text color inside google charts.
+// https://github.com/google/google-visualization-issues/issues/2103#issuecomment-1076466289
+svg text[fill] {
+  fill: $neutral_dark;
 }
