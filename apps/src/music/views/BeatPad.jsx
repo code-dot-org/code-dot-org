@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './beatpad.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import musicLocale from '../locale';
+import musicI18n from '../locale';
 
 const BUTTONS_PER_ROW = 3;
 const enabledClasses = [
@@ -51,7 +51,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
   return (
     <div className={styles.container}>
       <div className={styles.labelContainer}>
-        <p className={styles.label}>{musicLocale.control()}</p>
+        <p className={styles.label}>{musicI18n.control()}</p>
         <FontAwesome
           icon={'times'}
           onClick={onClose}
