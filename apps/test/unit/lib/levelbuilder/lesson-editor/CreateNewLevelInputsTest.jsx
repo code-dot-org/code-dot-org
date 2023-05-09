@@ -12,9 +12,9 @@ describe('CreateNewLevelInputs', () => {
       levelOptions: [
         ['All Type', ''],
         ['Applab', 'Applab'],
-        ['Dancelab', 'Dancelab']
+        ['Dancelab', 'Dancelab'],
       ],
-      addLevel
+      addLevel,
     };
   });
 
@@ -50,7 +50,7 @@ describe('CreateNewLevelInputs', () => {
     server.respondWith('POST', '/levels?do_not_redirect=true', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const wrapper = shallow(<CreateNewLevelInputs {...defaultProps} />);
@@ -76,7 +76,7 @@ describe('CreateNewLevelInputs', () => {
     server.respondWith('POST', '/levels?do_not_redirect=true', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const wrapper = shallow(<CreateNewLevelInputs {...defaultProps} />);
@@ -102,7 +102,7 @@ describe('CreateNewLevelInputs', () => {
     server.respondWith('POST', '/levels?do_not_redirect=true', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const wrapper = shallow(<CreateNewLevelInputs {...defaultProps} />);

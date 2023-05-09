@@ -17,8 +17,8 @@ class HeaderBanner extends React.Component {
     children: PropTypes.node,
     short: PropTypes.bool,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    backgroundUrl: PropTypes.string,
-    imageUrl: PropTypes.string
+    backgroundUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string,
   };
 
   render() {
@@ -29,7 +29,7 @@ class HeaderBanner extends React.Component {
       description,
       responsiveSize,
       backgroundUrl,
-      imageUrl
+      imageUrl,
     } = this.props;
 
     let headerBannerContainerStyle,
@@ -51,7 +51,7 @@ class HeaderBanner extends React.Component {
     }
 
     const headerBannerStyle = {
-      backgroundImage: `url(${backgroundUrl})`
+      backgroundImage: `url(${backgroundUrl})`,
     };
 
     const bannerContentImageStyle = short
@@ -67,7 +67,7 @@ class HeaderBanner extends React.Component {
               style={headerBannerContainerStyle}
             >
               <div className={'bannerContent'}>
-                <div style={headingStyle}>{headingText}</div>
+                <h1 style={headingStyle}>{headingText}</h1>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ class HeaderBanner extends React.Component {
             style={headerBannerContainerStyle}
           >
             <div className={'bannerContent'}>
-              <div style={headingStyle}>{headingText}</div>
+              <h1 style={headingStyle}>{headingText}</h1>
               {subHeadingText && (
                 <div style={subHeadingStyle}>{subHeadingText}</div>
               )}
@@ -101,7 +101,9 @@ class HeaderBanner extends React.Component {
                 <div className={'children'}>{this.props.children}</div>
               )}
             </div>
-            {imageUrl && <img style={bannerContentImageStyle} src={imageUrl} />}
+            {imageUrl && (
+              <img style={bannerContentImageStyle} src={imageUrl} alt="" />
+            )}
           </div>
         </div>
       );
@@ -112,60 +114,60 @@ class HeaderBanner extends React.Component {
 const styles = {
   headerBannerContainer: {
     minHeight: 260,
-    maxWidth: styleConstants['content-width']
+    maxWidth: styleConstants['content-width'],
   },
   headerBannerContainerShort: {
     minHeight: 140,
-    maxWidth: styleConstants['content-width']
+    maxWidth: styleConstants['content-width'],
   },
   bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0,
   },
   bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
     color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
+    fontSize: 48,
+    marginBottom: 0,
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
     fontSize: 16,
     lineHeight: '21px',
-    marginTop: 16
+    marginTop: 16,
   },
   bannerSubHeadingResponsive: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.dark_charcoal,
     fontSize: 16,
     lineHeight: '21px',
-    marginTop: 16
+    marginTop: 16,
   },
   bannerDescription: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
     fontSize: 16,
     lineHeight: '21px',
-    marginTop: 16
+    marginTop: 16,
   },
   bannerDescriptionResponsive: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.dark_charcoal,
     fontSize: 16,
     lineHeight: '21px',
-    marginTop: 16
+    marginTop: 16,
   },
   bannerContentImage: {
-    maxHeight: 260
+    maxHeight: 260,
   },
   bannerContentImageShort: {
-    maxHeight: 140
-  }
+    maxHeight: 140,
+  },
 };
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(HeaderBanner);

@@ -17,14 +17,14 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
   static propTypes = {
     school_info: SchoolInfoPropType,
     onSchoolInfoChange: PropTypes.func.isRequired,
-    errors: PropTypes.object
+    errors: PropTypes.object,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      showCustomFields: false
+      showCustomFields: false,
     };
   }
 
@@ -40,8 +40,8 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
           school_name: selection.school.name,
           school_state: selection.school.state,
           school_zip: selection.school.zip,
-          school_type: selection.school.school_type
-        }
+          school_type: selection.school.school_type,
+        },
       });
     } else {
       this.props.onSchoolInfoChange({school_info: {}});
@@ -55,7 +55,10 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
           <FormGroup
             id="school_id"
             validationState={
-              this.props.errors.hasOwnProperty('school_id')
+              Object.prototype.hasOwnProperty.call(
+                this.props.errors,
+                'school_id'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -108,7 +111,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
       'school_name',
       'school_state',
       'school_zip',
-      'school_type'
+      'school_type',
     ];
 
     if (['Public school', 'Charter school'].includes(school_info.school_type)) {

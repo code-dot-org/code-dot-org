@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A video game wants to implement a system that recommends character classes based on the user's play style.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByPlayStyle()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CharacterClass</code> class that returns a filtered list of character classes that match the play style.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecommendedCharacterClasses()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CharacterClass</code> class to call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByPlayStyle()</code> method and returns a list of recommended character classes.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecommendedCharacterClasses()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_private_methods",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Game Characters",
+    "bubble_choice_description": "A video game wants to implement a system that recommends character classes based on the user's play style."
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T14:06:21.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:06:21.596+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L6c_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L6c_2023\"},{\"changed_at\":\"2023-04-11 14:06:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:10:21 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:20:28 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

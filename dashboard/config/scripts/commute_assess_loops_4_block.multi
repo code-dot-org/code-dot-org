@@ -29,3 +29,5 @@ DISPLAY <val style="border-width:1px;border-style:solid;border-color:black;borde
 }
 </pre>
 MARKDOWN
+
+allow_multiple_attempts true

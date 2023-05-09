@@ -6,3 +6,5 @@ right 'Agree'
 right 'Neutral'
 right 'Disagree'
 right 'Strongly disagree'
+
+allow_multiple_attempts true

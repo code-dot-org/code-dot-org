@@ -7,7 +7,7 @@ import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/Un
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
-  setCodeReviewEnabledForLevel
+  setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
 
 $(document).ready(initPage);

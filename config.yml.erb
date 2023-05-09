@@ -318,14 +318,13 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
-i18n_key_value:
 i18n_backend:
 cache:
 app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -459,7 +458,7 @@ image_optim: <%=chef_managed && !ci_test%>
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:
 csf_workshop_attendance_gsheet_key: !Secret
-applications_2023_2024_gsheet_key:
+applications_gsheet_key:
 eir_teacher_enrollments_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?

@@ -74,13 +74,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.verified_teacher?
   end
 
-  test 'census_reviewer?' do
-    user = create :teacher
-    refute user.census_reviewer?
-    user.permission = UserPermission::CENSUS_REVIEWER
-    assert user.census_reviewer?
-  end
-
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?

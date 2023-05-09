@@ -1,5 +1,6 @@
 ---
 from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
+reply-to: '"Code.org" <support@code.org>'
 subject: Submission Received
 ---
 <% edit_link = "http://#{CDO.canonical_hostname('code.org')}/schools/edit/#{form.secret}" %>

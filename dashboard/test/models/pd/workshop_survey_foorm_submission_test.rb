@@ -11,20 +11,20 @@ module Pd
 
     test 'save workshop with submission' do
       workshop_survey = Pd::WorkshopSurveyFoormSubmission.new(user_id: @user.id, pd_workshop_id: @pd_summer_workshop.id, day: 0)
-      workshop_survey.save_with_foorm_submission({'question1': 'answer1'}, @foorm_form.name, @foorm_form.version)
+      workshop_survey.save_with_foorm_submission({question1: 'answer1'}, @foorm_form.name, @foorm_form.version)
       assert_equal @foorm_form.name, workshop_survey.foorm_submission.form_name
     end
 
     test 'can check that survey has already been submitted' do
       workshop_survey = Pd::WorkshopSurveyFoormSubmission.new(user_id: @user.id, pd_workshop_id: @pd_summer_workshop.id, day: 0)
-      workshop_survey.save_with_foorm_submission({'question1': 'answer1'}, @foorm_form.name, @foorm_form.version)
+      workshop_survey.save_with_foorm_submission({question1: 'answer1'}, @foorm_form.name, @foorm_form.version)
 
       assert Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(@user.id, @pd_summer_workshop.id, nil, 0, @foorm_form.name)
     end
 
     test 'can check that survey has already been submitted without form name' do
       workshop_survey = Pd::WorkshopSurveyFoormSubmission.new(user_id: @user.id, pd_workshop_id: @pd_summer_workshop.id, day: 0)
-      workshop_survey.save_with_foorm_submission({'question1': 'answer1'}, @foorm_form.name, @foorm_form.version)
+      workshop_survey.save_with_foorm_submission({question1: 'answer1'}, @foorm_form.name, @foorm_form.version)
 
       assert Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(@user.id, @pd_summer_workshop.id, nil, 0, nil)
     end
@@ -36,7 +36,7 @@ module Pd
     test 'do not allow a day 6 survey for a 5 day workshop' do
       workshop_survey = Pd::WorkshopSurveyFoormSubmission.new(user_id: @user.id, pd_workshop_id: @pd_summer_workshop.id, day: 6)
       assert_raises(ActiveRecord::RecordInvalid) do
-        workshop_survey.save_with_foorm_submission({'question1': 'answer1'}, @foorm_form.name, @foorm_form.version)
+        workshop_survey.save_with_foorm_submission({question1: 'answer1'}, @foorm_form.name, @foorm_form.version)
       end
     end
 
@@ -48,7 +48,7 @@ module Pd
         day: 6
       )
       workshop_survey.save_with_foorm_submission(
-        {'question1': 'answer1'},
+        {question1: 'answer1'},
         @foorm_form.name,
         @foorm_form.version
       )

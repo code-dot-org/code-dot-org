@@ -23,7 +23,7 @@ class HeaderMiddle extends React.Component {
     lessonData: PropTypes.object,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   constructor(props) {
@@ -35,7 +35,7 @@ class HeaderMiddle extends React.Component {
       scriptNameDesiredWidth: 0,
       lessonProgressDesiredWidth: 0,
       finishDesiredWidth: 0,
-      initialDelay: true
+      initialDelay: true,
     };
 
     setTimeout(() => {
@@ -60,7 +60,7 @@ class HeaderMiddle extends React.Component {
     this.setState({
       width: this.getWidth(),
       windowWidth: $(window).width(),
-      windowHeight: $(window).height()
+      windowHeight: $(window).height(),
     });
   };
 
@@ -93,7 +93,7 @@ class HeaderMiddle extends React.Component {
         scriptName: 0,
         progress: 0,
         popup: 0,
-        finish: 0
+        finish: 0,
       };
     }
 
@@ -105,7 +105,7 @@ class HeaderMiddle extends React.Component {
         ),
         progress: 0,
         popup: 0,
-        finish: 0
+        finish: 0,
       };
     }
 
@@ -171,18 +171,13 @@ class HeaderMiddle extends React.Component {
       progress: progressWidth,
       popup: popupWidth,
       finish: finishWidth,
-      showPopupBecauseProgressCropped: showPopupBecauseProgressCropped
+      showPopupBecauseProgressCropped: showPopupBecauseProgressCropped,
     };
   }
 
   render() {
-    const {
-      scriptNameData,
-      lessonData,
-      scriptData,
-      currentLevelId,
-      isRtl
-    } = this.props;
+    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
+      this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
@@ -206,7 +201,7 @@ class HeaderMiddle extends React.Component {
           width: widths.scriptName - scriptNameExtraWidth,
           setDesiredWidth: width => {
             this.setDesiredWidth('scriptName', width);
-          }
+          },
         }
       : null;
 
@@ -227,7 +222,7 @@ class HeaderMiddle extends React.Component {
             style={{
               float: 'left',
               width: widths.projectInfo,
-              visibility: widths.projectInfo === 0 ? 'hidden' : undefined
+              visibility: widths.projectInfo === 0 ? 'hidden' : undefined,
             }}
           >
             <ProjectInfo
@@ -259,7 +254,7 @@ class HeaderMiddle extends React.Component {
                 visibility:
                   widths.scriptName === scriptNameExtraWidth
                     ? 'hidden'
-                    : undefined
+                    : undefined,
               }}
             >
               <ScriptName {...extraScriptNameData} isRtl={isRtl} />
@@ -275,7 +270,7 @@ class HeaderMiddle extends React.Component {
                 visibility:
                   widths.progress === lessonProgressExtraWidth
                     ? 'hidden'
-                    : undefined
+                    : undefined,
               }}
             >
               <LessonProgress
@@ -296,7 +291,7 @@ class HeaderMiddle extends React.Component {
                 width: widths.popup,
                 windowWidth: this.state.windowWidth,
                 windowHeight: this.state.windowHeight,
-                visibility: widths.popup === 0 ? 'hidden' : undefined
+                visibility: widths.popup === 0 ? 'hidden' : undefined,
               }}
             >
               <HeaderPopup
@@ -316,7 +311,7 @@ class HeaderMiddle extends React.Component {
                 float: 'left',
                 width: widths.finish,
                 marginRight: '5px',
-                height: 18
+                height: 18,
               }}
             >
               <HeaderFinish
@@ -326,7 +321,7 @@ class HeaderMiddle extends React.Component {
                   this.setDesiredWidth('finish', width);
                 }}
                 style={{
-                  visibility: widths.projectInfo === 0 ? 'hidden' : undefined
+                  visibility: widths.projectInfo === 0 ? 'hidden' : undefined,
                 }}
                 isRtl={isRtl}
               />
@@ -345,15 +340,16 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    animation: 'header_fadein 0.4s'
+    animation: 'header_fadein 0.4s',
   },
   finishedLink: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export default connect(state => ({
   isRtl: state.isRtl,
   appLoadStarted: state.header.appLoadStarted,
-  appLoaded: state.header.appLoaded
+  appLoaded: state.header.appLoaded,
+  currentLevelId: state.progress.currentLevelId,
 }))(HeaderMiddle);

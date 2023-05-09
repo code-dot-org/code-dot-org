@@ -6,7 +6,7 @@ import {
   determineInputs,
   interpolateInputs,
   groupInputsByRow,
-  createJsWrapperBlockCreator
+  createJsWrapperBlockCreator,
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
 import {expect} from '../util/reconfiguredChai';
@@ -60,7 +60,7 @@ describe('block utils', () => {
       `;
 
       const newToolbox = appendBlocksByCategory(oldToolbox, {
-        Custom: ['do_cool_stuff', 'even_cooler_stuff']
+        Custom: ['do_cool_stuff', 'even_cooler_stuff'],
       });
 
       expect(newToolbox).xml.to.equal(`
@@ -86,7 +86,7 @@ describe('block utils', () => {
       `;
 
       const newToolbox = appendBlocksByCategory(oldToolbox, {
-        Start: ['do_cool_stuff', 'even_cooler_stuff']
+        Start: ['do_cool_stuff', 'even_cooler_stuff'],
       });
 
       expect(newToolbox).xml.to.equal(`
@@ -108,7 +108,7 @@ describe('block utils', () => {
       `;
 
       const newToolbox = appendBlocksByCategory(oldToolbox, {
-        Custom: ['do_cool_stuff', 'even_cooler_stuff']
+        Custom: ['do_cool_stuff', 'even_cooler_stuff'],
       });
 
       expect(newToolbox).xml.to.equal(`
@@ -137,7 +137,7 @@ describe('block utils', () => {
         Start: ['do_cool_stuff', 'even_cooler_stuff'],
         Sprites: ['gamelab_moveLeft', 'gamelab_moveRight'],
         Events: ['gamelab_whenUpArrow', 'gamelab_whenDownArrow'],
-        Custom: ['gamelab_consoleLog']
+        Custom: ['gamelab_consoleLog'],
       });
 
       expect(newToolbox).xml.to.equal(`
@@ -342,7 +342,10 @@ describe('block utils', () => {
       `);
   });
 
-  const TEST_SPRITES = [['dog', '"dog"'], ['cat', '"cat"']];
+  const TEST_SPRITES = [
+    ['dog', '"dog"'],
+    ['cat', '"cat"'],
+  ];
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
@@ -364,7 +367,7 @@ describe('block utils', () => {
       setAlign.returns(fakeInput);
 
       fakeBlockly = {
-        FieldDropdown: sinon.stub()
+        FieldDropdown: sinon.stub(),
       };
     });
 
@@ -377,8 +380,8 @@ describe('block utils', () => {
             mode: 'dropdown',
             name: 'ANIMATION',
             label: 'create sprite ',
-            options: TEST_SPRITES
-          }
+            options: TEST_SPRITES,
+          },
         ])
       );
 
@@ -398,8 +401,8 @@ describe('block utils', () => {
             mode: 'value',
             name: 'DISTANCE',
             type: Blockly.BlockValueType.NUMBER,
-            label: 'block field'
-          }
+            label: 'block field',
+          },
         ])
       );
 
@@ -415,8 +418,8 @@ describe('block utils', () => {
         groupInputsByRow([
           {
             mode: 'dummy',
-            label: 'block field'
-          }
+            label: 'block field',
+          },
         ])
       );
 
@@ -433,18 +436,18 @@ describe('block utils', () => {
             mode: 'dropdown',
             name: 'ANIMATION',
             label: 'dropdown ',
-            options: TEST_SPRITES
+            options: TEST_SPRITES,
           },
           {
             mode: 'value',
             name: 'DISTANCE',
             type: Blockly.BlockValueType.NUMBER,
-            label: 'value label'
+            label: 'value label',
           },
           {
             mode: 'dummy',
-            label: 'dummy label'
-          }
+            label: 'dummy label',
+          },
         ])
       );
 
@@ -461,12 +464,12 @@ describe('block utils', () => {
           {
             mode: 'value',
             name: 'VALUE',
-            label: 'prefix'
+            label: 'prefix',
           },
           {
             mode: 'dummy',
-            label: 'suffix'
-          }
+            label: 'suffix',
+          },
         ])
       );
 
@@ -480,20 +483,20 @@ describe('block utils', () => {
       const valueInput1 = {
         mode: 'value',
         name: 'VALUE1',
-        label: 'hello'
+        label: 'hello',
       };
       const valueInput2 = {
         mode: 'value',
         name: 'VALUE2',
-        label: 'world'
+        label: 'world',
       };
       const fieldInput = {
         mode: 'dropdown',
         name: 'DROPDOWN',
-        label: 'foo'
+        label: 'foo',
       };
       const dummyInput = {
-        mode: 'dummy'
+        mode: 'dummy',
       };
       it('groups a single value input as one row', () => {
         const groupedInputs = groupInputsByRow([valueInput1]);
@@ -511,18 +514,18 @@ describe('block utils', () => {
         const groupedInputs = groupInputsByRow([valueInput1, fieldInput]);
         expect(groupedInputs).to.deep.equal([
           [valueInput1],
-          [fieldInput, dummyInput]
+          [fieldInput, dummyInput],
         ]);
       });
       it('groups a field and two value inputs as two rows', () => {
         const groupedInputs = groupInputsByRow([
           fieldInput,
           valueInput1,
-          valueInput2
+          valueInput2,
         ]);
         expect(groupedInputs).to.deep.equal([
           [fieldInput, valueInput1],
-          [valueInput2]
+          [valueInput2],
         ]);
       });
     });
@@ -536,8 +539,8 @@ describe('block utils', () => {
       expect(inputs).to.deep.equal([
         {
           mode: 'dummy',
-          label: 'block text'
-        }
+          label: 'block text',
+        },
       ]);
     });
 
@@ -545,8 +548,8 @@ describe('block utils', () => {
       const inputs = determineInputs('create a {ANIMATION} sprite', [
         {
           name: 'ANIMATION',
-          options: TEST_SPRITES
-        }
+          options: TEST_SPRITES,
+        },
       ]);
       expect(inputs).to.deep.equal([
         {
@@ -554,12 +557,12 @@ describe('block utils', () => {
           name: 'ANIMATION',
           label: 'create a ',
           options: TEST_SPRITES,
-          strict: false
+          strict: false,
         },
         {
           mode: 'dummy',
-          label: ' sprite'
-        }
+          label: ' sprite',
+        },
       ]);
     });
 
@@ -567,8 +570,8 @@ describe('block utils', () => {
       const inputs = determineInputs('move {DISTANCE} pixels', [
         {
           name: 'DISTANCE',
-          type: NUMBER
-        }
+          type: NUMBER,
+        },
       ]);
       expect(inputs).to.deep.equal([
         {
@@ -576,12 +579,12 @@ describe('block utils', () => {
           name: 'DISTANCE',
           type: NUMBER,
           label: 'move ',
-          strict: false
+          strict: false,
         },
         {
           mode: 'dummy',
-          label: ' pixels'
-        }
+          label: ' pixels',
+        },
       ]);
     });
 
@@ -589,7 +592,7 @@ describe('block utils', () => {
       const inputs = determineInputs('create a {ANIMATION} sprite at {X} {Y}', [
         {name: 'ANIMATION', options: TEST_SPRITES},
         {name: 'X', type: NUMBER},
-        {name: 'Y', type: NUMBER}
+        {name: 'Y', type: NUMBER},
       ]);
       expect(inputs).to.deep.equal([
         {
@@ -597,22 +600,22 @@ describe('block utils', () => {
           name: 'ANIMATION',
           options: TEST_SPRITES,
           label: 'create a ',
-          strict: false
+          strict: false,
         },
         {
           mode: 'value',
           name: 'X',
           type: NUMBER,
           label: ' sprite at ',
-          strict: false
+          strict: false,
         },
-        {mode: 'value', name: 'Y', type: NUMBER, label: ' ', strict: false}
+        {mode: 'value', name: 'Y', type: NUMBER, label: ' ', strict: false},
       ]);
     });
 
     it('removes trailing empty strings', () => {
       const inputs = determineInputs('set speed to {SPEED}', [
-        {name: 'SPEED', type: NUMBER}
+        {name: 'SPEED', type: NUMBER},
       ]);
       expect(inputs).to.deep.equal([
         {
@@ -620,8 +623,8 @@ describe('block utils', () => {
           name: 'SPEED',
           type: NUMBER,
           label: 'set speed to ',
-          strict: false
-        }
+          strict: false,
+        },
       ]);
     });
 
@@ -630,12 +633,12 @@ describe('block utils', () => {
       expect(inputs).to.deep.equal([
         {
           mode: 'dummy',
-          label: 'this block has '
+          label: 'this block has ',
         },
         {
           mode: 'dummy',
-          label: ' two lines'
-        }
+          label: ' two lines',
+        },
       ]);
     });
 
@@ -645,29 +648,29 @@ describe('block utils', () => {
         [
           {
             name: 'WITH',
-            field: true
-          }
+            field: true,
+          },
         ]
       );
       expect(inputs).to.deep.equal([
         {
           mode: 'dummy',
-          label: 'this block has '
+          label: 'this block has ',
         },
         {
           name: 'WITH',
           mode: 'field',
           label: ' three lines ',
-          strict: false
+          strict: false,
         },
         {
           mode: 'dummy',
-          label: ''
+          label: '',
         },
         {
           mode: 'dummy',
-          label: ' a field input'
-        }
+          label: ' a field input',
+        },
       ]);
     });
   });
@@ -693,15 +696,15 @@ describe('block utils', () => {
               {
                 name: 'NAME',
                 assignment: true,
-                field: true
-              }
-            ]
+                field: true,
+              },
+            ],
           },
           '',
           'test'
         );
         const fakeBlock = {
-          getFieldValue: sinon.stub().returns('someVar')
+          getFieldValue: sinon.stub().returns('someVar'),
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('someVar = foo(someVar);\n');
@@ -715,14 +718,14 @@ describe('block utils', () => {
               {
                 name: 'NAME1',
                 assignment: true,
-                field: true
+                field: true,
               },
               {
                 name: 'NAME2',
                 assignment: true,
-                field: true
-              }
-            ]
+                field: true,
+              },
+            ],
           },
           '',
           'test'
@@ -731,8 +734,8 @@ describe('block utils', () => {
           getFieldValue: field =>
             ({
               NAME1: 'a',
-              NAME2: 'b'
-            }[field])
+              NAME2: 'b',
+            }[field]),
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('a = b = foo(a, b);\n');
@@ -747,13 +750,13 @@ describe('block utils', () => {
             args: [
               {
                 name: 'NAME1',
-                defer: true
+                defer: true,
               },
               {
                 name: 'NAME2',
-                defer: true
-              }
-            ]
+                defer: true,
+              },
+            ],
           },
           '',
           'test'
@@ -764,7 +767,7 @@ describe('block utils', () => {
           .callsFake((block, name) => {
             return {
               NAME1: 'elrond',
-              NAME2: 'isildur'
+              NAME2: 'isildur',
             }[name];
           });
         const code = generator['test_yellAt']();
@@ -788,7 +791,7 @@ describe('block utils', () => {
             name: 'simpleValue',
             blockText: '{VAL}',
             args: [{name: 'VAL'}],
-            returnType: 'String'
+            returnType: 'String',
           },
           '',
           'test'
@@ -807,7 +810,7 @@ describe('block utils', () => {
             simpleValue: true,
             name: 'simpleAssignment',
             blockText: '{VAR} = {VAL}',
-            args: [{name: 'VAL'}, {name: 'VAR', assignment: true}]
+            args: [{name: 'VAL'}, {name: 'VAR', assignment: true}],
           },
           '',
           'test'
@@ -817,7 +820,7 @@ describe('block utils', () => {
           .callsFake((block, name) => {
             return {
               VAR: 'myVariable',
-              VAL: '"some other value"'
+              VAL: '"some other value"',
             }[name];
           });
         const code = generator['test_simpleAssignment']();
@@ -835,8 +838,8 @@ describe('block utils', () => {
             args: [
               {name: 'VAL'},
               {name: 'VAR1', assignment: true},
-              {name: 'VAR2', assignment: true}
-            ]
+              {name: 'VAR2', assignment: true},
+            ],
           },
           '',
           'test'
@@ -847,7 +850,7 @@ describe('block utils', () => {
             return {
               VAR1: 'i',
               VAR2: 'j',
-              VAL: '"yet another value"'
+              VAL: '"yet another value"',
             }[name];
           });
         const code = generator['test_simpleAssignment']();
@@ -864,7 +867,7 @@ describe('block utils', () => {
               name: 'simpleValue',
               blockText: '{VAL1} {VAL2}',
               args: [{name: 'VAL1'}, {name: 'VAL2'}],
-              returnType: 'String'
+              returnType: 'String',
             },
             '',
             'test'
@@ -881,9 +884,9 @@ describe('block utils', () => {
               args: [
                 {name: 'VAR', assignment: true},
                 {name: 'VAL1'},
-                {name: 'VAL2'}
+                {name: 'VAL2'},
               ],
-              returnType: 'String'
+              returnType: 'String',
             },
             '',
             'test'
@@ -898,7 +901,7 @@ describe('block utils', () => {
             func: 'bark',
             methodCall: true,
             blockText: '{THIS} barks',
-            args: []
+            args: [],
           },
           '',
           'test'
@@ -907,7 +910,7 @@ describe('block utils', () => {
           .stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
-              THIS: 'myDog'
+              THIS: 'myDog',
             }[name];
           });
         const code = generator['test_bark']();
@@ -923,7 +926,7 @@ describe('block utils', () => {
             methodCall: true,
             thisObject: 'spot',
             blockText: 'say hi',
-            args: []
+            args: [],
           },
           '',
           'test'
@@ -940,7 +943,7 @@ describe('block utils', () => {
             methodCall: true,
             blockText: "{THIS}'s favorite toy",
             args: [],
-            returnType: 'String'
+            returnType: 'String',
           },
           '',
           'test'
@@ -949,7 +952,7 @@ describe('block utils', () => {
           .stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
-              THIS: 'myDog'
+              THIS: 'myDog',
             }[name];
           });
         const [code] = generator['test_getToy']();
@@ -966,7 +969,7 @@ describe('block utils', () => {
             func: 'whenJump',
             blockText: 'when jump',
             args: [],
-            eventBlock: true
+            eventBlock: true,
           },
           '',
           'test'
@@ -993,7 +996,7 @@ describe('block utils', () => {
             name: 'useStrict',
             expression: 'use strict;',
             blockText: 'run this program in strict mode',
-            args: []
+            args: [],
           },
           '',
           'test'
@@ -1009,7 +1012,7 @@ describe('block utils', () => {
             expression: 'window',
             blockText: 'window object',
             args: [],
-            returnType: 'Object'
+            returnType: 'Object',
           },
           '',
           'test'
@@ -1026,7 +1029,7 @@ describe('block utils', () => {
           {
             func: 'runThisCallback',
             blockText: 'run this callback {STATEMENT}',
-            args: [{name: 'STATEMENT', statement: true}]
+            args: [{name: 'STATEMENT', statement: true}],
           },
           '',
           'test'
@@ -1048,7 +1051,7 @@ describe('block utils', () => {
           {
             func: 'skyscraper',
             blockText: "woo {EMTPY} it's a skyscraper",
-            args: [{name: 'EMTPY', customInput: 'dummy'}]
+            args: [{name: 'EMTPY', customInput: 'dummy'}],
           },
           '',
           'test'
@@ -1065,15 +1068,15 @@ describe('block utils', () => {
             args: [
               {
                 name: 'DROPDOWN',
-                options: [['someOption', 7]]
-              }
-            ]
+                options: [['someOption', 7]],
+              },
+            ],
           },
           '',
           'test'
         );
         const fakeBlock = {
-          getFieldValue: () => 7
+          getFieldValue: () => 7,
         };
         const code = generator['test_selectOne'].bind(fakeBlock)();
 
@@ -1087,15 +1090,15 @@ describe('block utils', () => {
             args: [
               {
                 name: 'INPUT',
-                field: true
-              }
-            ]
+                field: true,
+              },
+            ],
           },
           '',
           'test'
         );
         const fakeBlock = {
-          getFieldValue: () => 42
+          getFieldValue: () => 42,
         };
         const code = generator['test_processValue'].bind(fakeBlock)();
 
@@ -1110,15 +1113,15 @@ describe('block utils', () => {
               {
                 name: 'INPUT',
                 field: true,
-                type: 'String'
-              }
-            ]
+                type: 'String',
+              },
+            ],
           },
           '',
           'test'
         );
         const fakeBlock = {
-          getFieldValue: () => 'some input'
+          getFieldValue: () => 'some input',
         };
         const code = generator['test_processStringValue'].bind(fakeBlock)();
 
@@ -1133,19 +1136,18 @@ describe('block utils', () => {
               {
                 name: 'INPUT',
                 field: true,
-                type: 'String'
-              }
-            ]
+                type: 'String',
+              },
+            ],
           },
           '',
           'test'
         );
         const fakeBlock = {
-          getFieldValue: () => 'some input with a "quote" in it'
+          getFieldValue: () => 'some input with a "quote" in it',
         };
-        const code = generator['test_processAnotherStringValue'].bind(
-          fakeBlock
-        )();
+        const code =
+          generator['test_processAnotherStringValue'].bind(fakeBlock)();
 
         expect(code.trim()).to.equal(
           'processAnotherStringValue("some input with a \\"quote\\" in it");'
@@ -1157,7 +1159,7 @@ describe('block utils', () => {
             name: 'extraArgsTest',
             expression: 'extraArgsTest;',
             blockText: 'run this program in strict mode',
-            args: [{name: 'EXTRA'}]
+            args: [{name: 'EXTRA'}],
           },
           '',
           'test'

@@ -14,3 +14,4 @@ answer 'range'
 
 question '(yearbook-picture "Sally" 1992)'
 answer 'example'
+allow_multiple_attempts true

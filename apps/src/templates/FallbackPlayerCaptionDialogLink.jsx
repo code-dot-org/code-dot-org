@@ -8,7 +8,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {
   static propTypes = {
-    inDialog: PropTypes.bool
+    inDialog: PropTypes.bool,
   };
 
   state = {open: false};
@@ -38,7 +38,7 @@ export default class FallbackPlayerCaptionDialogLink extends React.Component {
 class FallbackPlayerCaptionDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func
+    handleClose: PropTypes.func,
   };
 
   render() {
@@ -79,19 +79,19 @@ class FallbackPlayerCaptionDialog extends Component {
 
 const styles = {
   link: {
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
     textAlign: 'left',
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
   },
   dialogLinkContainer: {
-    marginTop: 20
+    marginTop: 20,
   },
   dialogLink: {
-    color: '#005580'
-  }
+    color: '#005580',
+  },
 };

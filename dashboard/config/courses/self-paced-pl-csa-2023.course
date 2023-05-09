@@ -3,9 +3,10 @@
   "script_names": [
     "self-paced-pl-csa1-2023",
     "self-paced-pl-csa2-2023",
-    "self-paced-pl-csa3-2023"
+    "self-paced-pl-csa3-2023",
+    "self-paced-pl-csa4-2023"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

@@ -17,3 +17,5 @@ There are different sized headers which are marked by the number next to the h i
 Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options
 
 MARKDOWN
+
+allow_multiple_attempts true

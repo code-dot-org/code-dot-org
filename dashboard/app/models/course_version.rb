@@ -71,6 +71,7 @@ class CourseVersion < ApplicationRecord
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
   delegate :included_in_units?, to: :content_root, allow_nil: true
+  delegate :link, to: :content_root, allow_nil: false
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
@@ -197,5 +198,9 @@ class CourseVersion < ApplicationRecord
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
       units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }
+  end
+
+  def hoc?
+    !!course_offering&.hoc?
   end
 end

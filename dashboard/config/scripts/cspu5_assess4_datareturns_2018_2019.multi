@@ -29,3 +29,5 @@ Looking at the code, val is set to 0. Going through the data, if the current ite
 
 In other words, the largest number in data is set to val. In this case, 16 will be returned.
 MARKDOWN
+
+allow_multiple_attempts true

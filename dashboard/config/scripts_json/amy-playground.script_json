@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "amy-playground",
-    "serialized_at": "2022-12-12 16:49:09 UTC",
+    "serialized_at": "2023-03-02 23:25:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -74,6 +74,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "ecosystems",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "amy-playground"
       }
@@ -762,6 +777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "demo_blank_sprite lab_flash talk"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -783,6 +801,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "demo_sprite lab_flash talk"
+        ]
       },
       "bonus": false,
       "seeding_key": {

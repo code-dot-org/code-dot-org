@@ -19,11 +19,13 @@ import {queryParams} from '../code-studio/utils';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import styleConstants from '@cdo/apps/styleConstants';
+import classNames from 'classnames';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
+    inStartBlocksMode: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -38,7 +40,8 @@ class CodeWorkspace extends React.Component {
     showMakerToggle: PropTypes.bool,
     autogenerateML: PropTypes.func,
     closeWorkspaceAlert: PropTypes.func,
-    workspaceAlert: PropTypes.object
+    workspaceAlert: PropTypes.object,
+    isProjectTemplateLevel: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -47,7 +50,7 @@ class CodeWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // isRunning and style only affect style, and can be updated
         // workspaceAlert is involved in displaying or closing workspace alert
         // therefore this key can be updated
@@ -99,13 +102,13 @@ class CodeWorkspace extends React.Component {
       readonlyWorkspace,
       withSettingsCog,
       showMakerToggle,
-      autogenerateML
+      autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevronButton,
-      runModeIndicators && isRunning && styles.runningIcon
+      runModeIndicators && isRunning && styles.runningIcon,
     ];
 
     const settingsCog = showSettingsCog && (
@@ -154,7 +157,7 @@ class CodeWorkspace extends React.Component {
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
         <span>{settingsCog}</span>
-      </PaneSection>
+      </PaneSection>,
     ];
   }
 
@@ -250,7 +253,10 @@ class CodeWorkspace extends React.Component {
           <ProtectedStatefulDiv
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
-            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+            className={classNames(
+              this.props.pinWorkspaceToBottom ? 'pin_bottom' : '',
+              this.props.inStartBlocksMode ? 'has_banner' : ''
+            )}
             canUpdate={true}
           >
             {this.props.workspaceAlert && this.renderWorkspaceAlert(false)}
@@ -265,6 +271,15 @@ class CodeWorkspace extends React.Component {
           <div id="oldVersionBanner" style={styles.oldVersionWarning}>
             {i18n.oldVersionWarning()}
           </div>
+        )}
+        {this.props.inStartBlocksMode && (
+          <>
+            <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+              {this.props.isProjectTemplateLevel
+                ? i18n.startBlocksTemplateWarning()
+                : i18n.inStartBlocksMode()}
+            </div>
+          </>
         )}
         {props.showDebugger && (
           <JsDebugger
@@ -282,10 +297,13 @@ class CodeWorkspace extends React.Component {
 
 const styles = {
   headerIcon: {
-    fontSize: 18
+    fontSize: 18,
   },
   runningIcon: {
-    color: color.dark_charcoal
+    color: color.neutral_white,
+    ':hover': {
+      color: color.neutral_dark20,
+    },
   },
   oldVersionWarning: {
     zIndex: 99,
@@ -294,7 +312,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.8,
-    position: 'relative'
+    position: 'relative',
   },
   studentNotStartedWarning: {
     zIndex: 99,
@@ -302,7 +320,15 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
+  },
+  startBlocksBanner: {
+    zIndex: 99,
+    backgroundColor: color.lighter_yellow,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative',
   },
   chevronButton: {
     padding: 0,
@@ -310,19 +336,19 @@ const styles = {
     border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
-    color: color.lighter_purple,
+    color: color.neutral_white,
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white,
-      boxShadow: 'none'
-    }
+      color: color.neutral_dark20,
+      boxShadow: 'none',
+    },
   },
   toolboxHeaderContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
@@ -331,6 +357,7 @@ export default connect(
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
+    inStartBlocksMode: state.pageConstants.inStartBlocksMode,
     isRtl: state.isRtl,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: !!state.runState.isRunning,
@@ -339,14 +366,15 @@ export default connect(
       state.pageConstants.showDebugConsole
     ),
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.showProjectTemplateWorkspaceIcon,
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
-    workspaceAlert: state.project.workspaceAlert
+    workspaceAlert: state.project.workspaceAlert,
+    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
   }),
   dispatch => ({
-    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),
   })
 )(Radium(CodeWorkspace));

@@ -170,9 +170,9 @@ def main
         #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
       SQL
     end
-  rescue => e
+  rescue => exception
     Honeybadger.notify(
-      e,
+      exception,
       error_message: "Error when writing contained_levels"
     )
   end
@@ -193,9 +193,9 @@ def main
         #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
       SQL
     end
-  rescue => e
+  rescue => exception
     Honeybadger.notify(
-      e,
+      exception,
       error_message: "Error when writing contained_level_answers"
     )
   end
@@ -215,9 +215,9 @@ def main
         #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
       SQL
     end
-  rescue => e
+  rescue => exception
     Honeybadger.notify(
-      e,
+      exception,
       error_message: "Error when writing level_sources_multi_type"
     )
   end
@@ -311,10 +311,10 @@ def insert_pd_applications_status_logs_rows(rows)
       VALUES
       #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
     SQL
-  rescue => e
-    puts e
+  rescue => exception
+    puts exception
     Honeybadger.notify(
-      e,
+      exception,
       error_message: "Error when writing pd_applications_status_logs"
     )
   end

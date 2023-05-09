@@ -10,13 +10,14 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "encrypted_solution": "/HaX2fZLaWpSwzR2B2mKXIU912atZEHK2auKGN1P0uiKCKWyXWkNtaMmZNrU\nUm4BmJVBHr46jXp+ZQcCYrwE9SW6hLbpqIBO54f3dx1PS4YnCTFG1NeUUPOq\n0k4+uw/Ha8MsbX3n3ShiLkQzhah7KOPpcjLK+VSj07NfZMmZeTd0EBdj6mTr\nSlZ12v8HRtw76zANO3GjMXkUqq6CemmJpHPs5LNQMFmwjCuXArpJoP29I98U\nQd2t9SD/iHw4eCiP/WSXehS0bobVfTn43Ov/Z/aQpEgOws+9UKg3X0fCivi5\nq4LeAYt1YBsiuOq53xLUZpUPzmu9qVh6fJPmb2SUwlui5cqWXSwIRyBgi2nG\n1ZeisHDCejJPyNKohrfiyHCwoeEIjEUR5S665PYR+JFZZgBJVTKIHKOSmwD8\nmyc7E0c1icWDHwnvy59dSOpQJ4QEEleYyZPgozFrTs6vVsGYgfl3c9w5w3f+\n4P3th5XWequg2OLcOEm7J7X5bXkiPHQz\n"
+    "encrypted_solution": "/HaX2fZLaWpSwzR2B2mKXIU912atZEHK2auKGN1P0uiKCKWyXWkNtaMmZNrU\nUm4BmJVBHr46jXp+ZQcCYrwE9SW6hLbpqIBO54f3dx1PS4YnCTFG1NeUUPOq\n0k4+uw/Ha8MsbX3n3ShiLkQzhah7KOPpcjLK+VSj07NfZMmZeTd0EBdj6mTr\nSlZ12v8HRtw76zANO3GjMXkUqq6CemmJpHPs5LNQMFmwjCuXArpJoP29I98U\nQd2t9SD/iHw4eCiP/WSXehS0bobVfTn43Ov/Z/aQpEgOws+9UKg3X0fCivi5\nq4LeAYt1YBsiuOq53xLUZpUPzmu9qVh6fJPmb2SUwlui5cqWXSwIRyBgi2nG\n1ZeisHDCejJPyNKohrfiyHCwoeEIjEUR5S665PYR+JFZZgBJVTKIHKOSmwD8\nmyc7E0c1icWDHwnvy59dSOpQJ4QEEleYyZPgozFrTs6vVsGYgfl3c9w5w3f+\n4P3th5XWequg2OLcOEm7J7X5bXkiPHQz\n",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-09-14T13:10:18.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-09-14T13:10:18.000Z",
   "user_id": 16889,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-14T13:10:18.410+00:00\",\"changed\":[\"cloned from \\\"CSA Consumer Review Lab L2-L6\\\"\"],\"cloned_from\":\"CSA Consumer Review Lab L2-L6\"},{\"changed_at\":\"2022-09-14 13:13:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }

@@ -6,3 +6,5 @@ right 'They can be used as a general solution for problems with different specif
 wrong 'They can be used to run the same code in many different places in the program.'
 wrong 'They can be used to detect when the user has provided input.'
 
+
+allow_multiple_attempts true

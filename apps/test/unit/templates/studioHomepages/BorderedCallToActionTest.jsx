@@ -15,7 +15,7 @@ describe('BorderedCallToAction', () => {
     headingText,
     descriptionText,
     buttonText,
-    buttonUrl
+    buttonUrl,
   };
 
   describe('default behavior', () => {
@@ -34,13 +34,13 @@ describe('BorderedCallToAction', () => {
     it('renders a gray button with text', () => {
       const button = borderedCtA.findOne('Button');
       expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('gray');
+      expect(button.props.color).to.equal('brandSecondaryDefault');
     });
 
     it('has a dashed border', () => {
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'dashed',
-        borderWidth: 5
+        borderWidth: 5,
       });
     });
 
@@ -72,7 +72,7 @@ describe('BorderedCallToAction', () => {
       );
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'solid',
-        borderWidth: 1
+        borderWidth: 1,
       });
     });
 

@@ -3,11 +3,7 @@
   "config": {
     "func": "stopBehavior",
     "blockText": "sprite {ANIMATION_NAME} stops {BEHAVIOR} ",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "args": [
       {
         "name": "ANIMATION_NAME",

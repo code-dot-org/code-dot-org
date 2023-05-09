@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A recipe website wants to implement a system that recommends recipes based on the user's ingredient preferences.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByIngredients()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Recipe</code> class to return a list of filtered recipes that contain the preferred ingredients.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecommendedRecipes()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Recipe</code> class to call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByIngredients()</code> method and return the list of recommended recipes.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RecipeRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecommendedRecipes()</code> method and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_private_methods",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Recipe Preferences",
+    "bubble_choice_description": "A recipe website wants to implement a system that recommends recipes based on the user's ingredient preferences.",
+    "thumbnail_url": "https://images.code.org/7f5708cd01ea7ba23476cfa92256dd4a-recipe.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T14:05:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:05:06.394+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L5b_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L5b_2023\"},{\"changed_at\":\"2023-04-11 14:05:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:09:42 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:03:18 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

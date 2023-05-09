@@ -1,6 +1,6 @@
 export const DisplayTheme = {
   LIGHT: 'light',
-  DARK: 'dark'
+  DARK: 'dark',
 };
 
 export const DEFAULT_DISPLAY_THEME = DisplayTheme.DARK;

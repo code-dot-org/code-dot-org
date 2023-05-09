@@ -10,7 +10,7 @@ describe('clientApi module', () => {
     sinon.stub(project, 'getCurrentId').returns('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function(xhr) {
+    xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
   });
@@ -100,7 +100,11 @@ describe('clientApi module', () => {
 
     describe('getStarterAssets', () => {
       it('makes an ajax request to the correct url', () => {
-        clientApi.starterAssets.getStarterAssets(levelName, () => {}, () => {});
+        clientApi.starterAssets.getStarterAssets(
+          levelName,
+          () => {},
+          () => {}
+        );
 
         expect(requests).to.have.length(1);
         expect(requests[0].method).to.equal('GET');

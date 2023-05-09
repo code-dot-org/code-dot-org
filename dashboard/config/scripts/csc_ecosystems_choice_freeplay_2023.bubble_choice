@@ -1,0 +1,9 @@
+name 'csc_ecosystems_choice_freeplay_2023'
+display_name 'Survival in Groups!'
+description 'Practice your skills! Choose an ecosystem simulation to explore! Watch how the organisms in the food chain interact.'
+
+sublevels
+level 'csc_ecosystems_marine_choice'
+level 'csc_ecosystems_rainforest_freeplay_2023'
+level 'csc_ecosystems_desert_freeplay_2023'
+level 'csc_ecosystems_arctic_freeplay_2023'

@@ -12,7 +12,8 @@
     "optional": "true",
     "parent_level_id": 24993,
     "name_suffix": "_2022",
-    "encrypted": "false"
+    "encrypted": "false",
+    "allow_multiple_attempts": "true"
   },
   "level_num": "custom",
   "game_id": 52,

@@ -24,11 +24,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -72,7 +72,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/5dc2e4d2d52ec8cd8d7d1ef83768ec37-image-1650057797540.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Alarm Clock Settings\r\n\r\nCreate an app that lets you customize how an alarm clock looks and sounds when it goes off. There are two settings - `quiet` and `loud`. The quiet setting plays a low frequency and displays teal lights. The loud setting displays a higher frequency and displays red lights.\r\n\r\nThe app has already been started for you with the `quiet` section complete. Your task is to complete the first line of code with the variable, and then add a new if-statement for the `loud` section of the app.\r\n\r\n## Do This\r\n1) Get the value from the dropdown on the screen [**(Show Me Where)**](#triggercallout=variable)\r\n2) Use an if-statement to play a high-pitched note and turn all of the LEDs red [**(Show Me Where)**](#triggercallout=if-statement)",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
@@ -105,13 +105,13 @@
     },
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 41,
-  "created_at": "2022-04-08T17:04:03.000Z",
-  "user_id": 1,
   "published": true,
+  "created_at": "2022-04-08T17:04:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:04:03.072+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracD_2022\"},{\"changed_at\":\"2022-04-08 22:33:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-08 22:37:40 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-15 21:23:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:08:17 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:11:10 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:11:17 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:12:08 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:21:20 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:04:03.072+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracD_2022\"},{\"changed_at\":\"2022-04-08 22:33:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-08 22:37:40 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-15 21:23:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:08:17 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:11:10 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:11:17 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:12:08 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-05-18 16:21:20 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-16 17:36:11 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

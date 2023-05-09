@@ -12,7 +12,7 @@ export default storybook => {
     combineReducers({
       sectionStandardsProgress,
       sectionProgress,
-      unitSelection
+      unitSelection,
     })
   );
 

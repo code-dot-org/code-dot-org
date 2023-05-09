@@ -9,8 +9,8 @@ module Cdo
       /craft/
     ).freeze
 
-    def serve(request)
-      status, headers, body = super(request)
+    def serve(request, filepath, content_headers)
+      status, headers, body = super(request, filepath, content_headers)
       new_headers = filter_headers(request.path_info, headers)
       return [status, new_headers, body]
     end
@@ -27,4 +27,7 @@ module Cdo
     end
   end
 end
-ActionDispatch::FileHandler.prepend Cdo::NoTransformPaths
+
+Rails.application.config.to_prepare do
+  ActionDispatch::FileHandler.prepend Cdo::NoTransformPaths
+end

@@ -197,13 +197,13 @@ module Pd
       end
 
       test 'deserialize' do
-        fake_questions_array = 5.times.map do |i|
+        fake_questions_array = Array.new(5) do |i|
           {type: "fake type #{i}"}
         end
 
         # Each question hash is passed to the constructor of the appropriate Question sub-class,
         # and then the array of Questions are passed to the FormQuestions constructor
-        mock_constructed_questions = 5.times.map {mock}
+        mock_constructed_questions = Array.new(5) {mock}
         5.times do |i|
           mock_question_class = mock do |c|
             c.expects(:new).with({type: "fake type #{i}"}).returns(mock_constructed_questions[i])

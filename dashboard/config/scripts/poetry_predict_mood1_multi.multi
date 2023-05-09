@@ -7,3 +7,5 @@ wrong 'Funny', feedback: 'Interesting choice. The poet was probably not making a
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts false

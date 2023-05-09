@@ -19,7 +19,7 @@ The K–12 Computer Science Access Report is a collaborative partnership (with t
 
 
 The interactive visualization below provides data nationally and per state for the most recent school year of data reported in the K–12 Computer Science Access Report. Some tabs allow filtering by state, county, district, and legislative districts. The following data is also available:
-- Appendices and all the summary data for the State of Computer Science Education can be downloaded [here](https://advocacy.code.org/2021_State_of_CS_data.xlsx).
+- Appendices and all the summary data for the State of Computer Science Education can be downloaded [here](https://advocacy.code.org/data/2022_state_of_cs_data.xlsx).
 - AP computer science exam-taking data over time, by gender and race/ethnicity can be viewed at [code.org/ap](https://code.org/ap). 
 - The interactive data and raw data per school can be obtained from the Tableau view below.
 
@@ -64,7 +64,7 @@ An overview of each tab is as follows:
 	vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
 
-Preliminary data for the current school year can be viewed on our [interactive map](https://code.org/yourschool). Learn more about our [data sources](https://code.org/yourschool/about). Underlying data was contributed by various organizations, including the Computer Science Teachers Association (CSTA), University of Texas at Austin, the College Board, Technology Education and Literacy in Schools (TEALS), Project Lead the Way, BootUp PD, and many state education agencies. 
+Learn more about our [data sources](https://code.org/yourschool/about). Underlying data was contributed by various organizations, including the Computer Science Teachers Association (CSTA), University of Texas at Austin, the College Board, Technology Education and Literacy in Schools (TEALS), Project Lead the Way, BootUp PD, and many state education agencies. 
 
 Suggested citation: 
 Code.org. (2022). *Computer science access report data*. Retrieved from code.org/yourschool/accessreport. 

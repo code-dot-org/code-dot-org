@@ -135,7 +135,7 @@ module Pd::Application
 
       mail(
         to: @application.formatted_applicant_email,
-        subject: "Reminder: Complete your application for Code.org’s Professional Learning Program"
+        subject: "Reminder: Complete your application for Code.org's Professional Learning Program"
       )
     end
 
@@ -144,7 +144,7 @@ module Pd::Application
 
       mail(
         to: @application.formatted_applicant_email,
-        subject: "Follow Up: Complete your application for Code.org’s Professional Learning Program"
+        subject: "Follow Up: Complete your application for Code.org's Professional Learning Program"
       )
     end
 

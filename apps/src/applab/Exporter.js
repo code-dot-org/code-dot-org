@@ -1,4 +1,3 @@
-/* global dashboard */
 import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
@@ -15,7 +14,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {
   extractSoundAssets,
   rewriteAssetUrls,
-  fetchWebpackRuntime
+  fetchWebpackRuntime,
 } from '../util/exporter';
 
 // This allowlist determines which appOptions properties
@@ -65,7 +64,7 @@ const APP_OPTIONS_ALLOWLIST = {
     lesson_total: true,
     iframeEmbed: true,
     lastAttempt: true,
-    submittable: true
+    submittable: true,
   },
   showUnusedBlocks: true,
   fullWidth: true,
@@ -100,7 +99,7 @@ const APP_OPTIONS_ALLOWLIST = {
   report: {
     fallback_response: true,
     callback: true,
-    sublevelCallback: true
+    sublevelCallback: true,
   },
   isUS: true,
   send_to_phone_url: true,
@@ -110,7 +109,7 @@ const APP_OPTIONS_ALLOWLIST = {
     art_from_html: true,
     code_from_html: true,
     powered_by_aws: true,
-    trademark: true
+    trademark: true,
   },
   teacherMarkdown: false,
   dialog: {
@@ -121,16 +120,16 @@ const APP_OPTIONS_ALLOWLIST = {
     sublevelCallback: true,
     app: true,
     level: true,
-    shouldShowDialog: true
+    shouldShowDialog: true,
   },
-  locale: true
+  locale: true,
 };
 
 // this configuration forces certain values to show up
 // in the appOptions config. These values will be assigned
 // regardless of whether or not they are in the allowlist
 const APP_OPTIONS_OVERRIDES = {
-  readonlyWorkspace: true
+  readonlyWorkspace: true,
 };
 
 export function getAppOptionsFile() {
@@ -189,27 +188,27 @@ export default {
       appName,
       exportConfigPath: exportConfig.path,
       htmlBody: transformedHTML,
-      fontPath: fontAwesomeWOFFPath
+      fontPath: fontAwesomeWOFFPath,
     });
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
     const staticAssets = [
       {
-        url: '/blockly/js/en_us/common_locale.js' + cacheBust
+        url: '/blockly/js/en_us/common_locale.js' + cacheBust,
       },
       {
-        url: '/blockly/js/en_us/applab_locale.js' + cacheBust
+        url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
       },
       {
-        url: '/blockly/css/applab.css' + cacheBust
+        url: '/blockly/css/applab.css' + cacheBust,
       },
       {
-        url: '/blockly/css/common.css' + cacheBust
+        url: '/blockly/css/common.css' + cacheBust,
       },
       {
         dataType: 'binary',
-        url: fontAwesomeWOFFRelativeSourcePath + cacheBust
-      }
+        url: fontAwesomeWOFFRelativeSourcePath + cacheBust,
+      },
     ];
 
     const rootRelativeAssetPrefix = 'assets/';
@@ -219,7 +218,7 @@ export default {
       html,
       code,
       rootRelativeAssetPrefix,
-      zipAssetPrefix
+      zipAssetPrefix,
     });
 
     const mainProjectFilesPrefix = appName + '/';
@@ -231,7 +230,7 @@ export default {
       rewriteAssetUrls(appAssets, html)
     );
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
-      fontPath: fontAwesomeWOFFPath
+      fontPath: fontAwesomeWOFFPath,
     });
     zip.file(mainProjectFilesPrefix + 'style.css', fontAwesomeCSS);
     zip.file(
@@ -286,7 +285,7 @@ export default {
               appOptionsContents,
               commonLocale,
               applabLocale,
-              applabApi
+              applabApi,
             ].join('\n')
           );
           zip.file(
@@ -319,7 +318,7 @@ export default {
             .map(url => ({
               url,
               rootRelativePath: rootRelativeApplabAssetPrefix + url,
-              zipPath: zipApplabAssetPrefix + url
+              zipPath: zipApplabAssetPrefix + url,
             }));
 
           zip.file(appName + '/' + rootApplabPrefix + 'applab.css', applabCSS);
@@ -332,7 +331,7 @@ export default {
             (...assetResponses) => {
               assetResponses.forEach(([data], index) => {
                 zip.file(cssAssetsToDownload[index].zipPath, data, {
-                  binary: true
+                  binary: true,
                 });
               });
               return resolve(zip);
@@ -346,7 +345,7 @@ export default {
           logToCloud.addPageAction(
             logToCloud.PageAction.StaticResourceFetchError,
             {
-              app: 'applab'
+              app: 'applab',
             },
             1 / 100
           );
@@ -357,12 +356,12 @@ export default {
   },
 
   exportApp(appName, code, levelHtml) {
-    return this.exportAppToZip(appName, code, levelHtml).then(function(zip) {
-      zip.generateAsync({type: 'blob'}).then(function(blob) {
+    return this.exportAppToZip(appName, code, levelHtml).then(function (zip) {
+      zip.generateAsync({type: 'blob'}).then(function (blob) {
         saveAs(blob, appName + '.zip');
       });
     });
-  }
+  },
 };
 
 function generateAppAssets(params) {
@@ -370,7 +369,7 @@ function generateAppAssets(params) {
     html = '',
     code = '',
     rootRelativeAssetPrefix = '',
-    zipAssetPrefix = ''
+    zipAssetPrefix = '',
   } = params;
 
   const appAssets = dashboard.assets.listStore.list().map(asset => ({
@@ -378,13 +377,13 @@ function generateAppAssets(params) {
     rootRelativePath: rootRelativeAssetPrefix + asset.filename,
     zipPath: zipAssetPrefix + asset.filename,
     dataType: 'binary',
-    filename: asset.filename
+    filename: asset.filename,
   }));
 
   const soundAssets = extractSoundAssets({
     sources: [html, code],
     rootRelativeAssetPrefix,
-    zipAssetPrefix
+    zipAssetPrefix,
   });
 
   return [...appAssets, ...soundAssets];

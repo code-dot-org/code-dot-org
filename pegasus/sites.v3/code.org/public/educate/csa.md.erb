@@ -7,6 +7,8 @@ style_min: true
 
 <link href="/css/csa.css" rel="stylesheet">
 
+<%= view :professional_learning_marketing_banner, link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more' %>
+
 <%=view :solid_block_header, :title=>"AP® Computer Science A" %>
 
 <section class="top">
@@ -150,7 +152,7 @@ style_min: true
       <iframe class="col-50" src="https://go.pardot.com/l/153401/2021-02-19/p291ns" width="100%" height="400" type="text/html" frameborder="0" allowtransparency="true" style="overflow:hidden"></iframe>
       <img class="col-33" src="/images/csa/csa-why-2.png">
     </div>
-    <p>Missed the previous updates? Check out the latest CSA news <a href="https://staging.code.org/educate/CSAStatus_Signup">here</a>.</p>
+    <p>Missed the previous updates? Check out the latest CSA news <a href="https://code.org/educate/CSAStatus_Signup">here</a>.</p>
     <div style="clear: both"></div>
   </div>
 </section>
@@ -285,3 +287,4 @@ style_min: true
   </details>
 </section>
 
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT %>

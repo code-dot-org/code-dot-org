@@ -24,18 +24,18 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimNode
  */
-var NetSimClientNode = (module.exports = function(shard, clientRow) {
+var NetSimClientNode = (module.exports = function (shard, clientRow) {
   NetSimNode.call(this, shard, clientRow);
 });
 NetSimClientNode.inherits(NetSimNode);
 
 /** @inheritdoc */
-NetSimClientNode.prototype.getNodeType = function() {
+NetSimClientNode.prototype.getNodeType = function () {
   return NodeType.CLIENT;
 };
 
 /** @inheritdoc */
-NetSimClientNode.prototype.getStatus = function() {
+NetSimClientNode.prototype.getStatus = function () {
   var outgoingWire = this.getOutgoingWire();
   if (!outgoingWire) {
     return i18n.notConnected();
@@ -43,7 +43,7 @@ NetSimClientNode.prototype.getStatus = function() {
 
   // Get remote node for display name / hostname
   var cachedNodeRows = this.shard_.nodeTable.readAll();
-  var remoteNodeRow = _.find(cachedNodeRows, function(nodeRow) {
+  var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
     return nodeRow.id === outgoingWire.remoteNodeID;
   });
 
@@ -58,7 +58,7 @@ NetSimClientNode.prototype.getStatus = function() {
     mutualConnection = true;
   } else {
     var cachedWireRows = this.shard_.wireTable.readAll();
-    mutualConnection = cachedWireRows.some(function(wireRow) {
+    mutualConnection = cachedWireRows.some(function (wireRow) {
       return (
         wireRow.localNodeID === outgoingWire.remoteNodeID &&
         wireRow.remoteNodeID === outgoingWire.localNodeID
@@ -73,13 +73,13 @@ NetSimClientNode.prototype.getStatus = function() {
 };
 
 /** @inheritdoc */
-NetSimClientNode.prototype.isFull = function() {
+NetSimClientNode.prototype.isFull = function () {
   var outgoingWire = this.getOutgoingWire();
   if (!outgoingWire) {
     return false;
   }
   var cachedWireRows = this.shard_.wireTable.readAll();
-  return cachedWireRows.some(function(wireRow) {
+  return cachedWireRows.some(function (wireRow) {
     return (
       wireRow.localNodeID === outgoingWire.remoteNodeID &&
       wireRow.remoteNodeID === outgoingWire.localNodeID
@@ -92,7 +92,7 @@ NetSimClientNode.prototype.isFull = function() {
  * wire.
  * @returns {string|undefined}
  */
-NetSimClientNode.prototype.getAddress = function() {
+NetSimClientNode.prototype.getAddress = function () {
   var wire = this.getOutgoingWire();
   if (!wire) {
     return undefined;
@@ -104,7 +104,7 @@ NetSimClientNode.prototype.getAddress = function() {
  * Based on cached wire data, retrieve this node's outgoing wire.
  * @returns {NetSimWire|null} null if wire does not exist.
  */
-NetSimClientNode.prototype.getOutgoingWire = function() {
+NetSimClientNode.prototype.getOutgoingWire = function () {
   var cachedWireRows = this.shard_.wireTable.readAll();
   var outgoingWireRow = _.find(cachedWireRows, wireRow => {
     return wireRow.localNodeID === this.entityID;
@@ -122,6 +122,6 @@ NetSimClientNode.prototype.getOutgoingWire = function() {
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimClientNode.get = function(nodeID, shard, onComplete) {
+NetSimClientNode.get = function (nodeID, shard, onComplete) {
   NetSimEntity.get(NetSimClientNode, nodeID, shard, onComplete);
 };

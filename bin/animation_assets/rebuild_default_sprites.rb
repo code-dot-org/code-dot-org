@@ -36,16 +36,15 @@ def main
     props_by_key[key] = props
   end
 
-  File.open(OUTPUT_FILE, 'w') do |file|
-    file.write(
-      JSON.pretty_generate(
-        {
-          'orderedKeys': ordered_keys,
-          'propsByKey': props_by_key
-        }
-      )
+  File.write(
+    OUTPUT_FILE,
+    JSON.pretty_generate(
+      {
+        orderedKeys: ordered_keys,
+        propsByKey: props_by_key
+      }
     )
-  end
+  )
 end
 
 main

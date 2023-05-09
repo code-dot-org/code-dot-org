@@ -1,5 +1,3 @@
-/* global ace */
-
 /**
  * @typedef {Object} parameterSlotInfo
  * @property {string} funcName
@@ -24,7 +22,7 @@ function openerMatchesCloser(opener, closer) {
   var closersToOpeners = {
     '}': '{',
     ')': '(',
-    ']': '['
+    ']': '[',
   };
   return closersToOpeners[closer] === opener;
 }
@@ -38,7 +36,7 @@ function openerMatchesCloser(opener, closer) {
  * @param position
  * @returns {parameterSlotInfo|null}
  */
-exports.findFunctionAndParamNumber = function(editor, position) {
+exports.findFunctionAndParamNumber = function (editor, position) {
   var seenCloserStack = [];
   var sameDepthPrecedingCommaCount = 0;
 
@@ -105,7 +103,7 @@ exports.findFunctionAndParamNumber = function(editor, position) {
             return {
               funcName: funcName,
               fullFuncName: fullFuncName,
-              currentParameterIndex: sameDepthPrecedingCommaCount
+              currentParameterIndex: sameDepthPrecedingCommaCount,
             };
           }
 

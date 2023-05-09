@@ -11,7 +11,7 @@ MockFirebase.prototype.originalOnce = MockFirebase.prototype.once;
  * @param context
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.once = function(
+MockFirebase.prototype.once = function (
   eventType,
   onSuccess,
   onFailure,
@@ -34,7 +34,7 @@ MockFirebase.prototype.originalSet = MockFirebase.prototype.set;
  * @param {function} onComplete
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.set = function(value, onComplete) {
+MockFirebase.prototype.set = function (value, onComplete) {
   if (onComplete) {
     return this.originalSet(value, onComplete);
   }
@@ -57,7 +57,7 @@ MockFirebase.prototype.originalUpdate = MockFirebase.prototype.update;
  * @param {function} onComplete
  * @returns {Promise|undefined}
  */
-MockFirebase.prototype.update = function(value, onComplete) {
+MockFirebase.prototype.update = function (value, onComplete) {
   if (onComplete) {
     return this.originalUpdate(value, onComplete);
   }
@@ -73,7 +73,7 @@ MockFirebase.prototype.update = function(value, onComplete) {
 
 MockFirebase.prototype.originalTransaction = MockFirebase.prototype.transaction;
 
-MockFirebase.prototype.transaction = function(
+MockFirebase.prototype.transaction = function (
   updateFunction,
   onComplete,
   applyLocally

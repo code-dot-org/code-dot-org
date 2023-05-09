@@ -13,3 +13,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Some of the language from this question is taken directly from Learning Objective 2.1.1 "Describe the variety of abstractions used to represent data".
 MARKDOWN
+
+allow_multiple_attempts true

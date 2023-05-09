@@ -6,6 +6,8 @@ require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
 require 'net/http'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 # CircleCI Build Tags
 # We provide some limited control over CircleCI's build behavior by adding these
@@ -55,7 +57,7 @@ SKIP_EYES = 'skip eyes'.freeze
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  task :run_tests do
+  timed_task_with_logging :run_tests do
     unless CircleUtils.unit_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -81,7 +83,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  timed_task_with_logging :run_ui_tests do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -119,6 +121,7 @@ namespace :circle do
           " --abort_when_failures_exceed 10" \
           " --retry_count 2" \
           " --output-synopsis" \
+          " --with-status-page" \
           " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -130,6 +133,7 @@ namespace :circle do
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \
+            " --with-status-page" \
             " --html"
       end
     end
@@ -140,7 +144,7 @@ namespace :circle do
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
-  task :check_for_unexpected_apps_changes do
+  timed_task_with_logging :check_for_unexpected_apps_changes do
     # Changes to yarn.lock is a particularly common case; catch it early and
     # provide a helpful error message.
     if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
@@ -157,7 +161,7 @@ namespace :circle do
     end
   end
 
-  task :seed_ui_test do
+  timed_task_with_logging :seed_ui_test do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next

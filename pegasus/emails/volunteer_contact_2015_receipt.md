@@ -25,7 +25,7 @@ Hi <%= volunteer_name_s %>,
 
 We won't release your email directly to a teacher, so they're waiting for you to write back.
 
-Most schools still don’t teach computer science. Most students don’t know that it’s about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact <%= name_s %> directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
+Most schools still don't teach computer science. Most students don't know that it's about solving big problems and connecting us all closer together. This is your chance to inspire at least one young person in your area. If you are available to volunteer with this teacher, **please contact <%= name_s %> directly at [<%= email_s %>](<%= "mailto:" + email_s %>)**.
 
 In your email to <%= name_s %>, please be sure to share the following information:
 

@@ -85,8 +85,8 @@ class ProgrammingExpressionsController < ApplicationController
       programming_expression.save! if programming_expression.changed?
       programming_expression.write_serialization
       render json: programming_expression.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 
@@ -125,8 +125,8 @@ class ProgrammingExpressionsController < ApplicationController
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: :ok, json: {editUrl: edit_programming_expression_path(new_exp)})
-    rescue => err
-      render(json: {error: err.message}.to_json, status: :not_acceptable)
+    rescue => exception
+      render(json: {error: exception.message}.to_json, status: :not_acceptable)
     end
   end
 
@@ -135,9 +135,7 @@ class ProgrammingExpressionsController < ApplicationController
     return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
   end
 
-  private
-
-  def programming_expression_params
+  private def programming_expression_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
@@ -157,7 +155,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params
   end
 
-  def set_expression_by_keys
+  private def set_expression_by_keys
     @programming_expression = ProgrammingExpression.get_from_cache(params[:programming_environment_name], params[:programming_expression_key])
   end
 end

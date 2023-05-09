@@ -44,3 +44,5 @@ Plant maple = new Tree("red", 3.5);
 
 Which of the following best describes the effect of executing the statement?
 MARKDOWN
+
+allow_multiple_attempts true

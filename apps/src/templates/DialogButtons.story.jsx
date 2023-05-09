@@ -1,72 +1,60 @@
 import React from 'react';
 import DialogButtons from './DialogButtons';
 
-export default storybook => {
-  storybook
-    .deprecatedStoriesOf('Buttons/DialogButtons', module, {
-      reason: 'The component had way too many properties',
-      replacement: 'Button'
-    })
-    .addStoryTable([
-      {
-        name: 'ok',
-        story: () => <DialogButtons ok={true} />
-      },
-      {
-        name: 'cancelText',
-        story: () => <DialogButtons cancelText="Custom Cancel Text" />
-      },
-      {
-        name: 'confirmText',
-        story: () => <DialogButtons confirmText="Custom Confirm Text" />
-      },
-      {
-        name: 'nextLevel',
-        story: () => (
-          <DialogButtons nextLevel={true} continueText="Custom Continue Text" />
-        )
-      },
-      {
-        name: 'tryAgain',
-        story: () => <DialogButtons tryAgain="Custom Try Again Text" />
-      },
-      {
-        name: 'tryAgain with hint',
-        story: () => (
-          <DialogButtons
-            shouldPromptForHint={true}
-            tryAgain="Custom Try Again Text"
-          />
-        )
-      },
-      {
-        name: 'K1 customizations',
-        description:
-          'To use k1 customization, you must pass an assetUrl function.',
-        story: () => (
-          <DialogButtons
-            isK1={true}
-            tryAgain="Custom Try Again"
-            nextLevel={true}
-            continueText="Custom Continue"
-            assetUrl={url => '/blockly/' + url}
-          />
-        )
-      },
-      {
-        name: 'K1 freePlay',
-        description:
-          'To use k1 customization, you must pass an assetUrl function.',
-        story: () => (
-          <DialogButtons
-            isK1={true}
-            freePlay={true}
-            tryAgain="Custom Try Again"
-            nextLevel={true}
-            continueText="Custom Continue"
-            assetUrl={url => '/blockly/' + url}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'DialogButtons',
+  component: DialogButtons,
+};
+
+const Template = args => <DialogButtons {...args} />;
+
+export const OK = Template.bind({});
+OK.args = {
+  ok: true,
+};
+
+export const CancelText = Template.bind({});
+CancelText.args = {
+  cancelText: 'Custom Cancel Text',
+};
+
+export const ConfirmText = Template.bind({});
+ConfirmText.args = {
+  confirmText: 'Custom Confirm Text',
+};
+
+export const NextLevel = Template.bind({});
+NextLevel.args = {
+  nextLevel: true,
+  continueText: 'Custom Continue Text',
+};
+
+export const TryAgain = Template.bind({});
+TryAgain.args = {
+  tryAgain: 'Custom Try Again Text',
+};
+
+export const TryAgainWithHint = Template.bind({});
+TryAgainWithHint.args = {
+  shouldPromptForHint: true,
+  tryAgain: 'Custom Try Again Text',
+};
+
+export const K1Customizations = Template.bind({});
+K1Customizations.args = {
+  isK1: true,
+  tryAgain: 'Custom Try Again',
+  nextLevel: true,
+  continueText: 'Custom Continue',
+  assetUrl: url => '/blockly/' + url,
+};
+
+export const K1FreePlay = Template.bind({});
+K1FreePlay.args = {
+  isK1: true,
+  freePlay: true,
+  tryAgain: 'Custom Try Again',
+  nextLevel: true,
+  continueText: 'Custom Continue',
+  assetUrl: url => '/blockly/' + url,
 };

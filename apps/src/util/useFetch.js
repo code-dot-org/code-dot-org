@@ -4,7 +4,7 @@ const baseFetchState = {
   loading: false,
   data: null,
   response: null,
-  error: null
+  error: null,
 };
 
 const EMPTY_OPTIONS = {};
@@ -57,7 +57,7 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     const calculatedOptions = {
       credentials: 'same-origin',
       signal: abortController ? abortController.signal : undefined,
-      ...options
+      ...options,
     };
 
     // This async IIFE contains the core of the fetch logic. Note that the
@@ -97,6 +97,6 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     loading: fetchState.loading,
     data: fetchState.data,
     response: fetchState.response,
-    error: fetchState.error
+    error: fetchState.error,
   };
 };

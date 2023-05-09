@@ -35,3 +35,5 @@ There are two possible approaches to this question:
 First, look at the figure and break down the steps the robot needs to take. Looking at the figure, the robot needs to move forward 4 steps then rotate right. Notice the robot is moving clockwise and thus, will need to rotate right rather than left. This is repeated 4 times to make a square. Looking at the given code, lines 3 and 4 are extra steps and need to be removed.
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -72,6 +72,17 @@ module Pd
       new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
+    def new_facilitator_post_foorm
+      workshop = Pd::Workshop.find(params[:workshop_id])
+      survey_name = FACILITATOR_POST_SURVEY_CONFIG_PATH
+
+      agenda = params[:agenda] || nil
+      # remove / from agenda url so module/1 => module1
+      agenda&.tr!("/", "")
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil, workshop_agenda: agenda)
+    end
+
     def new_general_foorm(survey_names:, day:, subject: FOORM_GENERAL_SURVEY_SUBJECTS)
       # We may be redirecting from our legacy route which uses enrollment_code
       enrollment_code = params[:enrollmentCode] || params[:enrollment_code]

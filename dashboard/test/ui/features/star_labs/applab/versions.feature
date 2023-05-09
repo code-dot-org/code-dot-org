@@ -35,7 +35,6 @@ Scenario: Script Level Versions
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 2// comment 1"
 
-@no_ie
 Scenario: Project Load and Reload
   Given I am on "http://studio.code.org/projects/applab/new"
   And I rotate to landscape
@@ -73,7 +72,6 @@ Scenario: Project Load and Reload
 
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
 
-@no_ie
 @no_mobile
 Scenario: Project Version Checkpoints
   Given I am on "http://studio.code.org/projects/applab/new"
@@ -106,8 +104,7 @@ Scenario: Project Version Checkpoints
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
 
-# Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -145,8 +142,7 @@ Scenario: Project page refreshes when other client adds a newer version
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
-# Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"

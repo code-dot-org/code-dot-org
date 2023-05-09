@@ -118,11 +118,9 @@ module TextRender
         process_div_brackets(full_document)
       end
 
-      private
-
       # CDO-Markdown div_brackets extension.
       # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
-      def process_div_brackets(full_document)
+      private def process_div_brackets(full_document)
         full_document.
           gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
           gsub(/<p>\[(.*)\]<\/p>/) do
@@ -144,9 +142,7 @@ module TextRender
         wrap_details_tags_in_divs(full_document)
       end
 
-      private
-
-      def wrap_details_tags_in_divs(full_document)
+      private def wrap_details_tags_in_divs(full_document)
         full_document.
             gsub(/<details>/, "\n<div><details>").
             gsub(/<\/details>/, "</details></div>\n")

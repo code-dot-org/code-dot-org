@@ -8,7 +8,8 @@
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "oceanSetup"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -23,7 +24,7 @@
     "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
     "long_instructions": "**In this level you need to add the fish into this simulation and give them a realistic size and movement.**\r\n\r\n Do This: \r\n- Connect a `make 10 new sprites` block under when run.\r\n- Add a `set sprite size` block to make the fish smaller.\r\n- Connect a `sprite begins wandering`  block.\r\n- Press \"Run\" when you are finished to see your healthy, balanced ecosystem in action!\r\n",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
@@ -40,14 +41,15 @@
     "name_suffix": "_2",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return countByAnimation({\"costume\": \"fish_10\"}) == 10;\r\n  }, \"moreSprites\");\r\n\r\n  addCriteria(function() {\r\n    return getProp({\"costume\": \"fish_10\"}, \"scale\") == 50;\r\n  }, \"outbreakChangeSize\");\r\n\r\n  addCriteria(function() {\r\n    return getNumBehaviorsForAnimation(\"fish_10\") >= 1;\r\n  }, \"outbreakWander\");\r\n}\r\n\r\ncheck();\r\n",
     "encrypted_examples": "8AIVa+uHupydQWbsLtORN07w+g46uejFVAZbCgZZUVmV/JmWkOhnAeNMWkGc\nWlTA4o+MoKCF0F+yYJdTMJn4jg==\n",
+    "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-11-01T23:05:08.000Z",
-  "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:08.373+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2022\"},{\"changed_at\":\"2022-11-30 19:39:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:39:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:40:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:48:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "created_at": "2022-11-01T23:05:08.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:08.373+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2022\"},{\"changed_at\":\"2022-11-30 19:39:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:39:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:40:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-30 19:48:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-02-03 22:11:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-23 17:21:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2023-02-23 17:22:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -56,7 +58,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" deletable="false" movable="false" can_disconnect_from_parent="false">
+            <block type="procedures_callnoreturn" deletable="false">
               <mutation name="oceanSetup"/>
             </block>
           </next>
