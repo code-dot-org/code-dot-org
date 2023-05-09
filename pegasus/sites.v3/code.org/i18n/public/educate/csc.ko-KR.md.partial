@@ -27,17 +27,19 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # 컴퓨터 과학 커넥션
 
-이 최신 커리큘럼은 컴퓨터 과학 학습을 수학 및 언어, 과학, 사회와 같은 다른 과목의 학습에 연결합니다. CS 커넥션을 통해, K-12 학급은 흥미롭고 새로운 방식으로 일반 과목을 탐구합니다!
+Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
 
 ## 모듈
 
-CS 커넥션 모듈은 컴퓨터 과학 학습을 수학과 ELA, 과학과 같은 주요 과목에 통합하는 체계적으로 구성된 레슨 시리즈입니다. 모듈은 각 과목의 기준에 맞게 조율되며 하나의 범교과 프로젝트로 마무리됩니다.
+CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
-컴퓨터 과학을 다른 과목을 위한 수업 계획과 통합하고 싶은 선생님들은 물론 학생들이 다른 과목에서 배운 것을 보강해주고 싶은 CS 교육자들에게 딱 알맞습니다.
+They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 시간", box_background_color: "rgb(0,0,0,0.4)", right_heading: "시를 사용한 코딩", right_description: "이 레슨 시리즈로 학급에서 컴퓨터 과학과 시를 연결해 보세요.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "모듈 보기" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
 <aside>
   <h3><strong>Feedback</strong></h3>
@@ -53,27 +55,27 @@ CS 커넥션 모듈은 컴퓨터 과학 학습을 수학과 ELA, 과학과 같�
 
 ## Sample Projects
 
-계속해서 범교과 프로젝트로 컴퓨터 과학과 전통과목을 연결해 보세요. 완료하는데 1~2시간의 교습 시간이 걸리며 기존 커리큘럼 내에서 그에 맞게 주제 중심 프로젝트를 개발하고자 하는 교사에게 이상적입니다.
+Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 
 <em>팁: 이 프로젝트들은 어느 정도 컴퓨터 과학의 기초적 이해가 필요합니다. 헬로 월드 아워 오브 코드 활동을 완료한 다음에 시작하기를 권장합니다!</em>
 
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
 
-{{ csc_module, title: "Ecosystems Sample", image: "", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. 이 모델은 또한 지구권 및/또는 생물권, 수권, 대기권 간 상호작용으로 변형할 수도 있습니다 .", button_text: "더보기", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Ecosystems Sample", image: "", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
 {{ csc_module, title: "Life Cycles Sample", grades: "3+", image: "", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
-{{ csc_module, title: "Character Study Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! 아니요, 이것은 물리가 아닙니다 - 이 프로젝트를 통해 학생들은 코드를 사용하여 캐릭터의 어떤 한 동작이 연이어 일어나는 이벤트에 어떤 영향을 주는지 보여주는 이야기 속 한 장면을 만듭니다.", button_text: "더 보기", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "Story Morals Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. 학생들은 이 능력을 이야기와 설화, 책 또는 우화에 응용할 수 있습니다.", button_text: "더보기", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "Character Study Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn't physics - this project allows students to use code to build a scene from a story that shows how one character's actions affects the chain of events.", button_text: "Learn more", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Story Morals Sample", image: "", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "https://bit.ly/3wBJbQO" }}
 {{ clearfix }}
 
 ## Quick Activities
 
-Our Quick Activities provide a quick and interesting way to make a connection between computer science and other subjects. 이 레슨은 컴퓨터 과학에 관한 사전 지식을 요구하지 않아 21세기에 필수적인 학습을 전통 커리큘럼에 통합하길 원하거나 또는 학생들에게 기존 과목을 새로운 흥미로운 방식으로 배우고 싶게 동기부여하고자 하는 교사에게 완벽합니다.
+Our Quick Activities provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
 
 
-{{ csc_module, title: "꿀벌과 함께 하는 철자 공부", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 시간", description: "재미 있어요! 이 레슨에서 학생들은 기초 코딩기술을 사용하여 글자 채우기 판 위 단어의 철자를 바른 순서대로 맞추기 위해 꿀벌에게 어디에서 윙윙거리게 할지 말합니다.", button_text: "더보기", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
-{{ csc_module, title: "라우렐과 함께 숫자 세기", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "수학", duration: "1 시간", description: "보물찾기예요! 학생들은 라우렐을 도와 미로 판에 숨겨져 있는 보물을 찾기 위해 루프로 코딩을 하는 동안 숫자 세기와 덧셈을 연습하게 될 것입니다.", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
-{{ csc_module, title: "AI 윤리강령", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA 또는 인문학", duration: "1시간", description: "인공지능(AI)의 잠재적인 윤리적 위험을 조사한 후, 학생들은 함께 학급의 \"AI 윤리강령\" 자료를 만듭니다.", button_text: "더보기", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
-{{ csc_module, title: "데이터 시각화", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "수학", duration: "1시간", description: "이 레슨은 학생들에게 앱 랩의 데이터 시각화 툴은 물론 두 개의 중요한 차트 유형: 막대 차트와 히스토그램을 소개합니다. 이 레슨 과정 동안 학생들은 이 툴을 사용하고 데이터를 읽는 능력을 쌓게 될 것입니다.", button_text: "더보기", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Counting with Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 hour", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "AI Code of Ethics", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "Learn more", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
 {{ clearfix }}
 
 <em>CS 커넥션 활동이 끝났습니다. 학급을 위한 옵션을 더 찾고 계세요? 더 많은 레슨을 위해 <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">피드백</a>과 아이디어를 여기서 공유해 주십시오!</em>

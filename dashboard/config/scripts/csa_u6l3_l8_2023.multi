@@ -7,7 +7,7 @@ wrong '`1`'
 wrong '`2147483647` (equivalent to `Integer.MAX_VALUE`)'
 wrong '`2147483648`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

@@ -5,6 +5,24 @@ FactoryBot.define do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
+
+    trait :with_units do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+      end
+    end
+
+    trait :with_unit_groups do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+      end
+    end
   end
 
   factory :course_version do
