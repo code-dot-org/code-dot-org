@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-11-26T23:55:12.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "long_instructions": "**Make a prediction**: What do you think will happen when you run this code?",
     "instructions_important": "false",
@@ -14,8 +10,13 @@
     "skip_sound": true,
     "parent_level_id": 14879,
     "name_suffix": "_control",
-    "editor_experiment": "broward"
+    "editor_experiment": "broward",
+    "allow_multiple_attempts": "false"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2019-11-26T23:55:12.000Z",
+  "user_id": 1,
   "published": true,
   "notes": ""
 }]]></config>

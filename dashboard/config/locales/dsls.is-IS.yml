@@ -12309,20 +12309,12 @@ is-IS:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat mun ná akarninu. Það eru engar villur í leiknum.
-          feedback: Rangt. Í fyrsta lagi þá snýr Scrat í ranga átt, og síðan fer hann
-            ekki nógu langt áfram til að ná akarninu.
         - text: Scrat mun ekki ná akarninu því hann snýr í ranga átt.
           correct: true
-          feedback: Rétt! Scrat byrjar á að snúa í ranga átt, og svo fer hann ekki
-            nógu langt áfram til að ná akarninu.
         - text: Scrat mun ekki ná akarninu vegna þess að það eru ekki nógu margir
             `fara áfram` kubbar.
-          correct: true
-          feedback: Rétt! Scrat byrjar á að snúa í ranga átt, og svo fer hann ekki
-            nógu langt áfram til að ná akarninu.
         - text: Scrat mun ekki færast frá fyrsta kubbnum.
-          feedback: Það eru tvær villur í þessum kóða. Scrat byrjar á að snúa í ranga
-            átt, og svo fer hann ekki nógu langt áfram til að ná akarninu.
+          feedback: Scrat mun ekki ná akarninu því hann snýr í ranga átt.
         questions:
         - text: Leitaðu að villum í þessum kóða. Mun Scrat ná akarninu eða er vandamál?
       courseC_multi_maze_programming8_predict12022:
@@ -12770,3 +12762,9 @@ is-IS:
         questions:
         - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
             forritið keyrir?
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
+          mörgum og þú getur. Haltu áfram að æfa með föllum og listamanninum!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
+          mörgum og þú getur. Haltu áfram að æfa með innri lykkjum og listamanninum!

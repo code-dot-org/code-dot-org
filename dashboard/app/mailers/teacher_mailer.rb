@@ -1,5 +1,6 @@
 class TeacherMailer < ActionMailer::Base
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
+  default reply_to: 'Code.org <support@code.org>'
 
   # Send newly registered teachers a welcome email
   def new_teacher_email(teacher, teacher_locale = 'en-US')

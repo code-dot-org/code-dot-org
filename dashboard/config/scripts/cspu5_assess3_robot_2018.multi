@@ -45,3 +45,5 @@ Putting the code into words : inside the "REPEAT 4 TIMES" loop, the instructions
 * 3: The robot moves south 3 squares and faces east
 * 4: The robot moves east 3 squares and faces north
 MARKDOWN
+
+allow_multiple_attempts true

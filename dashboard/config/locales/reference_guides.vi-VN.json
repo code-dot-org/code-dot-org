@@ -71,6 +71,12 @@
         "csd-2022/playing-notes": {
           "display_name": "Ghi chú khi chơi"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Quá trình giải quyết vấn đề"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Quá trình giải quyết vấn đề"
+        },
         "csd-2022/sprite-properties": {
           "display_name": "Thuộc tính của nhân vật"
         },
@@ -82,6 +88,9 @@
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Vận tốc và mẫu bộ đếm"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Kho Web"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"

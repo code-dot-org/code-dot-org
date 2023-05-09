@@ -1,0 +1,20 @@
+{
+  "blockly_blockPlaySoundTooltip": "sesi çal",
+  "blockly_blockPlaySoundAtMeasureTooltip": "sesi çal",
+  "blockly_blockRepeatTooltip": "bu işlemleri",
+  "blockly_blockRestTooltip": "dinlenmek",
+  "blockly_blockWhenRun": "Çalıştığı zaman",
+  "blockly_blockWhenRunTooltip": "Çalıştığı zaman",
+  "blockly_functionNamePlaceholder": "fonksiyonum",
+  "blockly_toolboxCategoryEffects": "Efektler",
+  "blockly_toolboxCategoryEvents": "Olaylar",
+  "blockly_toolboxCategoryFunctions": "Fonksiyonlar",
+  "blockly_toolboxCategoryLogic": "Mantık",
+  "blockly_toolboxCategoryMath": "Matematik",
+  "blockly_toolboxCategoryPlay": "Oyna",
+  "blockly_toolboxCategoryVariables": "Değişkenler",
+  "feedback": "Geri bildirim",
+  "share": "Paylaş",
+  "startOver": "Baştan Başla",
+  "upload": "Yükle"
+}

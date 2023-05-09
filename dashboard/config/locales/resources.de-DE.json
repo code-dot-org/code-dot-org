@@ -149,6 +149,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Änderungen der virtuellen Stunde"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Ressource"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Passwort Power-Up: Wenn...dann...Szenarien",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -373,6 +376,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Änderungen der virtuellen Stunde"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Ressource"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Die Macht der Worte: Unterrichtsquiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -539,6 +545,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Änderungen der virtuellen Stunde"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Ressource"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Sei ein digitaler Super-Bürger: Lektionsfolien",
@@ -1217,6 +1226,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Änderungen der virtuellen Stunde"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Ressource"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Der Online-Frechheit ein STOPP setzen: Lektionsfolien",
@@ -2522,15 +2534,18 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "selecting_features/csd/2022": {
           "type": "Ressource"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2554,6 +2569,7 @@
           "type": "Antwortschlüssel"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2584,9 +2600,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -4695,12 +4716,15 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4730,6 +4754,7 @@
           "type": "Folien"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4757,9 +4782,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {

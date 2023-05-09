@@ -1,2 +1,12 @@
 {
+  "addCSSButton": "CSS əlavə et",
+  "addImageButton": "Şəkil əlavə et",
+  "addHTMLButton": "HTML əlavə et",
+  "closeFullscreenPreview": "Tam ekran önizləməsini bağlayın",
+  "openFullscreenPreview": "Tam ekran önizləməsini açın",
+  "refreshPreview": "Yenile və Yadda saxla",
+  "reloading": "Yenidən yüklənir...",
+  "toggleInspectorOn": "Müfəttiş:Qapalı",
+  "toggleInspectorOff": "Müfəttiş: Açıq",
+  "uploadError": "Yükləmə Xətası"
 }

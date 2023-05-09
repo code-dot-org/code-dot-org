@@ -1186,6 +1186,19 @@ el:
             '"x"': x
             '"y"': 'y'
             '"z"': ζ
+      gamelab_layoutSprites:
+        text: διάταξη {GROUP} ως {FORMAT}
+        options:
+          FORMAT:
+            '"border"': όριο
+            '"circle"': κύκλος
+            '"grid"': πλέγμα
+            '"top"': πάνω σειρά
+            '"row"': τάξη
+            '"bottom"': κάτω σειρά
+            '"left"': αριστερή στήλη
+            '"column"': στήλη
+            '"right"': δεξιά στήλη
       gamelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1208,6 +1221,18 @@ el:
             '"rain"': βροχή
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': όριο
+            '"circle"': κύκλος
+            '"grid"': πλέγμα
+            '"top"': πάνω σειρά
+            '"row"': τάξη
+            '"bottom"': κάτω σειρά
+            '"left"': αριστερή στήλη
+            '"column"': στήλη
+            '"right"': δεξιά στήλη
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1821,6 +1846,7 @@ el:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': τούβλο
             '"hearts"': καρδιές
             '"iceCream"': Παγωτό
             '"rainbow"': ουράνιο τόξο
@@ -1934,8 +1960,6 @@ el:
         text: στρίψε αριστερά
       RyanLab_turnRight:
         text: στρίψε δεξιά
-      SpriteLab2Beta_spriteSay:
-        text: χαρακτήρας {SPRITE} λέει {TEXT} για {SECONDS} δευτερόλεπτα
       Vector_createSpriteWith:
         text: |-
           δημιούργησε χαρακτήρα
@@ -1982,6 +2006,16 @@ el:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): περιστροφή δεξιά
+            new Behavior(spinning_left, []): περιστροφή αριστερά
+            new Behavior(fluttering, []): τριγύρισμα
+            new Behavior(jittering, []): τρεμούλιασμα
+            new Behavior(wobbling, []): ταλάντευση
+            new Behavior(wandering, []): περιπλάνηση
+            new Behavior(patrolling, []): περιφρούρηση
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:
@@ -2127,5 +2161,3 @@ el:
         text: ορίστε επικεφαλίδα {HEADING}
       storylab_setSubheading:
         text: ορίστε υποκεφαλίδα {SUBHEADING}
-      validation_validatedBackground:
-        text: Ορισμός φόντου σε {IMG}

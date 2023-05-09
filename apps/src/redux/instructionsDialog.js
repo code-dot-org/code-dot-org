@@ -3,7 +3,7 @@ const CLOSE_DIALOG = 'instructionsDialog/CLOSE_DIALOG';
 
 const initialState = {
   open: false,
-  imgOnly: false
+  imgOnly: false,
 };
 
 export default function reducer(state = initialState, action) {
@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action) {
     return {
       open: true,
       imgOnly: action.imgOnly,
-      imgUrl: action.imgUrl
+      imgUrl: action.imgUrl,
     };
   }
 
@@ -23,7 +23,7 @@ export default function reducer(state = initialState, action) {
       throw new Error('dialog is already closed');
     }
     return {
-      open: false
+      open: false,
     };
   }
   return state;
@@ -32,7 +32,7 @@ export default function reducer(state = initialState, action) {
 export const openDialog = ({imgOnly, imgUrl}) => ({
   type: OPEN_DIALOG,
   imgOnly,
-  imgUrl
+  imgUrl,
 });
 
 export const closeDialog = () => ({type: CLOSE_DIALOG});

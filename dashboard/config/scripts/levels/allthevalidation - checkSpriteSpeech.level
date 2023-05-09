@@ -37,16 +37,19 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "authored_hints": "[]",
-    "long_instructions": "# allthevalidation Template\r\n\r\n**Make sure to import the correct helper libraries, especially `zCriterionValidationLibrary`**\r\n\r\nThis level validates the function checkSpriteSpeech(spriteId), which returns true if the given sprite (specified by ID) is speaking during the frame that the function is run. This function is not intended for use in conjunction with events.\r\n\r\nTest criteria: If level passes when run with the default code, then the function is working properly.\r\nhttps://github.com/code-dot-org/code-dot-org/wiki/zCriterionValidationLibrary-Documentation",
+    "long_instructions": "# allthevalidation Template\r\n\r\n**Make sure to import the correct helper libraries, especially `zCriterionValidationLibrary`**\r\n\r\nhttps://github.com/code-dot-org/code-dot-org/wiki/zCriterionValidationLibrary-Documentation",
     "validation_code": "if(World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious();\r\n\r\n  addCriteria(function() {\r\n    return checkSpriteSpeech(getSpriteIdsInUse()[0]);\r\n  }, \"subject\");\r\n}\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-12-06T14:04:02.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-12-06T14:04:02.137+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - checkNotDefaultCostume\\\"\"],\"cloned_from\":\"allthevalidation - checkNotDefaultCostume\"},{\"changed_at\":\"2022-12-06 14:05:45 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:08:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "created_at": "2022-12-06T14:04:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-12-06T14:04:02.137+00:00\",\"changed\":[\"cloned from \\\"allthevalidation - checkNotDefaultCostume\\\"\"],\"cloned_from\":\"allthevalidation - checkNotDefaultCostume\"},{\"changed_at\":\"2022-12-06 14:05:45 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"validation_code\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-06 14:08:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-29 04:58:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-12-30 20:22:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,16 +65,24 @@
                   <field name="LOCATION">undefined</field>
                 </block>
               </value>
-              <next>
-                <block type="gamelab_spriteSay">
-                  <field name="SPEECH">Sprite Speech</field>
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"bee"</field>
-                    </block>
-                  </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">2</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay">
+              <field name="SPEECH">Sprite Speech</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"bee"</field>
                 </block>
-              </next>
+              </value>
             </block>
           </next>
         </block>

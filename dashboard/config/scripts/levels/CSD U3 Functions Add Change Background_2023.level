@@ -1,13 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T23:03:10.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Change the Background with the Score\r\n\r\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\r\n\r\n# Do This\r\n\r\n* Use an **if-statement** and two separate functions to draw your backgrounds.\r\n* Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!",
+    "long_instructions": "# Change the Background with the Score\r\n\r\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\r\n\r\n# Do This\r\n\r\n1) Use an **if-statement** and two separate functions to draw your backgrounds.\r\n2) Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!",
     "start_blocks": "var coin = createSprite(200,10);\r\ncoin.setAnimation(\"coin_gold_1\");\r\nsetCoin();\r\n\r\nvar bunny = createSprite(200,350);\r\nbunny.setAnimation(\"bunny1_ready_1\");\r\n\r\nvar score = 0;\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  if(keyDown(\"left\")){\r\n    bunny.x = bunny.x - 2;\r\n  }\r\n  \r\n  if(keyDown(\"right\")){\r\n    bunny.x = bunny.x + 2;\r\n  }\r\n  \r\n  if(coin.y > 400){\r\n    setCoin();\r\n  }\r\n  \r\n  textSize(20);\r\n  text(\"Score: \" + score, 10, 10, 100, 100);\r\n  drawSprites();\r\n}\r\n\r\nfunction setCoin(){\r\n\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -73,9 +69,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T23:03:10.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:10.968+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Add Change Background_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Add Change Background_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:10.968+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Add Change Background_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Add Change Background_2022\"},{\"changed_at\":\"2023-01-20 22:50:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

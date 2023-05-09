@@ -17,62 +17,41 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #292F36;
-  margin-top: 0;
+  margin: 0 0 0.5em;
   line-height: 1.2;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
-  margin-bottom: 1em;
 }
 
 h5, h6 {
   font-family: 'Gotham 5r', sans-serif;
-  margin-bottom: 1.5em;
 }
 
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 2.125em;
-}
-
-h3 {
-  font-size: 1.75em;
-}
-
-h4 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-
-h5 {
-  font-size: 1.25em;
-}
-
-h6 {
-  font-size: 1em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2.125em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
 
 p {
   font-size: 1em;
-  margin-bottom: 1.5em;
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 
-p.tiny {
+p.body-two {
   font-size: .875em;
-  margin-bottom: 1.15em;
 }
 
 p.overline {
-  font-family: 'Gotham 7r', sans-serif;
   font-size: .75em;
-  letter-spacing: .8px;
+  font-family: 'Gotham 5r', sans-serif;
+  letter-spacing: .5px;
   text-transform: uppercase;
-  margin-bottom: 1em;
 }
 
 figure span {
@@ -84,8 +63,9 @@ figure span {
 
 figcaption {
   font-family: 'Gotham 5r', sans-serif;
-  font-size: .75em;
+  font-size: .875em;
   margin: .5em 0 1em;
+  line-height: 1.2;
 }
 
 a,
@@ -95,61 +75,12 @@ a:visited {
   font-family: 'Gotham 5r', sans-serif;
   color: #9660BF;
   cursor: pointer;
+  text-decoration: underline;
   transition: color .2s ease-in-out;
 }
 
 a:hover,
 a:focus {
-  color: #292F36;
+  color: #6F488E;
+  text-decoration: underline;
 }
-
-a.btn,
-button {
-  font-family: 'Gotham 5r', sans-serif;
-  font-size: 1em;
-  line-height: 1;
-  margin: 1em 0;
-  padding: .75em 1em;
-  height: unset;
-  display: inline-block;
-  text-decoration: none;
-  background: #9660BF;
-  border: 2px solid #9660BF;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-}
-
-a.btn:hover,
-button:hover {
-  color: white;
-  background: #292F36;
-  border-color: #292F36;
-}
-
-a.btn.secondary {
-  background: none;
-  color: #9660BF;
-}
-
-a.btn.secondary:hover {
-  background: none;
-  color:#292F36;
-}
-
-
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 2.15em !important;
-  }
-
-  h2 {
-    font-size: 1.75em !important;
-  }
-
-  footer {
-    margin-top: 4em;
-  }
-}
-

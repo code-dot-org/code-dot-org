@@ -975,6 +975,23 @@ te:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_layoutSprites:
+        text: లేఔట్ {GROUP} ఒక {FORMAT} లాగా
+        options:
+          FORMAT:
+            '"border"': బార్డర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': బార్డర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
       gamelab_makeProjectile:
         options:
           DIRECTION:

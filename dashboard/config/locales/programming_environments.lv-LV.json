@@ -4,11 +4,51 @@
       "programming_environments": {
         "gamelab": {
           "categories": {
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Krāsa"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Krāsa"
+                    }
+                  }
+                }
+              }
+            },
             "drawing": {
               "name": "Zīmējums"
             },
             "math": {
-              "name": "Matemātika"
+              "name": "Matemātika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    },
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    },
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Mainīgie"
@@ -21,8 +61,63 @@
         "applab": {
           "name": "Aplikāciju laborotorija",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matemātika"
+              "name": "Matemātika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    },
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    },
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Mainīgie"

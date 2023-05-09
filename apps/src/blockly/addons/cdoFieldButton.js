@@ -1,71 +1,73 @@
 import GoogleBlockly from 'blockly/core';
 
-const CORNER_RADIUS = 3;
-const INNER_HEIGHT = 16;
-
+/**
+ * This is a customized field which the user clicks to select an option from a customized picker,
+ * for example, the location of a sprite from a grid or a sound file from a customized modal.
+ * @param value Optional. The initial value of the field.
+ * @param validator Optional. A function that is called to validate changes to the field's value.
+ * Takes in a value & returns a validated value, or null to abort a change
+ * @param onClick The function that handles the field's editor.
+ * @param transformText Optional. The function that handles how the field text is displayed.
+ * @param icon Optional. SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
+ */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
-    super('');
-
-    this.title_ = title;
-    this.buttonHandler_ = opt_buttonHandler;
-    this.color_ = opt_color;
-    this.changeHandler_ = opt_changeHandler;
+  constructor({value, validator, onClick, transformText, icon}) {
+    super(value, validator);
+    this.onClick = onClick;
+    this.transformText = transformText;
+    this.icon = icon;
+    this.SERIALIZABLE = true;
   }
 
-  init() {
-    super.init();
-
-    this.buttonElement_ = Blockly.utils.dom.createSvgElement(
-      'rect',
-      {
-        rx: CORNER_RADIUS,
-        ry: CORNER_RADIUS,
-        x: 1,
-        y: 1,
-        height: INNER_HEIGHT,
-        width: INNER_HEIGHT
-      },
-      this.fieldGroup_
-    );
-    this.buttonElement_.style.fillOpacity = 1;
-    this.buttonElement_.style.fill = this.color_;
-
-    this.textElement_.style.fontSize = '11pt';
-    this.textElement_.style.fill = 'white';
-    this.textElement_.textContent = '';
-    this.textElement_.appendChild(this.title_);
-
-    this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
+  static fromJson(options) {
+    return new CdoFieldButton(options);
   }
 
-  getValue() {
-    return String(this.value_);
-  }
-
-  setValue(value) {
-    if (this.value_ !== value) {
-      if (this.changeHandler_) {
-        const override = this.changeHandler_(value);
-        if (override !== undefined) {
-          value = override;
-        }
-      }
-      this.value_ = value;
+  /**
+   * Create the block UI for this field.
+   * @override
+   */
+  initView() {
+    super.initView();
+    if (this.icon) {
+      this.icon.style.fill = this.getSourceBlock().style.colourPrimary;
+      this.textElement_.appendChild(this.icon);
     }
   }
 
+  /**
+   *  Get the text from this field to display on the block. May differ from
+   * `getText` with call to `this.transformText` which can change format of text.
+   * @override
+   */
+  getDisplayText_() {
+    let text = this.getText();
+    if (!text) {
+      return GoogleBlockly.Field.NBSP;
+    }
+    // The transformText function customizes the text for display.
+    if (this.transformText) {
+      return this.transformText(text);
+    }
+    return text;
+  }
+
+  /**
+   * Create an editor for the field.
+   * @override
+   */
   showEditor_() {
-    if (!this.buttonHandler_) {
-      return;
-    }
-    this.buttonHandler_(this.setValue.bind(this));
+    this.onClick();
   }
 
-  updateWidth_() {
-    super.updateWidth_();
-    if (this.buttonElement_) {
-      this.buttonElement_.setAttribute('width', this.size_.width + 8);
+  /**
+   * Contrast background for button with source block
+   * @override
+   */
+  applyColour() {
+    const sourceBlock = this.getSourceBlock();
+    if (this.icon) {
+      this.icon.style.fill = sourceBlock.style.colourPrimary;
     }
   }
 }

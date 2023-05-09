@@ -11686,20 +11686,12 @@ vi-VN:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat sẽ đến được chỗ hạt sồi. Không có lỗi trong mã lệnh.
-          feedback: Sai rồi. Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không tiến
-            lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
           correct: true
-          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
-            tiến lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không đến được chỗ hạt sồi vì không có đủ số lượng khối `move
             forward` (tiến lên).
-          correct: true
-          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
-            tiến lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không di chuyển từ khối đầu tiên.
-          feedback: Có hai lỗi trong mã lệnh này. Thứ nhất, Scrat xoay sai hướng,
-            sau đó Scrat không tiến lên đủ số lần để đến chỗ hạt sồi.
+          feedback: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
         questions:
         - text: Hãy tìm lỗi trong mã lệnh này. Liệu Scrat có đến được chỗ hạt sồi
             không hay có vấn đề gì xảy ra?

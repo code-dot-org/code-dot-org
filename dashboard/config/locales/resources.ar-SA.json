@@ -153,6 +153,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "تعديلات الدرس الافتراضي"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "مصدر"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "تعزيز الكلمة السرية: سيناريوهات.. إذا.. ثم ",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
@@ -377,6 +380,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "تعديلات الدرس الافتراضي"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "مصدر"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "قوة الكلمات: اختبار الدرس",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -545,6 +551,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "تعديلات الدرس الافتراضي"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "مصدر"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "كن مواطناً رقمياً خارقاً: شرائح الدرس",
@@ -1223,6 +1232,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "تعديلات الدرس الافتراضي"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "مصدر"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "وضع حد الدناءة علي الانترنت: شرائح عرض الدرس",

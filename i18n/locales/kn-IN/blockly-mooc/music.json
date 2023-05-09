@@ -1,0 +1,18 @@
+{
+  "blockly_blockPlaySoundTooltip": " ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ",
+  "blockly_blockPlaySoundAtMeasureTooltip": " ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ",
+  "blockly_blockRepeatTooltip": "ಪುನರಾವರ್ತನೆ",
+  "blockly_blockRestTooltip": "ವಿಶ್ರಾಂತಿ",
+  "blockly_blockWhenRun": "ರನ್ ಮಾಡಿದಾಗ",
+  "blockly_blockWhenRunTooltip": "ರನ್ ಮಾಡಿದಾಗ",
+  "blockly_functionNamePlaceholder": "ನನ್ನ ಫಂಕ್ಷನ್‌",
+  "blockly_toolboxCategoryEffects": "ಪರಿಣಾಮಗಳು",
+  "blockly_toolboxCategoryEvents": "ಈವೆಂಟ್‌ಗಳು",
+  "blockly_toolboxCategoryLogic": "ಲಾಜಿಕ್",
+  "blockly_toolboxCategoryMath": "ಗಣಿತ",
+  "blockly_toolboxCategoryVariables": "ವೇರಿಯಬಲ್‌ಗಳು",
+  "feedback": "ಪ್ರತಿಕ್ರಿಯೆ",
+  "share": "ಹಂಚಿ",
+  "startOver": "ಮೊದಲಿನಿಂದ ಆರಂಭ",
+  "upload": "ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
+}

@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "الارتفاع",
   "dropletBlock_setColliderEach_param0": "نوع",
   "dropletBlock_setColliderEach_param4": "الارتفاع",
-  "errorLoadingAnimation": "يبدو أننا نواجه مشكلة في تحميل الرسوم المتحركة \"{animationName}\". تأكد من أن لديك اتصال جيد بالإنترنت وحاول إعادة تحميل الصفحة. إذا استمرت هذه المشكلة، فمن الممكن أن تكون هذه الرسوم المتحركة معطلة. في هذه الحالة، قد تحتاج إلى المتابعة عن طريق إزالة الرسم المتحرك.",
   "reinfFeedbackMsg": "لقد انتهيت! اضغط \"استمرار\" للانتقال للمرحلة التالية.",
   "shareGame": "شارك لعبتك:"
 }

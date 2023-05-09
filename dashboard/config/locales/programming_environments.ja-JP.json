@@ -9,22 +9,130 @@
           "name": "ゲーム ラボ",
           "categories": {
             "game_lab": {
-              "name": "ゲーム ラボ"
+              "name": "ゲーム ラボ",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "白黒"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                }
+              }
             },
             "sprites": {
-              "name": "スプライト"
+              "name": "スプライト",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "スパイラル"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "グループ"
+              "name": "グループ",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "スプライト"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "色"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "色"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "グラフィック\n"
+              "name": "グラフィック",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "星"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "計算(けいさん)"
+              "name": "計算(けいさん)",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    },
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    },
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "変数（へんすう）"
+              "name": "変数（へんすう）",
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
+                }
+              }
             },
             "functions": {
               "name": "関数(かんすう) "
@@ -35,14 +143,206 @@
           "name": "アプリ ラボ",
           "description": "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "小さくしたり大きくしたり"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "データ"
+              "name": "データ",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "計算(けいさん)"
+              "name": "計算(けいさん)",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    },
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    },
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "変数（へんすう）"
+              "name": "変数（へんすう）",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "独自のアドベンチャーを選択"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
+                },
+                "addPair": {
+                  "return_value": "設定なし"
+                }
+              }
             },
             "functions": {
               "name": "関数(かんすう) "

@@ -15,7 +15,7 @@ const sections = [
     code: 'ABCD',
     grade: '10',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const sections = [
     code: 'EFGH',
     grade: '11',
     providerManaged: true,
-    hidden: false
+    hidden: false,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const sections = [
     code: 'IJKL',
     grade: '9',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 4,
@@ -48,8 +48,8 @@ const sections = [
     code: 'MNOP',
     grade: '6',
     providerManaged: false,
-    hidden: true
-  }
+    hidden: true,
+  },
 ];
 
 const DEFAULT_PROPS = {
@@ -58,7 +58,7 @@ const DEFAULT_PROPS = {
   removeSection: () => {},
   toggleSectionHidden: () => {},
   updateRoster: () => {},
-  setRosterProvider
+  setRosterProvider,
 };
 
 describe('SectionActionDropdown', () => {

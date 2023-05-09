@@ -14,8 +14,7 @@ describe('SeeMoreCourses', () => {
     assert(
       wrapper.containsMatchingElement(
         <Button
-          __useDeprecatedTag
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
           icon="caret-down"
           text="View more"
         />
@@ -42,7 +41,7 @@ describe('SeeMoreCourses', () => {
                 style={{
                   width: 20,
                   float: 'left',
-                  color: color.white
+                  color: color.white,
                 }}
               >
                 .
@@ -83,7 +82,7 @@ describe('SeeMoreCourses', () => {
                 style={{
                   width: 20,
                   float: 'left',
-                  color: color.white
+                  color: color.white,
                 }}
               >
                 .

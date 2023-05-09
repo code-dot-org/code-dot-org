@@ -1883,26 +1883,35 @@
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld Chop Trees_2021": {
           "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
           "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz. Ən az sayda blok hansı yoldan keçir?"
         },
         "Overworld House Frame Chosen": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2019": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld House Frame Chosen_2020": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
@@ -1921,13 +1930,19 @@
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2019": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Place Wall_2020": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Shear Sheep": {
           "mc_3_a": "`Qırx` bloku önündəki qoyunu götürür. Qoyunla üz-üzəsən?",
@@ -2923,22 +2938,34 @@
           "alternate": "Alternativ blok \"Rəqqasələr\" kateqoriyasındadır."
         },
         "Overworld Avoid Monsters": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2019": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Avoid Monsters_2020": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Plant Crops": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -5013,27 +5040,36 @@
           "MC_HOC_2017_08_RY_c": "Lavadan sadə bir yolla keçmək üçün nöqtəli xətti izləməyə çalışın."
         },
         "Overworld Avoid Monsters2022": {
-          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir.",
+          "mc_8_a": "Tuta biləcəyiniz bir neçə yol var. Hansı ən qısadır?",
+          "mc_8_b": "Kodunu sadələşdirmək üçün \"təkrarla\" döngələrindən istifadə et."
         },
         "Overworld Chop Tree2022": {
           "mc_2_a": "Ağacın önündə durmaq üçün iki dəfə `irəli gedin`.",
           "mc_2_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
         },
         "Overworld Chop Trees2022": {
-          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir."
+          "mc_4_b": "\"Bloku dağıt\" əmri önündəki ağacı kəsir.",
+          "mc_4_a": "İstənilən qaydada ağacları kəsə bilərsiniz.Hansı yol ən az blok təşkil edir?"
         },
         "Overworld House Frame Chosen2022": {
-          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yerləşdir` blokundakı oxu klikləyin. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Move to Sheep2022": {
           "mc_1_a": "`İrəli get` bloku alətlər qutusunun başındadır.",
           "mc_1_b": "Hər iki `irəli get` blokunun `icra ediləndə` blokuna əlavə olunduğundan əmin olun."
         },
         "Overworld Place Wall2022": {
-          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin..",
+          "mc_5_a": "Əvvəlcə \"yerləşdir\" blokunu, sonra isə \"hərəkət et\" blokunu istifadə edin.",
+          "mc_5_b": "Kodu bir dəfədən çox işlətmək üçün hər iki blokun `təkrar` döngəsinin içərisində olduğundan əmin olun."
         },
         "Overworld Plant Crops2022": {
-          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. "
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart2022": {
           "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
@@ -6138,6 +6174,93 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "\\*\\*360/36 =? \\*\\*"
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_022022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_032022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_062022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_072022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_082022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Dance_2019_02": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 4 saydan sonra bitir._"
+        },
+        "Dance_2019_03": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   İki rəqqasda hərəkət etməlidir\n-   Ox düymələrinə basmalısınız\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_06": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Musiqinin ilk 4 sayında bir baş rəqqas və bir qrup fon rəqqasları yaradın.\n\n_Bu səviyyə 7 saydan sonra bitir._"
+        },
+        "Dance_2019_07": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın ölçüsün dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_08": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Ən azı bir rəqqasın çaların dəyişin.\n\n_Bu səviyyə 6 saydan sonra bitir._"
+        },
+        "Dance_2019_09": {
+          "validation": "**Bu səviyyəni necə keçə bilərəm?**\n\n-   Sadəcə \"Yekunlaşdır\" düyməsini basın!"
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal2022": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku məhv edir."
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Nəyisə yaratmaq üçün nəsə de , kod bloklarını bu şəkildə birləşdir :\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

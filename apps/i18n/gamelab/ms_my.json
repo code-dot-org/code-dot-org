@@ -5,7 +5,6 @@
   "dropletBlock_setCollider_param4": "ketinggian",
   "dropletBlock_setColliderEach_param0": "jenis",
   "dropletBlock_setColliderEach_param4": "ketinggian",
-  "errorLoadingAnimation": "Ia kelihatan seperti kita menghadapi masalah memuatkan animasi anda \"{animationName}\". Pastikan anda mempunyai sambungan internet yang baik dan cuba muatkan semula halaman. Jika masalah ini berterusan, ada kemungkinan animasi ini rosak. Dalam kes ini, anda mungkin perlu meneruskan dengan mengalih keluar animasi.",
   "reinfFeedbackMsg": "Anda telah selesai! Klik \"Teruskan\" untuk beralih ke tahap seterusnya.",
   "shareGame": "Kongsi permainan anda:"
 }

@@ -1,5 +1,6 @@
 const GDOCS_HOST = 'docs.google.com';
-const GDOCS_URL_REGEX = /^https?:\/\/docs\.google\.com\/(document|presentation)\/d\/([\w-]+)/;
+const GDOCS_URL_REGEX =
+  /^https?:\/\/docs\.google\.com\/(document|presentation)\/d\/([\w-]+)/;
 const SLIDES_PATH_REGEX = /\/presentation\/d\/[\w-]+/;
 const DOCS_PATH_REGEX = /\/document\/d\/[\w-]+/;
 const EXPORT_PATH = '/export?format=';

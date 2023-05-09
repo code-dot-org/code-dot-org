@@ -13,7 +13,7 @@ class ImageResourceCard extends Component {
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   getImage() {
@@ -21,15 +21,8 @@ class ImageResourceCard extends Component {
   }
 
   render() {
-    const {
-      altText,
-      title,
-      callout,
-      description,
-      buttonText,
-      link,
-      isRtl
-    } = this.props;
+    const {altText, title, callout, description, buttonText, link, isRtl} =
+      this.props;
 
     return (
       <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
@@ -48,7 +41,7 @@ class ImageResourceCard extends Component {
           <Button
             __useDeprecatedTag
             href={link}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={buttonText}
             style={styles.button}
           />
@@ -60,7 +53,7 @@ class ImageResourceCard extends Component {
 }
 
 ImageResourceCard.defaultProps = {
-  altText: ''
+  altText: '',
 };
 
 const styles = {
@@ -71,11 +64,12 @@ const styles = {
     marginBottom: 20,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.border_gray,
-    background: color.teal
+    borderColor: color.neutral_dark20,
+    background: color.neutral_light,
+    color: color.neutral_dark,
   },
   image: {
-    width: 158
+    width: 158,
   },
   textbox: {
     display: 'flex',
@@ -83,18 +77,17 @@ const styles = {
     justifyContent: 'space-between',
     boxSizing: 'border-box',
     width: 315,
-    padding: 20
+    padding: 20,
   },
   titleContainer: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   title: {
     fontSize: 24,
     paddingBottom: 10,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   callout: {
     flex: 'none',
@@ -102,23 +95,22 @@ const styles = {
     paddingBottom: 10,
     margin: '0px 8px',
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.white
+    color: color.white,
   },
   description: {
     fontSize: 14,
     lineHeight: '21px',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    height: 80
+    height: 80,
   },
   button: {
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
   },
   rtl: {
-    direction: 'rtl'
-  }
+    direction: 'rtl',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(ImageResourceCard);

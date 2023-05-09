@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMedia</code> class represents a social media platform. It has instance variables for the list of users on the social media platform, the list of public posts made by users whose profiles are set to public, and the list of private posts made by users whose profiles are set to private.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">User</code> class represents a user on a social media platform. It has instance variables for the user's username and the privacy status of their profile. For example, if <code style=\"background-color: #ececec; color: black; font-weight: bold;\">isPrivate</code> is <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code>, their profile is private.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">markPost()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMedia</code> class to return a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> with the post containing the user's <code style=\"background-color: #ececec; color: black; font-weight: bold;\">username</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"[PRIVATE]\"</code> if their profile is private.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createPost()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMedia</code> class to add the marked post to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">publicPosts</code> list if the user's profile is public or the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">hiddenPosts</code> list if the user's profile is private.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMediaRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createPost()</code> method to create posts for several of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">User</code> objects.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_private_methods",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Social Media Posts",
+    "bubble_choice_description": "Use `private` and `public` methods to mark posts on a social media platform based on the privacy of a user's profile.",
+    "thumbnail_url": "https://images.code.org/9241113bcaa7f6ed6e43ab1d509004df-user.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T14:04:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:57.842+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L5a_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L5a_2023\"},{\"changed_at\":\"2023-04-11 14:04:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:09:34 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:02:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

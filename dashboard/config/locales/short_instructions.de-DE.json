@@ -2508,7 +2508,7 @@
         "courseE_artist_functions5_2019": "Zeichne nur diese drei Sterne, um diese Aufgabe abzuschließen.",
         "courseE_artist_functions5_2020": "Zeichne nur diese drei Sterne, um diese Aufgabe abzuschließen.",
         "courseE_artist_functions5_copy": "Zeichne nur diese drei Sterne, um diese Aufgabe abzuschließen.",
-        "courseE_artist_functions6": "Zeichne dieses Fenster, indem du erst ein Quadrat zeichnest, dann eine Drehung um 90 Grad machst , bevor du ein weiteres Fenster zeichnest, und so weiter.",
+        "courseE_artist_functions6": "Zeichne dieses Fenster, indem du erst ein Quadrat zeichnest, dann eine Drehung um 90 Grad machst, bevor du ein weiteres Fenster zeichnest, und so weiter.",
         "courseE_artist_functions7": "Versuche, diese Aufgabe zu lösen, indem du `ein Fenster zeichnen` erstellst und es fünfmal aufrufst. Achte auf die Tür!",
         "courseE_artist_functions7_2018": "Versuche, diese Aufgabe zu lösen, indem du `ein Fenster zeichnen` erstellst und es fünfmal aufrufst. Achte auf die Tür!",
         "courseE_artist_functions7_2019": "Versuche, diese Aufgabe zu lösen, indem du `ein Fenster zeichnen` erstellst und es fünfmal aufrufst. Achte auf die Tür!",
@@ -4125,7 +4125,6 @@
         "courseD_artist_42022": "Füge eine kleine Form am Ende Ihrer Linie hinzu!",
         "courseD_artist_52022": "Spiel mit den Schneeflocken!",
         "courseD_artist_62022": "Versuche Ihre lange 150-Pixel-Zeile in 6 kurze Zeilen mit **25** Pixeln zu verwandeln, mit kleinen Drehungen am Ende.",
-        "courseD_artist_nestedLoops102022": "Nimm die Quadrate von vorher, aber dieses Mal nur 7, und lege sie in einer Reihe aus.",
         "courseD_artist_nestedLoops12022": "Zeichne ein Dreieck, um diese Phase zu starten.\\\\\n\n(jede Seite ist 100 Pixel lang und du brauchst für jeden Außenwinkel eine Drehung um 120 Grad)",
         "courseD_artist_nestedLoops1a2022": "Führe die Schleife für das Dreieck 6 Mal aus!",
         "courseD_artist_nestedLoops22022": "Löse diese Aufgabe mit so wenig Blöcken wie möglich! ",
@@ -4408,7 +4407,15 @@
         "helloworld_food_sizes_soccer-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
         "helloworld_food_sizes_space-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
         "helloworld_food_sounds_soccer-2022": "Lass uns lernen, wie Töne wiedergegeben werden.",
-        "helloworld_food_sounds_space-2022": "Lass uns lernen, wie Töne wiedergegeben werden."
+        "helloworld_food_sounds_space-2022": "Lass uns lernen, wie Töne wiedergegeben werden.",
+        "courseF_clicker_finish_-2022-2": "Beende dein Clicker-Spiel.",
+        "courseF_clicker_remove_-2022-2": "Verwenden Sie eine Variable, um die Punktzahl des Spielers zu Beginn des Spiels festzulegen und ihm jedes Mal Punkte zu geben, wenn er auf ein Sprite klickt.",
+        "courseF_clicker_score_-2022-2": "Wenn genügend Zeit vergangen ist, beenden Sie dieses Spiel, indem Sie das Endergebnis des Spielers ausdrucken.",
+        "courseF_clicker_sprites_-2022-2": "Erstelle eine Gruppe von Sprites mit demselben Kostüm.",
+        "courseF_clicker_variable_-2022-2": "Verwenden Sie eine Variable, um die Punktzahl des Spielers zu Beginn des Spiels festzulegen und ihm jedes Mal Punkte zu geben, wenn er auf ein Sprite klickt.",
+        "courseF_variables2_change_-2022-2": "Erstellen Sie ein Programm, das den Wert einer Variablen im Laufe der Zeit ändert. Lassen Sie das Sprite den neuen Wert sagen, wenn er sich ändert.",
+        "courseF_variables2_click_-2022-2": "Ändern Sie den Wert einer Variablen jedes Mal, wenn auf ein Sprite geklickt wird. Lassen Sie das Sprite jedes Mal den neuen Wert sagen, wenn er sich ändert.",
+        "courseF_variables2_set_-2022-2": "Setze eine Variable auf eine beliebige Zahl und lass dein Sprite diese gespeicherte Zahl sagen."
       }
     }
   }

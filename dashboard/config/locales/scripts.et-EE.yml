@@ -189,6 +189,8 @@ et:
           description_audience: Vanusele 6-13
         afterschool1:
           description_audience: Vanusele 7-13
+        cspunit4draft:
+          description_short: Andmed
         Special Fun:
           description_audience: Vanustele 10-18
         SpecialSeries:
@@ -263,6 +265,8 @@ et:
               display_name: Sisu
             practice:
               display_name: Õpetamise tavad
+        CSDU5-Draft:
+          description_short: Andmed
         CSF_Secret_Sample_Story:
           description_audience: Vanustele 8-18+
         MikeTest:
@@ -679,10 +683,13 @@ et:
               display_name: Ülevaade
             content:
               display_name: Sisu
+        dance:
+          name: tants
         aquatic:
           title: 'Minecraft: Voyage Aquatic'
           description_short: Kasuta loomingulisust ja probleemi lahendamise oskuseid,
             et uurida ja ehitada veealuseid maailmu koodi abil!
+          name: vee-
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -699,10 +706,14 @@ et:
           lesson_groups:
             csf_variables:
               display_name: Muutujad
+            csf_data:
+              display_name: Andmed
             csf_for_loops:
               display_name: For tsükkel
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
         coursed-2019:
@@ -719,6 +730,8 @@ et:
               display_name: Digitaalne kodakondsus
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
@@ -737,6 +750,8 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+            csf_sprites:
+              display_name: Spraidid
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -762,6 +777,8 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+            csf_data:
+              display_name: Andmed
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -858,6 +875,10 @@ et:
               display_name: Uuring
             required:
               display_name: Ülevaade
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1081,6 +1102,8 @@ et:
               display_name: Tingimuslaused
             csf_events:
               display_name: Sündmused
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
         time4cs-experiment-unit-1:
@@ -1091,6 +1114,8 @@ et:
               display_name: Tingimuslaused
             csf_events:
               display_name: Sündmused
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
         csp7-pilot:
@@ -1161,6 +1186,8 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+            csf_data:
+              display_name: Andmed
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -1175,6 +1202,8 @@ et:
               display_name: Digitaalne kodakondsus
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
@@ -1187,8 +1216,12 @@ et:
               display_name: Digitaalne kodakondsus
             csf_variables:
               display_name: Muutujad
+            csf_data:
+              display_name: Andmed
             csf_for_loops:
               display_name: For tsükkel
+            csf_sprites:
+              display_name: Spraidid
         express-2020:
           lesson_groups:
             csf_loops:
@@ -1201,6 +1234,8 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+            csf_sprites:
+              display_name: Spraidid
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -1347,6 +1382,8 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+            csf_data:
+              display_name: Andmed
         coursed-2021:
           lesson_groups:
             csf_events:
@@ -1365,6 +1402,8 @@ et:
           lesson_groups:
             ramp_up:
               display_name: Korduvad tsüklid
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
@@ -1373,6 +1412,8 @@ et:
               display_name: Funktsioonid
         coursef-2021:
           lesson_groups:
+            ramp_up:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_variables:
@@ -1399,6 +1440,8 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+            csf_sprites:
+              display_name: Spraidid
             lessonGroup-9:
               display_name: Sündmused
         pre-express-2021:
@@ -1413,6 +1456,8 @@ et:
               display_name: Sissejuhatus
             lessonGroup-3:
               display_name: Muutujad
+            Sprites:
+              display_name: Spraidid
             variables:
               display_name: Muutujad
         csd4-preview-2021:
@@ -1575,6 +1620,8 @@ et:
               display_name: Sisu
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
             lessonGroup-3:
               display_name: Muutujad
         csa8-exemplars:
@@ -1599,6 +1646,8 @@ et:
               display_name: Sündmused
         express-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
             lessonGroup-9:
               display_name: Sündmused
             csf_loops:
@@ -1645,6 +1694,8 @@ et:
               display_name: Tsüklid
             csf_events:
               display_name: Sündmused
+            csf_data:
+              display_name: Andmed
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -1657,6 +1708,8 @@ et:
               display_name: Tingimuslaused
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             ramp_up:
@@ -1667,6 +1720,8 @@ et:
               display_name: Tingimuslaused
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Spraidid
             lessonGroup-7:
               display_name: Digitaalne kodakondsus
             lessonGroup-8:
@@ -1715,6 +1770,8 @@ et:
           lesson_groups:
             lessonGroup-7:
               display_name: Digitaalne kodakondsus
+            ramp_up:
+              display_name: Spraidid
             lessonGroup-8:
               display_name: Muutujad
         csa6-2022:
@@ -1817,6 +1874,35 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For tsükkel
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-4:
+              display_name: Uuring
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -1832,6 +1918,114 @@ et:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Loendid
+              display_name: Andmed
             csp_loops:
               display_name: Tsüklid
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Loendid
+            lessonGroup-3:
+              display_name: Tsüklid
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
+            lessonGroup-9:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+            csf_data:
+              display_name: Andmed
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_sprites:
+              display_name: Spraidid
+            ramp_up:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Sissejuhatus

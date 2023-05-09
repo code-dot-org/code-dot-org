@@ -145,6 +145,18 @@ ha:
     on the training data, the SVM separates the "space" of all possible fish into
     two parts, which correspond to the classes we are trying to learn (such as "blue"
     or "not blue").
+  heading_additional_resources: Additional resources
+  call_to_action_learn_more: Learn more
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
+  call_to_action_explore_unit: Explore unit
+  call_to_action_view_lesson_plan: View lesson plan
+  call_to_action_self_paced_pl: Start self-paced professional learning
+  call_to_action_watch_panel: Watch panel
+  call_to_action_learn_about_challenge: Learn about challenge
+  call_to_action_explore_website: Explore website
+  call_to_action_read_more: Read more
+  call_to_action_special_announcement: See special announcement
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -153,6 +165,145 @@ ha:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
+  social_maker_title: I'm a Maker!
+  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
+  social_blockchain_title: How Blockchain Works
+  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
+    it's important.
+  social_ai_title: Learn about artificial intelligence (AI) | Code.org
+  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
+  pl_superhero_title: Help students become superheroes!
+  pl_superhero_desc: Join our highly supportive Professional Learning Program for
+    middle and high school educators.
+  teach_ai_homepage_banner_title: AI education for the world
+  teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
+    educators everywhere to teach with AI and about AI.
+  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
+    our new video series and accompanying lessons!
+  blockchain_intro_heading: See how blockchain works
+  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
+    industry experts and aims to demystify this technology.
+  blockchain_intro_list_heading: 'This series will:'
+  blockchain_intro_list_item_01: Explain what blockchain is
+  blockchain_intro_list_item_02: Explore why it's important
+  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
+  blockchain_video_title_01: Introduction to Blockchain
+  blockchain_video_title_02: Why Blockchain
+  blockchain_video_title_03: Under the Hood
+  blockchain_video_title_04: Beyond Currencies
+  blockchain_video_title_05: Marketplace and Price
+  blockchain_video_title_06: Trustworthy or a Scam?
+  blockchain_video_title_07: Societal Impact
+  blockchain_lessons_heading: Blockchain lessons for your class
+  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
+    Blockchain Works" series or can stand alone. The last lesson condenses the whole
+    series to a single day.
+  blockchain_resources_desc: Interested in learning more about blockchain? Here are
+    some additional resources that can help extend your students' learning.
+  blockchain_resources_01_heading: Coinbase Learn
+  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
+    tips, and market updates for first-timers, experienced investors, and everyone
+    in between.
+  blockchain_resources_01_button_label: Visit the Coinbase Learn website
+  blockchain_resources_02_heading: Whiteboard Crypto
+  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
+    to learn even more about blockchain technology.
+  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
+  blockchain_resources_03_heading: Hour of Code Activity
+  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
+  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
+  ai_2023_banner_title: AI education for the world
+  ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
+    everywhere.
+  teachai_launch_blog_title: Introducing TeachAI!
+  teachai_launch_blog_desc_01: Education, nonprofit, and tech leaders come together
+    to offer guidance on integrating AI safely into classrooms worldwide
+  teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
+    and secondary curricula around the world through new reports, policy recommendations,
+    and public engagement opportunities.
+  ai_hero_heading: Artificial intelligence isn't magic… It's just code!
+  ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
+    the ways we live, work, and learn.
+  ai_intro_heading: Why learn about AI?
+  ai_intro_video_title: Why AI Matters with Deb Raji
+  ai_intro_video_caption_link: Check out the full Intro to AI series
+  ai_intro_list_title_01: Foundational knowledge
+  ai_intro_list_desc_01: Spark students' interest in technology and help them understand
+    the world around them in a deeper way.
+  ai_intro_list_title_02: Creativity and innovation
+  ai_intro_list_desc_02: Inspire students to think creatively and innovate, as they
+    explore the potential applications of AI.
+  ai_intro_list_title_03: Problem solving and critical thinking
+  ai_intro_list_desc_03: Encourage students to develop essential skills as they learn
+    to design, build, and evaluate AI systems.
+  ai_why_heading: Why teach AI with Code.org?
+  ai_why_desc: All the resources you need in one place! Explore our curriculum offerings,
+    professional learning courses, and video series designed for you and your students.
+  ai_why_link_01: Explore AI curricula
+  ai_why_link_02: See professional learning options
+  ai_why_link_03: Watch AI videos
+  ai_curricula_heading: AI Curricula
+  ai_curricula_desc: Explore the different AI curriculum offerings which meet diverse
+    classroom needs.
+  ai_curriculum_title_01: AI and Machine Learning
+  ai_curriculum_desc_01: Explore how computers learn from data. Develop machine learning
+    projects around real-world data. Design a machine learning app to solve a personally
+    relevant problem.
+  ai_curriculum_grades_01: 'Grade Levels: 6-12'
+  ai_curriculum_duration_01: 'Duration: 20 hours'
+  ai_curriculum_btn_aria_label_01: Explore the AI and Machine Learning unit
+  ai_curriculum_title_02: AI and Ethics
+  ai_curriculum_desc_02: Reflect on the ethical implications of AI, then work together
+    to create an "AI Code of Ethics" resource for AI creators and legislators everywhere.
+  ai_curriculum_grades_02: 'Grade Levels: 5-12'
+  ai_curriculum_duration_02: 'Duration: 1 hour'
+  ai_curriculum_btn_aria_label_02: View the lesson plan for AI and Ethics
+  ai_curriculum_title_03: AI for Oceans
+  ai_curriculum_desc_03: Help A.I. clean the oceans by training it to detect trash!
+    Learn about training data and bias, and how AI can address world problems.
+  ai_curriculum_grades_03: 'Grade Levels: 3-12'
+  ai_curriculum_duration_03: 'Duration: 1 hour'
+  ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_carousel_heading: 'What teachers say about AI with Code.org:'
+  ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
+    there is an element of opinion in classification systems. Later, when we started
+    to see how bias can end up in AI, I was able to pull them back and remind them
+    that the data used to train their models was based on choices.
+  ai_carousel_quote_02: My students learned that they don't have to just be consumers
+    when it comes to technological advances that they are experiencing on almost a
+    daily basis. They can actually be creators!
+  ai_pl_heading: Preparing to teach AI
+  ai_pl_subheading: Prepare to teach AI using our self-paced online module.
+  ai_pl_list_01: Get an introduction to artificial intelligence and machine learning.
+  ai_pl_list_02: Train a machine learning model using AI Lab.
+  ai_pl_list_03: Engage with machine learning apps.
+  ai_pl_list_04: Consider real-world implications of AI and machine learning.
+  ai_pl_list_05: Explore end of chapter projects.
+  ai_pl_duration: 'Duration: 2 hours'
+  ai_video_series_title: How AI Works
+  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
+    series of short videos will introduce you to how artificial intelligence works
+    and why it matters. Then delve into issues like algorithmic bias and the ethics
+    of AI decision-making.
+  ai_resources_heading: Additional resources
+  ai_resources_desc: Interested in learning more about AI? Here are some additional
+    resources that can help extend your students' learning.
+  ai_resources_title_01: Ethics of AI Panel
+  ai_resources_desc_01: Go deeper with some of our favorite AI experts! This panel
+    discussion touches on important issues like algorithmic bias and the future of
+    work.
+  ai_resources_btn_aria_label_01: Watch the Ethics of AI panel
+  ai_resources_title_02: Imagine Cup Junior
+  ai_resources_desc_02: This global AI for Good challenge introduces students to Microsoft's
+    AI for Good initiatives, empowering them to solve a problem in the world with
+    the power of AI.
+  ai_resources_btn_aria_label_02: Learn about the Imagine Cup Junior challenge
+  ai_resources_title_03: AI for Teachers
+  ai_resources_desc_03: Supports integration of Artificial Intelligence knowledge
+    throughout K-12. Offer free professional development, webinars, conference presentations,
+    and peer-to-peer learning opportunities.
+  ai_resources_btn_aria_label_03: Explore the AI for Teachers website
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -1025,6 +1176,10 @@ ha:
   footer_menu_terms: Terms
   footer_menu_privacy: Privacy Policy
   footer_menu_cookie: Cookie Notice
+  footer_menu_facebook: Code.org on Facebook
+  footer_menu_twitter: Code.org on Twitter
+  footer_menu_instagram: Code.org on Instagram
+  footer_menu_medium: Code.org on Medium.com
   learn_banner_heading: Hour of Code Activities
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour
@@ -1691,7 +1846,7 @@ ha:
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: 'AI4ALL: AI & Drawing'
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
   tutorial_edisoncount_name: Teach Edison to count to 9
@@ -7217,7 +7372,8 @@ ha:
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -9289,7 +9445,8 @@ ha:
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
-  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_mee_string_platforms: All modern browsers, Mac, Windows, Chromebook, iPhone,
+    iPad, Android phone, Android tablet
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
     iPads, modern Android phones, iPhones
@@ -10129,8 +10286,8 @@ ha:
   tutorial_microsoftforest_string_platforms: All modern browsers
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: All modern browsers
-  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
-    Android (Chromebooks), iPad, Screen reader
+  tutorial_minecrafttimecraft_string_platforms: All modern browsers, Mac, Windows,
+    Chromebook, iPhone, iPad, Android phone, Android tablet
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: All modern browsers, Screen reader
   tutorial_codeartportrait_string_platforms: All modern browsers, Android tablet,
@@ -10368,7 +10525,7 @@ ha:
   tutorial_codespeakpixel_string_detail_programming_languages: JavaScript
   tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
     Racket
-  tutorial_carnegieslime_string_detail_programming_languages: blocks
+  tutorial_carnegieslime_string_detail_programming_languages: Blocks
   tutorial_ozotown_string_detail_programming_languages: Blocks
   tutorial_milnedash_string_detail_programming_languages: Blocks
   tutorial_microbitpet_string_detail_programming_languages: Python, MakeCode
@@ -10520,6 +10677,10 @@ ha:
   tutorial_nasapackage_name: 'NASA: Package Delivery Drone Simulation Coding Activity '
   tutorial_nasalunar_name: 'NASA: Lunar Coding Challenge'
   tutorial_meeestate_name: Escape Estate
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_nafbrand_name: Code your Brand
   tutorial_rpccw_longdescription: Create your own character, design a T-shirt, and
     create some music. Earn badges for each completed project.
   tutorial_rpledfirefly_longdescription: Use a Raspberry Pi Pico microcontroller and
@@ -10861,6 +11022,18 @@ ha:
     clues. Code your way out by dawn and earn a million emeralds! With coding in blocks
     or Python, Hour of Code offers a learning pathway for anyone to learn the basics
     of code.'
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_nafbrand_longdescription: In Code your Brand, you will be creating a virtual
+    contact file to create a personalized QR code with your contact details. After
+    you complete this activity, you will be equipped with a modern business card that
+    you can share while you're networking with people who can help or guide you in
+    your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
   tutorial_rpledfirefly_string_detail_grades: Grades 6-8
   tutorial_rpcharting_string_detail_grades: Grades 9+
@@ -10953,6 +11126,10 @@ ha:
   tutorial_nasapackage_string_detail_grades: Grades 6-8
   tutorial_nasalunar_string_detail_grades: Grades 6-8
   tutorial_meeestate_string_detail_grades: Grades 2+
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_kcjhealth_string_detail_grades: Grades 6+
+  tutorial_msftwakanda_string_detail_grades: Grades 6+
+  tutorial_nafbrand_string_detail_grades: Grades 9+
   tutorial_rpccw_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rpledfirefly_string_platforms: All modern browsers
@@ -11070,8 +11247,14 @@ ha:
   tutorial_nasaorbit_string_platforms: All modern browsers
   tutorial_nasapackage_string_platforms: All modern browsers
   tutorial_nasalunar_string_platforms: All modern browsers, iPad, iPhone
-  tutorial_meeestate_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone
+  tutorial_meeestate_string_platforms: All modern browsers, Mac, Windows, Chromebook,
+    iPhone, iPad, Android phone, Android tablet
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_string_platforms: All modern browsers
+  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_nafbrand_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
   tutorial_rpccw_string_detail_platforms: ''
   tutorial_rpledfirefly_string_detail_platforms: Raspberry Pi Pico
   tutorial_rpcharting_string_detail_platforms: ''
@@ -11165,6 +11348,10 @@ ha:
   tutorial_nasapackage_string_detail_platforms: ''
   tutorial_nasalunar_string_detail_platforms: ''
   tutorial_meeestate_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_nafbrand_string_detail_platforms: ''
   tutorial_rpccw_string_detail_programming_languages: Blocks
   tutorial_rpledfirefly_string_detail_programming_languages: Python
   tutorial_rpcharting_string_detail_programming_languages: Python
@@ -11261,29 +11448,10 @@ ha:
   tutorial_nasapackage_string_detail_programming_languages: Blocks
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: Blocks, Python
-  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
-    animations in this 1 hour crash course!
-  tutorial_imagipixelart_name: Code your own pixel art!
-  tutorial_imagipixelart_string_detail_grades: Grades 2-8
-  tutorial_imagipixelart_string_detail_platforms: ''
-  tutorial_imagipixelart_string_detail_programming_languages: typing
-  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
-    Windows phone, Android phone, iPhone
-  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
-    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
-  tutorial_kcjhealth_name: The Health & Well-Being Challenge
-  tutorial_kcjhealth_string_detail_grades: Grades 6+
-  tutorial_kcjhealth_string_detail_platforms: ''
-  tutorial_kcjhealth_string_detail_programming_languages: blocks
-  tutorial_kcjhealth_string_platforms: All modern browsers
-  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
-    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
-    ''Black Panther: Wakanda Forever''!'
-  tutorial_msftwakanda_name: Long Live Wakanda
-  tutorial_msftwakanda_string_detail_grades: Grades 6+
-  tutorial_msftwakanda_string_detail_platforms: ''
-  tutorial_msftwakanda_string_detail_programming_languages: blocks
-  tutorial_msftwakanda_string_platforms: All modern browsers
+  tutorial_imagipixelart_string_detail_programming_languages: Typing
+  tutorial_kcjhealth_string_detail_programming_languages: Blocks
+  tutorial_msftwakanda_string_detail_programming_languages: Blocks
+  tutorial_nafbrand_string_detail_programming_languages: Python
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -11340,6 +11508,13 @@ ha:
   all: All
   dont_know: I don't know
   language_label: Language
+  team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
+    yellow t-shirts pose in a hotel conference room for the company's summer 2022
+    Codechella event.
+  careers_page_code_pride_alt_text: Two feminine-presenting employees smile while
+    holding the ends of a Code.org-branded rainbow banner. Behind them, several people
+    are wearing Code.org shirts and waving rainbow flags while walking alongside a
+    multi-colored Volkswagen bug.
   language_code:
     ar: Arabic
     az: Azerbaijani

@@ -3,38 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The problem solving process with physical computing
+# The Problem Solving Process With Devices
 
-##### The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire course to promote student growth and development. The Physical Computing unit uses the problem solving process with programming. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:10px;">
 
-## Define
-<img src="https://images.code.org/0dd1fcc01da9976cdcb100d92c998393-image-1647994716343.png" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">As students begin adding complexity to their apps, it is common for students to get overwhelmed with the open ended nature of programming. The <strong>Problem Solving Process</strong> is a tool students can use to clarify and break down problems into manageable steps so they can easily identify the code they need to write for each step. <br><br>The Problem Solving Process is woven throughout the entire course to promote student growth and development. The Creating Apps with Devices unit introduces the Problem Solving Process in lesson 2 with the <strong>Problem Solving Process with Design</strong>. Thereafter, the <strong>Problem Solving Process with Programming</strong> is introduced in the first mini-project and used for the remainder of the unit.
+</p></div>
 
-* ##### Read the instructions carefully to ensure you understand the goals
-* ##### Rephrase the problem in your own words
-* ##### Identify any new skills you are being asked to apply
-* ##### Look for other problems you’ve solved that are similar to this one
-* ##### If there is starter code, read it to understand what it does
 
-## Prepare
-* ##### Write out an idea in plain English or pseudocode
-* ##### Sketch out your idea on paper
-* ##### List what you already know how to do and what you don’t yet
-* ##### Describe your idea to a classmate
-* ##### Review similar programs that you’ve written in the past
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Problem Solving Process with Design</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p><img src="https://images.code.org/763516348386c86fb767be352c52a50f-image-1680304623780.png"></p></div>
+</details>
 
-## Try
-* ##### Write one small piece at a time
-* ##### Test your program often
-* ##### Use comments to document what your code does
-* ##### Apply appropriate debugging strategies
-* ##### Go back to previous steps if you get stuck or don’t know whether you’ve solved the problem
+<br>
 
-## Reflect
-* ##### Compare your finished program to the defined problem to make sure you’ve solved all aspects of the problem
-* ##### Ask a classmate to try your program and note places where they struggle or exhibit confusion
-* ##### Ask a classmate to read your code to make sure that your documentation is clear and accurate
-* ##### Try to “break” your program to find types of interactions or input that you could handle better
-* ##### Identify a few incremental changes that you could make in the next iteration
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Problem Solving Process with Programming</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p><img src="https://images.code.org/8df26b0e6faa34ef713946e494420476-image-1680304712476.png"></p></div>
+</details>
 
 MARKDOWN

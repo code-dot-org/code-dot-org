@@ -12,10 +12,12 @@ import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
-/* global ga */
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const submitButtonText = 'Complete and Send';
 const sessionStorageKey = 'TeacherApplication';
+const hasLoggedTeacherAppStart = 'hasLoggedTeacherAppStart';
 const pageComponents = [
   ChooseYourProgram,
   FindYourRegion,
@@ -23,12 +25,12 @@ const pageComponents = [
   AdditionalDemographicInformation,
   AdministratorInformation,
   ImplementationPlan,
-  ProfessionalLearningProgramRequirements
+  ProfessionalLearningProgramRequirements,
 ];
 const autoComputedFields = [
   'regionalPartnerGroup',
   'regionalPartnerId',
-  'regionalPartnerWorkshopIds'
+  'regionalPartnerWorkshopIds',
 ];
 
 const sendFirehoseEvent = (userId, event) => {
@@ -36,7 +38,7 @@ const sendFirehoseEvent = (userId, event) => {
     {
       user_id: userId,
       study: 'application-funnel',
-      event: event
+      event: event,
     },
     {includeUserId: false}
   );
@@ -64,11 +66,15 @@ const TeacherApplication = props => {
   };
 
   const onInitialize = () => {
+    if (!sessionStorage.getItem(hasLoggedTeacherAppStart)) {
+      sessionStorage.setItem(hasLoggedTeacherAppStart, true);
+      analyticsReporter.sendEvent(EVENTS.TEACHER_APP_VISITED_EVENT);
+    }
     sendFirehoseEvent(userId, 'started-teacher-application');
   };
 
   const getPageProps = () => ({
-    accountEmail: accountEmail
+    accountEmail: accountEmail,
   });
 
   const onSuccessfulSubmit = () => {
@@ -76,11 +82,13 @@ const TeacherApplication = props => {
     reload();
 
     sendFirehoseEvent(userId, 'submitted-teacher-application');
+    analyticsReporter.sendEvent(EVENTS.APPLICATION_SUBMITTED_EVENT);
   };
 
   const onSuccessfulSave = () => {
     // only send firehose event on the first save of the teacher application
     !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
+    analyticsReporter.sendEvent(EVENTS.APPLICATION_SAVED_EVENT);
   };
 
   const onSetPage = newPage => {
@@ -126,7 +134,7 @@ TeacherApplication.propTypes = {
   ...FormController.propTypes,
   accountEmail: PropTypes.string.isRequired,
   userId: PropTypes.number.isRequired,
-  schoolId: PropTypes.string
+  schoolId: PropTypes.string,
 };
 
 export default TeacherApplication;

@@ -1,15 +1,15 @@
 import {assert} from '../../../../util/reconfiguredChai';
 
-describe('CommandHistory', function() {
+describe('CommandHistory', function () {
   var CommandHistory = require('@cdo/apps/lib/tools/jsdebugger/CommandHistory');
   var history, inputText;
 
-  beforeEach(function() {
+  beforeEach(function () {
     history = new CommandHistory();
     inputText = '';
   });
 
-  it('recounts commands in reverse order when moving back through history', function() {
+  it('recounts commands in reverse order when moving back through history', function () {
     history.push('one');
     history.push('two');
     history.push('three');
@@ -21,7 +21,7 @@ describe('CommandHistory', function() {
     assert.equal('one', inputText);
   });
 
-  it('recounts commands in original order when moving forward through history', function() {
+  it('recounts commands in original order when moving forward through history', function () {
     history.push('one');
     history.push('two');
     history.push('three');
@@ -37,7 +37,7 @@ describe('CommandHistory', function() {
     assert.equal('three', inputText);
   });
 
-  it('returns beginning of history when trying to move back past beginning of history', function() {
+  it('returns beginning of history when trying to move back past beginning of history', function () {
     history.push('one');
     history.push('two');
     inputText = history.goBack(inputText);
@@ -48,7 +48,7 @@ describe('CommandHistory', function() {
     assert.equal('one', inputText);
   });
 
-  it('returns empty string when moving forward past beginning of history', function() {
+  it('returns empty string when moving forward past beginning of history', function () {
     history.push('one');
     inputText = history.goBack(inputText);
     assert.equal('one', inputText);
@@ -58,7 +58,7 @@ describe('CommandHistory', function() {
     assert.equal('', inputText);
   });
 
-  it('stores a maximum of 64 commands', function() {
+  it('stores a maximum of 64 commands', function () {
     var i;
     for (i = 0; i < 65; i++) {
       history.push(i.toString());

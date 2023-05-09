@@ -325,7 +325,7 @@
           "Course_4_Artist_Inspire_c": "Кожен штифт також повторюється чотири рази, з правого повороту \\*\\* 360 / сторони \\*\\*."
         },
         "Course 4 Artist Vars 13": {
-          "Course_4_Artist_Vars_13_a": "Вам потрібні два повторюваних цикли (один в іншому), що повторюють `сторін` разів.",
+          "Course_4_Artist_Vars_13_a": "Вам потрібні два повторюваних цикли (один в іншому), що повторюють `` сторін`` разів.",
           "Course_4_Artist_Vars_13_b": "Внутрішня повторювана петля малює восьмикутник (повертаючи зліва). Після цього вам потрібно рухатися вперед і повернути праворуч лише у зовнішній петлі.",
           "Course_4_Artist_Vars_13_c": "Щоб відрегулювати фігуру, щоб зберегти той самий розмір, коли змінюється кількість сторін, використовуйте блок математики, щоб розділити довжину у пікселях на кількість сторін."
         },
@@ -2258,18 +2258,18 @@
           "hint1": "Клацніть кнопку `+` на блоці події. Заповніть порожній простір блоку  `змінити костюм` блоком `суб'єкт` що знаходиться всередині.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Щоб одягнути маску на монстра, використайте блок `змінити костюм` з подією `коли клацнули` :\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nНе забудьте перетягнути малий червоний блок  `клацнули` !",
-          "hint2": "Новий блок цього рівня має виглядати так:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Щоб одягнути маску на монстра, використайте блок `змінити костюм` з подією `коли клацнули` :\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nНе забудьте перетягнути малий червоний блок  `клацнули` !",
+          "hint2": "Новий блок цього рівня має виглядати так:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Хочете чогось складнішого?\n\nМонстри можуть рухатись повільніше чи швидше.\n\n1.  Клацніть `редагувати` у цьому блоці <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Збільшіть чи зменшіть число у цьому блоці: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nЩоб монстри рухались повільніше, оберіть дробове число, наприклад  `0.5` чи`0.25`. Щоб вони рухались швидше, оберіть будь-яке число, більше 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Переконайтесь, що розмістили блоки \"дій\" всередині блоку `якщо ймовірність`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Вам потрібно додати ще 3 події `коли торкається` щоб перевірити всі можливі комбінації `торкань` здорових та хворих спрайтів.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Вам потрібно додати ще 3 події `коли торкається` щоб перевірити всі можливі комбінації `торкань` здорових та хворих спрайтів.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Застрягли? Завжди можна скасувати зміни, клацаючи `Історія версій` внизу, коли обираєте \"Почати знову\"."
         },
         "Function intro Ryan_2021": {
@@ -2332,22 +2332,32 @@
           "mc_10_c": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_a": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку."
+          "courseA_artist_loops4_a": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.",
+          "courseA_artist_loops4_b": "Оскільки ти можеш використати лише один блок, <xml><block type=\"simple_move_right\"/></xml>\n\nспробуй вставити його всередину циклу <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
         },
         "courseA_artist_loops5_2021": {
-          "courseA_artist_loops5_b": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку."
+          "courseA_artist_loops5_b": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.",
+          "courseA_artist_loops5_a": "Спробуй, використовуючи все, що ти дізнався про блоки <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, виконати це завдання!",
+          "courseA_artist_loops5_c": "Оскільки ти можеш використовувати лише один блок <xml><block type=\"simple_move_right\"/></xml>, спробуйте розмістити його всередині\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nциклу <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_artist_loops6_2021": {
-          "courseA_artist_loops6_a": "Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює."
+          "courseA_artist_loops6_a": "Не можете зрозуміти, як зробити пагорб? Спробуйте грати з блоками трохи, щоб побачити, що кожен малює.",
+          "courseA_artist_loops6_b": "Для виконання цього завдання тобі потрібно буде 2 блоки у 2 напрямках."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_a": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон."
+          "courseA_artist_loops7_a": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.",
+          "courseA_artist_loops7_b": "Спочатку напиши код для однієї хвилі, а потім повтори, щоб намалювати дві інші.",
+          "courseA_artist_loops7_c": "Пам'ятай, що ти можеш розмістити більше одного блоку в одному циклі <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
         },
         "courseA_artist_loops9_2021": {
-          "courseA_artist_loops9_a": "Додайте ще один блок до коду, який ви надішлете, щоб намалювати решту сходів."
+          "courseA_artist_loops9_a": "Додайте ще один блок до коду, який ви надішлете, щоб намалювати решту сходів.",
+          "courseA_artist_loops9_b": "Блок, який тобі необхідно додати, має бути всередині\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n циклу.",
+          "courseA_artist_loops9_c": "Якщо ти не можеш зрозуміти, де вставити цикл, спробуйте написати код покроково та пошукати зразок."
         },
         "courseA_artist_loops_challenge2a_2021": {
-          "courseA_artist_loops_challenge2_c": "Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку."
+          "courseA_artist_loops_challenge2_c": "Всі ваші блоки повинні бути всередині циклу, щоб закінчити цю головоломку.",
+          "courseA_artist_loops_challenge2_a": "Блоки на зразок цього <xml>  <block type=\"simple_move_up_left\"/></xml> дозволять вашому Художнику рухатися під нахилом!",
+          "courseA_artist_loops_challenge2_b": "Після закінчення одного намету, \"підстрибни\" двічі, щоб дістатися до наступного!"
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "Не можете зрозуміти, що не так? Спробуйте запустити код кілька разів, щоб побачити, що станеться."
@@ -2359,34 +2369,46 @@
           "courseA_harvester_loops9_b": "Не бійтеся запускати свій код після кожної частини, щоб побачити, що станеться!"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці."
+          "courseA_maze_seq10_a": "Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці.",
+          "courseA_maze_seq10_b": "Йди у 3 різних напрямках для вирішення завдання."
         },
         "courseA_maze_seq10_dani": {
           "courseA_maze_seq10_a": "Якщо у вас виникли проблеми, спробуйте в першу чергу записати сходинки на папірці."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться."
+          "courseA_maze_seq13_b": "Не бійся помилятися! Спробуйте додати блоки та запустити код, щоб побачити, що станеться.",
+          "courseA_maze_seq13_a": "Якщо шлях, яким ти йдеш, невідомий, простеж пальчиком свій шлях від пташки до свинки.",
+          "courseA_maze_seq13_c": "Ці блоки <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nдопоможуть тобі наблизитися до свинки."
         },
         "courseA_maze_seq_challenge1_2021": {
           "courseA_maze_seq_challenge1_a": "Існує два рішення цієї загадки."
         },
         "courseA_playLab_events2_2021": {
-          "courseA_playLab_events2_a": "Шукай блок, який змушує собаку щось сказати."
+          "courseA_playLab_events2_a": "Шукай блок, який змушує собаку щось сказати.",
+          "courseA_playLab_events2_b": "Ось код, який тобі потрібен, щоб виконати це завдання:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp1_2021": {
-          "2": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
+          "2": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!",
+          "1": "Якщо Скрет робить не те, що ти хочеш, переконайся, що обидва блоки повністю з'єднані, а потім знову натисни \"Запустити\"."
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_a": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку."
+          "courseB_artist_loops2_a": "Якщо ви хочете повторити цикл більше, ніж 4 рази, ви можете змінити номер у верхній частині блоку.",
+          "courseB_artist_loops2_b": "Спробуй спочатку запустити код та побачиш, куди потрапить Художник."
         },
         "courseB_artist_loops9_2021": {
-          "courseB_artist_loops9_c": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон."
+          "courseB_artist_loops9_c": "Не можете зрозуміти, де поставити цикл? Спробуйте написати код покрокові і шукайте шаблон.",
+          "courseB_artist_loops9_a": "Пам'ятай, що блоки стрибків можна використовувати для переміщення без лінії.",
+          "courseB_artist_loops9_b": "Для виконання завдання тобі знадобиться блок W."
         },
         "courseB_iceage_loops2_2021": {
-          "courseB_iceage_loops2_b": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу."
+          "courseB_iceage_loops2_b": "Якщо ви застрягли, спробуйте виписати кроки на аркуші паперу.",
+          "courseB_iceage_loops2_a": "Розбий цю задачку на 2 частини, одна частинка тебе чекає перед поворотом, а інша після.",
+          "courseB_iceage_loops2_c": "Йди цим шляхом та проведи Скрета до жолудя."
         },
         "courseB_iceage_loops4_2021": {
-          "courseB_iceage_loops4_b": "Не бійся запускати свій код і подивитися, що станеться!"
+          "courseB_iceage_loops4_b": "Не бійся запускати свій код і подивитися, що станеться!",
+          "courseB_iceage_loops4_a": "Спробуй записати кроки, які має зробити Скрет, щоб дістатися до жолудя. Бачиш малюнок?",
+          "courseB_iceage_loops4_c": "Цим шляхом має піти Скрет."
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Якщо ви застрягли, спробуйте розібрати шлях на папері.",
@@ -2406,10 +2428,14 @@
           "courseB_maze_seq_challenge1_a": "Найкращий шлях може не працювати на цей раз."
         },
         "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_c": "Отримати всі прапори, щоб пройти!"
+          "courseB_playlab_events6_c": "Отримати всі прапори, щоб пройти!",
+          "courseB_playlab_events6_a": "Використовуй ці блоки подій:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>.",
+          "courseB_playlab_events6_b": "Використовуй стрілки списку, що розкривається, на зелених блоках подій `при ___ натисканні стрілки` для вибору різних напрямків.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку."
+          "courseB_starWars_prog9_a": "Не бійся помилятися! Запустіть код, щоб побачити, що станеться, навіть якщо ви ще не вирішили головоломку.",
+          "courseB_starWars_prog9_b": "В тебе є багато способів вирішити цю задачку.",
+          "courseB_starWars_prog9_c": "Чи допоможе тут цикл `повторення` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>?"
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_b": "Клацніть на Octavia, коли ви запускаєте свою програму, щоб перевірити, чи вона працює!"
@@ -2652,8 +2678,8 @@
           "courseF_bee_functions_challenge2_a": "Якщо є шлях праворуч, ви повинні зробити наступне: \n\n-   Дістаньте будь-який нектар або зробіть будь-який мед. \n-   Поверніть праворуч у бік доріжки. \n-   Перейдіть до кінця бічного шляху. \n-   Поверніть праворуч. \n\nЯкщо ви повторите вищевказані дії двічі, ви будете готові повернутися на основний шлях. \n\n**Лиш клацніть, щоб отримати наступну підказку, якщо ви хочете побачити повне рішення!**"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Почніть з того, щоб зібрати ДВА дорогоцінні камені з кожної з перших двох купок. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>) \nВикористовуйте ці блоки. \n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Далі зберіть всі дорогоцінні камені, що залишилися в цьому ряду. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>) \nДодайте ці блоки до своєї програми. \n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Почніть з того, щоб зібрати ДВА дорогоцінні камені з кожної з перших двох купок. \n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>) \nВикористовуйте ці блоки. \n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Далі зберіть всі дорогоцінні камені, що залишилися в цьому ряду. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>) \nДодайте ці блоки до своєї програми. \n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Нарешті, зберіть скарб, що залишився. Додайте ці блоки до своєї програми.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Ось повне рішення цієї головоломки.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2686,7 +2712,7 @@
           "courseD_bee_debugging_challenge1_a": "Чому працює перша половина цієї програми? Подумайте, чому бджола повинна рухатися назад. Скільки нектару збирає бджола щоразу, коли рухається над квіткою?"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "Далі зберіть всі дорогоцінні камені, що залишилися в цьому ряду. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>) \nДодайте ці блоки до своєї програми. \n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Далі зберіть всі дорогоцінні камені, що залишилися в цьому ряду. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>) \nДодайте ці блоки до своєї програми. \n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Нарешті, зберіть скарб, що залишився. Додайте ці блоки до своєї програми.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Ось повне рішення цієї головоломки.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2810,18 +2836,18 @@
           "hint1": "Клацніть кнопку `+` на блоці події. Заповніть порожній простір блоку  `змінити костюм` блоком `суб'єкт` що знаходиться всередині.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "Щоб одягнути маску на монстра, використайте блок `змінити костюм` з подією `коли клацнули` :\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nНе забудьте перетягнути малий червоний блок  `клацнули` !",
-          "hint2": "Новий блок цього рівня має виглядати так:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Щоб одягнути маску на монстра, використайте блок `змінити костюм` з подією `коли клацнули` :\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nНе забудьте перетягнути малий червоний блок  `клацнули` !",
+          "hint2": "Новий блок цього рівня має виглядати так:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4_-2022-2": {
           "challenge": "## Хочете чогось складнішого?\n\nМонстри можуть рухатись повільніше чи швидше.\n\n1.  Клацніть `редагувати` у цьому блоці <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Збільшіть чи зменшіть число у цьому блоці: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nЩоб монстри рухались повільніше, оберіть дробове число, наприклад  `0.5` чи`0.25`. Щоб вони рухались швидше, оберіть будь-яке число, більше 1."
         },
         "CourseF_outbreak6_-2022-2": {
           "hint2": "Переконайтесь, що розмістили блоки \"дій\" всередині блоку `якщо ймовірність`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Вам потрібно додати ще 3 події `коли торкається` щоб перевірити всі можливі комбінації `торкань` здорових та хворих спрайтів.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Вам потрібно додати ще 3 події `коли торкається` щоб перевірити всі можливі комбінації `торкань` здорових та хворих спрайтів.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Вакцини\n\nВи можете симулювати вакцинацію монстрів при клацанні по них. Щоб це зробити, використайте блок `змінити костюм` у цій події:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Застрягли? Завжди можна скасувати зміни, клацаючи `Історія версій` внизу, коли обираєте \"Почати знову\"."
         },
         "Function intro Ryan2022": {
@@ -3151,16 +3177,16 @@
           "hello-world-first-solution-pizza": "Щоб піца щось сказала, підключіть блоки коду так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Ви можете змінити фон, підключивши блок `set background` під блоком подій `при натисканні`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Ви можете змінити фон, підключивши блок `set background` під блоком подій `при натисканні`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_Примітка:_ Щоб надати спрайту поведінку, вам потрібно використовувати блок `sprite begins` з одним із зелених блоків поведінки, наприклад, `спінінг праворуч`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "Спробуйте підключити блок `змінити костюм` під блоком подій `при натисканні`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "Спробуйте підключити блок `змінити костюм` під блоком подій `при натисканні`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Підключіть блок `say` під блоком подій `коли клацання`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "Підключіть блок `say` під блоком подій `коли клацання`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Щоб змінити місце розташування спрайту, натисніть значок на блоці розташування, а потім клацніть туди, куди ви хочете перейти.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -3172,7 +3198,7 @@
           "hello-world-first-solution-bear": "Щоб ведмідь щось сказав, підключіть блоки коду так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "Щоб встановити розмір спрайту всього один раз, ви можете використовувати цей блок:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "Щоб встановити розмір спрайту всього один раз, ви можете використовувати цей блок:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "Якщо ви хочете змінити розмір спрайту знову і знову (з подіями), використовуйте цей блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -3249,7 +3275,7 @@
           "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -3273,10 +3299,10 @@
         },
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Щоб встановити розмір спрайту всього один раз, ви можете використовувати цей блок:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "Якщо ви хочете змінити розмір спрайту знову і знову (з подіями), використовуйте цей блок:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    \\<block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_changePropBy": "Якщо ви хочете змінити розмір спрайту знову і знову (з подіями), використовуйте цей блок:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Ви можете змінити фон, підключивши блок `set background` під блоком подій `при натисканні`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Ви можете змінити фон, підключивши блок `set background` під блоком подій `при натисканні`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_Примітка:_ Щоб надати спрайту поведінку, вам потрібно використовувати блок `sprite begins` з одним із зелених блоків поведінки, наприклад, `спінінг праворуч`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -3291,7 +3317,7 @@
           "location_pin_hint": "Щоб змінити місце розташування спрайту, натисніть значок на блоці розташування, а потім клацніть туди, куди ви хочете перейти.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Переконайтеся, що костюми збігаються для кожного спрайту.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Щоб істота щось сказала, підключіть блоки коду так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -3299,6 +3325,312 @@
         "helloworld_retro_sizes": {
           "hw_retro_setProp": "Щоб встановити розмір спрайту всього один раз, ви можете використовувати цей блок:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "Якщо ви хочете змінити розмір спрайту знову і знову (з подіями), використовуйте цей блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "Не можеш зрозуміти, як намалювати лінію? Почни приєднувати блоки до блоку <xml><block type=\"when_run\"/></xml> та побачиш, що станеться.",
+          "courseA_artist_loops2_b": "Використовуй цей блок <xml><block type=\"simple_move_right\"/></xml> для розв'язання завдання."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "Повільно проведи пальцем по програмі та побачиш, де виникла проблема.",
+          "courseA_artist_loops3_b": "Для розв'язання цього завдання тобі знадобиться блок, подібний до цього.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "Спробуй запустити код і побачиш, що в ньому всередині.",
+          "courseA_artist_loops8_b": "Як би ти організував цикл коду, який отримав?",
+          "courseA_artist_loops8_c": "Що робить код?\\\nЩо він має робити?\\\nПро що це тобі говорить?"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Застряг? Тоді спробуйте спочатку записати усі кроки на аркуші паперу.",
+          "courseA_harvester_seq10_b": "Ти маєш `Рухатися на Схід`, потім `Рухатися на Північ`. Зроби це два рази. Не забудь зібрати усю кукурудзу!",
+          "courseA_harvester_seq10_c": "Спробуй використати цей шлях, щоб зібрати усю кукурудзу."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Використовуй цей блок та збери кукурудзу, коли до неї підійде Фермерка.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Використовуй цей блок і збери кукурудзу, якщо Фермерка знайде її!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Фермерка має рухатися тричі на Схід, щоб дістатися до кукурудзи. Використовуй цей блок:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "Не забудь використати <xml><block type=\"harvester_corn\"/></xml> та зібрати кукурудзу!",
+          "courseA_harvester_seq2_b": "Спробуй записати усі кроки на папері і ти швидко знайдеш рішення!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Не забув використати цей блок?\n\n<xml><block type=\"harvester_corn\"/></xml>.",
+          "courseA_harvester_seq3_b": "Промовляй кроки вголос та прослідкуй, чи допоможе це тобі знайти відповідь."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Скільки проміжків між Фермеркою та кукурудзою? Скільки блоків вже є у нашій робочій області?",
+          "courseA_harvester_seq4_b": "Тобі знадобиться п'ять блоків для \"руху на схід\" та один блок для \"збирання кукурудзи\":\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Який блок рухає Фермерку в неправильному напрямку?",
+          "courseA_harvester_seq5_b": "Убери один блок.",
+          "courseA_harvester_seq5_c": "Викинь цей блок у смітник!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Якщо ти застряг, спробуй вимовляти кроки вголос. Це може допомогти тобі знайти правильний шлях."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Спробуй розв'язати задачку, розбивши її на 2 частини, одна частинка тебе чекає перед поворотом, а інша після.",
+          "courseA_harvester_seq7_b": "Проблеми? Ось шлях, яким має рухатися Фермерка."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Твій кінцевий код має містити **4** блоки для руху та **2** блоки для збору врожаю."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Запусти код кілька разів та прослідкуй, що станеться. Де зупинилася Фермерка?",
+          "courseA_harvester_seq9_b": "Не забудь зібрати усю кукурудзу! Тобі знадобиться **3** блоки для збору кукурудзи.",
+          "courseA_harvester_seq9_c": "Йди цією стежкою та збери усю кукурудзу."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Якщо в тебе виникли проблеми з переміщенням пташки, перевір, чи з'єднані блоки під блоком <xml>\n  <block type=\"when_run\"/>\n</xml>.",
+          "courseA_maze_seq1_b": "Пташці потрібно буде 3 рази переміститися на Захід, щоб дістатися свинки. Використай цей блок:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Спробуй записати кроки на папері і ти обов'язково знайдеш рішення!",
+          "2": "Використовуй цей блок:\n\n<xml><block type=\"maze_moveSouth\"/></xml>."
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Промовляй кроки вголос та подивись, чи допоможе це тобі знайти відповідь."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "Твій остаточний код має складатися з 3 блоків руху.",
+          "courseA_maze_seq6_b": "Якщо ти застряг, спробуй розв'язати задачку, розбивши її на 2 частини, одна частинка тебе чекає перед поворотом, а інша після."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Якщо ти застряг, спробуй намалювати малюнок на папері, це допоможе тобі зрозуміти, як має рухатися пташка."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Спробуй порахувати проміжки на пальцях. Не забувай рахувати проміжки, з яких ти починав!"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Перетягни цей блок <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> та з'єднай його знизу блоку <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>.",
+          "courseA_playLab_events3_b": "Не забувай використовувати клавішу зі стрілкою вліво, щоб переміщати Хорхе до прапорця після того, як напишеш програму. Коли прапорець стане зеленим, ти закінчив!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "Ось блок подій, який тобі знадобиться, щоб змусити Хорхе рухатися вправо:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "Це код, який тобі знадобиться для виконання цього завдання:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "Ось блоки подій, які тобі потрібно буде використовувати для переміщення Хорхе вгору та вниз:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nта \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Ти знав, що можеш змінити клавішу для стрілки події, натиснувши на картинку в блоці та обравши нову клавішу?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "Ось блок подій, який ти можеш використати, щоб змусити Хорхе зробити щось при натисканні на нього:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "Ось блок, який ти можеш використати для зміни фону:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>.",
+          "courseA_playLab_events6_c": "Ось блок, який ти можеш використати для відтворення випадкового звуку:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Використовуй цей блок, щоб керувати ситуаціями зіткнення героїв.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Зроби так, щоб з'являвся пінгвін Ваддлз при натисканні на Робіна!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Зроби так, щоб з'являвся привид Бу при натисканні на пінгвіна Ваддлз!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Зроби так, щоб з'являвся пухнастий монстр Джейден при натисканні на Бу!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Зроби так, щоб з'являвся робот Спіфф при натисканні на монстра!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "І останнє, зроби так, щоб з'являвся чарівник Вендель при натисканні на Спіффа!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Ти можеш змусити пташку заспівати.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Ти можеш змусити робота пищати.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Ви можете змусити розлюченого монстра гарчати.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Твій код має виглядати так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Не забувай використовувати `повторний` цикл <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> для створення кращого коду!",
+          "courseB_artist_loops3_b": "Художник має піти Південь, щоб провести цю лінію."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Блок стрибка дозволяє рухатися вперед, не проводячи лінію.",
+          "courseB_artist_loops4_b": "Для вирішення завдання тобі потрібно буде додати блок всередину повторного циклу.",
+          "courseB_artist_loops4_c": "Не забудь змінити кількість повторень циклу."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Перетягни `повторний` цикл <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, а потім розмісти всередині нього інші блоки. Як ти гадаєш, скільки разів варто повторити це?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Спробуйте записати рухи на аркуші паперу і пошукати зразок."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "У цьому завданні використовується **4** цикли, один за одним!",
+          "courseB_artist_loops7_b": "Зверни увагу, що кожен цикл утворює зразок сходів, які йдуть в іншому напрямку.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Цикли мають бути організовані наступним чином:\n\n-   Цикл 1\n    -   Вправо\n    -   Вниз\n\n-   Цикл 2\n    -   Вправо\n    -   Вгору\n\n-   Цикл 3\n    -   Ліворуч\n    -   Вгору\n\n-   Цикл 4\n    -   Ліворуч\n    -   Вниз"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Скільки разів потрібно повторити зразок, щоб зробити сходи?",
+          "courseB_artist_loops8_b": "Спробуй запустити отриманий код та побачиш що буде відбуватися."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Блоки, подібні до цього: <xml>  <block type=\"simple_move_up_right\"/></xml> дозволять Художнику рухатися під нахилом!",
+          "courseB_artist_loops_challenge1_b": "Закінчивши одну з кісток, \"перестрибуй\" до наступної!",
+          "courseB_artist_loops_challenge1_c": "Тобі потрібно буде двічі \"пересунутися\" або \"перестрибнути\" через одні й ті ж самі лінії."
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Код для малювання хрестика ти вже отримав. Все, що тобі потрібно, це повторити хрестик і \"перестрибнути\" до наступної точки.",
+          "courseB_artist_loops_challenge2_b": "Ти можеш використовувати блоки `стрибків` для переміщення в інші місця без малюнку."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Якщо не розумієш де розмістити `повторні` цикли, випиши покроково код і пошукай зразок.",
+          "courseB_collector_loops10_b": "Спробуй записати рухи на аркуші паперу і пошукати зразок."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Блок <xml><block type=\"collector_collect_simplified\"/></xml> можна використовувати та забрати скарб, якщо ти стоїш на ньому."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Рухайся та забирай скарби.",
+          "courseB_collector_loops2_b": "Коли дістанешся місця зі скарбом, використовуй блок <xml><block type=\"collector_collect\"/></xml>, щоб забрати його."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Спробуй використати блок <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> та забрати свій скарб.",
+          "courseB_collector_prog3_b": "Пам'ятай, ти можеш вставити більше одного блоку в повторний цикл."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "Спробуйте скористатися кнопкою \"Крок\" та дізнайся в чому проблема.",
+          "courseB_collector_loops4_b": "Для зміни відстані, яку має пройти Лорел, зміни кількість циклів, які будуть повторюватися.",
+          "courseB_collector_loops4_c": "Лорел має спуститися вниз та забрати скарб після завершення  `повторного` циклу <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Використовуй більше одного циклу для виконання завдання.",
+          "courseB_collector_loops5_b": "Спробуй запустити код кілька разів і побачиш, що станеться."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Не можеш зрозуміти в чому проблема? Використовуй кнопку \"Крок\" для виконання програми по одному блоку одночасно.",
+          "courseB_collector_loops6_b": "Ти можеш змінити кількість повторних циклів, натиснувши на \"3\" та обравши інше число.",
+          "courseB_collector_loops6_c": "Для розв'язання цього завдання використай 3 `повторні` цикли <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>.",
+          "courseB_collector_loops6_d": "Якщо ти заплутався, спробуйте розбити це завдання на 3 частини."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Якщо тобі важко виконати це завдання, спробуй намалювати його на папері, це допоможе вирішити його.",
+          "courseB_collector_loops7_b": "Тобі знадобиться 3 повторні цикли, щоб виконати це завдання, і не забудь про додатковий скарб в кінці!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Якщо не розумієш де розмістити повторні цикли, випиши покроково код і пошукай зразок."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Тобі здається це занадто складним?  Розбий завдання на 3 невеликі частини, це полегшить його виконання.",
+          "courseB_collector_loops9_b": "Для цього завдання тобі знадобиться 3 повторні цикли."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Почни створювати цикл наступних команд:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>.",
+          "courseB_collector_loops_challenge1_c": "Рухайся на Схід двічі між кожним шляхом.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nТи можеш зробити це лише з 14 блоками. Натисни на ще одну підказку та отримаєш рішення.",
+          "courseB_collector_loops_challenge1_d": "Спробуй!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Якщо в тебе виникли проблеми, спробуй виправити їх. Не здавайтеся!",
+          "courseB_collector_loops_challenge2a_b": "Поглянь на цей варіант проходження лабіринту. Чи бачиш ти зразок, який можеш повторити?",
+          "courseB_collector_loops_challenge2a_c": "Щоб зібрати усі скарби додай два блоки <xml> <block type=\"collector_collect\"/></xml> всередину циклу або встав блок всередину `повторного` блоку."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Обережно, крига тріснула! Скрет може впасти у воду!",
+          "courseB_iceage_loops10_b": "Спробуй проговорити кроки вголос або записати їх на аркуші паперу. Чи побачив ти малюнок?",
+          "courseB_iceage_loops10_c": "Це довге завдання! Йди цим шляхом."
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "Обережно, крига тріснула! Скрет може провалитися!",
+          "courseB_iceage_loops1_b": "Ти маєш використовувати цей блок:\n\n<xml><block type=\"maze_moveEast\"/></xml>."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Використовуй цей новий блок!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>.",
+          "courseB_iceage_loops3_b": "Щоб повторити код, перетягни цикл `повторення` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, а потім розмісти всередині нього потрібний тобі блок."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "Твій кінцевий код матиме **три** блоки для руху.",
+          "courseB_iceage_loops6_b": "Тобі потрібно лише створити **один** додатковий цикл!",
+          "courseB_iceage_loops6_c": "Твій кінцевий маршрут виглядає так."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Якщо ти застряг, спробуй записати кроки на аркуші паперу. Побачив малюнок?",
+          "courseB_iceage_loops7_b": "Цим шляхом має піти Скрет, щоб дістатися жолудя."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "Перевір, чи правильні блоки для руху? Що ще можна змінити?",
+          "courseB_iceage_loops8_b": "Перший цикл має повторюватися **3** рази, другий - **5** разів, третій - **4** рази та останній - **4** рази.",
+          "courseB_iceage_loops8_c": "Використовуй цикли, щоб допомогти Скрету пройти цим шляхом."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "Потрапив у халепу? Спробуйте розбити завдання на менші частинки. Не бійся виконувати завдання під час кодування!",
+          "courseB_iceage_loops9_b": "Твій кінцевий код має містити **4** цикли.",
+          "courseB_iceage_loops9_c": "Скрет має пройти цим шляхом та дістати жолудь."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "У цьому блозі Дейзі має щось сказати:\n\n[blockly block][][0]"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "У цьому блозі необхідно додавати подію:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>.",
+          "courseB_playlab_events3_b": "У цьому блозі ти можеш змінити настрій Дейзі:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Це подія, яка керує стрілкою ліворуч:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>.",
+          "courseB_playlab_events4_b": "Це блок, який змушує лицаря рухатися ліворуч.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "Це блок подій, який керує стрілкою ліворуч:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>.",
+          "courseB_playlab_events5_b": "Це блок, який змушує лицаря тікати.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "Це блок подій, який тобі потрібен:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>.",
+          "courseB_playlab_events7_b": "Це блок, необхідний для відтворення звуку.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "Це блок, який тобі потрібен, щоб змусити лицаря зникнути:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Зроби так, щоб інші тварини рухалися вниз при натисканні стрілки `▼`.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Змінюй швидкість тварин за допомогою цього блоку:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>.",
+          "courseB_playlab_events_challenge1_c": "Що скажуть учасники, коли перегони закінчаться? Зроби так, щоб вони говорили за допомогою цієї події:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Кожна тварина в грі має зникати при натисканні на неї. Також вона має з'являтися через секунду-дві!",
+          "courseB_playlab_events_challenge2_b": "Використовуй інші блоки подій та зроби так, щоб інші тварини зникли!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "Використовуй додаткові команди для відтворення звуків або заробляй бали при натисканні на тварин!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Спробуй змішувати!\n\nЗроби так, щоб одні тварини давали більше балів, ніж інші.\nВикористовуй різні звуки.\nЗмінюй настрій тварин!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "Спробуй додати блоки по одному, а потім натисни \"Пуск\" і побачиш, що станеться.",
+          "courseB_starWars_prog1_b": "Для вирішення задачки тобі потрібно буде дістатися Сходу. Як далеко тобі потрібно йти?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "Розділи цю задачку на дві частини. Знайди одну груду металолому, а потім придумай, як дістатися до іншої."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Для вирішення цієї задачки тобі потрібно пройти 3 шляхи.",
+          "courseB_starWars_prog3_b": "Створюй по одному фрагменту коду за раз. Запусти його та з'ясуй, куди рухатися далі."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Створюй по одному фрагменту коду за раз. Запусти його та з'ясуй, куди рухатися далі.",
+          "courseB_starWars_prog4_b": "Спробуй використовувати блок `повторення` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "Чи не схожий цей малюнок на попередню задачку?",
+          "courseB_starWars_prog5_b": "BB-8 буде збирати металолом, коли буде перекидатися через нього.",
+          "courseB_starWars_prog5_c": "Обведи цей малюнок пальчиком. Порахуй шматочки металу під час руху.",
+          "courseB_starWars_prog5_da": "Поглянь, що станеться, якщо використовувати той самий розв'язок, що й у задачі зі сходами:"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "Цей малюнок - це лише сходинка з двома рухами в кожному напрямку!",
+          "courseB_starWars_prog6_b": "Спробуй використовувати блок `повторення` для скорочення коду.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "Чи не схожий цей малюнок на попередню задачку?",
+          "courseB_starWars_prog7_b": "BB-8 буде збирати металолом, коли буде перекидатися через нього.",
+          "courseB_starWars_prog7_c": "Спробуй намалювати великий малюнок сходинок поверх цієї задачки. Чи покриває він увесь металолом?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "Усе добре, ти можеш повертатися до певного набору локацій, де ти вже побував.",
+          "courseB_starWars_prog8_b": "Спробуй використовувати блок `повторення` і побачиш що станеться з кодом, який ти додав всередину.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         }
       }
     }

@@ -159,7 +159,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "text"
+          "text": "text",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -202,7 +203,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "text"
+          "text": "text",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "walking": "naglalakad",
@@ -615,7 +617,8 @@
           "white": "puti"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "title"
@@ -648,7 +651,8 @@
           "low": "mababa"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "I-update"
+          "Update": "I-update",
+          "value": "value"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Nagawa mo ito!"
@@ -723,16 +727,20 @@
           "Success!": "Tagumpay!"
         },
         "CSD U6 analog light": {
-          "Update": "I-update"
+          "Update": "I-update",
+          "value": "value"
         },
         "CSD U6 analog light_2018": {
-          "Update": "I-update"
+          "Update": "I-update",
+          "value": "value"
         },
         "CSD U6 analog light_2019": {
-          "Update": "I-update"
+          "Update": "I-update",
+          "value": "value"
         },
         "CSD U6 analog light_2021": {
-          "Update": "I-update"
+          "Update": "I-update",
+          "value": "value"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -811,16 +819,20 @@
           "Medium": "Medium"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 frequency": {
           "short": "maikli",
@@ -1644,6 +1656,90 @@
           "night": "gabi",
           "dusk": "Takipsilim",
           "Predict": "Hula"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Gawin akong mas malaki at kulay asul!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Gawin akong pula!",
+          "Make me blue!": "Gawin akong asul!",
+          "Write code to change my text!": "Sumulat ng code upang baguhin ang text ko!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Berde-hin!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Flashlight na App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "Kabayo!",
+          "You Choose!": "Pumili Ka!",
+          "Animal Sound Board!!!": "Board ng Tunog ng Hayop!!!",
+          "Monkey!": "Unggoy!",
+          "Tiger!": "Tigre!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Ito!",
+          "This or That?!": "Ito o Iyon?!",
+          "You clicked this!": "Na-click mo ito!"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "value"
+        },
+        "CSD U6 analog change": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "value"
+        },
+        "CSD U6 analog data": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "value"
+        },
+        "CSD U6 analog sound": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "value"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "value"
         }
       }
     }

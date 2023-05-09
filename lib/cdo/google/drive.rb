@@ -50,8 +50,8 @@ module Google
       file = @session.file_by_title(path_to_title_array(path))
       return nil if file.nil?
       Google::Drive::File.new(@session, file)
-    rescue GoogleDrive::Error => e
-      ChatClient.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
+    rescue GoogleDrive::Error => exception
+      ChatClient.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{exception.message}</code></pre>", color: 'yellow'
       return nil
     end
 
@@ -132,9 +132,7 @@ module Google
       document.acl
     end
 
-    private
-
-    def path_to_title_array(path)
+    private def path_to_title_array(path)
       titles = path.split(::File::SEPARATOR).map {|x| x == '' ? ::File::SEPARATOR : x}
       titles.unshift 'Pegasus'
       titles

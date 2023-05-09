@@ -71,11 +71,17 @@
         "k5-onlinepd-2019/For Loops": {
           "name": "For tsükkel"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
+        },
         "K5-OnlinePD/Next Steps": {
           "name": "Järgmised sammud"
         },
         "netsim/Manual DNS": {
           "name": "Manuaalne DNS"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Arvutiteaduse alused"
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Järgmised sammud"
@@ -121,6 +127,9 @@
         },
         "csd3-2022/Variables": {
           "name": "Muutujad"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Spraidid"
         },
         "csd3-2022/Text": {
           "name": "Tekst"
@@ -272,6 +281,9 @@
         "csd3-2018/Variables": {
           "name": "Muutujad"
         },
+        "csd3-2018/Sprites": {
+          "name": "Spraidid"
+        },
         "csd3-2018/Conditionals": {
           "name": "Tingimuslaused"
         },
@@ -353,6 +365,9 @@
         "csd3-2019/Variables": {
           "name": "Muutujad"
         },
+        "csd3-2019/Sprites": {
+          "name": "Spraidid"
+        },
         "csd3-2019/Conditionals": {
           "name": "Tingimuslaused"
         },
@@ -421,6 +436,9 @@
         },
         "csd3-2017/Variables": {
           "name": "Muutujad"
+        },
+        "csd3-2017/Sprites": {
+          "name": "Spraidid"
         },
         "csd3-2017/Conditionals": {
           "name": "Tingimuslaused"
@@ -814,6 +832,9 @@
         },
         "csd3-2021/Variables": {
           "name": "Muutujad"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Spraidid"
         },
         "csd3-2021/Text": {
           "name": "Tekst"

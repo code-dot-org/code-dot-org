@@ -162,6 +162,9 @@
         "virtual_lesson_modifications/coursed/2022": {
           "name": "Úpravy virtuálnych lekcií"
         },
+        "extension_lessons_micro_bit/coursed/2022": {
+          "type": "Zdroj"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Silnejšie heslá: situácie ak/tak",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
@@ -374,6 +377,9 @@
         "virtual_lesson_modifications/coursef/2022": {
           "name": "Úpravy virtuálnych lekcií"
         },
+        "extension_lessons_micro_bit/coursef/2022": {
+          "type": "Zdroj"
+        },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Objav silu slov: kvíz pre lekciu",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
@@ -548,6 +554,9 @@
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "Úpravy virtuálnych lekcií"
+        },
+        "extension_lessons_micro_bit/coursee/2022": {
+          "type": "Zdroj"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Buď super digitálny občan: snímky pre lekciu",
@@ -908,7 +917,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -1234,6 +1243,9 @@
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "Úpravy virtuálnych lekcií"
+        },
+        "extension_lessons_micro_bit/coursec/2022": {
+          "type": "Zdroj"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "STOP zákernosti na internete: Prezentácia k lekcii",
@@ -1876,12 +1888,12 @@
         },
         "cs_in_entertainment/csd/2022": {
           "name": "Informatika v oblasti zábavy",
-          "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
+          "url": "https://docs.google.com/document/d/1rwllcnenhxfB0TlDFoNsoynafewg3FnKvRQ6It9ip4M",
           "type": "Sprievodca aktivitou"
         },
         "cs_in_entertainment_1/csd/2022": {
           "name": "Informatika v oblasti zábavy",
-          "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
+          "url": "https://docs.google.com/document/d/16RuelgpCshUu7sZRIPcfzImsUq8LaI1SrVPBl2gm_Hk/edit",
           "type": "Príklad"
         },
         "programming_for_entertainment/csd/2022": {
@@ -1890,17 +1902,17 @@
         },
         "drawing_shapes/csd/2022": {
           "name": "Kreslenie tvarov",
-          "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
+          "url": "https://docs.google.com/document/d/1-fSmfBT9P5WGqLkv3PHRK_PFU5eKQKj2Cmtw_0sxpGw/edit",
           "type": "Príklad"
         },
         "drawing_shapes_version_a_/csd/2022": {
           "name": "Kreslenie tvarov (verzia A)",
-          "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
+          "url": "https://docs.google.com/document/d/1nqhvUotZY6Eq_yARq5DQeBVh66-DLgxkxS20gxl9wgE/",
           "type": "Sprievodca aktivitou"
         },
         "drawing_shapes_version_b_/csd/2022": {
           "name": "Kreslenie tvarov (verzia B)",
-          "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
+          "url": "https://docs.google.com/document/d/1U8MzSbBgFpoD9RA9juMlwoY8a3-rIqfc2phYGM4rCJs/",
           "type": "Sprievodca aktivitou"
         },
         "sample_shape_drawing/csd/2022": {
@@ -1909,7 +1921,7 @@
           "type": "Príklad"
         },
         "plotting_shapes/csd/2022": {
-          "name": "Tvorba tvarov",
+          "name": "Kreslenie tvarov",
           "type": "Prezentácia"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -1933,7 +1945,7 @@
         },
         "shapes_and_parameters_1/csd/2022": {
           "name": "Tvary a parametre",
-          "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1rM9FvqqmWieHGuB1Zsa7o6yzdzqTuCJLm3wF5Ur5tWs/view?usp=sharing",
           "type": "Zdroj"
         },
         "shapes_and_parameters_2/csd/2022": {
@@ -1951,7 +1963,7 @@
         },
         "variables/csd/2022": {
           "name": "Premenné",
-          "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
+          "url": "https://docs.google.com/document/d/1lvmOUOZxA7yxXx4Vaqz7Q5eL1GMr1zEvGShsLARVHKg/view",
           "type": "Zdroj"
         },
         "variables_3/csd/2022": {
@@ -1991,12 +2003,12 @@
           "type": "Prezentácia"
         },
         "sprite_properties/csd/2022": {
-          "name": "Vlastnosti postáv",
+          "name": "Vlastnosti sprajtov",
           "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Zdroj"
         },
         "sprite_properties_1/csd/2022": {
-          "name": "Vlastnosti postáv",
+          "name": "Vlastnosti sprajtov",
           "type": "Prezentácia"
         },
         "text/csd/2022": {
@@ -2005,21 +2017,21 @@
         },
         "captioned_scenes/csd/2022": {
           "name": "Scény s titulkami",
-          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
+          "url": "https://docs.google.com/document/d/1YNLFv6CIchtER-R1vDSfADrZ4Q0cjr9wVlZzfD1ZqbM",
           "type": "Hodnotenie"
         },
         "mini_project_-_captioned_scenes/csd/2022": {
           "name": "Mini projekt - Scény s titulkami",
-          "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
+          "url": "https://docs.google.com/document/d/1qobv1DM5JgsfgGW2NYXv1HdxYIWZ5D66fs4tDbu2oXs",
           "type": "Príklad"
         },
         "sprite_scene_planning/csd/2022": {
           "name": "Plánovanie scény so sprajtmi",
-          "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
+          "url": "https://docs.google.com/document/d/15vY5COdQFFjfmgeapmAmCMGXu6RG63w9G_2h_bTPEJs",
           "type": "Sprievodca aktivitou"
         },
         "mini-project_-_captioned_scenes/csd/2022": {
-          "name": "Miniprojekt – Scény s popismi",
+          "name": "Miniprojekt – Scény s titulkami",
           "type": "Prezentácia"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
@@ -2033,15 +2045,15 @@
         },
         "random_dot_flipbook/csd/2022": {
           "name": "Flipbook s náhodnou bodkou",
-          "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
+          "url": "https://docs.google.com/drawings/d/1jhHixUyRdE_BWqTWCzMWliY__I4_OHwGgNMcNfVedFU"
         },
         "random_sprite_flipbook/csd/2022": {
           "name": "Flipbook s náhodným sprajtom",
-          "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
+          "url": "https://docs.google.com/drawings/d/1jyE41t-q9QYN0RHjs-ZwXpGfXSvsrHVyNfvOwzH7VMc"
         },
         "the_draw_loop/csd/2022": {
           "name": "Cyklus kreslenia",
-          "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1HVIqBJvUbv34ldvDvWL0btrbATDCdEr3G8GfvNcihHQ",
           "type": "Zdroj"
         },
         "the_draw_loop_1/csd/2022": {
@@ -2054,7 +2066,7 @@
           "type": "Video"
         },
         "the_counter_pattern/csd/2022": {
-          "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1AIFFe20suvI1G4xZVQq8cyaijIUwR0a-wEBgAN0o3zw",
           "type": "Zdroj"
         },
         "sprite_movement_1/csd/2022": {
@@ -2073,7 +2085,7 @@
         },
         "animated_scene_planning/csd/2022": {
           "name": "Plánovanie animovanej scény",
-          "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/17p2hgJh0qNBFWv1XJr67A4TTpWSi8jfSLU8xgA0ETyo",
           "type": "Príklad"
         },
         "mini-project_-_animation/csd/2022": {
@@ -2096,7 +2108,7 @@
           "type": "Video"
         },
         "if_statements/csd/2022": {
-          "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1MarYd5QGZXdejwGQbd4a8iuOQWXmi114QpE8u_e9N30",
           "type": "Zdroj"
         },
         "conditionals/csd/2022": {
@@ -2104,12 +2116,12 @@
           "type": "Prezentácia"
         },
         "keyboard_input/csd/2022": {
-          "name": "Stlačenie kláves ako vstup",
+          "name": "Vstup z klávesnice",
           "type": "Prezentácia"
         },
         "if-else_statements/csd/2022": {
           "name": "Výroky \"If-Else\"",
-          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1CKETr-MNCTCGrJSuoeGN9fZEweNa5Kv9o5Q4dWUh2Us",
           "type": "Zdroj"
         },
         "if_else_statements/csd/2022": {
@@ -2118,7 +2130,7 @@
           "type": "Video"
         },
         "mouse_input/csd/2022": {
-          "name": "Vstup myši",
+          "name": "Vstup pomocou myši",
           "type": "Prezentácia"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
@@ -2128,31 +2140,31 @@
         },
         "interactive_card/csd/2022": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
+          "url": "https://docs.google.com/document/d/12I6aGW1eFhS3zYYLHNaAkNJ2kXzL_RA2VIQ_q82nfs0",
           "type": "Príklad"
         },
         "interactive_card_-_marked_rubrics/csd/2022": {
           "name": "Interaktívna pohľadnica – Vyplnené hodnotiace tabuľky",
-          "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
+          "url": "https://docs.google.com/document/d/1V0Em5XHUoMHHWVnbjkcfxhWdpPaXoorTHJbVqOK_Cqs/view",
           "type": "Príklad"
         },
         "interactive_card_-_student_checklist/csd/2022": {
           "name": "Interaktívna pohľadnica – kontrolný zoznam pre žiakov",
-          "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
+          "url": "https://docs.google.com/document/d/18e2-mRbHzqnWmaZ1mVKyl1On4wDbtyj2Y6rMJqWuGKw/view"
         },
         "interactive_card_1/csd/2022": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+          "url": "https://docs.google.com/document/d/1ahRmIusyp6GReYwuVVtvdSHeWx7ajCOwKER8sx4eyBQ",
           "type": "Sprievodca projektom"
         },
         "interactive_card_2/csd/2022": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+          "url": "https://docs.google.com/document/d/1PGYVWLUlhAXW319S8QBWag5yIbHYcumMJdFZVU9Ub5Y",
           "type": "Vzájomné hodnotenie"
         },
         "interactive_card_3/csd/2022": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+          "url": "https://docs.google.com/document/d/1Cqk8xRILvTk3F8ed2VPUU9CrHEfd0RXt0YnWoSOXyu8/view",
           "type": "Hodnotenie"
         },
         "project_-_interactive_card/csd/2022": {
@@ -2175,7 +2187,7 @@
         },
         "collision_detection/csd/2022": {
           "name": "Detekcia kolízie",
-          "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
+          "url": "https://docs.google.com/document/d/1HED2LZc3I4b7rArFjjAsrLUTDcyzCLmrVVV7wGnwyJc",
           "type": "Príklad"
         },
         "collision_detection_1/csd/2022": {
@@ -2185,12 +2197,12 @@
         },
         "collision_detection_version_a_/csd/2022": {
           "name": "Detekcia kolízie (Verzia A)",
-          "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
+          "url": "https://docs.google.com/document/d/1I7zW3dIizDMczymcQE11ZTDrZ5H5x2XSzHY_Vu4AeT0",
           "type": "Sprievodca aktivitou"
         },
         "collision_detection_version_b_/csd/2022": {
           "name": "Detekcia kolízie (Verzia B)",
-          "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
+          "url": "https://docs.google.com/document/d/11_nrTTWY6YlIXEUrbmY51ZEDyDD1HmsxWrcIoPrSB28",
           "type": "Sprievodca aktivitou"
         },
         "collision_detection_2/csd/2022": {
@@ -2199,25 +2211,25 @@
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
           "name": "Sprievodca miniprojektom – Plošinovka",
-          "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1lhtTnmb3n-aIzd_lkaubyrhSS7AT-zhYMLMOgKOlpBs",
           "type": "Príklad"
         },
         "side_scroller/csd/2022": {
-          "name": "Posúvačka (side-scroller)",
-          "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
+          "name": "Plošinovka",
+          "url": "https://docs.google.com/document/d/1r6BHgFCzWa4z9vyhnEeGvOgU-Nc4GUg2nEhM2tHPrHs",
           "type": "Hodnotenie"
         },
         "side_scroller_1/csd/2022": {
-          "name": "Posúvačka (side-scroller)",
-          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+          "name": "Plošinovka",
+          "url": "https://docs.google.com/document/d/1mbF_MTRWs9cRinZo4Z7Pp_XZG3e8Ge4b_G8to9S78iI",
           "type": "Sprievodca projektom"
         },
         "mini-project_-_side_scroller/csd/2022": {
-          "name": "Miniprojekt – Side-scroller",
+          "name": "Miniprojekt – Plošinovka",
           "type": "Prezentácia"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
-          "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/19muHWImy346SLK-4w9SSHYBvEww743ACHvqii_c6F9w",
           "type": "Zdroj"
         },
         "complex_sprite_movement/csd/2022": {
@@ -2230,17 +2242,17 @@
         },
         "flyer_game/csd/2022": {
           "name": "Lietacia hra",
-          "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
+          "url": "https://docs.google.com/document/d/1Fvc7tcwn9ydzSMpT_-LIAZsNbIkTJREfLTbUJfoWbsk",
           "type": "Hodnotenie"
         },
         "flyer_game_-_project_guide/csd/2022": {
           "name": "Lietacia hra – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1lk8VFIEXHizllnRkEqduerDgcnN7DJq97kaVBb8JzIc",
           "type": "Príklad"
         },
         "flyer_game_1/csd/2022": {
           "name": "Lietacia hra",
-          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+          "url": "https://docs.google.com/document/d/1vs96-pUZXmwqGNEdEiFb-lWe0y1as1UYBM0lXxVy7IQ",
           "type": "Sprievodca projektom"
         },
         "mini-project_-_flyer_game/csd/2022": {
@@ -2263,10 +2275,10 @@
         },
         "defender_game/csd/2022": {
           "name": "Hra Obranca",
-          "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
+          "url": "https://docs.google.com/document/d/1as39KREuCA4n8EL1t5Wh2mdLOXz6xFHQbePe7b38YB4/edit"
         },
         "the_game_design_process/csd/2022": {
-          "name": "Proces tvorby hry",
+          "name": "Proces návrhu hry",
           "type": "Prezentácia"
         },
         "planning_your_platform_game/csd/2022": {
@@ -2280,7 +2292,7 @@
           "type": "Sprievodca aktivitou"
         },
         "using_the_game_design_process/csd/2022": {
-          "name": "Využitie procesu na tvorbu hry",
+          "name": "Využitie procesu návrhu hry",
           "type": "Prezentácia"
         },
         "make_your_own_game/csd/2022": {
@@ -3267,7 +3279,7 @@
         },
         "classifying_fish/csd/2022": {
           "name": "Klasifikácia rýb",
-          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "url": "https://docs.google.com/document/d/1xExZMqHs0IjK9UVexgfOcJ6Ifc-YgdSFUbYxhsVJixw/view",
           "type": "Sprievodca aktivitou"
         },
         "introduction_to_machine_learning/csd/2022": {
@@ -3280,7 +3292,7 @@
         },
         "types_of_machine_learning_1/csd/2022": {
           "name": "Typy strojového učenia",
-          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+          "url": "https://docs.google.com/document/d/1WgWI_zD_Hjji-dtWRNotvu3W6-jJNFhIvxR_DGw_XsE",
           "type": "Sprievodca aktivitou"
         },
         "types_of_machine_learning_2/csd/2022": {
@@ -3587,15 +3599,17 @@
         },
         "creating_an_app/csd/2022": {
           "name": "Vytvorenie aplikácie",
+          "url": "https://docs.google.com/presentation/d/1vsx4g90Arh8UchtI_AUa7o3nCfwDFskJAQMtzdTfjGE/template/preview",
           "type": "Prezentácia"
         },
         "_template_5_why_s/csd/2022": {
           "name": "[Šablóna] 5 prečo",
-          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
+          "url": "https://docs.google.com/presentation/d/1oQ5KjfU2yx23ujAXw4uHRAOohbmgQCb0s8iK345eKhc/edit",
           "type": "Zdroj"
         },
         "design_an_ai_app/csd/2022": {
           "name": "Návrh aplikácie umelej inteligencie",
+          "url": "https://docs.google.com/presentation/d/1pQWBcO3h7kzL4cDLeeC5CKw0l0IU2mP57txEmHtbODI/template/preview",
           "type": "Prezentácia"
         },
         "design_an_ai_app_-_project_guide/csd/2022": {
@@ -4150,7 +4164,7 @@
           "type": "Zdroj"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -5236,7 +5250,7 @@
           "type": "Zdroj"
         },
         "sprites_in_action/express/2021": {
-          "name": "Postavy v akcii",
+          "name": "Sprajty v akcii",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "Prezentácia"
         },
@@ -5572,7 +5586,7 @@
         },
         "classifying_fish/csd/2021": {
           "name": "Klasifikácia rýb",
-          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "url": "https://docs.google.com/document/d/1xExZMqHs0IjK9UVexgfOcJ6Ifc-YgdSFUbYxhsVJixw/view",
           "type": "Sprievodca aktivitou"
         },
         "introduction_to_machine_learning/csd/2021": {
@@ -5592,7 +5606,7 @@
         },
         "types_of_machine_learning_1/csd/2021": {
           "name": "Typy strojového učenia",
-          "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+          "url": "https://docs.google.com/document/d/1WgWI_zD_Hjji-dtWRNotvu3W6-jJNFhIvxR_DGw_XsE",
           "type": "Sprievodca aktivitou"
         },
         "types_of_machine_learning_2/csd/2021": {
@@ -5918,17 +5932,17 @@
         },
         "creating_an_app/csd/2021": {
           "name": "Vytvorenie aplikácie",
-          "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
+          "url": "https://docs.google.com/presentation/d/1vsx4g90Arh8UchtI_AUa7o3nCfwDFskJAQMtzdTfjGE/copy",
           "type": "Prezentácia"
         },
         "_template_5_why_s/csd/2021": {
           "name": "[Šablóna] 5 prečo",
-          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
+          "url": "https://docs.google.com/presentation/d/1oQ5KjfU2yx23ujAXw4uHRAOohbmgQCb0s8iK345eKhc/edit",
           "type": "Zdroj"
         },
         "design_an_ai_app/csd/2021": {
           "name": "Návrh aplikácie umelej inteligencie",
-          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
+          "url": "https://docs.google.com/presentation/d/1pQWBcO3h7kzL4cDLeeC5CKw0l0IU2mP57txEmHtbODI/copy",
           "type": "Prezentácia"
         },
         "design_an_ai_app_-_project_guide/csd/2021": {
@@ -6518,22 +6532,22 @@
         },
         "cs-entertainment-activity/csd/2021": {
           "name": "Informatika v oblasti zábavy",
-          "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
+          "url": "https://docs.google.com/document/d/1rwllcnenhxfB0TlDFoNsoynafewg3FnKvRQ6It9ip4M",
           "type": "Sprievodca aktivitou"
         },
         "cs_in_entertainment/csd/2021": {
           "name": "Informatika v oblasti zábavy",
-          "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
+          "url": "https://docs.google.com/document/d/16RuelgpCshUu7sZRIPcfzImsUq8LaI1SrVPBl2gm_Hk/edit",
           "type": "Príklad"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "Objavujeme informatiku – Lekcia 3 - Interaktívne animácie a hry",
-          "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
+          "url": "https://docs.google.com/presentation/d/11PlPXbWqenlbu8dozL1tiLEyElDufkML60xLWigUc2I/",
           "type": "Prezentácia"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Kreslenie tvarov",
-          "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
+          "url": "https://docs.google.com/document/d/1-fSmfBT9P5WGqLkv3PHRK_PFU5eKQKj2Cmtw_0sxpGw/edit",
           "type": "Príklad"
         },
         "colored-shape-drawing/csd/2021": {
@@ -6543,12 +6557,12 @@
         },
         "drawing_shapes_version_b_/csd/2021": {
           "name": "Kreslenie tvarov (verzia B)",
-          "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
+          "url": "https://docs.google.com/document/d/1U8MzSbBgFpoD9RA9juMlwoY8a3-rIqfc2phYGM4rCJs/",
           "type": "Sprievodca aktivitou"
         },
         "drawing_shapes_version_a_/csd/2021": {
           "name": "Kreslenie tvarov (verzia A)",
-          "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
+          "url": "https://docs.google.com/document/d/1nqhvUotZY6Eq_yARq5DQeBVh66-DLgxkxS20gxl9wgE/",
           "type": "Sprievodca aktivitou"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
@@ -6563,7 +6577,7 @@
         },
         "drawing_shapes/csd/2021": {
           "name": "Kreslenie tvarov",
-          "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1UA2V-2K-Y7bWhEKNYa9cnMZLXCDroZf22KthXEhwzT4/view?usp=sharing",
           "type": "Zdroj"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
@@ -6573,7 +6587,7 @@
         },
         "shapes_and_parameters/csd/2021": {
           "name": "Tvary a parametre",
-          "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1rM9FvqqmWieHGuB1Zsa7o6yzdzqTuCJLm3wF5Ur5tWs/view?usp=sharing",
           "type": "Zdroj"
         },
         "introduction-to-variables/csd/2021": {
@@ -6587,7 +6601,7 @@
         },
         "variables_1/csd/2021": {
           "name": "Premenné",
-          "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
+          "url": "https://docs.google.com/document/d/1lvmOUOZxA7yxXx4Vaqz7Q5eL1GMr1zEvGShsLARVHKg/view",
           "type": "Zdroj"
         },
         "random_numbers/csd/2021": {
@@ -6621,26 +6635,26 @@
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
           "name": "Mini projekt - Scény s titulkami",
-          "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
+          "url": "https://docs.google.com/document/d/1qobv1DM5JgsfgGW2NYXv1HdxYIWZ5D66fs4tDbu2oXs",
           "type": "Príklad"
         },
         "captioned-scenes/csd/2021": {
           "name": "Scény s titulkami",
-          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
+          "url": "https://docs.google.com/document/d/1YNLFv6CIchtER-R1vDSfADrZ4Q0cjr9wVlZzfD1ZqbM",
           "type": "Hodnotenie"
         },
         "sprite-scene-planning/csd/2021": {
           "name": "Plánovanie scény so sprajtmi",
-          "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
+          "url": "https://docs.google.com/document/d/15vY5COdQFFjfmgeapmAmCMGXu6RG63w9G_2h_bTPEJs",
           "type": "Sprievodca aktivitou"
         },
         "random-dot-flipbook/csd/2021": {
           "name": "Flipbook s náhodnou bodkou",
-          "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
+          "url": "https://docs.google.com/drawings/d/1jhHixUyRdE_BWqTWCzMWliY__I4_OHwGgNMcNfVedFU"
         },
         "random-sprite-flipbook/csd/2021": {
           "name": "Flipbook s náhodným sprajtom",
-          "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
+          "url": "https://docs.google.com/drawings/d/1jyE41t-q9QYN0RHjs-ZwXpGfXSvsrHVyNfvOwzH7VMc"
         },
         "youtube-flipbook/csd/2021": {
           "name": "Príklad flipbooku - od Marnic Bos",
@@ -6653,7 +6667,7 @@
         },
         "the_draw_loop/csd/2021": {
           "name": "Cyklus kreslenia",
-          "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1HVIqBJvUbv34ldvDvWL0btrbATDCdEr3G8GfvNcihHQ",
           "type": "Zdroj"
         },
         "animating-sprites/csd/2021": {
@@ -6662,12 +6676,12 @@
           "type": "Video"
         },
         "the_counter_pattern/csd/2021": {
-          "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1AIFFe20suvI1G4xZVQq8cyaijIUwR0a-wEBgAN0o3zw",
           "type": "Zdroj"
         },
         "animated-scene-planning-exemplar-2020/csd/2021": {
           "name": "Plánovanie animovanej scény",
-          "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/17p2hgJh0qNBFWv1XJr67A4TTpWSi8jfSLU8xgA0ETyo",
           "type": "Príklad"
         },
         "animated-scene-1/csd/2021": {
@@ -6696,12 +6710,12 @@
           "type": "Zdroj"
         },
         "if_statements/csd/2021": {
-          "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1MarYd5QGZXdejwGQbd4a8iuOQWXmi114QpE8u_e9N30",
           "type": "Zdroj"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
           "name": "Výroky \"If-Else\"",
-          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/1CKETr-MNCTCGrJSuoeGN9fZEweNa5Kv9o5Q4dWUh2Us",
           "type": "Zdroj"
         },
         "if_else_statements/csd/2021": {
@@ -6711,32 +6725,32 @@
         },
         "interactive-card-exemplar-2020/csd/2021": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
+          "url": "https://docs.google.com/document/d/12I6aGW1eFhS3zYYLHNaAkNJ2kXzL_RA2VIQ_q82nfs0",
           "type": "Príklad"
         },
         "interactive-card-marked-rubrics/csd/2021": {
           "name": "Interaktívna pohľadnica – Vyplnené hodnotiace tabuľky",
-          "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
+          "url": "https://docs.google.com/document/d/1V0Em5XHUoMHHWVnbjkcfxhWdpPaXoorTHJbVqOK_Cqs/view",
           "type": "Príklad"
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+          "url": "https://docs.google.com/document/d/1ahRmIusyp6GReYwuVVtvdSHeWx7ajCOwKER8sx4eyBQ",
           "type": "Sprievodca projektom"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+          "url": "https://docs.google.com/document/d/1PGYVWLUlhAXW319S8QBWag5yIbHYcumMJdFZVU9Ub5Y",
           "type": "Vzájomné hodnotenie"
         },
         "interactive_card/csd/2021": {
           "name": "Interaktívna pohľadnica",
-          "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+          "url": "https://docs.google.com/document/d/1Cqk8xRILvTk3F8ed2VPUU9CrHEfd0RXt0YnWoSOXyu8/view",
           "type": "Hodnotenie"
         },
         "interactive_card_-_student_checklist/csd/2021": {
           "name": "Interaktívna pohľadnica – kontrolný zoznam pre žiakov",
-          "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view"
+          "url": "https://docs.google.com/document/d/18e2-mRbHzqnWmaZ1mVKyl1On4wDbtyj2Y6rMJqWuGKw/view"
         },
         "extra_code_in_challenge_levels_1/csd/2021": {
           "name": "Extra kód na úrovniach úloh",
@@ -6755,17 +6769,17 @@
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Detekcia kolízie",
-          "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
+          "url": "https://docs.google.com/document/d/1HED2LZc3I4b7rArFjjAsrLUTDcyzCLmrVVV7wGnwyJc",
           "type": "Príklad"
         },
         "collision_detection_version_b_/csd/2021": {
           "name": "Detekcia kolízie (Verzia B)",
-          "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
+          "url": "https://docs.google.com/document/d/11_nrTTWY6YlIXEUrbmY51ZEDyDD1HmsxWrcIoPrSB28",
           "type": "Sprievodca aktivitou"
         },
         "collision_detection_version_a_/csd/2021": {
           "name": "Detekcia kolízie (Verzia A)",
-          "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
+          "url": "https://docs.google.com/document/d/1I7zW3dIizDMczymcQE11ZTDrZ5H5x2XSzHY_Vu4AeT0",
           "type": "Sprievodca aktivitou"
         },
         "collision_detection/csd/2021": {
@@ -6775,36 +6789,36 @@
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
           "name": "Sprievodca miniprojektom – Plošinovka",
-          "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1lhtTnmb3n-aIzd_lkaubyrhSS7AT-zhYMLMOgKOlpBs",
           "type": "Príklad"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Posúvačka (side-scroller)",
-          "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
+          "name": "Plošinovka",
+          "url": "https://docs.google.com/document/d/1r6BHgFCzWa4z9vyhnEeGvOgU-Nc4GUg2nEhM2tHPrHs",
           "type": "Hodnotenie"
         },
         "side-scroller/csd/2021": {
-          "name": "Posúvačka (side-scroller)",
-          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+          "name": "Plošinovka",
+          "url": "https://docs.google.com/document/d/1mbF_MTRWs9cRinZo4Z7Pp_XZG3e8Ge4b_G8to9S78iI",
           "type": "Sprievodca projektom"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
+          "url": "https://docs.google.com/document/d/19muHWImy346SLK-4w9SSHYBvEww743ACHvqii_c6F9w",
           "type": "Zdroj"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
           "name": "Lietacia hra – sprievodca projektom",
-          "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1lk8VFIEXHizllnRkEqduerDgcnN7DJq97kaVBb8JzIc",
           "type": "Príklad"
         },
         "flyer-game-1/csd/2021": {
           "name": "Lietacia hra",
-          "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
+          "url": "https://docs.google.com/document/d/1Fvc7tcwn9ydzSMpT_-LIAZsNbIkTJREfLTbUJfoWbsk",
           "type": "Hodnotenie"
         },
         "flyer-game/csd/2021": {
           "name": "Lietacia hra",
-          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+          "url": "https://docs.google.com/document/d/1vs96-pUZXmwqGNEdEiFb-lWe0y1as1UYBM0lXxVy7IQ",
           "type": "Sprievodca projektom"
         },
         "calling_and_defining_functions/csd/2021": {
@@ -6819,7 +6833,7 @@
         },
         "project-guide-defender-game/csd/2021": {
           "name": "Hra Obranca",
-          "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
+          "url": "https://docs.google.com/document/d/1as39KREuCA4n8EL1t5Wh2mdLOXz6xFHQbePe7b38YB4/edit"
         },
         "planning-your-platform-game-exemplar-2020/csd/2021": {
           "name": "Plánovanie plošinovky",

@@ -124,6 +124,9 @@
         "coursed-2022/Conditionals with Cards": {
           "name": "Υποθέσεις με Κάρτες"
         },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "coursef-2022/Sprites in Action": {
           "name": "Χαρακτήρες σε Δράση"
         },
@@ -182,6 +185,9 @@
         },
         "courseb-2022/Getting Loopy": {
           "name": "Επαναλαμβανόμαστε"
+        },
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
         "express-2022/Sprites in Action": {
           "name": "Χαρακτήρες σε Δράση"
@@ -579,6 +585,9 @@
         },
         "express-2019/While Loops in Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
+        },
+        "express-2019/Learning Sprites with Sprite Lab": {
+          "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
         "coursec-2019/Powerful Passwords": {
           "name": "Ισχυρά Συνθηματικά"
@@ -1088,6 +1097,12 @@
         "allthethings/lesson-48": {
           "name": "Ποίηση"
         },
+        "allthethings/lesson-49": {
+          "name": "Μουσική"
+        },
+        "coursef-2021/lesson-6": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "coursef-2021/lesson-8": {
           "name": "Χαρακτήρες σε Δράση"
         },
@@ -1198,6 +1213,9 @@
         },
         "coursed-2021/Until Loops in Maze": {
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
         "express-2021/lesson-3": {
           "name": "Χαρακτήρες σε Δράση"
@@ -1331,6 +1349,9 @@
         },
         "express-2020/While Loops with the Farmer": {
           "name": "Βρόχοι Ενώ με τον Αγρότη"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "Ψάρια που Κολυμπάνε στο εργαστήριο Sprite"
         },
         "courseb-2020/Move It, Move It": {
           "name": "Μετακίνησέ το, Μετακίνησέ το"

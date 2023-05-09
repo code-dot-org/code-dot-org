@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-01-06T19:59:34.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "placeholder": "Enter your reflection here.",
     "long_instructions": "How many bits would be needed to count all of the students in class today?",
@@ -18,8 +14,13 @@
     "encrypted_solution": "QsS08bS895/ADxuFalGCTO3RYVkkjiNk/5JctGPe5tMo8xfVzP6vZ+h/loNu\ni5/bSvXqj41PWftClU++MDp6GbMb17yxkRkNkhgtGONJTd0PZQ/PHvFgYkCH\nKK4vYk0SmDwMHH/HwLikK6nrrKFLxPW7vcgGLDTxzJLS8uS/fhuSlyGKWpZb\nc20KjqjfrCr/ou2q2Vhqpxp/yLd3urJPDndl+rNMcaYMQZLxEnmJtGFnuMi9\nvMcHYJObpKHeQqfo5Ny6GwFtMrcHergSEoMc/M55mJzWdVFUX4z3N4Mr8+8D\nmwj6ctMADdQU6nm7m9wz6NVSuoNKpd4tnJQaFExEYQ==\n",
     "encrypted": "false",
     "optional": "false",
-    "title": "Reflection: Bits Needed"
+    "title": "Reflection: Bits Needed",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-01-06T19:59:34.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-01-06T19:59:34.512+00:00\",\"changed\":[\"cloned from \\\"U1L5 CFU how many bits_2021\\\"\"],\"cloned_from\":\"U1L5 CFU how many bits_2021\"}]"

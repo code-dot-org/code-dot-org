@@ -53,7 +53,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "create assigns unique section codes" do
-    sections = 3.times.map do
+    sections = Array.new(3) do
       # Repeatedly seed the RNG so we get the same "random" codes.
       srand 1
       Section.create!(@default_attrs)
@@ -134,15 +134,42 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
-  test 'should raise error if grade is not valid' do
+  test 'should raise error if grades is not valid' do
     section1 = Section.create @default_attrs
 
     error = assert_raises do
-      section1.grade = 'fake_grade'
+      section1.grades = ['fake_grade']
       section1.save!
     end
 
-    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:'
+    assert_includes error.message, 'Grades must be one or more of the valid student grades'
+  end
+
+  test 'should raise error if grades contain pl and others' do
+    section1 = Section.create @default_attrs
+
+    error = assert_raises do
+      section1.grades = ['pl', '1']
+      section1.save!
+    end
+
+    assert_includes error.message, 'Grades cannot combine pl with other grades'
+  end
+
+  test 'grades are sorted on save' do
+    section = Section.create @default_attrs
+
+    section.update!(grades: ['12', '1', '5', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', '5', '12']
+
+    section.update!(grades: ['10', 'Other', '1', '2'])
+    section.reload
+    assert_equal section.grades, ['1', '2', '10', 'Other']
+
+    section.update!(grades: ['Other', '1', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', 'Other']
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
@@ -180,9 +207,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use pl grade' do
-    section = build :section, :teacher_participants, grade: 'Other'
+    section = build :section, :teacher_participants, grades: ['Other']
     refute section.valid?
-    assert_equal ['Grade must be pl for pl section.'], section.errors.full_messages
+    assert_equal ['Grades must be ["pl"] for pl section.'], section.errors.full_messages
   end
 
   test 'can not update participant type' do
@@ -190,7 +217,7 @@ class SectionTest < ActiveSupport::TestCase
 
     error = assert_raises do
       section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-      section.grade = 'pl'
+      section.grades = ['pl']
       section.save!
     end
 
@@ -437,7 +464,7 @@ class SectionTest < ActiveSupport::TestCase
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
@@ -486,7 +513,7 @@ class SectionTest < ActiveSupport::TestCase
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
@@ -538,7 +565,7 @@ class SectionTest < ActiveSupport::TestCase
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
@@ -583,7 +610,7 @@ class SectionTest < ActiveSupport::TestCase
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
@@ -667,17 +694,20 @@ class SectionTest < ActiveSupport::TestCase
     refute facilitator_section.can_join_section_as_participant?(student)
   end
 
-  test 'valid_grade? accepts K-12 and Other' do
-    assert Section.valid_grade?("K")
-    assert Section.valid_grade?("1")
-    assert Section.valid_grade?("6")
-    assert Section.valid_grade?("12")
-    assert Section.valid_grade?("Other")
+  test 'valid_grades? accepts K-12 and Other' do
+    assert Section.valid_grades?(["K"])
+    assert Section.valid_grades?(["1"])
+    assert Section.valid_grades?(["6"])
+    assert Section.valid_grades?(["12"])
+    assert Section.valid_grades?(["Other"])
+    assert Section.valid_grades?(["K", "1", "10", "Other"])
   end
 
-  test 'valid_grade? does not accept invalid numbers and strings' do
-    refute Section.valid_grade?("Something else")
-    refute Section.valid_grade?("56")
+  test 'valid_grades? does not accept invalid numbers and strings' do
+    refute Section.valid_grades?(["Something else"])
+    refute Section.valid_grades?(["56"])
+    refute Section.valid_grades?(["K", "1", "56", "Other"])
+    refute Section.valid_grades?([""])
   end
 
   test 'code review disabled for sections with no code review expiration' do

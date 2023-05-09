@@ -14,12 +14,12 @@ export default function AllCodeDocs({programmingEnvironments, allCategories}) {
   const ideSelectButtonStyle = {
     ...styles.button,
     ...styles.leftButton,
-    ...(ideSelected && styles.selectedButton)
+    ...(ideSelected && styles.selectedButton),
   };
   const docsSelectButtonStyle = {
     ...styles.button,
     ...styles.rightButton,
-    ...(!ideSelected && styles.selectedButton)
+    ...(!ideSelected && styles.selectedButton),
   };
 
   return (
@@ -76,33 +76,33 @@ export default function AllCodeDocs({programmingEnvironments, allCategories}) {
 
 AllCodeDocs.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  allCategories: PropTypes.arrayOf(PropTypes.object).isRequired
+  allCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const styles = {
   leftButton: {
     borderRadius: '4px 0px 0px 4px',
-    marginRight: 0
+    marginRight: 0,
   },
   rightButton: {
     borderRadius: '0px 4px 4px 0px',
-    marginLeft: 0
+    marginLeft: 0,
   },
   selectedButton: {
     color: 'white',
-    background: 'orange'
+    background: 'orange',
   },
   button: {
     fontSize: 'small',
-    padding: 5
+    padding: 5,
   },
   newLinks: {
     display: 'flex',
     justifyContent: 'flex-end',
-    gap: 25
+    gap: 25,
   },
   buttonRow: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };

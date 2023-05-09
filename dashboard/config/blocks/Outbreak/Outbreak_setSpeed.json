@@ -9,6 +9,7 @@
         "type": "Number",
         "field": true
       }
-    ]
+    ],
+    "style": "default"
   }
 }

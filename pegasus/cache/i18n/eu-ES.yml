@@ -23,12 +23,23 @@ eu-ES:
     Ikaskuntzaren Asteko (CSEdWeek) beste baliabide batzuk
   n_have_learned_an_hoc: "<h1>Saiatu egiten</h1><h2>Kode Ordua.</h2><h3>#-k egin dute
     jada</h3>"
+  try_hoc_num_served: "<h1>Probatu</h1><h2>kode-ordu bat</h2><h3>%{num} egin dute
+    jada</h3>"
+  try_hoc_num_served_markdown: |-
+    # Probatu bat
+
+    ## Kodearen ordua
+
+    ### %{num} egin dute jada #Try an
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
     aukera izan beharko luke
   petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
+  petition_sign_message_num: Ados bazaude, sinatu zure izena eta sartu gure posta-zerrendan
+    beste %{num}ekin batera.
   petition_join_others: 'Elkartu # gehiagorekin'
+  petition_join_others_num: Bat egin beste %{num}-rekin
   name: Izena
   email: E-posta
   zipcode: Posta kodea edo herrialdea

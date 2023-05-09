@@ -817,7 +817,7 @@ fr:
       1:
         text: "Une variable est un récipient dans lequel tu peux stocker une valeur. Quand tu utilises cette variable dans un algorithme, elle ouvre le récipient et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
-        text: "Par exemple, si je voulais écrire un algorithme pour dire : « Joyeux Anniversaire, tu vas avoir 10 ans ! » à mon petit frère, ce serait très bien pour l'heure, mais quand j’exécuterais l’algorithme l'année prochaine, j'aurais envie qu'il y soit indiqué : « Joyeux Anniversaire, tu vas avoir 11 ans ! ». Je pourrais donc créer une variable que j'appelerais « âge » pour stocker l'âge de mon frère et faire que mon algorithme indique plutôt : « Joyeux Anniversaire, tu as \"âge\" ». Comme les variables peuvent changer, chaque année, je pourrais mettre à jour la variable « âge » pour qu'elle soit égale à « âge » plus 1."
+        text: "Par exemple, si je voulais écrire un algorithme pour dire : « Joyeux Anniversaire, tu vas avoir 10 ans ! » à mon petit frère, ce serait très bien pour l'heure, mais quand j’exécuterais l’algorithme l'année prochaine, j'aurais envie qu'il y soit indiqué : « Joyeux Anniversaire, tu vas avoir 11 ans ! ». Je pourrais donc créer une variable que j'appelerais « âge » pour stocker l'âge de mon frère et faire que mon algorithme indique plutôt : « Joyeux Anniversaire, tu as « âge » ». Comme les variables peuvent changer, chaque année, je pourrais mettre à jour la variable « âge » pour qu'elle soit égale à « âge » plus 1."
       3:
         text: "Dans ce casse-tête, on va utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « avancer » examinera cette variable « longueur » pour voir à quelle valeur tu l’as fixée."
     C4_variables_playlab:
@@ -1610,7 +1610,7 @@ fr:
         text: "Le CPU est le composant maître qui contrôle toutes les autres parties de l'ordinateur. Un CPU a besoin d'exécuter différentes tâches, il est donc composé en interne de parties plus petites et plus simples pour réaliser chaque tâche spécifique. Il a des circuits dédiés aux maths simples et à la logique. Il a d'autres circuits qui envoient et reçoivent des informations vers et en provenance des autres composants de l'ordinateur."
       7:
         image: 'notes/csd_concept_hardware_software_7.png'
-        text: "La vraie magie du CPU est comment il connaît les circuits à utiliser et quand les utiliser. Le processeur reçois des commandes simples qui lui disent quel circuit utiliser pour une tâche spécifique. Par exemple, une commande \"add\" (ajouter) ordonne au processeur d'utiliser un de ses circuits externes pour calculer un nouveau nombre. Ensuite, la commande \"store\" (ranger) ordonne au processeur d'utiliser un autre circuit pour enregistrer le résultat dans la mémoire."
+        text: "La vraie magie du CPU est comment il connaît les circuits à utiliser et quand les utiliser. Le processeur reçois des commandes simples qui lui disent quel circuit utiliser pour une tâche spécifique. Par exemple, une commande « add » (ajouter) ordonne au processeur d'utiliser un de ses circuits externes pour calculer un nouveau nombre. Ensuite, la commande « store » (ranger) ordonne au processeur d'utiliser un autre circuit pour enregistrer le résultat dans la mémoire."
       8:
         image: 'notes/csd_concept_hardware_software_8.png'
         text: "Comme pour les nombres, toutes ces commandes simples peuvent être représentées en binaire par des zéros et des uns ou des signaux électriques ouvert et fermé. Les commandes binaires sont rangées dans la mémoire et le processeur accède à ces commandes en séquence, l'une après l'autre. Cette séquence de commandes est en fait un programme informatique très simple."
@@ -1657,7 +1657,7 @@ fr:
       9:
         text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule."
       10:
-        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle \"my_first_dancer\". Vous pouvez changer le nom en cliquant ici."
+        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle « my_first_dancer ». Vous pouvez changer le nom en cliquant ici."
       11:
         text: "Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace de jeu, avec ça."
       12:

@@ -34,7 +34,7 @@ module CircleUtils
   # @return [Set<Set<String>>] set of build tags in this build's commit message
   private_class_method def self.build_tags
     # Only parse the commit message once
-    @tags ||= circle_commit_message.
+    @build_tags ||= circle_commit_message.
         scan(/(?<=\[)[\w\d\s]+(?=\])/).
         map {|s| s.downcase.split.to_set}.
         to_set
@@ -42,6 +42,6 @@ module CircleUtils
 
   # In unit tests, we want to bypass the cache and recompute tags.
   def self.__clear_cached_tags_for_test
-    @tags = nil
+    @build_tags = nil
   end
 end

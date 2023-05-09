@@ -13,3 +13,4 @@ wrong "rocket-height(seconds) = seconds * 2"
 right "rocket-height(seconds) = seconds * seconds"
 wrong "rocket-height(seconds) = seconds * 4"
 wrong "rocket-height(seconds) = seconds * 16"
+allow_multiple_attempts true

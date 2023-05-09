@@ -52,7 +52,7 @@
         "mc": "Hora de Código de Minecraft",
         "minecraft": "Diseñador de Minecraft Hora de Código",
         "oceans": "Inteligencia Artificial para océanos",
-        "outbreak": "Simulador de Brotes Epidémicos",
+        "outbreak": "Simulación de Brote Epidémico",
         "pixelation": "Pixelación",
         "playlab": "Laboratorio de juegos",
         "poembot": "Botpoema",
@@ -68,7 +68,7 @@
         "poembot-hoc": "botpoema-hoc",
         "ai-ethics": "Ética en la Inteligencia Artificial - Actividad",
         "dance-unplugged": "Hora del Código - Fiesta de Baile - Desconectado",
-        "counting-csc": "Contando - Actividad",
+        "counting-csc": "Actividad de conteo",
         "explore-data-1": "Datos - Actividad",
         "outbreak-csc": "Epidemia",
         "spelling-bee": "Deletreando - Actividad",
@@ -377,7 +377,11 @@
         "physcomp-temp": "physcomp-temp",
         "hello-world-soccer": "Hola Mundo: Fútbol",
         "csa-collegeboard-labs": "AP CSA Laboratorio Magpie",
-        "playground": "Zona de juegos"
+        "playground": "Zona de juegos",
+        "blockchain": "Blockchain (cadena de bloques)",
+        "self-paced-pl-csc": "Preparación para Enseñar la Unidad 1 ",
+        "poemmaker": "poeta",
+        "web-development": "Desarrollo Web"
       }
     }
   }

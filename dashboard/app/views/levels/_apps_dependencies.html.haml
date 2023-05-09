@@ -7,6 +7,7 @@
 - use_applab ||= false
 - use_gamelab ||= false
 - use_weblab ||= false
+- use_ailab ||= false
 - hide_source ||= false
 - use_phaser ||= false
 - app_options[:locale] = js_locale
@@ -54,6 +55,10 @@
   - else
     %script{src: webpack_asset_path('js/blockly.js')}
     %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+
+-# ailab external repo dependencies
+- if use_ailab
+  %script{src: webpack_asset_path("js/#{js_locale}/mlPlayground_locale.js")}
 
 -# Common script dependencies
 %script{src: webpack_asset_path('js/common.js')}

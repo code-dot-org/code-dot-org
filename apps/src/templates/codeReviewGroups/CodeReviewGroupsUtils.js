@@ -9,7 +9,7 @@ export const generateNewGroup = () => {
   return {
     droppableId: `${DROPPABLE_ID_PREFIX}${new Date().getTime()}`,
     name: '',
-    members: []
+    members: [],
   };
 };
 

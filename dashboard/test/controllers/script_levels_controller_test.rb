@@ -237,6 +237,40 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "should not fetch partial peer review matches" do
+    user = create(:user)
+    level = create(:free_response, :with_script, peer_reviewable: true)
+    script_level = level.script_levels.first
+    level_source = create(:level_source)
+    create(:user_level, user: user, script: script_level.script, level: level, level_source: level_source)
+
+    peer_review_params = {
+      submitter: user,
+      script: script_level.script,
+      level: level,
+      level_source: level_source
+    }
+
+    # A "valid" PeerReview in this context is one that has both a reviewer and
+    # data; we want to ignore reviews that only have one or the other.
+    valid_peer_review = create(:peer_review, :reviewed, **peer_review_params)
+
+    # no data
+    create(:peer_review, :reviewed, data: nil, **peer_review_params)
+
+    # no reviewer
+    create(:peer_review, **peer_review_params)
+
+    sign_in user
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson.relative_position,
+      id: script_level.position,
+    }
+    assert_response :success
+    assert_equal [valid_peer_review], assigns(:peer_reviews)
+  end
+
   test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1525,7 +1559,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {variants: {'maze 2': {'active': false}}}
+        properties: {variants: {'maze 2': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1543,7 +1577,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level2
@@ -1562,7 +1596,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
           lesson: lesson,
           script: script,
           levels: [level, level2],
-          properties: {'variants': {'maze 1': {'active': false}, 'maze 2': {'active': false}}}
+          properties: {variants: {'maze 1': {active: false}, 'maze 2': {active: false}}}
         )
       )
     end
@@ -1585,7 +1619,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1611,7 +1645,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false}}}
+        properties: {variants: {'maze 1': {active: false}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1631,7 +1665,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1652,7 +1686,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1674,7 +1708,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment1.name, experiment2.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment1.name, experiment2.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1696,7 +1730,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         lesson: lesson,
         script: script,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+        properties: {variants: {'maze 1': {active: false, experiments: [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level2
@@ -1895,22 +1929,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
+    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017', is_course: true
+    CourseOffering.add_course_offering(cats1)
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+      get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     end
 
     cats1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
+    cats2 = create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(cats2)
+    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
     # next redirects to latest version in a script family
-    get :next, params: {script_id: 'ui-test-versioned-script'}
+    get :next, params: {script_id: 'cats'}
     assert_redirected_to "/s/cats2/next"
   end
 

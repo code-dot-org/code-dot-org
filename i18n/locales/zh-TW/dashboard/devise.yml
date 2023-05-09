@@ -50,9 +50,6 @@ zh-TW:
       expired: "已失效，請重新申請"
       not_found: "未找到"
       not_locked: "未上鎖"
-      not_saved:
-        one: "發生 1 個錯誤，%{resource} 無法儲存："
-        other: "發生 %{count} 個錯誤，%{resource} 無法儲存："
     invitations:
       send_instructions: '邀請信件已發送至 %{email}。'
       invitation_token_invalid: '提供的邀請碼無效！'

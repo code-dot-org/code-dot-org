@@ -13,6 +13,9 @@
         },
         "csd-2022/variables": {
           "display_name": "متغیرات"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "ویب لیب"
         }
       }
     }

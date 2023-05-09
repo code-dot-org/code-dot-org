@@ -161,7 +161,6 @@ zh-CN:
     visit_privacy: 访问 Code.org 的[隐私条款]（%{privacy_url}）以了解跟多。
     student_terms_markdown: 注意：电子邮箱不会被存储，并用作与学生取得联系。Code.org 不会向学生发送与密码恢复无关的任何邮件。更多信息请查阅
       [隐私政策](http://code.org/privacy)。
-    additional_information: 我们需要一些额外的信息来继续为你注册.
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型
     user_type_student: 学生
@@ -322,7 +321,7 @@ zh-CN:
         personal_login_created_username: 您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。
   nav:
     header:
-      finished_hoc: 完成了！
+      finished_hoc: 我已经完成了我的Hour of Code项目。
       sign_in_to_save: 登录以保存进度
       my_dashboard: 我的控制面板
       course_catalog: 课程分类
@@ -368,6 +367,7 @@ zh-CN:
       help_us: 帮助我们
       teach: 教学
       about: 关于
+      incubator: 孵化器
       legal: 隐私与法律
       legal_privacy: 隐私政策
       legal_cookie_notice: Cookie通知
@@ -618,6 +618,7 @@ zh-CN:
     store: 商店
     cookie_notice: Cookie通知
     view_code: 查看代码
+    locale_select: 请选择语言
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -643,6 +644,9 @@ zh-CN:
       applab_unsupported_tablet: 应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       gamelab_unsupported_tablet: 游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
+  deprecation:
+    algebra_lab: '代数中的 CS 课程和内容已被弃用。在接下来的几个月内，该实验室将不再可用。请改为查看 [Bootstrap: Algebra]
+      (%{bootstrap_algebra_url})。[了解更多] (%{cs_algebra_url})。'
   slow_loading: 请再多等一会儿...
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段
@@ -681,29 +685,17 @@ zh-CN:
       body_short: 设计一个应用，用代码模块或者 JavaScript 来写出这个程序，然后马上分享你的应用吧。
       audience: 13岁以上
       cta: 了解操作方法
-    dance:
-      title: 舞蹈派对
+    aquatic:
+      title: 我的世界
     dance-2019:
       title: 舞蹈派对
-    hello-world:
-      title: 你好世界
-      body: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
-    poem-art:
-      title: 诗歌艺术
-      body: 表达自己！使用代码创建动画诗歌。
-    hoc:
-      title: 经典迷宫
-      body: 请尝试计算机科学的基本知识。数百万人尝试了它。
+    dance:
+      title: 舞蹈派对
     flappy:
       title: 飞扬的代码
       body: 想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！
-    20-hour:
-      title: 加速课程
-      body: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
-      body_short: 在速成版课程2-4中学习入门的计算机科学。
-    hoc2014:
-      try_new_tutorial: 试试我们新的测试版的编程一小时教程
-      try_frozen: 来自冰雪奇缘的艺术家安娜及爱莎。
+    frozen:
+      title: 冰雪奇缘
     gallery:
       title: 作品
       body: 查看由我们用户创建的应用程序和艺术家图片的作品
@@ -712,18 +704,21 @@ zh-CN:
       body: 游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。
       audience: 13岁以上
       cta: 了解操作方法
+    hello-world:
+      title: 你好世界
+      body: 从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。
+    hero:
+      title: 我的世界
+      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
     hoc-encryption:
       title: 简单加密
       body: 学生将学习技术来创建和破解加密的信息。
-    weblab:
-      title: 网站实验室（测试版）
-      body: 网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。
-      audience: 13岁以上
-      cta: 了解操作方法
-    frozen:
-      title: 冰雪奇缘
-    starwars:
-      title: 星球大战
+    hoc:
+      title: 经典迷宫
+      body: 请尝试计算机科学的基本知识。数百万人尝试了它。
+    hoc2014:
+      try_new_tutorial: 试试我们新的测试版的编程一小时教程
+      try_frozen: 来自冰雪奇缘的艺术家安娜及爱莎。
     infinity:
       title: 无限发挥游戏实验室
       body: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
@@ -733,30 +728,39 @@ zh-CN:
     minecraft2016:
       title: 我的世界
       body: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
-    aquatic:
-      title: 我的世界
-    hero:
-      title: 我的世界
-      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+    poem-art:
+      title: 诗歌艺术
+      body: 表达自己！使用代码创建动画诗歌。
     sports:
       title: 运动
       body: 创造一个篮球游戏或跨越各种运动的混合比赛。
+    starwars:
+      title: 星球大战
     text-compression:
       title: 文本压缩
       body: 在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。
-    unplugged:
-      title: 离线课程
-      audience: 适合年龄 4 岁以上
-      body: 我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。
-      body_short: 如果你没有电脑，可以在你的教室试试这些离线的教程。
-    unplugged_conditionals:
-      title: 条件语句
-      body: 在这个离线活动中，通过扑克牌来学习算法和条件判断语句。
+    weblab:
+      title: 网站实验室（测试版）
+      body: 网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。
+      audience: 13岁以上
+      cta: 了解操作方法
     widgets:
       title: 小部件
       body: 学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。
       audience: 14 岁或以上
       cta: 了解操作方法
+    unplugged_conditionals:
+      title: 条件语句
+      body: 在这个离线活动中，通过扑克牌来学习算法和条件判断语句。
+    unplugged:
+      title: 离线课程
+      audience: 适合年龄 4 岁以上
+      body: 我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。
+      body_short: 如果你没有电脑，可以在你的教室试试这些离线的教程。
+    20-hour:
+      title: 加速课程
+      body: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
+      body_short: 在速成版课程2-4中学习入门的计算机科学。
   landing:
     prerelease_tutorial: 本教程为 **beta** 版，将根据反馈信息对其进行改进和修订。
     report_bug: 报告错误
@@ -1148,6 +1152,13 @@ zh-CN:
     no_teacher_email:
       body_markdown: 账号还没有填写电子邮件地址。请访问[帐户设置](%{user_registration})，在完成表单前添加电子邮件地址。
   courses_category: 完整课程
+  course_offering:
+    headers:
+      minecraft: 我的世界
+      hello_world: 你好世界
+      sports: 运动
+      csf: 计算机科学基本原理
+      csc: 计算机科学联系
   cookie_banner:
     message: 通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。
     more_information: 查看 Code.org 的隐私政策。

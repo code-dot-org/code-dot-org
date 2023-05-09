@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundTooltip": "phát âm thanh",
+  "blockly_blockPlaySoundAtMeasureTooltip": "phát âm thanh",
+  "blockly_blockRepeatTooltip": "lặp lại",
+  "blockly_blockWhenRun": "khi chạy",
+  "blockly_blockWhenRunTooltip": "khi chạy",
+  "blockly_functionNamePlaceholder": "hàm của tôi",
+  "blockly_toolboxCategoryEffects": "Hiệu ứng",
+  "blockly_toolboxCategoryEvents": "Các sự kiện",
+  "blockly_toolboxCategoryFunctions": "Các hàm",
+  "blockly_toolboxCategoryLogic": "Logic",
+  "blockly_toolboxCategoryMath": "Phép toán",
+  "blockly_toolboxCategoryPlay": "Chơi",
+  "blockly_toolboxCategoryVariables": "Các biến",
+  "feedback": "Phản hồi",
+  "share": "Chia sẻ",
+  "startOver": "Bắt đầu lại",
+  "upload": "Tải lên"
+}

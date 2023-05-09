@@ -98,5 +98,5 @@ export const SongTitlesToArtistTwitterHandle = {
   sunflower_postmaloneftswaelee: 'PostMalone',
   sunroof_nickyoureanddazy: 'Nicky_Youre',
   taconesrojos_sebastianyatra: 'SebastianYatra',
-  wedonttalkaboutbruno_encanto: 'EncantoMovie'
+  wedonttalkaboutbruno_encanto: 'EncantoMovie',
 };

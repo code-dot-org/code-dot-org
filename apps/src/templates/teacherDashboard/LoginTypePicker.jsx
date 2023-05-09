@@ -8,15 +8,18 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2} from '../../lib/ui/Headings';
+import {Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
+const SELECT_LOGIN_TYPE = 'Login Type Selection';
 
 /**
  * UI for selecting the login type of a class section:
@@ -31,12 +34,18 @@ class LoginTypePicker extends Component {
     handleCancel: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     // Provided by Redux
-    providers: PropTypes.arrayOf(PropTypes.string)
+    providers: PropTypes.arrayOf(PropTypes.string),
   };
 
   reportLoginTypeSelection = provider => {
     analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
-      loginType: provider
+      loginType: provider,
+    });
+  };
+
+  recordSectionSetupExitEvent = eventName => {
+    analyticsReporter.sendEvent(eventName, {
+      source: SELECT_LOGIN_TYPE,
     });
   };
 
@@ -52,8 +61,13 @@ class LoginTypePicker extends Component {
     this.props.setLoginType(provider);
   };
 
+  cancel = () => {
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
+    this.props.handleCancel();
+  };
+
   render() {
-    const {title, providers, handleCancel, disabled} = this.props;
+    const {title, providers, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -63,44 +77,52 @@ class LoginTypePicker extends Component {
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
     // Adjust max height of the LoginTypePicker container based on the number of
     // LoginType cards (which affects number of rows in the CardContainer flexbox).
-    const containerHeight = hasThirdParty ? '500px' : '360px';
+    const containerHeight = hasThirdParty ? '500px' : '334px';
 
     const style = {
       container: {
         width: styleConstants['content-width'],
         height: containerHeight,
         left: '20px',
-        right: '20px'
+        right: '20px',
       },
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
-        height: 'calc(80vh - 200px)'
+        height: 'calc(80vh - 200px)',
       },
       thirdPartyProviderUpsell: {
-        marginBottom: '10px'
+        marginBottom: '10px',
       },
       footer: {
         position: 'absolute',
         width: styleConstants['content-width'],
         height: '100px',
         left: 0,
-        bottom: '-65px',
+        bottom: '-51px',
         padding: '0px 20px 20px 20px',
         backgroundColor: '#fff',
-        borderRadius: '5px'
+        borderRadius: '5px',
+      },
+      mediumText: {
+        fontSize: '.75em',
+        color: color.neutral_dark,
+        fontFamily: '"Gotham 5r", sans-serif',
+      },
+      learnHow: {
+        marginTop: '12px',
       },
       emailPolicyNote: {
-        marginBottom: '20px',
-        paddingTop: '20px',
-        borderTop: '1px solid #000'
-      }
+        marginBottom: '31px',
+        paddingTop: '8px',
+        borderTop: `1px solid ${color.neutral_dark}`,
+      },
     };
 
     return (
       <div style={style.container}>
-        <Heading1>{title}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+        <Heading3 isRebranded>{title}</Heading3>
+        <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
         <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
@@ -115,28 +137,27 @@ class LoginTypePicker extends Component {
             <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
           {!hasThirdParty && (
-            <div>
+            <p style={{...style.mediumText, ...style.learnHow}}>
               {i18n.thirdPartyProviderUpsell() + ' '}
               <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
                 {i18n.learnHow()}
               </a>
               {' ' + i18n.connectAccountThirdPartyProviders()}
-            </div>
+            </p>
           )}
         </div>
         <div style={style.footer}>
-          <div style={style.emailPolicyNote}>
-            <b>{i18n.note()}</b>
+          <p style={{...style.mediumText, ...style.emailPolicyNote}}>
+            {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
             <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
               {i18n.moreInfo()}
             </a>
-          </div>
+          </p>
           <Button
-            onClick={handleCancel}
+            onClick={this.cancel}
             text={i18n.dialogCancel()}
-            size={Button.ButtonSize.large}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             disabled={disabled}
           />
         </div>
@@ -146,7 +167,7 @@ class LoginTypePicker extends Component {
 }
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
-  providers: state.teacherSections.providers
+  providers: state.teacherSections.providers,
 }))(LoginTypePicker);
 
 const PictureLoginCard = props => (
@@ -160,7 +181,7 @@ const PictureLoginCard = props => (
 );
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 const WordLoginCard = props => (

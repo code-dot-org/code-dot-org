@@ -190,7 +190,7 @@
   "outbreakmodule": "módulobrote",
   "curriculum-sandbox-levels": "plan-estudios-niveles-sandbox",
   "subgoal-labels-opt-in": "etiquetas-de-subobjetivo-opt-in",
-  "valentine": "valentín",
+  "valentine": "enamorados",
   "csa7-exemplars": "csa7-ejemplos",
   "coursec-draft": "cursoc-borrador",
   "cs-discoveries-teachercon-novice": "descubrimientos-cs-profesorcon-principiante",
@@ -373,5 +373,9 @@
   "physcomp-temp": "physcomp-temp",
   "hello-world-soccer": "Hola Mundo Fútbol",
   "csa-collegeboard-labs": "AP CSA Laboratorio Magpie",
-  "playground": "Zona de juegos"
+  "playground": "Zona de juegos",
+  "blockchain": "Blockchain (cadena de bloques)",
+  "self-paced-pl-csc": "Preparación para Enseñar la Unidad 1 ",
+  "poemmaker": "poeta",
+  "web-development": "Desarrollo Web"
 }

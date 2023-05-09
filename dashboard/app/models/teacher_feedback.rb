@@ -149,21 +149,23 @@ class TeacherFeedback < ApplicationRecord
 
   # TODO: update to use camelcase
   def summarize(is_latest = false)
-    {
-      id: id,
-      student_id: student_id,
-      script_id: script_id,
-      level_id: level_id,
-      comment: comment,
-      performance: performance,
-      created_at: created_at,
-      student_seen_feedback: student_seen_feedback,
-      review_state: review_state,
-      student_last_updated: user_level&.updated_at,
-      seen_on_feedback_page_at: seen_on_feedback_page_at,
-      student_first_visited_at: student_first_visited_at,
-      is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        student_id: student_id,
+        script_id: script_id,
+        level_id: level_id,
+        comment: comment,
+        performance: performance,
+        created_at: created_at,
+        student_seen_feedback: student_seen_feedback,
+        review_state: review_state,
+        student_last_updated: user_level&.updated_at,
+        seen_on_feedback_page_at: seen_on_feedback_page_at,
+        student_first_visited_at: student_first_visited_at,
+        is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
+      }
+    end
   end
 
   def summarize_for_csv(level, script_level, student, sublevel_index = nil)
@@ -237,9 +239,7 @@ class TeacherFeedback < ApplicationRecord
     return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
   end
 
-  private
-
-  def student_updated_since_feedback?
+  private def student_updated_since_feedback?
     user_level.present? && user_level.updated_at > created_at
   end
 end

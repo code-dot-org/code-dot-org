@@ -77,7 +77,6 @@
   "didntMoveRight": "Sua fada não se moveu para a direita.",
   "didntMoveUp": "Sua fada não se moveu para cima.",
   "didntPressKey": "Sempre pressione uma tecla de seta depois de pressionar *\"Run\"*. Você pode clicar nos botões alaranjados sob a área de jogo ou pressionar as teclas no seu teclado.",
-  "errorLoadingAnimation": "Parece que estamos com problemas para carregar sua animação \"{animationName}\". Verifique se você tem uma boa conexão com a Internet e tente recarregar a página. Se esse problema persistir, é possível que essa animação seja interrompida. Nesse caso, talvez seja necessário continuar removendo a animação.",
   "eventsOneChange": "Sua fada mudou, mas somente uma vez. Teste seu programa pressionando a tecla algumas vezes, e certifique-se de que o bloco correto foi utilizado. <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPRIEDADE\">\"scale\"</title><value name=\"FADA\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMAÇÃO\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Sua fada deve ter exatamente 3 comportamentos. Tente movimentar o bloco 'stops everything' (parar tudo) para um local diferente no seu código.",
   "foodNotTouchPet": "Arraste sua fada da alimentação até que ela toque na fada do pet.",

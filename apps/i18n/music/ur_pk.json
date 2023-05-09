@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundTooltip": "آواز چلائیں",
+  "blockly_blockPlaySoundAtMeasureTooltip": "آواز چلائیں",
+  "blockly_blockRepeatTooltip": "دوبارہ",
+  "blockly_blockRestTooltip": "آرام",
+  "blockly_blockWhenRun": "جب رن ہو تو",
+  "blockly_blockWhenRunTooltip": "جب رن ہو تو",
+  "blockly_functionNamePlaceholder": "میرا فنکشن",
+  "blockly_toolboxCategoryEffects": "اثرات",
+  "blockly_toolboxCategoryEvents": "ایونٹس/واقعات",
+  "blockly_toolboxCategoryLogic": "منطق",
+  "blockly_toolboxCategoryMath": "ریاضی",
+  "blockly_toolboxCategoryPlay": "چلائیں",
+  "blockly_toolboxCategoryVariables": "متغیرات",
+  "feedback": "تاثرات",
+  "share": "دوسروں کو بتائیں",
+  "startOver": "پھر سے شروع کریں",
+  "upload": "اپلوڈ کریں"
+}

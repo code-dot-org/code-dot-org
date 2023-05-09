@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-04 16:10:52 UTC",
+    "serialized_at": "2023-01-04 05:03:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1253,8 +1253,8 @@
       }
     },
     {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/media/pdf/ap21-sg-computer-science-principles.pdf",
+      "name": "APCSP Create Performance Task Scoring Guidelines",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-principles.pdf",
       "key": "apcsp_ct_20-21_scoring_guidelines",
       "properties": {
         "audience": "Student",
@@ -1265,7 +1265,7 @@
       }
     },
     {
-      "name": "APCSP CT 20-21 Task Instructions",
+      "name": "APCSP Create Performance Task Instructions",
       "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
       "key": "apcsp_ct_20-21_task_instructions",
       "properties": {

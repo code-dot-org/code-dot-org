@@ -183,11 +183,11 @@ fr:
             ? Essaie notre tutoriel de Code Flappy !
           name: flappy
         jigsaw:
-          title: Puzzle
+          title: Casse-tête
           description: Essaie notre tutoriel pour les pièces de casse-tête
           description_short: Essaie notre tutoriel pour les pièces de casse-tête
           student_description: Essaie notre tutoriel pour les pièces de casse-tête
-          name: pièces de Puzzle
+          name: pièces de Casse-tête
         step:
           title: Étape
           description: Tutoriel par étapes
@@ -209,7 +209,7 @@ fr:
           student_description: Essayez ces amusantes casse-têtes de codage. Faites
             de votre mieux !
         Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutoriel - Défi d'énigmes sur Code Studio
+          title: Tutoriel - Défi d' casse-têtes sur Code Studio
           description: Essayez ces amusantes casse-têtes de codage. Faites de votre
             mieux !
           description_short: Relevez le défi !
@@ -253,6 +253,9 @@ fr:
             utilisateur
           student_description: Tous les types de niveau pour le test de l'interface
             utilisateur
+          lessons:
+            lesson-49:
+              name: Musique
         algebraPD2b:
           title: Informatique en DP d'algèbre
           description: 'Phase 2 en ligne : Études estivales mixtes'
@@ -2567,7 +2570,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -2633,7 +2636,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -2690,7 +2693,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -2998,7 +3001,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3231,7 +3234,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3242,7 +3245,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3255,7 +3258,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3279,7 +3282,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3297,7 +3300,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3308,7 +3311,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3319,7 +3322,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3647,7 +3650,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3660,7 +3663,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_nested_loops:
               display_name: Boucles Imbriquées
             csf_functions:
@@ -3692,7 +3695,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -3711,7 +3714,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_events:
               display_name: Événements
             csf_sprites:
@@ -3740,7 +3743,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -3982,7 +3985,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -4069,7 +4072,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -4220,19 +4223,19 @@ fr:
               display_name: Contenu
         virustest:
           title: Simulation d'une épidémie
-          description_short: Utilisez Sprite Lab pour créer une simulation à partir
-            d'une épidémie de virus.
+          description_short: Utilisez le Labo des Sprites pour créer une simulation
+            à partir d'une épidémie de virus.
         outbreak:
           lesson_groups:
             outbreak:
               display_name: Simulation de l'épidémie
           title: Simulateur d'épidémie
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une
-            épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie
-            de virus. '
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
           name: épidémie
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation
             d''une épidémie de virus. '
         2021drafting:
           lesson_groups:
@@ -4256,15 +4259,15 @@ fr:
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez vous exercer
             à utiliser un processus de résolution de problèmes pour résoudre une série
-            d'énigmes, de défis et de scénarios du monde réel. Ensuite, vous apprendrez
-            comment les ordinateurs entrent, sortent, stockent et traitent les informations
-            pour aider les humains à résoudre des problèmes.  L'unité se termine par
-            un projet dans lequel vous concevez une application qui aide à résoudre
-            un problème de votre choix. \n\n\\*\\*Conseils pour la mise en œuvre de
-            l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être terminé avant toute
-            autre unité de CS Discoveries.\n-   Des leçons alternatives sont fournies
-            pour certaines leçons de l'unité 1, selon le contexte de votre classe.\n-
-            \  Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            d' casse-têtes, de défis et de scénarios du monde réel. Ensuite, vous
+            apprendrez comment les ordinateurs entrent, sortent, stockent et traitent
+            les informations pour aider les humains à résoudre des problèmes.  L'unité
+            se termine par un projet dans lequel vous concevez une application qui
+            aide à résoudre un problème de votre choix. \n\n\\*\\*Conseils pour la
+            mise en œuvre de l'unité 1\n\n-   Le chapitre 1 de l'unité 1 doit être
+            terminé avant toute autre unité de CS Discoveries.\n-   Des leçons alternatives
+            sont fournies pour certaines leçons de l'unité 1, selon le contexte de
+            votre classe.\n-   Vous pouvez consulter le [Guide du programme](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             et le [Guide de mise en œuvre](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
             pour plus d'informations sur cette unité.\n\nTraduit avec www.DeepL.com/Translator
             (version gratuite)"
@@ -4436,7 +4439,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -4487,6 +4490,13 @@ fr:
               display_name: Enquête
         coursea-2021:
           title: Cours A (2021)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lesson_groups:
@@ -4505,6 +4515,15 @@ fr:
             que tu peux partager.
         courseb-2021:
           title: Cours B (2021)
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           description_short: Une introduction à l'informatique pour les pré-lecteurs.
             Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
@@ -4573,7 +4592,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_binary:
               display_name: Binaire
             csf_digcit:
@@ -4591,7 +4610,7 @@ fr:
             Les élèves apprendront à créer des projets amusants et interactifs qui
             renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
             de ces leçons, les élèves se mettront à faire du codage plus complexe.
-            Les élèves découvriront les boucles imbriquées, les fonctions et les formules
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
             conditionnelles. À la fin du cours, les élèves associeront ces notions
             pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
             libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
@@ -4604,7 +4623,7 @@ fr:
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_nested_loops:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_impacts:
@@ -4614,7 +4633,7 @@ fr:
             lessonGroup-7:
               display_name: L'impact de l'informatique
           student_description: Mets-toi à coder avec les algorithmes, les événements,
-            les boucles, les formules conditionnelles et les fonctions ! À la fin
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
             de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
             partager avec tes amis et ta famille.
         coursef-2021:
@@ -4670,13 +4689,13 @@ fr:
           description_audience: 'Âges : de 9 à 18 ans'
           lesson_groups:
             csf_warmup:
-              display_name: Warm-up (Séance d’échauffement)
+              display_name: Séance d’échauffement
             csf_sequencing:
               display_name: Séquencement
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -4792,11 +4811,11 @@ fr:
           lesson_groups:
             contagion:
               display_name: Contagion
-          description_short: 'Utilisez Sprite Lab pour programmer la simulation d''une
-            épidémie de virus. '
-          description: 'Utilisez Sprite Lab pour programmer la simulation d''une épidémie
-            de virus. '
-          student_description: 'Utilisez Sprite Lab pour programmer la simulation
+          description_short: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          description: 'Utilisez le Labo des Sprites pour programmer la simulation
+            d''une épidémie de virus. '
+          student_description: 'Utilisez le Labo des Sprites pour programmer la simulation
             d''une épidémie de virus. '
         csa1-pilot:
           lesson_groups:
@@ -5091,9 +5110,9 @@ fr:
         spritelab-effects-challenge:
           name: spritelab-effets-défi
           title: Défi de l'effet Sprite
-          description_audience: Utilisateurs intermédiaires/avancés de Sprite Lab
+          description_audience: Utilisateurs intermédiaires/avancés du Labo des Sprites
           description_short: Relevez le défi de créer votre propre effet de sprite
-            avec Sprite Lab !
+            avec le Labo des Sprites !
         csa-u8-dev:
           lesson_groups:
             lessonGroup-2:
@@ -5222,6 +5241,13 @@ fr:
             lessonGroup-5:
               display_name: Projet de fin de cours
           title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5238,7 +5264,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csf_functions:
               display_name: Fonctions
             csf_variables:
@@ -5282,7 +5308,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -5313,6 +5339,15 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -5390,7 +5425,7 @@ fr:
             csf_loops:
               display_name: Boucles
             csf_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             end_of_course_project:
               display_name: Projet de fin de cours
           title: Cours D (2022)
@@ -5415,7 +5450,7 @@ fr:
             csf_functions:
               display_name: Fonctions
             csf_nested_loops:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             lessonGroup-7:
               display_name: L'impact de l'informatique
             end_of_course_project:
@@ -5426,12 +5461,12 @@ fr:
             Les élèves apprendront à créer des projets amusants et interactifs qui
             renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
             de ces leçons, les élèves se mettront à faire du codage plus complexe.
-            Les élèves découvriront les boucles imbriquées, les fonctions et les formules
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
             conditionnelles. À la fin du cours, les élèves associeront ces notions
             pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
             libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
           student_description: Mets-toi à coder avec les algorithmes, les événements,
-            les boucles, les formules conditionnelles et les fonctions ! À la fin
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
             de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
             partager avec tes amis et ta famille.
           description_audience: 'Âge : 8 à 12 ans'
@@ -5704,7 +5739,7 @@ fr:
           description: "Résolution de problèmes et informatique est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous allez appliquer
-            un processus de résolution de problèmes pour résoudre une série d'énigmes,
+            un processus de résolution de problèmes pour résoudre une série d' casse-têtes,
             de défis et de scénarios du monde réel. Ensuite, vous apprendrez comment
             les ordinateurs entrent, sortent, stockent et traitent les informations
             pour aider les humains à résoudre des problèmes.  L'unité se termine par
@@ -5878,6 +5913,55 @@ fr:
               display_name: Contenu
             lessonGroup-4:
               display_name: Leçons alternatives
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Tableaux unidimensionnels (1D)
+            lesson-3:
+              name: Les Boucles « Pour »
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Random
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Leçons alternatives
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriété intellectuelle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Leçons alternatives
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Enquête
+            lessonGroup-5:
+              display_name: Leçons alternatives
         hello-world-space-2022:
           title: 'Bonjour tout le monde : Espace'
         hello-world-soccer-2022:
@@ -5885,42 +5969,67 @@ fr:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Chapitre 1
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
-              display_name: Chapitre 2
-          title: Résolution de problèmes
+              display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
             lessonGroup-3:
               display_name: 'Chapitre 23 : Prototypage d''Applications'
-          title: Le Processus Du Concept
+          student_description: L'unité 4 présente les impacts sociaux plus larges
+            de l'informatique. À travers une série de défis de conception, tu apprendras
+            à mieux comprendre les besoins des autres, tout en développant une solution
+            à un problème. La seconde moitié de l'unité consiste en un projet d'équipe
+            itératif, au cours duquel les équipes ont la possibilité d'identifier
+            un besoin qui leur tient à cœur, de prototyper des solutions sur papier
+            et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs
+            pour obtenir des commentaires et procéder à une itération supplémentaire.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapitre 1 : Représentation de l''information'
             lessonGroup-3:
               display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapitre 1 : Images et Animations'
             lessonGroup-3:
               display_name: 'Chapitre 2 : Construction de Jeux'
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience
+            de codage en programmant des animations, de l'art interactif et des jeux
+            dans le Labo des Jeux. L'unité commence avec des formes simples et progresse
+            vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les
+            mêmes concepts de programmation et le processus de conception que les
+            informaticiens utilisent quotidiennement. Dans le projet final, tu développeras
+            un programme personnalisé et interactif.
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Chapitre 1
             lessonGroup-3:
-              display_name: Chapitre 2
-          title: L'Informatique Physique
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Chapitre 1
             lessonGroup-3:
               display_name: Chapitre 2
+            lessonGroup-4:
+              display_name: Introduction au Labo des Applis
           title: IA et apprentissage automatique
         physcomp-temp:
           lesson_groups:
@@ -5949,7 +6058,7 @@ fr:
             csp_variables:
               display_name: Variables
             csp_conditionals:
-              display_name: Formules conditionnelles
+              display_name: Instructions conditionnelles
             csp_functions:
               display_name: Fonctions
             csp_project:
@@ -5957,7 +6066,7 @@ fr:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Listes
+              display_name: Données
             csp_loops:
               display_name: Boucles
             csp_traversals:
@@ -5969,9 +6078,15 @@ fr:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unité 6 : Les Algorithmes'
+              display_name: Listes
             lessonGroup-2:
               display_name: Suivi d'après cours
+            lessonGroup-3:
+              display_name: Boucles
+            lessonGroup-4:
+              display_name: Parcours
+            lessonGroup-5:
+              display_name: Projet
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -6000,6 +6115,10 @@ fr:
               display_name: Suivi d'après cours
         csp-post-survey-2023:
           title: CS PrincipPrincipleses Enquête Post-Cours
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Évaluations
         csp-playground:
           title: CSP Terrain de Jeux
           description_audience: Rédacteurs de programmes
@@ -6009,3 +6128,664 @@ fr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+          title: Résolution de problèmes
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+          title: Résolution de problèmes
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
+            conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
+          description_audience: 'Âges : 4 à 8 ans'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Séquencement
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Événements
+            csf_loops:
+              display_name: Boucles
+            csf_conditionals:
+              display_name: Instructions conditionnelles
+            csf_functions:
+              display_name: Fonctions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Les Boucles « Pour »
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours Express (2022)
+          description: Apprends l'informatique en essayant les cours ici à ton propre
+            rythme ! Apprends à créer des logiciels, développe des compétences de
+            résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          student_description: Apprends l'informatique en essayant les cours ici à
+            ton propre rythme ! Apprends à créer des logiciels, développe des compétences
+            de résolution de problèmes et plonge-toi dans des défis amusants ! Développe
+            des jeux et des projets créatifs à partager avec tes amis, ta famille
+            et tes enseignants.
+          description_short: 'Une introduction à l''informatique : elle combine le
+            meilleur de notre programme pour l''école primaire à destination des élèves
+            plus âgés.'
+          description_audience: 'Âges : de 9 à 18 ans'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+            lessonGroup-5:
+              display_name: Projet de fin de cours
+          title: Cours A (2022)
+          description: 'Le Cours A propose un programme d''informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l''internet en toute sécurité. '
+          student_description: Apprends les bases de l'informatique et de la sécurité
+            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
+            que tu peux partager.
+          description_short: Une initiation à l’informatique pour les pré-lecteurs.
+          description_audience: 'Âges : 4 à 7 ans'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_impacts:
+              display_name: L'impact de l'informatique
+            csf_events:
+              display_name: Événements
+            lessonGroup-6:
+              display_name: Projet de fin de cours
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
+          student_description: Apprends les bases de l'informatique et de la sécurité
+            sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
+            que tu peux partager.
+          description_short: Une introduction à l'informatique pour les pré-lecteurs.
+            Similaire au cours A, mais avec une profondeur de concept accrue.
+          description_audience: 'Âges : 5 à 8 ans'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_loops:
+              display_name: Boucles
+            csf_events:
+              display_name: Événements
+            csf_data:
+              display_name: Données
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours C (2022)
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les
+            élèves créeront des programmes avec du séquençage, des boucles et des
+            événements. Ils examineront des techniques de résolution de problèmes
+            et élaboreront des stratégies pour créer des communautés positives en
+            ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs
+            qu'ils pourront partager.
+          student_description: Crée des programmes avec séquençage, boucles et événements.
+            Traduis tes initiales en binaire, étudie différentes techniques de résolution
+            de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours,
+            crée ton propre jeu ou ta propre histoire que tu peux partager !
+          description_short: Apprendre les rudiments de l’informatique et de créer
+            vos propres œuvres d’art, vos histoires et vos jeux.
+          description_audience: 'Âges: 6 à 10 ans'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Citoyenneté Numérique
+            csf_sequencing:
+              display_name: Séquencement
+            csf_events:
+              display_name: Événements
+            csf_loops:
+              display_name: Boucles
+            csf_conditionals:
+              display_name: Instructions conditionnelles
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours D (2022)
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours
+            commence par un examen des notions abordées dans les cours précédents,
+            dont les boucles et les événements. Par la suite, les élèves développeront
+            leur compréhension des algorithmes, des boucles imbriquées, des boucles
+            « tant que », des instructions conditionnelles, et bien plus encore.
+          student_description: Découvre les boucles, les instructions conditionnelles
+            et les événements. Au-delà du codage, découvre aussi la citoyenneté numérique.
+          description_short: Learn about conditional statements. Create your own art,
+            games, and even a dance party.
+          description_audience: 'Àges : 7 à 11 ans'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Citoyenneté Numérique
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Boucles Imbriquées
+            csf_functions:
+              display_name: Fonctions
+            csf_nested_loops:
+              display_name: Instructions conditionnelles
+            lessonGroup-7:
+              display_name: L'impact de l'informatique
+            end_of_course_project:
+              display_name: Projet de fin de cours
+          title: Cours E (2022)
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours
+            commence par une introduction à l'outil de programmation Labo des Sprites.
+            Les élèves apprendront à créer des projets amusants et interactifs qui
+            renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
+            de ces leçons, les élèves se mettront à faire du codage plus complexe.
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
+            conditionnelles. À la fin du cours, les élèves associeront ces notions
+            pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
+            libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          student_description: Mets-toi à coder avec les algorithmes, les événements,
+            les boucles, les instructions conditionnelleset les fonctions ! À la fin
+            de ce cours, tu concevras et créera un jeu ou un dessin que tu pourras
+            partager avec tes amis et ta famille.
+          description_audience: 'Âge : 8 à 12 ans'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Enquête
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+            lessonGroup-4:
+              display_name: Enquête
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience
+            de codage en programmant des animations, de l'art interactif et des jeux
+            dans le Labo des Jeux. L'unité commence avec des formes simples et progresse
+            vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les
+            mêmes concepts de programmation et le processus de conception que les
+            informaticiens utilisent quotidiennement. Dans le projet final, tu développeras
+            un programme personnalisé et interactif.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+            lessonGroup-4:
+              display_name: Enquête
+          student_description: L'unité 4 présente les impacts sociaux plus larges
+            de l'informatique. À travers une série de défis de conception, tu apprendras
+            à mieux comprendre les besoins des autres, tout en développant une solution
+            à un problème. La seconde moitié de l'unité consiste en un projet d'équipe
+            itératif, au cours duquel les équipes ont la possibilité d'identifier
+            un besoin qui leur tient à cœur, de prototyper des solutions sur papier
+            et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs
+            pour obtenir des commentaires et procéder à une itération supplémentaire.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+            lessonGroup-4:
+              display_name: Enquête
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-3:
+              display_name: Chapitre 1
+            lessonGroup-4:
+              display_name: Chapitre 2
+            lessonGroup-5:
+              display_name: Enquête
+          title: IA et apprentissage automatique
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience
+            de codage en programmant des animations, de l'art interactif et des jeux
+            dans le Labo des Jeux. L'unité commence avec des formes simples et progresse
+            vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les
+            mêmes concepts de programmation et le processus de conception que les
+            informaticiens utilisent quotidiennement. Dans le projet final, tu développeras
+            un programme personnalisé et interactif.
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-3:
+              display_name: Chapitre 1
+            lessonGroup-4:
+              display_name: Chapitre 2
+          title: IA et apprentissage automatique
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+          student_description: L'unité 4 présente les impacts sociaux plus larges
+            de l'informatique. À travers une série de défis de conception, tu apprendras
+            à mieux comprendre les besoins des autres, tout en développant une solution
+            à un problème. La seconde moitié de l'unité consiste en un projet d'équipe
+            itératif, au cours duquel les équipes ont la possibilité d'identifier
+            un besoin qui leur tient à cœur, de prototyper des solutions sur papier
+            et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs
+            pour obtenir des commentaires et procéder à une itération supplémentaire.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience
+            de codage en programmant des animations, de l'art interactif et des jeux
+            dans le Labo des Jeux. L'unité commence avec des formes simples et progresse
+            vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les
+            mêmes concepts de programmation et le processus de conception que les
+            informaticiens utilisent quotidiennement. Dans le projet final, tu développeras
+            un programme personnalisé et interactif.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+          student_description: L'unité 4 présente les impacts sociaux plus larges
+            de l'informatique. À travers une série de défis de conception, tu apprendras
+            à mieux comprendre les besoins des autres, tout en développant une solution
+            à un problème. La seconde moitié de l'unité consiste en un projet d'équipe
+            itératif, au cours duquel les équipes ont la possibilité d'identifier
+            un besoin qui leur tient à cœur, de prototyper des solutions sur papier
+            et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs
+            pour obtenir des commentaires et procéder à une itération supplémentaire.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          description_short: Apprends comment les gens utilisent les ordinateurs pour
+            résoudre des problèmes de données.
+          student_description: L'Unité 5 traite de l'importance des données dans la
+            résolution des problèmes et met en évidence la façon dont les ordinateurs
+            peuvent aider dans ce processus. Le premier chapitre explore les différents
+            systèmes utilisés pour représenter l'information dans un ordinateur et
+            les défis et les compromis posés par leur utilisation. Dans le deuxième
+            chapitre, tu apprendras comment les données collectées sont utilisées
+            pour résoudre les problèmes et comment les ordinateurs aident à automatiser
+            les étapes de ce processus. Le chapitre conclut en examinant comment le
+            processus de résolution de problèmes de données peut être appliqué à une
+            zone de ton choix.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-4:
+              display_name: Chapitre 2
+          title: IA et apprentissage automatique
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          description_short: Apprend à programmer des objets.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-5:
+              display_name: Enquête
+        vpl-csd-ci-1:
+          title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes
+            et l''informatique'
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner aux élèves la résolution de problèmes
+            et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation
+            professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution
+            de problèmes et de l'informatique.\n-   Mettre en pratique les concepts
+            clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée
+            prévue : \\*\\* 30 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner aux élèves la résolution de problèmes
+            et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation
+            professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution
+            de problèmes et de l'informatique.\n-   Mettre en pratique les concepts
+            clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée
+            prévue : \\*\\* 30 minutes"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Formation au développement Web
+          title: 'Module 2 : Se préparer à enseigner le développement Web'
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner le module de développement Web de Code.org.
+            \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-
+            \  Découvrir le développement Web.\n-   Mettre en pratique les concepts
+            clés inclus dans le module.\n-   Participer au laboratoire Web.\n-   Explorer
+            les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner le module de développement Web
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir le développement Web.\n-   Mettre en pratique les
+            concepts clés inclus dans le module.\n-   Participer au laboratoire Web.\n-
+            \  Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Se préparer à enseigner les animations et les jeux interactifs
+          title: 'Module 3 : Se préparer à enseigner les animations et les jeux interactifs '
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner le module Animations et jeux interactifs
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en
+            pratique les concepts clés inclus dans le module.\n-   Participer à Game
+            Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :**
+            120 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner le module Animations et jeux interactifs
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en
+            pratique les concepts clés inclus dans le module.\n-   Participer à Game
+            Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :**
+            120 minutes"
+        vpl-csd-ci-4:
+          title: 'Module 4 : Se préparer à enseigner le processus de conception'
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner le module Processus de conception de
+            Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir le processus de conception.\n-   Mettre en pratique
+            les concepts clés inclus dans le module.\n-   Participer à App Lab.\n-
+            \  Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner le module Processus de conception
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir le processus de conception.\n-   Mettre en pratique
+            les concepts clés inclus dans le module.\n-   Participer à App Lab.\n-
+            \  Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-5:
+          title: 'Module 5 : Se préparer à enseigner les Données et la Société'
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner le module Données et société de Code.org.
+            \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-
+            \  Découvrir le cours Données et société.\n-   Mettre en pratique les
+            concepts clés inclus dans le module.\n-   Explorer les projets de fin
+            de chapitre.\n\n**Durée prévue :** 90 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner le module Données et société de
+            Code.org. \n\n**Dans ce module de formation professionnelle, vous allez
+            :**\n\n-   Découvrir le cours Données et société.\n-   Mettre en pratique
+            les concepts clés inclus dans le module.\n-   Explorer les projets de
+            fin de chapitre.\n\n**Durée prévue :** 90 minutes"
+        vpl-csd-ci-7:
+          title: 'Module 7 : Se préparer à enseigner l''IA et l''apprentissage automatique'
+          description: "Ce module de formation professionnelle est conçu pour vous
+            aider à vous préparer à enseigner le module AI et apprentissage automatique
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous trouverez
+            :**\n\n-   Une introduction à l'IA et à l'apprentissage automatique.\n-
+            \  Pratiquer les concepts clés inclus dans le module.\n-   Participer
+            au AI Lab et à l'App Lab.\n-   Explorer les projets de fin de chapitre.\n-
+            \  Élaborer un plan pour la mise en œuvre du module avec vos élèves.\n\n**Durée
+            prévue :** 120 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour
+            vous aider à vous préparer à enseigner le module AI et apprentissage automatique
+            de Code.org. \n\n**Dans ce module de formation professionnelle, vous trouverez
+            :**\n\n-   Une introduction à l'IA et à l'apprentissage automatique.\n-
+            \  Pratiquer les concepts clés inclus dans le module.\n-   Participer
+            au AI Lab et à l'App Lab.\n-   Explorer les projets de fin de chapitre.\n-
+            \  Élaborer un plan pour la mise en œuvre du module avec vos élèves.\n\n**Durée
+            prévue :** 120 minutes"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+            lessonGroup-5:
+              display_name: Enquête
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bienvenue
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 1
+          title: Jour 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Conclusion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 2
+          title: Jour 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 3
+          title: Jour 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Conclusion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 4
+          title: Jour 4
+        csd-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-data-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-impact-in-society-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-coding-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-hardware-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-creativity-post-survey-2023:
+          title: Suivi d'après cours

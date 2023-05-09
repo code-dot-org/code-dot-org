@@ -4,3 +4,5 @@ wrong '4', feedback: 'Incorrect. The farmer will collect 4 pumpkins in each of 3
 right '12', feedback: 'Correct!'
 wrong '15', feedback: 'Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!'
 wrong 'I don\'t know.', feedback: 'The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!'
+
+allow_multiple_attempts false

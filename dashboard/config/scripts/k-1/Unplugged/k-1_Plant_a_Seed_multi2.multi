@@ -8,3 +8,5 @@ question 'Which step should fill in the blank for this algorithm?'
 wrong '/script_assets/k_1_images/unplugged_images/brush-teeth.png'
 right '/script_assets/k_1_images/unplugged_images/cover-seed.png'
 wrong '/script_assets/k_1_images/unplugged_images/water-pot.png'
+
+allow_multiple_attempts true

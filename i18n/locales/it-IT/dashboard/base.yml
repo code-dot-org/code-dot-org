@@ -74,7 +74,7 @@ it:
   cancel: "Annulla"
   okay: "Ok!"
   or: "o"
-  heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
+  heading_x_of_y: "%{heading} (pagina %{x} di %{y})"
   join_section:
     code:
       title: 'Iscriviti ad una classe su Code.org'
@@ -172,7 +172,6 @@ it:
     data_collection_us: "Sono consapevole che Code.org è un sito web statunitense senza fini di lucro, e che le leggi che disciplinano la raccolta dei dati negli Stati Uniti potrebbero essere diverse dalle leggi nel mio paese."
     visit_privacy: 'Consulta [l''informativa sulla privacy] (%{privacy_url}) di Code.org per saperne di più.'
     student_terms_markdown: "Gli indirizzi di posta elettronica vengono memorizzati in modo tale da impedirci di contattare gli studenti. Gli studenti non riceveranno mai messaggi di posta elettronica da Code.org, tranne nel caso essi stessi richiedano il recupero della password del loro account. Per ulteriori informazioni leggi la nostra [informativa sulla privacy](http://code.org/privacy)."
-    additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
     user_type_button: "Aggiorna Tipologia di Account"
     user_type_label: "Tipo di account"
     user_type_student: "Studente"
@@ -344,13 +343,13 @@ it:
       professional_learning: "Professional learning"
       documentation: "Documentazione"
       tutorials: "Corsi"
-      app_lab_documentation: "Documentazione dell'App Lab"
-      app_lab_tutorials: "Tutorial dell'App Lab"
-      game_lab_documentation: "Documentazione del Game Lab"
-      game_lab_tutorials: "Tutorial del Game Lab"
+      app_lab_documentation: "Documentazione di Sviluppo app"
+      app_lab_tutorials: "Tutorial di Sviluppo app"
+      game_lab_documentation: "Documentazione di Sviluppo Giochi"
+      game_lab_tutorials: "Tutorial di Sviluppo Giochi"
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
-      web_lab_documentation: "Documentazione del Web Lab"
+      web_lab_documentation: "Documentazione Sviluppo Web"
       educate_overview: "Panoramica dei corsi"
       educate_elementary: "Scuola elementare"
       educate_middle: "Scuola media"
@@ -443,7 +442,7 @@ it:
       prize_us_only: '(Solo per gli studenti degli Stati Uniti)'
       prizes_link: 'Più informazioni'
   teacher:
-    answer: Rispondi
+    answer: Risposta
     dashboard: 'Cruscotto dell''Insegnante'
     for_teachers_only: Per gli insegnanti
     title:
@@ -606,6 +605,8 @@ it:
     try_hour_of_code: 'Prova l''Ora del Codice!'
     store: 'Negozio'
     cookie_notice: 'Informativa sui cookie'
+    view_code: 'Visualizza codice'
+    locale_select: "Seleziona lingua"
   reference_area:
     title: 'Hai bisogno di aiuto?'
     subtitle: 'Guarda questi video e suggerimenti'
@@ -632,7 +633,7 @@ it:
       weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
   try_reloading: 'Prova a ricaricare la pagina'
-  next_stage: 'Finito! Prosegui con la lezione successiva'
+  next_stage: 'Finito! Vai alla lezione successiva'
   download_pdf: 'Apri il piano di lavoro di questa lezione'
   lesson_plan: 'Piano di lavoro della lezione'
   view_lesson_plan: 'Leggi il piano di lavoro di questa lezione'
@@ -668,29 +669,18 @@ it:
       body_short: "Progetta una App, programmala con i blocchi o con Javascript, e poi condividila."
       audience: 'Da 13 anni in su'
       cta: 'Scopri come'
-    dance:
-      title: 'Ballando col codice'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Ballando col codice'
-    hello-world:
-      title: 'Ciao mondo'
-      body: 'Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi interattivi in un mondo creato da te.'
-    poem-art:
-      title: 'L''arte della poesia'
-      body: 'Esprimiti! Usa il codice per animare le poesie.'
-    hoc:
-      title: 'Labirinto Classico'
-      body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
+      image_alt: 'Un gatto felice, un bradipo e uno squalo che ballano.'
+    dance:
+      title: 'Ballando col codice'
     flappy:
       title: 'Flappy'
       body: 'Vuoi creare la tua versione del gioco "Flappy" in meno di 10 minuti? Prova questo corso!'
-    20-hour:
-      title: 'Corso rapido'
-      body: 'Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell''informatica e della programmazione. Il corso è pensato per l''uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po'' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.'
-      body_short: 'Acquisisci le basi dell''informatica con una sintesi dei corsi 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
-      try_frozen: 'Artista con Anna ed Elsa, da Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "La tua collezione"
       body: "Guarda una collezione di app e immagini artistiche create dai nostri utenti"
@@ -699,18 +689,21 @@ it:
       body: "Sviluppo Giochi è un ambiente di programmazione in cui si possono realizzare semplici animazioni e giochi con oggetti e personaggi che interagiscono tra loro."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
+    hello-world:
+      title: 'Ciao mondo'
+      body: 'Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi interattivi in un mondo creato da te.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
     hoc-encryption:
       title: "Crittografia semplice"
       body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
-    weblab:
-      title: "Sviluppo Web"
-      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
-      audience: "Da 13 anni in su"
-      cta: "Scopri come"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Guerre Stellari"
+    hoc:
+      title: 'Labirinto Classico'
+      body: 'Impara i concetti base dell''informatica. Milioni di persone l''hanno già fatto.'
+    hoc2014:
+      try_new_tutorial: 'Prova il nuovo corso dell''Ora del Codice in versione provvisoria'
+      try_frozen: 'Artista con Anna ed Elsa, da Frozen'
     infinity:
       title: "Laboratorio con Disney Infinity"
       body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity."
@@ -720,30 +713,40 @@ it:
     minecraft2016:
       title: "Minecraft"
       body: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
+    poem-art:
+      title: 'L''arte della poesia'
+      body: 'Esprimiti! Usa il codice per animare le poesie.'
+      image_alt: 'Un calamaro hipster che si esibisce su un palco.'
     sports:
       title: "Sport"
       body: "Crea una partita di basket o abbina diversi sport."
+    starwars:
+      title: "Guerre Stellari"
     text-compression:
       title: "Compressione del testo"
       body: "In questa lezione impari come comprimere un testo, sostituendo sequenze di caratteri ripetuti con simboli."
-    unplugged:
-      title: "Lezioni Tradizionali"
-      audience: "Età 4+"
-      body: "Abbiamo preparato delle lezioni (chiamate <i>lezioni tradizionali</i>) da usare nella tua classe senza utilizzare un computer. Potrai quindi insegnare le basi dell'informatica anche senza avere un computer! Puoi usare queste lezioni tradizionali sia come un corso a sé stante che come complemento agli altri corsi."
-      body_short: "Se non hai un computer, prova queste lezioni tradizionali."
-    unplugged_conditionals:
-      title: "Istruzioni condizionali"
-      body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
+    weblab:
+      title: "Sviluppo Web"
+      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
+      audience: "Da 13 anni in su"
+      cta: "Scopri come"
     widgets:
       title: "Componenti"
       body: "Gli studenti possono esplorare concetti dal nostro corso Cs Principles usando questi strumenti digitali sul campo. Possono utilizzare i componenti per conto proprio o creare una lezione su un singolo concetto per la classe."
       audience: "Dai 14 anni in su"
       cta: "Scopri come"
+    unplugged_conditionals:
+      title: "Istruzioni condizionali"
+      body: "Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali usando un mazzo di carte."
+    unplugged:
+      title: "Lezioni Tradizionali"
+      audience: "Età 4+"
+      body: "Abbiamo preparato delle lezioni (chiamate <i>lezioni tradizionali</i>) da usare nella tua classe senza utilizzare un computer. Potrai quindi insegnare le basi dell'informatica anche senza avere un computer! Puoi usare queste lezioni tradizionali sia come un corso a sé stante che come complemento agli altri corsi."
+      body_short: "Se non hai un computer, prova queste lezioni tradizionali."
+    20-hour:
+      title: 'Corso rapido'
+      body: 'Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell''informatica e della programmazione. Il corso è pensato per l''uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po'' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.'
+      body_short: 'Acquisisci le basi dell''informatica con una sintesi dei corsi 2-4.'
   landing:
     prerelease_tutorial: "Questa esercitazione è in **versione provvisoria**. È soggetta a revisioni man mano che arrivano osservazioni, al fine di migliorarla."
     report_bug: "Report Bug"
@@ -908,6 +911,7 @@ it:
           age: 'Si prega di specificare un''età'
           abuse_type: 'Indicate come questo contenuto violi i Termini del servizio'
           abuse_detail: 'Si prega di fornire i dettagli concernenti il contenuto che si desidera segnalare'
+          captcha: 'Compilare il CAPTCHA per segnalare questo contenuto.'
         abusive_url: 'URL del contenuto da segnalare'
         abuse_type:
           question: 'Come questo contenuto viola i %{link_start}Termini del servizio%{link_end}?'
@@ -928,7 +932,7 @@ it:
       name: 'Aumentato'
       description: 'Vorrei che un istruttore esaminasse questa presentazione'
     instructor_feedback: 'Feedback dell''istruttore'
-    peer_feedback: 'Feedback di un collega'
+    peer_feedback: 'Riscontro tra pari'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
     peer_review: 'Valutazioni dei parigrado'
   external_links:
@@ -989,8 +993,8 @@ it:
     download_in_Vietnamese: 'Scarica in vietnamita:'
     windows: 'Windows (64 bit)'
     mac: 'Mac OS X'
-  locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
-  hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
+  locked_stage: 'I contenuti di questa lezione non sono visibili perché questa lezione è attualmente bloccata. Il tuo insegnante può sbloccare questa lezione quando è il momento di lavorarci o rivedere le tue risposte.'
+  hidden_stage: "Il tuo insegnante non si aspettava  in questa lezione. Chiedi al tuo insegnante a quale lezione dovresti partecipare."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
   no_course_access_student: "Non hai accesso a questo corso. Per favore chiedi al tuo insegnante in quale corso dovresti essere."
   no_course_access_teacher: "Non hai accesso a questo corso. Se credi che dovresti avere accesso a questo corso, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
@@ -1016,6 +1020,7 @@ it:
       colombian_school_city: 'Città della scuola'
       colombian_school_municipality: 'Provincia della Scuola'
       colombian_chilean_school_name: 'Nome della scuola'
+      chilean_school_id: 'ID Scuola'
       ages: 'Qual è l''età degli studenti a cui insegni quest''anno?'
       subjects: 'Quali materie insegni quest''anno?'
       resources: 'Quali delle seguenti risorse di informatica utilizzi?'
@@ -1033,13 +1038,17 @@ it:
         not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Cile'
         colombia: 'Colombia'
         israel: 'Israele'
         malaysia: 'Malesia'
         mexico: 'Messico'
+        paraguay: 'Paraguay'
         thailand: 'Tailandia'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: 'Fino a 6 anni'
         ages_7_8: '7 -8 anni'
@@ -1108,6 +1117,13 @@ it:
     no_teacher_email:
       body_markdown: 'Nel tuo account non è stato inserito alcun indirizzo email. Per favore, prima di compilare questo modulo, [vai alle impostazioni del tuo account](%{user_registration}) per aggiungere il tuo indirizzo email.'
   courses_category: 'Corsi Avanzati'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Ciao mondo'
+      sports: 'Sport'
+      csf: 'Corsi base'
+      csc: 'Informatica interdisciplinare'
   cookie_banner:
     message: 'Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'
     more_information: "Leggi l'informativa sulla privacy di Code.org."
@@ -1144,4 +1160,15 @@ it:
       forbidden: "L'utente non può aggiornare lo stato bloccabile dello studente"
   reset_predict_progress_button: "Eliminare la risposta"
   pixelation:
+    raw_format: "Formato Raw"
+    save_image: "Salva immagine"
+    actual_size: "Dimensioni effettive"
+    image_file_format_header: "Formato file immagine "
+    image_file_format_width: "Larghezza: 1 byte"
+    image_file_format_height: "Altezza: 1 byte"
+    image_file_format_bits_per_pixel: "Bit per pixel: 1 byte"
+    image_width: "Larghezza immagine\n"
+    image_height: "Altezza immagine"
     binary: "Binario"
+    hexadecimal: "Esadecimale"
+    pixel_format_header: "Formato Pixel"

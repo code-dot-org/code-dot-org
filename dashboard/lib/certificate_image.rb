@@ -56,21 +56,21 @@ class CertificateImage
       # the correct font. This is important for handling non-latin languages.
       # The text_overlay is first generated at full size and then resized to fit
       # the given bounding box width & height.
-      text_overlay = Magick::Image.read("pango:#{text}") do
+      text_overlay = Magick::Image.read("pango:#{text}") do |img|
         # pango:markup is set to false in order to easily prevent pango markup
         # injection from user input.
-        define('pango', 'markup', false)
+        img.define('pango', 'markup', false)
         # If the text doesn't fit the bounding box, then put a '...' at the end.
-        define('pango', 'ellipsize', 'end')
-        self.background_color = 'none'
-        self.pointsize = pointsize
-        self.font = font
-        self.fill = color
+        img.define('pango', 'ellipsize', 'end')
+        img.background_color = 'none'
+        img.pointsize = pointsize
+        img.font = font
+        img.fill = color
         # Limit the maximum size of content to protect ourselves against extremely large strings.
         # The multiplier represents the max amount the text can be shrunk to fit the given bounds.
-        self.size = "#{width * 3}x#{height * 3}"
+        img.size = "#{width * 3}x#{height * 3}"
         # Center the text in the box.
-        self.gravity = Magick::CenterGravity
+        img.gravity = Magick::CenterGravity
       end.first
 
       return unless text_overlay
@@ -184,9 +184,10 @@ class CertificateImage
 
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
-    return true if ScriptConstants.unit_in_category?(:hoc, course)
+    course_version = CurriculumHelper.find_matching_course_version(course)
+    return true if course_version&.hoc?
     return false if accelerated_course?(course)
-    return false if CurriculumHelper.find_matching_course_version(course)
+    return false if course_version
     true
   end
 
@@ -196,9 +197,10 @@ class CertificateImage
 
   def self.certificate_template_for(course)
     if ScriptConstants.unit_in_category?(:minecraft, course)
-      if course == ScriptConstants::MINECRAFT_HERO_NAME
+      case course
+      when ScriptConstants::MINECRAFT_HERO_NAME
         'MC_Hour_Of_Code_Certificate_Hero.png'
-      elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
+      when ScriptConstants::MINECRAFT_AQUATIC_NAME
         'MC_Hour_Of_Code_Certificate_Aquatic.png'
       else
         'MC_Hour_Of_Code_Certificate.png'

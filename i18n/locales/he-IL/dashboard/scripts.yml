@@ -106,7 +106,10 @@ he:
         Testing: {}
         cspunit2: {}
         algebraPD2a: {}
-        allthethings: {}
+        allthethings:
+          lessons:
+            lesson-49:
+              name: מוסיקה
         algebraPD2b: {}
         cspfacilitator: {}
         K5-OnlinePD: {}
@@ -2323,12 +2326,18 @@ he:
           lessons:
             lesson-4:
               name: משתנים
-        csa3-2023: {}
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: בשביל לולאות
         csa4-2023: {}
         csa5-2023: {}
         csa6-2023: {}
         csa7-2023: {}
-        csa8-2023: {}
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         vpl-csd3-ayw-pilot-2022: {}
         vpl-csd4-ayw-pilot-2022: {}
         csa-magpie-lab: {}
@@ -2338,7 +2347,12 @@ he:
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         hello-world-soccer-2022: {}
-        csd1-2023: {}
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
         csd2-2023: {}
         csd4-2023:
           lesson_groups:
@@ -2358,7 +2372,10 @@ he:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
-        csd6-2023: {}
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
         csd7-2023: {}
         physcomp-temp:
           lesson_groups:
@@ -2393,8 +2410,6 @@ he:
               display_name: פּרוֹיֶקט
         csp5-2023:
           lesson_groups:
-            csp_lists:
-              display_name: רשימות
             csp_loops:
               display_name: חזרות
             csp_project:
@@ -2403,8 +2418,14 @@ he:
               display_name: סקר שלאחר הקורס
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: רשימות
             lessonGroup-2:
               display_name: סקר שלאחר הקורס
+            lessonGroup-3:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: פּרוֹיֶקט
         csp7-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2437,3 +2458,294 @@ he:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
         allthevalidation: {}
+        vpl-csd5-ayw-pilot-2022: {}
+        vpl-csd6-ayw-pilot-2022: {}
+        self-paced-pl-csa4-2023: {}
+        katies-playground: {}
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-temp: {}
+        csc-timecapsule-2023: {}
+        vpl-csd7-ayw-pilot-2022: {}
+        vpl-csd8-ayw-pilot-2022: {}
+        csc-mappinglandmarks-2023: {}
+        blockchain-2023: {}
+        self-paced-pl-csc-2023: {}
+        csc-ecosystems-2023: {}
+        csc-adaptations-2023: {}
+        drafting: {}
+        tess-testing-problem-solving-2023: {}
+        testing-focus-on-creativity1: {}
+        testing-focus-on-creativity2: {}
+        poetry-2023: {}
+        poemmaker-2023: {}
+        dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+          title: קורס ד' (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+            lessonGroup-4:
+              display_name: סקר
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+            lessonGroup-4:
+              display_name: סקר
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+            lessonGroup-4:
+              display_name: סקר
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+        focus-on-creativity2-2023: {}
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        csc-starquilts-2023: {}
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        focus-on-data3-2023: {}
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+        self-paced-pl-k5-getting-started: {}
+        focus-on-design-with-purpose2-2023: {}
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        self-paced-k5-pl-getting-started: {}
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+        focus-on-coding2-2023: {}
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        focus-on-impact-in-society4-2023: {}
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csa9-2023: {}
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        vpl-csd-ci-1: {}
+        vpl-csd-ci-2: {}
+        vpl-csd-ci-3: {}
+        vpl-csd-ci-4: {}
+        vpl-csd-ci-5: {}
+        vpl-csd-ci-6: {}
+        vpl-csd-ci-7: {}
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-5:
+              display_name: סקר
+        focus-on-creativity4b-2023: {}
+        focus-on-hardware3b-2023: {}
+        focus-on-design-with-purpose4b-2023: {}
+        ai-temp: {}
+        focus-on-coding4b-2023: {}
+        csd6b-2023: {}
+        vpl-csd-ci-6b: {}
+        self-paced-pl-physical-computing1-2023: {}
+        self-paced-pl-physical-computing2-2023: {}
+        self-paced-pl-csd1-2023: {}
+        self-paced-pl-csd2-2023: {}
+        self-paced-pl-csd3-2023: {}
+        self-paced-pl-csd4-2023: {}
+        self-paced-pl-csd5-2023: {}
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: מבוא
+        pl-csd-summer-day2: {}
+        pl-csd-summer-day3: {}
+        pl-csd-summer-day4: {}
+        pl-csd-summer-day5: {}
+        self-paced-pl-microbit1: {}
+        self-paced-pl-microbit2: {}
+        seesaw-adaptations: {}
+        csp-bingo-2023: {}
+        csd-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-data-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-impact-in-society-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-coding-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-design-with-purpose-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-hardware-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-creativity-post-survey-2023:
+          title: סקר שלאחר הקורס

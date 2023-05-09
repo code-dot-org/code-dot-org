@@ -1,11 +1,18 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MusicLabView from '@cdo/apps/music/MusicView';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
+import MusicLabView from '@cdo/apps/music/views/MusicView';
 
-$(document).ready(function() {
+$(document).ready(function () {
+  const channelId = document.querySelector('script[data-channelid]').dataset
+    .channelid;
+
   ReactDOM.render(
-    <MusicLabView />,
+    <Provider store={getStore()}>
+      <MusicLabView appOptions={{channel: channelId, app: 'music'}} />
+    </Provider>,
     document.getElementById('musiclab-container')
   );
 });

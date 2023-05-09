@@ -12,7 +12,7 @@ describe('ChangeUserTypeForm', () => {
     values: {},
     validationErrors: {},
     onChange: () => {},
-    onSubmit: () => {}
+    onSubmit: () => {},
   };
 
   describe('calls onChange', () => {
@@ -20,7 +20,7 @@ describe('ChangeUserTypeForm', () => {
 
     const initialValues = {
       email: 'initialEmail@example.com',
-      emailOptIn: 'no'
+      emailOptIn: 'no',
     };
 
     beforeEach(() => {
@@ -45,7 +45,7 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        email: changedEmail
+        email: changedEmail,
       });
     });
 
@@ -60,7 +60,7 @@ describe('ChangeUserTypeForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        emailOptIn: newOptIn
+        emailOptIn: newOptIn,
       });
     });
   });
@@ -144,7 +144,7 @@ describe('ChangeUserTypeForm', () => {
 
     it('does nothing if there are no validation errors', () => {
       wrapper.setProps({
-        validationErrors: {}
+        validationErrors: {},
       });
 
       wrapper.instance().focusOnAnError();
@@ -154,8 +154,8 @@ describe('ChangeUserTypeForm', () => {
     it('focuses on the email field if there is an email validation error', () => {
       wrapper.setProps({
         validationErrors: {
-          email: 'Something is wrong with the email'
-        }
+          email: 'Something is wrong with the email',
+        },
       });
 
       wrapper.instance().focusOnAnError();

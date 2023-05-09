@@ -300,7 +300,7 @@ def canonicalize(str)
   str = match&.captures&.last if match
   str.gsub!(/[-:]/, ' ')
   # deduplicate spaces
-  str = str.split(' ').compact.join(' ')
+  str = str.split.compact.join(' ')
   str.downcase.strip
 end
 

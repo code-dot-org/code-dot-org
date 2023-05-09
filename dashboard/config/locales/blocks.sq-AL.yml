@@ -332,6 +332,14 @@ sq:
             '"g"': g
             '"q"': q
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': klasë
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"row"': klasë
       gamelab_makeProjectile:
         options:
           DIRECTION:

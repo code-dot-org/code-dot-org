@@ -11,3 +11,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The main action is in this problem is drawing a dot and moving one way to draw multiple dots in a line. A loop can be used to repeat "drawDot()" 100 times in a row.
 MARKDOWN
+
+allow_multiple_attempts true

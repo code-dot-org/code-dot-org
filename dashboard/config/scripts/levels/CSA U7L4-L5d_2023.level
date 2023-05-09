@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A video streaming website wants to keep track of the user's viewing history.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">validateDate()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ViewingHistory</code> class to return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if the viewing date is valid, otherwise return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">validateVideo()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ViewingHistory</code> class to return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if the video is valid, otherwise return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>.\r\n\r\n✅ **TO DO #3:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addViewing()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ViewingHistory</code> class to call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> validation methods. If both validations pass, add the viewing to the user's history.\r\n\r\n✅ **TO DO #4:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">VideoRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">addViewing()</code> method and print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ViewingHistory</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "video_key": "csa_private_methods",
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Video Streaming",
+    "bubble_choice_description": "A video streaming website wants to keep track of the user's viewing history.",
+    "thumbnail_url": "https://images.code.org/58efd1cd27283c8623c3244574d3a2c5-browser.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2023-04-11T14:05:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:05:15.144+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L5c_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L5c_2023\"},{\"changed_at\":\"2023-04-11 14:05:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:09:50 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:03:44 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

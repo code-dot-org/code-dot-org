@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Report a problem
+# Report a Problem
 
 
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 
 ## What happens next? 
 
-#### After you submit your message, a member of our team will follow up with you via email. 
+##### After you submit your message, a member of our team will follow up with you via email. 
 
 
 

@@ -50,7 +50,7 @@ module Cdo
                 'schema-name': schema,
                 'table-name': table,
               },
-              'value': RedshiftImport::TEMP_TABLE_PREFIX
+              value: RedshiftImport::TEMP_TABLE_PREFIX
             }
           end
 
@@ -80,7 +80,7 @@ module Cdo
             'rule-action': 'add-suffix',
             'rule-target': 'schema',
             'object-locator': {'schema-name': '%'},
-            'value': '_pii'
+            value: '_pii'
           }
         end
 
@@ -181,9 +181,9 @@ module Cdo
         end
 
         CDO.log.info "DMS Task Completed Successfully: #{@arn}"
-      rescue StandardError => error
-        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{error.message}"
-        raise error
+      rescue StandardError => exception
+        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{exception}"
+        raise exception
       end
 
       # Check periodically until replication task has completed and then validate that it was successful.

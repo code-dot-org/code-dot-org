@@ -5,7 +5,7 @@ tr:
       name:
         Unplug1: Bilgisayar Bilimine Giriş
         Maze: Labirent
-        Multi: Çok Seçimli Şeyler
+        Multi: Çoktan Seçmeli Maddeler
         Unplug2: Sayısal Düşünme
         Unplug3: Grafik Kağıdı Programlama
         Artist: Sanatçı
@@ -612,11 +612,11 @@ tr:
         CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
         CSF_maze_intro_k1_blocks: Code Studio tanıtımı
         CSF_maze_intro_text_blocks: Code Studio tanıtımı
-        CSF_my_robotic_friends: Robot dostlarım
+        CSF_my_robotic_friends: Robotik Arkadaşlarım
         CSF_Power_of_Words: Kelimelerin Gücü
         CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
-        CSF_stevie_big_project: Stevie ve büyük proje
-        CSF_unspotted_bugs: Bulunamamış hatalar
+        CSF_stevie_big_project: Stevie ve Büyük Proje
+        CSF_unspotted_bugs: Fark Edilmeyen Hatalar
         CSF_zuck_loops_short: Döngüleri yineleyin
         frozen_intro: Kodlama Saatine Giriş
         frozen_loops: Döngülere Giriş
@@ -928,6 +928,57 @@ tr:
         csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
         csa-pl-intro-to-strings: Java'da Dizgilere Giriş
         csa-pl-compareTo: Karşılaştırma () metodu
+        csc-event-short-intro: Etkinlikler Kısa Giriş
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Devre Oyun Alanına Genel
+          Bakış
+        csa-day-in-pm-pl: Proje yöneticisi ne yapar?
+        csa-pl-intro-to-pm: Proje Yönetimine Giriş
+        PL_CSD_CircuitPlayground_Setup: Devre Oyun Alanı Ayarlama
+        csa_object_oriented_programming: 'CSA: Nesne Tabanlı Programlama'
+        csa_creating_objects: 'CSA: Nesne Oluşturma'
+        csa_calling_methods: 'CSA: Çağrı Yöntemleri'
+        csa_while_loops: 'CSA: Süresince Döngüleri'
+        csa_inheritance: 'CSA: Kalıtım'
+        csa_writing_a_method: 'CSA: Yöntem Yazma'
+        csa_software_engineering_code_reviews: 'CSA: Yazılım Mühendisliği - Kod İncelemeleri'
+        csa_conditional_statements: 'CSA: Koşullu İfadeler'
+        csa_printing_in_java: 'CSA: Java''da Yazdırma'
+        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim ve DEĞİL'
+        csa-pl-intro-to-oop: Nesne Tabanlı Programlamaya Giriş
+        csa-pl-welcome-to-Neighborhood: Çevremize Hoşgeldiniz
+        csa-pl-calling-methods: Java'da Çağrı Yöntemleri
+        csa-pl-creating-objects: Nesne Oluşturma
+        csa_accessor_methods: 'CSA: Accessor Yöntemleri'
+        csa_constructors: 'CSA: Yapıcılar'
+        csa_creating_a_scanner_object: 'CSA: Tarayıcı Nesnesi Oluşturma'
+        csa_creating_variables: 'CSA: Değişken Oluşturma'
+        csa_instance_variables_and_attributes: 'CSA: Örnek Değişkenleri ve Nitelikleri'
+        csa_mutator_methods: 'CSA: Mutator Yöntemleri'
+        csa_overloaded_constructors: 'CSA: Aşırı Yüklenmiş Kurucular'
+        csa_the_tostring_method: 'CSA: toString () Yöntemi'
+        csa_scanner_class_methods: 'CSA: Tarayıcı Sınıfı Yöntemleri'
+        csa_for_loops: 'CSA: (İçin) Döngüleri'
+        csa_enhanced_for_loops: 'CSA: Gelişmiş İçin Döngüleri'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D Dizideki Değerleri Değiştirme'
+        csa_nested_loops: 'CSA: İç içe Döngüler'
+        csa_one_dimensional_arrays: 'CSA: Tek Boyutlu (1D) Diziler'
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: Döküm'
+        csa_equals_and_aliases: 'CSA: Eşittir ve Takma Adlar'
+        csa_multi-selection_statements: 'CSA: Çok Seçimli İfadeler'
+        csa_random_numbers: 'CSA: Rastgele Sayılar'
+        csa_static_methods: 'CSA: Statik Yöntemler'
+        csa_static_variables: 'CSA: Statik Değişkenler'
+        csa_the_equals_method: 'CSA: equals() Yöntemi'
+        csa_welcome_to_the_theater: 'CSA: Tiyatroya Hoşgeldiniz'
+        enter_your_own_poem: Kendi Şiirinizi Girin
+        csa-example-solution-1: 'Canlı Kodlama Örnek Çözüm '
+        csd_sprite_properties: Nesne özellikleri
+        csa-pl-documentation: Java Lab'de Belgeler
+        csc-starquilts-intro: 'CSC: Yıldız Yorgan'
+        csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
+        csa-pl-vocab-pm: Proje Yönetimi Kelime Bilgisi
+        csc-ecosystems-intro: Ekosistemlere Giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

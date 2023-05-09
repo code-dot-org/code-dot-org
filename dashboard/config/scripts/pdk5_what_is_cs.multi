@@ -15,3 +15,4 @@ wrong 'a part inside of a computer'
 right 'a set of instructions a person gives a computer to execute'
 wrong 'a week-long course to learn about computers'
 wrong 'a secret password'
+allow_multiple_attempts true

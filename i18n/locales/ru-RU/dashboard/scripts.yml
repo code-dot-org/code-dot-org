@@ -264,6 +264,9 @@ ru:
           description_short: Все типы уровней для тестирования пользовательского интерфейса (UI)
           student_description: Все типы уровней для тестирования пользовательского интерфейса (UI). Пожалуйста, войдите в систему, чтобы протестировать уровни applab (по замыслу уровни applab работают только после входа в систему. Обычно мы вынуждаем людей входить в систему, но это возможно только для всего скрипта, и было бы нелишним сделать это для этого скрипта).
           name: allthethings
+          lessons:
+            lesson-49:
+              name: Музыка
         algebraPD2b:
           title: Информатика в алгебре. Проффесиональное Развитие
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1901,6 +1904,8 @@ ru:
               display_name: функции
             csp_project:
               display_name: Проект
+        pluralsight:
+          name: pluralsight
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -3512,6 +3517,40 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Одномерные (1D) массивы
+            lesson-3:
+              name: Циклы с параметром
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: СлучайноеЗначение
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+            lessonGroup-4:
+              display_name: Опрос
         hello-world-space-2022:
           title: 'Привет, мир: космос'
         hello-world-soccer-2022:
@@ -3519,17 +3558,15 @@ ru:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Глава 1
+              display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
-              display_name: Глава 2
-          title: Решение проблем
+              display_name: 'Глава 2: Компьютеры и решение проблем'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Пользовательский дизайн'
             lessonGroup-3:
               display_name: 'Глава 2: Прототипирование приложения'
-          title: Процесс разработки схемы
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3544,17 +3581,16 @@ ru:
               display_name: 'Глава 2: Создание игры'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Глава 1
             lessonGroup-3:
-              display_name: Глава 2
-          title: Физические Вычисления
+              display_name: 'Глава 2: Создание физических прототипов'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Глава 1
             lessonGroup-3:
               display_name: Глава 2
+            lessonGroup-4:
+              display_name: Введение в Лабораторию приложений
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -3586,7 +3622,7 @@ ru:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Списки
+              display_name: Данные
             csp_loops:
               display_name: Циклы
             csp_traversals:
@@ -3597,8 +3633,16 @@ ru:
               display_name: Опрос после окончания курса
         csp6-2023:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
             lessonGroup-2:
               display_name: Опрос после окончания курса
+            lessonGroup-3:
+              display_name: Циклы
+            lessonGroup-4:
+              display_name: Обходов
+            lessonGroup-5:
+              display_name: Проект
         csp7-2023:
           lesson_groups:
             csp_parameters_return_values:
@@ -3621,6 +3665,10 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Опрос после окончания курса
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Оценки
         csp-playground:
           description_audience: Руководство для авторов
           description_short: Для поэтапныъ обновлений в уроках или уровней между версиями учебной программы
@@ -3628,3 +3676,363 @@ ru:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Создание физических прототипов'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Введение в Лабораторию приложений
+        drafting:
+          name: разработка
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Глава 2
+          title: Решение проблем
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+          title: Решение проблем
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+          description_audience: 'Возраст: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_sprites:
+              display_name: Спрайты
+            lessonGroup-9:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_functions:
+              display_name: функции
+            csf_variables:
+              display_name: Переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+            end_of_course_project:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+            lessonGroup-5:
+              display_name: Завершение Курсового Проекта
+          student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+          description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
+          description_audience: 'Возраст: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_impacts:
+              display_name: Воздействие компьютерной техники
+            csf_events:
+              display_name: События
+            lessonGroup-6:
+              display_name: Завершение Курсового Проекта
+          student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
+          description_audience: 'Возраст: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+            csf_data:
+              display_name: Данные
+            end_of_course_project:
+              display_name: Завершение Курсового Проекта
+          student_description: Создавайте программы с последовательностью, циклами и событиями. Переведите свои инициалы в двоичный код, изучите различные методы решения проблем и узнайте, как реагировать на киберугрозы. В конце курса создайте свою собственную игру или историю, которой вы сможете поделиться!
+          description_short: Изучите основы компьютерной науки и создавайте свои собственные произведения искусства, истории и игры.
+          description_audience: 'Возраст: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_events:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            end_of_course_project:
+              display_name: Завершение Курсового Проекта
+          title: Курс D (2021)
+          description_audience: 'Возраст: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sprites:
+              display_name: Спрайты
+            ramp_up:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
+            csf_nested_loops:
+              display_name: Условные команды
+            lessonGroup-7:
+              display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-3:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опрос
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+            lessonGroup-4:
+              display_name: Опрос
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+            lessonGroup-4:
+              display_name: Опрос
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+            lessonGroup-4:
+              display_name: Опрос
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-3:
+              display_name: Глава 1
+            lessonGroup-4:
+              display_name: Глава 2
+            lessonGroup-5:
+              display_name: Опрос
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-3:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-3:
+              display_name: Глава 1
+            lessonGroup-4:
+              display_name: Глава 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Введение в Лабораторию приложений
+            lessonGroup-4:
+              display_name: Глава 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание физических прототипов'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опрос
+        vpl-csd-ci-1:
+          title: 'Модуль 1: Подготовка к преподаванию по теме "Решения задач и вычисления"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Решение задач и вычисления\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в решение задач и вычисления.\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 30 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Решение задач и вычисления\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в решение задач и вычисления.\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 30 минут"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Преподавание по теме "Веб-разработка"
+          title: 'Модуль 2: Подготовка к преподаванию по теме "Веб-разработка"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Веб-разработка\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в веб-разработку.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Web Lab.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по модулю \"Веб-разработка\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в веб-разработку.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Web Lab.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Подготовка к преподаванию по теме "Интерактивная анимация и игры"
+          title: 'Модуль 3: Подготовка к преподаванию по теме "Интерактивная анимация и игры" '
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Интерактивная анимация и игры\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в интерактивную анимацию и игры.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Лаборатории игр.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 120 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Интерактивная анимация и игры\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в интерактивную анимацию и игры.\n-   Знакомство с ключевыми понятиями модуля.\n-   Работа в Лаборатории игр.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 120 минут"
+        vpl-csd-ci-4:
+          title: ' Модуль 4: Подготовка к преподаванию по теме "Процесс дизайна"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Процесс дизайна\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в процесс дизайна.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории приложений.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Процесс дизайна\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в процесс дизайна.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории приложений.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd-ci-5:
+          title: 'Модуль 5: Подготовка к преподаванию по теме "Данные и общество"'
+          description: "Этот модуль профессионального обучения поможет вам приготовиться к преподаванию по теме \"Данные и общество\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в тему \"Данные и общество\".\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам приготовиться к преподаванию по теме \"Данные и общество\" на Code.org. \n\n**В этом модуле профессионального обучения вы познакомитесь со следующими темами:**\n\n-   Введение в тему \"Данные и общество\".\n-   Знакомство с ключевыми понятиями модуля.\n-   Знакомство с проектами, выполняемыми в конце главы.\n\n**Примерное время:** 90 минут"
+        vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Обучение ИИ и Машинному Обучению
+          title: 'Модуль 7: Подготовка к преподаванию по теме "Искусственный интеллект и машинное обучение"'
+          description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Искусственный интеллект и машинное обучение\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в искусственный интеллект и машинное обучение.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории искусственного интеллекта и в лаборатории приложений.\n-   Знакомство с проектами, выполняемыми в конце главы.\n-   Подготовка плана работы по модулю с учащимися.\n\n**Примерное время:** 120 минут"
+          student_description: "Этот модуль профессионального обучения поможет вам подготовиться к преподаванию по теме \"Искусственный интеллект и машинное обучение\" на Code.org. \n\n**В этом профессиональном модуле вы познакомитесь со следующими темами:**\n\n-   Введение в искусственный интеллект и машинное обучение.\n-   Знакомство с ключевыми понятиями модуля\n-   Работа в лаборатории искусственного интеллекта и в лаборатории приложений.\n-   Знакомство с проектами, выполняемыми в конце главы.\n-   Подготовка плана работы по модулю с учащимися.\n\n**Примерное время:** 120 минут"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Создание физических прототипов'
+            lessonGroup-5:
+              display_name: Опрос
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Добро пожаловать
+        self-paced-pl-csd5-2023:
+          title: Обучение ИИ и Машинному Обучению
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Введение
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Подведение итогов
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Подведение итогов
+        csd-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-data-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-impact-in-society-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-coding-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-hardware-post-survey-2023:
+          title: Опрос после окончания курса
+        focus-on-creativity-post-survey-2023:
+          title: Опрос после окончания курса

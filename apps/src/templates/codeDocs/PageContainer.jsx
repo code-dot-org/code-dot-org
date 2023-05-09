@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {
   NavigationBar,
   NavigationCategory,
-  NavigationItem
+  NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
 
 export default function PageContainer({
@@ -13,13 +13,13 @@ export default function PageContainer({
   categoriesForNavigation,
   programmingEnvironmentTitle,
   currentCategoryKey,
-  currentDocId
+  currentDocId,
 }) {
   return (
     <>
       <h1>
         {i18n.programmingEnvironmentDocumentation({
-          programmingEnvironmentTitle
+          programmingEnvironmentTitle,
         })}
       </h1>
       <div
@@ -58,5 +58,5 @@ PageContainer.propTypes = {
   categoriesForNavigation: PropTypes.arrayOf(PropTypes.object).isRequired,
   programmingEnvironmentTitle: PropTypes.string.isRequired,
   currentCategoryKey: PropTypes.string,
-  currentDocId: PropTypes.number
+  currentDocId: PropTypes.number,
 };

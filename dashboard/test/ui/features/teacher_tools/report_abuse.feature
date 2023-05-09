@@ -5,6 +5,7 @@ Feature: Report Abuse Form
     And I select the "13" option in dropdown "uitest-age-selector"
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
+    And I complete the CAPTCHA
     Then I click selector "#uitest-submit-report-abuse" once I see it
     Then I wait until current URL contains "support.code.org"
 
@@ -16,6 +17,7 @@ Feature: Report Abuse Form
     And I wait until element "#uitest-age-selector" is not visible
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
+    And I complete the CAPTCHA
     Then I click selector "#uitest-submit-report-abuse" once I see it
     Then I wait until current URL contains "support.code.org"
 
@@ -27,5 +29,6 @@ Feature: Report Abuse Form
     And I wait until element "#uitest-age-selector" is not visible
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "Mudblood is an offensive term" into "#uitest-abuse-detail"
+    And I complete the CAPTCHA
     Then I click selector "#uitest-submit-report-abuse" once I see it
     Then I wait until current URL contains "support.code.org"

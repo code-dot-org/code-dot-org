@@ -878,6 +878,7 @@ pt:
         csp_applab_parameters: Funções com parâmetros
         CSA-PL-intro-to-arrays: Arrays Unidimensionais (1D)
         CS_Changing_Everything: Ciência da Computação está Mudando Tudo
+        csd_sprite_properties: Propriedades do Sprite
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

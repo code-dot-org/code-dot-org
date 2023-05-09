@@ -7,12 +7,12 @@ import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboa
 describe('SectionAssigner', () => {
   // const store = createStore(combineReducers())
   const unassignedSection = fakeTeacherSectionsForDropdown[0];
-  const assignedSection = fakeTeacherSectionsForDropdown[1];
+  // const assignedSection = fakeTeacherSectionsForDropdown[1];
   const defaultProps = {
     selectedSectionId: unassignedSection.id,
     sections: fakeTeacherSectionsForDropdown,
     selectSection: () => {},
-    showAssignButton: false
+    showAssignButton: false,
   };
 
   it('renders a TeacherSectionSelector', () => {
@@ -21,28 +21,17 @@ describe('SectionAssigner', () => {
     expect(wrapper.find('TeacherSectionSelector').exists()).to.be.true;
   });
 
-  it('does not render an AssignButton if showAssignButton is false', () => {
+  it('does not render an MultipleAssignButton if showAssignButton is false', () => {
     const wrapper = mount(<SectionAssigner {...defaultProps} />);
 
-    expect(wrapper.find('AssignButton').exists()).to.be.false;
+    expect(wrapper.find('MultipleAssignButton').exists()).to.be.false;
   });
 
-  it('renders an AssignButton', () => {
+  it('renders an MultipleAssignButton', () => {
     const wrapper = shallow(
       <SectionAssigner {...defaultProps} showAssignButton={true} />
     );
 
-    expect(wrapper.find('Connect(AssignButton)').exists()).to.be.true;
-  });
-
-  it('renders an UnassignSectionButton', () => {
-    const wrapper = shallow(
-      <SectionAssigner
-        {...defaultProps}
-        selectedSectionId={assignedSection.id}
-      />
-    );
-
-    expect(wrapper.find('Connect(UnassignSectionButton)').exists()).to.be.true;
+    expect(wrapper.find('Connect(MultipleAssignButton)').exists()).to.be.true;
   });
 });

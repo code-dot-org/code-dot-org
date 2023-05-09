@@ -1759,6 +1759,277 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Bagong block!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Mag-click muna dito!"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Tab ng costume"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Tab ng costume"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "I-click ang asul na button para buksan o isara."
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Maaari mong pabagalin ang program mo dito."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Maaari mong pabagalin ang program mo dito."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Subukang lampasan ang code mo nang paisa-isa."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Subukang lampasan ang code mo nang paisa-isa."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Pindutin muna ang Run button!",
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Subukang baguhin ang kapag sa habang."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Subukang baguhin ang kapag sa habang."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Mga bagong block dito!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Mga bagong block dito!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Gamitin ang bagong block ng kaganapan na makikita dito."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Gamitin ang bagong block ng kaganapan na makikita dito."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Ang block na ito ay nasa maling pagkakasunud-sunod."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Ang block na ito ay nasa maling pagkakasunud-sunod."
+        },
+        "courseF_events_time": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Mag-click dito upang buksan ang kategoryang Mga Pag-uugali."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Mag-click dito upang buksan ang kategoryang Mga Pag-uugali."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Mag-click dito upang buksan ang kategoryang Mga Sprite."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Mag-click dito upang buksan ang kategoryang Mga Sprite."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Mag-click dito upang buksan ang kategoryang Mga Lokasyon."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Mag-click dito upang buksan ang kategoryang Mga Lokasyon."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Maghanap ng bagong block dito."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Maghanap ng bagong block dito."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Maghanap ng bagong block dito!"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Maghanap ng bagong block dito!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Nagbago ba ang kulay ng background noong sinagot mo ang tanong? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Nagbago ba ang kulay ng background noong sinagot mo ang tanong? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Tapos ka na ba? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Tapos ka na ba? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Maghanap ng dalawang mga bagong block dito!",
+          "text_answer_finish": "Nagpakita ba ang screen ng pamagat sa loob ng 3 segundo? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Maghanap ng dalawang mga bagong block dito!",
+          "text_answer_finish": "Nagpakita ba ang screen ng pamagat sa loob ng 3 segundo? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang code mo, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Maghanap ng mga bagong block dito!"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Maghanap ng mga bagong block dito!"
+        },
+        "courseF_text_events": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
+        },
+        "courseF_text_print": {
+          "print_block": "Hanapin ang print na block dito!",
+          "text_print_finish": "Na-print ba ang mensahe mo sa itaas? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang iyong code, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Hanapin ang print na block dito!",
+          "text_print_finish": "Na-print ba ang mensahe mo sa itaas? Kung gayon, pindutin ang 'Tapos na'. Kung hindi, pindutin ang 'I-reset', baguhin ang iyong code, at pindutin muli ang 'Run'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Hanapin ang prompt na block dito!"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Hanapin ang prompt na block dito!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
         }
       }
     }

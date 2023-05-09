@@ -12567,20 +12567,12 @@ id-ID:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat akan sampai di akorn. Tidak ada bug dalam code.
-          feedback: Salah. Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
-            secukupnya agar mencapai akorn.
         - text: Scrat tidak akan mencapai akorn karena dia salah belok.
           correct: true
-          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
-            secukupnya agar mencapai akorn.
         - text: Scrat tidak akan mencapai akorn karena tidak cukup ada blok `move
             forward`.
-          correct: true
-          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
-            secukupnya agar mencapai akorn.
         - text: Scrat tidak akan bergerak dari blok pertama.
-          feedback: Ada dua bug di dalam code ini. Pertama, Scrat salah belok, lalu
-            Scrat tidak bergerak maju secukupnya agar mencapai akorn.
+          feedback: Scrat tidak akan mencapai akorn karena dia salah belok.
         questions:
         - text: Cari bug dalam code ini. Akankah Scrat mencapai akorn atau apakah
             ada masalah?

@@ -10,8 +10,8 @@ Scenario:
   When I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "initial load"
-  And I drag Google Blockly block "1" to block "0"
-  Then Google Blockly block "1" is child of block "0"
+  And I drag block "moveLeft" to block "whenLeft"
+  Then block "moveLeft" is child of block "whenLeft"
   And I see no difference for "block snap"
   And I press "runButton"
   And I hold key "LEFT"

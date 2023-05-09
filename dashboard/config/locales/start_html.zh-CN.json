@@ -208,11 +208,13 @@
         },
         "CSD U1 processing live_2021": {
           "bear": "熊",
-          "rat": "老鼠"
+          "rat": "老鼠",
+          "walking": "行走"
         },
         "CSD U1 processing live_2022": {
           "bear": "熊",
-          "rat": "老鼠"
+          "rat": "老鼠",
+          "walking": "行走"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "叮咚！答对啦！",
@@ -447,7 +449,7 @@
           "yellow": "黄色",
           "green": "绿色",
           "blue": "蓝色",
-          "orange": "桔子"
+          "orange": "橙子"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "安静",
@@ -1684,6 +1686,42 @@
           "night": "夜",
           "dusk": "黄昏",
           "Predict": "预测"
+        },
+        "Escape Room Example": {
+          "1205": "1205"
+        },
+        "Final Room Escape App": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 1": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 10": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 10 - 2": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 3": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 3-2": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 4": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 5": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 7": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 8": {
+          "CODE": "代码"
+        },
+        "Room Escape Workshop - 9-2": {
+          "CODE": "代码"
         }
       }
     }
