@@ -42,7 +42,7 @@ export function newBoard() {
   const board = new five.Board({
     io: io,
     debug: false,
-    repl: false
+    repl: false,
   });
 
   io.emit('connect');

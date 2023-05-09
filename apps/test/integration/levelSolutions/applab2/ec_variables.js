@@ -23,8 +23,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.indexOf',
@@ -41,8 +41,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.includes',
@@ -61,8 +61,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.length',
@@ -77,8 +77,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'str.toUpperCase/str.toLowerCase',
@@ -97,8 +97,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     // This regression test covers an error in the interpreter's sort()
@@ -107,7 +107,7 @@ module.exports = {
     testApplabConsoleOutput({
       testName: 'Array.prototype.sort',
       source: 'console.log([5, 4, 4, 1].sort());',
-      expect: '▶[1, 4, 4, 5]'
-    })
-  ]
+      expect: '▶[1, 4, 4, 5]',
+    }),
+  ],
 };

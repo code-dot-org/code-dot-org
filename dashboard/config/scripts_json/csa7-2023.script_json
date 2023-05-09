@@ -9,14 +9,15 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 00:21:07 UTC",
-    "published_state": null,
+    "serialized_at": "2023-04-18 14:41:31 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -318,8 +319,9 @@
       "relative_position": 14,
       "properties": {
         "assessment": true,
-        "overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers"
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -1303,7 +1305,7 @@
       "key": "55964510-1b3f-409a-8407-3e80ecd4f054",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the this keyword refers to the current object. Students identify that using the this keyword as a parameter passes the current object in the method call.",
+        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the `this` keyword refers to the current object. Students identify that using the `this` keyword as a parameter passes the current object in the method call.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1575,7 +1577,7 @@
       "key": "5520c519-58ec-484a-a312-82e5dbb29f76",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n\n**Discussion Goal:** Students recall that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Students identify that Java can differentiate between the two by the method signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students suggest that the methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n\n**Discussion Goal:** Students recall that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Students identify that Java can differentiate between the two by the method signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students suggest that the methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
       },
       "seeding_key": {
         "activity_section.key": "5520c519-58ec-484a-a312-82e5dbb29f76",
@@ -2814,7 +2816,7 @@
       "key": "131eb99d-ea76-46a5-bb73-120c73192b2d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Open Source Bugs activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity and have students complete the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
       },
       "seeding_key": {
         "activity_section.key": "131eb99d-ea76-46a5-bb73-120c73192b2d",
@@ -3768,7 +3770,7 @@
       "key": "a4b8cbe6-1638-436a-8313-d6f638a16129",
       "position": 3,
       "properties": {
-        "description": "**Creative Coding with The Theater Project:** Use the rubric on the last page of the Creative Coding with The Theater Project Planning Guide to assess the projects.",
+        "description": "**Creative Coding with The Theater Project:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -3784,6 +3786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_2023"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3806,6 +3811,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3828,6 +3836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_2023"
+        ],
         "progression": "Predict and Run: Object References as Parameters"
       },
       "bonus": false,
@@ -3850,6 +3861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3872,6 +3886,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3894,6 +3911,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_2023"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3916,6 +3936,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L5_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3938,6 +3961,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L6_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3960,6 +3986,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L7_2023"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -3982,6 +4011,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4004,6 +4036,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1_2023"
+        ],
         "progression": "Predict and Run: Overloaded Methods"
       },
       "bonus": false,
@@ -4026,6 +4061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4048,6 +4086,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4070,6 +4111,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_2023"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4092,6 +4136,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L5_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4114,6 +4161,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L6_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4136,6 +4186,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L7_2023"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4158,6 +4211,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L8_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4180,6 +4236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4202,6 +4261,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4224,6 +4286,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_2023"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4246,6 +4311,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4268,6 +4336,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L5_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4290,6 +4361,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L6_2023"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4312,6 +4386,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4334,6 +4411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4356,6 +4436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4378,6 +4461,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_2023"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4400,6 +4486,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4422,6 +4511,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4444,6 +4536,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_2023"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4466,6 +4561,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4488,6 +4586,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4510,6 +4611,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4532,6 +4636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4554,6 +4661,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4576,6 +4686,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4598,6 +4711,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4620,6 +4736,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment_2023"
+        ],
         "progression": "Unit 7 Assessment"
       },
       "bonus": false,
@@ -4667,6 +4786,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_2023"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -5204,6 +5326,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 7 Guide",
+      "url": "https://docs.google.com/document/d/1SuKkXhuLkM0qjGUKxYFXIIG5wjVIRYRxN-VgWJuxF4c/edit?usp=share_link",
+      "key": "_exemplar_unit_7_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_7_guide"
+      }
+    },
+    {
       "name": "[KEY] MusicQueue FRQ",
       "url": "https://docs.google.com/document/d/16IVOtfRf0PLA0hWlxuJVHLrq-7yPKq_sGoUinQX3FJU/edit?usp=share_link",
       "key": "_key_musicqueue_frq",
@@ -5372,6 +5506,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa7-2023/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa7-2023/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa7-2023/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
+      }
+    },
+    {
       "name": "Coloring Page",
       "url": "https://docs.google.com/document/d/1njVylQ0RpzNSK7Bvn4GODpYB8FxpCYRdBEJzBCe6OCo/edit?usp=sharing",
       "key": "coloring_page",
@@ -5431,6 +5598,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_coding_with_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "Creative Coding with The Theater Project Planning Guide",
+      "url": "https://docs.google.com/document/d/15-nB8Vema_sBoeRHTpGJQBdemsbFIZ9ZxZx9cIcCoAM/edit?usp=sharing",
+      "key": "creative_coding_with_the_theater_project_planning_guide_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide_2"
       }
     },
     {
@@ -5944,7 +6123,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "creative_coding_with_the_theater_project_planning_guide"
+        "resource.key": "creative_coding_with_the_theater_project_planning_guide_2"
       }
     },
     {
@@ -6345,6 +6524,30 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_7_guide",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa7-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "developing_project_management_skills",

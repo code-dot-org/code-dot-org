@@ -20,7 +20,7 @@ describe('debug output of an ExpressionNode tree', function () {
 
     node = new ExpressionNode('+', [
       new ExpressionNode('-', [3, 2]),
-      new ExpressionNode('*', [1, 1])
+      new ExpressionNode('*', [1, 1]),
     ]);
     assert.equal(node.debug(), '(+ (- 3 2) (* 1 1))');
   });
@@ -114,7 +114,7 @@ describe('ExpressionNode', function () {
     it('works with nested nodes', function () {
       node = new ExpressionNode('*', [
         new ExpressionNode('/', [1, 2]),
-        new ExpressionNode('/', [3, 4])
+        new ExpressionNode('/', [3, 4]),
       ]);
       assert.equal(node.value_, '*');
       assert(node.isArithmetic());
@@ -203,8 +203,8 @@ describe('ExpressionNode', function () {
       node = new ExpressionNode('sqrt', [
         new ExpressionNode('+', [
           new ExpressionNode('sqr', [3]),
-          new ExpressionNode('sqr', [4])
-        ])
+          new ExpressionNode('sqr', [4]),
+        ]),
       ]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
@@ -215,7 +215,7 @@ describe('ExpressionNode', function () {
     it('can evaluate a more complex expression', function () {
       node = new ExpressionNode('*', [
         new ExpressionNode('-', [5, 3]),
-        new ExpressionNode('/', [8, 4])
+        new ExpressionNode('/', [8, 4]),
       ]);
       evaluation = node.evaluate({});
       assert(!evaluation.err);
@@ -241,7 +241,7 @@ describe('ExpressionNode', function () {
 
       evaluation = node.evaluate({
         x: jsnums.makeFloat(1),
-        y: jsnums.makeFloat(2)
+        y: jsnums.makeFloat(2),
       });
       assert(!evaluation.err);
       assert(isJsNumber(evaluation.result));
@@ -274,7 +274,7 @@ describe('ExpressionNode', function () {
       // f(x, y) = x + y
       mapping.f = {
         variables: ['x', 'y'],
-        expression: new ExpressionNode('+', ['x', 'y'])
+        expression: new ExpressionNode('+', ['x', 'y']),
       };
       evaluation = node.evaluate({});
       assert(evaluation.err);
@@ -293,7 +293,7 @@ describe('ExpressionNode', function () {
       // f(x) = x
       mapping.f = {
         variables: ['x'],
-        expression: new ExpressionNode('x')
+        expression: new ExpressionNode('x'),
       };
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
@@ -308,12 +308,12 @@ describe('ExpressionNode', function () {
       // g(y) = y + 1
       mapping.g = {
         variables: ['y'],
-        expression: new ExpressionNode('+', ['y', 1])
+        expression: new ExpressionNode('+', ['y', 1]),
       };
       // f(x) = g(x)
       mapping.f = {
         variables: ['x'],
-        expression: new ExpressionNode('g', ['x'])
+        expression: new ExpressionNode('g', ['x']),
       };
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
@@ -329,11 +329,11 @@ describe('ExpressionNode', function () {
       mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
-        expression: new ExpressionNode('+', ['x', 'y'])
+        expression: new ExpressionNode('+', ['x', 'y']),
       };
       mapping.f = {
         variables: ['x'],
-        expression: new ExpressionNode('g', ['x'])
+        expression: new ExpressionNode('g', ['x']),
       };
 
       // compute f(2)
@@ -352,14 +352,14 @@ describe('ExpressionNode', function () {
       mapping.x = jsnums.makeFloat(1);
       mapping.g = {
         variables: ['y'],
-        expression: new ExpressionNode('+', ['x', 'y'])
+        expression: new ExpressionNode('+', ['x', 'y']),
       };
       mapping.f = {
         variables: ['x'],
         expression: new ExpressionNode('+', [
           new ExpressionNode('g', ['x']),
-          new ExpressionNode('x')
-        ])
+          new ExpressionNode('x'),
+        ]),
       };
 
       // compute f(2)
@@ -379,17 +379,17 @@ describe('ExpressionNode', function () {
       var mapping = {
         f: {
           variables: ['x'],
-          expression: new ExpressionNode('+', ['x', 1])
+          expression: new ExpressionNode('+', ['x', 1]),
         },
         g: {
           variables: ['x'],
-          expression: new ExpressionNode('+', ['x', 2])
-        }
+          expression: new ExpressionNode('+', ['x', 2]),
+        },
       };
 
       node = new ExpressionNode('+', [
         new ExpressionNode('f', [1]),
-        new ExpressionNode('g', [2])
+        new ExpressionNode('g', [2]),
       ]);
       evaluation = node.evaluate(mapping);
       assert(!evaluation.err);
@@ -404,9 +404,9 @@ describe('ExpressionNode', function () {
           variables: ['x'],
           expression: new ExpressionNode('+', [
             new ExpressionNode('f', ['x']),
-            new ExpressionNode(1)
-          ])
-        }
+            new ExpressionNode(1),
+          ]),
+        },
       };
 
       node = new ExpressionNode('f', [1]);
@@ -418,7 +418,7 @@ describe('ExpressionNode', function () {
     it('cant evaluate an expression that becomes a div zero', function () {
       var node = new ExpressionNode('/', [
         new ExpressionNode(6),
-        new ExpressionNode('-', [5, 5])
+        new ExpressionNode('-', [5, 5]),
       ]);
       evaluation = node.evaluate();
       assert(evaluation.err);
@@ -450,7 +450,7 @@ describe('ExpressionNode', function () {
 
     node = new ExpressionNode('*', [
       new ExpressionNode('+', [1, 2]),
-      new ExpressionNode('-', [3, 1])
+      new ExpressionNode('-', [3, 1]),
     ]);
     assert.equal(node.depth(), 2);
   });
@@ -467,7 +467,7 @@ describe('ExpressionNode', function () {
     // both children have same depth
     node = new ExpressionNode('+', [
       new ExpressionNode('+', [1, 2]),
-      new ExpressionNode('+', [3, 4])
+      new ExpressionNode('+', [3, 4]),
     ]);
     assert.equal(node.getDeepestOperation().debug(), '(+ 1 2)');
 
@@ -505,7 +505,7 @@ describe('ExpressionNode', function () {
 
     node = new ExpressionNode('*', [
       new ExpressionNode('+', [1, 2]),
-      new ExpressionNode('-', [3, 1])
+      new ExpressionNode('-', [3, 1]),
     ]);
     result = node.collapse();
     assert.equal(result, true);
@@ -537,7 +537,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(1), true),
           new Token(' + ', true),
           new Token(jsnums.makeFloat(2), true),
-          new Token(')', true)
+          new Token(')', true),
         ]);
       });
     });
@@ -566,7 +566,7 @@ describe('ExpressionNode', function () {
           new Token('x', true),
           new Token(',', true),
           new Token('y', true),
-          new Token(')', true)
+          new Token(')', true),
         ]);
       });
     });
@@ -582,7 +582,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(1), false),
           new Token(' + ', false),
           new Token(jsnums.makeFloat(2), false),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
 
@@ -595,7 +595,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(1), true),
           new Token(' - ', true),
           new Token(jsnums.makeFloat(2), true),
-          new Token(')', true)
+          new Token(')', true),
         ]);
       });
 
@@ -608,7 +608,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(2), true),
           new Token(' + ', false),
           new Token(jsnums.makeFloat(2), false),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
 
@@ -621,7 +621,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(1), false),
           new Token(' + ', false),
           new Token(jsnums.makeFloat(3), true),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
     });
@@ -629,7 +629,7 @@ describe('ExpressionNode', function () {
     it('works with collapse', function () {
       var original = new ExpressionNode('*', [
         new ExpressionNode('+', [1, 2]),
-        new ExpressionNode('+', [3, 4])
+        new ExpressionNode('+', [3, 4]),
       ]);
       var node = original.clone();
       node.collapse();
@@ -644,7 +644,7 @@ describe('ExpressionNode', function () {
         new Token(' + ', false),
         new Token(jsnums.makeFloat(4), false),
         new Token(')', false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
     });
 
@@ -653,7 +653,7 @@ describe('ExpressionNode', function () {
       var expected = new ExpressionNode('f', [
         new ExpressionNode(1),
         new ExpressionNode(2),
-        new ExpressionNode(3)
+        new ExpressionNode(3),
       ]);
 
       it('marks nothing when calls are identical', function () {
@@ -667,7 +667,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(2), false),
           new Token(',', false),
           new Token(jsnums.makeFloat(3), false),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
 
@@ -675,7 +675,7 @@ describe('ExpressionNode', function () {
         node = new ExpressionNode('g', [
           new ExpressionNode(1),
           new ExpressionNode(2),
-          new ExpressionNode(3)
+          new ExpressionNode(3),
         ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
@@ -686,7 +686,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(2), true),
           new Token(',', true),
           new Token(jsnums.makeFloat(3), true),
-          new Token(')', true)
+          new Token(')', true),
         ]);
       });
 
@@ -694,7 +694,7 @@ describe('ExpressionNode', function () {
         node = new ExpressionNode('f', [
           new ExpressionNode(1),
           new ExpressionNode(2),
-          new ExpressionNode(4)
+          new ExpressionNode(4),
         ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
@@ -705,7 +705,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(2), false),
           new Token(',', false),
           new Token(jsnums.makeFloat(4), true),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
 
@@ -713,7 +713,7 @@ describe('ExpressionNode', function () {
         node = new ExpressionNode('f', [
           new ExpressionNode(4),
           new ExpressionNode(5),
-          new ExpressionNode(6)
+          new ExpressionNode(6),
         ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
@@ -724,7 +724,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(5), true),
           new Token(',', false),
           new Token(jsnums.makeFloat(6), true),
-          new Token(')', false)
+          new Token(')', false),
         ]);
       });
 
@@ -733,7 +733,7 @@ describe('ExpressionNode', function () {
           new ExpressionNode(1),
           new ExpressionNode(2),
           new ExpressionNode(3),
-          new ExpressionNode(4)
+          new ExpressionNode(4),
         ]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
@@ -746,7 +746,7 @@ describe('ExpressionNode', function () {
           new Token(jsnums.makeFloat(3), true),
           new Token(',', true),
           new Token(jsnums.makeFloat(4), true),
-          new Token(')', true)
+          new Token(')', true),
         ]);
       });
     });
@@ -784,10 +784,10 @@ describe('ExpressionNode', function () {
     it('single value', function () {
       var node = new ExpressionNode(1);
       assert.deepEqual(node.getTokenList(false), [
-        new Token(jsnums.makeFloat(1), false)
+        new Token(jsnums.makeFloat(1), false),
       ]);
       assert.deepEqual(node.getTokenList(true), [
-        new Token(jsnums.makeFloat(1), true)
+        new Token(jsnums.makeFloat(1), true),
       ]);
     });
 
@@ -798,14 +798,14 @@ describe('ExpressionNode', function () {
         new Token(jsnums.makeFloat(1), false),
         new Token(' + ', false),
         new Token(jsnums.makeFloat(2), false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
       assert.deepEqual(node.getTokenList(true), [
         new Token('(', true),
         new Token(jsnums.makeFloat(1), true),
         new Token(' + ', true),
         new Token(jsnums.makeFloat(2), true),
-        new Token(')', true)
+        new Token(')', true),
       ]);
     });
 
@@ -820,7 +820,7 @@ describe('ExpressionNode', function () {
         new Token(')', false),
         new Token(' + ', false),
         new Token(jsnums.makeFloat(3), false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
       assert.deepEqual(node.getTokenList(true), [
         new Token('(', false),
@@ -831,7 +831,7 @@ describe('ExpressionNode', function () {
         new Token(')', true),
         new Token(' + ', false),
         new Token(jsnums.makeFloat(3), false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
     });
 
@@ -839,7 +839,7 @@ describe('ExpressionNode', function () {
       var node = new ExpressionNode('/', [1, 4]);
       node.collapse();
       assert.deepEqual(node.getTokenList(false), [
-        new Token(jsnums.makeFloat('0.25').toExact(), false)
+        new Token(jsnums.makeFloat('0.25').toExact(), false),
       ]);
     });
 
@@ -882,7 +882,7 @@ describe('ExpressionNode', function () {
         new Token(jsnums.makeFloat(1), false),
         new Token(' + ', false),
         new Token(jsnums.makeFloat(2), false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
     });
 
@@ -890,8 +890,8 @@ describe('ExpressionNode', function () {
       var node = new ExpressionNode('sqrt', [
         new ExpressionNode('+', [
           new ExpressionNode('sqr', [3]),
-          new ExpressionNode('sqr', [4])
-        ])
+          new ExpressionNode('sqr', [4]),
+        ]),
       ]);
 
       var tokenList = node.getTokenList(false);
@@ -907,7 +907,7 @@ describe('ExpressionNode', function () {
         new Token(jsnums.makeFloat(4), false),
         new Token(' ^ 2', false),
         new Token(')', false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
 
       tokenList = node.getTokenList(true);
@@ -923,7 +923,7 @@ describe('ExpressionNode', function () {
         new Token(jsnums.makeFloat(4), false),
         new Token(' ^ 2', false),
         new Token(')', false),
-        new Token(')', false)
+        new Token(')', false),
       ]);
     });
   });
@@ -969,11 +969,11 @@ describe('ExpressionNode', function () {
 
     node = new ExpressionNode('+', [
       new ExpressionNode('*', [1, 2]),
-      new ExpressionNode('/', [3, 4])
+      new ExpressionNode('/', [3, 4]),
     ]);
     target = new ExpressionNode('+', [
       new ExpressionNode('/', [3, 4]),
-      new ExpressionNode('*', [1, 2])
+      new ExpressionNode('*', [1, 2]),
     ]);
     assert.equal(node.isEquivalentTo(target), true);
   });

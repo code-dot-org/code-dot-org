@@ -450,44 +450,6 @@ module Pd::Application
       assert_equal 3, application.status_log.count
     end
 
-    test 'setting an auto-email status queues up an email if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:queue_email).with('accepted')
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting an auto-email status does not queue up an email if no RP' do
-      application = create :pd_teacher_application
-      assert_empty application.emails
-
-      application.expects(:queue_email).never
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting a non auto-email status does not queue up a status email even if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:queue_email).never
-      application.update!(status: 'pending')
-    end
-
-    test 'setting an auto-email status deletes unsent emails for the application' do
-      unrelated_email = create :pd_application_email
-      application = create :pd_teacher_application
-      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
-      associated_unsent_email = create :pd_application_email, application: application
-
-      application.update!(status: 'pending_space_availability')
-      assert Email.exists?(unrelated_email.id)
-      assert Email.exists?(associated_sent_email.id)
-      refute Email.exists?(associated_unsent_email.id)
-    end
-
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher_application_hash,
         regional_partner_id: create(:regional_partner).id,
@@ -845,7 +807,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :admin_approval, deliver_now: true
+        application.send_pd_application_email :admin_approval
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
@@ -1123,14 +1085,6 @@ module Pd::Application
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       TeacherApplication.send_admin_approval_reminders_to_teachers
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
-
-      # If we queued a teacher reminder email any time before but didn't send, we still cannot send.
-      application = create :pd_teacher_application
-      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 14.days.ago
-      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
-      TeacherApplication.send_admin_approval_reminders_to_teachers
-      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
       # If we sent a teacher reminder email any time before, we cannot send.
       application = create :pd_teacher_application

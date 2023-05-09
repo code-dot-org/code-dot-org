@@ -24,7 +24,7 @@ class ScreenSelector extends React.Component {
 
     // passed explicitly
     screenIds: PropTypes.array.isRequired,
-    onCreate: PropTypes.func.isRequired
+    onCreate: PropTypes.func.isRequired,
   };
 
   handleChange = evt => {
@@ -88,7 +88,7 @@ export default connect(
       currentScreenId: state.screens.currentScreenId,
       interfaceMode: state.interfaceMode,
       hasDesignMode: state.pageConstants.hasDesignMode,
-      isRunning: state.runState.isRunning
+      isRunning: state.runState.isRunning,
     };
   },
   function propsFromDispatch(dispatch) {
@@ -98,7 +98,7 @@ export default connect(
       },
       onImport() {
         dispatch(screens.toggleImportScreen(true));
-      }
+      },
     };
   }
 )(ScreenSelector);

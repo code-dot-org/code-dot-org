@@ -208,7 +208,7 @@ export const commands = {
       actionCommands.moveToward.apply(this, [
         spriteArg,
         5,
-        closestTarget.position
+        closestTarget.position,
       ]);
     };
   },
@@ -221,5 +221,5 @@ export const commands = {
   removeBehaviorSimple(spriteArg, behavior) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.removeBehavior(sprite, behavior));
-  }
+  },
 };

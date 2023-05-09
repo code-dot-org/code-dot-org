@@ -101,7 +101,7 @@ class CollectionsApi {
     path +=
       '?' +
       queryString.stringify({
-        version: versionId
+        version: versionId,
       });
     return ajaxInternal('PUT', path, success, error);
   }
@@ -115,7 +115,7 @@ class CollectionsApi {
               study: 'weblab_loading_investigation',
               study_group: 'empty_manifest',
               event: 'error_uploading_starter_files',
-              project_id: this.getProjectId()
+              project_id: this.getProjectId(),
             },
             {includeUserId: true}
           );
@@ -158,7 +158,7 @@ class AssetsApi extends CollectionsApi {
       '?' +
       queryString.stringify({
         src_channel: sourceProjectId,
-        src_files: JSON.stringify(assetFilenames)
+        src_files: JSON.stringify(assetFilenames),
       });
     return ajaxInternal('POST', path, success, error);
   }
@@ -270,7 +270,7 @@ class FilesApi extends CollectionsApi {
     path +=
       '?' +
       queryString.stringify({
-        version: versionId
+        version: versionId,
       });
     return ajaxInternal('PUT', path, success, error);
   }
@@ -279,7 +279,7 @@ class FilesApi extends CollectionsApi {
     var path = this.basePath(newFilename);
     var params = {
       src: oldFilename,
-      delete: oldFilename
+      delete: oldFilename,
     };
     if (project().filesVersionId) {
       params['files-version'] = project().filesVersionId;
@@ -514,5 +514,5 @@ module.exports = {
   starterAssets: new StarterAssetsApi(),
   files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels')
+  channels: new CollectionsApi('channels'),
 };

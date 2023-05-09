@@ -1,6 +1,6 @@
 name 'CSD U5 MC Q3_2023'
 type 'multi'
-question 'Given the following cross tabulation of favorite pets and activities, is this statement true or false? "If I like music, I\'m mostly likely to like birds."'
+question ' '
 wrong 'True'
 right 'False'
 teacher_markdown <<MARKDOWN
@@ -10,10 +10,17 @@ If someone likes music, they are most likely to like dogs.
 MARKDOWN
 
 markdown <<MARKDOWN
+Given the following cross tabulation of favorite pets and activities, is this statement true or false? "_If I like music, I'm mostly likely to like birds._"
+<br>
+
 | | Dog | Cat | Bird | Snake |
 | ----------- | :-----------: | :-----------: | :-----------: | :-----------: |
 | Camping | II |  | I | I |
 | Art |  | IIIII |  |  |
 | Video Games | III | I |  | I |
 | Music | IIIIII | II | I | I |
+
+<br>
 MARKDOWN
+
+allow_multiple_attempts true

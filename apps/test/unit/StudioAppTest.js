@@ -5,7 +5,7 @@ import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
-  makeFooterMenuItems
+  makeFooterMenuItems,
 } from '@cdo/apps/StudioApp';
 import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
@@ -16,7 +16,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {
   sandboxDocumentBody,
   replaceOnWindow,
-  restoreOnWindow
+  restoreOnWindow,
 } from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -80,12 +80,12 @@ describe('StudioApp', () => {
           containerId: 'foo',
           level: {
             editCode: true,
-            codeFunctions: {}
+            codeFunctions: {},
           },
           dropletConfig: {
-            blocks: []
+            blocks: [],
           },
-          skin: {}
+          skin: {},
         });
 
         expect(assetsApi.getFiles).to.have.been.calledOnce;
@@ -101,12 +101,12 @@ describe('StudioApp', () => {
           containerId: 'foo',
           level: {
             editCode: true,
-            codeFunctions: {}
+            codeFunctions: {},
           },
           dropletConfig: {
-            blocks: []
+            blocks: [],
           },
-          skin: {}
+          skin: {},
         });
 
         expect(listener).to.have.been.calledOnce;
@@ -235,7 +235,7 @@ describe('StudioApp', () => {
         studio = studioApp();
         studio.feedback_ = {
           canContinueToNextLevel: () => {},
-          getNumBlocksUsed: () => {}
+          getNumBlocksUsed: () => {},
         };
 
         onAttemptSpy = sinon.spy();
@@ -260,13 +260,13 @@ describe('StudioApp', () => {
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeSinceLastReport: 3000
+              idleTimeSinceLastReport: 3000,
             },
             pageConstants: {
-              isReadOnlyWorkspace: false
-            }
+              isReadOnlyWorkspace: false,
+            },
           }),
-          dispatch: stubbedDispatch
+          dispatch: stubbedDispatch,
         });
 
         studio.report({});
@@ -286,13 +286,13 @@ describe('StudioApp', () => {
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeSinceLastReport: 1000
+              idleTimeSinceLastReport: 1000,
             },
             pageConstants: {
-              isReadOnlyWorkspace: false
-            }
+              isReadOnlyWorkspace: false,
+            },
           }),
-          dispatch: sinon.stub()
+          dispatch: sinon.stub(),
         });
 
         studio.milestoneStartTime = 1000;
@@ -307,7 +307,7 @@ describe('StudioApp', () => {
           time: 2000,
           timeSinceLastMilestone: 1000,
           attempt: 0,
-          lines: undefined
+          lines: undefined,
         });
 
         redux.getStore.restore();
@@ -423,12 +423,12 @@ describe('StudioApp', () => {
   describe('loadLibraryBlocks', () => {
     const initialConfig = {
       level: {
-        codeFunctions: {preExistingFunction: null}
+        codeFunctions: {preExistingFunction: null},
       },
       dropletConfig: {
         additionalPredefValues: ['preExistingValue'],
-        blocks: ['preExistingBlock']
-      }
+        blocks: ['preExistingBlock'],
+      },
     };
 
     it('given no libraries, leaves the config unchanged', () => {
@@ -457,7 +457,7 @@ describe('StudioApp', () => {
       let targetBlocks = [
         'preExistingBlock',
         ...sampleLibrary.libraries[0].dropletConfig,
-        ...sampleLibrary.libraries[1].dropletConfig
+        ...sampleLibrary.libraries[1].dropletConfig,
       ];
 
       config.level.libraries = sampleLibrary.libraries;
@@ -470,12 +470,12 @@ describe('StudioApp', () => {
       let librarycode = [
         {
           name: sampleLibrary.libraries[0].name,
-          code: createLibraryClosure(sampleLibrary.libraries[0])
+          code: createLibraryClosure(sampleLibrary.libraries[0]),
         },
         {
           name: sampleLibrary.libraries[1].name,
-          code: createLibraryClosure(sampleLibrary.libraries[1])
-        }
+          code: createLibraryClosure(sampleLibrary.libraries[1]),
+        },
       ];
 
       config.level.libraries = sampleLibrary.libraries;
@@ -489,7 +489,7 @@ describe('StudioApp', () => {
         preExistingFunction: null,
         'twoFunctionLibrary.functionWithParams': null,
         'twoFunctionLibrary.functionWithGlobalVariable': null,
-        'oneFunctionLibrary.functionWithPrivateFunctionCall': null
+        'oneFunctionLibrary.functionWithPrivateFunctionCall': null,
       };
 
       config.level.libraries = sampleLibrary.libraries;

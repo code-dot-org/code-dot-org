@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-04-11 23:33:29 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-04-28 18:53:17 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -331,7 +333,7 @@
       "key": "182b31a3-ea9b-4bd5-b846-a259ce445d39",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show a couple poetry slides\n\n**Read poetry together:** Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show a couple poetry slides\n\n**Read poetry together:** Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems."
       },
       "seeding_key": {
         "activity_section.key": "182b31a3-ea9b-4bd5-b846-a259ce445d39",
@@ -2242,6 +2244,16 @@
       }
     },
     {
+      "key": "2ef99265-af55-4a2d-8719-58d4451f0610",
+      "properties": {
+        "description": "Understand the power of being able to write programs to animate text"
+      },
+      "seeding_key": {
+        "lesson.key": "Poetry Circle",
+        "objective.key": "2ef99265-af55-4a2d-8719-58d4451f0610"
+      }
+    },
+    {
       "key": "4903767c-89c4-4fbf-8879-93cf977803ae",
       "properties": {
         "description": "Describe how visual and multimedia elements contribute to the meaning, tone, or beauty of a text. "
@@ -2299,6 +2311,16 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "objective.key": "a39a475f-a7c2-402f-abef-87340f6e4a45"
+      }
+    },
+    {
+      "key": "a4fa2434-b9c5-4e36-819b-50398d230730",
+      "properties": {
+        "description": "Share their apps with one another"
+      },
+      "seeding_key": {
+        "lesson.key": "Poetry Circle",
+        "objective.key": "a4fa2434-b9c5-4e36-819b-50398d230730"
       }
     },
     {

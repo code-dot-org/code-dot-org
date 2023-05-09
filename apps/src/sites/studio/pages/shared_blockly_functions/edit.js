@@ -10,7 +10,7 @@ const customSimpleDialog = function ({
   bodyText,
   prompt,
   promptPrefill,
-  onCancel: callback
+  onCancel: callback,
 }) {
   if (prompt) {
     const result = window.prompt(bodyText, promptPrefill);
@@ -29,7 +29,7 @@ Blockly.inject(document.getElementById('blockly-container'), {
   customSimpleDialog,
   valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
   hasVerticalScrollbars: true,
-  typeHints: true
+  typeHints: true,
 });
 
 const blockPool = JSON.parse(
@@ -39,7 +39,7 @@ install(Blockly);
 installCustomBlocks({
   blockly: Blockly,
   blockDefinitions: blockPool,
-  customInputTypes // TODO: generalize for other app types.
+  customInputTypes, // TODO: generalize for other app types.
 });
 
 const DEFAULT_NAME = 'acting';

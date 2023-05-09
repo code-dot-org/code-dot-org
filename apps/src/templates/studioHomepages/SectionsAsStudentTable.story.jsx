@@ -14,7 +14,7 @@ const sections = [
     numberOfStudents: 14,
     linkToStudents: 'to Manage Students tab',
     login_type: 'picture',
-    code: 'ABCDEF'
+    code: 'ABCDEF',
   },
   {
     name: 'Algebra Period 2',
@@ -25,7 +25,7 @@ const sections = [
     numberOfStudents: 19,
     linkToStudents: 'to Manage Students tab',
     login_type: 'word',
-    code: 'EEB206'
+    code: 'EEB206',
   },
   {
     name: 'Period 3',
@@ -36,7 +36,7 @@ const sections = [
     numberOfStudents: 22,
     linkToStudents: 'to Manage Students tab',
     login_type: 'email',
-    code: 'HPRWHG'
+    code: 'HPRWHG',
   },
   {
     name: 'Period 4',
@@ -47,7 +47,7 @@ const sections = [
     numberOfStudents: 23,
     linkToStudents: 'to Manage Students tab',
     login_type: 'clever',
-    code: 'C-GAIDFE'
+    code: 'C-GAIDFE',
   },
   {
     name: 'Period 5',
@@ -60,13 +60,13 @@ const sections = [
     numberOfStudents: 24,
     linkToStudents: 'to Manage Students tab',
     login_type: 'google_classroom',
-    code: 'G-DSLIGFDE'
-  }
+    code: 'G-DSLIGFDE',
+  },
 ];
 
 export default {
   title: 'SectionAsStudentTable',
-  component: SectionsAsStudentTable
+  component: SectionsAsStudentTable,
 };
 
 const Template = args => (
@@ -82,10 +82,10 @@ const Template = args => (
 
 export const SectionCanLeave = Template.bind({});
 SectionCanLeave.args = {
-  canLeave: true
+  canLeave: true,
 };
 
 export const SectionCannotLeave = Template.bind({});
 SectionCannotLeave.args = {
-  canLeave: false
+  canLeave: false,
 };

@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-08 13:50:47 UTC",
+    "serialized_at": "2023-05-08 14:57:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -102,7 +103,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the substring() method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
+        "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
         "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
       },
@@ -192,9 +193,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Why does an `ArrayList` only store objects?\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they discover why an `ArrayList` can only store objects and learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
+        "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-7-lists-of-objects/37928) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Why does an `ArrayList` only store objects?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you discover why an `ArrayList` can only store objects and learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
+        "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -2645,7 +2646,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: Manipulating Elements"
+        "progression_name": "Investigate and Modify: Lists of Objects"
       },
       "seeding_key": {
         "activity_section.key": "0b4e1124-cda4-4b96-a1b9-200a5f15d8ce",
@@ -4186,7 +4187,7 @@
       "key": "bb2493c2-8286-4f5f-b819-4777e1101ad9",
       "position": 3,
       "properties": {
-        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric on the last page of the Natural Language Processing Project Planning Guide to assess the projects.",
+        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -4749,6 +4750,56 @@
     {
       "chapter": 23,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "progression": "Investigate and Modify: The ArrayList Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      },
+      "level_keys": [
+        "CSA U6L4-L3_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L4-L4_2023"
+        ],
+        "progression": "Investigate and Modify: The ArrayList Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L4-L4_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      },
+      "level_keys": [
+        "CSA U6L4-L4_2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4772,8 +4823,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
+      "chapter": 26,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4797,8 +4848,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
+      "chapter": 27,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4822,8 +4873,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
+      "chapter": 28,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4847,7 +4898,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4872,7 +4923,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4897,7 +4948,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4922,7 +4973,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4947,7 +4998,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4972,7 +5023,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4997,7 +5048,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5022,7 +5073,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5047,7 +5098,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5072,7 +5123,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5097,7 +5148,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5122,7 +5173,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5147,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5172,7 +5223,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5197,7 +5248,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5222,7 +5273,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5247,7 +5298,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5272,7 +5323,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5280,7 +5331,7 @@
         "level_keys": [
           "CSA U6L7-L2_2023"
         ],
-        "progression": "Investigate and Modify: Manipulating Elements"
+        "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
       "seeding_key": {
@@ -5297,7 +5348,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5305,7 +5356,7 @@
         "level_keys": [
           "CSA U6L7-L3_2023"
         ],
-        "progression": "Investigate and Modify: Manipulating Elements"
+        "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
       "seeding_key": {
@@ -5322,7 +5373,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5330,7 +5381,7 @@
         "level_keys": [
           "CSA U6L7-L4_2023"
         ],
-        "progression": "Investigate and Modify: Manipulating Elements"
+        "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
       "seeding_key": {
@@ -5347,7 +5398,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5372,7 +5423,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5397,7 +5448,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5422,7 +5473,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5447,7 +5498,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5472,7 +5523,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5497,7 +5548,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5522,7 +5573,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5547,7 +5598,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5572,7 +5623,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5597,7 +5648,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5622,7 +5673,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5647,7 +5698,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5672,7 +5723,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5697,7 +5748,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5722,7 +5773,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5747,7 +5798,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5772,7 +5823,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5797,7 +5848,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5822,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5847,7 +5898,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5872,11 +5923,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6-2023"
+        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -5894,7 +5948,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6177,6 +6231,30 @@
         "level.key": "CSA U6L4-L2_2023",
         "script_level.level_keys": [
           "CSA U6L4-L2_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L4-L3_2023",
+        "script_level.level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L4-L4_2023",
+        "script_level.level_keys": [
+          "CSA U6L4-L4_2023"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -6775,15 +6853,15 @@
       }
     },
     {
-      "name": "[KEY] Project Characteristics",
-      "url": "https://docs.google.com/document/d/1qK7GgOOjGm5XF2cXcFN2NeA6fE-Mfptnk6vmAm8rC5s/edit?usp=share_link",
-      "key": "_key_project_characteristics",
+      "name": "[EXEMPLAR] Unit 6 Guide",
+      "url": "https://docs.google.com/document/d/1O8_f2SkeW7wUmyZGMYxIkhu6ofLckmOIsDwcg1pqklA/edit?usp=share_link",
+      "key": "_exemplar_unit_6_guide",
       "properties": {
         "audience": "Verified Teacher",
-        "type": "Answer Key"
+        "type": "Exemplar"
       },
       "seeding_key": {
-        "resource.key": "_key_project_characteristics"
+        "resource.key": "_exemplar_unit_6_guide"
       }
     },
     {
@@ -7492,12 +7570,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "_key_project_characteristics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
         "resource.key": "_key_u6l1_extra_practice"
       }
     },
@@ -7869,6 +7941,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_6_guide",
+        "script.name": "csa6-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_6",

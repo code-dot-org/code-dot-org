@@ -33,7 +33,7 @@ var CraftVisualizationColumn = function (props) {
 };
 
 CraftVisualizationColumn.propTypes = {
-  showFinishButton: PropTypes.bool.isRequired
+  showFinishButton: PropTypes.bool.isRequired,
 };
 
 module.exports = CraftVisualizationColumn;

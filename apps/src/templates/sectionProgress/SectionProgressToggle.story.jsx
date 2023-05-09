@@ -14,7 +14,7 @@ export default storybook => {
           }}
           scriptId={1}
         />
-      )
+      ),
     };
   }
 
@@ -29,7 +29,7 @@ export default storybook => {
           }}
           scriptId={1}
         />
-      )
+      ),
     };
   }
 
@@ -45,7 +45,7 @@ export default storybook => {
           }}
           scriptId={1}
         />
-      )
+      ),
     };
   }
 

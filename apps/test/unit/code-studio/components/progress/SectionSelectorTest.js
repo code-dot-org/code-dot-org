@@ -3,7 +3,7 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   UnconnectedSectionSelector as SectionSelector,
-  NO_SELECTED_SECTION_VALUE
+  NO_SELECTED_SECTION_VALUE,
 } from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {mount} from 'enzyme';
 import * as utils from '@cdo/apps/utils';
@@ -11,7 +11,7 @@ import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const fakeSection = {
   name: 'My Section',
-  id: 123
+  id: 123,
 };
 
 const testSectionId = 11;

@@ -48,7 +48,7 @@ export default class cc_client {
         error: function (jqxhr, textStatus, error) {
           // TODO: handle net::ERR_CONNECTION_REFUSED error gracefully
           asyncCallback(false);
-        }
+        },
       });
     }
   }
@@ -65,7 +65,7 @@ export default class cc_client {
     if (window.ipcRenderer !== undefined) {
       window.ipcRenderer.sendToHost('sendToApp', {
         api: 'basic',
-        url: `${baseUrl}${this.port}/${command}`
+        url: `${baseUrl}${this.port}/${command}`,
       });
       this.callbackRef = callback;
       this.keyRef = key;
@@ -86,7 +86,7 @@ export default class cc_client {
         error: function (jqxhr, textStatus, error) {
           console.log(`Command : ${command} fail`, error);
           callback();
-        }
+        },
       });
     }
   }

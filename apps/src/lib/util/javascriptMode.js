@@ -82,7 +82,7 @@ export function apiValidateType(
           6,
           9,
           10,
-          12
+          12,
         ];
         var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         if (isMicroBitBoard) {

@@ -11,13 +11,13 @@ describe('MethodSummaryTable', () => {
       {
         key: 'turnleft',
         name: 'turnLeft()',
-        content: 'A description about what this method does'
+        content: 'A description about what this method does',
       },
       {
         key: 'step',
         name: 'step(int steps)',
-        content: 'A description about what this method and parameter does'
-      }
+        content: 'A description about what this method and parameter does',
+      },
     ];
   });
 

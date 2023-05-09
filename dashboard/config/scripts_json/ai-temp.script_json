@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-12 02:51:25 UTC",
+    "serialized_at": "2023-05-04 16:12:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,18 +42,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "notice": "AI/ML Professional Development",
-            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
       "seeding_key": {
@@ -70,6 +61,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "Students learn how computer vision works. They first look at optical illusions to identify the features of the drawing that their eyes noticed. Students watch a video explaining computer vision and how a computer \"sees\". They design an algorithm that uses a network to decide what number the seven segment display is displaying. Finally, students test their algorithm.",
+        "preparation": "- Print copies of the Computer Vision Network activity guide for each group\n- (Optional) Print copies of the Seven Segment Display Manipulative",
+        "student_overview": "Learn how computer vision works by designing an algorithm to detect numbers."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -85,6 +79,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "Students learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.",
+        "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student",
+        "student_overview": "Learn how neural networks work by adjusting the weights of a recommendation system to adjust the outputs."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -94,12 +91,15 @@
     },
     {
       "key": "lesson-7",
-      "name": "[Generative AI Lesson]",
+      "name": "[Generative LLM Lesson (chatbot)]",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Large Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia.\n\nIn this activity, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n",
+        "preparation": "- Print copies of the activity guide for each student",
+        "student_overview": "Are Large Language Models (LLMs) intelligent or creative? Decide for yourself as you work with them to create something, and learn more about how they work!"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -108,15 +108,30 @@
       }
     },
     {
-      "key": "Algorithmic Bias",
-      "name": "Algorithmic Bias",
+      "key": "lesson-8",
+      "name": "[Generative Images Lesson (dall-e-esque)]",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "Algorithmic Bias",
+      "name": "Algorithmic Bias",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
         "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
-        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-lessons-1-7/36489) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing)",
+        "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
       "seeding_key": {
@@ -128,14 +143,14 @@
     {
       "key": "Our AI Code of Ethics",
       "name": "Our AI Code of Ethics",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\r\n- (Optional) Watch our **How AI Works** video series and prepare to share it with students after the lesson.",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
       "seeding_key": {
@@ -146,13 +161,13 @@
     },
     {
       "key": "Blockchain In a Day",
-      "name": "Blockchain In a Day",
-      "absolute_position": 7,
+      "name": "Introduction to AI In a Day",
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How Blockchain Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire Introduction to AI video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom."
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -218,6 +233,184 @@
       }
     },
     {
+      "key": "380689a6-76b5-4746-a0d5-60a5d41f28e0",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "380689a6-76b5-4746-a0d5-60a5d41f28e0",
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "38e8af92-a111-42f5-9b93-c723bd2f53c5",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "c24958df-e546-4f72-ba8a-69016a87f2ec",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "0601474b-ca09-4996-8160-e880e4cec3e8",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "aec17932-137c-4f4a-940c-e6941ec16520",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aec17932-137c-4f4a-940c-e6941ec16520",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Neural Networks"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "82731c6b-052b-425a-aad4-62f85474fd23",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "c6f6081e-0e67-4413-a217-07ecfeca95f8",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "969658e5-7a77-4157-8c32-47a88346b337",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
       "key": "3bbd3bbf-aa1f-407f-be08-e40f71186cdd",
       "position": 1,
       "properties": {
@@ -254,6 +447,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145",
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706",
         "lesson.key": "Algorithmic Bias",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -314,13 +520,13 @@
       }
     },
     {
-      "key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
+      "key": "017827aa-77fd-48b5-9b18-3f4e25f81174",
       "position": 5,
       "properties": {
-        "name": "Extended Learning"
+        "name": "After the Lesson"
       },
       "seeding_key": {
-        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74",
+        "lesson_activity.key": "017827aa-77fd-48b5-9b18-3f4e25f81174",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -331,7 +537,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Introduction to Blockchain"
+        "name": "Introduction to AI"
       },
       "seeding_key": {
         "lesson_activity.key": "4a5a98de-b492-47df-95a0-6aceefa69ffd",
@@ -345,7 +551,7 @@
       "position": 2,
       "properties": {
         "duration": 10,
-        "name": "Why Blockchain?"
+        "name": "What is Machine Learning?"
       },
       "seeding_key": {
         "lesson_activity.key": "46c8889e-3e6c-4f38-85f7-4355cef430ba",
@@ -359,7 +565,7 @@
       "position": 3,
       "properties": {
         "duration": 10,
-        "name": "Under the Hood"
+        "name": "Training Data and Bias"
       },
       "seeding_key": {
         "lesson_activity.key": "1bac79cf-34b0-4d15-b558-c3e4921d6f9b",
@@ -369,28 +575,28 @@
       }
     },
     {
-      "key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+      "key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
       "position": 4,
       "properties": {
         "duration": 10,
-        "name": "Beyond Currencies"
+        "name": "How Neural Networks Work"
       },
       "seeding_key": {
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
+        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
         "lesson.key": "Blockchain In a Day",
         "lesson_group.key": "",
         "script.name": "ai-temp"
       }
     },
     {
-      "key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+      "key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
       "position": 5,
       "properties": {
         "duration": 10,
-        "name": "Marketplace & Price"
+        "name": "How Computer Vision Works"
       },
       "seeding_key": {
-        "lesson_activity.key": "dc78ffe6-c1cd-49ad-aceb-a39b233a3931",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9",
         "lesson.key": "Blockchain In a Day",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -401,7 +607,7 @@
       "position": 6,
       "properties": {
         "duration": 10,
-        "name": "Trustworthy or a Scam"
+        "name": "Ethics & AI: Equal Access and Algorithmic Bias"
       },
       "seeding_key": {
         "lesson_activity.key": "abbb0aa6-d654-4130-ab38-ae014235d655",
@@ -415,7 +621,7 @@
       "position": 7,
       "properties": {
         "duration": 10,
-        "name": "Societal Impact"
+        "name": "Ethics & AI: Privacy & the Future of Work"
       },
       "seeding_key": {
         "lesson_activity.key": "770d000b-e678-4bf8-a98a-797388320d6b",
@@ -443,7 +649,7 @@
       "key": "efe9075d-e60b-41ca-bbe6-32285a8acd06",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -798,15 +1004,13 @@
       }
     },
     {
-      "key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+      "key": "679a6819-0166-4683-8110-c81c20e37457",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
-        "name": "Reflection",
-        "progression_name": "Check-In Survey"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the  video in the slides\n[r introduction_to_ai_-_training_data_and_bias/ai-temp/unversioned]"
       },
       "seeding_key": {
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1",
+        "activity_section.key": "679a6819-0166-4683-8110-c81c20e37457",
         "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152"
       }
     },
@@ -820,6 +1024,2155 @@
       "seeding_key": {
         "activity_section.key": "dab81f50-3f98-4996-b401-f01699ca1efc",
         "lesson_activity.key": "57ed185b-d2e8-4766-9661-3f832cec5152"
+      }
+    },
+    {
+      "key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06bdab50-c475-4990-bb5a-31bb6c04ca21",
+        "lesson_activity.key": "380689a6-76b5-4746-a0d5-60a5d41f28e0"
+      }
+    },
+    {
+      "key": "fb7de881-f681-4c9c-a91a-5eae1f835b25",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the image on the slide to students.",
+        "name": "Optical Illusions"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb7de881-f681-4c9c-a91a-5eae1f835b25",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "636059ac-31c1-4987-8631-3ee9f2f6df58",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "636059ac-31c1-4987-8631-3ee9f2f6df58",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "f247fab8-4a90-4df4-b16a-a0b4e5b77e93",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _What animal do you see in this image? Write your answer on a sheet of paper_"
+      },
+      "seeding_key": {
+        "activity_section.key": "f247fab8-4a90-4df4-b16a-a0b4e5b77e93",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "70ddb44c-93fe-42d5-9f11-70b47f9e91dd",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70ddb44c-93fe-42d5-9f11-70b47f9e91dd",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "775a7f79-5081-4840-aeac-32169f27731b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** After a brief pause, ask students to share out. Students will likely notice one of two animals: either a duck or a rabbit. Once both options are said, students may \"switch\" back and forth in how they see the image - sometimes it's a duck, sometimes it's a rabbit."
+      },
+      "seeding_key": {
+        "activity_section.key": "775a7f79-5081-4840-aeac-32169f27731b",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "68f26f59-65e6-4a0b-a42c-6d6f76b32479",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "68f26f59-65e6-4a0b-a42c-6d6f76b32479",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "5460d221-4e74-4fe5-8b99-669e3c0c39e1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _If this were an argument and you wanted to convince someone else that your animal is correct, what would you say? What **features** in the image help your argument?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "5460d221-4e74-4fe5-8b99-669e3c0c39e1",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "ad57bfcc-37cc-42d9-99eb-ea489c7220b9",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ad57bfcc-37cc-42d9-99eb-ea489c7220b9",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "ad0f2d6d-e528-4189-b7b5-cbe4463009e3",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is meant to help students identify the features of the drawing that their eyes noticed to help make that decision. Both arguments will likely identify the black dot in the center as the eye of the animal. Duck arguments will identify the left feature as the bill or mouth of the duck, whereas rabbit arguments will identify those as the ears. Emphasize that students are using specific features to make their decision (ie: eye + ears + mouth = rabbit)."
+      },
+      "seeding_key": {
+        "activity_section.key": "ad0f2d6d-e528-4189-b7b5-cbe4463009e3",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "ea9a63dd-a785-4aef-b625-47cbb731d474",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea9a63dd-a785-4aef-b625-47cbb731d474",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "a1415f18-651b-4dbd-948f-a852232bfbf9",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show slide with additional optical illusions"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1415f18-651b-4dbd-948f-a852232bfbf9",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "ef8676cb-5d31-464a-85b1-971e0e09d6da",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef8676cb-5d31-464a-85b1-971e0e09d6da",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "b87f7925-ef76-415b-91cb-630460390d3a",
+      "position": 13,
+      "properties": {
+        "description": "We use our eyes and sense of sight to identify objects, and sometimes an image with identical features can be interpretted in several different ways. But what about a computer - what would it \"see\" if it saw one of this pictures? Is the dress gold, or is it blue? Is this a young woman looking away, or an old woman looking down? Are these a bunch of dogs, or a bunch of bagels? Today we're going to talk about how computers can \"see\" and detect images",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b87f7925-ef76-415b-91cb-630460390d3a",
+        "lesson_activity.key": "38e8af92-a111-42f5-9b93-c723bd2f53c5"
+      }
+    },
+    {
+      "key": "b86e7b1a-f0ef-41ff-832f-b931a53abcd9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_computer_vision_works_1/ai-temp/unversioned]",
+        "name": "Image Recognition Algorithm"
+      },
+      "seeding_key": {
+        "activity_section.key": "b86e7b1a-f0ef-41ff-832f-b931a53abcd9",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "72eab082-a6b2-4168-a124-bf415c939499",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "72eab082-a6b2-4168-a124-bf415c939499",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "50ef3f67-f1b4-497d-bd3d-e7c9b984f81d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you summarize how a computer \"sees\" something in an image?"
+      },
+      "seeding_key": {
+        "activity_section.key": "50ef3f67-f1b4-497d-bd3d-e7c9b984f81d",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "ee7a8885-2a74-41e9-a5ac-715ab3676ed9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee7a8885-2a74-41e9-a5ac-715ab3676ed9",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "da8c658a-9802-4a83-8fba-062b4314400b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students describing how it breaks an image into parts, then combines them together in layers to create more complex shapes. Students may rely on the shape visuals from the video, or on the dog and muffin visuals."
+      },
+      "seeding_key": {
+        "activity_section.key": "da8c658a-9802-4a83-8fba-062b4314400b",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "20e7cf05-893c-40d7-a3cd-d6599bb86d2e",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "20e7cf05-893c-40d7-a3cd-d6599bb86d2e",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "ebe0349c-b6d1-4951-9323-8a3206871bc1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with vocabulary for today's lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebe0349c-b6d1-4951-9323-8a3206871bc1",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "64e54cac-d2c6-46da-86b6-9f8394cdb303",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "64e54cac-d2c6-46da-86b6-9f8394cdb303",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "f2edc645-cbcc-413c-82eb-2e523a919bdb",
+      "position": 9,
+      "properties": {
+        "description": "* **Algorithm** - a series of steps to solve a problem or make a decision\n* **Network** - A collection of items connected together. Following these connections can represent the steps in an algorithm, like a flowchart."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2edc645-cbcc-413c-82eb-2e523a919bdb",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "9d96f4db-109f-4b8e-9ed4-b78dfe4aa355",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d96f4db-109f-4b8e-9ed4-b78dfe4aa355",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "10e8c3a0-46fe-44d3-a813-b56c9a946215",
+      "position": 11,
+      "properties": {
+        "description": "Today we're going to create our own image recognition **algorithm**. An algorithm is a series of steps to solve a problem or make a decision. We're going to create an algorithm that uses a **network** to make a decision, just like in the video",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "10e8c3a0-46fe-44d3-a813-b56c9a946215",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "a57447f9-9145-4105-90d2-86d06eb891cc",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a57447f9-9145-4105-90d2-86d06eb891cc",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "1849a2f7-b72a-45c9-a128-4cf617285c82",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with a scoreboard from a baseball game"
+      },
+      "seeding_key": {
+        "activity_section.key": "1849a2f7-b72a-45c9-a128-4cf617285c82",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "33627534-02cb-47ec-8686-12af396ee433",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "33627534-02cb-47ec-8686-12af396ee433",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "920d8ff2-cf46-41a8-9cf4-0cc18706a5f6",
+      "position": 15,
+      "properties": {
+        "description": "We're helping a sports arena make its scoreboard more accessible. We want to train a camera to detect what the scores are so it can be broadcast to a radio receive for people who are visually impaired. For this to work, it needs to detect the which number is displayed on the scoreboard. Each number is represented with one of these displays, which uses 7 segments to create images.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "920d8ff2-cf46-41a8-9cf4-0cc18706a5f6",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "7b0cef44-9d38-464b-ab81-f70e43fc6bfe",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b0cef44-9d38-464b-ab81-f70e43fc6bfe",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "04b1576e-95c0-450e-aed2-7b606fa5295a",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you represent your birthday using these numbers? Sketch your answer on a sheet of scratch paper"
+      },
+      "seeding_key": {
+        "activity_section.key": "04b1576e-95c0-450e-aed2-7b606fa5295a",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "cd39ba68-10be-4118-8d5d-c7f149b92f83",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd39ba68-10be-4118-8d5d-c7f149b92f83",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "f51a00b8-6543-4576-8eb1-25c1c1788a84",
+      "position": 19,
+      "properties": {
+        "description": "As students are sketching their responses, begin distributing the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f51a00b8-6543-4576-8eb1-25c1c1788a84",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "5fdd8464-40ce-4748-9755-019e9f0b4827",
+      "position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5fdd8464-40ce-4748-9755-019e9f0b4827",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "83b74996-35e9-4cd2-ab6b-15d26c027256",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the\n[r computer_vision_network/ai-temp/unversioned]",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Going Big:** Consider printing out copies of the 7-segment manipulatives and having students work on whiteboards, poster paper, rolls of butcher paper, or even setting down individual items and connecting them with string or yarn."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "83b74996-35e9-4cd2-ab6b-15d26c027256",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "4ee01ed4-cb2e-4aa0-bfc5-f308b39c18e8",
+      "position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee01ed4-cb2e-4aa0-bfc5-f308b39c18e8",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "0e2fb7aa-0e8f-498a-a36b-87840baee2e6",
+      "position": 23,
+      "properties": {
+        "description": "**Group:** Group students into pairs to work together"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e2fb7aa-0e8f-498a-a36b-87840baee2e6",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "0fda68c3-2afc-4019-9a56-e94a8440564f",
+      "position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0fda68c3-2afc-4019-9a56-e94a8440564f",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "fb94afe7-0053-4432-84df-12d875874286",
+      "position": 25,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slides giving an overview of this activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb94afe7-0053-4432-84df-12d875874286",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "e2dbc314-b8d6-4be2-b74a-ae374a0290e1",
+      "position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2dbc314-b8d6-4be2-b74a-ae374a0290e1",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "c8c950b5-ec66-4196-9d5b-67170e0684ae",
+      "position": 27,
+      "properties": {
+        "description": "| Slides                           | Say                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| ![](https://images.code.org/1b79baa3ea6dfa043c4ca65862fde192-slides1.png) | **Say:** The left side of this guide represents the inputs that your sensor can detect. It knows when each individual segment is turned on.                              |\n| ![](https://images.code.org/ddf12b3544d8315ddb987a86cb1ec8ef-slides2.png) | **Say:** The right side of this guide represents the decision we're trying to make. We need to build a path from the inputs on the left to these decisions on the right. |\n| ![](https://images.code.org/67dd4d7689a543737ea8bf31e21e377f-slides3.png) | **Say:** This central area is where you can build your network, just like in the video                                                                                   |\n| ![](https://images.code.org/b5be83c4dbfac8bfcacb8cbed48546c8-slides4.png) | **Say:** You can combine at most 2 inputs from previous layers to create a new combination, like this \"corner\" combined from two segments                                |\n| ![](https://images.code.org/52227f3ce8b3cfbf9e779f3b9bb948a1-slides5.png) | **Say:** You can make as many items in this column as you want! For the first layer, you may end up with a lot of combinations in this column                            |\n| ![](https://images.code.org/b5a0d32cf2af3901fe39ad517eaec037-slides6.png) | **Say:** You can combine from previous layers to move into the next layers, creating more complex shaps like this \"Top Half\"                                             |\n| ![](https://images.code.org/4ff1cfacd677b6992336307c0cffc8ba-slides7.png) | **Say:** You can combine from any previous layer, but you can still only use 2 inputs at a time                                                                          |\n| ![](https://images.code.org/59b7b329453c40494bfc0f5d8353ffce-slides8.png) | **Say:** The final layer is special - it can combine up to 3 inputs from any of the previous layers\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c950b5-ec66-4196-9d5b-67170e0684ae",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "4c555cb5-d8aa-4c12-9120-427c3b4a20bf",
+      "position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4c555cb5-d8aa-4c12-9120-427c3b4a20bf",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "a8384314-5f97-47ca-b9b7-4fd43dcd8def",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work in pairs to construct their network. The rules for the network are displayed on the slides."
+      },
+      "seeding_key": {
+        "activity_section.key": "a8384314-5f97-47ca-b9b7-4fd43dcd8def",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "d80d813f-ab6b-4f24-bc0f-b761c3ede948",
+      "position": 30,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d80d813f-ab6b-4f24-bc0f-b761c3ede948",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "dc0754a5-bafa-462c-8190-ecbadb4a2b97",
+      "position": 31,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete this task, observing the different strategies students attempt to \"move through\" the layers. Ensure partners are collaborating together. Look for groups that are creating unique or novel networks , especially when different from some of the examples in the presentation.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why are they out of order?** Students may ask why the numbers are out of order on the right side of the activity guide. They're ordered by \"number of segments\" - 8 has the most active segments, and 1 does not. When it comes time to make a decision, if multiple numbers are lit up (like 9 and 7 and 4 and 1), then the top number is always chosen. This helps reduce the complexity for students as they make their algorithms - otherwise, an 8 could cause havoc in their network!"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Exemplar:** A few example networks are provided as an Answer Keys. These can be used as reference, or to quickly inspire students who may be stuck. They can also be used in class discussions to emphasize that there are multiple ways to solve this task."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc0754a5-bafa-462c-8190-ecbadb4a2b97",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "7f16e0aa-a4e4-4b2c-8b1a-0d6bfbee9583",
+      "position": 32,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f16e0aa-a4e4-4b2c-8b1a-0d6bfbee9583",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "7e36fac3-f40c-4d28-bee8-7afe8a9fb34e",
+      "position": 33,
+      "properties": {
+        "description": "**Regroup:** Have students regroup",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**(Optional) Gallery Walk:** Consider having students perform a gallery walk to visit other networks, and have students reflect on how the networks are similar or different from their own. This is an especially engaging activity if students have \"Gone Big\" and drafted their networks on whiteboards or poster paper."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7e36fac3-f40c-4d28-bee8-7afe8a9fb34e",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "ce31b70b-2601-4ae4-b296-f62c47e5ad5b",
+      "position": 34,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ce31b70b-2601-4ae4-b296-f62c47e5ad5b",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "cc12cb6d-a555-4097-b153-9222e1ffb5a1",
+      "position": 35,
+      "properties": {
+        "description": "Now that we have our algorithm, lets test it! We're going to do 2 examples. I'm going to show a slide that has certain inputs covered with post-it notes. This means the sensor detected that particular strand was lit up. Follow your network to determine which number it is!",
+        "name": "Testing Our Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc12cb6d-a555-4097-b153-9222e1ffb5a1",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "abd7bbed-22a2-46e0-9f7d-cebec05f1bf6",
+      "position": 36,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abd7bbed-22a2-46e0-9f7d-cebec05f1bf6",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "50115111-857f-49c1-89b6-38b95ea3dc9f",
+      "position": 37,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the first example",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Use the network, not your eyes:** Students may comment that, once they have the inputs on the left-side, they already know what number it is - they can \"figure it out just by looking at it\". Remind students that the goal isn't for _**us**_ to figure it out with our eyes and brain, but for a _**computer**_ to figure it our with its sensors and algorithm. You can also ask students to consider all of the steps that happened in nanoseconds once they saw these inputs - their brain needed to combine all of this information together to know what number it was. This network is doing the same thing, acting like the computer's \"brain\" to make a decision once it sees the inputs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50115111-857f-49c1-89b6-38b95ea3dc9f",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "89f634a7-d404-4641-bad9-e74b9c5ffe5b",
+      "position": 38,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "89f634a7-d404-4641-bad9-e74b9c5ffe5b",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "eabbe395-bf2a-4e80-8ad7-77f165638fed",
+      "position": 39,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they trace the path in their network"
+      },
+      "seeding_key": {
+        "activity_section.key": "eabbe395-bf2a-4e80-8ad7-77f165638fed",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "fff90702-93b6-4649-9ef5-4405aa77cbfe",
+      "position": 40,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fff90702-93b6-4649-9ef5-4405aa77cbfe",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "9e40b6bf-3daa-4a01-8669-06cbabad7255",
+      "position": 41,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** _Are there any changes you want to make to your network? You have a minute to do so!_"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e40b6bf-3daa-4a01-8669-06cbabad7255",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "ff2a56e7-092c-4eed-8968-a6ede153b4af",
+      "position": 42,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2a56e7-092c-4eed-8968-a6ede153b4af",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "9a49f599-618f-4ad9-a4c6-d3ba85526823",
+      "position": 43,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the second example",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Extensions:**\n\n* Consider having students trade networks with another pair, then giving students a third example and seeing if they can trace a neighbor's network\n* Consider inviting students to trace the solution in front of the class, explaining how their network works\n* Consider giving students the number 8 as an input, which will activate every single space in their network, then prompt them to consider how they can make a decision when this happens"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a49f599-618f-4ad9-a4c6-d3ba85526823",
+        "lesson_activity.key": "c24958df-e546-4f72-ba8a-69016a87f2ec"
+      }
+    },
+    {
+      "key": "15d41629-fa6c-4dc6-b7c9-d579614d9e7e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 1) Prompt:** _How would you adapt your network to work with a 14-segment display? What would need to change?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "15d41629-fa6c-4dc6-b7c9-d579614d9e7e",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "86523e14-9b15-4d0e-b4ee-93c1b60f3309",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "86523e14-9b15-4d0e-b4ee-93c1b60f3309",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "40f2eb62-2042-4ba4-9516-085f9115221d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 2) Prompt:** _Imagine one of the segments is burnt out so the following image is displayed. What number do you think it is? What number will your network say it is?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "40f2eb62-2042-4ba4-9516-085f9115221d",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "ff5347e9-a7fe-4f71-b8dd-916a1734564d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff5347e9-a7fe-4f71-b8dd-916a1734564d",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "7ab04c2e-8143-4b1c-8bb9-9b43d5e2a517",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Could be 3 or 9"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ab04c2e-8143-4b1c-8bb9-9b43d5e2a517",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "3fb2fcf6-fd37-4ffd-bc5b-e6204203937a",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fb2fcf6-fd37-4ffd-bc5b-e6204203937a",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 3) Prompt:** What do you imagine a network could look like that could identify the image below? What do the inputs look like? What do some of the middle layers look like?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "1810f940-d14f-41b9-bfd1-629d114679dd",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1810f940-d14f-41b9-bfd1-629d114679dd",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "12149e56-a564-43f2-97b9-15dd29ecba69",
+      "position": 9,
+      "properties": {
+        "description": "**(Optional) Extension:** Consider watching the [r what_a_neural_network_sees/ai-temp/unversioned] video from the [Experiments with Google](https://experiments.withgoogle.com/what-neural-nets-see) page. The short video gives a live example of how image classification works as a neural network, where you can see the inputs and hidden layers. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "12149e56-a564-43f2-97b9-15dd29ecba69",
+        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
+      }
+    },
+    {
+      "key": "7dec4bea-c382-45c7-bff3-98501fe3e2a1",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7dec4bea-c382-45c7-bff3-98501fe3e2a1",
+        "lesson_activity.key": "aec17932-137c-4f4a-940c-e6941ec16520"
+      }
+    },
+    {
+      "key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What's an example of an experience that recommends things to you?\n",
+        "name": "Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "a618943e-7f87-45e7-95ab-d48904978f67",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a618943e-7f87-45e7-95ab-d48904978f67",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "52e15617-7d3f-40b2-a003-e317e5ec7b0a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to think of things that make recommendations, especially different apps or websites. For example, they may be recommended videos from Youtube or new songs on a music app. Some apps may ask you to pick preferences before using them to help figure out your preferences. Some websites give recommendations at the end of an experience, like a takeout menu or online grocery store recommending new items before checking out. Try to crowdsource a variety of examples before continuing to the next prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "52e15617-7d3f-40b2-a003-e317e5ec7b0a",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "ee18fb83-0a5c-4bd1-87ef-ef01f8ef81a7",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee18fb83-0a5c-4bd1-87ef-ef01f8ef81a7",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "0b6f4cd1-d024-41a6-b79c-ab4327f7bc92",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Do these recommendations tend to be accurate? Or do they feel random?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6f4cd1-d024-41a6-b79c-ab4327f7bc92",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "3bd57d75-a5e2-41ec-8e4a-875bbb6c2afd",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd57d75-a5e2-41ec-8e4a-875bbb6c2afd",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "f24de523-1a44-4776-b36b-ad227aa5abc8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Responses here will vary, and there's no expected answer. Instead, focus on the tension between getting recommendations and having them be accurate and how not every recommendation may feel like it matches each student's interests and personality."
+      },
+      "seeding_key": {
+        "activity_section.key": "f24de523-1a44-4776-b36b-ad227aa5abc8",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "3c0d90e1-cf1f-420f-b29a-4b32aebf4eab",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c0d90e1-cf1f-420f-b29a-4b32aebf4eab",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "4ccd67fd-b5a6-4a89-8fa0-e7a05363594a",
+      "position": 9,
+      "properties": {
+        "description": "We get recommended things all the time, but how do these programs know what to recommend? How do they get better? Today we're going to look at one way computers create recommendations using something called neural networks.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4ccd67fd-b5a6-4a89-8fa0-e7a05363594a",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r wetube_content_creators/ai-temp/unversioned] resource.",
+        "name": "WeTube"
+      },
+      "seeding_key": {
+        "activity_section.key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "dede1f3c-73ef-4891-aef7-6057575d5667",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dede1f3c-73ef-4891-aef7-6057575d5667",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "3a947b42-c8d5-48cb-8d0f-8ce5276f73d7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with information about WeTube, which is also on the top of the handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "3a947b42-c8d5-48cb-8d0f-8ce5276f73d7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2154438d-c829-4b9a-97c7-dff7e400d03d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2154438d-c829-4b9a-97c7-dff7e400d03d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "17be71f6-f238-4ba5-9f42-200277a7f5f9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students the widget and demonstrate how to select a person and then view the video recommendations.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real Or Fake?** Students may have lots of questions about this business model and why it's a good idea to only go by recommendations. These may be valid questions if this were a real business, but it's not - ensure students that this is just an excuse to focus on the role of recommendations in our world. However, it is true that the underlying concepts in this business and how recommendations work are similar to real-world recommendation systems, even if the company is fake."
+          },
+          {
+            "type": "contentCorner",
+            "markdown": "**Spotify Recommendations:** Spotify is one of many companies that uses a similar interface when users first use the app - it asks users to pick 4-5 different artists, and then curates songs based on those preferences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "17be71f6-f238-4ba5-9f42-200277a7f5f9",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "ccd54d58-6f1b-46ae-9624-4e680c2aa212",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ccd54d58-6f1b-46ae-9624-4e680c2aa212",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
+      "position": 7,
+      "properties": {
+        "description": "Send students to the first level in Code Studio. As they work, have them consider the following prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "7b56027d-eab7-473c-881e-c50e1dee6ef3",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b56027d-eab7-473c-881e-c50e1dee6ef3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "37f381db-5783-4bcb-9026-386ea7168176",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Which content creator resonates with you the most and are most excited to follow? Which one resonates with you the least?"
+      },
+      "seeding_key": {
+        "activity_section.key": "37f381db-5783-4bcb-9026-386ea7168176",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "efadacf8-2bc4-495d-9bf6-4e164a420d7e",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "efadacf8-2bc4-495d-9bf6-4e164a420d7e",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+      "position": 11,
+      "properties": {
+        "progression_name": "Beta: WeTube Video Recommendations (Widget)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "cc6c0053-1b85-46b4-8569-e4281fb4031d",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cc6c0053-1b85-46b4-8569-e4281fb4031d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d4a7ca60-ff34-4cb9-a069-2c02eb5e0ffa",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>\n**Circulate:** Walk around as students experiment with the app. Make sure they understand the interface - that after choosing a content creator, they see a list of video recommendations they can explore. Encourage students to explore different content creators and see what videos are recommended. Students should notice that the videos seem to match the personalities of each person with some variation. Once most students have looked at a few content creators, regroup the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "d4a7ca60-ff34-4cb9-a069-2c02eb5e0ffa",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c3d98156-3f85-472f-89f4-fd769e92e323",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3d98156-3f85-472f-89f4-fd769e92e323",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "345a98a1-b394-419d-b311-628b531de2f3",
+      "position": 15,
+      "properties": {
+        "description": "**Regroup:** Have students regroup to discuss the following prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "345a98a1-b394-419d-b311-628b531de2f3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e337aa16-d050-44df-9b7a-d2ebdefc1c3d",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e337aa16-d050-44df-9b7a-d2ebdefc1c3d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "8cef1f79-a4fa-44a1-b542-2887784662ba",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Ask the following questions in quick succession and having students respond non-verbally (for example, by raising their hands). The goal is to quickly move through these questions to motivate the next section of the lesson.\n\n* Were there any videos that showed up for your person that you didn't think were super interesting or disagreed with?\n* Were there any videos that showed up for another person that you wish had shown up with your favorite person?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cef1f79-a4fa-44a1-b542-2887784662ba",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "726dc701-e620-46c6-8ca4-0797bddee133",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "726dc701-e620-46c6-8ca4-0797bddee133",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "6c8d2205-3aae-4542-a71c-160c27e2e8f7",
+      "position": 19,
+      "properties": {
+        "description": "It’s super unlikely that just subscribing to 1 person will give you the ideal recommendations - there may be some things here that you actually don’t like, and you’d rather do something that a different user recommended instead. There’s gotta be a way to combine these different perspectives to fine-tune the recommendations that we get. Let’s look at how computer science and artificial intelligence can help with that!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6c8d2205-3aae-4542-a71c-160c27e2e8f7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e9c9d95f-682a-4499-b44b-cbbf40061deb",
+      "position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9c9d95f-682a-4499-b44b-cbbf40061deb",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_neural_networks_work_1/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "ac7983bf-5ffa-4b04-a6ea-a4ffb50689d0",
+      "position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ac7983bf-5ffa-4b04-a6ea-a4ffb50689d0",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"WeTube Version 2.0\" slide, which describes the updates to the widget. Click through the next slides to explain the differences in the widget.",
+        "name": "WeTube 2.0"
+      },
+      "seeding_key": {
+        "activity_section.key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "654953d7-59fa-44db-bea1-680deb2804a3",
+      "position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "654953d7-59fa-44db-bea1-680deb2804a3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "70e5a3e7-36d8-40f6-ade9-6937a2e221e7",
+      "position": 25,
+      "properties": {
+        "description": "| Slide                                | Say                                                                                                                                                                                          |\n| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://images.code.org/6e487bccc9772f7eb6c78352c056722a-slide1.png)| <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can now combine recommendations from each person.                                                                                                                   |\n| ![](https://images.code.org/e4bf18a7627489ca6a9ed7d5bdb5e8af-slide2.png)| <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can use the slider to adjust how much this person will influence your recommendations. Just like in the video, we're adding more **weight** to their recommendation |\n| ![](https://images.code.org/ec4d4979551a57e25631bbf3f8abf0bc-slide3.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can click on someone else and combine their recommendations. The thicker the line, the more they influence the recommendations.                                     |\n| ![](https://images.code.org/a590809f6ea6b40482f248d546fe3e7b-slide4.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** Here are some of the recommendations we get with Sofia and Joseph. Both of their preferences are reflected here.                                                        |\n| ![](https://images.code.org/1d017e757cc99c0b7d4eade71605d704-slide5.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can also click the Select New Weights button to go back and change your preferences. For example, we could decide to add Alex to our recommendation model.          |\n| ![](https://images.code.org/97a4ce3acb93c9265bf53d26760db754-slide6.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** When we do that, some new videos appear in our feed that were influenced by Alex's preferences.      "
+      },
+      "seeding_key": {
+        "activity_section.key": "70e5a3e7-36d8-40f6-ade9-6937a2e221e7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "b641746b-198d-497a-bf73-25cb142b4949",
+      "position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b641746b-198d-497a-bf73-25cb142b4949",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
+      "position": 27,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r neural_networks/ai-temp/unversioned] Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5e9a72df-7082-42ad-b164-b9bacff1cd81",
+      "position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e9a72df-7082-42ad-b164-b9bacff1cd81",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5c1b98cf-bd48-45ce-9908-31662fcdab4f",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the widget to create a new set of recommendations to match your interests. Fine tune your weights until the recommendations match your interests."
+      },
+      "seeding_key": {
+        "activity_section.key": "5c1b98cf-bd48-45ce-9908-31662fcdab4f",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+      "position": 30,
+      "properties": {
+        "progression_name": "WeTube Video Recommendations (Widget)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How Is It Learning?** This widget is similar to the example shown in the video and, behind the scenes, each person has given a rating to the different \"videos\" that get recommended. However, there is a key difference: in the video, the network customizes the weights by \"learning\" from how users rate the videos that are recommended to them, but in this widget users can manually adjust the weights to customize the network themselves. In this sense, the widget isn't really \"learning\" in the same way the video learns. However, it does create an equivalent type of recommendation system, and is similar to other recommendation systems that let users customize their interests themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5f158ea6-d982-4055-bd6c-140f0222cd2f",
+      "position": 31,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f158ea6-d982-4055-bd6c-140f0222cd2f",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "9b2666b8-e890-4d76-a4c2-8a7363a20fb2",
+      "position": 32,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete this task. Students should be testing different combinations of weights and recommendations. Encourage students to share observations with their neighbors and really play with the combinations. Some probing questions could be:\n\n* Are there any videos that appear for certain people?\n* If you pick a particular video, is there a way to get it to the \"front page\" of your recommendations in your top 3?\n* Are there videos that never seem to make it to the top 3?\n\nAs students begin to settle on combinations that they like, regroup the class\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b2666b8-e890-4d76-a4c2-8a7363a20fb2",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "a0dfd053-6ced-40e7-a3ea-e84973774918",
+      "position": 33,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a0dfd053-6ced-40e7-a3ea-e84973774918",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "4a6157d3-e861-4f78-8c2a-06126fd58c00",
+      "position": 34,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Jenna is a student who _loves_ Boba Tea. There's a video called \"Boba Tea Hacks: Unique flavor combinations\". She's trying to find a combination that gets this video to the Top 3 videos. Can you help her?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a6157d3-e861-4f78-8c2a-06126fd58c00",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "f7ce1e2d-0acd-4946-b6c7-99d2820eeb3a",
+      "position": 35,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ce1e2d-0acd-4946-b6c7-99d2820eeb3a",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c9853709-41db-4932-b7ff-7bfbad68608b",
+      "position": 36,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Give students a few minutes to experiment here, but transparently: this video is designed to always be rated low by the current selection of content creators and never appear in the Top 3. This is intentional and designed to motivate the final part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9853709-41db-4932-b7ff-7bfbad68608b",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2adc96e8-0c83-43a6-926f-afd872c53850",
+      "position": 37,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2adc96e8-0c83-43a6-926f-afd872c53850",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "fa98ce25-9c52-47ff-96e1-12cb2864af6d",
+      "position": 38,
+      "properties": {
+        "description": "It seemed like it was nearly impossible for Jenna to see her interest represented in her Top 3.  Thinking about how Jenna must feel, it can be pretty disappointing to not be able to see your own interests represented in an app like this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa98ce25-9c52-47ff-96e1-12cb2864af6d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "9c624a2f-8fd3-4226-ae4c-b3101aa943bf",
+      "position": 39,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9c624a2f-8fd3-4226-ae4c-b3101aa943bf",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "74160687-e223-4c52-90dd-14fa0a489dfa",
+      "position": 40,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Have there been times where your interests or perspectives haven't been represented in an app? Why do you think that is?\n\nHave students share with their neighbors"
+      },
+      "seeding_key": {
+        "activity_section.key": "74160687-e223-4c52-90dd-14fa0a489dfa",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c829c1af-740b-4975-896e-9b76c81eea44",
+      "position": 41,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c829c1af-740b-4975-896e-9b76c81eea44",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "3e94de71-adea-42c6-92d4-7fed563a8461",
+      "position": 42,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may have a wide variety of experiences here. Some may be comical or inconsequential, like not having their favorite type of food recommended to them no matter how hard they try. Others may be more influential and consequential, like never having music or books or movies reflective of their identities or culture recommended back to them. Focus the discussion on why this might be, emphasizing answers that focus on the diversity of the data used for the recommendation algorithm. When this comes up, feel free to transition to the next part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e94de71-adea-42c6-92d4-7fed563a8461",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e0153a27-b1eb-4dcf-ba12-7040838a8e0c",
+      "position": 43,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0153a27-b1eb-4dcf-ba12-7040838a8e0c",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "cb56a3de-93f4-4dd7-9acf-0e87b8ffd8d4",
+      "position": 44,
+      "properties": {
+        "description": "Recommendation systems are only as good as the data they have to work with. In this example, none of our content creators liked the Boba Tea video enough to make it rise to the top, even though people like Jenna clearly want to watch it. Sometimes this causes people to leave the app entirely, but there's also another solution: adding more perspectives to the data!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb56a3de-93f4-4dd7-9acf-0e87b8ffd8d4",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d993dbdb-9ca0-496b-b0b2-8e2ae8c52937",
+      "position": 45,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d993dbdb-9ca0-496b-b0b2-8e2ae8c52937",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e5bf95e9-b4ff-4f27-a385-d2b520d215cf",
+      "position": 46,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the next set of directions - imagining your own content creator\n\n* \"You are now in charge of imagining a new content creator that WeTube will add to their recommendation system. This person could be based on an existing person (even yourself!), or could be totally imaginary. The key thing is that this person should represent new interests and perspectives not represented by the current group of people.\"\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5bf95e9-b4ff-4f27-a385-d2b520d215cf",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2aec17ca-a172-41f0-aba9-29fdd141071c",
+      "position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2aec17ca-a172-41f0-aba9-29fdd141071c",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "80d2d63a-d2a6-42cd-8ae4-22f2314b5ff3",
+      "position": 48,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Design your own content creator on the activity guide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "80d2d63a-d2a6-42cd-8ae4-22f2314b5ff3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "793cd2e2-89ad-47e4-8ec3-649d30193a98",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Why is it important to have a diverse set of data when creating a recommendation system?"
+      },
+      "seeding_key": {
+        "activity_section.key": "793cd2e2-89ad-47e4-8ec3-649d30193a98",
+        "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b"
+      }
+    },
+    {
+      "key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4"
+      }
+    },
+    {
+      "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the \n[r generative_llm_guide/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "e370dd14-b9e4-4e98-8915-c2d7e5c32eaa",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e370dd14-b9e4-4e98-8915-c2d7e5c32eaa",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "bc247004-971f-44c4-b492-db1c701a503c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  Complete the following sentences with one word only:\n- Thank \\_\\_\\_.\n- Please buy me a \\_\\_\\_.\n- Video games are \\_\\_\\_.\n- I enjoy playing outside in the Spring because it is \\_\\_\\_.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc247004-971f-44c4-b492-db1c701a503c",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "d5cd913e-bac7-4138-b312-d00217d5ffc1",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5cd913e-bac7-4138-b312-d00217d5ffc1",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "d26cb547-c5ba-4e2f-90d6-83f7223bfa38",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Compare your answers with your neighbors. Where did you pick the same words? Where did you pick different ones?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d26cb547-c5ba-4e2f-90d6-83f7223bfa38",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "24a3aeb9-06ef-4e30-8e3f-b0aea0e01bdf",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24a3aeb9-06ef-4e30-8e3f-b0aea0e01bdf",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "9f7cb538-3510-47d6-8c0e-f64e4a92d115",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n There are no right or wrong answers here; the idea is to collect a diversity of responses. This activity is meant to make students think about what words “probably” follow other words, and why. In this lesson, students will be learning about Large Language Models (LLMs), and how they guess likely next words based on context and what words have been close to each other in the past.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A [snowball discussion protocol](https://www.mcgill.ca/skillsets/files/skillsets/active_strategies_snowballing.pdf) might work well here – give students 30 seconds to come up with their own answers, a minute to talk about them in pairs, then a minute for pairs to pair up with other pairs, until at 4 minutes you bring the whole class together."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f7cb538-3510-47d6-8c0e-f64e4a92d115",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "1be74053-0156-46e3-98ad-90cb507b5fa0",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1be74053-0156-46e3-98ad-90cb507b5fa0",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "1d0120ad-8d89-4375-bd96-ebb2eb2a9aa8",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Why did you pick these words?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d0120ad-8d89-4375-bd96-ebb2eb2a9aa8",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "3ca19eb2-2437-4808-a17a-9aecd5578fd9",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ca19eb2-2437-4808-a17a-9aecd5578fd9",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "28940825-d678-4ce5-9ab0-3ec39ee2a830",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n Students will likely have similar answers for the first sentence, but will diverge quickly with the other answers, such as which thing to buy. Emphasize how some prompts rely on the context of the sentence, like how students may have different opinions about video games, but they are more likely to give a positive answer to the last sentence because of the word 'enjoy’."
+      },
+      "seeding_key": {
+        "activity_section.key": "28940825-d678-4ce5-9ab0-3ec39ee2a830",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "792f2da2-18a7-4a0b-a411-c4ed1e7f978d",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "792f2da2-18a7-4a0b-a411-c4ed1e7f978d",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "eda9a95b-2825-4276-9a14-1cd5e03f6f9d",
+      "position": 13,
+      "properties": {
+        "description": "This prompt is one example of how we can use our prior knowledge to guess what words come next in a sentence. We’ve also seen that those words will not always be the same. In today’s lesson, we’re going to look at how computers can write text based on a similar principle – learning from a lot of text that has been written before in order to guess what words might follow each other.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eda9a95b-2825-4276-9a14-1cd5e03f6f9d",
+        "lesson_activity.key": "82731c6b-052b-425a-aad4-62f85474fd23"
+      }
+    },
+    {
+      "key": "b2a7bd06-caf5-4166-95a6-09c7acaa95d0",
+      "position": 1,
+      "properties": {
+        "description": "Before we watch the video, which is about Large Language Models, let’s make sure we understand what a model is in the first place.",
+        "duration": "10",
+        "name": "Watch the Video",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b2a7bd06-caf5-4166-95a6-09c7acaa95d0",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "e4694d52-743e-4cea-afbf-f3bec1480b20",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e4694d52-743e-4cea-afbf-f3bec1480b20",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "cc2616fa-582e-478d-b737-2285e98f6693",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Model** - a computer program designed to make a decision",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are lots of ways to encourage students to retain vocabulary, and different methods will work well for different students. Encourage students to rephrase these definitions in their own words and/or draw pictures (there is space on the handout for this), and write sentences with these words."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2616fa-582e-478d-b737-2285e98f6693",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "3fe6323c-6d1a-42c5-8edb-557c546794b8",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fe6323c-6d1a-42c5-8edb-557c546794b8",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the How AI Works: Chatbots and Large Language Models video (WIP link to resource). At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding."
+      },
+      "seeding_key": {
+        "activity_section.key": "b57bec27-2967-40ea-b6b4-fc6a5b4333b7",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "aeaf296f-5b13-41b0-b736-e6a977c55255",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "aeaf296f-5b13-41b0-b736-e6a977c55255",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "58c45ad6-b7e1-4403-949c-d3a19539a03e",
+      "position": 7,
+      "properties": {
+        "description": "| Video                                                                                                                                                                                                    | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Everything Available on the Internet”                                                                         | After pausing the video, ask this question: <br /> - What is a large language model? <br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Looking for a quick answer to check for understanding of the video so far<br /><br />  Students should explain that a large language model learns from a very  large  body of text (such as all of wikipedia) in order to generate new text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “Once we have the next letter, we repeat the process to find the next letter, and the next letter, and so on.” | After pausing the video, ask these questions:<br /> - How is the model picking the next letter?<br /> - What seems to be the problem with this method?<br /><br /> <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> The first two questions are looking for a quick check for understanding. Students should mention that the model is picking the next letter randomly, and they have probably noticed that these random picks of letters are not generating real words.<br /><br />  **Follow-up Discussion:**<br /> What might fix that problem?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Do not spend too much time on this question, and let students know that wild (on topic) guesses are ok here; the point is to prime students to be interested in the next part of the video, where it explains the fix.<br /><br />  **Say:**<br />  Let’s find out! |\n| [Screenshot of last frame of video]<br /><br />  Pause video at [timestamp] when they say “As you see, this works surprisingly well!”                                                                    | After pausing the video, ask these questions:<br /> - How does the system come up with better results?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> Quick check for understanding for this part of the video. Better results come from  **context**.  Make sure students also explain what context means – in this case all the words before the word in question.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| [Screenshot of last frame of video]<br /><br />  This is the end of the video                                                                                                                            | When the video ends, ask this summary question:<br /> - What can a Large Language Model create?<br /><br />  <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** <br /> LLMs generate text that sounds plausibly like a human might have written it.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Deep dive into how machines “guess” the probability of the next word:\nThe model that these programs build computes a “distance” between words – words that often follow each other, or are often used in place of each other, will have a shorter “distance.” \nIf you are interested in exploring what models see as the distance between words, Google’s [Semantris](https://research.google.com/semantris/) visualizes what words Google’s model thinks are closer to each other, and is a fun game to play. [Semantle](https://semantle.com/) is a Wordle-ish variant that allows players to guess a word by finding words that are slowly getting closer in distance. [Context Atlas](https://storage.googleapis.com/bert-wsd-vis/demo/index.html?#word=code) also visualizes this.\nIf you would like more information about the models behind Large Language Models, look into Recurrent Neural Networks and Transformers. The YouTube channel [AI Coffee Break with Letitia](https://www.youtube.com/watch?v=iH-wmtxHunk&list=PLpZBeKTZRGPNdymdEsSSSod5YQ3Vu0sKY&index=2) has a lot of great explanatory videos on this topic. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58c45ad6-b7e1-4403-949c-d3a19539a03e",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "25c08b22-1f38-4903-9daf-1456434fb2cf",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "25c08b22-1f38-4903-9daf-1456434fb2cf",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:**  Review the following vocabulary from the video. Allow students to check their answers from the activity guide.\n\n- Large Language Model (LLM): a general purpose form of AI that is trained on a very, very large body of knowledge.\n- Context:\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "89c6e27a-e752-4993-81aa-dbcc1c1607ca",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a4667108-23d7-4e77-9bae-7cbf0eea3e2b",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  What’s an example of something you’ve interacted with that probably uses an LLM? What things can you imagine using an LLM for in the future?"
+      },
+      "seeding_key": {
+        "activity_section.key": "f07929f7-fa1e-46cc-8aad-8d609d9bd5ca",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8d660547-7601-4727-9f80-8efcf9132c1d",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d660547-7601-4727-9f80-8efcf9132c1d",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nThis discussion connects the video to things the students have experienced – they have probably seen predictive text in emails or cell phones, and have probably heard of ChatGPT, for instance. Students may imagine using this technology for anything that generates text, including writing code or news articles. If students are struggling to find answers, you can provide the examples of predictive text, and / or demonstrate.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This might be a good place to use the [Whip Around Discussion Protocol](https://k12teacherstaffdevelopment.com/tlb/what-is-the-whip-around-strategy/), giving each student a chance to rapid-fire share their answers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c0cd6ed5-3a71-411c-b46d-d771c8548c9b",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "84306b41-5dc3-4574-9ba7-533f280b310d",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84306b41-5dc3-4574-9ba7-533f280b310d",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Remember, these LLMs are learning from every word on the internet. What is a benefit of using the entire internet as input? What is a drawback?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "18e9b083-6b59-4be5-86b0-ab74ebc84e51",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e1e7bd62-ccf7-4389-8b18-34db3eb90459",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "808eacba-cd56-4608-9090-2d4e48cfdef8",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Learning from every word on the internet gives Large Language Models a ton of information to learn from, but not all of that information is factual, and not all the wording will be kind or appropriate. \n\nAlso encourage students to consider how people with access to writing on the internet tend to be more privileged voices, and therefore further marginalize the voices of already marginalized groups. ",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Vocabulary – Bias is when a decision favors some things and de-prioritizes or excludes others. **Algorithmic bias** is the term for bias that occurs within computational systems. Often, it stems from the fact that the data the model learned from comes from humans, and is thus biased. This [video](https://www.youtube.com/watch?v=heQzqX35c9A) has more information about algorithmic bias."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "808eacba-cd56-4608-9090-2d4e48cfdef8",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "4aa3307f-8f88-455c-9102-c0005805b40e",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa3307f-8f88-455c-9102-c0005805b40e",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "81acc1fa-0168-4fec-b39a-716287c5f75c",
+      "position": 19,
+      "properties": {
+        "description": "Large Language Models often learn from every word on the internet, but what if we limited a model to only the words of a specific person? Let’s explore a Language Model (It’s not very large; it’s only based on one piece of writing) trained entirely based on one song or story, of your choice.\n\nFor this example, the model will be showing all probable next words, and we, the writers, will get to pick which words we want. Each “probable next word” was chosen by finding the 10 most common words that came after the current word being used.\n\nFor this activity, you will have 5 minutes to write a story, lyrics to a song or a poem,  using the predictive text model. Feel free to try a couple of different stories.\n\nFirst, I’ll show you how this program works, and then you’ll write your own stories.\n",
+        "duration": "15",
+        "name": " Create With a Language Model ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. Given Botnik has a lot more options and features, it can generate slightly more coherent text, and you may wish to show students [things that Botnik generated](https://botnik.org/creations/). This [video](https://www.youtube.com/watch?v=WypWvaCw3zs) provides more context around Botnik, starting around 1:20."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81acc1fa-0168-4fec-b39a-716287c5f75c",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
+      "position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d28d2952-7b58-49f8-8b34-f1fe6456c40c",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:**  Show the students how to use the Predictive Text Widget, taking examples from the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "715e20fc-e095-4227-bfd4-fdde30a4a368",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
+      "position": 22,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "After giving instructions, it can be helpful to check that your students understand what is expected of them – questions like “How long do we have to do this activity?” “What is expected at the end of it?” help to make sure the instructions are clear and the students are ready to get to work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4206a48b-3a73-4cd7-b10f-d2a2caf94cf4",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
+      "position": 23,
+      "properties": {
+        "description": "**Code Studio:** Have students log into Code Studio and begin interacting with the widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "02c34eb9-a754-4d55-ac24-78c0ab34e649",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "6414a7c4-aeb7-44c3-a365-8f3f6665bcf7",
+      "position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6414a7c4-aeb7-44c3-a365-8f3f6665bcf7",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
+      "position": 25,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students write their stories, encourage them by telling them your thoughts and ideas, making sure they stay on task."
+      },
+      "seeding_key": {
+        "activity_section.key": "fe4f53d8-396f-4e67-90e9-ece8fa9945b6",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "6eb03952-5539-4ba4-81a9-05d3c11f87b3",
+      "position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6eb03952-5539-4ba4-81a9-05d3c11f87b3",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "d8503792-ae7d-470d-98e5-072d39553051",
+      "position": 27,
+      "properties": {
+        "description": "**Regroup:** Have students close out of the widget and re-focus as a whole class"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8503792-ae7d-470d-98e5-072d39553051",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "7b6f1784-9206-4f0e-ab5c-b404902eaf27",
+      "position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b6f1784-9206-4f0e-ab5c-b404902eaf27",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "bb931295-0da6-414d-93c8-ae12504281eb",
+      "position": 30,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb931295-0da6-414d-93c8-ae12504281eb",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8c5569de-472b-4605-8294-87538485a2ca",
+      "position": 31,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students are on task, being kind, and that all students get to share their stories.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is important to share expectations when students are sharing their work with each other. It can be helpful to talk to students about what kind of feedback they would like to receive, and how before encouraging them to give feedback to each other."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8c5569de-472b-4605-8294-87538485a2ca",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "1d1ea614-e875-438b-bd1a-465d8ea7b742",
+      "position": 32,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1d1ea614-e875-438b-bd1a-465d8ea7b742",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
+      "position": 33,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How was this activity acting like an LLM as described by the video? How was it different?"
+      },
+      "seeding_key": {
+        "activity_section.key": "774b52e9-6b41-4ceb-96a5-a7bf8268abb3",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "195528a4-eafc-45cd-a7df-e6235f55eebf",
+      "position": 34,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "195528a4-eafc-45cd-a7df-e6235f55eebf",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "63466701-0e1a-484a-975e-22356086e24b",
+      "position": 35,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** An LLM is usually learning from more words.  An LLM has context. This model only knew the word right before the one being chosen. We, the people choosing the next word, had context. (it’s possible the students won’t have noticed this, point it out directly if it didn’t come up). "
+      },
+      "seeding_key": {
+        "activity_section.key": "63466701-0e1a-484a-975e-22356086e24b",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "b26fb956-97c3-4f43-9a5a-eba1c0f8debf",
+      "position": 36,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b26fb956-97c3-4f43-9a5a-eba1c0f8debf",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
+      "position": 37,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did these stories have in common? How were they different? Why?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "94baedf3-8164-4b90-96b3-87e1fdfed32b",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "b4b80c22-a725-4b12-a26b-eaef761583fd",
+      "position": 38,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b4b80c22-a725-4b12-a26b-eaef761583fd",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
+      "position": 39,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students have probably found that stories told by the same \"voice\" had more similar words, but choosing different words still meant different stories came out. This is to help students begin to have a framework around the Wrap Up Question, about whether LLMs are Creative and/or intelligent."
+      },
+      "seeding_key": {
+        "activity_section.key": "d9812780-e164-49bc-8897-b3e5c2df5cb8",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "161cb423-7bdb-4eb8-8516-036184133d91",
+      "position": 40,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "161cb423-7bdb-4eb8-8516-036184133d91",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "1d060652-506b-49c3-8a63-0a93002c46cb",
+      "position": 41,
+      "properties": {
+        "description": "Most of the things that generate text today use a Large Language Model, but before we had the computing power to allow models to learn from the entire text of wikipedia, there were text-based AIs that were not based on Large Language Models.\n\nInstead, these programs have rules for what sorts of text make sense at different times.\n\nOne of the most famous examples is Eliza, who was a computer program that was supposed to sound like a therapist that was invented in 1966. It was very impressive in its time. Let’s explore what Eliza is and is not capable of.\n",
+        "duration": "10",
+        "name": "(Optional) A Chatbot that is not an LLM – Eliza",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d060652-506b-49c3-8a63-0a93002c46cb",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131",
+      "position": 42,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3e9ffcbf-9d1a-44d1-9670-7ef4059a7131",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "d802ab4d-027b-406c-a388-ad6d02901ebb",
+      "position": 43,
+      "properties": {
+        "description": "**Option 1:** Pull up an example Eliza displayed on the projector, and take responses from students for what to say to Eliza.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d802ab4d-027b-406c-a388-ad6d02901ebb",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
+      "position": 44,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8c5e5a5d-6815-43d6-9896-86064abf0e9a",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "288a039b-6428-48d8-8eea-7173712585f2",
+      "position": 45,
+      "properties": {
+        "description": "**Option 2 (takes more time):** Allow students to to play with Eliza on their own computers for a few minutes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "288a039b-6428-48d8-8eea-7173712585f2",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "fc32c914-4a76-421b-a217-18096fa92a17",
+      "position": 46,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fc32c914-4a76-421b-a217-18096fa92a17",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "8b5cad22-513a-4df7-9375-361cd81cd899",
+      "position": 47,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  How did using Eliza feel different from using a Large Language Model? How does Eliza feel similar to using a Large Language Model?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b5cad22-513a-4df7-9375-361cd81cd899",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "59ddf11a-7eb3-4dbe-99bc-0739052b8e09",
+      "position": 48,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59ddf11a-7eb3-4dbe-99bc-0739052b8e09",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "bf3d8cc5-0d42-4d9e-99ac-d3d1053cd96a",
+      "position": 49,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students will probably notice that the responses are more limited, though they may also notice that it can still feel real sometimes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf3d8cc5-0d42-4d9e-99ac-d3d1053cd96a",
+        "lesson_activity.key": "7d7bc071-19f7-4859-84e6-f43bc77d4c3d"
+      }
+    },
+    {
+      "key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  Is a Large Language Model Creative? Intelligent? Why or why not? "
+      },
+      "seeding_key": {
+        "activity_section.key": "c428b4fe-e4a2-4902-b70e-0fabd2b96a54",
+        "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8"
+      }
+    },
+    {
+      "key": "b29030bc-1552-4c02-9862-5a3d01188070",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b29030bc-1552-4c02-9862-5a3d01188070",
+        "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8"
+      }
+    },
+    {
+      "key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students may have very different answers to this question. Some may think LLMs are intelligent because they come up with intelligent sounding responses, but others should notice that the LLM does not understand what it is saying, just what words tend to go together. Intelligence itself is a hard to define concept. "
+      },
+      "seeding_key": {
+        "activity_section.key": "03b9189c-a2d5-416e-8b7b-ff8967d82f80",
+        "lesson_activity.key": "c6f6081e-0e67-4413-a217-07ecfeca95f8"
+      }
+    },
+    {
+      "key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
+        "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337"
       }
     },
     {
@@ -862,7 +3215,7 @@
       "key": "ebdc2bba-de92-41ac-8d5f-1fcd96fa60db",
       "position": 2,
       "properties": {
-        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model, just like we saw in AI for Oceans. This model could be used to crop other photos being uploaded to the social media site, just like the model we trained yesterday was used to identify certain types of fish and sea creatures. ",
+        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model. This model could be used to crop other photos being uploaded to the social media site.",
         "remarks": true
       },
       "seeding_key": {
@@ -875,13 +3228,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
-        "progression_name": "Cropping Widget",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "When discussing bias, connect back to the training students did in the previous lesson when deciding what an “angry”  or “fun” fish looks like, pushing students to consider how their opinions might lead to problems when training an AI model that would be widely used."
-          }
-        ]
+        "progression_name": "Cropping Widget"
       },
       "seeding_key": {
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
@@ -1000,8 +3347,19 @@
       }
     },
     {
-      "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+      "key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_societal_impact/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "11b9c974-2a82-4453-babd-af1299b2c3f0",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "8d417eb1-5125-4593-8ff9-8ebbc996b7c3",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
       },
@@ -1012,7 +3370,7 @@
     },
     {
       "key": "fbd7a999-53ad-4436-a823-9af545f6053e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
         "remarks": true
@@ -1024,7 +3382,7 @@
     },
     {
       "key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
         "progression_name": "Check For Understanding"
@@ -1032,6 +3390,18 @@
       "seeding_key": {
         "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6",
         "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "247a4935-25fb-49e9-b4bb-eb8a95818189",
+        "lesson_activity.key": "1a9dfbcf-3379-4148-a8bc-ee3435f19706"
       }
     },
     {
@@ -1109,19 +3479,8 @@
       }
     },
     {
-      "key": "737b817e-018b-4598-892e-2138f424c1ff",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-temp/unversioned] video to setup the activity they will complete today.\n\n\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "737b817e-018b-4598-892e-2138f424c1ff",
-        "lesson_activity.key": "00e07751-15c1-4fee-902e-1e6877eaa69e"
-      }
-    },
-    {
       "key": "96148774-43f3-4272-80d5-850dc3d8877c",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Groups**: Place students in groups of three or four.",
         "name": "Research and Reflect"
@@ -1133,7 +3492,7 @@
     },
     {
       "key": "b27e29ea-22f3-49cc-b5fb-ebccb2f3fe0d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
         "remarks": true
@@ -1145,7 +3504,7 @@
     },
     {
       "key": "d0097d6a-6380-495f-acfa-0fec2733119e",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-temp/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-temp/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
       },
@@ -1156,14 +3515,14 @@
     },
     {
       "key": "cd595daa-684b-41e8-ab6d-a6716923d382",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
         "name": "Draft “Our AI Code of Ethics” Resource ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our-ai-code-of-ethics-template-slides/ai-ethics/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our_ai_code_of_ethics_template_/ai-temp/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
           }
         ]
       },
@@ -1173,10 +3532,21 @@
       }
     },
     {
-      "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+      "key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Watch the video \n[r introduction_to_ai_-_privacy_and_future_of_work/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "cadd45cc-05e2-430c-94c3-5b67aef18696",
+        "lesson_activity.key": "8ed127df-c40b-4809-8803-c1abd706b689"
+      }
+    },
+    {
+      "key": "340bfba4-be24-40bc-b080-acd39d6a5767",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -1185,22 +3555,22 @@
       }
     },
     {
-      "key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
+      "key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
       "position": 1,
       "properties": {
-        "description": "If you or your students would like to learn more about AI, check out our [r how_ai_works/ai-temp/unversioned] video series.\n\n\n\n\n\n",
-        "name": "Learn more about AI\r"
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
       },
       "seeding_key": {
-        "activity_section.key": "56f9004c-2ac0-42be-b8c2-05a1e278e6da",
-        "lesson_activity.key": "c94fe253-e775-4ad1-8d9d-1f4a38793b74"
+        "activity_section.key": "904e1685-6341-44a3-9acc-bfc0fa57e933",
+        "lesson_activity.key": "017827aa-77fd-48b5-9b18-3f4e25f81174"
       }
     },
     {
       "key": "8645c99d-e8c5-449c-8ec4-bc7b27c64a3b",
       "position": 1,
       "properties": {
-        "description": "Today we're going to learn about Blockchain technology! What is Blockchain you ask? Let's find out together!",
+        "description": "Today we're going to learn about AI technology! What is AI you ask? Let's find out together!",
         "remarks": true
       },
       "seeding_key": {
@@ -1212,7 +3582,7 @@
       "key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/ai-temp/unversioned] video"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [r introduction_to_ai_introduction/ai-temp/unversioned]\n video\n"
       },
       "seeding_key": {
         "activity_section.key": "97acbc7c-b1d1-4ff0-a0b5-168f430d5a9f",
@@ -1223,7 +3593,7 @@
       "key": "f8a286c4-d9e3-4b55-899e-bd3c55a7a9dc",
       "position": 3,
       "properties": {
-        "description": "We're going to spend class watching this entire series! Ecah video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
+        "description": "We're going to spend class watching this entire series! Each video will have some new vocabulary to keep track of. After each video, there will be a reflection question to answer and discuss. Let's get started!",
         "remarks": true
       },
       "seeding_key": {
@@ -1246,7 +3616,7 @@
       "key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n [r introduction_to_ai_what_is_machine_learning_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "29b3ec86-58e6-4c7d-9718-d6b00776979e",
@@ -1257,7 +3627,7 @@
       "key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of AI either in your personal life or that you’ve seen in a movie or book?"
       },
       "seeding_key": {
         "activity_section.key": "5aacbc0e-b00f-4a5c-a232-a73416d08301",
@@ -1268,7 +3638,7 @@
       "key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_training_data_and_bias/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "090f25ba-166a-4e6f-b7fb-ef374319a987",
@@ -1279,7 +3649,7 @@
       "key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does learning about human bias in machine learning change your thoughts on AI?"
       },
       "seeding_key": {
         "activity_section.key": "c683ccbf-8b65-409f-b656-fd9221efefbb",
@@ -1287,32 +3657,10 @@
       }
     },
     {
-      "key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
-      },
-      "seeding_key": {
-        "activity_section.key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
-      }
-    },
-    {
-      "key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
-        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
-      }
-    },
-    {
       "key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_how_neural_networks_work/ai-temp/unversioned]\n video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "8c4a7f98-250e-49c7-b5f0-cfef533907e7",
@@ -1323,7 +3671,7 @@
       "key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Why is it important to have a diverse set of data when creating a recommendation system?"
       },
       "seeding_key": {
         "activity_section.key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
@@ -1331,10 +3679,32 @@
       }
     },
     {
+      "key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_how_computer_vision_works/ai-temp/unversioned]\n video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb8bf7d-4bf2-4b17-be26-b05b2946cf02",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
+      }
+    },
+    {
+      "key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you summarize how a computer \"sees\" something in an image?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b86a3b4-4b47-44de-a8e5-874e7709e7dd",
+        "lesson_activity.key": "e9dc2621-41aa-462f-ad59-bea401630ac9"
+      }
+    },
+    {
       "key": "79b13b87-8713-470e-bbc9-17f112e89477",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "79b13b87-8713-470e-bbc9-17f112e89477",
@@ -1345,7 +3715,7 @@
       "key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe “AI ethics” to a family member or friend?"
       },
       "seeding_key": {
         "activity_section.key": "8f04517c-7491-4a57-afb8-1a5db2ea4c0b",
@@ -1356,7 +3726,7 @@
       "key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r introduction_to_ai_ethics_ai_privacy_the_future_of_work/ai-temp/unversioned] video as a class. Students should be listening for vocabulary terms to match on their notetaker.\n"
       },
       "seeding_key": {
         "activity_section.key": "419be35e-d4b1-4ada-8abc-f77c26219c5c",
@@ -1367,7 +3737,7 @@
       "key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does AI change your thoughts on your future work and careers?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ec8ee443-e7f1-457f-a89d-92bfba916f44",
@@ -1378,23 +3748,11 @@
       "key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
       "position": 1,
       "properties": {
-        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
         "name": "Teacher Survey"
       },
       "seeding_key": {
         "activity_section.key": "ca0eb773-44d3-4664-aa7c-74eb256866f4",
-        "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
-      }
-    },
-    {
-      "key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
-      "position": 2,
-      "properties": {
-        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "activity_section.key": "afebd90a-7666-400a-975d-fbdc0960d6bb",
         "lesson_activity.key": "7ea72882-4b8e-479e-a4bf-2e556ec5d35f"
       }
     }
@@ -1402,81 +3760,6 @@
   "script_levels": [
     {
       "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U9L5 Cropping Widget_introai"
-        ],
-        "progression": "Cropping Widget"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L5 Cropping Widget_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
-      },
-      "level_keys": [
-        "U9L5 Cropping Widget_introai"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_U9L7_CFU12022_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "csp_U9L7_CFU12022_introai"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "progression": "Check For Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U9L7 Free Response_introai"
-        ],
-        "lesson.key": "Algorithmic Bias",
-        "lesson_group.key": "",
-        "script.name": "ai-temp",
-        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      },
-      "level_keys": [
-        "U9L7 Free Response_introai"
-      ]
-    },
-    {
-      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1501,7 +3784,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1526,7 +3809,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1551,35 +3834,68 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 4,
+      "chapter": 4,
+      "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "aiml-intro-pulse-survey_introai"
+          "Neural Networks - Perceptron - Beta"
         ],
-        "progression": "Check-In Survey"
+        "progression": "Beta: WeTube Video Recommendations (Widget)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aiml-intro-pulse-survey_introai"
+          "Neural Networks - Perceptron - Beta"
         ],
-        "lesson.key": "Introduction to Machine Learning",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
       },
       "level_keys": [
-        "aiml-intro-pulse-survey_introai"
+        "Neural Networks - Perceptron - Beta"
       ]
-    }
-  ],
-  "levels_script_levels": [
+    },
     {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "progression": "WeTube Video Recommendations (Widget)"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "U9L5 Cropping Widget_introai",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
+      },
+      "level_keys": [
+        "Neural Networks - Perceptron - Full"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
         "script_level.level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
@@ -1587,11 +3903,24 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
-      }
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget_introai"
+      ]
     },
     {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "csp_U9L7_CFU12022_introai",
         "script_level.level_keys": [
           "csp_U9L7_CFU12022_introai"
         ],
@@ -1599,11 +3928,24 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
+      },
+      "level_keys": [
+        "csp_U9L7_CFU12022_introai"
+      ]
     },
     {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
       "seeding_key": {
-        "level.key": "U9L7 Free Response_introai",
         "script_level.level_keys": [
           "U9L7 Free Response_introai"
         ],
@@ -1611,8 +3953,13 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
-      }
-    },
+      },
+      "level_keys": [
+        "U9L7 Free Response_introai"
+      ]
+    }
+  ],
+  "levels_script_levels": [
     {
       "seeding_key": {
         "level.key": "Oceans_FishVTrash_introai",
@@ -1651,21 +3998,81 @@
     },
     {
       "seeding_key": {
-        "level.key": "aiml-intro-pulse-survey_introai",
+        "level.key": "Neural Networks - Perceptron - Beta",
         "script_level.level_keys": [
-          "aiml-intro-pulse-survey_introai"
+          "Neural Networks - Perceptron - Beta"
         ],
-        "lesson.key": "Introduction to Machine Learning",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "6b4f0c67-b8b6-49e6-9331-e6fe9b8886a1"
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neural Networks - Perceptron - Full",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget_introai",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U9L7_CFU12022_introai",
+        "script_level.level_keys": [
+          "csp_U9L7_CFU12022_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response_introai",
+        "script_level.level_keys": [
+          "U9L7 Free Response_introai"
+        ],
+        "lesson.key": "Algorithmic Bias",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "71c7f0b9-5087-412b-a759-a804597ab2c6"
       }
     }
   ],
   "resources": [
     {
+      "name": "[Example] Computer Vision Network",
+      "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
+      "key": "_example_computer_vision",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_example_computer_vision"
+      }
+    },
+    {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1R9kSIbLwHtLSY0HoeIz19Kt1eXQKmCCjG6qM_VQhVGc/copy",
+      "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/copy",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
@@ -1677,12 +4084,11 @@
     },
     {
       "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
       "key": "ai_ethics_research_areas",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_areas"
@@ -1690,19 +4096,18 @@
     },
     {
       "name": "AI Ethics Research Reflection",
-      "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
       "key": "ai_ethics_research_reflection",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_reflection"
       }
     },
     {
-      "name": "AI: What is Machine Learning?",
+      "name": "Introduction to AI - What is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
@@ -1715,32 +4120,8 @@
       }
     },
     {
-      "name": "Blockchain: Societal Impact",
-      "url": "https://www.youtube.com/watch?v=C3C_JfG8cNg",
-      "key": "blockchain_societal_impact",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "blockchain_societal_impact"
-      }
-    },
-    {
-      "name": "Blockchain: Trustworthy or a Scam?",
-      "url": "https://www.youtube.com/watch?v=WzxbwEQRJPo",
-      "key": "blockchain_trustworthy_or_a_scam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "blockchain_trustworthy_or_a_scam_"
-      }
-    },
-    {
       "name": "Classifying Fish",
-      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+      "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
       "key": "classifying_fish",
       "properties": {
         "audience": "Student",
@@ -1749,6 +4130,30 @@
       },
       "seeding_key": {
         "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "Computer Vision",
+      "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+      "key": "computer_vision",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "computer_vision"
+      }
+    },
+    {
+      "name": "Computer Vision Network",
+      "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
+      "key": "computer_vision_network",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computer_vision_network"
       }
     },
     {
@@ -1765,116 +4170,188 @@
       }
     },
     {
-      "name": "Ethics & AI: Equal Access and Algorithmic Bias",
-      "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
-      "key": "ethics_ai_equal_access_and_algorithmic_bias",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "name": "How AI Works",
-      "url": "https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y",
-      "key": "how_ai_works",
-      "properties": {
-        "audience": "Student",
-        "type": "Video Series"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_works"
-      }
-    },
-    {
-      "name": "How Blockchain Works",
-      "url": "https://docs.google.com/presentation/d/12LSqxNVap6ERjOrt5Nl644-6_r4VKrh0yJY5KmS-L3A/template/preview",
-      "key": "how_blockchain_works",
+      "name": "Generative LLM",
+      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/copy",
+      "key": "generative_llm",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "how_blockchain_works"
+        "resource.key": "generative_llm"
       }
     },
     {
-      "name": "How Blockchain Works: Beyond Currencies",
-      "url": "https://www.youtube.com/watch?v=3EwkfUz_BPs",
-      "key": "how_blockchain_works_beyond_currencies",
+      "name": "Generative LLM Guide",
+      "url": "https://docs.google.com/document/d/1e9CLjhlrADSDx79CdWqAkDLneq7Xj1XH3ZgJJX2EN0I/edit?usp=sharing",
+      "key": "generative_llm_guide",
       "properties": {
         "audience": "Student",
-        "type": "Video"
+        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "how_blockchain_works_beyond_currencies"
+        "resource.key": "generative_llm_guide"
       }
     },
     {
-      "name": "How Blockchain Works: Introduction",
-      "url": "https://www.youtube.com/watch?v=MjibPL4tGqo",
-      "key": "how_blockchain_works_introduction",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_introduction"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Marketplace & Price",
-      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
-      "key": "how_blockchain_works_marketplace_price",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_marketplace_price"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Under the Hood",
-      "url": "https://www.youtube.com/watch?v=It_Ivgm5wQA",
-      "key": "how_blockchain_works_under_the_hood",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_under_the_hood"
-      }
-    },
-    {
-      "name": "How Blockchain Works: Why Blockchain?",
-      "url": "https://www.youtube.com/watch?v=10wYLCnDHao",
-      "key": "how_blockchain_works_why_blockchain_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_blockchain_works_why_blockchain_"
-      }
-    },
-    {
-      "name": "How Blockchain Works Youtube Playlist",
-      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf",
-      "key": "how_blockchain_works_youtube_playlist",
+      "name": "Introduction to AI",
+      "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+      "key": "introduction_to_ai",
       "properties": {
         "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai"
+      }
+    },
+    {
+      "name": "Introduction to AI - Privacy and Future of Work",
+      "url": "https://youtu.be/zNxw5gJtHLc",
+      "key": "introduction_to_ai_-_privacy_and_future_of_work",
+      "properties": {
+        "audience": "Student",
         "type": "Video"
       },
       "seeding_key": {
-        "resource.key": "how_blockchain_works_youtube_playlist"
+        "resource.key": "introduction_to_ai_-_privacy_and_future_of_work"
+      }
+    },
+    {
+      "name": "Introduction to AI - Societal Impact",
+      "url": "https://youtu.be/tJQSyzBUAew",
+      "key": "introduction_to_ai_-_societal_impact",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_-_societal_impact"
+      }
+    },
+    {
+      "name": "Introduction to AI - Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "introduction_to_ai_-_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_-_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: Ethics & AI: Equal Access and Algorithmic Bias",
+      "url": "https://youtu.be/tJQSyzBUAew",
+      "key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: Ethics & AI: Privacy & the Future of Work",
+      "url": "https://youtu.be/zNxw5gJtHLc",
+      "key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work"
+      }
+    },
+    {
+      "name": "Introduction to AI: How Computer Vision Works",
+      "url": "https://youtu.be/2hXG8v8p0KM",
+      "key": "introduction_to_ai_how_computer_vision_works",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_computer_vision_works"
+      }
+    },
+    {
+      "name": "Introduction to AI: How Computer Vision Works",
+      "url": "https://youtu.be/2hXG8v8p0KM",
+      "key": "introduction_to_ai_how_computer_vision_works_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_computer_vision_works_1"
+      }
+    },
+    {
+      "name": "Introduction to AI: How Neural Networks Work",
+      "url": "https://youtu.be/JrXazCEACVo",
+      "key": "introduction_to_ai_how_neural_networks_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_neural_networks_work"
+      }
+    },
+    {
+      "name": "Introduction to AI: How Neural Networks Work",
+      "url": "https://youtu.be/JrXazCEACVo",
+      "key": "introduction_to_ai_how_neural_networks_work_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_neural_networks_work_1"
+      }
+    },
+    {
+      "name": "Introduction to AI: Introduction",
+      "url": "https://youtu.be/Ok-xpKjKp2g",
+      "key": "introduction_to_ai_introduction",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_introduction"
+      }
+    },
+    {
+      "name": "Introduction to AI: Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "introduction_to_ai_training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_training_data_and_bias"
+      }
+    },
+    {
+      "name": "Introduction to AI: What is Machine Learning?",
+      "url": "https://youtu.be/KHbwOetbmbs",
+      "key": "introduction_to_ai_what_is_machine_learning_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_what_is_machine_learning_"
       }
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/copy",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
@@ -1882,6 +4359,30 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+      "key": "neural_networks",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+      "key": "neural_networks_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks_1"
       }
     },
     {
@@ -1894,6 +4395,18 @@
       },
       "seeding_key": {
         "resource.key": "our_ai_code_of_ethics_template_"
+      }
+    },
+    {
+      "name": "Seven Segment Display Manipulative",
+      "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
+      "key": "seven_segment_display_manipulative",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "seven_segment_display_manipulative"
       }
     },
     {
@@ -1923,7 +4436,7 @@
     },
     {
       "name": "Vocabulary Matching",
-      "url": "https://docs.google.com/document/d/1Ns3EMBk8gNumJ9SMbXbnDbvsCi7wA0XjKbIainuiU4M/edit",
+      "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
       "key": "vocabulary_matching",
       "properties": {
         "audience": "Student",
@@ -1933,6 +4446,30 @@
       "seeding_key": {
         "resource.key": "vocabulary_matching"
       }
+    },
+    {
+      "name": "WeTube Content Creators",
+      "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+      "key": "wetube_content_creators",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "wetube_content_creators"
+      }
+    },
+    {
+      "name": "What a Neural Network Sees",
+      "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
+      "key": "what_a_neural_network_sees",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_a_neural_network_sees"
+      }
     }
   ],
   "lessons_resources": [
@@ -1940,6 +4477,12 @@
       "seeding_key": {
         "lesson.key": "Algorithmic Bias",
         "resource.key": "csp_unit_5_-_lesson_8_-_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "resource.key": "introduction_to_ai_-_societal_impact"
       }
     },
     {
@@ -1957,55 +4500,49 @@
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "blockchain_societal_impact"
+        "resource.key": "introduction_to_ai"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "blockchain_trustworthy_or_a_scam_"
+        "resource.key": "introduction_to_ai_ethics_ai_equal_access_and_algorithmic_bias"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works"
+        "resource.key": "introduction_to_ai_ethics_ai_privacy_the_future_of_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_beyond_currencies"
+        "resource.key": "introduction_to_ai_how_computer_vision_works"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_introduction"
+        "resource.key": "introduction_to_ai_how_neural_networks_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_marketplace_price"
+        "resource.key": "introduction_to_ai_introduction"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_under_the_hood"
+        "resource.key": "introduction_to_ai_training_data_and_bias"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_why_blockchain_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Blockchain In a Day",
-        "resource.key": "how_blockchain_works_youtube_playlist"
+        "resource.key": "introduction_to_ai_what_is_machine_learning_"
       }
     },
     {
@@ -2024,6 +4561,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "introduction_to_ai_-_training_data_and_bias"
       }
     },
     {
@@ -2053,19 +4596,85 @@
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "how_ai_works"
+        "resource.key": "introduction_to_ai_-_privacy_and_future_of_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
         "resource.key": "our_ai_code_of_ethics_template_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "introduction_to_ai_how_neural_networks_work_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "wetube_content_creators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_example_computer_vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "computer_vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "computer_vision_network"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "introduction_to_ai_how_computer_vision_works_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "seven_segment_display_manipulative"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "what_a_neural_network_sees"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "generative_llm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "generative_llm_guide"
       }
     }
   ],
@@ -2076,6 +4685,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "a series of steps to solve a problem or make a decision",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
     {
       "key": "artificial_intelligence",
       "word": "Artificial Intelligence",
@@ -2097,6 +4716,16 @@
       }
     },
     {
+      "key": "large_language_model_llm_",
+      "word": "Large Language Model (LLM)",
+      "definition": "a general purpose form of AI that is trained on a very, very large body of knowledge",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
       "key": "machine_learning",
       "word": "Machine Learning",
       "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
@@ -2104,6 +4733,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "model",
+      "word": "Model",
+      "definition": "a computer program designed to make a decision",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "network",
+      "word": "Network",
+      "definition": "A collection of items connected together. Following these connections can represent the steps in an algorithm, like a flowchart.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "network"
       }
     }
   ],
@@ -2125,12 +4774,66 @@
         "lesson.key": "Our AI Code of Ethics",
         "vocabulary.key": "ethics"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "network"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "model"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "00b36546-a3e9-44d4-bc1f-5c0a4e2a9eb0",
+      "properties": {
+        "description": "Collaborate with AI to create a creative text document"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "00b36546-a3e9-44d4-bc1f-5c0a4e2a9eb0"
+      }
+    },
+    {
+      "key": "0395d242-ca00-47c7-8c3a-f8875e91fe19",
+      "properties": {
+        "description": "Describe how computer vision is built of layers that combine smaller components into a final prediction"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "0395d242-ca00-47c7-8c3a-f8875e91fe19"
+      }
+    },
+    {
+      "key": "070e0195-352f-4560-bab5-4bf8d2c80b3f",
+      "properties": {
+        "description": "Discuss positive and negative side effects of these models"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "070e0195-352f-4560-bab5-4bf8d2c80b3f"
+      }
+    },
     {
       "key": "38e5184b-0a73-4d35-9715-dd011d43fc3c",
       "properties": {
@@ -2152,6 +4855,16 @@
       }
     },
     {
+      "key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b",
+      "properties": {
+        "description": "Use the weights of an artificial neuron to adjust the outputs of a recommendation system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b"
+      }
+    },
+    {
       "key": "85ebf69e-1ef7-4817-abaf-0a8f0efe2c33",
       "properties": {
         "description": "Apply the Problem Solving Process to train a computer to solve a problem"
@@ -2162,9 +4875,19 @@
       }
     },
     {
+      "key": "93ccdd32-5c10-44b5-b52f-0701036e0953",
+      "properties": {
+        "description": "Explain the need for diverse perspectives when creating recommendation systems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "93ccdd32-5c10-44b5-b52f-0701036e0953"
+      }
+    },
+    {
       "key": "97170e18-9a17-4f74-90bd-a0d180dfcd11",
       "properties": {
-        "description": "Explain how Blockchain works"
+        "description": "Explain how AI works"
       },
       "seeding_key": {
         "lesson.key": "Blockchain In a Day",
@@ -2190,51 +4913,19 @@
         "lesson.key": "Our AI Code of Ethics",
         "objective.key": "cb65d681-bb92-48a1-9f42-2635d27ae0a5"
       }
+    },
+    {
+      "key": "e4f8c8d3-0a13-468d-8a9d-af7647bef878",
+      "properties": {
+        "description": "Describe that having a large amount of text to learn from allows computers to appear intelligent in written form"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "e4f8c8d3-0a13-468d-8a9d-af7647bef878"
+      }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithmic Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.F.11"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",

@@ -60,7 +60,7 @@ function onPuzzleSubmit() {
   showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => onPuzzleComplete(true)
+    onConfirm: () => onPuzzleComplete(true),
   });
 }
 
@@ -71,7 +71,7 @@ function onPuzzleUnsubmit() {
   showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: unsubmit
+    onConfirm: unsubmit,
   });
 }
 
@@ -120,7 +120,7 @@ function showConfirmationDialog(config) {
 
   const dialog = studioApp.createModalDialog({
     contentDiv: contentDiv,
-    defaultBtnSelector: '#confirm-button'
+    defaultBtnSelector: '#confirm-button',
   });
 
   const cancelButton = buttons.querySelector('#again-button');

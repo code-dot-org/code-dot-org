@@ -10,3 +10,4 @@ question 'truncate'
 answer 'remove everything to the right of the decimal point'
 question 'static method'
 answer 'a method that is called by the class instead of by an instance of the class'
+allow_multiple_attempts true

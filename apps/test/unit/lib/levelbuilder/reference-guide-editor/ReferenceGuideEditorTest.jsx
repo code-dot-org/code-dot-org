@@ -9,7 +9,7 @@ const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   key: key,
   parent_reference_guide_key: parent,
   course_version_name: 'csa-2021',
-  content: '##some markdown'
+  content: '##some markdown',
 });
 
 describe('ReferenceGuideEditorTest', () => {
@@ -28,7 +28,7 @@ describe('ReferenceGuideEditorTest', () => {
     const referenceGuides = [
       makeReferenceGuide('hello_world', 'parent_key'),
       makeReferenceGuide('hello_world2', 'parent_key'),
-      makeReferenceGuide('hello_world3', 'parent_key')
+      makeReferenceGuide('hello_world3', 'parent_key'),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditor
@@ -52,7 +52,7 @@ describe('ReferenceGuideEditorTest', () => {
     const referenceGuides = [
       makeReferenceGuide('hello_world', 'parent_key'),
       makeReferenceGuide('hello_world2', 'parent_key'),
-      makeReferenceGuide('hello_world3', 'parent_key')
+      makeReferenceGuide('hello_world3', 'parent_key'),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditor
@@ -81,7 +81,7 @@ describe('ReferenceGuideEditorTest', () => {
     expect(fetchSpy.getCall(0).args[1].body).to.equal(
       JSON.stringify({
         ...referenceGuide,
-        display_name: 'new_display_name'
+        display_name: 'new_display_name',
       })
     );
   });
@@ -92,7 +92,7 @@ describe('ReferenceGuideEditorTest', () => {
     const referenceGuides = [
       makeReferenceGuide('hello_world', 'parent_key'),
       makeReferenceGuide('hello_world2', 'parent_key'),
-      makeReferenceGuide('hello_world3', 'parent_key')
+      makeReferenceGuide('hello_world3', 'parent_key'),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditor
@@ -113,7 +113,7 @@ describe('ReferenceGuideEditorTest', () => {
     expect(fetchSpy.getCall(0).args[1].body).to.equal(
       JSON.stringify({
         ...referenceGuide,
-        parent_reference_guide_key: null
+        parent_reference_guide_key: null,
       })
     );
   });

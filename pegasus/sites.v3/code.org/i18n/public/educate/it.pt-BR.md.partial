@@ -10,7 +10,8 @@ theme: responsive
 
 - Recomendamos pelo menos uma conexão de 15 MBit/s com a internet na sua escola.
 - A menor resolução de vídeo compatível é de 1024 x 728 p.
-- Você vai precisar de um desktop ou de um notebook, com um mouse (ou touchpad) e teclado, para os cursos para ensino fundamental e ensino médio: Descobertas da SC, Princípios da SC e Introdução ao App Lab. A maioria dos tablets e dispositivos móveis não é compatível com esses cursos. Veja "Detalhes sobre a compatibilidade de dispositivos móveis e tablets" abaixo para ver as exceções em termos de dispositivos.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Veja "Detalhes sobre a compatibilidade de dispositivos móveis e tablets" abaixo para ver as exceções em termos de dispositivos.
 - Todos os demais conteúdos, como os cursos K-5 (Fundamentos da ciência da computação) e atividades no Hour of Code funcionam em iPads e Chromebooks, além de todos os outros tablets, notebooks ou desktops modernos.
 - Está procurando detalhes sobre a compatibilidade de dispositivos móveis? Leia abaixo.
 
@@ -82,12 +83,12 @@ Para tem a melhor experiência possível com todo o conteúdo do Code.org, recom
 
 ## Detalhes sobre a compatibilidade de dispositivos móveis e tablets
 
-Os cursos Descobertas da SC, Princípios da SC e Introdução ao App Lab não são compatíveis com tablets ou dispositivos móveis – um teclado completo e um mouse (ou touchpad em MacBooks, por exemplo) são necessários. A maioria dos tablets não é compatível, com as seguintes exceções:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. A maioria dos tablets não é compatível, com as seguintes exceções:
 
 - Microsoft Surface Pro com teclado externo
 - iPad com iPadOS 13.4 ou posterior, com teclado externo e mouse externo ou touchpad
 
-Todos os demais conteúdos, como os cursos K-5 (Fundamentos da ciência da computação) e atividades no Hour of Code funcionam em iPads e Chromebooks, além de todos os outros tablets, notebooks ou desktops modernos.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Telefones celulares
 

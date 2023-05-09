@@ -10,20 +10,20 @@ const CARDS = [
     title: i18n.projectTypeApplab(),
     description: i18n.projectDescriptionApplab(),
     buttonText: i18n.learnMoreApplab(),
-    link: '/applab'
+    link: '/applab',
   },
   {
     title: i18n.projectTypeGamelab(),
     description: i18n.projectDescriptionGamelab(),
     buttonText: i18n.learnMoreGamelab(),
-    link: '/gamelab'
+    link: '/gamelab',
   },
   {
     title: i18n.projectTypeWeblab(),
     description: i18n.projectDescriptionWeblab(),
     buttonText: i18n.learnMoreWeblab(),
-    link: '/weblab'
-  }
+    link: '/weblab',
+  },
 ];
 
 export default class MiddleHighResourceCards extends Component {

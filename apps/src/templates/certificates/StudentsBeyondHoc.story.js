@@ -15,7 +15,7 @@ export default storybook => {
             userType="teacher"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Other tutorial, English, student over 13',
@@ -27,7 +27,7 @@ export default storybook => {
             under13={false}
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Other tutorial, English, student under 13',
@@ -39,7 +39,7 @@ export default storybook => {
             under13={true}
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Other tutorial, English, signed out',
@@ -50,7 +50,7 @@ export default storybook => {
             userType="signedOut"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Other tutorial, non-English, signed out',
@@ -61,7 +61,7 @@ export default storybook => {
             userType="signedOut"
             isEnglish={false}
           />
-        )
+        ),
       },
       {
         name: 'Applab, signed out, English',
@@ -72,7 +72,7 @@ export default storybook => {
             userType="signedOut"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Applab, signed in, English',
@@ -83,7 +83,7 @@ export default storybook => {
             userType="student"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'pre2017 Minecraft, signed in, English, under 13',
@@ -95,7 +95,7 @@ export default storybook => {
             isEnglish={true}
             under13={true}
           />
-        )
+        ),
       },
       {
         name: 'pre2017 Minecraft, signed in, English, 13+',
@@ -107,7 +107,7 @@ export default storybook => {
             isEnglish={true}
             under13={false}
           />
-        )
+        ),
       },
       {
         name: 'pre2017 Minecraft, signed in, non-English',
@@ -118,7 +118,7 @@ export default storybook => {
             userType="student"
             isEnglish={false}
           />
-        )
+        ),
       },
       {
         name: '2018 Minecraft, English, young student',
@@ -130,7 +130,7 @@ export default storybook => {
             isEnglish={true}
             under13={true}
           />
-        )
+        ),
       },
       {
         name: '2018 Minecraft, English, older student',
@@ -142,7 +142,7 @@ export default storybook => {
             isEnglish={true}
             under13={false}
           />
-        )
+        ),
       },
       {
         name: '2018 Minecraft, non-English',
@@ -153,7 +153,7 @@ export default storybook => {
             userType="student"
             isEnglish={false}
           />
-        )
+        ),
       },
       {
         name: 'Dance, signed in, English',
@@ -164,7 +164,7 @@ export default storybook => {
             userType="student"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Dance, signed in, non-English',
@@ -175,7 +175,7 @@ export default storybook => {
             userType="student"
             isEnglish={false}
           />
-        )
+        ),
       },
       {
         name: 'Dance, signed out, English',
@@ -186,7 +186,7 @@ export default storybook => {
             userType="signedOut"
             isEnglish={true}
           />
-        )
+        ),
       },
       {
         name: 'Dance, signed out, non-English',
@@ -197,7 +197,7 @@ export default storybook => {
             userType="signedOut"
             isEnglish={false}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

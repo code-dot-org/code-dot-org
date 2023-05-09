@@ -1,4 +1,4 @@
-@import 'color', 'font', 'barlow-semi-condensed-font';
+@import "color", "font", "barlow-semi-condensed-font";
 
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
@@ -8,6 +8,8 @@
 // We're using mixins to style semantic tags and also creating
 // identical classes for potential use on other elements if needed.
 
+// ----------------------------------------
+// v 1.0.1
 // ----------------------------------------
 
 // Heading styles
@@ -19,6 +21,7 @@
 // - example: h3.heading-sm
 
 // Use @include [mixin-name] in stylesheets for widespread use.
+
 /* — example: all h3s in a ul need to look like h5s
     ul.icon-list {
       h3 { @include heading-sm }
@@ -51,7 +54,7 @@
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
+  font-family: $barlowSemiCondensed-medium;
   font-size: 1.5em;
 }
 
@@ -83,15 +86,15 @@
 @mixin body-two {
   @include paragraph-common;
   font-family: $gotham-regular, sans-serif;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 @mixin overline {
   @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: .75em;
+  font-size: 0.75em;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 @mixin strong {
@@ -105,34 +108,46 @@
 // Caption styles
 @mixin figcaption {
   font-family: $gotham-bold, sans-serif;
-  font-size: .875em;
-  margin: .5em 0 1em;
+  font-size: 0.875em;
+  margin: 0.5em 0 1em;
   line-height: 1.2;
 }
 
 // ----------------------------------------
 
 // Headings
-h1, .heading-xxl { @include heading-xxl }
-h2, .heading-xl { @include heading-xl }
-h3, .heading-lg { @include heading-lg }
-h4, .heading-md { @include heading-md }
-h5, .heading-sm { @include heading-sm }
-h6, .heading-xs { @include heading-xs }
+h1,
+.heading-xxl { @include heading-xxl; }
+h2,
+.heading-xl { @include heading-xl; }
+h3,
+.heading-lg { @include heading-lg; }
+h4,
+.heading-md { @include heading-md; }
+h5,
+.heading-sm { @include heading-sm; }
+h6,
+.heading-xs { @include heading-xs; }
 
 // Paragraphs
 // Use on default paragraphs
-p, .body-one { @include body-one }
+p,
+.body-one { @include body-one; }
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-p.body-two, .body-two { @include body-two }
+p.body-two,
+.body-two { @include body-two; }
 // Use on small uppercase labels or descriptions
-p.overline, .overline { @include overline }
+p.overline,
+.overline { @include overline; }
 // Use in paragraphs to bold text
-strong, .strong { @include strong }
+strong,
+.strong { @include strong; }
 // Use in paragraphs to italicize text
-em, .em { @include em }
+em,
+.em { @include em; }
 
 // Captions
 // Use on figcaption elements that accompany images or videos
-figcaption, .figcaption { @include figcaption }
+figcaption,
+.figcaption { @include figcaption; }

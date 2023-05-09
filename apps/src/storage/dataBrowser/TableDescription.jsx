@@ -10,7 +10,7 @@ import {Link} from '@dsco_/link';
 export default class TableDescription extends React.Component {
   static propTypes = {
     tableName: PropTypes.string.isRequired,
-    libraryTables: PropTypes.array.isRequired
+    libraryTables: PropTypes.array.isRequired,
   };
 
   render() {

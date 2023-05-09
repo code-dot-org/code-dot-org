@@ -3,7 +3,7 @@ import SchoolTypeDropdown from './SchoolTypeDropdown';
 
 export default {
   title: 'SchoolTypeDropdown',
-  component: SchoolTypeDropdown
+  component: SchoolTypeDropdown,
 };
 
 //
@@ -12,7 +12,7 @@ export default {
 
 class DropdownWrapper extends Component {
   state = {
-    value: ''
+    value: '',
   };
 
   onChange(event) {

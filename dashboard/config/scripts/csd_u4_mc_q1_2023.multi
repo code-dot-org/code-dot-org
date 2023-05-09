@@ -1,6 +1,6 @@
 name 'CSD U4 MC Q1_2023'
 type 'multi2'
-question 'You are developing an app that will warn you when the air quality in your city is poor. Select who are, most likely, the target users of the app. (Select all that apply)'
+question 'You are developing an app that will warn you when the air quality in your city is poor. Who would most likely be the target users of the app? (*Select two*)'
 wrong 'The people writing the code for the app'
 right 'People with asthma or other respiratory illnesses'
 wrong 'The researchers conducting user interviews'
@@ -10,3 +10,5 @@ teacher_markdown <<MARKDOWN
 
 The target users are the ones most likely to use the app, not necessarily the people creating the app.
 MARKDOWN
+
+allow_multiple_attempts true

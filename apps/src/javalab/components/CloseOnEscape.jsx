@@ -21,7 +21,7 @@ const CloseOnEscape = ({handleClose, className, children}) => {
 CloseOnEscape.propTypes = {
   handleClose: PropTypes.func.isRequired,
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default CloseOnEscape;

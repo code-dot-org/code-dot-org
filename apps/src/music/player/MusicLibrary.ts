@@ -2,7 +2,7 @@ export default class MusicLibrary {
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
-  constructor(libraryJson: any) {
+  constructor(libraryJson: {groups?: FolderGroup[]}) {
     if (!libraryJson.groups || libraryJson.groups.length === 0) {
       throw new Error(`Invalid library JSON: ${libraryJson}`);
     }

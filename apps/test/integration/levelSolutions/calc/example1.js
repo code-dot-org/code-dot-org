@@ -13,49 +13,49 @@ module.exports = {
       description: 'Correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          blockUtils.calcBlockXml('functional_plus', [3, 4])
+          blockUtils.calcBlockXml('functional_plus', [3, 4]),
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'mirrored answer',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [4, 3]),
-          blockUtils.calcBlockXml('functional_plus', [2, 1])
+          blockUtils.calcBlockXml('functional_plus', [2, 1]),
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'wrong answer',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          blockUtils.calcBlockXml('functional_plus', [3, 3])
+          blockUtils.calcBlockXml('functional_plus', [3, 3]),
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty answer',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -64,13 +64,13 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml></xml>'
+      xml: '<xml></xml>',
     },
     {
       description: 'empty input',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -83,15 +83,15 @@ module.exports = {
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          blockUtils.calcBlockXml('functional_plus', [3]) // missing second input
+          blockUtils.calcBlockXml('functional_plus', [3]), // missing second input
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty input inside a variable',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -117,13 +117,13 @@ module.exports = {
         '</block>' +
         '</functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty input inside a function',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -158,28 +158,28 @@ module.exports = {
         '  <title name="NAME">f</title>' +
         // missing block here
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'extra top block',
       expected: {
         result: true,
-        testResult: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS
+        testResult: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS,
       },
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          blockUtils.calcBlockXml('functional_plus', [3, 4])
+          blockUtils.calcBlockXml('functional_plus', [3, 4]),
         ]) +
         blockUtils.calcBlockXml('functional_plus', [1, 2]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'divide by zero',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -191,13 +191,13 @@ module.exports = {
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_dividedby', [4, 0]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'imaginary number',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -206,13 +206,14 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + blockUtils.calcBlockXml('functional_sqrt', [-1]) + '</xml>'
+      xml:
+        '<xml>' + blockUtils.calcBlockXml('functional_sqrt', [-1]) + '</xml>',
     },
     {
       description: 'unnamed variable',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -242,14 +243,14 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'unnamed function',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -298,7 +299,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

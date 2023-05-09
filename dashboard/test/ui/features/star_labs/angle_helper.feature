@@ -1,5 +1,4 @@
 @no_mobile
-@no_ie
 Feature: Angle Helper
 
 Background:

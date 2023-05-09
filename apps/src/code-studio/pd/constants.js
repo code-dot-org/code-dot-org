@@ -10,11 +10,11 @@ import * as utils from '../../utils';
  */
 exports.SelectStyleProps = {
   menuContainerStyle: {
-    maxHeight: 400
+    maxHeight: 400,
   },
   menuStyle: {
-    maxHeight: 398
-  }
+    maxHeight: 398,
+  },
 };
 
 export const PrivacyDialogMode = utils.makeEnum(

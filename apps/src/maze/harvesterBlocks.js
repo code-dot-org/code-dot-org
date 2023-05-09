@@ -23,7 +23,7 @@ function addIfAtSpecificCropBlock(blockly, generator, crop) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_ifAt${capitalizeFirstLetter(crop)}`] = function () {
@@ -49,7 +49,7 @@ function addIfAtSpecificCropElseBlock(blockly, generator, crop) {
       this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_ifAt${capitalizeFirstLetter(crop)}Else`] = function () {
@@ -75,7 +75,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function () {
@@ -99,7 +99,7 @@ function addIfSpecificCropHasBlock(blockly, generator, crop) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_ifHas${capitalizeFirstLetter(crop)}`] = function () {
@@ -125,7 +125,7 @@ function addIfSpecificCropHasElseBlock(blockly, generator, crop) {
       this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_ifHas${capitalizeFirstLetter(crop)}Else`] = function () {
@@ -151,7 +151,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_whileHas${capitalizeFirstLetter(crop)}`] = function () {
@@ -177,7 +177,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator[`harvester_untilHas${capitalizeFirstLetter(crop)}`] = function () {
@@ -206,7 +206,7 @@ exports.install = function (blockly, blockInstallOptions) {
       title: isK1 ? msg.pick() : `${msg.pick()} ${msg[crop]()}`,
       titleImage: isK1 ? skin[crop] : undefined,
       tooltip: msg[`${crop}Tooltip`](),
-      functionName: `Maze.get${capitalizeFirstLetter(crop)}`
+      functionName: `Maze.get${capitalizeFirstLetter(crop)}`,
     });
 
     addIfAtSpecificCropBlock(blockly, generator, crop);
@@ -221,11 +221,11 @@ exports.install = function (blockly, blockInstallOptions) {
 
   const AT_OPTIONS = CROPS.map(crop => [
     msg[crop](),
-    capitalizeFirstLetter(crop)
+    capitalizeFirstLetter(crop),
   ]);
   const HAS_OPTIONS = CROPS.map(crop => [
     msg[`has${crop}`](),
-    capitalizeFirstLetter(crop)
+    capitalizeFirstLetter(crop),
   ]);
 
   blockly.Blocks.harvester_ifAtCrop = {
@@ -241,7 +241,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_ifAtCrop = function () {
@@ -265,7 +265,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_ifAtCropElse = function () {
@@ -291,7 +291,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_untilAtCrop = function () {
@@ -315,7 +315,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_ifHasCrop = function () {
@@ -341,7 +341,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_ifHasCropElse = function () {
@@ -367,7 +367,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_whileHasCrop = function () {
@@ -393,7 +393,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.harvester_untilHasCrop = function () {

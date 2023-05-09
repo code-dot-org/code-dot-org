@@ -57,12 +57,12 @@ window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 import {
   registerGetResult,
   registerLevel,
-  onAnswerChanged
+  onAnswerChanged,
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.dashboard.codeStudioLevels = {
   registerGetResult,
   registerLevel,
-  onAnswerChanged
+  onAnswerChanged,
 };
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js

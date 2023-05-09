@@ -1,9 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "game_id": 63,
-  "created_at": "2023-03-14T20:37:45.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "properties": {
     "skin": "dance",
     "helper_libraries": [
@@ -51,12 +47,12 @@
     "video_key": "hoc_dance_properties_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"setprop_hint\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"setprop_hint\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "tts_long_instructions_override": "Every dancer has a set of properties that controls what it looks like.\r\n\r\nUse a set size block under a green event block to make dancers appear closer or farther away.",
     "encrypted_examples": "ifZFrHeme+HwwZsyMJQtx7Nc/SDgtCAhg/yQtpqe7ho86YB6RSHVysM502U6\nzXEsV62fZ0piPO7zmQbIL55/7w==\n",
@@ -64,9 +60,13 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
+  "game_id": 63,
   "published": true,
+  "created_at": "2023-03-14T20:37:45.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:45.685+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_072022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_072022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:37:45.685+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_072022\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_072022\"},{\"changed_at\":\"2023-04-19 13:22:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"soft_buttons\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 2
@@ -141,7 +141,7 @@
           <title name="MOVE">"rand"</title>
           <title name="DIR">-1</title>
         </block>
-        <block type="Dancelab_setPropEach">
+        <block type="Dancelab_setPropEach" id="6">
           <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"PINEAPPLE"</title>
           <title name="PROPERTY">"scale"</title>
           <title name="VAL">50</title>

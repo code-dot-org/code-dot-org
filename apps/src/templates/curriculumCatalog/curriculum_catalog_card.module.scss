@@ -19,11 +19,11 @@ $container-width: 309px;
 }
 
 .curriculumCatalogCardContainer_english {
-  height: 24em;
+  height: 25em;
 }
 
 .curriculumCatalogCardContainer_notEnglish {
-  height: 26.5em;
+  height: 28em;
 }
 
 .curriculumInfoContainer {
@@ -39,10 +39,6 @@ $container-width: 309px;
     color: $neutral_dark80;
   }
 
-  button {
-    margin: 0;
-  }
-
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
@@ -56,12 +52,46 @@ $container-width: 309px;
   }
 }
 
-.tagsAndTranslatabilityContainer {
+.labelsAndTranslatabilityContainer {
   display: flex;
+  column-gap: 0.25em;
   justify-content: space-between;
+  margin-bottom: 0.5em;
+  height: 1.5em;
 
   i {
     font-size: 1.5em;
+  }
+}
+
+.labelsContainer {
+  display: flex;
+  column-gap: 0.5em;
+
+  > div {
+    // font styles
+    font-size: 0.75em;
+    line-height: 0.875em;
+    letter-spacing: 0.04em;
+    font-family: $gotham-bold, sans-serif;
+    text-transform: uppercase;
+    color: $neutral-dark;
+
+    // label styles
+    padding: 0.6em 0.75em 0 0.75em;
+    background-color: $brand_primary_light;
+    border-radius: 1em;
+
+    // ellipsis overflow
+    max-width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      max-width: inherit;
+      overflow: inherit;
+    }
   }
 }
 
@@ -71,47 +101,50 @@ $container-width: 309px;
   column-gap: 0.5em;
   margin: 0 0 0.5em 0;
 
-  .iconWithDescriptionText {
+  > p {
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;
   }
 }
 
-.overline {
-  color: $brand_primary_default;
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
-  font-family: $gotham-bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .buttonsContainer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
 }
 
 .buttonsContainer_notEnglish {
   flex-direction: column-reverse;
   row-gap: 1em;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     width: 100%;
-    height: 34px;
-    font-size: 1em;
   }
 }
 
 .buttonsContainer_english {
   justify-content: space-between;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
     width: math.div($container-width - (2 * 16) - 12, 2);
-    height: 40px;
-    font-size: 1em;
   }
 }

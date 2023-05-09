@@ -15,7 +15,7 @@ export default function SubjectSelect({
   readOnly,
   inputStyle,
   validation,
-  onChange
+  onChange,
 }) {
   return (
     <FormGroup validationState={validation.style.subject}>
@@ -47,5 +47,5 @@ SubjectSelect.propTypes = {
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
   validation: PropTypes.object,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };

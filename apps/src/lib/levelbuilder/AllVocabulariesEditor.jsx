@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {
   addVocabulary,
   updateVocabulary,
-  removeVocabulary
+  removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Dialog from '@cdo/apps/templates/Dialog';
@@ -22,7 +22,7 @@ class AllVocabulariesEditor extends Component {
 
     courseVersionId: PropTypes.number.isRequired,
     courseVersionLessons: PropTypes.arrayOf(PropTypes.object),
-    courseName: PropTypes.string.isRequired
+    courseName: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -31,7 +31,7 @@ class AllVocabulariesEditor extends Component {
     this.state = {
       vocabularyForEdit: null,
       vocabularyForDeletion: null,
-      addVocabularyDialogOpen: false
+      addVocabularyDialogOpen: false,
     };
   }
 
@@ -40,43 +40,43 @@ class AllVocabulariesEditor extends Component {
       {
         property: 'actions',
         header: {
-          label: 'Actions'
+          label: 'Actions',
         },
         cell: {
           formatters: [this.actionsCellFormatter],
           props: {
             style: {
-              ...lessonEditorTableStyles.actionsCell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.actionsCell,
+            },
+          },
+        },
       },
       {
         property: 'word',
         header: {
-          label: 'Word'
+          label: 'Word',
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'definition',
         header: {
-          label: 'Definition'
+          label: 'Definition',
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
-      }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
+      },
     ];
   }
 
@@ -111,7 +111,7 @@ class AllVocabulariesEditor extends Component {
 
   handleDeleteVocabularyDialogClose = () => {
     this.setState({
-      vocabularyForDeletion: null
+      vocabularyForDeletion: null,
     });
   };
 
@@ -147,7 +147,7 @@ class AllVocabulariesEditor extends Component {
             handleClose={() =>
               this.setState({
                 vocabularyForEdit: null,
-                addVocabularyDialogOpen: false
+                addVocabularyDialogOpen: false,
               })
             }
             courseVersionId={this.props.courseVersionId}
@@ -180,31 +180,31 @@ const styles = {
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   remove: {
     fontSize: 14,
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   edit: {
     fontSize: 14,
     cursor: 'pointer',
     textAlign: 'center',
     width: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   addButton: {
     fontSize: 18,
     marginTop: 'auto',
-    marginBottom: 'auto'
+    marginBottom: 'auto',
   },
   header: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export const UnconnectedAllVocabulariesEditor = AllVocabulariesEditor;
@@ -212,5 +212,5 @@ export const UnconnectedAllVocabulariesEditor = AllVocabulariesEditor;
 export default connect(state => ({vocabularies: state.vocabularies}), {
   addVocabulary,
   updateVocabulary,
-  removeVocabulary
+  removeVocabulary,
 })(AllVocabulariesEditor);

@@ -7,51 +7,54 @@ import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
-  translatedCourseOfferingDurations
+  translatedCourseOfferingDurations,
+  subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
-
-// TODO [MEG]: remove this placeholder and require() syntax once images are pulled
-const tempImage = require('@cdo/static/resource_cards/anotherhoc.png');
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
   duration,
-  youngestGrade,
-  oldestGrade,
-  imageAltText,
-  imageSrc,
-  subjects,
-  topics,
-  isTranslated,
-  isEnglish
+  gradesArray,
+  imageAltText = '', // for decorative images
+  imageSrc = 'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png',
+  subjects = [],
+  topics = [],
+  isTranslated = false,
+  isEnglish,
+  pathToCourse,
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
     gradeRange={i18n.gradeRange({
-      youngest_grade: youngestGrade,
-      oldest_grade: oldestGrade
-    })} // TODO [MEG]: Decide on translation strategy for this
+      numGrades: gradesArray.length,
+      youngestGrade: gradesArray[0],
+      oldestGrade: gradesArray[gradesArray.length - 1],
+    })}
     imageSrc={imageSrc}
-    subjectsAndTopics={[
-      ...subjects?.map(
-        subject => translatedCourseOfferingSchoolSubjects[subject]
-      ),
-      ...topics?.map(topic => translatedCourseOfferingCsTopics[topic])
-    ]}
+    subjectsAndTopics={intersection(
+      subjectsAndTopicsOrder,
+      concat(subjects, topics)
+    )?.map(
+      subject_or_topic_key =>
+        translatedCourseOfferingSchoolSubjects[subject_or_topic_key] ||
+        translatedCourseOfferingCsTopics[subject_or_topic_key]
+    )}
     quickViewButtonDescription={i18n.quickViewDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
     isEnglish={isEnglish}
+    pathToCourse={pathToCourse}
   />
 );
 
@@ -59,10 +62,9 @@ CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
-  youngestGrade: PropTypes.string.isRequired,
-  oldestGrade: PropTypes.string.isRequired,
+  gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
   imageAltText: PropTypes.string,
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
   isTranslated: PropTypes.bool,
   subjects: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingSchoolSubjects))
@@ -70,15 +72,8 @@ CurriculumCatalogCard.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
   ),
-  isEnglish: PropTypes.bool.isRequired
-};
-
-CurriculumCatalogCard.defaultProps = {
-  imageSrc: tempImage, // TODO [MEG]: remove this default once images are pulled
-  imageAltText: '', // for decorative images
-  isTranslated: false,
-  subjects: [],
-  topics: []
+  isEnglish: PropTypes.bool.isRequired,
+  pathToCourse: PropTypes.string.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -94,7 +89,8 @@ const CustomizableCurriculumCatalogCard = ({
   subjectsAndTopics,
   quickViewButtonDescription,
   quickViewButtonText,
-  isEnglish
+  isEnglish,
+  pathToCourse,
 }) => (
   <div
     className={classNames(
@@ -106,9 +102,13 @@ const CustomizableCurriculumCatalogCard = ({
   >
     <img src={imageSrc} alt={imageAltText} />
     <div className={style.curriculumInfoContainer}>
-      {/*TODO [MEG]: Show all subjects and topics rather than only the first one */}
-      <div className={style.tagsAndTranslatabilityContainer}>
-        <p className={style.overline}>{subjectsAndTopics[0]}</p>
+      <div className={style.labelsAndTranslatabilityContainer}>
+        <div className={style.labelsContainer}>
+          {subjectsAndTopics.length > 0 && <div>{subjectsAndTopics[0]}</div>}
+          {subjectsAndTopics.length > 1 && (
+            <div>{`+${subjectsAndTopics.length - 1}`}</div>
+          )}
+        </div>
         {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
@@ -121,12 +121,12 @@ const CustomizableCurriculumCatalogCard = ({
       <h4>{courseDisplayName}</h4>
       <div className={style.iconWithDescription}>
         <FontAwesome icon="user" className="fa-solid" />
-        <p className={style.iconWithDescriptionText}>{gradeRange}</p>
+        <p>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
         {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
         <FontAwesome icon="clock-o" />
-        <p className={style.iconWithDescriptionText}>{duration}</p>
+        <p>{duration}</p>
       </div>
       <div
         className={classNames(
@@ -137,21 +137,20 @@ const CustomizableCurriculumCatalogCard = ({
         )}
       >
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.neutralDark}
           type="button"
-          onClick={() => {}}
+          href={pathToCourse}
           aria-label={quickViewButtonDescription}
-        >
-          {quickViewButtonText}
-        </Button>
+          text={quickViewButtonText}
+        />
         <Button
           color={Button.ButtonColor.brandSecondaryDefault}
           type="button"
           onClick={() => {}}
           aria-label={assignButtonDescription}
-        >
-          {assignButtonText}
-        </Button>
+          text={assignButtonText}
+        />
       </div>
     </div>
   </div>
@@ -168,11 +167,12 @@ CustomizableCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
+  pathToCourse: PropTypes.string.isRequired,
 
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
-  assignButtonDescription: PropTypes.string.isRequired
+  assignButtonDescription: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalogCard;

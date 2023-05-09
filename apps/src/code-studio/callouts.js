@@ -109,24 +109,24 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
+          button: $('<div class="tooltip-x-close"/>'),
+        },
       },
       style: {
         classes: '',
         tip: {
           width: 20,
-          height: 20
-        }
+          height: 20,
+        },
       },
       position: {
         my: 'bottom left',
-        at: 'top right'
+        at: 'top right',
       },
       hide: {
-        event: 'click mousedown touchstart'
+        event: 'click mousedown touchstart',
       },
-      show: false // don't show on mouseover
+      show: false, // don't show on mouseover
     };
 
     var customConfig =

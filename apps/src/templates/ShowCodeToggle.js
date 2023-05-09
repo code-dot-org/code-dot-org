@@ -14,7 +14,7 @@ const BLOCKS_GLYPH_DARK =
 const commonProps = {
   hasFocus: PropTypes.bool,
   isRtl: PropTypes.bool,
-  isMinecraft: PropTypes.bool
+  isMinecraft: PropTypes.bool,
 };
 
 class ShowCodeButton extends Component {
@@ -25,12 +25,12 @@ class ShowCodeButton extends Component {
     hidden: PropTypes.bool,
     showingBlocks: PropTypes.bool,
     showCodeLabel: PropTypes.string,
-    showBlocksLabel: PropTypes.string
+    showBlocksLabel: PropTypes.string,
   };
 
   static defaultProps = {
     showBlocksLabel: msg.showBlocksHeader(),
-    showCodeLabel: msg.showCodeHeader()
+    showCodeLabel: msg.showCodeHeader(),
   };
 
   onClick() {
@@ -41,15 +41,15 @@ class ShowCodeButton extends Component {
   render() {
     const blockGlyphIconStyle = {
       ...styles.blocksGlyph,
-      ...(this.props.isRtl && styles.blocksGlyphRtl)
+      ...(this.props.isRtl && styles.blocksGlyphRtl),
     };
     const iconImageStyle = {
       ...styles.iconImage,
-      ...(this.props.isRtl && styles.blocksGlyphImageRtl)
+      ...(this.props.isRtl && styles.blocksGlyphImageRtl),
     };
     const blocksGlyphIcon = (
       <i style={blockGlyphIconStyle}>
-        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} />
+        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
       </i>
     );
     return (
@@ -77,7 +77,7 @@ class ShowCodeButton extends Component {
 class DropletCodeToggle extends Component {
   static propTypes = {
     ...commonProps,
-    onToggle: PropTypes.func.isRequired
+    onToggle: PropTypes.func.isRequired,
   };
 
   afterInit = () => {
@@ -105,7 +105,7 @@ class DropletCodeToggle extends Component {
     if (result && result.error) {
       logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
         dropletError: !result.nonDropletError,
-        fromBlocks
+        fromBlocks,
       });
       studioApp().showToggleBlocksError();
     } else {
@@ -121,7 +121,7 @@ class DropletCodeToggle extends Component {
       !studioApp().currentlyUsingBlocks(),
       {
         project_id: project.getCurrentId(),
-        level_id: studioApp().config.level.id
+        level_id: studioApp().config.level.id,
       }
     );
   };
@@ -144,7 +144,7 @@ class DropletCodeToggle extends Component {
 class BlocklyShowCodeButton extends Component {
   static propTypes = {
     ...commonProps,
-    onToggle: PropTypes.func.isRequired
+    onToggle: PropTypes.func.isRequired,
   };
 
   onClick = () => {
@@ -169,7 +169,7 @@ class BlocklyShowCodeButton extends Component {
 export default class ShowCodeToggle extends Component {
   static propTypes = {
     ...commonProps,
-    onToggle: PropTypes.func.isRequired
+    onToggle: PropTypes.func.isRequired,
   };
 
   afterInit = () => {
@@ -194,20 +194,20 @@ const styles = {
     lineHeight: '22px',
     paddingRight: 8,
     fontSize: 15,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   iconImage: {
-    verticalAlign: 'text-bottom'
+    verticalAlign: 'text-bottom',
   },
   blocksGlyphRtl: {
     paddingRight: 0,
-    paddingLeft: 8
+    paddingLeft: 8,
   },
   blocksGlyphImageRtl: {
     transform: 'scale(-1, 1)',
     MozTransform: 'scale(-1, 1)',
     WebkitTransform: 'scale(-1, 1)',
     OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)'
-  }
+    msTransform: 'scale(-1, 1)',
+  },
 };

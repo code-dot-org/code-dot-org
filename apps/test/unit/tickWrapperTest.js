@@ -6,7 +6,7 @@ function createFakeApp() {
     tickCount: 0,
     onTick: function () {
       this.tickCount++;
-    }
+    },
   };
 }
 

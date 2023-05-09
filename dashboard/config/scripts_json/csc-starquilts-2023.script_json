@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-04-11 23:35:37 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-04-28 18:53:24 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -523,7 +525,7 @@
       "key": "55812512-a855-46c4-9ef3-05e800093449",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-pointed star shape and an 8-point Star Quilt?_\n\n**Discussion Goal**: The class will look at an image of a 6-pointed star shape, just like they created in Lesson 2. Students should compare the image to a 8-pointed Star Quilt, which they will create today. \n\nStudents should notice:\n- The star shape has 6 points and the Star Quilt has 8 points\n- The Star Quilt has more rows \n\nAnticipated student responses (similarities):\n- They are both stars\n- They are both made out of rhombus shapes\n- The rhombus shapes are in a pattern\n- The rhombus shapes fit together perfectly\n- The Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between an 8-pointed star shape and an 8-point Star Quilt?_\n\n**Discussion Goal**: The class will look at an image of an 8-pointed star shape, just like they created in Lesson 2. Students should compare the image to a 8-pointed Star Quilt, which they will create today. \n\nStudents should notice:\n- They both have 8 points\n- The Star Quilt has more rows \n\nAnticipated student responses (similarities):\n- They are both stars\n- They are both made out of rhombus shapes\n- The rhombus shapes are in a pattern\n- The rhombus shapes fit together perfectly\n- The Artist can be used to create both of these shapes\n\n \n\n",
         "duration": "5",
         "name": "Warm Up"
       },
