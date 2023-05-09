@@ -215,8 +215,6 @@ pt:
       que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails
       do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade]
       (http://code.org/privacy) para mais informações.
-    additional_information: Precisamos de mais informações para continuar com o processo
-      de inscrição.
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
@@ -1547,6 +1545,13 @@ pt:
         configurações de sua conta (%{user_registration}) para adicionar o seu endereço
         de email antes de completar este formulário.
   courses_category: Cursos Completos
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Olá Mundo
+      sports: Esportes
+      csf: Conceitos básicos da CC
+      csc: Conexões de CC
   cookie_banner:
     message: Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você
       concorda com o armazenamento de cookies em seu computador ou dispositivo.

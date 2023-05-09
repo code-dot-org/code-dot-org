@@ -1477,6 +1477,14 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1563,3 +1571,7 @@ lt:
               display_name: Komandų kūrimas
             csf_nested_loops:
               display_name: Sąlyginiai sakiniai
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Įvadas

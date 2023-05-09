@@ -11,7 +11,7 @@ class EditTableListRow extends React.Component {
   static propTypes = {
     onViewChange: PropTypes.func.isRequired,
     tableName: PropTypes.string.isRequired,
-    tableType: PropTypes.string
+    tableType: PropTypes.string,
   };
 
   handleEdit = () => {

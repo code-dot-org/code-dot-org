@@ -167,7 +167,6 @@ nl:
     data_collection_us: "Ik begrijp dat Code.org een in de VS gevestigde non-profit website is en dat de wetten waaronder het verzamelen van data in de VS valt kunnen afwijken van de wetten in mijn land."
     visit_privacy: 'Ga naar het [Privacybeleid](%{privacy_url}) van Code.org voor meer informatie.'
     student_terms_markdown: "Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](http://code.org/privacy) voor meer informatie."
-    additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
     user_type_button: "Accounttype bijwerken"
     user_type_label: "Accounttype"
     user_type_student: "Leerling"
@@ -938,6 +937,11 @@ nl:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nee'
   courses_category: 'Volledige Cursussen'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Hallo Wereld'
+      csf: 'Basis'
   cookie_banner:
     accept: 'Ik ga akkoord'
   page_not_found_title: "Pagina niet gevonden"

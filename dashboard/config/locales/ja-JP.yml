@@ -165,7 +165,6 @@ ja:
 '
     visit_privacy: 詳細は Code.org の [プライバシーポリシー](%{privacy_url}) にアクセスしてください。
     student_terms_markdown: メールアドレスは私たちが生徒に連絡できるような形式では保存されません。パスワードの回復を除き生徒はCode.orgからメールを受信することはありません。詳しくは、私たちの[プライバシーポリシー](http://code.org/privacy)をご覧ください。
-    additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
     user_type_button: アカウントタイプを更新
     user_type_label: アカウントの種類
     user_type_student: 生徒
@@ -1186,6 +1185,13 @@ ja:
     no_teacher_email:
       body_markdown: アカウントにメールアドレスがありません。このフォームに入力する前に、[アカウント設定](%{user_registration})にアクセスしてメールアドレスを追加してください。
   courses_category: すべてのコース
+  course_offering:
+    headers:
+      minecraft: マインクラフト
+      hello_world: ハローワールド
+      sports: スポーツ
+      csf: コンピューター・サイエンスの基礎
+      csc: CSコネクション
   cookie_banner:
     message: このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。
     more_information: Code.orgのプライバシーポリシーを見る。

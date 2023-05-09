@@ -3,17 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Events
+# Introducing Events
 
-##### Next, you will be introduced to the computer science concept of **events**, an action that causes something to happen. 
+##### The previous level was a preview of events.  When the two sprites were each clicked, each sprite said something.  Remember, events in computer science are actions that cause something to happen.  
 
 ## You will:
 
-* ##### Watch a video that introduces **events** to students.
+* ##### Watch a video that introduces events to students.
 * ##### Use Sprite Lab to code different types of events.
 
-
-**Note:**  Some levels presented here have more steps than what a student will encounter during a single lesson.
 
 ### **Suggested time:** 15 minutes
 

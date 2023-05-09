@@ -44,6 +44,7 @@ class LevelsController < ApplicationController
     Match,
     Maze,
     Multi,
+    Music,
     NetSim,
     Odometer,
     Pixelation,
@@ -132,6 +133,7 @@ class LevelsController < ApplicationController
 
     view_options(
       full_width: true,
+      no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       blocklyVersion: params[:blocklyVersion]
@@ -424,6 +426,8 @@ class LevelsController < ApplicationController
         @game = Game.ailab
       elsif @type_class == Javalab
         @game = Game.javalab
+      elsif @type_class == Music
+        @game = Game.music
       end
       @level = @type_class.new
       render :edit
@@ -530,7 +534,7 @@ class LevelsController < ApplicationController
     # Reference links should be stored as an array.
     if params[:level][:reference_links].is_a? String
       params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
-      params[:level][:reference_links].delete_if(&:blank?)
+      params[:level][:reference_links].compact_blank!
     end
 
     permitted_params.concat(Level.permitted_params)

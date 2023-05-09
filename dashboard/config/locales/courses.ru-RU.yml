@@ -146,6 +146,12 @@ ru:
           description_short: Узнайте основные принципы информатики.
         self-paced-pl-csa-2023:
           title: Модули для начала работы по Информатике A
+        csd-2023:
+          title: Открытия информатики
+        vpl-csd-summer-ci-2023:
+          title: Исследование учебной программы по Открытиям в Информатике
+        self-paced-pl-csd-2023:
+          title: self-paced-pl-csd-2021
     resources:
       curriculum/csd/2020:
         name: Учебная программа

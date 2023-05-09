@@ -1447,6 +1447,14 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1545,3 +1553,7 @@ hy:
               display_name: գործառույթները
             csf_nested_loops:
               display_name: conditionals
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ներածություն

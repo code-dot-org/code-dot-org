@@ -205,8 +205,6 @@ sk:
       kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia
       hesla. Prečítajte si naše [podmienky ochrany súkromia](http://code.org/privacy)
       pre viac informácií.
-    additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie
-      vášho prihlásenia/registrácie.
     user_type_button: Zmeniť typ účtu
     user_type_label: Typ účtu
     user_type_student: Študent
@@ -1360,6 +1358,12 @@ sk:
         ísť do Nastavenia svojho účtu %{user_registration} a pridať si tam emailovú
         adresu.
   courses_category: Všetky kurzy
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Ahoj Svet
+      sports: Športy
+      csf: Základy Informatiky
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s
       uložením cookies na Vašom počítači alebo zariadení.

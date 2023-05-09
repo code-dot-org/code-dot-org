@@ -9,133 +9,139 @@ module.exports = {
   tests: [
     {
       description: 'fractal snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('fractal');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml: blockUtils.blockOfType('create_snowflake_dropdown', {
-        TYPE: 'fractal'
-      })
+        TYPE: 'fractal',
+      }),
     },
 
     {
       description: 'flower snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('flower');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'flower'})
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {
+        TYPE: 'flower',
+      }),
     },
 
     {
       description: 'spiral snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('spiral');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'spiral'})
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {
+        TYPE: 'spiral',
+      }),
     },
 
     {
       description: 'line snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('line');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'line'})
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'line'}),
     },
 
     {
       description: 'parallelogram snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('parallelogram');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml: blockUtils.blockOfType('create_snowflake_dropdown', {
-        TYPE: 'parallelogram'
-      })
+        TYPE: 'parallelogram',
+      }),
     },
 
     {
       description: 'square snowflake',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function(api) {
+          answer: testUtils.generateArtistAnswer(function (api) {
             api.drawSnowflake('square');
-          })
+          }),
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'square'})
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {
+        TYPE: 'square',
+      }),
     },
 
     {
       // Freeplay level that just uses a bunch of our blocks to get us some
       // better code coverage
       description: 'other blocks',
-      delayLoadLevelDefinition: function() {
+      delayLoadLevelDefinition: function () {
         return {
           permittedErrors: 0,
           sliderSpeed: 1,
           answer: [],
-          freePlay: true
+          freePlay: true,
         };
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
+        testResult: TestResults.FREE_PLAY,
       },
-      runBeforeClick: function() {
+      runBeforeClick: function () {
         // This is a free-play level: click Finish when drawing is done.
         addEventListener('artistDrawingComplete', () =>
           $('#finishButton').click()
@@ -145,10 +151,10 @@ module.exports = {
         'when_run',
         'create_a_snowflake_branch',
         'draw_a_snowflake',
-        'draw_a_robot'
-      ])
+        'draw_a_robot',
+      ]),
 
       // NOTE: there a bunch of other custom blocks that are still untested
-    }
-  ]
+    },
+  ],
 };

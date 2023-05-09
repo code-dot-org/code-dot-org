@@ -4,19 +4,19 @@ import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
 import {
   blankStudentTransfer,
   blankStudentTransferStatus,
-  TransferStatus
+  TransferStatus,
 } from './manageStudentsRedux';
 
 const studentData = [
   {id: 1, name: 'Student A'},
   {id: 3, name: 'Student C'},
-  {id: 2, name: 'Student B'}
+  {id: 2, name: 'Student B'},
 ];
 
 const sections = [
   {id: 1, name: 'Section A', loginType: 'email'},
   {id: 2, name: 'Section B', loginType: 'word'},
-  {id: 3, name: 'Section C', loginType: 'picture'}
+  {id: 3, name: 'Section C', loginType: 'picture'},
 ];
 
 const transferToOtherTeacher = {
@@ -24,13 +24,13 @@ const transferToOtherTeacher = {
   studentIds: [1, 2, 3],
   otherTeacher: true,
   otherTeacherSection: 'ABCDEF',
-  copyStudents: false
+  copyStudents: false,
 };
 
 const errorTransferStatus = {
   status: TransferStatus.FAIL,
   error:
-    'You cannot move these students because they are already in the new section.'
+    'You cannot move these students because they are already in the new section.',
 };
 
 const DEFAULT_PROPS = {
@@ -41,14 +41,14 @@ const DEFAULT_PROPS = {
   sections,
   updateStudentTransfer: action('Update'),
   transferStudents: action('Transfer'),
-  cancelStudentTransfer: action('Cancel')
+  cancelStudentTransfer: action('Cancel'),
 };
 
 export default storybook => {
   storybook.storiesOf('MoveStudents', module).addStoryTable([
     {
       name: 'Move students empty dialog',
-      story: () => <MoveStudents {...DEFAULT_PROPS} />
+      story: () => <MoveStudents {...DEFAULT_PROPS} />,
     },
     {
       name: 'Move students dialog when "other teacher" option is chosen',
@@ -57,7 +57,7 @@ export default storybook => {
           {...DEFAULT_PROPS}
           transferData={transferToOtherTeacher}
         />
-      )
+      ),
     },
     {
       name: 'Move students dialog when an error has occurred',
@@ -67,7 +67,7 @@ export default storybook => {
           transferData={transferToOtherTeacher}
           transferStatus={errorTransferStatus}
         />
-      )
-    }
+      ),
+    },
   ]);
 };

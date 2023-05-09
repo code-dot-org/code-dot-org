@@ -172,7 +172,6 @@ cs:
     data_collection_us: "Jsem si vědom, že Code.org je americký neziskový server a že zákony upravující shromažďování osobních údajů ve Spojených státech amerických se mohou lišit od zákonů platných v mé zemi."
     visit_privacy: 'Navštivte zásady ochrany osobních údajů Code.org [Zásady ochrany osobních údajů](%{privacy_url}), kde se dozvíte více.'
     student_terms_markdown: "E-mailové adresy se neukládají v podobě, která by nám umožňovala kontaktovat studenty. Studenti nikdy nedostanou od Code.org e-maily za jiným účelem než za účelem obnovení hesla. Podívejte se na naše [zásady ochrany osobních údajů](http://code.org/privacy), kde najdete další informace."
-    additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
     user_type_student: "Student"
@@ -1124,6 +1123,13 @@ cs:
     no_teacher_email:
       body_markdown: 'Váš účet nemá e-mailovou adresu. Přidejte si před odesláním tohoto formuláře [v uživatelském nastavení](%{user_registration}) e-mailovou adresu.'
   courses_category: 'Kompletní kurzy'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Ahoj, světe'
+      sports: 'Sporty'
+      csf: 'Základy informatiky'
+      csc: 'Napojení na počítačovou vědu'
   cookie_banner:
     message: 'Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím", souhlasíte s uložením cookies na svém počítači nebo přístroji.'
     more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."

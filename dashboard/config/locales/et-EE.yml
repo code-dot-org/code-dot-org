@@ -137,7 +137,6 @@ et:
       veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda
       minu koduriigis kehtivatest.
     visit_privacy: Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).
-    additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Konto tüüp
     user_type_student: Õpilane
     user_type_teacher: Õpetaja
@@ -924,6 +923,11 @@ et:
       email_opt_in:
         opt_in_yes: Jah
         opt_in_no: Ei
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      csf: Arvutiteaduse põhialused
+      csc: Arvutiteaduse ühendused (CS Connections)
   cookie_banner:
     accept: Olen nõus
   page_not_found_title: Lehte ei leitud

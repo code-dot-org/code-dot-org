@@ -1146,6 +1146,19 @@ mn:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{GROUP} маягт нь {FORMAT} шиг байна"
+        options:
+          FORMAT:
+            '"border"': хил
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
       gamelab_locationAt:
         text: 'байршил х: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1167,6 +1180,18 @@ mn:
             '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': хил
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
       gamelab_makeProjectile:
         options:
           DIRECTION:

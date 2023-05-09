@@ -150,8 +150,6 @@ gl:
     mismatch_password: Os dous contrasinais que metiches non se corresponden
     student_consent: Confirmo que teño autorización de meus pais ou titores legais
       para empregrar os servizos de Code.org.
-    additional_information: Necesitamos máis informacións para continuarmos o proceso
-      de creacción da conta.
     user_type_button: Actualizar tipo de conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
@@ -801,6 +799,9 @@ gl:
       email_opt_in:
         opt_in_yes: Si
         opt_in_no: Non
+  course_offering:
+    headers:
+      minecraft: Minecraft
   cookie_banner:
     accept: Acepto
   page_not_found_title: Páxina non atopada

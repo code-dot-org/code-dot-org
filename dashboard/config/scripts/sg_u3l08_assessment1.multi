@@ -24,3 +24,5 @@ teacher_markdown <<MARKDOWN
 * Values do not need to be provided to a function with parameters in any particular order.
 	* Explanation: When calling a function with parameters in your program, you must pass the corresponding values into the function in the same order as they are listed in the function definition.
 MARKDOWN
+
+allow_multiple_attempts true

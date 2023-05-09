@@ -4,11 +4,11 @@
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Hour of Code",
   "marketing_initiative": null,
   "grade_levels": "8,9,10,11,12",
   "header": null,
-  "image": "https://images.code.org/d0beca5b723e4c649225a6e38177e15f-Code Break.png",
+  "image": "https://images.code.org/1a937937ccd5b6015659cc5958ec98ec-Middle School Image 2.png",
   "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"

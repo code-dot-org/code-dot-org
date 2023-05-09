@@ -1,0 +1,22 @@
+{
+  "blockly_blockPlaySoundTooltip": "възпроизвежда звук",
+  "blockly_blockPlaySoundAtMeasureTooltip": "възпроизвежда звук",
+  "blockly_blockRepeatTooltip": "повтори",
+  "blockly_blockRestTooltip": "почивка",
+  "blockly_blockWhenRun": "при стартиране",
+  "blockly_blockWhenRunTooltip": "при стартиране",
+  "blockly_functionNamePlaceholder": "моята функция",
+  "blockly_toolboxCategoryControl": "Контрол",
+  "blockly_toolboxCategoryEffects": "Ефекти",
+  "blockly_toolboxCategoryEvents": "Събития",
+  "blockly_toolboxCategoryFunctions": "Функции",
+  "blockly_toolboxCategoryLogic": "Логика",
+  "blockly_toolboxCategoryMath": "Математика",
+  "blockly_toolboxCategoryPlay": "Играй",
+  "blockly_toolboxCategoryVariables": "Променливи",
+  "control": "Контрол",
+  "feedback": "Обратна връзка",
+  "share": "Сподели",
+  "startOver": "Стартиране отначало",
+  "upload": "Качване"
+}

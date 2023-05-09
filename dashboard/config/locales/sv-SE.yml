@@ -165,8 +165,6 @@ sv:
       i mitt land.
     visit_privacy: Besök Code.org’s [Privacy Policy](%{privacy_url}) för att veta
       mer.
-    additional_information: Vi behöver  ytterligare information att fortsätta registrera
-      dig.
     user_type_button: Uppdatera kontotyp
     user_type_label: Kontotyp
     user_type_student: Student
@@ -1012,6 +1010,10 @@ sv:
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nej
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sport
   cookie_banner:
     accept: Jag håller med
   page_not_found_button: Återvänd hem

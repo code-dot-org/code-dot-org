@@ -7,12 +7,12 @@ import Dialog, {
   Body,
   Buttons,
   Confirm,
-  Cancel
+  Cancel,
 } from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
   ScreenListItem,
-  AssetListItem
+  AssetListItem,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
@@ -83,7 +83,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: [],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -100,7 +100,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: [],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -120,7 +120,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: ['foo.png', 'bar.png'],
           canBeImported: true,
           conflictingIds: [],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -143,7 +143,7 @@ describe('ScreenListItem', () => {
           assetsToReplace: ['foo.png', 'bar.png'],
           canBeImported: false,
           conflictingIds: ['input1', 'input2'],
-          html: ''
+          html: '',
         }}
       />
     );
@@ -165,11 +165,7 @@ describe('ImportScreensDialog', () => {
   let dialog, onImport;
 
   function getDialogButton() {
-    return dialog
-      .children()
-      .at(1)
-      .children()
-      .at(0);
+    return dialog.children().at(1).children().at(0);
   }
 
   describe('When given a list of screens', () => {
@@ -198,10 +194,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );
@@ -209,18 +205,8 @@ describe('ImportScreensDialog', () => {
 
     it('renders a dialog with the list of screens', () => {
       expect(dialog.type()).to.equal(Dialog);
-      expect(
-        dialog
-          .children()
-          .at(0)
-          .type()
-      ).to.equal(Body);
-      expect(
-        dialog
-          .children()
-          .at(1)
-          .type()
-      ).to.equal(Buttons);
+      expect(dialog.children().at(0).type()).to.equal(Body);
+      expect(dialog.children().at(1).type()).to.equal(Buttons);
       expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
     });
 
@@ -285,8 +271,8 @@ describe('ImportScreensDialog', () => {
             screens: [],
             otherAssets: [
               {filename: 'foo.png', category: 'image', willReplace: false},
-              {filename: 'bar.mov', category: 'video', willReplace: true}
-            ]
+              {filename: 'bar.mov', category: 'video', willReplace: true},
+            ],
           }}
         />
       );
@@ -347,10 +333,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: false,
                 conflictingIds: ['img2'],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );
@@ -417,10 +403,10 @@ describe('ImportScreensDialog', () => {
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
-                html: exampleHtml
-              }
+                html: exampleHtml,
+              },
             ],
-            otherAssets: []
+            otherAssets: [],
           }}
         />
       );

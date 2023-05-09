@@ -27,7 +27,7 @@ const defaultProps = {
   unitCompleted: false,
   hasPerLevelResults: false,
   isProfessionalLearningCourse: false,
-  publishedState: 'stable'
+  publishedState: 'stable',
 };
 
 describe('UnitOverviewTopRow', () => {
@@ -178,14 +178,14 @@ describe('UnitOverviewTopRow', () => {
               id: 1,
               key: 'curriculum',
               name: 'Curriculum',
-              url: 'https://example.com/a'
+              url: 'https://example.com/a',
             },
             {
               id: 2,
               key: 'vocabulary',
               name: 'Vocabulary',
-              url: 'https://example.com/b'
-            }
+              url: 'https://example.com/b',
+            },
           ]}
         />
       );
@@ -197,14 +197,14 @@ describe('UnitOverviewTopRow', () => {
                 id: 1,
                 key: 'curriculum',
                 name: 'Curriculum',
-                url: 'https://example.com/a'
+                url: 'https://example.com/a',
               },
               {
                 id: 2,
                 key: 'vocabulary',
                 name: 'Vocabulary',
-                url: 'https://example.com/b'
-              }
+                url: 'https://example.com/b',
+              },
             ]}
           />
         )
@@ -284,17 +284,14 @@ describe('UnitOverviewTopRow', () => {
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_overview.pdf',
-      '/link/to/script_resources.pdf'
+      '/link/to/script_resources.pdf',
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plans',
-      'Print Handouts'
+      'Print Handouts',
     ]);
   });
 

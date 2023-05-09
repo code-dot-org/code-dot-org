@@ -18,7 +18,7 @@ const SUBMISSION_STATUSES = {
   FULL: 'full',
   NOT_FOUND: 'not found',
   SUCCESS: 'success',
-  UNKNOWN_ERROR: 'error'
+  UNKNOWN_ERROR: 'error',
 };
 
 export default class WorkshopEnroll extends React.Component {
@@ -27,12 +27,12 @@ export default class WorkshopEnroll extends React.Component {
     session_dates: PropTypes.arrayOf(PropTypes.string),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
-      first_name: PropTypes.string
+      first_name: PropTypes.string,
     }),
     facilitators: PropTypes.arrayOf(FacilitatorPropType),
     workshop_enrollment_status: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    collect_demographics: PropTypes.bool
+    collect_demographics: PropTypes.bool,
   };
 
   constructor(props) {
@@ -40,7 +40,8 @@ export default class WorkshopEnroll extends React.Component {
 
     this.state = {
       workshopEnrollmentStatus:
-        this.props.workshop_enrollment_status || SUBMISSION_STATUSES.UNSUBMITTED
+        this.props.workshop_enrollment_status ||
+        SUBMISSION_STATUSES.UNSUBMITTED,
     };
   }
 
@@ -52,11 +53,11 @@ export default class WorkshopEnroll extends React.Component {
         cancelUrl: result.responseJSON.cancel_url,
         accountExists: result.responseJSON.account_exists,
         signUpUrl: result.responseJSON.sign_up_url,
-        workshopUrl: result.responseJSON.workshop_url
+        workshopUrl: result.responseJSON.workshop_url,
       });
     } else {
       this.setState({
-        workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR
+        workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR,
       });
     }
   };
@@ -128,7 +129,7 @@ export default class WorkshopEnroll extends React.Component {
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': this.props.workshop.regional_partner?.name,
       'workshop course': this.props.workshop.course,
-      'workshop subject': this.props.workshop.subject
+      'workshop subject': this.props.workshop.subject,
     });
     return (
       <div>

@@ -4,18 +4,18 @@ import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),
-  handleCancel: action('handleCancel callback')
+  handleCancel: action('handleCancel callback'),
 };
 
 export default {
   title: 'ChangeUserTypeModal',
-  component: ChangeUserTypeModal
+  component: ChangeUserTypeModal,
 };
 
 const container = {
   margin: 'auto',
   width: '50%',
-  padding: '10px'
+  padding: '10px',
 };
 
 const Template = args => (

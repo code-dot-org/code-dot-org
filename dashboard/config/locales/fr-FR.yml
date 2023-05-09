@@ -221,8 +221,6 @@ fr:
       qui nous permette de contacter les élèves. Les élèves ne recevront jamais d’e-mail
       de Code.org sauf lors de la procédure de récupération de mot de passe. Voir
       notre [politique de confidentialité](http://code.org/privacy) pour plus d'informations.
-    additional_information: Nous avons besoin de quelques informations supplémentaires
-      pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
     user_type_label: Type de compte
     user_type_student: Élève
@@ -1474,6 +1472,13 @@ fr:
         [consulter les paramètres de votre compte](%{user_registration}) pour ajouter
         votre adresse e-mail avant de remplir ce formulaire.
   courses_category: Cours Complets
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Bonjour tout le monde !
+      sports: Sports
+      csf: Fondamentaux d'Informatique
+      csc: Connexions CS
   cookie_banner:
     message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
       vous acceptez le stockage de cookies sur votre ordinateur ou appareil.

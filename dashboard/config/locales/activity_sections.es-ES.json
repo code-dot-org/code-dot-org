@@ -980,7 +980,7 @@
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Introducción al Laboratorio de aplicaciones",
-          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la tutoría. Aquí hay algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando\n\n-   **Comprobación de la corrección:** Este tutorial no dirá a los estudiantes si han completado el nivel correctamente. Anima a los alumnos a utilizar las imágenes de destino y las instrucciones que se proporcionan en cada nivel para saber si están en el camino correcto. Si los estudiantes quieren pasar un nivel particularmente difícil, pueden simplemente hacer clic en \"Finalizar\" y continuar.\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda.\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante, asegúrate de que ha mirado de cerca la imagen objetivo y ha leído todo el texto que hay.\n-   **¿Atrapado? Haz clic aquí:** Cada nivel incluye un GIF que muestra exactamente cómo completar el nivel. Si los estudiantes quieren ayuda, pueden y deben utilizar estos GIFs. Si sólo quieren utilizarlos como una pista, basta con que cierren el GIF una vez que hayan visto la primera parte.\n-   A veces los alumnos se benefician más de volver a un nivel difícil. Salvo la secuencia del \"Modo Diseño\", todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente."
+          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la tutoría. Aquí hay algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando\n\n-   **Comprobación de la corrección:** Este tutorial no dirá a los estudiantes si han completado el nivel correctamente. Anima a los alumnos a utilizar las imágenes de destino y las instrucciones que se proporcionan en cada nivel para saber si están en el camino correcto. Si los estudiantes quieren pasar un nivel particularmente difícil, pueden simplemente hacer clic en \"Finalizar\" y continuar.\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda.\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante, asegúrate de que ha mirado de cerca la imagen objetivo y ha leído todo el texto que hay.\n-   **¿Atrapado? Haz clic aquí:** Cada nivel incluye un GIF que muestra exactamente cómo completar el nivel. Si los estudiantes quieren ayuda, pueden y deben utilizar estos GIFs. Si sólo quieren utilizarlos como una pista, basta con que cierren el GIF una vez que hayan visto la primera parte.\n-   **Sigue adelante y regresa:** En ocasiones, los alumnos se beneficiarán más de volver a un nivel complicado. Excepto la secuencia \"Modo Diseño\", todos los niveles son independientes entre sí, aunque se basan en cierta medida en conceptos introducidos previamente."
         },
         "11f7be58-02e1-4667-84e4-6310924c189d": {
           "description": "#### Configurar Propiedades - Niveles 2-4\n\nEn estos niveles se trata de aprender a utilizar el bloque `setProperty()`. Los desplegables de este bloque facilitan el conocimiento de lo que es capaz de cambiar. Dicho esto, hay un par de consejos que pueden ayudar:\n\n-   **Cuándo usar Comillas Dobles:** El bloque `setProperty()` cambia automáticamente el desplegable final cuando se seleccionan las propiedades que se quieren cambiar, incluso si se usan comillas dobles. En caso de duda, los estudiantes deberían cambiar primero los dos primeros desplegables, y luego usar el último como modelo para saber qué valores funcionan allí. El error más común es no utilizar las comillas dobles alrededor del nombre del color.\n-   **Pasando el ratón por encima para leer los IDs:** Al pasar el ratón por encima de un elemento en tu aplicación puedes leer su ID. Esto ayudará a los estudiantes cuando intenten cambiar varios elementos en su pantalla.",
@@ -1292,7 +1292,7 @@
           "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿A programar? ¿Depuración? ¿Eventos? ¿Cómo se sienten respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Celebrar\n\nExplica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Ciencias de la Computación, y millones de otros estudiantes de todo el mundo también han participado en una Hora del Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada alumno un [certificate](https://studio.code.org/certificates/batch) con su nombre.\n\n#### Próximos Pasos\n\nInforma a los alumnos de que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
-          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\n#### Llévame a Jugar a la Pelota\n\nLleva a los alumnos al exterior para jugar a algún tipo de juego de pelota. Haz un seguimiento de los acontecimientos y las acciones. Por ejemplo, si no se dribla en el baloncesto, se comete una falta de desplazamiento y el otro equipo se queda con el balón. En el fútbol, enviar el balón fuera de los límites de la cancha hace que el otro equipo saque el balón. Introducir el balón en la portería supone un punto. Inventa más pruebas si tus alumnos están interesados. Haz que todos los alumnos griten \"¡Yupi!\" cuando el capitán de un equipo marque un punto. Haz que todos se tiren al suelo y rueden si un alumno marca dos goles seguidos."
+          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Informática de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\n#### Llévame a Jugar a la Pelota\n\nLleva a los alumnos al exterior para jugar a algún tipo de juego de pelota. Haz un seguimiento de los acontecimientos y las acciones. Por ejemplo, si no se dribla en el baloncesto, se comete una falta de desplazamiento y el otro equipo se queda con el balón. En el fútbol, enviar el balón fuera de los límites de la cancha hace que el otro equipo saque el balón. Introducir el balón en la portería supone un punto. Inventa más pruebas si tus alumnos están interesados. Haz que todos los alumnos griten \"¡Yupi!\" cuando el capitán de un equipo marque un punto. Haz que todos se tiren al suelo y rueden si un alumno ¡marca dos goles seguidos!"
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
           "name": "Preparando el terreno",
@@ -1523,7 +1523,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -1996,7 +1996,7 @@
           "description": "#### Vista Previa - Bucles en la Edad de Hielo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vista previa - Bucles en la Edad de Hielo\"\n\nPara terminar la conexión, previsualizar un rompecabezas en línea (o dos) como clase.\n\n**Modelo:** Muestra un rompecabezas en línea completo de la progresión que viene.  Recomendamos el Rompecabezas 5.  Señala el \"Espacio de Juego\" con _Scrat_ y la bellota, así como el \"Espacio de Trabajo\" con el código Blockly.  Explica que este código Blockly es ahora el lenguaje que la clase utilizará para ayudar a _Scrat_ a llegar a la bellota.  ¿Ven los alumnos alguna similitud con el ejercicio que acaban de hacer?  ¿Cuáles son las grandes diferencias?\n\nTrabaja con tu clase para arrastrar el código al espacio de trabajo de forma que _Scrat_ (finalmente) llegue a la bellota. \n\n**Transición:** Los alumnos ya deberían estar preparados para pasar a los ordenadores y completar rompecabezas en línea por su cuenta."
         },
         "23874ed2-c11c-4626-93ce-738a948d9467": {
-          "name": "Bucles de la Era de Hielo",
+          "name": "Bucles en la Edad de Hielo",
           "description": "Mientras los alumnos resuelven los rompecabezas, comprueba si son capaces de averiguar cuántos bloques utilizan con bucle y cuántos sin bucle.\n "
         },
         "d9fbe733-657b-4504-8dbb-eab8104168aa": {
@@ -2486,7 +2486,7 @@
           "description": "Podemos ver que, en todas estas aplicaciones, el usuario puede elegir cómo las usa. Estas elecciones pueden motivar a más personas a querer usar la aplicación."
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
-          "name": "Presentamos el Laboratorio de sprites",
+          "name": "Presentación de Laboratorio Sprite",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra el vídeo \" Introducción a Laboratorio Sprite\"",
           "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
         },
@@ -2606,7 +2606,7 @@
           "description": "#### Vocabulario\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar**: Muestra la diapositiva \"Vocabulario\"\n\n-   **Algoritmo** - Una lista de pasos para completar una tarea.\n-   **Evento** - Acción que provoca que algo suceda."
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "description": "#### Predicción (2 minutos)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostrar:** Muestra la diapositiva \"Nivel 1 - Predecir\"\n\n**Haz esto:** Este nivel debe completarse en clase. Pide a los alumnos que lean el código proporcionado y hagan una predicción sobre lo que ocurrirá. Después de pulsar \"Ejecutar\", deja tiempo para que los alumnos reflexionen sobre cualquier cosa que les haya parecido interesante o que les haya sorprendido.",
           "progression_name": "Predicción"
         },
@@ -4793,7 +4793,7 @@
           "description": "#### Ronda 1 (básica):\n\n-   Comenzar a marchar en el lugar.\n-   Dejar de marchar en el lugar.\n-   Empezar a aplaudir.\n-   Dejar de aplaudir.\n-   Comenzar a marchar en el lugar.\n-   Empezar a aplaudir.\n-   Detener todo.\n\n**Debate:** \\_¿Qué sucede cuando les dijeron que aplaudieran pero ya marchaban en el lugar? ¿Qué sucede si les dicen que comiencen con dos comportamientos diferentes a la vez? \\_\\_\n\nLos estudiantes deben comprender que pueden ocurrir múltiples comportamientos a la vez.\n\n#### Ronda 2 (intermedia):\n\n-   Empezar a agitar los brazos en el aire.\n-   Empezar a mover la cabeza.\n-   Dejar de agitar los brazos en el aire.\n-   Dejar de mover la cabeza.\n-   Empezar a sacudir las rodillas.\n-   Empezar a agitar los brazos como un pájaro.\n-   Dejar de sacudir tus rodillas.\n-   Empezar a mover la cabeza.\n-   Empezar a marchar en el lugar.\n-   Dejar de agitar los brazos como un pájaro.\n-   Detener todo.\n\n**Debate:**\n\n_¿Qué tipo de instrucciones hicieron que las personas cometieran errores?\n¿Qué estrategias creen que son útiles para asegurarse de seguir las instrucciones correctamente?\n¿Por qué es importante realizar un seguimiento de cada comportamiento por separado?_\n\nLos estudiantes deben comprender que cada comportamiento debe detenerse individualmente. Necesitan realizar un seguimiento de cada uno por separado.\n\n#### Difícil\n\n-   Empezar a agacharse.\n-   Empezar a tocar su cabeza.\n-   Dejar de agacharse.\n-   Dejar de tocarse la cabeza.\n-   Empezar a saltar arriba y abajo.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a aplaudir.\n-   Empezar a agitar los brazos como un pájaro.\n-   Detener todo.\n-   Empezar a agacharse.\n-   Empezar a saltar arriba y abajo.\n-   Detener todo.\n-   Empezar a tocar sus rodillas.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a girar hacia la izquierda.\n-   Empezar a girar hacia la derecha.\n-   Dejar de girar hacia la izquierda.\n-   Dejar de girar hacia la derecha.\n\n**Debate:** _¿Qué sucede si dos comportamientos parecen entrar en conflicto entre sí?_\n\n_¿Qué deben hacer cuando les diga que aplaudan y agiten los brazos al mismo tiempo?_\n\n_¿Cómo pueden saltar arriba y abajo mientras están agachados?_\n\n_¿Qué sucede si necesitan tocarse las rodillas y la cabeza al mismo tiempo?_\n\n_Cuando les dijiste que giraran en dos direcciones opuestas, ¿qué hicieron?_ \n\n_¿Qué pasaría si les dijeran que giren a la izquierda y a la derecha al mismo tiempo?_\n\nLos estudiantes deben entender que algunos comportamientos entran en conflicto entre sí, lo que puede generar resultados inesperados. Es posible que dos comportamientos opuestos se cancelen entre sí."
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "description": "#### Predicción (2 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
@@ -5293,7 +5293,7 @@
         "e0582255-a83c-4278-8b18-9ce09ac1118d": {
           "name": "Funciones en Cosechadora",
           "description": "#### Rompecabezas en línea\n\nAlgunos rompecabezas tendrán una función predeclarada para que los alumnos la completen. Puede ser útil que los alumnos escriban primero todo el programa sin una función y luego determinen dónde sería útil una función en el programa.\n\nEs importante asegurarse de que cada alumno esté completando cada rompecabezas con un punto verde oscuro. Si algunos de tus alumnos tienen dificultades para simplificar el código y usar funciones, configura equipos de estudiantes expertos dentro de tu clase para que den vueltas y respondan preguntas.\n\nNo olvide proporcionar lápices y papel para ayudar a los alumnos a esbozar posibles soluciones.",
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
           "progression_name": "Practica"
@@ -5976,7 +5976,7 @@
           "description": "Use estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar Bajo la Capucha**\n\nCuando comparte un enlace a su historia, también comparte todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los otros. \n\n Postée enlaces para historias terminadas en línea. \n    \\-   ¡También invente una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídales que hagan clic en el botón \"Cómo Funciona\" para ver el código  para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Que te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original estará  segura)"
         },
         "7a945439-a8e0-438c-a2a3-7e81b6832618": {
-          "progression_name": "Mi barrio en línea"
+          "progression_name": "Mi Barrio en línea"
         },
         "05ed12f0-289f-4706-976f-cd05c6780b2e": {
           "description": "### Vocabulario Clave\n\n-   **En línea**: utilizar un ordenador, un teléfono o una tableta para visitar un sitio web o una aplicación.\n-   **Sitio web o aplicación**: un lugar que se puede visitar en Internet\n\n**Preguntar**: _¿Qué tienes que hacer para estar seguro cuando visitas nuevos lugares?_ ([Diapositiva 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nInvitar a los alumnos a responder. Las respuestas variarán, pero refuerce las siguientes normas de seguridad:\n\n-   Visitar siempre los sitios con un adulto.\n-   No navegar solos.\n-   Hablar sólo con personas conocidas.\n\n**Decir**: _Hoy vamos a hablar de que visitar lugares en Internet es muy parecido a visitar lugares en la vida real. Al igual que hay reglas para mantenerse a salvo cuando se visitan nuevos lugares en el mundo, hay formas de mantenerse a salvo en Internet._\n\n**Proyectar** [Diapositiva 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) y definir **en línea** como _el uso de un ordenador, teléfono o tableta para visitar un sitio web o una aplicación_.\n\n**Mostrar** el vídeo [Mi Vecindario En Línea](https://www.commonsense.org/education/videos/my-online-neighborhood)  en [Diapositiva 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) y luego preguntar:\\_¿Qué le gustaba a Arms de Internet? ¿Qué tipo de cosas puede hacer en Internet?\n\nInvitar a los alumnos a responder. Ejemplos de respuestas:\n\n-   Le gusta visitar sitios interesantes.\n-   Puede hablar con su familia y amigos. \n-   Puede aprender muchas cosas nuevas.\n-   Puede crear cosas en Internet.\n\n**Preguntar**: ¿Qué tres reglas sigue Arms cuando visita sitios en Internet?\n\nInvitar a los alumnos a responder. Proyectar [Diapositiva 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) y reforzar las tres reglas principales:\n\n1.  Pregunta siempre primero a tus padres (o a un adulto de confianza). \n2.  Habla sólo con personas que conozcas.\n3.  Limítate a los sitios que sean adecuados para tí.\n\nExplicar que limitarse a los lugares que son \"adecuados\" significa asegurarse de que es un sitio o una aplicación que es apropiada para los niños, y que tienes permiso para estar allí."
@@ -8034,7 +8034,7 @@
           "description": "**Distribuye:** Reparte copias de las guías de actividades."
         },
         "f71ff33f-68b6-4385-940d-3532a4eae4f2": {
-          "name": "El proceso de resolución de problemas",
+          "name": "El Proceso de Resolución de Problemas",
           "description": "**Vídeo:** Ver el Vídeo del Proceso de Resolución de Problemas en Code Studio\n\n**Preguntas a considerar con el video:**\n\n-   ¿Cómo has seguido el proceso de resolución de problemas en la última lección?\n-   ¿Cómo podrías utilizar este proceso en un problema de tu vida cotidiana?",
           "tips": [
             "La primera pregunta de debate forma parte de la actividad central del resto de la lección. Los alumnos deben dedicar un tiempo a trabajar en sus grupos para pensar en cosas concretas que hayan hecho siguiendo cada paso del proceso. El objetivo de este debate es hacer que los pasos abstractos sean más concretos y accesibles para los alumnos relacionándolos con una actividad compartida.\nLa segunda pregunta da a los alumnos la oportunidad de ampliar su comprensión del proceso a un problema diferente, viendo cómo pueden ser los diferentes pasos en distintos ámbitos. El objetivo de este debate es asegurarse de que los alumnos tienen una comprensión lo suficientemente general del proceso como para poder aplicarlo a una mayor variedad de problemas, ya que el proceso se utilizará a lo largo del curso en diversos ámbitos."
@@ -14957,7 +14957,7 @@
           "progression_name": "Video: pestaña de animación"
         },
         "9950874e-2903-4dd5-993b-756daf5d7e7d": {
-          "progression_name": "La pestaña de Animación"
+          "progression_name": "La Pestaña de Animación"
         },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
           "progression_name": "Añadiendo Imágenes"
@@ -15399,7 +15399,7 @@
           "progression_name": "Resumen de la lección"
         },
         "1fa3a144-768b-4b54-adff-9f74f35e5212": {
-          "progression_name": "Introducción a los arreglos"
+          "progression_name": "Introducción a los Arrays"
         },
         "222276ad-7a62-4d4b-b81b-d2b05b57a456": {
           "progression_name": "Uso de arreglos"
@@ -15688,7 +15688,7 @@
           "progression_name": "Recorrido por el modo de diseño"
         },
         "932f56f3-0737-4a5c-a254-4f71a2339b47": {
-          "progression_name": "Introducción al modo de diseño"
+          "progression_name": "Introducción al Modo Diseño"
         },
         "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
           "progression_name": "Crear una Pantalla"
@@ -16057,7 +16057,7 @@
           "progression_name": "Practica"
         },
         "42a28a6d-b136-4659-bdbd-5caed86947d3": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "93ea2ce1-2886-47f0-a9cc-702b4c5969ce": {
           "progression_name": "Practica"
@@ -16121,7 +16121,7 @@
           "progression_name": "Practica"
         },
         "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "027a43ed-b9d6-48af-acb0-40514f563a5a": {
           "progression_name": "Practica"
@@ -16162,7 +16162,7 @@
           "progression_name": "Practica"
         },
         "1509114f-e57a-4100-b4ec-665739adf403": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "f86d1539-d7e0-4872-997d-5064553f90ca": {
           "progression_name": "Practica"
@@ -16250,7 +16250,7 @@
           "progression_name": "Practica"
         },
         "f0c21fc1-b243-411a-b177-99f07b95acf3": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "e49641c5-0812-46d3-9bae-93e4c933e04e": {
           "progression_name": "Practica"
@@ -16370,7 +16370,7 @@
           "progression_name": "Predicción"
         },
         "502e09e6-3af3-43cb-ae96-e44507f1250c": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "95928265-96cb-467e-9d34-0e1bbe203c3c": {
           "progression_name": "Practica"
@@ -16408,7 +16408,7 @@
           "progression_name": "Juego libre"
         },
         "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
-          "progression_name": "Presentamos el Laboratorio de sprites"
+          "progression_name": "Presentación de Laboratorio Sprite"
         },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "Predicción"
@@ -16417,7 +16417,7 @@
           "progression_name": "Miniproyecto: Pez nadador"
         },
         "ee39051b-426b-40d9-b61f-1f180cae8717": {
-          "progression_name": "Cómo crear un sprite"
+          "progression_name": "Como hacer un sprite"
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Miniproyecto: Pez nadador (continuación)"
@@ -16650,7 +16650,7 @@
           "progression_name": "Practica"
         },
         "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
-          "progression_name": "Presentamos el Laboratorio de sprites"
+          "progression_name": "Presentación de Laboratorio Sprite"
         },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "Predicción"
@@ -16659,7 +16659,7 @@
           "progression_name": "Miniproyecto: Pez nadador"
         },
         "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
-          "progression_name": "Cómo crear un sprite"
+          "progression_name": "Como hacer un sprite"
         },
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Miniproyecto: Pez nadador (continuación)"
@@ -16745,7 +16745,7 @@
           "progression_name": "Juego libre"
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "52c49228-8221-4b46-9f42-81a5f1abf27f": {
           "progression_name": "Practica"
@@ -16902,7 +16902,7 @@
           "progression_name": "Practica"
         },
         "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "4bde879a-5158-461f-9d04-3000cc8992a2": {
           "progression_name": "Practica"
@@ -17055,7 +17055,7 @@
           "progression_name": "Video: pestaña de animación"
         },
         "fe842642-97e4-423d-af5a-a5ffc35984b4": {
-          "progression_name": "La pestaña de Animación"
+          "progression_name": "La Pestaña de Animación"
         },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
           "progression_name": "Añadiendo Imágenes"
@@ -17498,7 +17498,7 @@
           "progression_name": "Video: introducción a arreglos"
         },
         "234a8b22-6373-4b94-a9f1-07e51eb0de2b": {
-          "progression_name": "Introducción a los arreglos"
+          "progression_name": "Introducción a los Arrays"
         },
         "691a61e8-7b83-498e-b058-71e50cc81e7e": {
           "progression_name": "Arreglos"
@@ -17683,7 +17683,7 @@
           "progression_name": "Resumen de la lección"
         },
         "463ab77e-51c4-410e-80ff-f4e4e58ccbbe": {
-          "progression_name": "Introducción al modo de diseño"
+          "progression_name": "Introducción al Modo Diseño"
         },
         "440973a7-6351-45b5-938f-17845fbd92c6": {
           "progression_name": "Crear una Pantalla"
@@ -18305,7 +18305,7 @@
           "progression_name": "Video: pestaña de animación"
         },
         "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
-          "progression_name": "La pestaña de Animación"
+          "progression_name": "La Pestaña de Animación"
         },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Añadiendo Imágenes"
@@ -18796,7 +18796,7 @@
           "progression_name": "Resumen de la lección"
         },
         "9a7b01c8-b4f1-453e-9213-e46b4c42f10d": {
-          "progression_name": "Introducción a los arreglos"
+          "progression_name": "Introducción a los Arrays"
         },
         "41e85228-e2c9-4cbf-bf30-375ac0c3a708": {
           "progression_name": "Uso de arreglos"
@@ -19320,7 +19320,7 @@
           "progression_name": "Recorrido por el modo de diseño"
         },
         "45ec05ff-a316-4da6-8857-f4e39c4f55a8": {
-          "progression_name": "Introducción al modo de diseño"
+          "progression_name": "Introducción al Modo Diseño"
         },
         "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
           "progression_name": "Crear una Pantalla"
@@ -19479,7 +19479,7 @@
           "description": "**Reflexión:** ¿cuál es tu aplicación o juego favorito? ¿Qué elecciones puedes hacer mientras lo usas?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "Presentamos el Laboratorio de sprites",
+          "name": "Presentación de Laboratorio Sprite",
           "description": "**Haz esto:** reproduce el video **\\*Introducción al Sprite Lab**.",
           "progression_name": "Vídeo: Presentación del Laboratorio de Sprites"
         },
@@ -19572,7 +19572,7 @@
           "description": "#### Ronda 1 (básica):\n\n-   Comenzar a marchar en el lugar.\n-   Dejar de marchar en el lugar.\n-   Empezar a aplaudir.\n-   Dejar de aplaudir.\n-   Comenzar a marchar en el lugar.\n-   Empezar a aplaudir.\n-   Detener todo.\n\n**Debate:** \\_¿Qué sucede cuando les dijeron que aplaudieran pero ya marchaban en el lugar? ¿Qué sucede si les dicen que comiencen con dos comportamientos diferentes a la vez? \\_\\_\n\nLos estudiantes deben comprender que pueden ocurrir múltiples comportamientos a la vez.\n\n#### Ronda 2 (intermedia):\n\n-   Empezar a agitar los brazos en el aire.\n-   Empezar a mover la cabeza.\n-   Dejar de agitar los brazos en el aire.\n-   Dejar de mover la cabeza.\n-   Empezar a sacudir las rodillas.\n-   Empezar a agitar los brazos como un pájaro.\n-   Dejar de sacudir tus rodillas.\n-   Empezar a mover la cabeza.\n-   Empezar a marchar en el lugar.\n-   Dejar de agitar los brazos como un pájaro.\n-   Detener todo.\n\n**Debate:**\n\n_¿Qué tipo de instrucciones hicieron que las personas cometieran errores?\n¿Qué estrategias creen que son útiles para asegurarse de seguir las instrucciones correctamente?\n¿Por qué es importante realizar un seguimiento de cada comportamiento por separado?_\n\nLos estudiantes deben comprender que cada comportamiento debe detenerse individualmente. Necesitan realizar un seguimiento de cada uno por separado.\n\n#### Difícil\n\n-   Empezar a agacharse.\n-   Empezar a tocar su cabeza.\n-   Dejar de agacharse.\n-   Dejar de tocarse la cabeza.\n-   Empezar a saltar arriba y abajo.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a aplaudir.\n-   Empezar a agitar los brazos como un pájaro.\n-   Detener todo.\n-   Empezar a agacharse.\n-   Empezar a saltar arriba y abajo.\n-   Detener todo.\n-   Empezar a tocar sus rodillas.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a girar hacia la izquierda.\n-   Empezar a girar hacia la derecha.\n-   Dejar de girar hacia la izquierda.\n-   Dejar de girar hacia la derecha.\n\n**Debate:** _¿Qué sucede si dos comportamientos parecen entrar en conflicto entre sí?_\n\n_¿Qué deben hacer cuando les diga que aplaudan y agiten los brazos al mismo tiempo?_\n\n_¿Cómo pueden saltar arriba y abajo mientras están agachados?_\n\n_¿Qué sucede si necesitan tocarse las rodillas y la cabeza al mismo tiempo?_\n\n_Cuando les dijiste que giraran en dos direcciones opuestas, ¿qué hicieron?_ \n\n_¿Qué pasaría si les dijeran que giren a la izquierda y a la derecha al mismo tiempo?_\n\nLos estudiantes deben entender que algunos comportamientos entran en conflicto entre sí, lo que puede generar resultados inesperados. Es posible que dos comportamientos opuestos se cancelen entre sí."
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "description": "#### Predicción (2 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
@@ -20738,7 +20738,7 @@
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
-          "progression_name": "Mi barrio en línea"
+          "progression_name": "Mi Barrio en línea"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
           "description": "### Vocabulario Clave\n\n-   **En línea**: utilizar un ordenador, un teléfono o una tableta para visitar un sitio web o una aplicación.\n-   **Sitio web o aplicación**: un lugar que se puede visitar en Internet\n\n**Preguntar**: _¿Qué tienes que hacer para estar seguro cuando visitas nuevos lugares?_ ([Diapositiva 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nInvitar a los alumnos a responder. Las respuestas variarán, pero refuerce las siguientes normas de seguridad:\n\n-   Visitar siempre los sitios con un adulto.\n-   No navegar solos.\n-   Hablar sólo con personas conocidas.\n\n**Decir**: _Hoy vamos a hablar de que visitar lugares en Internet es muy parecido a visitar lugares en la vida real. Al igual que hay reglas para mantenerse a salvo cuando se visitan nuevos lugares en el mundo, hay formas de mantenerse a salvo en Internet._\n\n**Proyectar** [Diapositiva 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) y definir **en línea** como _el uso de un ordenador, teléfono o tableta para visitar un sitio web o una aplicación_.\n\n**Mostrar** el vídeo [Mi Vecindario En Línea](https://www.commonsense.org/education/videos/my-online-neighborhood)  en [Diapositiva 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) y luego preguntar:\\_¿Qué le gustaba a Arms de Internet? ¿Qué tipo de cosas puede hacer en Internet?\n\nInvitar a los alumnos a responder. Ejemplos de respuestas:\n\n-   Le gusta visitar sitios interesantes.\n-   Puede hablar con su familia y amigos. \n-   Puede aprender muchas cosas nuevas.\n-   Puede crear cosas en Internet.\n\n**Preguntar**: ¿Qué tres reglas sigue Arms cuando visita sitios en Internet?\n\nInvitar a los alumnos a responder. Proyectar [Diapositiva 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) y reforzar las tres reglas principales:\n\n1.  Pregunta siempre primero a tus padres (o a un adulto de confianza). \n2.  Habla sólo con personas que conozcas.\n3.  Limítate a los sitios que sean adecuados para tí.\n\nExplicar que limitarse a los lugares que son \"adecuados\" significa asegurarse de que es un sitio o una aplicación que es apropiada para los niños, y que tienes permiso para estar allí."
@@ -22172,7 +22172,7 @@
           "description": "#### Vista previa de bucles en Ice Age\n\nPara terminar la conexión, previsualiza un rompecabezas en línea (o dos) como clase.\n\n\\*\\*Modelo: \\*\\* Revela un rompecabezas online completo de la progresión que viene. Recomendamos Puzzle 5. Señale el «Área de juego» con _Scrat_ y la bellota, así como el «Espacio de trabajo» con el código Blockly. Explica que este código de Blockly es ahora el lenguaje que usará la clase para ayudar a _Scrat_ a llegar a la bellota. ¿Los alumnos ven alguna similitud con el ejercicio que acaban de hacer? ¿Cuáles son las grandes diferencias?\n\nTrabaja con tu clase para arrastrar el código al espacio de trabajo de tal manera que _Scrat_ (eventualmente) llegue a la bellota. \n\n\\*\\*Transición: \\*\\* Los estudiantes deben estar listos para hacer la transición a las computadoras para completar los rompecabezas en línea por su cuenta."
         },
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
-          "name": "Bucles de la Era de Hielo",
+          "name": "Bucles en la Edad de Hielo",
           "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
@@ -22730,7 +22730,7 @@
           "description": "#### Ronda 1 (básica):\n\n-   Comenzar a marchar en el lugar.\n-   Dejar de marchar en el lugar.\n-   Empezar a aplaudir.\n-   Dejar de aplaudir.\n-   Comenzar a marchar en el lugar.\n-   Empezar a aplaudir.\n-   Detener todo.\n\n**Debate:** \\_¿Qué sucede cuando les dijeron que aplaudieran pero ya marchaban en el lugar? ¿Qué sucede si les dicen que comiencen con dos comportamientos diferentes a la vez? \\_\\_\n\nLos estudiantes deben comprender que pueden ocurrir múltiples comportamientos a la vez.\n\n#### Ronda 2 (intermedia):\n\n-   Empezar a agitar los brazos en el aire.\n-   Empezar a mover la cabeza.\n-   Dejar de agitar los brazos en el aire.\n-   Dejar de mover la cabeza.\n-   Empezar a sacudir las rodillas.\n-   Empezar a agitar los brazos como un pájaro.\n-   Dejar de sacudir tus rodillas.\n-   Empezar a mover la cabeza.\n-   Empezar a marchar en el lugar.\n-   Dejar de agitar los brazos como un pájaro.\n-   Detener todo.\n\n**Debate:**\n\n_¿Qué tipo de instrucciones hicieron que las personas cometieran errores?\n¿Qué estrategias creen que son útiles para asegurarse de seguir las instrucciones correctamente?\n¿Por qué es importante realizar un seguimiento de cada comportamiento por separado?_\n\nLos estudiantes deben comprender que cada comportamiento debe detenerse individualmente. Necesitan realizar un seguimiento de cada uno por separado.\n\n#### Difícil\n\n-   Empezar a agacharse.\n-   Empezar a tocar su cabeza.\n-   Dejar de agacharse.\n-   Dejar de tocarse la cabeza.\n-   Empezar a saltar arriba y abajo.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a aplaudir.\n-   Empezar a agitar los brazos como un pájaro.\n-   Detener todo.\n-   Empezar a agacharse.\n-   Empezar a saltar arriba y abajo.\n-   Detener todo.\n-   Empezar a tocar sus rodillas.\n-   Empezar a tocar su cabeza.\n-   Detener todo.\n-   Empezar a girar hacia la izquierda.\n-   Empezar a girar hacia la derecha.\n-   Dejar de girar hacia la izquierda.\n-   Dejar de girar hacia la derecha.\n\n**Debate:** _¿Qué sucede si dos comportamientos parecen entrar en conflicto entre sí?_\n\n_¿Qué deben hacer cuando les diga que aplaudan y agiten los brazos al mismo tiempo?_\n\n_¿Cómo pueden saltar arriba y abajo mientras están agachados?_\n\n_¿Qué sucede si necesitan tocarse las rodillas y la cabeza al mismo tiempo?_\n\n_Cuando les dijiste que giraran en dos direcciones opuestas, ¿qué hicieron?_ \n\n_¿Qué pasaría si les dijeran que giren a la izquierda y a la derecha al mismo tiempo?_\n\nLos estudiantes deben entender que algunos comportamientos entran en conflicto entre sí, lo que puede generar resultados inesperados. Es posible que dos comportamientos opuestos se cancelen entre sí."
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "description": "#### Predicción (2 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
@@ -23263,7 +23263,7 @@
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
           "name": "Funciones en Cosechadora",
           "description": "#### Rompecabezas en línea\n\nAlgunos rompecabezas tendrán una función predeclarada para que los alumnos la completen. Puede ser útil que los alumnos escriban primero todo el programa sin una función y luego determinen dónde sería útil una función en el programa.\n\nEs importante asegurarse de que cada alumno esté completando cada rompecabezas con un punto verde oscuro. Si algunos de tus alumnos tienen dificultades para simplificar el código y usar funciones, configura equipos de estudiantes expertos dentro de tu clase para que den vueltas y respondan preguntas.\n\nNo olvide proporcionar lápices y papel para ayudar a los alumnos a esbozar posibles soluciones.",
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Practica"
@@ -26324,7 +26324,7 @@
           "tips": [
             "**Nivel 6:**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
-          "progression_name": "Introducción a los arreglos"
+          "progression_name": "Introducción a los Arrays"
         },
         "3d948510-40d8-4411-8f62-7572f97e0f5b": {
           "progression_name": "Uso de arreglos"
@@ -26425,7 +26425,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
@@ -29010,7 +29010,7 @@
           "description": "**Distribuye:** Reparte copias de las guías de actividades."
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
-          "name": "El proceso de resolución de problemas",
+          "name": "El Proceso de Resolución de Problemas",
           "description": "**Vídeo:** Ver el Vídeo del Proceso de Resolución de Problemas en Code Studio\n\n**Preguntas a considerar con el video:**\n\n-   ¿Cómo has seguido el proceso de resolución de problemas en la última lección?\n-   ¿Cómo podrías utilizar este proceso en un problema de tu vida cotidiana?",
           "tips": [
             "La primera pregunta de debate forma parte de la actividad central del resto de la lección. Los alumnos deben dedicar un tiempo a trabajar en sus grupos para pensar en cosas concretas que hayan hecho siguiendo cada paso del proceso. El objetivo de este debate es hacer que los pasos abstractos sean más concretos y accesibles para los alumnos relacionándolos con una actividad compartida.\nLa segunda pregunta da a los alumnos la oportunidad de ampliar su comprensión del proceso a un problema diferente, viendo cómo pueden ser los diferentes pasos en distintos ámbitos. El objetivo de este debate es asegurarse de que los alumnos tienen una comprensión lo suficientemente general del proceso como para poder aplicarlo a una mayor variedad de problemas, ya que el proceso se utilizará a lo largo del curso en diversos ámbitos."
@@ -31448,7 +31448,7 @@
           "progression_name": "Practica"
         },
         "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "e0c060eb-1f06-4f1d-a91e-edd961631883": {
           "progression_name": "Practica"
@@ -31489,7 +31489,7 @@
           "progression_name": "Practica"
         },
         "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "b2a36927-a878-4885-b769-ee48fec75770": {
           "progression_name": "Practica"
@@ -31598,7 +31598,7 @@
           "progression_name": "Practica"
         },
         "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "94134ae8-5a03-4079-a051-0538b5db4a77": {
           "progression_name": "Practica"
@@ -31718,7 +31718,7 @@
           "progression_name": "Predicción"
         },
         "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "86188817-4050-4ffc-8321-67eb22cc7438": {
           "progression_name": "Practica"
@@ -31846,7 +31846,7 @@
           "progression_name": "Practica"
         },
         "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "fe170410-de6e-4d52-8cd2-62ceb9a8b808": {
           "progression_name": "Practica"
@@ -31973,7 +31973,7 @@
           "progression_name": "Practica"
         },
         "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
-          "progression_name": "Presentamos el Laboratorio de sprites"
+          "progression_name": "Presentación de Laboratorio Sprite"
         },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "Predicción"
@@ -31982,7 +31982,7 @@
           "progression_name": "Miniproyecto: Pez nadador"
         },
         "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
-          "progression_name": "Cómo crear un sprite"
+          "progression_name": "Como hacer un sprite"
         },
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Miniproyecto: Pez nadador (continuación)"
@@ -32067,7 +32067,7 @@
           "progression_name": "Juego libre"
         },
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
-          "progression_name": "La cosechadora"
+          "progression_name": "La Recolectora"
         },
         "8c92f401-dd45-4021-a38f-b410d49f7195": {
           "progression_name": "Practica"
@@ -32178,7 +32178,7 @@
           "progression_name": "Practica"
         },
         "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
-          "progression_name": "Uso del bloque 'repetir'"
+          "progression_name": "Usando el bloque de repetición"
         },
         "f7863404-2557-401b-9c80-dd660b885dad": {
           "progression_name": "Practica"
@@ -32230,7 +32230,7 @@
           "progression_name": "Juego libre"
         },
         "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
-          "progression_name": "Presentamos el Laboratorio de sprites"
+          "progression_name": "Presentación de Laboratorio Sprite"
         },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "Predicción"
@@ -32239,7 +32239,7 @@
           "progression_name": "Miniproyecto: Pez nadador"
         },
         "51a140d6-441e-487b-9e1f-313e842b78c3": {
-          "progression_name": "Cómo crear un sprite"
+          "progression_name": "Como hacer un sprite"
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Miniproyecto: Pez nadador (continuación)"

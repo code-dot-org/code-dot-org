@@ -71,6 +71,10 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
         text-compression:
           title: Pemampatan Teks
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Muzik
         asUnplugged:
           description_audience: Umur 6-13 tahun
         afterschool1:
@@ -2103,3 +2107,99 @@ ms:
               display_name: Pengenalan kepada Makmal Aplikasi
             lessonGroup-4:
               display_name: Bab 2
+        vpl-csd-ci-1:
+          title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pengajaran Pembangunan Web
+          title: 'Modul 2: Persediaan untuk Mengajar Pembangunan Web'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Pembangunan Web Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Pembangunan Web.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Web.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 90 minit
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bersedia untuk Mengajar Animasi dan Permainan Interaktif
+          title: 'Modul 3: Persediaan untuk Mengajar Animasi dan Permainan Interaktif'
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+        vpl-csd-ci-4:
+          title: 'Modul 4: Persediaan untuk Mengajar Proses Reka Bentuk'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Proses Reka Bentuk Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang Proses Reka Bentuk.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Persediaan mengajar data dan masyarakat'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit Data dan Masyarakat Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentant Data dan Masyarakat.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terokai akhir projek bab.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 90 minit"
+        vpl-csd-ci-7:
+          title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
+          description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+          student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Penggulungan

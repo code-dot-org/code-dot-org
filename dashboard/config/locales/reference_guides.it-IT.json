@@ -3,10 +3,13 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "Eventi Accelerometro"
+          "display_name": "Eventi dell'accelerometro"
         },
         "csd-2022/ai-lab": {
-          "display_name": "Laboratorio di Intelligenza Artificiale"
+          "display_name": "Laboratorio IA"
+        },
+        "csd-2022/animation-tab": {
+          "display_name": "Scheda Animazione"
         },
         "csd-2022/app-lab": {
           "display_name": "Sviluppo App"
@@ -17,8 +20,35 @@
         "csd-2022/arrays": {
           "display_name": "Insiemi"
         },
+        "csd-2022/board-events": {
+          "display_name": "Eventi della scheda"
+        },
+        "csd-2022/body-styling": {
+          "display_name": "Stile del corpo del testo (=body)"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Condizioni logiche (o espressioni booleane) e operatori di confronto"
+        },
+        "csd-2022/changing-screens": {
+          "display_name": "Modificare le schermate"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "display_name": "Modificare la scala del sensore"
+        },
+        "csd-2022/classes": {
+          "display_name": "Classi"
+        },
         "csd-2022/collision-detection": {
-          "display_name": "Rilevamento delle Collisioni"
+          "display_name": "Rilevamento delle collisioni"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Luci colorate"
+        },
+        "csd-2022/creative-commons-search": {
+          "display_name": "Creative Commons Search"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
         },
         "csd-2022/css-overview": {
           "display_name": "Panoramica"
@@ -26,11 +56,17 @@
         "csd-2022/design-mode": {
           "display_name": "Design Mode"
         },
+        "csd-2022/designing-screens-with-code": {
+          "display_name": "Progettare schermate in modalità codice"
+        },
         "csd-2022/drawing-shapes": {
           "display_name": "Disegnare Forme"
         },
         "csd-2022/for-loops": {
           "display_name": "Cicli con contatore"
+        },
+        "csd-2022/formatting-html": {
+          "display_name": "Formattazione HTML"
         },
         "csd-2022/functions": {
           "display_name": "Funzioni"
@@ -44,11 +80,26 @@
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Intestazioni e Paragrafi"
         },
+        "csd-2022/html": {
+          "display_name": "HTML"
+        },
         "csd-2022/html-overview": {
           "display_name": "Panoramica"
         },
         "csd-2022/html-tags": {
           "display_name": "Tag HTML"
+        },
+        "csd-2022/if-statements": {
+          "display_name": "Istruzioni condizionali"
+        },
+        "csd-2022/if-statements-2": {
+          "display_name": "Istruzioni condizionali"
+        },
+        "csd-2022/images-in-html": {
+          "display_name": "Immagini in HTML"
+        },
+        "csd-2022/importing-screens": {
+          "display_name": "Importare le schermate"
         },
         "csd-2022/introduction-to-ai-lab": {
           "display_name": "Lezione 6"
@@ -59,6 +110,9 @@
         "csd-2022/javascript-overview": {
           "display_name": "Panoramica"
         },
+        "csd-2022/layout-properties": {
+          "display_name": "Proprietà della disposizione della pagina (layout)"
+        },
         "csd-2022/lists": {
           "display_name": "Liste"
         },
@@ -68,8 +122,11 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Panoramica"
         },
+        "csd-2022/modifying-arrays": {
+          "display_name": "Modifica delle matrici (array)"
+        },
         "csd-2022/naming-variables": {
-          "display_name": "Nominare le Variabili"
+          "display_name": "Denominazione delle variabili"
         },
         "csd-2022/other": {
           "display_name": "Altro"
@@ -92,14 +149,32 @@
         "csd-2022/random-numbers": {
           "display_name": "Numeri Casuali"
         },
+        "csd-2022/responding-to-user-input": {
+          "display_name": "Reazione all'input dell'utente"
+        },
         "csd-2022/shapes-and-parameters": {
           "display_name": "Forme e Parametri"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Interazioni tra personaggi"
         },
         "csd-2022/sprite-properties": {
           "display_name": "Proprietà del personaggio"
         },
         "csd-2022/sprites": {
           "display_name": "Personaggi"
+        },
+        "csd-2022/style-sheets": {
+          "display_name": "Fogli di stile"
+        },
+        "csd-2022/text-properties": {
+          "display_name": "Proprietà del testo"
+        },
+        "csd-2022/the-accelerometer": {
+          "display_name": "L'accelerometro"
+        },
+        "csd-2022/the-draw-loop": {
+          "display_name": "La funzione ciclica `draw()`"
         },
         "csd-2022/variables": {
           "display_name": "Variabili"

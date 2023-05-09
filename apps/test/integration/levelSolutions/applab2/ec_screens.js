@@ -16,19 +16,13 @@ function validatePropertyRow(index, label, value, assert) {
   var propertyRow = $('#propertyRowContainer > div').eq(index);
   assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
-  assert.equal(
-    propertyRow
-      .children(1)
-      .children(0)
-      .val(),
-    value
-  );
+  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
 function validateElementSelect(expected, assert) {
   var actual = $('#emptyTab')
     .find('select option')
-    .map(function(_, element) {
+    .map(function (_, element) {
       return element.value;
     })
     .get();
@@ -48,7 +42,7 @@ module.exports = {
       description: 'basic test',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // We have an applab div with a single screen inside it
         var designModeViz = document.getElementById('designModeViz');
         assert(designModeViz);
@@ -110,21 +104,21 @@ module.exports = {
         );
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'add a screen',
       editCode: true,
       timeout: 15000,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         var screenSelector = document.getElementById('screenSelector');
@@ -177,21 +171,21 @@ module.exports = {
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'delete a screen',
       editCode: true,
       timeout: 15000,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         var screenSelector = document.getElementById('screenSelector');
@@ -250,16 +244,12 @@ module.exports = {
 
         // Should have resulted in two new buttons
         assert.equal(
-          $('#design-properties button')
-            .eq(0)
-            .text(),
+          $('#design-properties button').eq(0).text(),
           'Yes',
           'first button should be yes'
         );
         assert.equal(
-          $('#design-properties button')
-            .eq(1)
-            .text(),
+          $('#design-properties button').eq(1).text(),
           'No',
           'second button should be no'
         );
@@ -304,7 +294,7 @@ module.exports = {
         // Change name
         var inputId = $('#design-properties input').first();
         ReactTestUtils.Simulate.change(inputId[0], {
-          target: {value: 'renamed_screen'}
+          target: {value: 'renamed_screen'},
         });
         assert(document.getElementById('design_renamed_screen'));
 
@@ -321,14 +311,14 @@ module.exports = {
         );
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
@@ -346,9 +336,9 @@ module.exports = {
         'checkbox("my_checkbox", false);' +
         'radioButton("my_radio_button", false, "group");' +
         'dropdown("my_dropdown", "option1", "etc");',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           function idExistsOnScreen1(id) {
             var element = document.getElementById(id);
             assert(element);
@@ -380,8 +370,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'switching screens works',
@@ -390,7 +380,7 @@ module.exports = {
         'button("button1", "my_button_text");' +
         'setScreen("screen2");' +
         'button("button2", "my_button_text");',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
 
@@ -403,7 +393,7 @@ module.exports = {
         );
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           assert.equal(
             $('#divApplab').is(':visible'),
             true,
@@ -433,16 +423,12 @@ module.exports = {
           );
 
           assert.equal(
-            $('#divApplab #button1')
-              .parent()
-              .attr('id'),
+            $('#divApplab #button1').parent().attr('id'),
             'screen1',
             'screen1 is parent of button1'
           );
           assert.equal(
-            $('#divApplab #button2')
-              .parent()
-              .attr('id'),
+            $('#divApplab #button2').parent().attr('id'),
             'screen2',
             'screen2 is parent of button2'
           );
@@ -452,14 +438,14 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'stay on screen2 when entering code mode',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         assert.equal(
@@ -540,21 +526,21 @@ module.exports = {
         );
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'running from design mode switches to default screen',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
 
@@ -608,14 +594,14 @@ module.exports = {
         );
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -623,7 +609,7 @@ module.exports = {
         "switching to code mode while running in design mode doesn't change screen",
       editCode: true,
       xml: 'setScreen("screen2");',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
 
@@ -651,7 +637,7 @@ module.exports = {
           'transparency layer not visible when designing'
         );
 
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           // should be on screen 2 after run
           assert.equal(
             $('#divApplab').is(':visible'),
@@ -698,8 +684,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -714,7 +700,7 @@ module.exports = {
         '<button id="button2" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 185px; top: 65px; background-color: rgb(26, 188, 156);">Button</button>' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
 
@@ -750,15 +736,15 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'add/remove an element to a screen',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         assert.equal(
@@ -793,21 +779,21 @@ module.exports = {
         assert.equal(screenElement.children.length, 0);
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'add a background',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#design_screen1').click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);
@@ -817,7 +803,7 @@ module.exports = {
         var imageInput = $('#design-properties input').eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: {value: assetUrl}
+          target: {value: assetUrl},
         });
 
         var screenElement = document.getElementById('design_screen1');
@@ -834,14 +820,14 @@ module.exports = {
         assert.equal(screenElement.style.height, '450px');
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -850,7 +836,7 @@ module.exports = {
       // Use an asset path which we can access so that image loading will succeed
       assetPathPrefix: '/base/test/integration/assets/',
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         $('#design_screen1').click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);
@@ -862,7 +848,7 @@ module.exports = {
         var imageInput = $('#design-properties input').eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: {value: assetUrl}
+          target: {value: assetUrl},
         });
 
         var screenElement = document.getElementById('design_screen1');
@@ -879,21 +865,21 @@ module.exports = {
         assert.equal(screenElement.style.height, '450px');
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
       description: 'screen dropdown',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         assert.equal(
@@ -913,10 +899,7 @@ module.exports = {
 
         assert.equal($('#screenSelector').children().length, 4);
         assert.equal(
-          $('#screenSelector')
-            .children()
-            .eq(3)
-            .text(),
+          $('#screenSelector').children().eq(3).text(),
           'New screen...'
         );
 
@@ -938,14 +921,14 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'duplicate screens',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
         assert.equal(
@@ -966,9 +949,7 @@ module.exports = {
 
         // duplicate screen1
         ReactTestUtils.Simulate.change(
-          $('div#emptyTab')
-            .children()
-            .children('select')[0],
+          $('div#emptyTab').children().children('select')[0],
           {target: {value: 'screen1'}}
         );
 
@@ -992,10 +973,7 @@ module.exports = {
 
         assert.equal($('#screenSelector').children().length, 4);
         assert.equal(
-          $('#screenSelector')
-            .children()
-            .eq(3)
-            .text(),
+          $('#screenSelector').children().eq(3).text(),
           'New screen...'
         );
 
@@ -1010,8 +988,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'load a level with two screens',
@@ -1026,7 +1004,7 @@ module.exports = {
         '<button id="button2" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 185px; top: 65px; background-color: rgb(26, 188, 156);">Button</button>' +
         '</div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert.equal(
           $('#divApplab').is(':visible'),
           true,
@@ -1071,16 +1049,12 @@ module.exports = {
           'design mode screen2 contains button2'
         );
         assert.equal(
-          $('#propertyRowContainer button')
-            .last()
-            .text(),
+          $('#propertyRowContainer button').last().text(),
           '',
           'First screen should have no default button'
         );
         assert.equal(
-          $('#propertiesBody button')
-            .first()
-            .text(),
+          $('#propertiesBody button').first().text(),
           'Delete',
           'first button should be delete'
         );
@@ -1094,26 +1068,19 @@ module.exports = {
         );
         validatePropertyRow(0, 'id', 'screen3', assert);
         assert.equal(
-          $('#propertyRowContainer button')
-            .last()
-            .text(),
+          $('#propertyRowContainer button').last().text(),
           'Make Default',
           'Third screen should have default button'
         );
         assert.equal(
-          $('#propertiesBody button')
-            .first()
-            .text(),
+          $('#propertiesBody button').first().text(),
           'Delete',
           'first button should be delete'
         );
 
         assert.equal($('#screenSelector').children().length, 5);
         assert.equal(
-          $('#screenSelector')
-            .children()
-            .eq(4)
-            .text(),
+          $('#screenSelector').children().eq(4).text(),
           'New screen...'
         );
 
@@ -1130,16 +1097,12 @@ module.exports = {
         );
         assert.equal($('#screenSelector').children().length, 6);
         assert.equal(
-          $('#propertyRowContainer button')
-            .last()
-            .text(),
+          $('#propertyRowContainer button').last().text(),
           'Make Default',
           'New screen should have default button'
         );
         assert.equal(
-          $('#propertiesBody button')
-            .first()
-            .text(),
+          $('#propertiesBody button').first().text(),
           'Delete',
           'first button should be delete'
         );
@@ -1149,8 +1112,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
@@ -1173,7 +1136,7 @@ module.exports = {
         '    </div>' +
         '  </div>' +
         '</div>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         assert.equal(
           $('#divApplab').is(':visible'),
           true,
@@ -1190,7 +1153,7 @@ module.exports = {
           '#versions-header is visible'
         );
 
-        tickWrapper.runOnAppTick(Applab, 20, function() {
+        tickWrapper.runOnAppTick(Applab, 20, function () {
           assert.equal(
             $('#screen1').is(':visible'),
             true,
@@ -1207,8 +1170,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

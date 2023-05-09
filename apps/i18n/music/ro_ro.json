@@ -1,0 +1,22 @@
+{
+  "blockly_blockPlaySoundTooltip": "reda sunetul",
+  "blockly_blockPlaySoundAtMeasureTooltip": "reda sunetul",
+  "blockly_blockRepeatTooltip": "repetă",
+  "blockly_blockRestTooltip": "odihnă",
+  "blockly_blockWhenRun": "când rulezi",
+  "blockly_blockWhenRunTooltip": "când rulezi",
+  "blockly_functionNamePlaceholder": "funcţiunea mea",
+  "blockly_toolboxCategoryControl": "Control",
+  "blockly_toolboxCategoryEffects": "Efecte",
+  "blockly_toolboxCategoryEvents": "Evenimente",
+  "blockly_toolboxCategoryFunctions": "Funcţii",
+  "blockly_toolboxCategoryLogic": "Logică",
+  "blockly_toolboxCategoryMath": "Matematică",
+  "blockly_toolboxCategoryPlay": "Joacă",
+  "blockly_toolboxCategoryVariables": "Variabile",
+  "control": "Control",
+  "feedback": "Punct de vedere",
+  "share": "Distribuie",
+  "startOver": "Începe din nou",
+  "upload": "Încarcă"
+}

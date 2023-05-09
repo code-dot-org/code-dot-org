@@ -213,8 +213,6 @@ id:
       kami menghubungi murid. Murid tidak akan menerima email dari Code.org kecuali
       untuk pemulihan kata sandi. Lihat [kebijakan privasi](http://code.org/privacy)
       kami untuk informasi lebih lanjut.
-    additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
-      pendaftaran Anda.
     user_type_button: Perbarui Jenis Akun
     user_type_label: Jenis Akun
     user_type_student: siswa
@@ -1420,6 +1418,13 @@ id:
         akun Anda](%{user_registration}) untuk menambahkan alamat email sebelum menyelesaikan
         formulir ini.
   courses_category: Kursus Lengkap
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Halo Dunia
+      sports: Olahraga
+      csf: Dasar dasar CS
+      csc: CS Connections
   cookie_banner:
     message: Dengan melanjutkan penelusuran situs kami atau mengklik "Saya setuju,"
       Anda menyetujui penyimpanan cookies di komputer atau perangkat Anda.

@@ -205,8 +205,6 @@ ga:
       dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org
       seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy)
       chun tuilleadh eolais a fháil.
-    additional_information: Teastaíonn tuilleadh eolais uainn sular féidir linn tú
-      a chlárú.
     user_type_button: Athraigh Cineál an Chuntais
     user_type_label: Cineál Cuntais
     user_type_student: Dalta
@@ -1342,6 +1340,11 @@ ga:
         duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
         sula líonfaidh tú an fhoirm seo isteach.
   courses_category: Cúrsaí Iomlána
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Spórt
+      csf: Buntús na Ríomheolaíochta
   cookie_banner:
     message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
       glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.

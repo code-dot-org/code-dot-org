@@ -1,21 +1,23 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import classNames from 'classnames';
 import {getNoteName, isBlackKey} from '../utils/Notes';
 import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import PreviewControls from './PreviewControls';
+import musicI18n from '../locale';
 
 const moduleStyles = require('./chordPanel.module.scss').default;
-const classNames = require('classnames');
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 const MAX_NOTES = 16;
 
 const styleDropdownOptions: [PlayStyle, string][] = [
-  ['arpeggio-up', 'Arpeggio Up'],
-  ['arpeggio-down', 'Arpeggio Down'],
-  ['arpeggio-random', 'Arpeggio Random'],
-  ['together', 'Together']
+  ['arpeggio-up', musicI18n.chordArpeggioUp()],
+  ['arpeggio-down', musicI18n.chordArpeggioDown()],
+  ['arpeggio-random', musicI18n.chordArpeggioRandom()],
+  ['together', musicI18n.chordTogether()],
 ];
 
 export interface ChordPanelProps {
@@ -33,7 +35,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   previewChord,
   previewNote,
   cancelPreviews,
-  library
+  library,
 }) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
@@ -64,9 +66,9 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     onChange({
       notes: selectedNotes,
       playStyle,
-      instrument
+      instrument,
     });
-  }, [instrument, playStyle, selectedNotes]);
+  }, [instrument, playStyle, selectedNotes, onChange]);
 
   useEffect(() => {
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
@@ -77,7 +79,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       previewChord({
         notes: selectedNotes,
         playStyle,
-        instrument
+        instrument,
       }),
     [previewChord, selectedNotes, playStyle, instrument]
   );
@@ -86,7 +88,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
 
   return (
     <div className={moduleStyles.chordPanelContainer}>
-      <div className={moduleStyles.controlsRow}>
+      <div className={moduleStyles.optionsRow}>
         <select
           value={instrument}
           onChange={event => setInstrument(event.target.value)}
@@ -117,6 +119,13 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         onPressKey={onPressKey}
         isDisabled={isDisabled}
       />
+      <NoteGrid
+        numOctaves={NUM_OCTAVES}
+        startOctave={START_OCTAVE}
+        selectedNotes={selectedNotes}
+        playStyle={playStyle}
+        instrument={instrument}
+      />
       <PreviewControls
         enabled={selectedNotes.length > 0}
         playPreview={playPreview}
@@ -140,7 +149,7 @@ const Keybed: React.FunctionComponent<KeybedProps> = ({
   startOctave,
   selectedNotes,
   onPressKey,
-  isDisabled
+  isDisabled,
 }) => {
   const keys = [];
   const startingNote = startOctave * 12;
@@ -162,7 +171,11 @@ const Keybed: React.FunctionComponent<KeybedProps> = ({
     );
   }
 
-  return <div className={moduleStyles.keybed}>{keys}</div>;
+  return (
+    <div id="keypad" className={moduleStyles.keybed}>
+      {keys}
+    </div>
+  );
 };
 
 interface KeyProps {
@@ -178,7 +191,7 @@ const Key: React.FunctionComponent<KeyProps> = ({
   isSelected,
   isDisabled,
   onClick,
-  text
+  text,
 }: KeyProps) => {
   return (
     <div
@@ -189,9 +202,60 @@ const Key: React.FunctionComponent<KeyProps> = ({
         type === 'white' && moduleStyles.whiteKey,
         type === 'black' && moduleStyles.blackKey
       )}
-      onClick={onClick}
+      onClick={isSelected || !isDisabled ? onClick : undefined}
     >
-      <p className={moduleStyles.noteLabel}>{text}</p>
+      <div className={moduleStyles.noteLabel}>{text}</div>
+    </div>
+  );
+};
+
+interface NoteGridProps {
+  numOctaves: number;
+  startOctave: number;
+  selectedNotes: number[];
+  playStyle: PlayStyle;
+  instrument: string;
+}
+
+const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
+  numOctaves,
+  startOctave,
+  selectedNotes,
+  playStyle,
+  instrument,
+}) => {
+  const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
+    chordEventValue: {
+      notes: selectedNotes,
+      playStyle,
+      instrument,
+    },
+    width: 315,
+    height: 110,
+    numOctaves,
+    startOctave,
+    padding: 2,
+    noteHeightScale: 2,
+  });
+
+  return (
+    <div id="notegrid-container" className={moduleStyles.noteGridContainer}>
+      {graphNotes.map((graphNote: ChordGraphNote, index) => {
+        return (
+          <div
+            key={index}
+            className={moduleStyles.gridNote}
+            style={{
+              top: graphNote.y,
+              left: graphNote.x,
+              width: graphNote.width,
+              height: graphNote.height,
+            }}
+          >
+            &nbsp;
+          </div>
+        );
+      })}
     </div>
   );
 };

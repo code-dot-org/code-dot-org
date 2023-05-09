@@ -10,7 +10,7 @@ import {
   importOrUpdateRoster,
   sectionCode,
   sectionProvider,
-  sectionName
+  sectionName,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../../templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -18,7 +18,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROVIDER_NAME = {
   [OAuthSectionTypes.clever]: i18n.loginTypeClever(),
-  [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom()
+  [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom(),
 };
 
 export const READY = 'ready';
@@ -37,23 +37,18 @@ class SyncOmniAuthSectionControl extends React.Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
-    updateRoster: PropTypes.func.isRequired
+    updateRoster: PropTypes.func.isRequired,
   };
 
   state = {
     buttonState: READY,
     isDialogOpen: false,
-    syncFailErrorLog: ''
+    syncFailErrorLog: '',
   };
 
   onClick = () => {
-    const {
-      sectionId,
-      sectionCode,
-      sectionName,
-      updateRoster,
-      sectionProvider
-    } = this.props;
+    const {sectionId, sectionCode, sectionName, updateRoster, sectionProvider} =
+      this.props;
     const {buttonState} = this.state;
 
     firehoseClient.putRecord(
@@ -63,8 +58,8 @@ class SyncOmniAuthSectionControl extends React.Component {
         event: 'sync-oauth-button-click',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          loginType: sectionProvider
-        })
+          loginType: sectionProvider,
+        }),
       },
       {includeUserId: true}
     );
@@ -90,7 +85,7 @@ class SyncOmniAuthSectionControl extends React.Component {
       })
       .catch(sync_error => {
         this.setState({
-          syncFailErrorLog: '' + sync_error
+          syncFailErrorLog: '' + sync_error,
         });
         this.openDialog();
         firehoseClient.putRecord(
@@ -101,8 +96,8 @@ class SyncOmniAuthSectionControl extends React.Component {
             data_json: JSON.stringify({
               sectionId: sectionId,
               loginType: sectionProvider,
-              error_message: sync_error
-            })
+              error_message: sync_error,
+            }),
           },
           {includeUserId: true}
         );
@@ -120,7 +115,10 @@ class SyncOmniAuthSectionControl extends React.Component {
   render() {
     const {sectionProvider, sectionCode} = this.props;
     const {buttonState} = this.state;
-    const supportedType = PROVIDER_NAME.hasOwnProperty(sectionProvider);
+    const supportedType = Object.prototype.hasOwnProperty.call(
+      PROVIDER_NAME,
+      sectionProvider
+    );
     if (!supportedType || !sectionCode) {
       // Possibly not loaded yet.
       return null;
@@ -150,7 +148,7 @@ class SyncOmniAuthSectionControl extends React.Component {
             <SafeMarkdown
               markdown={i18n.loginTypeSyncButtonDialogTroubleshooting({
                 syncFailureSupportArticle:
-                  'https://support.code.org/hc/en-us/articles/6496495212557'
+                  'https://support.code.org/hc/en-us/articles/6496495212557',
               })}
             />
           </div>
@@ -172,10 +170,10 @@ export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionId),
     sectionName: sectionName(state, props.sectionId),
-    sectionProvider: sectionProvider(state, props.sectionId)
+    sectionProvider: sectionProvider(state, props.sectionId),
   }),
   {
-    updateRoster: importOrUpdateRoster
+    updateRoster: importOrUpdateRoster,
   }
 )(SyncOmniAuthSectionControl);
 
@@ -200,7 +198,7 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
   buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 function buttonText(buttonState, providerName) {
@@ -216,7 +214,7 @@ function iconProps(buttonState) {
   if (buttonState === IN_PROGRESS) {
     return {
       icon: 'refresh',
-      iconClassName: 'fa-spin fa-fw'
+      iconClassName: 'fa-spin fa-fw',
     };
   }
   return {};
@@ -225,18 +223,18 @@ function iconProps(buttonState) {
 const styles = {
   dialog: {
     padding: '10px 20px 20px 20px',
-    maxHeight: '500px'
+    maxHeight: '500px',
   },
   scroll: {
     overflowX: 'hidden',
     overflowY: 'auto',
     maxHeight: '200px',
-    paddingTop: '10px'
+    paddingTop: '10px',
   },
   needHelpMessage: {
-    paddingTop: '20px'
+    paddingTop: '20px',
   },
   closeButton: {
-    paddingTop: '20px'
-  }
+    paddingTop: '20px',
+  },
 };

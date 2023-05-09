@@ -4,7 +4,7 @@ import Permission, {
   Facilitator,
   Organizer,
   ProgramManager,
-  Partner
+  Partner,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const permissionTypes = [
@@ -12,7 +12,7 @@ const permissionTypes = [
   Facilitator,
   Organizer,
   ProgramManager,
-  Partner
+  Partner,
 ];
 
 describe('Permission class', () => {

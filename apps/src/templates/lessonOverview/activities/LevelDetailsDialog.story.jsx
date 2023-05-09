@@ -9,7 +9,7 @@ const defaultProps = {
     console.log('closed');
   },
   viewAs: ViewType.Instructor,
-  isRtl: false
+  isRtl: false,
 };
 
 const standaloneVideoScriptLevel = {
@@ -24,11 +24,10 @@ const standaloneVideoScriptLevel = {
       enable_fallback: true,
       key: 'csd_debugging',
       name: 'Debugging',
-      src:
-        'https://www.youtube-nocookie.com/embed/auv10y-dN4s/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=auv10y-dN4s&wmode=transparent',
-      thumbnail: 'studio.code.org/c/video_thumbnails/csd_debugging.jpg'
-    }
-  }
+      src: 'https://www.youtube-nocookie.com/embed/auv10y-dN4s/?autoplay=0&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=auv10y-dN4s&wmode=transparent',
+      thumbnail: 'studio.code.org/c/video_thumbnails/csd_debugging.jpg',
+    },
+  },
 };
 
 const externalMarkdownScriptLevel = {
@@ -36,15 +35,15 @@ const externalMarkdownScriptLevel = {
   level: {
     type: 'External',
     markdown:
-      '## Best Class Pet \n### Here are three different ways to show the results of a vote for best class pet.'
-  }
+      '## Best Class Pet \n### Here are three different ways to show the results of a vote for best class pet.',
+  },
 };
 
 const levelGroupScriptLevel = {
   url: '/s/csd6-2020/lessons/16/levels/9/page/1',
   level: {
-    type: 'LevelGroup'
-  }
+    type: 'LevelGroup',
+  },
 };
 
 const bubbleChoiceScriptLevel = {
@@ -55,7 +54,7 @@ const bubbleChoiceScriptLevel = {
   status: 'not_tried',
   level: {
     type: 'BubbleChoice',
-    name: 'parentLevel'
+    name: 'parentLevel',
   },
   sublevels: [
     {
@@ -69,7 +68,7 @@ const bubbleChoiceScriptLevel = {
       letter: 'a',
       name: 'sublevel1',
       id: 'sublevel1',
-      status: 'not_tried'
+      status: 'not_tried',
     },
     {
       type: 'External',
@@ -82,9 +81,9 @@ const bubbleChoiceScriptLevel = {
       letter: 'b',
       name: 'sublevel2',
       id: 'sublevel2',
-      status: 'not_tried'
-    }
-  ]
+      status: 'not_tried',
+    },
+  ],
 };
 
 const levelWithInstructions = {
@@ -104,12 +103,11 @@ const levelWithInstructions = {
         enable_fallback: true,
         key: 'csd_weblab_intro_2',
         name: 'Intro to Web Lab - Part 2',
-        src:
-          'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
-        thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg'
-      }
-    ]
-  }
+        src: 'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
+        thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg',
+      },
+    ],
+  },
 };
 
 const levelWithContainedLevel = {
@@ -122,15 +120,15 @@ const levelWithContainedLevel = {
         name: 'contained-free-response-level',
         type: 'FreeResponse',
         longInstructions:
-          '**Make a prediction**: What do you think will happen when you run this code?'
-      }
-    ]
-  }
+          '**Make a prediction**: What do you think will happen when you run this code?',
+      },
+    ],
+  },
 };
 
 export default {
   title: 'LevelDetailsDialog',
-  component: LevelDetailsDialog
+  component: LevelDetailsDialog,
 };
 
 const Template = args => {
@@ -143,36 +141,36 @@ const Template = args => {
 
 export const StandaloneVideoExample = Template.bind({});
 StandaloneVideoExample.args = {
-  scriptLevel: standaloneVideoScriptLevel
+  scriptLevel: standaloneVideoScriptLevel,
 };
 
 export const ExternalExample = Template.bind({});
 ExternalExample.args = {
-  scriptLevel: externalMarkdownScriptLevel
+  scriptLevel: externalMarkdownScriptLevel,
 };
 
 export const LevelGroupExample = Template.bind({});
 LevelGroupExample.args = {
-  scriptLevel: levelGroupScriptLevel
+  scriptLevel: levelGroupScriptLevel,
 };
 
 export const BubbleChoiceExample = Template.bind({});
 BubbleChoiceExample.args = {
-  scriptLevel: bubbleChoiceScriptLevel
+  scriptLevel: bubbleChoiceScriptLevel,
 };
 
 export const ContainedExample = Template.bind({});
 ContainedExample.args = {
-  scriptLevel: levelWithContainedLevel
+  scriptLevel: levelWithContainedLevel,
 };
 
 export const TopInstructionsExample = Template.bind({});
 TopInstructionsExample.args = {
-  scriptLevel: levelWithInstructions
+  scriptLevel: levelWithInstructions,
 };
 
 export const TopInstructionsRTLExample = Template.bind({});
 TopInstructionsRTLExample.args = {
   scriptLevel: levelWithInstructions,
-  isRtl: true
+  isRtl: true,
 };

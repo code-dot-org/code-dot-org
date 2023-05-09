@@ -2,7 +2,6 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-/* global confirm */
 
 var utils = require('../utils');
 import $ from 'jquery';
@@ -45,7 +44,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var NetSim = (module.exports = function() {
+var NetSim = (module.exports = function () {
   /**
    * @type {Object}
    */
@@ -151,7 +150,7 @@ var NetSim = (module.exports = function() {
   this.eventKeys = {};
 });
 
-NetSim.prototype.injectStudioApp = function(studioApp) {
+NetSim.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
@@ -163,7 +162,7 @@ NetSim.prototype.injectStudioApp = function(studioApp) {
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  */
-NetSim.prototype.init = function(config) {
+NetSim.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('NetSim requires a StudioApp');
   }
@@ -215,12 +214,12 @@ NetSim.prototype.init = function(config) {
    */
   this.reportingInfo_ = config.report;
 
-  var generateCodeAppHtmlFromEjs = function() {
+  var generateCodeAppHtmlFromEjs = function () {
     return page({
       data: {
         localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
-        instructions: this.level.shortInstructions
-      }
+        instructions: this.level.shortInstructions,
+      },
     });
   }.bind(this);
 
@@ -228,7 +227,7 @@ NetSim.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
   config.loadAudio = this.loadAudio_.bind(this);
 
-  var onMount = function() {
+  var onMount = function () {
     // Override certain StudioApp methods - netsim does a lot of configuration
     // itself, because of its nonstandard layout.
     this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(
@@ -239,9 +238,8 @@ NetSim.prototype.init = function(config) {
     // Wrap showInstructionsWrapper to actually show instructions, which core
     // studioApp no longer does.  This must happen before studioApp_.init()
     // which will actually call this wrapper.
-    const originalShowInstructionsWrapper = config.showInstructionsWrapper.bind(
-      config
-    );
+    const originalShowInstructionsWrapper =
+      config.showInstructionsWrapper.bind(config);
     config.showInstructionsWrapper = originalShowInstructions => {
       originalShowInstructionsWrapper(() => {
         this.showInstructionsDialog();
@@ -255,7 +253,7 @@ NetSim.prototype.init = function(config) {
 
     // Create netsim lobby widget in page
     this.currentUser_.whenReady(
-      function() {
+      function () {
         this.initWithUser_(this.currentUser_);
       }.bind(this)
     );
@@ -282,7 +280,7 @@ NetSim.prototype.init = function(config) {
 /**
  * @param {RunLoop.Clock} clock
  */
-NetSim.prototype.tick = function(clock) {
+NetSim.prototype.tick = function (clock) {
   if (this.isConnectedToShard()) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
@@ -294,14 +292,14 @@ NetSim.prototype.tick = function(clock) {
  * object.
  * @returns {*}
  */
-NetSim.prototype.getOverrideShardID = function() {
+NetSim.prototype.getOverrideShardID = function () {
   var parts = location.search.split('?');
   if (parts.length === 1) {
     return undefined;
   }
 
   var shardID;
-  parts[1].split('&').forEach(function(param) {
+  parts[1].split('&').forEach(function (param) {
     var sides = param.split('=');
     if (sides.length > 1 && sides[0] === 's') {
       shardID = sides[1];
@@ -313,7 +311,7 @@ NetSim.prototype.getOverrideShardID = function() {
 /**
  * @returns {boolean} TRUE if the level is configured to show any tabs.
  */
-NetSim.prototype.shouldShowAnyTabs = function() {
+NetSim.prototype.shouldShowAnyTabs = function () {
   return this.level.showTabs.length > 0;
 };
 
@@ -324,7 +322,7 @@ NetSim.prototype.shouldShowAnyTabs = function() {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUser_ = function(user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -333,36 +331,36 @@ NetSim.prototype.initWithUser_ = function(user) {
       logTitle: i18n.receivedMessageLog(),
       isMinimized: false,
       hasUnreadMessages: true,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
     });
 
     this.sentMessageLog_ = new NetSimLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentMessageLog(),
       isMinimized: true,
       hasUnreadMessages: false,
-      packetSpec: this.level.clientInitialPacketHeader
+      packetSpec: this.level.clientInitialPacketHeader,
     });
   } else if (this.level.messageGranularity === MessageGranularity.BITS) {
     this.receivedMessageLog_ = new NetSimBitLogPanel($('#netsim-received'), {
       logTitle: i18n.receiveBits(),
       isMinimized: false,
       netsim: this,
-      showReadWireButton: true
+      showReadWireButton: true,
     });
 
     this.sentMessageLog_ = new NetSimBitLogPanel($('#netsim-sent'), {
       logTitle: i18n.sentBitsLog(),
       isMinimized: false,
-      netsim: this
+      netsim: this,
     });
   }
 
   this.statusPanel_ = new NetSimStatusPanel($('#netsim-status'), {
-    disconnectCallback: this.disconnectFromRemote.bind(this, function() {})
+    disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
   });
 
   this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'), {
-    user
+    user,
   });
 
   this.visualization_ = new NetSimVisualization(
@@ -382,7 +380,7 @@ NetSim.prototype.initWithUser_ = function(user) {
     showTeacherLogCallback: this.routerLogModal_.show.bind(
       this.routerLogModal_,
       true
-    )
+    ),
   });
 
   // Tab panel - contains instructions, my device, router, dns
@@ -393,9 +391,8 @@ NetSim.prototype.initWithUser_ = function(user) {
       myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
       encodingChangeCallback: this.changeEncodings.bind(this),
       routerBandwidthSliderChangeCallback: this.setRouterBandwidth.bind(this),
-      routerBandwidthSliderStopCallback: this.changeRemoteRouterBandwidth.bind(
-        this
-      ),
+      routerBandwidthSliderStopCallback:
+        this.changeRemoteRouterBandwidth.bind(this),
       routerMemorySliderChangeCallback: this.setRouterMemory.bind(this),
       routerMemorySliderStopCallback: this.changeRemoteRouterMemory.bind(this),
       dnsModeChangeCallback: this.changeRemoteDnsMode.bind(this),
@@ -403,7 +400,7 @@ NetSim.prototype.initWithUser_ = function(user) {
       showRouterLogCallback: this.routerLogModal_.show.bind(
         this.routerLogModal_,
         false
-      )
+      ),
     });
     this.tabs_.attachToRunLoop(this.runLoop_);
   }
@@ -446,7 +443,7 @@ NetSim.prototype.initWithUser_ = function(user) {
  *          we don't want to warn the user, this method doesn't return anything.
  * @private
  */
-NetSim.prototype.onBeforeUnload_ = function(event) {
+NetSim.prototype.onBeforeUnload_ = function (event) {
   if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
     return;
   }
@@ -468,7 +465,7 @@ NetSim.prototype.onBeforeUnload_ = function(event) {
  *
  * @private
  */
-NetSim.prototype.onUnload_ = function() {
+NetSim.prototype.onUnload_ = function () {
   if (this.isConnectedToShard()) {
     this.disconnectFromShardOnUnload_();
   }
@@ -478,7 +475,7 @@ NetSim.prototype.onUnload_ = function() {
  * Whether we are currently connected to a netsim shard
  * @returns {boolean}
  */
-NetSim.prototype.isConnectedToShard = function() {
+NetSim.prototype.isConnectedToShard = function () {
   return null !== this.myNode;
 };
 
@@ -487,7 +484,7 @@ NetSim.prototype.isConnectedToShard = function() {
  * @param {string} shardID
  * @returns {boolean}
  */
-NetSim.prototype.isConnectedToShardID = function(shardID) {
+NetSim.prototype.isConnectedToShardID = function (shardID) {
   return this.isConnectedToShard() && this.shard_.id === shardID;
 };
 
@@ -497,7 +494,7 @@ NetSim.prototype.isConnectedToShardID = function(shardID) {
  * @param {!string} shardID
  * @param {!string} displayName
  */
-NetSim.prototype.connectToShard = function(shardID, displayName) {
+NetSim.prototype.connectToShard = function (shardID, displayName) {
   if (this.isConnectedToShard()) {
     logger.warn('Auto-closing previous connection...');
     this.disconnectFromShard(
@@ -509,7 +506,7 @@ NetSim.prototype.connectToShard = function(shardID, displayName) {
   this.shard_ = new NetSimShard(shardID, NetSimGlobals.getPubSubConfig());
   this.createMyClientNode_(
     displayName,
-    function(err, myNode) {
+    function (err, myNode) {
       this.myNode = myNode;
       this.shardChange.notifyObservers(this.shard_, this.myNode);
     }.bind(this)
@@ -523,11 +520,11 @@ NetSim.prototype.connectToShard = function(shardID, displayName) {
  * @param {!NodeStyleCallback} onComplete - result is new local node
  * @private
  */
-NetSim.prototype.createMyClientNode_ = function(displayName, onComplete) {
+NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(
     this.shard_,
     displayName,
-    function(err, node) {
+    function (err, node) {
       if (err) {
         logger.error('Failed to create client node; ' + err.message);
         NetSimAlert.error(i18n.createMyClientNodeError());
@@ -536,7 +533,7 @@ NetSim.prototype.createMyClientNode_ = function(displayName, onComplete) {
       }
 
       node.setLostConnectionCallback(
-        function() {
+        function () {
           NetSimAlert.warn(i18n.alertConnectionReset());
           this.disconnectFromShard();
         }.bind(this)
@@ -551,7 +548,7 @@ NetSim.prototype.createMyClientNode_ = function(displayName, onComplete) {
  * Disconnect, for use when navigating away from the page.
  * @private
  */
-NetSim.prototype.disconnectFromShardOnUnload_ = function() {
+NetSim.prototype.disconnectFromShardOnUnload_ = function () {
   this.myNode.stopSimulation();
   this.myNode.destroyOnUnload();
   this.myNode = null;
@@ -566,8 +563,8 @@ NetSim.prototype.disconnectFromShardOnUnload_ = function() {
  * Ends the connection to the netsim shard.
  * @param {NodeStyleCallback} [onComplete]
  */
-NetSim.prototype.disconnectFromShard = function(onComplete) {
-  onComplete = onComplete || function() {};
+NetSim.prototype.disconnectFromShard = function (onComplete) {
+  onComplete = onComplete || function () {};
 
   if (!this.isConnectedToShard()) {
     logger.warn('Redundant disconnect call.');
@@ -583,7 +580,7 @@ NetSim.prototype.disconnectFromShard = function(onComplete) {
 
   this.myNode.stopSimulation();
   this.myNode.destroy(
-    function(err, result) {
+    function (err, result) {
       if (err) {
         logger.warn('Error destroying node:' + err.message);
         // Don't stop disconnecting on an error here; we make a good-faith
@@ -603,7 +600,7 @@ NetSim.prototype.disconnectFromShard = function(onComplete) {
 /**
  * @returns {boolean} Whether the local client is connected to a remote node
  */
-NetSim.prototype.isConnectedToRemote = function() {
+NetSim.prototype.isConnectedToRemote = function () {
   return this.isConnectedToClient() || this.isConnectedToRouter();
 };
 
@@ -611,7 +608,7 @@ NetSim.prototype.isConnectedToRemote = function() {
  * @returns {NetSimNode} the remote node our client is connected to, or null if
  *          not connected
  */
-NetSim.prototype.getConnectedRemoteNode = function() {
+NetSim.prototype.getConnectedRemoteNode = function () {
   var client = this.getConnectedClient();
   var router = this.getConnectedRouter();
   return client ? client : router;
@@ -621,7 +618,7 @@ NetSim.prototype.getConnectedRemoteNode = function() {
  * @returns {boolean} Whether the local client has a mutual P2P connection to
  *          another client.
  */
-NetSim.prototype.isConnectedToClient = function() {
+NetSim.prototype.isConnectedToClient = function () {
   return !!this.getConnectedClient();
 };
 
@@ -629,7 +626,7 @@ NetSim.prototype.isConnectedToClient = function() {
  * @returns {NetSimClientNode} the client node our client is connected to, or
  *          null if not connected to another client.
  */
-NetSim.prototype.getConnectedClient = function() {
+NetSim.prototype.getConnectedClient = function () {
   if (this.isConnectedToShard()) {
     return this.myNode.myRemoteClient;
   }
@@ -640,7 +637,7 @@ NetSim.prototype.getConnectedClient = function() {
  * Whether our client node is connected to a router node.
  * @returns {boolean}
  */
-NetSim.prototype.isConnectedToRouter = function() {
+NetSim.prototype.isConnectedToRouter = function () {
   return !!this.getConnectedRouter();
 };
 
@@ -648,7 +645,7 @@ NetSim.prototype.isConnectedToRouter = function() {
  * @returns {NetSimRouterNode} the router node our client is connected to, or
  *          null if not connected to a router.
  */
-NetSim.prototype.getConnectedRouter = function() {
+NetSim.prototype.getConnectedRouter = function () {
   if (this.isConnectedToShard()) {
     return this.myNode.getMyRouter();
   }
@@ -661,7 +658,7 @@ NetSim.prototype.getConnectedRouter = function() {
  * @param {number} routerID
  * @param {NodeStyleCallback} onComplete
  */
-NetSim.prototype.connectToRouter = function(routerID, onComplete) {
+NetSim.prototype.connectToRouter = function (routerID, onComplete) {
   if (this.isConnectedToRemote()) {
     // Disconnect and try to connect again when we're done.
     logger.warn('Auto-disconnecting from previous router.');
@@ -672,7 +669,7 @@ NetSim.prototype.connectToRouter = function(routerID, onComplete) {
   }
 
   var self = this;
-  NetSimRouterNode.get(routerID, this.shard_, function(err, router) {
+  NetSimRouterNode.get(routerID, this.shard_, function (err, router) {
     if (err) {
       logger.warn(
         'Failed to find router with ID ' + routerID + '; ' + err.message
@@ -681,7 +678,7 @@ NetSim.prototype.connectToRouter = function(routerID, onComplete) {
       return;
     }
 
-    self.myNode.connectToRouter(router, function(err) {
+    self.myNode.connectToRouter(router, function (err) {
       if (err) {
         logger.warn(
           'Failed to connect to ' + router.getDisplayName() + '; ' + err.message
@@ -698,8 +695,8 @@ NetSim.prototype.connectToRouter = function(routerID, onComplete) {
  * @param {NodeStyleCallback} [onComplete] optional function to call when
  *        disconnect is complete
  */
-NetSim.prototype.disconnectFromRemote = function(onComplete) {
-  onComplete = utils.valueOr(onComplete, function() {});
+NetSim.prototype.disconnectFromRemote = function (onComplete) {
+  onComplete = utils.valueOr(onComplete, function () {});
   this.myNode.disconnectRemote(onComplete);
 };
 
@@ -709,7 +706,7 @@ NetSim.prototype.disconnectFromRemote = function(onComplete) {
  * Used only in simplex & bit-granular mode.
  * @param {!NodeStyleCallback} onComplete
  */
-NetSim.prototype.receiveBit = function(onComplete) {
+NetSim.prototype.receiveBit = function (onComplete) {
   this.myNode.getLatestMessageOnSimplexWire(onComplete);
 };
 
@@ -722,7 +719,7 @@ NetSim.prototype.receiveBit = function(onComplete) {
  *
  * @param {EncodingType[]} newEncodings
  */
-NetSim.prototype.changeEncodings = function(newEncodings) {
+NetSim.prototype.changeEncodings = function (newEncodings) {
   this.enabledEncodings_ = newEncodings;
   if (this.tabs_) {
     this.tabs_.setEncodings(newEncodings);
@@ -738,7 +735,7 @@ NetSim.prototype.changeEncodings = function(newEncodings) {
  * Get the currently enabled encoding types.
  * @returns {EncodingType[]}
  */
-NetSim.prototype.getEncodings = function() {
+NetSim.prototype.getEncodings = function () {
   return this.enabledEncodings_;
 };
 
@@ -751,7 +748,7 @@ NetSim.prototype.getEncodings = function() {
  *
  * @param {number} newChunkSize
  */
-NetSim.prototype.setChunkSize = function(newChunkSize) {
+NetSim.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   if (this.tabs_) {
     this.tabs_.setChunkSize(newChunkSize);
@@ -765,7 +762,7 @@ NetSim.prototype.setChunkSize = function(newChunkSize) {
  * Update bitrate for the local device, which affects send-animation speed.
  * @param {number} newBitRate in bits per second
  */
-NetSim.prototype.setMyDeviceBitRate = function(newBitRate) {
+NetSim.prototype.setMyDeviceBitRate = function (newBitRate) {
   this.myDeviceBitRate_ = newBitRate;
   if (this.tabs_) {
     this.tabs_.setMyDeviceBitRate(newBitRate);
@@ -774,7 +771,7 @@ NetSim.prototype.setMyDeviceBitRate = function(newBitRate) {
 };
 
 /** @param {number} creationTimestampMs */
-NetSim.prototype.setRouterCreationTime = function(creationTimestampMs) {
+NetSim.prototype.setRouterCreationTime = function (creationTimestampMs) {
   if (this.tabs_) {
     this.tabs_.setRouterCreationTime(creationTimestampMs);
   }
@@ -789,7 +786,7 @@ NetSim.prototype.setRouterCreationTime = function(creationTimestampMs) {
  *
  * @param {number} newBandwidth in bits/second
  */
-NetSim.prototype.setRouterBandwidth = function(newBandwidth) {
+NetSim.prototype.setRouterBandwidth = function (newBandwidth) {
   if (this.tabs_) {
     this.tabs_.setRouterBandwidth(newBandwidth);
   }
@@ -800,7 +797,7 @@ NetSim.prototype.setRouterBandwidth = function(newBandwidth) {
  * clients.
  * @param {number} newBandwidth in bits/second
  */
-NetSim.prototype.changeRemoteRouterBandwidth = function(newBandwidth) {
+NetSim.prototype.changeRemoteRouterBandwidth = function (newBandwidth) {
   this.setRouterBandwidth(newBandwidth);
   if (this.isConnectedToRouter()) {
     this.getConnectedRouter().setBandwidth(newBandwidth);
@@ -816,7 +813,7 @@ NetSim.prototype.changeRemoteRouterBandwidth = function(newBandwidth) {
  *
  * @param {number} newMemory in bits
  */
-NetSim.prototype.setRouterMemory = function(newMemory) {
+NetSim.prototype.setRouterMemory = function (newMemory) {
   if (this.tabs_) {
     this.tabs_.setRouterMemory(newMemory);
   }
@@ -827,7 +824,7 @@ NetSim.prototype.setRouterMemory = function(newMemory) {
  * to other clients.
  * @param {number} newMemory in bits
  */
-NetSim.prototype.changeRemoteRouterMemory = function(newMemory) {
+NetSim.prototype.changeRemoteRouterMemory = function (newMemory) {
   this.setRouterMemory(newMemory);
   if (this.isConnectedToRouter()) {
     this.getConnectedRouter().setMemory(newMemory);
@@ -843,7 +840,7 @@ NetSim.prototype.changeRemoteRouterMemory = function(newMemory) {
  *
  * @param {DnsMode} newDnsMode
  */
-NetSim.prototype.setDnsMode = function(newDnsMode) {
+NetSim.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
   if (this.tabs_) {
     this.tabs_.setDnsMode(newDnsMode);
@@ -855,7 +852,7 @@ NetSim.prototype.setDnsMode = function(newDnsMode) {
  * Get current DNS mode.
  * @returns {DnsMode}
  */
-NetSim.prototype.getDnsMode = function() {
+NetSim.prototype.getDnsMode = function () {
   return this.dnsMode_;
 };
 
@@ -864,7 +861,7 @@ NetSim.prototype.getDnsMode = function() {
  * to other clients.
  * @param {DnsMode} newDnsMode
  */
-NetSim.prototype.changeRemoteDnsMode = function(newDnsMode) {
+NetSim.prototype.changeRemoteDnsMode = function (newDnsMode) {
   this.setDnsMode(newDnsMode);
   if (this.isConnectedToRouter()) {
     this.getConnectedRouter().setDnsMode(newDnsMode);
@@ -874,7 +871,7 @@ NetSim.prototype.changeRemoteDnsMode = function(newDnsMode) {
 /**
  * @param {boolean} isDnsNode
  */
-NetSim.prototype.setIsDnsNode = function(isDnsNode) {
+NetSim.prototype.setIsDnsNode = function (isDnsNode) {
   if (this.tabs_) {
     this.tabs_.setIsDnsNode(isDnsNode);
   }
@@ -887,7 +884,7 @@ NetSim.prototype.setIsDnsNode = function(isDnsNode) {
 /**
  * @param {number} dnsNodeID
  */
-NetSim.prototype.setDnsNodeID = function(dnsNodeID) {
+NetSim.prototype.setDnsNodeID = function (dnsNodeID) {
   this.visualization_.setDnsNodeID(dnsNodeID);
 };
 
@@ -895,7 +892,7 @@ NetSim.prototype.setDnsNodeID = function(dnsNodeID) {
  * Tells simulation that we want to become the DNS node for our
  * connected router.
  */
-NetSim.prototype.becomeDnsNode = function() {
+NetSim.prototype.becomeDnsNode = function () {
   this.setIsDnsNode(true);
   if (this.myNode && this.myNode.getMyRouter()) {
     // STATE IS THE ROOT OF ALL EVIL
@@ -909,7 +906,7 @@ NetSim.prototype.becomeDnsNode = function() {
 /**
  * @param {Array} tableContents
  */
-NetSim.prototype.setDnsTableContents = function(tableContents) {
+NetSim.prototype.setDnsTableContents = function (tableContents) {
   if (this.tabs_) {
     this.tabs_.setDnsTableContents(tableContents);
   }
@@ -918,7 +915,7 @@ NetSim.prototype.setDnsTableContents = function(tableContents) {
 /**
  * @param {Array} logData
  */
-NetSim.prototype.setRouterLogData = function(logData) {
+NetSim.prototype.setRouterLogData = function (logData) {
   if (this.tabs_) {
     this.tabs_.setRouterLogData(logData);
   }
@@ -928,7 +925,7 @@ NetSim.prototype.setRouterLogData = function(logData) {
  * @param {number} queuedPacketCount
  * @private
  */
-NetSim.prototype.setRouterQueuedPacketCount_ = function(queuedPacketCount) {
+NetSim.prototype.setRouterQueuedPacketCount_ = function (queuedPacketCount) {
   if (this.tabs_) {
     this.tabs_.setRouterQueuedPacketCount(queuedPacketCount);
   }
@@ -938,7 +935,7 @@ NetSim.prototype.setRouterQueuedPacketCount_ = function(queuedPacketCount) {
  * @param {number} usedMemoryInBits
  * @private
  */
-NetSim.prototype.setRouterMemoryInUse_ = function(usedMemoryInBits) {
+NetSim.prototype.setRouterMemoryInUse_ = function (usedMemoryInBits) {
   if (this.tabs_) {
     this.tabs_.setRouterMemoryInUse(usedMemoryInBits);
   }
@@ -948,7 +945,7 @@ NetSim.prototype.setRouterMemoryInUse_ = function(usedMemoryInBits) {
  * @param {number} dataRateBitsPerSecond
  * @private
  */
-NetSim.prototype.setRouterDataRate_ = function(dataRateBitsPerSecond) {
+NetSim.prototype.setRouterDataRate_ = function (dataRateBitsPerSecond) {
   if (this.tabs_) {
     this.tabs_.setRouterDataRate(dataRateBitsPerSecond);
   }
@@ -958,7 +955,7 @@ NetSim.prototype.setRouterDataRate_ = function(dataRateBitsPerSecond) {
  * Load audio assets for this app
  * @private
  */
-NetSim.prototype.loadAudio_ = function() {};
+NetSim.prototype.loadAudio_ = function () {};
 
 /**
  * Replaces StudioApp.configureDom.
@@ -967,7 +964,7 @@ NetSim.prototype.loadAudio_ = function() {};
  * @param {!string} config.containerId: ID of a parent DOM element for app content
  * @private
  */
-NetSim.configureDomOverride_ = function(config) {
+NetSim.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
 
   var vizHeight = this.MIN_WORKSPACE_HEIGHT;
@@ -1034,7 +1031,7 @@ function resizeFooterToFitToLeftOfContent() {
     : null;
 }
 
-var netsimDebouncedResizeFooter = _.debounce(function() {
+var netsimDebouncedResizeFooter = _.debounce(function () {
   resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
 }, 10);
@@ -1044,7 +1041,7 @@ var netsimDebouncedResizeFooter = _.debounce(function() {
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function () {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -1058,14 +1055,14 @@ NetSim.onResizeOverride_ = function() {
 /**
  * Passthrough to local "static" netsimDebounceResizeFooter method
  */
-NetSim.prototype.debouncedResizeFooter = function() {
+NetSim.prototype.debouncedResizeFooter = function () {
   netsimDebouncedResizeFooter();
 };
 
 /**
  * Re-render parts of the page that can be re-rendered in place.
  */
-NetSim.prototype.render = function() {
+NetSim.prototype.render = function () {
   if (this.isConnectedToRemote()) {
     var myAddress = this.myNode.getAddress();
 
@@ -1082,7 +1079,7 @@ NetSim.prototype.render = function() {
         myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
         remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
-        shareLink: this.lobby_.getShareLink()
+        shareLink: this.lobby_.getShareLink(),
       });
     }
   } else {
@@ -1108,7 +1105,7 @@ NetSim.prototype.render = function() {
  * @param {NetSimLocalClientNode} localNode - null if disconnected
  * @private
  */
-NetSim.prototype.onShardChange_ = function(shard, localNode) {
+NetSim.prototype.onShardChange_ = function (shard, localNode) {
   // Unregister old handlers
   if (this.eventKeys.registeredWithLocalNode) {
     this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
@@ -1143,7 +1140,7 @@ NetSim.prototype.onShardChange_ = function(shard, localNode) {
  * @param {NetSimNode} remoteNode - null if disconnected
  * @private
  */
-NetSim.prototype.onRemoteChange_ = function(wire, remoteNode) {
+NetSim.prototype.onRemoteChange_ = function (wire, remoteNode) {
   var routerConnectEvent = remoteNode && remoteNode instanceof NetSimRouterNode;
   var routerDisconnectEvent =
     !remoteNode && this.eventKeys.registeredWithRouter;
@@ -1196,7 +1193,7 @@ NetSim.prototype.onRemoteChange_ = function(wire, remoteNode) {
  * @param {NetSimRouterNode} router that we are now connected to
  * @private
  */
-NetSim.prototype.onRouterConnect_ = function(router) {
+NetSim.prototype.onRouterConnect_ = function (router) {
   this.onRouterStateChange_(router);
   this.onRouterStatsChange_(router);
   this.setRouterLogData(router.getLog());
@@ -1207,7 +1204,7 @@ NetSim.prototype.onRouterConnect_ = function(router) {
  * Steps to take when we were connected to a router and now we are not.
  * @private
  */
-NetSim.prototype.onRouterDisconnect_ = function() {
+NetSim.prototype.onRouterDisconnect_ = function () {
   this.setRouterCreationTime(0);
   this.setRouterQueuedPacketCount_(0);
   this.setRouterMemoryInUse_(0);
@@ -1222,7 +1219,7 @@ NetSim.prototype.onRouterDisconnect_ = function() {
  * @param {NetSimRouterNode} router
  * @private
  */
-NetSim.prototype.onRouterStateChange_ = function(router) {
+NetSim.prototype.onRouterStateChange_ = function (router) {
   var myNode = {};
   if (this.myNode) {
     myNode = this.myNode;
@@ -1246,7 +1243,7 @@ NetSim.prototype.onRouterStateChange_ = function(router) {
  * @param {NetSimRouterNode} router
  * @private
  */
-NetSim.prototype.onRouterStatsChange_ = function(router) {
+NetSim.prototype.onRouterStatsChange_ = function (router) {
   this.setRouterQueuedPacketCount_(router.getQueuedPacketCount());
   this.setRouterMemoryInUse_(router.getMemoryInUse());
   this.setRouterDataRate_(router.getCurrentDataRate());
@@ -1256,7 +1253,7 @@ NetSim.prototype.onRouterStatsChange_ = function(router) {
  * What to do when our connected router's local network changes.
  * @private
  */
-NetSim.prototype.onRouterWiresChange_ = function() {
+NetSim.prototype.onRouterWiresChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setDnsTableContents(this.getConnectedRouter().getAddressTable());
   }
@@ -1266,7 +1263,7 @@ NetSim.prototype.onRouterWiresChange_ = function() {
  * What to do when our connected router's logs change.
  * @private
  */
-NetSim.prototype.onRouterLogChange_ = function() {
+NetSim.prototype.onRouterLogChange_ = function () {
   if (this.isConnectedToRouter()) {
     this.setRouterLogData(this.getConnectedRouter().getLog());
   }
@@ -1277,7 +1274,7 @@ NetSim.prototype.onRouterLogChange_ = function() {
  * simplex wire.
  * @param {"0"|"1"} newState
  */
-NetSim.prototype.animateSetWireState = function(newState) {
+NetSim.prototype.animateSetWireState = function (newState) {
   this.visualization_.animateSetWireState(newState);
 };
 
@@ -1286,7 +1283,7 @@ NetSim.prototype.animateSetWireState = function(newState) {
  * simplex wire.
  * @param {"0"|"1"} newState
  */
-NetSim.prototype.animateReadWireState = function(newState) {
+NetSim.prototype.animateReadWireState = function (newState) {
   this.visualization_.animateReadWireState(newState);
 };
 
@@ -1305,7 +1302,7 @@ NetSim.prototype.animateReadWireState = function(newState) {
  *    b) If both log widgets are open, they share the vertical space 50/50
  *    c) If both log widgets are closed, they float at the top of the space.
  */
-NetSim.prototype.updateLayout = function() {
+NetSim.prototype.updateLayout = function () {
   var rightColumn = $('#netsim-rightcol');
   var sendPanel = $('#netsim-send');
   var logWrap = $('#netsim-logs');
@@ -1349,7 +1346,7 @@ NetSim.prototype.updateLayout = function() {
  * Appropriate steps for when the student hits the "Continue to next level"
  * button.  Should mark the level as complete and navigate to the next level.
  */
-NetSim.prototype.completeLevelAndContinue = function() {
+NetSim.prototype.completeLevelAndContinue = function () {
   if (this.isConnectedToRemote() && !confirm(i18n.onBeforeUnloadWarning())) {
     return;
   }
@@ -1364,21 +1361,21 @@ NetSim.prototype.completeLevelAndContinue = function() {
     level: this.level.id,
     result: true,
     testResult: 100,
-    onComplete: function(serverResponse) {
+    onComplete: function (serverResponse) {
       // Re-enable submit button, in case there's nowhere to go.
       $('.submitButton').attr('disabled', false);
 
       // If there's somewhere to go, disconnect and go!
       if (serverResponse.redirect) {
         if (this.isConnectedToRemote()) {
-          this.disconnectFromRemote(function() {
+          this.disconnectFromRemote(function () {
             window.location.href = serverResponse.redirect;
           });
         } else {
           window.location.href = serverResponse.redirect;
         }
       }
-    }.bind(this)
+    }.bind(this),
   });
 };
 
@@ -1386,10 +1383,10 @@ NetSim.prototype.completeLevelAndContinue = function() {
  * Attempt to reset the simulation shard, kicking all users out and resetting
  * all data.
  */
-NetSim.prototype.resetShard = function() {
+NetSim.prototype.resetShard = function () {
   if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
     this.shard_.resetEverything(
-      function(err) {
+      function (err) {
         if (err) {
           logger.error(err);
           NetSimAlert.error(i18n.shardResetError());
@@ -1403,6 +1400,6 @@ NetSim.prototype.resetShard = function() {
 /**
  * Show the instrutions modal dialog on top of the NetSim interface.
  */
-NetSim.prototype.showInstructionsDialog = function() {
+NetSim.prototype.showInstructionsDialog = function () {
   getStore().dispatch(openInstructionsDialog({imgOnly: false}));
 };

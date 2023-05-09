@@ -6,7 +6,7 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
-  setProjectUpdatedSaved
+  setProjectUpdatedSaved,
 } from '../../projectRedux';
 
 // Levelbuilder-only UI for saving changes to a level.
@@ -17,7 +17,7 @@ class LevelBuilderSaveButton extends React.Component {
     setProjectUpdatedSaving: PropTypes.func.isRequired,
     setProjectUpdatedSaved: PropTypes.func.isRequired,
     overrideHeaderText: PropTypes.string,
-    overrideOnSaveURL: PropTypes.string
+    overrideOnSaveURL: PropTypes.string,
   };
 
   onSave = () => {
@@ -30,7 +30,7 @@ class LevelBuilderSaveButton extends React.Component {
       dataType: 'json',
       error: this.props.setProjectUpdatedError,
       success: this.props.setProjectUpdatedSaved,
-      contentType: 'application/json'
+      contentType: 'application/json',
     });
   };
 
@@ -55,11 +55,11 @@ export default connect(
   state => ({
     getChanges: state.header.getLevelBuilderChanges,
     overrideHeaderText: state.header.overrideHeaderText,
-    overrideOnSaveURL: state.header.overrideOnSaveURL
+    overrideOnSaveURL: state.header.overrideOnSaveURL,
   }),
   {
     setProjectUpdatedError,
     setProjectUpdatedSaving,
-    setProjectUpdatedSaved
+    setProjectUpdatedSaved,
   }
 )(LevelBuilderSaveButton);

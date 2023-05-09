@@ -24,7 +24,7 @@ export default class ChangeEmailModal extends React.Component {
     handleCancel: PropTypes.func.isRequired,
     userType: PropTypes.oneOf(['student', 'teacher']).isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
-    currentHashedEmail: PropTypes.string
+    currentHashedEmail: PropTypes.string,
   };
 
   state = {
@@ -32,13 +32,13 @@ export default class ChangeEmailModal extends React.Component {
     values: {
       newEmail: '',
       currentPassword: '',
-      emailOptIn: ''
+      emailOptIn: '',
     },
     serverErrors: {
       newEmail: '',
       currentPassword: '',
-      emailOptIn: ''
-    }
+      emailOptIn: '',
+    },
   };
 
   save = () => {
@@ -56,11 +56,11 @@ export default class ChangeEmailModal extends React.Component {
   cancel = () => this.props.handleCancel();
 
   onSubmitFailure = error => {
-    if (error && error.hasOwnProperty('serverErrors')) {
+    if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
       this.setState(
         {
           saveState: STATE_INITIAL,
-          serverErrors: error.serverErrors
+          serverErrors: error.serverErrors,
         },
         () => this.changeEmailForm.focusOnAnError()
       );
@@ -80,7 +80,8 @@ export default class ChangeEmailModal extends React.Component {
       currentPassword:
         serverErrors.currentPassword ||
         this.getCurrentPasswordValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
+      emailOptIn:
+        serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
   }
 
@@ -126,7 +127,7 @@ export default class ChangeEmailModal extends React.Component {
     });
     this.setState({
       values: newValues,
-      serverErrors: newServerErrors
+      serverErrors: newServerErrors,
     });
   };
 
@@ -176,6 +177,6 @@ export default class ChangeEmailModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
-  }
+    color: color.charcoal,
+  },
 };

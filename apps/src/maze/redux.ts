@@ -9,7 +9,7 @@ interface MazeState {
 const initialState: MazeState = {
   collectorCurrentCollected: 0,
   collectorLastCollected: 0,
-  collectorMinRequired: 1
+  collectorMinRequired: 1,
 };
 
 const mazeSlice = createSlice({
@@ -25,14 +25,14 @@ const mazeSlice = createSlice({
     },
     setCollectorMinRequired(state, action: PayloadAction<number>) {
       state.collectorMinRequired = action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const {
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,
-  setCollectorMinRequired
+  setCollectorMinRequired,
 } = mazeSlice.actions;
 
 export default mazeSlice.reducer;

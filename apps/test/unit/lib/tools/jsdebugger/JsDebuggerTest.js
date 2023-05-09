@@ -7,14 +7,14 @@ import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   allowConsoleWarnings,
-  createMouseEvent
+  createMouseEvent,
 } from '../../../../util/testUtils.js';
 import * as utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -49,7 +49,7 @@ describe('The JSDebugger component', () => {
         showDebugConsole: true,
         showDebugWatch: true,
         showDebugSlider: true,
-        debugConsoleDisabled: false
+        debugConsoleDisabled: false,
       })
     );
     getStore().dispatch(actions.initialize({runApp}));
@@ -302,7 +302,7 @@ function spyOnBodyEventMethods() {
 
   return () => ({
     addEventSpy: getAddEventSpy(),
-    removeEventSpy: getRemoveEventSpy()
+    removeEventSpy: getRemoveEventSpy(),
   });
 }
 
@@ -329,7 +329,9 @@ function createOrCaptureSpy(parentObj, methodName) {
   let spyFn, wasCaptured;
 
   beforeEach(() => {
-    if (parentObj[methodName].hasOwnProperty('callCount')) {
+    if (
+      Object.prototype.hasOwnProperty.call(parentObj[methodName], 'callCount')
+    ) {
       // Something is already spying on this method.  Capture the spy for use
       // in our test, and don't clean it up ourselves.
       spyFn = parentObj[methodName];
