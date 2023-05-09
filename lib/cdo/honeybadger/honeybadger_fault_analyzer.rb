@@ -10,12 +10,15 @@ class HoneybadgerFaultAnalyzer
     @pegasus_project_id = 34365
   end
 
-  def get_faults_for_project(project_id, limit=nil)
+  def get_faults_for_project(project_id)
     faults = []
     current_count = 0
     next_url = @honeybadger_url_builder.get_api_url_request("faults", {project_id: project_id})
-    while next_url && current_count < limit
+    while next_url
       parsed_response = @honeybadger_url_builder.call_api_response_from_url(next_url)
+      if parsed_response['results'].nil?
+        break
+      end
       parsed_response['results'].each do |fault|
         faults << HoneybadgerFault.new(@honeybadger_url_builder, fault)
         current_count += 1
@@ -25,11 +28,11 @@ class HoneybadgerFaultAnalyzer
     faults
   end
 
-  def get_faults(limit=nil)
+  def get_faults
     validate_api_token!
     faults = []
     get_all_projects_and_ids.each do |_, project_id|
-      faults << get_faults_for_project(project_id, limit)
+      faults << get_faults_for_project(project_id)
     end
     faults
   end
