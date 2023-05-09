@@ -9,3 +9,4 @@ right 'I thought it would be easy'
 right 'I thought it would be challenging'
 right 'I was placed in it'
 right 'Other reason not listed'
+allow_multiple_attempts true

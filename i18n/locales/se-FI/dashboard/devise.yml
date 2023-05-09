@@ -50,9 +50,6 @@ se:
       expired: "lea nohkan, bivdde ođđa"
       not_found: "ii gávdno"
       not_locked: "ii leat lássejuvvon"
-      not_saved:
-        one: "1 boastuvuohta dagahii %{resource} ahte ii sáhte vurkejuvvot:"
-        other: "%{count} boastuvuođat dagahedje %{resource} ahte eai sáhte vurkejuvvot:"
     invitations:
       send_instructions: 'Bovdehus epoasta lea sáddejuvvon %{email}.'
       invitation_token_invalid: 'Sáddejuvvon bovdehus-token ii leat dohkkálaš!'

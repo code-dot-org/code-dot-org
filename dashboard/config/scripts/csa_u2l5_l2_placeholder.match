@@ -29,3 +29,5 @@ answer 'Line 9'
 
 question 'modulus'
 answer 'Line 8'
+
+allow_multiple_attempts true

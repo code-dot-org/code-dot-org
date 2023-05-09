@@ -3,7 +3,7 @@
   "addAComment": "Add a comment",
   "addACommentToReview": "Add a comment to the review",
   "authorizerNearLimit": "You have run your code too many times in the last {lockoutPeriod}. You have {attemptsLeft} attempts left before your account will be permanently locked and you will be unable to run Java code. Please wait 15 minutes before trying again.",
-  "authorizerNearLimitTemporary": "You have run your code too many times in the last {lockoutPeriod}. You have {attemptsLeft} attempts left. Become a verified teacher to access a much higher quota for yourself and your students.\n You can learn more about becoming verified [here](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n You can learn why verification is needed [here](https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n",
+  "authorizerNearLimitTemporary": "You have run your code too many times in the last {lockoutPeriod}. You have {attemptsLeft} attempts left. Become a verified teacher to access a much higher quota for yourself and your students.\nLearn more about [how to become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nLearn [why teacher verification is needed](https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n",
   "authorizerTokenUsed": "You are attempting to reuse a token that has already run your code. Please check that you are on a secure network before trying again. If you believe this message is in error, contact support@code.org.",
   "authorLabel": "author",
   "allFilesCompile": "All Files Compile!",
@@ -122,6 +122,7 @@
   "onlyVisibleToYou": "teacher comments are only visible to you",
   "openedDate": "opened {date}",
   "programCompleted": "Program completed.",
+  "programEndedUnexpectedly": "Your program stopped unexpectedly. We may be out of capacity to run your program, or you may be having network issues. Please check your network connection and try again.",
   "programStopped": "Program stopped.",
   "refresh": "Refresh",
   "rename": "Rename",
@@ -154,8 +155,9 @@
   "unauthorizedJavabuilderConnectionStudent": "To run your code in Java Lab, you need to be assigned to a CSA section and your teacher needs to be \"verified.\" Ask your teacher for help and try again. Your teacher can find more details in [this article.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "unsupportedMiniAppMessage": "Level type mismatch: {miniAppType} projects are not supported on a non-{miniAppType} level.",
-  "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
-  "userBlockedTemporary": "You have reached the limit of the number of times you can run Java code in 24 hours. Become a verified teacher to access a much higher quota for yourself and your students.\n You can learn more about becoming verified [here](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n You can learn why verification is needed [here](https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n If you believe this message is in error, contact support@code.org.",
+  "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",  
+  "userBlockedTemporary": "You have reached the limit of the number of times you can run Java code in 24 hours. Become a verified teacher to access a much higher quota for yourself and your students.\nLearn more about [how to become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nLearn [why teacher verification is needed](https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nIf you believe this message is in error, contact support@code.org.",
+  "waitingForServer": "Waiting for a response...",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }

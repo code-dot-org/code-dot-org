@@ -1131,3 +1131,7 @@ gl:
               display_name: Funcións
             csf_nested_loops:
               display_name: Condicionais
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introdución

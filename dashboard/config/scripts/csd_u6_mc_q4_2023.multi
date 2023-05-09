@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 Since the program should respond to the Circuit Playground, use `onBoardEvent`. The left button is `buttonL`.
 MARKDOWN
+
+allow_multiple_attempts true

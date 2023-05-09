@@ -14,3 +14,4 @@ answer 'a loop for traversing an array from the first element to the last'
 
 question 'for loop'
 answer 'a loop used to repeat a block of code a known number of times'
+allow_multiple_attempts true

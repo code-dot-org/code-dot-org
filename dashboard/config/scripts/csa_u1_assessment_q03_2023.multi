@@ -21,3 +21,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 A loop terminates when the condition is `false`. Since the condition for this `while` loop checks if the `Painter` object can move forward in the direction it is facing, it will terminate when this is no longer `true`. This means that the loop will terminate when the `Painter` object can no longer move east.
 MARKDOWN
+
+allow_multiple_attempts true
