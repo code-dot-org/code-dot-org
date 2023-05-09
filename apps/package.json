@@ -4,8 +4,8 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "^14.17.1",
-    "npm": "^6.14.13"
+    "node": "^18.16.0",
+    "npm": "^9.5.1"
   },
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
@@ -161,7 +161,7 @@
     "messageformat": "2.3.0",
     "mocha": "^4.1.0",
     "mock-firmata": "0.2.0",
-    "moment": "^2.19.3",
+    "moment": "^2.29.4",
     "newrelic": "^1.27.2",
     "node-js-marker-clusterer": "^1.0.0",
     "path-browserify": "^1.0.1",
