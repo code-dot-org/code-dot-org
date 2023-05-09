@@ -46,3 +46,5 @@ Option II passes the value `5` to the parameter `age` and the value `8` to the p
 
 Option III passes the value `3` to the parameter `age`. The instance variable `puppies` is set to `0` when using this constructor. This option would create a dog that is 3 years old with no puppies.
 MARKDOWN
+
+allow_multiple_attempts true
