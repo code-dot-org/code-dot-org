@@ -36,9 +36,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // Call super so value is set.
     super.fromXml(element);
     // If `menuGenerator_` is an array, it is an array of options with
-    // each option represented as an array containing a human-readable string,
-    // and a language-neutral string. For example,
-    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']]
+    // each option represented by an array containing 2 elements -
+    // a human-readable string and a language-neutral string. For example,
+    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
     // Options are included in the block definition.
     // But if the field xml contains `config`, then the dropdown options
     // are determined by `config`.
