@@ -949,34 +949,41 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
+    error_message = under_13_without_tos_teacher?(level)
+    return false unless error_message
+
+    if error_message == I18n.t("errors.messages.too_young")
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: "redirect_under_13",
+          event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
+          data_json: {
+            game: level.game.name
+          }.to_json
+        }
+      )
+    end
+    redirect_to '/', flash: {alert: error_message}
+    return true
+  end
+
+  def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
-        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+        return I18n.t("errors.messages.teacher_must_accept_terms")
       else
-        error_message = I18n.t("errors.messages.too_young")
-        FirehoseClient.instance.put_record(
-          :analysis,
-          {
-            study: "redirect_under_13",
-            event: "student_with_no_teacher_redirected",
-            user_id: current_user.id,
-            data_json: {
-              game: level.game.name
-            }.to_json
-          }
-        )
+        return I18n.t("errors.messages.too_young")
       end
-      redirect_to '/', flash: {alert: error_message}
-      return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
-        return true
+        return I18n.t("errors.messages.pair_programmer")
       end
     end
 

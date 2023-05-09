@@ -14,3 +14,5 @@ What would be printed as a result of executing the following line of code?
 System.out.println("ghoul".compareTo("ghost"));
 ```
 MARKDOWN
+
+allow_multiple_attempts true

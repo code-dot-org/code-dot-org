@@ -14,3 +14,4 @@ answer 'a class that extends a superclass and inherits its attributes and behavi
 
 question 'tester class'
 answer 'the class that contains the `main` method and from where the program starts running'
+allow_multiple_attempts true

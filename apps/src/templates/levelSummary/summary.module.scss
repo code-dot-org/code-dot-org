@@ -1,0 +1,161 @@
+@import "color.scss";
+
+.summaryContainer {
+  max-width: 970px;
+  margin: auto;
+}
+
+.navLinks {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  a {
+    text-decoration: underline;
+  }
+
+  a.navLinkLeft {
+    float: left;
+  }
+
+  a.navLinkRight {
+    float: right;
+  }
+}
+
+h1,
+h2 {
+  color: $neutral_dark;
+  margin-top: 32px;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 34px;
+  border-bottom: 1px solid $neutral_dark20;
+}
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:global(.multi) h1,
+:global(.multi) h2 {
+  text-align: start;
+}
+
+.levelTitle,
+.markdown h1,
+.markdown h2,
+:global(.markdown-container) h1,
+:global(.markdown-container) h2,
+:global(h1.no-underline),
+:global(h2.no-underline) {
+  border-bottom: unset;
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */
+
+p,
+label,
+ul,
+ol,
+li,
+textarea {
+  color: $neutral_dark;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+label.sectionSelector {
+  display: inline-block;
+}
+
+.toggleContainer {
+  float: right;
+}
+
+[dir="rtl"] .toggleContainer {
+  float: left;
+}
+
+.correctAnswersContainer {
+  background: $neutral_light;
+  border: 2px solid $neutral_dark20;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.studentResponses {
+  select {
+    display: block;
+  }
+
+  .studentResponsesColumns {
+    width: 100%;
+    columns: 2 auto;
+    column-gap: 48px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+
+  .studentAnswer {
+    padding: 12px;
+    margin-bottom: 16px;
+    // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
+    background-color: $lightest_cyan;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  %students-submitted {
+    height: 40px; // h2 line-height
+    line-height: 40px; // h2 line-height
+    position: relative;
+    margin-top: -56px; // h2 height+margins
+  }
+
+  .studentsSubmittedLeft {
+    @extend %students-submitted;
+    float: left;
+  }
+
+  .studentsSubmittedRight {
+    @extend %students-submitted;
+    float: right;
+  }
+
+  .studentsSubmittedLeft span,
+  .studentsSubmittedRight span {
+    vertical-align: middle;
+    line-height: 40px; // h2 line-height
+  }
+
+  /* stylelint-disable selector-pseudo-class-no-unknown */
+  .studentsSubmittedLeft :global(.fa),
+  .studentsSubmittedRight :global(.fa) {
+    vertical-align: middle;
+    padding: 0 8px;
+    font-size: 24px;
+    color: $brand_primary_default;
+  }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
+}
+
+.multiChart {
+  margin-bottom: 48px;
+  clear: both;
+}
+
+// Hack to fix the annotation text color inside google charts.
+// https://github.com/google/google-visualization-issues/issues/2103#issuecomment-1076466289
+svg text[fill] {
+  fill: $neutral_dark;
+}

@@ -10,6 +10,24 @@
             },
             "css_properties": {
               "expressions": {
+                "font-size": {
+                  "examples": {
+                    "Changing the Font Size": {
+                      "name": "Zmiana rozmiaru czcionki"
+                    }
+                  }
+                },
+                "height": {
+                  "examples": {
+                    " Height in pixels": {
+                      "name": " Wysokość w pikselach",
+                      "description": "Ustaw wysokość elementu `<p>` na 100 px."
+                    },
+                    " Height as a percentage": {
+                      "name": " Wysokość w procentach"
+                    }
+                  }
+                },
                 "text-align": {
                   "content": "# Wyrównaj tekst",
                   "short_description": "Wyrównaj tekst"
@@ -189,15 +207,26 @@
                   }
                 },
                 "draw": {
+                  "examples": {
+                    "TV Static Line": {
+                      "description": "Animuj linię jak na zepsutym starym telewizorze."
+                    }
+                  },
                   "return_value": "Brak wartości zwracanej."
                 },
                 "keyDown": {
+                  "examples": {
+                    "Driving": {
+                      "name": "Jazda"
+                    }
+                  },
                   "palette_params": {
                     "code": {
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Sprawdza, czy podany klawisz jest naciśnięty."
                 },
                 "keyWentDown": {
                   "palette_params": {
@@ -205,9 +234,15 @@
                       "type": "Łańcuch"
                     }
                   },
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Sprawdza, czy podany klawisz został naciśnięty."
                 },
                 "keyWentUp": {
+                  "examples": {
+                    "Falling Star": {
+                      "name": "Spadająca gwiazda"
+                    }
+                  },
                   "palette_params": {
                     "code": {
                       "type": "Łańcuch"
@@ -360,31 +395,67 @@
                 "bounce": {
                   "examples": {
                     "Four Collisions": {
-                      "name": "Cztery kolizje"
+                      "name": "Cztery kolizje",
+                      "description": "Zademonstruj wszystkie cztery rodzaje kolizji."
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
                     }
                   }
                 },
                 "bounceOff": {
                   "examples": {
                     "Four Collisions": {
-                      "name": "Cztery kolizje"
+                      "name": "Cztery kolizje",
+                      "description": "Zademonstruj wszystkie cztery rodzaje kolizji."
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
                     }
                   }
                 },
                 "collide": {
                   "examples": {
                     "Four Collisions": {
-                      "name": "Cztery kolizje"
+                      "name": "Cztery kolizje",
+                      "description": "Zademonstruj wszystkie cztery rodzaje kolizji."
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
                     }
                   }
+                },
+                "depth": {
+                  "return_value": "Głębokość duszka.",
+                  "short_description": "Głębokość duszka w kolejności rysowania. "
+                },
+                "destroy": {
+                  "examples": {
+                    "Rain, Rain Go Away": {
+                      "description": "Parasol usuwa krople deszczu."
+                    }
+                  },
+                  "short_description": "Usuwa duszka z animacji."
                 },
                 "displace": {
                   "examples": {
                     "Four Collisions": {
-                      "name": "Cztery kolizje"
+                      "name": "Cztery kolizje",
+                      "description": "Zademonstruj wszystkie cztery rodzaje kolizji."
                     },
                     "Umbrella": {
                       "name": "Parasol"
+                    }
+                  },
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
                     }
                   }
                 },
@@ -399,6 +470,11 @@
                   "return_value": "Wysokość duszka."
                 },
                 "isTouching": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
+                    }
+                  },
                   "return_value": "Logiczna prawda lub fałsz."
                 },
                 "mirrorX": {
@@ -412,6 +488,13 @@
                   "palette_params": {
                     "dir": {
                       "type": "Liczba"
+                    }
+                  }
+                },
+                "overlap": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
                     }
                   }
                 },
@@ -522,6 +605,20 @@
                   },
                   "return_value": "Brak wartości zwracanej."
                 },
+                "group.bounce": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
+                    }
+                  }
+                },
+                "group.collide": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
+                    }
+                  }
+                },
                 "contains": {
                   "palette_params": {
                     "sprite": {
@@ -529,6 +626,13 @@
                     }
                   },
                   "return_value": "Logiczna prawda lub fałsz."
+                },
+                "group.displace": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
+                    }
+                  }
                 },
                 "get": {
                   "palette_params": {
@@ -539,6 +643,13 @@
                 },
                 "group.isTouching": {
                   "return_value": "Logiczna prawda lub fałsz."
+                },
+                "group.overlap": {
+                  "palette_params": {
+                    "target": {
+                      "type": "Duszek lub Grupa"
+                    }
+                  }
                 },
                 "pointToEach": {
                   "palette_params": {

@@ -14,16 +14,17 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U5L6-Image Filters PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U5L6-Image Filters PBT_2023"
+    "teacher_markdown": "1. This line sets a reference to the current `Pixel` object that we are going to be modifying.\r\n\r\n2. If we were to subtract values, then the image would get darker."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-28T00:00:46.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-28T00:00:46.201+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3_2023\\\"\"],\"cloned_from\":\"CSA U5L6-L3_2023\"},{\"changed_at\":\"2023-03-28 00:00:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:33:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:36:39 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-28T00:00:46.201+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3_2023\\\"\"],\"cloned_from\":\"CSA U5L6-L3_2023\"},{\"changed_at\":\"2023-03-28 00:00:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:33:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:36:39 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 17:34:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

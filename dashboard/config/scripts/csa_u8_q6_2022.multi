@@ -36,3 +36,5 @@ Which of the following best describes the contents of numbers after the followin
 
 `int m = mystery(n);`
 MARKDOWN
+
+allow_multiple_attempts true

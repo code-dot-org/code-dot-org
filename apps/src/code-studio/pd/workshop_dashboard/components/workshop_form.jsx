@@ -35,7 +35,9 @@ import {
   CsfFacilitator,
 } from '../permission';
 import {
+  ActiveCourseWorkshops,
   Subjects,
+  SubjectNames,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
   HideFundedSubjects,
@@ -98,6 +100,7 @@ export class WorkshopForm extends React.Component {
       }),
     }),
     onSaved: PropTypes.func,
+    today: PropTypes.instanceOf(Date),
     readOnly: PropTypes.bool,
     children: PropTypes.node,
   };
@@ -361,6 +364,32 @@ export class WorkshopForm extends React.Component {
     return this.state.course && Subjects[this.state.course];
   }
 
+  // For summer workshops for CSP and CSA, only workshop admins can change
+  // the “Is this a virtual workshop” field within one month of the workshop
+  // in order to prevent people from changing this last minute without
+  // talking to us or the Friday institute.
+  checkCannotChangeIfWorkshopVirtual() {
+    return (
+      (this.state.course === ActiveCourseWorkshops.CSP ||
+        this.state.course === ActiveCourseWorkshops.CSA) &&
+      this.state.subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
+      !this.props.permission.has(WorkshopAdmin) &&
+      this.state.sessions.some(this.sessionStartsWithinMonth)
+    );
+  }
+
+  // Returns whether today is within a month before the given session.
+  sessionStartsWithinMonth = session => {
+    const today = this.props.today;
+    const workshopDate = new Date(session.date);
+    const monthBeforeWorkshopDate = new Date(
+      workshopDate.getFullYear(),
+      workshopDate.getMonth() - 1,
+      workshopDate.getDate()
+    );
+    return monthBeforeWorkshopDate <= today && today <= workshopDate;
+  };
+
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
@@ -378,6 +407,14 @@ export class WorkshopForm extends React.Component {
       HideFundedSubjects.includes(this.state.subject);
     const showFundedInput = !(
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
+    );
+    const virtualWorkshopHelpTip = this.checkCannotChangeIfWorkshopVirtual() ? (
+      <p>
+        There is less than a month until your workshop. Please contact
+        partner@code.org to update this setting.
+      </p>
+    ) : (
+      <p>Please update your selection if/when your plans change.</p>
     );
 
     return (
@@ -419,16 +456,19 @@ export class WorkshopForm extends React.Component {
             <FormGroup validationState={validation.style.virtual}>
               <ControlLabel>
                 Is this a virtual workshop?
-                <HelpTip>
-                  <p>Please update your selection if/when your plans change.</p>
-                </HelpTip>
+                <HelpTip>{virtualWorkshopHelpTip}</HelpTip>
               </ControlLabel>
               <SelectIsVirtual
                 value={this.currentVirtualStatus()}
                 onChange={this.handleVirtualChange}
                 readOnly={
                   this.props.readOnly ||
-                  VirtualOnlySubjects.includes(this.state.subject)
+                  VirtualOnlySubjects.includes(this.state.subject) ||
+                  this.checkCannotChangeIfWorkshopVirtual()
+                }
+                showVirtualOptions={
+                  !!this.props.workshop ||
+                  !this.checkCannotChangeIfWorkshopVirtual()
                 }
               />
               <HelpBlock>{validation.help.virtual}</HelpBlock>
@@ -1119,7 +1159,7 @@ export default connect(state => ({
   facilitatorCourses: state.workshopDashboard.facilitatorCourses,
 }))(WorkshopForm);
 
-const SelectIsVirtual = ({value, readOnly, onChange}) => (
+const SelectIsVirtual = ({value, readOnly, onChange, showVirtualOptions}) => (
   <FormControl
     componentClass="select"
     value={value}
@@ -1132,18 +1172,23 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={'friday_institute'} value={'friday_institute'}>
-      Yes, this is a Code.org-Friday Institute virtual workshop.
-    </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a regional virtual workshop.
-    </option>
+    {showVirtualOptions && (
+      <>
+        <option key={'friday_institute'} value={'friday_institute'}>
+          Yes, this is a Code.org-Friday Institute virtual workshop.
+        </option>
+        <option key={'regional'} value={'regional'}>
+          Yes, this is a regional virtual workshop.
+        </option>
+      </>
+    )}
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
   value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
+  showVirtualOptions: PropTypes.bool.isRequired,
 };
 
 const SelectSuppressEmail = ({value, readOnly, onChange}) => (

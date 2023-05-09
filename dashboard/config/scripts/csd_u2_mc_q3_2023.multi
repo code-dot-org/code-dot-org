@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 In CSS files, rules are found inside curly braces `{}` and each rule consists of a property name and a value, separated by a colon `:`. HTML tags use `<>`.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-24 22:49:26 UTC",
+    "serialized_at": "2023-04-25 23:04:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -353,7 +353,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -951,21 +951,8 @@
       }
     },
     {
-      "key": "d5896ffb-3838-43ba-8897-7860c85e153a",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d5896ffb-3838-43ba-8897-7860c85e153a",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "7e6df4e4-cde8-400f-a9c2-4ba04e84d19d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -979,7 +966,7 @@
     },
     {
       "key": "5da4346f-d40b-4265-8e24-c2d649d928eb",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -3007,26 +2994,15 @@
       }
     },
     {
-      "key": "2dd0e5cf-5af3-4dad-88f5-dbf6444a319c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "2dd0e5cf-5af3-4dad-88f5-dbf6444a319c",
-        "lesson_activity.key": "d5896ffb-3838-43ba-8897-7860c85e153a"
-      }
-    },
-    {
       "key": "0bf86ca5-3976-4667-afef-0343ce485a72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 5 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
-        "progression_name": "Unit 5 Exam",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit Exam - Lists, Loops, and Traversals",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics5.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://images.code.org/20855b4b37e959abdd2f5a0a8098e0db-Screenshot 2023-04-25 at 3.21.26 PM.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing)\n\n"
           }
         ]
       },
@@ -3321,6 +3297,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Lists Predict"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4446,7 +4425,7 @@
         "level_keys": [
           "CSP Unit 5 AP-Style Assessment 2022_2023"
         ],
-        "progression": "Unit 5 Exam"
+        "progression": "Unit Exam - Lists, Loops, and Traversals"
       },
       "bonus": false,
       "seeding_key": {
@@ -5198,6 +5177,18 @@
       }
     },
     {
+      "name": "Assessment Day - Lists, Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1-40fvFHMW27Z0iX6UzJDCFq31Hneg-gUH5C86fzoBgo/edit?usp=sharing",
+      "key": "assessment_day_-_lists_loops_and_traversals",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_lists_loops_and_traversals"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -5568,6 +5559,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -5681,7 +5684,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
+        "resource.key": "assessment_day_-_lists_loops_and_traversals"
       }
     },
     {
@@ -5917,6 +5920,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp6-2023"
       }
     },

@@ -148,7 +148,6 @@ ka:
     valid_password: "პაროლი დასაშვებია!"
     invalid_password: "პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს"
     mismatch_password: "თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა"
-    additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
     user_type_button: "ანგარიშის ტიპის განახლება"
     user_type_label: "ანგარიშის ტიპი"
     user_type_student: "მოსწავლე"
