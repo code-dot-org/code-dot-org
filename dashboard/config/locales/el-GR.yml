@@ -90,7 +90,7 @@ el:
     submit: Προσθέστε υπόδειξη
   appname: Code.org
   stage: σκηνή
-  stage_number: Σκηνικό %{number}
+  stage_number: Μάθημα %{number}
   puzzle: Παζλ
   trophies: τρόπαια
   courses: Τες
@@ -234,8 +234,6 @@ el:
       θα λάβουν ποτέ ηλεκτρονικά μηνύματα από το Code.org εκτός εάν πρόκειται για
       τη διαδικασία ανάκτησης κωδικού. Δείτε την [πολιτική απορήτου] (http://code.org/privacy)
       για περισσότερες πληροφορίες.
-    additional_information: Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
-      η εγγραφή σας.
     user_type_button: Ενημέρωση τύπου λογαριασμού
     user_type_label: Τύπος λογαριασμού
     user_type_student: φοιτητής/μαθητής

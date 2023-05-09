@@ -1,1 +1,16 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "ая тоглуулах",
+  "blockly_blockPlaySoundAtMeasureTooltip": "ая тоглуулах",
+  "blockly_blockRepeatTooltip": "давтах",
+  "blockly_blockWhenRun": "ажиллуулах үед",
+  "blockly_blockWhenRunTooltip": "ажиллуулах үед",
+  "blockly_functionNamePlaceholder": "миний функц",
+  "blockly_toolboxCategoryEvents": "Үйл явдлууд",
+  "blockly_toolboxCategoryFunctions": "Функцүүд",
+  "blockly_toolboxCategoryLogic": "Логик",
+  "blockly_toolboxCategoryMath": "Математик",
+  "blockly_toolboxCategoryVariables": "Хувьсагчууд",
+  "feedback": "Хариу үйлдэл",
+  "share": "Хуваалцах",
+  "startOver": "Шинээр Эхлэх"
+}
