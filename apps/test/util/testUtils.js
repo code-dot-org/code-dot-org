@@ -254,7 +254,7 @@ function zeroPadLeft(string, desiredWidth) {
 
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
-  if (originalWindowValues.hasOwnProperty(key)) {
+  if (Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(
       `Can't replace 'window.${key}' - it's already been replaced.`
     );
@@ -264,7 +264,7 @@ export function replaceOnWindow(key, newValue) {
 }
 
 export function restoreOnWindow(key) {
-  if (!originalWindowValues.hasOwnProperty(key)) {
+  if (!Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
   }
   window[key] = originalWindowValues[key];
