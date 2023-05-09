@@ -66,12 +66,12 @@ def main(options)
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
   rescue => exception
-    Infrastructure::Logger.flush
     ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
+  ensure
+    # Flush metrics about feature runs into cloudwatch
+    Infrastructure::Logger.flush
   end
-  # Flush metrics about feature runs into cloudwatch
-  Infrastructure::Logger.flush
 
   # Produce a final report if we aborted due to excess failures
   if $failed_features > options.abort_when_failures_exceed
