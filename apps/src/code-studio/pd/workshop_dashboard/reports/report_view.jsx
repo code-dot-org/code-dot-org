@@ -111,7 +111,7 @@ export default class ReportView extends React.Component {
       API_DATE_FORMAT
     );
     const queryBy = newState.queryBy || this.state.queryBy;
-    const course = newState.hasOwnProperty('course')
+    const course = Object.prototype.hasOwnProperty.call(newState, 'course')
       ? newState.course
       : this.state.course;
     const report = newState.report || this.state.report;

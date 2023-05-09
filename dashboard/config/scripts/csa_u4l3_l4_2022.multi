@@ -33,3 +33,5 @@ public static void mystery(int a, int b, int c) {
 
 What is printed as a result of the call `mystery(5, 9, 5)`?
 MARKDOWN
+
+allow_multiple_attempts true

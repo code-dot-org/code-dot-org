@@ -37,3 +37,5 @@ The first `else if` statement checks if `x` is equal to `2`, which is also `fals
 
 The second `else if` statement checks if `x` is equal to `3`, `4`, or `5`, which is `true`. The code inside this `else if` statement is executed, which prints `"x is 3, 4, or 5"` to the console.
 MARKDOWN
+
+allow_multiple_attempts true
