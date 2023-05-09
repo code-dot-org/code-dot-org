@@ -14,7 +14,7 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimSlider
  */
-var NetSimPacketSizeControl = (module.exports = function(
+var NetSimPacketSizeControl = (module.exports = function (
   rootDiv,
   packetSizeChangeCallback,
   options
@@ -23,7 +23,7 @@ var NetSimPacketSizeControl = (module.exports = function(
     onChange: packetSizeChangeCallback,
     min: options.minimumPacketSize,
     max: 8192,
-    upperBoundInfinite: false
+    upperBoundInfinite: false,
   });
 
   // Auto-render, unlike our base class
@@ -36,7 +36,7 @@ NetSimPacketSizeControl.inherits(NetSimSlider);
  * @param {number} packetSize
  * @returns {string}
  */
-NetSimPacketSizeControl.prototype.getPacketSizeText = function(packetSize) {
+NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
   return i18n.numBitsPerPacket({numBits: packetSize});
 };
 
@@ -47,7 +47,7 @@ NetSimPacketSizeControl.prototype.getPacketSizeText = function(packetSize) {
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimPacketSizeControl.prototype.valueToLabel = function(val) {
+NetSimPacketSizeControl.prototype.valueToLabel = function (val) {
   if (val === Infinity) {
     return i18n.unlimited();
   }
@@ -60,7 +60,7 @@ NetSimPacketSizeControl.prototype.valueToLabel = function(val) {
  * @returns {string}
  * @override
  */
-NetSimPacketSizeControl.prototype.valueToShortLabel = function(val) {
+NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
   if (val === Infinity) {
     return i18n.unlimited();
   }

@@ -15,7 +15,7 @@ class GoogleChartWrapper extends React.Component {
     bucketSize: PropTypes.string,
     chartTitle: PropTypes.string,
     selectedColumn1: PropTypes.string,
-    selectedColumn2: PropTypes.string
+    selectedColumn2: PropTypes.string,
   };
 
   chartArea = null;
@@ -26,7 +26,7 @@ class GoogleChartWrapper extends React.Component {
 
     const mapped = _.map(counts, (count, key) => ({
       [columnName]: isNumeric ? parseFloat(key) : key,
-      count
+      count,
     }));
     return _.sortBy(mapped, columnName);
   };
@@ -57,11 +57,11 @@ class GoogleChartWrapper extends React.Component {
       title: this.props.chartTitle || '',
       legend: {position: 'none'},
       hAxis: {
-        format: '#.#' // Round values to 1 decimal place
+        format: '#.#', // Round values to 1 decimal place
       },
       vAxis: {
-        format: '#.#' // Round values to 1 decimal place
-      }
+        format: '#.#', // Round values to 1 decimal place
+      },
     };
 
     switch (this.props.chartType) {
@@ -69,7 +69,7 @@ class GoogleChartWrapper extends React.Component {
         if (this.props.selectedColumn1) {
           chart = new GoogleChart.MaterialBarChart(this.chartArea);
           let records = ignoreMissingValues(this.props.records, [
-            this.props.selectedColumn1
+            this.props.selectedColumn1,
           ]);
           chartData = this.aggregateRecordsByColumn(
             records,
@@ -85,7 +85,7 @@ class GoogleChartWrapper extends React.Component {
           options.histogram = {bucketSize: this.props.bucketSize};
           chart = new GoogleChart.Histogram(this.chartArea);
           chartData = ignoreMissingValues(this.props.records, [
-            this.props.selectedColumn1
+            this.props.selectedColumn1,
           ]);
           options.hAxis.title = this.props.selectedColumn1;
           options.hAxis.titleTextStyle = {italic: false};
@@ -99,7 +99,7 @@ class GoogleChartWrapper extends React.Component {
           chart = new GoogleChart.MaterialScatterChart(this.chartArea);
           chartData = ignoreMissingValues(this.props.records, [
             this.props.selectedColumn1,
-            this.props.selectedColumn2
+            this.props.selectedColumn2,
           ]);
           options.hAxis.title = this.props.selectedColumn1;
           options.vAxis.title = this.props.selectedColumn2;

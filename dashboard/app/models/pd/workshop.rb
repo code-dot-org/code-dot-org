@@ -670,7 +670,7 @@ class Pd::Workshop < ApplicationRecord
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
-    ![Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
+    [Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].exclude?(course)
   end
 
   def workshop_starting_date
@@ -829,8 +829,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    return false if [SUBJECT_CSP_FOR_RETURNING_TEACHERS, SUBJECT_CSA_CAPSTONE].include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 

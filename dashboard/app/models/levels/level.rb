@@ -349,6 +349,7 @@ class Level < ApplicationRecord
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'Music', # no ideal solution
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
@@ -796,6 +797,10 @@ class Level < ApplicationRecord
       status: SharedConstants::LEVEL_STATUS.not_tried,
       thumbnailUrl: thumbnail_url
     }
+  end
+
+  def project_type
+    return game&.app
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

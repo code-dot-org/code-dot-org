@@ -20,12 +20,10 @@
   }
 }
 
-//.toolboxIcon {
-//}
-
 .toolboxLabel {
   font-family: $gotham-regular;
   font-size: 14px;
   padding: 0 5px;
   vertical-align: middle;
+  user-select: none;
 }

@@ -23,7 +23,7 @@ class DataBrowser extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {selectedTab: TabType.DATA_TABLES};
@@ -138,14 +138,14 @@ class DataBrowser extends React.Component {
  */
 const TabType = {
   DATA_TABLES: 'dataTables',
-  KEY_VALUE_PAIRS: 'keyValuePairs'
+  KEY_VALUE_PAIRS: 'keyValuePairs',
 };
 DataBrowser.TabType = TabType;
 
 export default connect(
   state => ({
     view: state.data.view,
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -153,6 +153,6 @@ export default connect(
     },
     onViewChange(view, tableName) {
       dispatch(changeView(view, tableName));
-    }
+    },
   })
 )(DataBrowser);

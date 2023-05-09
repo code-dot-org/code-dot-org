@@ -235,7 +235,7 @@ levels.custom = {
 
   // DNS tab and its controls
   showDnsModeControl: false,
-  defaultDnsMode: DnsMode.NONE
+  defaultDnsMode: DnsMode.NONE,
 };
 
 /**
@@ -290,14 +290,14 @@ levels.playground = {
     'binary',
     'hexadecimal',
     'decimal',
-    'ascii'
+    'ascii',
   ],
   defaultEnabledEncodings: [
     'a_and_b',
     'binary',
     'hexadecimal',
     'decimal',
-    'ascii'
+    'ascii',
   ],
   showBitRateControl: true,
   lockBitRateControl: false,
@@ -315,5 +315,5 @@ levels.playground = {
 
   // DNS tab and its controls
   showDnsModeControl: true,
-  defaultDnsMode: DnsMode.NONE
+  defaultDnsMode: DnsMode.NONE,
 };

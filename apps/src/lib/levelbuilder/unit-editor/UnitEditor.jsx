@@ -14,7 +14,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   init,
-  mapLessonGroupDataForEditor
+  mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {lessonGroupShape} from './shapes';
@@ -25,7 +25,7 @@ import {
   PublishedState,
   InstructorAudience,
   ParticipantAudience,
-  CurriculumUmbrella
+  CurriculumUmbrella,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
@@ -98,7 +98,7 @@ class UnitEditor extends React.Component {
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     studentResources: PropTypes.arrayOf(resourceShape).isRequired,
-    init: PropTypes.func.isRequired
+    init: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -122,8 +122,8 @@ class UnitEditor extends React.Component {
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
       deeperLearningCourse: this.props.initialProfessionalLearningCourse,
-      onlyInstructorReviewRequired: this.props
-        .initialOnlyInstructorReviewRequired,
+      onlyInstructorReviewRequired:
+        this.props.initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
@@ -150,7 +150,7 @@ class UnitEditor extends React.Component {
       unitPublishedState: this.props.initialUnitPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
-      participantAudience: this.props.initialParticipantAudience
+      participantAudience: this.props.initialParticipantAudience,
     };
   }
 
@@ -181,7 +181,7 @@ class UnitEditor extends React.Component {
     this.setState({
       isCourse: !this.state.isCourse,
       familyName: null,
-      versionYear: null
+      versionYear: null,
     });
   };
 
@@ -189,7 +189,7 @@ class UnitEditor extends React.Component {
     if (!this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
         showCalendar: !this.state.showCalendar,
-        weeklyInstructionalMinutes: '225'
+        weeklyInstructionalMinutes: '225',
       });
     } else {
       this.setState({showCalendar: !this.state.showCalendar});
@@ -205,7 +205,7 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error:
-          'Please provide instructional minutes per week in Unit Calendar Settings.'
+          'Please provide instructional minutes per week in Unit Calendar Settings.',
       });
       return;
     } else if (
@@ -216,7 +216,7 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error:
-          'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+          'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.',
       });
       return;
     } else if (
@@ -226,7 +226,7 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error:
-          'Please provide a pilot experiment in order to save with published state as pilot.'
+          'Please provide a pilot experiment in order to save with published state as pilot.',
       });
       return;
     } else if (
@@ -240,7 +240,7 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error:
-          'Standalone units that are not in development must be a standalone unit with family name and version year.'
+          'Standalone units that are not in development must be a standalone unit with family name and version year.',
       });
       return;
     } else if (
@@ -250,7 +250,7 @@ class UnitEditor extends React.Component {
     ) {
       this.setState({
         isSaving: false,
-        error: 'Please set both version year and family name.'
+        error: 'Please set both version year and family name.',
       });
       return;
     }
@@ -265,7 +265,7 @@ class UnitEditor extends React.Component {
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
-          error: 'Saving cancelled.'
+          error: 'Saving cancelled.',
         });
         return;
       }
@@ -280,7 +280,7 @@ class UnitEditor extends React.Component {
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
-          error: 'Saving cancelled.'
+          error: 'Saving cancelled.',
         });
         return;
       }
@@ -298,7 +298,7 @@ class UnitEditor extends React.Component {
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
-          error: 'Saving cancelled.'
+          error: 'Saving cancelled.',
         });
         return;
       }
@@ -353,7 +353,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
-      use_legacy_lesson_plans: this.state.useLegacyLessonPlans
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
     };
 
     $.ajax({
@@ -361,7 +361,7 @@ class UnitEditor extends React.Component {
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
+      data: JSON.stringify(dataToSave),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -375,7 +375,7 @@ class UnitEditor extends React.Component {
             isSaving: false,
             lastUpdatedAt: data.updated_at,
             savedFamilyName: data.family_name,
-            savedVersionYear: data.version_year
+            savedVersionYear: data.version_year,
           });
         }
       })
@@ -451,7 +451,7 @@ class UnitEditor extends React.Component {
             }
             features={{
               imageUpload: true,
-              resourceLink: true
+              resourceLink: true,
             }}
           />
           <TextareaWithMarkdownPreview
@@ -464,7 +464,7 @@ class UnitEditor extends React.Component {
             }
             features={{
               imageUpload: true,
-              resourceLink: true
+              resourceLink: true,
             }}
           />
         </CollapsibleEditorSection>
@@ -492,8 +492,8 @@ class UnitEditor extends React.Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
-                  studentDetailProgressView: !this.state
-                    .studentDetailProgressView
+                  studentDetailProgressView:
+                    !this.state.studentDetailProgressView,
                 })
               }
             />
@@ -854,12 +854,12 @@ class UnitEditor extends React.Component {
             projectWidgetVisible={this.state.projectWidgetVisible}
             updateLessonExtrasAvailable={() =>
               this.setState({
-                lessonExtrasAvailable: !this.state.lessonExtrasAvailable
+                lessonExtrasAvailable: !this.state.lessonExtrasAvailable,
               })
             }
             updateProjectWidgetVisible={() =>
               this.setState({
-                projectWidgetVisible: !this.state.projectWidgetVisible
+                projectWidgetVisible: !this.state.projectWidgetVisible,
               })
             }
             updateProjectWidgetTypes={projectWidgetTypes =>
@@ -876,8 +876,8 @@ class UnitEditor extends React.Component {
                 style={styles.checkbox}
                 onChange={() =>
                   this.setState({
-                    includeStudentLessonPlans: !this.state
-                      .includeStudentLessonPlans
+                    includeStudentLessonPlans:
+                      !this.state.includeStudentLessonPlans,
                   })
                 }
                 disabled={!allowMajorCurriculumChanges}
@@ -902,7 +902,7 @@ class UnitEditor extends React.Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
-                  hasVerifiedResources: !this.state.hasVerifiedResources
+                  hasVerifiedResources: !this.state.hasVerifiedResources,
                 })
               }
             />
@@ -978,7 +978,7 @@ class UnitEditor extends React.Component {
                 disabled={!this.state.showCalendar}
                 onChange={e =>
                   this.setState({
-                    weeklyInstructionalMinutes: e.target.value
+                    weeklyInstructionalMinutes: e.target.value,
                   })
                 }
               />
@@ -1027,9 +1027,9 @@ class UnitEditor extends React.Component {
                 style={styles.checkbox}
                 onChange={() =>
                   this.setState({
-                    onlyInstructorReviewRequired: !this.state
-                      .onlyInstructorReviewRequired,
-                    peerReviewsRequired: 0
+                    onlyInstructorReviewRequired:
+                      !this.state.onlyInstructorReviewRequired,
+                    peerReviewsRequired: 0,
                   })
                 }
               />
@@ -1092,20 +1092,20 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   box: {
     marginTop: 10,
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
+    padding: 10,
+  },
 };
 
 export const UnconnectedUnitEditor = UnitEditor;
@@ -1114,9 +1114,9 @@ export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
     teacherResources: state.resources,
-    studentResources: state.studentResources
+    studentResources: state.studentResources,
   }),
   {
-    init
+    init,
   }
 )(UnitEditor);

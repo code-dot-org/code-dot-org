@@ -213,6 +213,50 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
+  test "latest_published_version returns most recent published course version with unit group" do
+    offering = create :course_offering, :with_unit_groups
+
+    most_recent_version = offering.course_versions[2]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[0]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[1]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[3]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit" do
+    offering = create :course_offering, :with_units
+
+    most_recent_version = offering.course_versions[1]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[2]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[3]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[0]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@student)
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@teacher)
@@ -541,15 +585,57 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
+  test "validates grade_levels" do
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3,K')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '10,11,12,13')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '0')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K1')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K,K,1')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'one-grade', display_name: 'Test One Grade', grade_levels: 'K')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'middle-grades', display_name: 'Test Middle Grades', grade_levels: '7,8')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'high-grades', display_name: 'Test High Grades', grade_levels: '10,11,12')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'all-grades', display_name: 'Test All Grades', grade_levels: 'K,1,2,3,4,5,6,7,8,9,10,11,12')
+    end
+  end
+
   test "validates curriculum_type value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', curriculum_type: 'Invalid Curriculum Type')
     end
   end
 
   test "validates marketing_initiative value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', marketing_initiative: 'Invalid Marketing Initiative')
     end
   end
 

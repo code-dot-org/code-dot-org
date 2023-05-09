@@ -5,7 +5,7 @@ import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 import {
   assignToSection,
-  unassignSection
+  unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import sinon from 'sinon';
@@ -23,7 +23,7 @@ describe('MultipleSectionsAssigner', () => {
     unassignSection: unassignSection,
     assignToSection: assignToSection,
     updateHiddenScript: updateHiddenScript,
-    participantAudience: 'student'
+    participantAudience: 'student',
   };
   const setUp = (overrideProps = {}) => {
     const props = {...defaultProps, ...overrideProps};
@@ -35,7 +35,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     // Checks that an assigned section is checked
@@ -66,7 +66,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: true,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     // Checks that an assigned section is checked
@@ -116,7 +116,7 @@ describe('MultipleSectionsAssigner', () => {
       courseId: assigedStandaloneUnitSection.courseId,
       isStandAloneUnit: true,
       scriptId: assigedStandaloneUnitSection.unitId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     // Checks that an assigned section is checked
@@ -148,7 +148,7 @@ describe('MultipleSectionsAssigner', () => {
       isStandAloneUnit: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     // Check that courses 1-6 have TeacherOptions and course 7 does not.
@@ -188,7 +188,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -235,7 +235,7 @@ describe('MultipleSectionsAssigner', () => {
       reassignConfirm,
       updateHiddenScript,
       courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     wrapper
@@ -277,7 +277,7 @@ describe('MultipleSectionsAssigner', () => {
       unassignSection,
       reassignConfirm,
       courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId
+      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
     });
 
     wrapper
@@ -321,7 +321,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       updateHiddenScript,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -364,7 +364,7 @@ describe('MultipleSectionsAssigner', () => {
       unassignSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -407,7 +407,7 @@ describe('MultipleSectionsAssigner', () => {
       assignToSection,
       reassignConfirm,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
-      courseVersionId: assignedCourseANDUnitSection.courseVersionId
+      courseVersionId: assignedCourseANDUnitSection.courseVersionId,
     });
 
     wrapper
@@ -442,7 +442,7 @@ describe('MultipleSectionsAssigner', () => {
       isOnCoursePage: false,
       courseId: assignedCourseANDUnitSection.courseId,
       isStandAloneUnit: false,
-      scriptId: assignedCourseANDUnitSection.unitId
+      scriptId: assignedCourseANDUnitSection.unitId,
     });
 
     wrapper.find('.select-all-sections').simulate('click');

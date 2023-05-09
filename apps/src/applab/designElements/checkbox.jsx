@@ -12,7 +12,7 @@ class CheckboxProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -76,7 +76,7 @@ class CheckboxEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getChangeEventCode() {
@@ -119,7 +119,7 @@ export default {
   PropertyTab: CheckboxProperties,
   EventTab: CheckboxEvents,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('input');
     element.type = 'checkbox';
     element.style.width = '12px';
@@ -131,12 +131,12 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Disable click events unless running
-    $(element).on('click', function(e) {
+    $(element).on('click', function (e) {
       if (!Applab.isRunning()) {
         element.checked = !element.checked;
       }
     });
-  }
+  },
 };

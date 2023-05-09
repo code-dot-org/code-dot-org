@@ -4,3 +4,4 @@ wrong 'The program will print "Hello name!"', feedback: 'Incorrect. The name blo
 right 'The program will greet you with the name you type in.', feedback: 'Correct! What you type is used in place of the name block.'
 wrong 'The sprite will change sizes.', feedback: 'Incorrect. Text is printed to the screen.'
 wrong 'The computer will ask another question.', feedback: 'Incorrect. Only one question is asked, right when the program begins.'
+allow_multiple_attempts false

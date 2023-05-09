@@ -401,7 +401,7 @@ class FilesApi < Sinatra::Base
 
     # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
-    unless 'sources' == endpoint
+    unless endpoint == 'sources'
       app_size = buckets.app_size(encrypted_channel_id)
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
@@ -425,7 +425,7 @@ class FilesApi < Sinatra::Base
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
-    if 'sources' == endpoint
+    if endpoint == 'sources'
       body_json = JSON.parse(body)
       source = body_json["source"]
       html = body_json["html"]
@@ -645,10 +645,7 @@ class FilesApi < Sinatra::Base
 
     filename.downcase! if endpoint == 'files'
     begin
-      versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
-      return versions.to_json if owns_channel?(encrypted_channel_id)
-      # only return the latest version if the user does not own the channel
-      return versions.select {|version| version[:isLatest]}.to_json
+      get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

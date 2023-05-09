@@ -186,7 +186,6 @@ en:
     data_collection_us: "I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country."
     visit_privacy: 'Visit Code.org’s [Privacy Policy](%{privacy_url}) to learn more.'
     student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
-    additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
     user_type_label: "Account Type"
     user_type_student: "Student"
@@ -886,6 +885,8 @@ en:
     submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
     submit-complete-title: "Submit your assessment"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
+  level_summary:
+    correct_answer: "Correct Answer"
   match:
     wrong_title: "Incorrect solution"
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -1271,6 +1272,25 @@ en:
     no_teacher_email:
       body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Full Courses'
+  course_offering:
+    headers:
+      favorites: 'Favorites'
+      labs_and_skills: 'Labs and Skills'
+      minecraft: 'Minecraft'
+      hello_world: 'Hello World'
+      popular_media: 'Popular Media'
+      sports: 'Sports'
+      express: 'Express'
+      csf: 'CS Fundamentals'
+      csc: 'CS Connections'
+      year_long: 'Year Long'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Self-Paced'
+      teacher_led: 'Teacher-Led'
+      collections: 'Collections'
+      workshops_k5: 'K-5 Workshops'
+      summer_workshops_612: '6-12 Summer Workshops'
+      virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."

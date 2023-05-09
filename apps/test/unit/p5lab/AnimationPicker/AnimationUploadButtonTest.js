@@ -17,10 +17,10 @@ const defaultProps = {
   teacherHasConfirmedUploadWarning: false,
   showingUploadWarning: emptyFunction,
   exitedUploadWarning: emptyFunction,
-  currentUserType: 'student'
+  currentUserType: 'student',
 };
 
-describe('AnimationUploadButton', function() {
+describe('AnimationUploadButton', function () {
   describe('student scenarios', () => {
     it('shows warning if should restrict and is not already in restricted mode', () => {
       const body = shallow(<AnimationUploadButton {...defaultProps} />);
@@ -33,7 +33,7 @@ describe('AnimationUploadButton', function() {
     it('does not show warning if should restrict and is already in restricted mode', () => {
       const combinedProps = {
         ...defaultProps,
-        inRestrictedShareMode: true
+        inRestrictedShareMode: true,
       };
 
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
@@ -46,7 +46,7 @@ describe('AnimationUploadButton', function() {
     it('does not show warning if should not restrict', () => {
       const combinedProps = {
         ...defaultProps,
-        shouldWarnOnAnimationUpload: false
+        shouldWarnOnAnimationUpload: false,
       };
 
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
@@ -74,7 +74,7 @@ describe('AnimationUploadButton', function() {
   describe('teacher scenarios', () => {
     const defaultPropsTeacher = {
       ...defaultProps,
-      currentUserType: 'teacher'
+      currentUserType: 'teacher',
     };
 
     it('shows warning if should restrict and is not already in restricted mode', () => {
@@ -88,7 +88,7 @@ describe('AnimationUploadButton', function() {
     it('does not show warning if should restrict and is already in restricted mode', () => {
       const combinedProps = {
         ...defaultPropsTeacher,
-        teacherHasConfirmedUploadWarning: true
+        teacherHasConfirmedUploadWarning: true,
       };
 
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
@@ -101,7 +101,7 @@ describe('AnimationUploadButton', function() {
     it('does not show warning if should not restrict', () => {
       const combinedProps = {
         ...defaultPropsTeacher,
-        shouldWarnOnAnimationUpload: false
+        shouldWarnOnAnimationUpload: false,
       };
 
       const body = shallow(<AnimationUploadButton {...combinedProps} />);

@@ -24,28 +24,28 @@ export const style = {
     marginLeft: 0,
     marginRight: 0,
     ':hover': {
-      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
-    }
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
+    },
   },
   large: {
     fontSize: 35,
     lineHeight: 'normal',
     paddingLeft: 14,
-    paddingRight: 14
+    paddingRight: 14,
   },
   arrow: {
     base: {
       position: 'relative',
       height: ARROW_HEIGHT,
       textAlign: 'left',
-      display: 'inline-block'
+      display: 'inline-block',
     },
     left: {
-      paddingLeft: ARROW_WIDTH
+      paddingLeft: ARROW_WIDTH,
     },
     right: {
-      paddingRight: ARROW_WIDTH
-    }
+      paddingRight: ARROW_WIDTH,
+    },
   },
   arrowHead: {
     base: {
@@ -54,17 +54,17 @@ export const style = {
       height: 0,
       borderColor: 'transparent',
       borderWidth: ARROW_WIDTH,
-      borderStyle: 'solid'
+      borderStyle: 'solid',
     },
     left: color => ({
       left: 10 - ARROW_WIDTH,
-      borderRightColor: color
+      borderRightColor: color,
     }),
     right: color => ({
       right: 10 - ARROW_WIDTH,
-      borderLeftColor: color
-    })
-  }
+      borderLeftColor: color,
+    }),
+  },
 };
 
 style.withArrow = {
@@ -81,15 +81,15 @@ style.withArrow = {
     marginLeft: 0,
     marginRight: 0,
     ':hover': {
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
   left: {
-    paddingLeft: 0
+    paddingLeft: 0,
   },
   right: {
-    paddingRight: 0
-  }
+    paddingRight: 0,
+  },
 };
 
 export const BUTTON_TYPES = {
@@ -97,19 +97,21 @@ export const BUTTON_TYPES = {
     style: {
       backgroundColor: color.white,
       borderColor: color.charcoal,
-      color: color.charcoal
-    }
+      color: color.charcoal,
+    },
   },
   cancel: {
     style: {
       backgroundColor: color.neutral_white,
-      border: `2px solid ${color.neutral_dark}`,
+      borderWidth: 2,
+      borderStyle: 'solid',
+      borderColor: color.neutral_dark,
       color: color.neutral_dark,
       ':hover': {
         backgroundColor: color.neutral_dark20,
-        boxShadow: 'none'
-      }
-    }
+        boxShadow: 'none',
+      },
+    },
   },
   primary: {
     style: {
@@ -119,16 +121,16 @@ export const BUTTON_TYPES = {
       ':hover': {
         backgroundColor: color.brand_secondary_dark,
         borderColor: color.brand_secondary_dark,
-        boxShadow: 'none'
-      }
-    }
+        boxShadow: 'none',
+      },
+    },
   },
   legacyPrimary: {
     style: {
       backgroundColor: color.orange,
       borderColor: color.orange,
-      color: color.neutral_white
-    }
+      color: color.neutral_white,
+    },
   },
   danger: {
     style: {
@@ -138,17 +140,17 @@ export const BUTTON_TYPES = {
       ':hover': {
         backgroundColor: color.product_negative_dark,
         borderColor: color.product_negative_dark,
-        boxShadow: 'none'
-      }
-    }
+        boxShadow: 'none',
+      },
+    },
   },
   action: {
     style: {
       backgroundColor: color.purple,
       borderColor: color.purple,
-      color: color.white
-    }
-  }
+      color: color.white,
+    },
+  },
 };
 
 const BaseButton = Radium(function BaseButton({
@@ -169,7 +171,7 @@ const BaseButton = Radium(function BaseButton({
 BaseButton.propTypes = {
   type: PropTypes.oneOf(Object.keys(BUTTON_TYPES)),
   children: PropTypes.node,
-  size: PropTypes.oneOf(['normal', 'large'])
+  size: PropTypes.oneOf(['normal', 'large']),
 };
 
 const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
@@ -184,7 +186,7 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
       <div
         style={[
           style.arrowHead.base,
-          style.arrowHead[arrow](config.style.backgroundColor)
+          style.arrowHead[arrow](config.style.backgroundColor),
         ]}
       />
       <BaseButton
@@ -195,7 +197,7 @@ const ArrowButton = Radium(function ArrowButton({arrow, ...props}) {
   );
 });
 ArrowButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: PropTypes.oneOf(['left', 'right']).isRequired
+  arrow: PropTypes.oneOf(['left', 'right']).isRequired,
 });
 
 const LegacyButton = Radium(function Button(props) {
@@ -206,7 +208,7 @@ const LegacyButton = Radium(function Button(props) {
   }
 });
 LegacyButton.propTypes = Object.assign({}, BaseButton.propTypes, {
-  arrow: PropTypes.oneOf(['left', 'right'])
+  arrow: PropTypes.oneOf(['left', 'right']),
 });
 
 export default LegacyButton;

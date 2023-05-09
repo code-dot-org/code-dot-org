@@ -14,7 +14,7 @@ var PlaybackState = {
   NONE: 'none',
   BEGIN: 'begin',
   LOOP: 'loop',
-  END: 'end'
+  END: 'end',
 };
 
 /**
@@ -33,7 +33,7 @@ var PlaybackState = {
  *        (applied to each individual clip), default to 1 which is normal gain.
  * @constructor
  */
-var ThreeSliceAudio = function(audioPlayer, options) {
+var ThreeSliceAudio = function (audioPlayer, options) {
   options = utils.valueOr(options, {});
   /** @private {PlaybackState} */
   this.state_ = PlaybackState.NONE;
@@ -60,7 +60,7 @@ module.exports = ThreeSliceAudio;
  * Will do nothing if the effect is already playing, so safe to call often (on
  * a key-repeat, for example).
  */
-ThreeSliceAudio.prototype.on = function() {
+ThreeSliceAudio.prototype.on = function () {
   if (this.state_ === PlaybackState.NONE || this.state_ === PlaybackState.END) {
     debug('on');
     this.enterState_(PlaybackState.BEGIN);
@@ -72,7 +72,7 @@ ThreeSliceAudio.prototype.on = function() {
  * still starting up) then it will just stop immediately.  If the loop has
  * started, the end effect will be played and then the audio will stop.
  */
-ThreeSliceAudio.prototype.off = function() {
+ThreeSliceAudio.prototype.off = function () {
   debug('off');
   if (
     this.state_ === PlaybackState.BEGIN ||
@@ -82,7 +82,7 @@ ThreeSliceAudio.prototype.off = function() {
   }
 };
 
-ThreeSliceAudio.prototype.enterState_ = function(state) {
+ThreeSliceAudio.prototype.enterState_ = function (state) {
   this.exitState_(this.state_);
   debug(this.state_ + ' -> ' + state);
   this.state_ = state;
@@ -91,7 +91,7 @@ ThreeSliceAudio.prototype.enterState_ = function(state) {
     if (this.beginClipName_) {
       this.audioPlayer_.play(this.beginClipName_, {
         volume: this.volume_,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.LOOP);
@@ -101,7 +101,7 @@ ThreeSliceAudio.prototype.enterState_ = function(state) {
       this.audioPlayer_.play(this.loopClipName_, {
         volume: this.volume_,
         loop: true,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.END);
@@ -110,7 +110,7 @@ ThreeSliceAudio.prototype.enterState_ = function(state) {
     if (this.endClipName_) {
       this.audioPlayer_.play(this.endClipName_, {
         volume: this.volume_,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.NONE);
@@ -118,7 +118,7 @@ ThreeSliceAudio.prototype.enterState_ = function(state) {
   }
 };
 
-ThreeSliceAudio.prototype.exitState_ = function(state) {
+ThreeSliceAudio.prototype.exitState_ = function (state) {
   if (state === PlaybackState.BEGIN && this.beginClipName_) {
     this.audioPlayer_.stopLoopingAudio(this.beginClipName_);
   } else if (state === PlaybackState.LOOP && this.loopClipName_) {
@@ -128,7 +128,7 @@ ThreeSliceAudio.prototype.exitState_ = function(state) {
   }
 };
 
-ThreeSliceAudio.prototype.whenSoundStopped_ = function(stoppedState) {
+ThreeSliceAudio.prototype.whenSoundStopped_ = function (stoppedState) {
   debug('soundStopped (' + stoppedState + ')');
   if (
     stoppedState === PlaybackState.BEGIN &&

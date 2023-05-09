@@ -12,7 +12,7 @@ import {
   setAuthProviders,
   setPageType,
   beginCreatingSection,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -95,7 +95,7 @@ function showHomepage() {
             showReturnToReopenedTeacherApplication={
               homepageData.showReturnToReopenedTeacherApplication
             }
-            donorBannerName={homepageData.donorBannerName}
+            afeEligible={homepageData.afeEligible}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
@@ -137,11 +137,10 @@ function getTeacherAnnouncement(override) {
     heading: i18n.announcementHeadingBackToSchoolRemote(),
     buttonText: i18n.announcementButtonBackToSchool(),
     description: i18n.announcementDescriptionBackToSchoolRemote(),
-    link:
-      'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
+    link: 'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
     image: '',
     type: 'bullhorn',
-    id: 'back_to_school_2018'
+    id: 'back_to_school_2018',
   };
 
   // Optional override of teacher announcement (typically via DCDO).
@@ -160,7 +159,7 @@ function getTeacherAnnouncement(override) {
       description: override.teacher_announce_description,
       link: override.teacher_announce_url,
       type: override.teacher_announce_type,
-      id: override.teacher_announce_id
+      id: override.teacher_announce_id,
     };
   }
 

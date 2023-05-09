@@ -10,7 +10,7 @@ const visibleOverlayProps = {
   buttonsAreDisabled: false,
   hasBeenDismissed: false,
   onDismiss: () => {},
-  dismissAction: ''
+  dismissAction: '',
 };
 
 describe('SwipePrompt', () => {

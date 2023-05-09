@@ -10,14 +10,14 @@ const commonProps = {
   isWrongBrowser: false,
   hasConnectionError: false,
   handleTryAgain: action('Try Again'),
-  useFakeBoardOnNextRun: action('Use fake board on next run'),
+  useVirtualBoardOnNextRun: action('Use virtual board on next run'),
   handleDisableMaker: action('Disable Maker Toolkit'),
-  handleOpenSetupPage: action('Open setup page')
+  handleOpenSetupPage: action('Open setup page'),
 };
 
 export default {
   title: 'MakerStatusOverlay',
-  component: UnconnectedMakerStatusOverlay
+  component: UnconnectedMakerStatusOverlay,
 };
 
 const Template = args =>
@@ -25,24 +25,24 @@ const Template = args =>
 
 export const WaitingToConnect = Template.bind({});
 WaitingToConnect.args = {
-  isConnecting: true
+  isConnecting: true,
 };
 
 export const UnsupportedBrowser = Template.bind({});
 UnsupportedBrowser.args = {
-  isWrongBrowser: true
+  isWrongBrowser: true,
 };
 
 export const ConnectionError = Template.bind({});
 ConnectionError.args = {
-  hasConnectionError: true
+  hasConnectionError: true,
 };
 
 function wrapOverlay(overlay) {
   const style = {
     position: 'relative',
     width: APP_WIDTH,
-    height: APP_HEIGHT
+    height: APP_HEIGHT,
   };
   return <div style={style}>{overlay}</div>;
 }

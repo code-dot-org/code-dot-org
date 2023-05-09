@@ -51,7 +51,7 @@ describe('Library parser', () => {
           description: emptyDescription,
           functions: emptyFunctions,
           dropletConfig: [],
-          source: emptyCode
+          source: emptyCode,
         })
       );
     });
@@ -132,8 +132,8 @@ describe('Library parser', () => {
       let selectedFunctions = [
         {
           functionName: functionName,
-          comment: comment
-        }
+          comment: comment,
+        },
       ];
 
       let expectedDropletConfig = [
@@ -141,8 +141,8 @@ describe('Library parser', () => {
           func: functionName,
           category: category,
           comment: comment,
-          type: 'either'
-        }
+          type: 'either',
+        },
       ];
 
       expect(
@@ -158,7 +158,7 @@ describe('Library parser', () => {
           description: emptyDescription,
           functions: [functionName],
           dropletConfig: expectedDropletConfig,
-          source: emptyCode
+          source: emptyCode,
         })
       );
     });
@@ -170,11 +170,11 @@ describe('Library parser', () => {
       let selectedFunctions = [
         {
           functionName: functions[0],
-          parameters: params
+          parameters: params,
         },
         {
-          functionName: functions[1]
-        }
+          functionName: functions[1],
+        },
       ];
 
       let expectedDropletConfig = [
@@ -183,13 +183,13 @@ describe('Library parser', () => {
           category: category,
           type: 'either',
           params: params,
-          paletteParams: params
+          paletteParams: params,
         },
         {
           func: functions[1],
           category: category,
-          type: 'either'
-        }
+          type: 'either',
+        },
       ];
 
       expect(
@@ -205,7 +205,7 @@ describe('Library parser', () => {
           description: emptyDescription,
           functions: functions,
           dropletConfig: expectedDropletConfig,
-          source: emptyCode
+          source: emptyCode,
         })
       );
     });
@@ -223,7 +223,7 @@ describe('Library parser', () => {
       let originalJson = JSON.stringify({
         name: emptyLibraryName,
         dropletConfig: [{func: funcName1}, {func: funcName2}],
-        source: emptyCode
+        source: emptyCode,
       });
 
       let newName = 'newName';
@@ -239,10 +239,10 @@ describe('Library parser', () => {
         channelId: channelId,
         dropletConfig: [
           {func: `${newName}.${funcName1}`},
-          {func: `${newName}.${funcName2}`}
+          {func: `${newName}.${funcName2}`},
         ],
         versionId: versionId,
-        source: emptyCode
+        source: emptyCode,
       });
     });
   });
@@ -260,7 +260,7 @@ describe('Library parser', () => {
       let originalJson = {
         name: emptyLibraryName,
         functions: emptyFunctions,
-        source: code
+        source: code,
       };
       let newJson = parser.createLibraryClosure(originalJson);
       expect(newJson).to.deep.equal(closureCreator(emptyLibraryName, code));
@@ -272,7 +272,7 @@ describe('Library parser', () => {
       let originalJson = {
         name: emptyLibraryName,
         functions: emptyFunctions,
-        source: code
+        source: code,
       };
       let newJson = parser.createLibraryClosure(originalJson);
       expect(newJson).to.include('// comment;\nreturn');
@@ -285,7 +285,7 @@ describe('Library parser', () => {
       let originalJson = {
         name: emptyLibraryName,
         functions: [firstFunction, secondFunction],
-        source: code
+        source: code,
       };
       let closureFunctions = `${firstFunction}: ${firstFunction},${secondFunction}: ${secondFunction}`;
       let newJson = parser.createLibraryClosure(originalJson);

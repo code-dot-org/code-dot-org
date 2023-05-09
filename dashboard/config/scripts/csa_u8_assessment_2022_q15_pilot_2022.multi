@@ -37,3 +37,5 @@ String[] t = {"ni", "rn"};
 System.out.println(mystery(s, t));
 ```
 MARKDOWN
+
+allow_multiple_attempts true

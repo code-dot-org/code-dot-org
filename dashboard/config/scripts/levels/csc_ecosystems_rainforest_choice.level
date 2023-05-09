@@ -50,7 +50,8 @@
     "block_pool": "gamelab",
     "name_suffix": "_1",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "ecosystems"
     ],
     "mini_rubric": "false",
     "include_shared_functions": "false",
@@ -66,16 +67,16 @@
     "display_name": "Rainforest Ecosystem",
     "encrypted_examples": "KqCFW/mPQBYd2llilvgs+brK6qYR6cCFdQMiefHF53sdRkVnSbUznAonRYb0\nqxeEZRSbYF0p6rmVPoAy+f32iQ==\n",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "thumbnail_url": "https://images.code.org/e0d85bdbbc439cc96c4bb0307a0268f3-image-1677712765696.png"
+    "thumbnail_url": "https://images.code.org/e0d85bdbbc439cc96c4bb0307a0268f3-image-1677712765696.png",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-03-01T22:53:18.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2023-03-01T22:53:18.000Z",
   "user_id": 182,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-01T22:53:18.693+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_marine_choice\\\"\"],\"cloned_from\":\"csc_ecosystems_marine_choice\"},{\"changed_at\":\"2023-03-01 22:53:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:54:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"display_name\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:15:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:15:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:16:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:17:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:19:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-01T22:53:18.693+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_marine_choice\\\"\"],\"cloned_from\":\"csc_ecosystems_marine_choice\"},{\"changed_at\":\"2023-03-01 22:53:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:54:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"display_name\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:15:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:15:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:16:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:17:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:19:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-21 19:57:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-21 20:00:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -94,6 +95,24 @@
                       <field name="LOCATION">{"x":331,"y":295}</field>
                     </block>
                   </value>
+                  <next>
+                    <block type="ecosystems_goldilocks">
+                      <field name="CONDITION">"too much"</field>
+                      <field name="SPRITE">"bannana"</field>
+                      <next>
+                        <block type="ecosystems_goldilocks">
+                          <field name="CONDITION">"too little"</field>
+                          <field name="SPRITE">"bannana"</field>
+                          <next>
+                            <block type="ecosystems_goldilocks">
+                              <field name="CONDITION">"just right"</field>
+                              <field name="SPRITE">"bannana"</field>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>

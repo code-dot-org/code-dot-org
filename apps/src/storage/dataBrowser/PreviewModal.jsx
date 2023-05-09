@@ -15,7 +15,7 @@ class PreviewModal extends React.Component {
     libraryManifest: PropTypes.object.isRequired,
     isPreviewOpen: PropTypes.bool.isRequired,
     tableName: PropTypes.string.isRequired,
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
   };
 
   importTable(datasetInfo) {
@@ -52,11 +52,11 @@ export default connect(
   state => ({
     isPreviewOpen: state.data.isPreviewOpen,
     tableName: state.data.tableName || '',
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
   }),
   dispatch => ({
     onClose() {
       dispatch(hidePreview());
-    }
+    },
   })
 )(PreviewModal);

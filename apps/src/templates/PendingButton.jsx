@@ -13,7 +13,7 @@ class PendingButton extends React.Component {
     pendingStyle: PropTypes.any,
     pendingText: PropTypes.string.isRequired,
     style: PropTypes.any,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
   };
 
   render() {
