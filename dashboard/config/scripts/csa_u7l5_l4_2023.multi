@@ -7,7 +7,7 @@ right 'The `LimitedProduct` object will have a lower quantity than the `Product`
 wrong 'The `Product` object will have a lower quantity than the `LimitedProduct` object only if the limit for the `LimitedProduct` object is greater than the quantity of the `Product` object.'
 wrong 'The `LimitedProduct` object will have a lower quantity than the `Product` object only if the limit for the `LimitedProduct` object is greater than the quantity of the `Product` object.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A company wants to create a system that tracks inventory levels for their products. The following code is used:

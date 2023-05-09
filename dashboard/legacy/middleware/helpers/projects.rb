@@ -16,7 +16,8 @@ class Projects
     @table = Projects.table
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -25,7 +26,7 @@ class Projects
       updated_at: timestamp,
       updated_ip: ip,
       abuse_score: 0,
-      project_type: type,
+      project_type: project_type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,

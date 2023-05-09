@@ -24,3 +24,5 @@ for (int row = 0; row < arr.length; row++) {
 
 How many times will `"CS Rocks!"` be printed when the code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

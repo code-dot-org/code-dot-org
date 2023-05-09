@@ -10,15 +10,17 @@ class ToggleSwitch extends React.Component {
     isToggledOn: PropTypes.bool.isRequired,
     onToggle: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired,
+    expands: PropTypes.string,
   };
 
   render() {
-    const {isToggledOn, onToggle, label} = this.props;
+    const {isToggledOn, onToggle, label, expands} = this.props;
 
     let dynamicStyle = isToggledOn
       ? styles.toggledOnIcon
       : styles.toggledOffIcon;
     const iconStyle = {...styles.icon, ...dynamicStyle};
+
     return (
       <button
         type="button"
@@ -26,6 +28,14 @@ class ToggleSwitch extends React.Component {
         aria-pressed={isToggledOn}
         style={styles.button}
         className="button-active-no-border toggle-input"
+        // Technically we should probably use one of `controls` or `owns`, but
+        // current screenreader support is so spotty that using both seems like
+        // a safer bet for now :(
+        // https://a11ysupport.io/tests/tech__aria__aria-controls
+        // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns
+        aria-controls={expands}
+        aria-owns={expands}
+        aria-expanded={expands ? isToggledOn : undefined}
       >
         <div className="toggle-display">
           <i className={'fa fa-toggle-on'} style={iconStyle} />

@@ -33,3 +33,5 @@ The code segment does not work as intended. Which of the following changes shoul
 
 
 MARKDOWN
+
+allow_multiple_attempts true
