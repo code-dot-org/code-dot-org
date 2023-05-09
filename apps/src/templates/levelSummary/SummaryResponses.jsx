@@ -67,6 +67,11 @@ const SummaryResponses = ({
     }
   }, [showCorrectAnswer]);
 
+  // "Show correct answer" toggle is only shown for some level types, and
+  // only when the policy allows it for that user.
+  const showAnswerToggle =
+    scriptData.answer_is_visible && scriptData.level.type === MULTI;
+
   return (
     <div className={styles.summaryContainer} id="summary-container">
       {/* Student Responses */}
@@ -96,8 +101,8 @@ const SummaryResponses = ({
           <SectionSelector reloadOnChange={true} />
         </label>
 
-        {/* "Show correct answer" toggle is only shown for some level types. */}
-        {scriptData.level.type === MULTI && (
+        {/* Correct answer toggle */}
+        {showAnswerToggle && (
           <div className={styles.toggleContainer}>
             <ToggleSwitch
               isToggledOn={showCorrectAnswer}
