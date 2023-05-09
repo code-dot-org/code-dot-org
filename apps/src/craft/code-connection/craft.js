@@ -43,7 +43,7 @@ const preloadImage = function (url) {
  * @param {any} input
  */
 function getItemName(input) {
-  if (input.hasOwnProperty('name')) {
+  if (Object.prototype.hasOwnProperty.call(input, 'name')) {
     input = input['name'];
   }
   return input;

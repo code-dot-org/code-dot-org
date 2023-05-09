@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 20:39:06 UTC",
+    "serialized_at": "2023-05-08 22:53:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1746,7 +1746,7 @@
       "key": "16ba4b74-82e2-40bb-baad-823262586c88",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1886,7 +1886,7 @@
       "key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd3/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd3/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "69154734-5b41-4f61-b1e4-b594d29dbcda",
@@ -6563,10 +6563,21 @@
       }
     },
     {
-      "key": "2f064ef6-493e-43c1-ad4c-7ef6773fc013",
+      "key": "6df55616-151e-4c70-bcfe-e389ea928712",
       "position": 1,
       "properties": {
-        "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
+        "description": "**Transition:** Move students onto Code Studio - level 2 where they will code the idea they made during the warm-up to make the giraffe sprite push the monkey sprite across the screen. When students finish level 2, have them try level 3 where they will make an elephant sprite push a hippo sprite *down* the screen. "
+      },
+      "seeding_key": {
+        "activity_section.key": "6df55616-151e-4c70-bcfe-e389ea928712",
+        "lesson_activity.key": "5ebe865d-6a28-47ff-b29f-92a8cbc6137d"
+      }
+    },
+    {
+      "key": "2f064ef6-493e-43c1-ad4c-7ef6773fc013",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt**: These were challenging problems, but we were able to solve them.  What helped us to solve these problems?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6581,7 +6592,7 @@
     },
     {
       "key": "62575c46-6715-46aa-a108-0417bf223645",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "All of these things are very important, and they come up in Computer Science a lot. One thing that was particularly helpful was the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, which hid the complicated code that tells us whether the two sprites are touching. There's also a [`displace`(#f78183)](/docs/gamelab/displace/) block that hides the code we just wrote, and some other blocks that hide the code for some other types of sprite interactions.  You'll have a chance to try out these blocks in the next few levels.",
         "remarks": true
@@ -6593,8 +6604,9 @@
     },
     {
       "key": "78c05816-0e2f-48a6-91a1-40edc89a48a8",
-      "position": 3,
+      "position": 4,
       "properties": {
+        "description": "**Transition:** Have students continue working on the remaining levels.  ",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -6610,7 +6622,7 @@
     },
     {
       "key": "b6c7d504-1530-4ba5-944d-3a48cc279b8d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -6621,7 +6633,7 @@
     },
     {
       "key": "089403d5-9fad-4c00-8607-cd631c6f2801",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -6638,7 +6650,7 @@
     },
     {
       "key": "e9f9ca78-2be6-4c1e-a713-edfee412da74",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },

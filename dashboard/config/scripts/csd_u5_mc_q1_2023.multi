@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 Knowing how much the electricity costs doesn't help you increase attendance at sports games.
 MARKDOWN
+
+allow_multiple_attempts true
