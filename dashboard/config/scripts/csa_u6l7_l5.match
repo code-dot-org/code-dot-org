@@ -14,3 +14,4 @@ answer 'a condition that must be true just before a block of code can execute'
 
 question 'postcondition'
 answer 'a condition that must be true just after a block of code executes'
+allow_multiple_attempts true

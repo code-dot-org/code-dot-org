@@ -1,1 +1,20 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "音を再生",
+  "blockly_blockPlaySoundAtMeasureTooltip": "音を再生",
+  "blockly_blockRepeatTooltip": "くりかえし",
+  "blockly_blockRestTooltip": "休む",
+  "blockly_blockWhenRun": "実行(じっこう)した時",
+  "blockly_blockWhenRunTooltip": "実行(じっこう)した時",
+  "blockly_functionNamePlaceholder": "my function",
+  "blockly_toolboxCategoryEffects": "効果",
+  "blockly_toolboxCategoryEvents": "イベント",
+  "blockly_toolboxCategoryFunctions": "関数(かんすう) ",
+  "blockly_toolboxCategoryLogic": "ロジック",
+  "blockly_toolboxCategoryMath": "計算(けいさん)",
+  "blockly_toolboxCategoryPlay": "プレイ",
+  "blockly_toolboxCategoryVariables": "変数（へんすう）",
+  "feedback": "フィードバック",
+  "share": "共有",
+  "startOver": "最初からやりなおす",
+  "upload": "アップロード"
+}

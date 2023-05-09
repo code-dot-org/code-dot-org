@@ -14,4 +14,8 @@ export default abstract class Sequencer {
    * Clear all sequenced events.
    */
   abstract clear(): void;
+  /**
+   * Return the last sequenced measure.
+   */
+  abstract getLastMeasure(): number;
 }

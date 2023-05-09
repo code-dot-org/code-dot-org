@@ -9,3 +9,5 @@ question 'Password lock'
 answer '“My friends think it\’s funny to change my settings, but it\’s annoying!”'
 question 'Black and white option'
 answer '“I am colorblind, so a lot of colors just look the same to me.”'
+
+allow_multiple_attempts true

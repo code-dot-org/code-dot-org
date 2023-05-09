@@ -17,3 +17,5 @@ wrong 'Users are prevented from leaving negative comments.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

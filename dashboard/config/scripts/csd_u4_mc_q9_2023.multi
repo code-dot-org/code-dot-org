@@ -18,3 +18,5 @@ Given this app\'s user interface and design, which user needs are met? (*Select 
 <img src="https://images.code.org/5fe722da5284d45844bf49f48691f5c9-CSDunit4design2.png" style="width:300px; border: 2px solid #d8d9d9;  margin: 0px 1px 0px 1px;">
 <img src="https://images.code.org/1f64c66ed779f0d2fe051d4aba124a5b-CSDunit4design3.png" style="width:300px; border: 2px solid #d8d9d9; margin: 0px 1px 0px 1px;">
 MARKDOWN
+
+allow_multiple_attempts true

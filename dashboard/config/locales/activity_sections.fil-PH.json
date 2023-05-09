@@ -1768,7 +1768,7 @@
           "description": " \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang susunod na slide\n\n**Sabihin:** _Tingnan natin kung makakahanap tayo ng pattern dito:_\n\n-   _Kapag nag-tap ka sa isang device, magsisimula ang isang app._\n-   _Kapag napunta ang bola sa net, umiskor ng puntos._\n-   _Kapag (event)_, _(aksiyon)_.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang susunod na slide\n\n**Sabihin:** _Karaniwan kapag naririnig natin ang \"pangyayari\" naiisip natin:_\n\n-   _Field trip_\n-   _Kumpetisyon_\n-   _Birthday Party_\n\n_Natututo tayo ng bagong kahulugan sa salitang \"event\" ngayon._"
         },
         "c46ad1e5-1820-471c-91ad-65d1a6f9649b": {
-          "description": "### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\n**Sabihin:** _Sa Computer Science, ang mga event ay nagiging sanhi ng ibang mga pagkilos._\n\n_Ang araling ito ay may isang bago at mahalagang salita sa bokabularyo:_\n\n-   **Event** - Ang event ay isang aksiyon na nagiging sanhi sa isang bagay na mangyari."
+          "description": "### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\n**Sabihin:** _Sa Computer Science, ang mga event ay nagiging sanhi ng ibang mga pagkilos._\n\n_Ang araling ito ay may isang bago at mahalagang salita sa bokabularyo:_\n\n-   **Kaganapan** - Ang kaganapan ay aksiyon na nagiging sanhi sa isang bagay na mangyari."
         },
         "5b25dba2-c68c-43c3-814f-98e4e743cf7f": {
           "name": "Mga Pangyayari sa Bounce",
@@ -1785,7 +1785,7 @@
           ]
         },
         "6483e0eb-3cdc-45fd-b834-207388a3586a": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mga Event sa Bounce” na slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Ilista ang mga event na ito” na slide\n\nIpatala sa mga mag-aaral ang wastong pagkakasunod-sunod ng mga event na ipinapakita sa slide na ito. Tumawag ng ilang mag-aaral upang ibahagi ang kanilang mga sagot bago ibunyag ang \"Sagot\" na slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Sagot” na slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Paano gumagana ang mga event?” na slide\n\nTalakayin sa klase ang tamang pagkakasunod-sunod.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mga Kaganapan sa Bounce” na slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Ilista ang mga kaganapang ito” na slide\n\nIpatala sa mga mag-aaral ang wastong pagkakasunod-sunod ng mga kaganapan na ipinapakita sa slide na ito. Tumawag ng ilang mag-aaral upang ibahagi ang kanilang mga sagot bago ibunyag ang \"Sagot\" na slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Sagot” na slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Paano gumagana ang mga kaganapan?” na slide\n\nTalakayin sa klase ang tamang pagkakasunod-sunod.",
           "tips": [
             null
           ]
@@ -1802,7 +1802,7 @@
         },
         "b7541d65-dbb6-4402-8392-0a1416e131d5": {
           "name": "Panimula",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pair-Share” na slide\n\nSabihin sa mga mag-aaral na subukan at isalaysay ang ilan sa kanilang mga paboritong bahagi ng mga video game at kung paano sila mailalarawan bilang mga event. I-pair-share at talakayin ang mga pagkakaiba sa pagitan ng kanilang mga event at ng kanilang kapareha."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pair-Share” na slide\n\nSabihin sa mga mag-aaral na subukan at isalaysay ang ilan sa kanilang mga paboritong bahagi ng mga video game at kung paano sila mailalarawan bilang mga kaganapan. I-pair-share at talakayin ang mga pagkakaiba sa pagitan ng kanilang mga kaganapan at ng kanilang kapareha."
         },
         "77c010a8-6312-4f5a-a39a-ba6c761ba9ce": {
           "name": "Bumuo ng Star Wars na Laro",
@@ -1859,11 +1859,11 @@
           "progression_name": "Pagsasanay"
         },
         "c9ed59ff-70e5-4915-b258-f37aae334833": {
-          "description": "##### Antas 3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mga Event ng Dance Party” na video\nAntas 3",
+          "description": "##### Antas 3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mga Kaganapan ng Dance Party” na video\nAntas 3",
           "progression_name": "Video: Mga Event"
         },
         "715c15b8-ce05-4be2-a6e3-63c7addc5abf": {
-          "description": "##### Antas 4\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 4-5 - Mga Event” na slide\n\n-   Mga Antas 4-5 ay tungkol sa paggawa ng sayaw na interactive. \n-   Ang mga berdeng block ay mga event block. Ang mga block na ito ay nagsisimula ng bagong pagkakasunud-sunod ng code at hindi kailangang ikonekta sa loob ng `setup` na block.\n-   Ang pagkonekta sa lila na block sa ilalim ng berdeng event block ay nagbibigay-daan sa iyo upang gawin ang karakter na magsagawa ng sayaw sa pamamagitan ng pagpindot sa orange na mga arrow button o key sa keyboard mo.\n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o ang (mga) dancer ay hindi gagalaw.\n\n##### Antas 5\n\n-   Siguraduhing maglabas ng pangalawang lila na `gawin minsan` na block. Dapat ay mayroon kang `ginagawa ng mga oso minsan` na block at `ginagawa ng pusa minsan` na block sa workspace mo. Parehong dapat na konektado sa berdeng `kapag pinindot` na event block.\n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o hindi gagalaw ang mga dancer.",
+          "description": "##### Antas 4\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 4-5 - Mga Kaganapan” na slide\n\n-   Mga Antas 4-5 ay tungkol sa paggawa ng sayaw na interactive. \n-   Ang mga berdeng block ay mga block ng kaganapan. Ang mga block na ito ay nagsisimula ng bagong pagkakasunud-sunod ng code at hindi kailangang ikonekta sa loob ng `setup` na block.\n-   Ang pagkonekta sa lila na block sa ilalim ng berdeng block ng kaganapan ay nagbibigay-daan sa iyo upang gawin ang karakter na magsagawa ng sayaw sa pamamagitan ng pagpindot sa orange na mga arrow button o key sa keyboard mo.\n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o ang (mga) dancer ay hindi gagalaw.\n\n##### Antas 5\n\n-   Siguraduhing maglabas ng pangalawang lila na `gawin minsan` na block. Dapat ay mayroon kang `ginagawa ng mga oso minsan` na block at `ginagawa ng pusa minsan` na block sa workspace mo. Parehong dapat na konektado sa berdeng `kapag pinindot` na block ng kaganapan.\n-   Siguraduhing pindutin ang mga arrow button pagkatapos pindutin ang Run o hindi gagalaw ang mga dancer.",
           "progression_name": "Mga event"
         },
         "ea2f2503-ce0e-4498-a269-25b1d203fbe4": {
@@ -2324,7 +2324,7 @@
         },
         "3dcc5ff1-9cad-46cc-985e-e92e1989a304": {
           "name": "Mga Extension na Aralin sa micro:bit",
-          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course D, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Loop, Mga Kondisyon (kung...kung gayon... iba pa), Mga Input at output, Mga Event, at Mga Variable."
+          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course D, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Loop, Mga Kondisyon (kung...kung gayon... iba pa), Mga Input at output, Mga Kaganapan, at Mga Variable."
         },
         "af7e0728-c503-4364-86db-6470460a4c2c": {
           "progression_name": "Ang Kapangyarihan ng Salita - Hindi Naka-plug na Aktibidad"
@@ -2404,6 +2404,7 @@
           "description": "#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Bokabularyo” na slide\n\n-   **Algorithm** - Isang listahan ng mga hakbang upang makumpleto ang isang gawain.\n-   **Pag-uugali** - Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng isang sprite hanggang sa sabihing huminto ito.\n-   **Program** - Isang algorithm na na-code sa isang bagay na maaaring patakbuhin ng isang makina.\n-   **Sprite** - Isang graphic sa screen na may lokasyon, laki, at hitsura."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "name": "Paggawa ng mga Sprite",
           "description": "#### Hula (3 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 1 - Hulaan” na slide \n\n**Gawin Ito:** Ipabasa sa mga mag-aaral ang ibinigay na code at gumawa ng hula tungkol sa kung ano ang mangyayari. Pagkatapos pindutin ang \"Run\", magbigay ng oras sa mga mag-aaral na pag-isipan ang anumang bagay na nakita nilang kawili-wili o gumulat sa kanila.",
           "tips": [
             null
@@ -2427,7 +2428,7 @@
           "progression_name": "Pagsasanay"
         },
         "98dedd12-1d66-41ed-9629-e30265862d45": {
-          "description": "#### Libreng Laro (10 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 9 - Libreng Laro” na slide \n\n-   \\*Transisyon:\\*\\* Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makakagawa sila ng sarili nilang proyekto. Ang bawat pagpipilian dito ay nagbibigay sa mga mag-aaral ng ibang koleksiyon ng mga sprite costume na gagamitin. Ang mga mag-aaral ay dapat pumili ng isa upang magsimula.",
+          "description": "#### Libreng Laro (10 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 9 - Libreng Laro” na slide \n\n-   \\*Transisyon:\\*\\* Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makakagawa sila ng sarili nilang proyekto. Ang bawat pagpipilian dito ay nagbibigay sa mga mag-aaral ng ibang koleksiyon ng mga costume ng sprite na gagamitin. Ang mga mag-aaral ay dapat pumili ng isa upang magsimula.",
           "tips": [
             null
           ],
@@ -2472,24 +2473,24 @@
           "progression_name": "Pagsasanay"
         },
         "d5632c3a-b496-41b6-a90f-1c738211a438": {
-          "description": "#### Libreng Laro (10 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Level 9 - Libreng Laro” na slide \n\n-   \\*Transisyon:\\*\\* Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makikita nila ang parehong mga pagpipilian sa libreng paglalaro gaya ng mga nakaraang aralin. Hikayatin ang mga mag-aaral na magdagdag ng mga event sa kanilang mga proyekto mula sa huling pagkakataon, o magsimula ng bagong proyekto.",
+          "description": "#### Libreng Laro (10 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Level 9 - Libreng Laro” na slide \n\n-   \\*Transisyon:\\*\\* Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makikita nila ang parehong mga pagpipilian sa libreng paglalaro gaya ng mga nakaraang aralin. Hikayatin ang mga mag-aaral na magdagdag ng mga kaganapan sa kanilang mga proyekto mula sa huling pagkakataon, o magsimula ng bagong proyekto.",
           "tips": [
             null
           ],
           "progression_name": "Libreng Play: Gumawa ng Interactive na Eksena"
         },
         "04a61c5c-7ed1-4db4-8ba7-9f46de81dd30": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Paano gumagana ang mga event” na slide"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Paano gumagana ang mga kaganapan” na slide"
         },
         "8af29cc7-6e43-400d-8410-17b8758b9183": {
-          "description": "Paano gumagana ang mga event? \n\n1.  Pinipindot ng user ang isang key sa keyboard. \n2.  Ang keyboard ay nagpapadala ng signal sa computer. \n3.  Ang computer ay gumagawa ng desisyon batay sa code. \n4.  Ina-update ng computer ang display."
+          "description": "Paano gumagana ang mga kaganapan? \n\n1.  Pinipindot ng user ang isang key sa keyboard. \n2.  Ang keyboard ay nagpapadala ng signal sa computer. \n3.  Ang computer ay gumagawa ng desisyon batay sa code. \n4.  Ina-update ng computer ang display."
         },
         "ec95fadb-9235-4f39-b4f7-f9b02e2fecdb": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Pag-isipan” na slide \n\n**Pag-isipan:** \n_Ang mga arrow key ay isang paraan upang makagawa ng program mas interactive._ \n\n-   _Ano ang iba pang mga paraan na maaari nating bigyan ang isang user ng kontrol sa kung ano ang nangyayari sa isang app o laro?_ \n\nAng pagpapasulat sa mga mag-aaral tungkol sa kung ano ang kanilang natutunan, kung bakit ito kapaki-pakinabang, at kung ano ang pakiramdam nila tungkol dito ay makakatulong na patatagin ang anumang kaalaman na kanilang nakuha ngayon at bumuo ng isang review sheet sa kanila upang tingnan sa hinaharap."
         },
         "c129fbec-8adf-45f8-9920-ccac97d6022f": {
           "name": "Panimula",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Pag-isipan” na slide\n\n**Repasuhin:** \n\n-   _Naaalala mo ba kung ano ang isang event?_\n\n-   _Naaalala mo ba kung ano ang pag-uugali?_\n\n-   _Naaalala mo ba ang ilan sa mga pag-uugali na iyong ginamit? Ano ang ginagawa nila?_\n    -   _\"nagpapatrolya\"_\n    -   _\"nanginginig\"_\n    -   _\"umiikot pakanan/pakaliwa\"_ \n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “bokabularyo” na slide\n\n-   **Pag-uugali** - Isang aksyon sa Sprite Lab na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito.\n-   **Event** - Isang aksyon na nagiging sanhi ng isang bagay na mangyari.\n\n**Gawin Ito**: Muling bisitahin ang _mga event_ at _pag-uugali_ sa programming. Bukod pa rito, ipakilala ang tool na \"Mga Costume\" ng Sprite Lab na nagbibigay-daan sa mga mag-aaral na gumuhit ng kanilang sariling mga costume.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 1 - Pagtuklas” na slide\n\n**Ipakita:** Magsimula sa pamamagitan ng pagpapakita ng Antas 1 ng aralin ngayon sa iyong mga mag-aaral.\n\n**Mag-isip/Pares:** Hilingin sa mga mag-aaral na hulaan kung ano ang mangyayari kapag pinatakbo ang code, at talakayin sa kanilang mga katabi. Patakbuhin ang code, at talakayin ang kinalabasan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 2 - Pagbuo ng Kasanayan” na slide\n\n**Ipakita:** Ipakita ang Antas 2. Maikling ipakita kung paano gawin ang sumusunod:\n\n-   Mag-navigate sa pagitan ng mga tab na _Code_ at _Mga Costume_. \n-   Gumuhit ng costume. \n-   Pumili ng costume mula sa costume library.\n-   Baguhin ang costume ng sprite ng virtual na alagang hayop sa custom."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Pag-isipan” na slide\n\n**Repasuhin:** \n\n-   _Naaalala mo ba kung ano ang isang event?_\n\n-   _Naaalala mo ba kung ano ang pag-uugali?_\n\n-   _Naaalala mo ba ang ilan sa mga pag-uugali na iyong ginamit? Ano ang ginagawa nila?_\n    -   _\"nagpapatrolya\"_\n    -   _\"nanginginig\"_\n    -   _\"umiikot pakanan/pakaliwa\"_ \n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “bokabularyo” na slide\n\n-   **Pag-uugali** - Isang aksiyon sa Sprite Lab na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito.\n-   **Kaganapan** - Isang aksiyon na nagiging sanhi ng isang bagay na mangyari.\n\n**Gawin Ito**: Muling bisitahin ang _mga kaganapan_ at _pag-uugali_ sa programming. Bukod pa rito, ipakilala ang tool na \"Mga Costume\" ng Sprite Lab na nagbibigay-daan sa mga mag-aaral na gumuhit ng kanilang sariling mga costume.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 1 - Pagtuklas” na slide\n\n**Ipakita:** Magsimula sa pamamagitan ng pagpapakita ng Antas 1 ng aralin ngayon sa iyong mga mag-aaral.\n\n**Mag-isip/Pares:** Hilingin sa mga mag-aaral na hulaan kung ano ang mangyayari kapag pinatakbo ang code, at talakayin sa kanilang mga katabi. Patakbuhin ang code, at talakayin ang kinalabasan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 2 - Pagbuo ng Kasanayan” na slide\n\n**Ipakita:** Ipakita ang Antas 2. Maikling ipakita kung paano gawin ang sumusunod:\n\n-   Mag-navigate sa pagitan ng mga tab na _Code_ at _Mga Costume_. \n-   Gumuhit ng costume. \n-   Pumili ng costume mula sa costume library.\n-   Baguhin ang costume ng sprite ng virtual na alagang hayop sa custom."
         },
         "f64df1a5-3d41-4029-9a8c-1439d98d7386": {
           "tips": [
@@ -2524,6 +2525,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Ipakita ang “Kwento ng Blank Space: Paboritong Pagkain” na slide \n\n**Gawin ito:** Ipakita ang unang kwentong blank space (Paboritong Pagkain) sa pisara gamit ang lesson slides. \n\n**Prompt:** _Sa tingin mo, paano gumagana ang blangkong space story na ito? Ano ang napapansin mo sa mga label para sa bawat blangkong espasyo?_ \n\nMahalagang maunawaan ng mga mag-aaral na karaniwang ibinibigay ng isang tao ang mga salitang itinalaga ng bawat label nang hindi muna nakikita ang kuwento. Maaaring mapansin ng mga mag-aaral na ang bawat espasyo ay may natatanging label. \n\n**Gawin Ito:** Ihanda ang unang tatlong sobre para sa demonstrasyon. Kung ginagamit ang mga slide, isulong ang animation upang ipakita ang tatlong lilang kahon."
         },
         "580f30a2-5998-427d-9399-f52a5426e91d": {
+          "name": "Mga Laro sa Parti",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Kwentong Blank Space: Mga Laro ng Party” na slide\n\n**Gawin Ito:**\n\n-   Ihanda ang mga sobre na may markang \"pang-uri\", \"bagay\", \"bahagi ng katawan\", at \"numero\". \n-   Ulitin ang laro sa itaas gamit ang pangalawang kuwento. Sa pagkakataong ito maaari kang magsimula sa mga label bago ipakita ang kuwento upang bumuo ng higit pang pananabik. Ang mga animation sa mga slide ng aralin ay naka-set up na upang makatulong na mapadali ito.\n\n#### (Opsyonal) Extension ng Role Play\n\nAng isang koneksiyon ay maaaring gawin sa pagitan ng mga boluntaryo at ang ideya ng app na may \"user\". Sa analogy na ito, ang iyong tungkulin bilang guro ay parang kompyuter. Hihilingin at iimbakin mo ang impormasyon mula sa \"mga user\" at pagkatapos ay pag-aralan kung paano pagsasama-samahin ang kuwento. Para makilahok ang mas maraming mag-aaral at ipagawa sa kanila ang modelong ito, magtalaga ng mga tungkulin:\n\n_Mga Computer:_ Ibahagi at mangolekta ng mga sobre. Buksan ang bawat sobre habang binabasa ang kuwento upang tingnan ang mga value na iniimbak.\n\n_Mga User:_ Isumite ang mga salitang kailangan upang makumpleto ang kuwento.\n\n_Tagabasa:_ Basahin nang malakas ang natapos na kuwento.\n\n#### Pagtatanong\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan**: _Paano naiiba ang pagsulat ng isang blank space na kwento sa pagsusulat ng isang normal na kwento?_"
         },
         "6a51a240-94c7-47c6-880d-674a72b76bbf": {
@@ -2617,7 +2619,7 @@
         },
         "aef1a460-c4ee-406c-9f3e-2e9243f88502": {
           "name": "Repasuhin",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Paano gumagana ang mga sprite, pag-uugali, event, at text?_\n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*_Ipakita_: Ipakita ang “Bokabularyo” na slide\n\n-   **Input** - Ang impormasyong nakukuha ng mga computer sa mga user.\n-   **Prompt** - Isang mensahe sa screen ng computer na naghihintay ng input sa user.\n-   **Variable** - Isang label sa piraso ng impormasyong ginagamit sa isang program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Repasuhin” na slide\n\n**Gawin Ito:** Gamit ang mga slide ng aralin, suriin ang mga konsepto na natuklas na ng mga mag-aaral sa kurso: mga sprite, pag-uugali, event, at text. Panghuli, suriin kung paano gumagana ang mga prompt at variable. \n\n#### Hula\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Hulaan” na slide\n\n**Gawin Ito:** Ipabasa sa mga mag-aaral ang ibinigay na code at gumawa ng hula tungkol sa kung ano ang mangyayari. Pagkatapos pindutin ang \"Run\", magbigay ng oras sa mga mag-aaral na pag-isipan ang anumang bagay na nakita nilang kawili-wili o gumulat sa kanila. Maaari mo ring i-edit ang code na ito kasama ng iyong klase sa standalone na [\"sandbox\"](https://studio.code.org/levels/27300) na antas na ito.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Paano gumagana ang mga sprite, pag-uugali, kaganapan, at text?_\n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*_Ipakita_: Ipakita ang “Bokabularyo” na slide\n\n-   **Input** - Ang impormasyong nakukuha ng mga computer sa mga user.\n-   **Prompt** - Isang mensahe sa screen ng computer na naghihintay ng input sa user.\n-   **Variable** - Isang label sa piraso ng impormasyong ginagamit sa isang program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Repasuhin” na slide\n\n**Gawin Ito:** Gamit ang mga slide ng aralin, suriin ang mga konsepto na natuklas na ng mga mag-aaral sa kurso: mga sprite, pag-uugali, kaganapan, at text. Panghuli, suriin kung paano gumagana ang mga prompt at variable. \n\n#### Hula\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Hulaan” na slide\n\n**Gawin Ito:** Ipabasa sa mga mag-aaral ang ibinigay na code at gumawa ng hula tungkol sa kung ano ang mangyayari. Pagkatapos pindutin ang \"Run\", magbigay ng oras sa mga mag-aaral na pag-isipan ang anumang bagay na nakita nilang kawili-wili o gumulat sa kanila. Maaari mo ring i-edit ang code na ito kasama ng iyong klase sa standalone na [\"sandbox\"](https://studio.code.org/levels/27300) na antas na ito.",
           "tips": [
             null
           ],
@@ -2637,7 +2639,7 @@
           "description": "#### Pagpaplano (10 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 3 - Pagpaplano ng Program” na slide"
         },
         "2f3827a9-3daa-4dc5-ab2f-3a3c435d2095": {
-          "description": "Bago magsulat ng anumang code, gagawa ka ng plano para sa iyong programa. \n\nDapat kasama sa iyong nakumpletong plano ang: \n\n-   Ang uri ng proyektong iyong binubuo. \n-   Isang listahan ng mga tanong na itatanong mo sa user. \n-   Anumang iba pang text na iyong ipapakita. \n-   Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali)."
+          "description": "Bago magsulat ng anumang code, gagawa ka ng plano para sa iyong program. \n\nDapat kasama sa iyong nakumpletong plano ang: \n\n-   Ang uri ng proyektong iyong binubuo. \n-   Isang listahan ng mga tanong na itatanong mo sa user. \n-   Anumang iba pang text na iyong ipapakita. \n-   Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali)."
         },
         "424d3194-cf6e-4e19-9ded-54cffd714225": {
           "description": "  <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Pumili ng Uri ng Proyekto” na slide"
@@ -2710,11 +2712,11 @@
           "progression_name": "Pagsasanay"
         },
         "6962360d-5a78-47ae-8686-4038e83ebfbf": {
-          "description": "#### Libreng Laro (10 minuto)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 10 - Libreng Laro” na slide \n\n-   \\*Transisyon\\*\\*: Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makakagawa sila ng sarili nilang proyekto. Ang bawat pagpipilian dito ay nagbibigay sa mga mag-aaral ng ibang koleksiyon ng mga sprite costume na gagamitin. Ang mga mag-aaral ay dapat pumili ng isa upang magsimula.",
+          "description": "#### Libreng Laro (10 minuto)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 10 - Libreng Laro” na slide \n\n-   \\*Transisyon\\*\\*: Dapat na ngayong lumaktaw ang mga mag-aaral sa huling antas sa aralin kung saan makakagawa sila ng sarili nilang proyekto. Ang bawat pagpipilian dito ay nagbibigay sa mga mag-aaral ng ibang koleksiyon ng mga costume ng sprite na gagamitin. Ang mga mag-aaral ay dapat pumili ng isa upang magsimula.",
           "progression_name": "Libreng Laro"
         },
         "95e83631-dfdc-4398-bde7-941a56206de6": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide \n\n**Pag-isipan**: _Paano mo magagamit ang mga sprite at event para gawing mas kumplikado ang iyong program?_ \n\n**Layunin ng talakayan**: Dapat na maunawaan ng mga mag-aaral na ang pagbubukas ng mga event block (gamit ang + sign) at pag-drag palabas ng sprite block sa loob ay nagbibigay-daan sa program na baguhin ang mga indibidwal na sprite nang paisa-isa kapag sila ay na-click ng user."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide \n\n**Pag-isipan**: _Paano mo magagamit ang mga sprite at kaganapan para gawing mas kumplikado ang iyong program?_ \n\n**Layunin ng talakayan**: Dapat na maunawaan ng mga mag-aaral na ang pagbubukas ng mga event block (gamit ang + sign) at pag-drag palabas ng sprite block sa loob ay nagbibigay-daan sa program na baguhin ang mga indibidwal na sprite nang paisa-isa kapag sila ay na-click ng user."
         },
         "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
           "name": "Panimula",
@@ -2868,7 +2870,7 @@
           "description": "**Gawin ito:** Suriin ang bokabularyo, **mga modelo at simulation** sa mga mag-aaral, sa pamamagitan ng pagbuo ng nakaraang aralin. Ang simulation ay isang modelo sa computer ng isang proseso o sistema."
         },
         "0c3814f9-66cf-41d1-b809-35840b9be2d8": {
-          "description": "_Ngayon, gagawin nating buhay ang isang lugar tulad ng Monster Town sa pamamagitan ng pagsulat ng ilang code._ \n\n_Sa simulation na ito, gagamit ka ng mga sprite para kumatawan sa iba't ibang halimaw. Ang mga sprite ay magkakaroon ng iba't ibang costume upang sabihin sa atin ang mga bagay tulad ng kung sila ay may sakit o malusog. Gagamitin mo rin ang mga pag-uugali para gumalaw ang mga halimaw._ \n\n_Sa wakas, gagamit ka ng mga event para baguhin ang kasuotan ng isang sprite kapag nagdikit ang dalawang sprite sa screen na ito. Ito ay kumakatawan sa isang halimaw na nagpapasa ng virus sa isa pa. Gagawa ka ng mga hula tungkol sa kung ano ang mangyayari sa mga kapitbahay ng Monster Town, at tulungan silang maging malusog muli!_"
+          "description": "_Ngayon, gagawin nating buhay ang isang lugar tulad ng Monster Town sa pamamagitan ng pagsulat ng ilang code._ \n\n_Sa simulation na ito, gagamit ka ng mga sprite para kumatawan sa iba't ibang halimaw. Ang mga sprite ay magkakaroon ng iba't ibang costume upang sabihin sa atin ang mga bagay tulad ng kung sila ay may sakit o malusog. Gagamitin mo rin ang mga pag-uugali para gumalaw ang mga halimaw._ \n\n_Sa wakas, gagamit ka ng mga kaganapan para baguhin ang kasuotan ng isang sprite kapag nagdikit ang dalawang sprite sa screen na ito. Ito ay kumakatawan sa isang halimaw na nagpapasa ng virus sa isa pa. Gagawa ka ng mga hula tungkol sa kung ano ang mangyayari sa mga kapitbahay ng Monster Town, at tulungan silang maging malusog muli!_"
         },
         "12dc3a29-9b6a-448a-91d7-c795731e097b": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Outbreak na Simulator: Introduksiyon” na video",
@@ -2881,7 +2883,7 @@
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "43ec708f-4fc2-467d-b096-303d4f897b68": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Outbreak na Simulator: Mga Event” na video"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Outbreak na Simulator: Mga Kaganapan” na video"
         },
         "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita:** Ipakita ang “Antas 5-7 - Pagbuo ng Kasanayan” na slide",
@@ -3125,7 +3127,7 @@
         },
         "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
           "name": "Mga Extension na Aralin sa micro:bit",
-          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course F, mag-click [here](http://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Variable, Data, Mga Event, Simulation, Mga Loop, at Mga Conditional."
+          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course F, mag-click [here](http://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Variable, Data, Mga Kaganapan, Simulation, Mga Loop, at Mga Conditional."
         },
         "3c23fa37-7254-47f3-b576-da07d0b605dd": {
           "progression_name": "Maging Super Digital na Mamamayan"
@@ -3138,7 +3140,7 @@
           ]
         },
         "41244c64-de49-47a8-a227-ffac166959f4": {
-          "description": "#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang \"Bokabularyo\" na slide\n\nBago tumungo sa Pangunahing Gawain, ipakilala o suriin ang bokabularyo ng aralin ngayon.\n\n-   **Behavior** - Isang aksiyon na patuloy na ginagawa ng sprite hanggang sa masabihan itong huminto.\n\n-   **Sprite** - Isang graphic sa screen na may lokasyon, laki, at hitsura."
+          "description": "#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang \"Bokabularyo\" na slide\n\nBago tumungo sa Pangunahing Gawain, ipakilala o suriin ang bokabularyo ng aralin ngayon.\n\n-   **Pag-uugali** - Isang aksiyon na patuloy na ginagawa ng sprite hanggang sa masabihan itong huminto.\n\n-   **Sprite** - Isang graphic sa screen na may lokasyon, laki, at hitsura."
         },
         "9a18adb7-3bfe-410d-89dc-79ccde9c3419": {
           "description": "Ngayon, matututunan ng mga mag-aaral kung paano gumawa ng mga sprite sa Sprite Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Aktibidad sa Pagbubuklod” na slide\n\n**Talakayin**: Ipaalam sa mga mag-aaral na ang karakter na ito sa screen ay sprite. Ito ay graphic na kinokontrol ng program. Sa araling ito, magkakaroon ng pagkakataon ang mga mag-aaral na pumili ng sarili nilang mga sprite na makokontrol.\n\n#### [Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nGamit ang projector, ipakita ang antas ng sandbox sa mga mag-aaral. Ang layunin ay gumawa ng mga koneksiyon sa nakaraang aralin at ipakita sa kanila ang ilan sa mga natatanging paraan na gumagana ang Sprite Lab. Gumawa ng modelo sa pagsulat ng ilang mga program at hilingin sa mga mag-aaral na ibahagi ang kanilang mga obserbasyon.",
@@ -3189,13 +3191,13 @@
           "description": "I-welcome ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan**: _Paano natin ginagamit ang mga sprite sa ating mga program?_"
         },
         "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Serye ng mga Event” na slide\n\nTingnan natin kung makakahanap tayo ng pattern dito:\n\n-   Kapag pinindot mo ang switch, bumukas ang mga ilaw.\n-   Kapag nag-tap ka sa device, magsisimula ang app.\n-   Kapag tumunog ang alarm, bumangon ka sa kama.\n-   Kailan (event), (aksiyon).\n\nSa computer science, ang mga event ay nagdudulot ng iba pang mga aksiyon na mangyari. Ang bagong bokabularyo nating salita ngayon ay event. Karaniwan kapag naririnig natin ang \"event\" naiisip natin ang:\n\n-   Field trip\n-   Kompetisyon\n-   Birthday Party\n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\nSa Computer Science, ang mga event ay nagdudulot ng iba pang mga aksiyon na mangyari.\n\n-   **Event** - Isang aksiyon na nagiging sanhi ng isang bagay na mangyari"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Serye ng mga Kaganapan” na slide\n\nTingnan natin kung makakahanap tayo ng pattern dito:\n\n-   Kapag pinindot mo ang switch, bumukas ang mga ilaw.\n-   Kapag nag-tap ka sa device, magsisimula ang app.\n-   Kapag tumunog ang alarm, bumangon ka sa kama.\n-   Kailan (kaganapan), (aksiyon).\n\nSa computer science, ang mga kaganapan ay nagdudulot ng iba pang mga aksiyon na mangyari. Ang bagong bokabularyo nating salita ngayon ay kaganapan. Karaniwan kapag naririnig natin ang \"kaganapan\" naiisip natin ang:\n\n-   Field trip\n-   Kompetisyon\n-   Birthday Party\n\n#### Bokabularyo\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Bokabularyo” na slide\n\nSa Computer Science, ang mga kaganapan ay nagdudulot ng iba pang mga aksiyon na mangyari.\n\n-   **Kaganapan** - Isang aksiyon na nagiging sanhi ng isang bagay na mangyari"
         },
         "6ab89428-3831-40d4-982b-7516657f1fed": {
-          "description": "_Natututo tayo ng bagong kahulugan para sa salitang \"event\" ngayon. Tumutok tayo sa mga event na nagiging sanhi ng iba pang mga aksiyon na mangyari tulad ng kapag ang pag-flip ng switch ay nagiging sanhi ng pag-on ng mga ilaw o pagpindot sa pindutan upang gumawa ng karakter sa galawang laro._"
+          "description": "_Natututo tayo ng bagong kahulugan para sa salitang \"kaganapan\" ngayon. Tumutok tayo sa mga kaganapan na nagiging sanhi ng iba pang mga aksiyon na mangyari tulad ng kapag ang pag-flip ng switch ay nagiging sanhi ng pag-on ng mga ilaw o pagpindot sa pindutan upang gumawa ng karakter sa galawang laro._"
         },
         "fc9b73f1-5742-4de6-ba32-d70445934ec1": {
-          "description": "Ngayon, magtatrabaho ang mga mag-aaral sa Sprite Lab, ngunit ang mga event na kanilang gagawin ay magiging katulad ng mga video game na nakasanayan nilang laruin. Ang mga event ay magkakaroon ng anyo ng mga aksiyon, tulad ng pag-click sa screen o dalawang karakter na tumatakbo sa isa't isa."
+          "description": "Ngayon, magtatrabaho ang mga mag-aaral sa Sprite Lab, ngunit ang mga kaganapan na kanilang gagawin ay magiging katulad ng mga video game na nakasanayan nilang laruin. Ang mga kaganapan ay magkakaroon ng anyo ng mga aksiyon, tulad ng pag-click sa screen o dalawang karakter na tumatakbo sa isa't isa."
         },
         "0dfd76e3-4d45-4581-b98f-141d1fcfc804": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._"
@@ -3213,7 +3215,7 @@
           "progression_name": "Pagbuo ng Kasanayan"
         },
         "0a9662e0-8661-4cfe-be3c-e5fe52ed582f": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Programming gamit ang Mga Event” na video"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Programming gamit ang Mga Kaganapan” na video"
         },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 7-12 - Pagbuo ng Kasanayan” na slide",
@@ -3244,7 +3246,7 @@
           "description": "### Pagsusuri ng \"Personal at Pribadong Impormasyon\"\n\nPaalalahanan ang mga mag-aaral ng impormasyon na ligtas na ibahagi online at impormasyong mahigpit na pribado.\n\n| LIGTAS - Personal na Impormasyon                                                                                                           | HINDI LIGTAS - Pribadong Impormasyon                                                                                                            |\n| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |\n| Paborito mong pagkain<br/>Opinyon mo <br/><i>(bagama't dapat itong gawin nang may paggalang)</i><br/>Pangalan <br/><i>(may pahintulot)</i> | Pangalan ng dalagang ina<br/>Social Security number<br/>Petsa ng kapanganakan mo<br/>Credit card information ng magulang<br/>Numero ng telepono |\n\n<br/>\n\nTalakayin ang iba pang mga halimbawa ng dalawang kategorya sa itaas."
         },
         "e3d34b0d-b3a0-49a0-9ff0-6d7bf1679b1c": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**:  Ipakita ang “Antas 1 - Tuklasin” na slide\n\n**Layunin:** Ngayon, ang mga mag-aaral ay gagawa ng kanilang sariling mga interactive na poster sa SpriteLab! Magsisimula sila sa pamamagitan ng paggawa ng ilang halimbawa na nakasentro kay _\"Rikki\"_, kathang-isip na babae na nakagawa na ng poster para ibahagi. Pagkatapos, matapos ng mabilis na pagpapakilala sa paglikha ng mga custom na sprite costume, magiging malaya ang mga mag-aaral na gumawa ng kanilang mga poster ayon sa gusto nila.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**:  Ipakita ang “Antas 1 - Tuklasin” na slide\n\n**Layunin:** Ngayon, ang mga mag-aaral ay gagawa ng kanilang sariling mga interactive na poster sa SpriteLab! Magsisimula sila sa pamamagitan ng paggawa ng ilang halimbawa na nakasentro kay _\"Rikki\"_, kathang-isip na babae na nakagawa na ng poster para ibahagi. Pagkatapos, matapos ng mabilis na pagpapakilala sa paglikha ng mga custom na costume ng sprite, magiging malaya ang mga mag-aaral na gumawa ng kanilang mga poster ayon sa gusto nila.",
           "tips": [
             null
           ]
@@ -3723,7 +3725,7 @@
         },
         "be35b565-6d45-46fa-ae1a-c5d1aeb2f901": {
           "name": "Mga Extension na Aralin sa micro:bit",
-          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course E, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Event, Mga Epekto ng pag-compute, Pagdidisenyo sa Accessibility, Mga Loop, Mga Conditional: (kung...pagkatapos), at Mga Function."
+          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course E, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Kaganapan, Mga Epekto ng pag-compute, Pagdidisenyo sa Accessibility, Mga Loop, Mga Conditional: (kung...pagkatapos), at Mga Function."
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "progression_name": "Video: Sundan ang Digital Trail"
@@ -5784,7 +5786,7 @@
         },
         "438866ae-0223-4f9f-badd-3457a85f7c7a": {
           "name": "Panimula",
-          "description": "#### Serye ng Mga Event\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tingnan natin kung makakahanap tayo ng pattern dito” na slide\n\n**Sabihin:** _Tingnan natin kung makakahanap tayo ng pattern dito:_\n\n-   _Kapag nag-tap ka sa isang device, magsisimula ang app._\n-   _Kapag tumunog ang alarm, bumangon ka sa kama._\n-   _Kailan (event)_, _(aksiyon)_.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Susunod” na slide\n\n**Sabihin:** _Karaniwan kapag naririnig natin ang \"event\" naiisip natin:_\n\n-   _Field trip_\n-   _Kompetisyon_\n-   _Birthday Party_\n\n_Natututo tayo ng bagong kahulugan sa salitang \"event\" ngayon._"
+          "description": "#### Serye ng Mga Event\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tingnan natin kung makakahanap tayo ng pattern dito” na slide\n\n**Sabihin:** _Tingnan natin kung makakahanap tayo ng pattern dito:_\n\n-   _Kapag nag-tap ka sa isang device, magsisimula ang app._\n-   _Kapag tumunog ang alarm, bumangon ka sa kama._\n-   _Kailan (kaganapan)_, _(aksiyon)_.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Susunod” na slide\n\n**Sabihin:** _Karaniwan kapag naririnig natin ang \"kaganapan\" naiisip natin:_\n\n-   _Field trip_\n-   _Kompetisyon_\n-   _Birthday Party_\n\n_Natututo tayo ng bagong kahulugan sa salitang \"kaganapan\" ngayon._"
         },
         "b5d0ecce-50d3-4d8f-8143-eb3bcd6a52b0": {
           "name": "Bukabularyo",
@@ -5795,7 +5797,7 @@
           "progression_name": "Ang Malaking Event - Hindi Naka-plug na Aktibidad"
         },
         "81ac2e94-8470-41a8-a506-505bf1bd3fac": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Naalala mo Ito?” na slide\n\n**Sabihin:** *Naaalala mo ba ang paggabay kay _Red_ sa \"Angry Birds\" hanggang sa baboy sa Maze na palaisipan? Sumulat ka ng program na kumuha kay Red mula simula hanggang matapos nang walang anumang pagkaantala.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pagbibigay ng Mga Pagpipilian sa User” na slide\n\n**Sabihin:** _Sa karamihan ng mga tunay na program gusto natin ng higit pang mga opsyon._\n_Paano kung gusto ko lang gumalaw ang karakter ko kapag nasa screen ng phone ko ang daliri ko?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pagkontrol sa Laro” na slide\n\n**Sabihin:** _Kailangan kong i-program ang karakter upang gumalaw lamang kapag ang aking daliri ay nasa screen ng telepono ko._\n_Ang paglalagay ng aking daliri sa screen ay magiging event na nagsasabi sa aking karakter na lumipat._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Kailan Tayo Gumagamit ng Mga Event” na slide\n\n**Sabihin:** _Sa mga naunang aralin, gumawa tayo ng mga algorithm na nagpapahintulot sa atin na kontrolin ang kaibigan o iba pang karakter sa ilang hakbang sa isang pagkakataon._ \n\n_Ito ay masaya at kapaki-pakinabang, ngunit ano ang mangyayari kapag hindi mo alam ang lahat ng gusto mong gawin ng iyong kaibigan nang maaga?_ \n\n_Dito pumapasok ang mga event!_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Naalala mo Ito?” na slide\n\n**Sabihin:** *Naaalala mo ba ang paggabay kay _Red_ sa \"Angry Birds\" hanggang sa baboy sa Maze na palaisipan? Sumulat ka ng program na kumuha kay Red mula simula hanggang matapos nang walang anumang pagkaantala.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pagbibigay ng Mga Pagpipilian sa User” na slide\n\n**Sabihin:** _Sa karamihan ng mga tunay na program gusto natin ng higit pang mga opsyon._\n_Paano kung gusto ko lang gumalaw ang karakter ko kapag nasa screen ng phone ko ang daliri ko?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pagkontrol sa Laro” na slide\n\n**Sabihin:** _Kailangan kong i-program ang karakter upang gumalaw lamang kapag ang aking daliri ay nasa screen ng telepono ko._\n_Ang paglalagay ng aking daliri sa screen ay magiging kaganapan na nagsasabi sa aking karakter na lumipat._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Kailan Tayo Gumagamit ng Mga Kaganapan” na slide\n\n**Sabihin:** _Sa mga naunang aralin, gumawa tayo ng mga algorithm na nagpapahintulot sa atin na kontrolin ang kaibigan o iba pang karakter sa ilang hakbang sa isang pagkakataon._ \n\n_Ito ay masaya at kapaki-pakinabang, ngunit ano ang mangyayari kapag hindi mo alam ang lahat ng gusto mong gawin ng iyong kaibigan nang maaga?_ \n\n_Dito pumapasok ang mga kaganapan!_",
           "tips": [
             null
           ]
@@ -5809,7 +5811,7 @@
         },
         "072ac15c-51ea-444a-ba24-2d1da32a8b2d": {
           "name": "Pagmumuni-muni",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Ano ang ilang halimbawa ng mga event?_",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Ano ang ilang halimbawa ng mga kaganapan?_",
           "tips": [
             null
           ]
@@ -5828,7 +5830,7 @@
         },
         "49e86e55-b607-4af6-bdb6-b912549b69ea": {
           "name": "Panimula",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mabilisang Pagrepaso” na slide\n\n**Sabihin:** _Ano ang nagawa ng \"na-program\" natin ang mga event sa pag-click sa pindutan?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Magdagdag ng Mga Event sa Coding” na slide\n\n**Sabihin:** _Ngayon ay magdadagdag tayo ng mga event sa ating coding. Gagawa tayo ng isang event sa pag-click ng mouse at isa sa kapag ang ibon ay tumama sa isang bagay - tulad ng lupa o balakid._"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Mabilisang Pagrepaso” na slide\n\n**Sabihin:** _Ano ang nagawa ng \"na-program\" natin ang mga kaganapan sa pag-click sa pindutan?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Magdagdag ng Mga Kaganapan sa Coding” na slide\n\n**Sabihin:** _Ngayon ay magdadagdag tayo ng mga kaganapan sa ating coding. Gagawa tayo ng isang kaganapan sa pag-click ng mouse at isa sa kapag ang ibon ay tumama sa isang bagay - tulad ng lupa o balakid._"
         },
         "c18dfa97-b98e-4a9b-99e1-59c56b29905b": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Aktibidad sa Pagbubuklod” na slide\n\nKumuha ng aralin mula sa kaukulang online na yugto, inirerekomenda namin ang palaisipan 4.\n\n**Sabihin:** _Ano ang dapat mangyari kapag ang \"Flappy Bird\" ay bumangga sa isang bagay na parang lupa o balakid?_\n\nIpaliwanag na ang \"Flappy\" sa larong ito ay susulong sa pag-click ng mouse at ang laro ay magtatapos kung ang \"Flappy\" ay mapapatakbo sa anumang bagay.\n\nKumpletuhin ang palaisipan kasama ng klase at maglaan ng oras sa mabilis na talakayan kung ano ang at hindi event. Sa bawat event, tanungin ang mga mag-aaral kung anong aksiyon na naaayon sa event na ito."
@@ -5859,7 +5861,7 @@
           "description": "Gamitin ang mga aktibidad na ito upang mapahusay ang pagkatuto ng mag-aaral. Maaaring gamitin ang mga ito bilang mga aktibidad sa labas ng klase o iba pang pagpapabuti.\n\n**Tumingin sa ilalim ng Hood**\n\nKapag nagbahagi ka ng link sa laro mo, ibinabahagi mo rin ang lahat ng code na nasa likod nito. Ito ay mahusay na paraan sa mga mag-aaral na matuto sa bawat isa.\n\n-   Mag-post ng mga link sa mga nakumpletong laro online o sa board.\n    -   Gumawa ng sarili mong laro para ibahagi din!\n-   Kapag nag-load ang mga mag-aaral ng link, ipa-click sa kanila ang \"Paano Ito Gumagana\" na button upang makita ang code sa likod ng laro.\n-   Talakayin bilang grupo ang iba't ibang paraan ng pag-code ng iyong mga kaklase sa kanilang mga laro.\n    -   Ano ang ikinagulat mo?\n    -   Ano ang gusto mong subukan?\n-   Pumili ng laro ng ibang tao at buuin ito. (Huwag mag-alala; ang orihinal na laro ay magiging ligtas.)"
         },
         "a1420040-a891-4dd5-8aa7-127bac142431": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Anong mga event ang ginamit ng \"Flappy Game\"?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Anong mga kaganapan ang ginamit ng \"Flappy Game\"?_"
         },
         "8f34487c-1c94-4472-80bd-7e53befee5f6": {
           "name": "Bukabularyo",
@@ -5867,7 +5869,7 @@
         },
         "e0573e5e-1308-46de-b4aa-d856b692817d": {
           "name": "Panimula",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tsart” na slide\n\nMaikling talakayin ang larong _Flappy Bird_ mula sa huling aralin. Gamit ang tsart na ibinigay sa slide, sabihin sa mga mag-aaral na makabuo ng iba't ibang mga event sa laro at itala ang kanilang mga sagot sa tsart. Kasama sa mga event ang:\n\n-   _Flappy_ tumatama sa lupa\n-   _Flappy_ tumatama sa balakid\n-   Isang player na nag-click sa screen\n-   _Flappy_ nilalagpasan ang balakid\n\nNgayon talakayin ang mga aksiyon na tumutugma sa mga event na ito. Ang _Flappy_ na tumatakbo sa bagay ay tinatapos ang laro, ngunit ang _Flappy_ na nalagpasan ang balakid ay nanalo ng puntos. Ang player na nag-click ay ginagawang _Flappy_ flap ang kanyang mga pakpak. Itala ang mga sagot ng mag-aaral sa tsart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Answer Key” na slide\n\n![](<https://images.code.org/7b1f494f111ed3b1cea6d7b0c52bb149-flappy table.png>)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Talakayin” na slide\n\n**Talakayin:** _Isipin ang iba't ibang event na ginamit sa \"Flappy Game.\" Ano ang iba pang mga uri ng mga laro na maaaring buuin gamit ang mga event at pagkilos na iyon?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tsart” na slide\n\nMaikling talakayin ang larong _Flappy Bird_ mula sa huling aralin. Gamit ang tsart na ibinigay sa slide, sabihin sa mga mag-aaral na makabuo ng iba't ibang mga kaganapan sa laro at itala ang kanilang mga sagot sa tsart. Kasama sa mga kaganapan ang:\n\n-   _Flappy_ tumatama sa lupa\n-   _Flappy_ tumatama sa balakid\n-   Isang player na nag-click sa screen\n-   _Flappy_ nilalagpasan ang balakid\n\nNgayon talakayin ang mga aksiyon na tumutugma sa mga kaganapang ito. Ang _Flappy_ na tumatakbo sa bagay ay tinatapos ang laro, ngunit ang _Flappy_ na nalagpasan ang balakid ay nanalo ng puntos. Ang player na nag-click ay ginagawang _Flappy_ flap ang kanyang mga pakpak. Itala ang mga sagot ng mag-aaral sa tsart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Answer Key” na slide\n\n![](<https://images.code.org/7b1f494f111ed3b1cea6d7b0c52bb149-flappy table.png>)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Talakayin” na slide\n\n**Talakayin:** _Isipin ang iba't ibang kaganapan na ginamit sa \"Flappy Game.\" Ano ang iba pang mga uri ng mga laro na maaaring buuin gamit ang mga kaganapan at pagkilos na iyon?_"
         },
         "6728fc70-4eea-4c9e-8b55-b5643cb406f1": {
           "tips": [
@@ -5896,7 +5898,7 @@
         },
         "6449b59e-03df-41af-9bea-a74772120074": {
           "name": "Pagmumuni-muni",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Anong mga event ang ginamit mo sa iyong program ngayon?_\n\n_Ano ang pinakanagustuhan mo sa aktibidad ngayon?_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Anong mga kaganapan ang ginamit mo sa iyong program ngayon?_\n\n_Ano ang pinakanagustuhan mo sa aktibidad ngayon?_"
         },
         "0dd3008c-14b5-47c3-9913-65bd3bf87655": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Pag-isipan” na slide\n\n**Pag-isipan:** _Sabihin nating gusto mong malaman ang pinakasikat na lasa ng ice cream sa mga kaklase mo. Paano mo malalaman ang impormasyong ito?_"
@@ -6057,7 +6059,7 @@
         },
         "e79ff65f-c393-4328-8530-e40474ddbca1": {
           "name": "Mga Extension na Aralin sa micro:bit",
-          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course D, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Event, Mga Input at output, Sequencing, Mga Loop, Data, at Mga Variable."
+          "description": "Upang mabuo ang mga kasanayang natutunan mo sa CS Fundamentals Course D, mag-click [dito](https://code.org/maker/csf-microbit) para tingnan ang Extension Lessons gamit ang micro:bit. Ang mga [4 na micro:bit na aralin](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) ay sumasaklaw sa mga sumusunod na paksa: Kilalanin ang iyong micro:bit, Mga Kaganapan, Mga Input at output, Sequencing, Mga Loop, Data, at Mga Variable."
         },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "tips": [
@@ -13531,6 +13533,7 @@
           "name": "Panimula"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Paggawa ng mga Sprite",
           "tips": [
             null
           ],
@@ -13606,6 +13609,9 @@
         },
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "Ang Kapangyarihan ng Salita - Hindi Naka-plug na Aktibidad"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Mga Laro sa Parti"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "progression_name": "Video: Mga Hindi Naka-plug na Variable sa Mga Sobre"
@@ -15460,6 +15466,7 @@
           "name": "Panimula"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Paggawa ng mga Sprite",
           "tips": [
             null
           ],
