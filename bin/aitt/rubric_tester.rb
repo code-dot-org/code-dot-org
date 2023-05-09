@@ -272,6 +272,8 @@ def main
   expected_grades_file = 'expected_grades.csv'
   output_file = "output/#{options[:output_filename]}"
 
+  system("mkdir -p cached_responses")
+
   prompt, rubric = read_inputs(prompt_file, rubric_file)
   student_files = get_student_files
   expected_grades = get_expected_grades(expected_grades_file)
