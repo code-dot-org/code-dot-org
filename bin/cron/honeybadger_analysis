@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
-require '../../lib/cdo/data/logging/infrastructure_logger'
+# require '../../lib/cdo/data/logging/infrastructure_logger'
 require '../../lib/cdo/honeybadger/honeybadger_fault_analyzer'
 require '../../lib/cdo/honeybadger/honeybadger_url_builder'
 abort 'Script already running' unless only_one_running?(__FILE__)
@@ -8,22 +8,31 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 
 def main
-  filters = %w[-is:resolved -is:paused%20 -is:ignored environment:"production" assignee:"nobody"]
+  puts rack_env
+  filters = ['-is:resolved', '-is:paused%20', '-is:ignored', "environment:\"#{rack_env}\"", 'assignee:"nobody"']
   time_filters = ["occurred_after=#{1.day.ago.to_i}"]
   honeybadger_url_builder = HoneybadgerUrlBuilder.new(time_filters, filters)
-  analyzer = HoneybadgerFaultAnalyzer.new(honeybadger_url_builder)
-  faults = analyzer.get_faults_for_project(3240, 25)
-  notices_within_range_sum = 0
 
+  analyzer = HoneybadgerFaultAnalyzer.new(honeybadger_url_builder)
+
+  project_id = 3240
+  faults = analyzer.get_faults_for_project(project_id)
+  notices_within_range_sum = 0
+  affected_users = 0
   faults.each do |fault|
     puts fault.id
     notices_within_range_sum += fault.notices_within_range
-    affected_users = fault.get_affected_users
 
-    Infrastructure::Logger.puts('testing_faults_affected_users', affected_users.count)
-    puts "____"
+    affected_users += fault.get_affected_users.count
   end
-  Infrastructure::Logger.flush
+  puts affected_users
+  puts notices_within_range_sum
+  puts faults.count
+  #extra_dimensions = {project_id:project_id}
+  #Infrastructure::Logger.puts('testing_honey_badger_faults_open_affected_users_30_days', affected_users.count, extra_dimensions)
+  #Infrastructure::Logger.puts('testing_honey_badger_faults_open_notices_30_days', notices_within_range_sum, extra_dimensions)
+  #Infrastructure::Logger.puts('testing_honey_badger_faults_open_count_30_days', faults.count, extra_dimensions)
+  #Infrastructure::Logger.flush
 end
 
 main

@@ -7,6 +7,7 @@ class HoneybadgerUrlBuilder
 
   def call_api_response_from_url(url)
     curl_request = "curl -s -u #{CDO.honeybadger_api_token}: \"#{@api_base_url}#{url}\""
+    puts curl_request
     response = `#{curl_request}`
     JSON.parse response
   end
@@ -16,17 +17,16 @@ class HoneybadgerUrlBuilder
     call_api_response_from_url(operation_url)
   end
 
-  private
-
   def get_api_url_request(type, params = {})
     if type == 'affected_users'
-      puts "affected users call"
       return get_affected_users_url(params[:fault])
     end
     if type == 'faults'
       return get_faults_url(params[:project_id])
     end
   end
+
+  private
 
   # join the filters by a 'white space' or "%20"
   # This is used while a better query builder for honeybadger is implemented
