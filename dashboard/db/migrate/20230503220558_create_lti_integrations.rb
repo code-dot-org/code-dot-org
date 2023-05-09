@@ -2,13 +2,13 @@ class CreateLtiIntegrations < ActiveRecord::Migration[6.0]
   def change
     create_table :lti_integrations do |t|
       t.string :name
-      t.string :platform_id
-      t.string :issuer
-      t.string :client_id
-      t.string :platform_name
-      t.string :auth_redirect_url
-      t.string :jwks_url
-      t.string :access_token_url
+      t.string :platform_id, null: false
+      t.string :issuer, null: false
+      t.string :client_id, null: false
+      t.string :platform_name, null: false
+      t.string :auth_redirect_url, null: false
+      t.string :jwks_url, null: false
+      t.string :access_token_url, null: false
       t.string :admin_email
 
       t.timestamps
