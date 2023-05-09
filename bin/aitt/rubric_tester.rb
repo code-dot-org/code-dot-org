@@ -8,6 +8,8 @@ require 'open3'
 require 'parallel'
 require 'optparse'
 
+VALID_GRADES = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence", "No Evidence"]
+
 def command_line_options
   options = {
     output_filename: 'report.html'
@@ -27,6 +29,14 @@ def command_line_options
       'or if one of the API requests failed in the previous run.'
     ) do
       options[:use_cached] = true
+    end
+
+    opts.on(
+      '-p', '--num_passing_grades N', Integer, 'Number of grades which are considered passing.',
+      'If specified, report based on whether the pass/fail result is accurate for each criteria.',
+      'For example, N=2 means that Extensive Evidence and Convincing Evidence are both passing.'
+    ) do |num_passing_grades|
+      options[:passing_grades] = VALID_GRADES[0...num_passing_grades]
     end
 
     opts.on("-h", "--help", "Prints this help message") do
@@ -64,7 +74,6 @@ end
 
 def validate_server_response(tsv_data, rubric)
   expected_columns = ["Key Concept", "Grade", "Reason"]
-  valid_grades = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence", "No Evidence"]
 
   # Get the list of key concepts from the rubric
   rubric_key_concepts = CSV.parse(rubric, headers: true).map {|row| row['Key Concept']}.uniq
@@ -80,7 +89,7 @@ def validate_server_response(tsv_data, rubric)
   return [false, 'invalid or missing key concept'] unless rubric_key_concepts.sort == key_concepts_from_response.sort
 
   # 4. All entries in the Grade column are one of the valid values
-  return [false, 'invalid grade value'] unless tsv_data.all? {|row| valid_grades.include?(row["Grade"])}
+  return [false, 'invalid grade value'] unless tsv_data.all? {|row| VALID_GRADES.include?(row["Grade"])}
 
   [true, nil]
 end
@@ -130,7 +139,13 @@ def grade_student_work(prompt, rubric, student_code, student_id, use_cached: fal
   end
 end
 
-def compute_accuracy(expected_grades, actual_grades)
+def accurate?(expected_grade, actual_grade, passing_grades)
+  return expected_grade == actual_grade unless passing_grades
+
+  passing_grades.include?(expected_grade) == passing_grades.include?(actual_grade)
+end
+
+def compute_accuracy(expected_grades, actual_grades, passing_grades)
   overall_total = 0
   overall_matches = 0
   matches_by_criteria = {}
@@ -143,7 +158,7 @@ def compute_accuracy(expected_grades, actual_grades)
       total_by_criteria[criteria] += 1
       overall_total += 1
 
-      next unless expected_grades[student_id][criteria] == row['Grade']
+      next unless accurate?(expected_grades[student_id][criteria], row['Grade'], passing_grades)
 
       matches_by_criteria[criteria] ||= 0
       matches_by_criteria[criteria] += 1
@@ -162,12 +177,21 @@ def compute_accuracy(expected_grades, actual_grades)
   [accuracy_by_criteria, overall_accuracy]
 end
 
+def compute_pass_fail_cell_color(expected, actual, passing_grades)
+  if accurate?(expected, actual, passing_grades)
+    'green'
+  else
+    'red'
+  end
+end
+
 # compute color for a cell in the "actual grade" column
 # based on the difference between the expected grade and the actual grade
-def compute_actual_cell_color(actual, expected)
-  possible_grades = ["No Evidence", "Limited Evidence", "Convincing Evidence", "Extensive Evidence"]
-  expected_index = possible_grades.index(expected)
-  actual_index = possible_grades.index(actual)
+def compute_actual_cell_color(actual, expected, passing_grades)
+  return compute_pass_fail_cell_color(expected, actual, passing_grades) if passing_grades
+
+  expected_index = VALID_GRADES.index(expected)
+  actual_index = VALID_GRADES.index(actual)
   grade_difference = expected_index && actual_index && (expected_index - actual_index).abs
   case grade_difference
   when 0
@@ -219,7 +243,7 @@ def generate_accuracy_table(accuracy_by_criteria)
   accuracy_table
 end
 
-def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors)
+def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, expected_grades, passing_grades, accuracy_by_criteria, errors)
   link_base_url = "file://#{`pwd`.strip}/sample_code"
 
   File.open(output_file, 'w') do |file|
@@ -253,7 +277,7 @@ def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, e
         expected = expected_grades[student_id][criteria]
         actual = grade['Grade']
         reason = grade['Reason']
-        cell_color = compute_actual_cell_color(actual, expected)
+        cell_color = compute_actual_cell_color(actual, expected, passing_grades)
         file.puts "    <tr><td>#{criteria}</td><td>#{expected}</td><td style=\"background-color: #{cell_color};\">#{actual}</td><td>#{reason}</td></tr>"
       end
       file.puts '  </table>'
@@ -288,9 +312,9 @@ def main
   errors = actual_grades.reject(&:last).map(&:first)
   actual_grades = actual_grades.select(&:last).to_h
 
-  accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades)
+  accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades, options[:passing_grades])
   generate_html_output(
-    output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors
+    output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
   )
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
