@@ -1,7 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
-
-const EMPTY_OPTION = '???';
+import {EMPTY_OPTION} from '../constants';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /** Add special case for ???
@@ -22,7 +21,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     if (newValue === EMPTY_OPTION) {
       this.value_ = newValue;
       this.isDirty_ = true;
-      this.selectedOption_ = ['???', ''];
+      this.selectedOption_ = [EMPTY_OPTION, ''];
     } else {
       super.doValueUpdate_(newValue);
     }
@@ -36,27 +35,25 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // Call super so value is set.
     super.fromXml(element);
 
-    // If `menuGenerator_` is an array, it is an array of options with
-    // each option represented by an array containing 2 elements -
-    // a human-readable string and a language-neutral string. For example,
-    // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
-    // Options are included in the block definition.
-    const originalOptionsMap = Array.isArray(this.menuGenerator_)
-      ? this.menuGenerator_.reduce((optionsMap, curr) => {
-          optionsMap[curr[1]] = curr[0];
-          return optionsMap;
-        }, {})
-      : {};
-
     // If the field xml contains a `config`, then the dropdown options
     // are determined by `config`.
     // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
     // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
-    let options = null;
     if (this.config) {
-      options = this.printerStyleNumberRangeToList(this.config);
+      // If `menuGenerator_` is an array, it is an array of options with
+      // each option represented by an array containing 2 elements -
+      // a human-readable string and a language-neutral string. For example,
+      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+      // Options are included in the block definition.
+      const originalOptionsMap = Array.isArray(this.menuGenerator_)
+        ? this.menuGenerator_.reduce((optionsMap, curr) => {
+            optionsMap[curr[1]] = curr[0];
+            return optionsMap;
+          }, {})
+        : {};
+      let options = this.printerStyleNumberRangeToList(this.config);
       // `options` is not a number range, it is a customized config string.
       if (options.length === 0) {
         options = this.config.split(',').map(val => {
@@ -79,10 +76,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
           return [numString, numString];
         });
       }
-    }
-
-    // If the config attribute is present in xml, set the menuGenerator_ to those config options.
-    if (options) {
+      // set the menuGenerator_ to those config options.
       this.menuGenerator_ = options;
     }
   }

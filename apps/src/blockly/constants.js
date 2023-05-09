@@ -49,3 +49,4 @@ export const CLAMPED_NUMBER_REGEX =
 export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
 
 export const NO_OPTIONS_MESSAGE = i18n.uninitialized();
+export const EMPTY_OPTION = '???';
