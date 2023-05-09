@@ -152,12 +152,11 @@ const allShownCurricula = [
   course4Curriculum,
 ];
 
-const grades2And3ShownCurricula = [
-  countingCurriculum,
+const gradesKAnd2ShownCurricula = [
   poemArtCurriculum,
   danceUnpluggedCurriculum,
+  course1Curriculum,
   course2Curriculum,
-  course3Curriculum,
 ];
 
 const weeklongShownCurricula = [makerCurriculum];
@@ -196,7 +195,7 @@ const allFiltersAppliedShownCurricula = [
 export default {
   allCurricula,
   allShownCurricula,
-  grades2And3ShownCurricula,
+  gradesKAnd2ShownCurricula,
   weeklongShownCurricula,
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,

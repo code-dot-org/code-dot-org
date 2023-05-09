@@ -11,7 +11,7 @@ import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumC
 import {
   allCurricula,
   allShownCurricula,
-  grades2And3ShownCurricula,
+  gradesKAnd2ShownCurricula,
   weeklongShownCurricula,
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
@@ -75,20 +75,20 @@ describe('CurriculumCatalog', () => {
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
 
-    // Select "Grade 2" and "Grade 3" in grade level filter
+    // Select "Kindergarten" and "Grade 2" in grade level filter
+    const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
+    fireEvent.click(kindergartenFilterCheckbox);
+    assert(kindergartenFilterCheckbox.checked);
     const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
     fireEvent.click(grade2FilterCheckbox);
     assert(grade2FilterCheckbox.checked);
-    const grade3FilterCheckbox = screen.getByDisplayValue('grade_3');
-    fireEvent.click(grade3FilterCheckbox);
-    assert(grade3FilterCheckbox.checked);
 
-    // Filters for all courses for grades 2 and/or 3
+    // Filters for all courses for kindergarten and/or grade 2
     const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
     expect(numFilteredCurriculumCards).to.equal(
-      grades2And3ShownCurricula.length
+      gradesKAnd2ShownCurricula.length
     );
   });
 
