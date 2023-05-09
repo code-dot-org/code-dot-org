@@ -1130,3 +1130,7 @@ hr:
               display_name: Funkcije
             csf_nested_loops:
               display_name: Uvjeti
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Uvod

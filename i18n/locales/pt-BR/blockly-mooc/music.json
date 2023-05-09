@@ -1,1 +1,20 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "tocar som",
+  "blockly_blockPlaySoundAtMeasureTooltip": "tocar som",
+  "blockly_blockRepeatTooltip": "repita",
+  "blockly_blockRestTooltip": "descanso",
+  "blockly_blockWhenRun": "quando executar",
+  "blockly_blockWhenRunTooltip": "quando executar",
+  "blockly_functionNamePlaceholder": "minha função",
+  "blockly_toolboxCategoryEffects": "Efeitos",
+  "blockly_toolboxCategoryEvents": "Eventos",
+  "blockly_toolboxCategoryFunctions": "funções",
+  "blockly_toolboxCategoryLogic": "Lógica",
+  "blockly_toolboxCategoryMath": "Matemática",
+  "blockly_toolboxCategoryPlay": "Jogar",
+  "blockly_toolboxCategoryVariables": "variáveis",
+  "feedback": "Feedback",
+  "share": "Compartilhar",
+  "startOver": "Começar do início",
+  "upload": "Fazer upload"
+}

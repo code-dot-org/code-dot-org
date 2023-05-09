@@ -112,7 +112,6 @@ hy:
     valid_password: "Valid գաղտնաբառը:"
     invalid_password: "Գաղտնաբառ պետք է լինի առնվազն 6 նիշ"
     mismatch_password: "Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում"
-    additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել ստորագրման ձեզ."
     user_type_student: "Աշակերտ"
     user_type_teacher: "Teacher"
     field_is_required: "պարտադիր ե"
