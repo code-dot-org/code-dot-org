@@ -154,7 +154,6 @@ he:
     invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
     student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
-    additional_information: "יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך."
     user_type_button: "עדכן סוג חשבון"
     user_type_label: "סוג חשבון"
     user_type_student: "תלמיד"

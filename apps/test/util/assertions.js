@@ -35,7 +35,7 @@ export function assertHidden(selector) {
  */
 export function assertOwnProperty(obj, propertyName) {
   assert(
-    obj.hasOwnProperty(propertyName),
+    Object.prototype.hasOwnProperty.call(obj, propertyName),
     'Expected ' +
       obj.constructor.name +
       " to have a property '" +

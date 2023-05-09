@@ -167,7 +167,7 @@ class InlineAudio extends React.Component {
   }
 
   isLocaleSupported() {
-    return VOICES.hasOwnProperty(this.props.locale);
+    return Object.prototype.hasOwnProperty.call(VOICES, this.props.locale);
   }
 
   getAudioSrc() {

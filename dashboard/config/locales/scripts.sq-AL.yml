@@ -1621,3 +1621,15 @@ sq:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Hyrja
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Mbyll
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Mbyll

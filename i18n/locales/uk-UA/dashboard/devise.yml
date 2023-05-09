@@ -50,9 +50,6 @@ uk:
       expired: "вже закінчився термін дії. Будь ласка, зробіть новий запит"
       not_found: "не знайдено"
       not_locked: "не заблоковано"
-      not_saved:
-        one: "Збереженню цього %{resource} заважала 1 помилка:"
-        other: "%{count} помилок заважали збереженню цього %{resource}:"
     invitations:
       send_instructions: 'Запрошення надіслано електронною поштою на %{email}.'
       invitation_token_invalid: 'Надано неприпустимий маркер запрошення!'
