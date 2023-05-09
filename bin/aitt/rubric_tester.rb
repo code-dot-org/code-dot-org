@@ -263,10 +263,15 @@ def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, e
       file.puts "  <h2 style=\"color: red\">Errors: #{errors.count}</h2>"
       file.puts "  <p style=\"color: red\">#{errors.join(', ')} failed to load</p>"
     end
+
+    file.puts "  <h2>Command Line:</h2>"
+    file.puts "  <p><pre>#{$command_line}</pre><\p>"
+
     file.puts "  <h2>Overall Accuracy: #{accuracy.to_i}%</h2>"
     file.puts "  <h2>Accuracy by Key Concept:</h2>"
     file.puts generate_accuracy_table(accuracy_by_criteria)
 
+    file.puts "  <h2>Grades by student:</h2>"
     actual_grades.each do |student_id, grades|
       file.puts "  <h3>Student: #{student_id}</h3>"
       file.puts "  <a href=\"#{link_base_url}/#{student_id}.js\">#{student_id}.js</a>"
@@ -289,6 +294,7 @@ def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, e
 end
 
 def main
+  $command_line = "#{$0} #{ARGV.join(' ')}"
   options = command_line_options
   main_start_time = Time.now
   prompt_file = 'system_prompt.txt'
