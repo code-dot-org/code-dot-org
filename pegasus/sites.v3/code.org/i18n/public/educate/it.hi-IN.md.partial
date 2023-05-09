@@ -10,7 +10,8 @@ theme: responsive
 
 - हम आपके स्कूल के लिए कम से कम 15 MBit/sec इंटरनेट कनेक्शन की सिफारिश करते हैं।
 - हमारे द्वारा समर्थित सबसे छोटा स्क्रीन आकार 1024 x 728 px है।
-- हमारे मध्यम और उच्च विद्यालय स्तर के पाठ्यक्रमों के लिए आपको माउस (या टचपैड) और कीबोर्ड वाले एक डेस्कटॉप या लैपटॉप कंप्यूटर की आवश्यकता होगी: सीएस डिस्कवरीज़, सीएस सिद्धांत, और ऐप लैब का परिचय। अधिकांश टैबलेट्स और मोबाइल डिवाइसेस इन पाठ्यक्रमों के लिए समर्थित नहीं हैं। डिवाइस-विशिष्ट अपवादों के लिए नीचे "मोबाइल और टैबलेट समर्थन विवरण" देखें।
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. डिवाइस-विशिष्ट अपवादों के लिए नीचे "मोबाइल और टैबलेट समर्थन विवरण" देखें।
 - अन्य सारी सामग्री, जैसे कि K-5 पाठ्यक्रम (कंप्यूटर विज्ञान के बुनियादी सिद्धांत) और ऑवर ऑफ़ कोड गतिविधियां अन्य सभी आधुनिक टैबलेट्स और लैपटॉप या डेस्कटॉप कंप्यूटर्स के अलावा iPads और Chromebook पर संगत हैं।
 - मोबाइल डिवाइस समर्थन विवरण खोज रहे हैं? नीचे दिया गया पढ़ें।
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## मोबाइल और टैबलेट समर्थन विवरण
 
-सभी सीएस डिस्कवरी, सीएस सिद्धांत, और ऐप लैब के परिचय के पाठ्यक्रम टैबलेट्स या मोबाइल डिवाइसेस के साथ संगत नहीं हैं - एक पूर्ण कीबोर्ड और माउस (या MacBooks की तरह टचपैड) की आवश्यकता होती है। अधिकांश टैबलेट निम्नलिखित अपवादों के साथ समर्थित नहीं हैं:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. अधिकांश टैबलेट निम्नलिखित अपवादों के साथ समर्थित नहीं हैं:
 
 - एक बाहरी कीबोर्ड के साथ माइक्रोसॉफ्ट सरफेस प्रो
 - एक बाहरी कीबोर्ड और एक बाहरी माउस या टचपैड के साथ iPadOS 13.4 या बाद का संस्करण चला रहा iPad
 
-अन्य सारी सामग्री, जैसे कि K-5 पाठ्यक्रम (कंप्यूटर विज्ञान के बुनियादी सिद्धांत) और ऑवर ऑफ़ कोड गतिविधियां अन्य सभी आधुनिक टैबलेट्स और लैपटॉप या डेस्कटॉप कंप्यूटर्स के अलावा iPads और Chromebook पर संगत हैं।
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### मोबाइल फोन्स
 

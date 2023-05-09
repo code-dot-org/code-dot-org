@@ -15,7 +15,7 @@ const NUMBERS_TO_DISPLAY_TEXT = {
   '2.0': i18n.timeMedium(),
   '4.0': i18n.timeLong(),
   '8.0': i18n.timeVeryLong(),
-  random: i18n.timeRandom()
+  random: i18n.timeRandom(),
 };
 
 const MINIBLOCKS_TO_DISPLAY_TEXT = {
@@ -52,7 +52,7 @@ const MINIBLOCKS_TO_DISPLAY_TEXT = {
   carrots: i18n.miniBlockCarrots(),
   milk: i18n.miniBlockMilk(),
   egg: i18n.miniBlockEgg(),
-  poppy: i18n.miniBlockPoppy()
+  poppy: i18n.miniBlockPoppy(),
 };
 
 const MINIBLOCKS = Object.keys(MINIBLOCKS_TO_DISPLAY_TEXT).sort();
@@ -88,7 +88,7 @@ const SOUNDS_TO_DISPLAY_TEXT = {
   metalWhack: i18n.soundTypeMetalWhack(),
   zombieBrains: i18n.soundTypeZombieBrains(),
   zombieGroan: i18n.soundTypeZombieGroan(),
-  zombieHurt: i18n.soundTypeZombieHurt()
+  zombieHurt: i18n.soundTypeZombieHurt(),
 };
 
 const ALL_SOUNDS = Object.keys(SOUNDS_TO_DISPLAY_TEXT);
@@ -100,7 +100,7 @@ const ENTITY_TYPES_TO_DISPLAY_TEXT = {
   ironGolem: i18n.entityTypeIronGolem(),
   creeper: i18n.entityTypeCreeper(),
   cow: i18n.entityTypeCow(),
-  chicken: i18n.entityTypeChicken()
+  chicken: i18n.entityTypeChicken(),
 };
 
 const ENTITY_TYPES = Object.keys(ENTITY_TYPES_TO_DISPLAY_TEXT);
@@ -111,7 +111,7 @@ const SPAWNABLE_ENTITY_TYPES = [
   'ironGolem',
   'creeper',
   'cow',
-  'chicken'
+  'chicken',
 ];
 
 const DIRECTIONS_TO_DISPLAY_TEXT = {
@@ -119,7 +119,7 @@ const DIRECTIONS_TO_DISPLAY_TEXT = {
   middle: i18n.directionMiddle(),
   down: i18n.directionDown(),
   left: i18n.directionLeft(),
-  right: i18n.directionRight()
+  right: i18n.directionRight(),
 };
 
 /**
@@ -149,13 +149,13 @@ const ENTITY_ACTION_BLOCKS_TO_DISPLAY_TEXT = {
   flashEntity: i18n.blockActionFlashEntity(),
   moveForward: i18n.blockActionMoveForward(),
   moveRandom: i18n.blockActionMoveRandom(),
-  explodeEntity: i18n.blockActionExplodeEntity()
+  explodeEntity: i18n.blockActionExplodeEntity(),
 };
 
 const ENTITY_TARGET_ACTION_BLOCKS_TO_DISPLAY_TEXT = {
   moveToward: i18n.blockActionMoveToward(),
   moveTo: i18n.blockActionMoveTo(),
-  moveAway: i18n.blockActionMoveAway()
+  moveAway: i18n.blockActionMoveAway(),
 };
 
 export const ENTITY_ACTION_BLOCKS = Object.keys(
@@ -169,7 +169,7 @@ export const ENTITY_TARGET_ACTION_BLOCKS = Object.keys(
 export const install = (blockly, blockInstallOptions) => {
   const craftBlockOptions = {
     playSoundOptions: blockInstallOptions.level.playSoundOptions,
-    dropDropdownOptions: blockInstallOptions.level.dropDropdownOptions
+    dropDropdownOptions: blockInstallOptions.level.dropDropdownOptions,
   };
 
   blockly.Blocks.craft_turn = {
@@ -183,12 +183,12 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_turn.DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
   blockly.getGenerator().craft_entityTurn = function () {
@@ -197,7 +197,7 @@ export const install = (blockly, blockInstallOptions) => {
     const methodCalls = {
       left: 'turnLeft',
       right: 'turnRight',
-      random: 'turnRandom'
+      random: 'turnRandom',
     };
     return `${methodCalls[dir]}(event.targetIdentifier, 'block_id_${this.id}');\n`;
   };
@@ -215,13 +215,13 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
     [i18n.blockTurnRight() + ' \u21BB', 'right'],
-    [i18n.turnRandom(), 'random']
+    [i18n.turnRandom(), 'random'],
   ];
 
   blockly.getGenerator().craft_entityTurnLR = function () {
@@ -230,7 +230,7 @@ export const install = (blockly, blockInstallOptions) => {
     const methodCalls = {
       left: 'turnLeft',
       right: 'turnRight',
-      random: 'turnRandom'
+      random: 'turnRandom',
     };
     return `${methodCalls[dir]}(event.targetIdentifier, 'block_id_${this.id}');\n`;
   };
@@ -248,17 +248,17 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
   blockly.Blocks.craft_turn.DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
   blockly.getGenerator().craft_turn = function () {
@@ -274,7 +274,7 @@ export const install = (blockly, blockInstallOptions) => {
     WHEN_SPAWNED: EventType.WhenSpawned,
     WHEN_ATTACKED: EventType.WhenAttacked,
     WHEN_NIGHT: EventType.WhenNight,
-    WHEN_DAY: EventType.WhenDay
+    WHEN_DAY: EventType.WhenDay,
   };
 
   const defaultEventOrder = [
@@ -283,7 +283,7 @@ export const install = (blockly, blockInstallOptions) => {
     'WHEN_USED',
     'WHEN_ATTACKED',
     'WHEN_DAY',
-    'WHEN_NIGHT'
+    'WHEN_NIGHT',
   ];
 
   const statementNameToDisplayName = {
@@ -292,7 +292,7 @@ export const install = (blockly, blockInstallOptions) => {
     WHEN_SPAWNED: i18n.eventTypeWhenSpawned(),
     WHEN_ATTACKED: i18n.eventTypeWhenAttacked(),
     WHEN_NIGHT: i18n.eventTypeWhenNight(),
-    WHEN_DAY: i18n.eventTypeWhenDay()
+    WHEN_DAY: i18n.eventTypeWhenDay(),
   };
 
   function blockFor(displayName, statementNames = defaultEventOrder) {
@@ -307,7 +307,7 @@ export const install = (blockly, blockInstallOptions) => {
         });
         this.setColour(120);
         this.setTooltip('');
-      }
+      },
     };
   }
 
@@ -425,7 +425,7 @@ export const install = (blockly, blockInstallOptions) => {
         this.appendStatementInput('DO');
         this.setPreviousStatement(false);
         this.setNextStatement(false);
-      }
+      },
     };
 
     blockly.getGenerator()[`craft_${functionName}`] = function () {
@@ -471,7 +471,7 @@ export const install = (blockly, blockInstallOptions) => {
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-      }
+      },
     };
 
     blockly.getGenerator()[`craft_${simpleFunctionName}`] = function () {
@@ -488,7 +488,7 @@ export const install = (blockly, blockInstallOptions) => {
         this.appendDummyInput().appendField(new blockly.FieldLabel(blockText));
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-      }
+      },
     };
 
     blockly.getGenerator()[`craft_${simpleFunctionName}`] = function () {
@@ -515,7 +515,7 @@ export const install = (blockly, blockInstallOptions) => {
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-      }
+      },
     };
 
     blockly.getGenerator()[`craft_${blockName}`] = function () {
@@ -558,7 +558,7 @@ export const install = (blockly, blockInstallOptions) => {
     'up',
     'down',
     'left',
-    'right'
+    'right',
   ]);
 
   blockly.Blocks.craft_forever = {
@@ -568,7 +568,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendField(i18n.forever());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_forever = function () {
@@ -592,7 +592,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_repeatTimes = function () {
@@ -609,7 +609,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_repeatRandom = function () {
@@ -622,7 +622,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       const dropdownOptions = [2, 3, 4, 5, 6, 7, 8, 9, 10].map(k => [
         k.toString(),
-        k.toString()
+        k.toString(),
       ]);
       const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
@@ -634,7 +634,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_repeatDropdown = function () {
@@ -651,7 +651,7 @@ export const install = (blockly, blockInstallOptions) => {
         'middle',
         'down',
         'left',
-        'right'
+        'right',
       ]);
       const entityTypeDropdownOptions = keysToDropdownOptions(
         SPAWNABLE_ENTITY_TYPES
@@ -671,7 +671,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(locationDropdown, 'DIRECTION');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator()[`craft_spawnEntity`] = function () {
@@ -697,7 +697,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(entityTypeDropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator()[`craft_spawnEntityRandom`] = function () {
@@ -712,7 +712,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendField(new blockly.FieldLabel('move north'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveEntityNorth = function () {
@@ -726,7 +726,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendField(new blockly.FieldLabel('move south'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveEntitySouth = function () {
@@ -740,7 +740,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendField(new blockly.FieldLabel('move east'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveEntityEast = function () {
@@ -754,7 +754,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendField(new blockly.FieldLabel('move west'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveEntityWest = function () {
@@ -787,7 +787,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(dropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_playSound = function () {
@@ -811,7 +811,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(i18n.blockActionToScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_addScore = function () {

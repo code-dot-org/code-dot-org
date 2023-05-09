@@ -40,7 +40,7 @@ $(document).ready(() => {
       url: form.prop('action'),
       data: form.serialize(),
       dataType: 'json',
-      success: data => $('#race-modal').modal('hide')
+      success: data => $('#race-modal').modal('hide'),
     });
   }
 

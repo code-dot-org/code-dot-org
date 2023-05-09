@@ -84,7 +84,7 @@ clientState.writeSourceForLevel = function (
     createKey(scriptName, levelId, 'source'),
     JSON.stringify({
       source: source,
-      timestamp: timestamp
+      timestamp: timestamp,
     })
   );
 };

@@ -4213,7 +4213,8 @@
           "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_a": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
@@ -5098,7 +5099,8 @@
           "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
         },
         "courseA_maze_seq52022": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq62022": {
           "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
@@ -5707,6 +5709,52 @@
         },
         "courseF_bee_for_challenge22022": {
           "courseF_bee_for_challenge2_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "ប្រសិនបើកំប្រុកមិនធ្វើអ្វីដូចដែលអ្នកចង់បានទេ ត្រូវប្រាកដថាកូដប្លុកទាំងពីរត្រូវបានភ្ជាប់ជាមួយគ្នា ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!​ ម្តងទៀត។",
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp12022": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp12022": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2019": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2020": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
         }
       }
     }

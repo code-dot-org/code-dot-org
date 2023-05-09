@@ -1626,63 +1626,63 @@
         },
         "0661508e-1aa3-488f-8064-beaec4c40e7a": {
           "name": "Yansıtma",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “yansıtma” slaytını göster\n\n\\*\\* Yansıt \\*\\*: \\_ Sıradaki adımların bir listesini tamamlamanız gerekir mi? \\_"
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “yansıtma” slaytını göster\n\n**Yansıt**: _Sıradaki adımların bir listesini tamamlamanız gerekir mi?_"
         },
         "835c16c0-8a24-43c1-889b-493814eb50d1": {
           "name": "Kelime Dağarcığı",
-          "description": "<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: \"Kelime\" slaytını göster\n\n-   \\*\\* Algoritma \\*\\* - Bir görevi bitirmek için adımların bir listesi.\n-   \\*\\* Program \\*\\* - Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+          "description": "<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Kelime\" slaytını göster\n\n-   **Algoritma** - Bir görevi bitirmek için adımların bir listesi.\n-   **Program** - Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
           "name": "Giriş",
-          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Giriş” slaytını göster\n\nÖğrencilere robotların yapabileceği şeyler için bağlam vermek için aşağıdaki videolardan birini izleyin:\n\n-   [Honda tarafından Asimo] [0] \\(3:58)\n-   [Yumurta Çizim Robotu] [1] \\(3:15)\n-   [Dans eden Lego Robot] [2] \\(1:35)\n\nAna etkinlikte, öğrenciler gruplarının geri kalanının orijinal görüntüyü görmesine izin vermeden çizim yapmak için birbirlerine rehberlik etmek için talimatları kodlayacaklardır. Bu ısınma sınıfın etkinliğini çerçeveler."
+          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> **Ekran**: “Giriş” slaytını göster\n\nÖğrencilere robotların yapabileceği şeyler için bağlam vermek için aşağıdaki videolardan birini izleyin:\n\n-   [Honda tarafından Asimo] [0] \\(3:58)\n-   [Yumurta Çizim Robotu] [1] \\(3:15)\n-   [Dans eden Lego Robot] [2] \\(1:35)\n\nAna etkinlikte, öğrenciler gruplarının geri kalanının orijinal görüntüyü görmesine izin vermeden çizim yapmak için birbirlerine rehberlik etmek için talimatları kodlayacaklardır. Bu ısınma sınıfın etkinliğini çerçeveler."
         },
         "5263a44d-bdc5-4a33-ae74-33eb50c4ec28": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Tartışma” slaytını göster\n\n\\*\\* Tartışın: \\*\\* \\_ Robotların yaptıkları şeyleri nasıl yapacağını bildiğini varsayıyorsunuz? Bizimki gibi çalışan beyinleri var mı? \\_\n\n\\*\\* Tartışma Hedefi: \\*\\* Robotlar insanlar gibi davranıyor gibi görünse de, aslında sadece programlamalarına yanıt verdiklerini söyleyin. Öğrenciler muhtemelen daha çok insan gibi davranan filmlerden ve TV'den robotlara atıfta bulunacaklardır. Onları _roombas_ gibi gerçek hayatta gördükleri veya duydukları robotları ve hatta _amazon Alexa_ gibi dijital asistanları düşünmeye itin.\n\nBunu, belirli komutları kullanarak, insanların belirli şeyler yapmak için robotları nasıl programlamaları gerektiği konusunda bir tartışmaya çalışın."
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Tartışma” slaytını göster\n\n**Tartışın:** _Robotların yaptıkları şeyleri nasıl yapacağını bildiğini varsayıyorsunuz? Bizimki gibi çalışan beyinleri var mı?_\n\n**Tartışma Hedefi:** Robotlar insanlar gibi davranıyor gibi görünse de, aslında sadece programlamalarına yanıt verdiklerini söyleyin. Öğrenciler muhtemelen daha çok insan gibi davranan filmlerden ve TV'den robotlara atıfta bulunacaklardır. Onları _Roombas_ gibi gerçek hayatta gördükleri veya duydukları robotları ve hatta _amazon Alexa_ gibi dijital asistanları düşünmeye itin.\n\nBunu, belirli komutları kullanarak, insanların belirli şeyler yapmak için robotları nasıl programlamaları gerektiği konusunda bir tartışmaya çalışın."
         },
         "61f2eb20-0ecb-4319-8ea7-5a9210a1c406": {
           "name": "Grafik Kağıdı Programlama",
           "progression_name": "Grafik Kağıdında Programlama - Bağlantısız Aktivite"
         },
         "69bac9e1-3ac8-4641-bd12-2ea9fe9dd83a": {
-          "description": "Bu etkinlikte, öğrenciler hem programcı hem de robot olarak hareket edecekler, birbirleri için yazdıkları programlara göre karelerde renklendireceklerdir.\n\n\\*\\* Dağıt: \\*\\* Öğrenciler 4x4 ızgaraları (veya 4x4 kutu kesilmiş grafik kağıdı tabakaları) kullanacaklar. Ayrıca görüntü çalışma sayfasına da ihtiyaç duyacaklar.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Grafik kağıt programlama-komutlar” slaytını göster\n\n\\*\\* Bunu yapın: \\*\\* Bu komutları yansıtın veya bunları tahtaya yazın. Uzun süredir devam etmeyecekler, ancak öğrencilerin algoritmadan programa geçiş yapmalarına yardımcı olacaklar.\n\n     Bir kareyi sağa hareket et\n     Sol bir kareyi hareket et\n     Bir kareyi hareket et\n     Bir kareyi aşağı hareket ettirmek\n     Kare ile renkle doldurun"
+          "description": "Bu etkinlikte, öğrenciler hem programcı hem de robot olarak hareket edecekler, birbirleri için yazdıkları programlara göre karelerde renklendireceklerdir.\n\n**Dağıt:** Öğrenciler 4x4 ızgaraları (veya 4x4 kutu kesilmiş grafik kağıdı tabakaları) kullanacaklar. Ayrıca görüntü çalışma sayfasına da ihtiyaç duyacaklar.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Grafik kağıt programlama-komutlar” slaytını göster\n\n**Bunu yapın:** Bu komutları yansıtın veya bunları tahtaya yazın. Uzun süredir devam etmeyecekler, ancak öğrencilerin algoritmadan programa geçiş yapmalarına yardımcı olacaklar.\n\n     Bir kareyi sağa hareket et\n     Sol bir kareyi hareket et\n     Bir kareyi hareket et\n     Bir kareyi aşağı hareket ettirmek\n     Kareleri renkle doldurun"
         },
         "fcd4343e-894a-46df-8506-60461c8b0dc8": {
           "description": "Bugün hepimiz robotları programlıyoruz ... ve onlar zaten buradalar! Sensin! Birbirimizin yeniden bir resim yaratmasına yardımcı olmak için özel anlamları olan semboller kullanarak programlar yazacağız. İlk olarak, ben robot gibi ve siz programcılarsınız gibi birlikte pratik yapacağız, o zaman herkessıra gelmesi için gruplara ayrılabiliriz."
         },
         "ae4453c2-6859-4fe5-9fde-625cfd390cb1": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Grafik Kağıt Programlama-Bulmaca #1” Slayt\n\nHem öğrencilerin size doğru yürümesini sağlayacağınız görüntüyü hem de KOLunuzla dolduracağınız boş bir ızgarayı görüntüleyin. Talimatların, ızgara ve görüntünün aynı anda görünür kaldığından emin olun. “Kareyi renkle doldur” talimatı verildiğinde, renkle doldurulmuş bir kareyi temsil etmek için slayttaki iki kareden birini ızgaraya sürükleyin.\n\n\\[] [0]"
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Grafik Kağıt Programlama-Bulmaca #1” Slayt\n\nHem öğrencilerin size doğru yürümesini sağlayacağınız görüntüyü hem de KOLunuzla dolduracağınız boş bir ızgarayı görüntüleyin. Talimatların, ızgara ve görüntünün aynı anda görünür kaldığından emin olun. “Kareyi renkle doldur” talimatı verildiğinde, renkle doldurulmuş bir kareyi temsil etmek için slayttaki iki kareden birini ızgaraya sürükleyin.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
         },
         "78086b29-2d45-4172-91f8-a56000ef094c": {
           "description": "_İşte bir resim.  Otomatik Gerçekleştirme Makinesi (ARM) ile robot olduğumu varsayın.  Anladığım tek talimat bunlar._\n\n _Sol üst köşeden başlayarak, sözlerinizle ARM'imi yüksek sesle yönlendirin._"
         },
         "2dc8720c-7b51-4e23-bff7-caf758dea9b3": {
-          "description": "\\*\\* Model: \\*\\* Sınıf size aşağıdaki gibi talimatlar verebilir. Takip etmeyi düşündüğünüz bir talimat duyduğunuzda, öğrencilerin ne yaptığınızı takip edebilmeleri için yüksek sesle tekrarladığınızdan emin olun.\n\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare aşağı hareket et\n     Kareyi renkle doldur\n\nÖrnek karenizi tamamlayana kadar etkinliğe devam edin.\n\n\\*\\* Yakalama: \\*\\* Öğrencilerin tek bir görüntüye giren tüm adımları görebilmeleri için her bir komutu yazın.\n\n    Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare aşağı hareket et\n     Kareyi renkle doldur\n\n\\*\\* Söyle: \\*\\* \\_ Bana bir görevi bitirmek için adımların bir listesini veriyorsunuz. Programlamada buna algoritma diyorlar. Algoritmalar harika, çünkü programcı olarak anlamanız kolaydır. Ancak, böyle bir çizim için algoritmayı yazmak istediğimizde ne olur? \\_\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Grafik Kağıt Programlama-Bulmaca #2” Slayt\n\nÖğrencilere aşağıdaki gibi daha karmaşık bir görüntü gösterin. Öğrencilerin önerdiği adımları yazmak için slayttaki \"Adımlar Listesi\" tablosunu kullanmaktan çekinmeyin.\n\n\\[] [0]\n\nArdından, bu görüntüye ulaşmak için alacağınız bazı talimatları yazmaya başlayın. Umalım ki, öğrenciler her şeyi uzun uzun yazmanın hızla biraz kabusa dönüşeceğini göreceklerdir.\n\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare aşağı hareket et\n     Sol bir kareyi hareket et\n     Kare ile renkle doldurun\n     Bir kare sola hareket et\n     Bir kare sola hareket et\n     Kareyi renkle doldur\n     VE 12 TALİMAT DAHA!\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: Sonraki slayt göster\n\nÖğrencilere bu sembol listesini gösterin.\n\n\\[] [1]"
+          "description": "**Model:** Sınıf size aşağıdaki gibi talimatlar verebilir. Takip etmeyi düşündüğünüz bir talimat duyduğunuzda, öğrencilerin ne yaptığınızı takip edebilmeleri için yüksek sesle tekrarladığınızdan emin olun.\n\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare aşağı hareket et\n     Kareyi renkle doldur\n\nÖrnek karenizi tamamlayana kadar etkinliğe devam edin.\n\n**Yakalama:** Öğrencilerin tek bir görüntüye giren tüm adımları görebilmeleri için her bir komutu yazın.\n\n    Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare aşağı hareket et\n     Kareyi renkle doldur\n\n**Söyle:** \\_ Bana bir görevi bitirmek için adımların bir listesini veriyorsunuz. Programlamada buna algoritma diyorlar. Algoritmalar harika, çünkü programcı olarak anlamanız kolaydır. Ancak, böyle bir çizim için algoritmayı yazmak istediğimizde ne olur? \\_\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Grafik Kağıt Programlama-Bulmaca #2” Slayt\n\nÖğrencilere aşağıdaki gibi daha karmaşık bir görüntü gösterin. Öğrencilerin önerdiği adımları yazmak için slayttaki \"Adımlar Listesi\" tablosunu kullanmaktan çekinmeyin.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nArdından, bu görüntüye ulaşmak için alacağınız bazı talimatları yazmaya başlayın. Umalım ki, öğrenciler her şeyi uzun uzun yazmanın hızla biraz kabusa dönüşeceğini göreceklerdir.\n\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare sağa hareket et\n     Bir kare sağa hareket et\n     Kareyi renkle doldur\n     Bir kare aşağı hareket et\n     Sol bir kareyi hareket et\n     Kare ile renkle doldurun\n     Bir kare sola hareket et\n     Bir kare sola hareket et\n     Kareyi renkle doldur\n     VE 12 TALİMAT DAHA!\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: Sonraki slayt göster\n\nÖğrencilere bu sembol listesini gösterin.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
         },
         "c24df0cf-2ab1-4b43-b556-7da15019dc60": {
-          "description": "\\*\\*Tartışma: \\*\\* \\_Talimatlarımızı kolaylaştırmak için bu sembolleri nasıl kullanabiliriz? \\_"
+          "description": "**Tartışma:** _Talimatlarımızı kolaylaştırmak için bu sembolleri nasıl kullanabiliriz?_"
         },
         "66e69e6f-d274-4340-a191-d6223b0c3fcb": {
-          "description": "Sözlü talimatlardan sembollere geçiş ile ilgili fikirler çıkarın. Öğrenciler o yere geldikten sonra, bu metni belirtin:\n\n-   \"Bir kare sağa hareket et, bir kare sağa hareket et, kareyi renkle doldur\"\n\nşimdi programa karşılık gelecektir:\n\n\\[] [0]\n\n\\*\\* Tartışma Hedefi: \\*\\* Öğrencilerin tüm ifadeleri temsil etmek için sembolleri kullanabilecekleri fikrine ulaşın. Bu anlaşıldıktan sonra, ayrıntılı listelemeden kodlamaya geçiş yapmaya \\*\\* \"programlama\" denir. \\*\\* \\*\\*"
+          "description": "Sözlü talimatlardan sembollere geçiş ile ilgili fikirler çıkarın. Öğrenciler o yere geldikten sonra, bu metni belirtin:\n\n-   \"Bir kare sağa hareket et, bir kare sağa hareket et, kareyi renkle doldur\"\n\nşimdi programa karşılık gelecektir:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\n**Tartışma Hedefi:** Öğrencilerin tüm ifadeleri temsil etmek için sembolleri kullanabilecekleri fikrine ulaşın. Bu anlaşıldıktan sonra, ayrıntılı listelemeden kodlamaya geçiş yapmaya **\"programlama\"** denir."
         },
         "be35d4b6-5785-44f3-9d9b-158e356ebb0d": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: Sonraki slaytı göster\n\n\\*\\* Model: \\*\\* Şimdi, sınıfın yalnızca sembolleri kullanarak daha büyük görüntüyü çizmenize yardımcı olmasını sağlayın. Şimdilik gereksiz adımlar için endişelenmeyin. Nihai programları resmi oluşturmak için çalışıyorsa, bir kazanç olarak düşünün. (Bu bulmacayı modellemede kullanımınız için semboller bu slaytta sonsuz klonlanmıştır.)",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: Sonraki slaytı göster\n\n**Model:** Şimdi, sınıfın yalnızca sembolleri kullanarak daha büyük görüntüyü çizmenize yardımcı olmasını sağlayın. Şimdilik gereksiz adımlar için endişelenmeyin. Nihai programları resmi oluşturmak için çalışıyorsa, bir kazanç olarak düşünün. (Bu bulmacayı modellemede kullanımınız için semboller bu slaytta sonsuz klonlanmıştır.)",
           "tips": [
             "Programımızı İngilizce kitap okur gibi soldan sağa yazdığımıza dikkat edin.  Bazı öğrenciler bu yöntemi tercih etmektedir.  Diğerleri, kılavuzun her satırına yeni bir kağıt satırında başlamayı sever.  Programlarını yazma biçimleri, gruplarındaki diğer kişilerin takip edip edemeyeceği kadar önemli değil!"
           ]
         },
         "d8c187b2-ad4b-4aaa-85e8-1585da13a6fa": {
-          "description": "Sınıfta bu noktada öneriler yüzünden bir uğultu olabilir. Sınıf egzersizin özünü alırsa, bu aynı ızgarayı doldurmanın alternatif yollarını tartışmak için iyi bir yerdir. Hala karışıklık varsa, bu parçayı başka bir gün için kaydedin ve başka bir örnekle çalışın.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Örnek Çözüm” slaytını göster\n\n\\[] [0]\n\n* * *"
+          "description": "Sınıfta bu noktada öneriler yüzünden bir uğultu olabilir. Sınıf egzersizin özünü alırsa, bu aynı ızgarayı doldurmanın alternatif yollarını tartışmak için iyi bir yerdir. Hala karışıklık varsa, bu parçayı başka bir gün için kaydedin ve başka bir örnekle çalışın.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Örnek Çözüm” slaytını göster\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n* * *"
         },
         "a44a9180-d414-4934-82ef-09e1d14355b1": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: \"Sıra Sende!\" slaytını göster\n\n### Öğrencilerin Sırası\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: \"Etkinlik Sayfası\" slaytını göster\n\n\\*\\* Grup: \\*\\* Öğrencileri çiftlere veya küçük gruplara bölün.\n\n-   Her çiftin/grubun çalışma sayfasından bir resim seçmesini sağlayın.\n-   Seçilen görüntüyü ortak (lar) ile çizmek için algoritmayı tartışın.\n-   Algoritmayı sembolleri kullanarak bir programa dönüştürün.\n-   Başka bir çift/grupla programları değiştirin ve birbirlerinin resmini çizin.\n-   Başka bir resim seçin ve tekrar gidin!\n\n\\[] [0]"
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Sıra Sende!\" slaytını göster\n\n### Öğrencilerin Sırası\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Etkinlik Sayfası\" slaytını göster\n\n**Grup:** Öğrencileri çiftlere veya küçük gruplara bölün.\n\n-   Her çiftin/grubun çalışma sayfasından bir resim seçmesini sağlayın.\n-   Seçilen görüntüyü ortak (lar) ile çizmek için algoritmayı tartışın.\n-   Algoritmayı sembolleri kullanarak bir programa dönüştürün.\n-   Başka bir çift/grupla programları değiştirin ve birbirlerinin resmini çizin.\n-   Başka bir resim seçin ve tekrar gidin!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
         },
         "fb8d3443-62f5-478c-95b5-1530c6d592e7": {
           "name": "İsteğe Bağlı Değerlendirme (10 dakika)",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: İsteğe bağlı değerlendirmeyi kullanıyorsanız sonraki slayt göster\n\n-   \\*\\* \\*Grafik Kağıt Programlama - Değerlendirme \\*\\* yi dağıtın ve talimatlar iyi açıklandıktan sonra öğrencilerin etkinliği bağımsız olarak tamamlamalarına izin verin.\n-   Önceki faaliyetler sayesinde bu tanıdık olmalıdır."
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: İsteğe bağlı değerlendirmeyi kullanıyorsanız sonraki slayt göster\n\n-   \\*\\* \\*Grafik Kağıt Programlama - Değerlendirme \\*\\* yi dağıtın ve talimatlar iyi açıklandıktan sonra öğrencilerin etkinliği bağımsız olarak tamamlamalarına izin verin.\n-   Önceki faaliyetler sayesinde bu tanıdık olmalıdır."
         },
         "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a": {
           "name": "Yansıma",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Yansıtma” slaytını göster\n\n**Yansıtma:**\n\n-   \\_Kodlayabileceğiniz başka bir görüntüyü çizin. Bu çizime uygun programı yazabilir misiniz? \\_\n-   \\_ Okların ne anlama geldiğini değiştirirsek başka ne tür robot türleri programlayabiliriz? \\_",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Yansıtma” slaytını göster\n\n**Yansıtma:**\n\n-   _Kodlayabileceğiniz başka bir görüntüyü çizin. Bu çizime uygun programı yazabilir misiniz?_\n-   _Okların ne anlama geldiğini değiştirirsek başka ne tür robot türleri programlayabiliriz?_",
           "tips": [
             "Bunun gibi yansıtma istemleri çeşitli stillerde tamamlanabilir. Günlük tutma veya tartışma (gruplar veya ortaklarla) harika seçeneklerdir!"
           ]
@@ -1732,30 +1732,30 @@
         },
         "f5627332-703a-420b-ab72-660c350b87d9": {
           "name": "Yansıtma",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “yansıtma” slaytını göster\n\n\\*\\* Yansıt: \\*\\* \\_ Hayatınızda ne zaman sinir bozucu bir sorun için “hata ayıklama” yaptınız? \\_",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “yansıtma” slaytını göster\n\n**Yansıt:** _Hayatınızda ne zaman sinir bozucu bir sorun için “hata ayıklama” yaptınız?_",
           "tips": [
             "Öğrencilerin sorunun gerçek bir yaşam problemini ifade ettiğini anladıklarından emin olun - önceki bir bilgisayar sorunu değil. Öğrencileriniz için alakalı bir örnek verin veya kendi hayatınızdan bir örnek bulun."
           ]
         },
         "5dbc43b8-f734-4c93-99d4-0995393a9f25": {
           "name": "Kelime Dağarcığı",
-          "description": "<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: \"Kelimeler\" slaytını göster\n\n-   \\*\\* Algoritma \\*\\* - Bir görevi bitirmek için adımların bir listesi.\n\n-   \\*\\* Hata \\*\\* - Bir programın doğru çalışmayan bir parçası.\n\n-   \\*\\* Hata Ayıklama \\*\\* - Bir algoritma veya programda sorunları bulmak ve düzeltme.\n\n-   \\*\\* Program \\*\\* - Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Kelime dağarcığı: (devam)” slaytını göster\n\n-   \\*\\* Sinirli \\*\\* - Rahatsız veya kızgın hissetmek çünkü bir şey istediğiniz gibi değil.\n\n-   \\*\\* Kalıcılık \\*\\* - Bir şey çok zor olsa bile tekrar tekrar denemek."
+          "description": "<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Kelimeler\" slaytını göster\n\n-   **Algoritma** - Bir görevi bitirmek için adımların bir listesi.\n\n-   **Hata** - Bir programın doğru çalışmayan bir parçası.\n\n-   **Hata Ayıklama** - Bir algoritma veya programda sorunları bulmak ve düzeltme.\n\n-   **Program** - Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Kelime dağarcığı: (devam)” slaytını göster\n\n-   **Sinirli** - Rahatsız veya kızgın hissetmek çünkü bir şey istediğiniz gibi değil.\n\n-   **Kalıcılık** - Bir şey çok zor olsa bile tekrar tekrar denemek."
         },
         "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
           "name": "Giriş",
           "description": "\"Grafik Kağıdı Programlama\" bölümünde takım arkadaşımızın Otomatik Gerçekleştirme Makinesi'ni (ARM) oklarla yönlendirdiğimizi hatırlayın.  Bu ısınma, ana aktivitede ihtiyaç duyulacak olan bu fikirleri geri getirecektir."
         },
         "1a76c73e-a54d-4d84-ae77-8cf516d6661e": {
-          "description": "#### Nerede hata yaptım?\n\n\\*\\* Hedef: \\*\\* Bu derste, öğrencilerin kendi programlarındaki hataları tanımlamayı ve düzeltmeyi öğrenmelerine yardımcı olmak istiyoruz. Bunu yapmanın en kolay yolu, ilk olarak öğrencileri kendi hataları olmayan hatalar içeren bir program sunmaktır. \"\" Programınızı düzeltmenize yardımcı olduktan sonra, hatalar yapmanın ne kadar sinir bozucu olabileceğini ve bu duyguların tamamen normal olduğunu ve onlar tarafından utanmadıklarını görmelerine yardımcı olduklarını paylaşın.\n\n<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: \"hata ayıklama\" slaytını göster\n\n\\[] [0]\n\n\\*\\* Tartışın: \\*\\* Sınıfın dikkatini çekin ve sıkışıp kaldığınızı bildirin! Bu zorluğunuz var ve çözdüğünüzü düşündünüz, ama işe yaramıyor gibi görünüyor. Programınızın bir hatası var, düzeltmenize yardımcı olabilirler mi?\n\nKurallar aracılığıyla bir dakikanızı ayırın:\n\n-   _yıldızda başla._\n    \\-Talimatları adım adım takip edin .\\_\n-   \\_ Tüm doğru kareler doldurulduğunda .\\_\n\n\\_Oİsteğe bağlı: \\_ Boş bir ızgara doldurarak takip edin. Resim istediğiniz şekilde ortaya çıkmadığında hayal kırıklığını ifade edin.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Düşün, eşleştir, paylaş” slaytını göster\n\n\\*\\* Düşün: \\*\\* \\_ Programımın neden işe yaramadığını anlayabilirmisiniz? \\_\n\n\\*\\* Eşleştir: \\*\\* Öğrencilerin programın ne söyleyeceğini anlayabileceklerini görmek için birlikte çalışmalarına izin verin.\n\n\\*\\* Paylaş: \\*\\* Öğrencilere sorunu çözmek için herhangi birinizin bir yol bulup bulamayacağını sorun. Doğru bir cevap aldığınızda, öğrencilere hata ayıklamada harika olduklarını bildirin!"
+          "description": "#### Nerede hata yaptım?\n\n**Hedef:** Bu derste, öğrencilerin kendi programlarındaki hataları tanımlamayı ve düzeltmeyi öğrenmelerine yardımcı olmak istiyoruz. Bunu yapmanın en kolay yolu, ilk olarak öğrencileri kendi hataları olmayan hatalar içeren bir program sunmaktır. Programınızı düzeltmenize yardımcı olduktan sonra, hatalar yapmanın ne kadar sinir bozucu olabileceğini ve bu duyguların tamamen normal olduğunu ve onlar tarafından utanmadıklarını görmelerine yardımcı olduklarını paylaşın.\n\n<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> **Ekran**: \"hata ayıklama\" slaytını göster\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Tartışın:** Sınıfın dikkatini çekin ve sıkışıp kaldığınızı bildirin! Bu zorluğunuz var ve çözdüğünüzü düşündünüz, ama işe yaramıyor gibi görünüyor. Programınızın bir hatası var, düzeltmenize yardımcı olabilirler mi?\n\nKurallar aracılığıyla bir dakikanızı ayırın:\n\n-   _yıldızda başla._\n-   _Talimatları adım adım takip edin._\n-   _Tüm doğru kareler doldurulduğunda._\n\n_İsteğe bağlı:_ Boş bir ızgara doldurarak takip edin. Resim istediğiniz şekilde ortaya çıkmadığında hayal kırıklığını ifade edin.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Düşün, eşleştir, paylaş” slaytını göster\n\n**Düşün:** _Programımın neden işe yaramadığını anlayabilirmisiniz?_\n\n**Eşleştir:** Öğrencilerin programın ne söyleyeceğini anlayabileceklerini görmek için birlikte çalışmalarına izin verin.\n\n**Paylaş:** Öğrencilere sorunu çözmek için herhangi birinizin bir yol bulup bulamayacağını sorun. Doğru bir cevap aldığınızda, öğrencilere hata ayıklamada harika olduklarını bildirin!"
         },
         "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6": {
-          "description": "\\*\\* Tartışın: \\*\\* Öğrencilere cevabı bulamadığınızda nasıl hissettiğinizi söyleyip söyleyemeyeceklerini sorun. \"Deli\" veya \"üzgün\" olduğunuzu söyleyebilirler. Onlara \"hayır\" demek yerine, biraz deli, biraz üzgün ve biraz kafası karışık hissettiğinizi açıklayın. Tüm bu duyguları bir araya getirdiğinizde, \"hayal kırıklığı\" olarak adlandırılan bir his verir.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Hayal kırıklığı” slaytını göster\n\n\"Hayal Kırıklığı\" olduğunuzda, deli, üzgün veya kafası karışık olduğunuzu düşünebilirsiniz - ve vazgeçmek için cazip olabilirsiniz - ancak hayal kırıklığı doğal bir duygu ve bir şeyler öğrenmek üzere olduğunuz büyük bir ipucu! Bırakmak yerine, ısrarcılık uygulayın. Tekrar tekrar denemeye devam edin. Birkaç kez sonra, hataları nasıl ayıklayacağınızı anlamaya başlayacaksınız!",
+          "description": "**Tartışın:** Öğrencilere cevabı bulamadığınızda nasıl hissettiğinizi söyleyip söyleyemeyeceklerini sorun. \"Deli\" veya \"üzgün\" olduğunuzu söyleyebilirler. Onlara \"hayır\" demek yerine, biraz deli, biraz üzgün ve biraz kafası karışık hissettiğinizi açıklayın. Tüm bu duyguları bir araya getirdiğinizde, \"hayal kırıklığı\" olarak adlandırılan bir his verir.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Hayal kırıklığı” slaytını göster\n\n\"Hayal Kırıklığı\" olduğunuzda, deli, üzgün veya kafası karışık olduğunuzu düşünebilirsiniz - ve vazgeçmek için cazip olabilirsiniz - ancak hayal kırıklığı doğal bir duygu ve bir şeyler öğrenmek üzere olduğunuz büyük bir ipucu! Bırakmak yerine, ısrarcılık uygulayın. Tekrar tekrar denemeye devam edin. Birkaç kez sonra, hataları nasıl ayıklayacağınızı anlamaya başlayacaksınız!",
           "tips": [
             "##### Hayal Kırıklığına Yardımcı Olacak İpuçları\n\n-   10'a kadar say\n-   Derin nefes al\n-   Onlar hakkında günlük\n-   Onlar hakkında bir ortakla konuşun\n-   Yardım isteyin\n\n##### Kararlı Olmak İçin İpuçları\n\n-   Daha önce ne denediğinizi takip edin\n-   Neler olduğunu açıklayın\n-   Ne olması gerektiğini açıklayın\n-   Bu sana ne anlatıyor?\n-   Bir değişiklik yapın ve tekrar deneyin"
           ]
         },
         "3630ffe8-f7ca-410f-8854-bb4a0e2bea95": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Hataları Bulma ve Düzeltme - Hata Ayıklama” slaytını göster\n\n\\*\\* Dağıt: \\*\\* Öğrencilerin hataları bulma ve düzeltme  (hata ayıklama) fikrini anladıklarından emin olmak için \\*\\* \\*çalışma sayfasını \\*\\* dağıtın ve öğrencilerin görevi çiftler halinde tamamlamasını sağlayın.\n\n\\_İsteğe Bağlı: \\_ Etkinliği daha hızlı hareket ettirmek istiyorsanız, bunları sınıf olarak tamamlamaktan çekinmeyin.\n\n\\*\\* Geçiş: \\*\\* Şimdi oyunu oynama zamanı!"
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Hataları Bulma ve Düzeltme - Hata Ayıklama” slaytını göster\n\n**Dağıt:** Öğrencilerin hataları bulma ve düzeltme  (hata ayıklama) fikrini anladıklarından emin olmak için **\\*çalışma sayfasını** dağıtın ve öğrencilerin görevi çiftler halinde tamamlamasını sağlayın.\n\n_İsteğe Bağlı:_ Etkinliği daha hızlı hareket ettirmek istiyorsanız, bunları sınıf olarak tamamlamaktan çekinmeyin.\n\n**Geçiş:** Şimdi oyunu oynama zamanı!"
         },
         "29bbe8ac-7f83-407e-ad63-4fe434d80d1d": {
           "name": "Röle Programlama",
@@ -1770,21 +1770,21 @@
           ]
         },
         "75be4329-bd0e-4acb-a0fb-591a650780bb": {
-          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: \"Röle Programlama\" slaytını göster\n\nSınıfınızla oyunun kurallarını gözden geçirin:\n\n-   Öğrencileri 3-5 lik gruplara ayırın.\n-   Her grubun röle tarzı sıraya girmesini sağlayın.\n-   Her takımdan odanın/spor salonu/alanın diğer tarafına aynı görüntüyü yerleştirin.\n-   Sıradaki ilk öğrenciyi görüntüye doğru ilerletin, gözden geçirin ve bu görüntüyü yeniden oluşturmak için programdaki ilk sembolü yazdırın.\n-   İlk öğrenci daha sonra geri koşar ve bir sonraki kişiyi sıraya koyar, sonra kuyruğun arkasına gider.\n-   Bir sonraki kişi görüntüyü çizer, görüntüyü gözden geçirir, daha önce yazılmış olan programı gözden geçirir, ardından ya yanlış bir sembolü seçerek programın hatasını ayıklar veya yeni bir sembol ekler. Bu öğrenci daha sonra bir sonraki kişiyi etiketlemek için geri döner ve grup programlarını bitirene kadar süreç devam eder.\n\nGörüntüyle eşleşen bir programla bitiren ilk grup kazanır!\nArtan zorluktaki görüntüler ile bunu birkaç kez oynayın.\n\nZaman tükenmeden veya öğrencileriniz bitkin hissetmeye başlamadan önce olabildiğince çok oynayın.\n\n\\*\\* Geçiş: \\*\\* Oyun bittiğinde, öğrenilen dersleri paylaşmak için herkesi daire içine alın.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Bugün ne öğrendik?” slaytını göster\n\n\\*\\* Tartışın: \\*\\* \\_ Bugün ne öğrendik? \\_\n\n-   \\_ Bir takımdaki her kişinin bir seferde beş ok yapmasına izin verilseydi? \\_\n    -   \\_ Kendi hatalarımızı  ve önceki programcının hatalarını ayıklamak ne kadar önemlidir ? \\_\n    -   \\_ 10 okla olsaydı? \\_\n    -   \\_10.000? Az ya da çok önemli mi olurdu? \\_\n\n<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: Bir sonraki slayt göster.\n\n-   \\_ Birden fazla kişi üzerinde çalıştığında bir programın daha iyi veya daha kötü olduğunu düşünüyor musunuz? \\_\n-   \\_, insanların aceleyle daha çok veya daha az hata yaptığını düşünüyor musunuz? \\_\n-   \\_ Bir hata bulursanız, tüm programı atıp baştan başlamak zorunda mısınız? \\_"
+          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Röle Programlama\" slaytını göster\n\nSınıfınızla oyunun kurallarını gözden geçirin:\n\n-   Öğrencileri 3-5 lik gruplara ayırın.\n-   Her grubun röle tarzı sıraya girmesini sağlayın.\n-   Her takımdan odanın/spor salonu/alanın diğer tarafına aynı görüntüyü yerleştirin.\n-   Sıradaki ilk öğrenciyi görüntüye doğru ilerletin, gözden geçirin ve bu görüntüyü yeniden oluşturmak için programdaki ilk sembolü yazdırın.\n-   İlk öğrenci daha sonra geri koşar ve bir sonraki kişiyi sıraya koyar, sonra kuyruğun arkasına gider.\n-   Bir sonraki kişi görüntüyü çizer, görüntüyü gözden geçirir, daha önce yazılmış olan programı gözden geçirir, ardından ya yanlış bir sembolü seçerek programın hatasını ayıklar veya yeni bir sembol ekler. Bu öğrenci daha sonra bir sonraki kişiyi etiketlemek için geri döner ve grup programlarını bitirene kadar süreç devam eder.\n\nGörüntüyle eşleşen bir programla bitiren ilk grup kazanır!\nArtan zorluktaki görüntüler ile bunu birkaç kez oynayın.\n\nZaman tükenmeden veya öğrencileriniz bitkin hissetmeye başlamadan önce olabildiğince çok oynayın.\n\n**Geçiş:** Oyun bittiğinde, öğrenilen dersleri paylaşmak için herkesi daire içine alın.\n\n<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Bugün ne öğrendik?” slaytını göster\n\n**Tartışın:** \\_ Bugün ne öğrendik? \n\n-   _Bir takımdaki her kişinin bir seferde beş ok yapmasına izin verilseydi?_\n    -   _Kendi hatalarımızı  ve önceki programcının hatalarını ayıklamak ne kadar önemlidir ?_\n    -   _10 okla olsaydı?_\n    -   _10.000? Az ya da çok önemli mi olurdu?_\n\n<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*Ekran\\*\\*: Bir sonraki slayt göster.\n\n-   _Birden fazla kişi üzerinde çalıştığında bir programın daha iyi veya daha kötü olduğunu düşünüyor musunuz?_\n-   _İnsanların aceleyle daha çok veya daha az hata yaptığını düşünüyor musunuz?_\n-   _Bir hata bulursanız, tüm programı atıp baştan başlamak zorunda mısınız?_"
         },
         "77e44b0c-4a6a-4eca-9347-a3395aefd2df": {
           "name": "Yansıma",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “yansıtma” slaytını göster\n\n**Yansıtma:**\n\n-   \\_ Sinirli olduklarında takım arkadaşlarınızı nasıl destekleyebilirsiniz? Seni nasıl destekleyebilirler? \\_"
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “yansıtma” slaytını göster\n\n**Yansıtma:**\n\n-   _Sinirli olduklarında takım arkadaşlarınızı nasıl destekleyebilirsiniz? Seni nasıl destekleyebilirler?_"
         },
         "058ba490-0f2c-4ea4-a6b3-05cbfefc0966": {
           "description": "Öğrencilerin daha iyi öğrenmesi için bu aktiviteleri kullanın. Sınıf dışı aktiviteler veya başka bilgi zenginleştirme aktiviteleri olarak kullanılabilir.\n\n**Kağıdı uzat**\n\n-   Bir röle için zamanınız veya yeriniz yoksa, öğrencilerin kağıdı masa gruplarında dolaştırmalarını sağlayabilirsiniz ve her biri kağıdı vermeden önce bir ok yazabilir.\n\n**Doldur, Taşı**\n\n-   Öğretmen olarak, her bir gruptaki çocuk sayısı kadar içi doldurulmuş karelerin olduğu bir resim çizin.\n-   Öğrencilerin, sonraki kişiye geçmeden önce doldurulmuş kareye (aslında bu kareyi doldurmak dahil) ulaşmak için gerektiği kadar oku programda yazmasını sağlayın.\n\n**Birlikte Hata Ayıklama**\n\nTahtaya bir resim çizin. Her öğrencinin, bu resim için bir program oluşturmasını sağlayın. Öğrencilerden sıra arkadaşı ile değiş tokuş yapmasını ve birbirlerinin kodunun hatasını ayıklamasını isteyin.\n\n-   İlk yanlış adımı daire içine alın, sonra bunu geçin.\n-   Öğrencilere, çalışmalarını incelemeleri ve hata ayıklamaları için başka bir şans verin.\n-   Bir gönüllüden programlarını paylaşmasını isteyin.\n\nSınıfa soru sorun: \n\n-   _Kaç öğrencide aynı program vardı?_\n-   _Herhangi birinde farklı bir şey var mı?_"
         },
         "0c752c58-d938-43f6-ac3c-a9b4556d12db": {
           "name": "Giriş",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “yansıtma” slaytını göster\n\n\\*\\* yansıt \\*\\*: \\_ Yeni bir beceri öğrendiniz ve başarısızlıkla karşılaştınız mı? \\_\n\nÖğrenmenin en önemli bölümlerinden biri hata ayıklamayı öğrenmektir. Sınıfa yeni bir beceri öğrenip öğrenmediklerini ve başarısızlıkla karşılaşıp karşılaşmadıklarını sorun.\n\nÖrneğin:\n\n-   Bisiklete binmeyi ve düşmeyi öğrenmek\n-   Yiyecekleri pişirmeyi ve yakmayı öğrenmek\n-   Bir spor oynamayı öğrenmek ve bir oyun kazanamamak\n\nYeni şeyler öğrenirken başarısızlıkla yüzleşmek çok yaygındır. Öğrencilerin geçmiş başarısızlıkları ve bunları nasıl aştıklarını tartışmalarını sağlayın.\n\n<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: \"Kelime\" slaytını göster\n\nProgramlamada, bilgisayar bilimcileri genellikle kodlarında \"hatalar\" ile karşılaşırlar.\n\n-   \\*\\* Hata \\*\\*: Doğru çalışmayan bir programın bir parçası.\n\nBir hata programı gerçekten bozabilir, bu nedenle kodunuzda \"hata ayıklamayı\" öğrenmek önemlidir.\n\n-   \\*\\* Hata Ayıklama \\*\\*: Algoritmanız veya programınızdaki sorunları bulma ve düzeltme.\n\nSınıfınızın daha fazla giriş bilgisine ihtiyacı olduğunu düşünüyorsanız konuşmayı sürdürün, ancak köprüleme etkinliklerinden biri için de zaman bırakın."
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “yansıtma” slaytını göster\n\n**yansıt**: _Yeni bir beceri öğrendiniz ve başarısızlıkla karşılaştınız mı?_\n\nÖğrenmenin en önemli bölümlerinden biri hata ayıklamayı öğrenmektir. Sınıfa yeni bir beceri öğrenip öğrenmediklerini ve başarısızlıkla karşılaşıp karşılaşmadıklarını sorun.\n\nÖrneğin:\n\n-   Bisiklete binmeyi ve düşmeyi öğrenmek\n-   Yiyecekleri pişirmeyi ve yakmayı öğrenmek\n-   Bir spor oynamayı öğrenmek ve bir oyun kazanamamak\n\nYeni şeyler öğrenirken başarısızlıkla yüzleşmek çok yaygındır. Öğrencilerin geçmiş başarısızlıkları ve bunları nasıl aştıklarını tartışmalarını sağlayın.\n\n<i class = \"fa fa liste-alt\" aria-hidden = \"true\"> </i> **Ekran**: \"Kelime\" slaytını göster\n\nProgramlamada, bilgisayar bilimcileri genellikle kodlarında \"hatalar\" ile karşılaşırlar.\n\n-   **Hata**: Doğru çalışmayan bir programın bir parçası.\n\nBir hata programı gerçekten bozabilir, bu nedenle kodunuzda \"hata ayıklamayı\" öğrenmek önemlidir.\n\n-   **Hata Ayıklama**: Algoritmanız veya programınızdaki sorunları bulma ve düzeltme.\n\nSınıfınızın daha fazla giriş bilgisine ihtiyacı olduğunu düşünüyorsanız konuşmayı sürdürün, ancak köprüleme etkinliklerinden biri için de zaman bırakın."
         },
         "9ad202f0-f99b-479b-b166-96acfb4899d9": {
-          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Köprü Etkinliği” slaytını göster\n\nBu etkinlikler, \"Bağlantısız Hata ayıklama: Röle Programlama\" nın bağlantısız konseptlerini öğrencilerin tanıştığı çevrimiçi dünyaya getirilmesine yardımcı olacaktır. Sınıfınızla ilgili olarak aşağıdakilerden birini seçin:"
+          "description": "<i class = \"fa fa liste-Alt\" aria-hidden = \"true\"> </i> **Ekran**: “Köprü Etkinliği” slaytını göster\n\nBu etkinlikler, \"Bağlantısız Hata ayıklama: Röle Programlama\" nın bağlantısız konseptlerini öğrencilerin tanıştığı çevrimiçi dünyaya getirilmesine yardımcı olacaktır. Sınıfınızla ilgili olarak aşağıdakilerden birini seçin:"
         },
         "dfa65e02-82a9-498c-b437-8db31c60b83b": {
           "name": "Kağıt Bloklarla Bağlantısız Etkinlik",
@@ -1799,11 +1799,11 @@
           "description": "Öğrencilerin, köprü oluşturma aktivitelerinden takımlarıyla birlikte oturmaları yararlı olabilir.  Her öğrenci bu bulmacalar üzerinde bireysel olarak veya çiftler halinde çalışmalıdır, ancak soru sormak ve yanıtlamak için birbirine sıkı sıkıya bağlı bir gruba sahip olmak, konuyla ilgili güven ve anlayış geliştirmeye yardımcı olabilir."
         },
         "bb78ee6d-4d05-4a4b-90e8-7c6cb6a099dd": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* ekran \\*\\*: “Adım düğmesiyle Hata ayıklama” videosunu göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Adım düğmesiyle Hata ayıklama” videosunu göster",
           "progression_name": "Video: Adım Düğmesiyle Hata Ayıklama"
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 2-6-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 2-6-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "a0c3172d-bf7f-4842-b719-5c987d502489": {
@@ -1826,7 +1826,7 @@
         },
         "5b25dba2-c68c-43c3-814f-98e4e743cf7f": {
           "name": "Bounce'daki Etkinlikler",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-7-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-7-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "16d61ffc-4200-4a4d-b11e-6fffb02ab38b": {
@@ -1994,7 +1994,7 @@
           "description": "Öğrenciler bulmacalar üzerinde çalışırken, bir döngü ile ve döngü olmadan kaç blok kullandıklarını anlayıp anlayamayacaklarına bakın."
         },
         "d9fbe733-657b-4504-8dbb-eab8104168aa": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "b0695358-20ba-4446-aa75-c0f5657059de": {
@@ -2002,7 +2002,7 @@
           "progression_name": "Video: Tekrarla Bloğunun kullanılması"
         },
         "d278b098-4bb0-4e0e-94b2-030bcfdc25bb": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 4-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\*Ekran \\*: “Seviye 4-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "8a2827d2-9dd0-4b84-9694-f7f4733543d5": {
@@ -2027,7 +2027,7 @@
         },
         "cbecc5ae-dfcc-4d98-8eea-4366ee0eade0": {
           "name": "Yansıma",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: “Yansıt” slaytını göster\n\n\\*\\*Yansıt: \\*\\* \\_ Döngüler, karmaşık sorunları programlamanıza nasıl yardımcı olur?\\_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: “Yansıt” slaytını göster\n\n\\*\\*Yansıt: \\*\\* _Döngüler, karmaşık sorunları programlamanıza nasıl yardımcı olur?_"
         },
         "68be7923-5ba2-46af-a379-052f2bd04142": {
           "description": "Öğrencilerin öğrenmesini geliştirmek için bu etkinlikleri kullanın.  Sınıf dışı etkinlikler veya diğer zenginleştirmeler olarak kullanılabilirler.\n\n **Çok Hareketli**\n\n-   Öğrencilere yapabilecekleri hareketlerin veya dans hareketlerinin resimlerini verin.\n    -   Öğrencilerin kendi danslarının koreografisini yapmaları için hareketleri düzenlemelerini ve döngüler eklemelerini sağlayın.\n-   Dansları sınıfın geri kalanıyla paylaşın.\n\n **Geri Bağlayın**\n\n-   Kendini tekrar eden popüler dansların bazı YouTube videolarını bulun.\n-   Sınıfınız döngüleri bulabiliyor mu?\n-   Aynı şeyi şarkılarla deneyin!"
@@ -2044,11 +2044,11 @@
         },
         "bc19ceeb-4c22-40a1-9794-7b0e998b5e78": {
           "name": "Döngüler ile Şekiller Çizme",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Seeviye 1 - JR Hildebrand ile Sanatçı Tanıtımı\" videosunu göster",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Seviye 1 - JR Hildebrand ile Sanatçı Tanıtımı\" videosunu göster",
           "progression_name": "Video: JR Hildebrand ile Sanatçı Tanıtımı"
         },
         "61fa4607-bb88-4573-8bea-10a12e88181a": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 2-3-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 2-3-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "5f35a867-9366-4759-b0e8-be48c34c09c5": {
@@ -2056,7 +2056,7 @@
           "progression_name": "Video: Sanatçı ile Döngüler"
         },
         "f52282b3-cfad-49a9-a004-5297a4ca7bbc": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352": {
@@ -2087,7 +2087,7 @@
           "description": "Bu ders için ikili programlamayı önemle tavsiye ederiz.  Bu, öğrencilerinizin çoğu için kolay bir konu olmayabilir.  Bir ortakla çalışmak ve bulmacaların olası çözümlerini tartışmak öğrencilerin kafasını rahatlatabilir.\n\n Ayrıca, öğrencilerin kodlamadan önce planlarını yazmaları için yanlarında kağıt ve kalem bulundurun.  Bazı bulmacaların kullanabileceğiniz belirli blokların sayısında bir sınırı vardır, bu nedenle öğrenciler tekrarları bulmak için uzun cevapları yazmaktan hoşlanıyorsa, kağıt yararlı olabilir."
         },
         "0f7a9d4d-e15d-4efc-a408-644c06c8fcb2": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "5458d92e-83cc-46e8-8197-4d025e3e090f": {
@@ -2099,7 +2099,7 @@
           "progression_name": "tahmin"
         },
         "535eebb3-357a-451a-95e4-f6cce960290e": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "355d4996-c94e-4553-ba72-f3b6faffeaea": {
@@ -2148,7 +2148,7 @@
         "dda904ae-113f-4561-8a61-e9ed43297a47": {
           "description": "#### Hızlı Sohbet: Ne öğrendik?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Hızlı Sohbet\" slaydını göster",
           "tips": [
-            null
+            "Flash Sohbet soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl bağlantılı olduğu hakkında büyük resmi düşünmeyi ateşlemeyi amaçlar. Bunları bir sınıf olarak mı, gruplar halinde mi yoksa bir dirsek partneri ile mi tartışmak istediğinize karar vermek için sınıfınızla ilgili bilginizi kullanın."
           ]
         },
         "0634eee0-ab96-4581-adc1-8bda642fdf93": {
@@ -2177,14 +2177,14 @@
           "progression_name": "Video: Bilgisayar Biliminin Temellerini Öğrenin"
         },
         "419b0732-9e07-4ab2-8c48-0fb798dfdfde": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-4-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-4-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "749a46b8-fc1f-4727-85bb-0e225b727c26": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: “Bir Ev Yap” videosunu göster"
         },
         "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 5-10-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 5-10-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "2ef8d43a-13d4-41ee-8d7f-3aa952ae04de": {
@@ -2208,7 +2208,7 @@
         },
         "d9a92c19-1b83-49fa-bc9c-de8298122305": {
           "name": "Yansıma",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Görüntüle**: “Yansıt” slaytını göster\n\n\\*\\*Yansıt: \\*\\* \n \\_Birinin koşullu ifade kullandığı bir sahne çizin. \nBu sahne nasıl koşullu ifadeyi gösteriyor? \\_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: “Yansıt” slaytını göster\n\n\\*\\*Yansıt: \\*\\* \n _Birinin koşullu ifade kullandığı bir sahne çizin. \nBu sahne nasıl koşullu ifadeyi gösteriyor?_"
         },
         "10b28faf-5fc4-41f2-a0fc-6c23d80da22d": {
           "description": "Öğrencilerin öğrenmesini geliştirmek için bu etkinlikleri kullanın.  Sınıf dışı etkinlikler veya diğer zenginleştirmeler olarak kullanılabilirler.\n\n#### Daha Fazla Minecraft\n\n Sınıfınızın _Minecraft_ ortamından gerçekten hoşlandığını fark ederseniz, [çevrimiçi olarak oynayabilecekleri diğer \\_Minecraft\\_ oyunlarına ilişkin bazı bağlantılar buradadır](https://code.org/minecraft).  Bu oyunlar aynı zamanda temel kodlama becerilerini de öğretecektir."
@@ -2219,7 +2219,7 @@
         },
         "e3c7f2af-1680-47d8-abac-407bcf97f905": {
           "name": "Çevrimiçi Bulmacaların Önizlemesi",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Önizleme - Arı ile Eğer/Başka\" slaytını göster\n\n**Söyle:** \\_Şimdi, bazı gizemli bulutlarla başa çıkmasına yardımcı olması için Code.org arısıyla koşul ifadeleri kullanacağız. Çiçeklerin nektarı olup olmadığını bilmiyoruz, bu nedenle, varsa nektarı topladığımızdan, ancak nektarı olmayan bir çiçekten nektarı toplamaya çalışmadığımızdan emin olmak için koşul cümleleri kullanmamız gerekecek. \n\nBu dersten bir bulmaca çıkarın, bulmaca 9'u öneriyoruz.\n\n-   Sınıfa arının buluta ulaştığında ne yapması gerektiğini sorun.\n    -   Arı, çiçek veya petek olup olmadığını kontrol etmek için şartlı kullanmalı.\n-   \"Eğer çiçekte / başka blok\" kullanın. Sınıfa, çiçek varsa arının ne yapması gerektiğini sorun. Çiçek olmazsa petek olur. Arı o zaman ne yapmalıdır?\n     \\-Arı çiçek varsa \"nektar almalı\", petek varsa \"bal yapmalıdır\".\n\nKodun geri kalanını doldurun ve \"Çalıştır\" düğmesine basın. Bunun neden işe yaradığını sınıfla tartışın."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Önizleme - Arı ile Eğer/Başka\" slaytını göster\n\n**Söyle:** _Şimdi, bazı gizemli bulutlarla başa çıkmasına yardımcı olması için Code.org arısıyla koşul ifadeleri kullanacağız. Çiçeklerin nektarı olup olmadığını bilmiyoruz, bu nedenle, varsa nektarı topladığımızdan, ancak nektarı olmayan bir çiçekten nektarı toplamaya çalışmadığımızdan emin olmak için koşul cümleleri kullanmamız gerekecek._ \n\nBu dersten bir bulmaca çıkarın, bulmaca 9'u öneriyoruz.\n\n-   Sınıfa arının buluta ulaştığında ne yapması gerektiğini sorun.\n    -   Arı, çiçek veya petek olup olmadığını kontrol etmek için şartlı kullanmalı.\n-   \"Eğer çiçekte / başka blok\" kullanın. Sınıfa, çiçek varsa arının ne yapması gerektiğini sorun. Çiçek olmazsa petek olur. Arı o zaman ne yapmalıdır?\n     \\-Arı çiçek varsa \"nektar almalı\", petek varsa \"bal yapmalıdır\".\n\nKodun geri kalanını doldurun ve \"Çalıştır\" düğmesine basın. Bunun neden işe yaradığını sınıfla tartışın."
         },
         "fcce1098-1ef9-42cd-a0a6-9a2a759e894c": {
           "description": "### Kelimeler\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Kelimeler\" slaytını göster\n\n**Koşullular** - Yalnızca belirli koşullar altında çalışan ifadeler."
@@ -2237,7 +2237,7 @@
           "progression_name": "tahmin"
         },
         "c6c9457f-77f7-4a4a-9f79-72386ab1ac9a": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 3-7-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 3-7-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "ec05bf5f-afd1-487a-a92f-45f2d0e1ddf3": {
@@ -2291,7 +2291,7 @@
           "description": "Döngüler, öğrencilerin anlaması için her zaman zor bir kavram olmasa da, sınıfınızın bu bulmacalarla mücadele edebileceğini düşünüyorsanız, ikili programlamayı öneririz.  Bu, öğrencilerin kodu uygulamadan önce fikir alışverişinde bulunmalarına olanak tanır.  Eşli programlama, while döngüleri gibi konularda güveni ve anlayışı artırmak için çalışır."
         },
         "e1adf430-4152-42c1-a520-f40716ca9378": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-3-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-3-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "0fa595d7-bcf7-4bf3-a292-22abb41aa813": {
@@ -2303,7 +2303,7 @@
           "progression_name": "tahmin"
         },
         "26d62974-617f-4322-ab5d-29e79e49cc87": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 6-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 6-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "9130d756-a245-4997-93d3-94264979355b": {
@@ -2354,7 +2354,7 @@
           "progression_name": "tahmin"
         },
         "34a17d75-d294-42da-b0ca-57ddd75b50cb": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 4-8-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 4-8-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "0664bded-dced-45bc-954d-8bc7d7734235": {
@@ -3256,7 +3256,7 @@
         "fc104032-9a2d-443a-96d0-e7f4c6de6782": {
           "name": "Yansıma",
           "tips": [
-            null
+            "Flash Sohbet soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl bağlantılı olduğu hakkında büyük resmi düşünmeyi ateşlemeyi amaçlar. Bunları bir sınıf olarak mı, gruplar halinde mi yoksa bir dirsek partneri ile mi tartışmak istediğinize karar vermek için sınıfınızla ilgili bilginizi kullanın."
           ]
         },
         "7b6cc68b-d189-4ebc-ad01-05bdf8696a0a": {
@@ -3577,7 +3577,7 @@
           ]
         },
         "fe5271b2-e5f3-44f5-94d8-d4630bb9d37d": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-2-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "9c33a50c-2471-4797-b3c7-024447bf16ff": {
@@ -3672,7 +3672,7 @@
           "name": "Yansıma",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**:  “Tartışma” slaydını göster",
           "tips": [
-            null
+            "Flash Sohbet soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl bağlantılı olduğu hakkında büyük resmi düşünmeyi ateşlemeyi amaçlar. Bunları bir sınıf olarak mı, gruplar halinde mi yoksa bir dirsek partneri ile mi tartışmak istediğinize karar vermek için sınıfınızla ilgili bilginizi kullanın."
           ]
         },
         "da43be51-eec4-49cb-8d03-ad637da32aff": {
@@ -3731,7 +3731,7 @@
           "progression_name": "Video: Minecraft - Tekrarlama Döngüleri"
         },
         "3ee7b90a-c59c-47ae-96f2-c5e9bc506d2a": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "d24f28cb-b90f-45e4-bca2-b2a2f75ffde5": {
@@ -3837,7 +3837,7 @@
         },
         "a24e03d0-5524-46ec-ab96-a0b1d9b24d8b": {
           "name": "Çiftçi Koşulları",
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 1-3-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 1-3-Beceri Oluşturma” slaytını göster",
           "tips": [
             "Bu bulmacalardaki desenler, her öğrenci için aşikar olmayabilir. Sınıf için herhangi bir sorun alanını daha iyi anlamak üzere bu seviyelerde önceden oynamanızı tavsiye ederiz. Ayrıca, **\\*Dur ve Çevrimiçi Düşün** Videosundaki teknikleri izlemek ve kullanmak, sınıfınız için yardımcı olabilir."
           ],
@@ -3852,7 +3852,7 @@
           "progression_name": "tahmin"
         },
         "2908bd65-d321-4b6f-a5f3-6d550564bbaa": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 6-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 6-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "e81da78c-ac8a-4212-bbe4-07ba9cfebc9e": {
@@ -3969,7 +3969,7 @@
           "description": "Öğrencilerin öğrendiklerini, neden yararlı olduğunu ve bu konuda ne hissettiklerini yazmalarını sağlamak, bugün edindikleri herhangi bir bilgiyi sağlamlaştırmaya ve gelecekte bakmaları için bir gözden geçirme sayfası oluşturmalarına yardımcı olabilir.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Yansıtma\" slaydını göster\n\n**Yansıt**:\n\n-   _Diğer içerik oluşturucuların birinin çalışmasını paylaştığını veya yeniden düzenlediğini gördüğünüz bir örnek verin._\n-   _Bunun adil olduğuna inanıyor musun? Neden ya da neden olmasın?_"
         },
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
-          "description": "Dijital paylaşım ve yaratıcı haklar konusunda daha fazla ders bulmak için [Telif Hakkı & Yaratıcılık ]'ı[0] ziyaret ediniz."
+          "description": "Dijital paylaşım ve yaratıcı haklar konusunda daha fazla ders bulmak için [Telif Hakkı & Yaratıcılık ](https://copyrightandcreativity.org) ziyaret ediniz."
         },
         "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
           "name": "Keşfet",
@@ -4114,6 +4114,7 @@
           "description": "Bağlantısız ders ile yaklaşan çevrimiçi ders arasında bağlantı kurmak için aşağıdaki etkinliklerden sınıfınızla yapmak üzere \\_birini seçin."
         },
         "639fc6b3-1389-409a-bbd4-9c939562fefb": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**Model:** \"Move It, Move It\" bağlantısız dersten \"Move It, Move It - Harita Etkinliği\"nden bir harita seçin.  \\*\\*Manipülatiflerden hareket parçalarını kullanarak öğrencilere bu yapıyı bu yeni yolla nasıl kodlayacağınızı gösterin.\n\n **Eşleştirin/Düşünün:** Ardından, başka bir harita seçin ve öğrencilerin hedefe ulaşmak için bir \"robotun\" hangi blokları okuması gerektiğini programlamasını sağlayın.\n\n Blokların yukarıdan aşağıya gitmesi gerektiğini ve hepsinin birbirine değmesi gerektiğini anladığından emin olun!\n\n **Paylaş:** Öğrencilerin birbirlerinin yanıtlarını kontrol etmelerini ve ortaya çıkabilecek soruları veya hataları çözmelerini sağlayın.\n\n#### -Veya-"
         },
         "70a01b4d-3336-46f9-8145-d43897a76bd2": {
@@ -4162,6 +4163,7 @@
           "description": "Bu aktivite, Move It, Move It'ten bağlantısız kavramların öğrencilerin içine girmekte olduğu çevrimiçi dünyaya getirilmesine yardımcı olacaktır.  Sınıfınızla yapmak için aşağıdakilerden birini seçin:"
         },
         "9b3f3413-3010-4c0a-86e4-92145569ea72": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**Dağıtın:** Öğrencilere \"E →\" (Doğu) ve \"W ←\" (Batı) gibi temel komutlarla **\\*Manipülatifler** verin.\n\n**Gösterin:** **\\*Harita Etkinliği**'nden bir harita seçin ve sınıfın görmesi için görüntüleyin.\n\n**Modelleme:** Başlangıç konumundan başlayarak, öğrencilere her bloğun ne yaptığını göstermek için parmağınızı kullanın. Onlara `E →`nin sağ oka karşılık geldiğini ve \"robot\"u bir adım sağa hareket ettirdiğini gösterin. Diğer üçü için de aynısını yapın.\n\n**Düşünme:** Bu noktada sınıf, okları kullanarak bir hedefe nasıl ulaşılacağını bilmelidir. Blockly bloklarını kullanarak bir hedefe nasıl ulaşırsınız?\n\n**Eşleştirme:** Şimdi, öğrencilerin kağıt Blockly bloklarını kullanarak masalarından program yapmasını sağlayın. Blokların yukarıdan aşağıya doğru gitmesi gerektiğini ve hepsinin birbirine bağlı olması gerektiğini anladıklarından emin olun!\n\n**Paylaşma:** Çiftlerin cevaplarını komşularıyla tartışmasını sağlayın. Herkes aynı şeyi mi aldı?\n\n### -Veya-"
         },
         "2c1b88e4-7ed1-4880-8113-f728a664f182": {
@@ -4295,6 +4297,7 @@
           "description": "Bu etkinlikler, \"Getting Loopy\"den bağlantısız kavramların öğrencilerin içine girmekte olduğu çevrimiçi dünyaya getirilmesine yardımcı olacaktır.  Sınıfınızla yapmak için aşağıdakilerden birini seçin:"
         },
         "4a96058b-b773-45a2-9901-f2d8783f0a4e": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "\"Getting Loopy\"deki dansı tekrar ziyaret edin.  Bu kez, dans talimatlarını kağıda yazmak yerine **\\*manipülatifleri** kullanarak \"kodlamak\" için sınıfla birlikte çalışın.  Öğrencilerin blokların yukarıdan aşağıya gitmesi gerektiğini ve hepsinin birbirine dokunması gerektiğini bildiğinden emin olun!\n\n#### -Veya-"
         },
         "97e4cca3-73f7-4a08-8edd-3a56685f07d1": {
@@ -4479,6 +4482,7 @@
           ]
         },
         "4aed8179-0c0e-4484-968f-13756541f600": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**\\*Çalışma Sayfası** ve **\\*manipülatiflerden** uzaktan kumandayı kullanarak, önceki dersteki etkinliği tekrarlamak için sınıfınızı toplayın.  Sınıfa \"deniz mavisi düğmeye basıldığında ne yapıyoruz?\" diye sorun.  daha sonra buna göre \"ne zaman\" olay bloklarından birini ve mavi eylem bloklarından birini doldurun.  Öğrencilerin, programın çalışması için \"ne zaman\" bloklarının mavi bloğun üzerinde olması gerektiğini ve birbirlerine dokunmaları gerektiğini anladığından emin olun.\n\n### -Veya-"
         },
         "896b109f-f671-46b5-97d3-54292dc5fedd": {
@@ -6213,6 +6217,7 @@
           ]
         },
         "51547753-2cb4-4275-ba76-1aefc4e65f51": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**\\*Çalışma Sayfası**'ndan boş bir flurb haritası seçin ve öğrencilere önceden \"topla\" komutu, bir \"tekrar\" döngüsü ve \"E →\" (Doğu  ) ve \"B ←\" (Batı).  Şimdi, öğrencilerin meyveleri toplamaları için kağıt Blockly bloklarını kullanarak masalarından flurbleri programlamalarını sağlayın.  Blokların yukarıdan aşağıya gitmesi gerektiğini ve hepsinin birbirine değmesi gerektiğini anladığından emin olun!\n\n#### -Veya-"
         },
         "7060a52b-e96b-4b92-a2d2-7cca708e81ea": {
@@ -6395,6 +6400,7 @@
           ]
         },
         "837efd25-c963-4480-a6e0-d88f5ca32661": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**\\*Controller Image**'in uzaktan kumandasını ve **\\*Manipulatives**'in bloklarını kullanarak, önceki dersteki etkinliği tekrarlamak için sınıfınızı toplayın.  Sınıfa deniz mavisi düğmesine basıldığında ne yapıyoruz?\\_ diye sorun ve ardından `When` olay bloklarından birini ve mavi eylem bloklarından birini uygun şekilde doldurun.  Öğrencilerin, programın çalışması için \"ne zaman\" bloklarının mavi bloğun üzerinde olması gerektiğini ve birbirlerine dokunmaları gerektiğini anladığından emin olun.\n\n#### -Veya-"
         },
         "573402e5-9215-457d-9709-f2d71a8cfdd3": {
@@ -6494,6 +6500,7 @@
           "description": "**Söyle:** _Robotlar yalnızca kendilerine söyleneni yapabilir, ancak onlara yalnızca kelimelerle söylemiyoruz.  Bir şey yapmak için, bir robotun okuyabileceği bir adımlar listesine sahip olması gerekir.  Bugün, bunun gerçekleşmesi için ne gerektiğini öğreneceğiz._"
         },
         "4e9eaee6-773f-429b-b274-d6c22d4c6457": {
+          "name": "Robotik Arkadaşlarım",
           "progression_name": "Robotik Arkadaşlarım - Bağlantısız Aktivite"
         },
         "e06b00b8-14c2-4a71-b479-4dfe82accabe": {
@@ -6824,6 +6831,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ekran**: \"Köprü Oluşturma Etkinliği\" slaydını göster\n\nBu etkinlik, \"Loopy Robotik Arkadaşlarım\"dan bağlantısız kavramların öğrencilerin içine girmekte olduğu çevrimiçi dünyaya getirilmesine yardımcı olacaktır. Sınıfınızla yapmak için aşağıdakilerden birini seçin:"
         },
         "a8481f49-9b56-474e-8c05-28251c46f468": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "\"Döngüsel Robotik Arkadaşlarım\"ı tekrar ziyaret edin.  Bu kez, yönergeleri kağıda yazmak yerine **\\*manipülatifleri** kullanarak \"kodlamak\" için sınıfla birlikte çalışın.  Öğrencilerin blokların yukarıdan aşağıya gitmesi gerektiğini ve hepsinin birbirine değmesi gerektiğini bildiğinden emin olun!\n\n#### -Veya-"
         },
         "6adb6ede-2fc4-47f7-97d8-32cd0c02402f": {
@@ -6848,7 +6856,7 @@
           "progression_name": "Video: BB-8 ile Tekrarlama Blokları"
         },
         "78b79d53-246f-40a9-ab3a-557fba2f5c1a": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 5-9-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "70017f05-4f16-45ff-9175-91445fd1802d": {
@@ -7021,6 +7029,7 @@
           "description": "Bu etkinlikler, \"Büyük Olay\"daki bağlantısız kavramları öğrencilerin içine girmekte oldukları çevrimiçi dünyaya taşımaya yardımcı olacaktır.  Sınıfınızla yapmak için aşağıdakilerden birini seçin:"
         },
         "40fa01ec-8eb2-4f37-af04-b4a4ec5bdad8": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "**\\*Etkinlik Denetleyicisi** ve **\\*Manipulatives**'in uzaktan kumandasını kullanarak sınıfınızı bir önceki dersteki etkinliği tekrarlamak için toplayın.  Sınıfa _\"deniz mavisi düğmeye basıldığında ne yaparız?\"_ diye sorun, ardından `When` olay bloklarından birini ve buna göre mavi eylem bloklarından birini doldurun.  Öğrencilerin, programın çalışması için \"ne zaman\" bloklarının mavi bloğun üzerinde olması gerektiğini ve birbirlerine dokunmaları gerektiğini anladığından emin olun.\n\n#### -Veya-"
         },
         "c18dfa97-b98e-4a9b-99e1-59c56b29905b": {
@@ -7078,7 +7087,7 @@
           "progression_name": "Video: Oyun Laboratuarı için Giriş"
         },
         "ab11c643-bd9d-44fb-822b-1eda83be85fd": {
-          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> \\*\\* Ekran \\*\\*: “Seviye 2-6-Beceri Oluşturma” slaytını göster",
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"> </i> **Ekran**: “Seviye 2-6-Beceri Oluşturma” slaytını göster",
           "progression_name": "Beceri Oluşturma"
         },
         "1b396a72-6c8e-4667-a4a5-8ef61ac9687f": {
@@ -7781,8 +7790,11 @@
         },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
-            null
+            "\\*\\*Nasıl Yapılır Videoları: \\*\\* Aşağıdaki adımlar, Code.org'un Öğretmen Desteği web sitesinde bulunan bir dizi [r code_org_how-to_videos/csd/2022] dizisinde de ele alınmıştır. Aşağıdaki talimatları okumadan önce bu videoları izlemeye karar verebilirsiniz."
           ]
+        },
+        "17a885d7-d6e7-490e-8307-bc31c01b6e64": {
+          "description": "## Dersten önce\n\n**Code.org'a Başlarken:** Ders planlarında nasıl gezineceğinize, sınıf bölümü oluşturmaya ve Code.org platformunun diğer önemli özelliklerine ilişkin genel bir bakış için [Code.org'a Başlarken](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video serimizi izlemeyi düşünün. Talimatları okumayı veya yazdırmayı tercih ederseniz her videonun bir destek makalesi de vardır - [daha fazla bilgi edinmek için burayı tıklayın](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Bir Sınıf Bölümü Oluşturun:** Öğrencilerinizi yönetmek, ilerlemelerini görüntülemek ve belirli bir müfredat atamak için Code.org'daki bir sınıf bölümünü kullanabilirsiniz - [daha fazla bilgi edinmek için burayı tıklayın](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nBir öğrenim yönetim sistemi kullanıyorsanız sınıflarınızı Code.org ile senkronize etmek için ek adımlar olabilir:\n\n-   Sınıflarınızı Google Classroom ile ayarlama adımları için [burayı tıklayın](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync)\n-   Sınıflarınızı Clever ile ayarlama adımları için [Buraya tıklayın](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync)\n\n**Doğrulanmış Öğretmen Olun:** Ders planları ve düzeylerinde, bir eğitim kurumundaki konumunuzu doğrulayan hızlı bir süreç olan Doğrulanmış Öğretmenler için ek kaynaklar ve cevap anahtarları bulunur. [Bir formu doldurmak için burayı tıklayın](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) ve doğrulanmış öğretmen kaynaklarına ~1 iş günü içinde erişebileceksiniz. Doğrulanmış öğretmenlerin ayrıca forumların [\"Öğretmen Odası\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) bölümüne erişimi vardır.\n\n**İlham Alın:** Mevcut CS Discoveries öğretmenlerinin yer aldığı [Öğretmen İpuçları video oynatma listemizi](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes) izlemeyi düşünün."
         },
         "7dfa48db-7c8e-4682-b804-844a5d067be1": {
           "tips": [
@@ -7912,6 +7924,9 @@
           "tips": [
             null
           ]
+        },
+        "a1ff9435-c64d-47de-b80e-706e4d82d807": {
+          "description": "**Ekran:** [r what_is_a_computer/csd/2022]'ı gösterin. Bu video, YouTube'un engellendiği okullar için alternatif bir bağlantı da dahil olmak üzere Code.org web sitesinde öğrenciler tarafından da kullanılabilir. Video, bir bilgisayarı, bilgileri manipüle ederek belirli türde düşünme çalışmalarına yardımcı olan bir makine olarak sunar. Tanımı \"bilgi ile çalışan bir makine\" olarak sunmak isteyebilirsiniz."
         },
         "59e91a3e-33a0-4f37-96d7-3c7ab5ca6e78": {
           "tips": [
@@ -16617,6 +16632,7 @@
           "description": "Bu etkinlikler, “For Loop Fun” den eklenmemiş kavramların öğrencilerin hareket ettikleri çevrimiçi dünyaya getirilmesine yardımcı olacaktır. Sınıfınızla ilgili olarak aşağıdakilerden _one_ öğesini seçin:"
         },
         "f636ac37-29ac-45d0-8b65-8bad3da1ab56": {
+          "name": "Kağıt Blokları Kullanan Bağlantısız Etkinlik",
           "description": "Sınıfınızın öğrencilerini ikili gruplara ayırın. İdeal olarak, çiftlerin \"For Döngüsü Eğlencesi\" etkinliğindekilerle aynı olmasını sağlayın. Her öğrenci çifti için [r course-cf-blockly-blocks/coursef/2021] dersinden bir for döngüsü yazdırın. Her çifte bir zar verin. Aşağıdaki değerleri elde etmek için eşlerin sırayla zarı atmasını sağlayın:\n\n-   Başlangıç değeri için bir zar\n-   Bitiş değeri için dört zar\n-   Adım değeri için bir zar\n\nHer çiftin for döngüsünü doğru noktada uygun değerlerle doldurmasını sağlayın.\n\n![](https://images.code.org/bae4910eb528de1e7471cbf6083154e4-csf1.png)\n\n\"For Döngüsü Eğlencesi\"nde kullanılana benzer temel bir sayı satırı kullanarak, öğrencilerin bu for döngüsünün dokunacağı başlangıç, bitiş ve orta değerleri işaretlemelerini sağlayın. Herkes bitirdiğinde, her çiftin başlangıç, orta ve bitiş numaralarını toplayarak kimin en çok puanı aldığını görün.\n\n#### -Veya"
         },
         "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b": {
@@ -16859,7 +16875,7 @@
         "77fd3087-e475-4e92-937b-775e410c6585": {
           "name": "Yansıma",
           "tips": [
-            null
+            "Flash Sohbet soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl bağlantılı olduğu hakkında büyük resmi düşünmeyi ateşlemeyi amaçlar. Bunları bir sınıf olarak mı, gruplar halinde mi yoksa bir dirsek partneri ile mi tartışmak istediğinize karar vermek için sınıfınızla ilgili bilginizi kullanın."
           ]
         },
         "17ba7429-02a4-495b-a9e3-a82ab6402746": {
@@ -20567,7 +20583,7 @@
         },
         "9a413780-6d7b-4341-9041-e8a1e3f540b6": {
           "name": "Algoritmayı Takip Edin",
-          "description": "Bugün hızlı bir oyunla başlayacağız. Bu oyunda, sana takip etmen için tüm emirleri vereceğim ve senin görevin talimatlarıma uymak. Komutlar her zaman “start” veya “dur” ile başlayacaktır. Eğer sana bir şey yapmaya başla dersem, bu davranışa başlaman ve ben sana durmanı söyleyene kadar devam etmelisin. Ayrıca sana “her şeyi durdurmanı” da söyleyebilirim. Bu da şu ana kadar sana verdiğim tüm davranışlara son verebileceğin anlamına geliyor. Üç raunt oynayacağız ve her turdan sonra size birkaç soru soracağım.",
+          "description": "Bugün hızlı bir oyunla başlayacağız. Bu oyunda, sana takip etmen için tüm emirleri vereceğim ve senin görevin talimatlarıma uymak. Komutlar her zaman “başla\" veya “dur” ile başlayacaktır. Eğer sana bir şey yapmaya başla dersem, bu davranışa başlaman ve ben sana durmanı söyleyene kadar devam etmelisin. Ayrıca sana “her şeyi durdurmanı” da söyleyebilirim. Bu da şu ana kadar sana verdiğim tüm davranışlara son verebileceğin anlamına geliyor. Üç raunt oynayacağız ve her turdan sonra size birkaç soru soracağım.",
           "progression_name": "Algoritmayı İzle - Bağlantısız Aktivite"
         },
         "0a66d8ca-05c2-4614-8349-39caa7d993db": {
@@ -20777,7 +20793,7 @@
           "description": "Öğrencilerin öğrendikleri, bunun neden faydalı olduğu ve bugün edindikleri herhangi bir bilgiyi pekiştirmenin ve gelecekte önem verecekleri bir inceleme kağıdı oluşturmanın nasıl yardımcı olabileceğine dair düşünceleri hakkında yazmalarını sağlayın.\n\n**Yönergeler:**\n\n-   Bugünkü dersin konusu neydi?\n-   Bugünkü ders sırasında nasıl hissettiniz?\n-   Başka içerik oluşturucuların birinin çalışmasını paylaşma veya remiksini yapma yöntemine dair gördüğünüz bir örnek verin. Bunun adil olduğuna inanıyor musun? Neden öyle veya neden değil?"
         },
         "12028f3b-0333-4a2a-9059-74c7ea960ebd": {
-          "description": "Dijital paylaşım ve yaratıcı haklar konusunda daha fazla ders bulmak için [Telif Hakkı & Yaratıcılık ]'ı[0] ziyaret ediniz."
+          "description": "Dijital paylaşım ve yaratıcı haklar konusunda daha fazla ders bulmak için [Telif Hakkı & Yaratıcılık ](https://copyrightandcreativity.org) ziyaret ediniz."
         },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Giriş",
@@ -20919,7 +20935,7 @@
         "06b4ee77-0a27-48bc-9dca-d55b530d1ce6": {
           "name": "Yansıma",
           "tips": [
-            null
+            "Flash Sohbet soruları, dersin daha büyük dünya ve öğrencilerin daha büyük geleceği ile nasıl bağlantılı olduğu hakkında büyük resmi düşünmeyi ateşlemeyi amaçlar. Bunları bir sınıf olarak mı, gruplar halinde mi yoksa bir dirsek partneri ile mi tartışmak istediğinize karar vermek için sınıfınızla ilgili bilginizi kullanın."
           ]
         },
         "3143fa54-1a02-46ef-850f-f7e7ec4ff64f": {
@@ -20992,7 +21008,7 @@
         },
         "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
           "name": "Giriş",
-          "description": "Sınıftan, \"Bağlantısız Fonksiyonlar: Şarkı Yazma\"yı tekrar düşünmelerini ve bir fonksiyonun ne olduğunu hatırlamalarını isteyin. Bir şarkı yazarken fonksiyonu ne zaman kullanacakları hakkında tartışma başlatın.\n\nSınıfa, fonksiyonları kullanmaya yönelik iki ana bileşenin olduğundan bahsedin.\n\n1.  **Bildirim**: Fonksiyon bildirimleri, bir fonksiyonu oluşturan şeylerdir. Bir fonksiyon bildiriminde, fonksiyona kod yazar ve fonksiyona bir isim verirsiniz. Bir fonksiyonu kullanmadan önce bunu bildirmelisiniz.\n\n2.  **Çağrı**:\n    Fonksiyon çağrıları, programın fonksiyonda kodu çalıştırmasını sağlayan şeydir. Bir fonksiyonu çağırmak için, programınızda fonksiyonun ismini belirtirsiniz. Fonksiyonu programınızda çağırmadan önce düzgün bir şekilde tanımlandığından emin olun.\n\nSınıf, iki bileşeni anlamak için şarkı yazmayı bir örnek olarak kullanabilir. Bağlantısız aktivitede, nakarata ait sözleri içeren fonksiyon \"nakarat\" olarak adlandırılmıştır. Bu fonksiyonu ilk yaptığımızda, fonksiyona girecek sözleri daire içine aldık. Fonksiyonu adlandırdığımızda, şarkı sözlerini okuyabiliriz ve tekrarlanan koro sözlerinin yerine \"nakarat\"a yapılan bir fonksiyon çağrısı koyabiliriz.\n\nÖğrenciler, bildirilen ve çağrılan fonksiyonları temel düzeyde anlayana kadar konuşmaya devam edin. Öğrenciler bu noktaya kadar olanları anlamazsa, Code.org bulmacalarından birine geçmeden önce köprüleme aktivitelerinden birini yaptığınızda emin olun."
+          "description": "Sınıftan, \"Bağlantısız Fonksiyonlar: Şarkı Yazma\"yı tekrar düşünmelerini ve bir fonksiyonun ne olduğunu hatırlamalarını isteyin. Bir şarkı yazarken fonksiyonu ne zaman kullanacakları hakkında tartışma başlatın.\n\nSınıfa, fonksiyonları kullanmaya yönelik iki ana bileşenin olduğundan bahsedin.\n\n1.  **Bildirim**: Fonksiyon bildirimleri, bir fonksiyonu oluşturan şeylerdir. Bir fonksiyon bildiriminde, fonksiyona kod yazar ve fonksiyona bir isim verirsiniz. Bir fonksiyonu kullanmadan önce bunu bildirmelisiniz.\n\n2.  **Çağrı**:\n    Fonksiyon çağrıları, programın fonksiyonda kodu çalıştırmasını sağlayan şeydir. Bir fonksiyonu çağırmak için, programınızda fonksiyonun ismini belirtirsiniz. Fonksiyonu programınızda çağırmadan önce düzgün bir şekilde tanımlandığından emin olun.\n\nSınıf, iki bileşeni anlamak için şarkı yazmayı bir örnek olarak kullanabilir. Bağlantısız aktivitede, nakarata ait sözleri içeren fonksiyon \"nakarat\" olarak adlandırılmıştır. Bu fonksiyonu ilk yaptığımızda, fonksiyona girecek sözleri daire içine aldık. Fonksiyonu adlandırdığımızda, şarkı sözlerini okuyabiliriz ve tekrarlanan koro sözlerinin yerine \"nakarat\"a yapılan bir fonksiyon çağrısı koyabiliriz.\n\nÖğrenciler, bildirilen ve çağrılan fonksiyonları temel düzeyde anlayana kadar konuşmaya devam edin. Öğrenciler bu noktaya kadar olanları anlamazsa, Code.org bulmacalarından birine geçmeden önce köprüleme aktivitelerinden birini yaptığınızdan emin olun."
         },
         "d1826ee5-4403-41a2-a804-3112c9da4cb1": {
           "name": "Sanatçı- Fonksiyonlar",
@@ -21120,7 +21136,7 @@
         },
         "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1": {
           "name": "Yansıma",
-          "description": "**Sorular:**\n\n-   Bir fonksiyonun programınıza yardımcı olabileceğini nasıl anlarsınız?\n-   \"while\" döngüleri ve \"if / else\" ifadeleri programınıza nasıl yardımcı olur?"
+          "description": "**Sorular:**\n\n-   Bir fonksiyonun programınıza yardımcı olabileceğini nasıl anlarsınız?\n-   \"süresince\" döngüleri ve \"eğer / başka\" ifadeleri programınıza nasıl yardımcı olur?"
         },
         "86067d99-75b5-4f21-ac53-cae3f71ab968": {
           "name": "Bağlam Belirleme",

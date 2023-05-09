@@ -1842,6 +1842,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -2030,6 +2031,10 @@ el:
           lessons:
             lesson-3:
               name: Βρόχοι Για
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         hello-world-space-2022:
           title: 'Γεια σας κόσμο: Διάστημα'
         hello-world-soccer-2022:
@@ -2102,6 +2107,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -2166,3 +2172,35 @@ el:
               display_name: Συναρτήσεις
             csf_nested_loops:
               display_name: Συνθήκες
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Εισαγωγή

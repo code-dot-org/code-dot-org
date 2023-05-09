@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 04:40:42 UTC",
+    "serialized_at": "2023-04-25 23:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -191,8 +191,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
-        "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
+        "preparation": "* Preview the questions on the assessment.\n* If you are teaching this virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing)",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
       "seeding_key": {
@@ -520,21 +519,8 @@
       }
     },
     {
-      "key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "80f0069e-e5e9-49ac-b06f-69e0635ee9ad",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up"
       },
@@ -547,7 +533,7 @@
     },
     {
       "key": "a384dc94-ebe3-4aa7-8aa9-a7c45795b27d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -561,7 +547,7 @@
     },
     {
       "key": "caf786b6-feff-4330-9541-1ffc5217758a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -575,7 +561,7 @@
     },
     {
       "key": "dc3660bc-9a51-4789-a532-7d2ddf8741ea",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -606,11 +592,28 @@
       }
     },
     {
-      "key": "6727bfea-9114-4e1f-83ef-31395ad45601",
+      "key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
       "position": 1,
       "properties": {
-        "description": "Now that we've learned how to represent information digitally and how the Internet works, it's time to think about creating digital content for others to interact with.",
+        "description": "**Distribute:** Give each student a copy of the [Unit 3 Journal](\thttps://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) or have students set up a new section in their CSP journals.",
         "name": "Preview the Unit",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
+        "lesson_activity.key": "b70bf83c-7531-4691-aefb-5053221bed41"
+      }
+    },
+    {
+      "key": "6727bfea-9114-4e1f-83ef-31395ad45601",
+      "position": 2,
+      "properties": {
+        "description": "Now that we've learned how to represent information digitally and how the Internet works, it's time to think about creating digital content for others to interact with.",
         "remarks": true
       },
       "seeding_key": {
@@ -620,7 +623,7 @@
     },
     {
       "key": "e977cf40-f15d-4aae-a238-1e584f3836b8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n Apps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
       },
@@ -685,7 +688,13 @@
       "key": "162c93f7-5c34-49a4-b37a-a32dda298805",
       "position": 5,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner, discuss the following and note down in your journal:*\n* *How does the user interact with the app?*\n* *What is the overall purpose of this app?*\n* *Who is the target audience?*\n\n**Share Out:** As a class, discuss student answers to the discussion questions."
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner, discuss the following and note down in your journal:*\n* *How does the user interact with the app?*\n* *What is the overall purpose of this app?*\n* *Who is the target audience?*\n\n**Share Out:** As a class, discuss student answers to the discussion questions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "162c93f7-5c34-49a4-b37a-a32dda298805",
@@ -709,7 +718,13 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** How Computers Work [r how_computers_work_-_what_makes_a_computer_a_computer/csp/2023]",
-        "name": "Input & Output"
+        "name": "Input & Output",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f70b12f1-6436-4b45-8ec9-9b61d7518e34",
@@ -773,7 +788,13 @@
       "key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) provides a template meant to help facilitate the thinking involved in this prompt for students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
@@ -784,7 +805,13 @@
       "key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\r\n\r\n* User Interface\r\n* Input\r\n* Output\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\n\n* User Interface\n* Input\n* Output\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
@@ -792,8 +819,19 @@
       }
     },
     {
-      "key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
+      "key": "c5eda6df-f822-408c-9c89-0a6b02286d1f",
       "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5eda6df-f822-408c-9c89-0a6b02286d1f",
+        "lesson_activity.key": "9da73de1-3e08-422a-9f17-96981d0f5aff"
+      }
+    },
+    {
+      "key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match term with the example.",
         "name": "Assessment: Check For Understanding\r",
@@ -808,7 +846,13 @@
       "key": "5e8e9fed-9cb9-4cdc-8b2e-9761d7f083e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.*\n* *Compare your sketch with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite / most used non-social media app. \nIn your Unit Journal, explore the function of the app, along with different inputs / outputs*\n* *Compare your journal with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=sharing) provides a template/directions for how students can complete this in their journals. See an example below:\n\n![](https://images.code.org/af1f30136d351f121db352e137d441fc-Unit Journal 3 Templates.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5e8e9fed-9cb9-4cdc-8b2e-9761d7f083e1",
@@ -893,7 +937,13 @@
       "key": "ff1f7ae5-c17e-43f1-b3de-04bd895f68f1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** \n* *What elements collect input?*\n* *What elements display output?*\n* *Do you think there are elements that can do both?*\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most elements can do both because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** \n* *What elements collect input?*\n* *What elements display output?*\n* *Do you think there are elements that can do both?*\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most elements can do both because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ff1f7ae5-c17e-43f1-b3de-04bd895f68f1",
@@ -925,12 +975,29 @@
       }
     },
     {
-      "key": "b5733f54-2269-48f3-98b4-d59ab961dd38",
+      "key": "b9818ce8-d92c-4c78-afaf-65628ffeafd6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. \n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. ",
         "duration": "5",
         "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Journal includes a template aimed at helping students *show* their responses as much as *tell* them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b9818ce8-d92c-4c78-afaf-65628ffeafd6",
+        "lesson_activity.key": "aa51e124-07b2-41e6-b06c-9223afd095da"
+      }
+    },
+    {
+      "key": "b5733f54-2269-48f3-98b4-d59ab961dd38",
+      "position": 2,
+      "properties": {
+        "description": "\n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -945,7 +1012,7 @@
     },
     {
       "key": "19fb24c8-cf2a-4aec-8bd2-e4d6b3622634",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": "30",
         "name": "Activity"
@@ -957,7 +1024,7 @@
     },
     {
       "key": "abcb6073-47fd-4952-8131-3ae9fdc30257",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Yesterday we learned all about Design Mode. Today you're going to start developing your own app that educates a user on a topic. This is a project that will continue through the rest of the unit.",
         "remarks": true
@@ -969,7 +1036,7 @@
     },
     {
       "key": "59c19415-bc50-4e17-b439-3cc0c992c584",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r app_development_planning_guide/csp/2023]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students into pairs."
       },
@@ -980,7 +1047,7 @@
     },
     {
       "key": "9e01ffd9-09e9-4ad1-b505-6bdc560cbe27",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You will work with a partner on this project. Collaboration is a big part of app development. Your team's diverse ideas will help make your app even better, because each partner can keep a lookout for bias. \r\n\r\nHere's an example: A team member puts in their app the phrase: \"All teenagers work after school to earn spending money\" because this is their experience - they work after school themselves. However, the other team member may not have an after school job, and because of this can point out the bias in that statement. \r\n\r\nCollaboration is key to catching bias in your work! \r\n\r\nHere's another example, this time in the design of an app. A team wants to make an app to encourage girls to sign up for a summer camp. One team member assumes that because this app is aimed at girls, the background should be pink. A girl on the team points out that she does not like pink, and using that color in the design may represent bias. \r\n\r\nAs you think about your topics and start designing your apps, remember to keep an eye out for bias and use your team mates to keep you accountable!",
         "remarks": true
@@ -992,7 +1059,7 @@
     },
     {
       "key": "1889d962-dae7-4b18-aa77-6560a52e137b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 2:** Choose One Topic\r\n\r\n* Working with a partner students narrow down their ideas to one topic and explain what would be covered in their app. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 3:** Survey Your Classmates\r\n\r\n* The goal in this step is for students to understand the needs of their users. This will help inform the overall design of the app."
       },
@@ -1003,7 +1070,7 @@
     },
     {
       "key": "c79ecad6-5fa6-4317-ab92-1d6341da14b8",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 4:** Design the User Interface\n\n* Students use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \n\n\n**Steps 5+** will be completed later on in the unit.",
         "tips": [
@@ -1020,7 +1087,7 @@
     },
     {
       "key": "2732d35f-a749-4dc3-a6e1-b9f2485eeb0f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did talking with the users of your app impact your design decisions?*",
         "duration": "10",
@@ -1033,7 +1100,7 @@
     },
     {
       "key": "f5b52a99-555c-4084-8b8e-eb6c80f70c90",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "In the following lessons, you will continue to plan and create you apps. What are we doing here? We are following a development process, which is similar to what developers use in the real world when creating their own apps. A development process breaks down the steps into small pieces - we've completed the first few today. \n\nThere are many different versions of the development process. Most use some combination of investigating and reflecting, designing, prototyping and testing. Development processes can be ordered like we have laid out in the Activity Guide or more exploratory in nature. As we continue on through this project, reflect on the steps and consider how they help organize the process.",
         "remarks": true
@@ -1045,7 +1112,7 @@
     },
     {
       "key": "b4b9a5ee-12e9-4b1d-8ab0-4f36f32060c6",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -1056,7 +1123,7 @@
     },
     {
       "key": "d17f3ba3-ad98-4c3d-b2e0-4e5850d3bc2f",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Match the term with the examples.",
         "name": "Assessment: Check For Understanding"
@@ -1226,7 +1293,13 @@
       "key": "e5eba97e-7812-43b0-91da-0f75abeaa82e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.*\n\n**Discussion Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\n\n* Instructions are not clear on what to do\n* Instructions use confusing words\n* Instructions don't actually accomplish what they're supposed to\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.*\n\n**Discussion Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\n\n* Instructions are not clear on what to do\n* Instructions use confusing words\n* Instructions don't actually accomplish what they're supposed to\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e5eba97e-7812-43b0-91da-0f75abeaa82e",
@@ -1281,7 +1354,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Make it a Gallery Walk:** Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.\n"
+            "markdown": "<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 150px\">\n<img src=\"https://images.code.org/3583b6026b2be005e035a93b4a5065f0-image-1678136357579.png\" style=\"margin-right: 40px; float: left\">\n<p><strong>Make it a Gallery Walk:</strong> Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.</p>\n</div>\n\n\n\n\n"
           }
         ]
       },
@@ -1409,7 +1482,13 @@
       "key": "908f609f-f99e-422d-a156-121f08532ba5",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) allows the user to navigate between app screens.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 6:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** This is a predict level to help students apply what they learned from the first three levels and associated discussions. Have students complete the prediction level discussing the answers to the questions with a partner.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students and gauge the understanding of event-driven vs sequential programming. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "908f609f-f99e-422d-a156-121f08532ba5",
@@ -1420,6 +1499,7 @@
       "key": "0ea43521-e531-43c1-ae26-c9f939e604b4",
       "position": 3,
       "properties": {
+        "description": "**Level 5:** Run this level in the same way as the first three. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) allows the user to navigate between app screens.\n\n**Level 6:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 7:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense.",
         "progression_name": "Code Investigation",
         "tips": [
           {
@@ -1464,7 +1544,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw.\r\n"
+            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw. The Unit 3 Journal includes a *Coding Breakdown* template designed to help students apply these terms to code snippets they saw in the lesson.\n\n\n![](https://images.code.org/056cc4cefb7a8208f7c85e4742edacdf-Unit%20Journal%203%20Templates%20(1).png)"
           }
         ]
       },
@@ -1538,7 +1618,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the [Debugging video](https://youtu.be/auv10y-dN4s\t\n) and then show the debugging process.",
-        "name": "Practice Time\r"
+        "name": "Practice Time\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e96cbdd2-5947-4054-8b18-c964cd36f799",
@@ -1561,7 +1647,13 @@
       "key": "df4c4ac2-4d85-419c-ab20-9c58f6611b21",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n    \n**Level 1:** This level requires students to recognize that strings need to go in quotes.\n\n**Level 2:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\n\n**Level 3:** This code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\n\n**Level 4:** This level explicitly introduces the fact that event handlers ([`onEvent`(#fff176)](/docs/applab/onEvent/)) should not go inside other [`onEvent`(#fff176)](/docs/applab/onEvent/) blocks. This is explicitly addressed in the concluding slide show as well.\n"
+        "description": "**Group:** Place students in pairs.\n    \n**Level 1:** This level requires students to recognize that strings need to go in quotes.\n\n**Level 2:** This level also requires students to recognize that strings need to go in quotes. Ideally students will get more familiar with checking for yellow warnings in this level.\n\n**Level 3:** This code has no warnings but in testing the app students should see that the range of values for the random numbers is too large. Iterative testing with different values should help them pick a number that keeps the smiley inside the screen.\n\n**Level 4:** This level explicitly introduces the fact that event handlers ([`onEvent`(#fff176)](/docs/applab/onEvent/)) should not go inside other [`onEvent`(#fff176)](/docs/applab/onEvent/) blocks. This is explicitly addressed in the concluding slide show as well.\n\n**Level 5:** This predict level asks students to hunt for a bug and give advice to the programmer to avoid bugs of this type in the future. This level emphasizes different parts of the Debugging process but especially the *Document* step, getting students to consider: \n  * *What have you learned?*\n * *What strategies did you use?* \n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students and gauge their use of the debugging process.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "df4c4ac2-4d85-419c-ab20-9c58f6611b21",
@@ -1583,7 +1675,7 @@
       "key": "7af62dcc-d444-40fb-8eca-fe7e04ebca31",
       "position": 5,
       "properties": {
-        "description": "**Level 5:** Have students complete at least one of the levels in this choice level\n * **5a** - The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\n * **5b** - In this level, an entire event handler is missing. Students will need to add it to the app.\n * **5c** - This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app.\n",
+        "description": "**Level 6:** Have students complete at least one of the levels in this choice level\n * **6a** - The code in this level will run, but the wrong text and sounds have been placed in the wrong places. This shows that code may have no warnings but still is not working correctly.\n * **6b** - In this level, an entire event handler is missing. Students will need to add it to the app.\n * **6c** - This app is a good chance for students to practice adding functionality of their own. While nothing starts off as \"broken\", students will need to use debugging practices as they add code to this app.\n",
         "progression_name": "Practice",
         "tips": [
           {
@@ -1598,10 +1690,27 @@
       }
     },
     {
-      "key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
+      "key": "e9035845-3772-44e9-86f3-f7363798acc7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *If you were using the debugging process then you should have some notes of good debugging tips. Share those with your neighbor and add any new ones you forgot to add. Be ready to share with the class.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings. Give the room an opportunity to share as many ideas as they can before sharing the provided slides with some recommended steps.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9035845-3772-44e9-86f3-f7363798acc7",
+        "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
+      }
+    },
+    {
+      "key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Create an analogy in which you compare and contrast the process of debugging with different actions / events / things from your life.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
@@ -1610,7 +1719,7 @@
     },
     {
       "key": "8b3e2e45-7542-411b-a265-5f7fa1cdd09c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide which lists some best practices in addition to those students may have mentioned."
       },
@@ -1621,7 +1730,7 @@
     },
     {
       "key": "b04cf468-6d19-44db-855c-f41424b649a9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Debugging is an important and entirely normal part of programming. Your code won't always work the first time, and that's OK! Debugging is a skill that you can practice and get better at. Using documentation and leaving comments for yourself are important skills, but so is working with classmates or learning to more effectively search for bugs. We'll keep using these skills.",
         "remarks": true,
@@ -1634,17 +1743,6 @@
       },
       "seeding_key": {
         "activity_section.key": "b04cf468-6d19-44db-855c-f41424b649a9",
-        "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
-      }
-    },
-    {
-      "key": "e9035845-3772-44e9-86f3-f7363798acc7",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
-      },
-      "seeding_key": {
-        "activity_section.key": "e9035845-3772-44e9-86f3-f7363798acc7",
         "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
       }
     },
@@ -2031,17 +2129,6 @@
       }
     },
     {
-      "key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10"
-      }
-    },
-    {
       "key": "b7c17f2d-1483-414b-a819-d24f2fc1caf8",
       "position": 1,
       "properties": {
@@ -2059,7 +2146,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
         "duration": "25",
-        "name": "Unit Assessment"
+        "name": "Unit Assessment",
+        "progression_name": "Unit Assessment - Intro to App Design"
       },
       "seeding_key": {
         "activity_section.key": "2f053470-d91c-44d8-ab9b-5b1114791766",
@@ -2820,6 +2908,31 @@
       "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2023"
+        ],
+        "progression": "Code Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2023"
+        ],
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2023",
+        "activity_section.key": "0ea43521-e531-43c1-ae26-c9f939e604b4"
+      },
+      "level_keys": [
+        "U3 Program Investigate Event vs Seq Predict_2023"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2842,9 +2955,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2867,9 +2980,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2892,8 +3005,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
+      "chapter": 33,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2917,7 +3030,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2942,7 +3055,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2967,7 +3080,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2992,7 +3105,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3017,8 +3130,33 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U3 Debugging Predict_2023"
+        ],
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 Debugging Predict_2023"
+        ],
+        "lesson.key": "Debugging",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2023",
+        "activity_section.key": "0f9f2d53-fd72-4645-a737-0e1146c42cde"
+      },
+      "level_keys": [
+        "U3 Debugging Predict_2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3042,8 +3180,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 6,
+      "chapter": 40,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3067,7 +3205,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3092,7 +3230,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3117,7 +3255,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3142,7 +3280,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -3167,14 +3305,15 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "CSP Unit 3 MC Assessment 2022_2023"
-        ]
+        ],
+        "progression": "Unit Assessment - Intro to App Design"
       },
       "bonus": false,
       "seeding_key": {
@@ -3530,6 +3669,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U3 Program Investigate Event vs Seq Predict_2023",
+        "script_level.level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2023"
+        ],
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2023",
+        "activity_section.key": "0ea43521-e531-43c1-ae26-c9f939e604b4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U3 Program Investigate Event-Driven setScreen_2023",
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven setScreen_2023"
@@ -3617,6 +3768,18 @@
         "level.key": "U3 Program Practice Pt 6_2023",
         "script_level.level_keys": [
           "U3 Program Practice Pt 6_2023"
+        ],
+        "lesson.key": "Debugging",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2023",
+        "activity_section.key": "0f9f2d53-fd72-4645-a737-0e1146c42cde"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 Debugging Predict_2023",
+        "script_level.level_keys": [
+          "U3 Debugging Predict_2023"
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
@@ -3746,6 +3909,18 @@
       }
     },
     {
+      "name": "Assessment Day - Intro to App Development",
+      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/edit?usp=sharing",
+      "key": "assessment_day_-_intro_to_app_development",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_intro_to_app_development"
+      }
+    },
+    {
       "name": "Class Chats: Olawale Oladehin",
       "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
       "key": "class_chats_olawale_oladehin",
@@ -3768,29 +3943,6 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 3 - Intro to App Design",
-      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/copy",
-      "key": "csp_unit_3_-_intro_to_app_design",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
       }
     },
     {
@@ -3917,6 +4069,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3939,6 +4103,18 @@
       "seeding_key": {
         "resource.key": "the_need_for_programming_languages"
       }
+    },
+    {
+      "name": "Unit 3 Journal",
+      "url": "https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link",
+      "key": "unit_3_journal",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_journal"
+      }
     }
   ],
   "lessons_resources": [
@@ -3951,7 +4127,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "assessment_day_-_intro_to_app_development"
       }
     },
     {
@@ -3994,6 +4170,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
         "resource.key": "introduction_to_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "resource.key": "unit_3_journal"
       }
     },
     {
@@ -4060,13 +4242,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
+        "resource.key": "syllabus",
         "script.name": "csp3-2023"
       }
     },
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_journal",
         "script.name": "csp3-2023"
       }
     }

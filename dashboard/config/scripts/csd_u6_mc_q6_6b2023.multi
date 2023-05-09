@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 `getProperty` allows you to access user input on the screen. The incorrect options are updating UI elements, which would use `setProperty`.
 MARKDOWN
+
+allow_multiple_attempts true

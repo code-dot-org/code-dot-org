@@ -1341,6 +1341,7 @@ tr:
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} de yeni hareket yap {ANIMATION_NAME} "
       gamelab_makeNewSpriteGroup:
+        text: "{N} yeni {GROUP}'ı {FORMAT} içinde yap"
         options:
           FORMAT:
             '"border"': sınır
@@ -2749,6 +2750,10 @@ tr:
           DIR:
             right: sağa ↻
             left: sola ↺
+      ecosystems_catchMe:
+        text: yakala {THIS}
+      ecosystems_eat:
+        text: ye {THIS}
       ecosystems_goldilocks:
         text: |2-
            eğer {CONDITION}{SPRITE}

@@ -17,18 +17,18 @@ const DEFAULT_PROPS = {
   onDeleteVerificationChange: action('Verify'),
   onCancel: action('Cancel'),
   disableConfirm: false,
-  deleteUser: action('Delete my Account')
+  deleteUser: action('Delete my Account'),
 };
 
 export default {
   title: 'DeleteAccountDialog',
-  component: DeleteAccountDialog
+  component: DeleteAccountDialog,
 };
 
 const container = {
   margin: 'auto',
   width: '50%',
-  padding: '10px'
+  padding: '10px',
 };
 
 const Template = args => (
@@ -40,31 +40,31 @@ const Template = args => (
 export const DeleteStudentAccount = Template.bind({});
 DeleteStudentAccount.args = {
   isTeacher: false,
-  warnAboutDeletingStudents: false
+  warnAboutDeletingStudents: false,
 };
 
 export const DeleteTeacherAccountWithoutStudents = Template.bind({});
 DeleteTeacherAccountWithoutStudents.args = {
   isTeacher: true,
-  warnAboutDeletingStudents: false
+  warnAboutDeletingStudents: false,
 };
 
 export const DeleteTeacherAccountWithStudents = Template.bind({});
 DeleteTeacherAccountWithStudents.args = {
   isTeacher: true,
-  warnAboutDeletingStudents: true
+  warnAboutDeletingStudents: true,
 };
 
 export const DeleteTeacherAccountWithStudents1Checkbox = Template.bind({});
 DeleteTeacherAccountWithStudents1Checkbox.args = {
   isTeacher: true,
   warnAboutDeletingStudents: true,
-  checkboxes: getCheckboxes(false, true)
+  checkboxes: getCheckboxes(false, true),
 };
 
 export const DeleteTeacherAccountWithStudents5Checkbox = Template.bind({});
 DeleteTeacherAccountWithStudents5Checkbox.args = {
   isTeacher: true,
   warnAboutDeletingStudents: true,
-  checkboxes: getCheckboxes(true)
+  checkboxes: getCheckboxes(true),
 };

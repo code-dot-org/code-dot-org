@@ -10,7 +10,7 @@ import {
   addActivitySection,
   moveActivity,
   removeActivity,
-  updateActivityField
+  updateActivityField,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
@@ -40,7 +40,7 @@ class ActivityCard extends Component {
     addActivitySection: PropTypes.func.isRequired,
     removeActivity: PropTypes.func.isRequired,
     moveActivity: PropTypes.func.isRequired,
-    updateActivityField: PropTypes.func.isRequired
+    updateActivityField: PropTypes.func.isRequired,
   };
 
   handleAddActivitySection = () => {
@@ -90,7 +90,7 @@ class ActivityCard extends Component {
       clearTargetActivitySection,
       updateActivitySectionMetrics,
       hasLessonPlan,
-      allowMajorCurriculumChanges
+      allowMajorCurriculumChanges,
     } = this.props;
 
     let levelsInActivity = 0;
@@ -103,7 +103,7 @@ class ActivityCard extends Component {
         <div
           style={{
             ...styles.activityHeader,
-            ...(this.props.collapsed && {marginBottom: 10})
+            ...(this.props.collapsed && {marginBottom: 10}),
           }}
         >
           {hasLessonPlan && (
@@ -189,21 +189,21 @@ const styles = {
     background: color.cyan,
     borderTopLeftRadius: borderRadius,
     borderTopRightRadius: borderRadius,
-    padding: 10
+    padding: 10,
   },
   activityHeaderComponents: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   activityBody: {
     background: color.lightest_cyan,
     borderBottomLeftRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     padding: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   addButton: {
     fontSize: 14,
@@ -211,28 +211,28 @@ const styles = {
     background: 'white',
     border: '1px solid #ccc',
     boxShadow: 'none',
-    margin: '0 10px 10px 10px'
+    margin: '0 10px 10px 10px',
   },
   button: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   label: {
     fontSize: 18,
-    marginRight: 5
+    marginRight: 5,
   },
   labelAndInput: {
     marginLeft: 10,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
   },
   inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
-    flex: '1 1'
-  }
+    flex: '1 1',
+  },
 };
 
 export const UnconnectedActivityCard = ActivityCard;
@@ -241,5 +241,5 @@ export default connect(state => ({}), {
   addActivitySection,
   moveActivity,
   removeActivity,
-  updateActivityField
+  updateActivityField,
 })(ActivityCard);

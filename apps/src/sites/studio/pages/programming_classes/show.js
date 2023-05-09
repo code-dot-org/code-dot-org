@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 
 $(document).ready(() => {
   registerReducers({
-    instructionsDialog
+    instructionsDialog,
   });
 
   const store = getStore();

@@ -214,8 +214,6 @@ tr:
       izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında
       asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik
       politikamıza](http://code.org/privacy) bakınız.
-    additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
-      duymaktayız.
     user_type_button: Hesap Türünü Güncelle
     user_type_label: Hesap Türü
     user_type_student: öğrenci
@@ -408,6 +406,7 @@ tr:
       app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
       game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
       game_lab_tutorials: Oyun Laboratuvar Eğitimi
+      sprite_lab_documentation: Sprite Lab Dökümanları
       sprite_lab_tutorials: Peri Laboratuvar Eğitimi
       web_lab_documentation: Web Lab Belgelendirmesi
       educate_overview: Eğitimci genel bakış
@@ -1537,11 +1536,23 @@ tr:
   courses_category: Tüm Kurslar
   course_offering:
     headers:
+      favorites: Sık Kullanılanlar
+      labs_and_skills: Laboratuvarlar ve Beceriler
       minecraft: Minecraft
       hello_world: Merhaba Dünya
+      popular_media: Popüler Medya
       sports: Spor
+      express: Hızlı
       csf: Bilgisayar bilimleri temelleri
       csc: Bilgisayar Bilimi Bağlantıları
+      year_long: Yıl boyu
+      csa_labs: CSA Labs
+      self_paced: Kendi kendine tempolu
+      teacher_led: Öğretmen liderliğinde
+      collections: Koleksiyonlar
+      workshops_k5: K-5 Atölyeleri
+      summer_workshops_612: 6-12 Yaz Atölyeleri
+      virtual_academic_year_workshops_612: 6-12 Sanal Akademik Yıl Atölyeleri
   cookie_banner:
     message: Sitemize göz atmaya devam ederek veya "Kabul Ediyorum"a tıklayarak, bilgisayarınızdaki
       veya cihazınızdaki çerezlerin depolanmasını kabul etmiş olursunuz.

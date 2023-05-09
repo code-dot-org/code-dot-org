@@ -2001,6 +2001,10 @@ he:
           lessons:
             lesson-3:
               name: בשביל לולאות
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         hello-world-space-2022:
           title: 'שלום, עולם: שטח'
         csd1-2023:
@@ -2170,24 +2174,38 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
+            lessonGroup-4:
+              display_name: סקר
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
             lessonGroup-3:
               display_name: 'פרק 2: תכנון אפליקציה'
+            lessonGroup-4:
+              display_name: סקר
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: ייצוג מידע'
             lessonGroup-3:
               display_name: 'פרק 2: פתרון בעיות נתונים'
+            lessonGroup-4:
+              display_name: סקר
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2280,7 +2298,31 @@ he:
           lesson_groups:
             lessonGroup-3:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-5:
+              display_name: סקר
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: מבוא
+        csd-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-data-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-impact-in-society-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-coding-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-design-with-purpose-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-hardware-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-creativity-post-survey-2023:
+          title: סקר שלאחר הקורס

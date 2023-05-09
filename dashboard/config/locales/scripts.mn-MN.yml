@@ -4458,6 +4458,14 @@ mn:
           lessons:
             lesson-3:
               name: Гогцоонд зориулав
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Оюуны өмч
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4731,12 +4739,18 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Зураг ба анимэйшн'
             lessonGroup-3:
               display_name: '2-р бүлэг: Барилгын тоглоом'
+            lessonGroup-4:
+              display_name: Судалгаа
           student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн,
             интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага
             дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй
@@ -4750,6 +4764,8 @@ mn:
               display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
             lessonGroup-3:
               display_name: '2-р бүлэг: Программын ноорог'
+            lessonGroup-4:
+              display_name: Судалгаа
           student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг.
             Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж
             байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно.
@@ -4763,6 +4779,8 @@ mn:
               display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
             lessonGroup-3:
               display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            lessonGroup-4:
+              display_name: Судалгаа
           description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн
             ашигладаг талаар олж мэдээрэй.
           student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын
@@ -4778,6 +4796,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: Апп Лаб-н танилцуулга
+            lessonGroup-5:
+              display_name: Судалгаа
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4959,10 +4979,14 @@ mn:
           lesson_groups:
             lessonGroup-3:
               display_name: Оролт ба гаралт
+            lessonGroup-5:
+              display_name: Судалгаа
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4983,3 +5007,50 @@ mn:
           lesson_groups:
             lessonGroup-3:
               display_name: Оролт ба гаралт
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Мэндчилгээ
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Танилцуулга
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-р өдөр
+          title: 1-р өдөр
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2-р өдөр
+          title: 2-р өдөр
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3-р өдөр
+          title: 3-р өдөр
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4-р өдөр
+          title: 4-р өдөр
+        csd-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-data-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-impact-in-society-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-coding-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-hardware-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-creativity-post-survey-2023:
+          title: Хичээлийн дараах судалгаа

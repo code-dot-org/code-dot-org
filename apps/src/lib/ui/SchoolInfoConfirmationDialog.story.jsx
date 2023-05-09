@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'SchoolInfoConfirmationDialog',
-  component: SchoolInfoConfirmationDialog
+  component: SchoolInfoConfirmationDialog,
 };
 
 //
@@ -23,8 +23,8 @@ DisplaySchoolInfoConfirmationDialog.args = {
     formUrl: '',
     authTokenName: 'auth_token',
     authTokenValue: 'fake_auth_token',
-    existingSchoolInfo: {}
+    existingSchoolInfo: {},
   },
   onClose: action('onClose callback'),
-  isOpen: true
+  isOpen: true,
 };

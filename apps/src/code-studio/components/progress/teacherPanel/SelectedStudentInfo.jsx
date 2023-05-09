@@ -17,7 +17,7 @@ export default class SelectedStudentInfo extends React.Component {
     onSelectUser: PropTypes.func.isRequired,
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
-    levelsWithProgress: PropTypes.arrayOf(levelWithProgress)
+    levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
   };
 
   onUnsubmit = userLevelId => {
@@ -27,9 +27,9 @@ export default class SelectedStudentInfo extends React.Component {
       data: {
         user_level: {
           best_result: 1,
-          submitted: false
-        }
-      }
+          submitted: false,
+        },
+      },
     })
       .done(data => {
         // Let's just refresh so that the dots are correct, etc.
@@ -79,7 +79,7 @@ export default class SelectedStudentInfo extends React.Component {
       // If not viewing a student, the teacher has themself selected
       return {
         id: teacherId,
-        name: i18n.studentTableTeacherDemo()
+        name: i18n.studentTableTeacherDemo(),
       };
     }
   };
@@ -190,7 +190,7 @@ const styles = {
   main: {
     display: 'flex',
     justifyContent: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   studentInfo: {
     minHeight: 80,
@@ -198,24 +198,24 @@ const styles = {
     textAlign: 'center',
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   bubble: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   name: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold',
-    fontSize: 15
+    fontSize: 15,
   },
   timeHeader: {
     fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   arrow: {
     fontSize: 40,
     cursor: 'pointer',
     position: 'relative',
-    top: 30
-  }
+    top: 30,
+  },
 };

@@ -2,7 +2,7 @@
 // render errors and other problems.
 import {
   throwOnConsoleErrorsEverywhere,
-  clearTimeoutsBetweenTests
+  clearTimeoutsBetweenTests,
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 import $ from 'jquery';

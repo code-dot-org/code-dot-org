@@ -8,7 +8,7 @@ export const bonusLevels = [
         description: 'A lovely description for this sublevel',
         thumbnail_url: '',
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseB_maze_seq_challenge1',
-        perfect: true
+        perfect: true,
       },
       {
         id: '23223',
@@ -16,9 +16,9 @@ export const bonusLevels = [
         description: 'Sublevel 2 is lots of fun',
         thumbnail_url: 'some-fake.url/kittens.png',
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_artist_prog_challenge1_2019',
-        perfect: false
-      }
-    ]
+        perfect: false,
+      },
+    ],
   },
   {
     lessonNumber: 2,
@@ -30,7 +30,7 @@ export const bonusLevels = [
         thumbnail_url:
           'https://d3p74s6bwmy6t9.cloudfront.net/80cc9bbdbd9a05c1a0cf03500b4eb38c=development/2091.png',
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_artist_prog_challenge1',
-        perfect: true
+        perfect: true,
       },
       {
         id: '23225',
@@ -39,9 +39,9 @@ export const bonusLevels = [
         thumbnail_url:
           'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_PlayLab_events_challenge1',
-        perfect: false
-      }
-    ]
+        perfect: false,
+      },
+    ],
   },
   {
     lessonNumber: 3,
@@ -53,7 +53,7 @@ export const bonusLevels = [
         thumbnail_url:
           'https://d3p74s6bwmy6t9.cloudfront.net/80cc9bbdbd9a05c1a0cf03500b4eb38c=development/2091.png',
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_PlayLab_events_challenge1',
-        perfect: false
+        perfect: false,
       },
       {
         id: '23227',
@@ -61,7 +61,7 @@ export const bonusLevels = [
         description: null,
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_PlayLab_events_challenge1',
         thumbnail_url: null,
-        perfect: true
+        perfect: true,
       },
       {
         id: '23228',
@@ -70,8 +70,8 @@ export const bonusLevels = [
         url: 'http://studio.code.org:3000/s/coursef-2019/lessons/1/extras?level_name=courseC_PlayLab_events_challenge1',
         thumbnail_url:
           'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
-        perfect: false
-      }
-    ]
-  }
+        perfect: false,
+      },
+    ],
+  },
 ];

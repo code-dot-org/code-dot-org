@@ -230,7 +230,7 @@ describe('NetSimRouterNode', function () {
           throw new Error('Nothing has been logged.');
         }
         return archive[archive.length - 1];
-      }
+      },
     };
   };
 
@@ -257,7 +257,7 @@ describe('NetSimRouterNode', function () {
     packetCountBitWidth = 4;
     packetHeaderSpec = [
       Packet.HeaderType.FROM_ADDRESS,
-      Packet.HeaderType.TO_ADDRESS
+      Packet.HeaderType.TO_ADDRESS,
     ];
 
     NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
@@ -403,7 +403,7 @@ describe('NetSimRouterNode', function () {
         testShard,
         {
           localNodeID: 0,
-          remoteNodeID: routerA.entityID
+          remoteNodeID: routerA.entityID,
         },
         function () {}
       );
@@ -415,7 +415,7 @@ describe('NetSimRouterNode', function () {
         testShard,
         {
           localNodeID: 0,
-          remoteNodeID: routerA.entityID
+          remoteNodeID: routerA.entityID,
         },
         function () {}
       );
@@ -432,7 +432,7 @@ describe('NetSimRouterNode', function () {
         {
           localNodeID: 0,
           remoteNodeID: routerA.entityID,
-          localHostname: 'theRightOne'
+          localHostname: 'theRightOne',
         },
         function () {}
       );
@@ -441,7 +441,7 @@ describe('NetSimRouterNode', function () {
         {
           localNodeID: 0,
           remoteNodeID: routerA.entityID + 1,
-          localHostname: 'theWrongOne'
+          localHostname: 'theWrongOne',
         },
         function () {}
       );
@@ -477,7 +477,7 @@ describe('NetSimRouterNode', function () {
           {
             localNodeID: wireID,
             remoteNodeID: routerA.entityID,
-            localAddress: wireID.toString(10)
+            localAddress: wireID.toString(10),
           },
           function () {}
         );
@@ -502,7 +502,7 @@ describe('NetSimRouterNode', function () {
           testShard,
           {
             localNodeID: wireID,
-            remoteNodeID: routerA.entityID
+            remoteNodeID: routerA.entityID,
           },
           function () {}
         );
@@ -528,7 +528,7 @@ describe('NetSimRouterNode', function () {
         {
           localNodeID: 10,
           remoteNodeID: routerA.entityID,
-          localAddress: address
+          localAddress: address,
         },
         function () {}
       );
@@ -538,7 +538,7 @@ describe('NetSimRouterNode', function () {
         {
           localNodeID: 11,
           remoteNodeID: routerA.entityID,
-          localAddress: address
+          localAddress: address,
         },
         function () {}
       );
@@ -597,7 +597,7 @@ describe('NetSimRouterNode', function () {
         testShard,
         {
           localNodeID: routerA.entityID + nodeIDOffset,
-          remoteNodeID: routerA.entityID
+          remoteNodeID: routerA.entityID,
         },
         function (e, w) {
           newWire = w;
@@ -875,7 +875,7 @@ describe('NetSimRouterNode', function () {
       // Construct a message with a timestamp payload, to ensure calls to
       // this method don't conflict with one another.
       var headers = encoder.makeBinaryHeaders({
-        toAddress: forClient.getAddress()
+        toAddress: forClient.getAddress(),
       });
       var payload = encoder.concatenateBinary(
         headers,
@@ -941,7 +941,7 @@ describe('NetSimRouterNode', function () {
           fromNodeID: from,
           toNodeID: to,
           simulatedBy: from,
-          payload: '00000'
+          payload: '00000',
         },
         function () {}
       );
@@ -966,7 +966,7 @@ describe('NetSimRouterNode', function () {
       var payload = encoder.concatenateBinary(
         {
           toAddress: '1111',
-          fromAddress: '1111'
+          fromAddress: '1111',
         },
         '101010101'
       );
@@ -983,7 +983,7 @@ describe('NetSimRouterNode', function () {
 
       var headers = encoder.makeBinaryHeaders({
         toAddress: toAddress,
-        fromAddress: fromAddress
+        fromAddress: fromAddress,
       });
       var payload = encoder.concatenateBinary(headers, '101010101');
       clientA.sendMessage(payload, function () {});
@@ -1034,7 +1034,7 @@ describe('NetSimRouterNode', function () {
       var sendMessageOfSize = function (messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: toAddress,
-          fromAddress: fromAddress
+          fromAddress: fromAddress,
         });
         var payload = encoder.concatenateBinary(
           headers,
@@ -1356,7 +1356,7 @@ describe('NetSimRouterNode', function () {
       var sendMessageOfSize = function (messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         });
         var payload = encoder.concatenateBinary(
           headers,
@@ -1548,7 +1548,7 @@ describe('NetSimRouterNode', function () {
       var sendMessageOfSize = function (messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         });
         var payload = encoder.concatenateBinary(
           headers,
@@ -1641,7 +1641,7 @@ describe('NetSimRouterNode', function () {
       var sendToAutoDns = function (fromNode, asciiPayload) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: autoDnsAddress,
-          fromAddress: fromNode.getAddress()
+          fromAddress: fromNode.getAddress(),
         });
         var payload = encoder.concatenateBinary(
           headers,
@@ -1830,7 +1830,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('wop')
       );
@@ -1868,7 +1868,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: routerB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('flop')
       );
@@ -1917,7 +1917,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('wop')
       );
@@ -1967,7 +1967,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('wop')
       );
@@ -1996,7 +1996,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
-        routerC.entityID
+        routerC.entityID,
       ]);
 
       // t=3; router B picks up message, forwards to client B
@@ -2008,7 +2008,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
         routerC.entityID,
-        routerB.entityID
+        routerB.entityID,
       ]);
     });
 
@@ -2030,7 +2030,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('wop')
       );
@@ -2059,7 +2059,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
-        routerC.entityID
+        routerC.entityID,
       ]);
 
       // t=3; router D picks up message, forwards to router B
@@ -2071,7 +2071,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
         routerC.entityID,
-        routerD.entityID
+        routerD.entityID,
       ]);
 
       // t=4; router B picks up message, forwards to client B
@@ -2084,7 +2084,7 @@ describe('NetSimRouterNode', function () {
         routerA.entityID,
         routerC.entityID,
         routerD.entityID,
-        routerB.entityID
+        routerB.entityID,
       ]);
     });
 
@@ -2102,7 +2102,7 @@ describe('NetSimRouterNode', function () {
         var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
             toAddress: clientB.getAddress(),
-            fromAddress: clientA.getAddress()
+            fromAddress: clientA.getAddress(),
           }),
           DataConverters.asciiToBinary('wop')
         );
@@ -2119,7 +2119,7 @@ describe('NetSimRouterNode', function () {
           routerA.entityID,
           routerC.entityID,
           routerF.entityID,
-          routerB.entityID
+          routerB.entityID,
         ]);
       });
 
@@ -2132,7 +2132,7 @@ describe('NetSimRouterNode', function () {
           routerA.entityID,
           routerE.entityID,
           routerC.entityID,
-          routerB.entityID
+          routerB.entityID,
         ]);
       });
 
@@ -2146,7 +2146,7 @@ describe('NetSimRouterNode', function () {
           routerD.entityID,
           routerF.entityID,
           routerC.entityID,
-          routerB.entityID
+          routerB.entityID,
         ]);
       });
 
@@ -2158,7 +2158,7 @@ describe('NetSimRouterNode', function () {
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
           routerD.entityID,
-          routerB.entityID
+          routerB.entityID,
         ]);
       });
     });
@@ -2177,7 +2177,7 @@ describe('NetSimRouterNode', function () {
       var packetBinary = encoder.concatenateBinary(
         encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
-          fromAddress: clientA.getAddress()
+          fromAddress: clientA.getAddress(),
         }),
         DataConverters.asciiToBinary('wop')
       );
@@ -2208,7 +2208,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('extraHopsRemaining', 0);
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
-        routerC.entityID
+        routerC.entityID,
       ]);
 
       // t=3; router B picks up message, forwards to client B
@@ -2220,7 +2220,7 @@ describe('NetSimRouterNode', function () {
       assertFirstMessageProperty('visitedNodeIDs', [
         routerA.entityID,
         routerC.entityID,
-        routerB.entityID
+        routerB.entityID,
       ]);
     });
 
@@ -2228,7 +2228,7 @@ describe('NetSimRouterNode', function () {
       var sendToAutoDnsA = function (fromNode, asciiPayload) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: routerA.getAutoDnsAddress(),
-          fromAddress: fromNode.getAddress()
+          fromAddress: fromNode.getAddress(),
         });
         var payload = encoder.concatenateBinary(
           headers,

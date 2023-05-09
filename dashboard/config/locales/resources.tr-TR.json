@@ -118,16 +118,19 @@
           "type": "Video"
         },
         "2022_change_log/coursed/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursed/2022": {
+          "name": "Tüm Kaynaklar",
           "url": "/s/kursd-2022/kaynaklar"
         },
         "all_standards/coursed/2022": {
+          "name": "Tüm Standartlar",
           "url": "/s/kursd-2022/standartlar"
         },
         "all_vocabulary/coursed/2022": {
+          "name": "Tüm Kelimeler",
           "url": "/s/kursd-2022/sözcük"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
@@ -136,6 +139,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursed/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -362,7 +366,7 @@
           "type": "Proje Kılavuzu"
         },
         "2022_change_log/coursef/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursef/2022": {
@@ -380,6 +384,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursef/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -403,6 +408,7 @@
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview"
         },
         "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -553,7 +559,7 @@
           "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit"
         },
         "2022_change_log/coursee/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursee/2022": {
@@ -571,6 +577,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursee/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -594,6 +601,7 @@
           "type": "Kaynak"
         },
         "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -715,7 +723,7 @@
           "type": "Kaynak"
         },
         "digital_sharing_ethics_video_/coursee/2022": {
-          "name": "Dijital Paylaşım Etik (Video)",
+          "name": "Dijital Paylaşım Etiği (Video)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "Video"
         },
@@ -734,7 +742,7 @@
           "url": "https://docs.google.com/document/d/1vNbI3RosjA5K2nQRoCTYGFmVReUvdubavvObCIljxuU/edit"
         },
         "2022_change_log/courseb/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/courseb/2022": {
@@ -752,6 +760,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/courseb/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -877,10 +886,12 @@
           "type": "Yönergeler"
         },
         "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie ve Büyük Proje",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "Kaynak"
         },
         "unspotted_bugs/courseb/2022": {
+          "name": "Fark Edilmeyen Hatalar",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "Video"
         },
@@ -996,6 +1007,7 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -1105,7 +1117,7 @@
           "type": "Video"
         },
         "2022_change_log/coursea/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursea/2022": {
@@ -1123,6 +1135,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursea/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -1309,17 +1322,17 @@
           "type": "Cevap Anahtarı"
         },
         "2022_change_log/coursec/2022": {
-          "name": "2022 Günlüğü değiştir",
+          "name": "2022 Değişiklik Günlüğü",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursec/2022": {
-          "url": "/s/kursc-2022/kaynaklar"
+          "url": "/s/kursc-2022/resources"
         },
         "all_standards/coursec/2022": {
-          "url": "/s/kursc-2022/standartlar"
+          "url": "/s/kursc-2022/standards"
         },
         "all_vocabulary/coursec/2022": {
-          "url": "/s/kursc-2022/sözcük"
+          "url": "/s/coursec-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
@@ -1327,6 +1340,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities/coursec/2022": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -1379,22 +1393,27 @@
           "type": "Slaytlar"
         },
         "my_robotic_friends/coursec/2022": {
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
           "type": "Bardak Aralıklandırma"
         },
         "my_robotic_friends_1/coursec/2022": {
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
           "type": "Sembol Anahtarı"
         },
         "my_robotic_friends_2/coursec/2022": {
+          "name": "Robotik Arkadaşlarım",
           "url": "https://youtu.be/xaW3PAzHxCU",
           "type": "Bağlantısız Video"
         },
         "my_robotic_friends_3/coursec/2022": {
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
           "type": "Bardak Dizme Fikirleri"
         },
         "my_robotic_friends_4/coursec/2022": {
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
           "type": "Kağıt Yamuk Şablonu"
         },
@@ -1690,8 +1709,18 @@
           "name": "Proje - Bir Öneri Yapın",
           "type": "Slaytlar"
         },
+        "all_resources_5/csd/2022": {
+          "url": "/s/csd1-2022/kaynaklar"
+        },
+        "all_standards_5/csd/2022": {
+          "url": "/s/csd1-2022/standartlar"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "url": "/s/csd1-2022/kelimeler"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "Problem çözme tanıtımı",
+          "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/preview",
           "type": "Slaytlar"
         },
         "problem_solving_process/csd/2022": {
@@ -1709,6 +1738,7 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Problem çözme süreci",
+          "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
           "type": "Slaytlar"
         },
         "solving_problems/csd/2022": {
@@ -1716,6 +1746,7 @@
         },
         "exploring_problem_solving/csd/2022": {
           "name": "Problem çözmeyi keşfetme",
+          "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
           "type": "Slaytlar"
         },
         "what_is_a_computer/csd/2022": {
@@ -1725,6 +1756,7 @@
           "name": "Bilgisayar nedir?"
         },
         "what_is_a_computer_1/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
           "type": "Slaytlar"
         },
         "input_and_output/csd/2022": {
@@ -3256,6 +3288,7 @@
           "type": "Kaynak"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Müfredatlar Arası Uzatma Faaliyetleri",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Kaynak"
         },
@@ -3325,6 +3358,7 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4034,22 +4068,22 @@
           "type": "Öğrenci Notu"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Robot Arkadaşlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
           "type": "Bardak Aralıklandırma"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Robot Arkadaşlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
           "type": "Bardak Dizme Fikirleri"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Robot Arkadaşlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
           "type": "Kağıt Yamuk Şablonu"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Robot Arkadaşlarım",
+          "name": "Robotik Arkadaşlarım",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
           "type": "Sembol Anahtarı"
         },
@@ -4479,6 +4513,7 @@
           "type": "Çalışma Kağıdı"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4492,6 +4527,7 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4678,6 +4714,7 @@
           "type": "Slaytlar"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite Lab Dökümanları",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "Kaynak"
         },
@@ -4735,7 +4772,7 @@
           "type": "Kaynak"
         },
         "digital-sharing-video/coursee/2021": {
-          "name": "Dijital Paylaşım Etik (Video)",
+          "name": "Dijital Paylaşım Etiği (Video)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "Video"
         },

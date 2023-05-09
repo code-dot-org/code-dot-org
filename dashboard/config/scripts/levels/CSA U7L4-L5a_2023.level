@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Short one-sentence description of problem to solve.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n✅ **TO DO #2:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClassName</code> class in the <strong>Documentation</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>\r\n    </div>\r\n</details>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SodaMachine</code> class represents a soda machine with multiple types of sodas. It has instance variables for the list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Soda</code> objects that are sold in the soda machine and the price of each soda.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Soda</code> class represents a type of soda and has an instance variable for the number of sodas available.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTotalSodas()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SodaMachine</code> class to calculate and return the total number of sodas available in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">theSodas</code> array.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTotalCost()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SodaMachine</code> class to calculate and return the total cost of all sodas available in a soda machine.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SodaRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTotalCost()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,15 +14,22 @@
         "tabOrder": 0
       }
     },
+    "video_key": "csa_private_methods",
     "encrypted_examples": [
 
-    ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Soda Machine",
+    "bubble_choice_description": "Use `private` and `public` methods to calculate the total inventory and cost of sodas in a soda machine.",
+    "thumbnail_url": "https://images.code.org/168b22d7091feb5f7ab09332dd9481b3-soda.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-11T14:04:49.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:49.485+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1 Private PBT_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L1 Private PBT_2023\"},{\"changed_at\":\"2023-04-11 14:04:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:49.485+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1 Private PBT_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L1 Private PBT_2023\"},{\"changed_at\":\"2023-04-11 14:04:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:09:25 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:40:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:02:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

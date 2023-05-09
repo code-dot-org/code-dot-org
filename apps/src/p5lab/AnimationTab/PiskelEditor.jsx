@@ -1,6 +1,4 @@
 /** @file Component wrapping embedded Piskel editor */
-// PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
-/* global PISKEL_DEVELOPMENT_MODE */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -36,7 +34,7 @@ class PiskelEditor extends React.Component {
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   componentDidMount() {
@@ -211,7 +209,7 @@ class PiskelEditor extends React.Component {
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'asset-editing',
-        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
+        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab',
       });
       this.hasLoggedFirehoseEvent_ = true;
     }
@@ -222,7 +220,7 @@ class PiskelEditor extends React.Component {
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
       frameCount: message.frameCount,
-      frameDelay: message.frameRate
+      frameDelay: message.frameRate,
     });
   };
 
@@ -244,7 +242,7 @@ export default connect(
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
     pendingFrames: state.animationList.pendingFrames,
     isBlockly: state.pageConstants.isBlockly,
-    localeCode: state.locales.localeCode
+    localeCode: state.locales.localeCode,
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),
@@ -253,6 +251,6 @@ export default connect(
     },
     removePendingFrames() {
       dispatch(removePendingFramesAction());
-    }
+    },
   })
 )(PiskelEditor);

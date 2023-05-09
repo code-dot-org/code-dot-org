@@ -387,10 +387,12 @@ it:
         csd_concept_memory_cpu_input_output: 'Come Funzionano i Computer: Memoria, CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
-        csd_external_amazon_data: Come I Big Data Sono Usati Nel Sistema Di Raccomandazione Di Amazon Per Cambiare Le Nostre Vite
+        csd_external_amazon_data: Come vengono utilizzati i big data nei sistemi di suggerimento di Amazon per cambiare le nostre vite
         csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti sui film?
-        csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
+        csd_external_waze_data: Perché così tanti utenti sono fissati con Waze?
         csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_drawloop: Introduzione alla funzione ciclica draw
+        csd_gamelab_sprites_1: Introduzione ai personaggi
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
@@ -481,7 +483,7 @@ it:
         applab_intro_sounds: Sviluppo App - Immagini e suoni
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
-        csd_applab_arrays: Introduzione agli array
+        csd_applab_arrays: Introduzione alle matrici (array)
         CSF_skinOverview_Harvester: La contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -525,7 +527,7 @@ it:
         what_is_an_event: Cos'è un evento?
         teaching_cs_pair_programming: 'Insegnare i Fondamenti di CS: Programmazione in Pari'
         teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione dei Problemi'
-        csd_applab_designmode: 'Scoperte CS: Sviluppo App - Modalità Progettazione'
+        csd_applab_designmode: 'Alla scoperta dell''informatica: Sviluppo App - Modalità Interfaccia'
         csd_pair_programming: Programmazione in coppia
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
@@ -562,8 +564,8 @@ it:
         codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil Epner'
         codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice Keeler'
         codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
-        csd_how_teamwork_works: Come Funziona il Lavoro di Squadra
-        csd_teamwork_and_disagreement: Lavoro di Squadra - Affrontare il Disaccordo
+        csd_how_teamwork_works: Come funziona il lavoro di squadra
+        csd_teamwork_and_disagreement: Lavoro di squadra - Gestire i disaccordi
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
@@ -579,7 +581,7 @@ it:
         csd_ml_intro_ai_lab_july2021: Lezione 6
         PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
         PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per i nuovi insegnanti'
-        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione Alla scoperta dell''informatica'
+        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione al corso Alla scoperta dell''informatica'
         PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti: la procedura di risoluzione dei problemi'
         PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione in coppia'
         PL_CSD_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: debugging'

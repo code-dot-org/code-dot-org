@@ -5,9 +5,6 @@ require_relative('../config/environment')
 # feedback strings and UI elements; all those strings for which we
 # generate the TTS URL clientside rather than somewhere in dashboard.
 
-# TODO: (elijah) consider integrating this into the sync-codeout-out
-# script
-
 # TODO: (elijah) formalize a process for flagging these strings somewhere
 # in apps code, rather than maintaining this ugly manual Hash
 

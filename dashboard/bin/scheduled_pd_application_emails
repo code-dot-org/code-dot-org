@@ -17,7 +17,3 @@ Services::CompleteApplicationReminder.send_complete_application_reminders!
 # at least 6 days from when an admin approval email was sent.
 # See allow_sending_admin_approval_teacher_reminder_email? for all conditions
 Pd::Application::TeacherApplication.send_admin_approval_reminders_to_teachers
-
-# We are still queueing decision emails when we log status
-# Send these emails too
-Pd::Application::Email.send_all_queued_emails

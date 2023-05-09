@@ -18,7 +18,7 @@ export const getNoteName = (note: number): string => {
     'G#',
     'A',
     'A#',
-    'B'
+    'B',
   ];
   return noteNames[note % 12];
 };

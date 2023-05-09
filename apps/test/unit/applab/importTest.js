@@ -8,7 +8,7 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 
 import {
   getImportableProject,
-  importScreensAndAssets
+  importScreensAndAssets,
 } from '@cdo/apps/applab/import';
 
 describe('The applab/import module', () => {
@@ -35,13 +35,13 @@ describe('The applab/import module', () => {
     return {
       channel: {
         name: 'Some Other Project!',
-        id: 'some-other-project'
+        id: 'some-other-project',
       },
       sources: {
-        html: `<div>${html}</div>`
+        html: `<div>${html}</div>`,
       },
       assets: [],
-      existingAssets: []
+      existingAssets: [],
     };
   }
 
@@ -141,7 +141,7 @@ describe('The applab/import module', () => {
         importable = getImportableProject({
           channel: {
             name: 'Some Other Project!',
-            id: 'some-other-project'
+            id: 'some-other-project',
           },
           sources: {
             html: `
@@ -159,32 +159,32 @@ describe('The applab/import module', () => {
                        id="img3">
                 </div>
                 <div class="screen" id="screen2"></div>
-              </div>`
+              </div>`,
           },
           assets: [
             {filename: 'asset1.png', category: 'image'},
             {filename: 'asset2.png', category: 'image'},
             {filename: 'asset3.png', category: 'image'},
             {filename: 'asset4.png', category: 'image'},
-            {filename: 'background-asset.png', category: 'image'}
+            {filename: 'background-asset.png', category: 'image'},
           ],
           existingAssets: [
             {filename: 'asset1.png', category: 'image'},
-            {filename: 'asset3.png', category: 'image'}
-          ]
+            {filename: 'asset3.png', category: 'image'},
+          ],
         });
       });
 
       it('should list the assets to replace', () => {
         expect(importable.screens[0].assetsToReplace).to.deep.equal([
-          'asset1.png'
+          'asset1.png',
         ]);
       });
 
       it('should list the assets to import without replacing', () => {
         expect(importable.screens[0].assetsToImport).to.deep.equal([
           'asset2.png',
-          'background-asset.png'
+          'background-asset.png',
         ]);
       });
 
@@ -255,7 +255,7 @@ describe('The applab/import module', () => {
       importScreensAndAssets(project.id, [project.screens[1]], []);
       expect(designMode.getAllScreenIds()).to.deep.equal([
         'screen1',
-        'screen2'
+        'screen2',
       ]);
     });
 
@@ -312,7 +312,7 @@ describe('The applab/import module', () => {
       );
       expect(designMode.getAllScreenIds()).to.deep.equal([
         'screen1',
-        'screen2'
+        'screen2',
       ]);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
@@ -376,7 +376,7 @@ describe('The applab/import module', () => {
         success();
         expect(designMode.getAllScreenIds()).to.deep.equal([
           'screen1',
-          'screen2'
+          'screen2',
         ]);
         expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
         expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
@@ -393,7 +393,7 @@ describe('The applab/import module', () => {
           'asset1.png',
           'asset2.png',
           'asset3.png',
-          'asset4.png'
+          'asset4.png',
         ]);
       });
 

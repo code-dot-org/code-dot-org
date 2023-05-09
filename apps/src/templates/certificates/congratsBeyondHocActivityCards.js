@@ -6,7 +6,7 @@ const CSFExpress = {
   description: i18n.csfExpressDesc(),
   link: '/s/express',
   image: 'csf-express',
-  buttonText: i18n.csfButton()
+  buttonText: i18n.csfButton(),
 };
 
 const CSFAccelerated = {
@@ -14,7 +14,7 @@ const CSFAccelerated = {
   description: i18n.csfAcceleratedDesc(),
   link: '/s/20-hour',
   image: 'csf-express',
-  buttonText: i18n.csfButton()
+  buttonText: i18n.csfButton(),
 };
 
 const CourseCatalog = {
@@ -22,7 +22,7 @@ const CourseCatalog = {
   description: i18n.courseCatalogDescription(),
   link: '/courses',
   image: 'course-catalog',
-  buttonText: i18n.courseCatalogButton()
+  buttonText: i18n.courseCatalogButton(),
 };
 
 const CreateAccount = {
@@ -30,7 +30,7 @@ const CreateAccount = {
   description: i18n.createAccountDesc(),
   link: '/users/sign_up',
   image: 'create-account',
-  buttonText: i18n.createAccount()
+  buttonText: i18n.createAccount(),
 };
 
 const CreateAccountApplab = {
@@ -38,7 +38,7 @@ const CreateAccountApplab = {
   description: i18n.createAccountApplabDesc(),
   link: '/users/sign_up',
   image: 'create-account',
-  buttonText: i18n.createAccount()
+  buttonText: i18n.createAccount(),
 };
 
 const AnotherHoC = {
@@ -46,7 +46,7 @@ const AnotherHoC = {
   description: i18n.anotherHoCDesc(),
   link: pegasus('/hourofcode/overview'),
   image: 'another-hoc',
-  buttonText: i18n.anotherHoCButton()
+  buttonText: i18n.anotherHoCButton(),
 };
 
 const ApplabTutorial = {
@@ -54,7 +54,7 @@ const ApplabTutorial = {
   description: i18n.applabTutorialDesc(),
   link: '/s/applab-intro/reset',
   image: 'applab-tutorial',
-  buttonText: i18n.applabTutorialButton()
+  buttonText: i18n.applabTutorialButton(),
 };
 
 const ApplabMarketing = {
@@ -62,7 +62,7 @@ const ApplabMarketing = {
   description: i18n.applabMarketingDesc(),
   link: pegasus('/applab'),
   image: 'applab-marketing',
-  buttonText: i18n.applabMarketingButton()
+  buttonText: i18n.applabMarketingButton(),
 };
 
 const ApplabProject = {
@@ -70,7 +70,7 @@ const ApplabProject = {
   description: i18n.applabProjectDesc(),
   link: '/projects/applab/new',
   image: 'applab-project',
-  buttonText: i18n.applabProjectButton()
+  buttonText: i18n.applabProjectButton(),
 };
 
 const OldMinecraft = {
@@ -78,7 +78,7 @@ const OldMinecraft = {
   description: i18n.pre2017MinecraftDesc(),
   link: 'https://education.minecraft.net/hour-of-code',
   image: 'old-minecraft',
-  buttonText: i18n.pre2017MinecraftButton()
+  buttonText: i18n.pre2017MinecraftButton(),
 };
 
 const HeroMinecraft = {
@@ -87,7 +87,7 @@ const HeroMinecraft = {
   link: 'https://education.minecraft.net/hour-of-code',
   image: 'hero-minecraft',
   buttonText: i18n.minecraft2017Button(),
-  MCShareLink: ''
+  MCShareLink: '',
 };
 
 // This card is displayed when you complete the Code.org MC Aquatic tutorial.
@@ -97,7 +97,7 @@ const AquaticMinecraft = {
   description: i18n.minecraftAquaticDesc(),
   link: 'http://aka.ms/hoc2018',
   image: 'aquatic-minecraft',
-  buttonText: i18n.minecraftAquaticButton()
+  buttonText: i18n.minecraftAquaticButton(),
 };
 
 // This card is displayed to promote the MC Aquatic tutorial after finishing
@@ -107,7 +107,7 @@ const AquaticMinecraftPromo = {
   description: i18n.minecraftAquaticPromoDesc(),
   link: '/s/aquatic/reset',
   image: 'aquatic-minecraft',
-  buttonText: i18n.minecraftAquaticPromoButton()
+  buttonText: i18n.minecraftAquaticPromoButton(),
 };
 
 const DanceParty = {
@@ -115,7 +115,7 @@ const DanceParty = {
   description: i18n.dancePartyDesc(),
   link: '/s/dance-2019/reset',
   image: 'dance-party-sloth-2019',
-  buttonText: i18n.dancePartyButton()
+  buttonText: i18n.dancePartyButton(),
 };
 
 const DancePartyFollowUp = {
@@ -123,7 +123,7 @@ const DancePartyFollowUp = {
   description: i18n.danceAfterPartyDesc(),
   link: '/s/dance-extras-2019/reset',
   image: 'dance-party-2-2019',
-  buttonText: i18n.danceAfterPartyButton()
+  buttonText: i18n.danceAfterPartyButton(),
 };
 
 export const cardSets = {
@@ -132,7 +132,7 @@ export const cardSets = {
   nonEnglishPre2017MinecraftCards: [
     CSFAccelerated,
     CourseCatalog,
-    OldMinecraft
+    OldMinecraft,
   ],
   heroMinecraftCards: [CSFExpress, ApplabTutorial, HeroMinecraft],
   youngerThan13HeroMinecraftCards: [CSFExpress, AnotherHoC, HeroMinecraft],
@@ -141,12 +141,12 @@ export const cardSets = {
   youngerThan13AquaticMinecraftCards: [
     CSFExpress,
     AnotherHoC,
-    AquaticMinecraft
+    AquaticMinecraft,
   ],
   nonEnglishAquaticMinecraftCards: [
     CSFAccelerated,
     CourseCatalog,
-    AquaticMinecraft
+    AquaticMinecraft,
   ],
   signedInApplabCards: [ApplabProject, ApplabMarketing, AnotherHoC],
   signedOutApplabCards: [ApplabMarketing, CreateAccountApplab, ApplabProject],
@@ -157,43 +157,43 @@ export const cardSets = {
   signedOutNonEnglishDefaultCards: [
     CSFAccelerated,
     CourseCatalog,
-    CreateAccount
+    CreateAccount,
   ],
   signedInEnglishDancePartyCards: [DancePartyFollowUp, CSFExpress, AnotherHoC],
   signedInNonEnglishDancePartyCards: [
     DancePartyFollowUp,
     CSFAccelerated,
-    AnotherHoC
+    AnotherHoC,
   ],
   signedOutEnglishDancePartyCards: [
     DancePartyFollowUp,
     CSFExpress,
-    CreateAccount
+    CreateAccount,
   ],
   signedOutNonEnglishDancePartyCards: [
     DancePartyFollowUp,
     CSFAccelerated,
-    CreateAccount
+    CreateAccount,
   ],
   // Use these cards if Dance Party Extras is hidden with DCDO.
   signedInEnglishDancePartyAquaticCards: [
     AquaticMinecraftPromo,
     CSFExpress,
-    AnotherHoC
+    AnotherHoC,
   ],
   signedInNonEnglishDancePartyAquaticCards: [
     AquaticMinecraftPromo,
     CSFAccelerated,
-    AnotherHoC
+    AnotherHoC,
   ],
   signedOutEnglishDancePartyAquaticCards: [
     AquaticMinecraftPromo,
     CSFExpress,
-    CreateAccount
+    CreateAccount,
   ],
   signedOutNonEnglishDancePartyAquaticCards: [
     AquaticMinecraftPromo,
     CSFAccelerated,
-    CreateAccount
-  ]
+    CreateAccount,
+  ],
 };

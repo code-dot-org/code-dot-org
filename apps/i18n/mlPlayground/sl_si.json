@@ -31,8 +31,33 @@
     },
     "salsa_toy": {
       "fields": {
+        "onion": {
+          "id": "čebula"
+        },
+        "avocado": {
+          "id": "avokado"
+        },
         "corn": {
           "id": "koruza"
+        },
+        "beans": {
+          "id": "fižolčki"
+        },
+        "lime": {
+          "id": "limeta"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "lobster": {
+          "id": "jastog"
+        },
+        "bacon": {
+          "id": "slanina"
+        },
+        "cheese": {
+          "id": "sir"
         }
       }
     },
@@ -60,6 +85,13 @@
         }
       }
     },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "limeta"
+        }
+      }
+    },
     "shapes_v2_toy": {
       "fields": {
         "size": {
@@ -69,11 +101,20 @@
     },
     "salad_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
         "chicken": {
           "id": "piščanec"
         },
         "fruit": {
           "id": "sadje"
+        },
+        "beans": {
+          "id": "fižolčki"
+        },
+        "cheese": {
+          "id": "sir"
         }
       }
     },
@@ -91,6 +132,9 @@
       "fields": {
         "age": {
           "id": "starost"
+        },
+        "health": {
+          "id": "zdravje"
         }
       }
     },
@@ -98,6 +142,15 @@
       "fields": {
         "chicken": {
           "id": "piščanec"
+        },
+        "lamb": {
+          "id": "jagenjček"
+        },
+        "onion": {
+          "id": "čebula"
+        },
+        "cheese": {
+          "id": "sir"
         }
       }
     },
@@ -135,10 +188,33 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "ljudje"
+        },
+        "elephant": {
+          "id": "slon"
+        },
+        "alligator": {
+          "id": "aligator"
+        }
+      }
+    },
     "abalone": {
       "fields": {
         "Length": {
           "id": "Dolžina"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "onion": {
+          "id": "čebula"
         }
       }
     },

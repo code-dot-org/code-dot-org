@@ -25,8 +25,8 @@ export default function CertificateShare({announcement, printUrl, imageUrl}) {
             {
               id: announcement.buttonId,
               url: announcement.buttonUrl,
-              text: announcement.buttonText
-            }
+              text: announcement.buttonText,
+            },
           ]}
         />
       )}
@@ -39,15 +39,15 @@ const styles = {
     with: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   certificate: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
 CertificateShare.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   printUrl: PropTypes.string.isRequired,
-  announcement: PropTypes.object
+  announcement: PropTypes.object,
 };

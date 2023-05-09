@@ -19,21 +19,21 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'displayGoal',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
       customValidator: customValidator,
-      xml: ''
-    }
-  ]
+      xml: '',
+    },
+  ],
 };
 
 function setEquationSets(targetSet, userSet) {
@@ -84,7 +84,7 @@ function customValidator(assert) {
     // line 1: age = 17
     validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ', null],
-      ['17', null]
+      ['17', null],
     ]);
 
     // line 2: age_in_months = (age * 12)
@@ -92,14 +92,14 @@ function customValidator(assert) {
       ['age_in_months = ', null],
       ['age', null],
       [' * ', null],
-      ['12', null]
+      ['12', null],
     ]);
 
     // line 3: age_in_months = 194
     validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months', null],
       [' = ', null],
-      ['204', null]
+      ['204', null],
     ]);
   });
 
@@ -127,7 +127,7 @@ function customValidator(assert) {
       // line 1: age = 10
       validateTextElementContainer(userExpression.childNodes[0], [
         ['age = ', null],
-        ['10', null]
+        ['10', null],
       ]);
 
       // line 2: age_in_months = age * 12
@@ -135,14 +135,14 @@ function customValidator(assert) {
         ['age_in_months = ', null],
         ['age', null],
         [' * ', null],
-        ['12', null]
+        ['12', null],
       ]);
 
       // line 3: age_in_months = 120
       validateTextElementContainer(userExpression.childNodes[2], [
         ['age_in_months', null],
         [' = ', null],
-        ['120', null]
+        ['120', null],
       ]);
     }
   );
@@ -175,7 +175,7 @@ function customValidator(assert) {
     // line 1: age = 1
     validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ', null],
-      ['1', null]
+      ['1', null],
     ]);
 
     // line 2: age_in_months = 17 * 12
@@ -183,14 +183,14 @@ function customValidator(assert) {
       ['age_in_months = ', null],
       ['17', null],
       [' * ', null],
-      ['12', null]
+      ['12', null],
     ]);
 
     // line 3: age_in_months = 204
     validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months', null],
       [' = ', null],
-      ['204', 'errorToken']
+      ['204', 'errorToken'],
     ]);
   });
 
@@ -215,7 +215,7 @@ function customValidator(assert) {
     // line 1: age = 10
     validateTextElementContainer(userExpression.childNodes[0], [
       ['age = ', null],
-      ['17', null]
+      ['17', null],
     ]);
 
     // line 2: age_in_months = age * 12
@@ -223,14 +223,14 @@ function customValidator(assert) {
       ['age_in_months2 = ', null],
       ['age', null],
       [' * ', null],
-      ['12', null]
+      ['12', null],
     ]);
 
     // line 3: age_in_months = 120
     validateTextElementContainer(userExpression.childNodes[2], [
       ['age_in_months2', 'errorToken'],
       [' = ', null],
-      ['204', null]
+      ['204', null],
     ]);
   });
 
@@ -245,7 +245,7 @@ function customValidator(assert) {
         ['i'],
         new ExpressionNode('/', [
           new ExpressionNode(4),
-          new ExpressionNode('-', [4, 4])
+          new ExpressionNode('-', [4, 4]),
         ])
       )
     );
@@ -263,7 +263,7 @@ function customValidator(assert) {
         ['i'],
         new ExpressionNode('/', [
           new ExpressionNode(4),
-          new ExpressionNode('-', [4, 4])
+          new ExpressionNode('-', [4, 4]),
         ])
       )
     );
@@ -283,7 +283,7 @@ function customValidator(assert) {
       ['4', null],
       [' - ', null],
       ['4', null],
-      [')', null]
+      [')', null],
     ]);
 
     // line 2: f(10)
@@ -292,7 +292,7 @@ function customValidator(assert) {
       ['f', null],
       ['(', null],
       ['10', null],
-      [')', null]
+      [')', null],
     ]);
   });
 
@@ -313,7 +313,7 @@ function customValidator(assert) {
           ['i'],
           new ExpressionNode('/', [
             new ExpressionNode(4),
-            new ExpressionNode('-', [4, 4])
+            new ExpressionNode('-', [4, 4]),
           ])
         )
       );
@@ -333,7 +333,7 @@ function customValidator(assert) {
         ['4', null],
         [' - ', null],
         ['4', null],
-        [')', null]
+        [')', null],
       ]);
 
       // line 2: f(10)
@@ -342,7 +342,7 @@ function customValidator(assert) {
         ['f', null],
         ['(', null],
         ['10', null],
-        [')', null]
+        [')', null],
       ]);
     }
   );
@@ -359,7 +359,7 @@ function customValidator(assert) {
           [],
           new ExpressionNode('/', [
             new ExpressionNode(4),
-            new ExpressionNode('-', [4, 4])
+            new ExpressionNode('-', [4, 4]),
           ])
         )
       );
@@ -385,7 +385,7 @@ function customValidator(assert) {
         ['4', 'errorToken'],
         [' - ', 'errorToken'],
         ['4', 'errorToken'],
-        [')', 'errorToken']
+        [')', 'errorToken'],
       ]);
     }
   );
@@ -412,7 +412,7 @@ function customValidator(assert) {
         [' / ', null],
         ['4', null],
         [' = ', null],
-        ['0.25', null]
+        ['0.25', null],
       ]);
     }
   );
@@ -436,7 +436,7 @@ function customValidator(assert) {
       [' / ', null],
       ['9', null],
       [' = ', null],
-      ['0.1', null] // this line does account for repeating symbol
+      ['0.1', null], // this line does account for repeating symbol
     ]);
     var g = userExpression.childNodes[0];
     var text = g.childNodes[4];
@@ -473,7 +473,7 @@ function customValidator(assert) {
       // line 1: f(x) = x
       validateTextElementContainer(userExpression.childNodes[0], [
         ['f(x) = ', null],
-        ['x', null]
+        ['x', null],
       ]);
 
       // line 2: f(1 + 1) = 2
@@ -485,7 +485,7 @@ function customValidator(assert) {
         ['1', null],
         [')', null],
         [' = ', null],
-        ['2', null]
+        ['2', null],
       ]);
     }
   );
@@ -507,7 +507,7 @@ function customValidator(assert) {
       [' ^ ', null],
       ['3', null],
       [' = ', null],
-      ['8', null]
+      ['8', null],
     ]);
   });
 
@@ -527,7 +527,7 @@ function customValidator(assert) {
       ['2', null],
       [' ^ 2', null],
       [' = ', null],
-      ['4', null]
+      ['4', null],
     ]);
   });
 
@@ -549,7 +549,7 @@ function customValidator(assert) {
       ['4', null],
       [')', null],
       [' = ', null],
-      ['2', null]
+      ['2', null],
     ]);
   });
 
@@ -588,7 +588,7 @@ function customValidator(assert) {
 
       validateTextElementContainer(userExpression.childNodes[0], [
         ['f(x) = ', null],
-        ['5', null]
+        ['5', null],
       ]);
 
       validateTextElementContainer(userExpression.childNodes[1], [
@@ -597,7 +597,7 @@ function customValidator(assert) {
         ['5', null],
         [')', null],
         [' = ', null],
-        ['5', null]
+        ['5', null],
       ]);
 
       validateTextElementContainer(userExpression.childNodes[2], [
@@ -606,7 +606,7 @@ function customValidator(assert) {
         ['1', null],
         [')', null],
         [' = ', null],
-        ['5', 'errorToken']
+        ['5', 'errorToken'],
       ]);
     }
   );
@@ -637,7 +637,7 @@ function customValidator(assert) {
 
       validateTextElementContainer(userExpression.childNodes[0], [
         ['f(x) = ', null],
-        ['x', null]
+        ['x', null],
       ]);
 
       validateTextElementContainer(userExpression.childNodes[1], [
@@ -646,7 +646,7 @@ function customValidator(assert) {
         ['3', 'errorToken'],
         [')', 'errorToken'],
         [' = ', null],
-        ['3', null]
+        ['3', null],
       ]);
     }
   );
@@ -681,7 +681,7 @@ function customValidator(assert) {
         [' + ', null],
         ['2', 'errorToken'],
         [' = ', null],
-        ['3', null]
+        ['3', null],
       ]);
     }
   );
@@ -704,7 +704,7 @@ function customValidator(assert) {
 
       assert.equal(userExpression.childNodes.length, 1);
       validateTextElementContainer(userExpression.childNodes[0], [
-        ['4', 'errorToken']
+        ['4', 'errorToken'],
       ]);
 
       // compute: 5

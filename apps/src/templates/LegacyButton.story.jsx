@@ -7,7 +7,7 @@ const docs = {
   primary: 'Use to identify primary action in a set of buttons',
   danger:
     'Use for destructive actions or actions with serious repercussions, e.g. deleting data',
-  action: 'Use to provide differentiated visual weight for secondary actions'
+  action: 'Use to provide differentiated visual weight for secondary actions',
 };
 
 export default storybook => {
@@ -68,7 +68,7 @@ export default storybook => {
             </tbody>
           </table>
         </div>
-      )
-    }
+      ),
+    },
   ]);
 };

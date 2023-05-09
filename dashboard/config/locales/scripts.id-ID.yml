@@ -5642,6 +5642,23 @@ id:
               display_name: Konten
             lessonGroup-4:
               display_name: Pelajaran Alternatif
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Hak milik intelektual
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-4:
+              display_name: Survei
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         hello-world-space-2022:
           title: 'Halo Dunia: Ruang'
         hello-world-soccer-2022:
@@ -5990,6 +6007,9 @@ id:
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survei
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
             yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur
@@ -6002,6 +6022,8 @@ id:
               display_name: 'Bab 1: Gambar dan Animasi'
             lessonGroup-3:
               display_name: 'Bab 2: Bangunan Permainan'
+            lessonGroup-4:
+              display_name: Survei
           student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk
             sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game
             Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga
@@ -6015,6 +6037,8 @@ id:
               display_name: 'Bab 1: User Centered Design'
             lessonGroup-3:
               display_name: 'Bab 2: Aplikasi Prototyping'
+            lessonGroup-4:
+              display_name: Survei
           student_description: Unit 4 memperkenalkan dampak sosial yang lebih luas
             dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari
             cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan
@@ -6029,6 +6053,8 @@ id:
               display_name: 'Bab 1: Yang Mewakili Informasi'
             lessonGroup-3:
               display_name: 'Bab 2: Memecahkan Masalah Data'
+            lessonGroup-4:
+              display_name: Survei
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
           student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah
@@ -6047,6 +6073,8 @@ id:
               display_name: Chapter 1
             lessonGroup-4:
               display_name: Chapter 2
+            lessonGroup-5:
+              display_name: Survei
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6255,6 +6283,8 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Masukan dan keluaran
+            lessonGroup-5:
+              display_name: Survei
         vpl-csd-ci-1:
           title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
           description: |-
@@ -6378,6 +6408,9 @@ id:
 
             **Waktu yang disarankan:** 90 menit
         vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: self-paced-pl-csd5
           title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
           description: |-
             Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
@@ -6407,6 +6440,8 @@ id:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -6427,3 +6462,52 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Masukan dan keluaran
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Selamat Datang
+        self-paced-pl-csd5-2023:
+          title: self-paced-pl-csd5
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Pendahuluan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hari 1
+          title: Hari 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penutupan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hari 2
+          title: Hari 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hari 3
+          title: Hari 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Penutupan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hari 4
+          title: Hari 4
+        csd-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-data-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-impact-in-society-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-coding-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-hardware-post-survey-2023:
+          title: Survei Pasca Kursus
+        focus-on-creativity-post-survey-2023:
+          title: Survei Pasca Kursus

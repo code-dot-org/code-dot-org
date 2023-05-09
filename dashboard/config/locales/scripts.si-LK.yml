@@ -1478,6 +1478,14 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1580,3 +1588,7 @@ si:
               display_name: ශ්‍රිතයන්
             csf_nested_loops:
               display_name: කන්ඩිෂනලස්
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: හැදින්වීම

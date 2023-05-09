@@ -159,7 +159,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "text"
+          "text": "text",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -202,7 +203,8 @@
           "38": "38",
           "39": "39",
           "40": "40",
-          "text": "text"
+          "text": "text",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "walking": "naglalakad",
@@ -615,7 +617,8 @@
           "white": "puti"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "title"
@@ -816,16 +819,20 @@
           "Medium": "Medium"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Masaya"
+          "Happy": "Masaya",
+          "?": "?"
         },
         "CSD U6 frequency": {
           "short": "maikli",

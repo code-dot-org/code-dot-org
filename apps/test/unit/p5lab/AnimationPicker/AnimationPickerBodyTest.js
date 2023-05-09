@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 const msg = require('@cdo/locale');
 import AnimationPickerBody, {
-  WarningLabel
+  WarningLabel,
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
@@ -28,12 +28,12 @@ describe('AnimationPickerBody', function () {
     hideCostumes: false,
     defaultQuery: {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     },
     selectedAnimations: [],
     onAnimationSelectionComplete: emptyFunction,
     pickerType: PICKER_TYPE.gamelab,
-    shouldWarnOnAnimationUpload: false
+    shouldWarnOnAnimationUpload: false,
   };
 
   describe('upload warning', function () {
@@ -62,8 +62,8 @@ describe('AnimationPickerBody', function () {
       const mockEvent = {
         target: {
           scrollTop: 450,
-          scrollHeight: 500
-        }
+          scrollHeight: 500,
+        },
       };
       const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
       expect(wrapper.state('currentPage')).to.equal(0);
@@ -75,8 +75,8 @@ describe('AnimationPickerBody', function () {
       const mockEvent = {
         target: {
           scrollTop: 0,
-          scrollHeight: 600
-        }
+          scrollHeight: 600,
+        },
       };
       const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
       expect(wrapper.state('currentPage')).to.equal(0);
@@ -118,7 +118,7 @@ describe('AnimationPickerBody', function () {
           navigable={false}
           defaultQuery={{
             categoryQuery: 'backgrounds',
-            searchQuery: ''
+            searchQuery: '',
           }}
         />
       );

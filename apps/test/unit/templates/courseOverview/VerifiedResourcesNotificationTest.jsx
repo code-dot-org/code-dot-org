@@ -6,7 +6,7 @@ import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/Ve
 describe('VerifiedResourcesNotification', () => {
   const defaultProps = {
     width: 700,
-    inLesson: false
+    inLesson: false,
   };
 
   it('renders course details description when notification not in lesson', () => {

@@ -2204,7 +2204,15 @@
         "courseE_artist_functions_challenge2_2018": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
         "courseE_artist_functions_challenge2_2019": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
         "courseE_artist_functions_challenge2_2020": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
-        "courseE_artist_functions_challenge2_2021": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!"
+        "courseE_artist_functions_challenge2_2021": "Próbáld ki ezt a kódot, és ha látod már, hogyan működik, készítsd el a sajátodat!",
+        "NEW Course 4 Artist Params 1": "Adjuk meg úgy a függvényt, hogy 50 képpont oldalhosszúságú négyzetet rajzoljon. Kattints a \"szerkesztés\" gombra a kezdéshez.",
+        "NEW Course 4 Artist Params 10": "Készíts egy `draw a hexagon` nevű függvényt, amelynek van egy hosszúság paramétere. A hatszög oldalai 100 képpont hosszúak legyenek. ",
+        "NEW Course 4 Artist Params 11": "Rájössz-e, hogyan kell megrajzolni ezt az alakzatot? Szerkeszd a függvényt, és használd a \"sides\" (oldalak) paramétert.",
+        "NEW Course 4 Artist Params 12": "Be tudod fejezni a rajzot? Minden alakzat oldalai 100 képpont hosszúak.",
+        "NEW Course 4 Artist Params 2": "Csinálj egy `draw a triangle` (rajzolj háromszöget) függvényt a semmiből, ami 50 képpont oldalú háromszöget rajzol.",
+        "NEW Course 4 Artist Params 3": "Most használjuk a függvényt, és rajzoljunk 5 háromszöget egy sorba. A háromszögek egymástól 30 képpontra vannak.",
+        "NEW Course 4 Artist Params 6": "Töltsd ki a \"length\" (hossz) paramétert a megfelelő értékekkel a \"???\" jelek helyén, és rajzold meg ezeket az alakzatokat. A négyzet és a háromszög oldalai 100 képpontosak, míg a hatszög oldalai 75 képpont hosszúak.",
+        "NEW Course 4 Artist Params 7": "Be tudod fejezni ezt a rajzot? Egy háromszög oldala mindig 25 képponttal hosszabb, mint az előző. Az első háromszög oldalai 25 képpont hosszúak."
       }
     }
   }

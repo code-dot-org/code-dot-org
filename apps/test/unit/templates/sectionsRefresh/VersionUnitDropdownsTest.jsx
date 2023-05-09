@@ -15,8 +15,8 @@ const DEFAULT_PROPS = {
   sectionCourse: {
     courseOfferingId: 74,
     displayName: 'Computer Science Discoveries',
-    versionId: 737
-  }
+    versionId: 737,
+  },
 };
 
 const setUpMount = (overrideProps = {}) => {
@@ -51,7 +51,7 @@ describe('VersionUnitDropdowns', () => {
       versionId: 737,
       unitId: 5080,
       hasLessonExtras: false,
-      hasTextToSpeech: true
+      hasTextToSpeech: true,
     });
   });
 });

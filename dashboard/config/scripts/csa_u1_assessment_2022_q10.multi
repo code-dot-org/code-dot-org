@@ -33,3 +33,5 @@ III. `Cookie` is a subclass of `Dessert`
 
 IV. `Cookie` is a superclass of `Food`
 MARKDOWN
+
+allow_multiple_attempts true

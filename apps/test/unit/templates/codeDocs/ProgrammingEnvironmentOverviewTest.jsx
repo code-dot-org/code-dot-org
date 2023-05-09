@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import ProgrammingEnvironmentOverview, {
-  CategorySection
+  CategorySection,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
 
 describe('ProgrammingEnvironmentOverview', () => {
@@ -18,15 +18,15 @@ describe('ProgrammingEnvironmentOverview', () => {
           key: 'world',
           name: 'World',
           color: '#acacd2',
-          docs: []
+          docs: [],
         },
         {
           key: 'sprites',
           name: 'Sprites',
           color: '#df9299',
-          docs: []
-        }
-      ]
+          docs: [],
+        },
+      ],
     };
   });
 
@@ -78,12 +78,12 @@ describe('CategorySection', () => {
           color: '#FFFFFF',
           docs: [
             {
-              key: 'location_picker'
+              key: 'location_picker',
             },
             {
-              key: 'set_background'
-            }
-          ]
+              key: 'set_background',
+            },
+          ],
         }}
       />
     );

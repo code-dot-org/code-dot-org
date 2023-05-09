@@ -7,10 +7,10 @@ import FoormFormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/F
 import {
   populateCodeMirror,
   resetCodeMirror,
-  confirmNoUnsavedChanges
+  confirmNoUnsavedChanges,
 } from './editorHelpers.js';
 import foorm, {
-  setFetchableEntities
+  setFetchableEntities,
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';

@@ -65,7 +65,7 @@ describe('ReportAbuseForm', () => {
   it('renders a captcha when required', () => {
     const args = {
       abuseUrl: 'test.url',
-      requireCaptcha: true
+      requireCaptcha: true,
     };
     const wrapper = shallow(<ReportAbuseForm {...args} />);
 
@@ -75,7 +75,7 @@ describe('ReportAbuseForm', () => {
   it('does not render a captcha when not required', () => {
     const args = {
       abuseUrl: 'test.url',
-      requireCaptcha: false
+      requireCaptcha: false,
     };
     const wrapper = shallow(<ReportAbuseForm {...args} />);
 

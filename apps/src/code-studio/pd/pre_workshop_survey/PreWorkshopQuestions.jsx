@@ -28,7 +28,7 @@ export default class PreWorkshopQuestions extends FormComponent {
           placeholder: 'Select a unit',
           required: true,
           options: units,
-          controlWidth: {md: 6}
+          controlWidth: {md: 6},
         })}
         {selectedUnit &&
           lessons &&
@@ -38,7 +38,7 @@ export default class PreWorkshopQuestions extends FormComponent {
             placeholder: 'Select a lesson',
             required: true,
             options: lessons,
-            controlWidth: {md: 6}
+            controlWidth: {md: 6},
           })}
         {this.buildFieldGroup({
           name: 'questionsAndTopics',
@@ -46,7 +46,7 @@ export default class PreWorkshopQuestions extends FormComponent {
           label:
             'What questions are on your mind leading into this workshop? ' +
             'What topics do you hope to discuss during the workshop?',
-          required: false
+          required: false,
         })}
       </FormGroup>
     );
@@ -77,11 +77,11 @@ export default class PreWorkshopQuestions extends FormComponent {
 PreWorkshopQuestions.associatedFields = [
   'unit',
   'lesson',
-  'questionsAndTopics'
+  'questionsAndTopics',
 ];
 
 PreWorkshopQuestions.propTypes = {
   ...FormComponent.propTypes,
   workshopDate: PropTypes.string.isRequired,
-  unitsAndLessons: PropTypes.array.isRequired
+  unitsAndLessons: PropTypes.array.isRequired,
 };

@@ -10,7 +10,7 @@ import React from 'react';
 
 const BUTTON_TYPE = {
   DANGER: 'danger',
-  SUBMIT: 'submit'
+  SUBMIT: 'submit',
 };
 
 export default class BootstrapButton extends React.Component {
@@ -19,7 +19,7 @@ export default class BootstrapButton extends React.Component {
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     text: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(Object.values(BUTTON_TYPE))
+    type: PropTypes.oneOf(Object.values(BUTTON_TYPE)),
   };
 
   buttonClasses = () => {
@@ -66,6 +66,6 @@ export default class BootstrapButton extends React.Component {
 
 const styles = {
   button: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };

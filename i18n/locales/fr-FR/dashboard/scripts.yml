@@ -4111,6 +4111,23 @@ fr:
               display_name: Contenu
             lessonGroup-4:
               display_name: Leçons alternatives
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Propriété intellectuelle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Leçons alternatives
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-4:
+              display_name: Enquête
+            lessonGroup-5:
+              display_name: Leçons alternatives
         hello-world-space-2022:
           title: 'Bonjour tout le monde : Espace'
         hello-world-soccer-2022:
@@ -4413,12 +4430,18 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Enquête
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapitre 1 : Images et Animations'
             lessonGroup-3:
               display_name: 'Chapitre 2 : Construction de Jeux'
+            lessonGroup-4:
+              display_name: Enquête
           student_description: Dans l'Unité 3, tu tireras profit de ton expérience de codage en programmant des animations, de l'art interactif et des jeux dans le Labo des Jeux. L'unité commence avec des formes simples et progresse vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les mêmes concepts de programmation et le processus de conception que les informaticiens utilisent quotidiennement. Dans le projet final, tu développeras un programme personnalisé et interactif.
         design-process-2023:
           lesson_groups:
@@ -4426,6 +4449,8 @@ fr:
               display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
             lessonGroup-3:
               display_name: 'Chapitre 23 : Prototypage d''Applications'
+            lessonGroup-4:
+              display_name: Enquête
           student_description: L'unité 4 présente les impacts sociaux plus larges de l'informatique. À travers une série de défis de conception, tu apprendras à mieux comprendre les besoins des autres, tout en développant une solution à un problème. La seconde moitié de l'unité consiste en un projet d'équipe itératif, au cours duquel les équipes ont la possibilité d'identifier un besoin qui leur tient à cœur, de prototyper des solutions sur papier et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs pour obtenir des commentaires et procéder à une itération supplémentaire.
         data-society-2023:
           lesson_groups:
@@ -4433,6 +4458,8 @@ fr:
               display_name: 'Chapitre 1 : Représentation de l''information'
             lessonGroup-3:
               display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+            lessonGroup-4:
+              display_name: Enquête
           description_short: Apprends comment les gens utilisent les ordinateurs pour résoudre des problèmes de données.
           student_description: L'Unité 5 traite de l'importance des données dans la résolution des problèmes et met en évidence la façon dont les ordinateurs peuvent aider dans ce processus. Le premier chapitre explore les différents systèmes utilisés pour représenter l'information dans un ordinateur et les défis et les compromis posés par leur utilisation. Dans le deuxième chapitre, tu apprendras comment les données collectées sont utilisées pour résoudre les problèmes et comment les ordinateurs aident à automatiser les étapes de ce processus. Le chapitre conclut en examinant comment le processus de résolution de problèmes de données peut être appliqué à une zone de ton choix.
         aiml-2023:
@@ -4443,6 +4470,8 @@ fr:
               display_name: Chapitre 1
             lessonGroup-4:
               display_name: Chapitre 2
+            lessonGroup-5:
+              display_name: Enquête
           title: IA et apprentissage automatique
         focus-on-creativity1-2023:
           lesson_groups:
@@ -4575,6 +4604,8 @@ fr:
           lesson_groups:
             lessonGroup-3:
               display_name: Les Entrées et les Sorties
+            lessonGroup-5:
+              display_name: Enquête
         vpl-csd-ci-1:
           title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes et l''informatique'
           description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
@@ -4609,6 +4640,8 @@ fr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+            lessonGroup-5:
+              display_name: Enquête
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4629,3 +4662,50 @@ fr:
           lesson_groups:
             lessonGroup-3:
               display_name: Les Entrées et les Sorties
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bienvenue
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 1
+          title: Jour 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Conclusion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 2
+          title: Jour 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 3
+          title: Jour 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Conclusion
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jour 4
+          title: Jour 4
+        csd-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-data-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-impact-in-society-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-coding-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-hardware-post-survey-2023:
+          title: Suivi d'après cours
+        focus-on-creativity-post-survey-2023:
+          title: Suivi d'après cours

@@ -172,7 +172,6 @@ it:
     data_collection_us: "Sono consapevole che Code.org è un sito web statunitense senza fini di lucro, e che le leggi che disciplinano la raccolta dei dati negli Stati Uniti potrebbero essere diverse dalle leggi nel mio paese."
     visit_privacy: 'Consulta [l''informativa sulla privacy] (%{privacy_url}) di Code.org per saperne di più.'
     student_terms_markdown: "Gli indirizzi di posta elettronica vengono memorizzati in modo tale da impedirci di contattare gli studenti. Gli studenti non riceveranno mai messaggi di posta elettronica da Code.org, tranne nel caso essi stessi richiedano il recupero della password del loro account. Per ulteriori informazioni leggi la nostra [informativa sulla privacy](http://code.org/privacy)."
-    additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
     user_type_button: "Aggiorna Tipologia di Account"
     user_type_label: "Tipo di account"
     user_type_student: "Studente"
@@ -344,13 +343,13 @@ it:
       professional_learning: "Professional learning"
       documentation: "Documentazione"
       tutorials: "Corsi"
-      app_lab_documentation: "Documentazione dello Sviluppo app"
-      app_lab_tutorials: "Tutorial dello Sviluppo app"
-      game_lab_documentation: "Documentazione del Game Lab"
-      game_lab_tutorials: "Tutorial del Game Lab"
+      app_lab_documentation: "Documentazione di Sviluppo app"
+      app_lab_tutorials: "Tutorial di Sviluppo app"
+      game_lab_documentation: "Documentazione di Sviluppo Giochi"
+      game_lab_tutorials: "Tutorial di Sviluppo Giochi"
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
-      web_lab_documentation: "Documentazione del Web Lab"
+      web_lab_documentation: "Documentazione Sviluppo Web"
       educate_overview: "Panoramica dei corsi"
       educate_elementary: "Scuola elementare"
       educate_middle: "Scuola media"
@@ -634,7 +633,7 @@ it:
       weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
   try_reloading: 'Prova a ricaricare la pagina'
-  next_stage: 'Finito! Prosegui con la lezione successiva'
+  next_stage: 'Finito! Vai alla lezione successiva'
   download_pdf: 'Apri il piano di lavoro di questa lezione'
   lesson_plan: 'Piano di lavoro della lezione'
   view_lesson_plan: 'Leggi il piano di lavoro di questa lezione'
@@ -933,7 +932,7 @@ it:
       name: 'Aumentato'
       description: 'Vorrei che un istruttore esaminasse questa presentazione'
     instructor_feedback: 'Feedback dell''istruttore'
-    peer_feedback: 'Feedback di un collega'
+    peer_feedback: 'Riscontro tra pari'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
     peer_review: 'Valutazioni dei parigrado'
   external_links:

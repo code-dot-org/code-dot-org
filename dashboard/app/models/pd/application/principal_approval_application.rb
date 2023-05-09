@@ -80,7 +80,7 @@ module Pd::Application
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
-      teacher_application.queue_email :admin_approval, deliver_now: true
+      teacher_application.send_pd_application_email :admin_approval
 
       Pd::Application::PrincipalApprovalApplication.create(
         form_data: {}.to_json,

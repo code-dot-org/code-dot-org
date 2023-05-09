@@ -9,13 +9,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 20:45:38 UTC",
+    "serialized_at": "2023-05-06 03:05:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1596,7 +1597,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You provide the entire unit guide, or you can distribute each section at the start of each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
+            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You can provide the entire unit guide, or you can distribute each section at the start of each lesson.\n\nYou can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students.\n\n**The unit guides are optional!** You can also choose not to use these at all, or use an entirely different approach to guided notes."
           }
         ]
       },
@@ -2021,7 +2022,7 @@
       "key": "8cd52d1e-03e5-4c59-9395-6eae7402e05f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
         "tips": [
           {
             "type": "teachingTip",
@@ -2996,10 +2997,27 @@
       }
     },
     {
-      "key": "3589f679-1435-4223-977f-47f6e32b995b",
+      "key": "ffdf1663-8493-4d84-8301-488b7f039f8e",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This and future \"Writing Algorithms\" activity guides provide guiding prompts and space for students to decompose problems and plan their solutions. Students do not need to complete all sections! However, if students get stuck, these are helpful for thinking through the problem to get unstuck."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ffdf1663-8493-4d84-8301-488b7f039f8e",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "3589f679-1435-4223-977f-47f6e32b995b",
+      "position": 12,
+      "properties": {
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
         "progression_name": "Practice: Using Loops and Boolean Methods",
         "tips": [
           {
@@ -5955,7 +5973,7 @@
       "key": "40c4203e-b918-4c71-8ec5-8004174984eb",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -8916,6 +8934,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 1 Guide",
+      "url": "https://docs.google.com/document/d/1WZnHVMvSLXphwZM0eb0EjZwZ72IQEBtxm2TL_zb8c-4/edit?usp=share_link",
+      "key": "_exemplar_unit_1_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_1_guide"
+      }
+    },
+    {
       "name": "[KEY] Decomposition",
       "url": "https://docs.google.com/document/d/1cFr0Wp8FlWJf4dNnuRKjDT0U2bFEGavtpUtcPqF2hh0/edit?usp=sharing",
       "key": "_key_decomposition",
@@ -10647,6 +10677,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_1_guide",
+        "script.name": "csa1-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_1",

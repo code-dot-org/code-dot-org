@@ -293,7 +293,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         testMapping = _.clone(mapping);
         testMapping[equation.name] = {
           variables: equation.params,
-          expression: equation.expression
+          expression: equation.expression,
         };
         equation.params.forEach(setTestMappingToOne);
         evaluation = equation.expression.evaluate(testMapping);
@@ -312,7 +312,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
         madeProgress = true;
         mapping[equation.name] = {
           variables: equation.params,
-          expression: equation.expression
+          expression: equation.expression,
         };
       } else if (mapping[equation.name] === undefined) {
         evaluation = equation.expression.evaluate(mapping);

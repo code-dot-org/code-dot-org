@@ -23,7 +23,7 @@ export default class RandomSkipSequencer {
         insideRandom: true,
         skipSound:
           currentEntry.skipSound ||
-          currentEntry.randomIndex !== currentEntry.currentIndex
+          currentEntry.randomIndex !== currentEntry.currentIndex,
       };
     } else {
       return {insideRandom: false, skipSound: false};
@@ -38,7 +38,7 @@ export default class RandomSkipSequencer {
       randomIndex:
         forceRandomIndex !== null
           ? forceRandomIndex
-          : Math.floor(Math.random() * length)
+          : Math.floor(Math.random() * length),
     });
   }
 

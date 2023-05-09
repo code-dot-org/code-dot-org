@@ -217,7 +217,6 @@ pl:
       nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili
       od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się
       w naszej [Polityce prywatności](http://code.org/privacy).
-    additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_button: Zaktualizuj typ konta
     user_type_label: Typ konta
     user_type_student: Uczeń
@@ -1535,11 +1534,13 @@ pl:
   courses_category: Pełne Kursy
   course_offering:
     headers:
+      favorites: Ulubione
       labs_and_skills: Laboratoria i umiejętności
       minecraft: Minecraft
       hello_world: Witaj świecie
       popular_media: Popularne media
       sports: Zawody
+      express: Ekspres
       csf: Podstawy Informatyki
       csc: Powiązania z informatyką (CS Connections)
       year_long: Przez cały rok

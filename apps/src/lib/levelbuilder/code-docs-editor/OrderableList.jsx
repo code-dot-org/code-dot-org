@@ -8,7 +8,7 @@ export default function OrderableList({
   setList,
   addButtonText,
   renderItem,
-  checkItemDeletionAllowed = item => true
+  checkItemDeletionAllowed = item => true,
 }) {
   const addItem = () => {
     const newParams = [...list, {key: createUuid()}];
@@ -78,21 +78,21 @@ OrderableList.propTypes = {
   setList: PropTypes.func.isRequired,
   addButtonText: PropTypes.string.isRequired,
   renderItem: PropTypes.func.isRequired,
-  checkItemDeletionAllowed: PropTypes.func
+  checkItemDeletionAllowed: PropTypes.func,
 };
 
 const styles = {
   button: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   controlButton: {
     margin: '0px 5px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   controls: {
-    display: 'flex'
+    display: 'flex',
   },
   item: {
-    paddingBottom: 15
-  }
+    paddingBottom: 15,
+  },
 };

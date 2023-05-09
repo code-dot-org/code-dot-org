@@ -10,7 +10,7 @@ describe('SoundListEntry', () => {
     wrapper.setState({
       category: 'Animals',
       search: 'b',
-      selectedSound: {}
+      selectedSound: {},
     });
     let sounds = wrapper.instance().sounds;
     sinon.stub(sounds, 'stopAllAudio');

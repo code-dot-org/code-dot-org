@@ -12,7 +12,7 @@ const MakerState = Immutable.Record({
   enabled: false,
   connectionState: DISCONNECTED,
   connectionError: null,
-  usingVirtualBoardNextTime: false
+  usingVirtualBoardNextTime: false,
 });
 
 // Selectors
@@ -89,17 +89,17 @@ export function reducer(state = new MakerState(), action) {
     return state.set('connectionState', CONNECTING);
   } else if (action.type === REPORT_CONNECTED) {
     return state.merge({
-      connectionState: CONNECTED
+      connectionState: CONNECTED,
     });
   } else if (action.type === REPORT_CONNECTION_ERROR) {
     return state.merge({
       connectionState: CONNECTION_ERROR,
-      connectionError: action.error
+      connectionError: action.error,
     });
   } else if (action.type === DISCONNECT) {
     return state.merge({
       connectionState: DISCONNECTED,
-      connectionError: null
+      connectionError: null,
     });
   } else if (action.type === USE_VIRTUAL_BOARD_ON_NEXT_RUN) {
     return state.set('usingVirtualBoardNextTime', true);

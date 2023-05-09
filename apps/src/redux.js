@@ -150,7 +150,7 @@ function createStore(reducer, initialState) {
         }
 
         return newState;
-      }
+      },
     });
 
     return configureStore({
@@ -165,7 +165,7 @@ function createStore(reducer, initialState) {
         // immutability check).
         getDefaultMiddleware({
           immutableCheck: {
-            ignoredPaths: ['jsInterpreter', 'jsdebugger']
+            ignoredPaths: ['jsInterpreter', 'jsdebugger'],
           },
           serializableCheck: {
             ignoredActionPaths: [
@@ -177,7 +177,7 @@ function createStore(reducer, initialState) {
               'props.showNextHint',
               'props.assetUrl',
               'props.exportApp',
-              'getChanges'
+              'getChanges',
             ],
             ignoredPaths: [
               'hiddenLesson',
@@ -193,10 +193,10 @@ function createStore(reducer, initialState) {
               'data',
               'screens',
               'header.getLevelBuilderChanges',
-              'getChanges'
-            ]
-          }
-        }).concat(reduxLogger)
+              'getChanges',
+            ],
+          },
+        }).concat(reduxLogger),
     });
   }
 
@@ -204,6 +204,6 @@ function createStore(reducer, initialState) {
     reducer: reducer,
     preloadedState: initialState,
     middleware: [reduxThunk],
-    devTools: process.env.NODE_ENV === 'development' // only enable devTools in development
+    devTools: process.env.NODE_ENV === 'development', // only enable devTools in development
   });
 }

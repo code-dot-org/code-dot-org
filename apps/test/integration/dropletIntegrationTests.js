@@ -3,7 +3,7 @@ import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import loadSource from './util/loadSource';
 
@@ -36,7 +36,7 @@ describe('setParamAtIndex', () => {
     dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
     editor = new window.droplet.Editor(dropletCodeTextbox, {
       mode: 'javascript',
-      palette: []
+      palette: [],
     });
 
     studioApp().editor = editor;

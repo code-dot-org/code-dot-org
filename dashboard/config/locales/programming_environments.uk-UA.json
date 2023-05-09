@@ -60,6 +60,13 @@
             },
             "drawing": {
               "expressions": {
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "Кольори RGB"
+                    }
+                  }
+                },
                 "shape": {
                   "examples": {
                     "Star": {

@@ -13,7 +13,7 @@ export default class Results extends React.Component {
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
     workshopRollups: PropTypes.object,
-    facilitatorRollups: PropTypes.object
+    facilitatorRollups: PropTypes.object,
   };
 
   /**

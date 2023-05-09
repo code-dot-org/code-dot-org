@@ -55,7 +55,7 @@ export default class VirtualMBBoard extends EventEmitter {
       LightSensor: VirtualLightSensor,
       ExternalButton: VirtualExternalButton,
       ExternalLed: VirtualExternalLed,
-      CapacitiveTouchSensor: VirtualCapacitiveTouchSensor
+      CapacitiveTouchSensor: VirtualCapacitiveTouchSensor,
     };
 
     for (const constructorName in constructors) {
@@ -72,7 +72,7 @@ export default class VirtualMBBoard extends EventEmitter {
       accelerometer: new VirtualAccelerometer(),
       lightSensor: new VirtualLightSensor(),
       compass: new VirtualCompass(),
-      board: new VirtualMBFirmataWrapper()
+      board: new VirtualMBFirmataWrapper(),
     };
 
     for (const componentName in components) {

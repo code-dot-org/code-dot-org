@@ -8,7 +8,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
     selectedEnrollment: PropTypes.object,
     show: PropTypes.bool,
     onCancel: PropTypes.func,
-    onEdit: PropTypes.func
+    onEdit: PropTypes.func,
   };
 
   constructor(props) {
@@ -16,7 +16,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
 
     this.state = {
       firstName: '',
-      lastName: ''
+      lastName: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -28,7 +28,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
     if (!prevProps.show && this.props.show) {
       this.setState({
         firstName: this.props.selectedEnrollment.first_name,
-        lastName: this.props.selectedEnrollment.last_name
+        lastName: this.props.selectedEnrollment.last_name,
       });
     }
   }

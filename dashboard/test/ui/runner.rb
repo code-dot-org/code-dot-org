@@ -10,6 +10,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -413,6 +414,13 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
@@ -631,9 +639,6 @@ def cucumber_arguments_for_browser(browser, options)
       if browser['mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -642,7 +647,6 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
@@ -651,12 +655,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a circle run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'

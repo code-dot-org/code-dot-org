@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 01:17:26 UTC",
+    "serialized_at": "2023-04-25 20:53:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1251,8 +1251,25 @@
       }
     },
     {
-      "key": "3b5ac820-f3b8-4532-b595-9c4ff6150b0e",
+      "key": "63fd09fc-12a3-48a9-a839-14f361a94b87",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the [Unit 1 Journal](\thttps://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63fd09fc-12a3-48a9-a839-14f361a94b87",
+        "lesson_activity.key": "fcc36e7f-86ad-4cdb-a69c-da191055b09b"
+      }
+    },
+    {
+      "key": "3b5ac820-f3b8-4532-b595-9c4ff6150b0e",
+      "position": 2,
       "properties": {
         "description": "A lot of people think that computer science is the study of computers, like the phone in your pocket or the computer on your desk. As we'll see this year, computer science actually has a lot more to do with information.",
         "remarks": true
@@ -1264,7 +1281,7 @@
     },
     {
       "key": "050c2076-742d-44c1-ae13-8913f239cf81",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** What is your definition of information?\n\n\n",
         "tips": [
@@ -1281,7 +1298,7 @@
     },
     {
       "key": "b7e099bf-d2c9-4416-b18c-d1993326b1f7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Have students silently write their own definition, then share with a partner, and finally have some volunteers share with the room.\n\n**Discussion Goal:** More important than writing a formal definition of information is getting students discussing the term and its diverse forms. If students struggle with defining \"information,\" modify the prompt by asking them to provide examples of information in their world such as texts, books, videos, music, conversations, etc.",
         "tips": [
@@ -1298,7 +1315,7 @@
     },
     {
       "key": "29945e4b-e277-4f6d-a8ca-fd6d8e4b7e84",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "* There are many ways we can think about the word “information,” but one possible definition we’ll explore today is that information is the answer to a question. \r\n* We're going to investigate what it takes to send that information back and forth to one another.",
         "remarks": true
@@ -1652,11 +1669,11 @@
       "properties": {
         "description": "\n**Question:** Each time we add another bit, what happens to the amount of numbers we can make?\n\n**Question:** Two schools are merging and to adapt to the increased size of the student body, the school is changing its system for keeping track of all student IDs from a system that uses 4-bit binary numbers to one that uses 8-bit binary numbers (AKA 1 byte). Which of the following best describes what effect this change will have?",
         "name": "Peer Instruction",
-        "progression_name": "Mid-Lesson Check for Understanding",
+        "progression_name": "Check for Understanding - Flippy Do",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use these questions to help formatively assess your students. You may choose to have them complete these questions before or after working on the Activity Guide. You can use the flowchart below to help use the data you get from these questions to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+            "type": "assessmentOpportunity",
+            "markdown": "Use these questions to help formatively assess your students. You may choose to have them complete these questions before or after working on the Activity Guide. You can use the flowchart below to help use the data you get from these questions to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)"
           }
         ]
       },
@@ -1687,7 +1704,13 @@
       "key": "d1aa764d-4fa5-4b0d-b78e-191859308729",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Now that we’ve had a chance to practice, let’s find out what we’ve learned and what we still have questions about.  Write down:\r\n\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary Canvas:** Use the slides to walk your class through how to add to the Vocabulary Canvas pages in their journals. The slides include examples taken from this lesson.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows the example of a Vocabulary Canvas provided in the lesson slides. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides, if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d1aa764d-4fa5-4b0d-b78e-191859308729",
@@ -1698,11 +1721,11 @@
       "key": "f48574cf-81b4-45f7-8743-cc86bd30e5b5",
       "position": 3,
       "properties": {
-        "description": "* 3 things you learned today\n* 2 things you found interesting\n* 1 question you still have.",
+        "description": "**Journal:** Give students time to add the vocab words to their journals. ",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this exercise to help assess what students learned and what needs to be clarified.  Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson.\n"
+            "type": "assessmentOpportunity",
+            "markdown": "You may choose to check journals after this lesson as a way to help assess what students learned and what needs to be clarified. Some misconceptions can be visually clarified using the Binary Odometer Widget in the next lesson."
           }
         ]
       },
@@ -1715,7 +1738,7 @@
       "key": "5d9b7b38-5624-40e7-94fd-f9b816380ff3",
       "position": 4,
       "properties": {
-        "description": "**Journal:** Add to your journal the vocab definitions for bit and byte. \n\n---"
+        "description": "\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "5d9b7b38-5624-40e7-94fd-f9b816380ff3",
@@ -1817,11 +1840,11 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n",
-        "progression_name": "Check For Understanding",
+        "progression_name": "Check For Understanding - Overflow",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from this question to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)"
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
           }
         ]
       },
@@ -2397,8 +2420,8 @@
         "progression_name": "Check For Understanding",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/95198dfe56cee550d2c3dd32a200305e-CFU_Next_Steps_Flowchart.png)\n"
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
           }
         ]
       },
@@ -2411,9 +2434,15 @@
       "key": "e316989e-520d-4c09-9885-72b5e4b28747",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r",
-        "progression_name": "Sampling an Analog Image: Challenge C"
+        "progression_name": "Sampling an Analog Image: Challenge C",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to adapt this activity to make it something more personal to your students. The [Unit 1 Journal](https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=sharing) includes a template asking students to create a logo or symbol they might wear on the back of their cape if they were a super hero."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e316989e-520d-4c09-9885-72b5e4b28747",
@@ -2710,7 +2739,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
-        "progression_name": "How Computers Work: Binary and Data"
+        "progression_name": "How Computers Work: Binary and Data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9096ea3c-5c41-48af-8c00-8dee52f0f05f",
@@ -2879,7 +2914,13 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/csp/2023] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
-        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f6eff8f5-4eee-41e9-af94-fc1701213ee6",
@@ -3377,7 +3418,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos."
+            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos.\n\nVideos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
           }
         ]
       },
@@ -3895,7 +3936,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)"
           }
         ]
       },
@@ -4026,7 +4067,7 @@
         "level_keys": [
           "CSP Binary 4bit to 8bit CFU 2023"
         ],
-        "progression": "Mid-Lesson Check for Understanding"
+        "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
       "seeding_key": {
@@ -4051,7 +4092,7 @@
         "level_keys": [
           "U1L5 CFU adding bits_2023"
         ],
-        "progression": "Mid-Lesson Check for Understanding"
+        "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
       "seeding_key": {
@@ -4151,7 +4192,7 @@
         "level_keys": [
           "U1L6 CFU beyond odometer_2023"
         ],
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding - Overflow"
       },
       "bonus": false,
       "seeding_key": {
@@ -5583,17 +5624,7 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
-      "name": "csp_unit_1-10_-_digital_information",
+      "name": "Lossy Compression",
       "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
       "key": "csp_unit_1-10_-_digital_information",
       "properties": {
@@ -5606,7 +5637,7 @@
       }
     },
     {
-      "name": "csp_unit_1-11_-_digital_information",
+      "name": "Intellectual Property",
       "url": "https://docs.google.com/presentation/d/17tFqFTmTE5-l4wq_tw85HdX-jUXJnUMmmm_Vwda5iZQ/",
       "key": "csp_unit_1-11_-_digital_information",
       "properties": {
@@ -5619,7 +5650,7 @@
       }
     },
     {
-      "name": "csp_unit_1-12_-_digital_information",
+      "name": "Digital Dilemmas",
       "url": "https://docs.google.com/presentation/d/16aEnqzS7m8tH3BNiiXyvtrG63HdZ4Ze-IBWstPh4I7M/",
       "key": "csp_unit_1-12_-_digital_information",
       "properties": {
@@ -5632,12 +5663,11 @@
       }
     },
     {
-      "name": "csp_unit_1-14_-_digital_information",
-      "url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/",
+      "name": "Assessment Day - Digital Information",
+      "url": "https://docs.google.com/presentation/d/1Drvhk77p-D9nsClbhQpyvSReAS10OkGEqVynT9IGCAQ/edit?usp=sharing",
       "key": "csp_unit_1-14_-_digital_information",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5645,7 +5675,7 @@
       }
     },
     {
-      "name": "csp_unit_1-1_-_digital_information",
+      "name": "Welcome to CSP",
       "url": "https://docs.google.com/presentation/d/1Cn0Vi7QhOzM_Jqdcs6qdKYBPvJdz_xk0q32iwDI9su0/",
       "key": "csp_unit_1-1_-_digital_information",
       "properties": {
@@ -5658,7 +5688,7 @@
       }
     },
     {
-      "name": "csp_unit_1-2_-_digital_information",
+      "name": "Representing Information",
       "url": "https://docs.google.com/presentation/d/1-JGoj8qbFV72uJKtt53Uhq26pFo__10tT2_iRWWHrRc/",
       "key": "csp_unit_1-2_-_digital_information",
       "properties": {
@@ -5671,7 +5701,7 @@
       }
     },
     {
-      "name": "csp_unit_1-3_-_digital_information",
+      "name": "Circle Square Patterns",
       "url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/",
       "key": "csp_unit_1-3_-_digital_information",
       "properties": {
@@ -5684,7 +5714,7 @@
       }
     },
     {
-      "name": "csp_unit_1-4_-_digital_information",
+      "name": "Binary Numbers",
       "url": "https://docs.google.com/presentation/d/1kQX-HWJjvoapWuFaCuy16t4c6G728wSCWRKRBiGlkzM/",
       "key": "csp_unit_1-4_-_digital_information",
       "properties": {
@@ -5697,7 +5727,7 @@
       }
     },
     {
-      "name": "csp_unit_1-5_-_digital_information",
+      "name": "Overflow and Rounding",
       "url": "https://docs.google.com/presentation/d/1UxuW7TzEcAFD0WkCFLlr1PIr1JF0MtjTHCMH6gmCC3o/",
       "key": "csp_unit_1-5_-_digital_information",
       "properties": {
@@ -5710,7 +5740,7 @@
       }
     },
     {
-      "name": "csp_unit_1-6_-_digital_information",
+      "name": "Representing Text",
       "url": "https://docs.google.com/presentation/d/1n_mCrBc2HPaOYzltye6NP2rIGQnna_x_E3lH3b2K5LE/",
       "key": "csp_unit_1-6_-_digital_information",
       "properties": {
@@ -5723,7 +5753,7 @@
       }
     },
     {
-      "name": "csp_unit_1-7_-_digital_information",
+      "name": "Black and White Images",
       "url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/",
       "key": "csp_unit_1-7_-_digital_information",
       "properties": {
@@ -5736,7 +5766,7 @@
       }
     },
     {
-      "name": "csp_unit_1-8_-_digital_information",
+      "name": "Color Images",
       "url": "https://docs.google.com/presentation/d/12yTt4gyJpwbwb09FqDWUAdcFC-5_Ox9L0kd1-96inl4/",
       "key": "csp_unit_1-8_-_digital_information",
       "properties": {
@@ -5749,7 +5779,7 @@
       }
     },
     {
-      "name": "csp_unit_1-9_-_digital_information",
+      "name": "Lossless Compression",
       "url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/",
       "key": "csp_unit_1-9_-_digital_information",
       "properties": {
@@ -5795,6 +5825,30 @@
       },
       "seeding_key": {
         "resource.key": "flippy_do"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
       }
     },
     {
@@ -5846,7 +5900,7 @@
       }
     },
     {
-      "name": "KEY U1L8 Black & White Images Activity Guide",
+      "name": "KEY Black & White Images Activity Guide",
       "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
       "key": "key_u1l8_black_white_images_activity_guide",
       "properties": {
@@ -5894,6 +5948,18 @@
       },
       "seeding_key": {
         "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -6032,7 +6098,7 @@
       }
     },
     {
-      "name": "U1L7 Black and White Images",
+      "name": "Activity Guide - Black and White Images",
       "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
       "key": "u1l7_black_and_white_images",
       "properties": {
@@ -6045,13 +6111,15 @@
       }
     },
     {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11hSBtl5mdkbbRNrjzafjKnVJntAdIj8JjtN2bFkbol0/view",
-      "key": "virtual_modification_resources",
+      "name": "Unit 1 Journal",
+      "url": "https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link",
+      "key": "unit_1_journal",
       "properties": {
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "virtual_modification_resources"
+        "resource.key": "unit_1_journal"
       }
     }
   ],
@@ -6274,6 +6342,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Representing Text",
         "resource.key": "ascii_reference_sheet"
       }
@@ -6342,7 +6416,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp1-2023"
       }
     },
@@ -6354,7 +6440,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "virtual_modification_resources",
+        "resource.key": "unit_1_journal",
         "script.name": "csp1-2023"
       }
     }

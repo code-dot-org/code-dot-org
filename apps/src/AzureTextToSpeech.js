@@ -27,7 +27,7 @@ class SoundResponse {
       forceHTML5: false,
       allowHTML5Mobile: true,
       onEnded,
-      ...playbackOptions
+      ...playbackOptions,
     };
     this.profaneWords = profaneWords;
     this.error = error;
@@ -44,7 +44,7 @@ class SoundResponse {
 
     return i18n.textToSpeechProfanity({
       profanityCount: this.profaneWords.length,
-      profaneWords: this.profaneWords.join(', ')
+      profaneWords: this.profaneWords.join(', '),
     });
   };
 
@@ -129,7 +129,7 @@ export default class AzureTextToSpeech {
         if (profaneWords && profaneWords.length > 0) {
           const soundResponse = wrappedCreateSoundResponse({
             onComplete,
-            profaneWords
+            profaneWords,
           });
           onFailure(soundResponse.profanityMessage());
           resolve(soundResponse);
@@ -151,7 +151,7 @@ export default class AzureTextToSpeech {
         if (profaneWords && profaneWords.length > 0) {
           const soundResponse = wrappedCreateSoundResponse({
             onComplete,
-            profaneWords
+            profaneWords,
           });
           onFailure(soundResponse.profanityMessage());
           wrappedSetCachedSound(soundResponse);
@@ -168,7 +168,7 @@ export default class AzureTextToSpeech {
         const soundResponse = wrappedCreateSoundResponse({
           onComplete,
           id,
-          bytes
+          bytes,
         });
         wrappedSetCachedSound(soundResponse);
         resolve(soundResponse);
@@ -194,7 +194,7 @@ export default class AzureTextToSpeech {
       method: 'POST',
       dataType: 'binary',
       responseType: 'arraybuffer',
-      data: {text, gender, locale}
+      data: {text, gender, locale},
     };
 
     if (authenticityToken) {

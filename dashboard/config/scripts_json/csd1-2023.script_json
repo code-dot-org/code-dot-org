@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-06 23:36:38 UTC",
+    "serialized_at": "2023-04-20 20:45:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3927,7 +3927,7 @@
       "position": 6,
       "properties": {
         "description": "Once groups are ready, have them test their towers by recording its height and see if it can stand on its own. Remind them of the rules, specifically that they can't touch or adjust the towers once they let go of it.",
-        "name": "Test Your Table\r"
+        "name": "Test Your Tower"
       },
       "seeding_key": {
         "activity_section.key": "01795e3f-f5e6-43b9-a42b-96ef8c4f7450",
@@ -4008,7 +4008,7 @@
       "key": "29a8eef9-a0a5-4592-ab45-c3f07b4d824f",
       "position": 12,
       "properties": {
-        "description": "### Test Your Table\n\nGroups can test their designs just as before and record the results on their activity guides.\n\n### Reflect\n\n**Transition**: Ask class to return to their own seats to reflect on the activity."
+        "description": "### Test Your Tower\n\nGroups can test their designs just as before and record the results on their activity guides.\n\n### Reflect\n\n**Transition**: Ask class to return to their own seats to reflect on the activity."
       },
       "seeding_key": {
         "activity_section.key": "29a8eef9-a0a5-4592-ab45-c3f07b4d824f",
@@ -5354,33 +5354,58 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_1",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_1"
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_1",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_curriculum_videos_1"
       }
     },
     {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_2",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
+        "resource.key": "csd_guide_to_differentiation_2"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_1"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_2"
       }
     },
     {
@@ -5517,7 +5542,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving (Paper Towels)",
+      "name": "Intro to Problem Solving (Paper Tower)",
       "url": "https://docs.google.com/presentation/d/1x9Zx8mdqlNkYnFcK0-uff_sv53v1_MWTHwpXdW6eJJo/template/preview",
       "key": "intro_to_problem_solving_paper_towels_",
       "properties": {
@@ -5615,7 +5640,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -5627,10 +5652,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
       "key": "sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5737,13 +5763,13 @@
       }
     },
     {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
+      "name": "The Problem Solving Process ",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
       "key": "the_problem_solving_process",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process"
@@ -5759,6 +5785,17 @@
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process_1"
+      }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
+      "key": "the_problem_solving_process_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_2"
       }
     },
     {
@@ -5836,7 +5873,6 @@
       "seeding_key": {
         "resource.key": "what_is_a_computer_version_b_"
       }
-
     }
   ],
   "lessons_resources": [
@@ -6170,7 +6206,6 @@
         "resource.key": "what_is_a_computer_version_b_"
       }
     }
-
   ],
   "scripts_resources": [
     {
@@ -6193,19 +6228,31 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "csd_guide_to_assessment_1",
         "script.name": "csd1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_curriculum_videos_1",
         "script.name": "csd1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "csd_guide_to_differentiation_2",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_1",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_2",
         "script.name": "csd1-2023"
       }
     },
@@ -6214,8 +6261,13 @@
         "resource.key": "teacher_forum",
         "script.name": "csd1-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_2",
+        "script.name": "csd1-2023"
+      }
     }
-
   ],
   "scripts_student_resources": [
 
@@ -6271,7 +6323,6 @@
         "vocabulary.key": "storage"
       }
     }
-
   ],
   "lessons_vocabularies": [
     {
@@ -6304,7 +6355,6 @@
         "vocabulary.key": "computer"
       }
     }
-
   ],
   "lessons_programming_expressions": [
 

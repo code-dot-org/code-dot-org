@@ -437,6 +437,9 @@
         "coursef-2022/Introducing Sprite Lab": {
           "name": "Ipinapakilala ang Sprite Lab"
         },
+        "coursef-2022/Making Sprites": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "coursef-2022/Sprites in Action": {
           "name": "Sprites sa aksyon"
         },
@@ -446,6 +449,26 @@
         },
         "coursef-2022/Mini-Project: User Input Programs": {
           "name": "Mini-Project: Mga Programa sa Pag-input ng User"
+        },
+        "coursef-2022/[New] Lots of Sprites": {
+          "name": "Maraming Sprite",
+          "overview": "Sa **setting ng konteksto**/**pagbuo ng kasanayan** na araling ito, mas mauunawaan ng mga mag-aaral ang mga kakayahan ng Sprite Lab at matututo sila kung paano pamahalaan ang mga grupo ng mga sprite na may parehong costume.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Ang araling ito ay pansamantalang lumilipat mula sa mga variable at sa halip ay nakatuon sa pagprogram na may mga grupo ng mga sprite. Sa susunod na kurso, ang mga mag-aaral ay matututo ng higit pa tungkol sa mga variable at simulation. Ang mga uri ng mga program na gagawin ng mga mag-aaral sa araling ito ay magbibigay ng karagdagang konteksto sa mga araling iyon.",
+          "student_overview": "Matututunan mo kung paano gumawa ng higit pa sa Sprite Lab at gumawa ng mga proyekto na may maraming sprite!"
+        },
+        "coursef-2022/[New] Counting with Variables": {
+          "name": "Nagbibilang gamit ang mga Variable",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamit ang mga mag-aaral ng mga variable upang subaybayan ang value na nagbabago sa paglipas ng panahon, tulad ng isang counter. Kasama rin sa araling ito ang maikling **mini-project** kung saan ang mga mag-aaral ay gumagawa ng simpleng laro.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Sa mga nakaraang aralin, natututo ang mga mag-aaral na gumamit ng mga variable upang mag-imbak ng data na maaaring makuha sa ibang pagkakataon. Sa araling ito, magsisimulang matuto ang mga mag-aaral na baguhin ang data na nakaimbak sa isang variable. Ang pangunahing pag-unawa sa kung paano gumagana ang mga variable ay magbibigay-daan din sa kanila na lumikha ng mas advanced na mga proyekto.",
+          "student_overview": "Matututo kang gumamit ng mga variable para makagawa ng counter o subaybayan ang score sa isang laro."
+        },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "overview": "Sa **mini-project** na araling ito, gagawa ang mga mag-aaral ng customized na \"collector game\", kung saan ang user ay nagpapalipat-lipat ng sprite para mangolekta ng mga bagay.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Ang proyektong ito ay idinisenyo upang payagan ang mga mag-aaral na ilapat ang kanilang bagong kaalaman sa mga variable sa masayang paraan. Sa pamamagitan ng pag-unawa kung paano baguhin ang value na nakaimbak sa variable, maaaring lumikha ang mga mag-aaral ng laro na awtomatikong nagpapanatili ng marka batay sa mga aksiyon ng manlalaro.",
+          "student_overview": "Kolektahin ang lahat ng mga sprite! Sa proyektong ito, gagawa ka ng isang laro na maaaring laruin ng iba."
         },
         "coursef-2022/Outbreak": {
           "name": "Pagsiklab",
@@ -470,10 +493,15 @@
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
         },
         "coursee-2022/Hello World: Food": {
-          "name": "Hello World"
+          "name": "Hello World",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan.",
+          "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. \n-   [Optional] Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
+          "purpose": "Ang araling ito ay inilaan upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Matututuhan ng mga mag-aaral kung paano magsabi ng mga bagay ang mga sprite, na kasanayang gagamitin nila sa susunod na aralin sa Tungkol sa Akin.",
+          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan."
         },
         "coursee-2022/Mini-Project: About Me": {
-          "name": "Mini-Project: Tungkol sa Akin"
+          "name": "Mini-Project: Tungkol sa Akin",
+          "preparation": "-   (Opsyonal) Mag-print ng mga kopya ng **gabay sa pagpaplano** para sa mga mag-aaral, o mamahagi ng mga digital na kopya.\n-   Isaalang-alang ang paggawa ng halimbawa na proyekto na ibahagi sa klase. \n-   Tiyaking may reflection journal ang bawat mag-aaral."
         },
         "coursee-2022/Drawing with Loops": {
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral."
@@ -491,6 +519,9 @@
           "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "overview": "Sa **skill-building/context-setting** lesson na ito, magkakaroon ng pagkakataon ang mga mag-aaral na magsanay ng content na natutunan nila hanggang sa puntong ito, pati na rin ang pagkuha ng sneak peek sa mga conditional!"
         },
         "coursee-2022/Conditionals with the Farmer": {
           "overview": "Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.",
@@ -537,6 +568,9 @@
           "name": "Pag-program sa Artist",
           "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
         },
+        "express-2022/Making Sprites": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "express-2022/Sprites in Action": {
           "name": "Sprites sa aksyon"
         },
@@ -551,7 +585,8 @@
           "name": "Naka-nest na mga Loops sa Maze"
         },
         "express-2022/Snowflakes with Anna and Elsa": {
-          "name": "Naka-nest na mga Loop sa Frozen"
+          "name": "Naka-nest na mga Loop sa Frozen",
+          "purpose": "Sa seryeng ito, makakakuha ang mga mag-aaral ng mga pagsasanay sa mga loop ng nesting habang gumagawa ng mga larawang ikasasabik nilang ibahagi. \n\nSimula sa ilang mga tagubilin, ang mga mag-aaral ay gagawa ng kanilang sariling mga desisyon pagdating sa paglikha ng mga disenyo sa pag-uulit. Pagkatapos ay paikutin nila ang mga nakapaligid sa iba't ibang paraan upang magkaroon ng gawa ng sining na talagang kakaiba."
         },
         "express-2022/Looking Ahead with Minecraft": {
           "name": "Masdan ang Hinaharap"
@@ -569,6 +604,13 @@
           "name": "Mga Function sa Artist",
           "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
           "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "express-2022/[New] Counting with Variables": {
+          "name": "Nagbibilang gamit ang mga Variable",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamit ang mga mag-aaral ng mga variable upang subaybayan ang value na nagbabago sa paglipas ng panahon, tulad ng isang counter. Kasama rin sa araling ito ang maikling **mini-project** kung saan ang mga mag-aaral ay gumagawa ng simpleng laro.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang plano ng aralin.",
+          "purpose": "Sa mga nakaraang aralin, natututo ang mga mag-aaral na gumamit ng mga variable upang mag-imbak ng data na maaaring makuha sa ibang pagkakataon. Sa araling ito, magsisimulang matuto ang mga mag-aaral na baguhin ang data na nakaimbak sa isang variable. Ang pangunahing pag-unawa sa kung paano gumagana ang mga variable ay magbibigay-daan din sa kanila na lumikha ng mas advanced na mga proyekto.",
+          "student_overview": "Matututo kang gumamit ng mga variable para makagawa ng counter o subaybayan ang score sa isang laro."
         },
         "express-2022/Using Variables with the Artist": {
           "overview": "Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo."
@@ -636,28 +678,43 @@
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
           "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!"
         },
+        "coursec-2022/My Robotic Friends Jr": {
+          "overview": "Sa **context-setting** na aralin, ang mga mag-aaral ay gagamit ng set ng mga simbolo upang turuan ang \"robot\" na mag-stack ng mga tasa sa iba't ibang pattern. Ang mga mag-aaral ay maghahalinhinan sa pakikilahok bilang robot, tumutugon lamang sa algorithm na tinukoy ng kanilang mga kasamahan.",
+          "preparation": "-   Maghanda ng stack ng 20 paper cups (o paper trapezoids) sa bawat grupo ng 2-3 na mag-aaral. \n-   Ipakita ang mga simbolo sa **\\*Symbol Key** kung saan maaaring sumangguni ang mga mag-aaral sa buong aralin. \n-   (Opsyonal) Mag-print ng **\\*Cup Stacking Ideas** bawat grupo ng 2-3 mag-aaral."
+        },
         "coursec-2022/Programming with Angry Birds": {
-          "name": "Pag-Program sa Maze"
+          "name": "Pag-Program sa Maze",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema para sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipan na gagawin bilang grupo kasama ng iyong klase."
         },
         "coursec-2022/Debugging in Maze": {
-          "name": "Pagde-debug sa Maze"
+          "name": "Pagde-debug sa Maze",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng CS Fundamentals - Mga Rekomendasyon sa Aralin**. \n-   Suriin ang **\\*Gabay sa Pag-debug** mula sa page ng pangkalahatang-ideya ng curriculum ng kursong ito kasama ng klase."
         },
         "coursec-2022/Collecting Treasure with Laurel": {
-          "name": "Pag-program sa Kolektor"
+          "name": "Pag-program sa Kolektor",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang mga potensyal na problema sa klase mo."
         },
         "coursec-2022/Creating Art with Code": {
           "name": "Pag-program sa Artist",
           "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
         },
+        "coursec-2022/My Loopy Robotic Friends Jr": {
+          "preparation": "-   Maghanda ng stack ng 20 paper cups (o \\*_\\\\_paper trapezoids) sa bawat grupo ng 4 na mag-aaral. \n-   Ipakita ang **\\*mga simbolo** kung saan maaaring sumangguni ang mga mag-aaral sa buong aralin. \n-   (Opsyonal) Mag-print ng **\\*Mga Ideya sa Pag-stack ng Tasa** bawat grupo ng 4 mag-aaral."
+        },
         "coursec-2022/Loops with Rey and BB-8": {
-          "name": "Mga Loops kasama sina Rey at BB-8"
+          "name": "Mga Loops kasama sina Rey at BB-8",
+          "preparation": "-   Maglaro sa mga palaisipan upang matukoy kung magkakaroon ng anumang mga lugar ng problema sa klase mo."
         },
         "coursec-2022/Harvesting Crops with Loops": {
           "name": "Mga Loops sa Harvester",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "preparation": "-   Magsanay sa paggawa ng sarili mong disenyo. Tandaan kung paano naiiba ang mga antas na ito sa lahat ng nauna."
+        },
         "coursec-2022/The Big Event": {
-          "name": "The Big Event"
+          "name": "The Big Event",
+          "preparation": "-   I-print o ipakita ang **\\*Event Controller**. \n-   Mag-print ng isang **\\*pagtatasa** sa bawat mag-aaral."
         },
         "coursec-2022/Build a Flappy Game": {
           "name": "Bumuo ng Flappy na Laro",
@@ -667,10 +724,12 @@
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo."
         },
         "coursec-2022/Picturing Data": {
-          "name": "Paglalarawan ng Data"
+          "name": "Paglalarawan ng Data",
+          "preparation": "-   Mag-print ng isang **\\*worksheet** para sa bawat mag-aaral. \n-   Subukan ang aralin ngayon sa Code Studio. Ito ay sinadya upang magamit bilang tool sa aktibidad ngayon. Maging handa na i-proyekto ito sa klase, o kung hindi man ay payagan ang mga mag-aaral na bisitahin ito sa kanilang sariling mga computer."
         },
         "coursec-2022/Binary Bracelets": {
-          "name": "Binary na mga Pulseras"
+          "name": "Binary na mga Pulseras",
+          "preparation": "-   (Opsyonal) Panoorin ang **\\*Leksiyon sa Aksiyon** na video. \n-   Magtipon ng mga marker para sa mga pulseras. Opsyonal ang iba pang mga dekorasyon tulad ng mga kuwintas at pipecleaner. \n-   Mag-print ng isang **\\*worksheet** at isang **\\*pagtatasa** sa bawat mag-aaral. \n-   (Opsyonal) Sumulat ng maikling mensahe sa pisara sa binary."
         },
         "coursec-2022/End of Course Project": {
           "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
@@ -3196,6 +3255,9 @@
         "coursef-2021/lesson-6": {
           "name": "Ipinapakilala ang Sprite Lab"
         },
+        "coursef-2021/lesson-7": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "coursef-2021/lesson-8": {
           "name": "Sprites sa aksyon"
         },
@@ -3412,6 +3474,9 @@
         "express-2021/Creating Art with Code": {
           "name": "Pag-program sa Artist",
           "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
+        },
+        "express-2021/lesson-2": {
+          "name": "Paggawa ng mga Sprite"
         },
         "express-2021/lesson-3": {
           "name": "Sprites sa aksyon"

@@ -2629,6 +2629,20 @@ ga:
               display_name: Ábhar
             lessonGroup-4:
               display_name: Ceachtanna Malartacha
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+            lessonGroup-4:
+              display_name: Suirbhé
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2844,28 +2858,40 @@ ga:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
             lessonGroup-3:
               display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Suirbhé
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Íomhánna agus Beochan'
             lessonGroup-3:
               display_name: 'Caibidil 2: Tógáil Cluichí'
+            lessonGroup-4:
+              display_name: Suirbhé
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
             lessonGroup-3:
               display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Léiriú Sonraí'
             lessonGroup-3:
               display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            lessonGroup-4:
+              display_name: Suirbhé
         aiml-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Buneolas ar an tSaotharlann Aipeanna
+            lessonGroup-5:
+              display_name: Suirbhé
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2966,7 +2992,31 @@ ga:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Suirbhé
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+            lessonGroup-5:
+              display_name: Suirbhé
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Réamhrá
+        csd-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-data-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-impact-in-society-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-coding-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-hardware-post-survey-2023:
+          title: Suirbhé Iarchúrsa
+        focus-on-creativity-post-survey-2023:
+          title: Suirbhé Iarchúrsa

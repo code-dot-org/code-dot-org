@@ -5,7 +5,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import {
   UnconnectedTeacherContentToggle as TeacherContentToggle,
-  mapStateToProps
+  mapStateToProps,
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -184,7 +184,7 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenLesson: true,
     });
 
     let root = $(component.html());
@@ -199,7 +199,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, '');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
     root = $(component.html());
     [contentElement, lockedLessonElement, hiddenLessonElement] = root
@@ -227,7 +227,7 @@ describe('TeacherContentToggle', () => {
 
     component.setProps({
       sectionsAreLoaded: true,
-      isLockedLesson: true
+      isLockedLesson: true,
     });
 
     let root = $(component.html());
@@ -242,7 +242,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
     root = $(component.html());
     [contentElement, lockedLessonElement, hiddenLessonElement] = root
@@ -272,7 +272,7 @@ describe('TeacherContentToggle', () => {
       sectionsAreLoaded: true,
       isLockedLesson: true,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: true
+      isHiddenLesson: true,
     });
 
     const root = $(component.html());
@@ -287,7 +287,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, '');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
   });
 
@@ -308,7 +308,7 @@ describe('TeacherContentToggle', () => {
       sectionsAreLoaded: true,
       isLockedLesson: false,
       hiddenLessonsInitialized: true,
-      isHiddenLesson: false
+      isHiddenLesson: false,
     });
 
     const root = $(component.html());
@@ -323,7 +323,7 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
 
     component.setProps({
-      isBlocklyOrDroplet: false
+      isBlocklyOrDroplet: false,
     });
   });
 
@@ -342,7 +342,7 @@ describe('TeacherContentToggle', () => {
         progress: {},
         teacherSections: {},
         hiddenLesson: {},
-        verifiedInstructor: {}
+        verifiedInstructor: {},
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
@@ -381,22 +381,22 @@ describe('TeacherContentToggle', () => {
           lessons: [
             {
               id: 123,
-              lockable: true
-            }
-          ]
+              lockable: true,
+            },
+          ],
         },
         teacherSections: {},
         hiddenLesson: {},
         verifiedInstructor: {
-          isVerified: true
-        }
+          isVerified: true,
+        },
       };
 
       const stateUnverified = {
         ...state,
         verifiedInstructor: {
-          isVerified: false
-        }
+          isVerified: false,
+        },
       };
 
       it('sets locked/hidden to false', () => {

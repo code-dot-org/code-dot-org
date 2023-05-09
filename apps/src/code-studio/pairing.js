@@ -32,5 +32,5 @@ export default {
         hideUserOptions();
         return false;
       });
-  }
+  },
 };

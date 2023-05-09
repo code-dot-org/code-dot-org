@@ -76,7 +76,7 @@
           "overview": "En esta lección, los estudiantes asumirán el control del Artista para completar los dibujos en la pantalla. Esta etapa del Artista permitirá a los estudiantes crear imágenes de complejidad creciente utilizando bloques de programación como \"avanzar 100 píxeles\" y \"girar 90 grados a la derecha\".",
           "preparation": "### Una Semana Antes de la Hora del Código\n\n-   Revisa la [Guía del Profesor de La Hora del Código](http://hourofcode.com/resources/how-to/) y las [Buenas Prácticas de los Educadores de Éxito](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para empezar a planificar tu evento de La Hora del Código. \n-   Registra tu evento de La Hora del Código][2] si quieres recibir obsequios o apoyo en el aula.\n-   Revisa y completa tú mismo el tutorial en línea: [Artista](https://studio.code.org/s/artist/lessons/1/levels/1) \n-   Asegúrate de probarlo tú primero antes de pedir a tus alumnos que lo completen. Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n### Un Día Antes de la Hora del Código\n\n-   Imprime uno o varios de los [ejemplos de Boletos de Salida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) que aparecen al final de este plan de estudio, o crea los tuyos propios. \n\n-   Cada alumno que complete la actividad debe recibir un [certificate](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación para facilitar la entrega al final de la Hora del Código.\n\n-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n\n-   (Opcional) Consigue transportadores para que tu clase observe los ángulos que deben utilizar para completar los rompecabezas.\n\n-   Imprime un **Giros y Ángulos - Guía del Alumno** para cada estudiante.",
           "purpose": "Esta lección servirá para inspirar más creatividad en la codificación. El propósito de esta lección es aumentar el conocimiento sobre la secuenciación mediante la introducción de bloques de programación y objetivos. En este caso, los estudiantes aprenden sobre los píxeles y los ángulos utilizando los bloques de programación, a la vez que incorporan técnicas de secuenciación. Además, los alumnos podrán contemplar nuevos objetivos como la programación del Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "gumball/Gumball Play Lab": {
           "name": "Laboratorio de juegos de Gumball",
@@ -200,15 +200,15 @@
           "name": "Codifica tu propio Juego de Baloncesto",
           "overview": "En esta actividad en línea, los alumnos aprenderán qué son los eventos y cómo los utilizan los ordenadores en programas como los videojuegos. Los estudiantes trabajarán a través de rompecabezas haciendo que el programa reaccione a los eventos (como los botones de flecha que se presionan.) Al final del rompecabezas, los estudiantes tendrán la oportunidad de personalizar su juego con diferentes velocidades y sonidos.",
           "preparation": "### Una Semana Antes de la Hora del Código\n\n-   Revisa la [Guía del Profesor de La Hora del Código](http://hourofcode.com/resources/how-to/) y las [Mejores Prácticas de Educadores Exitosos](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para comenzar a planificar tu actividad de La Hora del Código. \n-   Registra tu evento de La Hora del Código][2] si quieres recibir obsequios o apoyo en el aula.\n-   Revisa y completa tú mismo el tutorial en línea: [Codifica tu Propio Juego de Baloncesto](https://studio.code.org/s/basketball/lessons/1/levels/1) \n-   Asegúrate de probarlo antes de pedir a tus alumnos que lo completen. Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n### Un Día Antes de la Hora del Código\n\n-   Imprime uno o varios de los [ejemplos de Ticket de Salida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) que aparecen al final de este plan de lección, o crea los tuyos propios. \n\n-   Cada alumno que complete la actividad debe recibir un [certificate](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación para facilitar la entrega al final de la Hora del Código.\n\n-   Lee el paquete de diapositivas \"Eventos en Rebote - ¿Cómo ocurren?\" (que se presentará a los estudiantes al final de la clase).",
-          "purpose": "En esta lección se introducen los conceptos básicos de informática, de codificación y programación (mediante bloques), así como técnicas sencillas de depuración. Aprenderán que los eventos son muy comunes en los programas de ordenador, especialmente en los videojuegos.\n\nLos estudiantes desarrollarán su comprensión de los eventos haciendo un juego de baloncesto. Los alumnos aprenderán a hacer que una mano se mueva según las teclas de flecha y a hacer ruidos cuando los objetos chocan. ¡Al final, podrán personalizar su juego para hacerlo más auténtico!",
+          "purpose": "En esta lección se introducen los conceptos básicos de informática, de codificación y programación (mediante bloques), así como técnicas sencillas de depuración. Aprenderán que los eventos son muy comunes en los programas de ordenador, especialmente en los videojuegos.\n\nLos alumnos desarrollarán su comprensión de los eventos haciendo un juego de baloncesto. Los alumnos aprenderán a hacer que una mano se mueva según las teclas de flecha y a hacer ruidos cuando los objetos chocan. ¡Al final, podrán personalizar su juego para hacerlo más auténtico!",
           "student_overview": "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "name": "Fiesta de baile - Ir más allá",
           "overview": "En esta lección, alumnos de todas las edades continúan su experiencia con la codificación y la informática en un entorno seguro y de apoyo. Esta lección ha sido diseñada para alumnos de todas las edades, pero requiere saber leer. Esta actividad necesita sonido, ya que la herramienta fue construida para responder a la música.",
-          "preparation": "-   Revisa y completa tú mismo el tutorial online: [Dancy Party](https://hourofcode.com/us/how-to)\n\n-   Asegúrate de probarlo primero antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.",
+          "preparation": "#### Una semana antes de la Hora del Código\n\n-   Revisa la [Guía del Educador de La Hora del Código](https://hourofcode.com/us/how-to) y las [Buenas Prácticas de Educadores de Éxito](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para empezar a planificar tu evento de La Hora del Código.\n\n-   Registra tu evento de La Hora del Código][2] si deseas obtener apoyo en el aula, carteles con descuento o participar en el sorteo de robótica (sólo en EE.UU.).\n\n-   Revisa y completa tú mismo el tutorial en línea: [Dance Party](https://studio.code.org/s/dance-2019)\n\n-   Asegúrate de probarlo antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n#### Un día antes de la Hora del Código\n\n-   Cada estudiante que complete la actividad debe recibir un [certificate](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación a fin de facilitar la tarea al final de la Hora del Código.\n\n-   (opcional) Anima a los alumnos a traer auriculares para utilizarlos durante la actividad.",
           "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
-          "student_overview": "Estudiantes de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
+          "student_overview": "Alumnos de todas las edades continúan con una experiencia introductoria a la codificación y la informática en un entorno seguro y de apoyo. "
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "La Hora del Código 2013"
@@ -396,7 +396,7 @@
           "name": "Hora del Código de la Recolectora 2017"
         },
         "frequency_analysis/Frequency Analysis": {
-          "name": "Análisis de frecuencia"
+          "name": "Análisis de Frecuencia"
         },
         "coursed-2022/Password Power-Up": {
           "name": "Contraseña de Encendido",
@@ -455,7 +455,7 @@
           "student_overview": "¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva."
         },
         "coursed-2022/Loops in Ice Age": {
-          "name": "Bucles de la Era de Hielo",
+          "name": "Bucles en la Edad de Hielo",
           "overview": "Como una actualización (o introducción) rápida al uso de los bucles, en esta etapa los estudiantes usarán el bloque `repetir` para que Scrat llegue hasta la bellota de la manera más eficiente posible.",
           "preparation": "-   (Opcional) Elige un par de rompecabezas para hacer en grupo con tu clase.",
           "purpose": "En esta lección, los estudiantes aprenderán más sobre los bucles y cómo implementarlos en el código de Blockly. El uso de bucles es una habilidad importante en la programación porque repetir manualmente las instrucciones es tedioso e ineficiente. Con estos rompecabezas de Code.org, los estudiantes aprenderán a añadir instrucciones a los bucles existentes, a reunir el código repetido en los bucles y a reconocer los patrones que deben repetirse.",
@@ -525,7 +525,7 @@
           "student_overview": "El acoso nunca está bien. Esta lección te enseñará qué puedes decir y qué no cuando estás conectado."
         },
         "coursef-2022/Introducing Sprite Lab": {
-          "name": "Presentamos el Laboratorio de sprites",
+          "name": "Presentación de Laboratorio Sprite",
           "overview": "En esta lección **definida por el contexto**, los estudiantes debatirán sobre el papel de las computadoras y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán aplicaciones similares a las que crearán más adelante.",
           "preparation": "-   Determina cómo los estudiantes inician sesión en Code.org.\n-   Si es necesario, crea cuentas de Code.org para los estudiantes.\n-   Asigna Introducción al Sprite Lab a los estudiantes.\n-   Imprime copias de la hoja de trabajo **\\*Exploración de aplicaciones** (o publica la versión digital en tu LMS).",
           "purpose": "La primera lección busca que los estudiantes se interesen en el curso y conecten sus intereses personales con las ciencias de la computación. ",
@@ -539,7 +539,7 @@
           "student_overview": "En esta lección escribirás programas y aprenderás sobre los sprites y comportamientos."
         },
         "coursef-2022/Sprites in Action": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Esta lección está diseñada para reforzar las habilidades de la lección anterior e introducir a los estudiantes a la programación con eventos. A lo largo de este curso, los eventos serán la principal forma en que los estudiantes cambien la forma en que se ejecutan sus programas con el tiempo o en respuesta al usuario.",
@@ -864,7 +864,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "express-2022/Swimming Fish in Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",
@@ -881,7 +881,7 @@
           "student_overview": "En esta lección escribirás programas y aprenderás sobre los sprites y comportamientos."
         },
         "express-2022/Sprites in Action": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Esta lección está diseñada para introducir a los estudiantes en la programación con eventos. A lo largo de este curso, los eventos serán la principal forma en que los estudiantes cambian la forma en que sus programas se ejecutan a lo largo del tiempo o en respuesta al usuario.",
@@ -1246,7 +1246,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "coursec-2022/My Loopy Robotic Friends Jr": {
           "name": "Mis amigos robóticos y repetitivos Jr.",
@@ -1428,7 +1428,7 @@
           "student_overview": "**Pregunta del día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?**\n\nTrabajarás con un grupo para diseñar y probar un barco de papel de aluminio que soporte el mayor número posible de monedas de un céntimo. "
         },
         "csd1-2022/The Problem Solving Process": {
-          "name": "El proceso de resolución de problemas",
+          "name": "El Proceso de Resolución de Problemas",
           "assessment_opportunities": "1.  **Dado un problema, identificar las acciones individuales que entrarían dentro de cada paso del proceso de resolución de problemas**.\n\n    En la página 2 de la guía de actividad, comprueba que los alumnos han escrito acciones razonables para cada uno de los cuatro pasos del problema que intentan resolver.\n\n2.  **Identificar estrategias útiles dentro de cada paso del proceso de resolución de problemas**\n\n    En la recapitulación, comprueba que los alumnos proponen estrategias eficaces para cada paso del proceso.",
           "overview": "**Pregunta del día: ¿Cuáles son algunos de los pasos comunes que podemos utilizar para resolver diferentes tipos de problemas?**\n\nEsta lección introduce el proceso formal de resolución de problemas que los alumnos utilizarán a lo largo del año: Definir - Preparar - Probar - Reflexionar. La lección comienza pidiendo a los alumnos que realicen una lluvia de ideas sobre los diferentes tipos de problemas que se encuentran en la vida cotidiana. A continuación, se les muestran los cuatro pasos del proceso de resolución de problemas y trabajan juntos para relacionar estos pasos abstractos con sus experiencias reales de resolución de problemas. En primer lugar, los alumnos relacionan estos pasos con las actividades relacionadas con los problemas de la lección anterior, luego con un problema que se les dé bien y por último, con un problema que quieran mejorar. Al final de la lección, la clase recopila una lista de estrategias generalmente útiles para cada paso del proceso que se colocan en carteles que se utilizarán a lo largo de la unidad y del año.",
           "preparation": "Para cada alumno \n\n-   Imprime una copia de la Guía de Actividad\n\nPara la clase\n\n-   Papel para Póster\n-   Rotuladores/lápices de colores\n\nPara el Profesor\n\n-   Consulta el foro [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para profesores verificados para encontrar estrategias o recursos adicionales compartidos por otros profesores\n-   Si enseñas de forma virtual, considera la posibilidad de consultar nuestras [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
@@ -1444,7 +1444,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos aplicar el Proceso de Resolución de Problemas a muchos tipos de problemas diferentes?**\n\n¡Hoy aplicarás el Proceso de Resolución de Problemas a tres problemas diferentes que serán cada vez más complejos!"
         },
         "csd1-2022/What is a Computer?": {
-          "name": "¿Qué es una computadora?",
+          "name": "¿Qué es un Ordenador?",
           "assessment_opportunities": "1.  **Identificar un ordenador como una máquina que trabaja con información.**\n\n    En el último debate de la actividad principal, comprueba el razonamiento de los alumnos sobre si un aparato es un ordenador.  Asegúrate de que mencionen que utiliza información o resuelve problemas de información (o de pensamiento).\n\n2.  **Razonar si determinados objetos son o no son ordenadores.**\n\n    En el último debate de la actividad principal, comprueba el razonamiento de los alumnos sobre si un dispositivo es un ordenador.  Asegúrese de que mencionan que utiliza información o resuelve problemas de información (o de pensamiento).\n\n3.  **Elige problemas que puedan resolverse con la informática y justifica esas elecciones.**\n\n    En la actividad de recapitulación, comprueba que los alumnos han elegido problemas de información y han explicado cómo un ordenador obtiene y utiliza la información necesaria para resolver el problema.",
           "overview": "**Pregunta del día: ¿Qué es un ordenador?**\n\nEn esta lección, los alumnos elaboran una definición preliminar de ordenador. Para empezar la lección, la clase hará una lluvia de ideas sobre posibles definiciones de ordenador y colocará los resultados de esta lluvia de ideas en la pizarra. A continuación, los alumnos trabajarán en grupos para clasificar las imágenes en \"es un ordenador\" o \"no es un ordenador\" en un cartel. Los grupos colocarán sus carteles por la sala y explicarán brevemente sus motivaciones para elegir algunas de sus clasificaciones más difíciles.  A continuación, el profesor presentará una definición de ordenador y permitirá a los alumnos revisar sus carteles de acuerdo con la nueva definición.",
           "preparation": "**Para cada grupo** \n\n-   Imprime copias de la guía de actividad. Ten en cuenta que hay dos juegos de imágenes, pero cada grupo sólo necesita un juego.\n-   Tijeras (si no tienes tiempo de cortar las imágenes antes de la clase) \n-   Papel para carteles\n-   Rotuladores o lápices de colores \n-   Pegamento o cinta adhesiva para pegar los dibujos \n\n**Para el profesor**\n\n-   Consulta el foro [\"Sala de Profesores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para profesores verificados donde encontrarás estrategias o recursos adicionales compartidos por otros profesores\n-   Si enseñas virtualmente, considera revisar nuestras [Modificaciones de Lecciones Virtuales](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
@@ -2320,7 +2320,7 @@
           "name": "Eventos de Rebote"
         },
         "coursed-2018/Loops in Ice Age": {
-          "name": "Bucles de la Era de Hielo"
+          "name": "Bucles en la Edad de Hielo"
         },
         "coursed-2018/Loops in Artist": {
           "name": "Dibujar formas con bucles"
@@ -3037,13 +3037,13 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2018/The Problem Solving Process": {
-          "name": "El proceso de resolución de problemas"
+          "name": "El Proceso de Resolución de Problemas"
         },
         "csd1-2018/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
         },
         "csd1-2018/What is a Computer?": {
-          "name": "¿Qué es una computadora?"
+          "name": "¿Qué es un Ordenador?"
         },
         "csd1-2018/Input and Output": {
           "name": "Entrada y salida"
@@ -3148,7 +3148,7 @@
           "name": "Construye un juego de la Guerra de las Galaxias"
         },
         "coursed-2019/Loops in Ice Age": {
-          "name": "Bucles de la Era de Hielo"
+          "name": "Bucles en la Edad de Hielo"
         },
         "coursed-2019/Loops in Artist": {
           "name": "Dibujar formas con bucles"
@@ -3682,13 +3682,13 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2019/The Problem Solving Process": {
-          "name": "El proceso de resolución de problemas"
+          "name": "El Proceso de Resolución de Problemas"
         },
         "csd1-2019/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
         },
         "csd1-2019/What is a Computer?": {
-          "name": "¿Qué es una computadora?"
+          "name": "¿Qué es un Ordenador?"
         },
         "csd1-2019/Input and Output": {
           "name": "Entrada y salida"
@@ -4015,7 +4015,7 @@
           "name": "Bucles en Artista"
         },
         "coursec-2017/Loops in Harvester": {
-          "name": "Bucles en la cosechadora"
+          "name": "Bucles en la Recolectora"
         },
         "coursec-2017/Events: The Big Event": {
           "name": "Eventos: El Gran Evento"
@@ -4387,13 +4387,13 @@
           "name": "Introducción a la resolución de problemas"
         },
         "csd1-2017/The Problem Solving Process": {
-          "name": "El proceso de resolución de problemas"
+          "name": "El Proceso de Resolución de Problemas"
         },
         "csd1-2017/Exploring Problem Solving": {
           "name": "Exploración de la resolución de problemas"
         },
         "csd1-2017/What is a Computer?": {
-          "name": "¿Qué es una computadora?"
+          "name": "¿Qué es un Ordenador?"
         },
         "csd1-2017/Input and Output": {
           "name": "Entrada y salida"
@@ -4973,7 +4973,7 @@
           "name": "Música"
         },
         "coursef-2021/lesson-6": {
-          "name": "Presentamos el Laboratorio de sprites",
+          "name": "Presentación de Laboratorio Sprite",
           "overview": "En esta lección **definida por el contexto**, los estudiantes debatirán sobre el papel de las computadoras y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán aplicaciones similares a las que crearán más adelante.",
           "preparation": "-   Determina cómo los estudiantes inician sesión en Code.org.\n-   Si es necesario, crea cuentas de Code.org para los estudiantes.\n-   Asigna Introducción al Sprite Lab a los estudiantes.\n-   Imprime copias de la hoja de trabajo **\\*Exploración de aplicaciones** (o publica la versión digital en tu LMS).",
           "purpose": "La primera lección busca que los estudiantes se interesen en el curso y conecten sus intereses personales con las ciencias de la computación. ",
@@ -4987,7 +4987,7 @@
           "student_overview": "En esta lección escribirás programas y aprenderás sobre los sprites y comportamientos."
         },
         "coursef-2021/lesson-8": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Esta lección está diseñada para reforzar las habilidades de la lección anterior e introducir a los estudiantes a la programación con eventos. A lo largo de este curso, los eventos serán la principal forma en que los estudiantes cambien la forma en que se ejecutan sus programas con el tiempo o en respuesta al usuario.",
@@ -5333,7 +5333,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "name": "Mis amigos robóticos y repetitivos Jr.",
@@ -5462,7 +5462,7 @@
           "student_overview": "¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva."
         },
         "coursed-2021/Loops in Ice Age": {
-          "name": "Bucles de la Era de Hielo",
+          "name": "Bucles en la Edad de Hielo",
           "overview": "Como una actualización (o introducción) rápida al uso de los bucles, en esta etapa los estudiantes usarán el bloque `repetir` para que Scrat llegue hasta la bellota de la manera más eficiente posible.",
           "preparation": "-   (Opcional) Elige un par de rompecabezas para hacer en grupo con tu clase.\n-   Asegúrese de que cada alumno tenga un diario de reflexión.",
           "purpose": "En esta lección, los estudiantes aprenderán más sobre los bucles y cómo implementarlos en el código de Blockly. El uso de bucles es una habilidad importante en la programación porque repetir manualmente las instrucciones es tedioso e ineficiente. Con estos rompecabezas de Code.org, los estudiantes aprenderán a añadir instrucciones a los bucles existentes, a reunir el código repetido en los bucles y a reconocer los patrones que deben repetirse.",
@@ -5550,7 +5550,7 @@
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Consigue transportadores para que tu clase visualice los ángulos que deben utilizar para completar los rompecabezas.\n-   Imprime un **\\*Folleto del Alumno** para cada estudiante.",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
-          "student_overview": "Programa el Artista para crear imágenes hermosas."
+          "student_overview": "Crea bellas imágenes programando al Artista."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "name": "Aprender sprites con Laboratorio de Sprite",
@@ -5567,7 +5567,7 @@
           "student_overview": "En esta lección escribirás programas y aprenderás sobre los sprites y comportamientos."
         },
         "express-2021/lesson-3": {
-          "name": "Sprites en acción",
+          "name": "Sprites en Acción",
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. ",
           "preparation": "Explora los niveles y revisa las diapositivas de la lección.",
           "purpose": "Esta lección está diseñada para introducir a los estudiantes en la programación con eventos. A lo largo de este curso, los eventos serán la principal forma en que los estudiantes cambian la forma en que sus programas se ejecutan a lo largo del tiempo o en respuesta al usuario.",
@@ -6492,7 +6492,7 @@
           "student_overview": "**Pregunta del día: ¿Qué puede ayudarnos a trabajar juntos y a resolver problemas en equipo?**\n\nTrabajarás con un grupo para diseñar y probar un barco de papel de aluminio que soporte el mayor número posible de monedas de un céntimo. "
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "El proceso de resolución de problemas",
+          "name": "El Proceso de Resolución de Problemas",
           "assessment_opportunities": "1.  **Dado un problema, identificar las acciones individuales que entrarían dentro de cada paso del proceso de resolución de problemas**.\n\n    En la página 2 de la guía de actividad, comprueba que los alumnos han escrito acciones razonables para cada uno de los cuatro pasos del problema que intentan resolver.\n\n2.  **Identificar estrategias útiles dentro de cada paso del proceso de resolución de problemas**\n\n    En la recapitulación, comprueba que los alumnos proponen estrategias eficaces para cada paso del proceso.",
           "overview": "**Pregunta del día: ¿Cuáles son algunos de los pasos comunes que podemos utilizar para resolver diferentes tipos de problemas?**\n\nEsta lección introduce el proceso formal de resolución de problemas que los alumnos utilizarán a lo largo del año: Definir - Preparar - Probar - Reflexionar. La lección comienza pidiendo a los alumnos que realicen una lluvia de ideas sobre los diferentes tipos de problemas que se encuentran en la vida cotidiana. A continuación, se les muestran los cuatro pasos del proceso de resolución de problemas y trabajan juntos para relacionar estos pasos abstractos con sus experiencias reales de resolución de problemas. En primer lugar, los alumnos relacionan estos pasos con las actividades relacionadas con los problemas de la lección anterior, luego con un problema que se les dé bien y por último, con un problema que quieran mejorar. Al final de la lección, la clase recopila una lista de estrategias generalmente útiles para cada paso del proceso que se colocan en carteles que se utilizarán a lo largo de la unidad y del año.",
           "preparation": "Para cada alumno \n\n-   Imprime una copia de la Guía de Actividades\n\nPara la clase\n\n-   Papel para carteles\n-   Rotuladores/lápices de colores",
@@ -6508,7 +6508,7 @@
           "student_overview": "**Pregunta del día: ¿Cómo podemos aplicar el Proceso de Resolución de Problemas a muchos tipos de problemas diferentes?**\n\n¡Hoy aplicarás el Proceso de Resolución de Problemas a tres problemas diferentes que serán cada vez más complejos!"
         },
         "csd1-2021/What is a Computer?": {
-          "name": "¿Qué es una computadora?",
+          "name": "¿Qué es un Ordenador?",
           "assessment_opportunities": "1.  **Identificar un ordenador como una máquina que trabaja con información.**\n\n    En el último debate de la actividad principal, comprueba el razonamiento de los alumnos sobre si un aparato es un ordenador.  Asegúrate de que mencionen que utiliza información o resuelve problemas de información (o de pensamiento).\n\n2.  **Razonar si determinados objetos son o no son ordenadores.**\n\n    En el último debate de la actividad principal, comprueba el razonamiento de los alumnos sobre si un dispositivo es un ordenador.  Asegúrese de que mencionan que utiliza información o resuelve problemas de información (o de pensamiento).\n\n3.  **Elige problemas que puedan resolverse con la informática y justifica esas elecciones.**\n\n    En la actividad de recapitulación, comprueba que los alumnos han elegido problemas de información y han explicado cómo un ordenador obtiene y utiliza la información necesaria para resolver el problema.",
           "overview": "**Pregunta del día: ¿Qué es un ordenador?**\n\nEn esta lección, los alumnos elaboran una definición preliminar de ordenador. Para empezar la lección, la clase hará una lluvia de ideas sobre posibles definiciones de ordenador y colocará los resultados de esta lluvia de ideas en la pizarra. A continuación, los alumnos trabajarán en grupos para clasificar las imágenes en \"es un ordenador\" o \"no es un ordenador\" en un cartel. Los grupos colocarán sus carteles por la sala y explicarán brevemente sus motivaciones para elegir algunas de sus clasificaciones más difíciles.  A continuación, el profesor presentará una definición de ordenador y permitirá a los alumnos revisar sus carteles de acuerdo con la nueva definición.",
           "preparation": "**Para cada grupo** \n\n-   Imprime copias de la guía de actividades. Ten en cuenta que hay dos juegos de imágenes, pero cada grupo sólo necesita un juego.\n-   Tijeras (si no tienes tiempo de cortar las imágenes antes de la clase) \n-   Papel para carteles\n-   Rotuladores o lápices de colores \n-   Pegamento o cinta adhesiva para pegar las imágenes ",
@@ -6904,7 +6904,7 @@
           "name": "Fiesta de Baile"
         },
         "coursed-2020/Loops in Ice Age": {
-          "name": "Bucles de la Era de Hielo"
+          "name": "Bucles en la Edad de Hielo"
         },
         "coursed-2020/Loops in Artist": {
           "name": "Dibujar formas con bucles"

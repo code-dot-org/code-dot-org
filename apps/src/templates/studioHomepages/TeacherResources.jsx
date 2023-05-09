@@ -52,6 +52,6 @@ const styles = {
     width: contentWidth,
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

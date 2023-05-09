@@ -9,7 +9,7 @@ const unhiddenState = Immutable.fromJS({
   initialized: false,
   hideableLessonsAllowed: false,
   lessonsBySection: {},
-  scriptsBySection: {}
+  scriptsBySection: {},
 });
 const hiddenState = unhiddenState.setIn(
   ['lessonsBySection', sectionId.toString(), courseId.toString()],
@@ -35,9 +35,9 @@ const defaultProps = {
     {
       name: 'Section 11',
       id: 11,
-      isAssigned: false
-    }
-  ]
+      isAssigned: false,
+    },
+  ],
 };
 
 export default storybook => {
@@ -47,7 +47,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Plain CourseScript',
-        story: () => <CourseScript {...defaultProps} />
+        story: () => <CourseScript {...defaultProps} />,
       },
       {
         name: 'With teacher info',
@@ -57,7 +57,7 @@ export default storybook => {
             selectedSectionId={sectionId}
             hasNoSections={false}
           />
-        )
+        ),
       },
       {
         name: 'hidden as teacher',
@@ -68,7 +68,7 @@ export default storybook => {
             hasNoSections={false}
             hiddenLessonState={hiddenState}
           />
-        )
+        ),
       },
       {
         name: 'no section selected',
@@ -78,7 +78,7 @@ export default storybook => {
             hasNoSections={false}
             hiddenLessonState={hiddenState}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

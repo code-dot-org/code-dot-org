@@ -56,7 +56,7 @@ $.ajaxTransport('+binary', function (options, originalOptions, jqXHR) {
         xhr.responseType = dataType;
         xhr.send(data);
       },
-      abort: function () {}
+      abort: function () {},
     };
   }
 });

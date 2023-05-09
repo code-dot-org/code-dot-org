@@ -12,12 +12,12 @@ export default class ColumnMenu extends React.Component {
     coerceColumn: PropTypes.func.isRequired,
     handleDelete: PropTypes.func.isRequired,
     handleRename: PropTypes.func.isRequired,
-    isEditable: PropTypes.bool.isRequired
+    isEditable: PropTypes.bool.isRequired,
   };
 
   render() {
     const menuStyle = {
-      visibility: this.props.isEditable ? null : 'hidden'
+      visibility: this.props.isEditable ? null : 'hidden',
     };
     /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
     return (
@@ -56,6 +56,6 @@ export default class ColumnMenu extends React.Component {
 const styles = {
   icon: {
     color: 'white',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

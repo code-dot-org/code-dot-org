@@ -15,13 +15,13 @@ const DEFAULT_SUBLEVEL = {
   letter: 'a',
   perfect: true,
   status: 'perfect',
-  teacher_feedback_review_state: ReviewStates.keepWorking
+  teacher_feedback_review_state: ReviewStates.keepWorking,
 };
 
 const setUp = (isLessonExtra = false, overrideSublevel = {}) => {
   const props = {
     isLessonExtra: isLessonExtra,
-    sublevel: {...DEFAULT_SUBLEVEL, ...overrideSublevel}
+    sublevel: {...DEFAULT_SUBLEVEL, ...overrideSublevel},
   };
   return mount(<SublevelCard {...props} />);
 };
