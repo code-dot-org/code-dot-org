@@ -1,0 +1,11 @@
+  # Browser Event Logs Log Group and Log Stream
+  BrowserEventLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "browser-events-${DashboardSubdomainName}.${BaseDomainName}"
+
+  BrowserEventLogsStream:
+    Type: AWS::Logs::LogStream
+    Properties:
+      LogGroupName: !Ref BrowserEventLogs
+      LogStreamName: !Sub "${DashboardSubdomainName}.${BaseDomainName}"
