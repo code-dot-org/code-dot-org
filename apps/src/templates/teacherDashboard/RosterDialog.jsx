@@ -171,15 +171,42 @@ class RosterDialog extends React.Component {
   // create new function for redirect to NewEditPage
   redirectToEditSectionPage = sectionId => {
     const redirectUrl = '/sections/' + sectionId + '/edit';
-    console.log(redirectUrl);
     window.location.href = redirectUrl;
   };
 
   // Need to update with section ID
   handleRedirect = () => {
-    const redirect = true;
-    this.importClassroom(redirect);
-    this.redirectToEditSectionPage(/*sectionId*/);
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
+    const classrooms = this.props.classrooms;
+    const courseName =
+      classrooms &&
+      classrooms.find(classroom => {
+        return classroom.id === this.state.selectedId;
+      }).name;
+
+    const importSectionUrl =
+      this.props.rosterProvider === OAuthSectionTypes.google_classroom
+        ? '/dashboardapi/import_google_classroom'
+        : '/dashboardapi/import_clever_classroom';
+    const courseId = this.state.selectedId;
+
+    return new Promise((resolve, reject) => {
+      $.getJSON(importSectionUrl, {
+        courseId,
+        courseName,
+      })
+        .done(resolve)
+        .fail(jqxhr =>
+          reject(
+            new Error(`
+            url: ${importSectionUrl}
+            status: ${jqxhr.status}
+            statusText: ${jqxhr.statusText}
+            responseText: ${jqxhr.responseText}
+          `)
+          )
+        );
+    }).then(newSection => this.redirectToEditSectionPage(newSection.id));
   };
 
   cancel = () => {
@@ -213,6 +240,8 @@ class RosterDialog extends React.Component {
         loginType = locale.loginTypeClever();
         break;
     }
+
+    const testingUserId = 7;
 
     return (
       <BaseDialog
@@ -249,7 +278,7 @@ class RosterDialog extends React.Component {
           >
             {locale.dialogCancel()}
           </button>
-          {this.props.userId % 10 === 0 && (
+          {this.props.userId % 10 === testingUserId && (
             <button
               id="import-button"
               type="button"
@@ -264,7 +293,7 @@ class RosterDialog extends React.Component {
               {locale.chooseSection()}
             </button>
           )}
-          {this.props.userId % 10 !== 0 && (
+          {this.props.userId % 10 !== testingUserId && (
             <button
               id="import-button"
               type="button"
