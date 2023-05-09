@@ -10,12 +10,14 @@ require 'optparse'
 
 def command_line_options
   options = {
-    output_filename: 'output.html'
+    output_filename: 'report.html'
   }
   OptionParser.new do |opts|
     opts.banner = "Usage: #{$0} [options]"
 
-    opts.on('-o', '--output_filename FILENAME', String, 'Output filename') do |output_filename|
+    opts.on(
+      '-o', '--output_filename FILENAME', String, 'Output filename within output directory'
+    ) do |output_filename|
       options[:output_filename] = output_filename
     end
 
@@ -217,10 +219,10 @@ def generate_accuracy_table(accuracy_by_criteria)
   accuracy_table
 end
 
-def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors)
+def generate_html_output(output_file, prompt, rubric, accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors)
   link_base_url = "file://#{`pwd`.strip}/sample_code"
 
-  File.open(output_filename, 'w') do |file|
+  File.open(output_file, 'w') do |file|
     file.puts '<!DOCTYPE html>'
     file.puts '<html lang="en">'
     file.puts '<head>'
@@ -260,7 +262,6 @@ def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grade
     file.puts '</body>'
     file.puts '</html>'
   end
-  output_filename
 end
 
 def main
@@ -269,7 +270,7 @@ def main
   prompt_file = 'system_prompt.txt'
   rubric_file = 'rubric.csv'
   expected_grades_file = 'expected_grades.csv'
-  output_filename = options[:output_filename]
+  output_file = "output/#{options[:output_filename]}"
 
   prompt, rubric = read_inputs(prompt_file, rubric_file)
   student_files = get_student_files
@@ -286,8 +287,8 @@ def main
   actual_grades = actual_grades.select(&:last).to_h
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades)
-  output_file = generate_html_output(
-    output_filename, prompt, rubric, overall_accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors
+  generate_html_output(
+    output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, accuracy_by_criteria, errors
   )
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
