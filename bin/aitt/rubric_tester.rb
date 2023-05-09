@@ -9,9 +9,15 @@ require 'parallel'
 require 'optparse'
 
 def command_line_options
-  options = {}
+  options = {
+    output_filename: 'output.html'
+  }
   OptionParser.new do |opts|
     opts.banner = "Usage: #{$0} [options]"
+
+    opts.on('-o', '--output_filename FILENAME', String, 'Output filename') do |output_filename|
+      options[:output_filename] = output_filename
+    end
 
     opts.on(
       '-c', '--use_cached', 'Use cached responses from the API.',
@@ -263,7 +269,7 @@ def main
   prompt_file = 'system_prompt.txt'
   rubric_file = 'rubric.csv'
   expected_grades_file = 'expected_grades.csv'
-  output_filename = ARGV[0] || 'output.html'
+  output_filename = options[:output_filename]
 
   prompt, rubric = read_inputs(prompt_file, rubric_file)
   student_files = get_student_files
