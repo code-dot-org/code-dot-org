@@ -146,7 +146,6 @@
     agree_us_data_transfer_teacher: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
     data_collection_us: "Jeg forstår at Code.org er et non profit-nettsted basert i USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for landet mitt."
     visit_privacy: 'Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å finne ut mer.'
-    additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "elev"

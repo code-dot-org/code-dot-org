@@ -1129,6 +1129,18 @@
             null
           ]
         },
+        "3c242de5-2944-4439-a772-10f0e2bfd48a": {
+          "description": "**Naredite** Učenci naj preberejo pripravljen program in napovejo, kaj se bo zgodilo. Po kliku gumba \"Zaženi\" dajte učencem čas, da razmislijo o vsem, kar se jim zdi zanimivo ali se jim je zdelo zanimivo."
+        },
+        "3d069458-2202-468d-8728-9bfafa300eb7": {
+          "description": "**Pogovorite se** Katere so bile najbolj zanimive odločitve, ki ste jih s temi aplikacijami lahko naredili? Ste si med uporabo kdaj zaželeli, da bi lahko kaj spremenili, a niste imeli izbire?"
+        },
+        "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "description": "#### Gradnja spretnosti in vaja (20 min)\n\nTe aktivnosti so primerne za samostojno učenje ali programiranje v paru.\n\nUčenci naj zaključijo stopnje za gradnjo spretnosti nato pa preostali čas porabijo za vaje, ki jih izberejo med Aktivnostmi za vajo."
+        },
+        "727a30c1-2256-4e3c-aeff-c9a9cf427974": {
+          "description": "### Prosta igra (10 min)\n\nV zadnji stopnji lekcije bodo učenci lahko naredili svoj projekt."
+        },
         "c4709ef3-6dff-44f9-ab00-7c8d4ceb84de": {
           "tips": [
             null
@@ -1468,8 +1480,12 @@
             null
           ]
         },
+        "5fc2cc60-64ea-4c01-8c9e-21280799d17b": {
+          "description": "**Prikaži:** Pokaži prosojnico \"Razmislek\".\n\n**Razmislek:** _Kdaj bi moral končati seznam korakov v zaporedju?_"
+        },
         "9f5921d9-6813-471c-8c16-40e622971021": {
-          "name": "Slovar"
+          "name": "Slovar",
+          "description": "**Pokaži:** Pokaži prosojnico z besediščem\n\n-   **Algoritem** - Zaporedje korakov za dokončanje naloge.\n-   **Hrošč** - Del programa, ki ne deluje pravilno.\n-   **Razhroščevanje** - Iskanje in popravljanje napak v algoritmu ali programu.\n-   **Program** - Algoritem, ki je zapisan v obliki, ki jo lahko zažene stroj"
         },
         "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
           "name": "Uvod"

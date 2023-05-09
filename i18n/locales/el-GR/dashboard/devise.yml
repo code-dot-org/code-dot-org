@@ -50,9 +50,6 @@ el:
       expired: "έχει λήξει, παρακαλώ ζητήστε ένα νέο"
       not_found: "δεν βρέθηκε"
       not_locked: "δεν ήταν κλειδωμένος"
-      not_saved:
-        one: "1 σφάλμα απέτρεψε το  %{resource} να αποθηκευτεί:"
-        other: "%{count} σφάλματα απέτρεψαν την αποθήκευση του %{resource}:"
     invitations:
       send_instructions: 'Έχει αποσταλεί ένα email πρόσκληση στο %{email}.'
       invitation_token_invalid: 'Το κουπόνι πρόσκλησης που παρέχεται δεν είναι έγκυρο!'

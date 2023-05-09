@@ -874,12 +874,14 @@
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Udało się!",
           "Try the following:": "Spróbuj wykonać następujące czynności:",
-          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
+          "change the light": "zmień światło"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ryba",
           "Dog": "Pies",
-          "Cat": "Kot"
+          "Cat": "Kot",
+          "Lizard": "Jaszczurka"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Udało się!",
@@ -891,7 +893,8 @@
           "North": "Północ",
           "South": "Południe",
           "East": "Wschód",
-          "West": "Zachód"
+          "West": "Zachód",
+          "Off": "Wyłącz"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Udało się!",
@@ -1207,11 +1210,13 @@
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "czarny",
-          "white": "biały"
+          "white": "biały",
+          "Update Background": "Aktualizuj tło"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "czarny",
-          "white": "biały"
+          "white": "biały",
+          "Update Background": "Aktualizuj tło"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Radosny",
@@ -1304,22 +1309,26 @@
         "CSD U6 LED toggle": {
           "Success!": "Udało się!",
           "Try the following:": "Spróbuj wykonać następujące czynności:",
-          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
+          "change the light": "zmień światło"
         },
         "CSD U6 LED toggle_2018": {
           "Success!": "Udało się!",
           "Try the following:": "Spróbuj wykonać następujące czynności:",
-          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
+          "change the light": "zmień światło"
         },
         "CSD U6 LED toggle_2019": {
           "Success!": "Udało się!",
           "Try the following:": "Spróbuj wykonać następujące czynności:",
-          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
+          "change the light": "zmień światło"
         },
         "CSD U6 LED toggle_2021": {
           "Success!": "Udało się!",
           "Try the following:": "Spróbuj wykonać następujące czynności:",
-          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz."
+          "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
+          "change the light": "zmień światło"
         },
         "CSD U6 Pedometer": {
           "0": "0",
@@ -3511,12 +3520,14 @@
           "Check Answer!": "Sprawdź odpowiedź!"
         },
         "CSD U6 - Combine Inputs - P_2222": {
-          "pulse": "puls"
+          "pulse": "puls",
+          "Off": "Wyłącz"
         },
         "CSD U6 - Combine Inputs - SB1_2222": {
           "pulse": "puls",
           "short buzz": "krótki szum",
-          "long buzz": "długi szum"
+          "long buzz": "długi szum",
+          "Off": "Wyłącz"
         },
         "CSD U6 - Functions - SB_2222": {
           "Light Show!": "Pokaz świateł!"
@@ -4129,6 +4140,22 @@
         "CSD U6 - Board Outputs - PracC_2222": {
           "Light Off": "Światło wyłączone",
           "Light On": "Światło włączone"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "On": "Włącz",
+          "Off": "Wyłącz"
+        },
+        "CSD U6 - Board Outputs - PracA_2222": {
+          "On": "Włącz",
+          "Off": "Wyłącz"
+        },
+        "CSD U6 - Color LEDs - PracD_2222": {
+          "Left": "W lewo",
+          "Right": "W prawo"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "On": "Włącz",
+          "Off": "Wyłącz"
         }
       }
     }

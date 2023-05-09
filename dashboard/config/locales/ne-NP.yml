@@ -121,8 +121,6 @@ ne:
     valid_password: Valid password!
     invalid_password: Password must be at least 6 characters
     mismatch_password: The two passwords you entered do not match
-    additional_information: We need some additional information to continue signing
-      you up.
     user_type_label: Account Type
     user_type_student: Student
     user_type_teacher: Teacher

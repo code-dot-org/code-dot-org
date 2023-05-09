@@ -7,7 +7,7 @@ wrong '`[0, 0, 2, 7, 2, 4, 8, 5]`'
 right '`[5, 2, 7, 2, 4, 8]`'
 wrong 'An `IndexOutOfBoundsException` will occur.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 The method `remove_num()` removes all occurrences of the integer `0` from `nums`. When the integer `0` is removed from the `ArrayList`, the indices of all subsequent elements are shifted by one to fill the gap. This means that the original index `a` should not be incremented in the case that an element is removed, to avoid skipping over elements that were shifted down by one index.

@@ -6,3 +6,5 @@ wrong 'School and Teacher'
 wrong 'School and Classroom'
 wrong 'Student and Teacher'
 right 'Student and ClassPresident'
+
+allow_multiple_attempts true

@@ -5539,6 +5539,9 @@ uz:
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survey
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
             kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
             baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
@@ -5550,6 +5553,8 @@ uz:
               display_name: 'Chapter 1: Images and Animations'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Games'
+            lessonGroup-4:
+              display_name: Survey
           student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv
             san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va
             kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir
@@ -5562,6 +5567,8 @@ uz:
               display_name: 'Chapter 1: User Centered Design'
             lessonGroup-3:
               display_name: 'Chapter 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Survey
           student_description: Unit 4 introduces the broader social impacts of computing.
             Through a series of design challenges, you will learn how to better understand
             the needs of others while developing a solution to a problem. The second
@@ -5575,6 +5582,8 @@ uz:
               display_name: 'Chapter 1: Representing Information'
             lessonGroup-3:
               display_name: 'Chapter 2: Solving Data Problems'
+            lessonGroup-4:
+              display_name: Survey
           description_short: Learn how people use computers to solve data problems.
           student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi
             ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini
@@ -5590,6 +5599,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Intro to App Lab
+            lessonGroup-5:
+              display_name: Survey
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5787,10 +5798,14 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+            lessonGroup-5:
+              display_name: Survey
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5811,3 +5826,50 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputs and Outputs
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Xush kelibsiz
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kirish
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-kun
+          title: 1-kun
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Wrap Up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2-kun
+          title: 2-kun
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3-kun
+          title: 3-kun
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Wrap Up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4-kun
+          title: 4-kun
+        csd-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-data-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-impact-in-society-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-coding-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-hardware-post-survey-2023:
+          title: Post-Course Survey
+        focus-on-creativity-post-survey-2023:
+          title: Post-Course Survey
