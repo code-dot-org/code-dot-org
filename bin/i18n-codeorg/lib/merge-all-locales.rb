@@ -12,14 +12,7 @@ require 'json'
 # previous translation, update the new_translation with the prev_translation.
 
 def merge_translation_tree(en_translation, new_translation, prev_translation)
-  if !new_translation.is_a?(Hash)
-    # Leaf node, a translation.
-    # New translation equals to English, and old translation already exists
-    if !prev_translation.nil? && new_translation == en_translation &&
-       new_translation != prev_translation
-      new_translation = prev_translation
-    end
-  else
+  if new_translation.is_a?(Hash)
     # Recursive merge for subtree.
     new_translation.each_key do |key|
       next unless en_translation.key?(key) && prev_translation.key?(key)
@@ -33,6 +26,13 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
       unless new_translation.key?(key)
         new_translation[key] = en_translation[key]
       end
+    end
+  else
+    # Leaf node, a translation.
+    # New translation equals to English, and old translation already exists
+    if !prev_translation.nil? && new_translation == en_translation &&
+       new_translation != prev_translation
+      new_translation = prev_translation
     end
   end
   new_translation
