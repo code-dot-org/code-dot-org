@@ -55,3 +55,5 @@ Option II does **not** work. The loop control variable in the `for` loop is init
 
 Option III does **not** work. While the enhanced `for` loop traverses each element of the 1D array `nums`, the condition for the `if` statement uses a variable `index` to attempt to access the current element. This is incorrect because with an enhanced `for` loop, the enhanced `for` loop variable `value` should be used to access the current element and the variable `index` has not been declared and initialized.
 MARKDOWN
+
+allow_multiple_attempts true

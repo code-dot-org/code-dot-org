@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
@@ -50,7 +48,7 @@ function validateType(key, value, type) {
  */
 function validateReport(report) {
   for (var key in report) {
-    if (!report.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(report, key)) {
       continue;
     }
 

@@ -34,7 +34,7 @@ def parse_function_doc(doc_path)
       next
     end
 
-    next unless collecting_params && line.match(/^\|[^-]/) && !line.include?('| Name')
+    next unless collecting_params && line.match(/^\|[^-]/) && line.exclude?('| Name')
     param_name = line.split('|')[1].strip
     param_name_no_brackets = param_name.tr('[]', '')
     param_description = line.split('|')[4].strip

@@ -18,3 +18,5 @@ The program below attempts to draw a blue rectangle but does not work as intende
 <br><br>
 ![](https://images.code.org/ff53ff4ce4f5e8d5a151ddca8a6ba9ea-CSDunit3function.png)
 MARKDOWN
+
+allow_multiple_attempts true

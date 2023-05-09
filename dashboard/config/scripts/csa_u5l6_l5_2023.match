@@ -15,4 +15,4 @@ answer 'a method that requires an object of the class to be created before it ca
 question 'cast'
 answer 'to assign a value of one type to another'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true

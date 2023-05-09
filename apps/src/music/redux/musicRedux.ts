@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {initialProgressState, ProgressState} from '../progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -21,13 +22,24 @@ export const InstructionsPositions = {
 };
 
 interface MusicState {
+  /** If the song is currently playing */
   isPlaying: boolean;
+  /** The current 1-based playhead position, scaled to measures */
   currentPlayheadPosition: number;
+  /** The ID of the currently selected block, or undefined if no block is selected */
   selectedBlockId: string | undefined;
+  /** If the timeline should be positioned at the top above the workspace */
   timelineAtTop: boolean;
+  /** If instructions should be shown */
   showInstructions: boolean;
+  /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
+  /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
+  /** The current list of playback events */
+  playbackEvents: PlaybackEvent[];
+  /** The current last measure of the song */
+  lastMeasure: number;
   // TODO: Currently Music Lab is the only Lab that uses
   // this progres system, but in the future, we may want to
   // move this into a more generic, high-level, lab-agnostic
@@ -43,6 +55,8 @@ const initialState: MusicState = {
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
   isBeatPadShowing: false,
+  playbackEvents: [],
+  lastMeasure: 0,
   currentProgressState: {...initialProgressState},
 };
 
@@ -110,8 +124,40 @@ const musicSlice = createSlice({
     setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
       state.currentProgressState = {...action.payload};
     },
+    clearPlaybackEvents: state => {
+      state.playbackEvents = [];
+      state.lastMeasure = 0;
+    },
+    addPlaybackEvents: (
+      state,
+      action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
+    ) => {
+      state.playbackEvents.push(...action.payload.events);
+      state.lastMeasure = action.payload.lastMeasure;
+    },
   },
 });
+
+// Selectors
+export const getCurrentlyPlayingBlockIds = (state: {
+  music: MusicState;
+}): string[] => {
+  const {currentPlayheadPosition, playbackEvents} = state.music;
+  const playingBlockIds: string[] = [];
+
+  playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
+    const currentlyPlaying =
+      currentPlayheadPosition !== 0 &&
+      currentPlayheadPosition >= playbackEvent.when &&
+      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+
+    if (currentlyPlaying) {
+      playingBlockIds.push(playbackEvent.blockId);
+    }
+  });
+
+  return playingBlockIds;
+};
 
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then
 // registering reducers should happen there. We are registering reducers here for now
@@ -133,4 +179,6 @@ export const {
   hideBeatPad,
   toggleBeatPad,
   setCurrentProgressState,
+  clearPlaybackEvents,
+  addPlaybackEvents,
 } = musicSlice.actions;

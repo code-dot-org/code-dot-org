@@ -33,7 +33,7 @@ class Block < ApplicationRecord
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Unit.should_cache? && !Block.all_pool_names.include?(pool)
+    if Unit.should_cache? && Block.all_pool_names.exclude?(pool)
       return nil
     end
 

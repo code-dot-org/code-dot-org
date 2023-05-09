@@ -199,11 +199,6 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Enabled: false
 
-# Offense count: 19
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Rails/NegateInclude:
-  Enabled: false
-
 # Offense count: 41
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: Include.
@@ -483,11 +478,6 @@ Style/RedundantInitialize:
 Style/RedundantParentheses:
   Enabled: false
 
-# Offense count: 23
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantPercentQ:
-  Enabled: false
-
 # Offense count: 26
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantRegexpCharacterClass:
@@ -545,11 +535,4 @@ Style/TernaryParentheses:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
-  Enabled: false
-
-# Offense count: 13
-# This cop supports unsafe auto-correction (--auto-correct-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: forbid_for_all_comparison_operators, forbid_for_equality_operators_only, require_for_all_comparison_operators, require_for_equality_operators_only
-Style/YodaCondition:
   Enabled: false

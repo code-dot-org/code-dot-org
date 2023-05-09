@@ -11,3 +11,4 @@ wrong 'moveFast()'
 right 'turnLeft()'
 right 'canMove()'
 wrong 'turnAround()'
+allow_multiple_attempts true

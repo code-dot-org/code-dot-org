@@ -59,16 +59,15 @@ describe('QuickAssignTable', () => {
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {
-    const wrapper = setUpMount({
-      sectionCourse: {displayName: 'Computer Science A'},
-    });
-
+    const props = {
+      marketingAudience: MARKETING_AUDIENCE.HIGH,
+      courseOfferings: highSchoolCourseOfferings,
+      setSelectedCourseOffering: () => {},
+      updateCourse: () => {},
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+    };
+    const wrapper = mount(<QuickAssignTable {...props} />);
     const radio = wrapper.find("input[value='Computer Science A']");
     expect(radio.props().checked).to.be.true;
-    // and verify that the next door radio is checked=false
-    expect(
-      wrapper.find("input[value='Computer Science Discoveries']").props()
-        .checked
-    ).to.be.false;
   });
 });

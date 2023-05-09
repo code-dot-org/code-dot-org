@@ -15,3 +15,5 @@ A student is using a stylesheet to make all the paragraphs on the website green,
 1. The student did not upload the images used in the index.html page.
 1. The student accidentally misspelled “green” in the stylesheet.
 MARKDOWN
+
+allow_multiple_attempts true
