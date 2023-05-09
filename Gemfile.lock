@@ -285,6 +285,8 @@ GEM
       rack (>= 0.9.0)
     bindata (2.4.10)
     bindex (0.8.1)
+    bootsnap (1.16.0)
+      msgpack (~> 1.2)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -555,6 +557,7 @@ GEM
       ruby-progressbar
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    msgpack (1.7.0)
     multi_json (1.15.0)
     multi_test (0.1.2)
     multi_xml (0.5.5)
@@ -939,6 +942,7 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
+  bootsnap (>= 1.14.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.2.0)
