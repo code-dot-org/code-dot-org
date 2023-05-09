@@ -6,6 +6,28 @@ require 'httparty'
 require 'nokogiri'
 require 'open3'
 require 'parallel'
+require 'optparse'
+
+def command_line_options
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner = "Usage: #{$0} [options]"
+
+    opts.on(
+      '-c', '--use_cached', 'Use cached responses from the API.',
+      'This can be useful when debugging a problem with the tool,',
+      'or if one of the API requests failed in the previous run.'
+    ) do
+      options[:use_cached] = true
+    end
+
+    opts.on("-h", "--help", "Prints this help message") do
+      puts opts
+      exit
+    end
+  end.parse!
+  options
+end
 
 def read_inputs(prompt_file, rubric_file)
   prompt = File.read(prompt_file)
@@ -55,7 +77,13 @@ def validate_server_response(tsv_data, rubric)
   [true, nil]
 end
 
-def grade_student_work(prompt, rubric, student_code, student_id)
+def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false)
+  if use_cached && File.exist?("cached_responses/#{student_id}.txt")
+    cached_response = File.read("cached_responses/#{student_id}.txt")
+    tsv_data = parse_tsv(cached_response.strip)
+    return tsv_data.map(&:to_h)
+  end
+
   api_url = 'https://api.openai.com/v1/chat/completions'
   headers = {
     'Content-Type' => 'application/json',
@@ -81,6 +109,7 @@ def grade_student_work(prompt, rubric, student_code, student_id)
     tsv_data = parse_tsv(completed_text.strip)
     valid, reason = validate_server_response(tsv_data, rubric)
     if valid
+      File.write("cached_responses/#{student_id}.txt", completed_text)
       tsv_data.map(&:to_h)
     else
       puts "#{student_id} Invalid api response: #{reason}\n#{completed_text}}"
@@ -229,6 +258,7 @@ def generate_html_output(output_filename, prompt, rubric, accuracy, actual_grade
 end
 
 def main
+  options = command_line_options
   main_start_time = Time.now
   prompt_file = 'system_prompt.txt'
   rubric_file = 'rubric.csv'
@@ -242,7 +272,7 @@ def main
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    [student_id, grade_student_work(prompt, rubric, student_code, student_id)]
+    [student_id, grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached])]
   end
 
   # skip students with invalid api response
