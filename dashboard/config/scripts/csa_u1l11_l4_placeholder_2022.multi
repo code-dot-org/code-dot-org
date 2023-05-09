@@ -12,3 +12,5 @@ The following code segment has a logic error, but the programmer is having troub
 
 Where should they add a `System.out.print()`? What information should they print?
 MARKDOWN
+
+allow_multiple_attempts true

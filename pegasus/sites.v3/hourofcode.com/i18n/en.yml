@@ -120,6 +120,9 @@
   pl_superhero_title: "Help students become superheroes!"
   pl_superhero_desc: "Join our highly supportive Professional Learning Program for middle and high school educators."
 
+  teach_ai_homepage_banner_title: "AI education for the world"
+  teach_ai_homepage_banner_desc: "Code.org is part of TeachAI, dedicated to empowering educators everywhere to teach with AI and about AI."
+
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
@@ -155,8 +158,7 @@
   teachai_launch_blog_desc_01: "Education, nonprofit, and tech leaders come together to offer guidance on integrating AI safely into classrooms worldwide"
   teachai_launch_blog_desc_02: "TeachAI aims to integrate AI education into primary and secondary curricula around the world through new reports, policy recommendations, and public engagement opportunities."
 
-  ai_hero_heading_01: "Artificial intelligence isn't magic…"
-  ai_hero_heading_02: "It's just code!"
+  ai_hero_heading: "Artificial intelligence isn't magic… It's just code!"
   ai_hero_desc: "Demystify artificial intelligence (AI) by learning how it's changing the ways we live, work, and learn."
   ai_intro_heading: "Why learn about AI?"
   ai_intro_video_title: "Why AI Matters with Deb Raji"

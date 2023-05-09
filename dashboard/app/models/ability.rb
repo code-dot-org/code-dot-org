@@ -443,7 +443,7 @@ class Ability
         user.permission?(UserPermission::LEVELBUILDER)
       end
 
-      can :use_main_javabuilder, :javabuilder_session do
+      can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
     end

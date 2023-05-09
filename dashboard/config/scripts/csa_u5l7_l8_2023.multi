@@ -7,7 +7,7 @@ right '`{{0, 1}, {0, 1}}`'
 wrong '`{{0, 0, 1}, {0, 0, 1}}`'
 wrong '`{{0, 0, 0, 1}, {0, 0, 0, 1}}`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following method, `shift`, which is intended to shift the elements of `arr` one to the left. For example, if `arr` contains `{{1, 2, 3}, {4, 5, 6}}`, then `shift(arr)` should return `{{2, 3, 1}, {5, 6, 4}}`.

@@ -26,3 +26,5 @@ public static int[][] reverse(int[][] arr) {
 
 What choice could replace `/* missing statement */` so that `reverse` works as intended?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -40,3 +40,5 @@ for (int num: numbers) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

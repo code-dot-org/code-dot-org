@@ -159,6 +159,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -783,7 +784,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]

@@ -106,8 +106,6 @@ bs:
     valid_password: Ispravna lozinka!
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
     mismatch_password: Dvije lozinke koje ste unijeli se ne podudaraju
-    additional_information: Trebamo dodatne informacije kako bismo nastavili vašu
-      prijavu.
     user_type_label: Tip računa
     user_type_student: Učenik
     user_type_teacher: Učitelj

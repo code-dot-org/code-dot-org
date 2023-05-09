@@ -7,7 +7,7 @@ wrong '9'
 wrong '10'
 wrong '11'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Suppose the `binarySearch` method is called with an array containing 10 elements sorted in increasing order. What is the maximum number of times that the statement indicated by `/* calculate midpoint */` could execute?

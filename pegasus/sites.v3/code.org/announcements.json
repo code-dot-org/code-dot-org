@@ -2,7 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/home": "superhero"
+    "/home": "ai-launch-2023",
+    "/courses": "ai-launch-2023"
   },
   "banners": {
     "csleadersprize": {
@@ -143,6 +144,14 @@
       "buttonText": "Try it",
       "buttonUrl": "https://code.org/coldplay",
       "buttonId": "coldplay"
+    },
+    "ai-launch-2023": {
+      "image": "/shared/images/announcement/announcement_special_ai-launch_2023.png",
+      "title": "AI education for the world ",
+      "body": "See how we're planning to bring AI education to students around the world.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai",
+      "buttonId": "ai-launch-2023"
     }
   }
 }

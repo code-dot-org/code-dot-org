@@ -1723,7 +1723,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
@@ -1763,7 +1763,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
@@ -2272,7 +2272,7 @@ class User < ApplicationRecord
   end
 
   def within_united_states?
-    'United States' == user_geos.first&.country
+    user_geos.first&.country == 'United States'
   end
 
   def associate_with_potential_pd_enrollments

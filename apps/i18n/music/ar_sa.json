@@ -1,2 +1,20 @@
 {
+  "blockly_blockPlaySoundTooltip": "تشغيل صوت",
+  "blockly_blockPlaySoundAtMeasureTooltip": "تشغيل صوت",
+  "blockly_blockRepeatTooltip": "تكرار",
+  "blockly_blockRestTooltip": "استراحة",
+  "blockly_blockWhenRun": "عند التشغيل",
+  "blockly_blockWhenRunTooltip": "عند التشغيل",
+  "blockly_functionNamePlaceholder": "وظيفتي",
+  "blockly_toolboxCategoryEffects": "المؤثرات",
+  "blockly_toolboxCategoryEvents": "الأحداث",
+  "blockly_toolboxCategoryFunctions": "دوال",
+  "blockly_toolboxCategoryLogic": "المنطق",
+  "blockly_toolboxCategoryMath": "العمليات الحسابية",
+  "blockly_toolboxCategoryPlay": "العب",
+  "blockly_toolboxCategoryVariables": "المتغيرات",
+  "feedback": "الملاحظات",
+  "share": "المشاركة",
+  "startOver": "البدء من جديد",
+  "upload": "تحميل"
 }

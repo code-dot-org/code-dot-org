@@ -40,8 +40,9 @@ const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
-  // These first fields never change after initialization
   currentLevelId: null,
+
+  // These first fields never change after initialization
   currentLessonId: null,
   deeperLearningCourse: null,
   // used on multi-page assessments
@@ -84,15 +85,63 @@ const initialState = {
 /**
  * Thunks
  */
+
+// The user has navigated to a new level in the current lesson,
+// so we should update the browser and also set this as the new
+// current level.
 export function navigateToLevelId(levelId) {
   return (dispatch, getState) => {
     const state = getState().progress;
-    const newLevel = state.lessons[0].levels.find(level =>
-      level.ids.find(id => id === levelId)
+    const newLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
     );
 
     updateBrowserForLevelNavigation(state, newLevel.url, levelId);
     dispatch(setCurrentLevelId(levelId));
+  };
+}
+
+// The user has successfully completed the level and the page
+// will not be reloading.
+export function sendSuccessReport(appType) {
+  return (dispatch, getState) => {
+    const state = getState().progress;
+    const levelId = state.currentLevelId;
+    const currentLevel = getLevelById(
+      state.lessons,
+      state.currentLessonId,
+      levelId
+    );
+    const scriptLevelId = currentLevel.id;
+
+    // The server does not appear to use the user ID parameter,
+    // so just pass 0, like some other milestone posts do.
+    const userId = 0;
+
+    // An ideal score.
+    const idealPassResult = TestResults.ALL_PASS;
+
+    const data = {
+      app: appType,
+      result: true,
+      testResult: idealPassResult,
+    };
+
+    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => {
+      if (response.ok) {
+        // Update the progress store by merging in this
+        // particular result immediately.
+        dispatch(mergeResults({[levelId]: idealPassResult}));
+      }
+    });
   };
 }
 
@@ -109,7 +158,7 @@ export default function reducer(state = initialState, action) {
     // extract fields we care about from action
     return {
       ...state,
-      currentLevelId: action.currentLevelId,
+      currentLevelId: state.currentLevelId || action.currentLevelId,
       deeperLearningCourse: action.deeperLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       lessons: processedLessons(lessons, action.deeperLearningCourse),
@@ -409,6 +458,16 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     }
   });
 };
+
+/**
+ * Given an array of lessons, a lesson ID, and a level ID, returns
+ * the requested level.
+ */
+function getLevelById(lessons, lessonId, levelId) {
+  return lessons
+    .find(lesson => lesson.id === lessonId)
+    .levels.find(level => level.ids.find(id => id === levelId));
+}
 
 // Action creators
 export const initProgress = ({

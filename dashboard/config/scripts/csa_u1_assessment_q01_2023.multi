@@ -38,3 +38,5 @@ Since the `Painter` object is now facing south, the condition for the `while` lo
 
 ![](https://images.code.org/5a385ba1a5e2c3c3ba23419d14623118-image-1669132433838.png)
 MARKDOWN
+
+allow_multiple_attempts true

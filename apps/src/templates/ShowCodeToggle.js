@@ -49,7 +49,7 @@ class ShowCodeButton extends Component {
     };
     const blocksGlyphIcon = (
       <i style={blockGlyphIconStyle}>
-        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} />
+        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
       </i>
     );
     return (

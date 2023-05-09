@@ -158,4 +158,15 @@ export const AuthorizerSignalType = {
   NEAR_LIMIT: 'NEAR_LIMIT',
   USER_BLOCKED: 'USER_BLOCKED',
   CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED',
+  USER_BLOCKED_TEMPORARY: 'USER_BLOCKED_TEMPORARY',
+};
+
+export const JavabuilderLockoutType = {
+  PERMANENT: 'PERMANENT',
+  TEMPORARY: 'TEMPORARY',
+};
+
+export const JavabuilderLockoutPeriod = {
+  DAY: 'DAY',
+  HOUR: 'HOUR',
 };

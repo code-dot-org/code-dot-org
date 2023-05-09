@@ -1,4 +1,3 @@
-/* globals fetch */
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 

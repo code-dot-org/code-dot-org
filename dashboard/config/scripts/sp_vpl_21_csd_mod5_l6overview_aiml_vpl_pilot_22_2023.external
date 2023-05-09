@@ -18,8 +18,8 @@ markdown <<MARKDOWN
 * ##### Use data visualization tools to decide which features to include when training a model.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 Selecting labels and features</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:165px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🏷️ Selecting labels and features</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:200px;">
     <p>
 <img src="https://images.code.org/da2edc2f9785327ad83d10cd0887df82-image-1636138191377.47.43 PM.png" alt="Image of shapes of various colors and sizes" style="float:left; height: 250px; margin-left:10px; margin-right:30px;">
 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 Using data visualization tools</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">📊 Using data visualization tools</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 

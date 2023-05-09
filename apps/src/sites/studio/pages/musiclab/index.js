@@ -6,9 +6,12 @@ import {getStore} from '@cdo/apps/redux';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 
 $(document).ready(function () {
+  const channelId = document.querySelector('script[data-channelid]').dataset
+    .channelid;
+
   ReactDOM.render(
     <Provider store={getStore()}>
-      <MusicLabView />
+      <MusicLabView appOptions={{channel: channelId, app: 'music'}} />
     </Provider>,
     document.getElementById('musiclab-container')
   );
