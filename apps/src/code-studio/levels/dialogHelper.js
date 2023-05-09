@@ -1,4 +1,3 @@
-/* globals appOptions */
 import $ from 'jquery';
 import React from 'react';
 import PlayZone from '../components/playzone';
@@ -9,7 +8,7 @@ import experiments from '@cdo/apps/util/experiments';
 import Sounds from '../../Sounds';
 import {
   LegacyErrorDialog,
-  LegacySuccessDialog
+  LegacySuccessDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
@@ -35,7 +34,7 @@ export function showDialog(component, callback, onHidden) {
     // Content is a div with a specific expected structure. See LegacyDialog.
     body: content,
     onHidden,
-    autoResizeScrollableElement: '.scrollable-element'
+    autoResizeScrollableElement: '.scrollable-element',
   });
 
   // Note: This approach of rendering a React component to the dom and then
@@ -75,7 +74,7 @@ function adjustScroll() {
   if (winPos < elPos) {
     $('html, body').animate(
       {
-        scrollTop: $('.submitButton:first').offset().top - 10
+        scrollTop: $('.submitButton:first').offset().top - 10,
       },
       1000
     );
@@ -169,7 +168,7 @@ export function processResults(onComplete, beforeHook) {
           const dialog = new LegacyDialog({
             body: body,
             width: 800,
-            redirect: lastServerResponse.nextRedirect
+            redirect: lastServerResponse.nextRedirect,
           });
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
@@ -185,7 +184,7 @@ export function processResults(onComplete, beforeHook) {
             window.location.href = lastServerResponse.nextRedirect;
           }
         }
-      }
+      },
     });
   }
 }

@@ -11,18 +11,18 @@ module.exports = function (app) {
         levels: {
           levels: require('@cdo/apps/maze/levels'),
           karelLevels: require('@cdo/apps/maze/karelLevels'),
-          wordsearchLevels: require('@cdo/apps/maze/wordsearchLevels')
+          wordsearchLevels: require('@cdo/apps/maze/wordsearchLevels'),
         },
-        blocks: require('@cdo/apps/maze/blocks')
+        blocks: require('@cdo/apps/maze/blocks'),
       };
     };
   } else if (app === 'calc') {
     appCache[app] = function () {
       return {
         levels: {
-          levels: require('@cdo/apps/calc/levels')
+          levels: require('@cdo/apps/calc/levels'),
         },
-        blocks: require('@cdo/apps/calc/blocks')
+        blocks: require('@cdo/apps/calc/blocks'),
       };
     };
   } else if (app === 'turtle') {
@@ -30,18 +30,18 @@ module.exports = function (app) {
       return {
         skins: require('@cdo/apps/turtle/skins'),
         levels: {
-          levels: require('@cdo/apps/turtle/levels')
+          levels: require('@cdo/apps/turtle/levels'),
         },
-        blocks: require('@cdo/apps/turtle/blocks')
+        blocks: require('@cdo/apps/turtle/blocks'),
       };
     };
   } else if (app === 'eval') {
     appCache[app] = function () {
       return {
         levels: {
-          levels: require('@cdo/apps/eval/levels')
+          levels: require('@cdo/apps/eval/levels'),
         },
-        blocks: require('@cdo/apps/eval/blocks')
+        blocks: require('@cdo/apps/eval/blocks'),
       };
     };
   } else if (app === 'studio') {
@@ -49,9 +49,9 @@ module.exports = function (app) {
       return {
         skins: require('@cdo/apps/studio/skins'),
         levels: {
-          levels: require('@cdo/apps/studio/levels')
+          levels: require('@cdo/apps/studio/levels'),
         },
-        blocks: require('@cdo/apps/studio/blocks')
+        blocks: require('@cdo/apps/studio/blocks'),
       };
     };
   } else if (app === 'craft') {
@@ -59,9 +59,9 @@ module.exports = function (app) {
       return {
         skins: require('@cdo/apps/craft/simple/skins'),
         levels: {
-          levels: require('@cdo/apps/craft/simple/levels')
+          levels: require('@cdo/apps/craft/simple/levels'),
         },
-        blocks: require('@cdo/apps/craft/simple/blocks')
+        blocks: require('@cdo/apps/craft/simple/blocks'),
       };
     };
   } else if (app === 'applab') {
@@ -69,8 +69,8 @@ module.exports = function (app) {
       return {
         skins: require('@cdo/apps/applab/skins'),
         levels: {
-          levels: require('@cdo/apps/applab/levels')
-        }
+          levels: require('@cdo/apps/applab/levels'),
+        },
       };
     };
   } else if (app === 'gamelab') {
@@ -78,8 +78,8 @@ module.exports = function (app) {
       return {
         skins: require('@cdo/apps/p5lab/skins'),
         levels: {
-          levels: require('@cdo/apps/p5lab/levels')
-        }
+          levels: require('@cdo/apps/p5lab/levels'),
+        },
       };
     };
   }

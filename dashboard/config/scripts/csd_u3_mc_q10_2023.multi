@@ -1,10 +1,12 @@
 name 'CSD U3 MC Q10_2023'
 type 'multi2'
-question 'Which of the following programs correctly draws a rectangle at a random x position? (Select all that apply)'
-right '![](https://images.code.org/d81b7883043e495b71ecd31414a24a0f-CSDunit3random1.png)'
-right '![](https://images.code.org/159245ee4c20299e02ad923c0099ff77-CSDunit3random2.png)'
-wrong '![](https://images.code.org/4e7a1638e4645991cc8b4be8980458cd-CSDunit3random3.png)'
-wrong '![](https://images.code.org/3a54a9c772067bb784fa6d128d761171-CSDunit3random4.png)'
+question 'Which of the following programs correctly draws a rectangle at a random x position? (Select two)'
+right '![](https://images.code.org/e4ff593bc5e40a2d06fbd2951d856abf-Q7a.png)'
+right '![](https://images.code.org/f59580338cd356b19a777f4f82445f6e-Q7b.png)'
+wrong '![](https://images.code.org/3078be2fb61a7cf602aca3c4cea94ec7-Q7c.png)'
+wrong '![](https://images.code.org/4695aeb79a351056af610ab2b34551f1-Q7d.png)'
 teacher_markdown <<MARKDOWN
 **Content: Unit 3 Lesson 6**
 MARKDOWN
+
+allow_multiple_attempts true

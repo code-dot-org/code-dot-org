@@ -32,6 +32,7 @@ class CourseOffering < ApplicationRecord
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}
+  validate :grade_levels_format
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -75,6 +76,16 @@ class CourseOffering < ApplicationRecord
     CourseVersion.add_course_version(offering, content_root)
 
     offering
+  end
+
+  def latest_published_version
+    course_versions.select do |cv|
+      cv.content_root.launched?
+    end.max_by(&:version_year)
+  end
+
+  def path_to_latest_published_version
+    latest_published_version.content_root.link
   end
 
   def self.should_cache?
@@ -210,6 +221,19 @@ class CourseOffering < ApplicationRecord
     }
   end
 
+  def summarize_for_catalog
+    {
+      key: key,
+      display_name: display_name,
+      grade_levels: grade_levels,
+      image: image,
+      cs_topic: cs_topic,
+      school_subject: school_subject,
+      device_compatibility: device_compatibility,
+      course_version_path: path_to_latest_published_version
+    }
+  end
+
   def serialize
     {
       key: key,
@@ -297,5 +321,38 @@ class CourseOffering < ApplicationRecord
 
   def high_school_level?
     grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
+  end
+
+  private def grade_levels_format
+    return true if grade_levels.nil?
+
+    grade_levels_regex = /^[K|\d]+(,?\d)*$/
+    unless grade_levels_regex.match?(grade_levels)
+      errors.add(:grade_levels, "must be comma-separated values with optional K first and digits")
+      return false
+    end
+
+    array_of_grades = grade_levels.split(',')
+
+    unless array_of_grades.length == array_of_grades.uniq.length
+      errors.add(:grade_levels, "cannot contain duplicate grades")
+      return false
+    end
+
+    array_of_grades.delete("K")
+    return true if array_of_grades.empty?
+
+    array_of_integer_grades = array_of_grades.map(&:to_i)
+    unless array_of_integer_grades.all? {|grade| (1..12).cover?(grade)}
+      errors.add(:grade_levels, "numbers must be between 1 and 12, inclusive")
+      return false
+    end
+
+    unless array_of_integer_grades == (array_of_integer_grades.first..array_of_integer_grades.last).to_a
+      errors.add(:grade_levels, "must be consecutive and sorted")
+      return false
+    end
+
+    true
   end
 end

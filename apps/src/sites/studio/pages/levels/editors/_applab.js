@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 import {
   configMicrobit,
   configCircuitPlayground,
-  getMakerBlocks
+  getMakerBlocks,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 
 $(document).ready(function () {
@@ -54,11 +54,11 @@ $(document).ready(function () {
 
   const styles = {
     optgroup: {
-      color: color.light_gray
+      color: color.light_gray,
     },
     option: {
-      color: color.black
-    }
+      color: color.black,
+    },
   };
 
   const data = getScriptData('applabOptions');
@@ -70,7 +70,9 @@ $(document).ready(function () {
   );
   class DataLibrary extends React.Component {
     state = {
-      value: data.data_library_tables ? data.data_library_tables.split(',') : []
+      value: data.data_library_tables
+        ? data.data_library_tables.split(',')
+        : [],
     };
 
     handleChange = event => {

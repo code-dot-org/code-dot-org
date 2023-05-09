@@ -8,7 +8,7 @@ import style from './duplicate-element-button.module.scss';
  */
 class DuplicateElementButton extends React.Component {
   static propTypes = {
-    handleDuplicate: PropTypes.func.isRequired
+    handleDuplicate: PropTypes.func.isRequired,
   };
 
   handleDuplicate = event => this.props.handleDuplicate();

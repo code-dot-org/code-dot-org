@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AllVocabulariesEditor from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
 import vocabulariesEditor, {
-  initVocabularies
+  initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -14,7 +14,7 @@ $(document).ready(function () {
   const courseName = getScriptData('courseName');
 
   registerReducers({
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
   });
   const store = getStore();
   store.dispatch(initVocabularies(vocabularies || []));

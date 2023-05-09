@@ -14,19 +14,19 @@ export default class FacilitatorListFormPart extends React.Component {
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        email: PropTypes.string
+        email: PropTypes.string,
       })
     ),
     facilitators: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        email: PropTypes.string
+        email: PropTypes.string,
       })
     ).isRequired,
     course: PropTypes.string.isRequired,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
   };
 
   handleAddClick = () => {
@@ -140,7 +140,7 @@ export default class FacilitatorListFormPart extends React.Component {
       facilitators.length > 1 ? this.renderRemoveButton(i) : null;
 
     const facilitatorOptions = [
-      this.renderFacilitatorOption(facilitator)
+      this.renderFacilitatorOption(facilitator),
     ].concat(
       filteredAvailableFacilitators.map(f => this.renderFacilitatorOption(f))
     );
@@ -202,6 +202,6 @@ const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
-  }
+    border: 'none',
+  },
 };

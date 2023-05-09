@@ -10,8 +10,8 @@ exports.default = function reducer(state, action) {
         {
           message: action.message,
           error_type: action.error_type,
-          error_cause: action.error_cause
-        }
+          error_cause: action.error_cause,
+        },
       ].concat(state);
     case DISMISS_ERROR:
       if (state.length > 0) {
@@ -33,7 +33,7 @@ exports.reportError = function (message, error_type, error_cause) {
     type: REPORT_ERROR,
     message: message,
     error_type: error_type,
-    error_cause: error_cause
+    error_cause: error_cause,
   };
 };
 
@@ -43,6 +43,6 @@ exports.reportError = function (message, error_type, error_cause) {
  */
 exports.dismissError = function () {
   return {
-    type: DISMISS_ERROR
+    type: DISMISS_ERROR,
   };
 };

@@ -9,8 +9,8 @@ const studentData = [
     username: 'studenta',
     userType: 'student',
     secretWords: 'secret words',
-    secretPicturePath: 'wizard.jpg'
-  }
+    secretPicturePath: 'wizard.jpg',
+  },
 ];
 
 export default storybook => {

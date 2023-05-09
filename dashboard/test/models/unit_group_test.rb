@@ -260,7 +260,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if unit_group has plc_course" do
-    unit_group = UnitGroup.new(family_name: 'plc')
+    unit_group = create :unit_group, family_name: 'plc'
     unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
     unit_group.save
 

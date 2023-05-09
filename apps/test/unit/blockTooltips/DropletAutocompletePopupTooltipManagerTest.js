@@ -18,7 +18,7 @@ describe('DropletAutocompletePopupTooltipManager', () => {
 
       // Mock a DropletTooltipManager.
       let tooltipManager = DropletTooltipManagerStub({
-        showExamplesLink: 'http://example.com/examples'
+        showExamplesLink: 'http://example.com/examples',
       });
 
       // Create the popup tooltip manager class.

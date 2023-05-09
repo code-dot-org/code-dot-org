@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-04-12 21:30:31 UTC",
+    "serialized_at": "2023-04-28 18:53:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -772,6 +773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_widget_2023"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -794,6 +798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2023"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -816,6 +823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_title_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -838,6 +848,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_background_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -860,6 +873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -882,6 +898,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_location_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -904,6 +923,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -926,6 +948,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_prop_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -948,6 +973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -970,6 +998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2023"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -992,6 +1023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_predict_wonder_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1014,6 +1048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_clicksay_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1036,6 +1073,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_print_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1058,6 +1098,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_prompt_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1080,6 +1123,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_promptanswered_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1102,6 +1148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1124,6 +1173,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_survey_L1_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1145,6 +1197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_title_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1167,6 +1222,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_background_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1189,6 +1247,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1211,6 +1272,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_say2_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1233,6 +1297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_extensions_choice_2023"
+        ],
         "progression": "Extend Your Book Cover!"
       },
       "bonus": false,
@@ -1255,6 +1322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1277,6 +1347,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_survey_L2_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1298,6 +1371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcovers_markdown_lesson_4"
+        ],
         "progression": "Sharing Your Book Cover"
       },
       "bonus": false,

@@ -28,8 +28,8 @@ describe('StandardsViewHeaderButtons', () => {
             id: 2,
             name: 'Lesson Name',
             number: 1,
-            url: 'fakeurl.com'
-          }
+            url: 'fakeurl.com',
+          },
         ]}
       />
     );
@@ -49,8 +49,8 @@ describe('StandardsViewHeaderButtons', () => {
             id: 2,
             name: 'Lesson Name',
             number: 1,
-            url: 'fakeurl.com'
-          }
+            url: 'fakeurl.com',
+          },
         ]}
       />
     );

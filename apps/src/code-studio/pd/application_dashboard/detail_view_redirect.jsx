@@ -13,12 +13,12 @@ import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboa
 export default class DetailViewRedirect extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
-    }).isRequired
+      applicationId: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleApplicationLoaded = applicationData => {

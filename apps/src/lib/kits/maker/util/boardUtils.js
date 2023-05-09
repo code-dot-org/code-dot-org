@@ -3,7 +3,7 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID,
   MICROBIT_PID,
-  MICROBIT_VID
+  MICROBIT_VID,
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import DCDO from '@cdo/apps/dcdo';
@@ -13,7 +13,7 @@ export const BOARD_TYPE = {
   CLASSIC: 'classic',
   EXPRESS: 'express',
   MICROBIT: 'microbit',
-  OTHER: 'other'
+  OTHER: 'other',
 };
 /**
  * Detects the type of board plugged into the serial port. Defaults to BOARD_TYPE.OTHER.
@@ -76,7 +76,7 @@ export const SERIAL_BAUD = 57600;
 export const WEB_SERIAL_FILTERS = [
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
-  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
+  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID},
 ];
 
 export const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

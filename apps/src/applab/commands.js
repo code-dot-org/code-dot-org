@@ -15,7 +15,7 @@ import {
   apiValidateTypeAndRange,
   getAsyncOutputWarning,
   outputError,
-  outputWarning
+  outputWarning,
 } from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
@@ -98,7 +98,7 @@ function apiValidateDomIdExistence(
       allowCodeElements: true,
       allowDesignPrefix: true,
       allowDesignElements: true,
-      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+      allowTurtleCanvas: Boolean(opts.turtleCanvas),
     };
     var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
@@ -1209,7 +1209,7 @@ applabCommands.showElement = function (opts) {
   return applabCommands.setProperty({
     elementId: opts.elementId,
     property: 'hidden',
-    value: false
+    value: false,
   });
 };
 
@@ -1217,7 +1217,7 @@ applabCommands.hideElement = function (opts) {
   return applabCommands.setProperty({
     elementId: opts.elementId,
     property: 'hidden',
-    value: true
+    value: true,
   });
 };
 
@@ -1572,7 +1572,7 @@ function filterUrl(urlToCheck) {
     method: 'POST',
     contentType: 'application/json',
     dataType: 'json',
-    data: JSON.stringify({url: urlToCheck})
+    data: JSON.stringify({url: urlToCheck}),
   })
     .success(data => {
       let response = data['approved']
@@ -1647,7 +1647,7 @@ function logWebRequest(url) {
 
   logToCloud.addPageAction(logToCloud.PageAction.StartWebRequest, {
     hostname: hostname,
-    url: url
+    url: url,
   });
 }
 

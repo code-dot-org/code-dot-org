@@ -10,7 +10,7 @@ const clickSpy = sinon.spy();
 const defaultProps = {
   text: 'Click me',
   color: Button.ButtonColor.orange,
-  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>]
+  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 
 describe('DropdownButton', () => {

@@ -7,7 +7,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 
 export const ParamType = {
   TABLE: 'TABLE',
-  COLUMN: 'COLUMN'
+  COLUMN: 'COLUMN',
 };
 
 export default class GetColumnParamPicker extends React.Component {
@@ -15,7 +15,7 @@ export default class GetColumnParamPicker extends React.Component {
     param: PropTypes.oneOf(Object.values(ParamType)).isRequired,
     table: PropTypes.string,
     onClose: PropTypes.func.isRequired,
-    onChoose: PropTypes.func.isRequired
+    onChoose: PropTypes.func.isRequired,
   };
 
   state = {columns: []};
@@ -85,14 +85,14 @@ const styles = {
   title: {
     paddingLeft: '15px',
     fontFamily: "'Gotham 7r', sans-serif",
-    color: color.teal
+    color: color.teal,
   },
   option: {
     paddingLeft: '30px',
     fontFamily: "'Gotham 7r', sans-serif",
-    color: color.purple
+    color: color.purple,
   },
   error: {
-    padding: '30px'
-  }
+    padding: '30px',
+  },
 };

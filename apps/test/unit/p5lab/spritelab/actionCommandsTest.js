@@ -1,4 +1,3 @@
-/* global p5 */
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
@@ -23,17 +22,17 @@ describe('Action Commands', () => {
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
-        'follow'
+        'follow',
       ]);
       expect(sprite.targetSet).to.deep.equal({follow: ['costume1'], avoid: []});
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume2',
-        'follow'
+        'follow',
       ]);
       expect(sprite.targetSet).to.deep.equal({
         follow: ['costume1', 'costume2'],
-        avoid: []
+        avoid: [],
       });
     });
 
@@ -44,17 +43,17 @@ describe('Action Commands', () => {
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
-        'avoid'
+        'avoid',
       ]);
       expect(sprite.targetSet).to.deep.equal({follow: [], avoid: ['costume1']});
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume2',
-        'avoid'
+        'avoid',
       ]);
       expect(sprite.targetSet).to.deep.equal({
         follow: [],
-        avoid: ['costume1', 'costume2']
+        avoid: ['costume1', 'costume2'],
       });
     });
 
@@ -65,16 +64,16 @@ describe('Action Commands', () => {
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
-        'follow'
+        'follow',
       ]);
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume2',
-        'avoid'
+        'avoid',
       ]);
       expect(sprite.targetSet).to.deep.equal({
         follow: ['costume1'],
-        avoid: ['costume2']
+        avoid: ['costume2'],
       });
     });
 
@@ -86,7 +85,7 @@ describe('Action Commands', () => {
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
-        'other'
+        'other',
       ]);
       expect(console.warn).to.have.been.calledOnceWith(
         'unkknown targetType: other'
@@ -102,18 +101,18 @@ describe('Action Commands', () => {
       commands.changePropBy.apply(coreLibrary, [
         {name: 'spriteName1'},
         'direction',
-        180
+        180,
       ]);
       commands.setProp.apply(coreLibrary, [{name: 'spriteName1'}, 'speed', 10]);
       coreLibrary.addSprite({name: 'spriteName2', location: {x: 200, y: 200}});
       commands.bounceOff.apply(coreLibrary, [
         {name: 'spriteName1'},
-        {name: 'spriteName2'}
+        {name: 'spriteName2'},
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: 'spriteName1'},
-          'direction'
+          'direction',
         ])
       ).to.equal(0);
       expect(
@@ -126,17 +125,17 @@ describe('Action Commands', () => {
       commands.changePropBy.apply(coreLibrary, [
         {name: 'spriteName1'},
         'direction',
-        180
+        180,
       ]);
       coreLibrary.addSprite({name: 'spriteName2', location: {x: 400, y: 400}});
       commands.bounceOff.apply(coreLibrary, [
         {name: 'spriteName1'},
-        {name: 'spriteName2'}
+        {name: 'spriteName2'},
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: 'spriteName1'},
-          'direction'
+          'direction',
         ])
       ).to.equal(180);
       expect(
@@ -145,7 +144,7 @@ describe('Action Commands', () => {
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: 'spriteName2'},
-          'direction'
+          'direction',
         ])
       ).to.equal(0);
       expect(
@@ -169,29 +168,29 @@ describe('Action Commands', () => {
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
-        'direction'
+        'direction',
       ])
     ).to.equal(0);
     commands.changePropBy.apply(coreLibrary, [
       {name: spriteName},
       'direction',
-      200
+      200,
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
-        'direction'
+        'direction',
       ])
     ).to.equal(200);
     commands.changePropBy.apply(coreLibrary, [
       {name: spriteName},
       'direction',
-      200
+      200,
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
-        'direction'
+        'direction',
       ])
     ).to.equal(40);
   });
@@ -204,13 +203,13 @@ describe('Action Commands', () => {
     expect(
       commands.isTouchingSprite.apply(coreLibrary, [
         {name: 'spriteName1'},
-        {name: 'spriteName2'}
+        {name: 'spriteName2'},
       ])
     ).to.be.false;
     expect(
       commands.isTouchingSprite.apply(coreLibrary, [
         {name: 'spriteName3'},
-        {name: 'spriteName2'}
+        {name: 'spriteName2'},
       ])
     ).to.be.true;
   });
@@ -232,7 +231,7 @@ describe('Action Commands', () => {
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'direction'
+          'direction',
         ])
       ).to.equal(0);
       commands.moveForward.apply(coreLibrary, [{name: spriteName}, 100]);
@@ -249,7 +248,7 @@ describe('Action Commands', () => {
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
-        90
+        90,
       ]);
       commands.moveForward.apply(coreLibrary, [{name: spriteName}, 100]);
       expect(
@@ -265,7 +264,7 @@ describe('Action Commands', () => {
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
-        45
+        45,
       ]);
       commands.moveForward.apply(coreLibrary, [{name: spriteName}, 100]);
       expect(
@@ -283,7 +282,7 @@ describe('Action Commands', () => {
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
       50,
-      'South'
+      'South',
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
@@ -295,7 +294,7 @@ describe('Action Commands', () => {
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
       50,
-      'West'
+      'West',
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
@@ -307,7 +306,7 @@ describe('Action Commands', () => {
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
       50,
-      'North'
+      'North',
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
@@ -319,7 +318,7 @@ describe('Action Commands', () => {
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
       50,
-      'East'
+      'East',
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
@@ -336,7 +335,7 @@ describe('Action Commands', () => {
       commands.moveToward.apply(coreLibrary, [
         {name: spriteName},
         100,
-        {x: 123, y: 321}
+        {x: 123, y: 321},
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
@@ -369,23 +368,23 @@ describe('Action Commands', () => {
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
-        100
+        100,
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'direction'
+          'direction',
         ])
       ).to.equal(100);
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
-        400
+        400,
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'direction'
+          'direction',
         ])
       ).to.equal(40);
     });
@@ -394,12 +393,12 @@ describe('Action Commands', () => {
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'someProp',
-        100
+        100,
       ]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'someProp'
+          'someProp',
         ])
       ).to.equal(100);
     });
@@ -423,7 +422,7 @@ describe('Action Commands', () => {
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: spriteName},
-          'height'
+          'height',
         ])
       ).to.equal(250);
 
@@ -440,7 +439,7 @@ describe('Action Commands', () => {
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
-        'rotation'
+        'rotation',
       ])
     ).to.equal(90);
 
@@ -448,7 +447,7 @@ describe('Action Commands', () => {
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
-        'rotation'
+        'rotation',
       ])
     ).to.equal(-90);
   });
@@ -464,7 +463,7 @@ describe('Action Commands', () => {
     const createSprites = (n, animation) => {
       for (let i = 0; i < n; i++) {
         coreLibrary.addSprite({
-          animation: animation
+          animation: animation,
         });
       }
     };
@@ -477,13 +476,13 @@ describe('Action Commands', () => {
       coreLibrary.p5._predefinedSpriteAnimations = {
         cat: animation,
         alien: animation,
-        duck: animation
+        duck: animation,
       };
     });
 
     it('scales sprites in a non-circle layout', () => {
       coreLibrary.addSprite({
-        animation: 'cat'
+        animation: 'cat',
       });
 
       const spritesBeforeLayout = coreLibrary.getSpriteArray({costume: 'cat'});
@@ -499,7 +498,7 @@ describe('Action Commands', () => {
 
     it('circle layout works with 1 sprite', () => {
       coreLibrary.addSprite({
-        animation: 'cat'
+        animation: 'cat',
       });
 
       commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);

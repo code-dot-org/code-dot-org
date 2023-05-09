@@ -11,7 +11,7 @@ import {setDisplayTheme} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
-  TabType
+  TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
@@ -59,7 +59,7 @@ class JavalabView extends React.Component {
     validationPassed: PropTypes.bool,
     hasRunOrTestedCode: PropTypes.bool,
     hasOpenCodeReview: PropTypes.bool,
-    isJavabuilderConnecting: PropTypes.bool
+    isJavabuilderConnecting: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -132,7 +132,7 @@ class JavalabView extends React.Component {
         id="visualization"
         style={{
           ...styles.visualizationPlaceholder,
-          width: width + styleConstants['resize-bar-width']
+          width: width + styleConstants['resize-bar-width'],
         }}
       >
         &nbsp;
@@ -163,7 +163,7 @@ class JavalabView extends React.Component {
       validationPassed,
       hasRunOrTestedCode,
       hasOpenCodeReview,
-      isJavabuilderConnecting
+      isJavabuilderConnecting,
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -191,7 +191,7 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div
           style={{
-            ...styles.javalab
+            ...styles.javalab,
           }}
         >
           <JavalabPanels
@@ -230,7 +230,7 @@ class JavalabView extends React.Component {
                 onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
                 style={{
                   ...styles.consoleParent,
-                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40}),
                 }}
                 bottomRow={
                   <ControlButtons
@@ -272,7 +272,7 @@ const styles = {
     position: 'relative',
     marginLeft: 0,
     color: color.black,
-    left: 0
+    left: 0,
   },
   consoleParent: {
     position: 'relative',
@@ -280,24 +280,24 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
     flexGrow: 1,
-    overflowY: 'hidden'
+    overflowY: 'hidden',
   },
   visualizationPlaceholder: {
     height: 1,
     maxWidth: undefined,
     maxHeight: undefined,
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   preview: {
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   javalab: {
     display: 'flex',
     flexWrap: 'wrap',
-    direction: 'ltr'
+    direction: 'ltr',
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   buttons: {
     display: 'flex',
@@ -305,8 +305,8 @@ const styles = {
     justifyContent: 'flex-end',
     width: '100%',
     margin: '10px 0',
-    overflowY: 'hidden'
-  }
+    overflowY: 'hidden',
+  },
 };
 
 // We use the UnconnectedJavalabView to make this component's methods testable.
@@ -333,12 +333,12 @@ export default connect(
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
-    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting
+    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting,
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
   })
 )(UnconnectedJavalabView);

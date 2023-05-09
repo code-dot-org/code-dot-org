@@ -1857,6 +1857,7 @@ el:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': τούβλο
             '"hearts"': καρδιές
             '"iceCream"': Παγωτό
             '"rainbow"': ουράνιο τόξο

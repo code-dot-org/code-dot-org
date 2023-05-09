@@ -21,7 +21,7 @@ export default function wrap(p5) {
           } else {
             descriptor.value = value;
           }
-        }
+        },
       });
     }
     return sprite;

@@ -19,7 +19,7 @@ import {
   clearRenameFileError,
   setNewFileError,
   clearNewFileError,
-  setRenameFileError
+  setRenameFileError,
 } from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import PropTypes from 'prop-types';
@@ -39,7 +39,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {
   getDefaultFileContents,
   getTabKey,
-  isJavaFile
+  isJavaFile,
 } from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
@@ -93,7 +93,7 @@ class JavalabEditor extends React.Component {
     clearNewFileError: PropTypes.func.isRequired,
     setRenameFileError: PropTypes.func.isRequired,
     clearRenameFileError: PropTypes.func.isRequired,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   constructor(props) {
@@ -134,7 +134,7 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       menuPosition: {},
-      fileToDelete: null
+      fileToDelete: null,
     };
   }
 
@@ -153,7 +153,7 @@ class JavalabEditor extends React.Component {
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
+          effects: this.editorModeConfigCompartment.reconfigure(newStyle),
         });
       });
     }
@@ -167,8 +167,8 @@ class JavalabEditor extends React.Component {
             ),
             this.editorReadOnlyCompartment.reconfigure(
               EditorState.readOnly.of(this.props.isReadOnlyWorkspace)
-            )
-          ]
+            ),
+          ],
         });
       });
     }
@@ -178,7 +178,7 @@ class JavalabEditor extends React.Component {
         this.editors[editorKey].dispatch({
           effects: this.fontSizeCompartment.reconfigure(
             this.getFontSizeTheme(this.props.editorFontSize)
-          )
+          ),
         });
       });
     }
@@ -234,18 +234,18 @@ class JavalabEditor extends React.Component {
     this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
-        extensions: extensions
+        extensions: extensions,
       }),
       parent: this._codeMirrors[key],
-      dispatch: this.dispatchEditorChange(key)
+      dispatch: this.dispatchEditorChange(key),
     });
   }
 
   getFontSizeTheme(fontSize) {
     return EditorView.theme({
       '&': {
-        fontSize: `${fontSize}px`
-      }
+        fontSize: `${fontSize}px`,
+      },
     });
   }
 
@@ -277,7 +277,7 @@ class JavalabEditor extends React.Component {
     this.props.sourceVisibilityUpdated(this.props.fileMetadata[key], isVisible);
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -288,7 +288,7 @@ class JavalabEditor extends React.Component {
     );
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -301,7 +301,7 @@ class JavalabEditor extends React.Component {
     return {
       onContextMenu: e => {
         this.openTabContextMenu(key, e);
-      }
+      },
     };
   }
 
@@ -310,12 +310,12 @@ class JavalabEditor extends React.Component {
       this.props.setActiveTabKey(key);
       this.setState({
         showMenu: false,
-        contextTarget: null
+        contextTarget: null,
       });
       // scroll the new editor to whatever its current selection is.
       // If this editor has no selection it will stay at the top of the file.
       this.editors[key].dispatch({
-        scrollIntoView: true
+        scrollIntoView: true,
       });
       // It takes a second for the editor to show up. We can't
       // focus on it until it is visible, so we set a delay to focus
@@ -342,8 +342,8 @@ class JavalabEditor extends React.Component {
         contextTarget: key,
         menuPosition: {
           top: `${boundingRect.bottom}px`,
-          left: `${boundingRect.left}px`
-        }
+          left: `${boundingRect.left}px`,
+        },
       });
     }
   }
@@ -355,7 +355,7 @@ class JavalabEditor extends React.Component {
     this.props.openEditorDialog(JavalabEditorDialog.RENAME_FILE);
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -363,7 +363,7 @@ class JavalabEditor extends React.Component {
   cancelTabMenu() {
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -394,7 +394,7 @@ class JavalabEditor extends React.Component {
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -405,7 +405,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      fileToDelete: this.state.contextTarget
+      fileToDelete: this.state.contextTarget,
     });
   }
 
@@ -443,7 +443,7 @@ class JavalabEditor extends React.Component {
       renameFile,
       closeEditorDialog,
       setRenameFileError,
-      clearRenameFileError
+      clearRenameFileError,
     } = this.props;
     newFilename = newFilename.trim();
     if (!this.validateFileName(newFilename, setRenameFileError)) {
@@ -468,11 +468,11 @@ class JavalabEditor extends React.Component {
     // change syntax highlighting if there was a change from non-java to java or vice-versa
     if (isJavaFile(newFilename) && !isJavaFile(oldFilename)) {
       this.editors[editTabKey].dispatch({
-        effects: this.languageCompartment.reconfigure(java())
+        effects: this.languageCompartment.reconfigure(java()),
       });
     } else if (!isJavaFile(newFilename) && isJavaFile(oldFilename)) {
       this.editors[editTabKey].dispatch({
-        effects: this.languageCompartment.reconfigure([])
+        effects: this.languageCompartment.reconfigure([]),
       });
     }
 
@@ -490,7 +490,7 @@ class JavalabEditor extends React.Component {
       setAllEditorMetadata,
       closeEditorDialog,
       setNewFileError,
-      clearNewFileError
+      clearNewFileError,
     } = this.props;
     filename = filename.trim();
     if (!this.validateFileName(filename, setNewFileError)) {
@@ -532,7 +532,7 @@ class JavalabEditor extends React.Component {
       orderedTabKeys,
       activeTabKey,
       removeFile,
-      setAllEditorMetadata
+      setAllEditorMetadata,
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
@@ -563,7 +563,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      fileToDelete: null
+      fileToDelete: null,
     });
   }
 
@@ -581,7 +581,7 @@ class JavalabEditor extends React.Component {
       }
       const editor = this.editors[editorKey];
       editor.dispatch({
-        changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
+        changes: {from: 0, to: editor.state.doc.length, insert: fileContents},
       });
       const tabOrder = orderedTabKeys.indexOf(editorKey);
       this.props.setSource(filename, fileContents, tabOrder);
@@ -629,7 +629,7 @@ class JavalabEditor extends React.Component {
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -655,7 +655,7 @@ class JavalabEditor extends React.Component {
       fileMetadata,
       activeTabKey,
       editTabKey,
-      codeOwnersName
+      codeOwnersName,
     } = this.props;
 
     const showOpenCodeReviewWarning =
@@ -667,7 +667,7 @@ class JavalabEditor extends React.Component {
       top: this.state.menuPosition.top,
       left: this.state.menuPosition.left,
       backgroundColor: '#F0F0F0',
-      zIndex: 1000
+      zIndex: 1000,
     };
     return (
       <CloseOnEscape handleClose={this.cancelTabMenu}>
@@ -764,7 +764,7 @@ class JavalabEditor extends React.Component {
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
                     : javalabMsg.codeReviewingPeer({
-                        peerName: codeOwnersName
+                        peerName: codeOwnersName,
                       })}
                 </div>
               )}
@@ -827,7 +827,7 @@ export default connect(
     activeTabKey: state.javalabEditor.activeTabKey,
     lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
     editTabKey: state.javalabEditor.editTabKey,
-    editorFontSize: state.javalabView.editorFontSize
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     setSource: (filename, source, tabOrder) =>
@@ -868,6 +868,6 @@ export default connect(
     setNewFileError: error => dispatch(setNewFileError(error)),
     clearNewFileError: () => dispatch(clearNewFileError()),
     setRenameFileError: error => dispatch(setRenameFileError(error)),
-    clearRenameFileError: () => dispatch(clearRenameFileError())
+    clearRenameFileError: () => dispatch(clearRenameFileError()),
   })
 )(JavalabEditor);

@@ -6,7 +6,7 @@ exports.PaddleSpeed = {
   SLOW: 0.06,
   NORMAL: 0.1,
   FAST: 0.15,
-  VERY_FAST: 0.23
+  VERY_FAST: 0.23,
 };
 
 exports.BallSpeed = {
@@ -14,7 +14,7 @@ exports.BallSpeed = {
   SLOW: 0.06,
   NORMAL: 0.1,
   FAST: 0.15,
-  VERY_FAST: 0.23
+  VERY_FAST: 0.23,
 };
 
 exports.random = function (values) {

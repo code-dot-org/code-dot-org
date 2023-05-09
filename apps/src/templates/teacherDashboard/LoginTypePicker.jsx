@@ -34,18 +34,18 @@ class LoginTypePicker extends Component {
     handleCancel: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     // Provided by Redux
-    providers: PropTypes.arrayOf(PropTypes.string)
+    providers: PropTypes.arrayOf(PropTypes.string),
   };
 
   reportLoginTypeSelection = provider => {
     analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
-      loginType: provider
+      loginType: provider,
     });
   };
 
   recordSectionSetupExitEvent = eventName => {
     analyticsReporter.sendEvent(eventName, {
-      source: SELECT_LOGIN_TYPE
+      source: SELECT_LOGIN_TYPE,
     });
   };
 
@@ -84,15 +84,15 @@ class LoginTypePicker extends Component {
         width: styleConstants['content-width'],
         height: containerHeight,
         left: '20px',
-        right: '20px'
+        right: '20px',
       },
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
-        height: 'calc(80vh - 200px)'
+        height: 'calc(80vh - 200px)',
       },
       thirdPartyProviderUpsell: {
-        marginBottom: '10px'
+        marginBottom: '10px',
       },
       footer: {
         position: 'absolute',
@@ -102,21 +102,21 @@ class LoginTypePicker extends Component {
         bottom: '-51px',
         padding: '0px 20px 20px 20px',
         backgroundColor: '#fff',
-        borderRadius: '5px'
+        borderRadius: '5px',
       },
       mediumText: {
         fontSize: '.75em',
         color: color.neutral_dark,
-        fontFamily: '"Gotham 5r", sans-serif'
+        fontFamily: '"Gotham 5r", sans-serif',
       },
       learnHow: {
-        marginTop: '12px'
+        marginTop: '12px',
       },
       emailPolicyNote: {
         marginBottom: '31px',
         paddingTop: '8px',
-        borderTop: `1px solid ${color.neutral_dark}`
-      }
+        borderTop: `1px solid ${color.neutral_dark}`,
+      },
     };
 
     return (
@@ -167,7 +167,7 @@ class LoginTypePicker extends Component {
 }
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
-  providers: state.teacherSections.providers
+  providers: state.teacherSections.providers,
 }))(LoginTypePicker);
 
 const PictureLoginCard = props => (
@@ -181,7 +181,7 @@ const PictureLoginCard = props => (
 );
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 const WordLoginCard = props => (

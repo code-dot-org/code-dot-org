@@ -82,7 +82,7 @@ export function getTagString(prefix, tagString) {
     accessibility_tts: i18n.filterAccessibilityTTS(),
     accessibility_keyboard: i18n.filterAccessibilityKeyboard(),
     accessibility_captions: i18n.filterAccessibilityCaptions(),
-    accessibility_highcontrast: i18n.filterAccessibilityHighContrast()
+    accessibility_highcontrast: i18n.filterAccessibilityHighContrast(),
   };
 
   return tagString

@@ -12,7 +12,7 @@ var utils = require('./utils');
 module.exports.getResultsFromLog = function (logConditions, executionLog) {
   executionLog = executionLog || [];
   var results = {
-    testResult: TestResults.ALL_PASS
+    testResult: TestResults.ALL_PASS,
   };
   logConditions.forEach(function (condition, index) {
     var testResult = TestResults.LOG_CONDITION_FAIL;

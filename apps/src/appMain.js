@@ -8,7 +8,7 @@ import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 import {
   installCustomBlocks,
-  appendBlocksByCategory
+  appendBlocksByCategory,
 } from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
 import defaultSkinModule from './skins.js';
@@ -21,7 +21,7 @@ window.__TestInterface = {
   getDroplet: () => studioApp().editor,
   // Set to true to ignore onBeforeUnload events
   ignoreOnBeforeUnload: false,
-  getStore
+  getStore,
 };
 
 export default function (app, levels, options) {
@@ -74,7 +74,7 @@ export default function (app, levels, options) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1,
-      level: options.level
+      level: options.level,
     };
 
     if (options.level && options.level.edit_blocks) {
@@ -89,18 +89,18 @@ export default function (app, levels, options) {
         ? []
         : JSON.parse(level.customBlocks).map(blockConfig => ({
             config: blockConfig,
-            category: 'Custom'
+            category: 'Custom',
           }));
       const sharedBlocksConfig = level.sharedBlocks || [];
       const customBlocksConfig = [
         ...sharedBlocksConfig,
-        ...levelCustomBlocksConfig
+        ...levelCustomBlocksConfig,
       ];
       if (customBlocksConfig.length > 0) {
         const blocksByCategory = installCustomBlocks({
           blockly: Blockly,
           blockDefinitions: customBlocksConfig,
-          customInputTypes: options.blocksModule.customInputTypes
+          customInputTypes: options.blocksModule.customInputTypes,
         });
 
         if (

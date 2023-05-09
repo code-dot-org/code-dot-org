@@ -15,7 +15,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
         blocksDom,
         {
           noScrolling: true,
-          inline: true
+          inline: true,
         }
       );
       shrinkBlockSpaceContainer(blockSpace, true);
@@ -40,5 +40,5 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
 EmbeddedBlock.propTypes = {
   blockName: PropTypes.string.isRequired,
   link: PropTypes.string,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
 };

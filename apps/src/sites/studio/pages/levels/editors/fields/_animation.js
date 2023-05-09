@@ -31,7 +31,7 @@ $(document).ready(function () {
   initializeCodeMirror('level_start_animations', 'application/json', {
     callback: codeMirror => {
       validateAnimationJSON(codeMirror.getValue());
-    }
+    },
   });
 
   if (document.getElementById('level_custom_helper_library')) {

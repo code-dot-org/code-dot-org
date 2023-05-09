@@ -7,13 +7,15 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 ## Overview
 
+1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-monterey---including-apple-silicon-m1), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
+   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
      ruby --version  # --> ruby 2.7.5
-     node --version  # --> v14.17.1
+     node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
 
@@ -24,6 +26,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
+
+1. `bundle config --local without staging test production levelbuilder`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
@@ -46,14 +50,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
     </details>
     <details>
-      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` </summary>
+      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` or similar `Aws::SecretsManager` errors</summary>
+      Reported when missing credentials for access to our AWS Account or local secret configuration.
 
-      - If you have issue `"rake aborted! FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError: unable to sign request without credentials set"`, or similar `Aws::SecretsManager` errors, you are missing configuration or credentials for access to our AWS Account. Staff should see instructions for AWS account access in our "Getting Started As A Developer" doc. External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
-          - slack_bot_token: localoverride
-          - pardot_private_key: localoverride
-          - firebase_secret: localoverride
-          - firebase_shared_secret: localoverride
-          - properties_encryption_key: localoverride
+      See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets)
     </details>
     <details>
       <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
@@ -73,9 +73,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
-1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
-    - Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
-
 1. Run the website `bin/dashboard-server`
 
 1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
@@ -84,15 +81,35 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
+## Configure AWS Access or Secrets
+
+### For Code.org Staff
+
+Staff should see instructions for requesting AWS account access in our "AWS Account Access" doc linked from "Getting started as a Developer", and follow the setup steps in the "API access (for local development)" section.
+Some functionality will not work on your local site without this, for example, some project-backed level types such as <https://studio.code.org/projects/gamelab>. 
+### For external contributors
+
+External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
+          - slack_bot_token: localoverride
+          - pardot_private_key: localoverride
+          - firebase_secret: localoverride
+          - firebase_shared_secret: localoverride
+          - properties_encryption_key: localoverride
+
 ## OS-specific prerequisites
 
-### OS X Monterey - including Apple Silicon (M1)
+### macOS
 
-These steps are for OSX devices, including Apple Macbooks running on [Apple Silicon (M1)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). At this time, if you are using an M1 Macbook, we strongly recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
-These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+Notes:
+- At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+- These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
+- As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
 
-0. _(M1 Mac users only)_ Install Rosetta 2.
+Setup steps for macOS:
+
+1. _(M1 Mac users only)_ Install Rosetta 2.
 
   - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
   - If not, install Rosetta using
@@ -128,13 +145,16 @@ These steps may need to change over time as 3rd party tools update to have versi
           4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
-   1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-1. Install **rbenv** via `brew install rbenv`
+1. Install and configure **rbenv**
+    1. Install: `brew install rbenv`
+    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
+    3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
 1. Install **Ruby**
     1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
@@ -166,13 +186,13 @@ These steps may need to change over time as 3rd party tools update to have versi
        ```sh
        arch -arch x86_64 zsh
        # You are now in a new shell, run `arch` to confirm
-       nvm install # or `nvm install 14.17.1`
+       nvm install # or `nvm install 18.16.0`
        exit
        # You are now back in the original shell, run `arch` to confirm
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
 
-1. Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.19`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -181,114 +201,6 @@ These steps may need to change over time as 3rd party tools update to have versi
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
 1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
-
-### OS X Catalina
-
-1. Choose shell. Starting in Catalina, [the default shell for new users is zsh](https://support.apple.com/en-us/HT208050). Most developers at Code.org are still using bash so that may be a smoother experience for now.
-    <details>
-      <summary>To use bash:</summary>
-
-      * Switch the default shell back to bash and disable the warning:
-        * `chsh -s /bin/bash`
-        * Add the following to `~/.bash_profile` or your desired shell configuration file:
-          ```
-          export BASH_SILENCE_DEPRECATION_WARNING=1
-          ```
-    </details>
-    <details>
-      <summary>Optional configuration steps for zsh:</summary>
-              
-      * Setup git prompt and git autocompletion
-        * Download git-prompt.sh
-          ```
-          mkdir -p ~/bin/oh-my-zsh
-          curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/gitfast/git-prompt.sh > ~/bin/oh-my-zsh/git-prompt.sh
-          ```
-        * Add the following to `~/.zshrc` or your desired shell configuration file:
-          ```
-          # git prompt
-          source ~/bin/oh-my-zsh/git-prompt.sh
-          GIT_PS1_SHOWCOLORHINTS=1
-          GIT_PS1_SHOWDIRTYSTATE=1
-          GIT_PS1_SHOWUNTRACKEDFILES=1
-          setopt PROMPT_SUBST ; PS1='%m:%~$(__git_ps1 " (%s)")\$ '
-           
-          # git completion
-          source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh >/dev/null 2>&1
-           
-          # make git checkout not show remote branches
-          GIT_COMPLETION_CHECKOUT_NO_GUESS=1
-          autoload -Uz compinit && compinit
-          ```
-        * fix any problems with compinit:
-          ```
-          compaudit | xargs chmod g-w
-          ```
-    </details>
-1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
-    <details>
-      <summary>Troubleshoot: pdftk errors</summary>
-
-      * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
-    </details>
-    <details>
-      <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
-
-      * If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
-    </details>
-1. Set up MySQL
-    1. Force link 5.7 version: `brew link mysql@5.7 --force`
-    1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
-        1. Note, the folder name may instead be "mysql@5.7", if so, modify the command accordingly: `ln -sfv /usr/local/opt/mysql@5.7/*.plist ~/Library/LaunchAgents`, or use `ls -d /usr/local/opt/mysql*` to check for the correct folder name.
-    1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-        1. Note: if this fails check your plist file (`ls ~/Library/LaunchAgents/`) to see if it is "homebrew.mxcl.mysql@5.7.plist". If it is try: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql@5.7.plist` instead
-1. Set up rbenv
-    1. Run `rbenv init`
-    1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
-    1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby
-    1. Execute `rbenv install --skip-existing` from the root directory
-    1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
-1. Set up [nvm](https://github.com/creationix/nvm)
-    1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-
-        ```
-        # Load nvm function into the shell
-        export NVM_DIR=~/.nvm
-        source $(brew --prefix nvm)/nvm.sh
-        ```
-
-    1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node and yarn
-    1. `nvm install 14.17.1 && nvm alias default 14.17.1` this command should make this version the default version and print something like: `Creating default alias: default -> 14.17.1 (-> v14.17.1)`
-    1. `npm install -g yarn@1.22.5`.
-    1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
-1. Install OpenSSL:
-    1. `brew install openssl`
-    1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
-1. Prevent future problems related to the `Too many open files` error:
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-        ```
-        ulimit -n 8192
-        ```
-    1. close and reopen your current terminal window
-    1. make sure that `ulimit -n` returns 8192
-1. Install the Xcode Command Line Tools:
-    1. `xcode-select --install`
-
-    <details>
-      <summary>Troubleshoot: command line tools already installed</summary>
-
-      If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
-    </details>
-
-1. Install the Java 8 JDK: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
-
-1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]
@@ -314,7 +226,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
+    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
@@ -361,10 +273,13 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-1. Ensure chromium-browser or alternatively google-chrome is installed
-    * Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install google chrome by running the following:
-        1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
-        2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+1. Make it so that you can run apps tests locally. You have two options here:
+    1. If you have Google Chrome installed on Windows, add the following to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL:
+        1. `export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'`
+    1. Alternatively, ensure chromium-browser or alternatively google-chrome is installed in WSL
+        1. Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
+            1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+            1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
 1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
     * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`

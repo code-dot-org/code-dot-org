@@ -43,7 +43,7 @@ var StudioVisualizationColumn = function (props) {
 
 StudioVisualizationColumn.propTypes = {
   finishButton: PropTypes.bool.isRequired,
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 module.exports = StudioVisualizationColumn;

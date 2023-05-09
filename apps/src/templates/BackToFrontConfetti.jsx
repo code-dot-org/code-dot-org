@@ -13,19 +13,19 @@ import PropTypes from 'prop-types';
 
 const defaultStyle = {
   position: 'relative',
-  left: '50%'
+  left: '50%',
 };
 
 export default class BackToFrontConfetti extends React.Component {
   static propTypes = {
     style: PropTypes.object,
-    active: PropTypes.bool
+    active: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      confettiOnTop: false
+      confettiOnTop: false,
     };
   }
 

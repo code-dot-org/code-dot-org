@@ -15,13 +15,13 @@ describe('Maze', function () {
     maze = new Maze();
     maze.controller = new MazeController(
       {
-        map: [[]]
+        map: [[]],
       },
       {
-        movePegmanAnimationSpeedScale: 1
+        movePegmanAnimationSpeedScale: 1,
       },
       {
-        level: {}
+        level: {},
       }
     );
     maze.resultsHandler = new ResultsHandler(maze.controller, {});

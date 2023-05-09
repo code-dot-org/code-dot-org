@@ -22,7 +22,7 @@ puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttonContainer = document.createElement('div');
   buttonContainer.id = 'puzzleRatingButtons';
   buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')({
-    label: locale.puzzleRatingQuestion()
+    label: locale.puzzleRatingQuestion(),
   });
 
   var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
@@ -98,7 +98,7 @@ puzzleRatingUtils.cachePuzzleRating = function (container, options) {
   var selectedButton = container.querySelector('.enabled');
   if (selectedButton) {
     var rating = Object.assign({}, options, {
-      rating: selectedButton.getAttribute('data-value')
+      rating: selectedButton.getAttribute('data-value'),
     });
     var ratings = puzzleRatingUtils.getPuzzleRatings_();
     ratings.push(rating);
@@ -119,7 +119,7 @@ puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
       data: rating,
       complete: function () {
         puzzleRatingUtils.removePuzzleRating_(rating);
-      }
+      },
     });
   });
 };

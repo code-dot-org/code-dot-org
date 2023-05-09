@@ -1,6 +1,6 @@
 name 'CSA U8L7-L8_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Sorting Algorithms'
+description 'Implement the selection, insertion, or merge sort algorithms.'
 
 sublevels
 level 'CSA U8L7-L8a_2023'

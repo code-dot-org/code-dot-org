@@ -10,7 +10,7 @@ import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeed
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
-  rubricShape
+  rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -24,7 +24,7 @@ import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedb
 const ErrorType = {
   NoError: 'NoError',
   Load: 'Load',
-  Save: 'Save'
+  Save: 'Save',
 };
 
 export class EditableTeacherFeedback extends Component {
@@ -40,7 +40,7 @@ export class EditableTeacherFeedback extends Component {
     verifiedInstructor: PropTypes.bool,
     selectedSectionId: PropTypes.number,
     updateUserProgress: PropTypes.func.isRequired,
-    canHaveFeedbackReviewState: PropTypes.bool
+    canHaveFeedbackReviewState: PropTypes.bool,
   };
 
   constructor(props) {
@@ -58,7 +58,7 @@ export class EditableTeacherFeedback extends Component {
       reviewState: latestFeedback?.review_state || null,
       reviewStateUpdated: false,
       submitting: false,
-      errorState: ErrorType.NoError
+      errorState: ErrorType.NoError,
     };
   }
 
@@ -68,7 +68,7 @@ export class EditableTeacherFeedback extends Component {
       analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
         sectionId: this.props.selectedSectionId,
         unitId: this.props.serverScriptId,
-        levelId: this.props.serverLevelId
+        levelId: this.props.serverLevelId,
       });
     }
   };
@@ -97,7 +97,7 @@ export class EditableTeacherFeedback extends Component {
 
     this.setState({
       reviewState: newState,
-      reviewStateUpdated: oldState !== newState
+      reviewStateUpdated: oldState !== newState,
     });
   };
 
@@ -113,8 +113,8 @@ export class EditableTeacherFeedback extends Component {
           level_id: this.props.serverLevelId,
           old_state: this.getLatestReviewState(),
           new_state: this.state.reviewState,
-          section_id: this.props.selectedSectionId
-        })
+          section_id: this.props.selectedSectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -139,7 +139,7 @@ export class EditableTeacherFeedback extends Component {
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance,
-      analytics_section_id: this.props.selectedSectionId
+      analytics_section_id: this.props.selectedSectionId,
     };
 
     updateTeacherFeedback(payload, this.props.token)
@@ -155,20 +155,20 @@ export class EditableTeacherFeedback extends Component {
           latestFeedback: data,
           reviewStateUpdated: false,
           submitting: false,
-          errorState: ErrorType.NoError
+          errorState: ErrorType.NoError,
         });
       })
       .fail(() => {
         this.setState({
           errorState: ErrorType.Save,
-          submitting: false
+          submitting: false,
         });
       });
     analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
       sectionId: this.props.selectedSectionId,
       unitId: this.props.serverScriptId,
       levelId: this.props.serverLevelId,
-      isRubric: this.props.rubric
+      isRubric: this.props.rubric,
     });
   };
 
@@ -291,12 +291,12 @@ export class EditableTeacherFeedback extends Component {
 
 const styles = {
   button: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   errorIcon: {
     color: 'red',
-    margin: 10
-  }
+    margin: 10,
+  },
 };
 
 export const UnconnectedEditableTeacherFeedback = EditableTeacherFeedback;
@@ -307,13 +307,13 @@ export default connect(
       state.verifiedInstructor && state.verifiedInstructor.isVerified,
     selectedSectionId: state.teacherSections?.selectedSectionId,
     canHaveFeedbackReviewState:
-      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
+      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState,
   }),
   dispatch => ({
     updateUserProgress(userId) {
       dispatch(queryUserProgress(userId));
       dispatch(loadLevelsWithProgress());
-    }
+    },
   }),
   null,
   {forwardRef: true}

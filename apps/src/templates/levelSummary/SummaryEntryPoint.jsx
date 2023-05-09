@@ -57,13 +57,13 @@ SummaryEntryPoint.propTypes = {
   students: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string
+      name: PropTypes.string,
     })
   ),
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
-  })
+    name: PropTypes.string.isRequired,
+  }),
 };
 
 export default connect(
@@ -73,6 +73,6 @@ export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
     selectedSection:
-      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
   })
 )(SummaryEntryPoint);

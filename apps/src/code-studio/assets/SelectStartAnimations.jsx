@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   getManifest,
-  generateLevelAnimationsManifest
+  generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
 import {createUuid} from '@cdo/apps/utils';
@@ -18,14 +18,14 @@ const THUMBNAIL_BORDER_WIDTH = 1;
  */
 export default class SelectStartAnimations extends React.Component {
   static propTypes = {
-    useAllSprites: PropTypes.bool
+    useAllSprites: PropTypes.bool,
   };
 
   state = {
     levelAnimationsManifest: {},
     libraryManifest: {},
     orderedKeys: [],
-    propsByKey: {}
+    propsByKey: {},
   };
 
   componentDidMount() {
@@ -151,9 +151,9 @@ const styles = {
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   pageBreak: {
-    borderTop: '1px solid gray'
-  }
+    borderTop: '1px solid gray',
+  },
 };

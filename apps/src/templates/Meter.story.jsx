@@ -4,14 +4,14 @@ import color from '@cdo/apps/util/color';
 
 export default {
   title: 'Meter',
-  component: Meter
+  component: Meter,
 };
 
 // The meter background is white, so add a background color to make
 // the meter more easily visible.
 const containerStyle = {
   backgroundColor: color.lightest_gray,
-  padding: 10
+  padding: 10,
 };
 
 //
@@ -30,25 +30,25 @@ export const HalfFull = Template.bind({});
 HalfFull.args = {
   id: 'meter-1',
   label: 'Glass half-full:',
-  value: 5
+  value: 5,
 };
 
 export const SeventyFivePercentPlusFull = Template.bind({});
 SeventyFivePercentPlusFull.args = {
   id: 'meter-2',
   label: 'Warning zone:',
-  value: 8
+  value: 8,
 };
 
 export const NinetyPercentPlusFull = Template.bind({});
 NinetyPercentPlusFull.args = {
   id: 'meter-3',
   label: 'Almost full!',
-  value: 9
+  value: 9,
 };
 
 export const NoLabel = Template.bind({});
 NoLabel.args = {
   id: 'meter-4',
-  value: 4
+  value: 4,
 };

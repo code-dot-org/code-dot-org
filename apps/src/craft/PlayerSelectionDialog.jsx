@@ -17,7 +17,7 @@ function PlayerSelectionDialog({
   handlePlayerSelection,
   title = i18n.playerSelectLetsGetStarted(),
   titleClassName = 'minecraft-big-yellow-header',
-  hideSubtitle = false
+  hideSubtitle = false,
 }) {
   function renderPlayer(name) {
     const formattedName = name.toLowerCase();
@@ -58,10 +58,10 @@ PlayerSelectionDialog.propTypes = {
   handlePlayerSelection: PropTypes.func.isRequired,
   title: PropTypes.string,
   titleClassName: PropTypes.string,
-  hideSubtitle: PropTypes.bool
+  hideSubtitle: PropTypes.bool,
 };
 
 export default connect(state => ({
   isOpen: state.craft.playerSelectionDialogOpen,
-  handlePlayerSelection: state.craft.handlePlayerSelection
+  handlePlayerSelection: state.craft.handlePlayerSelection,
 }))(PlayerSelectionDialog);

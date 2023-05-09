@@ -189,14 +189,14 @@ module.exports = {
     useContractEditor: true,
     examplesRequired: true,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'example is missing result block',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -212,13 +212,13 @@ module.exports = {
         solutionBlocks +
         invalidExampleMissingResult +
         validExample2 +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'example result doesnt match definition',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -229,13 +229,14 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>'
+      xml:
+        '<xml>' + solutionBlocks + invalidExample1 + validExample2 + '</xml>',
     },
     {
       description: 'example result does match definition',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
@@ -247,13 +248,13 @@ module.exports = {
         validExample1 +
         validExample2 +
         validExampleRationalFloat +
-        '</xml>'
+        '</xml>',
     },
     {
       description: "variables don't need examples",
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, null);
@@ -277,14 +278,14 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'no examples when examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -295,7 +296,7 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + '</xml>'
-    }
-  ]
+      xml: '<xml>' + solutionBlocks + '</xml>',
+    },
+  ],
 };

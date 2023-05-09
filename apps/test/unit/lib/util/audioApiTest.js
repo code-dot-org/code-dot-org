@@ -4,7 +4,7 @@ import {
   commands,
   executors,
   injectExecuteCmd,
-  MAX_SPEECH_TEXT_LENGTH
+  MAX_SPEECH_TEXT_LENGTH,
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
@@ -17,7 +17,7 @@ describe('Audio API', function () {
   // executor because they get aliased.
   it('is internally complete', function () {
     for (let commandName in commands) {
-      if (!commands.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(commands, commandName)) {
         continue;
       }
       expect(executors).to.have.ownProperty(commandName);
@@ -25,7 +25,7 @@ describe('Audio API', function () {
     }
 
     for (let commandName in executors) {
-      if (!executors.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(executors, commandName)) {
         continue;
       }
       expect(commands).to.have.ownProperty(commandName);
@@ -33,7 +33,7 @@ describe('Audio API', function () {
     }
 
     for (let commandName in dropletConfig) {
-      if (!dropletConfig.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(dropletConfig, commandName)) {
         continue;
       }
       expect(dropletConfig[commandName].func).to.equal(commandName);
@@ -49,7 +49,7 @@ describe('Audio API', function () {
       // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'url',
-        'loop'
+        'loop',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
@@ -61,7 +61,7 @@ describe('Audio API', function () {
       expect(spy.firstCall.args[2]).to.deep.equal({
         url: 'one',
         loop: 'two',
-        callback: 'three'
+        callback: 'three',
       });
     });
   });
@@ -89,7 +89,7 @@ describe('Audio API', function () {
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'text',
         'gender',
-        'language'
+        'language',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(3);
 
@@ -109,7 +109,7 @@ describe('Audio API', function () {
         text: 'this is text',
         gender: 'female',
         language: 'English',
-        onComplete: onCompleteCallback
+        onComplete: onCompleteCallback,
       });
     });
 
@@ -121,18 +121,18 @@ describe('Audio API', function () {
         injectErrorHandler({outputWarning: outputWarningSpy});
         azureTTSStub = {
           createSoundPromise: sinon.spy(),
-          enqueueAndPlay: sinon.spy()
+          enqueueAndPlay: sinon.spy(),
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
         setAppOptions({
           azureSpeechServiceVoices: {
-            English: {female: 'en-female', locale: 'en-US'}
-          }
+            English: {female: 'en-female', locale: 'en-US'},
+          },
         });
         options = {
           text: 'hello world',
           gender: 'female',
-          language: 'English'
+          language: 'English',
         };
       });
 

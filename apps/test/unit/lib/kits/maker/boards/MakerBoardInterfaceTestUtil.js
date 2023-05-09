@@ -88,7 +88,7 @@ export function itImplementsTheMakerBoardInterface(
           createGlobalProperty: function (key, value) {
             jsInterpreter.globalProperties[key] = value;
           },
-          addCustomMarshalObject: sinon.spy()
+          addCustomMarshalObject: sinon.spy(),
         };
 
         return board.connect();

@@ -35,7 +35,7 @@ module Cdo
       results
     end
 
-    def freeze
+    def freeze_config
       lazy_load_secrets!
       super
     end
@@ -146,9 +146,9 @@ module Cdo
         Cdo::Secrets.new(logger: log)
       end
 
-      table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
+      @table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
-        table[key] = Cdo.lazy do
+        @table[key] = Cdo.lazy do
           if value.is_a?(Secret)
             value.lookup(cdo_secrets)
           else
@@ -172,7 +172,7 @@ module Cdo
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
     private def clear_secrets
       @secrets ||= []
-      @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
+      @secrets |= @table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
     end
   end

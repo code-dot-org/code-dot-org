@@ -14,13 +14,13 @@ class BonusLevels extends React.Component {
   static propTypes = {
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      lessonIndex: props.bonusLevels.length - 1
+      lessonIndex: props.bonusLevels.length - 1,
     };
   }
 
@@ -60,7 +60,7 @@ class BonusLevels extends React.Component {
       <div>
         <h2 style={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
-            lessonNumber: currLessonNum
+            lessonNumber: currLessonNum,
           })}
         </h2>
         <div style={styles.scroller}>
@@ -72,7 +72,7 @@ class BonusLevels extends React.Component {
           <div
             style={{
               ...styles.challenges,
-              width: CARD_AREA_SIZE
+              width: CARD_AREA_SIZE,
             }}
           >
             {this.props.bonusLevels.map(lesson => (
@@ -81,7 +81,7 @@ class BonusLevels extends React.Component {
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
-                  width: CARD_AREA_SIZE
+                  width: CARD_AREA_SIZE,
                 }}
               >
                 <div style={styles.cards}>
@@ -118,14 +118,14 @@ const styles = {
     whiteSpace: 'normal',
     transition: 'left 0.25s ease-out',
     padding: '10px 0',
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   challenges: {
     display: 'inline-block',
     overflowX: 'hidden',
     whiteSpace: 'nowrap',
     transition: 'width 0.1s ease-out',
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   lessonNumberHeading: {
     backgroundColor: color.purple,
@@ -135,31 +135,31 @@ const styles = {
     fontSize: 20,
     lineHeight: '35px',
     fontFamily: '"Gotham 4r"',
-    margin: 0
+    margin: 0,
   },
   arrow: {
     fontSize: 40,
     cursor: 'pointer',
     verticalAlign: -30,
-    margin: 10
+    margin: 10,
   },
   arrowDisabled: {
     color: color.lighter_gray,
-    cursor: 'default'
+    cursor: 'default',
   },
   cards: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   scroller: {
     backgroundColor: color.white,
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export default Radium(BonusLevels);

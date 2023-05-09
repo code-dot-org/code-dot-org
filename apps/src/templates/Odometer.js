@@ -6,7 +6,7 @@ export default class Odometer extends Component {
   static propTypes = {
     defaultValue: PropTypes.number,
     value: PropTypes.number.isRequired,
-    onRest: PropTypes.func
+    onRest: PropTypes.func,
   };
 
   render() {
@@ -34,7 +34,7 @@ export default class Odometer extends Component {
 
 class OdometerDigit extends Component {
   static propTypes = {
-    value: PropTypes.number.isRequired
+    value: PropTypes.number.isRequired,
   };
 
   render() {
@@ -45,7 +45,7 @@ class OdometerDigit extends Component {
         <div
           style={{
             ...styles.digit,
-            transform: `translateY(-${100 * (1 - progress)}%)`
+            transform: `translateY(-${100 * (1 - progress)}%)`,
           }}
         >
           {(digit + 1) % 10}
@@ -53,7 +53,7 @@ class OdometerDigit extends Component {
         <div
           style={{
             ...styles.digit,
-            transform: `translateY(-${100 * (1 - progress)}%)`
+            transform: `translateY(-${100 * (1 - progress)}%)`,
           }}
         >
           {digit}
@@ -67,12 +67,12 @@ const styles = {
   slot: {
     height: 36,
     display: 'inline-block',
-    overflowY: 'hidden'
+    overflowY: 'hidden',
   },
   digit: {
     paddingTop: 15,
     height: 36,
     width: 21,
-    overflowX: 'hidden'
-  }
+    overflowX: 'hidden',
+  },
 };

@@ -37,7 +37,7 @@ registerReducers({
   verifiedInstructor,
   currentUser,
   arrowDisplay,
-  microBit
+  microBit,
 });
 
 export {getStore};

@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
-  componentConstructors
+  componentConstructors,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/TouchSensor';
@@ -16,13 +16,13 @@ import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
-  TOUCH_PINS
+  TOUCH_PINS,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {
   newBoard,
   setSensorAnalogValue,
   stubComponentInitialization,
-  restoreComponentInitialization
+  restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -72,7 +72,7 @@ describe('Circuit Playground Components', () => {
           'tempSensor',
           'accelerometer',
           'buttonL',
-          'buttonR'
+          'buttonR',
         ]);
       });
     });
@@ -101,7 +101,7 @@ describe('Circuit Playground Components', () => {
             'touchPad6',
             'touchPad9',
             'touchPad10',
-            'touchPad12'
+            'touchPad12',
           ]);
         });
       });
@@ -113,7 +113,7 @@ describe('Circuit Playground Components', () => {
       const boardTwo = newBoard();
       return Promise.all([
         createCircuitPlaygroundComponents(boardOne),
-        createCircuitPlaygroundComponents(boardTwo)
+        createCircuitPlaygroundComponents(boardTwo),
       ]).then(([componentsOne, componentsTwo]) => {
         expect(componentsOne.led.board === boardOne).to.be.true;
         expect(componentsTwo.led.board === boardTwo).to.be.true;
@@ -523,7 +523,7 @@ describe('Circuit Playground Components', () => {
           accelerometer.io.sysexCommand
         ).to.have.been.calledOnce.and.calledWith([
           CP_COMMAND,
-          CP_ACCEL_STREAM_ON
+          CP_ACCEL_STREAM_ON,
         ]);
       });
 
@@ -544,7 +544,7 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getOrientation()).to.deep.equal([
           accelerometer.getOrientation('x'),
           accelerometer.getOrientation('y'),
-          accelerometer.getOrientation('z')
+          accelerometer.getOrientation('z'),
         ]);
 
         stub.restore();
@@ -568,7 +568,7 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getAcceleration()).to.deep.equal([
           accelerometer.getAcceleration('x'),
           accelerometer.getAcceleration('y'),
-          accelerometer.getAcceleration('z')
+          accelerometer.getAcceleration('z'),
         ]);
 
         stub.restore();

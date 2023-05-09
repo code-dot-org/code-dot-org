@@ -134,5 +134,5 @@ function fixMenuGenerator(menuGenerator, width, height) {
 }
 
 export var __TestInterface = {
-  fixMenuGenerator: fixMenuGenerator
+  fixMenuGenerator: fixMenuGenerator,
 };

@@ -5,7 +5,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import data, {
   changeView,
   updateTableColumns,
-  updateTableRecords
+  updateTableRecords,
 } from '@cdo/apps/storage/redux/data';
 import {DataView} from '@cdo/apps/storage/constants';
 import getScriptData from '@cdo/apps/util/getScriptData';

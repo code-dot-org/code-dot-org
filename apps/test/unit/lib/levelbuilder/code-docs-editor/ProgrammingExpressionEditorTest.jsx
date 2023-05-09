@@ -21,25 +21,25 @@ describe('ProgrammingExpressionEditor', () => {
       returnValue: 'none',
       tips: 'some tips on how to use this block',
       parameters: [{name: 'id', type: 'string'}],
-      examples: [{name: 'example 1'}]
+      examples: [{name: 'example 1'}],
     };
     defaultProps = {
       initialProgrammingExpression,
       environmentCategories: [
         {key: 'circuit', name: 'Circuit'},
         {key: 'variables', name: 'Variables'},
-        {key: 'canvas', name: 'Canvas'}
+        {key: 'canvas', name: 'Canvas'},
       ],
       videoOptions: [
         {
           key: 'video1',
-          name: 'Video 1'
+          name: 'Video 1',
         },
         {
           key: 'video2',
-          name: 'Video 2'
-        }
-      ]
+          name: 'Video 2',
+        },
+      ],
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -129,7 +129,7 @@ describe('ProgrammingExpressionEditor', () => {
         initialProgrammingExpression={{
           ...initialProgrammingExpression,
           environmentLanguageType: 'blockly',
-          blockName: 'gamelab_location_picker'
+          blockName: 'gamelab_location_picker',
         }}
       />
     );
@@ -166,7 +166,7 @@ describe('ProgrammingExpressionEditor', () => {
         'returnValue',
         'syntax',
         'tips',
-        'examples'
+        'examples',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('Block');

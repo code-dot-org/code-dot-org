@@ -35,3 +35,5 @@ Assume that `inputList` is an `ArrayList` of `Integer` objects that contains the
 
 What value will be returned by the call `bSearch(inputList, 0, 9, 55)`?
 MARKDOWN
+
+allow_multiple_attempts true

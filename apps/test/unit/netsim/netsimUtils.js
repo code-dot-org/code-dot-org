@@ -121,7 +121,7 @@ describe('NetSimUtils', function () {
           'toAddress',
           'fromAddress',
           'packetCount',
-          'packetIndex'
+          'packetIndex',
         ])
       );
     });
@@ -136,7 +136,7 @@ describe('NetSimUtils', function () {
         ['toAddress', 'fromAddress'],
         scrubHeaderSpecForBackwardsCompatibility([
           {key: 'toAddress', bits: 4},
-          {key: 'fromAddress', bits: 4}
+          {key: 'fromAddress', bits: 4},
         ])
       );
 
@@ -146,7 +146,7 @@ describe('NetSimUtils', function () {
           {key: 'toAddress', bits: 4},
           {key: 'fromAddress', bits: 4},
           {key: 'packetCount', bits: 4},
-          {key: 'packetIndex', bits: 4}
+          {key: 'packetIndex', bits: 4},
         ])
       );
     });

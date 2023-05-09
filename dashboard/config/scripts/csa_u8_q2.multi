@@ -18,3 +18,5 @@ MARKDOWN
 markdown <<MARKDOWN
 Which of the following are NOT true of insertion and selection sort?
 MARKDOWN
+
+allow_multiple_attempts true

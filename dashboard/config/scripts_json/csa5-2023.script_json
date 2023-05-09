@@ -16,8 +16,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 12:29:04 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-05-01 12:08:46 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -211,9 +211,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a grayscale image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* Print copies of the Grayscale Images handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a grayscale image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
+        "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
+        "preparation": "* Print copies of the Modifying Colors handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -2794,7 +2794,7 @@
       "key": "06e872e8-fab9-4c14-a276-d02f6c100bc3",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Grayscale Images handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create a grayscale image.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Modifying Colors handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create an image filter or effect.",
         "duration": "10",
         "name": "Planning the Algorithm",
         "tips": [
@@ -2824,7 +2824,7 @@
       "key": "4aedcd5b-4395-4e9e-948a-28ae83f2383a",
       "position": 7,
       "properties": {
-        "description": "Let's implement our algorithms to create our grayscale image filter! We can also use and modify other standard algorithms to create additional image filters and effects.",
+        "description": "Let's implement our algorithms to create a new image filter! We can also use and modify other standard algorithms to create additional image filters and effects.",
         "name": "Creating Image Filters",
         "remarks": true
       },
@@ -5348,6 +5348,31 @@
     },
     {
       "chapter": 54,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5L8-L6_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L8-L6_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "0cebb406-aa86-478c-b080-3987a190eea4"
+      },
+      "level_keys": [
+        "CSA U5L8-L6_2023"
+      ]
+    },
+    {
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5372,7 +5397,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5397,7 +5422,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5422,7 +5447,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5447,7 +5472,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5472,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5497,7 +5522,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5522,7 +5547,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6186,6 +6211,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5L8-L6_2023",
+        "script_level.level_keys": [
+          "CSA U5L8-L6_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2023",
+        "activity_section.key": "0cebb406-aa86-478c-b080-3987a190eea4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U5L9-L1_2023",
         "script_level.level_keys": [
           "CSA U5L9-L1_2023"
@@ -6307,6 +6344,30 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1RgtLxabsotFjhlt2n6KjPUUCs8lc-wzUSfmL5kp4E4k/edit?usp=sharing",
+      "key": "_exemplar_personal_narrative_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1P6PM0dzJxqNWzlY4OSJBH__RzViuGE2WMQglhr3SqBI/edit?usp=sharing",
+      "key": "_exemplar_personal_narrative_project_planning_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_personal_narrative_project_planning_guide_1"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Unit 5 Guide",
       "url": "https://docs.google.com/document/d/1pFYOmi8Lv7vUeHHVO_jUNpXvyYZeDr_2b1AhOOKY8hA/edit?usp=share_link",
       "key": "_exemplar_unit_5_guide",
@@ -6343,7 +6404,7 @@
       }
     },
     {
-      "name": "[KEY] Grayscale Images",
+      "name": "[KEY] Modifying Colors",
       "url": "https://docs.google.com/document/d/1qFqJyU-SNbHYRSn5-3wrIgf1GVyzqJxRwRh5PnbId_c/edit?usp=sharing",
       "key": "_key_grayscale_images",
       "properties": {
@@ -6643,7 +6704,7 @@
       }
     },
     {
-      "name": "Grayscale Images",
+      "name": "Modifying Colors",
       "url": "https://docs.google.com/document/d/1U7KadRIYqDHg3vEaN5Qh1UwjRCKGdrMc_PfzCfoxl4s/edit?usp=sharing",
       "key": "grayscale_images",
       "properties": {
@@ -6767,6 +6828,18 @@
       }
     },
     {
+      "name": "Personal Narrative Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1ht2OqwM-x_9JEiJ2Mu-tMGBHdufa1disaxgbplSAZUo/edit?usp=sharing",
+      "key": "personal_narrative_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project_planning_guide_1"
+      }
+    },
+    {
       "name": "Planning Algorithms Manipulatives",
       "url": "https://docs.google.com/document/d/1s3C8sqFduqYRdozFSaHnUqw2bygCmoXbaQYc6jgXgDg/edit?usp=sharing",
       "key": "planning_algorithms_manipulatives_2",
@@ -6781,7 +6854,7 @@
     },
     {
       "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/document/d/1Q6PnA8wya37_RM1MkU6JNeCKJdVLdLYYN7WyCZwOxWA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1yjyTJa1o-mwfbaOW37RkNx15mKvQgp6lsfHo0vK_NJc/edit?usp=sharing",
       "key": "planning_algorithms_manipulatives_3",
       "properties": {
         "audience": "Student",
@@ -7130,6 +7203,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_exemplar_personal_narrative_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "personal_narrative_project"
       }
     },
@@ -7179,6 +7258,18 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_exemplar_personal_narrative_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "personal_narrative_project_planning_guide_1"
       }
     },
     {
@@ -7631,6 +7722,16 @@
       }
     },
     {
+      "key": "row_major_order",
+      "word": "row-major order",
+      "definition": "traversing a 2D array by accessing each row from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
       "key": "two_dimensional_d_array",
       "word": "two-dimensional (2D) array",
       "definition": "an array of arrays often represented as a table with rows and columns",
@@ -7670,6 +7771,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "row_major_order"
       }
     },
     {

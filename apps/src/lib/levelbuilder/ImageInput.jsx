@@ -9,7 +9,7 @@ export default function ImageInput({
   updateImageUrl,
   initialImageUrl,
   showPreview = false,
-  helpTipText
+  helpTipText,
 }) {
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
@@ -64,7 +64,7 @@ ImageInput.propTypes = {
   updateImageUrl: PropTypes.func.isRequired,
   initialImageUrl: PropTypes.string,
   showPreview: PropTypes.bool,
-  helpTipText: PropTypes.string
+  helpTipText: PropTypes.string,
 };
 
 const styles = {
@@ -73,6 +73,6 @@ const styles = {
     marginLeft: 5,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.lighter_gray
-  }
+    borderColor: color.lighter_gray,
+  },
 };

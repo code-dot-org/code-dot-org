@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   BRAMBLE_READY_STATE,
   FILE_SYSTEM_ERROR,
-  SUPPORT_ARTICLE_URL
+  SUPPORT_ARTICLE_URL,
 } from '../../weblab/constants';
 import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
@@ -17,12 +17,12 @@ const STATUS_BRAMBLE_MOUNTABLE = 'statusBrambleMountable';
 const domainDependencies = [
   {
     url: 'https://codeprojects.org',
-    status: STATUS_CODE_PROJECTS
+    status: STATUS_CODE_PROJECTS,
   },
   {
     url: 'https://downloads.computinginthecore.org',
-    status: STATUS_COMPUTING_IN_THE_CORE
-  }
+    status: STATUS_COMPUTING_IN_THE_CORE,
+  },
 ];
 
 class WebLabNetworkCheck extends Component {
@@ -35,12 +35,12 @@ class WebLabNetworkCheck extends Component {
       encounteredFileSystemError: false,
       runButtonDisabled: false,
       renderCallToAction: false,
-      iframeSrc: 'about:blank'
+      iframeSrc: 'about:blank',
     };
   }
 
   static propTypes = {
-    studioUrl: PropTypes.string.isRequired
+    studioUrl: PropTypes.string.isRequired,
   };
 
   componentDidMount = () => {
@@ -74,7 +74,7 @@ class WebLabNetworkCheck extends Component {
       this.setState({encounteredFileSystemError: true});
     } else if (data?.msg === BRAMBLE_READY_STATE) {
       this.setState({
-        [STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED
+        [STATUS_BRAMBLE_MOUNTABLE]: Status.SUCCEEDED,
       });
     }
   };
@@ -120,20 +120,20 @@ class WebLabNetworkCheck extends Component {
         encounteredFileSystemError: false,
         runButtonDisabled: true,
         renderCallToAction: false,
-        iframeSrc: WEBLAB_URL
+        iframeSrc: WEBLAB_URL,
       },
       () => {
         const webLabChecksComplete = Promise.all([
           ...domainDependencies.map(this.verifyDomainAccess),
           // Polls for success every 500 ms; times out after 3 seconds
-          this.verifyBrambleMountable({timeout: 3000, interval: 500})
+          this.verifyBrambleMountable({timeout: 3000, interval: 500}),
         ]);
 
         webLabChecksComplete.then(() => {
           this.setState({
             renderCallToAction: true,
             runButtonDisabled: false,
-            iframeSrc: 'about:blank'
+            iframeSrc: 'about:blank',
           });
         });
       }
@@ -146,7 +146,7 @@ class WebLabNetworkCheck extends Component {
         [Status.WAITING]: 'Not complete',
         [Status.ATTEMPTING]: 'Connecting...',
         [Status.SUCCEEDED]: 'Success',
-        [Status.FAILED]: 'Failed'
+        [Status.FAILED]: 'Failed',
       }[status]
     }`}</p>
   );
@@ -157,7 +157,7 @@ class WebLabNetworkCheck extends Component {
     if (
       [
         this.state[STATUS_CODE_PROJECTS],
-        this.state[STATUS_COMPUTING_IN_THE_CORE]
+        this.state[STATUS_COMPUTING_IN_THE_CORE],
       ].includes(Status.FAILED)
     ) {
       actionItems.push(
@@ -192,7 +192,7 @@ class WebLabNetworkCheck extends Component {
     const testFailed = [
       STATUS_CODE_PROJECTS,
       STATUS_COMPUTING_IN_THE_CORE,
-      STATUS_BRAMBLE_MOUNTABLE
+      STATUS_BRAMBLE_MOUNTABLE,
     ].some(test => this.state[test] !== Status.SUCCEEDED);
 
     const actionItems = this.listActionItems();
@@ -309,11 +309,11 @@ class WebLabNetworkCheck extends Component {
 
 const styles = {
   content: {
-    marginTop: '30px'
+    marginTop: '30px',
   },
   iframe: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 export default WebLabNetworkCheck;

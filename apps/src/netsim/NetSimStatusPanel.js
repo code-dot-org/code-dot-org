@@ -32,7 +32,7 @@ var NetSimStatusPanel = (module.exports = function (rootDiv, callbacks) {
     className: 'netsim_status_panel',
     panelTitle: 'Status',
     userToggleable: false,
-    beginMinimized: true
+    beginMinimized: true,
   });
 });
 NetSimStatusPanel.inherits(NetSimPanel);
@@ -58,7 +58,7 @@ NetSimStatusPanel.prototype.render = function (data) {
     markup({
       myHostname: data.myHostname,
       myAddress: data.myAddress,
-      shareLink: data.shareLink
+      shareLink: data.shareLink,
     })
   );
   this.getBody().html(newMarkup);

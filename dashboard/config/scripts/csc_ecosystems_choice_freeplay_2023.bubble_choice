@@ -4,5 +4,6 @@ description 'Practice your skills! Choose a project that models aquatic animals 
 
 sublevels
 level 'csc_ecosystems_marine_choice'
-level 'csc_ecosystems_rainforest_choice'
-level 'csc_ecosystems_desert_choice'
+level 'csc_ecosystems_rainforest_freeplay_2023'
+level 'csc_ecosystems_desert_freeplay_2023'
+level 'csc_ecosystems_arctic_freeplay_2023'

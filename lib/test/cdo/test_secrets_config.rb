@@ -28,7 +28,7 @@ class SecretsConfigTest < Minitest::Test
     file.write yml_erb
     file.close
     config.load_configuration(file.path)
-    config.freeze
+    config.freeze_config
   end
 
   # Helper method which allows tests to easily mock a single secret being

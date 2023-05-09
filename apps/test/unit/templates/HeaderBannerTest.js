@@ -6,7 +6,7 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {combineReducers, createStore} from 'redux';
 import responsive, {
   setResponsiveSize,
-  ResponsiveSize
+  ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 
@@ -21,6 +21,7 @@ function wrapperWithProps(short, subheading, description) {
         subHeadingText={subheading}
         description={description}
         short={short}
+        backgroundUrl="/shared/images/banners/courses-hero-student.jpg"
       />
     </Provider>
   );
@@ -35,7 +36,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 140,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>
@@ -58,7 +59,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 140,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>
@@ -83,7 +84,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 260,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>
