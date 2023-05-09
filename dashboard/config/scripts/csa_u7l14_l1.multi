@@ -4,3 +4,5 @@ title 'Post-FRQ Survey'
 question 'Did you apply the three-step process (annotate, pseudocode, implement) before answering the question?'
 right 'Yes'
 right 'No'
+
+allow_multiple_attempts true

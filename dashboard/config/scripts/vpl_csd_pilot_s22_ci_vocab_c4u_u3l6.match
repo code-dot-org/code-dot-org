@@ -18,3 +18,5 @@ answer 'A first or early model of a product that allows you to test assumptions 
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

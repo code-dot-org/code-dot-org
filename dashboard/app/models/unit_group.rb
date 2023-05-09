@@ -59,6 +59,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation

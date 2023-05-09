@@ -11,3 +11,5 @@ right 'Stay on task'
 markdown <<MARKDOWN
 Which one of these tasks is the least appropriate to add to a Project Backlog?
 MARKDOWN
+
+allow_multiple_attempts true

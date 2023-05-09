@@ -1,5 +1,7 @@
-import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
+import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
@@ -109,7 +111,44 @@ export function getCode(workspace) {
   // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
 }
 
-// TODO: Re-define with a new custom field.
-export function soundField(onChange) {
-  return new Blockly.FieldDropdown([['Choose', 'Choose']], onChange);
+export function soundField(onClick, transformText, icon) {
+  // Handle 'play sound' block with default param from CDO blockly.
+  // TODO: Remove when sprite lab is migrated to Google blockly.
+  const validator = newValue => {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    if (!newValue.startsWith(SOUND_PREFIX) || !newValue.endsWith('.mp3')) {
+      console.error(
+        'An invalid sound value was selected. Therefore, the default sound value will be used.'
+      );
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  };
+  return new Blockly.FieldButton({
+    value: DEFAULT_SOUND,
+    validator,
+    onClick,
+    transformText,
+    icon,
+  });
+}
+
+export function locationField(icon, onClick) {
+  const transformTextSetField = value => {
+    if (value) {
+      try {
+        const loc = JSON.parse(value);
+        return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
+      } catch (e) {
+        // Just ignore bad values
+      }
+    }
+  };
+  return new Blockly.FieldButton({
+    onClick,
+    transformText: transformTextSetField,
+    icon,
+  });
 }

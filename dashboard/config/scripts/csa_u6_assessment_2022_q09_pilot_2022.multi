@@ -20,3 +20,5 @@ public void mystery(int n) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

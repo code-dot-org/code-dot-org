@@ -144,9 +144,14 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders a CensusTeacherBanner if showCensusBanner is true', () => {
+  /*
+    We have disabled the Census Banner on the Teacher Homepage (March 2023) to conserve
+    space. If we decide to show the banner again this test will need to be updated. See
+    TeacherHomepage.jsx to make the banner show.
+   */
+  it('does not render a CensusTeacherBanner even if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
   });
 
   it('renders a DonorTeacherBanner if isEnglish and afeEligible is true', () => {

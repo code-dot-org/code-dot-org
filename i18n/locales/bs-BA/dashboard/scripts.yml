@@ -1265,3 +1265,7 @@ bs:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Uvod

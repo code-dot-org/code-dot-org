@@ -7,3 +7,5 @@ wrong '(50, 125, 150)'
 wrong '(150, 0, 0)'
 wrong '(250, 200, 250)'
 right '(125, 125, 125)'
+
+allow_multiple_attempts true

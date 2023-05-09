@@ -112,6 +112,17 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "Mathematik",
               "expressions": {
@@ -138,7 +149,26 @@
               }
             },
             "variables": {
-              "name": "Variablen"
+              "name": "Variablen",
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Die Länge der Zeichenfolge"
+                }
+              }
             },
             "functions": {
               "name": "Funktionen"
@@ -151,6 +181,9 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "short_description": "Erstellt eine Schaltfläche auf dem Bildschirm, auf der ein Text an der Standardposition (0,0) angezeigt wird, welcher von der angegebenen ID bereitgestellt und referenziert wurde."
+                },
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
@@ -170,22 +203,72 @@
                     }
                   },
                   "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Die Eigenschaft, die geändert wird."
+                    }
+                  },
+                  "short_description": "Setzt eine Eigenschaft auf einen neuen Wert für das angegebene Element."
+                },
+                "setScreen": {
+                  "short_description": "Setzt den Bildschirm auf die angegebene ScreenID."
+                },
+                "showElement": {
+                  "short_description": "Zeigt das Element mit der angegebenen ID an."
+                },
+                "textLabel": {
+                  "short_description": "Erstellt eine Textbeschriftung auf dem Bildschirm an der Standardposition (0,0), in der der von der angegebenen ID bereitgestellte und referenzierte Text angezeigt wird."
                 }
               }
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Der Radius des Kreises in Pixeln."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Die X-Position in Pixeln der oberen linken Ecke des zu zeichnenden Bildes."
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln der oberen linken Ecke des zu zeichnenden Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln der oberen linken Ecke des zu zeichnenden Bildes."
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
-                  }
+                  },
+                  "short_description": "Gibt die Menge an Alpha (Opazität=Lichtundurchlässigkeit) (im Bereich von 0 bis 255) in der Farbe des Pixels zurück, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -193,6 +276,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -201,12 +290,32 @@
                     "Example: Duplicate": {
                       "name": "Beispiel: Duplizieren"
                     }
+                  },
+                  "palette_params": {
+                    "x": {
+                      "description": "Die X-Position in Pixeln, um die Aufnahme zu starten."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, um die Aufnahme zu starten."
+                    },
+                    "width": {
+                      "description": "Die Breite des umgebenden Rechtecks zur Erfassung der Bilddaten."
+                    },
+                    "height": {
+                      "description": "Die Höhe des umgebenden Rechtecks zur Erfassung der Bilddaten."
+                    }
                   }
                 },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -224,10 +333,26 @@
                     }
                   }
                 },
+                "rect": {
+                  "palette_params": {
+                    "width": {
+                      "description": "Die horizontale Breite des Rechtecks in Pixeln."
+                    },
+                    "height": {
+                      "description": "Die vertikale Höhe des Rechtecks in Pixeln."
+                    }
+                  }
+                },
                 "setAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -235,6 +360,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -242,6 +373,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     }
                   }
                 },
@@ -249,6 +386,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "red": {
+                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
+                    "alpha": {
+                      "description": "Optional. Der Grad der Opazität (von 0 bis 255), der im Pixel eingestellt werden soll. Der Standardwert ist 255 (volle Opazität). (Opazität = Lichtundurchlässigkeit)"
                     }
                   }
                 },
@@ -256,8 +405,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "x": {
+                      "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "y": {
+                      "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
+                    },
+                    "redValue": {
+                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
-                  }
+                  },
+                  "short_description": "Setzt den Rotanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den  Eingabe für redValue."
                 }
               }
             },
@@ -287,8 +446,18 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Der Name der Tabelle, aus der Datensätze abgerufen werden sollen."
+                    },
                     "options": {
                       "type": "Objekt"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Der Name des Schlüssels (key), der abgerufen werden soll."
                     }
                   }
                 },
@@ -299,10 +468,27 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "Ruft eine eindeutige Kennung für den aktuellen Benutzer dieser App ab."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Der Name der Tabelle, für die dieser Event-Handler gilt."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "Objekt"
+                    }
+                  }
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Die Webadresse eines Dienstes, der Daten zurückgibt."
                     }
                   }
                 },
@@ -317,17 +503,81 @@
             },
             "turtle": {
               "expressions": {
+                "arcLeft": {
+                  "short_description": "Bewegt die Schildkröte in einem gleichmäßigen und kreisförmigen Bogen vorwärts und nach links."
+                },
+                "getX": {
+                  "short_description": "Ruft die aktuelle X-Koordinate der Schildkröte in Pixeln ab."
+                },
+                "getY": {
+                  "short_description": "Ruft die aktuelle Y-Koordinate der Schildkröte in Pixeln ab."
+                },
+                "hide": {
+                  "short_description": "Macht die Schildkröte an ihrem aktuellen Standort unsichtbar."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Die Anzahl der Pixel, um die Schildkröte nach rechts zu bewegen."
+                    },
+                    "y": {
+                      "description": "Die Anzahl der Pixel, um die Schildkröte nach unten zu bewegen."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Verschiebt die Schildkröte um eine bestimmte Anzahl von Pixeln aus der aktuellen Richtung rückwärts."
+                },
+                "moveForward": {
+                  "short_description": "Verschiebt die Schildkröte um eine bestimmte Anzahl von Pixeln in die aktuelle Richtung vorwärts."
+                },
+                "moveTo": {
+                  "short_description": "Verschiebt die Schildkröte an eine bestimmte (x, y) Position auf dem Bildschirm."
+                },
+                "penColor": {
+                  "short_description": "Legt die Farbe des Stifts fest, mit dem die Schildkröte Linien und Punkte zeichnet."
+                },
+                "penDown": {
+                  "short_description": "Setzt den Stift auf, sodass die Schildkröte eine Linie hinter sich zieht, während sie sich bewegt."
+                },
+                "show": {
+                  "short_description": "Macht die Schildkröte an ihrem aktuellen Standort sichtbar."
+                },
+                "speed": {
+                  "short_description": "Legt die Geschwindigkeit für die Ausführung der App fest, das gilt auch für die Geschwindigkeit der Schildkröte."
+                },
                 "turnLeft": {
                   "examples": {
                     "Example: House": {
                       "name": "Beispiel: Haus"
                     }
-                  }
+                  },
+                  "short_description": "Dreht die Schildkröte um den angegebenen Winkel nach links. Die Position der Schildkröte bleibt dieselbe."
+                },
+                "turnRight": {
+                  "short_description": "Dreht die Schildkröte um den angegebenen Winkel nach rechts. Die Position der Schildkröte bleibt dieselbe."
+                },
+                "turnTo": {
+                  "short_description": "Ändert die Richtung der Schildkröte um einen bestimmten Winkel. 0 ist oben, 90 ist rechts, 180 ist unten und 270 ist links."
                 }
               }
             },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Der Wert, der von der setTimeout-Funktion zum Abbrechen zurückgegeben wird."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
+                    }
+                  }
+                },
                 "stopTimedLoop": {
                   "examples": {
                     "Countdown": {
@@ -393,8 +643,28 @@
                     }
                   }
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Deklariere ein Array und weise es einer Variablen zu"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
+                },
                 "addPair": {
                   "return_value": "Keiner"
+                },
+                "length": {
+                  "return_value": "Die Länge der Zeichenfolge"
                 }
               }
             },

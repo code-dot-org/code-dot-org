@@ -2368,7 +2368,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -2379,7 +2379,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -2390,7 +2390,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vnos
         - {}
         - {}
         - {}
@@ -8973,9 +8973,11 @@ sl-SI:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne v napačno
+            smer.
+        - feedback: Pravilno! Scrat se obrne v napačno smer in ne bo dosegel želoda.
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne v napačno
+            smer.
         - {}
         questions:
         - {}
@@ -9196,3 +9198,112 @@ sl-SI:
         - {}
         questions:
         - {}
+      Begin planning your project_2018_2019:
+        markdown: |+
+          # Primeri projekta
+
+          Začel boš svoj končni projekt. Preden začneš, si vzamei nekaj časa in si oglej primere projektov.
+
+          | Lačna veverica | Alien Story |
+          |---|---|
+          | [! [Lačna veverica (Play Lab)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG »Lačna veverica (Play Lab«)] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [! [Alien Story (Play Lab)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG »Alien Story (Play Lab«)] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Poskusite dodati zvoke tej igri! | Poskusite dodati še en prizor tej zgodbi! |
+
+      Begin planning your project_2018_2019_2020:
+        markdown: |+
+          # Primeri projekta
+
+          Začel boš svoj končni projekt. Preden začneš, si vzamei nekaj časa in si oglej primere projektov.
+
+          | Lačna veverica | Alien Story |
+          |---|---|
+          | [! [Lačna veverica (Play Lab)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG »Lačna veverica (Play Lab«)] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [! [Alien Story (Play Lab)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG »Alien Story (Play Lab«)] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Poskusite dodati zvoke tej igri! | Poskusite dodati še en prizor tej zgodbi! |
+
+      BinaryBracelets-Unplugged:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged2022:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged_2020:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      BinaryBracelets-Unplugged_2021:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      PicturingData-Unplugged:
+        markdown: |
+          # Slikovni podatki
+
+          Uporabi Play Lab projekt za zbiranje podatkov in napovedovanje.
+
+          ! [] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          # Slikovni podatki
+
+          Uporabi Play Lab projekt za zbiranje podatkov in napovedovanje.
+
+          ! [] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Mo(go)čna gesla
+
+          Razišči, zakaj ljudje uporabljajo gesla, nauči se prednosti uporabe gesel in odkrij strategije za ustvarjanje in ohranjanje močnih in varnih gesel.

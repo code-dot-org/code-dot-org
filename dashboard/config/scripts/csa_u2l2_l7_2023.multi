@@ -14,3 +14,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 For a "default" `Notebook` object, it would make the most sense that it would have a default color assigned, such as `"white"` and a default number of pages assigned, such as `50`. It would not make sense that a `Notebook` object would be created without a color or some set number of pages.
 MARKDOWN
+
+allow_multiple_attempts true

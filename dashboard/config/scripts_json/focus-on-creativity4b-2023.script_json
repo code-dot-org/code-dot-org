@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-28 22:57:59 UTC",
+    "serialized_at": "2023-05-02 19:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10020,11 +10020,10 @@
       }
     },
     {
-      "name": "Problem Solving Process for Design",
+      "name": "Problem Solving Process with Design",
       "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
       "key": "problem_solving_process_for_design_3",
       "properties": {
-        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_for_design_3"
