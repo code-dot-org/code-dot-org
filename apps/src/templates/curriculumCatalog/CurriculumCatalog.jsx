@@ -75,6 +75,15 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         }
       }
 
+      // Filter by duration
+      const durationFilters = appliedFilters['duration'];
+      if (
+        durationFilters.length > 0 &&
+        !durationFilters.includes(curriculum.duration)
+      ) {
+        return false;
+      }
+
       // Filter by topic (note: the Interdisciplinary topic will show any course that has been
       // tagged with a school subject (e.g. Math, Science, etc.))
       const topicFilters = appliedFilters['topic'];
