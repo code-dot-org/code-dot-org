@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2023-05-04 21:23:54 UTC",
+    "serialized_at": "2023-05-08 22:56:19 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1774,7 +1774,7 @@
       "key": "89a69079-d443-4f77-b312-1d9b075d794b",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -6606,7 +6606,7 @@
       "key": "5a4e50a9-849f-40b9-9faf-7abdd0e95844",
       "position": 1,
       "properties": {
-        "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
+        "description": "**Transition:** Move students onto Code Studio - level 2 where they will code the idea they made during the warm-up to make the giraffe sprite push the monkey sprite across the screen. When students finish level 2, have them try level 3 where they will make an elephant sprite push a hippo sprite down the screen.\n\n**Prompt:** These were challenging problems, but we were able to solve them. What helped us to solve these problems?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6635,6 +6635,7 @@
       "key": "02f5ab3d-be97-46c1-81a1-a03a8c2c1a8a",
       "position": 3,
       "properties": {
+        "description": "**Transition:** Have students continue working on the remaining levels.",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -13434,6 +13435,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
