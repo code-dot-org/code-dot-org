@@ -4,6 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
+import * as windowUtils from '@cdo/apps/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
@@ -15,14 +16,19 @@ describe('SectionsSetUpContainer', () => {
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('h1').length).to.equal(1);
+    expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(2);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
-      'Save and add another class section'
-    );
     expect(wrapper.find('Button').at(1).props().text).to.equal(
       'Finish creating sections'
     );
+  });
+
+  it('renders edit header and save button', () => {
+    const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
+
+    expect(wrapper.find('Heading1').length).to.equal(1);
+    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').at(1).props().text).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {
@@ -35,7 +41,7 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     wrapper
-      .find('FontAwesome')
+      .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
 
@@ -45,16 +51,12 @@ describe('SectionsSetUpContainer', () => {
   it('updates caret direction when Advacned Settings is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'caret-right'
-    );
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
     wrapper
-      .find('FontAwesome')
+      .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'caret-down'
-    );
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
@@ -79,7 +81,7 @@ describe('SectionsSetUpContainer', () => {
     sinon.restore();
   });
 
-  it('makes an ajax request when save is clicked', () => {
+  it('makes an ajax request when save is clicked', async () => {
     sinon
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')
@@ -90,7 +92,9 @@ describe('SectionsSetUpContainer', () => {
       .returns({
         attributes: {content: {value: null}},
       });
-    const fetchSpy = sinon.spy(window, 'fetch');
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -101,10 +105,47 @@ describe('SectionsSetUpContainer', () => {
 
     expect(fetchSpy).to.have.been.called.once;
 
+    await new Promise(resolve => setTimeout(resolve, 0));
+    expect(navigateToHrefSpy).to.have.been.called.once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
+
     sinon.restore();
   });
 
-  it('passes participantType and loginTyp to ajax request when save is clicked', () => {
+  it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
+    sinon
+      .stub(document, 'querySelector')
+      .withArgs('#sections-set-up-container')
+      .returns({
+        checkValidity: () => true,
+      })
+      .withArgs('meta[name="csrf-token"]')
+      .returns({
+        attributes: {content: {value: null}},
+      });
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+
+    const wrapper = shallow(<SectionsSetUpContainer isUsersFirstSection />);
+
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(fetchSpy).to.have.been.called.once;
+
+    await new Promise(resolve => setTimeout(resolve, 0));
+    expect(navigateToHrefSpy).to.have.been.called.once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
+      '/home?showSectionCreationDialog=true'
+    );
+
+    sinon.restore();
+  });
+
+  it('passes participantType and loginType to ajax request when save is clicked', () => {
     sinon
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')

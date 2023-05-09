@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-04-14 20:08:20 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-04-28 23:23:46 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -42,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and use events to make them interactive. \n\nStudents will code an event-based cause-and-effect model in Sprite Lab to demonstrate how species survive by adapting to their environments over time. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. \n\nStudents will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. \n",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n- Pair Programming: Decide if you want students to engage in pair programming. Watch this video and visit this Support page for more information about pair programming.\n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Determine in advance which levels might be more challenging for students.\n- Review slides and decide on pacing between student work time and whole group instruction.\n\n#####Optional\n- Prerequisite: Complete [Hello World](https://studio.code.org/s/hello-world-food-2021/lessons/1)\n- Pair Programming: Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/vgkahOzFH2Q) and visit this Support [page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n",
         "purpose": "This lesson provides an engaging and interactive learning experience that integrates science and technology. By using code to model a cause-and-effect relationship, students can explore how animals adapt to their environments and gain a deeper understanding of the natural world. Later, this lesson encourages creativity and self-expression by allowing students to personalize their models with their own unique style and ideas.",
         "student_overview": "In this lesson, you will model how animals adapt to their environments over time. You’ll learn to code how giraffes got their long necks, how bunnies have changed their fur color to hide better, and how birds have developed different shaped beaks."
       },

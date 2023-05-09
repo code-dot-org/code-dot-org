@@ -19,3 +19,5 @@ answer 'Assignment operator'
 
 question 'Shortcut syntax (+=, -=, *=, /=, %=) to perform an operation (+, -, *, /, or %) on both operands and store the result into the operand on the left'
 answer 'Compound assignment operator'
+
+allow_multiple_attempts true

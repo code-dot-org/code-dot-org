@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Short one-sentence description of problem to solve.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n✅ **TO DO #2:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ClassName</code> class in the <strong>Documentation</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for a thing to look for!\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>\r\n    </div>\r\n</details>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "long_instructions": "A musician wants to write a program that generates random chords for a song.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">generateChord()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SongGenerator</code> class to return a random chord from the list of chords.\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">generateSong()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SongGenerator</code> class that calls the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">generateChord()</code> method several times and returns the generated song.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">generateSong()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,16 +14,21 @@
         "tabOrder": 0
       }
     },
+    "video_key": "csa_private_methods",
     "encrypted_examples": [
 
     ],
-    "video_key": "csa_private_methods"
+    "reference_links": [
+      "/courses/csa-2023/guides/private-methods"
+    ],
+    "display_name": "Song Chords",
+    "bubble_choice_description": "A musician wants to write a program that generates random chords for a song."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-11T14:06:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:06:12.130+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L6b_2023\"},{\"changed_at\":\"2023-04-11 14:06:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:10:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:06:12.130+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L6b_2023\"},{\"changed_at\":\"2023-04-11 14:06:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:10:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:19:48 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

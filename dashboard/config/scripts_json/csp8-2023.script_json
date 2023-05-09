@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 04:46:04 UTC",
+    "serialized_at": "2023-04-25 23:04:12 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -270,7 +270,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1ulxdCKEwlIaMnXtb9mZcygINW7-hC1QftjLKxvFYC3M/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -854,21 +854,8 @@
       }
     },
     {
-      "key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csp8-2023"
-      }
-    },
-    {
       "key": "e5f2af15-ff99-4df9-ab65-b770b3356dbc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -882,7 +869,7 @@
     },
     {
       "key": "2c459c38-3d78-45d6-9587-0fff1ecff9fb",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -2664,26 +2651,15 @@
       }
     },
     {
-      "key": "d2911e14-9c88-4b2e-8d30-583294c330ca",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ulxdCKEwlIaMnXtb9mZcygINW7-hC1QftjLKxvFYC3M/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "d2911e14-9c88-4b2e-8d30-583294c330ca",
-        "lesson_activity.key": "bd21e880-0b18-4169-be8c-9e53c8f6e7aa"
-      }
-    },
-    {
       "key": "f8e31b1c-c837-4ac5-bed9-b1db30a2deb3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 10 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
-        "progression_name": "Unit 10 Exam",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit Exam - Cybersecurity and Global Impacts",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics10.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://images.code.org/5843e95342dbf0f156eb7a95490c9344-Screenshot 2023-04-25 at 3.42.55 PM.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing)\n\n"
           }
         ]
       },
@@ -2728,6 +2704,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations_2023"
+        ],
         "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
@@ -2750,6 +2729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3021,6 +3003,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp10_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3045,7 +3030,7 @@
         "level_keys": [
           "CSP 20-21 Unit 10 Assessment2022_2023"
         ],
-        "progression": "Unit 10 Exam"
+        "progression": "Unit Exam - Cybersecurity and Global Impacts"
       },
       "bonus": false,
       "seeding_key": {
@@ -3467,7 +3452,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 14 - Assessment Day",
+      "name": "CSP Unit 8 - Lesson 11 - Assessment Day",
       "url": "https://docs.google.com/presentation/d/1P1Jw7IJQciYo_o1xoQ6LjjjuLnfr4N_MrSVCqfiA9DE/copy",
       "key": "csp_unit_8_-_lesson_14_-_assessment_day",
       "properties": {

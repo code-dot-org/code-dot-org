@@ -5,6 +5,24 @@ FactoryBot.define do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
+
+    trait :with_units do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+      end
+    end
+
+    trait :with_unit_groups do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+      end
+    end
   end
 
   factory :course_version do
@@ -1262,7 +1280,7 @@ FactoryBot.define do
   factory :school_info_without_country, class: SchoolInfo do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    association :school_district, strategy: :build
+    association :school_district
   end
 
   factory :school_info_non_us, class: SchoolInfo do
@@ -1276,7 +1294,7 @@ FactoryBot.define do
     country {'US'}
 
     trait :with_district do
-      association :school_district, strategy: :build
+      association :school_district
     end
 
     trait :with_school do
@@ -1304,15 +1322,15 @@ FactoryBot.define do
   end
 
   factory :school_info_with_public_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :public_school
+    association :school, factory: :public_school
   end
 
   factory :school_info_with_private_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :private_school
+    association :school, factory: :private_school
   end
 
   factory :school_info_with_charter_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :charter_school
+    association :school, factory: :charter_school
   end
 
   factory :school_info_us_public, parent: :school_info_us do
@@ -1412,7 +1430,7 @@ FactoryBot.define do
     zip {"98122"}
 
     trait :with_district do
-      association :school_district, strategy: :build
+      association :school_district
     end
 
     trait :is_high_school do

@@ -17,3 +17,5 @@ The syntax for instantiating an object is
 ClassName nameOfObject = new ClassName();
 ```
 MARKDOWN
+
+allow_multiple_attempts true
