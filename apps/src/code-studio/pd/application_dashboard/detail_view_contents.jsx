@@ -972,7 +972,7 @@ export class DetailViewContents extends React.Component {
   };
 
   render() {
-    if (this.state.hasOwnProperty('deleted')) {
+    if (Object.prototype.hasOwnProperty.call(this.state, 'deleted')) {
       const message = this.state.deleted
         ? 'This application has been deleted.'
         : 'This application could not be deleted.';
