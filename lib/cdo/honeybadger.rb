@@ -99,8 +99,8 @@ module Honeybadger
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
-
-    filters = %w[occurred.after:"2+days+ago" -is:resolved -is:paused -is:ignored"]
-    HoneybadgerFaultAnalyzer.new(filters).get_faults
+    filters = %w[-is:resolved -is:paused -is:ignored]
+    time_filters = ["occurred_after=#{1.day.ago.to_i}"]
+    HoneybadgerFaultAnalyzer.new(time_filters, filters).get_faults
   end
 end

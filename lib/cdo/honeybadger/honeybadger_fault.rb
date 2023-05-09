@@ -7,8 +7,8 @@ class HoneybadgerFault
     @fault['environment'] || 'unknown'
   end
 
-  def assignee
-    @fault['assignee'] ? @fault['assignee']['email'] : nil
+  def assignee(default=nil)
+    @fault['assignee'] ? @fault['assignee']['email'] : default
   end
 
   def url
@@ -21,14 +21,5 @@ class HoneybadgerFault
 
   def project_id
     @fault['project_id']
-  end
-
-  def dotd_fault_response
-    {
-      environment: environment,
-      assignee: assignee,
-      url: url,
-      message: message
-    }
   end
 end
