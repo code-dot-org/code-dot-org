@@ -1,4 +1,5 @@
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import _ from 'lodash';
 
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
@@ -49,4 +50,31 @@ export function parseSoundPathString(text) {
   // Examples: 'Board games: card_dealing_multiple', 'default'
   const fieldText = `${category}${soundName}`;
   return fieldText;
+}
+
+/**
+ * Converts a printer-style string range to an array of numbers
+ * e.g., "1,2,4-6" becomes [1,2,4,5,6]
+ * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
+ * @returns  array of numbers
+ */
+export function printerStyleNumberRangeToList(rangeString) {
+  const rangeStringNoSpaces = rangeString.replace(/ /g, '');
+  const rangeItems = rangeStringNoSpaces.split(',');
+  const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
+  const numberRegExp = /^(\d+)$/; // e.g., "1", "2"
+  const fullNumberList = rangeItems.reduce((numberArray, currExp) => {
+    const rangeResult = rangeRegExp.exec(currExp);
+    const numberResult = numberRegExp.exec(currExp);
+    if (rangeResult) {
+      const lowerBound = Number(rangeResult[1]);
+      const upperNonInclusiveBound = Number(rangeResult[2]) + 1;
+      const rangeArray = _.range(lowerBound, upperNonInclusiveBound);
+      numberArray = numberArray.concat(rangeArray);
+    } else if (numberResult) {
+      numberArray.push(Number(numberResult[1]));
+    }
+    return numberArray;
+  }, []);
+  return fullNumberList;
 }

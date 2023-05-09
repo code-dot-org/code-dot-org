@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
-import _ from 'lodash';
 import {EMPTY_OPTION} from '../constants';
+import {printerStyleNumberRangeToList} from '@cdo/apps/p5lab/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /** Add special case for ???
@@ -53,7 +53,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
             return optionsMap;
           }, {})
         : {};
-      let options = this.printerStyleNumberRangeToList(this.config);
+      let options = printerStyleNumberRangeToList(this.config);
       // `options` is not a number range, it is a customized config string.
       if (options.length === 0) {
         options = this.config.split(',').map(val => {
@@ -93,31 +93,4 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     }
     return element;
   }
-
-  /**
-   * Converts a printer-style string range to an array of numbers
-   * e.g., "1,2,4-6" becomes [1,2,4,5,6]
-   * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
-   * @returns  array of numbers
-   */
-  printerStyleNumberRangeToList = function (rangeString) {
-    const rangeStringNoSpaces = rangeString.replace(/ /g, '');
-    const rangeItems = rangeStringNoSpaces.split(',');
-    const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
-    const numberRegExp = /^(\d+)$/; // e.g., "1", "2"
-    const fullNumberList = rangeItems.reduce((numberArray, currExp) => {
-      const rangeResult = rangeRegExp.exec(currExp);
-      const numberResult = numberRegExp.exec(currExp);
-      if (rangeResult) {
-        const lowerBound = Number(rangeResult[1]);
-        const upperNonInclusiveBound = Number(rangeResult[2]) + 1;
-        const rangeArray = _.range(lowerBound, upperNonInclusiveBound);
-        numberArray = numberArray.concat(rangeArray);
-      } else if (numberResult) {
-        numberArray.push(Number(numberResult[1]));
-      }
-      return numberArray;
-    }, []);
-    return fullNumberList;
-  };
 }
