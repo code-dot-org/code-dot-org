@@ -775,7 +775,6 @@ end
 
 def localize_markdown_content
   markdown_files_to_localize = %w[
-    ai.md.partial
     athome.md.partial
     break.md.partial
     coldplay.md.partial
