@@ -69,9 +69,6 @@ sq:
       expired: ka skaduar, ju lutem kërkoni një të ri
       not_found: nuk u gjet
       not_locked: nuk ishte e bllokuar
-      not_saved:
-        one: '1 gabim e ndaloi këtë %{resource} për tu ruajtur:'
-        other: "%{count} gabime ndaluan %{resource} për tu ruajtur:"
     invitations:
       send_instructions: Një ftesë përmes email-it është dërguar në %{email}.
       invitation_token_invalid: Shenja e ftesës nuk është e vlefshme!

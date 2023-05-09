@@ -1,4 +1,3 @@
-/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -630,8 +629,8 @@ designMode.onDuplicate = function (element, prevThemeName, event) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
   var duplicateElement = $(element).clone()[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
@@ -707,8 +706,8 @@ designMode.onRestoreThemeDefaults = function (element) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
 
   const currentThemeValue = elementLibrary.getCurrentTheme(
@@ -826,7 +825,7 @@ designMode.changeThemeForScreen = function (screenElement, themeValue) {
 
   const screenAndChildren = [
     currentScreen[0],
-    ...currentScreen.children().toArray()
+    ...currentScreen.children().toArray(),
   ];
 
   // Modify each element in the screen (including the screen itself):
@@ -847,8 +846,8 @@ function duplicateScreen(element) {
     event: 'duplicate_screen',
     project_id: project.getCurrentId(),
     data_json: JSON.stringify({
-      elementId: element.id
-    })
+      elementId: element.id,
+    }),
   });
 
   const sourceScreen = $(element);
@@ -890,7 +889,7 @@ function duplicateScreen(element) {
     makeDraggable(sourceScreen.children());
   }
   const styles = {
-    textAlign: 'center'
+    textAlign: 'center',
   };
   const alert = (
     <div style={styles}>
@@ -912,8 +911,8 @@ designMode.onCopyElementToScreen = function (element, destScreen) {
       elementId: element.id,
       elementTag: element.tagName,
       elementClass: element.className,
-      destinationScreen: destScreen
-    })
+      destinationScreen: destScreen,
+    }),
   });
 
   const sourceElement = $(element);
@@ -943,7 +942,7 @@ designMode.onCopyElementToScreen = function (element, destScreen) {
     makeDraggable(sourceElement.children());
   }
   const styles = {
-    textAlign: 'center'
+    textAlign: 'center',
   };
   const alert = (
     <div style={styles}>
@@ -967,8 +966,8 @@ function deleteElement(element) {
     data_json: JSON.stringify({
       elementId: element.id,
       elementTag: element.tagName,
-      elementClass: element.className
-    })
+      elementClass: element.className,
+    }),
   });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
@@ -1135,7 +1134,7 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
       removedHtml: removed,
       unsafeHtml: unsafe,
       safeHtml: safe,
-      sanitizationTarget: sanitizationTarget
+      sanitizationTarget: sanitizationTarget,
     });
   };
 }
@@ -1315,7 +1314,7 @@ function makeDraggable(jqueryElements) {
 
           // Re-render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
-        }
+        },
       })
       .draggable({
         cancel: false, // allow buttons and inputs to be dragged
@@ -1346,7 +1345,7 @@ function makeDraggable(jqueryElements) {
           // Set original element properties to update values in Property tab
           elm.css({
             left: newLeft,
-            top: newTop
+            top: newTop,
           });
 
           // Dim the element if it's dragged out of bounds
@@ -1384,16 +1383,16 @@ function makeDraggable(jqueryElements) {
           // Turn clipping back on so it's not possible for elements
           // to bleed out of app space
           designMode.setAppSpaceClipping(true);
-        }
+        },
       })
       .css({
         position: 'absolute',
-        lineHeight: '0px'
+        lineHeight: '0px',
       });
 
     wrapper.css({
       top: elm.css('top'),
-      left: elm.css('left')
+      left: elm.css('left'),
     });
 
     // Chrome/Safari both have issues where they don't properly render the
@@ -1505,7 +1504,7 @@ function highlightElement(element) {
   if ($(element).is('#designModeViz img[src!=""], #designModeViz label')) {
     $(element).parent().css({
       outlineStyle: 'dashed',
-      outlineWidth: '1px'
+      outlineWidth: '1px',
     });
   }
 }
@@ -1516,7 +1515,7 @@ function highlightElement(element) {
 function removeElementHighlights() {
   $('#designModeViz .ui-draggable').css({
     outlineStyle: '',
-    outlineWidth: ''
+    outlineWidth: '',
   });
 }
 
@@ -1571,7 +1570,7 @@ designMode.configureDragAndDrop = function () {
 
       // Re-render design work space for this element
       designMode.renderDesignWorkspace(element);
-    }
+    },
   });
 };
 
@@ -1602,7 +1601,7 @@ function moveElementIntoBounds(element) {
   elm.animate(
     {
       left: newContainedPos.left,
-      top: newContainedPos.top
+      top: newContainedPos.top,
     },
     ANIMATION_LENGTH_MS
   );
@@ -1610,7 +1609,7 @@ function moveElementIntoBounds(element) {
   // Update position on original element to update values in Property tab
   $(element).css({
     left: newContainedPos.left,
-    top: newContainedPos.top
+    top: newContainedPos.top,
   });
 }
 
@@ -1720,7 +1719,7 @@ designMode.renderDesignWorkspace = function (element) {
       this,
       designMode.activeScreen()
     ),
-    autogenerateML
+    autogenerateML,
   };
   ReactDOM.render(
     <Provider store={getStore()}>

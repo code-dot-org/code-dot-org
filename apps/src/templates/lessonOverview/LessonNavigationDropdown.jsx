@@ -18,7 +18,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
     lesson: navigationLessonShape.isRequired,
-    isStudentLessonPlan: PropTypes.bool
+    isStudentLessonPlan: PropTypes.bool,
   };
 
   constructor(props) {
@@ -30,7 +30,7 @@ export default class LessonNavigationDropdown extends Component {
       ) + 1;
 
     this.state = {
-      currentSection: sectionOfCurrentLesson
+      currentSection: sectionOfCurrentLesson,
     };
   }
 
@@ -47,14 +47,14 @@ export default class LessonNavigationDropdown extends Component {
           data_int: this.props.lesson.id,
           data_json: JSON.stringify({
             startingLessonId: this.props.lesson.id,
-            endingLessonId: listItem.id
-          })
+            endingLessonId: listItem.id,
+          }),
         },
         {
           includeUserId: true,
           callback: () => {
             navigateToHref(linkWithQueryParams(listItem.link));
-          }
+          },
         }
       );
     } else {
@@ -85,7 +85,7 @@ export default class LessonNavigationDropdown extends Component {
       if (lessonGroup.userFacing) {
         sectionsAndLessons.push({
           displayName: lessonGroup.displayName,
-          sectionNumber: index + 1
+          sectionNumber: index + 1,
         });
       }
       if (index + 1 === this.state.currentSection) {
@@ -123,7 +123,7 @@ export default class LessonNavigationDropdown extends Component {
                   <span
                     style={{
                       ...{margin: '0px 2px'},
-                      ...(listItem.key === lesson.key && styles.boldText)
+                      ...(listItem.key === lesson.key && styles.boldText),
                     }}
                   >
                     {`${listItem.position} - ${listItem.displayName}`}
@@ -141,18 +141,18 @@ export default class LessonNavigationDropdown extends Component {
 
 const styles = {
   dropdown: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   section: {
     width: 300,
     fontFamily: '"Gotham 4r", sans-serif',
-    backgroundColor: color.lightest_purple
+    backgroundColor: color.lightest_purple,
   },
   lesson: {
     width: 300,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
 };

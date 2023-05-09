@@ -172,7 +172,6 @@ ms:
     data_collection_us: "Saya faham bahawa Code.org adalah laman web bukan untuk keuntungan yang berpusat di AS dan undang-undang yang mengawal pengumpulan data di A.S. mungkin berbeza dari undang-undang di negara saya."
     visit_privacy: 'Lawati Code.org''s [Dasar Privasi](%{privacy_url}) untuk mengetahui lebih lanjut.'
     student_terms_markdown: "Alamat e-mel tidak disimpan dalam borang yang membolehkan kami menghubungi pelajar. Pelajar tidak akan menerima e-mel daripada Code.org kecuali untuk pemulihan kata laluan. Lihat [dasar privasi] kami(http://code.org/privacy) untuk maklumat lanjut."
-    additional_information: "Kami memerlukan beberapa maklumat tambahan untuk terus mendaftar anda."
     user_type_button: "Kemaskini Jenis Akaun"
     user_type_label: "Jenis Akaun"
     user_type_student: "Pelajar"

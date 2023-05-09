@@ -1,5 +1,4 @@
 /** Redux actions and reducer for an individual project */
-/* globals dashboard */
 
 const SHOW_PROJECT_UPDATED_AT = 'project/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_STATUS = 'project/SET_PROJECT_UPDATED_STATUS';
@@ -18,13 +17,13 @@ export const projectUpdatedStatuses = {
   default: 'default',
   saving: 'saving',
   saved: 'saved',
-  error: 'error'
+  error: 'error',
 };
 
 export const workspaceAlertTypes = {
   error: 'error',
   warning: 'warning',
-  notification: 'notification'
+  notification: 'notification',
 };
 
 const initialState = {
@@ -36,14 +35,14 @@ const initialState = {
   showTryAgainDialog: false,
   showWorkspaceAlert: {type: '', message: '', displayBottom: undefined},
   inRestrictedShareMode: false,
-  teacherHasConfirmedUploadWarning: false
+  teacherHasConfirmedUploadWarning: false,
 };
 
 export default (state = initialState, action) => {
   if (action.type === SHOW_PROJECT_UPDATED_AT) {
     return {
       ...state,
-      showProjectUpdatedAt: true
+      showProjectUpdatedAt: true,
     };
   }
 
@@ -51,62 +50,62 @@ export default (state = initialState, action) => {
     return {
       ...state,
       projectUpdatedAt: action.updatedAt,
-      projectUpdatedStatus: projectUpdatedStatuses.saved
+      projectUpdatedStatus: projectUpdatedStatuses.saved,
     };
   }
 
   if (action.type === SET_PROJECT_UPDATED_STATUS) {
     return {
       ...state,
-      projectUpdatedStatus: action.status
+      projectUpdatedStatus: action.status,
     };
   }
 
   if (action.type === SHOW_WORKSPACE_ALERT) {
     return {
       ...state,
-      workspaceAlert: action.workspaceAlert
+      workspaceAlert: action.workspaceAlert,
     };
   }
 
   if (action.type === REFRESH_PROJECT_NAME) {
     return {
       ...state,
-      projectName: dashboard.project.getCurrentName()
+      projectName: dashboard.project.getCurrentName(),
     };
   }
 
   if (action.type === SHOW_TRY_AGAIN_DIALOG) {
     return {
       ...state,
-      showTryAgainDialog: action.visible
+      showTryAgainDialog: action.visible,
     };
   }
 
   if (action.type === UNSET_NAME_FAILURE) {
     return {
       ...state,
-      projectNameFailure: undefined
+      projectNameFailure: undefined,
     };
   }
 
   if (action.type === SET_NAME_FAILURE) {
     return {
       ...state,
-      projectNameFailure: action.projectNameFailure
+      projectNameFailure: action.projectNameFailure,
     };
   }
   if (action.type === REFRESH_IN_RESTRICTED_SHARE_MODE) {
     return {
       ...state,
-      inRestrictedShareMode: dashboard.project.inRestrictedShareMode()
+      inRestrictedShareMode: dashboard.project.inRestrictedShareMode(),
     };
   }
   if (action.type === REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING) {
     return {
       ...state,
       teacherHasConfirmedUploadWarning:
-        dashboard.project.teacherHasConfirmedUploadWarning()
+        dashboard.project.teacherHasConfirmedUploadWarning(),
     };
   }
 
@@ -114,12 +113,12 @@ export default (state = initialState, action) => {
 };
 
 export const showProjectUpdatedAt = () => ({
-  type: SHOW_PROJECT_UPDATED_AT
+  type: SHOW_PROJECT_UPDATED_AT,
 });
 
 export const setProjectUpdatedError = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.error
+  status: projectUpdatedStatuses.error,
 });
 
 export const displayWorkspaceAlert = (
@@ -131,28 +130,28 @@ export const displayWorkspaceAlert = (
   workspaceAlert: {
     type: workspaceAlertType,
     message: workspaceAlertMessage,
-    displayBottom: workspaceAlertDisplayBottom
-  }
+    displayBottom: workspaceAlertDisplayBottom,
+  },
 });
 
 export const closeWorkspaceAlert = () => ({
   type: SHOW_WORKSPACE_ALERT,
-  workspaceAlert: null
+  workspaceAlert: null,
 });
 
 export const setProjectUpdatedSaving = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.saving
+  status: projectUpdatedStatuses.saving,
 });
 
 export const setProjectUpdatedSaved = () => ({
   type: SET_PROJECT_UPDATED_STATUS,
-  status: projectUpdatedStatuses.saved
+  status: projectUpdatedStatuses.saved,
 });
 
 export const setProjectUpdatedAt = updatedAt => ({
   type: SET_PROJECT_UPDATED_AT,
-  updatedAt
+  updatedAt,
 });
 
 export const retryProjectSave = () => {
@@ -160,31 +159,31 @@ export const retryProjectSave = () => {
 };
 
 export const refreshProjectName = () => ({
-  type: REFRESH_PROJECT_NAME
+  type: REFRESH_PROJECT_NAME,
 });
 
 export const setShowTryAgainDialog = visible => ({
   type: SHOW_TRY_AGAIN_DIALOG,
-  visible
+  visible,
 });
 
 export const setNameFailure = projectNameFailure => ({
   type: SET_NAME_FAILURE,
-  projectNameFailure
+  projectNameFailure,
 });
 
 export const unsetNameFailure = () => ({
-  type: UNSET_NAME_FAILURE
+  type: UNSET_NAME_FAILURE,
 });
 
 export function refreshInRestrictedShareMode() {
   return {
-    type: REFRESH_IN_RESTRICTED_SHARE_MODE
+    type: REFRESH_IN_RESTRICTED_SHARE_MODE,
   };
 }
 
 export function refreshTeacherHasConfirmedUploadWarning() {
   return {
-    type: REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING
+    type: REFRESH_TEACHER_HAS_CONFIRMED_UPLOAD_WARNING,
   };
 }

@@ -45,7 +45,7 @@ describe('NetSimVizSimulationWire', function () {
       shard,
       {
         localNodeID: localNodeID,
-        remoteNodeID: remoteNodeID
+        remoteNodeID: remoteNodeID,
       },
       function (e, w) {
         newWire = w;

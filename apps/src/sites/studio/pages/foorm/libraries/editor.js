@@ -6,11 +6,11 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import {
   populateCodeMirror,
   resetCodeMirror,
-  confirmNoUnsavedChanges
+  confirmNoUnsavedChanges,
 } from '../forms/editorHelpers.js';
 import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import foorm, {
-  setFetchableEntities
+  setFetchableEntities,
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';

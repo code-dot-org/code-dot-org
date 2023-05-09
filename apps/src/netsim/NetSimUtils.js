@@ -147,7 +147,7 @@ exports.getEncodingLabel = function (encodingType) {
  */
 exports.forEachEnumValue = function (enumObj, func) {
   for (var enumKey in enumObj) {
-    if (enumObj.hasOwnProperty(enumKey)) {
+    if (Object.prototype.hasOwnProperty.call(enumObj, enumKey)) {
       func(enumObj[enumKey]);
     }
   }
@@ -163,7 +163,7 @@ var NUMBER_SERIALIZATION_RULES = [
   {jsVal: Infinity, jsonVal: 'Infinity'},
   {jsVal: -Infinity, jsonVal: '-Infinity'},
   {jsVal: NaN, jsonVal: 'NaN'},
-  {jsVal: undefined, jsonVal: 'undefined'}
+  {jsVal: undefined, jsonVal: 'undefined'},
 ];
 
 /**
@@ -401,7 +401,7 @@ exports.makeContinueButton = function (onPanel) {
     },
     {
       secondary: false,
-      classes: ['submitButton']
+      classes: ['submitButton'],
     }
   );
 };

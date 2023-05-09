@@ -16,7 +16,7 @@ const StepType = {
   RUN: 0,
   IN: 1,
   OVER: 2,
-  OUT: 3
+  OUT: 3,
 };
 
 /**
@@ -26,7 +26,7 @@ const StepType = {
 const INTERSTITIAL_NODES = {
   Program: true,
   BlockStatement: true,
-  SwitchStatement: true
+  SwitchStatement: true,
 };
 
 /**
@@ -92,7 +92,7 @@ export default class JSInterpreter {
     customMarshalGlobalProperties,
     customMarshalBlockedProperties,
     customMarshalObjectList,
-    logExecution
+    logExecution,
   }) {
     this.studioApp = studioApp;
     this.shouldRunAtMaxSpeed =
@@ -104,7 +104,7 @@ export default class JSInterpreter {
     this.customMarshaler = new CustomMarshaler({
       globalProperties: customMarshalGlobalProperties,
       blockedProperties: customMarshalBlockedProperties,
-      objectList: customMarshalObjectList
+      objectList: customMarshalObjectList,
     });
 
     // Publicly-exposed events that anyone with access to the JSInterpreter can
@@ -190,7 +190,7 @@ export default class JSInterpreter {
             if (this.initialized()) {
               this.eventQueue.push({
                 fn: intFunc,
-                arguments: args
+                arguments: args,
               });
 
               if (!this.isExecuting) {
@@ -247,7 +247,7 @@ export default class JSInterpreter {
             interpreter.createNativeFunction(
               interpreter.makeNativeMemberFunction({
                 nativeFunc: this.nativeGetCallback,
-                maxDepth: 5
+                maxDepth: 5,
               })
             )
           );
@@ -257,7 +257,7 @@ export default class JSInterpreter {
             'setCallbackRetVal',
             interpreter.createNativeFunction(
               interpreter.makeNativeMemberFunction({
-                nativeFunc: this.nativeSetCallbackRetVal
+                nativeFunc: this.nativeSetCallbackRetVal,
               })
             )
           );
@@ -278,12 +278,12 @@ export default class JSInterpreter {
               // locations: adds information about row/col number and allows us to use the sourceFile option.
               locations: true,
               sourceFile: library.name,
-              program: libraryAST
+              program: libraryAST,
             });
           } catch (err) {
             err.message = i18n.errorParsingLibrary({
               libraryName: library.name,
-              errorMessage: err.message
+              errorMessage: err.message,
             });
             throw err;
           }
@@ -336,7 +336,7 @@ export default class JSInterpreter {
       // Tell the AST parser to push comments into our allComments array
       onComment: (isBlockComment, text, startLocation, endLocation) => {
         allComments.push({isBlockComment, text, startLocation, endLocation});
-      }
+      },
     };
 
     // trim whitespace to ensure we correctly detect comments
@@ -372,7 +372,7 @@ export default class JSInterpreter {
       functionsAndMetadata.push({
         functionName: codeFunction.id.name,
         parameters: params,
-        comment: fullComment
+        comment: fullComment,
       });
     });
 
@@ -519,7 +519,7 @@ export default class JSInterpreter {
     // Scope not found, insert new object in array:
     this.stoppedAtBreakpointRows.unshift({
       row: row,
-      scope: scope
+      scope: scope,
     });
   }
 
@@ -737,7 +737,10 @@ export default class JSInterpreter {
         //      in the doneLeft value, because the expression kind of looks like i = i + 1 which
         //      has a left (i = ) and a right (i + 1) side, and the left side is where the assignment
         //      actually takes place.
-        this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+        this.atInterstitialNode = Object.prototype.hasOwnProperty.call(
+          INTERSTITIAL_NODES,
+          nodeType
+        );
         if (inUserCode && !doneUserLine) {
           doneUserLine =
             this.atInterstitialNode ||
@@ -1155,7 +1158,7 @@ export default class JSInterpreter {
     if (typeof value === 'function') {
       const wrapper = this.interpreter.makeNativeMemberFunction({
         nativeFunc: value,
-        nativeParentObj: parent
+        nativeParentObj: parent,
       });
       interpreterVal = this.interpreter.createNativeFunction(wrapper);
     } else {
@@ -1216,7 +1219,7 @@ export default class JSInterpreter {
     } else if (expression.property.type === 'Literal') {
       return this.interpreter.getValue([
         object,
-        this.interpreter.createPrimitive(expression.property.value)
+        this.interpreter.createPrimitive(expression.property.value),
       ]);
     }
   }
@@ -1335,8 +1338,8 @@ export default class JSInterpreter {
       {
         node: evalInterpreter.ast,
         scope: currentScope,
-        thisExpression: currentScope
-      }
+        thisExpression: currentScope,
+      },
     ]);
     // Copy these properties directly into the evalInterpreter so the .isa()
     // method behaves as expected
@@ -1348,7 +1351,7 @@ export default class JSInterpreter {
       'NUMBER',
       'OBJECT',
       'STRING',
-      'UNDEFINED'
+      'UNDEFINED',
     ].forEach(function (prop) {
       evalInterpreter[prop] = this.interpreter[prop];
     }, this);

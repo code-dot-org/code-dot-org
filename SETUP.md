@@ -15,7 +15,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```sh
      ruby --version  # --> ruby 2.7.5
-     node --version  # --> v16.19.0
+     node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
 
@@ -136,15 +136,15 @@ Setup steps for macOS:
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-2. Install and configure **rbenv**
+1. Install and configure **rbenv**
     1. Install: `brew install rbenv`
     2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
-3. Install **Ruby**
+1. Install **Ruby**
     1. Run `rbenv install` from the project root directory.
 
-4.  *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+1.  *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
 
     ```sh
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
@@ -152,20 +152,20 @@ Setup steps for macOS:
     rm ./pdftk.rb
     ```
 
-5.  Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5 openssl`
+1.  Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5 openssl`
 
-6.  Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+1.  Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-7.  Install **yarn** via `npm install -g yarn@1.22.5`
+1.  Install **yarn** via `npm install -g yarn@1.22.5`
 
-8.  Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-9.  Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]
@@ -191,7 +191,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v16.19.0 && nvm alias default 16.19.0` Install nodejs v16.19.0
+    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.

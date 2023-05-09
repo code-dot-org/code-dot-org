@@ -64,8 +64,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getText and setText on text labels.',
@@ -86,8 +86,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on sliders.',
@@ -110,8 +110,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on text inputs.',
@@ -130,8 +130,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for value on dropdowns.',
@@ -150,8 +150,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'getProperty and setProperty for fit on images.',
@@ -180,8 +180,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'button',
@@ -200,8 +200,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -226,8 +226,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'testDuplicateNamesWarning',
@@ -248,8 +248,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'testIllegalNameError runButton',
@@ -274,8 +274,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.RUNTIME_ERROR_FAIL
-      }
+        testResult: TestResults.RUNTIME_ERROR_FAIL,
+      },
     },
     {
       description: 'testIllegalNameError submitButton',
@@ -300,8 +300,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.RUNTIME_ERROR_FAIL
-      }
+        testResult: TestResults.RUNTIME_ERROR_FAIL,
+      },
     },
     {
       description: 'setSize',
@@ -320,8 +320,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'html sanitization allows whitelisted tags and attributes',
@@ -381,8 +381,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
@@ -430,8 +430,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'substantial changes in html sanitization do cause warnings',
@@ -497,8 +497,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'invalid ids in html sanitization give specific warnings',
@@ -556,8 +556,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

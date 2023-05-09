@@ -7,21 +7,20 @@ markdown <<MARKDOWN
 
 ##  Course Lesson Objective
 
-After completing Lesson 7 you will be able to:
+##### After completing Lesson 4 you will be able to:
 
-* define sequencing and algorithms,
-* use Blockly code blocks, 
-* use the "step button" for debugging.
+* ##### define sequencing and algorithms.
+* ##### use the "step button" for debugging.
 
 ## CS Concepts
 
-**Sequencing** describes the process of ordering steps in a linear manner.
+##### **Sequencing** describes the process of ordering steps in a linear manner.
 
-**Algorithms** are lists of steps to complete a task. Programs are algorithms written as code for a computer to execute.
+##### **Algorithms** are lists of steps to complete a task. Programs are algorithms written as code for a computer to execute.
 
-### Lesson in Action 
+***
 
-* Watch the video demonstration,  <a href="https://www.youtube.com/watch?v=hrnhiKAQ1_k" target="blank">Happy Maps,</a> of a teacher first introducing sequencing to students with the **context-setting** lesson in Course A - Lesson 3:  Happy Maps.
+### **Task:  Watch a Lesson in Action** 
 
-**Note:**  This video opens in a new window.  Be sure to return to this online course to continue with lessons.
+* ##### Watch the video demonstration,  <a href="https://www.youtube.com/watch?v=hrnhiKAQ1_k" target="blank">Happy Maps,</a> of a teacher first introducing sequencing to students with the **context-setting** lesson in Course A - Lesson 3:  Happy Maps.
 MARKDOWN

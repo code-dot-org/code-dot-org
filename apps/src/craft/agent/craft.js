@@ -12,7 +12,7 @@ import {
   GameController,
   FacingDirection,
   EventType,
-  utils as CraftUtils
+  utils as CraftUtils,
 } from '@code-dot-org/craft';
 import dom from '../../dom';
 import MusicController from '../../MusicController';
@@ -28,7 +28,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
-  dismissSwipeOverlay
+  dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -40,7 +40,7 @@ const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
 };
 
 const interfaceImages = {
@@ -56,15 +56,15 @@ const interfaceImages = {
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
     MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
   ],
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Alex_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Agent_Fail.png',
     MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png',
-    MEDIA_URL + 'Sliced_Parts/Agent_Success.png'
-  ]
+    MEDIA_URL + 'Sliced_Parts/Agent_Success.png',
+  ],
 };
 
 const MUSIC_METADATA = [
@@ -75,7 +75,7 @@ const MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: 'vignette5-shortpiano'},
   {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short'},
   {volume: 1, hasOgg: true, name: 'vignette8-free-play'},
-  {volume: 1, hasOgg: true, name: 'nether2'}
+  {volume: 1, hasOgg: true, name: 'nether2'},
 ];
 
 const CHARACTER_STEVE = 'Steve';
@@ -86,7 +86,7 @@ const directionToFacing = {
   upButton: FacingDirection.North,
   downButton: FacingDirection.South,
   leftButton: FacingDirection.West,
-  rightButton: FacingDirection.East
+  rightButton: FacingDirection.East,
 };
 
 export default class Craft {
@@ -211,7 +211,7 @@ export default class Craft {
         Object.assign({}, config, {
           forceInsertTopBlock: 'when_run',
           appStrings: {
-            generatedCodeDescription: craftMsg.generatedCodeDescription()
+            generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           loadAudio: function () {},
           afterInject: function () {
@@ -234,7 +234,7 @@ export default class Craft {
               assetRoot: Craft.skin.assetUrl(''),
               audioPlayer: {
                 register: studioApp().registerAudio.bind(studioApp()),
-                play: studioApp().playAudio.bind(studioApp())
+                play: studioApp().playAudio.bind(studioApp()),
               },
               debug: false,
               customSlowMotion: config.level.isTestLevel
@@ -265,7 +265,7 @@ export default class Craft {
               },
               earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
                 config.level.puzzle_number
-              )
+              ),
             });
 
             if (!config.level.showPopupOnLoad) {
@@ -311,7 +311,7 @@ export default class Craft {
               [Hammer.DIRECTION_LEFT]: 'leftButton',
               [Hammer.DIRECTION_RIGHT]: 'rightButton',
               [Hammer.DIRECTION_UP]: 'upButton',
-              [Hammer.DIRECTION_DOWN]: 'downButton'
+              [Hammer.DIRECTION_DOWN]: 'downButton',
             };
 
             const onDrag = function (e) {
@@ -360,8 +360,8 @@ export default class Craft {
           },
           twitter: {
             text: 'Share on Twitter',
-            hashtag: 'Craft'
-          }
+            hashtag: 'Craft',
+          },
         })
       );
 
@@ -395,7 +395,7 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
-      hideRunButton: config.level.specialLevelType === 'agentSpawn'
+      hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
     ReactDOM.render(
@@ -514,7 +514,7 @@ export default class Craft {
       beforeLoad: Craft.minAssetsForLevelWithCharacter(
         levelConfig.puzzle_number
       ),
-      afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
+      afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number),
     };
 
     Craft.gameController.loadLevel({
@@ -553,13 +553,13 @@ export default class Craft {
           (levelConfig.timeoutVerificationFunction ||
             `function() { return false; }`) +
           ']'
-      )[0]
+      )[0],
     });
   }
 
   static minAssetsForLevelWithCharacter(levelNumber) {
     return Craft.minAssetsForLevelNumber(levelNumber).concat([
-      Craft.characterAssetPackName(Craft.getCurrentCharacter())
+      Craft.characterAssetPackName(Craft.getCurrentCharacter()),
     ]);
   }
 
@@ -786,14 +786,14 @@ export default class Craft {
           up: FacingDirection.North,
           down: FacingDirection.South,
           left: FacingDirection.West,
-          right: FacingDirection.East
+          right: FacingDirection.East,
         };
         appCodeOrgAPI.moveDirection(
           studioApp().highlight.bind(studioApp(), blockID),
           dirStringToDirection[direction],
           targetEntity
         );
-      }
+      },
     });
 
     Craft.gameController.codeOrgAPI.startAttempt(success => {
@@ -835,7 +835,7 @@ export default class Craft {
       const collectedLevels = Craft.getSessionDiamondCollectedLevels();
       if (collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
         message = craftMsg.agentDiamondPathCongrats({
-          count: collectedLevels.length
+          count: collectedLevels.length,
         });
       }
     }
@@ -869,17 +869,17 @@ export default class Craft {
           appStrings: {
             reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
             nextLevelMsg: craftMsg.nextLevelMsg({
-              puzzleNumber: Craft.initialConfig.level.puzzle_number
+              puzzleNumber: Craft.initialConfig.level.puzzle_number,
             }),
             tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
-            generatedCodeDescription: craftMsg.generatedCodeDescription()
+            generatedCodeDescription: craftMsg.generatedCodeDescription(),
           },
           feedbackImage: image,
           showingSharing: sharing,
           saveToProjectGallery: true,
-          disableSaveToGallery: !isSignedIn
+          disableSaveToGallery: !isSignedIn,
         });
-      }
+      },
     });
   }
 

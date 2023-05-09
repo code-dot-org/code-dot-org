@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import ProgressTableLessonNumber, {
-  unitTestExports
+  unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
@@ -17,7 +17,7 @@ const DEFAULT_PROPS = {
   highlighted: false,
   onClick: () => {},
   includeArrow: false,
-  isAssessment: false
+  isAssessment: false,
 };
 
 const setUp = (overrideProps = {}) => {

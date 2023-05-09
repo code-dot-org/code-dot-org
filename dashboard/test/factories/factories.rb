@@ -1,12 +1,28 @@
 require 'cdo/activity_constants'
 
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
+
+    trait :with_units do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+      end
+    end
+
+    trait :with_unit_groups do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+      end
+    end
   end
 
   factory :course_version do
@@ -140,7 +156,7 @@ FactoryBot.define do
         end
 
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"Facilitator_#{SecureRandom.uuid}@code.org"}
 
         after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
@@ -158,7 +174,7 @@ FactoryBot.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
+        email {"WorkshopOrganizer_#{SecureRandom.uuid}@code.org"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -1264,7 +1280,7 @@ FactoryBot.define do
   factory :school_info_without_country, class: SchoolInfo do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    association :school_district, strategy: :build
+    association :school_district
   end
 
   factory :school_info_non_us, class: SchoolInfo do
@@ -1278,12 +1294,14 @@ FactoryBot.define do
     country {'US'}
 
     trait :with_district do
-      association :school_district, strategy: :build
+      association :school_district
     end
 
     trait :with_school do
-      # Use state and school_type from the parent school_info
-      school {build :public_school, state: state, school_type: school_type}
+      # Use state and school_type from the parent school_info. Also make sure
+      # that we create rather than just building the school, to accommodate the
+      # custom School#id logic
+      school {create :public_school, state: state, school_type: school_type}
     end
   end
 
@@ -1304,15 +1322,15 @@ FactoryBot.define do
   end
 
   factory :school_info_with_public_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :public_school
+    association :school, factory: :public_school
   end
 
   factory :school_info_with_private_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :private_school
+    association :school, factory: :private_school
   end
 
   factory :school_info_with_charter_school_only, class: SchoolInfo do
-    association :school, strategy: :build, factory: :charter_school
+    association :school, factory: :charter_school
   end
 
   factory :school_info_us_public, parent: :school_info_us do
@@ -1412,7 +1430,7 @@ FactoryBot.define do
     zip {"98122"}
 
     trait :with_district do
-      association :school_district, strategy: :build
+      association :school_district
     end
 
     trait :is_high_school do

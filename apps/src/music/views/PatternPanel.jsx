@@ -19,7 +19,7 @@ const PatternPanel = ({
   onChange,
   previewSound,
   previewPattern,
-  cancelPreviews
+  cancelPreviews,
 }) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
@@ -147,7 +147,7 @@ PatternPanel.propTypes = {
   onChange: PropTypes.func.isRequired,
   previewSound: PropTypes.func.isRequired,
   previewPattern: PropTypes.func.isRequired,
-  cancelPreviews: PropTypes.func.isRequired
+  cancelPreviews: PropTypes.func.isRequired,
 };
 
 export default PatternPanel;

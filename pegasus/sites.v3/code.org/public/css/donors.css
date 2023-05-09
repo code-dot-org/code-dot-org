@@ -130,7 +130,7 @@ table td {
 }
 
 section.flex-container {
-  padding: 2em;
+  padding: 2em 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -139,12 +139,17 @@ section.flex-container {
     margin: 1em 0;
     font-size: 18px;
     text-align: center;
-    width: 150px;
+    font-family: "Gotham 7r", sans-serif;
   }
     section.flex-container img {
       align-self: center;
-      width: 150px;
+      width: 120px;
     }
+
+section.flex-container.no-logos {
+  padding: 0 1em;
+  justify-content: space-between;
+}
 
 section.lists h3 {
   background: #00b2c0;
@@ -179,12 +184,12 @@ section.lists h3 {
   }
 
     /* Adjust padding of the Gold Supporters sections */
-    section.flex-container.row-01 {
+    section.flex-container.row-01,
+    section.flex-container.row-02 {
       padding-bottom: 0;
     }
-    section.flex-container.row-02 {
+    section.flex-container.row-03 {
       padding-top: 0;
-      padding-bottom: 4em
     }
 
   h5 {
@@ -200,5 +205,4 @@ section.lists h3 {
   section.flex-container {
     flex-direction: column;
   }
-
 }

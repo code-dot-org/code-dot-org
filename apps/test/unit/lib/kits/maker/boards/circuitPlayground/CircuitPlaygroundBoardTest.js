@@ -6,14 +6,14 @@ import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,
-  EXTERNAL_PINS
+  EXTERNAL_PINS,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';
 import {
   stubComponentInitialization,
-  restoreComponentInitialization
+  restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
@@ -165,7 +165,7 @@ describe('CircuitPlaygroundBoard', () => {
     it('sets the boardType for express boards', () => {
       board.port_ = {
         vendorId: '0x239A',
-        productId: '0x8018'
+        productId: '0x8018',
       };
       return board.connectToFirmware().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);

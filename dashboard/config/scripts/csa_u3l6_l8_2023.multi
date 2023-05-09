@@ -70,3 +70,5 @@ This statement is false because the 1D array `myPets` is of type `Pet`. This mea
 
 This statement is false because the 1D array `myPets` is of type `Pet`. This means `myPets` can contain elements of `Pet` objects and objects of any `Pet` subclasses.
 MARKDOWN
+
+allow_multiple_attempts true

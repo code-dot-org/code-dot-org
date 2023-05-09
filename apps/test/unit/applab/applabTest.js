@@ -11,7 +11,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
@@ -100,26 +100,26 @@ describe('Applab', () => {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot), [
         {display: '"chart9"', text: '"chart9"'},
         {display: '"image1"', text: '"image1"'},
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
     });
 
     it('can filter on tag type', function () {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'div'), [
         {display: '"chart9"', text: '"chart9"'},
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'img'), [
-        {display: '"image1"', text: '"image1"'}
+        {display: '"image1"', text: '"image1"'},
       ]);
     });
 
     it('can filter on class', function () {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-        {display: '"chart9"', text: '"chart9"'}
+        {display: '"chart9"', text: '"chart9"'},
       ]);
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
     });
 
@@ -127,7 +127,7 @@ describe('Applab', () => {
       // Make sure searching for elements with class ".chart" does not also pick
       // up elements with class ".chart-friend"
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-        {display: '"chart9"', text: '"chart9"'}
+        {display: '"chart9"', text: '"chart9"'},
       ]);
       assert.deepEqual(
         Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'),
@@ -345,7 +345,7 @@ describe('Applab', () => {
       var code = [
         '',
         'createRecord("mytable", {name:\'Alice\'}, function(record) {' + '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
@@ -354,7 +354,7 @@ describe('Applab', () => {
       var code = [
         '',
         'updateRecord("mytable", {name:\'Bob\'}, function(record) {' + '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
@@ -364,7 +364,7 @@ describe('Applab', () => {
         '',
         'setKeyValue("key", "value", function () {',
         '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
@@ -376,7 +376,7 @@ describe('Applab', () => {
         '  for (var i =0; i < records.length; i++) {',
         "    textLabel('id', records[i].id + ': ' + records[i].name);",
         '  }',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), false);
     });
@@ -413,7 +413,7 @@ describe('Applab', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
           channelId: 'current_channel',
-          isSignedIn: true
+          isSignedIn: true,
         });
         // If we're signed in, we depend on the server routing you appropriately,
         // i.e. if you're under 13, we'll only let you see shared apps if your
@@ -425,7 +425,7 @@ describe('Applab', () => {
         localStorage.setItem('is13Plus', 'true');
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
-          channelId: 'current_channel'
+          channelId: 'current_channel',
         });
         assert.equal(component.props.promptForAge, false);
       });
@@ -433,7 +433,7 @@ describe('Applab', () => {
       it('is true if user is not signed in and has no local storage set', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
-          channelId: 'current_channel'
+          channelId: 'current_channel',
         });
         assert.equal(component.props.promptForAge, true);
       });
@@ -442,7 +442,7 @@ describe('Applab', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => false,
           channelId: 'current_channel',
-          isSignedIn: false
+          isSignedIn: false,
         });
         assert.equal(component.props.promptForAge, false);
       });
@@ -454,7 +454,7 @@ describe('Applab', () => {
           channelId: 'current_channel',
           hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, true);
       });
@@ -465,7 +465,7 @@ describe('Applab', () => {
           channelId: 'current_channel',
           hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, true);
       });
@@ -479,7 +479,7 @@ describe('Applab', () => {
           channelId: 'current_channel',
           hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, false);
       });
@@ -492,7 +492,7 @@ describe('Applab', () => {
           channelId: 'current_channel',
           hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, false);
       });
@@ -500,7 +500,7 @@ describe('Applab', () => {
 
     it('sets is13Plus to true on close', function () {
       var component = shareWarnings.checkSharedAppWarnings({
-        channelId: 'current_channel'
+        channelId: 'current_channel',
       });
       component.props.handleClose();
       assert.strictEqual(localStorage.getItem('is13Plus'), 'true');
@@ -508,7 +508,7 @@ describe('Applab', () => {
 
     it('sets is13Plus to false on too young', function () {
       var component = shareWarnings.checkSharedAppWarnings({
-        channelId: 'current_channel'
+        channelId: 'current_channel',
       });
       component.props.handleTooYoung();
       assert.strictEqual(localStorage.getItem('is13Plus'), 'false');
@@ -520,7 +520,7 @@ describe('Applab', () => {
         channelId: 'current_channel',
         hasDataAPIs: function () {
           return Applab.hasDataStoreAPIs(Applab.getCode());
-        }
+        },
       });
       component.props.handleClose();
       assert.strictEqual(
@@ -562,8 +562,8 @@ describe('Applab', () => {
           baseUrl: 'foo',
           skin: {},
           level: {
-            editCode: 'foo'
-          }
+            editCode: 'foo',
+          },
         };
       });
 
@@ -580,8 +580,8 @@ describe('Applab', () => {
             ...config,
             level: {
               ...config.level,
-              expandDebugger: true
-            }
+              expandDebugger: true,
+            },
           });
           expect(isDebuggerOpen(getStore().getState())).to.be.true;
         });
