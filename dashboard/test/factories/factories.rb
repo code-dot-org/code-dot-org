@@ -1680,4 +1680,14 @@ FactoryBot.define do
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
   end
+
+  factory :lti_integration do
+    platform_id {"1a2b3c5b"}
+    issuer {"http://some.lms.com"}
+    client_id {"12345678"}
+    platform_name {"canavs"}
+    auth_redirect_url {"http://some.lms.com/lti/authenticate"}
+    jwks_url {"http://some.lms.com/jwks"}
+    access_token_url {"http://some.lms.com/access_token"}
+  end
 end
