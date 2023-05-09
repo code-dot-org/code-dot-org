@@ -101,6 +101,7 @@ module Honeybadger
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
     filters = %w[-is:resolved -is:paused -is:ignored]
     time_filters = ["occurred_after=#{1.day.ago.to_i}"]
-    HoneybadgerFaultAnalyzer.new(time_filters, filters).get_faults
+    honeybadger_url_builder = HoneybadgerUrlBuilder.new(time_filters, filters)
+    HoneybadgerFaultAnalyzer.new(honeybadger_url_builder).get_faults
   end
 end

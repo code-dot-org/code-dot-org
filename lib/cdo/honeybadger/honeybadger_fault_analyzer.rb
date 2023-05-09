@@ -3,9 +3,8 @@ require_relative '../../../lib/cdo/honeybadger/honeybadger_fault'
 require_relative '../env'
 # Class to extract and handle faults reported by HoneyBadger
 class HoneybadgerFaultAnalyzer
-  def initialize(time_filters, filters)
-    @time_filters = time_filters
-    @filters = filters
+  def initialize(honeybadger_url_builder)
+    @honeybadger_url_builder = honeybadger_url_builder
     @cron_jobs_project_id = 45435
     @dashboard_project_id = 3240
     @pegasus_project_id = 34365
@@ -14,13 +13,11 @@ class HoneybadgerFaultAnalyzer
   def get_faults_for_project(project_id, limit=nil)
     faults = []
     current_count = 0
-    next_url = get_faults_url(project_id)
+    next_url = @honeybadger_url_builder.get_api_url_request("faults", {project_id: project_id})
     while next_url && current_count < limit
-      puts "https://app.honeybadger.io#{next_url}"
-      response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
-      parsed_response = JSON.parse response
+      parsed_response = @honeybadger_url_builder.call_api_response_from_url(next_url)
       parsed_response['results'].each do |fault|
-        faults << HoneybadgerFault.new(fault)
+        faults << HoneybadgerFault.new(@honeybadger_url_builder, fault)
         current_count += 1
       end
       next_url = parsed_response['links']['next']
@@ -46,20 +43,5 @@ class HoneybadgerFaultAnalyzer
   # Make sure the token is correctly setup and if not, raise an exception
   def validate_api_token!
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
-  end
-
-  # join the filters by a 'white space' or "%20"
-  # This is used while a better query builder for honeybadger is implemented
-  def get_filters_query
-    joined_filters = @filters.join("%20")
-    joined_filters.empty? ? '' : "q=#{joined_filters}"
-  end
-
-  def get_time_filter_query
-    @time_filters.join('&').to_s
-  end
-
-  def get_faults_url(project_id)
-    "/v2/projects/#{project_id}/faults?#{get_time_filter_query}&#{get_filters_query}"
   end
 end
