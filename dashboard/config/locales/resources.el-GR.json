@@ -131,6 +131,7 @@
           "type": "Βίντεο"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "type": "Βίντεο"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -1283,7 +1284,11 @@
         "teacher_forum_1/coursef/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "type": "Βίντεο"
         },
         "sprite_lab_documentation/coursef/2021": {

@@ -2891,18 +2891,26 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Mga Larawan at Animation'
             lessonGroup-3:
               display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
             lessonGroup-3:
               display_name: 'Kabanata 2: Pag-Prototype ng App'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
           student_description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
         data-society-2023:
           lesson_groups:
@@ -2910,6 +2918,8 @@ fil:
               display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
             lessonGroup-3:
               display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
           description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter para malutas ang mga problem sa mga datos.
           student_description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas ng mga problema at nagpapakita kung paano ang mga kompyuter maaaring makatulong sa prosesong ito. Ang unang kabanata ay sumasaklaw sa iba't ibang mga sistema na ginamit para mag-representa ng mga impormasyon sa kompyuter at ang mga hamon at kasukli na paggamit ng mga ito. Sa pangalawang kabanata, matutunan mo kung paano ang mga koleksyon ng mga datos ginagamit para maglutas ng mga problema, at kung paano ang mga kompyuter nakakatulong sa pag-automate ng mga hakbang sa prosesong ito. Ang kabanata ay magtatapos sa pagbigay pansin kung paano ang proseso sa paglutas ng mga problema sa mga datos ay maaaring gamitin sa mga bahagi na napili mo.
         aiml-2023:
@@ -2920,6 +2930,8 @@ fil:
               display_name: Kabanata 1
             lessonGroup-4:
               display_name: Kabanata 2
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3047,10 +3059,14 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Input at Mga Output
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kabanata 2: Input ng Hardware'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3071,3 +3087,19 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Input at Mga Output
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maligayang Pagdating
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Panimula
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Tapusin Na
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Tapusin Na

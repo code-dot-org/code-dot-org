@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-04-28 18:53:02 UTC",
+    "serialized_at": "2023-05-06 20:48:32 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2095,6 +2095,27 @@
     {
       "seeding_key": {
         "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.4.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule (pilot)",
         "framework.shortcode": "ccela",
         "standard.shortcode": "4.L.3"
       }
@@ -2160,6 +2181,34 @@
         "lesson.key": "Coding My Time Capsule (pilot)",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Time Capsule Story (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.9.3-5"
       }
     },
     {
@@ -2237,6 +2286,27 @@
         "lesson.key": "Sharing My Time Capsule (pilot)",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Time Capsule Introduction (pilot)",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.6.3-5"
       }
     },
     {

@@ -16,10 +16,10 @@ const PlaygroundThermometer = {
           return thermometerRawValue;
         },
       };
-      if (!this.hasOwnProperty('raw')) {
+      if (!Object.prototype.hasOwnProperty.call(this, 'raw')) {
         Object.defineProperty(this, 'raw', rawValueDescriptor);
       }
-      if (!this.hasOwnProperty('value')) {
+      if (!Object.prototype.hasOwnProperty.call(this, 'value')) {
         Object.defineProperty(this, 'value', rawValueDescriptor);
       }
     },

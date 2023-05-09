@@ -204,13 +204,16 @@
           "actions_category": "Caseta de instrumente are acum un nou aspect! Blocurile \"Acţiuni\" sunt aici acum."
         },
         "New Artist Project": {
-          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău"
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!"
         },
         "New Play Lab Project": {
-          "New Play Lab Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău"
+          "New Play Lab Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"

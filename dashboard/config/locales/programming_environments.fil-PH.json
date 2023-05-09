@@ -710,6 +710,11 @@
                   }
                 },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Lumiit at Lumaki"
+                    }
+                  },
                   "palette_params": {
                     "type": {
                       "type": "String"

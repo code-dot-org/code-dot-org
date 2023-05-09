@@ -147,7 +147,7 @@ exports.getEncodingLabel = function (encodingType) {
  */
 exports.forEachEnumValue = function (enumObj, func) {
   for (var enumKey in enumObj) {
-    if (enumObj.hasOwnProperty(enumKey)) {
+    if (Object.prototype.hasOwnProperty.call(enumObj, enumKey)) {
       func(enumObj[enumKey]);
     }
   }
