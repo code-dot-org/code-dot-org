@@ -11,31 +11,36 @@ class HoneybadgerFaultAnalyzer
     @pegasus_project_id = 34365
   end
 
-  def get_faults
+  def get_faults_for_project(project_id, limit=nil)
+    faults = []
+    current_count = 0
+    next_url = get_faults_url(project_id)
+    while next_url && current_count < limit
+      puts "https://app.honeybadger.io#{next_url}"
+      response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
+      parsed_response = JSON.parse response
+      parsed_response['results'].each do |fault|
+        faults << HoneybadgerFault.new(fault)
+        current_count += 1
+      end
+      next_url = parsed_response['links']['next']
+    end
+    faults
+  end
+
+  def get_faults(limit=nil)
     validate_api_token!
     faults = []
     get_all_projects_and_ids.each do |_, project_id|
-      next_url = get_faults_url(project_id)
-      puts next_url
-      while next_url
-        puts "https://app.honeybadger.io#{next_url}"
-        response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
-        parsed_response = JSON.parse response
-        parsed_response['results'].each do |fault|
-          faults << HoneybadgerFault.new(fault)
-        end
-        next_url = parsed_response['links']['next']
-      end
+      faults = get_faults_for_project(project_id, limit)
     end
-    puts faults
     faults
   end
 
   private
 
   def get_all_projects_and_ids
-    #{cronjobs: @cron_jobs_project_id, dashboard: @dashboard_project_id, pegasus: @pegasus_project_id}
-    {cronjobs: @cron_jobs_project_id}
+    {cronjobs: @cron_jobs_project_id, dashboard: @dashboard_project_id, pegasus: @pegasus_project_id}
   end
 
   # Make sure the token is correctly setup and if not, raise an exception
