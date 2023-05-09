@@ -55,7 +55,10 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
           <FormGroup
             id="school_id"
             validationState={
-              this.props.errors.hasOwnProperty('school_id')
+              Object.prototype.hasOwnProperty.call(
+                this.props.errors,
+                'school_id'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }

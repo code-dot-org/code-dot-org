@@ -4,8 +4,8 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "^14.17.1",
-    "npm": "^6.14.13"
+    "node": "^18.16.0",
+    "npm": "^9.5.1"
   },
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",

@@ -62,11 +62,13 @@
         },
         "CSD U1 storage outfit_2021": {
           "green": "zelena",
-          "black": "črna"
+          "black": "črna",
+          "purple": "vijoličen"
         },
         "CSD U1 storage outfit_2022": {
           "green": "zelena",
-          "black": "črna"
+          "black": "črna",
+          "purple": "vijoličen"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
           "Success!": "Uspešno!"
@@ -105,7 +107,8 @@
           "left": "levo",
           "right": "desno",
           "red": "rdeča",
-          "green": "zelena"
+          "green": "zelena",
+          "purple": "vijoličen"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "short": "kratko",
@@ -117,7 +120,8 @@
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "green": "zelena",
-          "blue": "modra"
+          "blue": "modra",
+          "orange": "pomaranča"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "kratko",
@@ -778,13 +782,15 @@
           "W": "Z",
           "A": "A",
           "yes": "da",
-          "no": "ne"
+          "no": "ne",
+          "head": "glava"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "Z",
           "A": "A",
           "yes": "da",
-          "no": "ne"
+          "no": "ne",
+          "head": "glava"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "Nazaj"
@@ -819,6 +825,15 @@
           "rain": "dež",
           "cloudy": "oblačno",
           "night": "noč"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "medved"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "medved"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "tišina"
         }
       }
     }

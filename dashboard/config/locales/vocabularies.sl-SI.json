@@ -85,6 +85,9 @@
         "variable/coursef/2022": {
           "word": "Spremenljivka"
         },
+        "input/coursef/2022": {
+          "word": "Vnos"
+        },
         "internet/coursef/2022": {
           "word": "Internet"
         },
@@ -133,6 +136,9 @@
         "binary/coursec/2022": {
           "word": "Binarno"
         },
+        "input/csd/2022": {
+          "word": "Vnos"
+        },
         "debugging/csd/2022": {
           "word": "Odpravljanje napak"
         },
@@ -173,6 +179,9 @@
         },
         "variable/coursef/2021": {
           "word": "Spremenljivka"
+        },
+        "input/coursef/2021": {
+          "word": "Vnos"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -242,6 +251,9 @@
         },
         "function/csd/2021": {
           "word": "Funkcija"
+        },
+        "input/csd/2021": {
+          "word": "Vnos"
         },
         "copyright/csd/2021": {
           "word": "Avtorska pravice"

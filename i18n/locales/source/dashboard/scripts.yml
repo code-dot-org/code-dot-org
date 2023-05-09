@@ -63,6 +63,8 @@ en:
           description_audience: Ages 9-18
           lesson_groups: {}
           student_description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          lessons: {}
+          name: course4
         Course4pre:
           title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -2806,6 +2808,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: deepdive-debugging
         fit-test:
           title: FIT Training Practice PLC Course
           description_audience: Facilitators in Training
@@ -3522,6 +3526,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: pluralsight
         express-2018-vn:
           title: Express For Vietnam (2018)
           description_audience: ''
@@ -4476,6 +4482,8 @@ en:
           description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
           lesson_groups: {}
           student_description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
+          lessons: {}
+          name: code-break
         code-break-staging:
           title: Code Break Staging
           description_audience: ''
@@ -4497,6 +4505,8 @@ en:
           description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
           lesson_groups: {}
           student_description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
+          lessons: {}
+          name: code-break-younger
         no-lg:
           title: ''
           description_audience: ''
@@ -9897,8 +9907,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching CS Connections
-          title: Teaching CS Connections
-          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n-   Get an overview of CS Connections.\n\n-   Set up a plan to implement a CS Connections module.\n\n-   Practice key concepts included in lessons.\n\n-   Preview features and resources.\n\n-   Consider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
+          title: Teaching CS Connections for Facilitators Only
+          description: "## **This self-paced online module is intended only for facilitators.**\n\nThis professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n-   Get an overview of CS Connections.\n\n-   Set up a plan to implement a CS Connections module.\n\n-   Practice key concepts included in lessons.\n\n-   Preview features and resources.\n\n-   Consider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\n-   Preview features and resources.\n\nConsider strategies to create positive CS learning experiences.\n\n**Suggested Time:** 75 minutes"
           description_short: ''
           description_audience: ''
@@ -10181,6 +10191,8 @@ en:
               display_name: 'Chapter 1: Creating Webpages'
             lessonGroup-3:
               display_name: 'Chapter 2: Multi-page Websites'
+            lessonGroup-4:
+              display_name: Survey
           name: web-development-2023
           title: Web Development ('23-'24)
           description_audience: ''
@@ -10194,6 +10206,8 @@ en:
               display_name: 'Chapter 1: Images and Animations'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Games'
+            lessonGroup-4:
+              display_name: Survey
           name: interactive-games-animations-2023
           title: Interactive Animations and Games ('23-'24)
           description_audience: ''
@@ -10207,6 +10221,8 @@ en:
               display_name: 'Chapter 1: User Centered Design'
             lessonGroup-3:
               display_name: 'Chapter 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Survey
           name: design-process-2023
           title: The Design Process ('23-'24)
           description_audience: ''
@@ -10220,6 +10236,8 @@ en:
               display_name: 'Chapter 1: Representing Information'
             lessonGroup-3:
               display_name: 'Chapter 2: Solving Data Problems'
+            lessonGroup-4:
+              display_name: Survey
           name: data-society-2023
           title: Data and Society ('23-'24)
           description_audience: ''
@@ -10235,6 +10253,8 @@ en:
               display_name: Chapter 1
             lessonGroup-4:
               display_name: Chapter 2
+            lessonGroup-5:
+              display_name: Survey
           name: aiml-2023
           title: AI and Machine Learning ('23-'24)
           description_audience: ''
@@ -10416,7 +10436,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('22-'23)
+          title: Teaching Computer Science Fundamentals ('23-'24)
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -10640,8 +10660,10 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
+            lessonGroup-5:
+              display_name: Survey
           name: microbit-2023
-          title: Creating Apps with Devices (micro:bit)
+          title: Creating Apps with Devices (micro:bit) ('23-'24)
           description_audience: ''
           description_short: ''
           description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom][1]\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n    :::\n\n \n \n "
@@ -10710,8 +10732,8 @@ en:
           title: Preparing to Teach Creating Apps for Devices (Option A - Circuit Playground)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your Circuit Playground. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
         vpl-csd-ci-7:
           lessons: {}
           lesson_groups:
@@ -10732,6 +10754,8 @@ en:
               display_name: 'Chapter 1: Inputs and Outputs'
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-5:
+              display_name: Survey
           name: devices-2023
           title: Creating Apps with Devices - Circuit Playground ('23-'24)
           description_audience: ''
@@ -10839,8 +10863,8 @@ en:
           title: Preparing to Teach Creating Apps for Devices (Option B - micro:bit)
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
-          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 75 minutes"
         self-paced-pl-physical-computing1-2023:
           lessons: {}
           lesson_groups:
@@ -10986,6 +11010,8 @@ en:
               name: Classroom Culture
             lesson-10:
               name: 'Wrap Up '
+            lesson-11:
+              name: Day 3 Wrap Up
           lesson_groups:
             lessonGroup-2:
               display_name: Day 3
@@ -11066,3 +11092,108 @@ en:
         virtual-pl-csd-summer-day5:
           lessons: {}
           lesson_groups: {}
+        self-paced-pl-microbit1:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: self-paced-pl-microbit1
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Code.org’s mission. \n-   Learn how to navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+        self-paced-pl-microbit2:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Creating Apps for Devices with micro:bits
+          name: self-paced-pl-microbit2
+          title: Preparing to Teach Creating Apps for Devices with micro:bits
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n\n-   Get an introduction to Creating Apps for Devices.\n-   Set up your micro:bit. \n-   Practice key concepts included in the unit.\n-   Preview end of chapter projects.\n-   Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        seesaw-adaptations:
+          lessons: {}
+          lesson_groups: {}
+          name: seesaw-adaptations
+          title: Seesaw - Animal Adaptations
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-bingo-2023:
+          lessons:
+            lesson-1:
+              name: BINGO Review Game by Unit
+          lesson_groups: {}
+          name: csp-bingo-2023
+          title: CSP Vocabulary BINGO
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-data-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-data-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-impact-in-society-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-impact-in-society-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-coding-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-coding-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-design-with-purpose-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-design-with-purpose-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-hardware-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-hardware-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''
+        focus-on-creativity-post-survey-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-creativity-post-survey-2023
+          title: Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the Post-Course Survey. This unit can be assigned after students complete their final unit in this course.
+          student_description: ''

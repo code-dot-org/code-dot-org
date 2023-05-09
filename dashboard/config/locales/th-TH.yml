@@ -130,7 +130,6 @@ th:
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
     student_consent: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
       Code.org ได้
-    additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
     user_type_button: อัปเดตประเภทบัญชี
     user_type_label: ประเภทบัญชี
     user_type_student: นักเรียน
