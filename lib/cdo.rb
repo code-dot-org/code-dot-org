@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
