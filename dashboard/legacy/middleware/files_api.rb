@@ -423,7 +423,9 @@ class FilesApi < Sinatra::Base
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      return bad_request if share_failure && share_failure[:type] != "address"
+      if share_failure && share_failure[:type] != "address"
+        halt 400, "Share failure: #{share_failure.inspect}"
+      end
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).

@@ -16,6 +16,7 @@ export const PublishState = {
   DEFAULT: 'default',
   ERROR_PUBLISH: 'error_publish',
   INVALID_INPUT: 'invalid_input',
+  PII_INPUT: 'pII_input',
   PROFANE_INPUT: 'profane_input',
   TOO_LONG: 'too_long',
   ERROR_UNPUBLISH: 'error_unpublish',
@@ -55,6 +56,7 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription: props.libraryDetails.libraryDescription,
       selectedFunctions: validSelectedFunctions,
       profaneWords: null,
+      pIIWords: null,
     };
   }
 
@@ -96,7 +98,7 @@ export default class LibraryPublisher extends React.Component {
       } else {
         this.publish();
       }
-    } catch {
+    } catch (err) {
       // Still publish if request errors
       this.publish();
     }
@@ -119,8 +121,19 @@ export default class LibraryPublisher extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        if (error.message.includes('httpStatusCode: 413')) {
+
+        const message = error && error.message ? error.message : '';
+        if (message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
+        } else if (message.includes('ShareFailure')) {
+          let match = message.match(/content="([^"]*)"/);
+          let content = match ? match[1] : null;
+          if (content) {
+            this.setState({
+              publishState: PublishState.PII_INPUT,
+              pIIWords: content,
+            });
+          }
         } else {
           this.setState({publishState: PublishState.ERROR_PUBLISH});
         }
@@ -261,11 +274,17 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState, profaneWords} = this.state;
+    const {publishState, pIIWords, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
-        errorMessage = i18n.libraryPublishInvalid();
+        errorMessage = i18n.libraryDetailsInvalid();
+        break;
+      case PublishState.PII_INPUT:
+        errorMessage = i18n.libraryDetailsPII({
+          pIICount: 1,
+          pIIWords: pIIWords,
+        });
         break;
       case PublishState.PROFANE_INPUT:
         errorMessage = i18n.libraryDetailsProfanity({

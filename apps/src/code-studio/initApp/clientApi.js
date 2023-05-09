@@ -189,8 +189,9 @@ var base = {
    * @param {String} filename - The name of the file to create or update.
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
+   * @param {Object} opts - Options object.
    */
-  put: function (id, value, filename, callback) {
+  put: function (id, value, filename, callback, opts) {
     $.ajax({
       url: this.api_base_url + '/' + id + '/' + filename,
       type: 'put',
@@ -201,6 +202,9 @@ var base = {
         callback(null, data);
       })
       .fail(function (request, status, error) {
+        if (opts.includeResponseText) {
+          error += ' ' + request.responseText;
+        }
         var err = errorString(request, status, error);
         callback(err, false);
       });
