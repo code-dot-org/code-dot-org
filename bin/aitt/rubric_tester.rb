@@ -94,6 +94,13 @@ def validate_server_response(tsv_data, rubric)
   [true, nil]
 end
 
+def compute_messages(prompt, rubric, student_code)
+  [
+    {role: 'system', content: prompt},
+    {role: 'user', content: "Rubric:\n#{rubric}\n\nStudent Code:\n#{student_code}"}
+  ]
+end
+
 def grade_student_work(prompt, rubric, student_code, student_id, use_cached: false)
   if use_cached && File.exist?("cached_responses/#{student_id}.txt")
     cached_response = File.read("cached_responses/#{student_id}.txt")
@@ -107,13 +114,11 @@ def grade_student_work(prompt, rubric, student_code, student_id, use_cached: fal
     'Authorization' => "Bearer #{ENV['OPENAI_API_KEY']}"
   }
 
+  messages = compute_messages(prompt, rubric, student_code)
   data = {
     model: 'gpt-4',
     temperature: 0,
-    messages: [
-      {role: 'system', content: prompt},
-      {role: 'user', content: "Rubric:\n#{rubric}\n\nStudent Code:\n#{student_code}"}
-    ],
+    messages: messages,
   }
 
   start_time = Time.now
