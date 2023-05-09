@@ -64,6 +64,6 @@ MoveStudentsDialogToOtherTeacher.args = {
 
 export const MoveStudentsDialogWithError = Template.bind({});
 MoveStudentsDialogWithError.args = {
-  tansferData: transferToOtherTeacher,
+  tranferData: transferToOtherTeacher,
   transferStatus: errorTransferStatus,
 };
