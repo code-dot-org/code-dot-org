@@ -241,7 +241,7 @@ class RosterDialog extends React.Component {
         break;
     }
 
-    const testingUserId = 7;
+    const testingUserId = -1;
 
     return (
       <BaseDialog
