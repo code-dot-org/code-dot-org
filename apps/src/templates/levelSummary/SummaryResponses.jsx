@@ -19,6 +19,7 @@ const SummaryResponses = ({
   // redux
   isRtl,
   viewAs,
+  hasSections,
   selectedSection,
   students,
   currentLevelId,
@@ -91,10 +92,13 @@ const SummaryResponses = ({
           </div>
         )}
 
-        <label className={styles.sectionSelector}>
-          {i18n.responsesForClassSection()}
-          <SectionSelector reloadOnChange={true} />
-        </label>
+        {/* Section dropdown */}
+        {hasSections && (
+          <label className={styles.sectionSelector}>
+            {i18n.responsesForClassSection()}
+            <SectionSelector reloadOnChange={true} />
+          </label>
+        )}
 
         {/* "Show correct answer" toggle is only shown for some level types. */}
         {scriptData.level.type === MULTI && (
@@ -131,6 +135,7 @@ SummaryResponses.propTypes = {
   scriptData: PropTypes.object,
   isRtl: PropTypes.bool,
   viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+  hasSections: PropTypes.bool,
   selectedSection: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -162,6 +167,7 @@ export default connect(
     return {
       isRtl: state.isRtl,
       viewAs: state.viewAs,
+      hasSections: state.teacherSections.sectionIds.length > 0,
       selectedSection:
         state.teacherSections.sections[state.teacherSections.selectedSectionId],
       students: state.teacherSections.selectedStudents,
