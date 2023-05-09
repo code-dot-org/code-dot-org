@@ -2958,6 +2958,8 @@ is:
               display_name: Innihald
             lessonGroup-4:
               display_name: Könnun
+            lessonGroup-5:
+              display_name: Annað kennsluefni
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3195,25 +3197,39 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Könnun
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Myndir og Hreyfing'
             lessonGroup-3:
               display_name: 'Kafli 2: Gerð leikja'
+            lessonGroup-4:
+              display_name: Könnun
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Notendamiðuð hönnun'
             lessonGroup-3:
               display_name: 'Kafli 2: Frumgerðir appa'
+            lessonGroup-4:
+              display_name: Könnun
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Kóðun upplýsinga'
             lessonGroup-3:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
+            lessonGroup-4:
+              display_name: Könnun
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Könnun
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3314,10 +3330,14 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Inntök og Úttök
+            lessonGroup-5:
+              display_name: Könnun
         devices-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+            lessonGroup-5:
+              display_name: Könnun
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3338,3 +3358,21 @@ is:
           lesson_groups:
             lessonGroup-3:
               display_name: Inntök og Úttök
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kynning
+        csd-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-data-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-impact-in-society-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-coding-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-hardware-post-survey-2023:
+          title: Könnun eftir námskeið
+        focus-on-creativity-post-survey-2023:
+          title: Könnun eftir námskeið

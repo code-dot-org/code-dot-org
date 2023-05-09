@@ -2195,3 +2195,11 @@ ms:
           title: 'Modul 7: Bersedia untuk Mengajar AI dan Pembelajaran Mesin'
           description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
           student_description: "Modul pembelajaran profesional ini direka untuk membantu anda bersedia untuk mengajar unit AI dan Pembelajaran Mesin Code.org. \n\n**Dalam modul pembelajaran profesional ini, anda akan:**\n\n-   Mendapat pengenalan tentang AI dan Pembelajaran Mesin.\n-   Amalkan konsep utama yang termasuk dalam unit.\n-   Terlibat dengan Makmal AI dan Makmal Aplikasi.\n-   Terokai akhir projek bab.\n-   Buat rancangan untuk melaksanakan unit dengan pelajar anda.\n\n\\*\\* Masa yang dicadangkan:\\*\\* 120 minit"
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Penggulungan
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Penggulungan

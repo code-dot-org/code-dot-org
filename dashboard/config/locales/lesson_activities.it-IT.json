@@ -996,7 +996,7 @@
           "name": "Analizza: dati personali o dati generici?"
         },
         "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
-          "name": "Conclusione: biglietto di uscita"
+          "name": "Conclusione: compito finale"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Approfondimenti"
@@ -3080,6 +3080,9 @@
         "36b07898-2f7d-4b48-a979-d2f46cef659b": {
           "name": "Conclusione"
         },
+        "15e4e2e5-9559-42e0-87af-f96ac932f5aa": {
+          "name": "Attività di approfondimento"
+        },
         "b863b736-7488-420c-84c2-e9ff135ac7fb": {
           "name": "Preparazione"
         },
@@ -3088,6 +3091,9 @@
         },
         "d79a6bf6-2044-46f7-97ff-06e2f8d72900": {
           "name": "Conclusione"
+        },
+        "919ed563-92a0-4e03-b316-14bf1a922f5a": {
+          "name": "Approfondimenti"
         },
         "a6fce4e5-46e2-4e4a-9120-52014cd62354": {
           "name": "Preparazione"
@@ -3176,11 +3182,17 @@
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Attività"
         },
+        "ee81ca1c-5e75-40ee-880c-e12ef70a34f5": {
+          "name": "Conclusione "
+        },
         "b6364f64-7652-413c-b216-00e84f75dc46": {
           "name": "Preparazione"
         },
         "cdebc121-9bb7-4512-a38f-ec2adaabed91": {
           "name": "Attività"
+        },
+        "ea249449-8468-4a0f-9291-66fcb8e755c1": {
+          "name": "Conclusione "
         },
         "591f1e39-f37c-4e7b-862b-f450ba4d018a": {
           "name": "Preparazione"
@@ -3226,6 +3238,9 @@
         },
         "ef0f2f8a-5694-4406-9357-17f0d20037e3": {
           "name": "Conclusione"
+        },
+        "0e3432dd-ba1d-4c56-a446-81c419bd6db9": {
+          "name": "Approfondimenti"
         },
         "af36124c-854d-449a-b766-4edfec01a4b2": {
           "name": "Preparazione"
@@ -3352,6 +3367,9 @@
         },
         "dd0a4787-a721-4e47-b42a-9d0ed545b988": {
           "name": "Conclusione"
+        },
+        "49145ed8-ab17-41b0-9502-807c1f24845a": {
+          "name": "Attività di approfondimento"
         },
         "34aa1a1a-3574-414f-82bf-991ada5c0625": {
           "name": "Preparazione"
@@ -7623,7 +7641,7 @@
           "name": "Analizza: dati personali o dati generici?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
-          "name": "Conclusione: biglietto di uscita"
+          "name": "Conclusione: compito finale"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Approfondimenti"
@@ -7916,6 +7934,9 @@
         "53a369c4-4de1-4607-99cf-3d538af13c51": {
           "name": "Conclusione"
         },
+        "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e": {
+          "name": "Attività di approfondimento"
+        },
         "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
           "name": "Preparazione"
         },
@@ -8153,6 +8174,9 @@
         "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
           "name": "Conclusione"
         },
+        "e0cc8a92-52b9-421d-a2fd-d5d63296212e": {
+          "name": "Attività di approfondimento"
+        },
         "83194b44-89d2-4b23-8601-b26ce5caa6af": {
           "name": "Preparazione"
         },
@@ -8161,6 +8185,9 @@
         },
         "098e6ecf-1fe4-459a-acc3-25907450f581": {
           "name": "Conclusione"
+        },
+        "4fada4f6-95c0-462f-af3f-7d3d655a466f": {
+          "name": "Approfondimenti"
         },
         "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
           "name": "Preparazione"
@@ -8249,6 +8276,9 @@
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Attività"
         },
+        "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec": {
+          "name": "Conclusione "
+        },
         "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
           "name": "Preparazione"
         },
@@ -8264,6 +8294,9 @@
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Attività"
         },
+        "3a46632a-43c7-47d3-85b7-e119bf9900ff": {
+          "name": "Conclusione "
+        },
         "1e259b12-ec38-426b-944e-f5778651c422": {
           "name": "Preparazione"
         },
@@ -8276,6 +8309,15 @@
         "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
           "name": "Preparazione"
         },
+        "d5a88b8b-de36-473b-8206-46ac7d2801c2": {
+          "name": "Attività 1"
+        },
+        "ca01af5b-36a3-461d-b6b0-9802dc211193": {
+          "name": "Attività 2"
+        },
+        "09284bd4-8906-4775-8b69-db734dde7324": {
+          "name": "Attività 3"
+        },
         "b3d78956-5557-4142-bd84-3741cc92fb87": {
           "name": "Conclusione"
         },
@@ -8287,6 +8329,9 @@
         },
         "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
           "name": "Conclusione"
+        },
+        "fe9db805-4d94-4c5e-a497-5fba5af44ff1": {
+          "name": "Approfondimenti"
         },
         "95526ba9-ab16-49b6-a013-d52be08b2753": {
           "name": "Preparazione"
