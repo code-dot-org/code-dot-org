@@ -1,8 +1,10 @@
 // Utilities for retrieving various types of data for Music Lab.
 
-import AppConfig from '../appConfig';
+const AppConfig = require('../appConfig').default;
 
 export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
+
+export type LevelSource = 'levels' | 'level' | 'file';
 
 // Loads a sound library JSON file.
 export const loadLibrary = async () => {
@@ -40,7 +42,7 @@ const loadProgressionFile = async () => {
 };
 
 // Loads level data from the dashboard, for a script level or a level.
-const loadLevelData = async levelDataPath => {
+const loadLevelData = async (levelDataPath: string) => {
   const response = await fetch(levelDataPath);
 
   if (!response.ok) {
@@ -53,9 +55,9 @@ const loadLevelData = async levelDataPath => {
 
 // Loads a progression step.
 export const loadProgressionStepFromSource = async (
-  levelSource,
-  levelDataPath,
-  currentLevelIndex
+  levelSource: LevelSource,
+  levelDataPath: string,
+  currentLevelIndex: number
 ) => {
   let progressionStep = undefined;
   let levelCount = undefined;
