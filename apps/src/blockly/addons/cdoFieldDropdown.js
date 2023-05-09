@@ -35,22 +35,24 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   fromXml(element) {
     // Call super so value is set.
     super.fromXml(element);
+
     // If `menuGenerator_` is an array, it is an array of options with
     // each option represented by an array containing 2 elements -
     // a human-readable string and a language-neutral string. For example,
     // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
     // Options are included in the block definition.
-    // But if the field xml contains `config`, then the dropdown options
-    // are determined by `config`.
-    // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
-    // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
-    // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     const originalOptionsMap = Array.isArray(this.menuGenerator_)
       ? this.menuGenerator_.reduce((optionsMap, curr) => {
           optionsMap[curr[1]] = curr[0];
           return optionsMap;
         }, {})
       : {};
+
+    // If the field xml contains a `config`, then the dropdown options
+    // are determined by `config`.
+    // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
+    // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
+    // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
     let options = null;
     if (this.config) {
@@ -107,8 +109,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   printerStyleNumberRangeToList = function (rangeString) {
     const rangeStringNoSpaces = rangeString.replace(/ /g, '');
     const rangeItems = rangeStringNoSpaces.split(',');
-    const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "5-10", "20-30"
-    const numberRegExp = /^(\d+)$/; // e.g., "3", "500"
+    const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
+    const numberRegExp = /^(\d+)$/; // e.g., "1", "2"
     const fullNumberList = rangeItems.reduce((numberArray, currExp) => {
       const rangeResult = rangeRegExp.exec(currExp);
       const numberResult = numberRegExp.exec(currExp);
