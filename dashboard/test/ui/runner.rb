@@ -415,8 +415,7 @@ def report_tests_finished(start_time, run_results)
   end
 
   extra_dimensions = {test_type: test_type}
-  total_tests = suite_success_count + failures.count
-  success_rate = total_tests > 0 ?  (1.0 * suite_success_count) / total_tests : nil
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
   Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
