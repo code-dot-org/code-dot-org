@@ -1,9 +1,9 @@
-# Blockly Manual Testing
+# Mainline Blockly Manual Testing
 Whenever the mainline `blockly` package version is being upgraded, manual testing should be included to ensure there are no regressions or issues with the version bump.
 
 The following is a manual test checklist to follow and may not be extensive:
 
-For all blockly labs, check the following:
+# For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
 - Context menu works (copy, duplicate, collapse, expand, disable, delete, paste).
 - The different themes are rendered properly (Modern, High Contrast, Protanopia, Deuteranopia, Tritanopia, and each of these can be combined with dark mode). There are 10 different ways to render workspace.
@@ -16,3 +16,5 @@ For all blockly labs, check the following:
 - When unused blocks are dragged to a different location in workspace, the svg frame should be removed. The svg frame appears around unused blocks when the program is run.
 - Click on the question mark icon of the unused code's svg frame. Check that a callout is displayed and that callout is removed when you click on X.
 
+# Dance Lab
+- 
