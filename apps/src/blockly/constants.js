@@ -1,4 +1,5 @@
 import {makeEnum} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 export const BlocklyVersion = {
   CDO: 'CDO',
@@ -46,3 +47,5 @@ export const CLAMPED_NUMBER_REGEX =
 
 // Used for custom field type FieldButton for 'play sound' block
 export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
+
+export const NO_OPTIONS_MESSAGE = i18n.uninitialized();
