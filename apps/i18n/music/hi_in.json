@@ -1,2 +1,20 @@
 {
+  "blockly_blockPlaySoundTooltip": "ध्वनि चलाएँ",
+  "blockly_blockPlaySoundAtMeasureTooltip": "ध्वनि चलाएँ",
+  "blockly_blockRepeatTooltip": "दोहराएँ",
+  "blockly_blockRestTooltip": "आराम",
+  "blockly_blockWhenRun": "जब चलाएँ",
+  "blockly_blockWhenRunTooltip": "जब चलाएँ",
+  "blockly_functionNamePlaceholder": "मेरा फंक्शन",
+  "blockly_toolboxCategoryEffects": "प्रभाव",
+  "blockly_toolboxCategoryEvents": "घटनाएँ",
+  "blockly_toolboxCategoryFunctions": "कार्य",
+  "blockly_toolboxCategoryLogic": "तर्क",
+  "blockly_toolboxCategoryMath": "गणित",
+  "blockly_toolboxCategoryPlay": "चलाओ",
+  "blockly_toolboxCategoryVariables": "चर",
+  "feedback": "प्रतिक्रिया",
+  "share": "शेयर करें",
+  "startOver": "पुन: प्रारंभ करें",
+  "upload": "अपलोड करें"
 }

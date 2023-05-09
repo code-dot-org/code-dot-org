@@ -1,13 +1,18 @@
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
-import styles from './summary.module.scss';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import FreeResponseResponses from './FreeResponseResponses';
+import MultiResponses from './MultiResponses';
+import styles from './summary.module.scss';
+
+const FREE_RESPONSE = 'FreeResponse';
+const MULTI = 'Multi';
 
 const SummaryResponses = ({
   scriptData,
@@ -21,27 +26,46 @@ const SummaryResponses = ({
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
 
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
   if (viewAs === ViewType.Participant) {
     document.location.replace(currentLevel.url + document.location.search);
   }
 
-  const logEvent = useCallback(eventName => {
-    const {level} = scriptData;
-    analyticsReporter.sendEvent(eventName, {
-      levelId: level.id,
-      levelName: level.name,
-      levelType: level.type,
-      sectionSelected: !!selectedSection,
-      ...scriptData.reportingData,
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const logEvent = useCallback(
+    eventName => {
+      const {level} = scriptData;
+      analyticsReporter.sendEvent(eventName, {
+        levelId: level.id,
+        levelName: level.name,
+        levelType: level.type,
+        sectionSelected: !!selectedSection,
+        ...scriptData.reportingData,
+      });
+    },
+    [scriptData, selectedSection]
+  );
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
+
+  useEffect(() => {
+    const correctAnswerElement = document.getElementById(
+      'summary-correct-answer'
+    );
+    if (correctAnswerElement) {
+      if (showCorrectAnswer) {
+        correctAnswerElement.classList.add(styles.correctAnswersContainer);
+        correctAnswerElement.classList.remove('hide');
+      } else {
+        correctAnswerElement.classList.add('hide');
+        correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+      }
+    }
+  }, [showCorrectAnswer]);
 
   return (
     <div className={styles.summaryContainer} id="summary-container">
@@ -67,29 +91,38 @@ const SummaryResponses = ({
           </div>
         )}
 
-        <label>
+        <label className={styles.sectionSelector}>
           {i18n.responsesForClassSection()}
           <SectionSelector reloadOnChange={true} />
         </label>
 
-        <div className={styles.studentResponsesColumns}>
-          {scriptData.responses.map(response => (
-            <div key={response.user_id} className={styles.studentAnswer}>
-              <p>{response.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+        {/* "Show correct answer" toggle is only shown for some level types. */}
+        {scriptData.level.type === MULTI && (
+          <div className={styles.toggleContainer}>
+            <ToggleSwitch
+              isToggledOn={showCorrectAnswer}
+              onToggle={() => {
+                setShowCorrectAnswer(!showCorrectAnswer);
+              }}
+              label={i18n.showAnswer()}
+              expands="summary-correct-answer"
+            />
+          </div>
+        )}
 
-      {/* Feedback sharing banner */}
-      <Notification
-        type={NotificationType.feedback}
-        notice={i18n.feedbackShareBannerTitle()}
-        details={i18n.feedbackShareBannerDesc()}
-        buttonText={i18n.feedbackShareBannerButton()}
-        buttonLink={'https://forms.gle/XsjRL9L3Mo5aC3KbA'}
-        dismissible={false}
-      />
+        {/* Free response visualization */}
+        {scriptData.level.type === FREE_RESPONSE && (
+          <FreeResponseResponses responses={scriptData.responses} />
+        )}
+
+        {/* Multi visualization */}
+        {scriptData.level.type === MULTI && (
+          <MultiResponses
+            scriptData={scriptData}
+            showCorrectAnswer={showCorrectAnswer}
+          />
+        )}
+      </div>
     </div>
   );
 };

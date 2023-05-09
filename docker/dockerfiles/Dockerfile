@@ -54,21 +54,25 @@ FROM ubuntu:18.04 as node
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    build-essential \
-    curl \
-    g++ \
-    python3-pip
+        build-essential \
+        curl \
+        g++ \
+        g++-8 \
+        gcc-8 \
+        python3-pip
 
 # install node
-RUN curl -sSLOJ https://nodejs.org/dist/v14.17.1/node-v14.17.1.tar.gz && \
-    tar -xzf node-v14.17.1.tar.gz && \
-    rm node-v14.17.1.tar.gz && \
-    cd node-v14.17.1 && \
+RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
+    tar -xzf node-v18.16.0.tar.gz && \
+    rm node-v18.16.0.tar.gz && \
+    cd node-v18.16.0 && \
+    # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
+    C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
     ./configure && \
     make -j `nproc` && \
     make install PREFIX=/build && \
     cd .. && \
-    rm -r node-v14.17.1
+    rm -r node-v18.16.0
 
 
 #########################################################
@@ -170,8 +174,8 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
     dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
     rm google-chrome-stable_current_amd64.deb && \
     sed -i \
-    's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
-    "/opt/google/chrome/google-chrome"
+        's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
+        "/opt/google/chrome/google-chrome"
 
 # install chromedriver
 RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \

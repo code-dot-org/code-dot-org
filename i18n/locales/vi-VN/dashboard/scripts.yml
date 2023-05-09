@@ -3100,6 +3100,22 @@ vi:
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
           description_audience: 'Độ tuổi: 8-12'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         aiml-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3108,6 +3124,8 @@ vi:
               display_name: Chương 1
             lessonGroup-4:
               display_name: Chương 2
+            lessonGroup-5:
+              display_name: Khảo sát
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3124,6 +3142,10 @@ vi:
               display_name: Giới thiệu về AppLab
             lessonGroup-4:
               display_name: Chương 2
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
         vpl-csd-ci-1:
           title: 'Học phần 1: Chuẩn bị giảng dạy về Giải quyết vấn đề và máy tính'
           description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org. \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 30 phút"
@@ -3154,3 +3176,37 @@ vi:
           title: 'Học phần 7: Chuẩn bị giảng dạy về AI và máy học'
           description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần AI và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-   Lên kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:** 120 phút"
           student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phần AI và máy học của Code.org. \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần AI và máy học.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương tác với AI Lab App Lab.\n-   Khám phá các dự án cuối bài học.\n-   Lên kế hoạch triển khai học phần với học sinh.\n\n**Thời gian đề xuất:** 120 phút"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chào mừng bạn
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Giới thiệu
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Tổng kết
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Tổng kết
+        csd-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-data-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-impact-in-society-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-coding-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-hardware-post-survey-2023:
+          title: Khảo sát sau khoá học
+        focus-on-creativity-post-survey-2023:
+          title: Khảo sát sau khoá học

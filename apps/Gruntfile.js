@@ -103,9 +103,8 @@ describe('entry tests', () => {
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var piskelRoot = String(
-    child_process.execSync('`npm bin`/piskel-root')
-  ).replace(/\s+$/g, '');
+  var piskelRootStdout = child_process.execSync('npx piskel-root');
+  var piskelRoot = String(piskelRootStdout).replace(/\s+$/g, '');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
     var localNodeModulesRoot = String(
@@ -1373,7 +1372,7 @@ describe('entry tests', () => {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      '`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 

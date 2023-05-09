@@ -350,11 +350,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function (
-    helpClickFunc
-  ) {
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_ = new BlockSvgUnused(this);
       this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
   };
@@ -406,22 +404,21 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
-  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function (
-    helpClickFunc
-  ) {
-    blocklyWrapper.browserEvents.bind(
-      blocklyWrapper.mainBlockSpace.getCanvas(),
-      blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-      blocklyWrapper.mainBlockSpace,
-      function () {
-        this.getTopBlocks().forEach(block => {
-          if (block.disabled) {
-            block.addUnusedBlockFrame(helpClickFunc);
-          }
-        });
-      }
-    );
-  };
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
+    function () {
+      blocklyWrapper.browserEvents.bind(
+        blocklyWrapper.mainBlockSpace.getCanvas(),
+        blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+        blocklyWrapper.mainBlockSpace,
+        function () {
+          this.getTopBlocks().forEach(block => {
+            if (block.disabled) {
+              block.addUnusedBlockFrame();
+            }
+          });
+        }
+      );
+    };
 
   blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => !block.disabled);
