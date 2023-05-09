@@ -92,14 +92,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    */
   toXml(element) {
     super.toXml(element);
-    if (Array.isArray(this.menuGenerator_)) {
-      // convert array of options back into string config
-      const config = this.menuGenerator_
-        .map(val => {
-          return val[1];
-        })
-        .join();
-      element.setAttribute('config', config);
+    if (this.config) {
+      element.setAttribute('config', this.config);
     }
     return element;
   }
