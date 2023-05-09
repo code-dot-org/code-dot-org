@@ -48,7 +48,7 @@ function validateType(key, value, type) {
  */
 function validateReport(report) {
   for (var key in report) {
-    if (!report.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(report, key)) {
       continue;
     }
 

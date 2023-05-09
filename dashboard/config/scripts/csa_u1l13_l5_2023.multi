@@ -35,3 +35,5 @@ The condition for the `while` loop repeats the block of code as long as the `Pai
 
 * The condition for the `while` loop is now false because the `Painter` object is facing south.
 MARKDOWN
+
+allow_multiple_attempts true

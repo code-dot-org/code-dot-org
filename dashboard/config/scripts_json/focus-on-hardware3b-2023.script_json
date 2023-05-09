@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:48:05 UTC",
+    "serialized_at": "2023-05-02 19:40:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9567,6 +9567,83 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging ",
+      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
+      "key": "csd_guide_to_debugging_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging_1"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation ",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_5",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_5"
+      }
+    },
+    {
+      "name": "CSD Guide to Programming Levels ",
+      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
+      "key": "csd_guide_to_programming_levels",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_programming_levels"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_3"
+      }
+    },
+    {
       "name": "Data & Change Events",
       "url": "https://studio.code.org/courses/csd-2022/guides/data-and-change-events",
       "key": "data_change_events",
@@ -9943,6 +10020,16 @@
       }
     },
     {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_for_design_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_1"
+      }
+    },
+    {
       "name": "Problem Solving Process with Programming",
       "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit",
       "key": "problem_solving_process_with_programming",
@@ -9953,6 +10040,17 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
+      "key": "problem_solving_process_with_programming_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_2"
       }
     },
     {
@@ -10189,6 +10287,16 @@
       },
       "seeding_key": {
         "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
       }
     },
     {
@@ -10775,6 +10883,66 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_3",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging_1",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_5",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_programming_levels",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_3",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_1",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_2",
+        "script.name": "focus-on-hardware3b-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "focus-on-hardware3b-2023"
       }
     }

@@ -6,3 +6,5 @@ wrong '![](https://images.code.org/90cd656f4548ba2a65b3571cd7d1773a-image-155784
 markdown <<MARKDOWN
 Which program will correctly print to the console the smallest number in the list? 
 MARKDOWN
+
+allow_multiple_attempts true

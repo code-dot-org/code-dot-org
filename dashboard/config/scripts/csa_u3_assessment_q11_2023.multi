@@ -19,3 +19,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The body of the `for` loop will execute 5 times since the loop control variable `count` starts at `0` and increases by `3` up to but not including `14`. This means the body of the `for` loop will execute when `count` is `0`, `3`, `6`, `9`, and `11`. When `count` becomes `14`, the condition is `false`, so the loop ends.
 MARKDOWN
+
+allow_multiple_attempts true

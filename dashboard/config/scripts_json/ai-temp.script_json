@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-30 03:42:14 UTC",
+    "serialized_at": "2023-05-04 16:12:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -79,7 +79,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student"
+        "overview": "Students learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.",
+        "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student",
+        "student_overview": "Learn how neural networks work by adjusting the weights of a recommendation system to adjust the outputs."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -335,6 +337,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -1764,7 +1779,8 @@
       "key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What's an example of an experience that recommends things to you?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What's an example of an experience that recommends things to you?\n",
+        "name": "Recommendations"
       },
       "seeding_key": {
         "activity_section.key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
@@ -1860,7 +1876,8 @@
       "key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the WIP LINK"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r wetube_content_creators/ai-temp/unversioned] resource.",
+        "name": "WeTube"
       },
       "seeding_key": {
         "activity_section.key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
@@ -2102,7 +2119,8 @@
       "key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"WeTube Version 2.0\" slide, which describes the updates to the widget. Click through the next slides to explain the differences in the widget."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"WeTube Version 2.0\" slide, which describes the updates to the widget. Click through the next slides to explain the differences in the widget.",
+        "name": "WeTube 2.0"
       },
       "seeding_key": {
         "activity_section.key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
@@ -2144,7 +2162,7 @@
       "key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
       "position": 27,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the WIP LINK"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r neural_networks/ai-temp/unversioned] Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
@@ -2389,6 +2407,18 @@
       "seeding_key": {
         "activity_section.key": "793cd2e2-89ad-47e4-8ec3-649d30193a98",
         "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b"
+      }
+    },
+    {
+      "key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4"
       }
     },
     {
@@ -3009,7 +3039,7 @@
       "properties": {
         "description": "Most of the things that generate text today use a Large Language Model, but before we had the computing power to allow models to learn from the entire text of wikipedia, there were text-based AIs that were not based on Large Language Models.\n\nInstead, these programs have rules for what sorts of text make sense at different times.\n\nOne of the most famous examples is Eliza, who was a computer program that was supposed to sound like a therapist that was invented in 1966. It was very impressive in its time. Let’s explore what Eliza is and is not capable of.\n",
         "duration": "10",
-        "name": "(Optional) Generative text that is not an LLM – Eliza",
+        "name": "(Optional) A Chatbot that is not an LLM – Eliza",
         "remarks": true
       },
       "seeding_key": {
@@ -4332,6 +4362,30 @@
       }
     },
     {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+      "key": "neural_networks",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+      "key": "neural_networks_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks_1"
+      }
+    },
+    {
       "name": "Our AI Code of Ethics [Template]",
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our_ai_code_of_ethics_template_",
@@ -4391,6 +4445,18 @@
       },
       "seeding_key": {
         "resource.key": "vocabulary_matching"
+      }
+    },
+    {
+      "name": "WeTube Content Creators",
+      "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+      "key": "wetube_content_creators",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "wetube_content_creators"
       }
     },
     {
@@ -4543,6 +4609,24 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "introduction_to_ai_how_neural_networks_work_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "wetube_content_creators"
       }
     },
     {
@@ -4768,6 +4852,16 @@
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
         "objective.key": "3f854432-7976-4aa4-98df-299cbac0b553"
+      }
+    },
+    {
+      "key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b",
+      "properties": {
+        "description": "Use the weights of an artificial neuron to adjust the outputs of a recommendation system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b"
       }
     },
     {

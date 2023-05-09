@@ -14,3 +14,4 @@ answer 'a collection of similar classes'
 
 question 'static variable'
 answer 'a variable defined in a class that stores a shared value for all instances of the class'
+allow_multiple_attempts true

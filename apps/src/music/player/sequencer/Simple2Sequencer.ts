@@ -69,6 +69,10 @@ export default class Simple2Sequencer extends Sequencer {
     this.functionMap = {};
   }
 
+  getLastMeasure(): number {
+    return this.getCurrentMeasure();
+  }
+
   /**
    * Set up for a new sequence with a new set of blocks (e.g. at the start
    * of a trigger or when_run block)
@@ -129,7 +133,8 @@ export default class Simple2Sequencer extends Sequencer {
 
     const currentEffects = this.getCurrentEffects();
     if (currentEffects !== null) {
-      this.effectsStack.push({...currentEffects});
+      // Create a fresh effect context if there is one active
+      this.effectsStack.push({});
     }
   }
 
@@ -195,94 +200,50 @@ export default class Simple2Sequencer extends Sequencer {
 
   /**
    * Play a sound at the current location.
-   * @param id
    */
-  playSound(id: string) {
-    const currentFunctionId = this.getCurrentFunctionId();
-    if (currentFunctionId === null) {
-      console.warn('Invalid state: no current function ID');
-      return;
-    }
-
-    const currentFunction = this.functionMap[currentFunctionId];
+  playSound(id: string, blockId: string) {
     const soundData = this.library.getSoundForId(id);
     if (soundData === null) {
       console.warn('Could not find sound with ID: ' + id);
       return;
     }
 
-    const soundEvent: SoundEvent = {
+    this.addNewEvent<SoundEvent>({
       id,
       type: 'sound',
-      triggered: this.inTrigger,
-      when: this.getCurrentMeasure(),
-      effects: {...this.getCurrentEffects()} || undefined,
-      skipContext: this.getCurrentSkipContext(),
       length: this.getLengthForId(id),
       soundType: soundData.type,
-    };
-
-    currentFunction.playbackEvents.push(soundEvent);
-
-    this.updateMeasureForPlayByLength(soundEvent.length);
-    currentFunction.endMeasure = this.getCurrentMeasure();
+      blockId,
+      ...this.getCommonEventFields(),
+    });
   }
 
   /**
-   * Play a pattern event at the current location
-   * @param value
+   * Play a pattern event at the current location.
    */
-  playPattern(value: PatternEventValue) {
-    const currentFunctionId = this.getCurrentFunctionId();
-    if (currentFunctionId === null) {
-      console.warn('Invalid state: no current function ID');
-      return;
-    }
-    const currentFunction = this.functionMap[currentFunctionId];
-
-    const patternEvent: PatternEvent = {
+  playPattern(value: PatternEventValue, blockId: string) {
+    this.addNewEvent<PatternEvent>({
       type: 'pattern',
       id: JSON.stringify(value),
       value,
-      triggered: this.inTrigger,
-      when: this.getCurrentMeasure(),
-      effects: {...this.getCurrentEffects()} || undefined,
-      skipContext: this.getCurrentSkipContext(),
+      blockId,
       length: DEFAULT_PATTERN_LENGTH,
-    };
-
-    currentFunction.playbackEvents.push(patternEvent);
-    this.updateMeasureForPlayByLength(DEFAULT_PATTERN_LENGTH);
-    currentFunction.endMeasure = this.getCurrentMeasure();
+      ...this.getCommonEventFields(),
+    });
   }
 
   /**
    * Play a chord event at the current location.
-   * @param
-   * @returns
    */
-  playChord(value: ChordEventValue) {
-    const currentFunctionId = this.getCurrentFunctionId();
-    if (currentFunctionId === null) {
-      console.warn('Invalid state: no current function ID');
-      return;
-    }
-    const currentFunction = this.functionMap[currentFunctionId];
-
-    const chordEvent: ChordEvent = {
+  playChord(value: ChordEventValue, blockId: string) {
+    this.addNewEvent<ChordEvent>({
       type: 'chord',
       id: JSON.stringify(value),
       value,
-      triggered: this.inTrigger,
-      when: this.getCurrentMeasure(),
-      effects: {...this.getCurrentEffects()} || undefined,
-      skipContext: this.getCurrentSkipContext(),
-      length: DEFAULT_PATTERN_LENGTH,
-    };
-
-    currentFunction.playbackEvents.push(chordEvent);
-    this.updateMeasureForPlayByLength(DEFAULT_CHORD_LENGTH);
-    currentFunction.endMeasure = this.getCurrentMeasure();
+      length: DEFAULT_CHORD_LENGTH,
+      blockId,
+      ...this.getCommonEventFields(),
+    });
   }
 
   rest(length: number) {
@@ -301,20 +262,41 @@ export default class Simple2Sequencer extends Sequencer {
     // to their parent FunctionContext. We are reconstructing that model here.
     // Going forward, the Timeline could instead render using getOrderedFunctions(), and not have
     // to reconstruct the function mapping itself.
+    return this.getOrderedFunctions()
+      .map(functionEvent => {
+        return functionEvent.playbackEvents.map(playbackEvent => {
+          return {
+            ...playbackEvent,
+            functionContext: {
+              name: functionEvent.name,
+              uniqueInvocationId: functionEvent.uniqueInvocationId,
+            },
+          };
+        });
+      })
+      .flat();
+  }
 
-    const events: PlaybackEvent[] = [];
-    for (const context of this.getOrderedFunctions()) {
-      const functionEvents = [...context.playbackEvents];
-      for (const functionEvent of functionEvents) {
-        functionEvent.functionContext = {
-          name: context.name,
-          uniqueInvocationId: context.uniqueInvocationId,
-        };
-      }
-      events.push(...functionEvents);
+  private getCommonEventFields() {
+    return {
+      triggered: this.inTrigger,
+      when: this.getCurrentMeasure(),
+      effects: {...this.getCurrentEffects()} || undefined,
+      skipContext: this.getCurrentSkipContext(),
+    };
+  }
+
+  private addNewEvent<T extends PlaybackEvent>(event: T) {
+    const currentFunctionId = this.getCurrentFunctionId();
+    if (currentFunctionId === null) {
+      console.warn('Invalid state: no current function ID');
+      return;
     }
+    const currentFunction = this.functionMap[currentFunctionId];
 
-    return events;
+    currentFunction.playbackEvents.push(event);
+    this.updateMeasureForPlayByLength(event.length);
+    currentFunction.endMeasure = this.getCurrentMeasure();
   }
 
   // Internal helper to get the entry at the top of the stack, or null

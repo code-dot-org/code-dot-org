@@ -7,7 +7,7 @@ wrong '`I am Jeanie I am Jeanie`'
 wrong 'Runtime error'
 right 'Compilation error'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Given the declaration `Parent p = new Child();` and the class definitions below, what is displayed by the method call `p.show("Jeanie");`	?

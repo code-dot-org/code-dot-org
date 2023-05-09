@@ -7,7 +7,7 @@ wrong '`mystery("nnoo");`'
 wrong '`mystery("nono");`'
 wrong '`mystery("noon");`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following method.
