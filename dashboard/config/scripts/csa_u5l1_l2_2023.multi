@@ -7,7 +7,7 @@ wrong '`int myArray[][] = new int[4, 6];`'
 wrong '`int[][] myArray = new int[4][6];`'
 wrong '`int[][] myArray = {6}{4};`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is the correct syntax for declaring and initializing a 2D array with 4 columns and 6 rows using the `new` keyword?

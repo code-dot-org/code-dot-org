@@ -1,2 +1,18 @@
 {
+  "blockly_blockPlaySoundTooltip": "ovozni ijro etish",
+  "blockly_blockPlaySoundAtMeasureTooltip": "ovozni ijro etish",
+  "blockly_blockRepeatTooltip": "takrorlash",
+  "blockly_blockWhenRun": "qachon",
+  "blockly_blockWhenRunTooltip": "qachon",
+  "blockly_functionNamePlaceholder": "mening funksiyam",
+  "blockly_toolboxCategoryEffects": "Ta'sirlari",
+  "blockly_toolboxCategoryEvents": "Hodisalar",
+  "blockly_toolboxCategoryFunctions": "Funksiyalar",
+  "blockly_toolboxCategoryLogic": "Mantiq",
+  "blockly_toolboxCategoryMath": "Matematik",
+  "blockly_toolboxCategoryPlay": "O‘ynash",
+  "blockly_toolboxCategoryVariables": "O‘zgaruvchilar",
+  "feedback": "Fikr-mulohaza",
+  "share": "Ulashish",
+  "startOver": "Boshidan boshlamoq"
 }

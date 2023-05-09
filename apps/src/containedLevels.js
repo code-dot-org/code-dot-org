@@ -65,8 +65,12 @@ export function postContainedLevelAttempt({
     return;
   }
   const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
+  const levelAllowsMultipleAttempts = !!codeStudioLevels.getLevel(
+    codeStudioLevels.getLevelIds()[0]
+  )?.allowMultipleAttempts;
+  const canRetryLevel = isTeacher || levelAllowsMultipleAttempts;
 
-  if (!isTeacher && attempts !== 1) {
+  if (!canRetryLevel && attempts !== 1) {
     return;
   }
 

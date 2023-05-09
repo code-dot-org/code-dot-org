@@ -65,6 +65,10 @@ class Poetry < GamelabJr
     GamelabJr
   end
 
+  def project_type
+    standalone_app_name
+  end
+
   def self.standalone_app_names
     [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc'],  ['Time Capsule', 'time_capsule']]
   end

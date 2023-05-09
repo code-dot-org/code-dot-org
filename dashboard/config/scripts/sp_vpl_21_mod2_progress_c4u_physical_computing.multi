@@ -19,3 +19,5 @@ teacher_markdown <<MARKDOWN
 
 Visit the <a href="https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress" target="blank" > *viewing student progress*</a> support article to learn more about tracking student progress. 
 MARKDOWN
+
+allow_multiple_attempts true

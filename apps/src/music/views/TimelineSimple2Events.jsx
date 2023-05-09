@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
-import {PlayerUtilsContext} from '../context';
+import React from 'react';
+import {useSelector} from 'react-redux';
 import TimelineElement from './TimelineElement';
 
 /**
@@ -11,8 +11,7 @@ const TimelineSimple2Events = ({
   eventVerticalSpace,
   getEventHeight,
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getPlaybackEvents();
+  const soundEvents = useSelector(state => state.music.playbackEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (

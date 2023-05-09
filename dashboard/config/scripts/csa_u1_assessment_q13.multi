@@ -17,3 +17,5 @@ True or False. There must be an else-statement after an if-statement.
 
 
 MARKDOWN
+
+allow_multiple_attempts true
