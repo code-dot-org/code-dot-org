@@ -69,7 +69,7 @@ export const translatedGradeLevels = {
 };
 
 export const gradeLevelsMap = {
-  kindergarten: 'kindergarten',
+  kindergarten: 'K',
   grade_1: '1',
   grade_2: '2',
   grade_3: '3',
