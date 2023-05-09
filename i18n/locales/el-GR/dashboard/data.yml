@@ -512,6 +512,8 @@ el:
         lesson_planning: Σχεδιασμός μαθημάτων
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
         csd_applab_parameters: Συναρτήσεις με παραμέτρους
+        CSF_SpriteLab_Intro_v2: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+        CSF_Spritelab_MakeSprite_v2: Πώς να φτιάξετε χαρακτήρες
         CSF_SpriteLab_SpritesInAction_v2: Χαρακτήρες σε Δράση
         csd_debugging: Εντοπισμός σφαλμάτων
         oceans_machine_learning: Εκμάθηση μηχανής

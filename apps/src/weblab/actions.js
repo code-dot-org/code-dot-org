@@ -20,7 +20,7 @@ export const ActionType = utils.makeEnum(
 export function changeFullScreenPreviewOn(fullScreenPreviewOn) {
   return {
     type: ActionType.CHANGE_FULL_SCREEN_PREVIEW_ON,
-    fullScreenPreviewOn
+    fullScreenPreviewOn,
   };
 }
 
@@ -32,7 +32,7 @@ export function changeFullScreenPreviewOn(fullScreenPreviewOn) {
 export function changeInspectorOn(inspectorOn) {
   return {
     type: ActionType.CHANGE_INSPECTOR_ON,
-    inspectorOn
+    inspectorOn,
   };
 }
 
@@ -45,7 +45,7 @@ export function changeInspectorOn(inspectorOn) {
 export function changeDialog(dialog = null) {
   return {
     type: ActionType.CHANGE_DIALOG,
-    dialog
+    dialog,
   };
 }
 
@@ -57,7 +57,7 @@ export function changeDialog(dialog = null) {
 export function changeMaxProjectCapacity(bytes) {
   return {
     type: ActionType.CHANGE_MAX_PROJECT_CAPACITY,
-    bytes
+    bytes,
   };
 }
 
@@ -68,7 +68,7 @@ export function changeMaxProjectCapacity(bytes) {
 export function changeProjectSize(bytes) {
   return {
     type: ActionType.CHANGE_PROJECT_SIZE,
-    bytes
+    bytes,
   };
 }
 

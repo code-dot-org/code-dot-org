@@ -143,7 +143,7 @@ var NetSimLogPanel = (module.exports = function (rootDiv, options) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
     panelTitle: options.logTitle,
-    beginMinimized: options.isMinimized
+    beginMinimized: options.isMinimized,
   });
 });
 NetSimLogPanel.inherits(NetSimPanel);
@@ -202,7 +202,7 @@ NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
     isUnread: this.hasUnreadMessages_,
-    markAsReadCallback: this.updateUnreadCount.bind(this)
+    markAsReadCallback: this.updateUnreadCount.bind(this),
   });
 
   newPacket.getRoot().prependTo(this.scrollArea_);
@@ -239,7 +239,7 @@ NetSimLogPanel.prototype.updateUnreadCount = function () {
     this.setPanelTitle(
       i18n.appendCountToTitle({
         title: this.logTitle_,
-        count: unreadCount
+        count: unreadCount,
       })
     );
   } else {
@@ -351,7 +351,7 @@ NetSimLogPacket.prototype.render = function () {
     packetSpec: this.packetSpec_,
     enabledEncodingsHash: encodingsHash,
     chunkSize: this.chunkSize_,
-    isMinimized: this.isMinimized
+    isMinimized: this.isMinimized,
   });
   var jQueryWrap = $(rawMarkup);
   NetSimLogPanel.adjustHeaderColumnWidths(jQueryWrap);

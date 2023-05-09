@@ -1,95 +1,47 @@
 import {BlockTypes} from '../blockTypes';
 
-export const loopFromTo = {
-  definition: {
-    type: BlockTypes.LOOP_FROM_TO,
-    style: 'loop_blocks',
-    message0: 'loop %1 from %2 to %3',
-    args0: [
-      {
-        type: 'field_variable',
-        name: 'measure',
-        variable: 'measure'
-      },
-      {
-        type: 'field_number',
-        name: 'from',
-        value: 1,
-        min: 1
-      },
-      {
-        type: 'field_number',
-        name: 'to',
-        value: 5,
-        min: 1
-      }
-    ],
-    message1: 'do %1',
-    args1: [
-      {
-        type: 'input_statement',
-        name: 'code'
-      }
-    ],
-    inputsInline: true,
-    previousStatement: null,
-    nextStatement: null,
-    tooltip: 'loop from a number to another number',
-    helpUrl: ''
-  },
-  generator: ctx =>
-    'for (var measure = ' +
-    ctx.getFieldValue('from') +
-    '; measure <= ' +
-    ctx.getFieldValue('to') +
-    '; measure++) {\n' +
-    //ctx.getFieldValue('code') +
-    Blockly.JavaScript.statementToCode(ctx, 'code') +
-    '\n}\n'
-};
-
 export const forLoop = {
   definition: {
     type: BlockTypes.FOR_LOOP,
-    message0: 'for %1 from %2 to %3 by %4',
+    message0: '%{BKY_CONTROLS_FOR_TITLE}',
     args0: [
       {
         type: 'field_variable',
         name: 'VAR',
-        variable: 'i'
+        variable: 'i',
       },
       {
         type: 'input_value',
         name: 'FROM',
         check: 'Number',
-        align: 'RIGHT'
+        align: 'RIGHT',
       },
       {
         type: 'input_value',
         name: 'TO',
         check: 'Number',
-        align: 'RIGHT'
+        align: 'RIGHT',
       },
       {
         type: 'input_value',
         name: 'BY',
         check: 'Number',
-        align: 'RIGHT'
-      }
+        align: 'RIGHT',
+      },
     ],
     message1: '%{BKY_CONTROLS_REPEAT_INPUT_DO} %1',
     args1: [
       {
         type: 'input_statement',
-        name: 'DO'
-      }
+        name: 'DO',
+      },
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
     helpUrl: '%{BKY_CONTROLS_FOR_HELPURL}',
-    extensions: ['contextMenu_newGetVariableBlock', 'controls_for_tooltip']
+    extensions: ['contextMenu_newGetVariableBlock', 'controls_for_tooltip'],
   },
   generator: ctx => {
     // For loop.
@@ -213,5 +165,5 @@ export const forLoop = {
         '}\n';
     }
     return code;
-  }
+  },
 };

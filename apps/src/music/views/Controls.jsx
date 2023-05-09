@@ -21,7 +21,7 @@ const Controls = ({
   top,
   instructionsAvailable,
   toggleInstructions,
-  instructionsOnRight
+  instructionsOnRight,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
@@ -41,7 +41,7 @@ const Controls = ({
         style={{
           position: 'absolute',
           [top ? 'bottom' : 'top']: -175,
-          [instructionsOnRight ? 'left' : 'right']: 10
+          [instructionsOnRight ? 'left' : 'right']: 10,
         }}
       >
         <BeatPad
@@ -50,7 +50,7 @@ const Controls = ({
           onClose={() => {
             dispatch(hideBeatPad());
             analyticsReporter.onButtonClicked('show-hide-beatpad', {
-              showing: false
+              showing: false,
             });
           }}
           isPlaying={isPlaying}
@@ -71,7 +71,7 @@ const Controls = ({
 
   const beatPadIconSection = renderIconButton('th', () => {
     analyticsReporter.onButtonClicked('show-hide-beatpad', {
-      showing: !isBeatPadShowing
+      showing: !isBeatPadShowing,
     });
     dispatch(toggleBeatPad());
   });
@@ -123,7 +123,7 @@ Controls.propTypes = {
   top: PropTypes.bool.isRequired,
   instructionsAvailable: PropTypes.bool.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired
+  instructionsOnRight: PropTypes.bool.isRequired,
 };
 
 export default Controls;

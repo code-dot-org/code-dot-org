@@ -13,7 +13,7 @@ export default storybook => {
           closeDialog={() => console.log('click')}
           showSharingColumn={() => console.log('click')}
         />
-      )
-    }
+      ),
+    },
   ]);
 };

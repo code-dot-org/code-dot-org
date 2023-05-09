@@ -1,6 +1,6 @@
 name 'CSA U5L1-L3_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Skill Building: Creating 2D Arrays'
+description 'Practice declaring and initializing 2D arrays using the `new` keyword.'
 
 sublevels
 level 'CSA U5L1-L3a_2023'

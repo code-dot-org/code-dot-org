@@ -51,7 +51,7 @@ export default class ProgramSequencer {
     this.stack.push({
       measure: nextMeasure,
       together: true,
-      lastMeasures: [nextMeasure]
+      lastMeasures: [nextMeasure],
     });
   }
 

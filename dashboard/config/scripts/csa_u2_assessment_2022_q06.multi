@@ -8,3 +8,5 @@ right 'When more than one constructor is defined in a class.'
 markdown <<MARKDOWN
 Which of these is an overloading constructor?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,6 +1,6 @@
 name 'CSA U5L4-L3_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Column-Major Traversal'
+description 'Implement standard 1D array algorithms for 2D arrays using the console or The Theater.'
 
 sublevels
 level 'CSA U5L4-L3a_2023'

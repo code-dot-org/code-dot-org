@@ -27,7 +27,7 @@ var InputOutputTable = function (props) {
   );
 };
 InputOutputTable.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired
+  data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
 };
 
 module.exports = InputOutputTable;

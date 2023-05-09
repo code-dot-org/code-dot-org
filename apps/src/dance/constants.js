@@ -1,6 +1,6 @@
 import {
   MAX_VISUALIZATION_WIDTH,
-  MIN_VISUALIZATION_WIDTH
+  MIN_VISUALIZATION_WIDTH,
 } from '@cdo/apps/StudioApp';
 
 /** @const {number} */
@@ -34,5 +34,5 @@ export const DancelabReservedWords = [
   'atTimestamp',
   'everySeconds',
   'everySecondsRange',
-  'everyVerseChorus'
+  'everyVerseChorus',
 ];

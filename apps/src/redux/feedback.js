@@ -19,9 +19,9 @@ const initialState = {
   displayFunometer: true,
   studentCode: {
     message: '',
-    code: ''
+    code: '',
   },
-  feedbackImage: null
+  feedbackImage: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -30,20 +30,20 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       displayingFeedback: true,
-      displayingShareControls
+      displayingShareControls,
     };
   }
   if (action.type === HIDE_FEEDBACK) {
     return {
       ...state,
-      displayingFeedback: false
+      displayingFeedback: false,
     };
   }
   if (action.type === SET_BLOCK_LIMIT) {
     const {blockLimit} = action;
     return {
       ...state,
-      blockLimit
+      blockLimit,
     };
   }
   if (action.type === SET_FEEDBACK_DATA) {
@@ -53,7 +53,7 @@ export default function reducer(state = initialState, action) {
       blocksUsed,
       displayFunometer,
       studentCode,
-      feedbackImage
+      feedbackImage,
     } = action;
     return {
       ...state,
@@ -62,14 +62,14 @@ export default function reducer(state = initialState, action) {
       blocksUsed,
       displayFunometer,
       studentCode,
-      feedbackImage
+      feedbackImage,
     };
   }
   if (action.type === SET_ACHIEVEMENTS) {
     const {achievements} = action;
     return {
       ...state,
-      achievements
+      achievements,
     };
   }
   return state;
@@ -77,24 +77,24 @@ export default function reducer(state = initialState, action) {
 
 export const showFeedback = (displayingShareControls = false) => ({
   type: SHOW_FEEDBACK,
-  displayingShareControls
+  displayingShareControls,
 });
 
 export const hideFeedback = () => ({
-  type: HIDE_FEEDBACK
+  type: HIDE_FEEDBACK,
 });
 
 export const setBlockLimit = blockLimit => ({
   type: SET_BLOCK_LIMIT,
-  blockLimit
+  blockLimit,
 });
 
 export const setFeedbackData = props => ({
   type: SET_FEEDBACK_DATA,
-  ...props
+  ...props,
 });
 
 export const setAchievements = achievements => ({
   type: SET_ACHIEVEMENTS,
-  achievements
+  achievements,
 });

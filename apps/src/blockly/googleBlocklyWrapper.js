@@ -1,9 +1,10 @@
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
-  ScrollOptions
+  ScrollOptions,
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
@@ -29,12 +30,12 @@ import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
 import {
   CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
-  CdoTritanopiaTheme
+  CdoTritanopiaTheme,
 } from './themes/cdoAccessibleThemes';
 import {
   CdoProtanopiaDarkTheme,
   CdoDeuteranopiaDarkTheme,
-  CdoTritanopiaDarkTheme
+  CdoTritanopiaDarkTheme,
 } from './themes/cdoAccessibleDarkThemes';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -43,18 +44,18 @@ import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
+import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused from './addons/blockSvgUnused';
+import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
-import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 
 const options = {
   contextMenu: true,
-  shortcut: true
+  shortcut: true,
 };
 
 const plugin = new CrossTabCopyPaste();
@@ -81,7 +82,7 @@ const BlocklyWrapper = function (blocklyInstance) {
     Object.defineProperty(this, propertyName, {
       get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
   };
 
@@ -92,7 +93,7 @@ const BlocklyWrapper = function (blocklyInstance) {
       },
       set: function (newValue) {
         this.blockly_[propertyName] = newValue;
-      }
+      },
     });
   };
 
@@ -148,6 +149,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
+  blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
@@ -232,7 +234,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_input', 'FieldTextInput', CdoFieldTextInput],
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
-    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput]
+    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -269,6 +271,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
+    'cdo_connection_checker',
+    CdoConnectionChecker,
+    true /* opt_allowOverrides */
+  );
 
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -276,17 +284,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
       return this.blockly_.getMainWorkspace();
-    }
+    },
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
       return this.blockly_.getMainWorkspace();
-    }
+    },
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
     get: function () {
       return this.blockly_.utils.dom.SVG_NS;
-    }
+    },
   });
 
   // Properties cannot be modified until wrapSettableProperty has been called
@@ -313,7 +321,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.DEUTERANOPIA]: CdoDeuteranopiaTheme,
     [Themes.DEUTERANOPIA_DARK]: CdoDeuteranopiaDarkTheme,
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
-    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme
+    [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
@@ -327,7 +335,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     set: function (snapRadius) {
       this.blockly_.SNAP_RADIUS = snapRadius;
       this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
-    }
+    },
   });
 
   blocklyWrapper.addChangeListener = function (blockspace, handler) {
@@ -342,30 +350,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function (
-    helpClickFunc
-  ) {
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_ = new BlockSvgUnused(this);
+      this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
-    this.unusedSvg_.render(this.svgGroup_, this.RTL);
-  };
-
-  const googleBlocklyRender = blocklyWrapper.BlockSvg.prototype.render;
-  blocklyWrapper.BlockSvg.prototype.render = function (opt_bubble) {
-    googleBlocklyRender.call(this, opt_bubble);
-    this.removeUnusedBlockFrame();
-  };
-
-  // The original Google Blockly dispose() is defined at:
-  // https://github.com/google/blockly/blob/1f862cb878f7eec36b71c638b85d5199bff01fcb/core/block_svg.ts#L863
-  const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
-  // if param healStack is true, then tries to heal any gap by connecting the next
-  // statement with the previous statement
-  // if param animate is true, shows a disposal animation and sound
-  blocklyWrapper.BlockSvg.prototype.dispose = function (healStack, animate) {
-    googleBlocklyDispose.call(this, healStack, animate);
-    this.removeUnusedBlockFrame();
   };
 
   blocklyWrapper.BlockSvg.prototype.isUnused = function () {
@@ -401,27 +390,35 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
     return this.setCheck(check);
   };
+  blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
+    return this.setOutput(isOutput, check);
+  };
+
+  // Block fields are referred to as titles in CDO Blockly.
+  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+    return this.setFieldValue(newValue, name);
+  };
+
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.fieldRow;
   };
 
-  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function (
-    helpClickFunc
-  ) {
-    blocklyWrapper.browserEvents.bind(
-      blocklyWrapper.mainBlockSpace.getCanvas(),
-      blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-      blocklyWrapper.mainBlockSpace,
-      function () {
-        this.getTopBlocks().forEach(block => {
-          if (block.disabled) {
-            block.addUnusedBlockFrame(helpClickFunc);
-          }
-        });
-      }
-    );
-  };
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
+    function () {
+      blocklyWrapper.browserEvents.bind(
+        blocklyWrapper.mainBlockSpace.getCanvas(),
+        blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+        blocklyWrapper.mainBlockSpace,
+        function () {
+          this.getTopBlocks().forEach(block => {
+            if (block.disabled) {
+              block.addUnusedBlockFrame();
+            }
+          });
+        }
+      );
+    };
 
   blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => !block.disabled);
@@ -460,7 +457,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.WorkspaceSvg.prototype.events = {
-    dispatchEvent: () => {} // TODO
+    dispatchEvent: () => {}, // TODO
   };
 
   // TODO - called by StudioApp, not sure whether they're still needed.
@@ -491,7 +488,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       EVENT_BLOCKS_IMPORTED: 'blocksImported',
       BLOCK_SPACE_CHANGE: 'blockSpaceChange',
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
-      RUN_BUTTON_CLICKED: 'runButtonClicked'
+      RUN_BUTTON_CLICKED: 'runButtonClicked',
     },
     onMainBlockSpaceCreated: callback => {
       if (Blockly.mainBlockSpace) {
@@ -511,7 +508,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         theme: theme,
         plugins: {},
         RTL: options.rtl,
-        renderer: options.renderer || Renderers.DEFAULT
+        renderer: options.renderer || Renderers.DEFAULT,
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -520,7 +517,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`
+          class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
         },
         null
       );
@@ -557,7 +554,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
       workspace.setTheme(theme);
       return workspace;
-    }
+    },
   };
 
   blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
@@ -570,15 +567,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
         drag: true,
         scrollbars: {
           vertical: true,
-          horizontal: false
-        }
+          horizontal: false,
+        },
       },
       plugins: {
         blockDragger: ScrollBlockDragger,
-        metricsManager: CdoMetricsManager
+        metricsManager: CdoMetricsManager,
+        connectionChecker: CdoConnectionChecker,
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
-      comments: false
+      comments: false,
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
@@ -594,6 +592,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    workspace.addChangeListener(onBlockClickDragDelete);
 
     // Initialize plugin.
     blocklyWrapper.navigationController.init();

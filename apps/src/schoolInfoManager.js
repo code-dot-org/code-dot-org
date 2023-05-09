@@ -30,7 +30,7 @@ export default function SchoolInfoManager(existingOptions) {
           setupSchoolDropdown(districtId, $('#school-type').val());
         }
       },
-      onDropdownOpen: scrollToBottom
+      onDropdownOpen: scrollToBottom,
     });
 
     districtElement[0].selectize.load(function (callback) {
@@ -65,7 +65,7 @@ export default function SchoolInfoManager(existingOptions) {
             );
           }
           districtListFirstLoad = false;
-        }
+        },
       });
     });
   }
@@ -99,7 +99,7 @@ export default function SchoolInfoManager(existingOptions) {
     selectize = schoolElement.selectize({
       maxItems: 1,
       sortField: [{field: 'text', direction: 'asc'}],
-      onDropdownOpen: scrollToBottom
+      onDropdownOpen: scrollToBottom,
     });
 
     schoolElement[0].selectize.load(function (callback) {
@@ -152,7 +152,7 @@ export default function SchoolInfoManager(existingOptions) {
             closestFormGroupOrItemBlock('#school').hide();
             $('#no-schools-warning').show();
           }
-        }
+        },
       });
     });
   }

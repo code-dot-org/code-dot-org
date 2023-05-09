@@ -14,7 +14,7 @@ describe('OrderableList', () => {
       list: [{key: '1'}, {key: '2'}, {key: '3'}],
       setList: setListSpy,
       addButtonText: 'Add New',
-      renderItem: renderItemSpy
+      renderItem: renderItemSpy,
     };
   });
 
@@ -24,7 +24,7 @@ describe('OrderableList', () => {
     expect(renderItemSpy.getCalls().map(c => c.args[0])).to.eql([
       {key: '1'},
       {key: '2'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
@@ -40,7 +40,7 @@ describe('OrderableList', () => {
     wrapper.find('.fa-trash').at(1).simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
@@ -51,7 +51,7 @@ describe('OrderableList', () => {
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
@@ -61,7 +61,7 @@ describe('OrderableList', () => {
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 

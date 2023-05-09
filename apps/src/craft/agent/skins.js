@@ -37,7 +37,7 @@ exports.load = function (assetUrl, id) {
     chest: '/blockly/media/craft/instructions/chest.png',
     bucket_empty: '/blockly/media/craft/instructions/bucket_empty.png',
     redstone_torch: '/blockly/media/craft/instructions/redstone_torch.png',
-    minecart_normal: '/blockly/media/craft/instructions/minecart_normal.png'
+    minecart_normal: '/blockly/media/craft/instructions/minecart_normal.png',
   };
 
   return skin;

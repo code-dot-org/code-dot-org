@@ -12,7 +12,7 @@ describe('OrderControls', () => {
     defaultProps = {
       move,
       remove,
-      name: 'My Lesson'
+      name: 'My Lesson',
     };
   });
   it('renders default props', () => {

@@ -6,9 +6,6 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/ai-styles.css", rel: "stylesheet"}
 
--# Import FontAwesome Pro
-%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
-
 -# FontAwesome icons
 - icon_sparkles = "fa-solid fa-sparkles"
 - icon_lightbulb = "fa-solid fa-lightbulb"
@@ -16,13 +13,18 @@ theme: responsive_full_width
 - icon_book = "fa-solid fa-book"
 - icon_person_chalkboard = "fa-solid fa-person-chalkboard"
 - icon_video = "fa-solid fa-video"
+- icon_megaphone = "fa-solid fa-megaphone"
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white; margin-bottom: 0"}=hoc_s(:ai_hero_heading_01)
-      %h2.heading-xxl{style: "color: white"}=hoc_s(:ai_hero_heading_02)
+      %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
+      - if !!DCDO.get('teach-ai-launch-2023', false)
+        %a.link-button.has-icon{href: "#teach-ai-callout"}
+          %div.flex-wrapper
+            %i{class: "#{icon_megaphone}"}
+            =hoc_s(:call_to_action_special_announcement)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
@@ -58,6 +60,17 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
+- if !!DCDO.get('teach-ai-launch-2023', false)
+  %section.bg-primary-light.blog-post-callout{id: "teach-ai-callout"}
+    .wrapper
+      %i{class: "#{icon_megaphone}"}
+      .text-wrapper
+        %h2.heading-lg=hoc_s(:teachai_launch_blog_title)
+        %p
+          %strong=hoc_s(:teachai_launch_blog_desc_01)
+        %p=hoc_s(:teachai_launch_blog_desc_02)
+        %a.link-button{href: "https://teachai.org/launch", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:call_to_action_read_more)
+
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_why_heading)
@@ -73,8 +86,7 @@ theme: responsive_full_width
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
-%a{id: "ai-curricula"}
-%section
+%section{id: "ai-curricula"}
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
@@ -110,8 +122,7 @@ theme: responsive_full_width
     .quotes-wrapper
       = view :ai_carousel
 
-%a{id: "ai-pl"}
-%section
+%section{id: "ai-pl"}
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
     .action-block.action-block--two-col
@@ -130,8 +141,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%a{id: "ai-videos"}
-%section
+%section{id: "ai-videos"}
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc)

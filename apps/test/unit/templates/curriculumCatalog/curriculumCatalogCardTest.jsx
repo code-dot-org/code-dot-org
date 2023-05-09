@@ -2,7 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {subjectsAndTopicsOrder} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {
+  subjectsAndTopicsOrder,
+  translatedCourseOfferingCsTopics,
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -13,7 +16,7 @@ describe('CurriculumCatalogCard', () => {
   const subjects = [
     // mix up the order to check consistent order prioritization
     subjectsAndTopicsOrder[firstSubjectIndexUsed + 1],
-    subjectsAndTopicsOrder[firstSubjectIndexUsed]
+    subjectsAndTopicsOrder[firstSubjectIndexUsed],
   ];
 
   const firstTopicIndexInList = 4;
@@ -22,7 +25,7 @@ describe('CurriculumCatalogCard', () => {
     // mix up the order to check consistent order prioritization
     subjectsAndTopicsOrder[firstTopicIndexUsed + 3],
     subjectsAndTopicsOrder[firstTopicIndexUsed],
-    subjectsAndTopicsOrder[firstTopicIndexUsed + 4]
+    subjectsAndTopicsOrder[firstTopicIndexUsed + 4],
   ];
 
   beforeEach(() => {
@@ -30,7 +33,8 @@ describe('CurriculumCatalogCard', () => {
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
-      isEnglish: true
+      isEnglish: true,
+      pathToCourse: '/s/course',
     };
   });
 
@@ -65,7 +69,7 @@ describe('CurriculumCatalogCard', () => {
     );
 
     screen.getByText(subjectsAndTopicsOrder[firstSubjectIndexUsed], {
-      exact: false
+      exact: false,
     });
   });
 
@@ -84,9 +88,14 @@ describe('CurriculumCatalogCard', () => {
   it('renders one topic, the first available from ordered list, if no subject present', () => {
     render(<CurriculumCatalogCard {...defaultProps} topics={topics} />);
 
-    screen.getByText(subjectsAndTopicsOrder[firstTopicIndexUsed], {
-      exact: false
-    });
+    screen.getByText(
+      translatedCourseOfferingCsTopics[
+        subjectsAndTopicsOrder[firstTopicIndexUsed]
+      ],
+      {
+        exact: false,
+      }
+    );
   });
 
   it('does not render label of remaining subjects and topics when exactly one subject or topic is present', () => {
@@ -158,9 +167,10 @@ describe('CurriculumCatalogCard', () => {
   it('renders Quick View button with descriptive label', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
-    screen.getByRole('button', {
-      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`)
+    const link = screen.getByRole('link', {
+      name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
     });
+    expect(link).to.have.property('href').to.contain(defaultProps.pathToCourse);
   });
 
   it('renders Assign button with descriptive label', () => {
@@ -169,7 +179,7 @@ describe('CurriculumCatalogCard', () => {
     screen.getByRole('button', {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
-      )
+      ),
     });
   });
 });

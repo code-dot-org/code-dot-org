@@ -4,7 +4,7 @@ import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 
 export default {
   name: 'TeacherDashboardNavigation',
-  component: TeacherDashboardNavigation
+  component: TeacherDashboardNavigation,
 };
 
 export const ScrollableNavigation = () => {
@@ -28,7 +28,7 @@ export const NonScrollableNavigation = () => {
   const links = [
     {label: 'Progress', url: '/progress'},
     {label: 'Stats', url: '/stats'},
-    {label: 'Students', url: '/students'}
+    {label: 'Students', url: '/students'},
   ];
 
   return (

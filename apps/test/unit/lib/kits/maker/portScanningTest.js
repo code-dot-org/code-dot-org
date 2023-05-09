@@ -7,13 +7,13 @@ import {
   REDBOARD_PORTS,
   FLORA_PORTS,
   OSX_DEFAULT_PORTS,
-  OTHER_BAD_SERIALPORTS
+  OTHER_BAD_SERIALPORTS,
 } from './sampleSerialPorts';
 import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
 import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
-  getPreferredPort
+  getPreferredPort,
 } from '@cdo/apps/lib/kits/maker/portScanning';
 import sinon from 'sinon';
 
@@ -91,7 +91,7 @@ describe('maker/portScanning.js', function () {
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS
+          ...OTHER_BAD_SERIALPORTS,
         ]);
         expect(getPreferredPort(ports)).to.deep.equal(circuitPlaygroundPort);
       });
@@ -105,7 +105,7 @@ describe('maker/portScanning.js', function () {
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS
+          ...OTHER_BAD_SERIALPORTS,
         ]);
         expect(getPreferredPort(ports)).to.equal(expressPort);
       });
@@ -118,7 +118,7 @@ describe('maker/portScanning.js', function () {
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS
+          ...OTHER_BAD_SERIALPORTS,
         ]);
         expect(getPreferredPort(ports)).to.equal(mbPort);
       });
@@ -130,7 +130,7 @@ describe('maker/portScanning.js', function () {
           floraPort,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS
+          ...OTHER_BAD_SERIALPORTS,
         ]);
         expect(getPreferredPort(ports)).to.equal(floraPort);
       });
@@ -141,7 +141,7 @@ describe('maker/portScanning.js', function () {
         const ports = _.shuffle([
           redboardPort,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS
+          ...OTHER_BAD_SERIALPORTS,
         ]);
         expect(getPreferredPort(ports)).to.equal(redboardPort);
       });

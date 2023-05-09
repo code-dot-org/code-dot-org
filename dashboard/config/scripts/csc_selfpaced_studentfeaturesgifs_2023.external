@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 <summary><strong>Demo of adjusting windows</strong></summary>
 
-<img src="https://images.code.org/883c1280e1ac491fdf09a80c27a32826-image-1681492214527.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/883c1280e1ac491fdf09a80c27a32826-image-1681492214527.gif" alt= "moving playspace and workspace window size" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 
 <summary><strong>Demo of instruction hints</strong></summary>
 
-<img src="https://images.code.org/399c6a5f4b4cddd06e5ebaa1e162d8ce-image-1681492569784.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/399c6a5f4b4cddd06e5ebaa1e162d8ce-image-1681492569784.gif" alt=" hint image and words displayed" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -46,7 +46,7 @@ markdown <<MARKDOWN
 
 <summary><strong>Demo of video hints</strong></summary>
 
-<img src="https://images.code.org/792b7f5b1985242e8e71ce070f1e9dc8-image-1681493236253.gif" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/5b55685520d1d8bbdd06575ceac69529-image-1682378944264.gif" alt=" video starting from the lesson level" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 </details>
 
@@ -54,5 +54,4 @@ markdown <<MARKDOWN
 
 
 ## Let's keep learning! 
-
 MARKDOWN

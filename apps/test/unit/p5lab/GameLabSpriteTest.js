@@ -1,13 +1,13 @@
 /* @file Test of our p5.play Sprite wrapper object */
-/* global p5 */
+
 import {expect} from '../../util/reconfiguredChai';
 import {
   forEveryBooleanPermutation,
-  sandboxDocumentBody
+  sandboxDocumentBody,
 } from '../../util/testUtils';
 import createP5Wrapper, {
   createStatefulP5Wrapper,
-  expectAnimationsAreClones
+  expectAnimationsAreClones,
 } from '../../util/gamelab/TestableP5Wrapper';
 
 describe('P5SpriteWrapper', function () {
@@ -303,7 +303,7 @@ describe('P5SpriteWrapper', function () {
       // setAnimation.
       projectAnimations = {
         [ANIMATION_LABEL]: createTestAnimation(8),
-        [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
+        [SECOND_ANIMATION_LABEL]: createTestAnimation(10),
       };
       p5Wrapper.p5._predefinedSpriteAnimations = projectAnimations;
     });
@@ -427,7 +427,7 @@ describe('P5SpriteWrapper', function () {
       // Manually preload animations onto p5._predefinedSpriteAnimations
       p5Wrapper.p5._predefinedSpriteAnimations = {
         [LOOPING_ANIMATION]: createTestAnimation(3, true),
-        [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
+        [NON_LOOPING_ANIMATION]: createTestAnimation(3, false),
       };
     });
     it('has no effect on a playing, looping animation', function () {

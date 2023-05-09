@@ -16,7 +16,7 @@ const UseFetchHarness = ({url, options, deps}) => {
 UseFetchHarness.propTypes = {
   url: PropTypes.string,
   options: PropTypes.object,
-  deps: PropTypes.array
+  deps: PropTypes.array,
 };
 
 // Convenience method; tests can use "await processEventLoop()" to wait for

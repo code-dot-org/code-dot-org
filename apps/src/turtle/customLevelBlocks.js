@@ -42,7 +42,7 @@ function createACircleCode(size, gensym, indent) {
       '++) {',
     indent + '  Turtle.moveForward(' + size + ');',
     indent + '  Turtle.turnRight(10);',
-    indent + '}\n'
+    indent + '}\n',
   ].join('\n');
 }
 
@@ -71,7 +71,7 @@ function makeBlockInitializer(title, parameter) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('');
-    }
+    },
   };
 }
 
@@ -101,7 +101,7 @@ function installDrawASquare(blockly, generator, gensym) {
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' + loopVar + '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(90);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -159,7 +159,7 @@ function installCreateASnowflakeBranch(blockly, generator, gensym) {
       '  Turtle.moveBackward(30);',
       '  Turtle.turnLeft(45);',
       '}',
-      'Turtle.turnRight(45);\n'
+      'Turtle.turnRight(45);\n',
     ].join('\n');
   };
 }
@@ -185,7 +185,7 @@ function installDrawARhombus(blockly, generator, gensym) {
       '  Turtle.turnRight(60);',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(120);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -210,7 +210,7 @@ function installDrawATriangle(blockly, generator, gensym) {
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnLeft(120);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -235,7 +235,7 @@ function installDrawAHexagon(blockly, generator, gensym) {
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 6; ' + loopVar + '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnLeft(60);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -269,7 +269,7 @@ function installDrawAHouse(blockly, generator, gensym) {
       '}',
       'Turtle.turnRight(90);',
       'Turtle.moveForward(' + value_length + ');',
-      'Turtle.turnLeft(90);\n'
+      'Turtle.turnLeft(90);\n',
     ].join('\n');
   };
 }
@@ -309,7 +309,7 @@ function installDrawAFlower(blockly, generator, gensym) {
       '}',
       'Turtle.turnRight(198);',
       'Turtle.jumpForward(' + value_length + ');',
-      'Turtle.turnRight(180);\n'
+      'Turtle.turnRight(180);\n',
     ].join('\n');
   };
 }
@@ -337,7 +337,7 @@ function installDrawASnowflake(blockly, generator, gensym) {
       '  Turtle.turnRight(90);',
       '  Turtle.moveForward(30);',
       '  Turtle.turnRight(45);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -364,7 +364,7 @@ function installDrawAStar(blockly, generator, gensym) {
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(144);',
       '}',
-      'Turtle.turnLeft(18);\n'
+      'Turtle.turnLeft(18);\n',
     ].join('\n');
   };
 }
@@ -410,7 +410,7 @@ function installDrawARobot(blockly, generator, gensym) {
       'Turtle.turnRight(90);',
       'Turtle.moveForward(40);',
       'Turtle.turnLeft(90);',
-      'Turtle.moveForward(50);\n'
+      'Turtle.moveForward(50);\n',
     ].join('\n');
   };
 }
@@ -460,7 +460,7 @@ function installDrawARocket(blockly, generator, gensym) {
         '++) {',
       '  Turtle.moveForward(20);',
       '  Turtle.turnLeft(120);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -493,7 +493,7 @@ function installDrawAPlanet(blockly, generator, gensym) {
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.moveBackward(' + value_length + ');',
       '  Turtle.turnRight(1);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -525,7 +525,7 @@ function installDrawUpperWave(blockly, generator, gensym) {
         '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(18);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -557,7 +557,7 @@ function installDrawLowerWave(blockly, generator, gensym) {
         '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnLeft(18);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 }
@@ -570,7 +570,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     [msg.createSnowflakeSpiral(), 'spiral'],
     [msg.createSnowflakeFlower(), 'flower'],
     [msg.createSnowflakeFractal(), 'fractal'],
-    [msg.createSnowflakeRandom(), 'random']
+    [msg.createSnowflakeRandom(), 'random'],
   ];
 
   blockly.Blocks.create_snowflake_dropdown = {
@@ -585,7 +585,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('');
-    }
+    },
   };
 
   generator.create_snowflake_dropdown = function () {

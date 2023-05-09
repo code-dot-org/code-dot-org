@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {
   // assert,
-  expect
+  expect,
 } from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';

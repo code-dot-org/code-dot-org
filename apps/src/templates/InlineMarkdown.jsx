@@ -18,12 +18,12 @@ const markdownToReact = unified()
   .use(inlineOnly)
   .use(remarkRehype)
   .use(rehypeReact, {
-    createElement: React.createElement
+    createElement: React.createElement,
   });
 
 export default class InlineMarkdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired
+    markdown: PropTypes.string.isRequired,
   };
 
   render() {

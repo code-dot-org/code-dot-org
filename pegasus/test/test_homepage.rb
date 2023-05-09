@@ -57,5 +57,21 @@ class HomepageTest < Minitest::Test
       banner = Homepage.get_announcement_for_page("homepage", @request)
       assert_equal("show-everywhere", banner[:id])
     end
+
+    it 'banners for local testing are shown as if based in the US' do
+      @request.stubs(:country).returns("RD")
+
+      Homepage.class_variable_set(:@@json_path, File.join("#{pegasus_dir}/test/fixtures/homepage", 'show_banner_in_US_and_unknown_location.json'))
+      banner = Homepage.get_announcement_for_page("homepage", @request)
+      assert_equal("show-in-US-and-unknown-location", banner[:id])
+
+      Homepage.class_variable_set(:@@json_path, File.join("#{pegasus_dir}/test/fixtures/homepage", 'show_banner_everywhere.json'))
+      banner = Homepage.get_announcement_for_page("homepage", @request)
+      assert_equal("show-everywhere", banner[:id])
+
+      Homepage.class_variable_set(:@@json_path, File.join("#{pegasus_dir}/test/fixtures/homepage", 'show_banner_outside_US.json'))
+      banner = Homepage.get_announcement_for_page("homepage", @request)
+      refute banner
+    end
   end
 end

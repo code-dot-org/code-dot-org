@@ -24,6 +24,7 @@ import IncubatorBanner from './IncubatorBanner';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 
@@ -53,12 +54,21 @@ export const UnconnectedTeacherHomepage = ({
   beginGoogleImportRosterFlow,
   hasFeedback,
   showIncubatorBanner,
-  currentUserId
+  currentUserId,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
+  /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
+   * when we want to show the Census banner again set this to true
+   */
+  const showPLBanner = false;
+
+  /* We are hiding the Census banner to free up space on the Teacher Homepage (May 2023)
+   * when we want to show the Census banner again remove the next line
+   */
+  showCensusBanner = false;
   const [displayCensusBanner, setDisplayCensusBanner] =
     useState(showCensusBanner);
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
@@ -89,7 +99,7 @@ export const UnconnectedTeacherHomepage = ({
         url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
         type: 'post',
         dataType: 'json',
-        data: censusBanner.current.getData()
+        data: censusBanner.current.getData(),
       })
         .done(() => {
           setCensusSubmittedSuccessfully(true);
@@ -106,7 +116,7 @@ export const UnconnectedTeacherHomepage = ({
   const dismissCensusBanner = (onSuccess, onFailure) => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/dismiss_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(onSuccess)
       .fail(xhr => {
@@ -128,7 +138,7 @@ export const UnconnectedTeacherHomepage = ({
   const postponeCensusBanner = () => {
     $.ajax({
       url: `/api/v1/users/${teacherId}/postpone_census_banner`,
-      type: 'post'
+      type: 'post',
     })
       .done(hideCensusBanner)
       .fail(xhr => {
@@ -154,7 +164,7 @@ export const UnconnectedTeacherHomepage = ({
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
     analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
-      'user id': currentUserId
+      'user id': currentUserId,
     });
   }
 
@@ -201,6 +211,7 @@ export const UnconnectedTeacherHomepage = ({
             solidBorder={true}
           />
         )}
+        {showPLBanner && <ProfessionalLearningSkinnyBanner />}
         {showReturnToReopenedTeacherApplication && (
           <BorderedCallToAction
             headingText="Return to Your Application"
@@ -313,14 +324,14 @@ UnconnectedTeacherHomepage.propTypes = {
   beginGoogleImportRosterFlow: PropTypes.func,
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
-  currentUserId: PropTypes.number
+  currentUserId: PropTypes.number,
 };
 
 const styles = {
   clear: {
     clear: 'both',
-    height: 30
-  }
+    height: 30,
+  },
 };
 
 export default connect(state => ({}), {beginGoogleImportRosterFlow})(

@@ -1002,7 +1002,7 @@
                       "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
                   },
-                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ile 255 arasında) döndürür."
+                  "short_description": "Verilen görüntü verisindeki x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ile 255 arasında) döndürür."
                 },
                 "getBlue": {
                   "palette_params": {

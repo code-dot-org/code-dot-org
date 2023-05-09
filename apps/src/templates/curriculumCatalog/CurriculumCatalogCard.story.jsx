@@ -3,7 +3,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 
 export default {
   title: 'CurriculumCatalogCard',
-  component: CurriculumCatalogCard
+  component: CurriculumCatalogCard,
 };
 
 const Template = args => <CurriculumCatalogCard {...args} />;
@@ -14,7 +14,8 @@ const defaultArgs = {
   gradesArray: ['1', '2', '3', '4'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
   isTranslated: true,
-  isEnglish: true
+  isEnglish: true,
+  pathToCourse: '/s/course',
 };
 
 export const AllOptionsCard = Template.bind({});

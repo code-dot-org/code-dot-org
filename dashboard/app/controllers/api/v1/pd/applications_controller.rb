@@ -98,7 +98,7 @@ module Api::V1::Pd
     def update
       application_data = application_params.to_h
 
-      if application_data[:status] != @application.status
+      if application_data[:status] && (application_data[:status] != @application.status)
         status_changed = true
       end
 
@@ -139,6 +139,7 @@ module Api::V1::Pd
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
 
+      @application.send_decision_email if status_changed && @application.should_send_decision_email?
       @application.update_scholarship_status(scholarship_status) if scholarship_status_changed
 
       @application.update_status_timestamp_change_log(current_user) if status_changed

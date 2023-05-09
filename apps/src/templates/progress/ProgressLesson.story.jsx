@@ -13,16 +13,16 @@ const defaultProps = {
   levels: [
     {
       ...fakeLevels(1)[0],
-      name: 'First progression'
+      name: 'First progression',
     },
     ...fakeLevels(5, {startLevel: 2}).map(level => ({
       ...level,
-      progression: 'Second Progression'
+      progression: 'Second Progression',
     })),
     {
       ...fakeLevels(1)[0],
-      name: 'Last progression'
-    }
+      name: 'Last progression',
+    },
   ],
   viewAs: ViewType.Instructor,
   isVisible: true,
@@ -31,7 +31,7 @@ const defaultProps = {
   lockableAuthorized: true,
   lockableAuthorizedLoaded: true,
   hiddenForStudents: false,
-  lockStatusLoaded: true
+  lockStatusLoaded: true,
 };
 
 const initialState = {
@@ -39,22 +39,22 @@ const initialState = {
     lessonGroups: [],
     lessons: [
       {
-        levels: []
-      }
+        levels: [],
+      },
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
     deeperLearningCourse: false,
     scriptName: 'script-name',
-    scriptId: 17
+    scriptId: 17,
   },
   teacherSections: {
     sectionsAreLoaded: true,
     sections: {},
-    sectionIds: []
+    sectionIds: [],
   },
   hiddenLesson: {},
-  lessonLock: {}
+  lessonLock: {},
 };
 
 export default storybook => {
@@ -67,7 +67,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'progress lesson',
-        story: () => <ProgressLesson {...defaultProps} />
+        story: () => <ProgressLesson {...defaultProps} />,
       },
       {
         name: 'progress lesson with focus area',
@@ -76,10 +76,10 @@ export default storybook => {
             {...defaultProps}
             lesson={{
               ...defaultProps.lesson,
-              isFocusArea: true
+              isFocusArea: true,
             }}
           />
-        )
+        ),
       },
       {
         name: 'progress lesson for peer reviews',
@@ -92,7 +92,7 @@ export default storybook => {
               id: -1,
               isFocusArea: false,
               lockable: false,
-              name: 'You must complete 4 reviews for this unit'
+              name: 'You must complete 4 reviews for this unit',
             }}
             levels={[
               {
@@ -101,7 +101,7 @@ export default storybook => {
                 status: LevelStatus.perfect,
                 isLocked: false,
                 url: '/peer_reviews/1',
-                levelNumber: 1
+                levelNumber: 1,
               },
               {
                 id: '-1',
@@ -109,7 +109,7 @@ export default storybook => {
                 status: LevelStatus.not_tried,
                 isLocked: false,
                 url: '/pull-review',
-                levelNumber: 2
+                levelNumber: 2,
               },
               {
                 id: '-1',
@@ -118,7 +118,7 @@ export default storybook => {
                 status: LevelStatus.not_tried,
                 isLocked: true,
                 url: '',
-                levelNumber: 3
+                levelNumber: 3,
               },
               {
                 id: '-1',
@@ -127,16 +127,16 @@ export default storybook => {
                 status: LevelStatus.not_tried,
                 isLocked: true,
                 url: '',
-                levelNumber: 4
-              }
+                levelNumber: 4,
+              },
             ]}
           />
-        )
+        ),
       },
       {
         name: 'hidden progress lesson as instructor',
         description: 'should be white with full opacity',
-        story: () => <ProgressLesson {...defaultProps} isVisible={true} />
+        story: () => <ProgressLesson {...defaultProps} isVisible={true} />,
       },
       {
         name: 'hidden progress lesson as participant',
@@ -147,7 +147,7 @@ export default storybook => {
             hiddenForStudents={true}
             isVisible={true}
           />
-        )
+        ),
       },
       {
         name: 'locked lesson as verified instructor',
@@ -158,7 +158,7 @@ export default storybook => {
             levels={fakeLevels(5, {named: false})}
             isLockedForAllStudents={true}
           />
-        )
+        ),
       },
       {
         name: 'unlocked lesson as verified instructor',
@@ -169,7 +169,7 @@ export default storybook => {
             levels={fakeLevels(5, {named: false})}
             isLockedForAllStudents={false}
           />
-        )
+        ),
       },
       {
         name: 'locked lesson as unverified instructor',
@@ -181,7 +181,7 @@ export default storybook => {
             isLockedForUser={true}
             lockableAuthorized={false}
           />
-        )
+        ),
       },
       {
         name: 'locked lesson signed out',
@@ -193,7 +193,7 @@ export default storybook => {
             levels={fakeLevels(5, {named: false})}
             isLockedForUser={true}
           />
-        )
+        ),
       },
       {
         name: 'locked lesson as participant',
@@ -204,11 +204,11 @@ export default storybook => {
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              isLocked: true
+              isLocked: true,
             }))}
             isLockedForUser={true}
           />
-        )
+        ),
       },
       {
         name: 'unlocked lockable lesson',
@@ -218,10 +218,10 @@ export default storybook => {
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.not_tried
+              status: LevelStatus.not_tried,
             }))}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

@@ -12,7 +12,7 @@ describe('SectionAssigner', () => {
     selectedSectionId: unassignedSection.id,
     sections: fakeTeacherSectionsForDropdown,
     selectSection: () => {},
-    showAssignButton: false
+    showAssignButton: false,
   };
 
   it('renders a TeacherSectionSelector', () => {

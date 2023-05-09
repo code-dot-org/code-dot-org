@@ -25,7 +25,7 @@ $(window).load(function () {
     },
     styleCurrentValue: function () {
       addSquareIconToButton(this.element);
-    }
+    },
   });
 
   reportTeacherReviewingStudentNonLabLevel();
@@ -68,14 +68,14 @@ $(window).load(function () {
     NUMBER: 'Number',
     STRING: 'String',
     IMAGE: 'Image',
-    BOOLEAN: 'Boolean'
+    BOOLEAN: 'Boolean',
   };
 
   const typesToColors = {
     [blockValueType.NUMBER]: '#00ccff',
     [blockValueType.STRING]: '#009999',
     [blockValueType.IMAGE]: '#9900cc',
-    [blockValueType.BOOLEAN]: '#336600'
+    [blockValueType.BOOLEAN]: '#336600',
   };
 
   /**
@@ -117,18 +117,18 @@ $(window).load(function () {
     state = {
       name: '',
       rangeType: blockValueType.NUMBER,
-      domainTypes: []
+      domainTypes: [],
     };
 
     onNameChangeEvent = event => {
       this.setState({
-        name: event.target.value
+        name: event.target.value,
       });
     };
 
     onRangeChange = newType => {
       this.setState({
-        rangeType: newType
+        rangeType: newType,
       });
     };
 
@@ -139,7 +139,7 @@ $(window).load(function () {
             object.type = newType;
           }
           return object;
-        })
+        }),
       });
     };
 
@@ -149,8 +149,8 @@ $(window).load(function () {
         domainTypes: this.state.domainTypes.concat({
           key: 'domain' + nextDomainID,
           type: blockValueType.NUMBER,
-          order: nextDomainID
-        })
+          order: nextDomainID,
+        }),
       });
     };
 
@@ -158,7 +158,7 @@ $(window).load(function () {
       this.setState({
         domainTypes: this.state.domainTypes.filter(
           object => object.key !== domainKey
-        )
+        ),
       });
     };
 
@@ -207,7 +207,7 @@ $(window).load(function () {
       domainTypes: PropTypes.array.isRequired,
       onDomainAdd: PropTypes.func.isRequired,
       onDomainChange: PropTypes.func.isRequired,
-      onDomainRemove: PropTypes.func.isRequired
+      onDomainRemove: PropTypes.func.isRequired,
     };
 
     render() {
@@ -253,7 +253,7 @@ $(window).load(function () {
   class TypeChooser extends React.Component {
     static propTypes = {
       onTypeChange: PropTypes.func.isRequired,
-      type: PropTypes.string
+      type: PropTypes.string,
     };
 
     selectmenuChange = selectChange => {
@@ -265,7 +265,7 @@ $(window).load(function () {
         select: function () {
           addSquareIconToButton(this);
         },
-        change: this.selectmenuChange
+        change: this.selectmenuChange,
       });
       $(ReactDOM.findDOMNode(this)).coloriconselectmenu('styleCurrentValue');
     }
@@ -276,7 +276,7 @@ $(window).load(function () {
 
     render() {
       const divStyle = {
-        backgroundColor: typesToColors[this.props.type]
+        backgroundColor: typesToColors[this.props.type],
       };
       return (
         <select defaultValue={this.props.type} style={divStyle}>
@@ -353,7 +353,7 @@ $(window).load(function () {
       return {
         response: formattedResponse,
         result: result,
-        errorDialog
+        errorDialog,
       };
     };
   }

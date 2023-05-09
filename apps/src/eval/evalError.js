@@ -32,5 +32,5 @@ CustomEvalError.Type = {
   BadStyle: 0,
   BadColor: 1,
   InfiniteRecursion: 2,
-  UserCodeException: 3
+  UserCodeException: 3,
 };

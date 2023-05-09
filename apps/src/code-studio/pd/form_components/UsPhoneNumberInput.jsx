@@ -14,14 +14,14 @@ export default class UsPhoneNumberInput extends React.Component {
     validationState: PropTypes.string,
     errorMessage: PropTypes.string,
     required: PropTypes.bool,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      value: UsPhoneNumberInput.coercePhoneNumber(this.props.value)
+      value: UsPhoneNumberInput.coercePhoneNumber(this.props.value),
     };
   }
 
@@ -92,7 +92,7 @@ export default class UsPhoneNumberInput extends React.Component {
       change[this.props.name]
     );
     this.setState({
-      value: phoneNumber
+      value: phoneNumber,
     });
 
     const phoneNumberDigits = UsPhoneNumberInput.toJustNumbers(phoneNumber);
@@ -101,7 +101,7 @@ export default class UsPhoneNumberInput extends React.Component {
       phoneNumberDigits !== UsPhoneNumberInput.toJustNumbers(this.props.value)
     ) {
       this.props.onChange({
-        [this.props.name]: phoneNumberDigits
+        [this.props.name]: phoneNumberDigits,
       });
     }
   };

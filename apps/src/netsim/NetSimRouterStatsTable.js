@@ -167,7 +167,7 @@ NetSimRouterStatsTable.prototype.render = function (clock) {
       bandwidthLimit: this.bandwidthLimit_,
       dataRate: this.dataRate_,
       totalMemory: this.totalMemory_,
-      usedMemory: this.usedMemory_
+      usedMemory: this.usedMemory_,
     })
   );
   this.rootDiv_.html(renderedMarkup);

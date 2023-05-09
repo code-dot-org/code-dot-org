@@ -5,7 +5,7 @@ export const SpriteSpeed = {
   NORMAL: 5,
   LITTLE_FAST: 6,
   FAST: 8,
-  VERY_FAST: 12
+  VERY_FAST: 12,
 };
 
 export const SpriteSize = {
@@ -13,7 +13,7 @@ export const SpriteSize = {
   SMALL: 0.75,
   NORMAL: 1,
   LARGE: 1.5,
-  VERY_LARGE: 2
+  VERY_LARGE: 2,
 };
 
 export const Direction = {
@@ -25,7 +25,7 @@ export const Direction = {
   NORTHEAST: 3,
   SOUTHEAST: 6,
   SOUTHWEST: 12,
-  NORTHWEST: 9
+  NORTHWEST: 9,
 };
 
 export const turnLeft90 = function (direction) {
@@ -50,7 +50,7 @@ export const ClockwiseDirectionsFromNorth = [
   Dir.SOUTH,
   Dir.SOUTHWEST,
   Dir.WEST,
-  Dir.NORTHWEST
+  Dir.NORTHWEST,
 ];
 
 /**
@@ -161,7 +161,7 @@ export const Position = {
   OUTBOTTOMLEFT: 22,
   OUTBOTTOMCENTER: 23,
   OUTBOTTOMRIGHT: 24,
-  OUTBOTTOMOUTRIGHT: 25
+  OUTBOTTOMOUTRIGHT: 25,
 };
 
 //
@@ -273,7 +273,7 @@ export const Emotions = {
   NORMAL: 0,
   HAPPY: 1,
   ANGRY: 2,
-  SAD: 3
+  SAD: 3,
 };
 
 // scale the collision bounding box to make it so they need to overlap a touch:
@@ -312,7 +312,7 @@ export const SquareType = {
   ITEM_CLASS_7: 4096,
   NOT_USED_8K: 8192,
   NOT_USED_16K: 16384,
-  NOT_USED_32K: 32768
+  NOT_USED_32K: 32768,
   // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.
 };
 
@@ -341,7 +341,7 @@ export function squareHasItemClass(itemClassIndex, squareValue) {
 export const WallType = {
   NORMAL_SIZE: 0,
   DOUBLE_SIZE: 1,
-  JUMBO_SIZE: 2
+  JUMBO_SIZE: 2,
 };
 
 export const WallTypeMask = 0x0f000000;

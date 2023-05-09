@@ -11,9 +11,9 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
       reduxStub = sinon.stub(redux, 'getStore').returns({
         getState: () => ({
           level: {
-            name: 'test-level'
-          }
-        })
+            name: 'test-level',
+          },
+        }),
       });
     });
 

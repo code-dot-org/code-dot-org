@@ -15,7 +15,7 @@ export const getKeyValue = function (key, onSuccess, onError) {
   return GameLab.executeCmd(null, 'getKeyValue', {
     key,
     onSuccess,
-    onError
+    onError,
   });
 };
 
@@ -24,6 +24,6 @@ export const setKeyValue = function (key, value, onSuccess, onError) {
     key,
     value,
     onSuccess,
-    onError
+    onError,
   });
 };

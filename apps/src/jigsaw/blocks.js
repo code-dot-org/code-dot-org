@@ -66,7 +66,7 @@ var patternCache = {
       throw new Error('Already have cached item with id: ' + patternInfo.id);
     }
     this.created[patternInfo.id] = patternInfo;
-  }
+  },
 };
 
 /**
@@ -88,7 +88,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     width: width,
     height: height,
     offsetX: offsetX,
-    offsetY: offsetY
+    offsetY: offsetY,
   };
 
   // If we don't yet have an svgDefs, queue the pattern and wait until we do
@@ -107,7 +107,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
         width: '100%',
         height: height,
         x: x,
-        y: y
+        y: y,
       },
       svgDefs
     );
@@ -115,7 +115,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       'image',
       {
         width: width,
-        height: height
+        height: height,
       },
       pattern
     );
@@ -155,7 +155,7 @@ exports.install = function (blockly, blockInstallOptions) {
       height: level.image.height,
       numBlocks: level.numBlocks,
       notchedEnds: level.notchedEnds,
-      level: key
+      level: key,
     });
 
     if (level.numBlocks === 0) {
@@ -211,12 +211,12 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
         .appendField(
           new blockly.FieldLabel(label, {
             fixedSize: {width: width, height: 64},
-            fontSize: 32
+            fontSize: 32,
           })
         );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 }
 
@@ -258,7 +258,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
             blockHeight * (blockNum - 1)
           )
         );
-      }
+      },
     };
   }
 

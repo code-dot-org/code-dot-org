@@ -19,7 +19,7 @@ export default function ControlButtons({
   showTestButton,
   isSubmittable,
   isSubmitted,
-  finishButtonTooltipText
+  finishButtonTooltipText,
 }) {
   /* The ids of these buttons are relied on in other parts of the codebase.
    * All of them are relied on for UI tests
@@ -94,5 +94,5 @@ ControlButtons.propTypes = {
   showTestButton: PropTypes.bool,
   isSubmittable: PropTypes.bool,
   isSubmitted: PropTypes.bool,
-  finishButtonTooltipText: PropTypes.string
+  finishButtonTooltipText: PropTypes.string,
 };

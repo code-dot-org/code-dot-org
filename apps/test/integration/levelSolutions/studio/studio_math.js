@@ -10,14 +10,14 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   timeoutFailureTick: 200,
   freePlay: true,
   edgeCollisions: true,
   allowSpritesOutsidePlayspace: false,
   spritesHiddenToStart: true,
-  customGameType: 'Rocket Height'
+  customGameType: 'Rocket Height',
 };
 
 module.exports = {
@@ -78,8 +78,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'empty start',
@@ -97,8 +97,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
     },
 
     {
@@ -161,8 +161,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
     },
 
     {
@@ -215,8 +215,8 @@ module.exports = {
       },
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
-      }
-    }
-  ]
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
+      },
+    },
+  ],
 };

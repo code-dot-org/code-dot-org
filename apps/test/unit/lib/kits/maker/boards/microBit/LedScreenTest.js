@@ -12,7 +12,7 @@ describe('LedScreen', function () {
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
       displayClearSpy = sinon.spy(boardClient, 'displayClear');
@@ -46,7 +46,7 @@ describe('LedScreen', function () {
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
     });
@@ -84,7 +84,7 @@ describe('LedScreen', function () {
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayShow');
     });
@@ -98,7 +98,7 @@ describe('LedScreen', function () {
         [0, 1, 0, 1, 0],
         [1, 0, 1, 0, 1],
         [0, 1, 0, 1, 0],
-        [1, 0, 1, 0, 1]
+        [1, 0, 1, 0, 1],
       ];
       led.display(pixelArray);
       expect(displaySpy).to.have.been.calledOnce;
@@ -114,7 +114,7 @@ describe('LedScreen', function () {
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
       scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');

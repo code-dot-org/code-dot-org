@@ -12,7 +12,7 @@ export class ScholarshipDropdown extends React.Component {
     dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isWorkshopAdmin: PropTypes.bool.isRequired
+    isWorkshopAdmin: PropTypes.bool.isRequired,
   };
 
   render() {

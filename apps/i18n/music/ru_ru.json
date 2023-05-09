@@ -1,2 +1,22 @@
 {
+  "blockly_blockPlaySoundTooltip": "проиграть звук",
+  "blockly_blockPlaySoundAtMeasureTooltip": "проиграть звук",
+  "blockly_blockRepeatTooltip": "повторить",
+  "blockly_blockRestTooltip": "отдых",
+  "blockly_blockWhenRun": "при запуске",
+  "blockly_blockWhenRunTooltip": "при запуске",
+  "blockly_functionNamePlaceholder": "моя функция",
+  "blockly_toolboxCategoryControl": "Управление",
+  "blockly_toolboxCategoryEffects": "Эффекты",
+  "blockly_toolboxCategoryEvents": "События",
+  "blockly_toolboxCategoryFunctions": "функции",
+  "blockly_toolboxCategoryLogic": "Логика",
+  "blockly_toolboxCategoryMath": "Математика",
+  "blockly_toolboxCategoryPlay": "Играть",
+  "blockly_toolboxCategoryVariables": "Переменные",
+  "control": "Управление",
+  "feedback": "Обратная связь",
+  "share": "Поделиться",
+  "startOver": "Начать заново",
+  "upload": "Загрузить"
 }

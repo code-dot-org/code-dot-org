@@ -26,7 +26,7 @@ var P5Wrapper = function () {
     'mouseWheel',
     'keyPressed',
     'keyReleased',
-    'keyTyped'
+    'keyTyped',
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(
     this.p5eventNames
@@ -421,7 +421,7 @@ P5Wrapper.prototype.getCustomMarshalGlobalProperties = function () {
     rightEdge: this.p5,
     topEdge: this.p5,
     bottomEdge: this.p5,
-    edges: this.p5
+    edges: this.p5,
   };
 };
 
@@ -452,7 +452,7 @@ P5Wrapper.prototype.getCustomMarshalBlockedProperties = function () {
     'loadJSON',
     'loadStrings',
     'loadTable',
-    'loadXML'
+    'loadXML',
   ];
 };
 
@@ -462,8 +462,8 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function () {
       instance: this.p5.Sprite,
       ensureIdenticalMarshalInstances: true,
       methodOpts: {
-        nativeCallsBackInterpreter: true
-      }
+        nativeCallsBackInterpreter: true,
+      },
     },
     // The p5play Group object should be custom marshalled, but its constructor
     // actually creates a standard Array instance with a few additional methods
@@ -473,8 +473,8 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function () {
       instance: Array,
       requiredMethod: 'draw',
       methodOpts: {
-        nativeCallsBackInterpreter: true
-      }
+        nativeCallsBackInterpreter: true,
+      },
     },
     {instance: window.p5},
     {instance: this.p5.Camera},
@@ -487,7 +487,7 @@ P5Wrapper.prototype.getCustomMarshalObjectList = function () {
     {instance: window.p5.Graphics},
     {instance: window.p5.Font},
     {instance: window.p5.Table},
-    {instance: window.p5.TableRow}
+    {instance: window.p5.TableRow},
     // TODO: Maybe add collider types here?
   ];
 };
