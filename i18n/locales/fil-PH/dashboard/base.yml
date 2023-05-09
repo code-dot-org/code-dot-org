@@ -172,7 +172,6 @@ fil:
     data_collection_us: "Naiintindihan ko na ang Code.org ay isang website ng hindi pang-profit na nakabase sa US at ang mga batas na namamahala sa pagkolekta ng data sa US ay maaaring magkakaiba sa mga batas sa aking bansa."
     visit_privacy: 'Bisitahin ang [Patakaran sa Privacy] ng Code.org (%{privacy_url}) upang matuto nang higit pa.'
     student_terms_markdown: "Ang mga email address ay hindi nakastore sa isang form na nagpapahintulot sa ating makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makakatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming [patakaran sa privacy](http://code.org/privacy) para sa karagdagan impormasyon."
-    additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
     user_type_button: "I-update ang Uri ng Account"
     user_type_label: "Uri ng Account"
     user_type_student: "Estudyante"

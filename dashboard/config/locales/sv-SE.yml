@@ -165,8 +165,6 @@ sv:
       i mitt land.
     visit_privacy: Besök Code.org’s [Privacy Policy](%{privacy_url}) för att veta
       mer.
-    additional_information: Vi behöver  ytterligare information att fortsätta registrera
-      dig.
     user_type_button: Uppdatera kontotyp
     user_type_label: Kontotyp
     user_type_student: Student

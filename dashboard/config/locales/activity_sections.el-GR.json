@@ -1172,6 +1172,7 @@
           ]
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
         },
         "a596d7dd-5533-4dea-b9f7-7dca09bafb6e": {
@@ -9352,11 +9353,17 @@
           "name": "Ελεύθερο παιχνίδι",
           "progression_name": "Ελεύθερο παιχνίδι"
         },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "Πρόβλεψη"
         },
         "659719ac-9bcf-4ed4-891b-1a4a37a3ac22": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Πώς να φτιάξετε χαρακτήρες"
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει (συνέχεια)"
@@ -9588,11 +9595,17 @@
           "name": "Εξάσκηση",
           "progression_name": "Εξάσκηση"
         },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "Πρόβλεψη"
         },
         "61942940-a071-4c23-9fbc-6632ec70ed93": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Πώς να φτιάξετε χαρακτήρες"
         },
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει (συνέχεια)"
@@ -11254,6 +11267,7 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
@@ -18987,11 +19001,17 @@
           "name": "Εξάσκηση",
           "progression_name": "Εξάσκηση"
         },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "Πρόβλεψη"
         },
         "bcccd594-04be-4289-bd38-c3e08ca13d89": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Πώς να φτιάξετε χαρακτήρες"
         },
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει (συνέχεια)"
@@ -19235,11 +19255,17 @@
           "name": "Ελεύθερο παιχνίδι",
           "progression_name": "Ελεύθερο παιχνίδι"
         },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "Πρόβλεψη"
         },
         "38099bbe-ac85-43ba-9087-19fdf9e613b5": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Πώς να φτιάξετε χαρακτήρες"
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Mini-Project: Ψάρι που κολυμπάει (συνέχεια)"

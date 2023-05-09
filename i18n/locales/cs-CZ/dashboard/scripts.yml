@@ -3114,3 +3114,15 @@ cs:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Úvod
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Rekapitulace
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Rekapitulace

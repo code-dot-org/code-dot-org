@@ -172,7 +172,6 @@ cs:
     data_collection_us: "Jsem si vědom, že Code.org je americký neziskový server a že zákony upravující shromažďování osobních údajů ve Spojených státech amerických se mohou lišit od zákonů platných v mé zemi."
     visit_privacy: 'Navštivte zásady ochrany osobních údajů Code.org [Zásady ochrany osobních údajů](%{privacy_url}), kde se dozvíte více.'
     student_terms_markdown: "E-mailové adresy se neukládají v podobě, která by nám umožňovala kontaktovat studenty. Studenti nikdy nedostanou od Code.org e-maily za jiným účelem než za účelem obnovení hesla. Podívejte se na naše [zásady ochrany osobních údajů](http://code.org/privacy), kde najdete další informace."
-    additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
     user_type_student: "Student"
