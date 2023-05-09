@@ -41,7 +41,8 @@ section.bg-secondary { background-color: $brand_secondary_light; }
   -webkit-font-smoothing: antialiased;
 }
 
-// Flex containers
+// Flex container
+// Use classes to determine flexbox characteristics
 .flex-container {
   display: flex;
 
@@ -518,42 +519,17 @@ form {
 
 // Action blocks wrappers
 .action-block__wrapper {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 2em;
+  display: grid;
+  grid-gap: 1.25em;
 
-  @media screen and (max-width: $width-md) {
-    flex-wrap: wrap;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-.action-block__wrapper--two-col {
-  justify-content: space-between;
-
-  & > .action-block--one-col {
-    width: 49%;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 1em;
-    }
-  }
-}
-
-.action-block__wrapper--three-col {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 960px;
-
-  & > .action-block--one-col {
-    width: 32%;
-    margin-top: 1.25em;
-
-    @media screen and (max-width: $width-md) {
-      width: 49%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
+  &.action-block__wrapper--three-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
