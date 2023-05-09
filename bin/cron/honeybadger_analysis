@@ -6,12 +6,16 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 
 def main
-  filters = %w[-is:resolved -is:paused%20 -is:ignored environment:"production" assignee:"nobody" last_occurred.before:\"2+days+ago\"]
-  analyzer = HoneybadgerFaultAnalyzer.new(filters)
-  errors = analyzer.get_faults
-  errors.each do |error|
-    puts error.dotd_fault_response
+  filters = %w[-is:resolved -is:paused%20 -is:ignored environment:"production" assignee:"nobody"]
+  time_filters = ["occurred_after=#{1.day.ago.to_i}"]
+  analyzer = HoneybadgerFaultAnalyzer.new(time_filters, filters)
+  faults = analyzer.get_faults_for_project(45435, 25)
+  notices_within_range_sum = 0
+  faults.each do |fault|
+    notices_within_range_sum += fault.notices_within_range
+    puts fault.to_s
   end
+  puts notices_within_range_sum
 end
 
 main

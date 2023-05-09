@@ -22,4 +22,14 @@ class HoneybadgerFault
   def project_id
     @fault['project_id']
   end
+
+  def notices_within_range
+    @fault['notices_count_in_range']
+  end
+
+  # Use this for debugging, if you need to access an attribute
+  # Expose an access method for it
+  def raw_fault
+    @fault
+  end
 end
