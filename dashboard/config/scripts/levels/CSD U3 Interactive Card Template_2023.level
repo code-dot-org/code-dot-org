@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:59:12.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -111,15 +107,26 @@
     "expand_debugger": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "parent_level_id": 20790,
     "name_suffix": "_2023",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.614+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Template_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Template_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:59:12.614+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Interactive Card Template_2022\\\"\"],\"cloned_from\":\"CSD U3 Interactive Card Template_2022\"},{\"changed_at\":\"2023-05-03 23:58:36 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

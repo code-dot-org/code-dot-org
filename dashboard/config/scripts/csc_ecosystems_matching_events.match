@@ -1,5 +1,5 @@
 name 'csc_ecosystems_matching_events'
-title 'Match the code to the screen'
+title 'Match the code to the animation'
 height '200'
 question 'The boat catches the fish. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)'
 answer '![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33 PM.png)'
@@ -10,9 +10,7 @@ answer '![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-16805
 
 
 markdown <<MARKDOWN
-## Look at what happens when the sprites touch
-
-Drag the event block program to the correct image
+Look at what happens when the sprites touch in both animations. Then drag each picture of code to its matching image.
 
 
 MARKDOWN
@@ -22,3 +20,5 @@ teacher_markdown <<MARKDOWN
 
 
 MARKDOWN
+
+allow_multiple_attempts true

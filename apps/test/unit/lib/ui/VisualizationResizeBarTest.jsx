@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
-  RESIZE_VISUALIZATION_EVENT
+  RESIZE_VISUALIZATION_EVENT,
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
 describe('VisualizationResizeBar', function () {

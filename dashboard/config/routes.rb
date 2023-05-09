@@ -108,7 +108,7 @@ Dashboard::Application.routes.draw do
     get '/catalog', to: 'curriculum_catalog#index'
 
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -267,6 +267,10 @@ Dashboard::Application.routes.draw do
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
       end
     end
+
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -1038,5 +1042,9 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+
+    get '/get_token', to: 'authenticity_token#get_token'
   end
 end

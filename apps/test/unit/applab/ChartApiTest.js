@@ -17,7 +17,7 @@ var fakeDocument = {
       return fakeImg;
     }
     return null;
-  }
+  },
 };
 
 /**
@@ -43,14 +43,14 @@ var fakeGoogle = {
   charts: {
     Bar: NullChart,
     Line: NullChart,
-    Scatter: NullChart
+    Scatter: NullChart,
   },
   visualization: {
     arrayToDataTable: function (array) {
       return array;
     },
-    PieChart: NullChart
-  }
+    PieChart: NullChart,
+  },
 };
 
 var FakeAppStorage = function () {
@@ -132,7 +132,7 @@ describe('ChartApi', function () {
       '"bar"',
       '"line"',
       '"pie"',
-      '"scatter"'
+      '"scatter"',
     ]);
   });
 
@@ -271,7 +271,7 @@ describe('ChartApi', function () {
 
     it('when inferring columns, prints list of all possible columns', function (testDone) {
       fakeAppStorage.fakeRecords = [
-        {id: 14, col1: 'xyzzy', col2: 'xyzzy', col3: 'xyzzy'}
+        {id: 14, col1: 'xyzzy', col2: 'xyzzy', col3: 'xyzzy'},
       ];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable').then(
         ensureDone(testDone, function () {
@@ -338,7 +338,7 @@ describe('ChartApi', function () {
     it('warns about empty dataset', function (testDone) {
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [
         'column1',
-        'column2'
+        'column2',
       ]).then(
         ensureDone(testDone, function () {
           assertWarns(chartApi, /No data\./);
@@ -350,7 +350,7 @@ describe('ChartApi', function () {
       fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [
         'column1',
-        'column2'
+        'column2',
       ]).then(
         ensureDone(testDone, function () {
           assertNotWarns(chartApi, /No data\./);
@@ -362,7 +362,7 @@ describe('ChartApi', function () {
       fakeAppStorage.fakeRecords = [{column1: 'Duke'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [
         'column1',
-        'column2'
+        'column2',
       ]).then(
         ensureDone(testDone, function () {
           assertWarns(chartApi, /No data found for column/);
@@ -374,7 +374,7 @@ describe('ChartApi', function () {
       fakeAppStorage.fakeRecords = [{column1: 'Duke', column2: 'Earl'}];
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [
         'column1',
-        'column2'
+        'column2',
       ]).then(
         ensureDone(testDone, function () {
           assertNotWarns(chartApi, /No data found for column/);
@@ -386,7 +386,7 @@ describe('ChartApi', function () {
       testMethod('fakeDiv', ChartType.PIE, 'fakeTable', [
         'column1',
         'column2',
-        'column3'
+        'column3',
       ]).then(
         ensureDone(testDone, function () {
           assertWarns(chartApi, /Too many columns/);
@@ -398,7 +398,7 @@ describe('ChartApi', function () {
       testMethod('fakeDiv', ChartType.BAR, 'fakeTable', [
         'column1',
         'column2',
-        'column3'
+        'column3',
       ]).then(
         ensureDone(testDone, function () {
           assertNotWarns(chartApi, /Too many columns/);
@@ -410,7 +410,7 @@ describe('ChartApi', function () {
       testMethod('fakeDiv', ChartType.LINE, 'fakeTable', [
         'column1',
         'column2',
-        'column3'
+        'column3',
       ]).then(
         ensureDone(testDone, function () {
           assertNotWarns(chartApi, /Too many columns/);
@@ -422,7 +422,7 @@ describe('ChartApi', function () {
       testMethod('fakeDiv', ChartType.SCATTER, 'fakeTable', [
         'column1',
         'column2',
-        'column3'
+        'column3',
       ]).then(
         ensureDone(testDone, function () {
           assertNotWarns(chartApi, /Too many columns/);

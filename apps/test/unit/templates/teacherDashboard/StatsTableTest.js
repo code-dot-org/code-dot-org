@@ -6,12 +6,12 @@ import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDa
 const students = [
   {id: 3, name: 'Student C'},
   {id: 2, name: 'Student B'},
-  {id: 1, name: 'Student A'}
+  {id: 1, name: 'Student A'},
 ];
 const studentsCompletedLevelCount = {
   1: 15,
   2: 12,
-  3: 65
+  3: 65,
 };
 
 describe('StatsTable', () => {

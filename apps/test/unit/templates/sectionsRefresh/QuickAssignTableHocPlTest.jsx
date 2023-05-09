@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
   courseOfferings: hocCourseOfferings,
   setSelectedCourseOffering: () => {},
   updateCourse: () => {},
-  sectionCourse: {}
+  sectionCourse: {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -40,7 +40,7 @@ describe('QuickAssignTable', () => {
   it('renders Professional Learning as the first and only table/column header', () => {
     const wrapper = setUp({
       marketingAudience: MARKETING_AUDIENCE.PL,
-      courseOfferings: plCourseOfferings
+      courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).to.equal(3);
     expect(wrapper.contains(i18n.professionalLearning())).to.be.true;
@@ -49,7 +49,7 @@ describe('QuickAssignTable', () => {
   it('renders one header in each of the first two columns', () => {
     const wrapper = setUp({
       marketingAudience: MARKETING_AUDIENCE.PL,
-      courseOfferings: plCourseOfferings
+      courseOfferings: plCourseOfferings,
     });
     expect(wrapper.find('table').length).to.equal(3);
     // First header displays in table 0

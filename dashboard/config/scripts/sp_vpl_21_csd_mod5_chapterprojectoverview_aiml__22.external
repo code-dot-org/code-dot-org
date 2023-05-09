@@ -3,11 +3,12 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# End of unit project: Design an AI App
+# End of Unit Project: Design an AI App
 
-## Project overview
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-##### To conclude this unit, students develop an AI app that addresses a social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">To conclude this unit, students develop an AI app that addresses a social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+</p></div>
 
 <hr style="clear:both">
 
@@ -30,9 +31,9 @@ My students learned that they don't have to just be consumers when it comes to t
 <hr style="clear:both"/>
 
 
-## Project resources
+## Project Resources
 
-* ##### <a href="https://studio.code.org/s/csd7-2022/lessons/21" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://studio.code.org/s/csd7-2023/lessons/22" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * ##### <a href="https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit?usp=sharing" target="blank" rel="noopener noreferrer" >Project guide</a> 
 * ##### <a href="https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
 

@@ -45,7 +45,7 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
@@ -77,85 +77,85 @@ const REMIX_PROPS = [
   {
     defaultValues: {
       initialX: DEFAULT_X,
-      initialY: DEFAULT_Y
+      initialY: DEFAULT_Y,
     },
     generateBlock: args =>
       blockAsXmlNode('jump_to_xy', {
         titles: {
           XPOS: args.initialX,
-          YPOS: args.initialY
-        }
-      })
+          YPOS: args.initialY,
+        },
+      }),
   },
   {
     defaultValues: {
-      startDirection: DEFAULT_DIRECTION
+      startDirection: DEFAULT_DIRECTION,
     },
     generateBlock: args =>
       blockAsXmlNode('draw_turn', {
         titles: {
-          DIR: 'turnRight'
+          DIR: 'turnRight',
         },
         values: {
           VALUE: {
             type: 'math_number',
             titleName: 'NUM',
-            titleValue: args.startDirection - DEFAULT_DIRECTION
-          }
-        }
-      })
-  }
+            titleValue: args.startDirection - DEFAULT_DIRECTION,
+          },
+        },
+      }),
+  },
 ];
 
 const FROZEN_REMIX_PROPS = [
   {
     defaultValues: {
       initialX: DEFAULT_X,
-      initialY: DEFAULT_Y
+      initialY: DEFAULT_Y,
     },
     generateBlock: args =>
       blockAsXmlNode('jump_to_xy', {
         titles: {
           XPOS: args.initialX,
-          YPOS: args.initialY
-        }
-      })
+          YPOS: args.initialY,
+        },
+      }),
   },
   {
     defaultValues: {
-      startDirection: 180
+      startDirection: 180,
     },
     generateBlock: args =>
       blockAsXmlNode('draw_turn', {
         titles: {
-          DIR: 'turnRight'
+          DIR: 'turnRight',
         },
         values: {
           VALUE: {
             type: 'math_number',
             titleName: 'NUM',
-            titleValue: args.startDirection - 180
-          }
-        }
-      })
+            titleValue: args.startDirection - 180,
+          },
+        },
+      }),
   },
   {
     defaultValues: {
-      skin: 'elsa'
+      skin: 'elsa',
     },
     generateBlock: args =>
       blockAsXmlNode('turtle_setArtist', {
         titles: {
-          VALUE: args.skin
-        }
-      })
-  }
+          VALUE: args.skin,
+        },
+      }),
+  },
 ];
 
 const REMIX_PROPS_BY_SKIN = {
   artist: REMIX_PROPS,
   anna: FROZEN_REMIX_PROPS,
-  elsa: FROZEN_REMIX_PROPS
+  elsa: FROZEN_REMIX_PROPS,
 };
 
 const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
@@ -342,7 +342,7 @@ Artist.prototype.init = function (config) {
     isK1: config.level.isK1,
     isFrozenSkin: this.isFrozenSkin(),
     decorationAnimationImage: this.decorationAnimationImage,
-    showDecoration: () => this.skin.id === 'elsa'
+    showDecoration: () => this.skin.id === 'elsa',
   });
 
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
@@ -405,7 +405,7 @@ Artist.prototype.init = function (config) {
   return Promise.all([
     this.preloadAllStickerImages(),
     this.preloadAllShapeImages(),
-    this.preloadAllPatternImages()
+    this.preloadAllPatternImages(),
   ]).then(() => {
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -797,8 +797,8 @@ Artist.prototype.evalCode = function (code, executionInfo) {
       Turtle: this.api,
       // The default executionInfo modifies itself, make a fresh copy each run
       executionInfo: {
-        ...executionInfo
-      }
+        ...executionInfo,
+      },
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
@@ -829,7 +829,7 @@ Artist.prototype.initInterpreter = function () {
     studioApp: this.studioApp_,
     shouldRunAtMaxSpeed: function () {
       return false;
-    }
+    },
   });
   this.JSInterpreter.onExecutionError.register(
     this.handleExecutionError.bind(this)
@@ -838,7 +838,7 @@ Artist.prototype.initInterpreter = function () {
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
-    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions
+    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
   });
 };
 
@@ -988,7 +988,7 @@ Artist.prototype.executeTuple_ = function () {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {
-      smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple
+      smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple,
     });
     if (this.shouldAnimate_) {
       this.visualization.display();
@@ -1168,7 +1168,7 @@ Artist.prototype.step = function (command, values, options) {
       } else {
         this.visualization.jumpTo([
           utils.xFromPosition(values[0], CANVAS_WIDTH),
-          utils.yFromPosition(values[0], CANVAS_HEIGHT)
+          utils.yFromPosition(values[0], CANVAS_HEIGHT),
         ]);
       }
       break;
@@ -1429,9 +1429,9 @@ Artist.prototype.displayFeedback_ = function () {
     disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
-      sharingText: turtleMsg.shareDrawing()
+      sharingText: turtleMsg.shareDrawing(),
     },
-    enablePrinting: true
+    enablePrinting: true,
   });
 };
 
@@ -1599,7 +1599,7 @@ Artist.prototype.report = function (enableOnComplete = true) {
     level: this.level.id,
     result: this.levelComplete,
     testResult: this.testResults,
-    program: encodeURIComponent(this.getUserCode())
+    program: encodeURIComponent(this.getUserCode()),
   };
 
   if (enableOnComplete) {
@@ -1639,7 +1639,7 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
     const encodedImage = encodeURIComponent(image.split(',')[1]);
     return {
       ...reportData,
-      image: encodedImage
+      image: encodedImage,
     };
   }
   return reportData;

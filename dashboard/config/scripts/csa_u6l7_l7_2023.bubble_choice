@@ -1,6 +1,6 @@
 name 'CSA U6L7-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: ArrayList Algorithms'
+description 'Use standard algorithms to find and manipulate elements in an `ArrayList`.'
 
 sublevels
 level 'CSA U6L7-L7a_2023'

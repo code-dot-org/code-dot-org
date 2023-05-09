@@ -9,7 +9,7 @@ import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
   enableCircuitPlaygroundComponents,
-  componentConstructors
+  componentConstructors,
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
@@ -17,14 +17,14 @@ import {
   SONG_ASCENDING,
   SONG_CONCLUSION,
   CP_COMMAND,
-  J5_CONSTANTS
+  J5_CONSTANTS,
 } from './PlaygroundConstants';
 import Led from './Led';
 import PlaygroundButton from './Button';
 import {
   detectBoardTypeFromPort,
   isWebSerialPort,
-  BOARD_TYPE
+  BOARD_TYPE,
 } from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
@@ -41,7 +41,7 @@ const pinMapping = {
   A4: 3,
   A5: 2,
   A6: 0,
-  A7: 1
+  A7: 1,
 };
 
 /**
@@ -113,7 +113,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     const board = new five.Board({
       io: playground,
       repl: false,
-      debug: false
+      debug: false,
     });
     board.once('ready', () => {
       this.serialPort_ = serialPort;
@@ -165,7 +165,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.prewiredComponents_ = {
           board: this.fiveBoard_,
           ...components,
-          ...J5_CONSTANTS
+          ...J5_CONSTANTS,
         };
       }
     );
@@ -270,7 +270,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   installOnInterpreter(jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
-        instance: componentConstructors[key]
+        instance: componentConstructors[key],
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
@@ -330,7 +330,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       {notes: SONG_CHARGE, tempo: 104},
       {notes: SONG_LEVEL_COMPLETE, tempo: 80},
       {notes: SONG_ASCENDING, tempo: 180},
-      {notes: SONG_CONCLUSION, tempo: 130}
+      {notes: SONG_CONCLUSION, tempo: 130},
     ]);
 
     return Promise.resolve()
@@ -340,7 +340,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   mappedPin(pin) {
-    return pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
+    return Object.prototype.hasOwnProperty.call(pinMapping, pin)
+      ? pinMapping[pin]
+      : pin;
   }
 
   pinMode(pin, modeConstant) {
@@ -393,7 +395,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     const SerialPortType = serialPortType();
 
     const port = new SerialPortType(portName, {
-      baudRate: SERIAL_BAUD
+      baudRate: SERIAL_BAUD,
     });
 
     this.createPendingQueue(port);

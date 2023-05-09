@@ -26,3 +26,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The condition in the `for` loop checks if `index` is less than or equal to `grades.length`. This condition will cause an `ArrayIndexOutOfBoundsException` because the length of a 1D array is one more than its last index. To correct this error, the condition needs to be changed to `index < grades.length`.
 MARKDOWN
+
+allow_multiple_attempts true

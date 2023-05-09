@@ -21,7 +21,7 @@ import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
 import {
   showArrowButtons,
-  dismissSwipeOverlay
+  dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 
 var SquareType = tiles.SquareType;
@@ -40,20 +40,20 @@ Bounce.btnState = {};
 
 var ButtonState = {
   UP: 0,
-  DOWN: 1
+  DOWN: 1,
 };
 
 Bounce.BallFlags = {
   MISSED_PADDLE: 1,
   IN_GOAL: 2,
-  LAUNCHING: 4
+  LAUNCHING: 4,
 };
 
 var ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
 };
 
 var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
@@ -67,12 +67,12 @@ studioApp().setCheckForEmptyBlocks(true);
 // Default Scalings
 Bounce.scale = {
   snapRadius: 1,
-  stepSpeed: 33
+  stepSpeed: 33,
 };
 
 var twitterOptions = {
   text: bounceMsg.shareBounceTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: 'BounceCode'
+  hashtag: 'BounceCode',
 };
 
 var loadLevel = function () {
@@ -142,7 +142,7 @@ var WALL_TILE_SHAPES = {
   '1101X': [0, 1], // Vert left
   '110XX': [0, 1], // Bottom left corner
   '1X11X': [0, 0], // Top left corner
-  null0: [1, 1] // Empty
+  null0: [1, 1], // Empty
 };
 
 var GOAL_TILE_SHAPES = {
@@ -151,7 +151,7 @@ var GOAL_TILE_SHAPES = {
   '1X001': [3, 3], // Top horiz right end
   '1X11X': [0, 2], // Top left corner
   '1X100': [0, 2], // Top horiz left end
-  null0: [1, 1] // Empty
+  null0: [1, 1], // Empty
 };
 
 // Return a value of '0' if the specified square is not a wall, '1' for
@@ -798,7 +798,7 @@ Bounce.init = function (config) {
     bounce_whenPaddleCollided: {x: 20, y: 310},
     bounce_whenWallCollided: {x: 20, y: 410},
     bounce_whenBallInGoal: {x: 20, y: 510},
-    bounce_whenBallMissesPaddle: {x: 20, y: 630}
+    bounce_whenBallMissesPaddle: {x: 20, y: 630},
   };
 
   config.twitter = twitterOptions;
@@ -1094,10 +1094,10 @@ var displayFeedback = function () {
       twitter: twitterOptions,
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
-        sharingText: bounceMsg.shareGame()
+        sharingText: bounceMsg.shareGame(),
       },
       saveToProjectGallery: true,
-      disableSaveToGallery: !isSignedIn
+      disableSaveToGallery: !isSignedIn,
     });
   }
 };
@@ -1136,7 +1136,7 @@ Bounce.execute = function () {
     whenRight: {code: generator('bounce_whenRight')},
     whenUp: {code: generator('bounce_whenUp')},
     whenDown: {code: generator('bounce_whenDown')},
-    whenGameStarts: {code: generator('when_run')}
+    whenGameStarts: {code: generator('when_run')},
   };
 
   studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
@@ -1198,7 +1198,7 @@ Bounce.onPuzzleComplete = function () {
       testResult: Bounce.testResults,
       program: encodeURIComponent(textBlocks),
       image: Bounce.encodedFeedbackImage,
-      onComplete: Bounce.onReportComplete
+      onComplete: Bounce.onReportComplete,
     });
   };
 
@@ -1213,7 +1213,7 @@ Bounce.onPuzzleComplete = function () {
         );
 
         sendReport();
-      }
+      },
     });
   }
 };
@@ -1282,7 +1282,7 @@ Bounce.displayScore = function () {
   var score = document.getElementById('score');
   score.textContent = bounceMsg.scoreText({
     playerScore: Bounce.playerScore,
-    opponentScore: Bounce.opponentScore
+    opponentScore: Bounce.opponentScore,
   });
 };
 

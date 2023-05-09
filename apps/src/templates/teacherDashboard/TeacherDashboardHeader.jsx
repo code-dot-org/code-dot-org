@@ -6,7 +6,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {
   switchToSection,
   recordSwitchToSection,
-  recordOpenEditSectionDetails
+  recordOpenEditSectionDetails,
 } from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
@@ -15,7 +15,7 @@ import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
-  sortedSectionsList
+  sortedSectionsList,
 } from './teacherSectionsRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
@@ -27,7 +27,7 @@ class TeacherDashboardHeader extends React.Component {
     sections: PropTypes.arrayOf(sectionShape).isRequired,
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
-    assignmentName: PropTypes.string
+    assignmentName: PropTypes.string,
   };
 
   constructor(props) {
@@ -152,25 +152,25 @@ class TeacherDashboardHeader extends React.Component {
 
 const styles = {
   sectionPrompt: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '5px'
+    marginBottom: '5px',
   },
   rightColumn: {
     display: 'flex',
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   buttonSection: {
     display: 'flex',
-    marginBottom: 5
+    marginBottom: 5,
   },
   buttonWithMargin: {
     margin: 0,
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 };
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
@@ -190,7 +190,7 @@ export default connect(
   },
   dispatch => {
     return {
-      openEditSectionDialog: id => dispatch(beginEditingSection(id))
+      openEditSectionDialog: id => dispatch(beginEditingSection(id)),
     };
   }
 )(TeacherDashboardHeader);

@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 
 import React, {Component} from 'react';
@@ -12,12 +10,12 @@ export default class SocialShare extends Component {
     facebook: PropTypes.string.isRequired,
     twitter: PropTypes.string.isRequired,
     print: PropTypes.string.isRequired,
-    under13: PropTypes.bool
+    under13: PropTypes.bool,
   };
 
   state = {
     isTwitterAvailable: false,
-    isFacebookAvailable: false
+    isFacebookAvailable: false,
   };
 
   componentDidMount() {
@@ -85,6 +83,6 @@ export default class SocialShare extends Component {
 const styles = {
   shareButton: {
     color: color.white,
-    minWidth: 40
-  }
+    minWidth: 40,
+  },
 };

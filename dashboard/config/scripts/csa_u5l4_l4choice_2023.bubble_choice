@@ -1,6 +1,6 @@
 name 'CSA U5L4-L4choice_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Column-Major Traversal'
+description 'Practice traversing 2D arrays in column-major order to implement standard algorithms.'
 
 sublevels
 level 'CSA U5L4-L4a_2023'

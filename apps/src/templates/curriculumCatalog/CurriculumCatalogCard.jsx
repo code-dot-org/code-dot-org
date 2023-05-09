@@ -8,7 +8,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDurations,
-  subjectsAndTopicsOrder
+  subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {concat, intersection} from 'lodash';
 import style from './curriculum_catalog_card.module.scss';
@@ -22,19 +22,20 @@ const CurriculumCatalogCard = ({
   subjects = [],
   topics = [],
   isTranslated = false,
-  isEnglish
+  isEnglish,
+  pathToCourse,
 }) => (
   <CustomizableCurriculumCatalogCard
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     courseDisplayName={courseDisplayName}
     duration={translatedCourseOfferingDurations[duration]}
     gradeRange={i18n.gradeRange({
       numGrades: gradesArray.length,
       youngestGrade: gradesArray[0],
-      oldestGrade: gradesArray[gradesArray.length - 1]
+      oldestGrade: gradesArray[gradesArray.length - 1],
     })}
     imageSrc={imageSrc}
     subjectsAndTopics={intersection(
@@ -46,13 +47,14 @@ const CurriculumCatalogCard = ({
         translatedCourseOfferingCsTopics[subject_or_topic_key]
     )}
     quickViewButtonDescription={i18n.quickViewDescription({
-      course_name: courseDisplayName
+      course_name: courseDisplayName,
     })}
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
     isEnglish={isEnglish}
+    pathToCourse={pathToCourse}
   />
 );
 
@@ -70,7 +72,8 @@ CurriculumCatalogCard.propTypes = {
   topics: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(translatedCourseOfferingCsTopics))
   ),
-  isEnglish: PropTypes.bool.isRequired
+  isEnglish: PropTypes.bool.isRequired,
+  pathToCourse: PropTypes.string.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -86,7 +89,8 @@ const CustomizableCurriculumCatalogCard = ({
   subjectsAndTopics,
   quickViewButtonDescription,
   quickViewButtonText,
-  isEnglish
+  isEnglish,
+  pathToCourse,
 }) => (
   <div
     className={classNames(
@@ -133,21 +137,20 @@ const CustomizableCurriculumCatalogCard = ({
         )}
       >
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.neutralDark}
           type="button"
-          onClick={() => {}}
+          href={pathToCourse}
           aria-label={quickViewButtonDescription}
-        >
-          {quickViewButtonText}
-        </Button>
+          text={quickViewButtonText}
+        />
         <Button
           color={Button.ButtonColor.brandSecondaryDefault}
           type="button"
           onClick={() => {}}
           aria-label={assignButtonDescription}
-        >
-          {assignButtonText}
-        </Button>
+          text={assignButtonText}
+        />
       </div>
     </div>
   </div>
@@ -164,11 +167,12 @@ CustomizableCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
   quickViewButtonText: PropTypes.string.isRequired,
   assignButtonText: PropTypes.string.isRequired,
+  pathToCourse: PropTypes.string.isRequired,
 
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
-  assignButtonDescription: PropTypes.string.isRequired
+  assignButtonDescription: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalogCard;

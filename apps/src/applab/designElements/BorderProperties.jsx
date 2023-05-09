@@ -8,7 +8,7 @@ export default class BorderProperties extends React.Component {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleBorderWidthChange: PropTypes.func.isRequired,
     handleBorderColorChange: PropTypes.func.isRequired,
-    handleBorderRadiusChange: PropTypes.func.isRequired
+    handleBorderRadiusChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,7 +16,7 @@ export default class BorderProperties extends React.Component {
       element,
       handleBorderWidthChange,
       handleBorderColorChange,
-      handleBorderRadiusChange
+      handleBorderRadiusChange,
     } = this.props;
 
     return (

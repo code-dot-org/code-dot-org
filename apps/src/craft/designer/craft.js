@@ -10,7 +10,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {
   GameController,
   FacingDirection,
-  utils as CraftUtils
+  utils as CraftUtils,
 } from '@code-dot-org/craft';
 import dom from '../../dom';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -30,7 +30,7 @@ import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   hideArrowButtons,
-  dismissSwipeOverlay
+  dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -48,7 +48,7 @@ const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
 };
 
 /**
@@ -65,29 +65,29 @@ const eventsCharacters = {
     staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Neutral.png',
     smallStaticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Neutral.png',
     failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Fail.png',
-    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Win.png'
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Steve_Win.png',
   },
   Alex: {
     name: 'Alex',
     staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Neutral.png',
     smallStaticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Neutral.png',
     failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Fail.png',
-    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Win.png'
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Alex_Win.png',
   },
   Chicken: {
     staticAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Neutral.png',
     smallStaticAvatar:
       MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Neutral.png',
     failureAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Fail.png',
-    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Win.png'
-  }
+    winAvatar: MEDIA_URL + 'Events/Pop_Up_Character_Chicken_Win.png',
+  },
 };
 
 const CHICKEN_ASSETS = [
   eventsCharacters.Chicken.staticAvatar,
   eventsCharacters.Chicken.smallStaticAvatar,
   eventsCharacters.Chicken.winAvatar,
-  eventsCharacters.Chicken.failureAvatar
+  eventsCharacters.Chicken.failureAvatar,
 ];
 const CHARACTER_ASSETS = [
   MEDIA_URL + 'Events/Steve_Character_Select.png',
@@ -95,7 +95,7 @@ const CHARACTER_ASSETS = [
   eventsCharacters.Steve.staticAvatar,
   eventsCharacters.Steve.smallStaticAvatar,
   eventsCharacters.Alex.staticAvatar,
-  eventsCharacters.Alex.smallStaticAvatar
+  eventsCharacters.Alex.smallStaticAvatar,
 ];
 const COMMON_UI_ASSETS = [
   MEDIA_URL + 'Sliced_Parts/MC_Loading_Spinner.gif',
@@ -112,7 +112,7 @@ const COMMON_UI_ASSETS = [
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
   MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
 ];
 const interfaceImages = {
   DEFAULT: COMMON_UI_ASSETS,
@@ -127,7 +127,7 @@ const interfaceImages = {
   9: CHARACTER_ASSETS,
   10: CHARACTER_ASSETS,
   11: CHARACTER_ASSETS,
-  12: CHARACTER_ASSETS
+  12: CHARACTER_ASSETS,
 };
 
 const MUSIC_METADATA = [
@@ -137,7 +137,7 @@ const MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: 'vignette4-intro', group: 'day'},
   {volume: 1, hasOgg: true, name: 'vignette5-shortpiano', group: 'day'},
   {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short', group: 'day'},
-  {volume: 1, hasOgg: true, name: 'vignette8-free-play', group: 'day'}
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play', group: 'day'},
 ];
 
 const CHARACTER_STEVE = 'Steve';
@@ -277,7 +277,7 @@ Craft.init = function (config) {
       ...config,
       forceInsertTopBlock: null,
       appStrings: {
-        generatedCodeDescription: craftMsg.generatedCodeDescription()
+        generatedCodeDescription: craftMsg.generatedCodeDescription(),
       },
       enableShowCode: false,
       enableShowBlockCount: false,
@@ -302,7 +302,7 @@ Craft.init = function (config) {
           assetRoot: Craft.skin.assetUrl(''),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
-            play: studioApp().playAudio.bind(studioApp())
+            play: studioApp().playAudio.bind(studioApp()),
           },
           debug: false,
           customSlowMotion: slowMotionURLParam, // NaN if not set
@@ -320,7 +320,7 @@ Craft.init = function (config) {
           },
           earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
             config.level.puzzle_number
-          )
+          ),
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -363,7 +363,7 @@ Craft.init = function (config) {
           [Hammer.DIRECTION_LEFT]: 'leftButton',
           [Hammer.DIRECTION_RIGHT]: 'rightButton',
           [Hammer.DIRECTION_UP]: 'upButton',
-          [Hammer.DIRECTION_DOWN]: 'downButton'
+          [Hammer.DIRECTION_DOWN]: 'downButton',
         };
 
         const onDrag = function (e) {
@@ -412,8 +412,8 @@ Craft.init = function (config) {
       },
       twitter: {
         text: 'Share on Twitter',
-        hashtag: 'Craft'
-      }
+        hashtag: 'Craft',
+      },
     });
 
     var interfaceImagesToLoad = [];
@@ -444,7 +444,7 @@ Craft.init = function (config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    isMinecraft: true
+    isMinecraft: true,
   });
 
   ReactDOM.render(
@@ -479,7 +479,7 @@ const directionToFacing = {
   upButton: FacingDirection.North,
   downButton: FacingDirection.South,
   leftButton: FacingDirection.West,
-  rightButton: FacingDirection.East
+  rightButton: FacingDirection.East,
 };
 
 Craft.onArrowButtonDown = function (e, btn) {
@@ -557,7 +557,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   const levelAssetPacks = {
     beforeLoad: Craft.minAssetsForLevelWithCharacter(levelConfig.puzzle_number),
-    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
+    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number),
   };
 
   const doNotShowPlayer = levelConfig.usePlayer === false;
@@ -599,7 +599,7 @@ Craft.initializeAppLevel = function (levelConfig) {
         (levelConfig.timeoutVerificationFunction ||
           `function() { return false; }`) +
         ']'
-    )[0]
+    )[0],
   });
 };
 
@@ -835,7 +835,7 @@ Craft.executeUserCode = function () {
         up: FacingDirection.North,
         down: FacingDirection.South,
         left: FacingDirection.West,
-        right: FacingDirection.East
+        right: FacingDirection.East,
       };
       appCodeOrgAPI.moveDirection(
         studioApp().highlight.bind(studioApp(), blockID),
@@ -868,7 +868,7 @@ Craft.executeUserCode = function () {
         type,
         randomDirection
       );
-    }
+    },
   };
 
   ENTITY_ACTION_BLOCKS.concat(['turnLeft', 'turnRight', 'turnRandom']).forEach(
@@ -897,12 +897,12 @@ Craft.executeUserCode = function () {
     onEventTriggered: function (type, eventType, callback, blockID) {
       userEvents[`event-${type}-${eventType}`] = {
         code: callback,
-        args: ['event']
+        args: ['event'],
       };
     },
     onGlobalEventTriggered: function (eventType, callback, blockID) {
       userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
-    }
+    },
   };
 
   CustomMarshalingInterpreter.evalWith(code, eventGenerationMethods);
@@ -912,9 +912,9 @@ Craft.executeUserCode = function () {
       instance: evalApiMethods.repeat,
       methodOpts: {
         nativeCallsBackInterpreter: true,
-        run: true
-      }
-    }
+        run: true,
+      },
+    },
   ];
 
   const hooks = {};
@@ -1005,17 +1005,17 @@ Craft.reportResult = function (success) {
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
-            puzzleNumber: Craft.initialConfig.level.puzzle_number
+            puzzleNumber: Craft.initialConfig.level.puzzle_number,
           }),
           tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
-          generatedCodeDescription: craftMsg.generatedCodeDescription()
+          generatedCodeDescription: craftMsg.generatedCodeDescription(),
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
-        disableSaveToGallery: !isSignedIn
+        disableSaveToGallery: !isSignedIn,
       });
-    }
+    },
   });
 };
 

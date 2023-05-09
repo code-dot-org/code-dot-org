@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-12 03:42:05 UTC",
+    "serialized_at": "2023-04-25 23:04:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -353,7 +353,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "preparation": "* Preview the assessment questions",
+        "preparation": "* Preview the assessment questions\n* If you are teaching virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing)",
         "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
@@ -951,21 +951,8 @@
       }
     },
     {
-      "key": "d5896ffb-3838-43ba-8897-7860c85e153a",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d5896ffb-3838-43ba-8897-7860c85e153a",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
       "key": "7e6df4e4-cde8-400f-a9c2-4ba04e84d19d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -979,7 +966,7 @@
     },
     {
       "key": "5da4346f-d40b-4265-8e24-c2d649d928eb",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1251,66 +1238,38 @@
       }
     },
     {
+      "key": "20be60c2-ea3e-41b0-87fd-3fcb018e908b",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "20be60c2-ea3e-41b0-87fd-3fcb018e908b",
+        "lesson_activity.key": "275c1724-72c0-4459-b367-a8f52c7e07dc"
+      }
+    },
+    {
+      "key": "ca4ec37f-9435-474f-8a2a-be63bef66050",
+      "position": 6,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca4ec37f-9435-474f-8a2a-be63bef66050",
+        "lesson_activity.key": "275c1724-72c0-4459-b367-a8f52c7e07dc"
+      }
+    },
+    {
       "key": "daf25887-3b63-4b25-a294-0c75c6864830",
       "position": 1,
       "properties": {
-        "description": "Here, we have all of the apps embedded in Choice Levels. The students should start at level 1 and work through level 5 to build one complete app prototype. Whatever app they initially select, they will need to continue to choose that app on the subsequent levels.\n\nThe three different apps have a different \"spice level\" -- essentially differentiation for students so that they create an app with an appropriate level of challenge for their current skill level.",
-        "name": "Option One",
+        "description": "TO ADD = Description / Instructions ",
+        "name": "App Development",
         "progression_name": "App Development: Lists in Action!"
       },
       "seeding_key": {
         "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830",
-        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
-      }
-    },
-    {
-      "key": "72d329f5-3451-420f-b7c5-e7662c67eef9",
-      "position": 2,
-      "properties": {
-        "description": "In this option, the different apps are laid out as individual levels, rather than as choice levels. The student is asked to choose one progression / sequence to complete. It doesn't rely on them choosing the correct app from the level sequence each time as happens in the choice level.",
-        "name": "Option Two"
-      },
-      "seeding_key": {
-        "activity_section.key": "72d329f5-3451-420f-b7c5-e7662c67eef9",
-        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
-      }
-    },
-    {
-      "key": "0c936045-355f-468f-b2ca-13b856ac7945",
-      "position": 3,
-      "properties": {
-        "description": "In this app development sequence, students will create an app that displays a random fortune, color, and lucky number when a user \"shakes\" it.",
-        "name": "Spice Level: *",
-        "progression_name": "Magic 9 Ball"
-      },
-      "seeding_key": {
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945",
-        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
-      }
-    },
-    {
-      "key": "a4973233-7629-43ed-bda3-0806a49a28c8",
-      "position": 4,
-      "properties": {
-        "description": "In this app development sequence, students will create an app that allows students to display information about a variety of birds. They are able to add to a list of favorites, and to retrieve and view that list later.",
-        "name": "Spice Level: **",
-        "progression_name": "Birds of a Feather"
-      },
-      "seeding_key": {
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8",
-        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
-      }
-    },
-    {
-      "key": "2b19c952-6ef1-4f1f-9832-978592eeed9b",
-      "position": 5,
-      "properties": {
-        "description": "In this app development sequence, students will work with lists to create an emoji generator, capable of displaying many different customization options. Students will also create the capacity for a user to save all of these customizations for particular emojis into a favorites list.",
-        "name": "Spice Level: ***",
-        "progression_name": "EmojiMaker"
-      },
-      "seeding_key": {
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b",
         "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
       }
     },
@@ -3035,26 +2994,15 @@
       }
     },
     {
-      "key": "2dd0e5cf-5af3-4dad-88f5-dbf6444a319c",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "2dd0e5cf-5af3-4dad-88f5-dbf6444a319c",
-        "lesson_activity.key": "d5896ffb-3838-43ba-8897-7860c85e153a"
-      }
-    },
-    {
       "key": "0bf86ca5-3976-4667-afef-0343ce485a72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 5 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
-        "progression_name": "Unit 5 Exam",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit Exam - Lists, Loops, and Traversals",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics5.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://images.code.org/20855b4b37e959abdd2f5a0a8098e0db-Screenshot 2023-04-25 at 3.21.26 PM.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing)\n\n"
           }
         ]
       },
@@ -3094,7 +3042,7 @@
   ],
   "script_levels": [
     {
-      "chapter": 2,
+      "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3119,7 +3067,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3144,7 +3092,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3169,7 +3117,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -3194,7 +3142,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3219,7 +3167,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3244,7 +3192,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3269,7 +3217,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3294,7 +3242,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3319,7 +3267,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -3341,6 +3289,31 @@
       },
       "level_keys": [
         "List Scrolling Pattern_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Lists Predict"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Lists Predict"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023",
+        "activity_section.key": "ca4ec37f-9435-474f-8a2a-be63bef66050"
+      },
+      "level_keys": [
+        "CSP Lists Predict"
       ]
     },
     {
@@ -3470,381 +3443,6 @@
     },
     {
       "chapter": 17,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_2-1"
-        ],
-        "progression": "Magic 9 Ball"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_2-1"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_2-2"
-        ],
-        "progression": "Magic 9 Ball"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_2-2"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_2-3"
-        ],
-        "progression": "Magic 9 Ball"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_2-3"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 9,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_2-4"
-        ],
-        "progression": "Magic 9 Ball"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_2-4"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 10,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_2-5"
-        ],
-        "progression": "Magic 9 Ball"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_2-5"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_1-1"
-        ],
-        "progression": "Birds of a Feather"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_1-1"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_1-2"
-        ],
-        "progression": "Birds of a Feather"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_1-2"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 13,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_1-3"
-        ],
-        "progression": "Birds of a Feather"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_1-3"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 14,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_1-4"
-        ],
-        "progression": "Birds of a Feather"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_1-4"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 15,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_1-5"
-        ],
-        "progression": "Birds of a Feather"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_1-5"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 16,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_3-1"
-        ],
-        "progression": "EmojiMaker"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_3-1"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 17,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_3-2"
-        ],
-        "progression": "EmojiMaker"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_3-2"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 18,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_3-3"
-        ],
-        "progression": "EmojiMaker"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_3-3"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 19,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_3-4"
-        ],
-        "progression": "EmojiMaker"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_3-4"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 20,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U6_L03_Lists Practice_Choice_3-5"
-        ],
-        "progression": "EmojiMaker"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      },
-      "level_keys": [
-        "U6_L03_Lists Practice_Choice_3-5"
-      ]
-    },
-    {
-      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3869,7 +3467,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3894,7 +3492,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3919,7 +3517,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3944,7 +3542,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3969,7 +3567,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3994,7 +3592,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4019,7 +3617,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4044,7 +3642,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4069,7 +3667,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4094,7 +3692,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4119,7 +3717,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4144,7 +3742,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4169,7 +3767,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4194,7 +3792,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +3817,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4244,7 +3842,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4269,7 +3867,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 34,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -4294,7 +3892,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4319,7 +3917,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4344,7 +3942,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4369,7 +3967,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4394,7 +3992,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4017,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4444,7 +4042,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4469,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4494,7 +4092,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4519,7 +4117,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4544,7 +4142,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4569,7 +4167,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4594,7 +4192,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4619,7 +4217,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4644,7 +4242,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4669,7 +4267,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4694,7 +4292,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4719,7 +4317,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4744,11 +4342,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 2_2023"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -4766,11 +4367,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 5_2023"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -4788,11 +4392,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp5_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4810,7 +4417,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4818,7 +4425,7 @@
         "level_keys": [
           "CSP Unit 5 AP-Style Assessment 2022_2023"
         ],
-        "progression": "Unit 5 Exam"
+        "progression": "Unit Exam - Lists, Loops, and Traversals"
       },
       "bonus": false,
       "seeding_key": {
@@ -4835,7 +4442,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4983,6 +4590,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSP Lists Predict",
+        "script_level.level_keys": [
+          "CSP Lists Predict"
+        ],
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023",
+        "activity_section.key": "ca4ec37f-9435-474f-8a2a-be63bef66050"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U6_L03_Lists Practice_Level 1",
         "script_level.level_keys": [
           "U6_L03_Lists Practice_Level 1"
@@ -5039,186 +4658,6 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2023",
         "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_2-1",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_2-2",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_2-3",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_2-4",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_2-5",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_2-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "0c936045-355f-468f-b2ca-13b856ac7945"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_1-1",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_1-2",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_1-3",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_1-4",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_1-5",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_1-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "a4973233-7629-43ed-bda3-0806a49a28c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_3-1",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-1"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_3-2",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-2"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_3-3",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-3"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_3-4",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-4"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U6_L03_Lists Practice_Choice_3-5",
-        "script_level.level_keys": [
-          "U6_L03_Lists Practice_Choice_3-5"
-        ],
-        "lesson.key": "Lists Practice",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2023",
-        "activity_section.key": "2b19c952-6ef1-4f1f-9832-978592eeed9b"
       }
     },
     {
@@ -5738,6 +5177,18 @@
       }
     },
     {
+      "name": "Assessment Day - Lists, Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1-40fvFHMW27Z0iX6UzJDCFq31Hneg-gUH5C86fzoBgo/edit?usp=sharing",
+      "key": "assessment_day_-_lists_loops_and_traversals",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_lists_loops_and_traversals"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_vocabulary",
@@ -6108,6 +5559,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -6221,7 +5684,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_6_-_lesson_13-18_-_project_assessment"
+        "resource.key": "assessment_day_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6457,6 +5920,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp6-2023"
       }
     },

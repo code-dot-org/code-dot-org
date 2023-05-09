@@ -41,7 +41,7 @@ export interface ProgressState {
 export const initialProgressState: ProgressState = {
   step: 0,
   satisfied: false,
-  message: null
+  message: null,
 };
 
 export default class ProgressManager {
@@ -52,6 +52,7 @@ export default class ProgressManager {
 
   constructor(
     progression: Progression,
+    initialStep: number | undefined,
     validator: Validator,
     onProgressChange: () => void
   ) {
@@ -59,6 +60,9 @@ export default class ProgressManager {
     this.validator = validator;
     this.onProgressChange = onProgressChange;
     this.currentProgressState = initialProgressState;
+    if (initialStep) {
+      this.currentProgressState.step = initialStep;
+    }
   }
 
   getProgression(): Progression {
@@ -99,9 +103,11 @@ export default class ProgressManager {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
-          this.currentProgressState.satisfied = validation.next;
-          this.currentProgressState.message = validation.message;
-          this.onProgressChange();
+          if (!this.currentProgressState.satisfied) {
+            this.currentProgressState.satisfied = validation.next;
+            this.currentProgressState.message = validation.message;
+            this.onProgressChange();
+          }
           return;
         }
       } else {
@@ -115,10 +121,16 @@ export default class ProgressManager {
   // Advance to the next step.  Advances the state internally and calls
   // the change handler.
   next(): void {
+    this.goToStep(this.currentProgressState.step + 1);
+  }
+
+  // Go to a specific step.  Adjusts the state internally and calls the
+  // change handler.
+  goToStep(specificStep: number): void {
     // Give the lab the chance to clear accumulated satisfied conditions.
     this.validator.clear();
 
-    this.currentProgressState.step++;
+    this.currentProgressState.step = specificStep;
     this.currentProgressState.satisfied = false;
     this.currentProgressState.message = null;
 

@@ -1,4 +1,3 @@
-/* global requirejs */
 import CdoBramble, {BRAMBLE_CONTAINER} from './CdoBramble';
 import {FILE_SYSTEM_ERROR, BRAMBLE_READY_STATE} from './constants';
 
@@ -41,7 +40,7 @@ function load(Bramble) {
 // to check that we can reach a ready state
 function loadMinimal(Bramble) {
   Bramble.load(BRAMBLE_CONTAINER, {
-    url: `${BRAMBLE_BASE_URL}/index.html`
+    url: `${BRAMBLE_BASE_URL}/index.html`,
   });
 
   Bramble.on('readyStateChange', (_, newState) => {

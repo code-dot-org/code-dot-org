@@ -14,12 +14,12 @@ const DEFAULT_PROPS = {
       {name: 'byzanz'},
       {name: 'frobozz'},
       {name: 'xyzzy'},
-      {name: 'bor'}
+      {name: 'bor'},
     ],
-    singleEntry: false
+    singleEntry: false,
   },
   selection: ['frobozz'],
-  onUserInput: FAKE_ON_USER_INPUT
+  onUserInput: FAKE_ON_USER_INPUT,
 };
 
 function getItemBorderLeft(wrapper, itemIndex) {
