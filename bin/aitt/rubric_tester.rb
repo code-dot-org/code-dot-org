@@ -3,8 +3,6 @@
 require 'csv'
 require 'json'
 require 'httparty'
-require 'nokogiri'
-require 'open3'
 require 'parallel'
 require 'optparse'
 
