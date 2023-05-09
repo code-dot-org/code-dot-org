@@ -160,6 +160,8 @@ const grades2And3ShownCurricula = [
   course3Curriculum,
 ];
 
+const weeklongShownCurricula = [makerCurriculum];
+
 const physicalCompShownCurricula = [makerCurriculum];
 
 const nonNullSchoolSubjectShownCurricula = [
@@ -195,6 +197,7 @@ export default {
   allCurricula,
   allShownCurricula,
   grades2And3ShownCurricula,
+  weeklongShownCurricula,
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,

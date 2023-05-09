@@ -12,6 +12,7 @@ import {
   allCurricula,
   allShownCurricula,
   grades2And3ShownCurricula,
+  weeklongShownCurricula,
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
@@ -89,6 +90,24 @@ describe('CurriculumCatalog', () => {
     expect(numFilteredCurriculumCards).to.equal(
       grades2And3ShownCurricula.length
     );
+  });
+
+  it('filtering by duration shows any shown course that is one of the selected durations', () => {
+    const numTotalCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+
+    // Select "Week" in grade level filter
+    const weekFilterCheckbox = screen.getByDisplayValue('week');
+    fireEvent.click(weekFilterCheckbox);
+    assert(weekFilterCheckbox.checked);
+
+    // Filters for all week-long courses
+    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
+      exact: false,
+    }).length;
+    expect(numFilteredCurriculumCards).to.equal(weeklongShownCurricula.length);
   });
 
   it('filtering by topic shows any course with at least 1 of the selected topics', () => {
