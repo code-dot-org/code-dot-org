@@ -12,7 +12,7 @@
       user_id: response.user_id,
       text: response.level_source&.data,
     }
-  end.filter { |r| !!r[:text] }  # Remove empty responses.
+  end&.filter { |r| !!r[:text] }  # Remove empty responses.
 
   teacher_markdown = if level.respond_to?(:solution) && level.solution.present? && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
     level.solution
