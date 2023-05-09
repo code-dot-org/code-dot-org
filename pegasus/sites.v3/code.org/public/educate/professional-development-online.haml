@@ -1,0 +1,48 @@
+---
+title: Online Self-Paced Professional Learning for Teachers | Code.org
+theme: responsive_full_width
+---
+
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: '/css/generated/professional-development-online.css', rel: 'stylesheet'}
+
+-# FontAwesome icons
+- icon_calendar_clock = "fa-solid fa-calendar-clock"
+- icon_person_rays = "fa-solid fa-person-rays"
+- icon_star = "fa-solid fa-star"
+
+%section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
+  .wrapper
+    .text-wrapper.col-60
+      %h1{style: "color: white"} Self-Paced Professional Learning For Educators
+      %p{style: "color: white"} Professional learning offerings to support teachers in every stage of their computer science teaching journey.
+    .clear
+    %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
+
+%section
+  .wrapper
+    %h2 Professional Learning on your timeline
+    %p Code.org is pleased to offer self-paced modules for teachers. These modules are available at no cost to any educator with a Code.org account worldwide!
+    %div.flex-container.justify-space-between.align-items-center.wrap
+      %ul.icon-bullet-list.full-width.col-45
+        %li
+          %div
+            %i{class: "#{icon_calendar_clock}"}
+          .text-wrapper
+            %h3 Flexibility and Convenience
+            %p Engage with the material at your own pace and on your own time.
+        %li
+          %div
+            %i{class: "#{icon_person_rays}"}
+          .text-wrapper
+            %h3 Personalized Learning Experience
+            %p Focus on the areas that are most important to your needs and teaching context.
+        %li.no-margin-bottom
+          %div
+            %i{class: "#{icon_star}"}
+          .text-wrapper
+            %h3 Access to High-Quality Content
+            %p Access to the latest best practices, research, and strategies for teaching computer science effectively.
+      %figure.col-50
+        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 1em;"}
+    .clear

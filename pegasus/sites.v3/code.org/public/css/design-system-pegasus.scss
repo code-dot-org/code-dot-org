@@ -41,6 +41,23 @@ section.bg-secondary { background-color: $brand_secondary_light; }
   -webkit-font-smoothing: antialiased;
 }
 
+// Flex containers
+.flex-container {
+  display: flex;
+
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+
+  &.align-items-center {
+    align-items: center;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
 // Line divider for use between sections
 // Use .no-margin-bottom to remove extra space above
 // a section that starts with an h2
@@ -179,7 +196,7 @@ ul {
 
   // Lists that use icons next to content
   &.icon-bullet-list {
-    margin: 2em 0 1em;
+    margin: 1em 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
