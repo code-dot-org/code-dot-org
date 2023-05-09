@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-04-28 18:53:13 UTC",
+    "serialized_at": "2023-05-08 22:06:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1400,15 +1400,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_ecosystems_freeplay_2023"
-        ],
         "progression": "Code Your Own Ecosystem Simulation"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_ecosystems_freeplay_2023"
+          "csc_ecosystems_simulation_setup"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1416,7 +1413,73 @@
         "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
       },
       "level_keys": [
-        "csc_ecosystems_freeplay_2023"
+        "csc_ecosystems_simulation_setup"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Your Own Ecosystem Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_events"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      },
+      "level_keys": [
+        "csc_ecosystems_simulation_events"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Your Own Ecosystem Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_conditional"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      },
+      "level_keys": [
+        "csc_ecosystems_simulation_conditional"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Your Own Ecosystem Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_setup_TEMPLATE"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      },
+      "level_keys": [
+        "csc_ecosystems_simulation_setup_TEMPLATE"
       ]
     }
   ],
@@ -1699,9 +1762,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_ecosystems_freeplay_2023",
+        "level.key": "csc_ecosystems_simulation_setup",
         "script_level.level_keys": [
-          "csc_ecosystems_freeplay_2023"
+          "csc_ecosystems_simulation_setup"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_simulation_events",
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_events"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_simulation_conditional",
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_conditional"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-ecosystems-2023",
+        "activity_section.key": "81bd8cd7-0a8a-41d4-9ea9-34e285777719"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_simulation_setup_TEMPLATE",
+        "script_level.level_keys": [
+          "csc_ecosystems_simulation_setup_TEMPLATE"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
