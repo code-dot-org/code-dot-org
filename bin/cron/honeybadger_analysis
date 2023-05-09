@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
+require '../../lib/cdo/data/logging/infrastructure_logger'
 require '../../lib/cdo/honeybadger/honeybadger_fault_analyzer'
+require '../../lib/cdo/honeybadger/honeybadger_url_builder'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
@@ -8,14 +10,20 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 def main
   filters = %w[-is:resolved -is:paused%20 -is:ignored environment:"production" assignee:"nobody"]
   time_filters = ["occurred_after=#{1.day.ago.to_i}"]
-  analyzer = HoneybadgerFaultAnalyzer.new(time_filters, filters)
-  faults = analyzer.get_faults_for_project(45435, 25)
+  honeybadger_url_builder = HoneybadgerUrlBuilder.new(time_filters, filters)
+  analyzer = HoneybadgerFaultAnalyzer.new(honeybadger_url_builder)
+  faults = analyzer.get_faults_for_project(3240, 25)
   notices_within_range_sum = 0
+
   faults.each do |fault|
+    puts fault.id
     notices_within_range_sum += fault.notices_within_range
-    puts fault.to_s
+    affected_users = fault.get_affected_users
+
+    Infrastructure::Logger.puts('testing_faults_affected_users', affected_users.count)
+    puts "____"
   end
-  puts notices_within_range_sum
+  Infrastructure::Logger.flush
 end
 
 main
