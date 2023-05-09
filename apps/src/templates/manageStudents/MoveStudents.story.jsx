@@ -52,18 +52,18 @@ const Template = args => (
 
 export const MoveStudentsEmptyDialog = Template.bind({});
 MoveStudentsEmptyDialog.args = {
-  tranferData: blankStudentTransfer,
+  transferData: blankStudentTransfer,
   transferStatus: blankStudentTransferStatus,
 };
 
 export const MoveStudentsDialogToOtherTeacher = Template.bind({});
 MoveStudentsDialogToOtherTeacher.args = {
-  tranferData: transferToOtherTeacher,
+  transferData: transferToOtherTeacher,
   transferStatus: blankStudentTransferStatus,
 };
 
 export const MoveStudentsDialogWithError = Template.bind({});
 MoveStudentsDialogWithError.args = {
-  tranferData: transferToOtherTeacher,
+  transferData: transferToOtherTeacher,
   transferStatus: errorTransferStatus,
 };
