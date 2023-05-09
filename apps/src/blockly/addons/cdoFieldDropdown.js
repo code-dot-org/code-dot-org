@@ -1,6 +1,9 @@
 import GoogleBlockly from 'blockly/core';
 import {EMPTY_OPTION} from '../constants';
-import {printerStyleNumberRangeToList} from '@cdo/apps/p5lab/utils';
+import {
+  printerStyleNumberRangeToList,
+  numberListToString,
+} from '@cdo/apps/p5lab/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /** Add special case for ???
@@ -53,29 +56,31 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
             return optionsMap;
           }, {})
         : {};
-      let options = printerStyleNumberRangeToList(this.config);
-      // `options` is not a number range, it is a customized config string.
-      if (options.length === 0) {
-        options = this.config.split(',').map(val => {
-          val = val.trim();
-          // If val is a one of the options in this.menuGenerator_,
-          // human-readable string is displayed.
-          if (originalOptionsMap[val]) {
-            return [originalOptionsMap[val], val];
-          } else {
-            // Remove quotes and display option with lowercase characters.
-            // For example, "GIRAFFE" would be transformed to giraffe.
-            const humanReadableVal = val.replace(/['"]+/g, '').toLowerCase();
-            return [humanReadableVal, val];
-          }
-        });
+
+      let options = null;
+      const numberList = printerStyleNumberRangeToList(this.config);
+      // If numberList is assigned a non-empty array, it contains a list of numbers.
+      // Convert this list to a string of dropdown options separated by commas and assign to options.
+      if (numberList.length > 0) {
+        options = numberListToString(numberList);
       } else {
-        // `options` is a list of numbers
-        options = options.map(num => {
-          const numString = num.toString();
-          return [numString, numString];
-        });
+        // otherwise, assign options to config string
+        options = this.config;
       }
+      options = options.split(',').map(val => {
+        val = val.trim();
+        // If val is a one of the options in this.menuGenerator_,
+        // human-readable string is displayed.
+        if (originalOptionsMap[val]) {
+          return [originalOptionsMap[val], val];
+        } else {
+          // Remove quotes and display option with lowercase characters.
+          // For example, "GIRAFFE" would be transformed to giraffe.
+          const humanReadableVal = val.replace(/['"]+/g, '').toLowerCase();
+          return [humanReadableVal, val];
+        }
+      });
+
       // set the menuGenerator_ to those config options.
       this.menuGenerator_ = options;
     }

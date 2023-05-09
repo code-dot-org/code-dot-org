@@ -78,3 +78,20 @@ export function printerStyleNumberRangeToList(rangeString) {
   }, []);
   return fullNumberList;
 }
+
+/**
+ * Converts an array of numbers to a string of numbers separated by commas
+ * e.g., [1,2,4,5,6] becomes "1,2,4,5,6", [5] becomes "5"
+ * @param numberList array of numbers
+ * @returns  numberString {string}
+ */
+export function numberListToString(numberList) {
+  let numberString = numberList.reduce((str, curr) => {
+    str = str + curr + ',';
+    return str;
+  }, '');
+  if (numberList.length > 0) {
+    numberString = numberString.slice(0, -1);
+  }
+  return numberString;
+}
