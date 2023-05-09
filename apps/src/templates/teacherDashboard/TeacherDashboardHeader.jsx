@@ -93,11 +93,12 @@ class TeacherDashboardHeader extends React.Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = sectionId => {
-    const editSectionUrl = '/sections/' + sectionId + '/edit';
-    return editSectionUrl;
+    return '/sections/' + sectionId + '/edit';
   };
 
   render() {
+    const testingUserId = -1;
+
     return (
       <div>
         <SmallChevronLink
@@ -126,8 +127,7 @@ class TeacherDashboardHeader extends React.Component {
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
-              {/* Uncomment when ready to launch */}
-              {/* {this.props.userId % 10 === 0 && (
+              {this.props.userId % 10 === testingUserId && (
                 <Button
                   __useDeprecatedTag
                   href={this.editRedirectUrl(this.props.selectedSection.id)}
@@ -139,24 +139,24 @@ class TeacherDashboardHeader extends React.Component {
                   style={styles.buttonWithMargin}
                 />
               )}
-              {this.props.userId % 10 !== 0 && ( */}
-              <Button
-                onClick={() => {
-                  this.props.openEditSectionDialog(
-                    this.props.selectedSection.id
-                  );
-                  recordOpenEditSectionDetails(
-                    this.props.selectedSection.id,
-                    'dashboard_header'
-                  );
-                }}
-                icon="gear"
-                size="narrow"
-                color="gray"
-                text={i18n.editSectionDetails()}
-                style={styles.buttonWithMargin}
-              />
-              {/* )} */}
+              {this.props.userId % 10 !== testingUserId && (
+                <Button
+                  onClick={() => {
+                    this.props.openEditSectionDialog(
+                      this.props.selectedSection.id
+                    );
+                    recordOpenEditSectionDetails(
+                      this.props.selectedSection.id,
+                      'dashboard_header'
+                    );
+                  }}
+                  icon="gear"
+                  size="narrow"
+                  color="gray"
+                  text={i18n.editSectionDetails()}
+                  style={styles.buttonWithMargin}
+                />
+              )}
               <DropdownButton
                 size="narrow"
                 color="gray"
