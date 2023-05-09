@@ -29,7 +29,7 @@ class HoneybadgerFaultAnalyzer
     validate_api_token!
     faults = []
     get_all_projects_and_ids.each do |_, project_id|
-      faults = get_faults_for_project(project_id, limit)
+      faults << get_faults_for_project(project_id, limit)
     end
     faults
   end
