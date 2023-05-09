@@ -34,7 +34,7 @@ describe('Timeout API', () => {
   // executor because they get aliased.
   it('is internally complete', () => {
     for (let commandName in commands) {
-      if (!commands.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(commands, commandName)) {
         continue;
       }
       expect(executors).to.have.ownProperty(commandName);
@@ -42,7 +42,7 @@ describe('Timeout API', () => {
     }
 
     for (let commandName in executors) {
-      if (!executors.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(executors, commandName)) {
         continue;
       }
       expect(commands).to.have.ownProperty(commandName);
@@ -50,7 +50,7 @@ describe('Timeout API', () => {
     }
 
     for (let commandName in dropletConfig) {
-      if (!dropletConfig.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(dropletConfig, commandName)) {
         continue;
       }
       expect(dropletConfig[commandName].func).to.equal(commandName);

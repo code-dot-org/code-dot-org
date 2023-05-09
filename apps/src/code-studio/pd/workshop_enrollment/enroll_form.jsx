@@ -419,7 +419,10 @@ export default class EnrollForm extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.props.first_name}
             validationState={
-              this.state.errors.hasOwnProperty('first_name')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'first_name'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -432,7 +435,10 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('last_name')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'last_name'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -450,7 +456,7 @@ export default class EnrollForm extends React.Component {
               this.props.email ? 'Email can be changed in account settings' : ''
             }
             validationState={
-              this.state.errors.hasOwnProperty('email')
+              Object.prototype.hasOwnProperty.call(this.state.errors, 'email')
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -464,7 +470,10 @@ export default class EnrollForm extends React.Component {
               required={true}
               onChange={this.handleChange}
               validationState={
-                this.state.errors.hasOwnProperty('confirm_email')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'confirm_email'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -482,7 +491,7 @@ export default class EnrollForm extends React.Component {
           <FormGroup>
             <FormGroup
               validationState={
-                this.state.errors.hasOwnProperty('role')
+                Object.prototype.hasOwnProperty.call(this.state.errors, 'role')
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -519,7 +528,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.grades_teaching}
                 validationState={
-                  this.state.errors.hasOwnProperty('grades_teaching')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'grades_teaching'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -541,7 +553,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.csf_intro_intent}
               validationState={
-                this.state.errors.hasOwnProperty('csf_intro_intent')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'csf_intro_intent'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -559,7 +574,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.csf_intro_other_factors}
               validationState={
-                this.state.errors.hasOwnProperty('csf_intro_other_factors')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'csf_intro_other_factors'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -595,7 +613,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.csf_courses_planned}
                 validationState={
-                  this.state.errors.hasOwnProperty('csf_courses_planned')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'csf_courses_planned'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -611,7 +632,8 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.attended_csf_intro_workshop}
                 validationState={
-                  this.state.errors.hasOwnProperty(
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
                     'attended_csf_intro_workshop'
                   )
                     ? VALIDATION_STATE_ERROR
@@ -630,7 +652,8 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.csf_has_physical_curriculum_guide}
                 validationState={
-                  this.state.errors.hasOwnProperty(
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
                     'csf_has_physical_curriculum_guide'
                   )
                     ? VALIDATION_STATE_ERROR
@@ -654,7 +677,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.previous_courses}
               validationState={
-                this.state.errors.hasOwnProperty('previous_courses')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'previous_courses'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -672,7 +698,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.replace_existing}
               validationState={
-                this.state.errors.hasOwnProperty('replace_existing')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'replace_existing'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -694,7 +723,10 @@ export default class EnrollForm extends React.Component {
                 required={true}
                 onChange={this.handleChange}
                 validationState={
-                  this.state.errors.hasOwnProperty('years_teaching')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'years_teaching'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -707,7 +739,10 @@ export default class EnrollForm extends React.Component {
                 required={true}
                 onChange={this.handleChange}
                 validationState={
-                  this.state.errors.hasOwnProperty('years_teaching_cs')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'years_teaching_cs'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -722,7 +757,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.taught_ap_before}
                 validationState={
-                  this.state.errors.hasOwnProperty('taught_ap_before')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'taught_ap_before'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -738,7 +776,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.planning_to_teach_ap}
                 validationState={
-                  this.state.errors.hasOwnProperty('planning_to_teach_ap')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'planning_to_teach_ap'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
