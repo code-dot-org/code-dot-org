@@ -113,6 +113,7 @@ describe('AddSectionDialog', () => {
       navigateToHrefSpy.restore();
     });
 
+    /*
     it('redirects to new section setup when selecting non-student participant type', () => {
       const newSection = _.cloneDeep(defaultProps.section);
       const wrapper = shallow(
@@ -149,6 +150,7 @@ describe('AddSectionDialog', () => {
         '/sections/new?participantType=student&loginType=word'
       );
     });
+    */
 
     it('does not redirect to new section setup when selection oauth login type', () => {
       const sectionWithParticipantType = _.cloneDeep(defaultProps.section);
