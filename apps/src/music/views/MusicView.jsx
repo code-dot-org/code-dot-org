@@ -44,6 +44,13 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
+import header from '../../code-studio/header';
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+} from '../../code-studio/projectRedux';
+import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -58,10 +65,15 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     appOptions: PropTypes.object,
     appConfig: PropTypes.object,
-    levels: PropTypes.array,
-    currentLevelIndex: PropTypes.number,
+    /**
+     * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
+     * false/undefined if as part of a script or standalone level.
+     * */
+    inIncubator: PropTypes.bool,
 
     // populated by Redux
+    currentLevelIndex: PropTypes.number,
+    levels: PropTypes.array,
     userId: PropTypes.number,
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
@@ -82,6 +94,9 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
+    setProjectUpdatedSaving: PropTypes.func,
+    setProjectUpdatedAt: PropTypes.func,
+    setProjectUpdatedError: PropTypes.func,
   };
 
   constructor(props) {
@@ -110,6 +125,9 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       showingVideo: true,
     };
+
+    // Music Lab currently does not support share and remix
+    header.showHeaderForProjectBacked({showShareAndRemix: false});
   }
 
   componentDidMount() {
@@ -180,6 +198,30 @@ class UnconnectedMusicView extends React.Component {
         this.onBlockSpaceChange,
         this.player,
         this.progressManager?.getCurrentStepDetails().toolbox
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveStart,
+        () => {
+          this.props.setProjectUpdatedSaving();
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveSuccess,
+        status => {
+          this.props.setProjectUpdatedAt(status.updatedAt);
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveNoop,
+        status => {
+          this.props.setProjectUpdatedAt(status.updatedAt);
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveFail,
+        () => {
+          this.props.setProjectUpdatedError();
+        }
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -449,6 +491,7 @@ class UnconnectedMusicView extends React.Component {
     this.compileSong();
 
     this.executeCompiledSong();
+    this.musicBlocklyWorkspace.saveCode(true);
 
     this.player.playSong(this.sequencer.getPlaybackEvents());
 
@@ -576,6 +619,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
+                  canShowSaveStatus={this.props.inIncubator}
                 />
               </div>
               <div id="blockly-div" />
@@ -638,6 +682,9 @@ const MusicView = connect(
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
+    setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
+    setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
+    setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
   })
 )(UnconnectedMusicView);
 
