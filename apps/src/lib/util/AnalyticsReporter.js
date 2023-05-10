@@ -10,6 +10,7 @@ import {
   getEnvironment,
   isProductionEnvironment,
   isStagingEnvironment,
+  isDevelopmentEnvironment,
 } from '../../utils';
 
 // A flag that can be toggled to send events regardless of environment
@@ -59,8 +60,12 @@ class AnalyticsReporter {
     }
   }
 
+  // Will only log in development into console.debug (viewable by selecting the Verbose debug level in
+  // dev tools).
   log(message) {
-    console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    if (isDevelopmentEnvironment()) {
+      console.debug(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    }
   }
 
   formatUserId(userId) {
