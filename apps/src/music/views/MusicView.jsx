@@ -661,17 +661,19 @@ const MusicView = connect(
     // The current level index has two potential sources of truth:
     // If we are part of a "script level", then it comes from the current level.
     // Otherwise, we fall back to the music progress manager's current step.
-    currentLevelIndex: state.progress.lessons
-      ? levelsForLessonId(
-          state.progress,
-          state.progress.currentLessonId
-        ).findIndex(level => level.isCurrentLevel)
-      : state.music.currentProgressState.step,
+    currentLevelIndex:
+      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
+        ? levelsForLessonId(
+            state.progress,
+            state.progress.currentLessonId
+          ).findIndex(level => level.isCurrentLevel)
+        : state.music.currentProgressState.step,
 
     // When we are in a lesson with multiple levels, they are here.
-    levels: state.progress.lessons
-      ? levelsForLessonId(state.progress, state.progress.currentLessonId)
-      : undefined,
+    levels:
+      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
+        ? levelsForLessonId(state.progress, state.progress.currentLessonId)
+        : undefined,
 
     // The current level ID, whether we're in a lesson with multiple levels, or
     // directly viewing a standalone level.
