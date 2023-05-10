@@ -20,9 +20,6 @@ export enum ProjectManagerEvent {
 }
 
 export default class ProjectManager {
-  // Channel id can be provided at initialization, or set later via load(levelId).
-  // We support both paths so that /projects can be created with a specific channel id,
-  // or we can load a channel for a level.
   channelId: string;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
@@ -85,8 +82,8 @@ export default class ProjectManager {
     return this.sourceChanged(project) || this.channelChanged(project);
   }
 
-  // Shut down this project manager. All we do here is clear any existing
-  // timeouts.
+  // Shut down this project manager. All we do here is clear the existing
+  // timeout, if it exists.
   destroy(): void {
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
