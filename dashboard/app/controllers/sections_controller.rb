@@ -5,16 +5,12 @@ class SectionsController < ApplicationController
   authorize_resource :section, only: [:new]
 
   def new
-    return head :forbidden unless current_user
-
     redirect_to '/home' unless params[:loginType] && params[:participantType]
 
     @is_users_first_section = current_user.sections.empty?
   end
 
   def edit
-    return head :forbidden unless current_user
-
     existing_section = Section.find_by(
       id: params[:id]
     )

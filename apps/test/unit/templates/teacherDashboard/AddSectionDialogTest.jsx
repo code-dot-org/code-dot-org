@@ -85,6 +85,23 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
+  it('once login type and audience are set EditSectionForm shows', () => {
+    let sectionWithLoginAndParticipantType = _.cloneDeep(defaultProps.section);
+    sectionWithLoginAndParticipantType.loginType = 'word';
+    sectionWithLoginAndParticipantType.participantType = 'student';
+
+    const wrapper = shallow(
+      <AddSectionDialog
+        {...defaultProps}
+        section={sectionWithLoginAndParticipantType}
+      />
+    );
+    expect(wrapper.find('Spinner').length).to.equal(0);
+    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
+    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
+    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
+  });
+
   describe('sectionSetupRefresh', () => {
     let navigateToHrefSpy;
 
