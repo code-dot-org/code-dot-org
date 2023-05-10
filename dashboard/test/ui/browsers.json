@@ -25,8 +25,9 @@
   },
   {
     "name": "iPhone",
+    "platformName": "iOS",
+    "platformVersion": "15.4",
     "browserName": "safari",
-    "platformName": "iOS 15.4",
     "appium:deviceName": "iPhone Simulator",
     "mobile": true,
     "rotatable": true,
