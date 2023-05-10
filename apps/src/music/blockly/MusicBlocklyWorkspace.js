@@ -28,18 +28,22 @@ import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
+import LevelChangeManager from '@cdo/apps/labs/LevelChangeManager';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor(channelId) {
+  constructor() {
     this.codeHooks = {};
     this.compiledEvents = null;
     this.lastExecutedEvents = null;
     this.channel = {};
     this.projectManager = null;
+    this.levelChangeManager = new LevelChangeManager(
+      this.resetProject.bind(this)
+    );
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -385,28 +389,35 @@ export default class MusicBlocklyWorkspace {
   }
 
   saveCode(forceSave = false) {
-    this.projectManager.save(forceSave);
+    this.projectManager.save(this.getProject(), forceSave);
   }
 
   hasUnsavedChanges() {
     return this.projectManager.hasUnsavedChanges();
   }
 
-  async changeLevels(newLevelId, newScriptId) {
-    if (this.hasUnsavedChanges()) {
-      // Force a save with the current code before changing panels if there are unsaved changes.
-      await this.projectManager.save(true);
-    }
-    // Clear out any remaining enqueud saves from the existing project manager.
-    this.projectManager.destroy();
-    // Now that we've saved (if we needed to), create a new ProjectManager and
-    // load the code for this level.
+  initiateLevelChange(newLevelId, newScriptId) {
+    this.levelChangeManager.enqueueLevelChange(
+      this.getProject(),
+      this.projectManager,
+      newLevelId,
+      newScriptId
+    );
+  }
+
+  async resetProject(newLevelId, newScriptId) {
+    console.log(
+      `[DEBUGGING] changing to level ${newLevelId} script ${newScriptId}`
+    );
     this.projectManager = await this.getProjectManager(
       undefined,
       newLevelId,
       newScriptId
     );
     await this.loadCode();
+    console.log(
+      `[DEBUGGING] finished changing to level ${newLevelId} script ${newScriptId}`
+    );
   }
 
   loadDefaultCode() {
@@ -455,13 +466,11 @@ export default class MusicBlocklyWorkspace {
     if (channelId) {
       return ProjectManagerFactory.getProjectManager(
         projectManagerStorageType,
-        this.getProject.bind(this),
         channelId
       );
     } else {
       return await ProjectManagerFactory.getProjectManagerForLevel(
         projectManagerStorageType,
-        this.getProject.bind(this),
         currentLevelId,
         currentScriptId
       );

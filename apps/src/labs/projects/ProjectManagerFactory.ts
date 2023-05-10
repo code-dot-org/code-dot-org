@@ -7,7 +7,7 @@
 import {RemoteChannelsStore, LocalChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';
 import {RemoteSourcesStore, LocalSourcesStore} from './SourcesStore';
-import {Project, ProjectManagerStorageType} from '../types';
+import {ProjectManagerStorageType} from '../types';
 
 export default class ProjectManagerFactory {
   /**
@@ -19,13 +19,11 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
-    getProject: () => Project,
     projectId: string
   ): ProjectManager {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       this.getChannelsStore(projectManagerStorageType),
-      getProject,
       projectId
     );
   }
@@ -37,12 +35,11 @@ export default class ProjectManagerFactory {
    * @param projectManagerStorageType The storage type for the project manager.
    * @param getProject A method which returns the project sources and channel.
    * @param levelId The identifier for the level.
-   * @param scriptName The name of the script. Can be undefined if the level is not in the context of a script.
+   * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
-    getProject: () => Project,
     levelId: number,
     scriptId?: number
   ): Promise<ProjectManager> {
@@ -61,7 +58,6 @@ export default class ProjectManagerFactory {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       channelsStore,
-      getProject,
       channelId
     );
   }

@@ -23,7 +23,7 @@ export default class ProjectManager {
   channelId: string;
   sourcesStore: SourcesStore;
   channelsStore: ChannelsStore;
-  getProject: () => Project;
+  projectToSave: Project | undefined;
 
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
@@ -44,13 +44,12 @@ export default class ProjectManager {
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
-    getProject: () => Project,
     channelId: string
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
-    this.getProject = getProject;
+    console.log(`[DEBUGGING] created project manager for ${channelId}`);
   }
 
   // Load the project from the sources and channels store.
@@ -83,8 +82,11 @@ export default class ProjectManager {
   }
 
   hasUnsavedChanges(): boolean {
-    const project = this.getProject();
-    return this.sourceChanged(project) || this.channelChanged(project);
+    // If a save has not been queued, do not check for unsaved changes.
+    // if (!this.saveQueued) {
+    //   return false;
+    // }
+    return this.sourceChanged() || this.channelChanged();
   }
 
   // Shut down this project manager. All we do here is clear the existing
@@ -95,6 +97,9 @@ export default class ProjectManager {
       this.timeoutId = undefined;
     }
     this.destroyed = false;
+    console.log(
+      `[DEBUGGING] destroyed project manager with channel id ${this.channelId}`
+    );
   }
 
   // TODO: Add functionality to reduce channel updates during
@@ -109,25 +114,36 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(forceSave = false): Promise<Response> {
+  async save(project: Project, forceSave = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
+      console.log(
+        `[DEBUGGING] tried to save on a destroyed project manager with channel id ${this.channelId}`
+      );
       return this.getNoopResponse();
     }
+    this.projectToSave = project;
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
+      return this.getNoopResponse();
+    } else {
+      this.saveHelper();
+    }
+  }
+
+  private async saveHelper(): Promise<Response> {
+    if (!this.projectToSave) {
       return this.getNoopResponse();
     }
     this.resetSaveState();
     this.saveInProgress = true;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
-    const project = this.getProject();
-    const sourceChanged = this.sourceChanged(project);
-    const channelChanged = this.channelChanged(project);
+    const sourceChanged = this.sourceChanged();
+    const channelChanged = this.channelChanged();
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
@@ -135,9 +151,14 @@ export default class ProjectManager {
     }
     // Only save the source if it has changed.
     if (sourceChanged) {
+      console.log(
+        `[DEBUGGING] saving for project with channel id ${
+          this.channelId
+        }, source is ${JSON.stringify(this.projectToSave.source)}`
+      );
       const sourceResponse = await this.sourcesStore.save(
         this.channelId,
-        project.source
+        this.projectToSave.source
       );
       if (!sourceResponse.ok) {
         this.saveInProgress = false;
@@ -147,13 +168,15 @@ export default class ProjectManager {
         // Maybe add a more specific statusText to the response?
         return sourceResponse;
       }
-      this.lastSource = JSON.stringify(project.source);
+      this.lastSource = JSON.stringify(this.projectToSave.source);
     }
 
     // Always save the channel--either the channel has changed and/or the source changed.
     // Even if only the source changed, we still update the channel to modify the last
     // updated time.
-    const channelResponse = await this.channelsStore.save(project.channel);
+    const channelResponse = await this.channelsStore.save(
+      this.projectToSave.channel
+    );
     if (!channelResponse.ok) {
       this.saveInProgress = false;
       this.executeListeners(ProjectManagerEvent.SaveFail, channelResponse);
@@ -162,7 +185,7 @@ export default class ProjectManager {
       // Maybe add a more specific statusText to the response?
       return channelResponse;
     }
-    this.lastChannel = JSON.stringify(project.channel);
+    this.lastChannel = JSON.stringify(this.projectToSave.channel);
 
     this.saveInProgress = false;
     this.executeListeners(ProjectManagerEvent.SaveSuccess);
@@ -187,7 +210,7 @@ export default class ProjectManager {
 
     this.timeoutId = window.setTimeout(
       () => {
-        this.save();
+        this.saveHelper();
       },
       this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
     );
@@ -214,12 +237,18 @@ export default class ProjectManager {
     return noopResponse;
   }
 
-  private sourceChanged(project: Project): boolean {
-    return this.lastSource !== JSON.stringify(project.source);
+  private sourceChanged(): boolean {
+    if (!this.projectToSave) {
+      return false;
+    }
+    return this.lastSource !== JSON.stringify(this.projectToSave.source);
   }
 
-  private channelChanged(project: Project): boolean {
-    return this.lastChannel !== JSON.stringify(project.channel);
+  private channelChanged(): boolean {
+    if (!this.projectToSave) {
+      return false;
+    }
+    return this.lastChannel !== JSON.stringify(this.projectToSave.channel);
   }
 
   private resetSaveState(): void {

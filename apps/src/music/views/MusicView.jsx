@@ -283,7 +283,7 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
-    this.musicBlocklyWorkspace.changeLevels(
+    this.musicBlocklyWorkspace.initiateLevelChange(
       this.props.currentLevelId,
       this.props.currentScriptId
     );
