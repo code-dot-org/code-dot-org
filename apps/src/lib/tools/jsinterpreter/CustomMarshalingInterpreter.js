@@ -241,7 +241,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
         if (
-          !obj.data.hasOwnProperty(name) &&
+          !Object.prototype.hasOwnProperty.call(obj.data, name) &&
           value instanceof Interpreter.Object
         ) {
           // When assigning an interpreter object as a property on a

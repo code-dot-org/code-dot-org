@@ -7,7 +7,7 @@ wrong '`28`'
 wrong '`22`'
 wrong '`26`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

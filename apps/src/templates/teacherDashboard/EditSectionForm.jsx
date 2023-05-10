@@ -163,7 +163,10 @@ class EditSectionForm extends Component {
           initialCourseVersionId
         ].key
       : null;
-    const course = courseOfferings.hasOwnProperty(section.courseOfferingId)
+    const course = Object.prototype.hasOwnProperty.call(
+      courseOfferings,
+      section.courseOfferingId
+    )
       ? courseOfferings[section.courseOfferingId]
       : null;
     const courseName = course ? course.display_name : null;

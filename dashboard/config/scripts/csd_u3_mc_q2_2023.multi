@@ -17,3 +17,5 @@ The program below attempts to draw a crab with a blue background. What change ne
 <br><br>
 ![](https://images.code.org/34bb691c1fd9a278f739d4a6c8385e22-CSDunit3sprite.png)
 MARKDOWN
+
+allow_multiple_attempts true

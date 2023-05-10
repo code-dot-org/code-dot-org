@@ -2455,11 +2455,40 @@ bg:
               display_name: Условия
             end_of_course_project:
               display_name: Проект за Края на Курса
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
           title: AI и Машинно Обучение
         focus-on-data3-2023:
           title: AI и Машинно Обучение
         focus-on-impact-in-society4-2023:
           title: AI и Машинно Обучение
         microbit-2023:
-          title: микробит
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Въведение

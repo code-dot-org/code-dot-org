@@ -115,7 +115,10 @@ class SyncOmniAuthSectionControl extends React.Component {
   render() {
     const {sectionProvider, sectionCode} = this.props;
     const {buttonState} = this.state;
-    const supportedType = PROVIDER_NAME.hasOwnProperty(sectionProvider);
+    const supportedType = Object.prototype.hasOwnProperty.call(
+      PROVIDER_NAME,
+      sectionProvider
+    );
     if (!supportedType || !sectionCode) {
       // Possibly not loaded yet.
       return null;

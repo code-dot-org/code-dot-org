@@ -7,7 +7,7 @@ right 'The code counts the total occurrences of the target character `"a"` in al
 wrong 'The code finds and prints the longest string in the `textArray` containing the target character `"a"`.'
 wrong 'The code counts the total number of strings in `textArray` that start with the target character `"a"` and prints the count.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

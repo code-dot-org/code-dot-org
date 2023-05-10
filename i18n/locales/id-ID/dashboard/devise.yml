@@ -50,9 +50,6 @@ id:
       expired: "telah kadarluarsa, silakan meminta yang baru"
       not_found: "Tidak ditemukan"
       not_locked: "tidak terkunci"
-      not_saved:
-        one: "1 error mengagalkan informasi %{resource} ini untuk disimpan:"
-        other: "%{count} error menggagalkan informasi %{resource} ini untuk disimpan:"
     invitations:
       send_instructions: 'Email undangan telah dikirim ke %{email}.'
       invitation_token_invalid: 'Token undangan yang disediakan tidak valid!'

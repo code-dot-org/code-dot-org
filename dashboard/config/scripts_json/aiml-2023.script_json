@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2023-05-03 02:40:47 UTC",
+    "serialized_at": "2023-05-04 21:20:52 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,6 +62,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "aiml-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "aiml-2023"
       }
     }
@@ -515,6 +527,21 @@
       "seeding_key": {
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "aiml-2023"
+      }
+    },
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 23,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "aiml-2023"
       }
     }
@@ -1546,6 +1573,18 @@
         "lesson_activity.key": "9bec9179-63a4-4096-9715-6e5799236750",
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "aiml-2023"
+      }
+    },
+    {
+      "key": "8b60b117-875a-4f8b-8f3d-dea7ce9c8f8f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b60b117-875a-4f8b-8f3d-dea7ce9c8f8f",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "aiml-2023"
       }
     }
@@ -8089,12 +8128,23 @@
       "key": "22200147-d941-4e14-92b9-3e5491e21839",
       "position": 1,
       "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/1gb5gLQAIQyMc_o4RP7zParEvpyO9kfAYp7cGnYyvZLw/edit#) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End-Of-Course Survey"
       },
       "seeding_key": {
         "activity_section.key": "22200147-d941-4e14-92b9-3e5491e21839",
         "lesson_activity.key": "9bec9179-63a4-4096-9715-6e5799236750"
+      }
+    },
+    {
+      "key": "83eba108-5427-4d98-9766-d9ab1c5fa6db",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "83eba108-5427-4d98-9766-d9ab1c5fa6db",
+        "lesson_activity.key": "8b60b117-875a-4f8b-8f3d-dea7ce9c8f8f"
       }
     }
   ],
@@ -10298,6 +10348,28 @@
       "level_keys": [
         "Student End of Unit Survey_csd7_2023"
       ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aiml-2023",
+        "activity_section.key": "83eba108-5427-4d98-9766-d9ab1c5fa6db"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -11355,6 +11427,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aiml-2023",
         "activity_section.key": "84242565-c729-4a97-8ed1-0eab7efc3212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2023",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aiml-2023",
+        "activity_section.key": "83eba108-5427-4d98-9766-d9ab1c5fa6db"
       }
     }
   ],

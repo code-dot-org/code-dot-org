@@ -6,3 +6,4 @@ right 'Placeholder Answer'
 wrong 'Placeholder Answer'
 wrong 'Placeholder Answer'
 wrong 'Placeholder Answer'
+allow_multiple_attempts true

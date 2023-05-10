@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-05-02 15:44:11 UTC",
+    "serialized_at": "2023-05-04 15:40:10 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2164,6 +2164,20 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Coding Your Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
@@ -2199,6 +2213,27 @@
     {
       "seeding_key": {
         "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -2220,6 +2255,27 @@
     {
       "seeding_key": {
         "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.1.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D4.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-16"
       }
@@ -2236,6 +2292,34 @@
         "lesson.key": "Project Share Out",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.2.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.3.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.Geo.5.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "framework.shortcode": "c3ss",
+        "standard.shortcode": "D2.His.2.3-5"
       }
     },
     {

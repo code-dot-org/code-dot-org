@@ -167,7 +167,6 @@ ga:
     data_collection_us: "Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith difriúil ó na dlíthe i do thír féin."
     visit_privacy: 'Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun tuilleadh a fhoghlaim.'
     student_terms_markdown: "Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy) chun tuilleadh eolais a fháil."
-    additional_information: "Teastaíonn tuilleadh eolais uainn sular féidir linn tú a chlárú."
     user_type_button: "Athraigh Cineál an Chuntais"
     user_type_label: "Cineál Cuntais"
     user_type_student: "Dalta"

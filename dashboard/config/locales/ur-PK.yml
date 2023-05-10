@@ -98,7 +98,6 @@ ur:
     valid_password: تصدیق شدہ پاس ورڈ!
     invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
     mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
-    additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
     user_type_button: اکاؤنٹ کی قسم اپڈیٹ کریں
     user_type_label: اکاؤنٹ کی قسم
     user_type_student: Talib-e-ilm

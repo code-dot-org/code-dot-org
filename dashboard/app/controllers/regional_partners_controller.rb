@@ -101,10 +101,10 @@ class RegionalPartnersController < ApplicationController
     state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
     zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
     result = @regional_partner.mappings.find_or_create_by(state: state, zip_code: zip_code)
-    if !result.errors[:base].nil_or_empty?
-      flash[:alert] = "Failed to add #{region}. #{result.errors[:base].join(',')}."
-    else
+    if result.errors[:base].nil_or_empty?
       flash[:notice] = "Successfully added #{region}."
+    else
+      flash[:alert] = "Failed to add #{region}. #{result.errors[:base].join(',')}."
     end
     redirect_to @regional_partner
   end

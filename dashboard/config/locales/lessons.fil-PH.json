@@ -437,6 +437,9 @@
         "coursef-2022/Introducing Sprite Lab": {
           "name": "Ipinapakilala ang Sprite Lab"
         },
+        "coursef-2022/Making Sprites": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "coursef-2022/Sprites in Action": {
           "name": "Sprites sa aksyon"
         },
@@ -491,10 +494,10 @@
         },
         "coursee-2022/Hello World: Food": {
           "name": "Hello World",
-          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga event.",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan.",
           "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. \n-   [Optional] Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
           "purpose": "Ang araling ito ay inilaan upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Matututuhan ng mga mag-aaral kung paano magsabi ng mga bagay ang mga sprite, na kasanayang gagamitin nila sa susunod na aralin sa Tungkol sa Akin.",
-          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga event."
+          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan."
         },
         "coursee-2022/Mini-Project: About Me": {
           "name": "Mini-Project: Tungkol sa Akin",
@@ -564,6 +567,9 @@
         "express-2022/Creating Art with Code": {
           "name": "Pag-program sa Artist",
           "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
+        },
+        "express-2022/Making Sprites": {
+          "name": "Paggawa ng mga Sprite"
         },
         "express-2022/Sprites in Action": {
           "name": "Sprites sa aksyon"
@@ -3249,6 +3255,9 @@
         "coursef-2021/lesson-6": {
           "name": "Ipinapakilala ang Sprite Lab"
         },
+        "coursef-2021/lesson-7": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "coursef-2021/lesson-8": {
           "name": "Sprites sa aksyon"
         },
@@ -3465,6 +3474,9 @@
         "express-2021/Creating Art with Code": {
           "name": "Pag-program sa Artist",
           "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
+        },
+        "express-2021/lesson-2": {
+          "name": "Paggawa ng mga Sprite"
         },
         "express-2021/lesson-3": {
           "name": "Sprites sa aksyon"

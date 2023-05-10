@@ -197,7 +197,12 @@ export function throwIfSerializedAnimationListIsInvalid(
   for (const animationKey in propsByKey) {
     ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(
       requiredPropName => {
-        if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
+        if (
+          !Object.prototype.hasOwnProperty.call(
+            propsByKey[animationKey],
+            requiredPropName
+          )
+        ) {
           throw new Error(
             `Required prop '${requiredPropName}' is missing from animation with key '${animationKey}'.`
           );
@@ -242,7 +247,7 @@ export function throwIfSerializedAnimationListIsInvalid(
   let knownNames = {};
   for (let key in propsByKey) {
     let name = propsByKey[key].name;
-    if (knownNames.hasOwnProperty(name)) {
+    if (Object.prototype.hasOwnProperty.call(knownNames, name)) {
       throw new Error(`Name "${name}" appears more than once in propsByKey`);
     }
     knownNames[name] = true;
