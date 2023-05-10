@@ -4115,7 +4115,6 @@
         "courseD_artist_42022": "Adicione uma pequena forma ao final da sua linha!",
         "courseD_artist_52022": "Brinque com os flocos de neve!",
         "courseD_artist_62022": "Tente alterar sua longa linha de 150 pixels em 6 linhas curtas de **25** pixels, com poucas viradas no final.",
-        "courseD_artist_nestedLoops102022": "Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.",
         "courseD_artist_nestedLoops12022": "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)",
         "courseD_artist_nestedLoops1a2022": "Agora execute um laço do triângulo 6 vezes. ",
         "courseD_artist_nestedLoops22022": "Desta vez, complete o quebra-cabeças com o menor número possível de blocos.",
@@ -4345,7 +4344,21 @@
         "helloworld_food_sizes_soccer-2022": "Vamos aprender a mudar o tamanho das fadas.",
         "helloworld_food_sizes_space-2022": "Vamos aprender a mudar o tamanho das fadas.",
         "helloworld_food_sounds_soccer-2022": "Vamos aprender a tocar sons.",
-        "helloworld_food_sounds_space-2022": "Vamos aprender a tocar sons."
+        "helloworld_food_sounds_space-2022": "Vamos aprender a tocar sons.",
+        "courseC19_playLab_sample1_2021": "Você está prestes a iniciar seu projeto final. Antes de começar, passe algum tempo olhando os projetos de exemplo.",
+        "AppLab AI Enabled": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "Applab AllTheThings ResourcesTab AllResources": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "Applab AllTheThings ResourcesTab MapReference": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "Applab AllTheThings ResourcesTab ReferenceLinks": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "U3L2 Using Simple Commands": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "csd-apps for good-1": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "csd-apps for good-1_2022": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes decision tree-2021": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes decision tree_2022": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes points-2021": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes points_2022": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes random-2021": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas.",
+        "ml-models-shoes random_2022": "Desenhe um quadrado de 1x1 acima e à esquerda da posição inicial da tartaruga. Clique para ver as instruções completas."
       }
     }
   }

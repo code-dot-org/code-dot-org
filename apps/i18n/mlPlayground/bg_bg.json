@@ -81,6 +81,7 @@
   "predictPlaceholder": "минмално {minimum}, максимално {maximum}",
   "crossTabRelationshipHeader": "Информация за Връзките",
   "crossTabTooMuchData": "Избраните данни са твърде големи, за да бъдат показани в таблица.",
+  "uniqueOptionsWarningNotice": "Бележка",
   "uniqueOptionsWarningMessage": "Категорични колони с повече от {valueCount} уникални стойности не могат да бъдат избрани като етикет или характеристика.",
   "predictionStatement": "Предвижда {output} на базата {inputs}",
   "datasets": {

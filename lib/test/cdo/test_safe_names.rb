@@ -42,10 +42,8 @@ class SafeNamesTest < Minitest::Test
     verify(['Beth A', 'Alex Able', 'Cathy', 'Alex Aaron'], ['Alex Aa', 'Alex Ab', 'Beth', 'Cathy'])
   end
 
-  private
-
   SPLIT_NAME_PROC = ->(name) {name.split(/\s+/, 2)}
-  def verify(actual, expected)
+  private def verify(actual, expected)
     result = SafeNames.get_safe_names(actual, SPLIT_NAME_PROC)
     assert_equal expected, result.map(&:first)
   end

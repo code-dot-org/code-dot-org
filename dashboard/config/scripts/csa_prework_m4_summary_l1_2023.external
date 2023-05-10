@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 Let’s summarize what you have learned so far!
 1. Students will use The Neighborhood and the Painter class to learn about objects and classes in Unit 1.
 2. An object must be instantiated, or created, before you can use the methods in the class.
-3. To instantiate an object know that a constructor is a special type of method that has the same name as a class and is called using the keyword `new`. Ex. `Painter sarah = new Painter();`
+3. To instantiate an object know that a constructor is a block of code that has the same name as a class and is called using the keyword `new`. Ex. `Painter sarah = new Painter();`
 4. To call a method you use the dot operator Ex. `sarah.move();`
 
 As a reminder, there is no expectation that your students have used Java prior to starting Code.org's CSA curriculum.  This pre-work is intended to help you get more comfortable with the content prior to attending summer workshops.

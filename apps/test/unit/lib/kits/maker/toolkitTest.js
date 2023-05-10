@@ -4,12 +4,12 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
 import dropletConfig, {
   configMicrobit,
-  configCircuitPlayground
+  configCircuitPlayground,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import MakerError from '@cdo/apps/lib/kits/maker/MakerError';
 import {reducer, isEnabled, isAvailable} from '@cdo/apps/lib/kits/maker/redux';

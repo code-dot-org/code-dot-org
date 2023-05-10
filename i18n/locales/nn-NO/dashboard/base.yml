@@ -167,7 +167,6 @@ nn:
     data_collection_us: "Jeg forstår at Code.org er et non profit-nettsted basert i USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for landet mitt."
     visit_privacy: 'Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å finne ut mer.'
     student_terms_markdown: "Epostadresser bli ikkje lagra i eit format som gir oss løyve til å kontakte elevane. Elevane vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre [retningslinjer for personvern] (http://code.org/privacy) for meir informasjon."
-    additional_information: "Vi treng nokre tilleggsopplysingar for å fortsette registreringa di."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "Elev"
@@ -1047,6 +1046,11 @@ nn:
     no_teacher_email:
       body_markdown: 'Kontoen din har ikkje epostadresse. Gå til [kontoinnstillingane dine](%{user_registration}) for å legge til epostadresse før du fullfører dette skjemaet.'
   courses_category: 'Alle kurs'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sport'
+      csf: 'Grunnleggande informatikk'
   cookie_banner:
     message: 'Ved å fortsatt bruke nettstaden vår eller ved å klikke på "Eg godtar", godtar du lagring av informasjonskapslar på datamaskina eller eininga di.'
     more_information: "Sjå Code.org sine retningslinjer for personvern."

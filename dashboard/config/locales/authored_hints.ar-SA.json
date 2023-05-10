@@ -1958,8 +1958,8 @@
           "courseA_maze_seq1_b": "سيتعيَّن على عامِلة الحصاد أن تتحرَّك في اتجاه \"الشرق\" ثلاث مرات لتصل إلى الذرة. استخدِم هذا المربع البرمجي:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq10": {
-          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً\n",
-          "courseA_maze_seq10_b": "أنت بحاجة للتحرك في 3 اتجاهات لحل هذا اللغز.\n"
+          "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
+          "courseA_maze_seq10_b": "أنت بحاجة للتحرك في 3 اتجاهات لحل هذا اللغز."
         },
         "courseA_maze_seq10_2018": {
           "courseA_maze_seq10_a": "إذا واجهتك مشكلة، حاول كتابة الخطوات على قُصاصة ورق أولأً",
@@ -2023,8 +2023,8 @@
           "courseA_maze_seq4_b": "حاول تشغيل التعليمات البرمجية كما هي. هل حصل خطأ ما؟ أي قطعة برمجية قمت بإزالتها؟ كيف يمكن أصلاحها؟"
         },
         "courseA_maze_seq5": {
-          "courseA_maze_seq5_a": "حاول كتابة الخطوات على ورقة للعثور على حل!\n",
-          "courseA_maze_seq5_b": "ستحتاج إلى قطعتين، يشيران إلى اتجاهين.\n"
+          "courseA_maze_seq5_a": "حاول كتابة الخطوات على ورقة للعثور على حل!",
+          "courseA_maze_seq5_b": "ستحتاج إلى قطعتين، يشيران إلى اتجاهين."
         },
         "courseA_maze_seq5_2018": {
           "1": "حاول كتابة الخطوات على ورقة للعثور على حل!",
@@ -2052,8 +2052,8 @@
           "1": "قل الخطوات بصوت مرتفع، واكتشف ما إذا كان ذلك سيساعدك في معرفة الإجابة أم لا."
         },
         "courseA_maze_seq6": {
-          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.\n",
-          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
+          "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
+          "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية."
         },
         "courseA_maze_seq6_2018": {
           "courseA_maze_seq6_a": "تعليماتك البرمجية النهائية يجب أن يحتوي على 3 قطع برمجية للتحريك.",
@@ -2072,15 +2072,15 @@
           "courseA_maze_seq6_b": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n"
         },
         "courseA_maze_seq7": {
-          "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.\n",
-          "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك.\n"
+          "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.",
+          "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك."
         },
         "courseA_maze_seq7_copy": {
           "courseA_maze_seq7_a": "هنالك قطعة برمجية يجب عليك إضافتها لتحريك الطائر إلى الخنزير.\n",
           "courseA_maze_seq7_b": "إذا كنت لا تعرف ماذا تعمل، حاول رسم اللغز على ورقة واستخدم أصبعك لتكتشف بأي طريق يجب أن يتحرك.\n"
         },
         "courseA_maze_seq8": {
-          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير.\n"
+          "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
         },
         "courseA_maze_seq8_2018": {
           "courseA_maze_seq8_a": "إذا علقت، حاول رسم الصورة على ورق لترى كيف يجب أن يتحرك الطير."
@@ -10621,7 +10621,7 @@
           "hw_retro_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "كل كائن له **موقع**. يمكنك ضبط الموقع عن طريق النقر فوق الدبوس الموجود في هذه الكتلة:\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   انقر فوق الدبوس ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) الموجود في قالب الموقع ثم اختر موضعًا جديدًا للكائن على الشاشة.\n-   اضغط على زر \"تشغيل\" عند الانتهاء من الكود.",
+          "location_hint": "كل كائن له **موقع**. يمكنك ضبط الموقع عن طريق النقر فوق الدبوس الموجود في هذه الكتلة:\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   انقر فوق الدبوس ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) الموجود في قالب الموقع ثم اختر موضعًا جديدًا للكائن على الشاشة.\n-   اضغط على زر \"تشغيل\" عند الانتهاء من الكود.",
           "remove_hint": "يمكنك إزالة كائن برقم سطر معين. يمكنك إضافة كائن جديد ليحل محله:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {

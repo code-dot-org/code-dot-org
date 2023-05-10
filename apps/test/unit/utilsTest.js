@@ -18,7 +18,7 @@ const {
   createUuid,
   normalize,
   stringifyQueryParams,
-  getTabId
+  getTabId,
 } = utils;
 
 describe('utils modules', () => {
@@ -57,20 +57,20 @@ describe('utils modules', () => {
       expect(normalize({x: 0, y: -3})).to.eql({x: 0, y: -1});
       expect(normalize({x: 1, y: 1})).to.eql({
         x: 1 / Math.sqrt(2),
-        y: 1 / Math.sqrt(2)
+        y: 1 / Math.sqrt(2),
       });
       expect(normalize({x: 1, y: -2})).to.eql({
         x: 1 / Math.sqrt(5),
-        y: -2 / Math.sqrt(5)
+        y: -2 / Math.sqrt(5),
       });
     });
   });
 
-  describe('shallowCopy', function() {
-    it('makes a shallow copy of an object', function() {
+  describe('shallowCopy', function () {
+    it('makes a shallow copy of an object', function () {
       const originalObject = {
         num: 2,
-        obj: {}
+        obj: {},
       };
       const newObject = shallowCopy(originalObject);
       expect(newObject).not.to.equal(originalObject);
@@ -79,11 +79,11 @@ describe('utils modules', () => {
     });
   });
 
-  describe('cloneWithoutFunctions', function() {
-    it('strips functions from an object', function() {
+  describe('cloneWithoutFunctions', function () {
+    it('strips functions from an object', function () {
       const originalObject = {
         num: 2,
-        func: function() {}
+        func: function () {},
       };
       const newObject = cloneWithoutFunctions(originalObject);
       expect(newObject).not.to.equal(originalObject);
@@ -92,33 +92,33 @@ describe('utils modules', () => {
     });
   });
 
-  describe('String.prototype.repeat', function() {
-    it('returns a string that is n copies of the original string', function() {
+  describe('String.prototype.repeat', function () {
+    it('returns a string that is n copies of the original string', function () {
       assert.equal('aaa', 'a'.repeat(3));
       assert.equal('abcabc', 'abc'.repeat(2));
     });
 
-    it('uses floor of count for non-integer counts', function() {
+    it('uses floor of count for non-integer counts', function () {
       assert.equal('aaa', 'a'.repeat(3.1));
       assert.equal('aaa', 'a'.repeat(3.9));
     });
 
-    it('returns empty string when given a zero count', function() {
+    it('returns empty string when given a zero count', function () {
       assert.equal('', 'a'.repeat(0));
     });
 
-    it('returns empty string when repeating an empty string', function() {
+    it('returns empty string when repeating an empty string', function () {
       assert.equal('', ''.repeat(20));
     });
 
-    it('throws RangeError when given a negative count', function() {
-      assert.throws(function() {
+    it('throws RangeError when given a negative count', function () {
+      assert.throws(function () {
         'a'.repeat(-1);
       }, RangeError);
     });
 
-    it('throws RangeError when given an infinity count', function() {
-      assert.throws(function() {
+    it('throws RangeError when given an infinity count', function () {
+      assert.throws(function () {
         'a'.repeat(Infinity);
       }, RangeError);
     });
@@ -128,30 +128,30 @@ describe('utils modules', () => {
     //       limits output of this method to 1 << 28 characters.
   });
 
-  describe('Function.prototype.inherits', function() {
+  describe('Function.prototype.inherits', function () {
     var A, B, C;
 
-    beforeEach(function() {
-      A = function() {
+    beforeEach(function () {
+      A = function () {
         this.usedConstructorA = true;
       };
 
-      B = function() {
+      B = function () {
         this.usedConstructorB = true;
         this.onConstructB();
       };
       B.inherits(A);
-      B.prototype.onConstructB = function() {};
+      B.prototype.onConstructB = function () {};
 
-      C = function() {
+      C = function () {
         this.usedConstructorC = true;
         this.onConstructC();
       };
       C.inherits(B);
-      C.prototype.onConstructC = function() {};
+      C.prototype.onConstructC = function () {};
     });
 
-    it('establishes a correct prototype chain', function() {
+    it('establishes a correct prototype chain', function () {
       var a = new A();
       assert(a instanceof A, 'a instanceof A');
       assert(!(a instanceof B), '!(a instanceof B)');
@@ -168,7 +168,7 @@ describe('utils modules', () => {
       assert(c instanceof C, 'c instanceof C');
     });
 
-    it("sets the object's constructor property correctly", function() {
+    it("sets the object's constructor property correctly", function () {
       // Object's constructor property should always end up set to the
       // function that constructed it.
       // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/
@@ -183,7 +183,7 @@ describe('utils modules', () => {
       assert(c.constructor === C, 'c.constructor === C');
     });
 
-    it('calls only the current constructor by default', function() {
+    it('calls only the current constructor by default', function () {
       var a = new A();
       assert(a.usedConstructorA === true, 'a.usedConstructorA === true');
 
@@ -197,12 +197,12 @@ describe('utils modules', () => {
       assert(c.usedConstructorC === true, 'c.usedConstructorC === true');
     });
 
-    it('can chain constructor calls', function() {
-      B.prototype.onConstructB = function() {
+    it('can chain constructor calls', function () {
+      B.prototype.onConstructB = function () {
         A.call(this);
       };
 
-      C.prototype.onConstructC = function() {
+      C.prototype.onConstructC = function () {
         B.call(this);
       };
 
@@ -216,16 +216,16 @@ describe('utils modules', () => {
       assert(c.usedConstructorC === true, 'c.usedConstructorC === true');
     });
 
-    it('exposes superPrototype for chaining methods', function() {
-      A.prototype.noise = function() {
+    it('exposes superPrototype for chaining methods', function () {
+      A.prototype.noise = function () {
         return 'fizz';
       };
 
-      B.prototype.noise = function() {
+      B.prototype.noise = function () {
         return B.superPrototype.noise.call(this) + 'bang';
       };
 
-      C.prototype.noise = function() {
+      C.prototype.noise = function () {
         return C.superPrototype.noise.call(this) + 'pop';
       };
 
@@ -240,8 +240,8 @@ describe('utils modules', () => {
     });
   });
 
-  describe('stripQuotes', function() {
-    it('can remove quotes from a string', function() {
+  describe('stripQuotes', function () {
+    it('can remove quotes from a string', function () {
       assert(stripQuotes("t'e's't'") === 'test');
       assert(stripQuotes('t"e"s"t"') === 'test');
       assert(stripQuotes('test') === 'test');
@@ -249,31 +249,31 @@ describe('utils modules', () => {
     });
   });
 
-  describe('wrapNumberValidatorsForLevelBuilder', function() {
+  describe('wrapNumberValidatorsForLevelBuilder', function () {
     let oldBlockly;
 
-    beforeEach(function() {
+    beforeEach(function () {
       // Blockly hasn't actually been loaded at this point, but we can simulate it.
       // First stash the current blockly in case things change and we do have it
       // loaded.
       oldBlockly = global.Blockly;
     });
 
-    afterEach(function() {
+    afterEach(function () {
       global.Blockly = oldBlockly;
     });
 
-    it('will allow ??? in number validators after being wrapped', function() {
+    it('will allow ??? in number validators after being wrapped', function () {
       global.Blockly = {
         FieldTextInput: {
           // fake our validators
-          nonnegativeIntegerValidator: function(text) {
+          nonnegativeIntegerValidator: function (text) {
             return isNaN(text) ? null : text;
           },
-          numberValidator: function(text) {
+          numberValidator: function (text) {
             return isNaN(text) ? null : text;
-          }
-        }
+          },
+        },
       };
 
       assert.equal(
@@ -300,84 +300,84 @@ describe('utils modules', () => {
     });
   });
 
-  describe('escapeHtml', function() {
+  describe('escapeHtml', function () {
     const unescaped = '&<>"\'/';
     const escaped = '&amp;&lt;&gt;&quot;&#39;&#47;';
 
-    it('should handle null input', function() {
+    it('should handle null input', function () {
       assert.strictEqual(escapeHtml(null), '');
     });
 
-    it('should handle undefined input', function() {
+    it('should handle undefined input', function () {
       assert.strictEqual(escapeHtml(undefined), '');
     });
 
-    it('should escape special characters', function() {
+    it('should escape special characters', function () {
       assert.strictEqual(escapeHtml(unescaped), escaped);
     });
 
-    it('should not escape regular characters', function() {
+    it('should not escape regular characters', function () {
       assert.strictEqual(escapeHtml('abc123'), 'abc123');
     });
   });
 
-  describe('escapeText', function() {
-    it('no-op on empty string', function() {
+  describe('escapeText', function () {
+    it('no-op on empty string', function () {
       assert.equal('', escapeText(''));
     });
 
-    it('no-op on alphanumeric string', function() {
+    it('no-op on alphanumeric string', function () {
       var alphabet = 'abcdefghijklmnopqrstuvwxyz';
       var digits = '0123456789';
       var testString = alphabet + alphabet.toUpperCase() + digits;
       assert.equal(testString, escapeText(testString));
     });
 
-    it('replaces all & with &amp;', function() {
+    it('replaces all & with &amp;', function () {
       assert.equal('&amp;', escapeText('&'));
       assert.equal('&amp;&amp;', escapeText('&&'));
       assert.equal('&amp;nbsp;', escapeText('&nbsp;'));
     });
 
-    it('replaces all < with &lt;', function() {
+    it('replaces all < with &lt;', function () {
       assert.equal('&lt;', escapeText('<'));
       assert.equal('&lt;&lt;', escapeText('<<'));
       assert.equal('&lt;div', escapeText('<div'));
     });
 
-    it('replaces all > with &gt;', function() {
+    it('replaces all > with &gt;', function () {
       assert.equal('&gt;', escapeText('>'));
       assert.equal('&gt;&gt;', escapeText('>>'));
       assert.equal('/&gt;', escapeText('/>'));
     });
 
-    it('breaks up all doubled spaces with &nbsp;', function() {
+    it('breaks up all doubled spaces with &nbsp;', function () {
       assert.equal(' ', escapeText(' '));
       assert.equal(' &nbsp;', escapeText('  '));
       assert.equal(' &nbsp; ', escapeText('   '));
       assert.equal(' &nbsp; &nbsp;', escapeText('    '));
     });
 
-    it('Escapes already-escaped content', function() {
+    it('Escapes already-escaped content', function () {
       assert.equal(
         '&amp;amp; &amp;nbsp; &amp;gt; &amp;lt;',
         escapeText('&amp; &nbsp; &gt; &lt;')
       );
     });
 
-    it('Wraps second and subsequent lines in <div>, removing line breaks', function() {
+    it('Wraps second and subsequent lines in <div>, removing line breaks', function () {
       var input = ['Line 1', 'Line 2', 'Line 3'].join('\n');
       var expected = 'Line 1<div>Line 2</div><div>Line 3</div>';
       assert.equal(expected, escapeText(input));
     });
 
-    it('Uses <br> for blank first line when handling multiple lines', function() {
+    it('Uses <br> for blank first line when handling multiple lines', function () {
       var input = ['', 'Line 2', 'Line 3'].join('\n');
       var expected = '<br><div>Line 2</div><div>Line 3</div>';
       assert.equal(expected, escapeText(input));
     });
 
-    it('Adds <br> to every other blank line', function() {
+    it('Adds <br> to every other blank line', function () {
       var input, expected;
 
       input = ['Line 1', '', 'Line 3'].join('\n');
@@ -394,37 +394,37 @@ describe('utils modules', () => {
     });
   });
 
-  describe('unescapeText', function() {
-    it('no-op on empty string', function() {
+  describe('unescapeText', function () {
+    it('no-op on empty string', function () {
       assert.equal('', unescapeText(''));
     });
 
-    it('no-op on alphanumeric string', function() {
+    it('no-op on alphanumeric string', function () {
       var alphabet = 'abcdefghijklmnopqrstuvwxyz';
       var digits = '0123456789';
       var testString = alphabet + alphabet.toUpperCase() + digits;
       assert.equal(testString, unescapeText(testString));
     });
 
-    it('replaces all &amp; with &', function() {
+    it('replaces all &amp; with &', function () {
       assert.equal('&', unescapeText('&amp;'));
       assert.equal('&&', unescapeText('&amp;&amp;'));
       assert.equal('&nbsp;', unescapeText('&amp;nbsp;'));
     });
 
-    it('replaces all &lt; with <', function() {
+    it('replaces all &lt; with <', function () {
       assert.equal('<', unescapeText('&lt;'));
       assert.equal('<<', unescapeText('&lt;&lt;'));
       assert.equal('<div', unescapeText('&lt;div'));
     });
 
-    it('replaces all &gt; with >', function() {
+    it('replaces all &gt; with >', function () {
       assert.equal('>', unescapeText('&gt;'));
       assert.equal('>>', unescapeText('&gt;&gt;'));
       assert.equal('/>', unescapeText('/&gt;'));
     });
 
-    it('replaces all &nbsp; with spaces', function() {
+    it('replaces all &nbsp; with spaces', function () {
       assert.equal(' ', unescapeText(' '));
       assert.equal(' ', unescapeText('&nbsp;'));
       assert.equal('  ', unescapeText(' &nbsp;'));
@@ -433,20 +433,20 @@ describe('utils modules', () => {
       assert.equal('    ', unescapeText(' &nbsp; &nbsp;'));
     });
 
-    it('Unescapes pre-escaped content correctly', function() {
+    it('Unescapes pre-escaped content correctly', function () {
       assert.equal(
         '&amp; &nbsp; &gt; &lt;',
         unescapeText('&amp;amp; &amp;nbsp; &amp;gt; &amp;lt;')
       );
     });
 
-    it('Unwraps <div>-wrapped lines, adding line breaks', function() {
+    it('Unwraps <div>-wrapped lines, adding line breaks', function () {
       var input = 'Line 1<div>Line 2</div><div>Line 3</div>';
       var expected = ['Line 1', 'Line 2', 'Line 3'].join('\n');
       assert.equal(expected, unescapeText(input));
     });
 
-    it('Adds line break for divs with attributes', function() {
+    it('Adds line break for divs with attributes', function () {
       var input, expected;
 
       input = 'Line 1<div style="line-height: 10.8px;">Line 2</div>';
@@ -454,7 +454,7 @@ describe('utils modules', () => {
       assert.equal(expected, unescapeText(input), 'div with attribute');
     });
 
-    it('Does not add leading newline for span-wrapped leading line', function() {
+    it('Does not add leading newline for span-wrapped leading line', function () {
       var input, expected;
 
       input = '<span>Line1</span><div>Line2</div>';
@@ -462,13 +462,13 @@ describe('utils modules', () => {
       assert.equal(expected, unescapeText(input), 'first line span');
     });
 
-    it('If input starts with <div> treats that as the first line', function() {
+    it('If input starts with <div> treats that as the first line', function () {
       var input = '<div>Line 1</div><div>Line 2</div>';
       var expected = ['Line 1', 'Line 2'].join('\n');
       assert.equal(expected, unescapeText(input));
     });
 
-    it('Converts <div><br></div> to a blank line', function() {
+    it('Converts <div><br></div> to a blank line', function () {
       var input, expected;
 
       input = '<div><br></div><div>Line 2</div><div>Line 3</div>';
@@ -488,7 +488,7 @@ describe('utils modules', () => {
       assert.equal(expected, unescapeText(input), 'all lines blank');
     });
 
-    describe('is the inverse of escapeText', function() {
+    describe('is the inverse of escapeText', function () {
       var assertRoundTrip = function assertRoundTrip(testString) {
         var intermediateForm = escapeText(testString);
         assert.equal(
@@ -498,19 +498,19 @@ describe('utils modules', () => {
         );
       };
 
-      it('With newline', function() {
+      it('With newline', function () {
         assertRoundTrip('Line1\nLine2');
       });
 
-      it('With leading newline', function() {
+      it('With leading newline', function () {
         assertRoundTrip('\nLine1\nLine2');
       });
 
-      it('With multiple leading newlines', function() {
+      it('With multiple leading newlines', function () {
         assertRoundTrip('\n\n \nLine1\nLine2');
       });
 
-      describe('fuzz tests (randomized)', function() {
+      describe('fuzz tests (randomized)', function () {
         var stringPool = [
           '<div>',
           '</div>',
@@ -524,7 +524,7 @@ describe('utils modules', () => {
           '&lt;',
           '&gt;',
           '&nbsp;',
-          '\n'
+          '\n',
         ];
 
         var randomTestString = function randomTestString() {
@@ -541,8 +541,8 @@ describe('utils modules', () => {
           fuzzTests.push(randomTestString());
         }
 
-        fuzzTests.forEach(function(testString) {
-          it(testString.replace(/\n/g, '\\n'), function() {
+        fuzzTests.forEach(function (testString) {
+          it(testString.replace(/\n/g, '\\n'), function () {
             assertRoundTrip(testString);
           });
         });
@@ -550,50 +550,50 @@ describe('utils modules', () => {
     });
   });
 
-  describe('makeEnum', function() {
-    it('builds a key:"key" enum object from its arguments', function() {
+  describe('makeEnum', function () {
+    it('builds a key:"key" enum object from its arguments', function () {
       var Seasons = makeEnum('SPRING', 'SUMMER', 'FALL', 'WINTER');
       assert.deepEqual(Seasons, {
         SPRING: 'SPRING',
         SUMMER: 'SUMMER',
         FALL: 'FALL',
-        WINTER: 'WINTER'
+        WINTER: 'WINTER',
       });
     });
 
-    it('returns an empty object when given no arguments', function() {
+    it('returns an empty object when given no arguments', function () {
       var TheVoid = makeEnum();
       assert.deepEqual(TheVoid, {});
     });
 
-    it('attempts to coerce arguments to string', function() {
+    it('attempts to coerce arguments to string', function () {
       var Coerced = makeEnum(undefined, null, 3.14, {});
       assert.deepEqual(Coerced, {
         undefined: 'undefined',
         null: 'null',
-        '3.14': '3.14',
-        '[object Object]': '[object Object]'
+        3.14: '3.14',
+        '[object Object]': '[object Object]',
       });
     });
 
-    it('throws if a duplicate key occurs', function() {
-      assert.throws(function() {
+    it('throws if a duplicate key occurs', function () {
+      assert.throws(function () {
         makeEnum('twins', 'twins');
       });
     });
 
-    it('freezes returned object if Object.freeze is available', function() {
+    it('freezes returned object if Object.freeze is available', function () {
       var ColdThings = makeEnum('snow', 'ice', 'vacuum');
       if (Object.freeze) {
-        assert.throws(function() {
+        assert.throws(function () {
           ColdThings['sorbet'] = 'sorbet';
         });
       }
     });
   });
 
-  describe('ellipsify', function() {
-    it('ellipsifies id strings that exceed max length', function() {
+  describe('ellipsify', function () {
+    it('ellipsifies id strings that exceed max length', function () {
       assert.equal('abcdefghi', ellipsify('abcdefghi', 12));
       assert.equal('abcdefghijkl', ellipsify('abcdefghijkl', 12));
       assert.equal('abcdefghi...', ellipsify('abcdefghijklm', 12));
@@ -618,14 +618,14 @@ describe('utils modules', () => {
         untouchedProperty: 'originalA',
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: 'originalC',
-        overriddenNestedProperty: {property: 'originalD'}
+        overriddenNestedProperty: {property: 'originalD'},
       };
 
       const overriddenValue = 'newB';
       const overrides = {
         overriddenProperty: overriddenValue,
         newProperty: 'newValue',
-        overriddenNestedProperty: {property: 'newD'}
+        overriddenNestedProperty: {property: 'newD'},
       };
 
       const expected = {
@@ -633,7 +633,7 @@ describe('utils modules', () => {
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: overriddenValue,
         overriddenNestedProperty: {property: 'newD'},
-        newProperty: 'newValue'
+        newProperty: 'newValue',
       };
 
       const actual = deepMergeConcatArrays(base, overrides);
@@ -652,7 +652,7 @@ describe('utils modules', () => {
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: 'originalC',
         overriddenNestedProperty: {property: 'originalD'},
-        items: [1, 2, 3]
+        items: [1, 2, 3],
       };
       const baseClone = _.cloneDeep(base);
 
@@ -660,7 +660,7 @@ describe('utils modules', () => {
         overriddenProperty: 'newB',
         newProperty: 'newValue',
         overriddenNestedProperty: {property: 'newD'},
-        items: [4, 5, 6]
+        items: [4, 5, 6],
       };
 
       const actual = deepMergeConcatArrays(base, overrides);
@@ -689,19 +689,19 @@ describe('utils modules', () => {
       const base = {
         first: 1,
         second: 2,
-        third: 3
+        third: 3,
       };
 
       const overrides = {
         third: '3',
         first: '1',
-        second: '2'
+        second: '2',
       };
 
       const expected = {
         first: '1',
         second: '2',
-        third: '3'
+        third: '3',
       };
       const actual = deepMergeConcatArrays(base, overrides);
       assert.deepEqual(expected, actual, 'overrides expected values');
@@ -713,8 +713,8 @@ describe('utils modules', () => {
     });
   });
 
-  describe('createUuid', function() {
-    it('returns a random uuid', function() {
+  describe('createUuid', function () {
+    it('returns a random uuid', function () {
       // Check layout
       expect(createUuid()).to.match(/^........-....-4...-....-............$/);
       // Check allowed characters

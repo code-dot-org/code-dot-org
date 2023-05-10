@@ -219,8 +219,6 @@ ms:
       kami menghubungi pelajar. Pelajar tidak akan menerima e-mel daripada Code.org
       kecuali untuk pemulihan kata laluan. Lihat [dasar privasi] kami(http://code.org/privacy)
       untuk maklumat lanjut.
-    additional_information: Kami memerlukan beberapa maklumat tambahan untuk terus
-      mendaftar anda.
     user_type_button: Kemaskini Jenis Akaun
     user_type_label: Jenis Akaun
     user_type_student: Pelajar
@@ -1431,6 +1429,13 @@ ms:
         akaun anda](%{user_registration}) untuk menambah alamat e-mel anda sebelum
         melengkapkan borang ini.
   courses_category: Semua Kursus
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Helo Dunia
+      sports: Sukan
+      csf: Asas CS
+      csc: Sambungan CS
   cookie_banner:
     message: Dengan meneruskan menyemak imbas tapak kami atau mengklik "Saya setuju",
       anda bersetuju untuk menyimpan kuki pada komputer atau peranti anda.

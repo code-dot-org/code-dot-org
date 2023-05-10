@@ -388,9 +388,7 @@ class Pd::Enrollment < ApplicationRecord
     select_completed ? completed_surveys : uncompleted_surveys
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

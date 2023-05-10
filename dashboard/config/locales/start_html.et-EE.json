@@ -4,19 +4,23 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "cute": "armas"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "cute": "armas"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "cute": "armas"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "cute": "armas"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Nimi",
@@ -76,11 +80,13 @@
         },
         "CSD U1 storage outfit_2021": {
           "green": "roheline",
-          "black": "must"
+          "black": "must",
+          "Clear": "Tühjenda"
         },
         "CSD U1 storage outfit_2022": {
           "green": "roheline",
-          "black": "must"
+          "black": "must",
+          "Clear": "Tühjenda"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Ära tegid!"

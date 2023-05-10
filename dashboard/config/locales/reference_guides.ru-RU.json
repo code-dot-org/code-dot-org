@@ -17,6 +17,9 @@
         "csd-2022/changing-screens": {
           "display_name": "Изменение экранов"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Обзор Окружной Игровой Площадки"
+        },
         "csd-2022/collision-detection": {
           "display_name": "Обнаружение столкновений"
         },
@@ -112,6 +115,12 @@
         },
         "csd-2022/playing-notes": {
           "display_name": "Игра в Notes"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Процесс решения проблем"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Процесс решения проблем"
         },
         "csd-2022/random-numbers": {
           "display_name": "Случайные числа"

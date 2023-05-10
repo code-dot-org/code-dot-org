@@ -13,12 +13,12 @@ export default class TutorialSet extends React.Component {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
-    grade: PropTypes.string.isRequired
+    grade: PropTypes.string.isRequired,
   };
 
   state = {
     showingDetail: false,
-    chosenItem: null
+    chosenItem: null,
   };
 
   tutorialClicked = item =>
@@ -74,6 +74,6 @@ const styles = {
     backgroundColor: '#d6d6d6',
     padding: 20,
     margin: 60,
-    whiteSpace: 'pre-wrap'
-  }
+    whiteSpace: 'pre-wrap',
+  },
 };

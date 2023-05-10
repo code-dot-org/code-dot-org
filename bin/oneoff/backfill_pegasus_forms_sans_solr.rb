@@ -51,13 +51,13 @@ def process_existing_batch_of_forms
           update_count += 1
         end
       end
-    rescue AbortFormError => e
-      warn "Unable to process form #{form[:id]} because #{e.message}."
+    rescue AbortFormError => exception
+      warn "Unable to process form #{form[:id]} because #{exception.message}."
       error_count += 1
       next
-    rescue Exception => e
-      warn "Unable to process form #{form[:id]} because #{e.message}."
-      raise e
+    rescue Exception => exception
+      warn "Unable to process form #{form[:id]} because #{exception.message}."
+      raise exception
     end
   end
 

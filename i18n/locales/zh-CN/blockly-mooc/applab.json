@@ -64,6 +64,7 @@
   "dropletBlock_setRGB_param3": "红色",
   "dropletBlock_setRGB_param4": "绿色",
   "dropletBlock_setRGB_param5": "蓝色",
+  "dropletBlock_substring_param0": "开始",
   "dropletBlock_substring_param1": "结束",
   "dropletBlock_updateRecord_param1_description": "记录数据。",
   "finalLevel": "恭喜你！你完成了最后一个谜题。",

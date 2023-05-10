@@ -11,7 +11,7 @@ class CourseBlocksWrapper extends Component {
     description: PropTypes.string,
     link: PropTypes.string,
     linkText: PropTypes.string,
-    hideBottomMargin: PropTypes.bool
+    hideBottomMargin: PropTypes.bool,
   };
 
   render() {

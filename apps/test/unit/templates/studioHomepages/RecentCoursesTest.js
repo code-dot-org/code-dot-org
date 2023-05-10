@@ -11,7 +11,7 @@ import {
   courses,
   moreCourses,
   topPlCourse,
-  topCourse
+  topCourse,
 } from './homepagesTestData';
 
 describe('RecentCourses', () => {

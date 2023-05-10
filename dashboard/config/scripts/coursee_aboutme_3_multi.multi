@@ -12,3 +12,5 @@ wrong 'My address is...'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

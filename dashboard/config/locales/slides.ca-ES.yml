@@ -810,6 +810,12 @@ ca:
         text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
           tecla de fletxa o quan es toca la pantalla.
     poemart_intro:
+      1:
+        text: Em dic Caia, sóc poeta i estudio informàtica. He après moltes coses
+          sobre programació que m'han fet millorar com a poeta, i molts aspectes de
+          la meva poesia m'han ajudat a ser millor programadora, perquè has d'aturar-te
+          a pensar en les paraules que fas servir i en què crearàs un cop estigui
+          tot acabat.
       6:
         text: Aquesta part central és la caixa d'eines. Aquí apareixeran blocs nous
           de codi a mesura que aneu fent la lliçó.

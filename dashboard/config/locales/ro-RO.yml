@@ -212,8 +212,6 @@ ro:
       să ne permită să contactăm studenții. Studenții nu vor primi niciodată emailuri
       din partea Code.org, decât pentru recuperarea parolelor. Pentru mai multe informații,
       vezi [privacy policy](http://code.org/privacy).
-    additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
-      a te putea înscrie.
     user_type_button: Actualizaţi tipul de contul
     user_type_label: Tipul contului
     user_type_student: Elev
@@ -1403,6 +1401,13 @@ ro:
         contului tău](%{user_registration})să adaugi adresa ta de email înainte de
         finalizarea acestui formular.
   courses_category: Toate cursurile
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Bună Lume
+      sports: Sporturi (Sports)
+      csf: Fundamentele CS
+      csc: Conexiuni CS
   cookie_banner:
     message: Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt
       de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul

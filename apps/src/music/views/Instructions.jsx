@@ -3,31 +3,27 @@ import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
+import {useSelector} from 'react-redux';
 
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({instructions, baseUrl, vertical, right}) => {
-  const [currentPanel, setCurrentPanel] = useState(0);
+const Instructions = ({
+  progression,
+  currentLevelIndex,
+  onNextPanel,
+  baseUrl,
+  vertical,
+  right,
+}) => {
   const [showBigImage, setShowBigImage] = useState(false);
-
-  const getPreviousPanel = () => {
-    return currentPanel > 0 ? currentPanel - 1 : null;
-  };
+  const progressState = useSelector(state => state.music.currentProgressState);
+  const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
-    return currentPanel + 1 < instructions?.groups[0].panels.length
+    return currentPanel + 1 < progression.steps.length
       ? currentPanel + 1
       : null;
-  };
-
-  const changePanel = nextPanel => {
-    const nextPanelIndex = nextPanel ? getNextPanel() : getPreviousPanel();
-
-    if (nextPanelIndex !== null) {
-      setCurrentPanel(nextPanelIndex);
-      setShowBigImage(false);
-    }
   };
 
   const imageClicked = () => {
@@ -36,15 +32,14 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 
   const analyticsReporter = useContext(AnalyticsContext);
   useEffect(() => {
-    // Instructions panels are 0-indexed, tracking is 1-based
+    // Instructions steps are 0-indexed, tracking is 1-based
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const previousPanel = getPreviousPanel();
   const nextPanel = getNextPanel();
 
-  const progressText = instructions
-    ? `${currentPanel + 1}/${instructions.groups[0].panels.length}`
+  const progressText = progression
+    ? `${currentPanel + 1}/${progression.steps.length}`
     : '';
 
   return (
@@ -55,12 +50,13 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
         vertical && moduleStyles.vertical
       )}
     >
-      {instructions && (
+      {progression && (
         <InstructionsPanel
-          panel={instructions.groups[0].panels[currentPanel]}
+          panel={progression.steps[currentPanel]}
+          message={progressState.message}
           vertical={vertical}
           baseUrl={baseUrl}
-          path={instructions.groups[0].path}
+          path={progression.path}
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
@@ -69,26 +65,19 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
       <div className={moduleStyles.bottom}>
         <div className={moduleStyles.progressText}>{progressText}</div>
         <div>
-          <button
-            type="button"
-            onClick={() => changePanel(false)}
-            className={classNames(
-              moduleStyles.button,
-              previousPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            onClick={() => changePanel(true)}
-            className={classNames(
-              moduleStyles.button,
-              nextPanel !== null && moduleStyles.buttonActive
-            )}
-          >
-            Next
-          </button>
+          {progressState.satisfied && (
+            <button
+              type="button"
+              onClick={() => onNextPanel()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonNext,
+                nextPanel !== null && moduleStyles.buttonActive
+              )}
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -96,20 +85,24 @@ const Instructions = ({instructions, baseUrl, vertical, right}) => {
 };
 
 Instructions.propTypes = {
-  instructions: PropTypes.object,
+  progression: PropTypes.object,
+  currentLevelIndex: PropTypes.number,
+  message: PropTypes.string,
+  onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 const InstructionsPanel = ({
   panel,
+  message,
   vertical,
   baseUrl,
   path,
   imageClicked,
   right,
-  showBigImage
+  showBigImage,
 }) => {
   return (
     <div
@@ -165,6 +158,7 @@ const InstructionsPanel = ({
         )}
       >
         {panel.text}
+        <div className={moduleStyles.message}>{message}</div>
       </div>
     </div>
   );
@@ -172,12 +166,13 @@ const InstructionsPanel = ({
 
 InstructionsPanel.propTypes = {
   panel: PropTypes.object.isRequired,
+  message: PropTypes.string,
   baseUrl: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   imageClicked: PropTypes.func.isRequired,
   showBigImage: PropTypes.bool,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 export default Instructions;

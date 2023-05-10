@@ -864,6 +864,29 @@ dv:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_layoutSprites:
+        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
+        options:
+          FORMAT:
+            '"border"': ބޯޑަރު
+            '"circle"': ސަރކަލް (ވަށްބުރު)
+            '"top"': މަތީ ރޯ
+            '"row"': ރޯ
+            '"bottom"': ތިރީ ރޯ
+            '"left"': ވާތު ކޮލަމް
+            '"column"': ކޮލަމް
+            '"right"': ކަނާތު ކޮލަމް
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': ބޯޑަރު
+            '"circle"': ސަރކަލް (ވަށްބުރު)
+            '"top"': މަތީ ރޯ
+            '"row"': ރޯ
+            '"bottom"': ތިރީ ރޯ
+            '"left"': ވާތު ކޮލަމް
+            '"column"': ކޮލަމް
+            '"right"': ކަނާތު ކޮލަމް
       gamelab_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       gamelab_setProp:

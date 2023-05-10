@@ -8,7 +8,7 @@ import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import * as utils from '@cdo/apps/utils';
@@ -47,17 +47,17 @@ describe('The ShowCodeToggle component', () => {
   beforeEach(() => {
     editor = {
       session: {
-        currentlyUsingBlocks: true
+        currentlyUsingBlocks: true,
       },
       getValue: () => '',
       toggleBlocks() {
         this.session.currentlyUsingBlocks = !this.session.currentlyUsingBlocks;
       },
       aceEditor: {
-        focus() {}
-      }
+        focus() {},
+      },
     };
-    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function() {
+    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
       this.editor = editor;
     });
   });
@@ -69,12 +69,12 @@ describe('The ShowCodeToggle component', () => {
       level: {
         id: 'some-level-id',
         editCode: true,
-        codeFunctions: {}
+        codeFunctions: {},
       },
       dropletConfig: {
-        blocks: []
+        blocks: [],
       },
-      skin: {}
+      skin: {},
     };
 
     codeWorkspaceDiv = document.createElement('div');
@@ -175,7 +175,7 @@ describe('The ShowCodeToggle component', () => {
           {
             project_id: 'some-project-id',
             level_id: 'some-level-id',
-            using_text_mode: true
+            using_text_mode: true,
           }
         );
       });
@@ -208,7 +208,7 @@ describe('The ShowCodeToggle component', () => {
             {
               level_id: 'some-level-id',
               project_id: 'some-project-id',
-              using_text_mode: false
+              using_text_mode: false,
             }
           );
         });

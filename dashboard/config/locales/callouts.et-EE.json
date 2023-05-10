@@ -325,13 +325,16 @@
           "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
@@ -450,7 +453,8 @@
           "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
@@ -742,7 +746,8 @@
           "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
         },
         "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
         },
         "Overworld Place Wall2022": {
           "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
@@ -775,6 +780,12 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Uus plokk!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
         }
       }
     }

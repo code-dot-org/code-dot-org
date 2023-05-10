@@ -20,11 +20,11 @@ export class AppLabTooltipOverlay extends React.Component {
     mouseY: PropTypes.number,
     // Provided by redux
     isInDesignMode: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
-    hoveredControlId: null
+    hoveredControlId: null,
   };
 
   componentDidMount() {
@@ -37,7 +37,7 @@ export class AppLabTooltipOverlay extends React.Component {
 
   onMouseMove = event => {
     this.setState({
-      hoveredControlId: this.getHoveredControlId(event.target)
+      hoveredControlId: this.getHoveredControlId(event.target),
     });
   };
 
@@ -102,7 +102,7 @@ export class AppLabTooltipOverlay extends React.Component {
 }
 export default connect(state => ({
   isRtl: state.isRtl,
-  isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN
+  isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN,
 }))(AppLabTooltipOverlay);
 
 /**

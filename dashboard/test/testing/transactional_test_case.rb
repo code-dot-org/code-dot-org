@@ -43,12 +43,10 @@ module ActiveSupport
           end
         end
 
-        private
-
         # Only select connections that support savepoints,
         # because individual test transactions will be nested
         # within the outer test case transaction.
-        def enlist_transaction_connections
+        private def enlist_transaction_connections
           ActiveRecord::Base.connection_handler.connection_pool_list.
             map(&:connection).
             select(&:supports_savepoints?)

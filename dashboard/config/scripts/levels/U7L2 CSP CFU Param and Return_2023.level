@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2022-10-19T18:21:55.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Reflection",
     "long_instructions": "What are the benefits of writing functions that use parameters and return? Try to list at least two.\r\n\r\n",
@@ -17,8 +13,13 @@
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-10-19T18:21:55.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-10-19T18:21:55.848+00:00\",\"changed\":[\"cloned from \\\"U7L2 CSP CFU Param and Return2022\\\"\"],\"cloned_from\":\"U7L2 CSP CFU Param and Return2022\"}]"

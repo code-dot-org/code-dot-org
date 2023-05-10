@@ -913,6 +913,7 @@ fr:
         csp_applab_parameters: Fonctions avec Paramètres
         CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
         CS_Changing_Everything: L'informatique est en Train de Tout Changer
+        csd_sprite_properties: Propriétés du sprite
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

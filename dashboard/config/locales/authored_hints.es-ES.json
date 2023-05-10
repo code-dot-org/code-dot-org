@@ -833,27 +833,27 @@
         },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
-          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas. ¡Prueba varias!",
-          "MC_HOC_2017_08_RY_c": "Intenta seguir la línea de puntos para obtener un camino simple a través de la lava."
+          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas.  ¡Prueba unas cuantas!",
+          "MC_HOC_2017_08_RY_c": "Sigue la línea de puntos para atravesar la lava."
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
-          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas. ¡Prueba varias!",
-          "MC_HOC_2017_08_RY_c": "Intenta seguir la línea de puntos para obtener un camino simple a través de la lava."
+          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas.  ¡Prueba unas cuantas!",
+          "MC_HOC_2017_08_RY_c": "Sigue la línea de puntos para atravesar la lava."
         },
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
-          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas. ¡Prueba varias!",
-          "MC_HOC_2017_08_RY_c": "Intenta seguir la línea de puntos para obtener un camino simple a través de la lava."
+          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas.  ¡Prueba unas cuantas!",
+          "MC_HOC_2017_08_RY_c": "Sigue la línea de puntos para atravesar la lava."
         },
         "MC_HOC_2017_FP20x20": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "MC_HOC_2017_FP20x20_2019": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "MC_HOC_2017_FP20x20_2020": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "NEW Course 4 Artist Functions 13": {
           "NEW_Course_4_Artist_Functions_13_a": "Intenta editar la función de 'dibujar una línea de cuadrados' para que no tengas que llamar dos veces.",
@@ -8672,31 +8672,31 @@
           "grade5_artist_variables_triangles1_c": "Dentro de tu bucle, tendrás que avanzar 50 píxeles, luego girar a la izquierda 120 grados."
         },
         "iceage_click_hello": {
-          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al hacer click' para completar este desafío."
+          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al pulsar' para completar este rompecabezas."
         },
         "iceage_free_play": {
           "iceage_free_play_a": "¿Puedes hacer que Sid y Manny tengan una lucha de cristales de hielo?  ",
           "iceage_free_play_b": "Haz que Granny persiga a Diego. Termina el juego como una victoria si lo atrapa.",
-          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego se haga más grande cada vez que recibe uno? Termina el juego como una victoria si Diego recibe 5 golpes."
+          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego aumente de tamaño cada vez que uno le dé?  Termina el juego como una victoria si Diego es golpeado 5 veces."
         },
         "iceage_hello1": {
-          "iceage_hello1_a": "Sólo necesitas agregar un bloque para resolver este desafío. Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de evento `cuando ejecuta` que ya se encuentra en el área de trabajo. Luego, escribe \"¡Hola!\" dentro."
+          "iceage_hello1_a": "Sólo tienes que añadir un bloque para resolver este rompecabezas.  Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de eventos `al ejecutar` que ya está en el área de trabajo. A continuación, escribe \"¡Hola! dentro."
         },
         "iceage_hello2": {
-          "iceage_hello2_a": "Para resolver este desafío, necesitarás que Sid diga algo único usando el bloque 'actor 1 dice'. Necesitarás que Manny diga algo con el bloque 'actor 2 dice'. "
+          "iceage_hello2_a": "Para resolver este rompecabezas, tendrás que hacer que Sid diga algo utilizando el bloque \"actor 1 dice\".  También tendrás que hacer que Manny diga algo con el bloque \"actor 2 dice\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_move_to_actor": {
-          "iceage_move_to_actor_a": "En este desafío, puedes mover a Diego hacia abajo 200 pixeles o mover a Manny arriba 200 pixeles.",
-          "iceage_move_to_actor_b": "Conecta el bloque 'reproducir\\_\\_\\_sonido' al evento 'cuando el actor 1 toque al 2' para terminar este reto."
+          "iceage_move_to_actor_a": "Para este rompecabezas, puedes mover a Diego 200 píxeles hacia abajo, o mover a Manny 200 píxeles hacia arriba.",
+          "iceage_move_to_actor_b": "Conecta el bloque `reproduce ___ sonido` al evento `cuando el actor 1 toca al actor 2` para terminar este desafío."
         },
         "iceage_move_to_flag": {
-          "iceage_hello3_a": "Utiliza el bloque de 'mover el actor 1 a la derecha por 200 píxeles' para resolver este desafío."
+          "iceage_hello3_a": "Utiliza el bloque `mover actor 1 a la derecha 200 píxeles` para resolver este rompecabezas."
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este desafío."
+          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este rompecabezas."
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
@@ -8704,11 +8704,11 @@
         },
         "iceage_throw_hearts": {
           "iceage_throw_hearts_a": "¿Cuándo deseas lanzar corazones a la abuela?  ¿Cuando se presiona una flecha? ¿Al hacer clic en Sid?  ¿Al hacer clic en abuela?  ¡La elección es tuya!",
-          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'establecer humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
+          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'configurar humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
         },
         "iceage_warn_ice_age": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
@@ -8876,11 +8876,11 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
-          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas. ¡Prueba varias!",
-          "MC_HOC_2017_08_RY_c": "Intenta seguir la línea de puntos para obtener un camino simple a través de la lava."
+          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas.  ¡Prueba unas cuantas!",
+          "MC_HOC_2017_08_RY_c": "Sigue la línea de puntos para atravesar la lava."
         },
         "MC_HOC_2017_FP20x20_2021": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "Overworld Avoid Monsters_2021": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",
@@ -10664,15 +10664,15 @@
           "card_idea3": "Puedes hacer que tu programa sea interactivo haciendo que ocurran otras cosas cuando el usuario pulse una tecla o después de que haya pasado un tiempo determinado.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"cuando\"</title>\n    <title name=\"KEY\">\"arriba\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"escala\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
           "iceage_sound_and_points_b": "Necesitas los bloques `anotar un punto` y `reproducir \\_\\_\\_\\_ sonido\\` para pasar este nivel."
         },
         "iceage_warn_ice_age_dani": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -10791,7 +10791,7 @@
           "hw_retro_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
+          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
           "remove_hint": "Puedes eliminar un sprite en un determinado número de línea. Puedes añadir un nuevo sprite para ocupar su lugar: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -10820,7 +10820,7 @@
           "2-3_Artist_Functions_4_a": "El artista debe girar 120 grados entre cada cuadrado para completar este diseño."
         },
         "MC Agent Freeplay": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "Farmer for Authored Hint testing": {
           "second_hint": "Esta es la segunda pista. Tiene un vídeo como pista.",
@@ -11000,11 +11000,11 @@
         },
         "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_a": "¡Presiona \"Ejecutar\"! \nPuedes ejecutar tu código aunque no sea correcto.  Ejecuta y restablece tu código una y otra vez hasta que descubras qué está mal.",
-          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas. ¡Prueba varias!",
-          "MC_HOC_2017_08_RY_c": "Intenta seguir la línea de puntos para obtener un camino simple a través de la lava."
+          "MC_HOC_2017_08_RY_b": "Hay MUCHAS maneras de resolver este rompecabezas.  ¡Prueba unas cuantas!",
+          "MC_HOC_2017_08_RY_c": "Sigue la línea de puntos para atravesar la lava."
         },
         "MC_HOC_2017_FP20x202022": {
-          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos caminos de vagoneta para que puedas explorar el mundo!"
+          "MC_HOC_2017_13_Cole_a": "Dile al Agente que construya unas vías de vagoneta ¡para que puedas explorar el mundo!"
         },
         "Overworld Avoid Monsters2022": {
           "mc_8_a": "Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?",

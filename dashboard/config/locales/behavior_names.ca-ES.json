@@ -290,22 +290,28 @@
           "moving east and looping": "anar cap a l'est en bucle"
         },
         "CourseF_outbreak1": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak1_-2022-2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak2_-2022-2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak3": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak3_-2022-2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak4": {
           "wandering": "deambular",
@@ -320,7 +326,8 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak4_-2022-2": {
           "wandering": "deambular",
@@ -335,19 +342,24 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak5": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak5_-2022-2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak6": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak6_-2022-2": {
-          "wandering": "deambular"
+          "wandering": "deambular",
+          "recovering": "recuperar-se"
         },
         "CourseF_outbreak7": {
           "wandering": "deambular",
@@ -361,7 +373,9 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se",
+          "moving left and right": "moure's cap a l'esquerra i cap a la dreta"
         },
         "CourseF_outbreak7_-2022-2": {
           "wandering": "deambular",
@@ -375,7 +389,9 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se",
+          "moving left and right": "moure's cap a l'esquerra i cap a la dreta"
         },
         "CourseF_outbreak8": {
           "wandering": "deambular",
@@ -389,7 +405,9 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se",
+          "moving left and right": "moure's cap a l'esquerra i cap a la dreta"
         },
         "CourseF_outbreak8_-2022-2": {
           "wandering": "deambular",
@@ -403,7 +421,9 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se",
+          "moving left and right": "moure's cap a l'esquerra i cap a la dreta"
         },
         "Dance Party 2": {
           "shrinking": "encongir-se",
@@ -1864,7 +1884,9 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_aquarium2022": {
           "wandering2": "deambular2",
@@ -1893,7 +1915,9 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_aquarium_-2022-2": {
           "wandering2": "deambular2",
@@ -1922,7 +1946,9 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -1938,7 +1964,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_apps_card2022": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -1954,7 +1981,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_apps_card_-2022-2": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -1970,7 +1998,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -1998,7 +2027,10 @@
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
           "moving west2": "anar cap a l'oest2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "blocking movement": "moviment de bloqueig",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_chatbot2022": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -2026,7 +2058,10 @@
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
           "moving west2": "anar cap a l'oest2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "blocking movement": "moviment de bloqueig",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_chatbot_-2022-2": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -2054,7 +2089,10 @@
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
           "moving west2": "anar cap a l'oest2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "blocking movement": "moviment de bloqueig",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_collector": {
           "wandering": "deambular",
@@ -2082,7 +2120,10 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "flying west and looping": "volar cap a l'oest i fer un bucle",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_collector2022": {
           "wandering": "deambular",
@@ -2110,7 +2151,10 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "flying west and looping": "volar cap a l'oest i fer un bucle",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "deambular",
@@ -2138,7 +2182,10 @@
           "swimming left and right2": "nedar cap a l'esquerra i cap a la dreta2",
           "moving north2": "anar cap al nord2",
           "jittering2": "tremolar2",
-          "patrolling2": "rondar2"
+          "patrolling2": "rondar2",
+          "flying west and looping": "volar cap a l'oest i fer un bucle",
+          "moving with arrow keys2": "moure amb les tecles de fletxa2",
+          "driving with arrow keys2": "dirigir amb les tecles de fletxa2"
         },
         "courseF_apps_madlib": {
           "wandering": "deambular",
@@ -2271,7 +2318,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_editable_card_-2022-2": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -2287,7 +2335,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -2303,7 +2352,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_editable_chatbot_-2022-2": {
           "driving with arrow keys": "dirigir amb les tecles de fletxa",
@@ -2319,7 +2369,8 @@
           "moving south": "anar cap al sud",
           "moving west": "anar cap a l'oest",
           "spinning right": "voltejar cap a la dreta",
-          "spinning left": "voltejar cap a l'esquerra"
+          "spinning left": "voltejar cap a l'esquerra",
+          "blocking movement": "moviment de bloqueig"
         },
         "courseF_editable_madlib": {
           "wandering": "deambular",
@@ -4714,7 +4765,9 @@
           "jittering": "tremolar",
           "moving west": "anar cap a l'oest",
           "patrolling": "rondar",
-          "moving with arrow keys": "moure amb les tecles de fletxa"
+          "moving with arrow keys": "moure amb les tecles de fletxa",
+          "recovering": "recuperar-se",
+          "moving left and right": "moure's cap a l'esquerra i cap a la dreta"
         },
         "simcustom_-2022-2": {
           "wandering": "deambular",

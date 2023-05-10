@@ -1209,6 +1209,19 @@ he:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: סדר {GROUP} ב {FORMAT}
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"top"': שורה עליונה
+            '"row"': טור
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
+            '"column"': עמודה
+            '"right"': עמודה ימנית
       gamelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1234,6 +1247,18 @@ he:
             '"spiral"': ספירלה
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"top"': שורה עליונה
+            '"row"': טור
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
+            '"column"': עמודה
+            '"right"': עמודה ימנית
       gamelab_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
       gamelab_makeProjectile:
@@ -2058,8 +2083,6 @@ he:
         text: פנה שמאלה
       RyanLab_turnRight:
         text: פנה ימינה
-      SpriteLab2Beta_spriteSay:
-        text: שספרייט {SPRITE} אומר {TEXT} עבור {SECONDS} שניות
       Vector_createSpriteWith:
         text: |-
           ליצור ספרייט
@@ -2108,6 +2131,16 @@ he:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} אמור {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): להסתובב ימינה
+            new Behavior(spinning_left, []): להסתובב שמאלה
+            new Behavior(fluttering, []): להתרגש
+            new Behavior(jittering, []): לרעוד
+            new Behavior(wobbling, []): להתנדנד
+            new Behavior(wandering, []): לשוטט
+            new Behavior(patrolling, []): לסייר
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
@@ -2263,5 +2296,3 @@ he:
         text: קבעו כותרת {HEADING}
       storylab_setSubheading:
         text: קבעו תת-כותרת {SUBHEADING}
-      validation_validatedBackground:
-        text: קבע רקע {IMG}

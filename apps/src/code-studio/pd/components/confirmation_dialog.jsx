@@ -15,19 +15,19 @@ export default class ConfirmationDialog extends React.Component {
       .isRequired,
     okText: PropTypes.string,
     cancelText: PropTypes.string,
-    width: PropTypes.number
+    width: PropTypes.number,
   };
 
   static defaultProps = {
     okText: 'OK',
     cancelText: 'Cancel',
-    width: 500
+    width: 500,
   };
 
   render() {
     const style = {
       width: this.props.width,
-      marginLeft: -this.props.width / 2
+      marginLeft: -this.props.width / 2,
     };
 
     return (

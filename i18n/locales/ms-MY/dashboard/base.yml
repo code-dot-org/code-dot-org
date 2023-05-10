@@ -172,7 +172,6 @@ ms:
     data_collection_us: "Saya faham bahawa Code.org adalah laman web bukan untuk keuntungan yang berpusat di AS dan undang-undang yang mengawal pengumpulan data di A.S. mungkin berbeza dari undang-undang di negara saya."
     visit_privacy: 'Lawati Code.org''s [Dasar Privasi](%{privacy_url}) untuk mengetahui lebih lanjut.'
     student_terms_markdown: "Alamat e-mel tidak disimpan dalam borang yang membolehkan kami menghubungi pelajar. Pelajar tidak akan menerima e-mel daripada Code.org kecuali untuk pemulihan kata laluan. Lihat [dasar privasi] kami(http://code.org/privacy) untuk maklumat lanjut."
-    additional_information: "Kami memerlukan beberapa maklumat tambahan untuk terus mendaftar anda."
     user_type_button: "Kemaskini Jenis Akaun"
     user_type_label: "Jenis Akaun"
     user_type_student: "Pelajar"
@@ -1112,6 +1111,13 @@ ms:
     no_teacher_email:
       body_markdown: 'Akaun anda tidak mempunyai alamat e-mel. Sila [lawati tetapan akaun anda](%{user_registration}) untuk menambah alamat e-mel anda sebelum melengkapkan borang ini.'
   courses_category: 'Semua Kursus'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Helo Dunia'
+      sports: 'Sukan'
+      csf: 'Asas CS'
+      csc: 'Sambungan CS'
   cookie_banner:
     message: 'Dengan meneruskan menyemak imbas tapak kami atau mengklik "Saya setuju", anda bersetuju untuk menyimpan kuki pada komputer atau peranti anda.'
     more_information: "Sila lihat Dasar Privasi Code.org."

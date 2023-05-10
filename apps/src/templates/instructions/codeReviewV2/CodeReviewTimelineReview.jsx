@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
+  codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
@@ -21,7 +21,7 @@ const CodeReviewTimelineReview = ({
   closeReview,
   toggleResolveComment,
   deleteCodeReviewComment,
-  currentUserId
+  currentUserId,
 }) => {
   const {id, createdAt, isOpen, version, ownerId, ownerName, comments} = review;
   const [displayCloseError, setDisplayCloseError] = useState(false);
@@ -121,7 +121,7 @@ const CodeReviewTimelineReview = ({
 export const UnconnectedCodeReviewTimelineReview = CodeReviewTimelineReview;
 
 export default connect(state => ({
-  currentUserId: state.currentUser?.userId
+  currentUserId: state.currentUser?.userId,
 }))(CodeReviewTimelineReview);
 
 CodeReviewTimelineReview.propTypes = {
@@ -131,14 +131,14 @@ CodeReviewTimelineReview.propTypes = {
   closeReview: PropTypes.func.isRequired,
   toggleResolveComment: PropTypes.func.isRequired,
   deleteCodeReviewComment: PropTypes.func.isRequired,
-  currentUserId: PropTypes.number
+  currentUserId: PropTypes.number,
 };
 
 const styles = {
   wrapper: {
     backgroundColor: 'white',
     borderRadius: '10px',
-    padding: '16px 12px'
+    padding: '16px 12px',
   },
   icon: {
     marginRight: '5px',
@@ -149,38 +149,38 @@ const styles = {
     fontSize: '22px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   header: {
     display: 'flex',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   title: {
     flexGrow: 1,
     fontStyle: 'italic',
-    marginRight: '10px'
+    marginRight: '10px',
   },
   codeReviewTitle: {
     fontFamily: '"Gotham 5r", sans-serif',
     lineHeight: '14px',
-    marginBottom: '4px'
+    marginBottom: '4px',
   },
   author: {
     fontSize: '12px',
     lineHeight: '12px',
-    marginBottom: '4px'
+    marginBottom: '4px',
   },
   date: {
     fontSize: '12px',
     marginBottom: '10px',
-    lineHeight: '15px'
+    lineHeight: '15px',
   },
   codeWorkspaceDisabledMsg: {
     textAlign: 'center',
     fontStyle: 'italic',
-    margin: '10px 0'
+    margin: '10px 0',
   },
   note: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };

@@ -3,6 +3,7 @@
   "config": {
     "func": "setSize_dropdown",
     "blockText": "set {SPRITE} size to {SIZE}",
+    "style": "default",
     "args": [
       {
         "name": "SPRITE",

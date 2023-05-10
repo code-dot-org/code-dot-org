@@ -544,3 +544,53 @@ ky:
               display_name: Тизмелер
             lessonGroup-3:
               display_name: Циклдер
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Өзгөрмөлөр
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шартуулар

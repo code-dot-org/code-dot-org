@@ -3,13 +3,13 @@ import CollapserIcon from './CollapserIcon';
 
 const styles = {
   background: {
-    position: 'relative'
-  }
+    position: 'relative',
+  },
 };
 
 export default {
   title: 'CollapserIcon',
-  component: CollapserIcon
+  component: CollapserIcon,
 };
 
 const Template = args => (
@@ -20,22 +20,22 @@ const Template = args => (
 
 export const DefaultExpanded = Template.bind({});
 DefaultExpanded.args = {
-  isCollapsed: false
+  isCollapsed: false,
 };
 
 export const DefaultCollapsed = Template.bind({});
 DefaultCollapsed.args = {
-  isCollapsed: true
+  isCollapsed: true,
 };
 
 export const DifferentIconExpanded = Template.bind({});
 DifferentIconExpanded.args = {
   isCollapsed: false,
-  expandedIconClass: 'fa-caret-down'
+  expandedIconClass: 'fa-caret-down',
 };
 
 export const CustomStyleExpanded = Template.bind({});
 CustomStyleExpanded.args = {
   isCollapsed: false,
-  style: {color: 'red'}
+  style: {color: 'red'},
 };

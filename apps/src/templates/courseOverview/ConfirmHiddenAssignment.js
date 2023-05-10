@@ -13,7 +13,7 @@ export default class ConfirmHiddenAssignment extends Component {
     sectionName: PropTypes.string.isRequired,
     assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired
+    onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
@@ -50,7 +50,7 @@ const styles = {
   header: {
     fontSize: 16,
     marginBottom: 5,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   content: {
     fontSize: 14,
@@ -63,6 +63,6 @@ const styles = {
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderStyle: 'solid',
-    borderColor: color.lighter_gray
-  }
+    borderColor: color.lighter_gray,
+  },
 };

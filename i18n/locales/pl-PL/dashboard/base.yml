@@ -171,7 +171,6 @@ pl:
     data_collection_us: "Rozumiem, że Code.org jest witryną non-profit z siedzibą w Stanach Zjednoczonych i że przepisy dotyczące gromadzenia danych w Stanach Zjednoczonych mogą różnić się od przepisów obowiązujących w moim kraju.\n"
     visit_privacy: "Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby dowiedzieć się więcej.\n"
     student_terms_markdown: "Adresy e-mail nie są przechowywane w postaci, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się w naszej [Polityce prywatności](http://code.org/privacy)."
-    additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
     user_type_button: "Zaktualizuj typ konta"
     user_type_label: "Typ konta"
     user_type_student: "Uczeń"
@@ -339,7 +338,7 @@ pl:
       project_gallery: "Galeria Projektów"
       sections: "Sekcje"
       help_support: "Pomoc i wsparcie"
-      report_bug: "Zgłosić problem"
+      report_bug: "Zgłoś problem"
       report_abuse: "Zgłoś nadużycie"
       teacher_community: "Społeczność nauczycieli"
       professional_learning: "Kształcenia Profesjonalne"
@@ -1205,6 +1204,25 @@ pl:
     no_teacher_email:
       body_markdown: 'Z Twoim kontem nie jest skojarzony adres e-mail. Prosimy [przejść do ustawień konta](%{user_registration}),, aby dodać swój adres e-mail przed wypełnieniem tego fomularza.'
   courses_category: 'Pełne Kursy'
+  course_offering:
+    headers:
+      favorites: 'Ulubione'
+      labs_and_skills: 'Laboratoria i umiejętności'
+      minecraft: 'Minecraft'
+      hello_world: 'Witaj świecie'
+      popular_media: 'Popularne media'
+      sports: 'Zawody'
+      express: 'Ekspres'
+      csf: 'Podstawy Informatyki'
+      csc: 'Powiązania z informatyką (CS Connections)'
+      year_long: 'Przez cały rok'
+      csa_labs: 'Laboratoria CSA'
+      self_paced: 'We własnym tempie'
+      teacher_led: 'Prowadzony przez nauczyciela'
+      collections: 'Kolekcje'
+      workshops_k5: 'Warsztaty dla uczniów w klasach K-5'
+      summer_workshops_612: 'Warsztaty Letnie dla uczniów w klasach 6-12'
+      virtual_academic_year_workshops_612: 'Wirtualne Warsztaty Roku Akademickiego dla uczniów w klasach 6-12'
   cookie_banner:
     message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
     more_information: "Zapoznaj się z polityką prywatności Code.org."

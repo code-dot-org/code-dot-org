@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalText = function(text, fontSize, color) {
+var EvalText = function (text, fontSize, color) {
   evalUtils.ensureString(text);
   evalUtils.ensureNumber(fontSize);
   evalUtils.ensureColor(color);
@@ -17,7 +17,7 @@ var EvalText = function(text, fontSize, color) {
 EvalText.inherits(EvalImage);
 module.exports = EvalText;
 
-EvalText.prototype.draw = function(parent) {
+EvalText.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
     parent.appendChild(this.element_);
@@ -33,6 +33,6 @@ EvalText.prototype.draw = function(parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-EvalText.prototype.getText = function() {
+EvalText.prototype.getText = function () {
   return this.text_;
 };

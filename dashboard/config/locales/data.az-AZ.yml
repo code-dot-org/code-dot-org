@@ -1008,6 +1008,7 @@ az:
           CSA: Bir Ölçülü (1D) Massivlər
           CSA: Bir Ölçülü (1D) Arrays
         csa_polymorphism: 'CSA: Polimorfizm'
+        csd_sprite_properties: Sprite Xüsusiyyətləri
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına

@@ -1,6 +1,6 @@
 name 'CSA U4L6-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Overriding the equals() Method'
+description 'Override and use the `equals()` method to compare objects in a program.'
 
 sublevels
 level 'CSA U4L6-L7a_2023'

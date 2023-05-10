@@ -2,7 +2,7 @@
 fil:
   errors:
     messages:
-      not_saved: 'Pakiwasto ang mga sumusunod na error:'
+      not_saved: 'Pakiwasto ang mga sumusunod na mga error:'
       too_young: May limitadong edad ito at hindi pwedeng ibigay sa nakababatang mga
         estudyante.
       teacher_must_accept_terms: Ang content na ito ay may nakalagay na restrikyon
@@ -229,8 +229,6 @@ fil:
       ay hinding-hindi makakatanggap ng mga emails mula sa Code.org maliban na lang
       sa password recovery. Tingnan ang aming [patakaran sa privacy](http://code.org/privacy)
       para sa karagdagan impormasyon.
-    additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
-      ang pag-sign up sa iyo.
     user_type_button: I-update ang Uri ng Account
     user_type_label: Uri ng Account
     user_type_student: Estudyante
@@ -1494,6 +1492,13 @@ fil:
         iyong mga setting ng account](%{user_registration}) upang idagdag ang iyong
         email address bago kumpletuhin ang form na ito.
   courses_category: Buong mga Kurso
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Hello World
+      sports: Mga Palakasan
+      csf: CS Fundamentals
+      csc: Mga Koneksiyon sa CS
   cookie_banner:
     message: Sa pamamagitan ng patuloy na pag-browse sa aming site o pag-click sa
       "Sumasang-ayon ako," sumasang-ayon ka sa pag-iimbak ng cookies sa computer o

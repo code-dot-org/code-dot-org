@@ -316,6 +316,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
+        id: id,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
@@ -327,7 +328,8 @@ class ScriptLevel < ApplicationRecord
         url: build_script_level_url(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
-        display_as_unplugged: level.display_as_unplugged?
+        display_as_unplugged: level.display_as_unplugged?,
+        app: level.game&.app
       }
 
       if progression
@@ -726,9 +728,7 @@ class ScriptLevel < ApplicationRecord
     level_example_links
   end
 
-  private
-
-  def kind
+  private def kind
     if level.unplugged?
       LEVEL_KIND.unplugged
     elsif assessment
@@ -738,7 +738,7 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def build_exemplar_url(path)
+  private def build_exemplar_url(path)
     CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end

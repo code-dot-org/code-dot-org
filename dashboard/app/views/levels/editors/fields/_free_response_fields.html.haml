@@ -31,4 +31,4 @@
     %p If checked, an assessment page will still be considered complete even if this question is left blank.
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_multiple_attempts, description: "Allow multiple attempts"}
-    %p Whether or not a user can submit multiple answers. Default is no for contained levels and yes for standalone levels. It will not apply for levels in level groups.
+    %p Whether or not a user can submit multiple answers. It will not apply for levels in level groups.

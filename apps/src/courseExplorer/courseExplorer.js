@@ -7,8 +7,8 @@ let toolShowingIndex = -1;
 
 let courseShowingIndex = -1;
 
-module.exports.initCourseExplorer = function() {
-  $('.tool').click(function() {
+module.exports.initCourseExplorer = function () {
+  $('.tool').click(function () {
     const row = $(this).data('row');
     const index = $(this).data('index');
 
@@ -36,12 +36,12 @@ module.exports.initCourseExplorer = function() {
     }
   });
 
-  $('.tool_arrow_box_close').click(function() {
+  $('.tool_arrow_box_close').click(function () {
     $('.detailrow').slideUp();
     toolShowingIndex = -1;
   });
 
-  $('.course.breakable').click(function() {
+  $('.course.breakable').click(function () {
     const courseIndex = $(this).attr('data-courseindex');
 
     // Show the arrows as inline-block instead of .show()'s default inline
@@ -90,7 +90,7 @@ module.exports.initCourseExplorer = function() {
     }
   });
 
-  $('.arrow_box_close').click(function() {
+  $('.arrow_box_close').click(function () {
     const courseIndex = $(this).attr('data-courseindex');
     $('.courseextra-' + courseIndex).slideUp();
     $(`.course-${courseIndex} .clicktag`).css(

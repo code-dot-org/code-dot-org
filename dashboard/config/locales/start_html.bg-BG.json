@@ -640,7 +640,8 @@
           "low": "нисък"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Актуализиране"
+          "Update": "Актуализиране",
+          "value": "стойност"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Вие го направихте!"
@@ -703,16 +704,20 @@
           "Success!": "Успешно!"
         },
         "CSD U6 analog light": {
-          "Update": "Актуализиране"
+          "Update": "Актуализиране",
+          "value": "стойност"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Актуализиране"
+          "Update": "Актуализиране",
+          "value": "стойност"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Актуализиране"
+          "Update": "Актуализиране",
+          "value": "стойност"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Актуализиране"
+          "Update": "Актуализиране",
+          "value": "стойност"
         },
         "CSD U6 array piano": {
           "C": "В",
@@ -1646,6 +1651,54 @@
         },
         "allthethings_moviebot": {
           "Ask me a question.": "Попитайте ме въпрос."
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "стойност"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "стойност"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "стойност"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "стойност"
+        },
+        "CSD U6 analog change": {
+          "value": "стойност"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "стойност"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "стойност"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "стойност"
+        },
+        "CSD U6 analog data": {
+          "value": "стойност"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "стойност"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "стойност"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "стойност"
+        },
+        "CSD U6 analog sound": {
+          "value": "стойност"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "стойност"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "стойност"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "стойност"
         }
       }
     }

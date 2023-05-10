@@ -5,13 +5,13 @@ import {
   LabeledCheckBoxes,
   LabeledCheckBoxesWithAdditionalTextFields,
   LabeledDynamicCheckBoxes,
-  LabeledDynamicCheckBoxesWithAdditionalTextFields
+  LabeledDynamicCheckBoxesWithAdditionalTextFields,
 } from './labeled/LabeledCheckBoxes';
 import {LabeledLargeInput, LabeledInput} from './labeled/LabeledInput';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields,
-  LabeledDynamicRadioButtonsWithAdditionalTextFields
+  LabeledDynamicRadioButtonsWithAdditionalTextFields,
 } from './labeled/LabeledRadioButtons';
 import {LabeledSelect} from './labeled/LabeledSelect';
 import {LabeledSingleCheckbox} from './labeled/LabeledSingleCheckbox';
@@ -28,7 +28,7 @@ export default storybook => {
     errorMessages: {},
     data: {},
     options: {},
-    onChange: action('onChange')
+    onChange: action('onChange'),
   };
 
   const Context = ({children, ...props}) => {
@@ -44,7 +44,7 @@ export default storybook => {
   Context.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   storybook
@@ -57,7 +57,7 @@ export default storybook => {
           <Context name="singleCheckbox" label="This is a single checkbox">
             <LabeledSingleCheckbox name="singleCheckbox" />
           </Context>
-        )
+        ),
       },
       {
         name: 'Checkboxes',
@@ -66,12 +66,12 @@ export default storybook => {
             name="checkBoxes"
             label="Select options"
             options={{
-              checkBoxes: ['option 1', 'option 2', 'option 3']
+              checkBoxes: ['option 1', 'option 2', 'option 3'],
             }}
           >
             <LabeledCheckBoxes name="checkBoxes" />
           </Context>
-        )
+        ),
       },
       {
         name: 'CheckboxesWithAdditionalFields',
@@ -80,17 +80,17 @@ export default storybook => {
             name="checkBoxesWithOther"
             label="Select options and add text"
             options={{
-              checkBoxesWithOther: ['option 1', 'option 2', OTHER]
+              checkBoxesWithOther: ['option 1', 'option 2', OTHER],
             }}
           >
             <LabeledCheckBoxesWithAdditionalTextFields
               name="checkBoxesWithOther"
               textFieldMap={{
-                [OTHER]: 'other'
+                [OTHER]: 'other',
               }}
             />
           </Context>
-        )
+        ),
       },
       {
         name: 'RadioButtons',
@@ -99,12 +99,12 @@ export default storybook => {
             name="radioButtons"
             label="Select an option"
             options={{
-              radioButtons: ['option 1', 'option 2', 'option 3']
+              radioButtons: ['option 1', 'option 2', 'option 3'],
             }}
           >
             <LabeledRadioButtons name="radioButtons" />
           </Context>
-        )
+        ),
       },
       {
         name: 'RadioButtonsWithAdditionalFields',
@@ -113,17 +113,17 @@ export default storybook => {
             name="radioButtonsWithOther"
             label="Select an option and add text"
             options={{
-              radioButtonsWithOther: ['option 1', 'option 2', OTHER]
+              radioButtonsWithOther: ['option 1', 'option 2', OTHER],
             }}
           >
             <LabeledRadioButtonsWithAdditionalTextFields
               name="radioButtonsWithOther"
               textFieldMap={{
-                [OTHER]: 'other'
+                [OTHER]: 'other',
               }}
             />
           </Context>
-        )
+        ),
       },
       {
         name: 'DynamicRadioButtonsWithAdditionalFields',
@@ -140,7 +140,7 @@ export default storybook => {
               textFieldMap={{[OTHER]: 'other'}}
             />
           </Context>
-        )
+        ),
       },
       {
         name: 'DynamicCheckboxes',
@@ -154,7 +154,7 @@ export default storybook => {
               options={[1, 2, 3].map(n => `Dynamic option #${n}`)}
             />
           </Context>
-        )
+        ),
       },
       {
         name: 'DynamicCheckboxesWithAdditionalFields',
@@ -171,7 +171,7 @@ export default storybook => {
               textFieldMap={{[OTHER]: 'other'}}
             />
           </Context>
-        )
+        ),
       },
       {
         name: 'Select',
@@ -180,12 +180,12 @@ export default storybook => {
             name="select"
             label="Select an option"
             options={{
-              select: ['option 1', 'option 2', 'option 3']
+              select: ['option 1', 'option 2', 'option 3'],
             }}
           >
             <LabeledSelect name="select" placeholder="Select an option" />
           </Context>
-        )
+        ),
       },
       {
         name: 'Input',
@@ -193,7 +193,7 @@ export default storybook => {
           <Context name="input" label="Enter some text">
             <LabeledInput name="input" />
           </Context>
-        )
+        ),
       },
       {
         name: 'LargeInput',
@@ -201,7 +201,7 @@ export default storybook => {
           <Context name="largeInput" label="Enter some longer text">
             <LabeledLargeInput name="largeInput" />
           </Context>
-        )
+        ),
       },
       {
         name: 'UsPhoneNumber',
@@ -209,7 +209,7 @@ export default storybook => {
           <Context name="usPhoneNumber" label="Enter a phone number">
             <LabeledUsPhoneNumberInput name="usPhoneNumber" />
           </Context>
-        )
-      }
+        ),
+      },
     ]);
 };

@@ -1,4 +1,5 @@
 !!! 5
+-require 'cdo/cpa'
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
@@ -7,6 +8,8 @@
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
         "/s/express-2021/lessons/1#{webpack_offline_asset_path('js/offline-service-worker.js')}"
+    :javascript
+      window.CPA_EXPERIENCE = "#{cpa_experience}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
@@ -18,6 +21,7 @@
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
+    = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is

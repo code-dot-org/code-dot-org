@@ -16,7 +16,7 @@ function MiniView(props) {
     scriptName,
     hasFullProgress,
     selectedSectionId,
-    minimal
+    minimal,
   } = props;
 
   let body;
@@ -31,7 +31,7 @@ function MiniView(props) {
         className="mini-view"
         style={{
           ...(!hasGroups && !isSummaryView && styles.detailView),
-          ...(hasGroups && styles.groupView)
+          ...(hasGroups && styles.groupView),
         }}
       >
         <ProgressTable minimal={minimal} />
@@ -61,18 +61,18 @@ MiniView.propTypes = {
   hasGroups: PropTypes.bool.isRequired,
   scriptName: PropTypes.string.isRequired,
   hasFullProgress: PropTypes.bool.isRequired,
-  selectedSectionId: PropTypes.number
+  selectedSectionId: PropTypes.number,
 };
 
 const styles = {
   // For the detail view (without groups) we want some margins
   detailView: {
-    margin: 10
+    margin: 10,
   },
   // For group view, we want larger margins to match the gap between groups
   groupView: {
-    margin: 20
-  }
+    margin: 20,
+  },
 };
 
 export const UnconnectedMiniView = MiniView;
@@ -82,5 +82,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(MiniView);

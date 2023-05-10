@@ -4031,7 +4031,6 @@
         "courseD_artist_42022": "아주 작은 도형을 선 끝에 추가하세요!",
         "courseD_artist_52022": "눈송이로 플레이하세요!",
         "courseD_artist_62022": "150 픽셀 길이의 선을 끝에서 약간 회전하여 **25**픽셀의 짧은 6개 선으로 변경해 보세요.  ",
-        "courseD_artist_nestedLoops102022": "앞에서 사각형을 가져오지만 이번에는 그 중 7개만 만들고 그것을 일렬로 배열합니다.",
         "courseD_artist_nestedLoops12022": "이번 단계를 시작하기 위해 삼각형을 그리세요.\n(각각의 변은 100픽셀이고, 매번 바깥으로 120도를 돌아야 합니다.)",
         "courseD_artist_nestedLoops1a2022": "이번에는 삼각형을 6번 반복해서 그려보세요. ",
         "courseD_artist_nestedLoops22022": "이번에는 가능한 한 가장 적은 개수의 블록을 사용해서 문제를 해결해보세요.",
@@ -4314,7 +4313,25 @@
         "helloworld_food_sizes_soccer-2022": "스프라이트 크기 변경에 관해 배워 볼께요.",
         "helloworld_food_sizes_space-2022": "스프라이트 크기 변경에 관해 배워 볼께요.",
         "helloworld_food_sounds_soccer-2022": "사운드 재생방법을 배워 볼께요.",
-        "helloworld_food_sounds_space-2022": "사운드 재생방법을 배워 볼께요."
+        "helloworld_food_sounds_space-2022": "사운드 재생방법을 배워 볼께요.",
+        "ml-bad data-club investigations": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-bad data-club investigations_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-bad data-loneliness all": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-bad data-loneliness all_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo1-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo1_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo2-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo2_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo3-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-data decisions-zoo3_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-final project-ai lab-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-final project-ai lab_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-intro categorical-food choices-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-intro categorical-food choices_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-intro categorical-pizza-2021": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-intro categorical-pizza_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-mini project-ai lab 2": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요.",
+        "ml-mini project-ai lab 2_2022": "활동 가이드의 설명에 따라 이 수업의 단계를 완료하세요."
       }
     }
   }

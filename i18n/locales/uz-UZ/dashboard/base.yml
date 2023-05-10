@@ -170,7 +170,6 @@ uz:
     data_collection_us: "Code.org AQShda joylashgan va notijorat veb-sayt bo'lib, AQShda ma'lumotlar yig'ishni tartibga soluvchi qonunlar mening mamlakatim qonunlaridan farq qilishi mumkinligini tushunaman."
     visit_privacy: 'Qo‘shimcha ma''lumot olish uchun Code.org-ning [Maxfiylik siyosati sahifasi](%{privacy_url})ga o‘ting.'
     student_terms_markdown: "Elektron pochta manzillari talabalar bilan bog'lanishimizga imkon beradigan shaklda saqlanmaydi. Parolni tiklashdan tashqari, talabalar hech qachon Code.org saytidan elektron pochta xabarlarini olmaydilar. Qo'shimcha ma'lumot olish uchun bizning [maxfiylik siyosatimiz] (http://code.org/privacy) ga qarang."
-    additional_information: "Ro'yxatdan o'tishni davom ettirish uchun bizga qo'shimcha ma'lumot kerak."
     user_type_button: "Hisob turini yangilash"
     user_type_label: "Hisob (Akkaunt) Turi"
     user_type_student: "O‘quvchi"
@@ -1081,6 +1080,11 @@ uz:
     no_teacher_email:
       body_markdown: 'Hisobingizda elektron pochta manzili yo''q. Ushbu shaklni to''ldirishdan oldin elektron pochta manzilingizni qo''shish uchun [hisobingiz sozlamalariga o''ting](%{user_registration}).'
   courses_category: 'To''liq kurslar'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sport'
+      csf: 'CS asoslari'
   cookie_banner:
     message: 'Bizning saytni ko''rib chiqishni davom ettirish yoki "Men roziman" tugmasini bosish orqali siz cookie-fayllarni kompyuteringizda yoki qurilmangizda saqlashga rozilik bildirasiz.'
     more_information: "Code.org Maxfiylik siyosati bilan tanishing"

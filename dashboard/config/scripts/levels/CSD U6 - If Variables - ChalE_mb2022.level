@@ -87,9 +87,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/booleans-and-comparison-operators"
+      "/courses/csd-2022/guides/counter-patterns-with-event"
     ],
     "callout_json": "[]",
     "display_name": "Debugging!",
@@ -99,9 +100,7 @@
     "teacher_markdown": "The bug is that the `>` and `<` symbols are swapped in the if-statements. For example, the top if statement checks if `xPos < 320`, which will be true while the arrow is still on the screen. We want the opposite: `xPos > 320`. This correctly checks that the arrow is off of the right-side of the screen. Similarly, the second if statement should be checking that `xPos < 0`.\r\n\r\nStudents can fix this within block mode, but it's a little tedious and requires removing the `<` and `>` blocks completely. It can be easier to switch into text mode and manually change these symbols, then switch back to block mode. For some students, this can be a good excuse to try out text mode if they've never used it before.",
     "bubble_choice_description": "The app is supposed to move an arrow across the screen and keep scrolling to the other side, but there are bugs!",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "3YBI2paHZm3sXvi3rGVc20x5lNzYqZaCWNpmZJfKdV+yq+OqogNb+5N+9AIQ\nx9/1aRvWLEjrVqRmOHbKYAM6Vg==\n"
   },
   "game_id": 41,
   "published": true,
@@ -109,7 +108,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:12.323+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalE_2222\"},{\"changed_at\":\"2023-02-07 22:51:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"reference_links\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:12.323+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalE_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalE_2222\"},{\"changed_at\":\"2023-02-07 22:51:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"reference_links\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:27:45 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

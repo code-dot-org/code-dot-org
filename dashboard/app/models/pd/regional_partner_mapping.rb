@@ -26,17 +26,15 @@ class Pd::RegionalPartnerMapping < ApplicationRecord
   validate :zip_code_xor_state
   validate :unique_region_to_partner
 
-  private
-
   # either zip_code or state must be populated, but not both
-  def zip_code_xor_state
+  private def zip_code_xor_state
     unless zip_code? ^ state?
       errors.add(:base, "Specify a zip code or a state, not both")
     end
   end
 
   # Region must not belong to another partner
-  def unique_region_to_partner
+  private def unique_region_to_partner
     result = Pd::RegionalPartnerMapping.where(zip_code: zip_code, state: state).where.not(regional_partner_id: regional_partner.id)
     if result.any?
       errors.add(:base, "This region belongs to another partner")

@@ -220,7 +220,7 @@ tr:
         title: Parametrelerle Şarkı Yazmak
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.  '
       courseB_unplugged_MRF_2018:
-        title: Robot dostlarım
+        title: Robotik Arkadaşlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
       PlantASeed_2018:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
@@ -276,7 +276,7 @@ tr:
         title: Röle Programlama
         desc: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır, sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana karşı yarışacaktır. 
       courseB_unplugged_MRF_2019:
-        title: Robot dostlarım
+        title: Robotik Arkadaşlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
       BuildingAFoundation_2019:
         title: 'eksik çeviri: en-US.data.unplugged.BuildingAFoundation_2018.title'

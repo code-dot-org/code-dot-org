@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Події акселерометра"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Аналогові датчики"
-        },
         "csd-2022/app-lab": {
           "display_name": "App Lab"
         },
@@ -97,6 +94,12 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Огляд"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Процес вирішення проблем"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Процес вирішення проблем"
         },
         "csd-2022/sprites": {
           "display_name": "Спрайти"

@@ -600,6 +600,7 @@ sk:
         csp_applab_parameters: Funkcie s parametrami
         CSA-PL-intro-to-arrays: Jednorozmerné (1D) polia
         CS_Changing_Everything: Informatika mení svet okolo nás
+        csd_sprite_properties: Vlastnosti sprajtov
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

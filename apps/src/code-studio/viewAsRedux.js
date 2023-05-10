@@ -37,7 +37,7 @@ export default function reducer(state = ViewType.Participant, action) {
 
 export const setViewType = viewType => ({
   type: SET_VIEW_TYPE,
-  viewType
+  viewType,
 });
 
 export const changeViewType = viewType => {

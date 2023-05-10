@@ -219,7 +219,6 @@ es-MX:
       nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten
       recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy)
       para obtener más información.
-    additional_information: Necesitamos más información para continuar con tu registro.
     user_type_button: Actualizar el tipo de cuenta
     user_type_label: Tipo de cuenta
     user_type_student: Estudiante
@@ -429,7 +428,7 @@ es-MX:
       educate_overview: Descripción del educador
       educate_elementary: Escuela primaria
       educate_middle: Escuela secundaria
-      educate_high: Educación media superior
+      educate_high: Preparatoria
       educate_hoc: Hora del código
       educate_partner: Colabora con nosotros
       educate_beyond: Más allá de Code.org
@@ -452,6 +451,7 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
+      incubator: Incubadora
       legal: Privacidad y Legalidad
       legal_privacy: Política de privacidad
       legal_cookie_notice: Aviso de Cookies
@@ -529,7 +529,7 @@ es-MX:
     confirm:
       remove: "¿Estás seguro de que quieres eliminar a este profesor?"
     students:
-      dashboard: Ir al panel del maestro
+      dashboard: Ir al panel del profesor
     user_not_found: No se pudo encontrar al docente.
     student_teacher_disassociated: Has abandonado la sección %{section_code} con %{teacher_name}.
     panel:
@@ -763,6 +763,7 @@ es-MX:
     store: Tienda
     cookie_notice: Aviso de Cookies
     view_code: Ve el código
+    locale_select: Seleccionar idioma
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Mira estos videos y sugerencias
@@ -796,6 +797,11 @@ es-MX:
       weblab_unsupported_locale_storage: Puedes experimentar problemas con el Laboratorio
         web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto
         en modo normal. Disculpa las molestias.
+  deprecation:
+    algebra_lab: 'El plan de estudios y los contenidos de Informática en Álgebra están
+      quedando obsoletos.  En los próximos meses, este laboratorio dejará de estar
+      disponible.  En su lugar, consulta [Bootstrap: Algebra](%{bootstrap_algebra_url}).
+      [Más información](%{cs_algebra_url}).'
   slow_loading: Esto está tardando más de lo habitual...
   try_reloading: Intenta volver a cargar la página
   next_stage: "¡Listo! Continúa a la siguiente etapa"
@@ -840,8 +846,18 @@ es-MX:
         funcione, y luego comparte tu aplicación en cuestión de segundos.
       audience: Desde 13 años
       cta: Aprende cómo
+      image_alt: Un conejito morado con una mochila propulsada por cohetes.
+    applab-intro:
+      image_alt: Una mano golpea el centro de la pantalla de un smartphone. De la
+        pantalla salen luces y destellos.
     aquatic:
       title: Minecraft
+      image_alt: Steve y Alex de Minecraft te están mirando.
+    artist:
+      image_alt: La caricatura de una persona sosteniendo un enorme lápiz y dibujando
+        un triángulo.
+    conditionals:
+      image_alt: Dos manos barajando un mazo de cartas.
     dance-2019:
       title: Fiesta de baile
     dance:
@@ -1168,6 +1184,7 @@ es-MX:
           age: Especifique una edad
           abuse_type: Describa cómo este contenido viola los términos del servicio
           abuse_detail: Proporcione detalles sobre el contenido que está informando
+          captcha: Por favor, completa el CAPTCHA para reportar este contenido.
         abusive_url: URL de los contenidos que está reportando
         abuse_type:
           question: "¿Cómo este contenido viola la %{link_start}Term de Servicio%{link_end}?"
@@ -1439,6 +1456,13 @@ es-MX:
         la configuración de tu cuenta](%{user_registration}) para agregar tu dirección
         de correo electrónico antes de completar este formulario.
   courses_category: Cursos completos
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Hola Mundo
+      sports: Deportes
+      csf: Fundamentos de Ciencias de la Computación
+      csc: Conexiones a las Ciencias de la Computación
   cookie_banner:
     message: Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas
       que se guarden las cookies en tu computadora o dispositivo.
@@ -1491,4 +1515,6 @@ es-MX:
     image_file_format_width: 'Ancho: 1 byte'
     image_file_format_height: 'Altura: 1 byte'
     image_file_format_bits_per_pixel: 'Bits por Pixel: 1 byte'
+    image_width: Ancho de imagen
+    image_height: Altura de la imagen
     binary: Binario

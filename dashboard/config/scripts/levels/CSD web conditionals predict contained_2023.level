@@ -11,13 +11,14 @@
     "parent_level_id": 23061,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "optional": "false"
+    "optional": "false",
+    "allow_multiple_attempts": "false"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-09-19T22:57:34.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-09-19T22:57:34.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.886+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals predict contained_2022\\\"\"],\"cloned_from\":\"CSD web conditionals predict contained_2022\"},{\"changed_at\":\"2023-01-13 19:26:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

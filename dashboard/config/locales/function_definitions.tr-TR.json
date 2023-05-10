@@ -493,20 +493,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "patrol": {
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "oyuncu"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "oyuncu"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -514,7 +519,8 @@
             "parameters": {
               "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -522,7 +528,8 @@
             "parameters": {
               "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -996,13 +1003,15 @@
             "parameters": {
               "height": "Yükseklik",
               "actor": "oyuncu"
-            }
+            },
+            "description": "yükseklik ve aktör parametreli zıplama fonksiyon bloğu"
           },
           "patrol": {
             "parameters": {
               "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "New Artist Project": {
@@ -1061,13 +1070,16 @@
             "parameters": {
               "height": "Yükseklik",
               "actor": "oyuncu"
-            }
+            },
+            "description": "yükseklik ve aktör parametreli zıplama fonksiyon bloğu"
           },
           "patrol": {
             "parameters": {
               "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye",
+            "description": "bir aktör ve hız parametresi olan bir devriye fonksiyonu"
           }
         },
         "Robot Doodle": {

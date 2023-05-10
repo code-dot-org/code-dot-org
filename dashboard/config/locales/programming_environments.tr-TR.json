@@ -107,6 +107,7 @@
                   }
                 },
                 "showMobileControls": {
+                  "content": "Oyun alanının altında görünen mobil kontrolleri değiştirir.",
                   "palette_params": {
                     "spaceButtonVisible": {
                       "type": "Boolean"
@@ -120,7 +121,8 @@
                     "mobileOnly": {
                       "type": "Boolean"
                     }
-                  }
+                  },
+                  "short_description": "Oyun alanının altında görünen mobil kontrolleri değiştirir."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -140,6 +142,9 @@
                       "name": "Sarmal"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Hareketli Karakter yüksekliği."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -220,6 +225,9 @@
                       "type": "Sayı"
                     }
                   }
+                },
+                "sprite.width": {
+                  "return_value": "Hareketli Karakter genişliği."
                 },
                 "createSprite": {
                   "palette_params": {
@@ -635,9 +643,71 @@
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "sayı",
+                      "description": "The number of milliseconds between each execution of the function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "sayı",
+                      "description": "İşlev yürütülmeden önce beklenecek milisaniye sayısı."
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "name": "Matematik",
               "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "mathSqrt": {
                   "palette_params": {
                     "x": {
@@ -658,9 +728,11 @@
                 "randomNumber": {
                   "palette_params": {
                     "min": {
+                      "type": "sayı",
                       "description": "Verdiği en düşük sayı"
                     },
                     "max": {
+                      "type": "sayı",
                       "description": "Verdiği en yüksek sayı"
                     }
                   }
@@ -668,9 +740,11 @@
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
+                      "type": "sayı",
                       "description": "Verdiği en düşük sayı"
                     },
                     "max": {
+                      "type": "sayı",
                       "description": "Verdiği en yüksek sayı"
                     }
                   }
@@ -685,6 +759,33 @@
                 },
                 "declareAssign_x": {
                   "short_description": "'var' ifadesinden sonra belirtilen isimle bir değişken tanımlar ve değişkene eşitliğin sağ tarafındaki değeri atar"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Dizenin uzunluğu"
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "sayı"
+                    },
+                    "end": {
+                      "type": "sayı"
+                    }
+                  }
                 }
               }
             },
@@ -784,15 +885,59 @@
                     }
                   }
                 },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    },
+                    "y": {
+                      "type": "sayı"
+                    },
+                    "width": {
+                      "type": "sayı"
+                    },
+                    "height": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "setProperty": {
                   "palette_params": {
                     "id": {
                       "type": "Dize"
                     },
                     "property": {
-                      "type": "Dize"
+                      "type": "Dize",
+                      "description": "Değiştirilecek özellik."
+                    }
+                  },
+                  "short_description": "Belirtilen öğe için bir özelliği yeni bir değere ayarlar."
+                },
+                "setScreen": {
+                  "short_description": "Ekranı verilen ekran kimliğine ayarlar."
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "sayı"
+                    },
+                    "width": {
+                      "type": "sayı"
                     }
                   }
+                },
+                "showElement": {
+                  "short_description": "Belirtilen kimliğe sahip öğeyi gösterir."
+                },
+                "textLabel": {
+                  "short_description": "Varsayılan konumda (0,0) verilen kimlik tarafından sağlanan ve başvurulan metni görüntüleyen ekranda bir metin etiketi oluşturur."
                 }
               }
             },
@@ -800,8 +945,46 @@
               "expressions": {
                 "circle": {
                   "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    },
+                    "y": {
+                      "type": "sayı"
+                    },
                     "radius": {
+                      "type": "sayı",
                       "description": "Çemberin piksel cinsinden yarıçapı."
+                    }
+                  }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[width]": {
+                      "type": "sayı"
+                    },
+                    "[height]": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Çizilecek görüntünün sol üst köşesinin piksel cinsinden y konumu."
+                    },
+                    "[width]": {
+                      "type": "sayı"
+                    },
+                    "[height]": {
+                      "type": "sayı"
                     }
                   }
                 },
@@ -809,13 +992,30 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisindeki x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ile 255 arasında) döndürür."
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
                     }
                   }
                 },
@@ -823,6 +1023,34 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı",
+                      "description": "Yakalamayı başlatmak için piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Yakalamayı başlatmak için piksel cinsinden y konumu."
+                    },
+                    "width": {
+                      "type": "sayı",
+                      "description": "Görüntü verilerini yakalamak için sınırlayıcı dikdörtgenin genişliği."
+                    },
+                    "height": {
+                      "type": "sayı",
+                      "description": "Görüntü verilerini yakalamak için sınırlayıcı dikdörtgenin yüksekliği."
                     }
                   }
                 },
@@ -830,6 +1058,30 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "sayı"
+                    },
+                    "y1": {
+                      "type": "sayı"
+                    },
+                    "x2": {
+                      "type": "sayı"
+                    },
+                    "y2": {
+                      "type": "sayı"
                     }
                   }
                 },
@@ -837,15 +1089,33 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Verileri tuval üzerine yerleştirmek için görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Verileri tuval üzerine yerleştirmek için görüntünün sol üst köşesinden başlayarak piksel cinsinden y konumu."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
+                    "x": {
+                      "type": "sayı",
+                      "description": "Dikdörtgenin sol üst köşesinin piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Dikdörtgenin sol üst köşesinin piksel cinsinden y konumu."
+                    },
                     "width": {
+                      "type": "sayı",
                       "description": "Dikdörtgenin piksel cinsinden yatay genişliği."
                     },
                     "height": {
+                      "type": "sayı",
                       "description": "Dikdörtgenin piksel cinsinden dikey yüksekliği."
                     }
                   }
@@ -854,15 +1124,41 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "alphaValue": {
+                      "type": "sayı",
+                      "description": "Pikselde ayarlanacak alfa (opaklık) miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki alfa (opaklık) miktarını (0 ila 255 aralığında) ayarlar."
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "blueValue": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak mavi miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki mavi miktarını (0 ila 255 arasında) blueValue giriş miktarına ayarlar."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -875,13 +1171,50 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "greenValue": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak yeşil miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki yeşil miktarını (0 ila 255 arasında) greenValue giriş miktarına ayarlar."
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "red": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak kırmızı miktarı (0 - 255)."
+                    },
+                    "green": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak yeşil miktarı (0 - 255)."
+                    },
+                    "blue": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak mavi miktarı (0 - 255)."
+                    },
+                    "alpha": {
+                      "type": "sayı",
+                      "description": "İsteğe bağlı. Pikselde ayarlanacak opaklık miktarı (0 - 255 arası). Varsayılanlar 255'tir (tam opaklık)."
                     }
                   }
                 },
@@ -889,13 +1222,33 @@
                   "palette_params": {
                     "imageData": {
                       "type": "nesne"
+                    },
+                    "x": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayarak piksel cinsinden x konumu."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Görüntünün sol üst köşesinden başlayan piksel cinsinden y konumu."
+                    },
+                    "redValue": {
+                      "type": "sayı",
+                      "description": "Piksel olarak ayarlanacak kırmızı miktarı (0 - 255)."
                     }
-                  }
+                  },
+                  "short_description": "Verilen görüntü verisinde verilen x ve y konumunda bulunan pikselin rengindeki kırmızı miktarını (0 ile 255 arasında değişen) redValue giriş miktarına ayarlar."
                 },
                 "setStrokeColor": {
                   "palette_params": {
                     "color": {
                       "type": "Dize"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "sayı"
                     }
                   }
                 }
@@ -934,6 +1287,9 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Kayıtların alınacağı tablonun adı."
+                    },
                     "options": {
                       "type": "nesne"
                     }
@@ -949,6 +1305,13 @@
                     }
                   }
                 },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Alınacak anahtarın adı."
+                    }
+                  }
+                },
                 "getPrediction": {
                   "palette_params": {
                     "name": {
@@ -959,6 +1322,16 @@
                     },
                     "callback": {
                       "type": "Fonksiyon"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Bu uygulamanın mevcut kullanıcısı için benzersiz bir tanımlayıcı alır."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Bu olay işleyicinin geçerli olduğu tablonun adı."
                     }
                   }
                 },
@@ -976,6 +1349,24 @@
                     }
                   }
                 },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Saklanacak anahtarın adı."
+                    },
+                    "value": {
+                      "description": "Saklanacak veriler."
+                    }
+                  },
+                  "short_description": "App Lab'ın anahtar/değer veri deposunda bir anahtar/değer çifti saklar ve işlem bittiğinde geri arama işlevini çağırır."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Veri döndüren bir hizmetin web adresi."
+                    }
+                  }
+                },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
@@ -988,30 +1379,187 @@
             "turtle": {
               "expressions": {
                 "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "sayı"
+                    },
+                    "radius": {
+                      "type": "sayı"
+                    }
+                  },
                   "short_description": "Kaplumbağayı düz, dairesel bir yay çizerek ileri ve sola hareket ettirir."
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "sayı"
+                    },
+                    "radius": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "getX": {
+                  "short_description": "Geçerli x koordinatını kaplumbağanın piksel cinsinden alır."
+                },
+                "getY": {
+                  "short_description": "Kaplumbağanın piksel cinsinden geçerli y koordinatını alır."
+                },
+                "hide": {
+                  "short_description": "Kaplumbağayı bulunduğu konumda görünmez yapar."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı",
+                      "description": "Kaplumbağayı sağa hareket ettirmek için piksel sayısı."
+                    },
+                    "y": {
+                      "type": "sayı",
+                      "description": "Kaplumbağayı aşağı hareket ettirmek için piksel sayısı."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağayı mevcut yönden belirli sayıda piksel geriye doğru hareket ettirir."
+                },
+                "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağayı geçerli yönde belirli sayıda piksel ileri taşır."
+                },
+                "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    },
+                    "y": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağayı ekranda belirli bir (x,y) konumuna taşır."
                 },
                 "penColor": {
                   "palette_params": {
                     "color": {
                       "type": "Dize"
                     }
-                  }
+                  },
+                  "short_description": "Kaplumbağanın çizgiler ve noktalar çizmek için kullandığı kalemin rengini ayarlar."
+                },
+                "penDown": {
+                  "short_description": "Kaplumbağa hareket ettikçe arkasına bir çizgi çizecek şekilde kalemi yere koyar."
                 },
                 "penRGB": {
                   "palette_params": {
                     "r": {
                       "type": "Sayı"
+                    },
+                    "g": {
+                      "type": "sayı"
+                    },
+                    "b": {
+                      "type": "sayı"
+                    },
+                    "a": {
+                      "type": "sayı"
                     }
-                  }
+                  },
+                  "short_description": "RGBA değerlerini kullanarak, kaplumbağanın çizgiler ve noktalar çizmek için kullandığı kalemin rengini ayarlar."
+                },
+                "penUp": {
+                  "short_description": "Kaplumbağa hareket ederken çizgi çizmesin diye kalemi yukarı alır."
+                },
+                "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağanın hareket ettikçe arkasına çizdiği çizginin genişliğini piksel cinsinden ayarlar."
+                },
+                "show": {
+                  "short_description": "Kaplumbağanın mevcut konumunda görünür olmasını sağlar."
+                },
+                "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağanın hızını da içeren uygulamanın yürütme hızını ayarlar."
+                },
+                "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağayı belirtilen açı kadar sola döndürür. Kaplumbağanın konumu aynı kalır."
+                },
+                "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağayı belirtilen açı kadar sağa döndürür. Kaplumbağanın konumu aynı kalır."
+                },
+                "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "sayı"
+                    }
+                  },
+                  "short_description": "Kaplumbağanın yönünü belirli bir açıyla değiştirir. 0 yukarı, 90 sağ, 180 aşağı ve 270 soldur."
                 }
               }
             },
             "control": {
               "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
+                      "type": "sayı",
                       "description": "İptal etmek için setTimeout işlevi tarafından döndürülen değer."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "sayı",
+                      "description": "The number of milliseconds between each execution of the function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "sayı",
+                      "description": "İşlev yürütülmeden önce beklenecek milisaniye sayısı."
                     }
                   }
                 },
@@ -1037,6 +1585,27 @@
             "math": {
               "name": "Matematik",
               "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "mathPow": {
                   "palette_params": {
                     "x": {
@@ -1044,6 +1613,13 @@
                     },
                     "y": {
                       "type": "Sayı"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "sayı"
                     }
                   }
                 },
@@ -1067,9 +1643,11 @@
                 "randomNumber_min_max": {
                   "palette_params": {
                     "min": {
+                      "type": "sayı",
                       "description": "Verdiği en düşük sayı"
                     },
                     "max": {
+                      "type": "sayı",
                       "description": "Verdiği en yüksek sayı"
                     }
                   }
@@ -1077,9 +1655,11 @@
                 "randomNumber": {
                   "palette_params": {
                     "min": {
+                      "type": "sayı",
                       "description": "Verdiği en düşük sayı"
                     },
                     "max": {
+                      "type": "sayı",
                       "description": "Verdiği en yüksek sayı"
                     }
                   }
@@ -1102,6 +1682,30 @@
                 "declareAssign_list_123": {
                   "short_description": "Bir diziyi bir değişkene bildirin ve atayın"
                 },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Aranacak dize."
+                    }
+                  }
+                },
+                "substring": {
+                  "palette_params": {
+                    "start": {
+                      "type": "sayı"
+                    },
+                    "end": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "addPair": {
                   "palette_params": {
                     "key": {
@@ -1114,6 +1718,23 @@
                   "palette_params": {
                     "key": {
                       "type": "Dize"
+                    }
+                  }
+                },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Dizenin uzunluğu"
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "sayı"
                     }
                   }
                 }
@@ -1139,6 +1760,20 @@
             },
             "maker": {
               "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "pinMode": {
                   "palette_params": {
                     "pin": {
@@ -1155,6 +1790,23 @@
               "expressions": {
                 "isPressed": {
                   "return_value": "Boolean"
+                },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "frequency": {
+                      "type": "sayı"
+                    },
+                    "duration": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "buzzer.note": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "sayı"
+                    }
+                  }
                 },
                 "buzzer.play": {
                   "palette_params": {
@@ -1177,8 +1829,104 @@
                     }
                   }
                 },
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "red": {
+                      "type": "sayı"
+                    },
+                    "green": {
+                      "type": "sayı"
+                    },
+                    "blue": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "sayı"
+                    }
+                  }
+                },
                 "toggleSwitch.isOpen": {
                   "return_value": "Boolean"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Sayı"
+                    },
+                    "y": {
+                      "type": "Sayı"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Sayı"
+                    },
+                    "y": {
+                      "type": "Sayı"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Sayı"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Dize"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Sayı"
+                    },
+                    "y": {
+                      "type": "Sayı"
+                    }
+                  }
                 }
               }
             }

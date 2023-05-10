@@ -4,22 +4,20 @@ title 'Making Counters'
 
 markdown <<MARKDOWN
 #Survival Behaviors
-<div style= "width: 60%"> 
-
 
 ##Behaviors in nature
-Animals have developed <strong>behaviors</strong> and actions to help them survive. <br> Some animals **migrate** during the winter and others try to stay in **groups**.
+Animals have developed <strong>behaviors</strong> and actions to help them survive. <br> For example, some animals **migrate** during the winter and others try to stay in **groups**.
 
-<img src="https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg" style= "width:60%">
-<img src="https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg" style= "width:60%">
+<img style=" float: left; width:50%; padding-top:10px" src="https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg" style= "width:60%">
+<img style=" float: left; width:46%; padding-top:10px" src="https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg" style= "width:60%">
+
+<div style="float: left">
+<h2>Behaviors in computer science</h2>
+In computer science, <strong>behaviors</strong> are are a set of actions that a sprite repeats over and over like an animation. <br>
+The actions within the behavior continue until instructed to stop. 
 <br>
 <br>
 
-##Behaviors in computer science
-In computer science, <strong>behaviors</strong> are pre-defined sets of actions that a sprite can perform over and over. When a sprite begins a behavior you are telling the computer to run that set of actions on the sprite over and over until the behavior stops.
-<br>
-<br>
-<img src="https://images.code.org/ce0b169674ea99f3a56ecb496577cc70-image-1678322843065.gif" style= "width:60%">
+<img src="https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif" style=" float: left; width:70%; padding-top:10px">
 </div>
-
 MARKDOWN

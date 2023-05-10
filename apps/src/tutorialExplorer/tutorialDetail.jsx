@@ -7,7 +7,6 @@ import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
-/* global ga */
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -17,7 +16,7 @@ export default class TutorialDetail extends React.Component {
     changeTutorial: PropTypes.func.isRequired,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorial: PropTypes.bool.isRequired,
-    grade: PropTypes.string.isRequired
+    grade: PropTypes.string.isRequired,
   };
 
   componentDidMount() {
@@ -67,38 +66,38 @@ export default class TutorialDetail extends React.Component {
         body: getTagString(
           'student_experience',
           this.props.item.tags_student_experience
-        )
+        ),
       },
       {
         key: 3,
         title: i18n.filterPlatform(),
-        body: this.props.item.string_platforms
+        body: this.props.item.string_platforms,
       },
       {
         key: 4,
         title: i18n.filterTopics(),
-        body: getTagString('subject', this.props.item.tags_subject)
+        body: getTagString('subject', this.props.item.tags_subject),
       },
       {
         key: 5,
         title: i18n.filterActivityType(),
-        body: getTagString('activity_type', this.props.item.tags_activity_type)
+        body: getTagString('activity_type', this.props.item.tags_activity_type),
       },
       {
         key: 6,
         title: i18n.filterLength(),
-        body: getTagString('length', this.props.item.tags_length)
+        body: getTagString('length', this.props.item.tags_length),
       },
       {
         key: 7,
         title: i18n.filterAccessibility(),
-        body: getTagString('accessibility', this.props.item.tags_accessibility)
+        body: getTagString('accessibility', this.props.item.tags_accessibility),
       },
       {
         key: 8,
         title: i18n.tutorialDetailInternationalLanguages(),
-        body: this.props.item.language
-      }
+        body: this.props.item.language,
+      },
       // Reserve key 8 for the optional standards.
     ];
 
@@ -240,15 +239,11 @@ export default class TutorialDetail extends React.Component {
                           </td>
                           <td style={styles.tutorialDetailsTableBody}>
                             <a
-                              href={`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
+                              href={`https://hourofcode.com/${this.props.item.short_code}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
+                              {`https://hourofcode.com/${this.props.item.short_code}`}
                             </a>
                           </td>
                         </tr>
@@ -293,30 +288,30 @@ const styles = {
     borderBottomWidth: 0,
     paddingTop: 0,
     paddingBottom: 4,
-    height: 48
+    height: 48,
   },
   tutorialDetailModalBody: {
     paddingTop: 0,
     overflow: 'hidden',
     textAlign: 'left',
     maxHeight: 'calc(100vh - 100px)',
-    overflowY: 'auto'
+    overflowY: 'auto',
   },
   popupFullWidth: {
     position: 'absolute',
     left: 0,
     top: 0,
-    width: '100%'
+    width: '100%',
   },
   tutorialDetailImageOuterContainer: {
     float: 'left',
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   tutorialDetailImageContainer: {
     position: 'relative',
     width: '100%',
     height: 0,
-    paddingTop: '75%'
+    paddingTop: '75%',
   },
   tutorialDetailImageBackground: {
     position: 'absolute',
@@ -325,64 +320,64 @@ const styles = {
     left: 0,
     bottom: 0,
     backgroundColor: '#f1f1f1',
-    border: 'solid 1px #cecece'
+    border: 'solid 1px #cecece',
   },
   tutorialDetailImage: {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%'
+    width: '100%',
   },
   tutorialDetailInfoContainer: {
     float: 'left',
-    paddingLeft: 20
+    paddingLeft: 20,
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 22,
-    paddingBottom: 4
+    paddingBottom: 4,
   },
   tutorialDetailPublisher: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 16
+    fontSize: 16,
   },
   tutorialDetailSub: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   tutorialDetailDescription: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14
+    fontSize: 14,
   },
   tutorialDetailDisabled: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 16,
-    paddingTop: 40
+    paddingTop: 40,
   },
   tutorialDetailDisabledIcon: {
-    color: '#d9534f'
+    color: '#d9534f',
   },
   tutorialDetailsTable: {
     marginTop: 20,
-    width: '100%'
+    width: '100%',
   },
   tutorialDetailsTableTitle: {
     padding: 5,
     width: '40%',
     fontFamily: '"Gotham 5r", sans-serif',
-    border: '1px solid lightgrey'
+    border: '1px solid lightgrey',
   },
   tutorialDetailsTableBody: {
     padding: 5,
-    border: '1px solid lightgrey'
+    border: '1px solid lightgrey',
   },
   tutorialDetailsTableBodyNoWrap: {
     padding: 5,
     border: '1px solid lightgrey',
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
   },
   tutorialDetailsAsReported: {
-    padding: 6
-  }
+    padding: 6,
+  },
 };

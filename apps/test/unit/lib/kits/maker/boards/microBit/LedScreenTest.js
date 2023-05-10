@@ -1,18 +1,18 @@
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 
-describe('LedScreen', function() {
+describe('LedScreen', function () {
   describe('on() and off()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
     let displayClearSpy;
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
       displayClearSpy = sinon.spy(boardClient, 'displayClear');
@@ -41,12 +41,12 @@ describe('LedScreen', function() {
 
   describe('toggle()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
     });
@@ -79,12 +79,12 @@ describe('LedScreen', function() {
 
   describe('display()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayShow');
     });
@@ -98,7 +98,7 @@ describe('LedScreen', function() {
         [0, 1, 0, 1, 0],
         [1, 0, 1, 0, 1],
         [0, 1, 0, 1, 0],
-        [1, 0, 1, 0, 1]
+        [1, 0, 1, 0, 1],
       ];
       led.display(pixelArray);
       expect(displaySpy).to.have.been.calledOnce;
@@ -108,13 +108,13 @@ describe('LedScreen', function() {
 
   describe('scrollString() and scrollNumber()', () => {
     let led;
-    let boardClient = new MicrobitStubBoard();
+    let boardClient = new MBFirmataClientStub();
     let scrollStringSpy;
     let scrollNumSpy;
 
     before(() => {
       led = new LedScreen({
-        mb: boardClient
+        mb: boardClient,
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
       scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');

@@ -1,5 +1,4 @@
 /** @file Some misc. browser check methods for maker */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 
 export function gtChrome33() {

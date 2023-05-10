@@ -37,7 +37,7 @@ def check_for_cdo_keys
 
     Create your API tokens from these pages:
 
-      https://github.com/settings/tokens ('public_repo' permission)
+      https://github.com/settings/tokens (classic token with 'public_repo' permission)
       https://app.honeybadger.io/users/edit#authentication
 
     Please add them to your locals.yml and rerun the script.

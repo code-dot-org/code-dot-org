@@ -12,6 +12,7 @@
         "name": "TEXT1",
         "field": false
       }
-    ]
+    ],
+    "style": "default"
   }
 }

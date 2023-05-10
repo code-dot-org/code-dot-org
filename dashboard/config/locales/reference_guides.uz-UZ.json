@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analog Sensorlar"
-        },
         "csd-2022/app-lab": {
           "display_name": "Ilovalar laboratoriyasi"
         },
@@ -98,11 +95,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Overview"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Physical Input"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Notalarni ijro etish"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Muammoni yechish jarayoni"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Muammoni yechish jarayoni"
         },
         "csd-2022/random-numbers": {
           "display_name": "Tasodifiy sonlar"

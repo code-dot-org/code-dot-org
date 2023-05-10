@@ -21,7 +21,7 @@ export default storybook =>
             Step with an unmet requirement
           </Step>
         </NumberedSteps>
-      )
+      ),
     },
     {
       name: 'Fade effect',
@@ -73,7 +73,7 @@ export default storybook =>
           }
         }
         return <FadeEffectExample />;
-      }
+      },
     },
     {
       name: 'Holds any content',
@@ -87,6 +87,6 @@ export default storybook =>
           </Step>
           <Step>More arbitrary content here.</Step>
         </NumberedSteps>
-      )
-    }
+      ),
+    },
   ]);

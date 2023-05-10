@@ -3,6 +3,8 @@
   "tryAgain": "دوبارہ کوشش کریں",
   "navigateDone": "اختتام",
   "saveProgress": "محفوظ کریں",
+  "potentialMisusesLabel": "حدود اور انتباہ",
+  "modelCardLimitations": "حدود اور انتباہ",
   "modelCardPossibleValuesMinimum": "کم سے کم",
   "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
   "columnInspectorDescription": "تفصیل",
@@ -15,7 +17,8 @@
         "age": {
           "id": "عمر"
         }
-      }
+      },
+      "name": "طبی ترجیح"
     },
     "shoe_survey_toy": {
       "fields": {
@@ -230,6 +233,13 @@
         },
         "Height": {
           "id": "لمبائی"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "آبی"
         }
       }
     },

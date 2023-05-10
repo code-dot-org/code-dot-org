@@ -487,11 +487,9 @@ class PardotV2Test < Minitest::Test
     assert PardotV2.delete_prospects_by_email(email)
   end
 
-  private
-
   # @param str a heredoc string
   # @return Nokogiri::XML::Document
-  def create_xml_from_heredoc(str)
+  private def create_xml_from_heredoc(str)
     # Trims whitespaces at the beginning and end of each line, and delete newline characters
     # in the input before parsing. Otherwise they will pollute XML document result.
     cleaned_str = str.strip.gsub(/\s*\n\s*/, '')

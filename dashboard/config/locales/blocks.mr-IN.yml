@@ -35,9 +35,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE1:
@@ -88,9 +88,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE:
@@ -147,9 +147,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -170,9 +170,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE:
@@ -310,9 +310,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           LOCATION:
@@ -332,9 +332,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           FORMAT:
@@ -342,7 +342,7 @@ mr:
             '"inner"': चौरस च्या आत
             '"diamond"': हिरा
             '"circle"': वर्तुळ
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"row"': ओळ
             '"column"': स्तंभ
             '"x"': क्रिस-क्रॉस
@@ -358,7 +358,7 @@ mr:
             '"DOG"': कुत्रा
             '"DUCK"': बदक
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
@@ -381,7 +381,7 @@ mr:
             '"DOG"': कुत्रा
             '"DUCK"': बदक
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
@@ -442,9 +442,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           LAYOUT:
@@ -452,7 +452,7 @@ mr:
             '"inner"': चौरस च्या आत
             '"diamond"': हिरा
             '"circle"': वर्तुळ
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"row"': ओळ
             '"column"': स्तंभ
             '"x"': क्रिस-क्रॉस
@@ -562,9 +562,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           SPEED:
@@ -631,9 +631,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -666,9 +666,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -692,9 +692,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintEachInline:
@@ -708,9 +708,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintInline:
@@ -732,9 +732,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           VISIBILITY:
@@ -766,9 +766,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -810,9 +810,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -1154,6 +1154,15 @@ mr:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': मंडल
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1180,6 +1189,14 @@ mr:
             '"spiral"': सर्पिलाकार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': मंडल
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_makeNumSprites:
         text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स तयार करा"
       gamelab_makeProjectile:
@@ -1354,7 +1371,7 @@ mr:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': फ्रंट
               ऑफ हाउस
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': आकाशगंगा
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': मंडल
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'किचन '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': लिविंग
               रूम
@@ -1592,6 +1609,10 @@ mr:
         text: "{SPRITE} चे x समन्वयक"
       gamelab_yLocationOf:
         text: "{SPRITE} चे y समन्वयक"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_tumbling:
+        text: टंबलिंग
       Mikelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1938,7 +1959,7 @@ mr:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/steady_campfire_loop.mp3"': कॅम्प फायर (शेकोटी)
+            '"sound://category_nature/steady_campfire_loop.mp3"': शेकोटी
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': जंगल
             '"sound://category_nature/summer_night_loop.mp3"': रात्र
             '"sound://category_background/ocean_waves.mp3"': महासागर
@@ -2116,7 +2137,7 @@ mr:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"border"': सीमारेषा
             '"row"': ओळ
             '"random"': कोणताही
@@ -2136,6 +2157,18 @@ mr:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} {SPEECH} म्हणा"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): उजवीकडे स्पिन होणे
+            new Behavior(spinning_left, []): डावीकडे स्पिन होणे
+            new Behavior(fluttering, []): फडफडणे
+            new Behavior(jittering, []): थरथरणे
+            new Behavior(wobbling, []): डगमगणे
+            new Behavior(wandering, []): भटकणे
+            new Behavior(patrolling, []): गस्त घालणे
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} चे अनुसरण करण्यास सुरवात करते"
       binary_move:
         options:
           DIR:
@@ -2215,5 +2248,3 @@ mr:
         text: हेडिंग सेट करा {HEADING}
       storylab_setSubheading:
         text: सबहेडिंग सेट करा {SUBHEADING}
-      validation_validatedBackground:
-        text: "{IMG} वर पार्श्वभूमी सेट करा"

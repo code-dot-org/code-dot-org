@@ -49,9 +49,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     end
   end
 
-  private
-
-  def school_info_params
+  private def school_info_params
     @school_info_params ||= params.require(:user).require(:school_info_attributes).
       permit(:school_type, :school_name, :full_address, :country, :school_id)
   end

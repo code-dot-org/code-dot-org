@@ -182,6 +182,10 @@ ka:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           student_description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: მუსიკა
         algebraPD2b:
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
           description_short: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
@@ -2959,27 +2963,64 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: ინტელექტუალური ქონება
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+            lessonGroup-4:
+              display_name: გამოკითხვა
         hello-world-soccer-2022:
           title: 'გამარჯობა მსოფლიო: ფეხბურთი'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-3:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
             lessonGroup-3:
               display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
-          title: დიზაინის პროცესი
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
             lessonGroup-3:
               display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: სურათები და ანიმაციები'
             lessonGroup-3:
               display_name: 'თავი 2: თამაშების შექმნა'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -3040,6 +3081,10 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: კურსის შემდგომი გამოკითხვა
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ტესტები
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3056,3 +3101,314 @@ ka:
               display_name: შესავალი აპლიკაციების ლაბორატორიაში
             lessonGroup-3:
               display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          description_audience: 'ასაკი: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: სპრაიტები
+            lessonGroup-9:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი
+            სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description_audience: 'ასაკი: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა
+            არ იცის.
+          description_audience: 'ასაკი: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
+            საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
+            გაზიარებასაც შეძლებთ.
+          description_audience: 'ასაკი: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+            csf_data:
+              display_name: მონაცემები
+          student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა
+            მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის
+            გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
+            კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც
+            შეძლებთ!
+          description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ
+            თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+          description_audience: 'ასაკი: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ციფრული მოქალაქეობა
+            csf_events:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_sprites:
+              display_name: სპრაიტები
+            ramp_up:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_nested_loops:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-3:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: გამოკითხვა
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+            lessonGroup-4:
+              display_name: გამოკითხვა
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+            lessonGroup-4:
+              display_name: გამოკითხვა
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+            lessonGroup-4:
+              display_name: გამოკითხვა
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+            lessonGroup-5:
+              display_name: გამოკითხვა
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-3:
+              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: სურათები და ანიმაციები'
+            lessonGroup-3:
+              display_name: 'თავი 2: თამაშების შექმნა'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
+            lessonGroup-3:
+              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
+            lessonGroup-3:
+              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესავალი აპლიკაციების ლაბორატორიაში
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+            lessonGroup-5:
+              display_name: გამოკითხვა
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'თავი 2: აპარატული შეყვანა'
+            lessonGroup-5:
+              display_name: გამოკითხვა
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: კეთილი იყოს თქვენი მობრძანება
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: შესავალი
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: შეჯამება
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: შეჯამება
+        csd-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-data-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-impact-in-society-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-coding-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-design-with-purpose-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-hardware-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა
+        focus-on-creativity-post-survey-2023:
+          title: კურსის შემდგომი გამოკითხვა

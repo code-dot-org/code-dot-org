@@ -1158,6 +1158,19 @@ da:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: formgiv {GROUP} som en {FORMAT}
+        options:
+          FORMAT:
+            '"border"': grænse
+            '"circle"': cirkel
+            '"grid"': gitter
+            '"top"': øverste række
+            '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': højre kolonne
       gamelab_locationAt:
         text: 'placering x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1179,6 +1192,18 @@ da:
             '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': grænse
+            '"circle"': cirkel
+            '"grid"': gitter
+            '"top"': øverste række
+            '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': højre kolonne
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1698,8 +1723,6 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
-      SpriteLab2Beta_spriteSay:
-        text: figur {SPRITE} siger {TEXT} i {SECONDS} sekunder
       Vector_createSpriteWith:
         text: |-
           opret figur
@@ -1746,6 +1769,14 @@ da:
             '0.75': most
             '0.5': half of
             '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning til højre
+            new Behavior(spinning_left, []): spinning til venstre
+            new Behavior(jittering, []): rystende
+            new Behavior(wandering, []): vandrende
+            new Behavior(patrolling, []): patruljerer
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:
@@ -1896,5 +1927,3 @@ da:
             '"hearts"': hjerter
             '"rain"': regn
             '"starburst"': Starburst
-      validation_validatedBackground:
-        text: sæt baggrund til {IMG}

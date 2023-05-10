@@ -73,6 +73,54 @@
         },
         "6": {
           "description": "Estudantes demonstram boa compreensão de conceitos, sistemas e operações tecnológicas."
+        },
+        "BI-1": {
+          "description": "Computadores percebem o mundo usando sensores"
+        },
+        "BI-2": {
+          "description": "Os agentes mantêm representações do mundo e as usam para raciocinar"
+        },
+        "BI-3": {
+          "description": "Os computadores podem aprender com os dados"
+        },
+        "BI-4": {
+          "description": "Agentes inteligentes exigem muitos tipos de conhecimento para interagir naturalmente com humanos"
+        },
+        "BI-5": {
+          "description": "A IA pode impactar a sociedade de formas positivas e negativas"
+        },
+        "3-A-i": {
+          "description": "Natureza da aprendizagem - humanos versus máquinas"
+        },
+        "3-A-ii": {
+          "description": "Natureza da aprendizagem - encontrando padrões nos dados"
+        },
+        "3-A-iii": {
+          "description": "Natureza da aprendizagem - treinando um modelo"
+        },
+        "3-A-iv": {
+          "description": "Natureza da aprendizagem - construindo versus usando um raciocínio"
+        },
+        "3-A-v": {
+          "description": "Natureza da aprendizagem - ajustando representações internas"
+        },
+        "3-A-vi": {
+          "description": "Natureza da aprendizagem - aprendendo com a experiência"
+        },
+        "3-B-i": {
+          "description": "Redes Neurais - estrutura de uma rede neural"
+        },
+        "3-B-ii": {
+          "description": "Redes Neurais - ajuste de peso"
+        },
+        "3-C-i": {
+          "description": "Conjuntos de dados - conjuntos de recursos"
+        },
+        "3-C-ii": {
+          "description": "Conjuntos de dados - grandes conjuntos de dados"
+        },
+        "3-C-iii": {
+          "description": "Conjuntos de dados - viés"
         }
       }
     }

@@ -237,6 +237,40 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  test "should not fetch partial peer review matches" do
+    user = create(:user)
+    level = create(:free_response, :with_script, peer_reviewable: true)
+    script_level = level.script_levels.first
+    level_source = create(:level_source)
+    create(:user_level, user: user, script: script_level.script, level: level, level_source: level_source)
+
+    peer_review_params = {
+      submitter: user,
+      script: script_level.script,
+      level: level,
+      level_source: level_source
+    }
+
+    # A "valid" PeerReview in this context is one that has both a reviewer and
+    # data; we want to ignore reviews that only have one or the other.
+    valid_peer_review = create(:peer_review, :reviewed, **peer_review_params)
+
+    # no data
+    create(:peer_review, :reviewed, data: nil, **peer_review_params)
+
+    # no reviewer
+    create(:peer_review, **peer_review_params)
+
+    sign_in user
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson.relative_position,
+      id: script_level.position,
+    }
+    assert_response :success
+    assert_equal [valid_peer_review], assigns(:peer_reviews)
+  end
+
   test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
     script = create :script
     lesson_group = create(:lesson_group, script: script)

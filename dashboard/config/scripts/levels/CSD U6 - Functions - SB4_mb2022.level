@@ -51,10 +51,12 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
+      "/courses/csd-2022/guides/functions",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-display"
     ],
-    "map_reference": "/courses/csd-2022/guides/functions",
     "starter_assets": {
       "BG-Landscape25.png": "eafc61c0-093d-4d84-9f76-a784aae033d8.png",
       "Alien_02.png": "0a11cf75-00e2-4722-8f39-13e00f420f43.png",
@@ -64,11 +66,9 @@
     },
     "project_template_level_name": "CSD U6 - Functions - SB34_template_mb2022",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L5.14B - define\",\r\n  \"callout_text\": \"Add your function here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"define\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Define your moveAliens function here!\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "encrypted_examples": [
-
-    ],
+    "video_key": "csd_u6_call_define_functions",
     "preload_asset_list": null,
-    "video_key": "csd_u6_call_define_functions"
+    "encrypted_examples": "BX2znrcsHI4jddHSMn2V2bs2oW1bDllhSxbbusJjT0lHSw+bGNfM0BoaTc8Z\nwy42skZ2jQNKiAo0oVBYSxX1sQ==\n"
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.993+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB4_2222\"},{\"changed_at\":\"2023-02-10 22:29:54 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.993+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB4_2222\"},{\"changed_at\":\"2023-02-10 22:29:54 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"start_html\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:49:57 +0000\",\"changed\":[\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

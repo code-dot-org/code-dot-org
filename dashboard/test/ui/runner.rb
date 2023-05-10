@@ -10,6 +10,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -64,8 +65,8 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
   end
 
@@ -289,8 +290,8 @@ def upload_log_and_get_public_link(filename, metadata)
   # TODO: Set content type dynamically based on filename extension.
   log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -413,6 +414,15 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
@@ -475,8 +485,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -485,8 +495,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -631,9 +641,6 @@ def cucumber_arguments_for_browser(browser, options)
       if browser['mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -642,7 +649,6 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
@@ -651,12 +657,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a circle run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'

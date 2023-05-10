@@ -75,7 +75,7 @@
         },
         "CourseD_Dance_Party_01": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**\n\n-   Välj en annan sång att spela.\n-   Välj en annan som ser ut som en älg!\n-   Byt namn på din dansare."
+          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare."
         },
         "CourseD_Dance_Party_02": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
@@ -160,7 +160,7 @@
         },
         "Dance_Party_01": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
-          "challenges": "**Valfria utmaningar**\n\n-   Välj en annan sång att spela.\n-   Välj en annan som ser ut som en älg!\n-   Byt namn på din dansare."
+          "challenges": "**Frivilliga utmaningar**\n\n-   Välj en annan låt att spela.\n-   Byt namn på din dansare."
         },
         "Dance_Party_02": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"

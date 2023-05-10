@@ -489,10 +489,18 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': ред
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': киша
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"row"': ред
       gamelab_makeProjectile:
         options:
           DIRECTION:

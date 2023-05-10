@@ -4,7 +4,7 @@ import {isWebSerialPort} from '../../util/boardUtils';
 
 export const ACCEL_EVENT_ID = 13;
 
-export default class MicrobitFirmataWrapper extends MBFirmataClient {
+export default class MicroBitFirmataWrapper extends MBFirmataClient {
   constructor(portType) {
     super(portType);
     this.digitalCallbacks = [];

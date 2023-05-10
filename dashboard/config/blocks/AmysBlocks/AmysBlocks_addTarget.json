@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "addTarget",
     "blockText": "{TARGET} {OPT} {SPRITE} ",
     "args": [

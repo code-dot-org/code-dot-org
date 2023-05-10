@@ -548,7 +548,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Come faccio a superare questo livello?**\n\n-   Basta premere il pulsante \"Termina!\"!",
           "repeat_every_ideas": "**Hai bisogno di qualche idea?**\n\n-   Cambia ripetutamente le dimensioni di un ballerino per farlo crescere.\n-   Cambia ripetutamente la rotazione di un ballerino per farlo girare..\n\n_Puoi anche usare numeri negativi per creare un effetto opposto!_",
-          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco evento per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Il blocco `alternano ogni` si trova nella categoria \"Ballerini\"."
@@ -642,7 +642,7 @@
         "Dance_2019_09": {
           "validation": "**Come faccio a superare questo livello?**\n\n-   Basta premere il pulsante \"Termina!\"!",
           "repeat_every_ideas": "**Hai bisogno di qualche idea?**\n\n-   Cambia ripetutamente le dimensioni di un ballerino per farlo crescere.\n-   Cambia ripetutamente la rotazione di un ballerino per farlo girare..\n\n_Puoi anche usare numeri negativi per creare un effetto opposto!_",
-          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco evento per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**Come faccio a completare questo esercizio?**\n\n-   Assicurati che sullo schermo appaia un ballerino.\n\n_L'esercizio terminerà dopo 4 battute._",
@@ -1009,17 +1009,17 @@
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Clicca la freccia sulla destra del blocco `metti` per scegliere il materiale da posizionare.",
-          "mc_6_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "mc_6_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "mc_6_c": "Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`."
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "Clicca la freccia sulla destra del blocco `metti` per scegliere il materiale da posizionare.",
-          "mc_6_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "mc_6_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "mc_6_c": "Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`."
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "Clicca la freccia sulla destra del blocco `metti` per scegliere il materiale da posizionare.",
-          "mc_6_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "mc_6_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "mc_6_c": "Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`."
         },
         "Overworld Move to Sheep": {
@@ -1037,17 +1037,17 @@
         "Overworld Place Wall": {
           "mc_5_a": "Usa prima il blocco `metti` e poi `vai avanti`.",
           "mc_5_b": "Controlla che entrambi i blocchi siano all'interno del blocco `ripeti ... volte` per far eseguire il codice più di una volta.",
-          "mc_5_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_5_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Place Wall_2019": {
           "mc_5_a": "Usa prima il blocco `metti` e poi `vai avanti`.",
           "mc_5_b": "Controlla che entrambi i blocchi siano all'interno del blocco `ripeti ... volte` per far eseguire il codice più di una volta.",
-          "mc_5_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_5_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Place Wall_2020": {
           "mc_5_a": "Usa prima il blocco `metti` e poi `vai avanti`.",
           "mc_5_b": "Controlla che entrambi i blocchi siano all'interno del blocco `ripeti ... volte` per far eseguire il codice più di una volta.",
-          "mc_5_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_5_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Plant Crops": {
           "mc_7_a": "Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.",
@@ -1079,17 +1079,17 @@
         "Overworld Shear Sheep": {
           "mc_3_a": "Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te. Sei di fronte alla pecora?",
           "mc_3_b": "Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa il blocco `gira a ...`.",
-          "mc_3_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_3_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Shear Sheep_2019": {
           "mc_3_a": "Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te. Sei di fronte alla pecora?",
           "mc_3_b": "Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa il blocco `gira a ...`.",
-          "mc_3_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_3_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Shear Sheep_2020": {
           "mc_3_a": "Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te. Sei di fronte alla pecora?",
           "mc_3_b": "Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa il blocco `gira a ...`.",
-          "mc_3_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_3_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Avoiding Lava": {
           "mc_11_a": "Tutto il codice per controllare se c'è la lava e coprirla è già pronto. Quello che resta da fare è aggiungere un blocco `vai avanti`.",
@@ -1121,17 +1121,17 @@
         "Underground Iron": {
           "mc_10_a": "Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad andare lì?",
           "mc_10_b": "Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti` per creare un passaggio sicuro. Poi ci puoi camminare sopra!",
-          "mc_10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Iron_2019": {
           "mc_10_a": "Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad andare lì?",
           "mc_10_b": "Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti` per creare un passaggio sicuro. Poi ci puoi camminare sopra!",
-          "mc_10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Iron_2020": {
           "mc_10_a": "Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad andare lì?",
           "mc_10_b": "Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti` per creare un passaggio sicuro. Poi ci puoi camminare sopra!",
-          "mc_10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Mining Coal": {
           "mc_9_a": "Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco davanti a te.",
@@ -3363,22 +3363,22 @@
           "courseB_starWars_prog8_b": "Prova ad usare il blocco `ripeti` per vedere cosa succede al codice che inserisci all'interno.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo `ripeti` potrebbe aiutarti qui?"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
         "courseB_starWars_prog9_2020": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
@@ -4741,42 +4741,42 @@
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops10": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops10_2018": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops10_2019": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops10_2020": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops1_2018": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops1_2019": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops1_2020": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops2": {
@@ -4859,27 +4859,27 @@
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops7_2018": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops7_2019": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops7_2020": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops7_copy": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!",
@@ -8912,7 +8912,7 @@
         },
         "Overworld House Frame Chosen_2021": {
           "mc_6_a": "Clicca la freccia sulla destra del blocco `metti` per scegliere il materiale da posizionare.",
-          "mc_6_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "mc_6_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "mc_6_c": "Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`."
         },
         "Overworld Move to Sheep_2021": {
@@ -8922,7 +8922,7 @@
         "Overworld Place Wall_2021": {
           "mc_5_a": "Usa prima il blocco `metti` e poi `vai avanti`.",
           "mc_5_b": "Controlla che entrambi i blocchi siano all'interno del blocco `ripeti ... volte` per far eseguire il codice più di una volta.",
-          "mc_5_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_5_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Plant Crops_2021": {
           "mc_7_a": "Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.",
@@ -8936,7 +8936,7 @@
         "Overworld Shear Sheep_2021": {
           "mc_3_a": "Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te. Sei di fronte alla pecora?",
           "mc_3_b": "Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa il blocco `gira a ...`.",
-          "mc_3_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_3_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Avoiding Lava_2021": {
           "mc_11_a": "Tutto il codice per controllare se c'è la lava e coprirla è già pronto. Quello che resta da fare è aggiungere un blocco `vai avanti`.",
@@ -8950,7 +8950,7 @@
         "Underground Iron_2021": {
           "mc_10_a": "Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad andare lì?",
           "mc_10_b": "Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti` per creare un passaggio sicuro. Poi ci puoi camminare sopra!",
-          "mc_10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Mining Coal_2021": {
           "mc_9_a": "Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco davanti a te.",
@@ -9503,7 +9503,7 @@
           "courseB_starWars_prog8_b": "Prova ad usare il blocco `ripeti` per vedere cosa succede al codice che inserisci all'interno.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
@@ -9851,11 +9851,11 @@
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops1_2021": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops2_2021": {
@@ -9892,12 +9892,12 @@
         "courseC_starWars_loops7_2021": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!",
@@ -10782,7 +10782,7 @@
           "hw_retro_changePropBy": "Se desideri modificare gradualmente la dimensione di un personaggio con un evento, usa questo blocco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Ciascun personaggio ha una **posizione**. Puoi impostare la posizione cliccando sulla puntina presente in questo blocco: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Clicca sulla puntina ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) sul destra del blocco, poi scegli sullo schermo una nuova posizione per il tuo personaggio.\n-   Premi il pulsante \"Esegui\" quando il tuo codice è pronto.",
+          "location_hint": "Ciascun personaggio ha una **posizione**. Puoi impostare la posizione cliccando sulla puntina presente in questo blocco: \n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Poetry_makeNewSpriteAnon\" id=\"1XbbmW9TqiPQBwSeRYvO\">\n  <field name=\"ANIMATION_NAME\">\"twinkling star\"</field>\n  <field name=\"LOCATION\">{\"x\":200,\"y\":200}</field>\n</block></xml>\n\n-   Clicca sulla puntina ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) sul destra del blocco, poi scegli sullo schermo una nuova posizione per il tuo personaggio.\n-   Premi il pulsante \"Esegui\" quando il tuo codice è pronto.",
           "remove_hint": "Puoi rimuovere un personaggio in corrispondenza di un certo verso ed eventualmente aggiungerne uno nuovo che prenda il suo posto: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
@@ -10883,7 +10883,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Come faccio a superare questo livello?**\n\n-   Basta premere il pulsante \"Termina!\"!",
           "repeat_every_ideas": "**Hai bisogno di qualche idea?**\n\n-   Cambia ripetutamente le dimensioni di un ballerino per farlo crescere.\n-   Cambia ripetutamente la rotazione di un ballerino per farlo girare..\n\n_Puoi anche usare numeri negativi per creare un effetto opposto!_",
-          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco evento per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Sfida supplementare**\n\n-   Puoi anche usare questo nuovo blocco per alternare una sequenza di mosse di ballo, impostando \"(Casuale)\", \"(Successivo)\", o \"(Precedente)\".\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Il blocco `alternano ogni` si trova nella categoria \"Ballerini\"."
@@ -11005,7 +11005,7 @@
         },
         "Overworld House Frame Chosen2022": {
           "mc_6_a": "Clicca la freccia sulla destra del blocco `metti` per scegliere il materiale da posizionare.",
-          "mc_6_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "mc_6_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "mc_6_c": "Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`."
         },
         "Overworld Move to Sheep2022": {
@@ -11015,7 +11015,7 @@
         "Overworld Place Wall2022": {
           "mc_5_a": "Usa prima il blocco `metti` e poi `vai avanti`.",
           "mc_5_b": "Controlla che entrambi i blocchi siano all'interno del blocco `ripeti ... volte` per far eseguire il codice più di una volta.",
-          "mc_5_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_5_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Overworld Plant Crops2022": {
           "mc_7_a": "Usa il blocco `semina del grano` per seminarlo nel punto in cui sei.",
@@ -11029,7 +11029,7 @@
         "Overworld Shear Sheep2022": {
           "mc_3_a": "Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te. Sei di fronte alla pecora?",
           "mc_3_b": "Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa il blocco `gira a ...`.",
-          "mc_3_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_3_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Avoiding Lava2022": {
           "mc_11_a": "Tutto il codice per controllare se c'è la lava e coprirla è già pronto. Quello che resta da fare è aggiungere un blocco `vai avanti`.",
@@ -11043,7 +11043,7 @@
         "Underground Iron2022": {
           "mc_10_a": "Il ferro è nei blocchi maculati dietro alla torcia! Come farai ad andare lì?",
           "mc_10_b": "Quando sei sul bordo della lava, usa il blocco `metti ciottoli davanti` per creare un passaggio sicuro. Poi ci puoi camminare sopra!",
-          "mc_10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "mc_10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "Underground Mining Coal2022": {
           "mc_9_a": "Sei girato dalla parte giusta? Il blocco `distruggi` scava nel blocco davanti a te.",
@@ -11577,7 +11577,7 @@
           "courseB_starWars_prog8_b": "Prova ad usare il blocco `ripeti` per vedere cosa succede al codice che inserisci all'interno.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog92022": {
-          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseB_starWars_prog9_a": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseB_starWars_prog9_b": "Ci sono molti modi per risolvere questo esercizio.",
           "courseB_starWars_prog9_c": "Un ciclo <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> potrebbe esserti utile qui?"
         },
@@ -11927,11 +11927,11 @@
         "courseC_starWars_loops102022": {
           "courseC_starWars_loops10_a": "Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.",
           "courseC_starWars_loops10_b": "Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\\\nSi chiama **ciclo annidato**.",
-          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops10_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops12022": {
           "courseC_starWars_loops1_a": "Quando BB-8 rotola su un rottame metallico lo recupera automaticamente.",
-          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.",
+          "courseC_starWars_loops1_b": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede.",
           "courseC_starWars_loops1_c": "Devi andare avanti cinque volte per risolvere questo esercizio."
         },
         "courseC_starWars_loops22022": {
@@ -11952,7 +11952,7 @@
         "courseC_starWars_loops72022": {
           "courseC_starWars_loops7_a": "Questo schema sembra più difficile di quello che è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami metallici?",
           "courseC_starWars_loops7_b": "Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare uno schema che si ripete.",
-          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
+          "courseC_starWars_loops7_c": "Non aver paura di sbagliare! Anche se non hai ancora risolto l'esercizio, esegui il codice per vedere cosa succede."
         },
         "courseC_starWars_loops82022": {
           "course_starWars_loops8_a": "Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!",

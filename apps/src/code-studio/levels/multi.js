@@ -3,14 +3,14 @@ import React from 'react';
 import {
   registerGetResult,
   onAnswerChanged,
-  resetContainedLevel
+  resetContainedLevel,
 } from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
-var Multi = function(
+var Multi = function (
   levelId,
   id,
   app,
@@ -19,7 +19,8 @@ var Multi = function(
   answers,
   answersFeedback,
   lastAttemptString,
-  containedMode
+  containedMode,
+  allowMultipleAttempts
 ) {
   // The dashboard levelId.
   this.levelId = levelId;
@@ -59,14 +60,16 @@ var Multi = function(
 
   this.submitAllowed = true;
 
+  this.allowMultipleAttempts = !!allowMultipleAttempts;
+
   $(document).ready(() => this.ready());
 };
 
-Multi.prototype.enableButton = function(enable) {
+Multi.prototype.enableButton = function (enable) {
   $('#' + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
-Multi.prototype.choiceClicked = function(button) {
+Multi.prototype.choiceClicked = function (button) {
   if (!this.submitAllowed) {
     return;
   }
@@ -79,7 +82,7 @@ Multi.prototype.choiceClicked = function(button) {
   onAnswerChanged(this.levelId, true);
 };
 
-Multi.prototype.clickItem = function(index) {
+Multi.prototype.clickItem = function (index) {
   // If this button is already crossed, do nothing more.
   if (this.crossedAnswers.indexOf(index) !== -1) {
     return;
@@ -121,7 +124,7 @@ Multi.prototype.clickItem = function(index) {
   return true;
 };
 
-Multi.prototype.unclickItem = function(index) {
+Multi.prototype.unclickItem = function (index) {
   var selectedItemIndex = this.selectedAnswers.indexOf(index);
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
@@ -131,7 +134,7 @@ Multi.prototype.unclickItem = function(index) {
 };
 
 // called on $.ready
-Multi.prototype.ready = function() {
+Multi.prototype.ready = function () {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
   if (window.appOptions.readonlyWorkspace && !this.containedMode) {
@@ -155,7 +158,7 @@ Multi.prototype.ready = function() {
   }
 
   $('#' + this.id + ' .answerbutton').click(
-    $.proxy(function(event) {
+    $.proxy(function (event) {
       //console.log("answerbutton clicked", this.id);
       this.choiceClicked($(event.currentTarget));
     }, this)
@@ -163,12 +166,9 @@ Multi.prototype.ready = function() {
 
   $('#' + this.id + ' #voteform img').on(
     'dragstart',
-    $.proxy(function(event) {
+    $.proxy(function (event) {
       // Prevent button images from being dragged, click the button instead.
-      var button = $(event.currentTarget)
-        .parent()
-        .parent()
-        .parent();
+      var button = $(event.currentTarget).parent().parent().parent();
       this.choiceClicked(button);
       event.preventDefault();
       event.stopPropagation();
@@ -205,23 +205,26 @@ Multi.prototype.ready = function() {
   }
 };
 
-Multi.prototype.lockAnswers = function() {
+Multi.prototype.lockAnswers = function () {
+  if (this.allowMultipleAttempts) {
+    return;
+  }
   $('#' + this.id + ' .answerbutton').addClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 
-Multi.prototype.resetAnswers = function() {
+Multi.prototype.resetAnswers = function () {
   $('#' + this.id + ' .answerbutton').removeClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', true);
   this.selectedAnswers.forEach(idx => this.unclickItem(idx));
 };
 
-Multi.prototype.getAppName = function() {
+Multi.prototype.getAppName = function () {
   return this.app;
 };
 
 // called by external result-posting code
-Multi.prototype.getResult = function(dontAllowSubmit) {
+Multi.prototype.getResult = function (dontAllowSubmit) {
   let answer;
   let errorDialog;
   let valid;
@@ -257,12 +260,12 @@ Multi.prototype.getResult = function(dontAllowSubmit) {
     result: result,
     errorDialog: errorDialog,
     submitted: submitted,
-    valid: valid
+    valid: valid,
   };
 };
 
 // called by external code that will display answer feedback
-Multi.prototype.getCurrentAnswerFeedback = function() {
+Multi.prototype.getCurrentAnswerFeedback = function () {
   if (!this.answersFeedback) {
     return;
   }
@@ -277,7 +280,7 @@ Multi.prototype.getCurrentAnswerFeedback = function() {
 };
 
 // This behavior should only be available when this is a standalone Multi.
-Multi.prototype.submitButtonClick = function() {
+Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
@@ -300,7 +303,7 @@ Multi.prototype.submitButtonClick = function() {
  * @returns {boolean} True if this Multi has been provided with answers, and the
  *   selected answer(s) are the correct one(s).
  */
-Multi.prototype.validateAnswers = function() {
+Multi.prototype.validateAnswers = function () {
   if (!this.answers) {
     return false;
   }

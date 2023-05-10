@@ -149,7 +149,7 @@ class DSLDefined < Level
 
   def existing_filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/config/scripts --color=never"
     `#{grep_string}`.chomp
   end
 
@@ -237,9 +237,7 @@ class DSLDefined < Level
     dsl_text
   end
 
-  private
-
-  def delete_level_file
+  private def delete_level_file
     File.delete(file_path) if File.exist?(file_path)
   end
 end

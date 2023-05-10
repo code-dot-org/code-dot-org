@@ -50,7 +50,7 @@ module UsersHelper
 
     log_account_takeover_to_firehose(**firehose_params)
     true
-  rescue => e
+  rescue => exception
     # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
     if source_user && destination_user
       firehose_params = {
@@ -58,7 +58,7 @@ module UsersHelper
         destination_user: destination_user,
         type: takeover_type,
         provider: provider,
-        error: "Type: #{e.class} Message: #{e.message}"
+        error: "Type: #{exception.class} Message: #{exception.message}"
       }
       log_self_takeover_investigation_to_firehose(firehose_params)
     end

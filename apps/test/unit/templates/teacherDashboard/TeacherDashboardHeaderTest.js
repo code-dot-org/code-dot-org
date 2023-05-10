@@ -17,7 +17,7 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 5,
     code: 'VQGSJR',
-    providerManaged: false
+    providerManaged: false,
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 4,
     code: 'TQGSJR',
-    providerManaged: false
+    providerManaged: false,
   },
   {
     id: 1,
@@ -37,19 +37,19 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 6,
     code: 'XQGSJR',
-    providerManaged: false
-  }
+    providerManaged: false,
+  },
 ];
 
 const MOCK_SCRIPT = {
-  name: 'Course D (2019)'
+  name: 'Course D (2019)',
 };
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSection: MOCK_SECTIONS[0],
   assignmentName: MOCK_SCRIPT.name,
-  openEditSectionDialog: () => {}
+  openEditSectionDialog: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {

@@ -90,7 +90,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'detail change notification links are complete urls' do
     courses = [
-      Pd::Workshop::COURSE_ADMIN,
+      Pd::Workshop::COURSE_ADMIN_COUNSELOR,
       Pd::Workshop::COURSE_CSF
     ]
 

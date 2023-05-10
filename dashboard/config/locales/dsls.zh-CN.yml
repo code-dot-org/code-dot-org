@@ -999,9 +999,9 @@ zh-CN:
 
           ## 资源
           * [个人网站草图 - 课堂活动指南](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
-        teacher_markdown: "* [个人网站梗概](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
-          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
-          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
+        teacher_markdown: "* [个人网站梗概] (https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)-样本
+          ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: 描述
         markdown: |
@@ -9531,9 +9531,9 @@ zh-CN:
       CSD U2 CSS practice_pilot_2021:
         display_name: 使用 CSS 设置文本样式
       CSD U2 Image challenge_pilot_2021:
-        display_name: 添加图画
+        display_name: 添加图片
       CSD U2 Image practice_pilot_2021:
-        display_name: 添加图画
+        display_name: 添加图片
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -10126,9 +10126,9 @@ zh-CN:
       CSD U2 CSS practice_pilot_2022:
         display_name: 使用 CSS 设置文本样式
       CSD U2 Image challenge_pilot_2022:
-        display_name: 添加图画
+        display_name: 添加图片
       CSD U2 Image practice_pilot_2022:
-        display_name: 添加图画
+        display_name: 添加图片
       CSD U2 Test Classes:
         answers:
         - {}

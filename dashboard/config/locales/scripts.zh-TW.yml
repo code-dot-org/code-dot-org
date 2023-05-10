@@ -276,6 +276,9 @@ zh-TW:
           description: 用於 UI 測試的所有關卡類型。請登入以測試 applab 關卡（根據設計，applab 的關卡僅在登入後才可使用。我們通常讓人們登入，但只針對整個腳本時才強制執行，對於此腳本來說，這樣做會很煩人）。
           description_short: 用於 UI 測試的所有關卡類型
           student_description: 用於 UI 測試的所有關卡類型。請登入以測試 applab 關卡（根據設計，applab 的關卡僅在登入後才可使用。我們通常讓人們登入，但只針對整個腳本時才強制執行，對於此腳本來說，這樣做會很煩人）。
+          lessons:
+            lesson-49:
+              name: 音樂
         algebraPD2b:
           title: 代數裡的計算機科學 PD
           description: 階段 2 暑假的線上混合式學習
@@ -4891,6 +4894,35 @@ zh-TW:
               display_name: 內容
             lessonGroup-4:
               display_name: 替代課程
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 替代課程
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: 知識產權
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 替代課程
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-4:
+              display_name: 問卷
+            lessonGroup-5:
+              display_name: 替代課程
         hello-world-space-2022:
           title: 你好世界：太空
         hello-world-soccer-2022:
@@ -4898,10 +4930,9 @@ zh-TW:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 第1章
+              display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
-              display_name: 第2章
-          title: 問題解決
+              display_name: 第 2 章：計算機與問題解決能力
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4909,38 +4940,49 @@ zh-TW:
             lessonGroup-3:
               display_name: '第2章: 多網頁網站'
           title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：用戶為中心的設計
             lessonGroup-3:
               display_name: 第 2 章︰ 應用程式原型
-          title: 設計流程
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：表達信息
             lessonGroup-3:
               display_name: 第 2 章：解決數據問題
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：圖像和動畫
             lessonGroup-3:
               display_name: 第 2 章：創建遊戲
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: 第1章
             lessonGroup-3:
-              display_name: 第2章
-          title: 實體運算
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章
             lessonGroup-3:
               display_name: 第2章
+            lessonGroup-4:
+              display_name: App Lab 入門
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -5036,6 +5078,10 @@ zh-TW:
               display_name: 課後調查
         csp-post-survey-2023:
           title: 電腦科學原理課後問卷調查
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: 評量
         csp-playground:
           title: CSP 遊樂場
           description_audience: 課程作者
@@ -5056,3 +5102,495 @@ zh-TW:
               display_name: App Lab 入門
             lessonGroup-3:
               display_name: 輸入與輸出
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 問題解決
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+          title: 問題解決
+        testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-4:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+          description_short: 為學前兒童提供的電腦科學簡介：結合我們的最佳幼稚園與一年級課程。
+          description_audience: 年齡：4-8
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_sprites:
+              display_name: 角色
+            lessonGroup-9:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_functions:
+              display_name: 函式
+            csf_variables:
+              display_name: 變數
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_short: 電腦科學簡介：結合我們最優秀的國小課程內容，供年齡較大的學生學習。
+          description_audience: 年齡 9-18
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            lessonGroup-5:
+              display_name: 課程結束專案
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學齡前兒童設計的計算機科學指引。
+          description_audience: 年齡：4-7
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_impacts:
+              display_name: 運算的影響
+            csf_events:
+              display_name: 事件
+            lessonGroup-6:
+              display_name: 課程結束專案
+          student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
+          description_audience: 年齡 5-8
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 數據
+            end_of_course_project:
+              display_name: 課程結束專案
+          student_description: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+          description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
+          description_audience: 年齡 6-10
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            end_of_course_project:
+              display_name: 課程結束專案
+          title: 課程 D（2021）
+          description_short: 學習條件式陳述句。你可製作自己的藝術品、遊戲，甚至舞蹈派對！
+          description_audience: 年齡 7-11
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sprites:
+              display_name: 角色
+            ramp_up:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
+            csf_nested_loops:
+              display_name: 條件判斷（Conditionals）
+            lessonGroup-7:
+              display_name: 運算的影響
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_audience: 年齡 8-12
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+            lessonGroup-3:
+              display_name: 第 2 章：計算機與問題解決能力
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+            lessonGroup-4:
+              display_name: 問卷
+          title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
+            lessonGroup-4:
+              display_name: 問卷
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+            lessonGroup-4:
+              display_name: 問卷
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+            lessonGroup-4:
+              display_name: 問卷
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Lab 入門
+            lessonGroup-3:
+              display_name: 第1章
+            lessonGroup-4:
+              display_name: 第2章
+            lessonGroup-5:
+              display_name: 問卷
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+        focus-on-creativity2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+            lessonGroup-3:
+              display_name: 第 2 章：計算機與問題解決能力
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Lab 入門
+            lessonGroup-3:
+              display_name: 第1章
+            lessonGroup-4:
+              display_name: 第2章
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+        focus-on-design-with-purpose2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+        focus-on-coding2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: App Lab 入門
+            lessonGroup-4:
+              display_name: 第2章
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章：建立物理原型
+          description_short: 在實體裝置上開發程式
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+            lessonGroup-5:
+              display_name: 問卷
+        vpl-csd-ci-1:
+          title: 模組1：準備問題解決和計算教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Web開發教學
+          title: 模組2：準備Web開發教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的Web開發單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識Web開發。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 準備互動動畫和遊戲教學
+          title: 模組3：準備互動動畫和遊戲教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+        vpl-csd-ci-4:
+          title: 模組4：準備設計進程教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的設計進程單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識設計進程。\n-   實踐單元中包含的關鍵概念。\n-   參與App實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            90分鐘"
+        vpl-csd-ci-5:
+          title: 模組5：準備數據和社會教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的數據和社會單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識數據和社會。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 90分鐘"
+        vpl-csd-ci-7:
+          title: 模組7：準備人工智慧和機器學習教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-
+            \  制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的人工智慧和機器學習單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識人工智慧和機器學習。\n-   實踐單元中包含的關鍵概念。\n-   參與人工智慧實驗室和App實驗室。\n-   探索章節結尾項目。\n-
+            \  制定一個與學生一起實施本單元的計畫。\n\n**建議時間：** 120分鐘"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 第 2 章：建立物理原型
+            lessonGroup-5:
+              display_name: 問卷
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 輸入與輸出
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 歡迎
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: 介紹
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 天
+          title: 第 1 天
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: 總結
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 2 天
+          title: 第 2 天
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 3 天
+          title: 第 3 天
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: 總結
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 4 天
+          title: 第 4 天
+        csd-post-survey-2023:
+          title: 課後調查
+        focus-on-data-post-survey-2023:
+          title: 課後調查
+        focus-on-impact-in-society-post-survey-2023:
+          title: 課後調查
+        focus-on-coding-post-survey-2023:
+          title: 課後調查
+        focus-on-design-with-purpose-post-survey-2023:
+          title: 課後調查
+        focus-on-hardware-post-survey-2023:
+          title: 課後調查
+        focus-on-creativity-post-survey-2023:
+          title: 課後調查

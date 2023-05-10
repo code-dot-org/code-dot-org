@@ -2534,15 +2534,18 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "selecting_features/csd/2022": {
           "type": "Ressource"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -2566,6 +2569,7 @@
           "type": "Antwortschlüssel"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -2596,9 +2600,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -4707,12 +4716,15 @@
           "type": "Ressource"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Folien"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Einführung in das KI-Spielelabor",
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Training und Testen im KI-Labor",
           "type": "Video"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
@@ -4742,6 +4754,7 @@
           "type": "Folien"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Modellkarten im KI Labor",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2021": {
@@ -4769,9 +4782,14 @@
           "type": "Antwortschlüssel"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Folien"
         },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Numerische Daten im KI-Labor"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Numerische Daten im KI-Labor",
           "type": "Video"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {

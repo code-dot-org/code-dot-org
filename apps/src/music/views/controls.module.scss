@@ -5,7 +5,7 @@
 .controlsContainer {
   display: flex;
   justify-content: center;
-  background-color: $gray-800;
+  background-color: $neutral_dark80;
   z-index: 70;
   border-radius: $default-border-radius;
   margin: $default-spacing 0;
@@ -34,6 +34,10 @@
 .iconButton {
   cursor: pointer;
   font-size: 30px;
+
+  &Link {
+    color: white;
+  }
 }
 
 .startOverButton {

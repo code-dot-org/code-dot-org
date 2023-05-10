@@ -220,8 +220,6 @@ vi:
       chúng ta liên lạc với học sinh. Học sinh sẽ không bao giờ nhận được email từ
       Code.org ngoại trừ email khôi phục mật khẩu. Hãy xem [chính sách quyền riêng
       tư](http://code.org/privacy) của chúng tôi để biết thêm thông tin.
-    additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
-      ký cho bạn.
     user_type_button: Cập nhật tài khoản
     user_type_label: Kiểu tài khoản
     user_type_student: Học sinh
@@ -1454,6 +1452,13 @@ vi:
         cài đặt tài khoản của bạn](%{user_registration}) để thêm địa chỉ email trước
         khi hoàn thành biểu mẫu này.
   courses_category: Các khóa học đầy đủ
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      hello_world: Xin chào cả thế giới
+      sports: Thể thao
+      csf: Nguyên tắc cơ bản của KHMT
+      csc: Kết nối KHMT
   cookie_banner:
     message: Bằng cách tiếp tục duyệt trang web của chúng tôi hoặc nhấp vào “Tôi đồng
       ý”, bạn đồng ý với hoạt động lưu trữ cookie trên máy tính hoặc thiết bị của

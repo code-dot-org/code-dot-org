@@ -16,7 +16,8 @@ class Projects
     @table = Projects.table
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -25,7 +26,7 @@ class Projects
       updated_at: timestamp,
       updated_ip: ip,
       abuse_score: 0,
-      project_type: type,
+      project_type: project_type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
@@ -308,7 +309,7 @@ class Projects
     end.compact
   end
 
-  # Find the encrypted channel token for most recent project of the given type.
+  # Find the encrypted channel token for most recent project of the given level type.
   def most_recent(key)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
@@ -318,6 +319,13 @@ class Projects
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+  end
+
+  # Find the encrypted channel token for most recent project of the given project_type.
+  def most_recent_project_type(type)
+    row = @table.where(storage_id: @storage_id, project_type: type).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).first
+    return nil unless row
+    JSON.parse(row[:value])['id']
   end
 
   # Returns the row value with 'id' and 'isOwner' merged from input params, and

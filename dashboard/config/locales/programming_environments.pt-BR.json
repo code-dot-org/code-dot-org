@@ -44,6 +44,10 @@
                     }
                   },
                   "short_description": "Reproduz o arquivo de som MP3 da URL especificada."
+                },
+                "showMobileControls": {
+                  "content": "Muda os controles móveis visíveis abaixo do espaço de jogo.",
+                  "short_description": "Muda os controles móveis visíveis abaixo do espaço de jogo."
                 }
               }
             },
@@ -56,6 +60,12 @@
                       "name": "Espiral"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "A altura do \"sprite\"."
+                },
+                "sprite.width": {
+                  "return_value": "A largura do \"sprite\"."
                 }
               }
             },

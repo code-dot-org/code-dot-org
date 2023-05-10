@@ -8,9 +8,6 @@
         "csd-2022/ai-lab": {
           "display_name": "AI Lab"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "類比感測器"
-        },
         "csd-2022/app-lab": {
           "display_name": "App Lab"
         },
@@ -25,6 +22,9 @@
         },
         "csd-2022/changing-sensor-scale": {
           "display_name": "感測器測量值的修改"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "電路遊樂場概述"
         },
         "csd-2022/classes": {
           "display_name": "類別"
@@ -119,11 +119,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "概覽"
         },
-        "csd-2022/physical-input": {
-          "display_name": "實體輸入"
-        },
         "csd-2022/playing-notes": {
           "display_name": "遊玩筆記"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "問題解決流程"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "問題解決流程"
         },
         "csd-2022/random-numbers": {
           "display_name": "隨機取數"

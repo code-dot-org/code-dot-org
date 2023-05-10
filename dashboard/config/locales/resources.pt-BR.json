@@ -1854,10 +1854,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Vídeo"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Introdução ao AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Introdução ao AI Lab",
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Treinamento e testes no AI Lab",
           "type": "Vídeo"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1866,12 +1871,20 @@
           "type": "Vídeo"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Cartões modelo no AI Lab",
           "type": "Vídeo"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Vídeo"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Dados numéricos no AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Dados numéricos no AI Lab",
           "type": "Vídeo"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -2283,7 +2296,8 @@
           "name": "Vocabulário"
         },
         "lesson_plans/csd/2017": {
-          "name": "Planos de aula"
+          "name": "Planos de aula",
+          "url": "https://curriculum.code.org/csd/unit1"
         },
         "standard_mappings/csd/2017": {
           "name": "Mapeamentos Padrão"
@@ -3598,10 +3612,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Vídeo"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Introdução ao AI Lab"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Introdução ao AI Lab",
           "type": "Vídeo"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Treinamento e testes no AI Lab",
           "type": "Vídeo"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3610,12 +3629,20 @@
           "type": "Vídeo"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Cartões modelo no AI Lab",
           "type": "Vídeo"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Vídeo"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Dados numéricos no AI Lab"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Dados numéricos no AI Lab",
           "type": "Vídeo"
         },
         "ai_ethics_research_reflection/csd/2021": {

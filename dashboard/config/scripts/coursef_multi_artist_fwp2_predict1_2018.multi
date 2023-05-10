@@ -11,3 +11,5 @@ We have added parameters to the 'draw a square' function.  Click the blue "edit"
 
 
 MARKDOWN
+
+allow_multiple_attempts false

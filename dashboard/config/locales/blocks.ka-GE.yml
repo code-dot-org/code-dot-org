@@ -630,6 +630,13 @@ ka:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"circle"': წრე
+            '"grid"': ბადე
+            '"row"': მწკრივი
+            '"column"': სვეტი
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -644,6 +651,13 @@ ka:
           EFFECT:
             '"rain"': წვიმა
             '"spiral"': სპირალი
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"circle"': წრე
+            '"grid"': ბადე
+            '"row"': მწკრივი
+            '"column"': სვეტი
       gamelab_makeProjectile:
         options:
           DIRECTION:

@@ -100,6 +100,12 @@
         },
         "6": {
           "description": "Žiaci preukazujú solídne porozumenie technologických pojmov, systémov a operácií."
+        },
+        "D2.Geo": {
+          "description": "Geografia"
+        },
+        "D2.His": {
+          "description": "História"
         }
       }
     }

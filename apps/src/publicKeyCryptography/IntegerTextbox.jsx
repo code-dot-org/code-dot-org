@@ -9,7 +9,7 @@ export default class IntegerTextbox extends React.Component {
     value: PropTypes.number,
     disabled: PropTypes.bool,
     color: PropTypes.string,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   onChange = event => {
@@ -30,7 +30,7 @@ export default class IntegerTextbox extends React.Component {
       backgroundColor: backgroundColor || 'white',
       borderColor: color.light_gray,
       borderStyle: 'solid',
-      borderWidth: 1
+      borderWidth: 1,
     };
 
     return (

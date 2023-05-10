@@ -646,7 +646,7 @@
               "name": "változók"
             },
             "functions": {
-              "name": "funkciók"
+              "name": "Függvények"
             }
           }
         },
@@ -1024,7 +1024,7 @@
               }
             },
             "functions": {
-              "name": "funkciók"
+              "name": "Függvények"
             },
             "advanced": {
               "name": "Haladó",
@@ -1083,6 +1083,54 @@
                 },
                 "toggleSwitch.isOpen": {
                   "return_value": "Logikai"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Szám"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Karakterlánc"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Szám"
+                    },
+                    "y": {
+                      "type": "Szám"
+                    }
+                  }
                 }
               }
             }

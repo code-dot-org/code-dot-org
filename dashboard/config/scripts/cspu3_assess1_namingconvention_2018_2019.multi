@@ -16,3 +16,5 @@ The most important part of naming a function is that it describes what the funct
 * Note: As functions can be shifted throughout the development of a program, numbering the functions or organizing them alphabetically are not crucial in their naming conventions.
 
 MARKDOWN
+
+allow_multiple_attempts true

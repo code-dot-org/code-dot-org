@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
@@ -56,7 +56,7 @@ InstructionsDialog.propTypes = {
   imgUrl: PropTypes.string,
   instructions: PropTypes.string,
   isBlockly: PropTypes.bool,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };
 
 export default connect(
@@ -67,19 +67,19 @@ export default connect(
     instructions:
       state.instructions.longInstructions ||
       state.instructions.shortInstructions,
-    isBlockly: state.pageConstants.isBlockly
+    isBlockly: state.pageConstants.isBlockly,
   }),
   dispatch => ({
-    handleClose: () => dispatch(closeDialog())
+    handleClose: () => dispatch(closeDialog()),
   })
 )(InstructionsDialog);
 
 const styles = {
   title: {
-    fontSize: 24
+    fontSize: 24,
   },
   imgContainer: {
     display: 'flex',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 };

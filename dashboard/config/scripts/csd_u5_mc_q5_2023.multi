@@ -1,8 +1,13 @@
 name 'CSD U5 MC Q5_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'Which word is best defined as "a way of representing information using only two options"?'
+wrong 'Encode'
+wrong 'Decode'
+wrong 'Pixel'
+right 'Binary system'
+wrong 'ASCII'
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 3**
+MARKDOWN
+
+allow_multiple_attempts true

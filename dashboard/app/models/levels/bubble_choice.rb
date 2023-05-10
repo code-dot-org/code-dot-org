@@ -238,19 +238,17 @@ class BubbleChoice < DSLDefined
     sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
   end
 
-  private
-
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @param [Unit]
   # @return [Level]
-  def best_result_sublevel(user, script)
+  private def best_result_sublevel(user, script)
     sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
     ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
 
-  def keep_working_sublevel(user, script)
+  private def keep_working_sublevel(user, script)
     # get latest feedback on sublevels where keepWorking is true
     level_ids = sublevels.map(&:id)
     latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)

@@ -7,7 +7,7 @@ var commonMsg = require('@cdo/locale');
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
  */
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -30,7 +30,7 @@ function installControlsRepeatSimplified(blockly, skin) {
 
   blockly.Blocks.controls_repeat_simplified = {
     // Repeat n times (internal number) with simplified UI
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
@@ -48,12 +48,12 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 
   blockly.Blocks.controls_repeat_simplified_dropdown = {
     // Repeat n times (internal number) with simplified UI
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
@@ -65,7 +65,7 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -75,7 +75,7 @@ function installControlsRepeatDropdown(blockly) {
 
   blockly.Blocks.controls_repeat_dropdown = {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
@@ -88,7 +88,7 @@ function installControlsRepeatDropdown(blockly) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -97,13 +97,13 @@ function installNumberDropdown(blockly) {
 
   blockly.Blocks.math_number_dropdown = {
     // Numeric value with a customizable dropdown.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
       Blockly.cdoUtils.setHSV(this, 258, 0.35, 0.62);
       this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -112,7 +112,7 @@ function installNumberDropdown(blockly) {
 function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
 
       // Not localized as this is only used by level builders
@@ -120,10 +120,10 @@ function installPickOne(blockly) {
         'Pick one (Use only in required blocks)'
       );
       this.appendStatementInput('PICK');
-    }
+    },
   };
 
-  blockly.JavaScript.pick_one = function() {
+  blockly.JavaScript.pick_one = function () {
     return '\n';
   };
 }
@@ -132,7 +132,7 @@ function installPickOne(blockly) {
 function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
@@ -142,16 +142,16 @@ function installCategory(blockly) {
         .appendField(new blockly.FieldTextInput('Name'), 'CATEGORY');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
-    }
+    },
   };
 
-  blockly.JavaScript.category = function() {
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
@@ -159,7 +159,7 @@ function installCategory(blockly) {
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],
-        ['Locations', 'Location']
+        ['Locations', 'Location'],
       ]);
       // Not localized as this is only used by level builders
       this.appendDummyInput()
@@ -167,10 +167,10 @@ function installCategory(blockly) {
         .appendField(customDropdown, 'CUSTOM');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
-    }
+    },
   };
 
-  blockly.JavaScript.custom_category = function() {
+  blockly.JavaScript.custom_category = function () {
     return '\n';
   };
 }
@@ -179,7 +179,7 @@ function installWhenRun(blockly, skin, isK1) {
   blockly.Blocks.when_run = {
     // Block to handle event where mouse is clicked
     helpUrl: '',
-    init: function() {
+    init: function () {
       if (this.setStyle) {
         this.setStyle('setup_blocks');
       } else {
@@ -195,12 +195,12 @@ function installWhenRun(blockly, skin, isK1) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
     },
-    shouldBeGrayedOut: function() {
+    shouldBeGrayedOut: function () {
       return false;
-    }
+    },
   };
 
-  blockly.JavaScript.when_run = function() {
+  blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
     return '\n';
   };
@@ -208,7 +208,7 @@ function installWhenRun(blockly, skin, isK1) {
 
 function installJoinBlock(blockly) {
   blockly.Blocks.text_join_simple = {
-    init: function() {
+    init: function () {
       this.helpUrl = '';
       this.setColour(160);
       this.setOutput(true, Blockly.BlockValueType.STRING);
@@ -216,24 +216,24 @@ function installJoinBlock(blockly) {
       this.inputCount = 0;
     },
 
-    getCustomContextMenuItems: function() {
+    getCustomContextMenuItems: function () {
       return [
         {
           text: `Set number of inputs (current: ${this.inputCount})`,
           enabled: true,
-          callback: function() {
+          callback: function () {
             var ret = prompt('Number of inputs', this.inputCount);
             if (ret === '???') {
               this.setInputCount(ret);
             } else if (ret !== '') {
               this.setInputCount(parseInt(ret));
             }
-          }.bind(this)
-        }
+          }.bind(this),
+        },
       ];
     },
 
-    setInputCount: function(inputCount) {
+    setInputCount: function (inputCount) {
       let newInputCount;
       if (inputCount === '???') {
         newInputCount = 2;
@@ -259,7 +259,7 @@ function installJoinBlock(blockly) {
       }
     },
 
-    pendingConnection: function(oldConnection, newConnection) {
+    pendingConnection: function (oldConnection, newConnection) {
       var lastConnectionIndex = 0;
       var oldConnectionIndex = -1;
       var newConnectionIndex = -1;
@@ -291,10 +291,10 @@ function installJoinBlock(blockly) {
           100
         );
       }
-    }
+    },
   };
 
-  blockly.JavaScript.text_join_simple = function() {
+  blockly.JavaScript.text_join_simple = function () {
     var parts = new Array(this.inputCount === '???' ? 2 : this.inputCount);
     for (var n = 0; n < this.inputCount; n++) {
       parts[n] =
@@ -311,7 +311,7 @@ function installJoinBlock(blockly) {
 
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 0, 0, 0.6);
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
@@ -319,10 +319,10 @@ function installCommentBlock(blockly) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(commonMsg.commentTooltip());
-    }
+    },
   };
 
-  blockly.JavaScript.comment = function() {
+  blockly.JavaScript.comment = function () {
     var comment = this.getFieldValue('TEXT');
     return `// ${comment}\n`;
   };

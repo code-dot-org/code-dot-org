@@ -9,7 +9,7 @@ import ProjectsPromo from './ProjectsPromo';
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
-    projectCount: PropTypes.number
+    projectCount: PropTypes.number,
   };
 
   render() {
@@ -21,7 +21,7 @@ export default class ProjectHeader extends React.Component {
           short={true}
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeadingMillions({
-            project_count: this.props.projectCount
+            project_count: this.props.projectCount,
           })}
           backgroundUrl={backgroundUrl}
         />

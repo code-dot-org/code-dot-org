@@ -5839,7 +5839,7 @@ pl-PL:
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
         - text: Komputer zada inne pytanie.
-          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie wtedy, gdy program
             rozpoczyna działanie.
         questions:
         - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy
@@ -13978,7 +13978,7 @@ pl-PL:
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
         - text: Komputer zada inne pytanie.
-          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie wtedy, gdy program
             rozpoczyna działanie.
         questions:
         - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy

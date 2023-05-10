@@ -103,7 +103,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:18.335+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Diagonal Movement_2022\\\"\"],\"cloned_from\":\"CSD U3 Diagonal Movement_2022\"},{\"changed_at\":\"2023-01-11 19:36:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:18.335+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Diagonal Movement_2022\\\"\"],\"cloned_from\":\"CSD U3 Diagonal Movement_2022\"},{\"changed_at\":\"2023-01-11 19:36:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-05 23:42:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

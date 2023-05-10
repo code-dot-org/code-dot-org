@@ -11,13 +11,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 23067,
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "false"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-09-19T23:00:16.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-09-19T23:00:16.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:16.017+00:00\",\"changed\":[\"cloned from \\\"CSD games collision predict contained_2022\\\"\"],\"cloned_from\":\"CSD games collision predict contained_2022\"},{\"changed_at\":\"2023-01-18 23:59:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

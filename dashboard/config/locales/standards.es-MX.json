@@ -937,6 +937,207 @@
         },
         "6.d": {
           "description": "Transfiera el conocimiento actual al aprendizaje de nuevas tecnologías."
+        },
+        "AAP-1.A.1": {
+          "description": "Una variable es una abstracción dentro de un programa que puede contener un valor. Cada variable tiene asociado almacenamiento de datos que representa un valor a la vez, pero ese valor puede ser una lista u otra colección que a su vez contenga múltiples valores. "
+        },
+        "AAP-1.A.2": {
+          "description": "El uso de nombres de variables significativos ayuda con la legibilidad del código del programa y la comprensión de qué valores están representados por las variables."
+        },
+        "AAP-1.A.3": {
+          "description": "Algunos lenguajes de programación proporcionan tipos para representar datos, a los que se hace referencia usando variables. Estos tipos incluyen números, booleanos, listas y cadenas. "
+        },
+        "AAP-1.A.4": {
+          "description": "Algunos valores son más adecuados para la representación usando un tipo de datos en lugar de otro."
+        },
+        "AAP-1.B.1": {
+          "description": "El operador de asignación permite a un programa cambiar el valor representado por una variable."
+        },
+        "AAP-1.B.2": {
+          "description": "La hoja de referencia del examen proporciona el operador “←” para usar en la asignación. Por ejemplo, una expresión ← evalúa la expresión y luego asigna el resultado a la variable a."
+        },
+        "AAP-1.B.3": {
+          "description": "El valor almacenado en una variable será el valor más reciente asignado. Por ejemplo: a ← 1b ← a a ← 2 display (b) todavía muestra 1."
+        },
+        "AAP-1.C.1": {
+          "description": "Una lista es una secuencia ordenada de elementos. Por ejemplo, [valor1, valor2, valor3, …] describe una lista donde valor1 es el primer elemento, el valor 2 es el segundo elemento, el valor 3 es el tercer elemento, y así sucesivamente."
+        },
+        "AAP-1.C.2": {
+          "description": "Un elemento es un valor individual en una lista al que se le asigna un índice único."
+        },
+        "AAP-1.C.3": {
+          "description": "Un índice es un método común para hacer referencia a los elementos en una lista o cadena usando números naturales."
+        },
+        "AAP-1.C.4": {
+          "description": "Una cadena es una secuencia ordenada de caracteres."
+        },
+        "AAP-1.D.1": {
+          "description": "La abstracción de datos proporciona una separación entre las propiedades abstractas de un tipo de datos y los detalles concretos de su representación."
+        },
+        "AAP-1.D.2": {
+          "description": "Las abstracciones de datos manejan la complejidad en los programas al dar un nombre a una colección de datos sin hacer referencia a los detalles específicos de la representación."
+        },
+        "AAP-1.D.3": {
+          "description": "Las abstracciones de datos se pueden crear usando listas."
+        },
+        "AAP-1.D.4": {
+          "description": "Desarrollar una abstracción de datos para implementar en un programa puede resultar en un programa que sea más fácil de desarrollar y mantener."
+        },
+        "AAP-1.D.5": {
+          "description": "Las abstracciones de datos a menudo contienen diferentes tipos de elementos."
+        },
+        "AAP-1.D.6": {
+          "description": "El uso de listas permite que múltiples elementos relacionados sean tratados como un solo valor. Las listas son referidas por diferentes nombres, como array, dependiendo del lenguaje de programación. DECLARACIÓN DE EXCLUSIÓN (EK APP-1.D.6): El uso de listas enlazadas queda fuera del ámbito de este curso y del Examen AP."
+        },
+        "AAP-1.D.7": {
+          "description": "La hoja de referencia del examen proporciona la notación [valor1, valor2, valor3…] para crear una lista con esos valores como los ítems primero, segundo, tercero y así sucesivamente. Por ejemplo, ● ALIST ← [valor1, valor2, valor3,...] crea una nueva lista que contiene los valores valor1, valor2, valor3, y... en los índices 1, 2, 3, y... respectivamente y la asigna a AList. alist ← [] crea una nueva lista vacía y la asigna a AList."
+        },
+        "AAP-1.D.8": {
+          "description": "La hoja de referencia del examen describe una estructura de lista cuyos valores de índice son de 1 a través del número de elementos en la lista, inclusive. Para todas las operaciones de lista, si un índice de lista es menor que 1 o mayor que la longitud de la lista, se produce un mensaje de error y el programa terminará."
+        },
+        "AAP-2.A.1": {
+          "description": "Un algoritmo es un conjunto finito de instrucciones que logran una tarea específica."
+        },
+        "AAP-2.A.2": {
+          "description": "Más allá de los lenguajes de programación visuales y textuales, los algoritmos se pueden expresar de diversas maneras, como lenguaje natural, diagramas y pseudocódigo."
+        },
+        "AAP-2.A.3": {
+          "description": "Los algoritmos ejecutados por programas se implementan usando lenguajes de programación."
+        },
+        "AAP-2.A.4": {
+          "description": "Cada algoritmo se puede construir usando combinaciones de secuenciación, selección e iteración."
+        },
+        "AAP-2.B.1": {
+          "description": "La secuenciación es la aplicación de cada paso de un algoritmo en el orden en que se dan las sentencias de código."
+        },
+        "AAP-2.B.2": {
+          "description": "Una declaración de código es una parte del código de programa que expresa una acción a llevar a cabo."
+        },
+        "AAP-2.B.3": {
+          "description": "Una expresión puede consistir en un valor, una variable, un operador o una llamada a procedimiento que devuelve un valor."
+        },
+        "AAP-2.B.4": {
+          "description": "Las expresiones se evalúan para producir un solo valor."
+        },
+        "AAP-2.B.5": {
+          "description": "La evaluación de las expresiones sigue un orden establecido de operaciones, definido por el lenguaje de programación."
+        },
+        "AAP-2.B.6": {
+          "description": "Las sentencias secuenciales se ejecutan en el orden en que aparecen en el segmento de código."
+        },
+        "AAP-2.B.7": {
+          "description": "La claridad y la legibilidad son consideraciones importantes a la hora de expresar un algoritmo en un lenguaje de programación."
+        },
+        "AAP-2.C.1": {
+          "description": "Los operadores aritméticos son parte de la mayoría de los lenguajes de programación e incluyen operadores de suma, resta, multiplicación, división y módulo."
+        },
+        "AAP-2.C.2": {
+          "description": "La hoja de referencia del examen proporciona un MOD b, que evalúa al resto cuando a se divide por b. Supongamos que a es un número entero mayor o igual a 0 y b es un entero mayor que 0. Por ejemplo, 17 MOD 5 evalúa a 2."
+        },
+        "AAP-2.C.3": {
+          "description": "La hoja de referencia del examen proporciona los operadores aritméticos +, -, *,/, y MOD. ● a + b● a — b● a * b● a/b● a/b● a MOD bEstos se utilizan para realizar aritmética en a y b Por ejemplo, 17/5 evalúa a 3.4."
+        },
+        "AAP-2.C.4": {
+          "description": "El orden de las operaciones utilizadas en las matemáticas se aplica a la hora de evaluar expresiones. El operador MOD tiene la misma prioridad que los operadores * y/."
+        },
+        "AAP-2.D.1": {
+          "description": "La concatenación de cadenas une dos o más cadenas de extremo a extremo para hacer una nueva cadena."
+        },
+        "AAP-2.D.2": {
+          "description": "Una subcadena es parte de una cadena existente."
+        },
+        "AAP-2.E.1": {
+          "description": "Un valor booleano es verdadero o falso."
+        },
+        "AAP-2.E.2": {
+          "description": "La hoja de referencia del examen proporciona los siguientes operadores relacionales: =, ≠, >, <, ≥, and ≤. ● a = b● a ≠ b● a > b● a < b● a ≥ b● a ≤ b Estos se utilizan para probar la relación entre dos variables, expresiones o valores. Una comparación con un operador relacional se evalúa a un valor booleano. Por ejemplo, a = b evalúa como verdadero si a y b son iguales; de lo contrario, se evalúa como falso."
+        },
+        "AAP-2.F.1": {
+          "description": "La hoja de referencia del examen proporciona los operadores lógicos NOTY, AND y OR, que evalúan a un valor booleano."
+        },
+        "AAP-2.F.2": {
+          "description": "La hoja de referencia del examen proporciona la condición NO, que evalúa como verdadera si la condición es falsa; de lo contrario, se evalúa como falsa."
+        },
+        "AAP-2.F.3": {
+          "description": "La hoja de referencia del examen proporciona la condición1 Y  la condición2, que evalúa como verdadero, si tanto la condición1 como la condición2 son verdaderas; de lo contrario se evalúa como falsa. "
+        },
+        "AAP-2.F.4": {
+          "description": "La hoja de referencia del examen proporciona la condición1 OR  lacondición2, que evalúa como verdadero, si la condición1 es verdadera o si la condición2 es verdadera o si ambas: condición1 y condición2, son verdaderas; de lo contrario se evalúa como falsa."
+        },
+        "AAP-2.F.5": {
+          "description": "El operando para un operador lógico es una expresión booleana o un único valor booleano."
+        },
+        "AAP-2.G.1": {
+          "description": "La selección determina qué partes de un algoritmo se ejecutan en función de que una condición sea verdadera o falsa."
+        },
+        "AAP-2.P.2": {
+          "description": "Los datos deben estar ordenados para usar el algoritmo de búsqueda binaria."
+        },
+        "3-A-i.K-2": {
+          "description": "Describir y proporcionar ejemplos de cómo aprenden las personas y cómo aprenden las computadoras."
+        },
+        "3-A-i.3-5": {
+          "description": "Diferenciar entre cómo aprenden las personas y cómo aprenden las computadoras."
+        },
+        "3-A-ii.6-8": {
+          "description": "Modelar cómo el aprendizaje supervisado identifica patrones en datos etiquetados."
+        },
+        "3-A-iii.K-2": {
+          "description": "Demostrar cómo entrenar una computadora para que reconozca algo"
+        },
+        "3-A-iv.6-8": {
+          "description": "Explicar la diferencia entre el entrenamiento y el uso de un modelo de razonamiento."
+        },
+        "3-A-v.3-5": {
+          "description": "Analizar un juego donde se construye un árbol de decisiones, describiendo la organización del árbol y el algoritmo de aprendizaje utilizado para agregar nodos"
+        },
+        "3-A-v.6-8": {
+          "description": "Compare cómo funciona un algoritmo de aprendizaje de árbol de decisiones frente a cómo funciona un algoritmo de aprendizaje de redes neuronales."
+        },
+        "3-A-v.9-12": {
+          "description": "Describir cómo aprenden diversos tipos de algoritmos de aprendizaje automático ajustando sus representaciones internas."
+        },
+        "3-A-vi.3-5": {
+          "description": "Explicar cómo el aprendizaje por refuerzo permite que una computadora aprenda de la experiencia (es decir, prueba y error)."
+        },
+        "3-A-vi.6-8": {
+          "description": "Explicar las diferencias entre el aprendizaje supervisado y el aprendizaje por refuerzo."
+        },
+        "3-A-vi.9-12": {
+          "description": "Seleccione el tipo apropiado de algoritmo de aprendizaje automático (aprendizaje supervisado, no supervisado o de refuerzo) para resolver un problema de razonamiento."
+        },
+        "3-B-i.3-5": {
+          "description": "Ilustrar cómo una red neuronal de 1 a 3 neuronas es una función que computa una salida."
+        },
+        "3-B-i.6-8": {
+          "description": "Ilustrar la estructura de una red neuronal y describir cómo sus partes forman un conjunto de funciones que computan una salida."
+        },
+        "3-B-i.9-12": {
+          "description": "Describir las siguientes arquitecturas de redes neuronales y sus usos: red feed-forward, red convolucional 2D, red recurrente, red generativa adversarial."
+        },
+        "3-B-ii.3-5": {
+          "description": "Demostrar cómo se asignan pesos en una red neuronal para producir un comportamiento deseado de entrada/salida."
+        },
+        "3-B-ii.6-8": {
+          "description": "Demuestre cómo se puede usar una regla de aprendizaje para ajustar los pesos en una red neuronal de una capa."
+        },
+        "3-B-ii.9-12": {
+          "description": "Entrenar una red neuronal multicapa utilizando el algoritmo de aprendizaje de retropropagación y describir cómo cambian los pesos de las neuronas y las salidas de las unidades ocultas como resultado del aprendizaje."
+        },
+        "3-C-ii.3-5": {
+          "description": "Ilustrar cómo entrenar a un clasificador para un concepto amplio como “perro” requiere una gran cantidad de datos para capturar la diversidad del dominio."
+        },
+        "3-C-ii.6-8": {
+          "description": "Ilustrar cómo los objetos de una imagen pueden segmentarse y etiquetarse para construir un conjunto de entrenamiento para el reconocimiento de objetos."
+        },
+        "3-C-ii.9-12": {
+          "description": "Evaluar un conjunto de datos utilizado para entrenar un sistema de IA real considerando el tamaño del conjunto de datos, la forma en que se adquirieron y etiquetaron los datos, el almacenamiento requerido y el tiempo estimado para producir el conjunto de datos."
+        },
+        "3-C-iii.K-2": {
+          "description": "Examine un conjunto de datos etiquetado e identifique problemas en los datos que podrían llevar a una computadora a hacer predicciones incorrectas."
+        },
+        "3-C-iii.9-12": {
+          "description": "Investigar desequilibrios en los datos de entrenamiento en términos de género, edad, etnia u otras variables demográficas que puedan resultar en un modelo sesgado, mediante el uso de una herramienta de visiualización de datos."
         }
       }
     }

@@ -512,6 +512,8 @@ el:
         lesson_planning: Σχεδιασμός μαθημάτων
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
         csd_applab_parameters: Συναρτήσεις με παραμέτρους
+        CSF_SpriteLab_Intro_v2: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+        CSF_Spritelab_MakeSprite_v2: Πώς να φτιάξετε χαρακτήρες
         CSF_SpriteLab_SpritesInAction_v2: Χαρακτήρες σε Δράση
         csd_debugging: Εντοπισμός σφαλμάτων
         oceans_machine_learning: Εκμάθηση μηχανής
@@ -542,6 +544,7 @@ el:
         CSA-PL-Printing-in-Java: Εκτύπωση σε Java
         CSA-PL-multi-selection-statements: Εντολές πολλαπλής επιλογής
         CS_Changing_Everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
+        csd_sprite_properties: Ιδιότητες Χαρακτήρα
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
