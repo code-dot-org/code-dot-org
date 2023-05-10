@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-15 16:17:20 UTC",
+    "serialized_at": "2023-05-09 21:04:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7472,6 +7472,18 @@
       }
     },
     {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
       "name": "Modifying Elements",
       "url": "https://docs.google.com/presentation/d/1E8G1t0h4bX3jnUITNVcR4IjtZI2kUA4DWezfYDy8JDU/edit?usp=sharing",
       "key": "modifying_elements",
@@ -7914,6 +7926,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "one-dimensional_1d_arrays"
       }
     },
@@ -8028,6 +8052,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "modifying_elements"
       }
     },
@@ -8058,6 +8094,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "traversing_1d_arrays"
       }
     },
@@ -8082,6 +8130,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "for_loops"
       }
     },
@@ -8094,6 +8148,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u3l4_extra_practice"
       }
     },
@@ -8101,6 +8161,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "u3l4_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_unit_3_guide"
       }
     },
     {
@@ -8130,6 +8196,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "preconditions_and_postconditions"
       }
     },
@@ -8154,7 +8226,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8184,6 +8268,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "_key_u3l7_extra_practice"
       }
     },
@@ -8208,6 +8298,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u3l7_extra_practice"
       }
     },
@@ -8215,6 +8311,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_unit_3_guide"
       }
     },
     {
@@ -8233,6 +8335,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "array_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8262,6 +8370,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "_key_finding_duplicates"
       }
     },
@@ -8281,6 +8395,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "finding_duplicates_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8336,6 +8456,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
         "script.name": "csa3-2023"
       }
     },
