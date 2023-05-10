@@ -5,6 +5,7 @@ interface LocaleState {
 }
 
 const initialState: LocaleState = {
+  // locale code like 'en-US', 'es-MX', or null if none is specified.
   localeCode: null,
 };
 
