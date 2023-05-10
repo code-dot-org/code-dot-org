@@ -37,6 +37,10 @@ export default class ProjectManager {
   } = {};
   private lastSource: string | undefined;
   private lastChannel: string | undefined;
+  // Id of the last timeout we set on a save, or undefined if there is no current timeout.
+  // When we enqueue a save, we set a timeout to execute the save after the save interval.
+  // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
+  // if it exists.
   private timeoutId: number | undefined;
 
   constructor(
@@ -86,6 +90,7 @@ export default class ProjectManager {
   destroy(): void {
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
+      this.timeoutId = undefined;
     }
   }
 

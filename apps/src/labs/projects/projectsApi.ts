@@ -6,7 +6,6 @@ export async function getForLevel(
   levelId: number,
   scriptId?: number
 ): Promise<Response> {
-  console.log(`in getForLevel, levelId=${levelId}, scriptId=${scriptId}`);
   let requestString = rootUrl;
   if (scriptId) {
     requestString += `script/${scriptId}/`;
