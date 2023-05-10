@@ -17,7 +17,7 @@
   %script{src: webpack_asset_path('js/levels/_content.js'), data: {associatedblocks: associated_blocks_json}}
 
 - unless data['title'].blank? || hide_header
-  %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
+  %h1{class: (header_class unless header_class.blank?)}!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
 
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'

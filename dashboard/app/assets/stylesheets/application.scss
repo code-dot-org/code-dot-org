@@ -2754,14 +2754,19 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 .multi {
   margin: auto;
-  h1 {
-    text-align: center;
-  }
   p {
     font-size: 16px;
     line-height: 24px;
   }
   $multi-left-margin: 50px;
+
+  .question-header {
+    margin-left: $multi-left-margin;
+  }
+
+  &.no-title {
+    padding-top: 16px;
+  }
 
   .answerbutton {
     &.lock-answers {
@@ -2846,6 +2851,8 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       font-size: 16px;
       line-height: 24px;
+      margin-top: 16px;
+      margin-bottom: 16px;
 
       @media #{$information-tablet-tall} {
         margin-left: $multi-left-margin;

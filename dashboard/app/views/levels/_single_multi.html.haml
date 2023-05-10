@@ -37,16 +37,20 @@
       = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone, contained_mode: contained_mode}
       = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
-.multi{id: "level_#{level.id}", class: layout_class}
-  - if DCDO.get("show_multi_level_summary_entry_point", false) && !in_level_group
-    %div#summaryEntryPoint
+
+- if DCDO.get("show_multi_level_summary_entry_point", false) && !in_level_group
+  %div#summaryEntryPoint
+
+.multi{id: "level_#{level.id}", class: layout_class + (data[:title].blank? ? " no-title" : "")}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank
     - question_content_class = nil
+    - header_class = "question-header"
   - else
     - question_content_class = "question"
+    - header_class = nil
 
-  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
+  = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, header_class: header_class, source_level: level, hide_header: !standalone}
 
   - localized_questions = level.localized_property(:questions)
   - if localized_questions.any?
@@ -61,10 +65,6 @@
         .btn {
           display: table;
         }
-
-    %br/
-    - unless use_tight_layout
-      %br/
 
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
