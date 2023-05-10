@@ -39,6 +39,7 @@ export default class ProjectManager {
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
   // if it exists.
   private timeoutId: number | undefined;
+  private destroyed = false;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -54,6 +55,10 @@ export default class ProjectManager {
 
   // Load the project from the sources and channels store.
   async load(): Promise<Response> {
+    if (this.destroyed) {
+      // no-op response
+      return new Response(null, {status: 304});
+    }
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     // If sourceResponse is not ok, we still want to load the channel. Source can
     // return not found if the project is new.
@@ -89,6 +94,7 @@ export default class ProjectManager {
       window.clearTimeout(this.timeoutId);
       this.timeoutId = undefined;
     }
+    this.destroyed = false;
   }
 
   // TODO: Add functionality to reduce channel updates during
@@ -104,18 +110,19 @@ export default class ProjectManager {
    * will be empty, otherwise it will contain failure information.
    */
   async save(forceSave = false): Promise<Response> {
+    if (this.destroyed) {
+      // If we have already been destroyed, don't attempt to save.
+      this.resetSaveState();
+      return this.getNoopResponse();
+    }
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
       return this.getNoopResponse();
     }
+    this.resetSaveState();
     this.saveInProgress = true;
-    if (this.timeoutId) {
-      window.clearTimeout(this.timeoutId);
-      this.timeoutId = undefined;
-    }
-    this.saveQueued = false;
     this.nextSaveTime = Date.now() + this.saveInterval;
     this.executeListeners(ProjectManagerEvent.SaveStart);
     const project = this.getProject();
@@ -213,5 +220,13 @@ export default class ProjectManager {
 
   private channelChanged(project: Project): boolean {
     return this.lastChannel !== JSON.stringify(project.channel);
+  }
+
+  private resetSaveState(): void {
+    if (this.timeoutId) {
+      window.clearTimeout(this.timeoutId);
+      this.timeoutId = undefined;
+    }
+    this.saveQueued = false;
   }
 }
