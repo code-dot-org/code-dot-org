@@ -120,8 +120,39 @@ theme: responsive_full_width
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-microbit-2023"), aria:{label: "Start the Teaching Creating Apps with Devices (micro:bit) professional learning program"}} Start professional learning
           %a.link-button.secondary{href: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), aria:{label: "Explore the Teaching Creating Apps with Devices (micro:bit) curriculum"}} Explore curriculum
 
+%section.bg-neutral-light
+  .wrapper
+    %div.col-50
+      %h2 Want to take your learning further?
+      %h3.heading-sm Facilitator-led workshops
+      %p In addition to the above self-paced online modules, facilitator-led professional learning workshops are available for teachers. Join the more than 100,000 teachers who have participated in our workshops. More than 90% of attendees would recommend our program to other teachers.
+      %a.link-button{href: "/profesional-learning"} Explore facilitator-led professional learning
+    %div.col-45{style: "float:right; margin-top: 0.5em"}
+      %figure.video-responsive{style: "max-width: unset"}
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", allowFullScreen: 'true', frameborder: '0', title: "Code.org's Professional Learning Program"}
+    .clear
 
-
-
-
-
+%section
+  .wrapper
+    %h2 Additional resources for teachers
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col
+        %h3 Code.org Regional Partner
+        %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
+        %p Connect with your Code.org Regional Partner to learn what's going on in your region. Your local Code.org Regional Partner provides facilitator-led workshops to teachers, and can help guide your school or district on implementation, certification, funding, and more.
+        %a.link-button{href: "/educate/professional-learning/contact-regional-partner"} Contact your Regional Partner
+      .action-block.action-block--one-col
+        .content-wrapper
+          %h3 Computer Science Teachers Association
+          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
+          %p Join the world's largest Computer Science department! Connect with over 19,000 CS teachers from around the globe, find strength in your local community, and get support from other CS teachers.
+        .content-footer
+          %a.link-button{href: "/educate/professional-learning/contact-regional-partner"} Join CSTA
+      .action-block.action-block--one-col
+        .content-wrapper
+          %h3 Amazon Future Engineer
+          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
+          %p Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! Find out if your school is eligible.
+        .content-footer
+          %a.link-button{href: "/educate/professional-learning/contact-regional-partner", aria:{label: "Learn more about Amazon Future Engineer"}} Learn more

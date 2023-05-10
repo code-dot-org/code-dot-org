@@ -570,6 +570,7 @@ form {
 // height consistency between cards in a wrapper
 .action-block--one-col {
   flex-wrap: wrap;
+  flex-direction: column;
   padding: 1em 1.5em;
 
   @media screen and (max-width: $width-md) {
@@ -584,6 +585,8 @@ form {
   a.link-button {
     width: 100%;
     text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
