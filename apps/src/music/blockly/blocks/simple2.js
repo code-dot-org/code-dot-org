@@ -105,6 +105,7 @@ export const triggeredAtSimple2 = {
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
     extensions: [DYNAMIC_TRIGGER_EXTENSION],
+    helpUrl: '/docs/ide/projectbeats/expressions/trigger',
   },
   generator: block =>
     `
@@ -124,7 +125,7 @@ export const playSoundAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/play_sample',
   },
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
@@ -142,7 +143,7 @@ export const playPatternAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/play_pattern',
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
@@ -178,7 +179,7 @@ export const playRestAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockRestTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/rest',
   },
   generator: block =>
     `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`,
@@ -213,7 +214,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     nextStatement: null,
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockSetEffectTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/set_effect',
   },
   generator: block => {
     const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
@@ -239,7 +240,7 @@ export const playSoundsTogether = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsTogether(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/play_together',
   },
   generator: block =>
     ` Sequencer.playTogether();
@@ -265,7 +266,7 @@ export const playSoundsSequential = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsSequentialTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/play_sequential',
   },
   generator: block =>
     ` Sequencer.playSequential();
@@ -291,7 +292,7 @@ export const playSoundsRandom = {
     nextStatement: null,
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsRandomTooltip(),
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/play_random',
   },
   generator: block => {
     const resultArray = [];
@@ -345,7 +346,7 @@ export const repeatSimple2 = {
     nextStatement: null,
     style: 'loop_blocks',
     tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
-    helpUrl: '',
+    helpUrl: '/docs/ide/projectbeats/expressions/repeat',
   },
   generator: block => {
     const repeats = block.getFieldValue('times');

@@ -104,6 +104,16 @@ export default class MusicBlocklyWorkspace {
     Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
       musicI18n.blockly_functionNamePlaceholder();
 
+    // Wrap the create function block's init function in a function that
+    // sets the block's help URL to the appropriate entry in the Music Lab
+    // docs, and calls the original init function if present.
+    const functionBlock = Blockly.Blocks.procedures_defnoreturn;
+    functionBlock.initOriginal = functionBlock.init;
+    functionBlock.init = function () {
+      this.setHelpUrl('/docs/ide/projectbeats/expressions/create_function');
+      this.initOriginal?.();
+    };
+
     Blockly.setInfiniteLoopTrap();
 
     this.resizeBlockly();
