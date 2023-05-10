@@ -396,6 +396,13 @@ export default class MusicBlocklyWorkspace {
     return this.projectManager.hasUnsavedChanges();
   }
 
+  /**
+   * Initiate a level change to the given level and script.
+   * The request may be enqueued if there is already a level change in progress.
+   * @param {*} newLevelId Id of new level
+   * @param {*} newScriptId Id of new script. Can be undefined if this level does
+   * not have a script.
+   */
   initiateLevelChange(newLevelId, newScriptId) {
     this.levelChangeManager.enqueueLevelChange(
       this.getProject(),
@@ -405,19 +412,19 @@ export default class MusicBlocklyWorkspace {
     );
   }
 
+  /**
+   * Create a new project manager and load code for the new level and script.
+   * @param {*} newLevelId Id of new level
+   * @param {*} newScriptId Id of new script. Can be undefined if this level does
+   * not have a script.
+   */
   async resetProject(newLevelId, newScriptId) {
-    console.log(
-      `[DEBUGGING] changing to level ${newLevelId} script ${newScriptId}`
-    );
     this.projectManager = await this.getProjectManager(
       undefined,
       newLevelId,
       newScriptId
     );
     await this.loadCode();
-    console.log(
-      `[DEBUGGING] finished changing to level ${newLevelId} script ${newScriptId}`
-    );
   }
 
   loadDefaultCode() {

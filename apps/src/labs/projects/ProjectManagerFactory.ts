@@ -13,7 +13,6 @@ export default class ProjectManagerFactory {
   /**
    * Get a project manager for a specific storage type and project identitifer.
    * @param projectManagerStorageType The storage type for the project manager
-   * @param getProject A method which returns the project sources and channel.
    * @param projectId The identifier for the project.
    * @returns A project manager
    */
@@ -33,7 +32,6 @@ export default class ProjectManagerFactory {
    * Fetches the channel for that level and script first, and is therefore asynchronous and could
    * throw an error if the channel request fails.
    * @param projectManagerStorageType The storage type for the project manager.
-   * @param getProject A method which returns the project sources and channel.
    * @param levelId The identifier for the level.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
    * @returns A project manager

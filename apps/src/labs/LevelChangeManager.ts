@@ -1,3 +1,11 @@
+/**
+ * Class that handles clean up between level switches. Specifically,
+ * it handles saving any unsaved project changes, destroying the project manager
+ * once those saves are done, then calling out to a reset function provided by the lab.
+ * If a level switch is already in progress while another is requested, the second
+ * level switch will be enqueued and will happen after the first level switch is complete.
+ */
+
 import ProjectManager from './projects/ProjectManager';
 import {Project} from './types';
 
@@ -11,6 +19,16 @@ export default class LevelChangeManager {
     this.levelChangeInProgress = false;
   }
 
+  /**
+   * Enqueue a level change. If no level change is in progress,
+   * the level change will happen immediately. If a level change is in progress,
+   * this level change will be enqued and will happen after all other enqueued level
+   * changes have completed.
+   * @param existingProject The current project to save before changing levels (if it has changed).
+   * @param existingProjectManager The current project manager to clean up before changing levels.
+   * @param levelId The level id of the new level.
+   * @param scriptId The script id of the new level (optional).
+   */
   async enqueueLevelChange(
     existingProject: Project,
     existingProjectManager: ProjectManager,
@@ -18,9 +36,6 @@ export default class LevelChangeManager {
     scriptId?: number
   ) {
     if (!this.levelChangeInProgress) {
-      console.log(
-        `[DEBUGGING] Directly calling changeLevel for level ${levelId} and script ${scriptId}`
-      );
       this.levelChangeInProgress = true;
       await this.changeLevel(
         existingProject,
@@ -30,9 +45,6 @@ export default class LevelChangeManager {
       );
       this.levelChangeInProgress = false;
     } else {
-      console.log(
-        `[DEBUGGING] Enqueuing level change to level ${levelId} and script ${scriptId}`
-      );
       this.enqueuedChanges.push({
         levelId,
         scriptId,
@@ -42,18 +54,21 @@ export default class LevelChangeManager {
     }
   }
 
-  async changeLevel(
+  /**
+   * Helper function to change levels. This function should only be called by enqueueLevelChange,
+   * or by itself if there are enqueued level changes.
+   * @param existingProject The current project to save before changing levels (if it has changed).
+   * @param existingProjectManager The current project manager to clean up before changing levels.
+   * @param levelId The level id of the new level.
+   * @param scriptId The script id of the new level (optional).
+   */
+  private async changeLevel(
     existingProject: Project,
     existingProjectManager: ProjectManager,
     levelId: number,
     scriptId?: number
   ) {
-    console.log(
-      `[DEBUGGING] In calling changeLevel for level ${levelId} and script ${scriptId}`
-    );
-
     if (existingProjectManager.hasUnsavedChanges()) {
-      console.log('triggering force save on change levels');
       // Force a save with the current code before changing levels if there are unsaved changes.
       await existingProjectManager.save(existingProject, true);
     }

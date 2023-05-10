@@ -7,6 +7,8 @@
  * ProjectManager throttles saves to only occur once every 30 seconds, unless a force
  * save is requested. If save is called within 30 seconds of the previous save,
  * the save is queued and will be executed after the 30 second interval has passed.
+ *
+ * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
@@ -82,10 +84,6 @@ export default class ProjectManager {
   }
 
   hasUnsavedChanges(): boolean {
-    // If a save has not been queued, do not check for unsaved changes.
-    // if (!this.saveQueued) {
-    //   return false;
-    // }
     return this.sourceChanged() || this.channelChanged();
   }
 
@@ -97,19 +95,14 @@ export default class ProjectManager {
       this.timeoutId = undefined;
     }
     this.destroyed = false;
-    console.log(
-      `[DEBUGGING] destroyed project manager with channel id ${this.channelId}`
-    );
   }
 
   // TODO: Add functionality to reduce channel updates during
   // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
-   * On a save, we get the project, which consists of a source and a channel. We
-   * first save the source. Only if the source save succeeds do we update the channel, as the
-   * channel is metadata about the project and we don't want to save it unless the source
-   * save succeeded.
+   * If a save is already enqueued, update this.projectToSave with the given project.
+   * @param project Project: the project to save
    * @param forceSave boolean: if the save should happen immediately
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
@@ -118,9 +111,6 @@ export default class ProjectManager {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
-      console.log(
-        `[DEBUGGING] tried to save on a destroyed project manager with channel id ${this.channelId}`
-      );
       return this.getNoopResponse();
     }
     this.projectToSave = project;
@@ -134,6 +124,18 @@ export default class ProjectManager {
     }
   }
 
+  /**
+   * Helper function to save a project, called either after a timeout or direclty by save()
+   * On a save, we check if there are unsaved changes. If there are none, we can skip the save.
+   * If only the source has changed, we save both the source and channel, as we want to update the
+   * lastUpdatedTime on the channel. If only the channel has changed, we skip saving the source and only
+   * save the channel.
+   * If we are saving both source and channel, only if the source save succeeds do we update the channel, as the
+   * channel is metadata about the project and we don't want to save it unless the source
+   * save succeeded.
+   * @returns a Response. If the save is successful, the response will be empty,
+   * otherwise it will contain failure or no-op information.
+   */
   private async saveHelper(): Promise<Response> {
     if (!this.projectToSave) {
       return this.getNoopResponse();
@@ -151,11 +153,6 @@ export default class ProjectManager {
     }
     // Only save the source if it has changed.
     if (sourceChanged) {
-      console.log(
-        `[DEBUGGING] saving for project with channel id ${
-          this.channelId
-        }, source is ${JSON.stringify(this.projectToSave.source)}`
-      );
       const sourceResponse = await this.sourcesStore.save(
         this.channelId,
         this.projectToSave.source
