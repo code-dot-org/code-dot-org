@@ -66,6 +66,9 @@ group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'aws-google', '~> 0.2.0'
   gem 'web-console', '~> 4.2.0'
+  # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
+  # We only use it in development atm to get a feel for it, and the benefit is greatest here.
+  gem 'bootsnap', '>= 1.14.0', require: false
 end
 
 # Rack::Cache middleware used in development/test;
@@ -204,15 +207,6 @@ gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 gem 'jwt' # single signon for zendesk
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
-
-# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
-# files included here. If you're upgrading to a different version, make sure to
-# check that the filenames have not changed, and copy the latest files from the
-# gem into our project. These font files are currently served from:
-# - /dashboard/public/fonts/
-# - /pegasus/sites.v3/code.org/public/fonts/
-# - /pegasus/sites.v3/hourofcode/public/fonts/
-gem 'font-awesome-rails', '~> 4.7.0.8'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
