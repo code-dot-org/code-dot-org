@@ -5,7 +5,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
-
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
@@ -125,20 +124,16 @@ function testJsonSerialization(workspace) {
   const FIREHOSE_EVENT_FAIL = 'differences-found';
   Blockly.Events.disable();
 
+  const workspaceBlocks = workspace.getAllBlocks();
+
   // Create an array of blocks based on JSON serialization of the current workspace.
   const blockJson = Blockly.serialization.workspaces.save(workspace);
-  const tempJsonWorkspace = new Blockly.Workspace();
-  Blockly.serialization.workspaces.load(blockJson, tempJsonWorkspace);
-  const jsonBlocks = tempJsonWorkspace.getAllBlocks();
-
-  // Create an array of blocks based on the XML encoding of the current workspace.
-  const blockXml = Blockly.Xml.blockSpaceToDom(workspace);
-  const tempXmlWorkspace = new Blockly.Workspace();
-  Blockly.Xml.domToWorkspace(blockXml, tempXmlWorkspace);
-  const xmlBlocks = tempXmlWorkspace.getAllBlocks();
+  const tempWorkspace = new Blockly.Workspace();
+  Blockly.serialization.workspaces.load(blockJson, tempWorkspace);
+  const jsonBlocks = tempWorkspace.getAllBlocks();
 
   // compareBlockArrays returns an array of differences found.
-  const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
+  const differences = compareBlockArrays(workspaceBlocks, jsonBlocks);
   const result =
     differences.length > 0 ? FIREHOSE_EVENT_FAIL : FIREHOSE_EVENT_PASS;
   // Log a record to Firehose/Redshift.
@@ -167,7 +162,7 @@ function testJsonSerialization(workspace) {
 // Used to find differences between blocks created from xml and json sources.
 // Called when the app is initialized and each time the app runs.
 // Compares two block arrays and returns an array of differences between them.
-export function compareBlockArrays(xmlBlocks, jsonBlocks) {
+export function compareBlockArrays(workspaceBlocks, jsonBlocks) {
   // compareValues() will be called recursively so we need to keep track of objects
   // that it has already compared, to prevent infinite loops caused by circular
   // references.
@@ -270,7 +265,7 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
     });
   }
 
-  return compareValues(xmlBlocks, jsonBlocks);
+  return compareValues(workspaceBlocks, jsonBlocks);
 }
 
 export function soundField(onClick, transformText, icon) {
