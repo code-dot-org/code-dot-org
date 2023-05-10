@@ -4,7 +4,7 @@ import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsO
 import {
   getMultipleChoiceSectionSummary,
   countSubmissionsForCurrentAssessment,
-  ALL_STUDENT_FILTER
+  ALL_STUDENT_FILTER,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
@@ -16,7 +16,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
     totalStudentCount: PropTypes.number,
     totalStudentSubmissions: PropTypes.number,
     studentId: PropTypes.number,
-    openDialog: PropTypes.func.isRequired
+    openDialog: PropTypes.func.isRequired,
   };
 
   render() {
@@ -24,7 +24,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
       questionAnswerData,
       totalStudentCount,
       totalStudentSubmissions,
-      studentId
+      studentId,
     } = this.props;
     return (
       <div>
@@ -33,7 +33,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
             <h2>
               {i18n.multipleChoiceQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
-                numStudents: totalStudentCount
+                numStudents: totalStudentCount,
               })}
             </h2>
             <MultipleChoiceAssessmentsOverviewTable
@@ -47,11 +47,12 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceAssessmentsOverviewContainer = MultipleChoiceAssessmentsOverviewContainer;
+export const UnconnectedMultipleChoiceAssessmentsOverviewContainer =
+  MultipleChoiceAssessmentsOverviewContainer;
 
 export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: state.teacherSections.selectedStudents.length,
-  studentId: state.sectionAssessments.studentId
+  studentId: state.sectionAssessments.studentId,
 }))(MultipleChoiceAssessmentsOverviewContainer);

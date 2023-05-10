@@ -10,7 +10,8 @@ theme: responsive
 
 - Pentru lecțiile dvs. recomandăm o conexiune la Internet de cel puțin 15MBit/sec.
 - Cea mai mică dimensiune de ecran pe care o sprijinim este de 1024 x 728 px.
-- Veți avea nevoie de un computer desktop sau laptop cu un mouse (sau o tastatură tactilă) și tastatură pentru cursurile nivelului de școală intermediară și superioară: Descoperiri CS, Principii CS, și Introducere în App Lab. Majoritatea tabletelor și dispozitivelor mobile nu sunt acceptate pentru aceste cursuri. Consultați „Detaliile privind Asistența Telefonului Mobil și a Tabletei” de mai jos pentru excepțiile specifice dispozitivului.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Consultați „Detaliile privind Asistența Telefonului Mobil și a Tabletei” de mai jos pentru excepțiile specifice dispozitivului.
 - Restul conținutului, precum cursurile K-5 (Fundamentele Informaticii) și activitățile Hour of Code sunt compatibile pe iPad-uri și Chromebooks în plus față de toate celelalte tablete și computere laptop sau desktop moderne.
 - Căutați detalii de asistență pentru dispozitivul mobil? Citiți mai jos.
 
@@ -82,12 +83,12 @@ Pentru cea mai bună experiență cu întreg conținutul Code.org, vă recomand�
 
 ## Detalii de Sprijinire a Mobilului și a Tabletei
 
-Toate cursurile Descoperiri CS, Principii CS și Introducere în App Lab nu sunt compatibile cu tabletele sau dispozitivele mobile - sunt necesare tastatură și mouse complete (sau tastatură tactilă, ca pe MacBooks). Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
 
 - Microsoft Surface Pro cu o tastatură externă
 - iPad care rulează iPadOS 13.4 sau mai actuală cu o tastatură externă și un mouse sau tastatură tactilă externe
 
-Restul conținutului, precum cursurile K-5 (Fundamentele Informaticii) și activitățile Hour of Code sunt compatibile pe iPad-uri și Chromebooks în plus față de toate celelalte tablete și computere laptop sau desktop moderne.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Telefoane Mobile
 
@@ -101,15 +102,25 @@ Noi utilizăm [YouTube](https://www.youtube.com) pentru a insera videoclipuri î
 
 Înainte de a începe cursurile online Code.org, testați redarea videoclipului de mai jos pentru a vă asigura că sunteți pregătit.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Acesta este executantul utilizat pe tot parcursul programei. Acesta va încerca să afișeze videoclipul prin YouTube și, dacă YouTube este blocat, va afișa videoclipul găzduit de Code.org folosind în schimb executantul nostru "de rezervă".
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Nu se redă videoclipul?
 
-Dacă videoclipul nu funcționează, puteți să ne trimiteți un email la support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Totuși, puteți utiliza tutorialele noastre fără videoclipuri.
+However, you can still use our tutorials without video.
 
 1. Am făcut ca toate videoclipurile noastre [să fie disponibile pentru a fi descărcate împreună](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Dacă școala dumneavoastră are o lățime de bandă redusă, vă recomandăm să descărcați videoclipuri și să le arătați elevilor pe un ecran partajat.
 2. Integrat în tutorialele noastre, am adăugat o pictogramă verde cu link de descărcare <img src="/images/green-download.png" width=25 height=25 /> pentru fiecare videoclip, permițând studenților să descarce videoclipuri tutoriale individuale.
@@ -119,8 +130,8 @@ Totuși, puteți utiliza tutorialele noastre fără videoclipuri.
 
 ## Setări speciale pentru utilizatorii Aplicațiilor Google/G-Suite
 
-Dacă sunteți un administrator G-suite, asigurați-vă că ați verificat setările de restricție pentru YouTube. Dacă ați specificat setarea "Acces restricționat strict pe YouTube" sau dacă vedeți mesaje cu mențiunea "acest videoclip a fost restricționat", puteți adăuga canalul nostru la lista de canale aprobate. Consultați [acest ghid](https://support.google.com/a/answer/6245597) de la Google pentru a afla cum să adăugați canalul nostru pe lista aprobată. De asemenea, puteți vedea [acest ghid](https://support.google.com/a/answer/6212415?hl=en) pentru a afla mai multe despre diferitele setări și care dintre ele este mai bună pentru cursurile dv.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Încă mai aveți probleme?
 
-Vă vom ajuta - doar trimiteți-ne un e-mail la support@code.org!
+We'll help you out - just email us at support@code.org!

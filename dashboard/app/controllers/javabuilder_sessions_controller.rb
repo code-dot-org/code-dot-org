@@ -59,9 +59,7 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
-  private
-
-  def upload_project_files_and_render(session_id, project_files, encoded_payload)
+  private def upload_project_files_and_render(session_id, project_files, encoded_payload)
     response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
     if response
       return render(json: {token: encoded_payload, session_id: session_id}) if response.code == '200'
@@ -71,7 +69,7 @@ class JavabuilderSessionsController < ApplicationController
     end
   end
 
-  def get_encoded_payload(additional_payload)
+  private def get_encoded_payload(additional_payload)
     teacher_list = get_teacher_list.join(',')
     level_id = params[:levelId]
     options = params[:options]
@@ -102,7 +100,7 @@ class JavabuilderSessionsController < ApplicationController
     create_encoded_payload(payload)
   end
 
-  def get_teacher_list
+  private def get_teacher_list
     if current_user.verified_instructor?
       return [current_user.id]
     end
@@ -114,7 +112,7 @@ class JavabuilderSessionsController < ApplicationController
     teachers.uniq
   end
 
-  def log_token_creation(payload)
+  private def log_token_creation(payload)
     FirehoseClient.instance.put_record(
       :analysis,
       {
@@ -126,7 +124,7 @@ class JavabuilderSessionsController < ApplicationController
     )
   end
 
-  def create_encoded_payload(payload)
+  private def create_encoded_payload(payload)
     JWT.encode(
       payload,
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSWORD),
@@ -134,7 +132,7 @@ class JavabuilderSessionsController < ApplicationController
     )
   end
 
-  def has_required_params?(additional_params)
+  private def has_required_params?(additional_params)
     default_params = [:executionType, :miniAppType]
 
     begin

@@ -79,9 +79,9 @@ namespace :ci do
   timed_task_with_logging :publish_github_release do
     RakeUtils.system "bin/create-release --force"
     ChatClient.log '<a href="https://github.com/code-dot-org/code-dot-org/releases/latest">New release created</a>'
-  rescue RuntimeError => e
+  rescue RuntimeError => exception
     ChatClient.log 'Failed to create a new release.', color: 'red'
-    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
+    ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text', color: 'red'
   end
 
   desc 'flush Content Distribution Network (CDN) caches'

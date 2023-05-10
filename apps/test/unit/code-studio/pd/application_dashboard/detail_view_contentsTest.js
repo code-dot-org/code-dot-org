@@ -1,7 +1,7 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {
   getApplicationStatuses,
-  ScholarshipStatusRequiredStatuses
+  ScholarshipStatusRequiredStatuses,
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
@@ -48,11 +48,11 @@ describe('DetailViewContents', () => {
       program: 'program',
       abilityToMeetRequirements: '10',
       committed: 'Yes',
-      taughtInPast: 'No'
+      taughtInPast: 'No',
     },
     response_scores: {
       meets_minimum_criteria_scores: {
-        committed: 'Yes'
+        committed: 'Yes',
       },
       bonus_points_scores: {
         committed: 5,
@@ -60,49 +60,49 @@ describe('DetailViewContents', () => {
         question_2: 5,
         question_3: 5,
         question_4: 5,
-        question_5: 5
+        question_5: 5,
       },
       meets_scholarship_criteria_scores: {
-        principal_approval: 'Yes'
-      }
+        principal_approval: 'Yes',
+      },
     },
-    school_stats: {}
+    school_stats: {},
   };
 
   // Nobody is able to set an application status to incomplete or to awaiting_admin_approval from detail view
   const getSelectableApplicationStatuses = (addAutoEmail = true) =>
     _.omit(getApplicationStatuses(addAutoEmail), [
       'incomplete',
-      'awaiting_admin_approval'
+      'awaiting_admin_approval',
     ]);
 
   const mountDetailView = (overrides = {}) => {
     const defaultApplicationData = {
-      ...DEFAULT_APPLICATION_DATA
+      ...DEFAULT_APPLICATION_DATA,
     };
     const defaultProps = {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      isWorkshopAdmin: false
+      isWorkshopAdmin: false,
     };
 
     // No-op router context
     context = {
       router: {
-        push() {}
-      }
+        push() {},
+      },
     };
 
     return mount(<DetailViewContents {..._.merge(defaultProps, overrides)} />, {
-      context
+      context,
     });
   };
 
   describe('Notes', () => {
     it('Does not supply value for teacher applications with no notes', () => {
       const teacherDetailView = mountDetailView({
-        applicationData: {notes: ''}
+        applicationData: {notes: ''},
       });
       expect(teacherDetailView.state().notes).to.eql('');
     });
@@ -113,8 +113,8 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
-          status: 'awaiting_admin_approval'
-        }
+          status: 'awaiting_admin_approval',
+        },
       });
 
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
@@ -147,8 +147,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           status: 'incomplete',
           scholarship_status: null,
-          update_emails_sent_by_system: false
-        }
+          update_emails_sent_by_system: false,
+        },
       });
       expect(
         detailView
@@ -166,13 +166,13 @@ describe('DetailViewContents', () => {
         status_change_log.push({
           changing_user: 'Test use',
           time: '2018-06-01 12:00 PDT',
-          title: status
+          title: status,
         });
       });
 
       // check that recorded change logs are rendered in ChangeLog element
       const overrides = {
-        applicationData: {status_change_log: status_change_log}
+        applicationData: {status_change_log: status_change_log},
       };
       const detailView = mountDetailView(overrides);
       expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
@@ -184,28 +184,25 @@ describe('DetailViewContents', () => {
   describe('Admin edit dropdown', () => {
     it('Is not visible to regional partners', () => {
       const detailView = mountDetailView({
-        isWorkshopAdmin: false
+        isWorkshopAdmin: false,
       });
       expect(detailView.find('button#admin-edit')).to.have.length(0);
     });
 
     it('Is visible to admins', () => {
       const detailView = mountDetailView({
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
       expect(detailView.find('button#admin-edit')).to.have.length(2);
     });
 
     it('Edit redirects to edit page', () => {
       const detailView = mountDetailView({
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
       const mockRouter = sinon.mock(context.router);
 
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#admin-edit').first().simulate('click');
       const adminEditMenuitem = detailView
         .find('.dropdown.open a')
         .findWhere(a => a.text() === '(Admin) Edit Form Data')
@@ -218,12 +215,9 @@ describe('DetailViewContents', () => {
 
     it('Has Delete Application menu item', () => {
       const detailView = mountDetailView({
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
-      detailView
-        .find('button#admin-edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#admin-edit').first().simulate('click');
       const deleteApplicationMenuitem = detailView
         .find('.dropdown.open a')
         .findWhere(a => a.text() === 'Delete Application')
@@ -249,10 +243,7 @@ describe('DetailViewContents', () => {
       expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
 
       expectedButtons = ['Save', 'Cancel'];
-      detailView
-        .find('button#edit')
-        .first()
-        .simulate('click');
+      detailView.find('button#edit').first().simulate('click');
       expect(
         detailView.find('#DetailViewHeader Button').map(button => {
           return button.text();
@@ -263,10 +254,7 @@ describe('DetailViewContents', () => {
       expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
       expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.false;
 
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
       expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
         .to.be.true;
       expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
@@ -287,8 +275,8 @@ describe('DetailViewContents', () => {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
-          principal_approval_state: PrincipalApprovalState.inProgress
-        }
+          principal_approval_state: PrincipalApprovalState.inProgress,
+        },
       });
       expect(detailView.text()).to.contain(`Incomplete`);
       expect(
@@ -301,8 +289,8 @@ describe('DetailViewContents', () => {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
-          principal_approval_state: PrincipalApprovalState.complete
-        }
+          principal_approval_state: PrincipalApprovalState.complete,
+        },
       });
       expect(detailView.text()).to.contain(`Complete`);
     });
@@ -310,8 +298,8 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
-          principal_approval_not_required: true
-        }
+          principal_approval_not_required: true,
+        },
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
         'Make required'
@@ -321,8 +309,8 @@ describe('DetailViewContents', () => {
       const detailView = mountDetailView({
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
-          principal_approval_not_required: null // principal approval is required
-        }
+          principal_approval_not_required: null, // principal approval is required
+        },
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
         'Make not required'
@@ -334,8 +322,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: true,
-          status: 'awaiting_admin_approval'
-        }
+          status: 'awaiting_admin_approval',
+        },
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
         'Resend request'
@@ -347,8 +335,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: false,
-          status: 'awaiting_admin_approval'
-        }
+          status: 'awaiting_admin_approval',
+        },
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
         'Resend request'
@@ -360,8 +348,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: true,
-          status: 'pending'
-        }
+          status: 'pending',
+        },
       });
       expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
         'Resend request'
@@ -372,7 +360,7 @@ describe('DetailViewContents', () => {
   describe('Regional Partner View', () => {
     it('has delete button', () => {
       const detailView = mountDetailView({
-        isWorkshopAdmin: false
+        isWorkshopAdmin: false,
       });
       const deleteButton = detailView.find('button#delete');
       expect(deleteButton).to.have.length(2);
@@ -383,7 +371,7 @@ describe('DetailViewContents', () => {
     it('on teacher applications', () => {
       const detailView = mountDetailView({
         isWorkshopAdmin: true,
-        regionalPartners: [{id: 1, name: 'test'}]
+        regionalPartners: [{id: 1, name: 'test'}],
       });
       const getLastRow = () =>
         detailView
@@ -391,11 +379,7 @@ describe('DetailViewContents', () => {
           .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
       // Dropdown is disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(true);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
 
       // Click "Edit"
       detailView
@@ -405,24 +389,13 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is no longer disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(false);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(false);
 
       // Click "Save"
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
 
       // Dropdown is disabled
-      expect(
-        getLastRow()
-          .find('Select')
-          .prop('disabled')
-      ).to.equal(true);
+      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
     });
   });
 
@@ -440,8 +413,8 @@ describe('DetailViewContents', () => {
             ...DEFAULT_APPLICATION_DATA,
             status: 'unreviewed',
             scholarship_status: null,
-            update_emails_sent_by_system: false
-          }
+            update_emails_sent_by_system: false,
+          },
         });
         expect(isModalShowing()).to.be.false;
         expect(getScholarshipStatus()).to.be.null;
@@ -475,8 +448,8 @@ describe('DetailViewContents', () => {
             ...DEFAULT_APPLICATION_DATA,
             status: 'unreviewed',
             scholarship_status: null,
-            update_emails_sent_by_system: false
-          }
+            update_emails_sent_by_system: false,
+          },
         });
         expect(isModalShowing()).to.be.false;
         expect(getScholarshipStatus()).to.be.null;
@@ -493,8 +466,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
           scholarship_status: null,
-          update_emails_sent_by_system: true
-        }
+          update_emails_sent_by_system: true,
+        },
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
@@ -513,8 +486,8 @@ describe('DetailViewContents', () => {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
           scholarship_status: null,
-          update_emails_sent_by_system: false
-        }
+          update_emails_sent_by_system: false,
+        },
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
@@ -528,10 +501,7 @@ describe('DetailViewContents', () => {
     });
 
     function clickEditButton() {
-      detailView
-        .find('#DetailViewHeader Button')
-        .last()
-        .simulate('click');
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
     }
 
     function getApplicationStatus() {
@@ -572,10 +542,7 @@ describe('DetailViewContents', () => {
     }
 
     function dismissModal() {
-      detailView
-        .find('ConfirmationDialog')
-        .first()
-        .prop('onOk')();
+      detailView.find('ConfirmationDialog').first().prop('onOk')();
       detailView.update();
     }
   });

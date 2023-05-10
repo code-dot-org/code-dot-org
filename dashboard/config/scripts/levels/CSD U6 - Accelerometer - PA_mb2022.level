@@ -92,11 +92,24 @@
     "display_name": "Movement Meter",
     "bubble_choice_description": "Detect how much the micro:bit wobbles when passed back and forth",
     "thumbnail_url": "https://images.code.org/7dbd25a9e674a93450032e3da67bcbaf-image-1648855946879.png",
-    "encrypted_examples": [
-
-    ],
     "video_key": "csd_debugging",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "wFtoaqlYHH+UWhkQKMOEpFNZDbn44ZDX0MRBr0KTDZ2l5GtZtNsPYsW/h2uC\nKIqDG6mIJq7zmaXtc2nYzR3jSw==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/courses/csd-2022/guides/microbit-sensors",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview",
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -104,7 +117,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:41.563+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PA_2222\"},{\"changed_at\":\"2023-02-10 20:30:43 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:41.563+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PA_2222\"},{\"changed_at\":\"2023-02-10 20:30:43 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"bubble_choice_description\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:43:53 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

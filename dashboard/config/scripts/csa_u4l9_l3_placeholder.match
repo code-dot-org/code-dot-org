@@ -11,3 +11,4 @@ question 'logical operator'
 answer 'an operator that returns a Boolean value'
 question 'concatenation'
 answer 'merging two strings into one'
+allow_multiple_attempts true

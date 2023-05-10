@@ -10,7 +10,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'StandardsProgressTable',
-  component: StandardsProgressTable
+  component: StandardsProgressTable,
 };
 
 const Template = args => (
@@ -19,7 +19,7 @@ const Template = args => (
       combineReducers({
         sectionProgress,
         sectionStandardsProgress,
-        unitSelection
+        unitSelection,
       })
     )}
   >

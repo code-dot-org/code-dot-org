@@ -1,12 +1,11 @@
 /** @file Board controller for BBC micro:bit */
-/* global SerialPort */ // Provided by the Code.org Browser
 
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
-  componentConstructors
+  componentConstructors,
 } from './MicroBitComponents';
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
@@ -19,12 +18,12 @@ import {
   FIRMWARE_VERSION_TIMEOUT,
   SQUARE_LEDS,
   CHECKMARK_LEDS,
-  ALL_LEDS
+  ALL_LEDS,
 } from './MicroBitConstants';
 import {delayPromise} from '../../util/boardUtils';
 import {
   SERIAL_BAUD,
-  isWebSerialPort
+  isWebSerialPort,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -115,7 +114,7 @@ export default class MicroBitBoard extends EventEmitter {
               firehoseClient.putRecord({
                 study: MAKER_TOOLKIT,
                 study_group: MICROBIT,
-                event: FIRMWARE_VERSION_TIMEOUT
+                event: FIRMWARE_VERSION_TIMEOUT,
               });
               console.warn(
                 'Firmware version not detected in time. Try refreshing the page.'
@@ -169,7 +168,7 @@ export default class MicroBitBoard extends EventEmitter {
         // in the WebSerialPortWrapper) when we attempt to marshall the object across to the
         // interpreter.
         board: this.boardClient_.getBoardClientWithoutPort(),
-        ...components
+        ...components,
       };
     });
   }
@@ -229,7 +228,7 @@ export default class MicroBitBoard extends EventEmitter {
 
     this.initializeComponents().then(() => {
       const ledScreen = new LedScreen({
-        mb: this.boardClient_
+        mb: this.boardClient_,
       });
 
       const timeInterval = 200;
@@ -285,7 +284,7 @@ export default class MicroBitBoard extends EventEmitter {
     // should be not-null here
     if (this.interpreterReference_) {
       this.interpreterReference_.addCustomMarshalObject({
-        instance: CapacitiveTouchSensor
+        instance: CapacitiveTouchSensor,
       });
       this.interpreterReference_.createGlobalProperty(
         'CapacitiveTouchSensor',
@@ -331,7 +330,7 @@ export default class MicroBitBoard extends EventEmitter {
     this.interpreterReference_ = jsInterpreter;
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
-        instance: componentConstructors[key]
+        instance: componentConstructors[key],
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });

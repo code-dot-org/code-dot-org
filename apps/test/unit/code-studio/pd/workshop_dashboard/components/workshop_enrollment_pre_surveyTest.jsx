@@ -44,7 +44,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
           school: 'A school',
           user_id: userIndex,
           attended: true,
-          pre_workshop_survey: survey
+          pre_workshop_survey: survey,
         };
       };
 
@@ -53,34 +53,34 @@ describe('WorkshopEnrollmentPreSurvey', () => {
           unit: 'Unit 4 - the fourth unit',
           lesson: 'Lesson 3 - the third lesson',
           questionsAndTopics: 'so many questions',
-          unitLessonShortName: 'U4 L3'
+          unitLessonShortName: 'U4 L3',
         }),
         generateFakeEnrollment({
           unit: 'Unit 1 - the first unit',
           lesson: 'Lesson 11 - the eleventh lesson',
           questionsAndTopics: 'another question',
-          unitLessonShortName: 'U1 L11'
+          unitLessonShortName: 'U1 L11',
         }),
         generateFakeEnrollment({
           unit: 'Unit 1 - the first unit',
           lesson: 'Lesson 2 - the second lesson',
           questionsAndTopics: '',
-          unitLessonShortName: 'U1 L2'
+          unitLessonShortName: 'U1 L2',
         }),
         generateFakeEnrollment({
           unit: 'Unit 1 - the first unit',
           lesson: 'Lesson 1 - the first lesson',
           questionsAndTopics: '',
-          unitLessonShortName: 'U1 L1'
+          unitLessonShortName: 'U1 L1',
         }),
         generateFakeEnrollment({
           unit: 'Unit 4 - the fourth unit',
           lesson: 'Lesson 3 - the third lesson',
           questionsAndTopics: 'more questions...',
-          unitLessonShortName: 'U4 L3'
+          unitLessonShortName: 'U4 L3',
         }),
         // one enrollment with no survey response.
-        generateFakeEnrollment(null)
+        generateFakeEnrollment(null),
       ];
 
       workshopEnrollmentPreSurvey = shallow(
@@ -111,7 +111,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         'Email',
         'Predicted Unit',
         'Predicted Lesson',
-        'Questions and topics they hope to discuss'
+        'Questions and topics they hope to discuss',
       ]);
     });
 
@@ -132,7 +132,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         fakeEnrollments[ROW_FULL_RESPONSE].email,
         'Unit 4 - the fourth unit',
         'Lesson 3 - the third lesson',
-        'so many questions'
+        'so many questions',
       ]);
     });
 
@@ -149,7 +149,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         fakeEnrollments[ROW_NO_QUESTION].email,
         'Unit 1 - the first unit',
         'Lesson 2 - the second lesson',
-        'No response'
+        'No response',
       ]);
     });
 
@@ -166,7 +166,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         fakeEnrollments[5].email,
         'No response',
         'No response',
-        'No response'
+        'No response',
       ]);
     });
 
@@ -186,7 +186,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
           ['U1 L1', 1],
           ['U1 L2', 1],
           ['U1 L11', 1],
-          ['U4 L3', 2]
+          ['U4 L3', 2],
         ]);
       });
     });

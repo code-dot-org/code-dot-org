@@ -18,7 +18,7 @@ social:
 
 Bilgisayar Bilimi 101'de, birçok öğrencinin oluşturduğu ilk program, ikonik bir metin satırı veren basit bir programdır: "Merhaba Dünya!" Öğrencilere temel kodlama becerileri ve uygulama yaratma özgüveni kazandıran bu giriş etkinliğiyle bilgisayar bilimi dünyasına merhaba deyin. Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için altı eğlenceli temadan birini seçin!
 
-# Merhaba Dünya temanızı seçin
+## Merhaba Dünya temanızı seçin
 
 {{ spritelab_module, title: "YENİ! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", alt_text: "Uzayda süzülen iki sevimli astronot ve korgi karakteri", url: "https://studio.code.org  /s/hello-world-space-2022/reset" }}
 {{ spritelab_module, title: "YENİ! Futbol", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", alt_text: "Üç zürafa, kaplan ve gergedan futbol maçına başlamak üzere sahada", url: "  https://studio.code.org/s/hello-world-soccer-2022/reset" }}
@@ -37,3 +37,5 @@ Bilgisayar Bilimi 101'de, birçok öğrencinin oluşturduğu ilk program, ikonik
 {{ özellikli_proje, başlık: "Hayvanlar", yazar: "B", yaş: "18+", resim: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "Bir sualtı animasyonlu gif içeren bir öğrenci projesi  bir gemi enkazının önünde yunus, balık ve denizanası karakterlerinin olduğu sahne", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
 {{ feature_project, title: "Retro", yazar: "W", yaş: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "Bir oyunun hareketli gifini içeren bir öğrenci projesi  uzak bir gezegende iki yabancı karakter içeren etiket", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
 {{ clearfix }}
+
+{{ helloworld }}

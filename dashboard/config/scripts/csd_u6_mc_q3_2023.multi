@@ -1,8 +1,19 @@
 name 'CSD U6 MC Q3_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question ' '
+wrong 'Listen to the buzzer sensor for 100 milliseconds'
+wrong 'Add the text "C4" to the buzzer note 100 times'
+wrong 'Update the buzzer variable to "C4"'
+right 'Buzzer plays the note C4 for 100 milliseconds'
+teacher_markdown <<MARKDOWN
+**Content: Unit 6 Lesson 13**
+MARKDOWN
+
+markdown <<MARKDOWN
+Describe the following code
+<br>
+
+![](https://images.code.org/a4c16d2eeb8743f758e3614a06754541-CSDunit6output.png)
+MARKDOWN
+
+allow_multiple_attempts true

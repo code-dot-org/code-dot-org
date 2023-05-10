@@ -3,7 +3,7 @@ import TabView from './TabView';
 
 export default {
   title: 'TabView',
-  component: TabView
+  component: TabView,
 };
 
 const Template = args => (
@@ -17,7 +17,7 @@ const Template = args => (
             <h1>Tab 1</h1>
             <p>Tab content</p>
           </div>
-        )
+        ),
       },
       {
         key: 'tab2',
@@ -27,7 +27,7 @@ const Template = args => (
             <h1>Tab 2</h1>
             <p>Placeholder text for tab 2</p>
           </div>
-        )
+        ),
       },
       {
         key: 'tab3',
@@ -37,8 +37,8 @@ const Template = args => (
             <h1>Tab 3</h1>
             <p>Tab 3 Body</p>
           </div>
-        )
-      }
+        ),
+      },
     ]}
     {...args}
   />

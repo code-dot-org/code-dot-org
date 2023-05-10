@@ -69,9 +69,7 @@ class FollowersController < ApplicationController
     render 'student_user_new', formats: [:html]
   end
 
-  private
-
-  def followers_params(user_type)
+  private def followers_params(user_type)
     allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
     if user_type == User::TYPE_TEACHER
       allowed_params.merge(params[:user].permit([:school, :full_address]))
@@ -79,11 +77,11 @@ class FollowersController < ApplicationController
     allowed_params
   end
 
-  def redirect_url
+  private def redirect_url
     params[:redirect] || root_path
   end
 
-  def load_section
+  private def load_section
     return if params[:section_code].blank?
 
     # Though downstream validations would raise an exception, we redirect to the admin directory to

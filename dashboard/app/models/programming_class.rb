@@ -173,13 +173,11 @@ class ProgrammingClass < ApplicationRecord
     end
   end
 
-  private
-
-  def parsed_examples
+  private def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
   end
 
-  def parsed_fields
+  private def parsed_fields
     fields.blank? ? [] : JSON.parse(fields)
   end
 end

@@ -11,7 +11,6 @@ This cookbook uses [`ruby-build`](https://github.com/rbenv/ruby-build#readme) in
 ## Attributes
 
 - `node['cdo-ruby']['version']`: Ruby version. See `ruby-build --definitions` for available options
-- `node['cdo-ruby']['old_version']`: Old version of Ruby to be uninstalled. Optional, and soon to be deprecated.
 - `node['cdo-ruby']['rubygems_version']`: Updates the version of [RubyGems](https://rubygems.org/) installed.
 - `node['cdo-ruby']['bundler_version']`: Updates the version of [Bundler](http://bundler.io/) installed.
 - `node['cdo-ruby']['rake_version']`: Updates the version of [Rake](https://ruby.github.io/rake/) installed.

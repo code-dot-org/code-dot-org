@@ -6,7 +6,7 @@ import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/cod
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
-  fakeTeacherAnnouncement
+  fakeTeacherAnnouncement,
 } from './FakeAnnouncementsTestData';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
@@ -25,13 +25,13 @@ const defaultProps = {
   unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: courseOfferings['1'].course_versions,
-  courseVersionId: 1
+  courseVersionId: 1,
 };
 
 describe('UnitOverviewHeader', () => {
   it('renders', () => {
     shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
   });
 
@@ -41,7 +41,7 @@ describe('UnitOverviewHeader', () => {
         {...defaultProps}
         plcHeaderProps={{
           unitName: 'foo',
-          courseViewPath: '/s/my-course'
+          courseViewPath: '/s/my-course',
         }}
       />,
       {disableLifecycleMethods: true}
@@ -51,14 +51,14 @@ describe('UnitOverviewHeader', () => {
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     assert.equal(wrapper.find('PlcHeader').length, 0);
   });
 
   it('has no notifications by default', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
@@ -85,7 +85,7 @@ describe('UnitOverviewHeader', () => {
         verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
-          fakeTeacherAndStudentAnnouncement
+          fakeTeacherAndStudentAnnouncement,
         ]}
       />,
       {disableLifecycleMethods: true}
@@ -110,7 +110,7 @@ describe('UnitOverviewHeader', () => {
 
   it('passes versions to AssignmentVersionSelector', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
@@ -121,7 +121,7 @@ describe('UnitOverviewHeader', () => {
 
   it('has correct unit description for instructor', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
-      disableLifecycleMethods: true
+      disableLifecycleMethods: true,
     });
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
       '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
@@ -132,7 +132,7 @@ describe('UnitOverviewHeader', () => {
     const wrapper = shallow(
       <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
       {
-        disableLifecycleMethods: true
+        disableLifecycleMethods: true,
       }
     );
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(

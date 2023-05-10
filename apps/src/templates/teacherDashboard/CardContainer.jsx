@@ -5,15 +5,14 @@ import styleConstants from '../../styleConstants';
 const style = {
   width: styleConstants['content-width'],
   display: 'flex',
-  flexDirection: 'row',
   flexWrap: 'wrap',
-  justifyContent: 'flexStart'
+  justifyContent: 'space-between',
 };
 
 /** Uses flexbox to arrange content cards into nice rows with wrapping. */
 export default class CardContainer extends Component {
   static propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
   render() {

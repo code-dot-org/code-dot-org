@@ -1311,14 +1311,14 @@ class User < ApplicationRecord
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
-      # hides the lesson
-      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
-    else
+    if script_sections.empty?
       # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    else
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     end
   end
 
@@ -1722,7 +1722,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
@@ -1762,7 +1762,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
@@ -2271,7 +2271,7 @@ class User < ApplicationRecord
   end
 
   def within_united_states?
-    'United States' == user_geos.first&.country
+    user_geos.first&.country == 'United States'
   end
 
   def associate_with_potential_pd_enrollments
@@ -2499,36 +2499,34 @@ class User < ApplicationRecord
     followeds.map(&:code_review_group).compact
   end
 
-  private
-
-  def account_age_in_years
+  private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end
 
   # Returns a list of all grades that the teacher currently has sections for
-  def grades_being_taught
+  private def grades_being_taught
     @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
-  def curriculums_being_taught
+  private def curriculums_being_taught
     @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
   end
 
-  def has_attended_pd?
+  private def has_attended_pd?
     pd_attendances.any?
   end
 
-  def school_stats
+  private def school_stats
     @school_stats ||= school_info_school&.most_recent_school_stats
   end
 
-  def hidden_lesson_ids(sections)
+  private def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  def hidden_unit_ids(sections)
+  private def hidden_unit_ids(sections)
     return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
@@ -2539,7 +2537,7 @@ class User < ApplicationRecord
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
-  def get_instructor_hidden_ids(hidden_lessons)
+  private def get_instructor_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
@@ -2554,7 +2552,7 @@ class User < ApplicationRecord
   # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden units.
   # @return {number[]} Set of lesson/unit ids that should be hidden
-  def get_participant_hidden_ids(assign_id, hidden_lessons)
+  private def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
@@ -2578,13 +2576,13 @@ class User < ApplicationRecord
     end
   end
 
-  def normalize_parent_email
+  private def normalize_parent_email
     self.parent_email = nil if parent_email.blank?
   end
 
   # Parent email is not required, but if it is present, it must be a
   # well-formed email address.
-  def validate_parent_email
+  private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
   end

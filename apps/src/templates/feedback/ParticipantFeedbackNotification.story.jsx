@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 export default {
   title: 'ParticipantFeedbackNotification',
-  component: ParticipantFeedbackNotification
+  component: ParticipantFeedbackNotification,
 };
 
 const Template = args => {
@@ -20,17 +20,17 @@ const Template = args => {
 
 export const ExampleStudent = Template.bind({});
 ExampleStudent.args = {
-  studentId: 123
+  studentId: 123,
 };
 
 function withFakeServer() {
   const server = sinon.fakeServer.create({
-    autoRespond: true
+    autoRespond: true,
   });
   const successResponse = body => [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify(body)
+    JSON.stringify(body),
   ];
   server.respondWith(
     'GET',

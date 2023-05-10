@@ -86,24 +86,22 @@ class DatastoreCache
         updated = true if value != old_value
       end
       notify_change_listeners if updated
-    rescue => exc
+    rescue => exception
       retry unless (tries -= 1).zero?
-      Honeybadger.notify(exc)
+      Honeybadger.notify(exception)
     end
   end
-
-  private
 
   # Sets the given value for the key in the local cache
   # @param key [String]
   # @param value [String]
-  def set_local(key, value)
+  private def set_local(key, value)
     @cache[key] = value
   end
 
   # Spawns a background thread that periodically updates the cached
   # values from the persistent datastore
-  def spawn_update_thread
+  private def spawn_update_thread
     Thread.new do
       loop do
         sleep @cache_expiration

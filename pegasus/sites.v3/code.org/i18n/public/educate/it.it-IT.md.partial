@@ -10,7 +10,8 @@ theme: responsive
 
 - Consigliamo di utilizzare una connessione Internet di almeno 15 MBit/sec per la scuola.
 - La dimensione dello schermo più piccola che supportiamo è 1024 x 728 px.
-- Avrai bisogno di un computer desktop o portatile con un mouse (touchpad) e una tastiera per i nostri corsi di livello di scuola media e superiore: CS Discoveries, CS Principles e Introuzione ad App Lab. La maggior parte dei tablet e dei dispositivi mobili non sono supportati per questi corsi. Leggi qui di seguito "Dettagli per il supporto di dispositivi mobili e tablet" per scoprire le eccezioni specifiche del dispositivo.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Leggi qui di seguito "Dettagli per il supporto di dispositivi mobili e tablet" per scoprire le eccezioni specifiche del dispositivo.
 - Tutti gli altri contenuti, tra cui i corsi K-5 (Fondamenti di informatica) e le attività di Hour of Code sono compatibili con iPad e Chromebook, oltre a tutti i tablet moderni e computer desktop e portatili.
 - Stai cercando i dettagli per il supporto dei dispositivi mobili? Leggi qui di seguito.
 
@@ -82,12 +83,12 @@ Per avere la migliore esperienza con tutti i contenuti Code.org, consigliamo di 
 
 ## Dettagli per il supporto di dispositivi mobili e tablet
 
-Tutti i corsi CS Discoveries, CS Principles e Introduzione ad App Lab non sono compatibili con i tablet o i dispositivi mobili: è necessario utilizzare una tastiera e un mouse (o touchpad, come i Macbook). La maggior parte dei tablet non è supportata con le seguenti eccezioni:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. La maggior parte dei tablet non è supportata con le seguenti eccezioni:
 
 - Microsoft Surface Pro con una tastiera esterna
 - iPad che utilizzano il sistema operativo iPadOS 13.4 o versioni successive con tastiera e mouse esterni o touchpad
 
-Tutti gli altri contenuti, tra cui i corsi K-5 (Fondamenti di informatica) e le attività di Hour of Code sono compatibili con iPad e Chromebook, oltre a tutti i tablet moderni e computer desktop e portatili.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Telefoni cellulari
 
@@ -101,15 +102,25 @@ Utilizziamo [YouTube](https://www.youtube.com) per incorporare video su Code.org
 
 Prima d'iniziare i corsi online di Code.org, esegui il test di riproduzione per i video sottostanti, per assicurarti di essere pronto.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Questo è il lettore utilizzato in tutto il curriculum. Proverà a mostrare il video tramite YouTube e, se questo sito è bloccato, mostrerà il video Code.org utilizzando invece il nostro lettore "di riserva".
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Il video non si riproduce?
 
-Se il video non funziona, puoi inviarci un'email all'indirizzo support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Tuttavia, puoi comunque utilizzare i nostri tutorial senza il video.
+However, you can still use our tutorials without video.
 
 1. Tutti i nostri video [sono stati resi disponibili per il download](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Se la larghezza di banda della tua scuola è bassa, ti consigliamo di scaricare i video e di mostrarli agli studenti su uno schermo condiviso.
 2. Integrata nei nostri tutorial, abbiamo aggiunto un'icona di collegamento di colore verde per il download <img src="/images/green-download.png" width=25 height=25 /> per ogni video, consentendo agli studenti di scaricare singoli video tutorial.
@@ -119,8 +130,8 @@ Tuttavia, puoi comunque utilizzare i nostri tutorial senza il video.
 
 ## Impostazioni speciali per utenti di Google Apps/G-Suite
 
-Se sei un amministratore di G-suite, assicurati di controllare quali sono le tue impostazioni di restrizione per YouTube. Se hai specificato l'impostazione "Accesso a YouTube molto limitato", oppure se visualizzai i messaggi che recita "questo video è stato limitato", puoi aggiungere il nostro canale all'elenco dei canali approvati. Consulta [questa guida](https://support.google.com/a/answer/6245597) di Google per scoprire di più su come aggiungere il nostro canale all'elenco dei canali approvati. Puoi inoltre consultare [questa guida](https://support.google.com/a/answer/6212415?hl=en) per scoprire di più sulle diverse impostazioni e su quale sia la migliore la tua classe.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Riscontri ancora problemi?
 
-Ti aiuteremo noi: sarà sufficiente inviarci un'email all'indirizzo support@code.org!
+We'll help you out - just email us at support@code.org!

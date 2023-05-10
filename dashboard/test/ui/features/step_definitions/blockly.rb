@@ -187,6 +187,23 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   expect(result).to eq(n.to_i)
 end
 
+Then(/^all blocks render with no unknown blocks$/) do
+  code = <<~CODE
+    return Blockly.Workspace.getAll().map(workspace => {
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => !!block.unknownBlock);
+      if (hasUnknownBlock) {
+        // element ID has name of block that is failing to render
+        return workspace.getParentSvg().parentElement.id;
+      } else {
+        return null;
+      }
+    });
+  CODE
+
+  result = @browser.execute_script(code)
+  expect(result.compact.empty?).to eq(true), "Blocks named: #{result.compact.join(', ')} unable to render"
+end
+
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
   result = @browser.execute_script(code)

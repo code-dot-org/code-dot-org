@@ -7,3 +7,5 @@ wrong 'gigabyte, megabyte, terabyte'
 wrong 'megabyte, terabyte, kilobyte'
 wrong 'gigabyte, terabyte, megabyte'
 right 'kilobyte, gigabyte, terabyte'
+
+allow_multiple_attempts true

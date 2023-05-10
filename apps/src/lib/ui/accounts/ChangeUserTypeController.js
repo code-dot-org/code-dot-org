@@ -131,8 +131,8 @@ export default class ChangeUserTypeController {
                 // We no longer have the requirement that the given email address must match an existing
                 // email address upon changing user type.
                 (validationErrors.current_password &&
-                  i18n.changeUserTypeModal_email_mustMatch())
-            }
+                  i18n.changeUserTypeModal_email_mustMatch()),
+            },
           };
         } else {
           error = new Error('Unexpected failure: ' + xhr.status);

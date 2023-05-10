@@ -124,9 +124,7 @@ class AdminReportsController < ApplicationController
     @script = Unit.get_from_cache(params[:script_id]) if params[:script_id]
   end
 
-  private
-
-  def level_answers_csv
+  private def level_answers_csv
     send_data(
       CSV.generate do |csv|
         csv << @headers

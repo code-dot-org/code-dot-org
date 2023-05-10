@@ -15,9 +15,9 @@ describe('SchoolInfoInterstitial', () => {
       formUrl: '',
       authTokenName: 'auth_token',
       authTokenValue: 'fake_auth_token',
-      existingSchoolInfo: {}
+      existingSchoolInfo: {},
     },
-    onClose: function() {}
+    onClose: function () {},
   };
 
   beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
@@ -74,7 +74,7 @@ describe('SchoolInfoInterstitial', () => {
         {...MINIMUM_PROPS}
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {}
+          existingSchoolInfo: {},
         }}
       />
     );
@@ -107,7 +107,7 @@ describe('SchoolInfoInterstitial', () => {
         {...MINIMUM_PROPS}
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {}
+          existingSchoolInfo: {},
         }}
         onClose={onClose}
       />
@@ -127,7 +127,7 @@ describe('SchoolInfoInterstitial', () => {
         {...MINIMUM_PROPS}
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {}
+          existingSchoolInfo: {},
         }}
       />
     );
@@ -158,8 +158,8 @@ describe('SchoolInfoInterstitial', () => {
             country: 'United States',
             school_type: 'public',
             school_name: 'Test School',
-            full_address: 'Seattle'
-          }
+            full_address: 'Seattle',
+          },
         }}
       />
     );
@@ -190,8 +190,8 @@ describe('SchoolInfoInterstitial', () => {
             country: 'United States',
             school_type: 'public',
             school_name: 'Test School',
-            full_address: 'Seattle'
-          }
+            full_address: 'Seattle',
+          },
         }}
       />
     );
@@ -213,8 +213,8 @@ describe('SchoolInfoInterstitial', () => {
             country: 'United States',
             school_type: 'public',
             school_name: 'Test School',
-            full_address: 'Seattle'
-          }
+            full_address: 'Seattle',
+          },
         }}
       />
     );
@@ -232,8 +232,8 @@ describe('SchoolInfoInterstitial', () => {
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
           existingSchoolInfo: {
-            country: 'US'
-          }
+            country: 'US',
+          },
         }}
       />
     );
@@ -258,8 +258,8 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              school_id: '123'
-            }
+              school_id: '123',
+            },
           }}
         />
       );
@@ -278,8 +278,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'Canada',
               school_type: 'public',
-              school_name: 'Test School Name'
-            }
+              school_name: 'Test School Name',
+            },
           }}
         />
       );
@@ -295,8 +295,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'homeschool',
-              school_name: 'Test School Name'
-            }
+              school_name: 'Test School Name',
+            },
           }}
         />
       );
@@ -313,8 +313,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: '',
-              full_address: ''
-            }
+              full_address: '',
+            },
           }}
         />
       );
@@ -334,8 +334,8 @@ describe('SchoolInfoInterstitial', () => {
                   country: 'United States',
                   school_type: schoolType,
                   school_name: '',
-                  [schoolDetailFieldName]: 'provided value'
-                }
+                  [schoolDetailFieldName]: 'provided value',
+                },
               }}
             />
           );
@@ -365,7 +365,7 @@ describe('SchoolInfoInterstitial', () => {
           {...MINIMUM_PROPS}
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {}
+            existingSchoolInfo: {},
           }}
         />
       );
@@ -381,8 +381,8 @@ describe('SchoolInfoInterstitial', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'United States'
-            }
+              country: 'United States',
+            },
           }}
         />
       );
@@ -400,8 +400,8 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'United States',
-              school_type: 'public'
-            }
+              school_type: 'public',
+            },
           }}
         />
       );
@@ -420,8 +420,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'public',
-              school_id: '123'
-            }
+              school_id: '123',
+            },
           }}
         />
       );
@@ -432,7 +432,7 @@ describe('SchoolInfoInterstitial', () => {
         [
           '_method=patch',
           'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123'
+          'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123',
         ].join('&')
       );
     });
@@ -446,8 +446,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'public',
-              school_name: 'Test School'
-            }
+              school_name: 'Test School',
+            },
           }}
         />
       );
@@ -459,7 +459,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -474,8 +474,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln'
-            }
+              full_address: '12222 SE Sunnyside Ln',
+            },
           }}
         />
       );
@@ -487,7 +487,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln'
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln',
         ].join('&')
       );
     });
@@ -500,8 +500,8 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'United States',
-              school_type: 'organization'
-            }
+              school_type: 'organization',
+            },
           }}
         />
       );
@@ -513,7 +513,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -527,8 +527,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'organization',
-              school_name: 'Test School'
-            }
+              school_name: 'Test School',
+            },
           }}
         />
       );
@@ -540,7 +540,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -554,8 +554,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'homeschool',
-              school_name: 'Test School'
-            }
+              school_name: 'Test School',
+            },
           }}
         />
       );
@@ -566,7 +566,7 @@ describe('SchoolInfoInterstitial', () => {
           'auth_token=fake_auth_token',
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=homeschool',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -580,8 +580,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'United States',
               school_type: 'other',
-              school_name: 'Test School'
-            }
+              school_name: 'Test School',
+            },
           }}
         />
       );
@@ -592,7 +592,7 @@ describe('SchoolInfoInterstitial', () => {
           'auth_token=fake_auth_token',
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=other',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -607,8 +607,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'organization',
               school_name: 'Test School',
-              full_address: 'Boring, OR'
-            }
+              full_address: 'Boring, OR',
+            },
           }}
         />
       );
@@ -620,7 +620,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR'
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
         ].join('&')
       );
     });
@@ -633,8 +633,8 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'Algeria',
-              school_type: ''
-            }
+              school_type: '',
+            },
           }}
         />
       );
@@ -644,7 +644,7 @@ describe('SchoolInfoInterstitial', () => {
           '_method=patch',
           'auth_token=fake_auth_token',
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
         ].join('&')
       );
     });
@@ -657,8 +657,8 @@ describe('SchoolInfoInterstitial', () => {
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
               country: 'Tanzania',
-              school_type: 'public'
-            }
+              school_type: 'public',
+            },
           }}
         />
       );
@@ -670,7 +670,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -684,8 +684,8 @@ describe('SchoolInfoInterstitial', () => {
             existingSchoolInfo: {
               country: 'Tanzania',
               school_type: 'public',
-              school_name: 'Test School'
-            }
+              school_name: 'Test School',
+            },
           }}
         />
       );
@@ -697,7 +697,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D='
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
         ].join('&')
       );
     });
@@ -713,8 +713,8 @@ describe('SchoolInfoInterstitial', () => {
               school_type: 'public',
               school_name: 'Test School',
               full_address:
-                'Tanzania National Stadium, Taifa Road, Dar es Salaam, Tanzania'
-            }
+                'Tanzania National Stadium, Taifa Road, Dar es Salaam, Tanzania',
+            },
           }}
         />
       );
@@ -726,7 +726,7 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania'
+          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania',
         ].join('&')
       );
     });
@@ -742,8 +742,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln'
-            }
+              full_address: '12222 SE Sunnyside Ln',
+            },
           }}
           onClose={onClose}
         />
@@ -766,8 +766,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln'
-            }
+              full_address: '12222 SE Sunnyside Ln',
+            },
           }}
           onClose={onClose}
         />
@@ -791,8 +791,8 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln'
-            }
+              full_address: '12222 SE Sunnyside Ln',
+            },
           }}
           onClose={onClose}
         />
@@ -817,7 +817,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'public',
           schoolName: 'Test School',
           schoolLocation: 'Seattle, WA, USA',
-          ncesSchoolId: '-1'
+          ncesSchoolId: '-1',
         })
       ).to.be.true;
     });
@@ -829,7 +829,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'public',
           schoolName: 'Test School',
           schoolLocation: '',
-          ncesSchoolId: '-1'
+          ncesSchoolId: '-1',
         })
       ).to.be.true;
     });
@@ -841,7 +841,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'public',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: '12345'
+          ncesSchoolId: '12345',
         })
       ).to.be.true;
     });
@@ -853,7 +853,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'homeschool',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.true;
 
@@ -863,7 +863,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'after school',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.true;
 
@@ -873,7 +873,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'organization',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.true;
 
@@ -883,7 +883,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'other',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.true;
     });
@@ -895,7 +895,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: '',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.true;
     });
@@ -907,7 +907,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: '',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.false;
     });
@@ -919,7 +919,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: '',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.false;
     });
@@ -931,7 +931,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'public',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.false;
 
@@ -941,7 +941,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'private',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.false;
 
@@ -951,7 +951,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolType: 'charter',
           schoolName: '',
           schoolLocation: '',
-          ncesSchoolId: ''
+          ncesSchoolId: '',
         })
       ).to.be.false;
     });

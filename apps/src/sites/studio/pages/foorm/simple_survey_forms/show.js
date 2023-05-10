@@ -5,7 +5,7 @@ import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 
 import 'survey-react/survey.css';
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
   ReactDOM.render(
     <Foorm {...getScriptData('props')} />,
     document.getElementById('application-container')

@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2017-10-02T20:06:49.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Free Response: Top-Down Design",
     "long_instructions": "Consider the figure below.  Use top-down thinking to design a solution to the problem.  In the space provided write a list of **just the names** of the functions that you would write in a program that draws this figure.  (Assume that the long line segments are 6 turtle moves long).\r\n\r\n![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r\n",
@@ -13,8 +9,13 @@
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
-    "peer_reviewable": "false"
+    "peer_reviewable": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2017-10-02T20:06:49.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-10-02 20:07:26 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",

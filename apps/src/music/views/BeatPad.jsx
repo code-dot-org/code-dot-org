@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './beatpad.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import musicI18n from '../locale';
 
 const BUTTONS_PER_ROW = 3;
 const enabledClasses = [
@@ -11,7 +12,7 @@ const enabledClasses = [
   styles.orange,
   styles.yellow,
   styles.green,
-  styles.teal
+  styles.teal,
 ];
 
 /**
@@ -50,7 +51,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
   return (
     <div className={styles.container}>
       <div className={styles.labelContainer}>
-        <p className={styles.label}>{'Beat Pad'}</p>
+        <p className={styles.label}>{musicI18n.control()}</p>
         <FontAwesome
           icon={'times'}
           onClick={onClose}
@@ -77,14 +78,14 @@ TriggerButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   colorClassName: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 BeatPad.propTypes = {
   triggers: PropTypes.array.isRequired,
   playTrigger: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+  isPlaying: PropTypes.bool.isRequired,
 };
 
 export default BeatPad;

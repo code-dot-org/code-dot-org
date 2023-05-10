@@ -11,3 +11,5 @@ markdown <<MARKDOWN
 Are you planning to take the AP exam and complete the AP Performance Tasks? *Note: whether you are in an AP class or not, it is still possible to take the AP exam and complete the performance tasks.*
 
 MARKDOWN
+
+allow_multiple_attempts true

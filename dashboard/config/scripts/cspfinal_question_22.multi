@@ -4,3 +4,5 @@ wrong 'Putting data into sorted order'
 right 'Copying the data to a cloud server'
 wrong 'Using data visualization tools'
 wrong 'Computing the most frequently occurring values in the data set'
+
+allow_multiple_attempts true

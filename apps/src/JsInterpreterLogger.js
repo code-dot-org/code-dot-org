@@ -8,7 +8,7 @@ var Observer = require('./Observer');
  * @implements LogTarget
  * @param {Console} window console API
  */
-var JsInterpreterLogger = (module.exports = function(outputConsole) {
+var JsInterpreterLogger = (module.exports = function (outputConsole) {
   /** @private {Console} */
   this.outputConsole_ = outputConsole;
 
@@ -20,7 +20,7 @@ var JsInterpreterLogger = (module.exports = function(outputConsole) {
  * Attach the logger to a particular JSInterpreter instance.
  * @param {JSInterpreter} jsInterpreter
  */
-JsInterpreterLogger.prototype.attachTo = function(jsInterpreter) {
+JsInterpreterLogger.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning, this.log.bind(this));
 };
 
@@ -29,7 +29,7 @@ JsInterpreterLogger.prototype.attachTo = function(jsInterpreter) {
  * attached to, unregistering handlers.
  * Safe to call when the logger is already detached.
  */
-JsInterpreterLogger.prototype.detach = function() {
+JsInterpreterLogger.prototype.detach = function () {
   this.observer_.unobserveAll();
 };
 
@@ -38,7 +38,7 @@ JsInterpreterLogger.prototype.detach = function() {
  * @param {*} arguments...
  * @see Console.log
  */
-JsInterpreterLogger.prototype.log = function() {
+JsInterpreterLogger.prototype.log = function () {
   if (!IN_UNIT_TEST && this.outputConsole_ && this.outputConsole_.log) {
     this.outputConsole_.log.apply(this.outputConsole_, arguments);
   }
@@ -48,7 +48,7 @@ JsInterpreterLogger.prototype.log = function() {
  * Clear the console object we were constructed with
  * @see Console.clear
  */
-JsInterpreterLogger.prototype.clear = function() {
+JsInterpreterLogger.prototype.clear = function () {
   if (!IN_UNIT_TEST && this.outputConsole_ && this.outputConsole_.clear) {
     this.outputConsole_.clear();
   }

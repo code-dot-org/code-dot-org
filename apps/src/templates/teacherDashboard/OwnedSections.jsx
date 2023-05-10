@@ -19,13 +19,14 @@ class OwnedSections extends React.Component {
     isPlSections: PropTypes.bool,
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    userId: PropTypes.number,
 
     // redux provided
-    beginEditingSection: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
-    viewHidden: false
+    viewHidden: false,
   };
 
   constructor(props) {
@@ -58,12 +59,12 @@ class OwnedSections extends React.Component {
 
   toggleViewHidden = () => {
     this.setState({
-      viewHidden: !this.state.viewHidden
+      viewHidden: !this.state.viewHidden,
     });
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const {isPlSections, sectionIds, hiddenSectionIds, userId} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
@@ -81,6 +82,7 @@ class OwnedSections extends React.Component {
               isPlSections={isPlSections}
               sectionIds={visibleSectionIds}
               onEdit={this.onEditSection}
+              userId={userId}
             />
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
@@ -109,6 +111,7 @@ class OwnedSections extends React.Component {
                   isPlSections={isPlSections}
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
+                  userId={userId}
                 />
               </div>
             )}
@@ -122,31 +125,28 @@ class OwnedSections extends React.Component {
 const styles = {
   button: {
     marginBottom: 20,
-    float: 'right'
+    float: 'right',
   },
   buttonContainer: {
     width: styleConstants['content-width'],
     textAlign: 'right',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   hiddenSectionLabel: {
     fontSize: 18,
     paddingBottom: 10,
-    color: color.charcoal
+    color: color.charcoal,
   },
   hiddenSectionDesc: {
     fontSize: 14,
     lineHeight: '22px',
     paddingBottom: 10,
-    color: color.charcoal
-  }
+    color: color.charcoal,
+  },
 };
 export const UnconnectedOwnedSections = OwnedSections;
 
-export default connect(
-  () => ({}),
-  {
-    beginEditingSection
-  }
-)(OwnedSections);
+export default connect(() => ({}), {
+  beginEditingSection,
+})(OwnedSections);

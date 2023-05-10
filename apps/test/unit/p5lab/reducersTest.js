@@ -1,21 +1,21 @@
 var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,
-  addConsoleMessage
+  addConsoleMessage,
 } = require('@cdo/apps/p5lab/redux/textConsole');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/reconfiguredChai';
 var _ = require('lodash');
-var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
-  .P5LabInterfaceMode;
+var P5LabInterfaceMode =
+  require('@cdo/apps/p5lab/constants').P5LabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
 
 var testUtils = require('../../util/testUtils');
 
-describe('gamelabReducer', function() {
+describe('gamelabReducer', function () {
   var store;
   var initialState;
   var CODE = P5LabInterfaceMode.CODE;
@@ -23,14 +23,14 @@ describe('gamelabReducer', function() {
 
   testUtils.setExternalGlobals();
 
-  beforeEach(function() {
+  beforeEach(function () {
     store = createStore(
       combineReducers(_.assign({}, commonReducers, gamelabReducers))
     );
     initialState = store.getState();
   });
 
-  it('has expected default state', function() {
+  it('has expected default state', function () {
     expect(initialState.interfaceMode).to.equal(CODE);
     expect(initialState.pageConstants).to.be.an('object');
     expect(initialState.pageConstants.assetUrl).to.be.a('function');
@@ -54,7 +54,7 @@ describe('gamelabReducer', function() {
       store.dispatch(addConsoleMessage(secondMessage));
       expect(store.getState().textConsole).to.deep.equal([
         initialMessage,
-        secondMessage
+        secondMessage,
       ]);
     });
 
@@ -64,10 +64,10 @@ describe('gamelabReducer', function() {
     });
   });
 
-  describe('action: changeInterfaceMode', function() {
+  describe('action: changeInterfaceMode', function () {
     var changeInterfaceMode = actions.changeInterfaceMode;
 
-    it('returns object with same values when already in given mode', function() {
+    it('returns object with same values when already in given mode', function () {
       expect(initialState.interfaceMode).to.equal(CODE);
       store.dispatch(changeInterfaceMode(CODE));
       var newState = store.getState();
@@ -75,7 +75,7 @@ describe('gamelabReducer', function() {
       expect(newState.interfaceMode).to.equal(CODE);
     });
 
-    it('returns object with updated values when in a new mode', function() {
+    it('returns object with updated values when in a new mode', function () {
       expect(initialState.interfaceMode).to.equal(CODE);
       expect(initialState.instructions.allowResize).to.equal(true);
       store.dispatch(changeInterfaceMode(ANIMATION));
@@ -85,17 +85,17 @@ describe('gamelabReducer', function() {
     });
   });
 
-  describe('action: setPageConstants', function() {
+  describe('action: setPageConstants', function () {
     var setPageConstants = pageConstants.setPageConstants;
 
-    it('allows setting assetUrl', function() {
-      var newAssetUrlFunction = function() {};
+    it('allows setting assetUrl', function () {
+      var newAssetUrlFunction = function () {};
       expect(initialState.pageConstants.assetUrl).to.not.equal(
         newAssetUrlFunction
       );
       store.dispatch(
         setPageConstants({
-          assetUrl: newAssetUrlFunction
+          assetUrl: newAssetUrlFunction,
         })
       );
       expect(store.getState().pageConstants.assetUrl).to.equal(
@@ -103,31 +103,31 @@ describe('gamelabReducer', function() {
       );
     });
 
-    it('allows setting isEmbedView', function() {
+    it('allows setting isEmbedView', function () {
       expect(initialState.pageConstants.isEmbedView).to.be.undefined;
       store.dispatch(
         setPageConstants({
-          isEmbedView: false
+          isEmbedView: false,
         })
       );
       expect(store.getState().pageConstants.isEmbedView).to.be.false;
     });
 
-    it('allows setting isShareView', function() {
+    it('allows setting isShareView', function () {
       expect(initialState.pageConstants.isShareView).to.be.undefined;
       store.dispatch(
         setPageConstants({
-          isShareView: true
+          isShareView: true,
         })
       );
       expect(store.getState().pageConstants.isShareView).to.be.true;
     });
 
-    it('does not allow setting other properties', function() {
-      expect(function() {
+    it('does not allow setting other properties', function () {
+      expect(function () {
         store.dispatch(
           setPageConstants({
-            theAnswer: 42
+            theAnswer: 42,
           })
         );
       }).to.throw(

@@ -213,6 +213,50 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course_offering.valid?
   end
 
+  test "latest_published_version returns most recent published course version with unit group" do
+    offering = create :course_offering, :with_unit_groups
+
+    most_recent_version = offering.course_versions[2]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[0]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[1]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[3]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
+  test "latest_published_version returns most recent published course version with unit" do
+    offering = create :course_offering, :with_units
+
+    most_recent_version = offering.course_versions[1]
+    most_recent_version.update!(key: '2021')
+    most_recent_version.content_root.update!(published_state: 'beta')
+
+    preview_version = offering.course_versions[2]
+    preview_version.update!(key: '2019')
+    preview_version.content_root.update!(published_state: 'preview')
+
+    most_recent_published_version = offering.course_versions[3]
+    most_recent_published_version.update!(key: '2020')
+    most_recent_published_version.content_root.update!(published_state: 'preview')
+
+    stable_version = offering.course_versions[0]
+    stable_version.update!(key: '2018')
+    stable_version.content_root.update!(published_state: 'stable')
+
+    assert_equal offering.latest_published_version, most_recent_published_version
+  end
+
   test 'any_version_is_assignable_pilot? is true if user has pilot access to any course versions' do
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@student)
     refute @unit_teacher_to_students.course_version.course_offering.any_version_is_assignable_pilot?(@teacher)
@@ -298,6 +342,82 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(unit2)
 
     refute unit1.course_version.course_offering.any_versions_in_development?
+  end
+
+  test 'any_version_is_in_published_state? is false if none of the course versions have a published_state of preview or stable' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-10', version_year: '1991', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-10', version_year: '1992', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit2)
+
+    refute unit1.course_version.course_offering.any_version_is_in_published_state?
+  end
+
+  test 'any_version_is_in_published_state? is true if one of the course versions have a published_state of preview or stable' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-12', version_year: '1991', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-12', version_year: '1992', is_course: true, published_state: 'preview')
+    CourseOffering.add_course_offering(unit2)
+
+    assert unit1.course_version.course_offering.any_version_is_in_published_state?
+  end
+
+  test 'any_version_is_in_published_state? is true if all of the course versions have a published_state of preview or stable' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-13', version_year: '1991', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-13', version_year: '1992', is_course: true, published_state: 'preview')
+    CourseOffering.add_course_offering(unit2)
+
+    assert unit1.course_version.course_offering.any_version_is_in_published_state?
+  end
+
+  test 'assignable_published_for_students_course_offerings filters only for assignable, published, and for student course offerings' do
+    # Course offering that doesn't satisfy any of the conditions
+    none_unit = create(:script, name: 'unit1', family_name: 'none', version_year: '1991', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    none_co = CourseOffering.add_course_offering(none_unit)
+    none_co.update!(assignable: false)
+
+    # Course offering that only satisfies the 'assignable' condition
+    assignable_unit = create(:script, name: 'unit2', family_name: 'assignable', version_year: '1992', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    assignable_co = CourseOffering.add_course_offering(assignable_unit)
+
+    # Course offering that only satisfies the 'published' condition
+    published_unit = create(:script, name: 'unit3', family_name: 'published', version_year: '1993', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    published_co = CourseOffering.add_course_offering(published_unit)
+    published_co.update!(assignable: false)
+
+    # Course offering that only satisfies the 'for student' condition
+    for_student_unit = create(:script, name: 'unit4', family_name: 'for-student', version_year: '1994', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    for_student_co = CourseOffering.add_course_offering(for_student_unit)
+    for_student_co.update!(assignable: false)
+
+    # Course offering that only satisfies the 'assignable' and 'published' condition
+    assignable_published_unit = create(:script, name: 'unit5', family_name: 'assignable-published', version_year: '1995', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    assignable_published_co = CourseOffering.add_course_offering(assignable_published_unit)
+
+    # Course offering that only satisfies the 'assignable' and 'for student' condition
+    assignable_for_student_unit = create(:script, name: 'unit6', family_name: 'assignable-for-student', version_year: '1996', is_course: true, published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    assignable_for_student_co = CourseOffering.add_course_offering(assignable_for_student_unit)
+
+    # Course offering that only satisfies the 'published' and 'for student' condition
+    published_for_student_unit = create(:script, name: 'unit7', family_name: 'published-for-student', version_year: '1997', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    published_for_student_co = CourseOffering.add_course_offering(published_for_student_unit)
+    published_for_student_co.update!(assignable: false)
+
+    # Course offering that satisfies all 3 conditions
+    all_unit = create(:script, name: 'unit8', family_name: 'all', version_year: '1998', is_course: true, published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    all_co = CourseOffering.add_course_offering(all_unit)
+
+    filtered_course_offerings = CourseOffering.assignable_published_for_students_course_offerings
+
+    refute filtered_course_offerings.include?(none_co)
+    refute filtered_course_offerings.include?(assignable_co)
+    refute filtered_course_offerings.include?(published_co)
+    refute filtered_course_offerings.include?(for_student_co)
+    refute filtered_course_offerings.include?(assignable_published_co)
+    refute filtered_course_offerings.include?(assignable_for_student_co)
+    refute filtered_course_offerings.include?(published_for_student_co)
+    assert filtered_course_offerings.include?(all_co)
   end
 
   test 'can_be_assigned? is false if its an unassignable course' do
@@ -451,8 +571,54 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'duration returns label associated with sum of units duration' do
+    # Create a unit with multiple lessons, each with a different number of lesson activities.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 40)
+
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+
+    # A course_offering of this unit should have a 'week' duration since a week is labeled as 91-250 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 120, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :week, co.duration
+  end
+
+  test 'duration returns lesson if sum of units duration is 0' do
+    # Create a unit with single lesson with an unspecified duration (defaults to 0).
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson)
+
+    # A course_offering of this unit should have a 'lesson' duration since a lesson is labeled as 0-90 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 0, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :lesson, co.duration
+  end
+
+  test 'duration returns school_year if sum of units duration is greater than 5000' do
+    # Create a unit with multiple lessons with durations that sum up to >5000.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+
+    # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 6000, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :school_year, co.duration
+  end
+
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: '/images/sample_image_ref', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: 'Computer:Works,Chromebook:Not ideal,Tablet:Does not work,Mobile:Does not work,No Device:Does not work'
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -465,15 +631,57 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
+  test "validates grade_levels" do
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3,K')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '10,11,12,13')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '0')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K1')
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: 'K,K,1')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'one-grade', display_name: 'Test One Grade', grade_levels: 'K')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'middle-grades', display_name: 'Test Middle Grades', grade_levels: '7,8')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'high-grades', display_name: 'Test High Grades', grade_levels: '10,11,12')
+    end
+
+    assert_creates CourseOffering do
+      CourseOffering.create!(key: 'all-grades', display_name: 'Test All Grades', grade_levels: 'K,1,2,3,4,5,6,7,8,9,10,11,12')
+    end
+  end
+
   test "validates curriculum_type value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', curriculum_type: 'Invalid Curriculum Type')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', curriculum_type: 'Invalid Curriculum Type')
     end
   end
 
   test "validates marketing_initiative value" do
     assert_raises do
-      CourseOffering.create!(key: 'test-key', marketing_initiative: 'Invalid Marketing Initiative')
+      CourseOffering.create!(key: 'test-key', display_name: 'Test', marketing_initiative: 'Invalid Marketing Initiative')
     end
   end
 

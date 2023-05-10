@@ -24,7 +24,7 @@ export default function BubbleBadge({badgeType, bubbleSize, bubbleShape}) {
 BubbleBadge.propTypes = {
   badgeType: PropTypes.oneOf(Object.values(BadgeType)).isRequired,
   bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
+  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired,
 };
 
 function AssessmentBubbleBadge(bubbleShape) {
@@ -40,7 +40,7 @@ function AssessmentBubbleBadge(bubbleShape) {
   );
 }
 AssessmentBubbleBadge.propTypes = {
-  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
+  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired,
 };
 
 function KeepWorkingBubbleBadge(bubbleSize) {
@@ -57,7 +57,7 @@ function KeepWorkingBubbleBadge(bubbleSize) {
   );
 }
 KeepWorkingBubbleBadge.propTypes = {
-  bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired
+  bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
 };
 
 // KeepWorkingBadge is exported because it is also used independently of
@@ -71,7 +71,7 @@ export function KeepWorkingBadge({isSmall, style}) {
 }
 KeepWorkingBadge.propTypes = {
   isSmall: PropTypes.bool,
-  style: PropTypes.object
+  style: PropTypes.object,
 };
 
 // AssessmentBadge is exported for tests
@@ -94,49 +94,49 @@ export function AssessmentBadge() {
 }
 AssessmentBadge.propTypes = {
   hasWhiteBorder: PropTypes.bool,
-  style: PropTypes.object
+  style: PropTypes.object,
 };
 
 const styles = {
   container: {
-    fontSize: 10
+    fontSize: 10,
   },
   bubblePosition: {
     position: 'absolute',
     top: -7,
-    right: -7
+    right: -7,
   },
   diamondBubblePosition: {
     position: 'absolute',
     top: -13,
-    right: -17
+    right: -17,
   },
   purple: {
-    color: color.purple
+    color: color.purple,
   },
   white: {
-    color: color.white
+    color: color.white,
   },
   keepWorkingSmallBadgePosition: {
     position: 'absolute',
     top: -2,
-    right: -2
+    right: -2,
   },
   keepWorkingBadgePosition: {
     position: 'absolute',
     top: 0,
-    right: -2
+    right: -2,
   },
   keepWorkingBadge: {
     borderRadius: '50%',
-    backgroundColor: color.red
+    backgroundColor: color.red,
   },
   keepWorkingBadgeFullSize: {
     width: 10,
-    height: 10
+    height: 10,
   },
   keepWorkingBadgeSmallSize: {
     width: 7,
-    height: 7
-  }
+    height: 7,
+  },
 };

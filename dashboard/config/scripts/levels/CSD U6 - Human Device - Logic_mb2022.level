@@ -48,14 +48,15 @@
     "text_mode_at_start": "false",
     "encrypted": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty",
-      "/courses/csd-2022/guides/changing-screens",
       "/courses/csd-2022/guides/designing-screens-with-code",
-      "/courses/csd-2022/guides/design-mode",
-      "/courses/csd-2022/guides/design-mode-elements",
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -64,7 +65,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "map_reference": "/courses/csd-2022/guides/problem-solving-process-programming"
   },
   "game_id": 41,
   "published": true,
@@ -72,7 +74,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:15.625+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Logic_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Logic_2222\"},{\"changed_at\":\"2023-02-08 22:50:18 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:49:15.625+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Logic_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Logic_2222\"},{\"changed_at\":\"2023-02-08 22:50:18 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 18:03:33 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -5,10 +5,7 @@ theme: responsive_full_width
 
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %script{src: webpack_asset_path('js/code.org/public/administrators.js')}
-%link{href: 'shared/css/design-system-pegasus.css', rel: 'stylesheet'}
-
--# Import FontAwesome Pro
-%script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 
 -# FontAwesome icons
 - icon_laptop_file = "fa-solid fa-laptop-file"
@@ -69,8 +66,8 @@ theme: responsive_full_width
         %div
           %i{class: "#{icon_location_dot}"}
         .text-wrapper
-          %h3 Local knowledge and implementation support
-          %p Regional support teams who understand your district's unique needs and provide guidance on implementation, certification and funding.
+          %h3 Local implementation support & resources
+          %p Regional support teams who understand your district's unique needs and provide guidance on implementation, certification and funding. Ready-made resources to engage students, families, and educators.
       %li
         %div
           %i{class: "#{icon_chart_pie}"}
@@ -93,8 +90,8 @@ theme: responsive_full_width
         %div
           %i{class: "#{icon_smile}"}
         .text-wrapper
-          %h3 Communications tools to support students, families, and educators
-          %p Ready-made resource library dedicated to demystifying CS education for each stakeholder in your district.
+          %h3 Amazon Future Engineer Benefits
+          %p Eligible schools can receive paid 1-year CSTA membership for teachers, Amazon classroom resources, first access to career exploration offerings, awards, scholarships, and more. 
       %li
         %div
           %i{class: "#{icon_money_check_dollar_pen}"}
@@ -136,9 +133,9 @@ theme: responsive_full_width
     %div.centered
       %a{href: '#email-signup-form', class: 'link-button'} Become a Code.org District Partner
 
-%section.bg-primary{style: "display: block !important"}
+%section.bg-primary-light{style: "display: block !important"}
   .wrapper
-    %p.callout.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
+    %p.heading-sm.no-margin-bottom Want to see how your district stacks up for computer science offerings? Check out the <a href="/yourschool" target="_blank" rel="noopener noreferrer">CS Access Report</a>!
 
 %a{id: 'email-signup-form'}
 %section{style: "display: block !important"}
@@ -146,6 +143,8 @@ theme: responsive_full_width
     %h2 Take the next step!
     %p If you are interested in becoming a district partner or have questions about the partnership, fill out the form below and a member of the Code.org team and/or our Regional Partner will be in touch.
     = view :admins_email_signup_form
+
+= view :section_divider_line
 
 %section{style: "display: block !important"}
   .wrapper

@@ -61,6 +61,7 @@ Feature: Unit overview page
     # On last level of the lesson
     And I am on "http://studio.code.org/s/csp3-2019/lessons/3/levels/1"
     And I click selector ".submitButton"
+    And I wait until I am on "http://studio.code.org/s/csp3-2019"
     And I wait for jquery to load
     And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is visible
     And I reload the page
@@ -73,7 +74,6 @@ Feature: Unit overview page
     And I click selector "#uitest-lesson-plan" once I see it
     When I switch tabs
     And I wait until current URL contains "curriculum.code.org/csp-19/unit3/1/"
-    
 
   Scenario: Unit overview new lesson plan
     Given I create an authorized teacher-associated student named "Blake"

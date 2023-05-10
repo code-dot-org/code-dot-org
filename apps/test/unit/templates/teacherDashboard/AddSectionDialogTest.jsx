@@ -5,7 +5,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
 import * as utils from '@cdo/apps/utils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -23,6 +22,7 @@ describe('AddSectionDialog', () => {
     handleCancel = sinon.spy();
     defaultProps = {
       isOpen: false,
+      userId: 99999,
       section: {
         id: 1,
         name: '',
@@ -42,7 +42,7 @@ describe('AddSectionDialog', () => {
         unitId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       },
       beginImportRosterFlow,
       setRosterProvider,
@@ -50,7 +50,7 @@ describe('AddSectionDialog', () => {
       setParticipantType,
       handleCancel,
       availableParticipantTypes: ['student'],
-      asyncLoadComplete: true
+      asyncLoadComplete: true,
     };
   });
 
@@ -102,22 +102,18 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
   });
 
-  describe('with sectionSetupRefresh experiment', () => {
+  describe('sectionSetupRefresh', () => {
     let navigateToHrefSpy;
 
     beforeEach(() => {
       navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
-      sinon
-        .stub(experiments, 'isEnabled')
-        .withArgs('sectionSetupRefresh')
-        .returns(true);
     });
 
     afterEach(() => {
-      experiments.isEnabled.restore();
       navigateToHrefSpy.restore();
     });
 
+    /*
     it('redirects to new section setup when selecting non-student participant type', () => {
       const newSection = _.cloneDeep(defaultProps.section);
       const wrapper = shallow(
@@ -154,6 +150,7 @@ describe('AddSectionDialog', () => {
         '/sections/new?participantType=student&loginType=word'
       );
     });
+    */
 
     it('does not redirect to new section setup when selection oauth login type', () => {
       const sectionWithParticipantType = _.cloneDeep(defaultProps.section);

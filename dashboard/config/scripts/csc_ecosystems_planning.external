@@ -1,0 +1,20 @@
+name 'csc_ecosystems_planning'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Share Your Ecosystem Simulation!
+<img src="https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png" style= "width:60%">
+<div style= "width: 60%"> 
+
+**Now that you have coded and modified an ecosystem, it's time to share it out!**
+
+As you present your project try to explain the following observations you made:
+
+>1. Explain the food chain in your ecosystem and how you coded it.
+>2. Was there too much or too little of an organism?
+>3. Explain the modifications you made to the simulation. 
+>4. What did you notice after you changed the values?
+</div>
+
+MARKDOWN

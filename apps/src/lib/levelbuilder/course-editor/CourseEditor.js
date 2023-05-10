@@ -18,7 +18,7 @@ import {
   PublishedState,
   InstructionType,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
@@ -56,7 +56,7 @@ class CourseEditor extends Component {
 
     // Provided by redux
     teacherResources: PropTypes.arrayOf(resourceShape),
-    studentResources: PropTypes.arrayOf(resourceShape)
+    studentResources: PropTypes.arrayOf(resourceShape),
   };
 
   constructor(props) {
@@ -83,7 +83,7 @@ class CourseEditor extends Component {
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
-      participantAudience: this.props.initialParticipantAudience
+      participantAudience: this.props.initialParticipantAudience,
     };
   }
 
@@ -112,7 +112,7 @@ class CourseEditor extends Component {
       participant_audience: this.state.participantAudience,
       instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
-      scripts: this.state.unitsInCourse
+      scripts: this.state.unitsInCourse,
     };
 
     if (this.props.teacherResources) {
@@ -132,7 +132,7 @@ class CourseEditor extends Component {
       this.setState({
         isSaving: false,
         error:
-          'Please provide a pilot experiment in order to save with published state as pilot.'
+          'Please provide a pilot experiment in order to save with published state as pilot.',
       });
       return;
     } else if (
@@ -141,7 +141,7 @@ class CourseEditor extends Component {
     ) {
       this.setState({
         isSaving: false,
-        error: 'Please set both version year and family name.'
+        error: 'Please set both version year and family name.',
       });
       return;
     }
@@ -156,7 +156,7 @@ class CourseEditor extends Component {
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
-          error: 'Saving cancelled.'
+          error: 'Saving cancelled.',
         });
         return;
       }
@@ -167,7 +167,7 @@ class CourseEditor extends Component {
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
+      data: JSON.stringify(dataToSave),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -177,7 +177,7 @@ class CourseEditor extends Component {
             lastSaved: Date.now(),
             isSaving: false,
             savedVersionYear: data.version_year,
-            savedFamilyName: data.family_name
+            savedFamilyName: data.family_name,
           });
         }
       })
@@ -192,7 +192,7 @@ class CourseEditor extends Component {
       unitNames,
       courseFamilies,
       versionYearOptions,
-      initialPublishedState
+      initialPublishedState,
     } = this.props;
     const {
       announcements,
@@ -210,7 +210,7 @@ class CourseEditor extends Component {
       publishedState,
       instructionType,
       instructorAudience,
-      participantAudience
+      participantAudience,
     } = this.state;
 
     const allowMajorCurriculumChanges =
@@ -435,25 +435,25 @@ const styles = {
     padding: '4px 6px',
     color: '#555',
     border: '1px solid #ccc',
-    borderRadius: 4
+    borderRadius: 4,
   },
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   box: {
     marginTop: 10,
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
+    padding: 10,
+  },
 };
 
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
   teacherResources: state.resources,
-  studentResources: state.studentResources
+  studentResources: state.studentResources,
 }))(CourseEditor);

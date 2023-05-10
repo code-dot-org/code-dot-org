@@ -89,7 +89,7 @@ class LevelLoaderTest < ActiveSupport::TestCase
 
   test 'debugging info for exceptions in load_custom_level' do
     LevelLoader.send(:load_custom_level, 'xxxxx', {})
-  rescue Exception => e
-    assert_includes e.message, "in level"
+  rescue Exception => exception
+    assert_includes exception.message, "in level"
   end
 end

@@ -12,6 +12,8 @@ export const BlockTypes = {
     'play_sound_at_current_location_simple2',
   PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2:
     'play_pattern_at_current_location_simple2',
+  PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2:
+    'play_chord_at_current_location_simple2',
   PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2:
     'play_rest_at_current_location_simple2',
   SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2:
@@ -31,5 +33,5 @@ export const BlockTypes = {
   NEW_TRACK_ON_TRIGGER: 'new_track_on_trigger',
   PLAY_SOUND_IN_TRACK: 'play_sound_in_track',
   REST_IN_TRACK: 'rest_in_track',
-  VALUE_SAMPLE: 'value_sample'
+  VALUE_SAMPLE: 'value_sample',
 };

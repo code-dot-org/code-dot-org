@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/pd_workshop_mailer
 class PdWorkshopMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   DEFAULT_COURSE = Pd::Workshop::COURSE_ECS
   DEFAULT_SUBJECT = Pd::Workshop::SUBJECT_ECS_PHASE_2
@@ -18,7 +18,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -31,7 +32,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -44,7 +46,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
     end
@@ -81,6 +84,10 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
   def teacher_enrollment_reminder__facilitator
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
       options: {days_before: 10}
+  end
+
+  def teacher_pre_workshop_csa
+    mail :teacher_pre_workshop_csa, Pd::Workshop::COURSE_CSA
   end
 
   def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
