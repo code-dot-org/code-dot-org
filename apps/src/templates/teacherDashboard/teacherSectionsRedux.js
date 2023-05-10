@@ -103,7 +103,7 @@ const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED =
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 /** Reports request to import a roster has started */
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
-/** Reports request to import a roster has succeeded and starts the edit-section process*/
+/** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few constants exposed for unit test setup */

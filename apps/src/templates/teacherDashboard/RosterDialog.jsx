@@ -156,7 +156,7 @@ class RosterDialog extends React.Component {
 
   state = {selectedId: null};
 
-  importClassroom = redirect => {
+  importClassroom = () => {
     this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
     const selectedName =
@@ -164,7 +164,7 @@ class RosterDialog extends React.Component {
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-    this.props.handleImport(this.state.selectedId, selectedName, redirect);
+    this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
 
@@ -297,7 +297,7 @@ class RosterDialog extends React.Component {
             <button
               id="import-button"
               type="button"
-              onClick={() => this.importClassroom(false)}
+              onClick={this.importClassroom}
               style={Object.assign(
                 {},
                 styles.buttonPrimary,
