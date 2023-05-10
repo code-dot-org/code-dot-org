@@ -1,5 +1,3 @@
-/*global mapboxgl*/
-
 $(document).ready(function () {
   // We keep some style elements as a Mapbox style for simplicity.
   const stylePath = 'mapbox://styles/codeorg/cjz36duae88ds1cp7ll7smx6s';

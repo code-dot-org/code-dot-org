@@ -170,7 +170,6 @@ ro:
     data_collection_us: "Înțeleg că Code.org este un site non-profit din SUA, iar legile care guvernează colectarea datelor în SUA pot fi diferite de legile din țara mea."
     visit_privacy: 'Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org  pentru mai multe informații.'
     student_terms_markdown: "Adresele de emai nu sunt depozitate într-o formă care să ne permită să contactăm studenții. Studenții nu vor primi niciodată emailuri din partea Code.org, decât pentru recuperarea parolelor. Pentru mai multe informații, vezi [privacy policy](http://code.org/privacy)."
-    additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
     user_type_button: "Actualizaţi tipul de contul"
     user_type_label: "Tipul contului"
     user_type_student: "Elev"

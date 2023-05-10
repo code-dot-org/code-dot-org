@@ -172,7 +172,6 @@ vi:
     data_collection_us: "Tôi hiểu rằng Code.org là trang web phi lợi nhuận có trụ sở tại Hoa Kỳ và pháp luật quản lý hoạt động thu thập dữ liệu ở Hoa Kỳ có thể khác với pháp luật ở quốc gia của bạn."
     visit_privacy: 'Hãy truy cập [Chính sách quyền riêng tư của Code.org](%{privacy_url}) để tìm hiểu thêm.'
     student_terms_markdown: "Địa chỉ email không được lưu trữ trong biểu mẫu cho phép chúng ta liên lạc với học sinh. Học sinh sẽ không bao giờ nhận được email từ Code.org ngoại trừ email khôi phục mật khẩu. Hãy xem [chính sách quyền riêng tư](http://code.org/privacy) của chúng tôi để biết thêm thông tin."
-    additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Kiểu tài khoản"
     user_type_student: "Học sinh"

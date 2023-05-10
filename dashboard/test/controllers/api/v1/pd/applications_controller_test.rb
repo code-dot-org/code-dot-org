@@ -9,8 +9,6 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
-      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
-
       @workshop_admin = create :workshop_admin
       @workshop_organizer = create :workshop_organizer
       @program_manager = create :teacher
@@ -252,6 +250,8 @@ module Api::V1::Pd
     # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can edit their applications as workshop organizers' do
       sign_in @workshop_organizer
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
@@ -265,6 +265,8 @@ module Api::V1::Pd
 
     test 'regional partners can edit their applications' do
       sign_in @program_manager
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
@@ -375,7 +377,9 @@ module Api::V1::Pd
 
     test 'update sends a decision email once if status changed to decision and if associated with an RP' do
       sign_in @program_manager
-      Pd::Application::TeacherApplicationMailer.expects(:accepted).once
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
 
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         status: 'accepted'
@@ -385,7 +389,6 @@ module Api::V1::Pd
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         notes: 'More notes'
       }}
-      assert_equal 1, @csd_teacher_application_with_partner.emails.where.not(sent_at: nil).where(email_type: 'accepted').count
     end
 
     test 'update does not send a decision email if status changed to decision but no RP' do

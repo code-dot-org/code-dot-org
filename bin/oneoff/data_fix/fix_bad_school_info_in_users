@@ -47,7 +47,8 @@ CDO.log.info "Called with options: #{options}"
 info_count = 0
 user_count = 0
 
-school_info_ids = ActiveRecord::Base.connection.execute(%Q{
+school_info_ids = ActiveRecord::Base.connection.execute(
+  <<~SQL
     SELECT DISTINCT t.id FROM (
       SELECT MIN(id) AS id FROM school_infos WHERE validation_type = 'none' AND country = 'US'
       AND school_type in ('public','charter')
@@ -62,7 +63,7 @@ school_info_ids = ActiveRecord::Base.connection.execute(%Q{
       GROUP BY school_type, state, school_district_id
     ) t JOIN school_infos si ON si.id = t.id
     WHERE (si.school_id IS NOT NULL OR si.school_name IS NOT NULL)
-  }
+  SQL
 ).pluck(0)
 
 csv_file = "#{Dir.tmpdir}/#{File.basename(__FILE__)}.#{Time.now.strftime('%Y%m%d%H%M')}.csv"

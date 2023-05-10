@@ -171,7 +171,6 @@ id:
     data_collection_us: "Saya mengetahui bahwa Code.org adalah situs web nirlaba yang berbasis di AS dan hukum yang mengatur pengumpulan data di AS mungkin berbeda dari hukum di negara saya."
     visit_privacy: 'Kunjungi [Kebijakan Privasi](%{privacy_url}) Code.org untuk mempelajari selengkapnya.'
     student_terms_markdown: "Alamat email tidak tersimpan dalam bentuk yang dapat membuat kami menghubungi murid. Murid tidak akan menerima email dari Code.org kecuali untuk pemulihan kata sandi. Lihat [kebijakan privasi](http://code.org/privacy) kami untuk informasi lebih lanjut."
-    additional_information: "Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran Anda."
     user_type_button: "Perbarui Jenis Akun"
     user_type_label: "Jenis Akun"
     user_type_student: "siswa"

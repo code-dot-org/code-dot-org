@@ -172,7 +172,6 @@ es:
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
     visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
-    additional_information: "Necesitamos alguna información adicional para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "estudiante"

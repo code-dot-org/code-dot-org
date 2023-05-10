@@ -1,4 +1,5 @@
 import React from 'react';
+import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
 
 const baseUrl = window.location.origin + '/musiclab';
 
@@ -83,6 +84,14 @@ const optionsList = [
     name: 'progression',
     type: 'string',
     description: 'Use a specific progression file.',
+  },
+  {
+    name: 'storage-type',
+    type: 'radio',
+    values: [
+      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
+      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
+    ],
   },
 ];
 
