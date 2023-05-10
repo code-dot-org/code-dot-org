@@ -22,6 +22,7 @@ describe('AddSectionDialog', () => {
     handleCancel = sinon.spy();
     defaultProps = {
       isOpen: false,
+      userId: 99999,
       section: {
         id: 1,
         name: '',
