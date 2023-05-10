@@ -21,7 +21,7 @@ const layoutSlice = createSlice({
 
 export const {setVisualizationScale} = layoutSlice.actions;
 
-const selectSelf = (state: LayoutState) => state;
+const selectSelf = (state: {layout: LayoutState}) => state.layout;
 
 export const getVisualizationScale = createSelector(
   selectSelf,
