@@ -257,7 +257,7 @@ class UnconnectedMusicView extends React.Component {
 
   // Returns whether we just have a single level.
   hasLevel = () => {
-    return !!this.props.currentLevelId;
+    return !this.hasLevels() && !!this.props.currentLevelId;
   };
 
   // Returns whether we have levels.
@@ -661,7 +661,8 @@ const MusicView = connect(
       ? levelsForLessonId(state.progress, state.progress.currentLessonId)
       : undefined,
 
-    // When we are editing a single level, this will be its ID.
+    // The current level ID, whether we're in a lesson with multiple levels, or
+    // directly viewing a single level.
     currentLevelId: state.progress.currentLevelId,
 
     // The number of levels.

@@ -73,11 +73,11 @@ export const loadProgressionStepFromSource = async (
   let progressionStep = undefined;
   let levelCount = undefined;
 
-  if (levelSource === LevelSource.LEVEL) {
+  if (levelSource === LevelSource.LEVELS) {
     // Since we have levels, we'll asynchronously retrieve the current level data.
     const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
-  } else if (levelSource === LevelSource.LEVELS) {
+  } else if (levelSource === LevelSource.LEVEL) {
     // Since we have a level, we'll asynchronously retrieve the current level data.
     const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
