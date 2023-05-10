@@ -17,6 +17,8 @@ import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
 
 class TeacherSections extends Component {
   static propTypes = {
+    userId: PropTypes.number,
+
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
     studentSectionIds: PropTypes.array,
@@ -24,6 +26,7 @@ class TeacherSections extends Component {
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool,
+    userId: PropTypes.number,
   };
 
   componentDidMount() {
@@ -36,6 +39,7 @@ class TeacherSections extends Component {
       studentSectionIds,
       hiddenPlSectionIds,
       hiddenStudentSectionIds,
+      userId,
     } = this.props;
 
     const hasSections =
@@ -55,6 +59,7 @@ class TeacherSections extends Component {
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
             <OwnedSections
+              userId={userId}
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
             />
@@ -63,13 +68,14 @@ class TeacherSections extends Component {
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
             <OwnedSections
+              userId={userId}
               isPlSections={true}
               sectionIds={plSectionIds}
               hiddenSectionIds={hiddenPlSectionIds}
             />
           </ContentContainer>
         )}
-        <RosterDialog />
+        <RosterDialog userId={this.props.userId} />
         <AddSectionDialog />
         <EditSectionDialog />
       </div>
