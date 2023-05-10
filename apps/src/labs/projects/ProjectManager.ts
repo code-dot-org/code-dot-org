@@ -51,7 +51,6 @@ export default class ProjectManager {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
-    console.log(`[DEBUGGING] created project manager for ${channelId}`);
   }
 
   // Load the project from the sources and channels store.

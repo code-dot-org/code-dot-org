@@ -261,12 +261,6 @@ class UnconnectedMusicView extends React.Component {
     this.handlePanelChange();
 
     if (this.props.levels && this.props.navigateToLevelId) {
-      // Initiate the level change for the projects system.
-      this.musicBlocklyWorkspace.initiateLevelChange(
-        this.props.currentLevelId,
-        this.props.currentScriptId
-      );
-
       const progressState = this.progressManager.getCurrentState();
       const currentPanel = progressState.step;
 
@@ -289,6 +283,14 @@ class UnconnectedMusicView extends React.Component {
     this.stopSong();
     this.setToolboxForProgress();
     this.setAllowedSoundsForProgress();
+    if (this.props.currentLevelId) {
+      // Initiate the level change for the projects system. Only
+      // do this is we have a level.
+      this.musicBlocklyWorkspace.initiateLevelChange(
+        this.props.currentLevelId,
+        this.props.currentScriptId
+      );
+    }
   };
 
   setToolboxForProgress = () => {
