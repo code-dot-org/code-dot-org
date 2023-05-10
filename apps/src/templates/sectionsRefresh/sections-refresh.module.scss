@@ -145,6 +145,7 @@ label.typographyLabel {
 
 .courseOption {
   margin-top: 10px;
+  align-items: baseline;
 }
 
 .flexDisplay .radio {
@@ -153,6 +154,7 @@ label.typographyLabel {
 
 .courseOptionLabel {
   margin: 0 10px 0 5px;
+  min-height: 40px;
 }
 
 .unitDropdown {
