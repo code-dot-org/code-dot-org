@@ -299,15 +299,9 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I rotate to landscape$/ do
-  if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:landscape)
-  end
-end
-
 When /^I rotate to portrait$/ do
   if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:portrait)
+    #@browser.rotate(:portrait)
   end
 end
 

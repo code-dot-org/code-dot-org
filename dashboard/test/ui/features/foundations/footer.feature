@@ -144,7 +144,6 @@ Feature: Checking the footer appearance
   Scenario: Mobile Star Wars share small footer
     When I open my eyes to test "Mobile Star Wars share small footer"
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I press "runButton"
     And I wait until element "#finishButton" is visible
@@ -174,7 +173,6 @@ Feature: Checking the footer appearance
   Scenario: Mobile Minecraft share small footer
     When I open my eyes to test "Mobile Minecraft share small footer"
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I press "runButton"
     And I wait until element "#sharing-dialog-copy-button" is visible
@@ -201,7 +199,6 @@ Feature: Checking the footer appearance
   Scenario: Mobile Applab share small footer
     When I open my eyes to test "Mobile Applab share small footer"
     Given I am on "http://studio.code.org/home"
-    And I rotate to landscape
     And I start a new Applab project
     And I navigate to the shared version of my project
     And I rotate to portrait

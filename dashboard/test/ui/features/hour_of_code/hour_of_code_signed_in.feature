@@ -30,7 +30,6 @@ Scenario:
 
 Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/6?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
@@ -52,7 +51,6 @@ Scenario: Progress on the server that is not on the client
 @no_mobile
 Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, should not see video
   Given I am on "http://studio.code.org/hoc/10"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then I wait until element ".video-modal" is visible
   Then I close the dialog
@@ -61,7 +59,6 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
 
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"

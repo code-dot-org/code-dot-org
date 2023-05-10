@@ -3,7 +3,6 @@ Feature: Recommended/Required Blocks Feedback
 
 Scenario: Solve without recommended blocks
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   When I press "runButton"

@@ -2,7 +2,6 @@ Feature: Sprite Lab
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"

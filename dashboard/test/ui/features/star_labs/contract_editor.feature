@@ -5,7 +5,6 @@ Feature: Opening the contract editor
 Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
   Given I am on "http://studio.code.org/s/algebra/lessons/7/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
@@ -26,7 +25,6 @@ Scenario: Testing the contract variable editor
 Scenario: Creating and modifying a new contract
   When I open my eyes to test "creating a new contract"
   Given I am on "http://studio.code.org/s/algebra/lessons/7/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
@@ -78,7 +76,6 @@ Scenario: Changing Parameter names
 
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://studio.code.org/s/allthethings/lessons/13/levels/11?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press the first "#modalEditorClose > .blocklyText" element
   And I resize top instructions to "100" pixels tall

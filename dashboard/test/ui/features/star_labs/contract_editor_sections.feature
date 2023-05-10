@@ -3,7 +3,6 @@ Feature: Contract Editor section configuration and manipulation
 
 Background:
   Given I am on "http://studio.code.org/s/algebra/lessons/7/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then element "#runButton" is visible
   And I open the blockly category with ID "7"
@@ -11,7 +10,7 @@ Background:
   And I wait to see "#modalEditorClose"
 
 Scenario: Examples should be hidden when specified in contract editor
-  And examples are visible
+  Given examples are visible
   And the "Contract and Purpose Statement" contract editor header is visible
   And the "Examples" contract editor header is visible
   And the "Definition" contract editor header is visible
@@ -23,14 +22,14 @@ Scenario: Examples should be hidden when specified in contract editor
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"
-  And there are no visible examples
+  Then there are no visible examples
   And the "Contract and Purpose Statement" contract editor header is visible
   And the "Examples" contract editor header isn't visible
   And the "Definition" contract editor header is visible
 
-  And I open the blockly category with ID "f"
+  When I open the blockly category with ID "f"
   And I press the edit button on a function call named "something"
-  And there are no visible examples
+  Then there are no visible examples
   And the "Examples" contract editor header isn't visible
 
 Scenario: Expanding / collapsing sections should persist across function openings
