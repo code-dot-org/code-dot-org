@@ -101,6 +101,12 @@
   call_to_action_explore_website: 'Explore website'
   call_to_action_read_more: 'Read more'
   call_to_action_special_announcement: "See special announcement"
+  call_to_action_contact_regional_partner: "Contact your Regional Partner"
+  call_to_action_join_csta: "Join CSTA"
+
+  aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
+
+  video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
@@ -215,6 +221,36 @@
   ai_resources_title_03: "AI for Teachers"
   ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12. Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
+
+  self_paced_pl_hero_heading: "Self-Paced Professional Learning For Educators"
+  self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
+  self_paced_pl_intro_heading: "Professional learning on your timeline"
+  self_paced_pl_intro_desc: "Code.org is pleased to offer self-paced modules for teachers. These modules are available at no cost to any educator with a Code.org account worldwide!"
+  self_paced_pl_intro_list_title_01: "Flexibility and Convenience"
+  self_paced_pl_intro_list_desc_01: "Engage with the material at your own pace and on your own time."
+  self_paced_pl_intro_list_title_02: "Personalized Learning Experience"
+  self_paced_pl_intro_list_desc_02: "Focus on the areas that are most important to your needs and teaching context."
+  self_paced_pl_intro_list_title_03: "Access to High-Quality Content"
+  self_paced_pl_intro_list_desc_03: "Access to the latest best practices, research, and strategies for teaching computer science effectively."
+  self_paced_pl_callout: "Looking for facilitator-led professional learning options? We offer in person or virtual workshops around the country."
+  self_paced_pl_modules_heading: "Self-paced professional learning modules"
+  self_paced_pl_modules_desc: "Through reading, viewing videos, completing interactive puzzles, and reflecting on your learning, you will develop your own understanding while preparing to teach computer science in your classroom."
+  self_paced_pl_modules_list_heading: "Through completing one of these modules, participants will:"
+  self_paced_pl_modules_list_01: "Learn how to navigate the Code.org website and teacher tools."
+  self_paced_pl_modules_list_02: "Gain a high level understanding of the content, tools, and pedagogy."
+  self_paced_pl_modules_list_03: "Prepare to begin teaching the curriculum with your students."
+
+  self_paced_pl_facilitator_heading: "Want to take your learning further?"
+  self_paced_pl_facilitator_subheading: "Facilitator-led workshops"
+  self_paced_pl_facilitator_desc: "In addition to the above self-paced online modules, facilitator-led professional learning workshops are available for teachers. Join the more than 100,000 teachers who have participated in our workshops. More than 90% of attendees would recommend our program to other teachers."
+  self_paced_pl_facilitator_call_to_action: "Explore facilitator-led professional learning"
+  self_paced_pl_resources_heading: "Additional resources for teachers"
+  self_paced_pl_resources_title_01: "Code.org Regional Partner"
+  self_paced_pl_resources_desc_01: "Connect with your Code.org Regional Partner to learn what's going on in your region. Your local Code.org Regional Partner provides facilitator-led workshops to teachers, and can help guide your school or district on implementation, certification, funding, and more."
+  self_paced_pl_resources_title_02: "Computer Science Teachers Association"
+  self_paced_pl_resources_desc_02: "Join the world's largest Computer Science department! Connect with over 19,000 CS teachers from around the globe, find strength in your local community, and get support from other CS teachers."
+  self_paced_pl_resources_title_03: "Amazon Future Engineer"
+  self_paced_pl_resources_desc_03: "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! Find out if your school is eligible."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

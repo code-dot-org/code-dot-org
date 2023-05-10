@@ -14,88 +14,119 @@ theme: responsive_full_width
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
-      %h1{style: "color: white"} Self-Paced Professional Learning For Educators
-      %p{style: "color: white"} Professional learning offerings to support teachers in every stage of their computer science teaching journey.
+      %h1{style: "color: white"}=hoc_s(:self_paced_pl_hero_heading)
+      %p{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
     .clear
     %img{src: "shared/images/banners/admins-hero-students-at-computers.png", alt: ""}
 
 %section
   .wrapper
-    %h2 Professional learning on your timeline
-    %p Code.org is pleased to offer self-paced modules for teachers. These modules are available at no cost to any educator with a Code.org account worldwide!
+    %h2=hoc_s(:self_paced_pl_intro_heading)
+    %p=hoc_s(:self_paced_pl_intro_desc)
     %div.flex-container.justify-space-between.align-items-center.wrap
       %ul.icon-bullet-list.full-width.col-45
         %li
           %div
             %i{class: "#{icon_calendar_clock}"}
           .text-wrapper
-            %h3 Flexibility and Convenience
-            %p Engage with the material at your own pace and on your own time.
+            %h3=hoc_s(:self_paced_pl_intro_list_title_01)
+            %p=hoc_s(:self_paced_pl_intro_list_desc_01)
         %li
           %div
             %i{class: "#{icon_person_rays}"}
           .text-wrapper
-            %h3 Personalized Learning Experience
-            %p Focus on the areas that are most important to your needs and teaching context.
+            %h3=hoc_s(:self_paced_pl_intro_list_title_02)
+            %p=hoc_s(:self_paced_pl_intro_list_desc_02)
         %li.no-margin-bottom
           %div
             %i{class: "#{icon_star}"}
           .text-wrapper
-            %h3 Access to High-Quality Content
-            %p Access to the latest best practices, research, and strategies for teaching computer science effectively.
+            %h3=hoc_s(:self_paced_pl_intro_list_title_03)
+            %p=hoc_s(:self_paced_pl_intro_list_desc_03)
       %figure.col-50
         %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 1em;"}
     .clear
 
 %section.bg-primary-light
   .wrapper
-    %p.heading-sm Looking for facilitator-led professional learning options? <a href="/professional-learning"> Check out our in-person and virtual workshops</a>.
+    %p.heading-sm
+      =hoc_s(:self_paced_pl_callout)
+      %a{href: "/professional-learning"}=hoc_s(:call_to_action_learn_more)
 
 %section
   .wrapper
-    %h2 Self-paced professional learning modules
-    %p Through reading, viewing videos, completing interactive puzzles, and reflecting on your learning, you will develop your own understanding while preparing to teach computer science in your classroom.
-    %p.heading-xs Through completing one of these modules, participants will:
+    %h2=hoc_s(:self_paced_pl_modules_heading)
+    %p=hoc_s(:self_paced_pl_modules_desc)
+    %p
+      %strong=hoc_s(:self_paced_pl_modules_list_heading)
     %ul
-      %li Learn how to navigate the Code.org website and teacher tools.
-      %li Gain a high level understanding of the content, tools, and pedagogy.
-      %li Prepare to begin teaching the curriculum with your students.
+      %li=hoc_s(:self_paced_pl_modules_list_01)
+      %li=hoc_s(:self_paced_pl_modules_list_02)
+      %li=hoc_s(:self_paced_pl_modules_list_03)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col
         %p.overline K-5 Teachers
         %h3 Teaching Computer Science Fundamentals
         %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-        %p <strong>Curriculum:</strong> Any CS Fundamentals (Course A-F)
-        %p <strong>Duration:</strong> 8 hours
-        %p <strong>Prerequisites:</strong> None
+        %p
+          %strong Curriculum:
+          Any CS Fundamentals (Course A-F)
+        %p
+          %strong Duration:
+          8 hours
+        %p
+          %strong Prerequisites:
+          None
         %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2022"), aria:{label: "Start the Teaching Computer Science Fundamentals professional learning program"}} Start professional learning
         %a.link-button.secondary{href: "/csf", aria:{label: "Explore the Teaching Computer Science Fundamentals curriculum"}} Explore curriculum
-      .action-block.action-block--one-col
-        %p.overline 6-10 Teachers
-        %h3 Teaching Computer Science Discoveries
-        %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
-        %p <strong>Curriculum:</strong> Computer Science Discoveries
-        %p <strong>Duration:</strong> 3 hours
-        %p <strong>Prerequisites:</strong> None
-        %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-2022"), aria:{label: "Start the Teaching Computer Science Discoveries professional learning program"}} Start professional learning
-        %a.link-button.secondary{href: CDO.studio_url("/courses/csd-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching Computer Science Discoveries curriculum"}} Explore curriculum
-      .action-block.action-block--one-col
-        %p.overline 9-12 Teachers
-        %h3 Teaching Computer Science Principles
-        %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
-        %p <strong>Curriculum:</strong> Computer Science Principles
-        %p <strong>Duration:</strong> 35 hours
-        %p <strong>Prerequisites:</strong> None
-        %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true"), aria:{label: "Start the Teaching Computer Science Principles professional learning program"}} Start professional learning
-        %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching Computer Science Principles curriculum"}} Explore curriculum
+      .action-block.action-block--one-col{style: "justify-content: space-between"}
+        .content-wrapper
+          %p.overline 6-10 Teachers
+          %h3 Teaching Computer Science Discoveries
+          %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
+          %p
+            %strong Curriculum:
+            Computer Science Discoveries
+          %p
+            %strong Duration:
+            3 hours
+          %p
+            %strong Prerequisites:
+            None
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-2022"), aria:{label: "Start the Teaching Computer Science Discoveries professional learning program"}} Start professional learning
+          %a.link-button.secondary{href: CDO.studio_url("/courses/csd-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching Computer Science Discoveries curriculum"}} Explore curriculum
+      .action-block.action-block--one-col{style: "justify-content: space-between"}
+        .content-wrapper
+          %p.overline 9-12 Teachers
+          %h3 Teaching Computer Science Principles
+          %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
+          %p
+            %strong Curriculum:
+            Computer Science Principles
+          %p
+            %strong Duration:
+            35 hours
+          %p
+            %strong Prerequisites:
+            None
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true"), aria:{label: "Start the Teaching Computer Science Principles professional learning program"}} Start professional learning
+          %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching Computer Science Principles curriculum"}} Explore curriculum
       .action-block.action-block--one-col{style: "justify-content: space-between"}
         .content-wrapper
           %p.overline 6-10 Teachers
           %h3 Teaching AI and Machine Learning
           %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
-          %p <strong>Curriculum:</strong> AI and Machine Learning
-          %p <strong>Duration:</strong> 2 hours
-          %p <strong>Prerequisites:</strong> None
+          %p
+            %strong Curriculum:
+            AI and Machine Learning
+          %p
+            %strong Duration:
+            2 hours
+          %p
+            %strong Prerequisites:
+            None
         .content-footer
           %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csd5-2022"), aria:{label: "Start the Teaching AI and Machine Learning professional learning program"}} Start professional learning
           %a.link-button.secondary{href: CDO.studio_url("/s/aiml-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching AI and Machine Learning curriculum"}} Explore curriculum
@@ -103,9 +134,15 @@ theme: responsive_full_width
         %p.overline 6-10 Teachers
         %h3 Teaching Creating Apps with Devices (Circuit Playground)
         %img{src: "/images/self-paced-pl-tile-maker-cp.png", alt: "", style: "width: 100%"}
-        %p <strong>Curriculum:</strong> Creating Apps with Devices (Circuit Playground)
-        %p <strong>Duration:</strong> 3 hours
-        %p <strong>Prerequisites:</strong> Access to a Circuit Playground
+        %p
+          %strong Curriculum:
+          Creating Apps with Devices (Circuit Playground)
+        %p
+          %strong Duration:
+          3 hours
+        %p
+          %strong Prerequisites:
+          Access to a Circuit Playground
         %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-physical-computing"), aria:{label: "Start the Teaching Creating Apps with Devices (Circuit Playground) professional learning program"}} Start professional learning
         %a.link-button.secondary{href: CDO.studio_url("/s/devices-2022?viewAs=Instructor"), aria:{label: "Explore the Teaching Creating Apps with Devices (Circuit Playground) curriculum"}} Explore curriculum
       .action-block.action-block--one-col{style: "justify-content: space-between"}
@@ -113,46 +150,55 @@ theme: responsive_full_width
           %p.overline 6-10 Teachers
           %h3 Teaching Creating Apps with Devices (micro:bit)
           %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
-          %p <strong>Curriculum:</strong> Creating Apps with Devices (micro:bit)
-          %p <strong>Duration:</strong> 3 hours
-          %p <strong>Prerequisites:</strong> Access to a micro:bit
+          %p
+            %strong Curriculum:
+            Creating Apps with Devices (micro:bit)
+          %p
+            %strong Duration:
+            3 hours
+          %p
+            %strong Prerequisites:
+            Access to a micro:bit
         .content-footer
           %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-microbit-2023"), aria:{label: "Start the Teaching Creating Apps with Devices (micro:bit) professional learning program"}} Start professional learning
           %a.link-button.secondary{href: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), aria:{label: "Explore the Teaching Creating Apps with Devices (micro:bit) curriculum"}} Explore curriculum
 
 %section.bg-neutral-light
   .wrapper
-    %div.col-50
-      %h2 Want to take your learning further?
-      %h3.heading-sm Facilitator-led workshops
-      %p In addition to the above self-paced online modules, facilitator-led professional learning workshops are available for teachers. Join the more than 100,000 teachers who have participated in our workshops. More than 90% of attendees would recommend our program to other teachers.
-      %a.link-button{href: "/profesional-learning"} Explore facilitator-led professional learning
+    %div.col-50{style: "margin-bottom: 1em;"}
+      %h2=hoc_s(:self_paced_pl_facilitator_heading)
+      %h3.heading-sm=hoc_s(:self_paced_pl_facilitator_subheading)
+      %p=hoc_s(:self_paced_pl_facilitator_desc)
+      %a.link-button{href: "/profesional-learning"}=hoc_s(:self_paced_pl_facilitator_call_to_action)
     %div.col-45{style: "float:right; margin-top: 0.5em"}
       %figure.video-responsive{style: "max-width: unset"}
         %div
-          %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", allowFullScreen: 'true', frameborder: '0', title: "Code.org's Professional Learning Program"}
+          %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", allowFullScreen: 'true', frameborder: '0', title: hoc_s(:video_title_professional_learning_program)}
     .clear
 
 %section
   .wrapper
-    %h2 Additional resources for teachers
+    %h2=hoc_s(:self_paced_pl_resources_heading)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col
-        %h3 Code.org Regional Partner
+        %h3=hoc_s(:self_paced_pl_resources_title_01)
         %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-        %p Connect with your Code.org Regional Partner to learn what's going on in your region. Your local Code.org Regional Partner provides facilitator-led workshops to teachers, and can help guide your school or district on implementation, certification, funding, and more.
-        %a.link-button{href: "/educate/professional-learning/contact-regional-partner"} Contact your Regional Partner
-      .action-block.action-block--one-col
+        %p=hoc_s(:self_paced_pl_resources_desc_01)
+        %a.link-button{href: "/educate/professional-learning/contact-regional-partner"}
+          =hoc_s(:call_to_action_contact_regional_partner)
+      .action-block.action-block--one-col{style: "justify-content: space-between"}
         .content-wrapper
-          %h3 Computer Science Teachers Association
+          %h3=hoc_s(:self_paced_pl_resources_title_02)
           %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-          %p Join the world's largest Computer Science department! Connect with over 19,000 CS teachers from around the globe, find strength in your local community, and get support from other CS teachers.
+          %p=hoc_s(:self_paced_pl_resources_desc_02)
         .content-footer
-          %a.link-button{href: "/educate/professional-learning/contact-regional-partner"} Join CSTA
-      .action-block.action-block--one-col
+          %a.link-button{href: "/educate/professional-learning/contact-regional-partner"}
+            =hoc_s(:call_to_action_join_csta)
+      .action-block.action-block--one-col{style: "justify-content: space-between"}
         .content-wrapper
-          %h3 Amazon Future Engineer
-          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-          %p Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! Find out if your school is eligible.
+          %h3=hoc_s(:self_paced_pl_resources_title_03)
+          %img{src: "/images/marketing/fill-261x148/AFE-El-Paso-4.jpg", alt: "", style: "width: 100%"}
+          %p=hoc_s(:self_paced_pl_resources_desc_03)
         .content-footer
-          %a.link-button{href: "/educate/professional-learning/contact-regional-partner", aria:{label: "Learn more about Amazon Future Engineer"}} Learn more
+          %a.link-button{href: "/educate/professional-learning/contact-regional-partner", aria:{label: hoc_s(:aria_label_call_to_action_afe)}}
+            =hoc_s(:call_to_action_learn_more)
