@@ -4,7 +4,18 @@ const AppConfig = require('../appConfig').default;
 
 export const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
-export type LevelSource = 'levels' | 'level' | 'file';
+enum LevelSource {
+  LEVELS = 'LEVELS',
+  LEVEL = 'LEVEL',
+  FILE = 'FILE',
+}
+
+// Exporting enum as object for use in JS files
+export const LevelSources = {
+  LEVELS: LevelSource.LEVELS,
+  LEVEL: LevelSource.LEVEL,
+  FILE: LevelSource.FILE,
+};
 
 // Loads a sound library JSON file.
 export const loadLibrary = async () => {
@@ -62,16 +73,16 @@ export const loadProgressionStepFromSource = async (
   let progressionStep = undefined;
   let levelCount = undefined;
 
-  if (levelSource === 'levels') {
+  if (levelSource === LevelSource.LEVEL) {
     // Since we have levels, we'll asynchronously retrieve the current level data.
     const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
-  } else if (levelSource === 'level') {
+  } else if (levelSource === LevelSource.LEVELS) {
     // Since we have a level, we'll asynchronously retrieve the current level data.
     const response = await loadLevelData(levelDataPath);
     progressionStep = response.level_data;
     levelCount = 1;
-  } else if (levelSource === 'file') {
+  } else if (levelSource === LevelSource.FILE) {
     // Let's load from the progression file.  We'll grab the entire progression
     // but just extract the current step's data.
     const response = await loadProgressionFile();
