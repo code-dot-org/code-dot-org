@@ -110,7 +110,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   var hiddenEncodings = [];
   for (var key in EncodingType) {
     if (
-      EncodingType.hasOwnProperty(key) &&
+      Object.prototype.hasOwnProperty.call(EncodingType, key) &&
       encodings.indexOf(EncodingType[key]) === -1
     ) {
       hiddenEncodings.push(EncodingType[key]);

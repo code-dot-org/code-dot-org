@@ -1,5 +1,3 @@
-/* globals appOptions */
-
 import {
   showDialog,
   processResults,

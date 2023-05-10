@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 Since the program should respond to the micro:bit, use `onBoardEvent`. The A button is `buttonA`.
 MARKDOWN
+
+allow_multiple_attempts true

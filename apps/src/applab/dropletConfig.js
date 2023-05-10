@@ -1,4 +1,3 @@
-/* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
 import dontMarshalApi from '../dontMarshalApi';

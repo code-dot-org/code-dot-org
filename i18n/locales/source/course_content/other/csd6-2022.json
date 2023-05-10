@@ -2279,11 +2279,11 @@
     }
   },
   "https://studio.code.org/s/csd6-2022/lessons/16/levels/7": {
-    "long_instructions": "# Little Alien Friend\n\nRosie is designing a children's toy to look like an alien. it has a physical body that uses 2 LEDs as the eye, and you communicate with it via an app. Each button on the app causes the alien to respond in a different way:\n\n-   Pressing “Wake Up” has the alien open their eyes\n-   Pressing “Listen” has the alien blink slowly as it listens to a story\n-   Pressing “Analyze” has the alien pulse its eyes as it analyzes objects in a room\n-   Pressing “Sleep” puts the alien to sleep and closes its eyes\n\n## Do This\n\n1.  Wire up two LEDs to pins `\"A0\"` and `\"A6\"`\n2.  Create two LED variables on pins `\"A0\"` and `\"A6\"`\n3.  Use an `on` block in the Wake Up event\n4.  Use a `blink` block in the Listen event\n5.  Use a `pulse` block in the Analyze event\n6.  Use an `off` block in the Sleep event",
+    "long_instructions": "# Little Alien Friend\n\nRosie is designing a children's toy to look like an alien. it has a physical body that uses 2 LEDs as the eye, and you communicate with it via an app. Each button on the app causes the alien to respond in a different way:\n\n-   Pressing “Wake Up” has the alien open their eyes\n-   Pressing “Listen” has the alien blink slowly as it listens to a story\n-   Pressing “Sleep” puts the alien to sleep and closes its eyes\n\n## Do This\n\n1.  Wire up two LEDs to pins `\"A0\"` and `\"A6\"`\n2.  Create two LED variables on pins `\"A0\"` and `\"A6\"`\n3.  Use an `on` block in the Wake Up event\n4.  Use a `blink` block in the Listen event\n5.  Use an `off` block in the Sleep event",
     "teacher_markdown": "**Assessing Student Work:** It may be appropriate to assess students on this level by having them physically show you the working prototype, since this app involves physical components to be wired together. You could also consider having students record a video of their app working and submitting it in addition to submitting their code.",
     "mini_rubric": {
       "rubric_key_concept": "Connect external LEDs to the circuit playground and create apps that use external LEDs",
-      "rubric_performance_level_1": "The program matches the app description using on(), blink(), pulse(), and off() blocks in the correct location. The LEDs are wired correctly",
+      "rubric_performance_level_1": "The program matches the app description using on(), blink(), and off() blocks in the correct location. The LEDs are wired correctly",
       "rubric_performance_level_2": "The program almost matches the app description, but one of the blocks may be matched with the wrong event. The LEDs are wired correctly.\r\n",
       "rubric_performance_level_3": "The program is missing some of the required blocks or the LEDs are not wired correctly.",
       "rubric_performance_level_4": "The program has not been started or there are no LEDs"
@@ -2292,7 +2292,6 @@
       "Little Alien Friend": "Little Alien Friend",
       "Wake Up": "Wake Up",
       "Listen": "Listen",
-      "Analyze": "Analyze",
       "Use this app to communicate with the Little Alien Friend toy!": "Use this app to communicate with the Little Alien Friend toy!",
       "Sleep": "Sleep"
     }

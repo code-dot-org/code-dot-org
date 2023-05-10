@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 21:21:09 UTC",
+    "serialized_at": "2023-04-25 20:53:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3936,7 +3936,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)"
           }
         ]
       },
@@ -5663,12 +5663,11 @@
       }
     },
     {
-      "name": "csp_unit_1-14_-_digital_information",
-      "url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/",
+      "name": "Assessment Day - Digital Information",
+      "url": "https://docs.google.com/presentation/d/1Drvhk77p-D9nsClbhQpyvSReAS10OkGEqVynT9IGCAQ/edit?usp=sharing",
       "key": "csp_unit_1-14_-_digital_information",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5829,6 +5828,30 @@
       }
     },
     {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
+      }
+    },
+    {
       "name": "How Computers Work - Data and Binary",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how_computers_work_-_data_and_binary",
@@ -5925,6 +5948,18 @@
       },
       "seeding_key": {
         "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -6381,6 +6416,24 @@
     },
     {
       "seeding_key": {
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp1-2023"
       }
@@ -6393,12 +6446,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_journal",
-        "script.name": "csp1-2023"
-      }
-    }
+
   ],
   "vocabularies": [
 

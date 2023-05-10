@@ -46,7 +46,7 @@ export const frameSizes = {
   HEADER_HEIGHT: 25,
 };
 
-export const blockTypes = {
+export const customConnectionBlockTypes = {
   SPRITE: 'Sprite',
   BEHAVIOR: 'Behavior',
   LOCATION: 'Location',

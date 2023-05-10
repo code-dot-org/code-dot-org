@@ -138,6 +138,14 @@ a.link-button {
       background: $neutral_dark10;
     }
   }
+
+  &.has-icon {
+    .flex-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0 .75em;
+    }
+  }
 }
 
 // Basic hero banner
@@ -294,11 +302,13 @@ ul {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+    gap: 1em 3em;
 
     li {
       text-indent: 0 !important;
-      margin: 1em 3em 1em 0;
       padding: 0;
+      display: flex;
+      gap: 0 0.75em;
 
       &::before {
         content: none;
@@ -306,7 +316,7 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 0 4px 0 0;
+        margin: 3px 0 0;
         vertical-align: text-bottom;
 
         &:before {
@@ -756,5 +766,23 @@ form {
   figure {
     width: 49%;
     margin-top: 1.25em;
+  }
+}
+
+// Blog post callout
+.blog-post-callout {
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  i {
+    font-size: 2em;
+  }
+
+  .text-wrapper {
+    width: 100%;
   }
 }

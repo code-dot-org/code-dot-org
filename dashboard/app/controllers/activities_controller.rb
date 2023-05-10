@@ -21,7 +21,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
@@ -145,7 +145,7 @@ class ActivitiesController < ApplicationController
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 
@@ -179,7 +179,7 @@ class ActivitiesController < ApplicationController
         time_spent: time_since_last_milestone
       )
 
-      is_sublevel = !@script_level.levels.include?(@level)
+      is_sublevel = @script_level.levels.exclude?(@level)
 
       # The level might belong to more than one bubble choice parent level.
       # Find the one that's in this script.

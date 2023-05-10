@@ -70,3 +70,6 @@ export const DEFAULT_CHORD = {
 };
 
 export const DEFAULT_CHORD_LENGTH = 1;
+
+export const LOCAL_STORAGE = 'local';
+export const REMOTE_STORAGE = 'remote';
