@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import i18n from '@cdo/locale';
 import {EMPTY_OPTION} from '../constants';
 import {
   printerStyleNumberRangeToList,
@@ -6,6 +7,8 @@ import {
 } from '@cdo/apps/p5lab/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+  static NO_OPTIONS_MESSAGE = i18n.uninitialized();
+
   /** Add special case for ???
    * @override
    */

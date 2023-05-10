@@ -3,7 +3,6 @@ import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
 import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
 import {Goal, showBackground} from '../redux/animationPicker';
@@ -77,7 +76,7 @@ function getAllBehaviors() {
   });
   behaviors.sort();
   if (allowBehaviorEditing || behaviors.length === 0) {
-    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+    behaviors.push([noBehaviorLabel, Blockly.FieldDropdown.NO_OPTIONS_MESSAGE]);
   }
   return behaviors;
 }
@@ -404,7 +403,8 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       const invalidBehavior =
-        block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
+        block.getFieldValue(arg.name) ===
+        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE;
       const behaviorId = Blockly.JavaScript.variableDB_?.getName(
         block.getFieldValue(arg.name),
         'PROCEDURE'
@@ -418,7 +418,10 @@ const customInputTypes = {
     },
     openEditor(e) {
       e.stopPropagation();
-      if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
+      if (
+        this.getFieldValue('BEHAVIOR') ===
+        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
+      ) {
         Blockly.behaviorEditor.openWithNewFunction();
       } else {
         Blockly.behaviorEditor.openEditorForFunction(
