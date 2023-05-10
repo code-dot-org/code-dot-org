@@ -44,6 +44,15 @@ class CourseOffering < ApplicationRecord
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
 
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2500,
+    semester: 5000,
+    school_year: 525600,
+  }
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -203,6 +212,12 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
+  def duration
+    co_units = latest_published_version.units
+    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -226,6 +241,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       grade_levels: grade_levels,
+      duration: duration,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
