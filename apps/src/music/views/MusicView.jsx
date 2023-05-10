@@ -20,6 +20,7 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {
   baseUrl,
+  LevelSources,
   loadLibrary,
   loadProgressionStepFromSource,
 } from '../utils/Loader';
@@ -345,11 +346,11 @@ class UnconnectedMusicView extends React.Component {
 
   loadProgressionStep = async () => {
     const progressionSource = this.hasLevels()
-      ? 'levels'
+      ? LevelSources.LEVELS
       : this.hasLevel()
-      ? 'level'
+      ? LevelSources.LEVEL
       : this.hasProgressionFile()
-      ? 'file'
+      ? LevelSources.FILE
       : undefined;
 
     if (progressionSource) {
