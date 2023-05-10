@@ -28,7 +28,6 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       const options = this.getOptions(true);
       this.selectedOption_ = null;
       for (let i = 0, option; (option = options[i]); i++) {
-        console.log(i, option);
         if (option[1] === this.value_) {
           this.selectedOption_ = option;
         }
