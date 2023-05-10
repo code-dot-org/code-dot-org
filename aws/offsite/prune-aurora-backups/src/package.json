@@ -11,7 +11,7 @@
     "lint": "eslint *.js"
   },
   "dependencies": {
-    "aws-sdk": "^2.1249.0"
+    "aws-sdk": "^2.1"
   },
   "devDependencies": {
     "chai": "^4.3.7",

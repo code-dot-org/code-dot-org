@@ -4,8 +4,7 @@
 
 * AWS CLI
 * [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-* [NodeJS 10.10+](https://nodejs.org/en/download/releases/)
-* Docker
+* [NodeJS 18](https://nodejs.org/en/download/releases/)
 
 ## Development
 

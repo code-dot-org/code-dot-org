@@ -44,7 +44,7 @@ const getSnapshotsToDelete = function(allSnapshots) {
     .slice(NUM_SNAPSHOTS_TO_KEEP);
 };
 
-const handler = async (event, context) => {
+const handler = async () => {
   const rds = new AWS.RDS();
 
   const describeResponse = await rds.describeDBClusterSnapshots({}).promise();

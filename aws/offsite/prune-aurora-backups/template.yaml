@@ -38,7 +38,7 @@ Resources:
       Role: !GetAtt PruneAuroraBackupsRole.Arn
       CodeUri: src/
       Handler: prune-aurora-backups.handler
-      Runtime: nodejs14.x
+      Runtime: nodejs18.x
 
   OncePerDayRule:
     Type: AWS::Events::Rule
