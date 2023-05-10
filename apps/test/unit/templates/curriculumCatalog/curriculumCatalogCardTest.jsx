@@ -2,7 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import {subjectsAndTopicsOrder} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
+import {
+  subjectsAndTopicsOrder,
+  translatedCourseOfferingCsTopics,
+} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CurriculumCatalogCard', () => {
   const translationIconTitle = 'Curriculum is available in your language';
@@ -31,6 +34,7 @@ describe('CurriculumCatalogCard', () => {
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
+      pathToCourse: '/s/course',
     };
   });
 
@@ -84,9 +88,14 @@ describe('CurriculumCatalogCard', () => {
   it('renders one topic, the first available from ordered list, if no subject present', () => {
     render(<CurriculumCatalogCard {...defaultProps} topics={topics} />);
 
-    screen.getByText(subjectsAndTopicsOrder[firstTopicIndexUsed], {
-      exact: false,
-    });
+    screen.getByText(
+      translatedCourseOfferingCsTopics[
+        subjectsAndTopicsOrder[firstTopicIndexUsed]
+      ],
+      {
+        exact: false,
+      }
+    );
   });
 
   it('does not render label of remaining subjects and topics when exactly one subject or topic is present', () => {
@@ -158,9 +167,10 @@ describe('CurriculumCatalogCard', () => {
   it('renders Quick View button with descriptive label', () => {
     render(<CurriculumCatalogCard {...defaultProps} />);
 
-    screen.getByRole('button', {
+    const link = screen.getByRole('link', {
       name: new RegExp(`View details about ${defaultProps.courseDisplayName}`),
     });
+    expect(link).to.have.property('href').to.contain(defaultProps.pathToCourse);
   });
 
   it('renders Assign button with descriptive label', () => {

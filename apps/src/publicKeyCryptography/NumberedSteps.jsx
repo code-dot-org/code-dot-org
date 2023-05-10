@@ -54,7 +54,7 @@ NumberedSteps.propTypes = {
  * be faded out.
  */
 export function Step(props) {
-  const isStepEnabled = props.hasOwnProperty('requires')
+  const isStepEnabled = Object.prototype.hasOwnProperty.call(props, 'requires')
     ? props.requires
     : true;
   const trStyle = {

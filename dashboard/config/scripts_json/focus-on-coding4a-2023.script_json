@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:28:29 UTC",
+    "serialized_at": "2023-05-02 19:35:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11137,6 +11137,28 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
+      }
+    },
+    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
@@ -11157,6 +11179,17 @@
       }
     },
     {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
       "name": "CSD Guide to Using Resources",
       "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
       "key": "csd_guide_to_using_resources",
@@ -11164,26 +11197,6 @@
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
       }
     },
     {
@@ -11618,6 +11631,27 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_and_design"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_for_design_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_2"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
+      "key": "problem_solving_process_with_programming_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_3"
       }
     },
     {
@@ -12500,6 +12534,18 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "focus-on-coding4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
+        "script.name": "focus-on-coding4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_debugging",
         "script.name": "focus-on-coding4a-2023"
       }
@@ -12512,25 +12558,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "focus-on-coding4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_using_resources",
         "script.name": "focus-on-coding4a-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "focus-on-coding4a-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
-        "script.name": "focus-on-coding4a-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "csd_programming_levels_guide",
+        "script.name": "focus-on-coding4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design_2",
+        "script.name": "focus-on-coding4a-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_3",
         "script.name": "focus-on-coding4a-2023"
       }
     },

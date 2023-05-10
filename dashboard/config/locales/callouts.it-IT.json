@@ -2646,6 +2646,61 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "Per prima cosa clicca qui!"
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Leggi attentamente il programma."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Leggi attentamente il programma."
+        },
+        "CSD U3 platform background1": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2018": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2019": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C1": "la funzione che disegna lo sfondo",
+          "CSD_U3_L16_S3_C2": "il codice che richiama la funzione",
+          "CSD_U3_L16_S3_C3": "Cambia questa funzione."
+        },
+        "CSD U6 light show": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2018": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2019": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Cosa fa questa riga di codice?"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "Definisci startGame qui"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definisci startGame qui"
         }
       }
     }

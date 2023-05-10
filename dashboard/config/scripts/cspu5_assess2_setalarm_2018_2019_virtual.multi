@@ -31,3 +31,5 @@ Inside IF statements:
 
 (day == “Saturday”) || (day == “Sunday”) which will be true if the day is a weekend or, if it is a weekday, this statement will be false.
 MARKDOWN
+
+allow_multiple_attempts true

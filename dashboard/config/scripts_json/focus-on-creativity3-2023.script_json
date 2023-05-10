@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-28 22:54:11 UTC",
+    "serialized_at": "2023-05-08 22:57:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1743,7 +1743,7 @@
       "key": "f5689106-fae9-402b-80a3-1e56664ceab0",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -6563,7 +6563,7 @@
       "key": "bb892fef-25a9-45eb-88a1-99174707351a",
       "position": 1,
       "properties": {
-        "description": "**Prompt**: This was a challenging problem, but we were able to solve it.  What helped us to solve this problem?",
+        "description": "**Transition:** Move students onto Code Studio - level 2 where they will code the idea they made during the warm-up to make the giraffe sprite push the monkey sprite across the screen. When students finish level 2, have them try level 3 where they will make an elephant sprite push a hippo sprite down the screen.\n\n**Prompt:** These were challenging problems, but we were able to solve them. What helped us to solve these problems?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6592,6 +6592,7 @@
       "key": "97fcae4b-39b7-4377-8573-d01222acd49c",
       "position": 3,
       "properties": {
+        "description": "**Transition:** Have students continue working on the remaining levels.",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -17073,11 +17074,10 @@
       }
     },
     {
-      "name": "Problem Solving Process for Design",
+      "name": "Problem Solving Process with Design",
       "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
       "key": "problem_solving_process_for_design_1",
       "properties": {
-        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_for_design_1"

@@ -7,7 +7,7 @@ wrong 'Testing the system to make sure that the rules of the game are clearly ex
 wrong 'Testing the system to make sure that players cannot create multiple profiles'
 wrong 'Testing the system by providing a free Beta version for anyone to try'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A tech company is creating a mobile video game that will include a facial recognition algorithm to scan the faces of users who are playing the game. Once recognized, the game will automatically log the player into their profile. Which of the following actions is most likely to reduce the possibility of bias in the system?

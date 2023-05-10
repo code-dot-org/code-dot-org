@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -6,7 +6,6 @@ import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
-import {PlayerUtilsContext} from '../context';
 import {useDispatch, useSelector} from 'react-redux';
 import {clearSelectedBlockId} from '../redux/musicRedux';
 
@@ -24,10 +23,9 @@ const Timeline = () => {
   const currentPlayheadPosition = useSelector(
     state => state.music.currentPlayheadPosition
   );
-  const playerUtils = useContext(PlayerUtilsContext);
   const measuresToDisplay = Math.max(
     minNumMeasures,
-    playerUtils.getLastMeasure()
+    useSelector(state => state.music.lastMeasure)
   );
 
   const getEventHeight = (numUniqueRows, availableHeight = 110) => {
