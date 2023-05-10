@@ -34,10 +34,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
         }
       }
       if (!this.selectedOption_) {
-        this.selectedOption_ = [
-          newValue.replace(/['"]+/g, '').toLowerCase(),
-          newValue,
-        ];
+        this.selectedOption_ = [this.toHumanReadableString(newValue), newValue];
       }
     }
   }
@@ -85,7 +82,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
         } else {
           // Remove quotes and display option with lowercase characters.
           // For example, "GIRAFFE" would be transformed to giraffe.
-          const humanReadableVal = val.replace(/['"]+/g, '').toLowerCase();
+          const humanReadableVal = this.toHumanReadableString(val);
           return [humanReadableVal, val];
         }
       });
@@ -106,5 +103,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       element.setAttribute('config', this.config);
     }
     return element;
+  }
+
+  toHumanReadableString(text) {
+    return text.replace(/['"]+/g, '').toLowerCase();
   }
 }
