@@ -10,11 +10,11 @@ class SecretsConfigTest < Minitest::Test
 
   def setup
     self.config = CdoSecrets.new
-    StackSecret.stubs(:current_stack_name).returns('test')
+    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns('test')
   end
 
   def teardown
-    StackSecret.unstub(:current_stack_name)
+    Cdo::SecretsConfig::StackSecret.unstub(:current_stack_name)
   end
 
   def test_load

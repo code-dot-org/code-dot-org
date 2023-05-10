@@ -98,7 +98,7 @@ module Cdo
       # latter is environment-specific and we want stack-specific overrides to
       # apply to all environments.
       def stack_specific_secret_path
-        @stack ||= StackSecret.current_stack_name
+        @stack ||= current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
       end
 
