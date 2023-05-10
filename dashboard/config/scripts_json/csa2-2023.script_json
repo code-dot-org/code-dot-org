@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-18 13:48:49 UTC",
+    "serialized_at": "2023-05-09 21:01:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8179,6 +8179,18 @@
       }
     },
     {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
       "name": "Instance Variables and Attributes",
       "url": "https://youtu.be/49XzLCs8wgU",
       "key": "instance_variables_and_attributes",
@@ -8593,6 +8605,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "_key_u2l1_extra_practice"
       }
     },
@@ -8600,6 +8618,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8713,6 +8737,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "_key_anticipation_guide"
       }
     },
@@ -8726,6 +8756,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "anticipation_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8749,6 +8785,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "_key_u2l2_extra_practice"
       }
     },
@@ -8756,6 +8798,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8779,7 +8827,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8809,6 +8869,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "_key_investigate_variables"
       }
     },
@@ -8822,6 +8888,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "creating_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8851,6 +8923,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "accessor_methods"
       }
     },
@@ -8864,6 +8942,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "creating_a_scanner_object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8887,6 +8971,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "_key_u2l5_extra_practice"
       }
     },
@@ -8894,6 +8984,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "constructors_and_inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8911,7 +9007,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8935,7 +9043,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8971,7 +9091,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -9027,6 +9159,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
         "script.name": "csa2-2023"
       }
     },

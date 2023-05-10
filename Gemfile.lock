@@ -285,6 +285,8 @@ GEM
       rack (>= 0.9.0)
     bindata (2.4.10)
     bindex (0.8.1)
+    bootsnap (1.16.0)
+      msgpack (~> 1.2)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (4.5.0)
@@ -542,7 +544,7 @@ GEM
     mime-types-data (3.2020.0512)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.1)
+    mini_portile2 (2.8.2)
     mini_racer (0.3.1)
       libv8 (~> 8.4.255)
     minitest (5.17.0)
@@ -555,6 +557,7 @@ GEM
       ruby-progressbar
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    msgpack (1.7.0)
     multi_json (1.15.0)
     multi_test (0.1.2)
     multi_xml (0.5.5)
@@ -582,7 +585,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (6.14.0)
     nio4r (2.5.8)
-    nokogiri (1.14.2)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oauth2 (1.4.11)
@@ -939,6 +942,7 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
+  bootsnap (>= 1.14.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.2.0)
