@@ -15,6 +15,8 @@ import {
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
+// A flag that can be toggled to console log events in development
+const LOG_EVENT_IN_DEV = false;
 
 class AnalyticsReporter {
   constructor() {
@@ -60,11 +62,10 @@ class AnalyticsReporter {
     }
   }
 
-  // Will only log in development into console.debug (viewable by selecting the Verbose debug level in
-  // dev tools).
+  // Will only log in development if LOG_EVENT_IN_DEV is set to true.
   log(message) {
-    if (isDevelopmentEnvironment()) {
-      console.debug(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    if (isDevelopmentEnvironment() && LOG_EVENT_IN_DEV) {
+      console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
     }
   }
 
