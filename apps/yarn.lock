@@ -3037,6 +3037,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.49.tgz#560b1ea774b61e19a89c3fc72d2dcaa3863f38b2"
   integrity sha512-Abq9fBviLV93OiXMu+f6r0elxCzRwc0RC5f99cU892uBITL44pTvgvEqlRlPRi8EGcO1z7Cp8A4d0s/p3J/+Nw==
 
+"@types/node@^18.16.6":
+  version "18.16.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.6.tgz#d0ffffe201b253989b17ea157ddabec677a4f4fe"
+  integrity sha512-N7KINmeB8IN3vRR8dhgHEp+YpWvGFcpDoh5XZ8jB5a00AdFKCKEyyGTOPTddUf4JqU1ZKTVxkOxakDvchNVI2Q==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
@@ -17572,10 +17577,10 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@^4.9.5:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
-  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
+typescript@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
+  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
 
 typo-js@*:
   version "1.0.2"
