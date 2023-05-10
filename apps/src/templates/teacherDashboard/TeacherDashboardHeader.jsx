@@ -127,7 +127,7 @@ class TeacherDashboardHeader extends React.Component {
           </div>
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
-              {this.props.userId % 10 === testingUserId && (
+              {this.props.userId /*% 10 === testingUserId*/ && (
                 <Button
                   __useDeprecatedTag
                   href={this.editRedirectUrl(this.props.selectedSection.id)}
@@ -139,7 +139,7 @@ class TeacherDashboardHeader extends React.Component {
                   style={styles.buttonWithMargin}
                 />
               )}
-              {this.props.userId % 10 !== testingUserId && (
+              {this.props.userId % 10 === testingUserId && (
                 <Button
                   onClick={() => {
                     this.props.openEditSectionDialog(
