@@ -32,7 +32,7 @@ export default class ProjectManager {
   private saveInProgress = false;
   private saveQueued = false;
   private eventListeners: {
-    [key in keyof typeof ProjectManagerEvent]?: [(response: Response) => void];
+    [key in keyof typeof ProjectManagerEvent]?: [(payload: object) => void];
   } = {};
   private lastSource: string | undefined;
   private lastChannel: string | undefined;
@@ -42,6 +42,7 @@ export default class ProjectManager {
   // if it exists.
   private currentTimeoutId: number | undefined;
   private destroyed = false;
+  private lastSaveResponse: object | undefined;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -180,8 +181,14 @@ export default class ProjectManager {
     }
     this.lastChannel = JSON.stringify(this.projectToSave.channel);
 
+    const channelSaveResponse = await channelResponse.json();
+
     this.saveInProgress = false;
-    this.executeListeners(ProjectManagerEvent.SaveSuccess);
+    this.lastSaveResponse = channelSaveResponse;
+    this.executeListeners(
+      ProjectManagerEvent.SaveSuccess,
+      this.lastSaveResponse
+    );
     return new Response();
   }
 
@@ -217,16 +224,13 @@ export default class ProjectManager {
     }
   }
 
-  private executeListeners(
-    type: ProjectManagerEvent,
-    response: Response = new Response()
-  ) {
-    this.eventListeners[type]?.forEach(listener => listener(response));
+  private executeListeners(type: ProjectManagerEvent, payload: object = {}) {
+    this.eventListeners[type]?.forEach(listener => listener(payload));
   }
 
   private getNoopResponse() {
     const noopResponse = new Response(null, {status: 304});
-    this.executeListeners(ProjectManagerEvent.SaveNoop, noopResponse);
+    this.executeListeners(ProjectManagerEvent.SaveNoop, this.lastSaveResponse);
     return noopResponse;
   }
 

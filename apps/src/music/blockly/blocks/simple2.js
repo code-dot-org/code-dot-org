@@ -181,7 +181,7 @@ export const playRestAtCurrentLocationSimple2 = {
     helpUrl: '',
   },
   generator: block =>
-    `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)})`,
+    `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`,
 };
 
 export const setEffectAtCurrentLocationSimple2 = {

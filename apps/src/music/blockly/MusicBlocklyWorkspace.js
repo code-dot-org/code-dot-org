@@ -491,4 +491,8 @@ export default class MusicBlocklyWorkspace {
       );
     }
   }
+
+  addSaveEventListener(event, listener) {
+    this.projectManager.addEventListener(event, listener);
+  }
 }

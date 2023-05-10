@@ -3,23 +3,18 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##Plan Your Own Ecosystem Simulation
+##Share Your Ecosystem Simulation!
+<img src="https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png" style= "width:60%">
+<div style= "width: 60%"> 
 
-<div>
-<img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+**Now that you have coded and modified an ecosystem, it's time to share it out!**
 
-<div style="float: left; width: 70%; padding-left:20px">
-<h4>
-<strong>It's time to plan your own ecosystem simulation.</strong>
-</h4>
+As you present your project try to explain the following observations you made:
 
->You should include:
-> - What is the flow of energy (food) in your ecosystem?
-> - What are the organisms in your ecosystem?
-
-**<a href="https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview" target="_blank"> Click here</a> for the planning guide resource**  
-
-
-
+>1. Explain the food chain in your ecosystem and how you coded it.
+>2. Was there too much or too little of an organism?
+>3. Explain the modifications you made to the simulation. 
+>4. What did you notice after you changed the values?
 </div>
+
 MARKDOWN
