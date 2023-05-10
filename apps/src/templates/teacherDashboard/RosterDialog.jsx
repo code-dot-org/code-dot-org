@@ -174,7 +174,7 @@ class RosterDialog extends React.Component {
     window.location.href = redirectUrl;
   };
 
-  // Need to update with section ID
+  // Creates the section and redirects to the edit page
   handleRedirect = () => {
     this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
