@@ -557,7 +557,7 @@ Resources:
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: DBProxy
+    DependsOn: Aurora1
 <% end -%>
 <%end-%>
 
@@ -605,7 +605,7 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <%   if database && !rack_env?(:production)%>
-    DependsOn: DBProxy
+    DependsOn: Aurora1
 <%   end -%>
 <% end-%>
 
