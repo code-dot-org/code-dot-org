@@ -48,6 +48,8 @@ import {
   navigateToLevelId,
   sendSuccessReport,
   getLevelDataPath,
+  ProgressLevelType,
+  getProgressLevelType,
 } from '@cdo/apps/code-studio/progressRedux';
 import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
@@ -63,6 +65,7 @@ import {BlockMode} from '../constants';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    progressLevelType: PropTypes.string,
     appOptions: PropTypes.object,
     appConfig: PropTypes.object,
     currentLevelIndex: PropTypes.number,
@@ -255,14 +258,14 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  // Returns whether we just have a single level.
-  hasLevel = () => {
-    return !this.hasLevels() && !!this.props.currentLevelId;
+  // Returns whether we just have a standalone level.
+  isStandaloneLevel = () => {
+    return this.props.progressLevelType === ProgressLevelType.LEVEL;
   };
 
   // Returns whether we have levels.
   hasLevels = () => {
-    return !!this.props.levels;
+    return this.props.progressLevelType === ProgressLevelType.SCRIPT_LEVEL;
   };
 
   // Returns whether we have a progression file.
@@ -271,8 +274,13 @@ class UnconnectedMusicView extends React.Component {
   };
 
   // Returns whether we have a progression.
+  // Note that even a standalone level has a progression in the sense that we
+  // will show instructions and feedback, but we'll only show them for that
+  // standalone level.
   hasProgression = () => {
-    return this.hasLevel() || this.hasLevels() || this.hasProgressionFile();
+    return (
+      this.isStandaloneLevel() || this.hasLevels() || this.hasProgressionFile()
+    );
   };
 
   getIsPlaying = () => {
@@ -347,7 +355,7 @@ class UnconnectedMusicView extends React.Component {
   loadProgressionStep = async () => {
     const progressionSource = this.hasLevels()
       ? LevelSources.LEVELS
-      : this.hasLevel()
+      : this.isStandaloneLevel()
       ? LevelSources.LEVEL
       : this.hasProgressionFile()
       ? LevelSources.FILE
@@ -646,6 +654,10 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
+    // The progress redux store tells us whether we are in a script level
+    // or a standalone level.
+    progressLevelType: getProgressLevelType(state),
+
     // The current level index has two potential sources of truth:
     // If we are part of a "script level", then it comes from the current level.
     // Otherwise, we fall back to the music progress manager's current step.
@@ -662,7 +674,7 @@ const MusicView = connect(
       : undefined,
 
     // The current level ID, whether we're in a lesson with multiple levels, or
-    // directly viewing a single level.
+    // directly viewing a standalone level.
     currentLevelId: state.progress.currentLevelId,
 
     // The number of levels.
