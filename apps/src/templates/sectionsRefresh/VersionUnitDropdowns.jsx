@@ -13,7 +13,6 @@ export default function VersionUnitDropdowns({
   const VERSION_ID = 'versionId';
   const UNIT_ID = 'unitId';
   const noAssignment = '__noAssignment__';
-  const preparedCourseVersions = prepareCourseVersions();
 
   // When selecting a new version, remove the outdated assigned unit
   const updateCourseVersion = id => {
@@ -31,7 +30,7 @@ export default function VersionUnitDropdowns({
   };
 
   const selectedCourseVersionObject =
-    preparedCourseVersions[sectionCourse?.versionId];
+    prepareCourseVersions()[sectionCourse?.versionId];
 
   const orderedUnits = _.orderBy(
     selectedCourseVersionObject?.units,
@@ -62,13 +61,14 @@ export default function VersionUnitDropdowns({
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
-        {Object.values(preparedCourseVersions).length > 1 && courseOffering && (
-          <AssignmentVersionSelector
-            selectedCourseVersionId={sectionCourse.versionId}
-            courseVersions={preparedCourseVersions}
-            onChangeVersion={id => updateCourseVersion(id)}
-          />
-        )}
+        {Object.values(prepareCourseVersions()).length > 1 &&
+          courseOffering && (
+            <AssignmentVersionSelector
+              selectedCourseVersionId={sectionCourse.versionId}
+              courseVersions={prepareCourseVersions()}
+              onChangeVersion={id => updateCourseVersion(id)}
+            />
+          )}
         {sectionCourse?.versionId &&
           orderedUnits &&
           Object.entries(orderedUnits).length > 1 && (
