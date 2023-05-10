@@ -19,16 +19,10 @@ import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
-// Checks if experiment is enabled and navigates to the new section setup page
-// if both params are non-null.
+// Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
-  if (
-    experiments.isEnabled('sectionSetupRefresh') &&
-    !!participantType &&
-    !!loginType
-  ) {
+  if (!!participantType && !!loginType) {
     navigateToHref(
       `/sections/new?participantType=${participantType}&loginType=${loginType}`
     );
@@ -40,6 +34,7 @@ const redirectToNewSectionPage = (participantType, loginType) => {
  * EditSectionDialog.
  */
 const AddSectionDialog = ({
+  userId,
   isOpen,
   section,
   beginImportRosterFlow,
@@ -64,9 +59,10 @@ const AddSectionDialog = ({
 
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
+  const testingUserId = -1;
 
   const onParticipantTypeSelection = participantType => {
-    if (participantType !== 'student') {
+    if (participantType !== 'student' && userId % 10 === testingUserId) {
       redirectToNewSectionPage(participantType, SectionLoginType.email);
     }
     setParticipantType(participantType);
@@ -75,6 +71,7 @@ const AddSectionDialog = ({
   const onLoginTypeSelection = loginType => {
     // Oauth section types should use the roster dialog, not the section setup page
     if (
+      userId % 10 === testingUserId &&
       [
         SectionLoginType.picture,
         SectionLoginType.word,
@@ -118,11 +115,7 @@ const AddSectionDialog = ({
     return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  if (
-    participantType &&
-    loginType &&
-    experiments.isEnabled('sectionSetupRefresh')
-  ) {
+  if (participantType && loginType && userId % 10 === testingUserId) {
     return null;
   } else {
     return (
@@ -140,6 +133,7 @@ const AddSectionDialog = ({
 };
 
 AddSectionDialog.propTypes = {
+  userId: PropTypes.number,
   // Provided by Redux
   isOpen: PropTypes.bool.isRequired,
   section: sectionShape,
