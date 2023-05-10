@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-07 14:54:39 UTC",
+    "serialized_at": "2023-05-08 22:58:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1745,7 +1745,7 @@
       "key": "290f8045-191d-41fd-890e-8bb755bcfc8b",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
