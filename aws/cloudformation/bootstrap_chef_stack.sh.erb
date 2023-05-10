@@ -119,8 +119,6 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
 <% if database && !rack_env?(:production) -%>
-    <%# CloudFormation resolves AuroraCluster.Endpoint.Address to the default DB Proxy endpoint instead of the cluster
-        writer endpoint if a DBProxy has been provisioned for the cluster. %>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
     "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.ReadEndpoint.Address}:${AuroraCluster.Endpoint.Port}/",
     "db_cluster_id": "${AuroraCluster}",
