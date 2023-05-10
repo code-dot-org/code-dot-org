@@ -445,9 +445,7 @@ details {
   }
 
   summary {
-    font-family: $gotham-bold, sans-serif;
-    font-size: 1.25em;
-    margin-bottom: .5em;
+    @include heading-sm;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -562,9 +560,7 @@ form {
   &.secondary {
 
     h3 {
-      font-family: $gotham-bold, sans-serif;
-      font-size: 1.25em;
-      margin-bottom: 0.5em;
+      @include heading-sm;
     }
   }
 }
