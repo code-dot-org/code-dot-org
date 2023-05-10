@@ -141,10 +141,14 @@ label.typographyLabel {
 .courseHeaders {
   position: relative;
   left: 10px;
+
+  h5 {
+    margin-top: 20px;
+  }
 }
 
 .courseOption {
-  margin-top: 10px;
+  margin-top: 20px;
   align-items: baseline;
 }
 
@@ -154,7 +158,6 @@ label.typographyLabel {
 
 .courseOptionLabel {
   margin: 0 10px 0 5px;
-  min-height: 40px;
 }
 
 .unitDropdown {
