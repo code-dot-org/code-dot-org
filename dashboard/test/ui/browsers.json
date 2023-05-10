@@ -31,7 +31,7 @@
     "mobile": true,
     "rotatable": true,
     "sauce:options": {
-      "deviceOrientation": "landscape"
+      "deviceOrientation": "LANDSCAPE"
     }
   },
   {
@@ -43,7 +43,7 @@
     "mobile": true,
     "rotatable": true,
     "sauce:options": {
-      "deviceOrientation": "landscape"
+      "deviceOrientation": "LANDSCAPE"
     }
   }
 ]
