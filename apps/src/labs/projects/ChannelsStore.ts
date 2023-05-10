@@ -42,7 +42,7 @@ export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
   loadForLevel(levelId: number, scriptId?: number) {
-    return projectsApi.getForLevel(levelId, scriptId);
+    return projectsApi.getChannelForLevel(levelId, scriptId);
   }
 
   load(channelId: string) {

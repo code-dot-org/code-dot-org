@@ -40,7 +40,7 @@ export default class ProjectManager {
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
   // if it exists.
-  private timeoutId: number | undefined;
+  private currentTimeoutId: number | undefined;
   private destroyed = false;
 
   constructor(
@@ -89,11 +89,8 @@ export default class ProjectManager {
   // Shut down this project manager. All we do here is clear the existing
   // timeout, if it exists.
   destroy(): void {
-    if (this.timeoutId) {
-      window.clearTimeout(this.timeoutId);
-      this.timeoutId = undefined;
-    }
-    this.destroyed = false;
+    this.resetSaveState();
+    this.destroyed = true;
   }
 
   // TODO: Add functionality to reduce channel updates during
@@ -204,7 +201,7 @@ export default class ProjectManager {
   private enqueueSave() {
     this.saveQueued = true;
 
-    this.timeoutId = window.setTimeout(
+    this.currentTimeoutId = window.setTimeout(
       () => {
         this.saveHelper();
       },
@@ -248,9 +245,9 @@ export default class ProjectManager {
   }
 
   private resetSaveState(): void {
-    if (this.timeoutId) {
-      window.clearTimeout(this.timeoutId);
-      this.timeoutId = undefined;
+    if (this.currentTimeoutId !== undefined) {
+      window.clearTimeout(this.currentTimeoutId);
+      this.currentTimeoutId = undefined;
     }
     this.saveQueued = false;
   }
