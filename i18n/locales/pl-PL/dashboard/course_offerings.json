@@ -401,5 +401,9 @@
   "focus-on-data": "focus-on-data",
   "focus-on-creativity": "focus-on-creativity",
   "vpl-csd-summer-ci": "vpl-csd-summer-ko",
-  "ai-temp": "ai-temp"
+  "ai-temp": "ai-temp",
+  "virtual-pl-csd-summer": "virtual-pl-csd-summer",
+  "pl-csd-summer": "pl-csd-summer",
+  "self-paced-pl-csd": "self-paced-pl-csd",
+  "self-paced-pl-microbit": "self-paced-pl-microbit"
 }

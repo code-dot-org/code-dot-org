@@ -14,3 +14,4 @@ answer 'a search algorithm that finds a target element in a sorted list by divid
 
 question 'selection sort'
 answer 'a sorting algorithm that selects the smallest element from an unsorted array in each iteration and places that element at the beginning of the unsorted array'
+allow_multiple_attempts true

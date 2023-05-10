@@ -8672,31 +8672,31 @@
           "grade5_artist_variables_triangles1_c": "Dentro de tu bucle, tendrás que avanzar 50 píxeles, luego girar a la izquierda 120 grados."
         },
         "iceage_click_hello": {
-          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al hacer click' para completar este desafío."
+          "iceage_click_hello_a": "Añade un bloque 'actor 1 dice' o más al evento 'al pulsar' para completar este rompecabezas."
         },
         "iceage_free_play": {
           "iceage_free_play_a": "¿Puedes hacer que Sid y Manny tengan una lucha de cristales de hielo?  ",
           "iceage_free_play_b": "Haz que Granny persiga a Diego. Termina el juego como una victoria si lo atrapa.",
-          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego se haga más grande cada vez que recibe uno? Termina el juego como una victoria si Diego recibe 5 golpes."
+          "iceage_free_play_c": "¿Puedes hacer que Sid lance copos de nieve a Diego y que Diego aumente de tamaño cada vez que uno le dé?  Termina el juego como una victoria si Diego es golpeado 5 veces."
         },
         "iceage_hello1": {
-          "iceage_hello1_a": "Sólo necesitas agregar un bloque para resolver este desafío. Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de evento `cuando ejecuta` que ya se encuentra en el área de trabajo. Luego, escribe \"¡Hola!\" dentro."
+          "iceage_hello1_a": "Sólo tienes que añadir un bloque para resolver este rompecabezas.  Arrastra el bloque `decir` desde la barra de herramientas y conéctalo al bloque de eventos `al ejecutar` que ya está en el área de trabajo. A continuación, escribe \"¡Hola! dentro."
         },
         "iceage_hello2": {
-          "iceage_hello2_a": "Para resolver este desafío, necesitarás que Sid diga algo único usando el bloque 'actor 1 dice'. Necesitarás que Manny diga algo con el bloque 'actor 2 dice'. "
+          "iceage_hello2_a": "Para resolver este rompecabezas, tendrás que hacer que Sid diga algo utilizando el bloque \"actor 1 dice\".  También tendrás que hacer que Manny diga algo con el bloque \"actor 2 dice\". "
         },
         "iceage_move_events": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_move_to_actor": {
-          "iceage_move_to_actor_a": "En este desafío, puedes mover a Diego hacia abajo 200 pixeles o mover a Manny arriba 200 pixeles.",
-          "iceage_move_to_actor_b": "Conecta el bloque 'reproducir\\_\\_\\_sonido' al evento 'cuando el actor 1 toque al 2' para terminar este reto."
+          "iceage_move_to_actor_a": "Para este rompecabezas, puedes mover a Diego 200 píxeles hacia abajo, o mover a Manny 200 píxeles hacia arriba.",
+          "iceage_move_to_actor_b": "Conecta el bloque `reproduce ___ sonido` al evento `cuando el actor 1 toca al actor 2` para terminar este desafío."
         },
         "iceage_move_to_flag": {
-          "iceage_hello3_a": "Utiliza el bloque de 'mover el actor 1 a la derecha por 200 píxeles' para resolver este desafío."
+          "iceage_hello3_a": "Utiliza el bloque `mover actor 1 a la derecha 200 píxeles` para resolver este rompecabezas."
         },
         "iceage_repeat": {
-          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este desafío."
+          "iceage_repeat_a": "Usa los bloques 'mover actor 1 a la izquierda' y 'mover actor 1 a la derecha' para resolver este rompecabezas."
         },
         "iceage_sound_and_points": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
@@ -8704,11 +8704,11 @@
         },
         "iceage_throw_hearts": {
           "iceage_throw_hearts_a": "¿Cuándo deseas lanzar corazones a la abuela?  ¿Cuando se presiona una flecha? ¿Al hacer clic en Sid?  ¿Al hacer clic en abuela?  ¡La elección es tuya!",
-          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'establecer humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
+          "iceage_throw_hearts_b": "Para que la abuela sea feliz cuando reciba un corazón, necesitas conectar el bloque 'configurar humor de actor 2 a feliz' debajo del evento 'cuando actor 2 toca el proyectil'."
         },
         "iceage_warn_ice_age": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "¡Hay dos formas de resolver este desafío!",
@@ -10664,15 +10664,15 @@
           "card_idea3": "Puedes hacer que tu programa sea interactivo haciendo que ocurran otras cosas cuando el usuario pulse una tecla o después de que haya pasado un tiempo determinado.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"cuando\"</title>\n    <title name=\"KEY\">\"arriba\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"escala\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "iceage_move_events_dani": {
-          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este desafío. "
+          "iceage_move_events_a": "Cada uno de los eventos 'cuando\\_\\_\\_flecha' necesita tener un comando 'mover actor 1' diferente conectado a él para resolver este rompecabezas. "
         },
         "iceage_sound_and_points_dani": {
           "iceage_sound_and_points_a": "Necesitas dos bloques debajo del evento 'cuando actor 1 toca actor 2'.",
           "iceage_sound_and_points_b": "Necesitas los bloques `anotar un punto` y `reproducir \\_\\_\\_\\_ sonido\\` para pasar este nivel."
         },
         "iceage_warn_ice_age_dani": {
-          "iceage_warn_ice_age_a": "Solo deberías tener que añadir dos bloques para llevar este desafío a donde debe estar. ",
-          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
+          "iceage_warn_ice_age_a": "Sólo deberías tener que añadir dos bloques para colocar este rompecabezas donde debe estar. ",
+          "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento `al ejecutar` para que ocurran inmediatamente después del inicio del programa."
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -11726,9 +11726,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Cada ángulo es 45 ó 90 grados.",
-          "courseC_artist_prog7_b": "¿Funciona en el primer paso?  \n¿Y en el segundo?  \n¿Dónde se equivoca?",
+          "courseC_artist_prog7_b": "¿Funciona en el primer paso?\\\\ \n¿Y en el segundo?\\\\ \n¿Dónde está el error?",
           "courseC_artist_prog7_c": "¡Puedes usar el menú desplegable en los bloques girar para ver qué ángulo necesitas!",
-          "courseC_artist_prog7_d": "Querrás:\n- avanzar\n- girar a la derecha 45 grados\n- avanzar\n- girar a la derecha 90 grados\n- avanzar\n- girar a la derecha 45 grados\n\nRepite este patrón 2 veces",
+          "courseC_artist_prog7_d": "Tendrás que: \n\n-   avanzar \n-   girar 45 grados a la derecha \n-   avanzar \n-   girar 90 grados a la derecha \n-   avanzar \n-   girar 45 grados a la derecha \n\n¡Repite este patrón 2 veces!",
           "courseC_artist_prog7_e": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_artist_prog_challenge12022": {
@@ -12401,9 +12401,9 @@
           "courseD_maze_until8_c": "¡Recuerda usar el bloque `repetir hasta` para llevarte al girasol!"
         },
         "courseE_artist_functions102022": {
-          "courseD_artist_functions10_b": "Este dibujo es muy similar al anterior, pero la función ` dibujar linea` está dibujando una forma diferente.",
+          "courseD_artist_functions10_b": "Este dibujo es muy similar al anterior, pero la función `dibujar linea` está dibujando una forma diferente.",
           "courseD_artist_functions10_a": "Para evitar usar múltiples bloques 'avanzar', crea una función 'dibujar hexágono' y llámala varias veces.",
-          "courseD_artist_functions10_c": "¿Ves dónde podría utilizar este dibujo una función llamada \"línea de hexágonos\"?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "¿Ves en qué lugar este dibujo podría usar una función llamada `línea de hexágonos`? \n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_b": "La función no debería contener el programa completo, sólo la parte que dibuja un cuadrado con lado de 100 pixels.",
@@ -12438,11 +12438,11 @@
           "courseD_artist_functions8_c": "Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon todo esto en un bucle de repetición para iniciar el siguiente ejercicio!"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "¿Puedes identificar los cuatro lugares en los que se puede utilizar la \"línea de triángulos\" en este dibujo?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Este rompecabezas se puede dividir en tres partes:\n  - crea la función \"dibujar un triángulo\".\n  - crea la función \"dibujar una línea de triángulos\".\n  - utiliza tu función \"dibujar una línea de triángulos\" cuatro veces para completar el dibujo",
+          "courseD_artist_functions9_e": "¿Puedes identificar los cuatro lugares donde se puede usar la `línea de triángulos` en este dibujo? \n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Este desafío puede dividirse en tres partes:\n\n-   crear la función `dibujar un triángulo`\n-   crear la función `dibujar una línea de triángulos`\n-   usar la función `dibujar una línea de triángulos` cuatro veces para completar el dibujo",
           "courseD_artist_functions9_b": "Este dibujo se hizo mediante la elaboración de una línea de triángulos 4 veces y girando ya sea 60 ó 120 grados antes de dibujar la línea siguiente del triángulo.",
-          "courseD_artist_functions9_c": "Para dibujar una línea de triángulos:\n  - repite 4 veces\n    - dibujar un triángulo\n    - saltar hacia adelante 50 píxeles",
-          "courseD_artist_functions9_d": "Para dibujar el diamante:\n  - repite 2 veces\n    - dibujar una línea de triángulos\n    - girar 60 grados\n    - dibujar una línea de triángulos\n    - girar 120 grados"
+          "courseD_artist_functions9_c": "Para dibujar una línea de triángulos: \n\n-   repite 4 veces \n    -   dibuja un triángulo \n    -   salta 50 pixeles hacia adelante",
+          "courseD_artist_functions9_d": "Para dibujar el diamante: \n\n-   repite 2 veces \n    -   dibuja una línea de triángulos \n    -   gira 60 grados \n    -   dibuja una línea de triángulos \n    -   gira 120 grados"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Si llamas a la función una vez más, puedes crear el mismo diseño en la esquina final.",

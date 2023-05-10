@@ -160,7 +160,6 @@ zh-TW:
     data_collection_us: 我理解Code.org是一家總部位於美國的非營利性網站，美國有關資料收集的法律可能與我所在國家的法律不同。
     visit_privacy: 訪問Code.org的[隱私政策]（%{privacy_url}）瞭解更多資訊。
     student_terms_markdown: 電子信箱的儲存形式並不允許我們聯繫學生。除了密碼恢復請求的通知信，學生不會收到來自 Code.org 的信件。詳情請參閱我們的[隱私政策](http://code.org/privacy)。
-    additional_information: 我們還需要一些其他資訊來完成你的註冊。
     user_type_button: 更新帳戶類型
     user_type_label: 帳戶類型
     user_type_student: 學生

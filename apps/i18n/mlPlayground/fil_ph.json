@@ -248,6 +248,13 @@
         }
       }
     },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Pantubig"
+        }
+      }
+    },
     "poke_toy": {
       "fields": {
         "avocado": {

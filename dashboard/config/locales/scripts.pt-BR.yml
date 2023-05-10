@@ -6243,12 +6243,18 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Imagens e Amimações'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo Jogos'
+            lessonGroup-4:
+              display_name: Questionário
           student_description: " Na Unidade 3, você aproveitará sua experiência de
             codificação ao programar animações, arte interativa e jogos no Laboratório
             de Jogos. A unidade começa com formas simples e cria jogos sofisticados
@@ -6261,6 +6267,8 @@ pt:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
             lessonGroup-3:
               display_name: 'Capítulo 1: Prototipando o App'
+            lessonGroup-4:
+              display_name: Questionário
           student_description: A unidade 4 apresenta os impactos sociais mais amplos
             da computação. Através de uma série de desafios de design, você aprenderá
             a entender melhor as necessidades de outras pessoas enquanto desenvolve
@@ -6275,6 +6283,8 @@ pt:
               display_name: 'Capítulo 1: Representando Informação'
             lessonGroup-3:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            lessonGroup-4:
+              display_name: Questionário
           description_short: Aprenda como as pessoas usam computadores para resolver
             problemas de dados.
           student_description: A unidade 5 trata da importância dos dados na solução
@@ -6294,6 +6304,8 @@ pt:
               display_name: Capítulo 1
             lessonGroup-4:
               display_name: Capítulo 2
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6483,6 +6495,8 @@ pt:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas e saídas
+            lessonGroup-5:
+              display_name: Questionário
         vpl-csd-ci-1:
           title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e
             computação'
@@ -6587,6 +6601,8 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -6607,3 +6623,50 @@ pt:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas e saídas
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bem-vindo
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 1
+          title: Dia 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 2
+          title: Dia 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 3
+          title: Dia 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Resumo
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dia 4
+          title: Dia 4
+        csd-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-data-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-impact-in-society-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-coding-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-hardware-post-survey-2023:
+          title: Pesquisa Pós-Curso
+        focus-on-creativity-post-survey-2023:
+          title: Pesquisa Pós-Curso

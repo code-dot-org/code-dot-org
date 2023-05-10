@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import weblabI18n from '@cdo/weblab/locale';

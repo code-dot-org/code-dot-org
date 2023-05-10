@@ -368,7 +368,7 @@ en:
             - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
           version_title: "'23-'24"
         focus-on-creativity-2023:
-          title: Focus on Creativity
+          title: Focus on Creativity (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
@@ -384,7 +384,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: "'23-24"
         focus-on-hardware-2023:
-          title: Focus on Hardware
+          title: Focus on Hardware (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Hardware is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to use data and physical devices to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -400,7 +400,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: ''
         focus-on-data-2023:
-          title: Focus on Data
+          title: Focus on Data (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Data is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to use data to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -416,7 +416,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: ''
         focus-on-design-with-purpose-2023:
-          title: Focus on Design with Purpose
+          title: Focus on Design with Purpose (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Design with Purpose is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about the needs of users while designing websites and apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -432,7 +432,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: ''
         focus-on-coding-2023:
-          title: Focus on Coding
+          title: Focus on Coding (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -448,7 +448,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: ''
         focus-on-impact-in-society-2023:
-          title: Focus on Impact in Society
+          title: Focus on Impact in Society (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that empowers students to create authentic artifacts.
           description_student: |-
             Focus on Impact in Society is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about computer science as a tool to solve problems while considering the broader social impacts of various aspects of computer science. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
@@ -470,7 +470,7 @@ en:
           description_teacher: ''
           version_title: "'23-'24"
         self-paced-pl-physical-computing-2023:
-          title: " Teaching Creating Apps with Devices"
+          title: " Teaching Creating Apps with Devices (Circuit Playground)"
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
@@ -496,13 +496,13 @@ en:
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
           version_title: "'23-'24"
         self-paced-pl-microbit-2023:
-          title: self-paced-pl-microbit-2023
+          title: Teaching Creating Apps with Devices (micro:bit)
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students using micro:bits.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students using micro:bits.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
           version_title: ''
         pl-csd-summer-2023:
-          title: 'CS Discoveries Summer Workshop '
+          title: CS Discoveries Summer Workshop
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."

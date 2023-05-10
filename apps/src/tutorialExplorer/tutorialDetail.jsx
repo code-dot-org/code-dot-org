@@ -7,7 +7,6 @@ import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
-/* global ga */
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
