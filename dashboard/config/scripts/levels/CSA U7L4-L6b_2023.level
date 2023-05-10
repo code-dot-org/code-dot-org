@@ -1,34 +1,43 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-11T14:06:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> class creates a scene that animates images in a scene with an animated transition after each image. It has an instance variable for a list of image files.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawTransition()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> class to animate a drawing of a circle that increases in size. The method should:\r\n\r\n* Start the size of the circle at <code style=\"background-color: #ececec; color: black; font-weight: bold;\">50</code>\r\n\r\n* While the size is less than or equal to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">600</code>,\r\n\r\n   * Set the fill color for the circle using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">setFillColor()</code> method and remove the stroke color using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">removeStrokeColor()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class\r\n\r\n   * Draw the circle using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawEllipse()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class\r\n\r\n   * Increase the size of the image by some amount, such as <code style=\"background-color: #ececec; color: black; font-weight: bold;\">50</code>\r\n\r\n   * Add a pause to create the animation\r\n\r\n✅ **TO DO #2:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> class to traverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">images</code> array. Add a pause, then call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">showTransition()</code> method to show the animated transition after each image.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> methods.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "theater",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "TheaterRunner.java": {
+        "text": "public class TheaterRunner {\n  public static void main(String[] args) {\n\n    String[] images = {\"laptop.jpg\", \"dog.jpg\", \"nature.jpg\", \"paintbrushes.jpg\"};\n\n    ImageScene myScene = new ImageScene(images);\n\n    // TO DO #3: Call the createScene() method.\n    myScene.createScene();\n    \n\n    Theater.playScenes(myScene);\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
+      },
+      "ImageScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene that displays images\n */\npublic class ImageScene extends Scene {\n\n  private String[] images;   // The list of images\n\n  /*\n   * Constructor to create a ImageScene with\n   * the specified array of image files\n   */\n  public ImageScene(String[] images) {\n    this.images = images;\n  }\n\n  // TO DO #1: Write the private method showTransition() to\n  // animate a drawing of a circle as a transition.\n  private void showTransition() {\n    int size = 50;\n\n    while (size <= 600) {\n      int xPos = (getWidth() / 2) - (size / 2);\n      int yPos = (getHeight() / 2) - (size / 2);\n\n      setFillColor(\"blue\");\n      removeStrokeColor();\n      drawEllipse(xPos, yPos, size, size);\n      \n      size += 50;\n      pause(0.3);\n    }\n  }\n\n  \n\n  // TO DO #2: Write the public method createScene() to\n  // draw each image with a transition in between each.\n  public void createScene() {\n    for (String image : images) {\n      drawImage(image, 0, 0, getWidth());\n      pause(0.5);\n      showTransition();\n    }\n  }\n\n  \n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
       }
     },
     "video_key": "csa_private_methods",
-    "encrypted_examples": [
-
-    ],
     "reference_links": [
       "/courses/csa-2023/guides/private-methods"
     ],
     "display_name": "Animated Transition",
-    "bubble_choice_description": "Use `private` and `public` methods to create a scene that draws images and shows an animated transition after each image."
+    "bubble_choice_description": "Use `private` and `public` methods to create a scene that draws images and shows an animated transition after each image.",
+    "thumbnail_url": "https://images.code.org/f112f8908562c98d362902e7a6722846-U7L4-L2d.gif",
+    "starter_assets": {
+      "dog.jpg": "00b40614-4292-47cc-84db-bcaf4b2cdf30.jpg",
+      "laptop.jpg": "10f4fd6f-69a2-476f-ac4b-1329c8df79a0.jpg",
+      "nature.jpg": "7c74b96d-1aa4-4342-a44b-7d280c27cfb0.jpg",
+      "paintbrushes.jpg": "f5737567-c21c-4043-b03f-f56f0973ba95.jpg"
+    }
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-04-11T14:06:03.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:06:03.860+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L6a_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L6a_2023\"},{\"changed_at\":\"2023-04-11 14:06:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:10:05 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:19:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:06:03.860+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L6a_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L6a_2023\"},{\"changed_at\":\"2023-04-11 14:06:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:10:05 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:19:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:17:16 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:19:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:19:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
