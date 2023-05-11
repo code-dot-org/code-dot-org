@@ -9,16 +9,11 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const appOptions = getScriptData('appoptions');
-  // Some Music Lab-specific configuration.
-  const appConfig = {
-    'load-progression': 'true',
-    'local-progression': 'true',
-  };
 
   ReactDOM.render(
     <Provider store={getStore()}>
       <LabContainer>
-        <MusicLabView appConfig={appConfig} appOptions={appOptions} />
+        <MusicLabView appOptions={appOptions} />
       </LabContainer>
     </Provider>,
     document.getElementById('musiclab-container')
