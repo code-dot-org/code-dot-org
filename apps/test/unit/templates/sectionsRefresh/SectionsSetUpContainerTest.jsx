@@ -2,8 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
-// import sinon from 'sinon';
-// import * as utils from '@cdo/apps/code-studio/utils';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
+import * as windowUtils from '@cdo/apps/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
@@ -58,7 +59,6 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
-  /*  TO DO: Update these tests when save button works
   it('validates the form when save is clicked', () => {
     const reportSpy = sinon.spy();
     sinon
@@ -81,7 +81,7 @@ describe('SectionsSetUpContainer', () => {
     sinon.restore();
   });
 
-  it('makes an ajax request when save is clicked', () => {
+  it('makes an ajax request when save is clicked', async () => {
     sinon
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')
@@ -92,7 +92,9 @@ describe('SectionsSetUpContainer', () => {
       .returns({
         attributes: {content: {value: null}},
       });
-    const fetchSpy = sinon.spy(window, 'fetch');
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -103,10 +105,47 @@ describe('SectionsSetUpContainer', () => {
 
     expect(fetchSpy).to.have.been.called.once;
 
+    await new Promise(resolve => setTimeout(resolve, 0));
+    expect(navigateToHrefSpy).to.have.been.called.once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
+
     sinon.restore();
   });
 
-  it('passes participantType and loginTyp to ajax request when save is clicked', () => {
+  it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
+    sinon
+      .stub(document, 'querySelector')
+      .withArgs('#sections-set-up-container')
+      .returns({
+        checkValidity: () => true,
+      })
+      .withArgs('meta[name="csrf-token"]')
+      .returns({
+        attributes: {content: {value: null}},
+      });
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+
+    const wrapper = shallow(<SectionsSetUpContainer isUsersFirstSection />);
+
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(fetchSpy).to.have.been.called.once;
+
+    await new Promise(resolve => setTimeout(resolve, 0));
+    expect(navigateToHrefSpy).to.have.been.called.once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
+      '/home?showSectionCreationDialog=true'
+    );
+
+    sinon.restore();
+  });
+
+  it('passes participantType and loginType to ajax request when save is clicked', () => {
     sinon
       .stub(document, 'querySelector')
       .withArgs('#sections-set-up-container')
@@ -139,5 +178,4 @@ describe('SectionsSetUpContainer', () => {
 
     sinon.restore();
   });
-  */
 });

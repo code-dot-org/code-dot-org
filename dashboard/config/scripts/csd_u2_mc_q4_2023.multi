@@ -17,3 +17,5 @@ teacher_markdown <<MARKDOWN
 
 The image of clouds and the image of rainbows both have the class weather. To write a style rule-set for that class, the selector for the rule-set has a `.` before the class name.
 MARKDOWN
+
+allow_multiple_attempts true

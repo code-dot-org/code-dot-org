@@ -8,3 +8,5 @@ wrong 'II only'
 wrong 'I and II'
 right 'I and III'
 wrong 'I, II, and III'
+
+allow_multiple_attempts true

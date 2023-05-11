@@ -21,3 +21,5 @@ Going through the code line by line:
 * Inside the else statement, since the length of hello is not less than 3, we go into the else statement
 * Since the word length is greater than 6, the code displays “ Use that word on the SAT.” in the console
 MARKDOWN
+
+allow_multiple_attempts true

@@ -98,6 +98,14 @@ class Bounce < Grid
     true
   end
 
+  def project_type
+    if skin == 'sports' || skin == 'basketball'
+      skin
+    else
+      'bounce'
+    end
+  end
+
   def toolbox(type)
     <<-XML.strip_heredoc.chomp
       <block type="bounce_moveLeft"></block>

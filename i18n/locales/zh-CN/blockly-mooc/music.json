@@ -1,1 +1,22 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "播放声音",
+  "blockly_blockPlaySoundAtMeasureTooltip": "播放声音",
+  "blockly_blockRepeatTooltip": "重复",
+  "blockly_blockRestTooltip": "休息",
+  "blockly_blockWhenRun": "当运行时",
+  "blockly_blockWhenRunTooltip": "当运行时",
+  "blockly_functionNamePlaceholder": "我的函数",
+  "blockly_toolboxCategoryControl": "控制",
+  "blockly_toolboxCategoryEffects": "效果",
+  "blockly_toolboxCategoryEvents": "事件",
+  "blockly_toolboxCategoryFunctions": "函数",
+  "blockly_toolboxCategoryLogic": "逻辑",
+  "blockly_toolboxCategoryMath": "数学",
+  "blockly_toolboxCategoryPlay": "玩",
+  "blockly_toolboxCategoryVariables": "变量",
+  "control": "控制",
+  "feedback": "反馈",
+  "share": "分享",
+  "startOver": "重新开始",
+  "upload": "上传"
+}

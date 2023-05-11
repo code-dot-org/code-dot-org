@@ -1,2 +1,22 @@
 {
+  "blockly_blockPlaySoundTooltip": "səsi səsləndir",
+  "blockly_blockPlaySoundAtMeasureTooltip": "səsi səsləndir",
+  "blockly_blockRepeatTooltip": "təkrar et",
+  "blockly_blockRestTooltip": "istirahət etmək",
+  "blockly_blockWhenRun": "icra etdikdə",
+  "blockly_blockWhenRunTooltip": "icra etdikdə",
+  "blockly_functionNamePlaceholder": "mənim funksiyam",
+  "blockly_toolboxCategoryControl": "Nəzarət",
+  "blockly_toolboxCategoryEffects": "Effektlər",
+  "blockly_toolboxCategoryEvents": "Tədbirlər",
+  "blockly_toolboxCategoryFunctions": "Funksiyalar",
+  "blockly_toolboxCategoryLogic": "Məntiq",
+  "blockly_toolboxCategoryMath": "Riyaziyyat",
+  "blockly_toolboxCategoryPlay": "Oyna",
+  "blockly_toolboxCategoryVariables": "dəyişənlər",
+  "control": "Nəzarət",
+  "feedback": "Əlaqə",
+  "share": "Bölüş",
+  "startOver": "Yenidən başla",
+  "upload": "Yüklə"
 }

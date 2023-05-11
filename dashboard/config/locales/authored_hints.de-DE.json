@@ -12643,6 +12643,9 @@
         "courseF_variables2_set_-2022-2": {
           "set_block_hint": "Du kannst eine Variable wie folgt setzen:\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>",
           "say_variable_hint": "Du kannst ein Sprite den Wert einer Variablen wie folgt sagen lassen:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Ein Vollwinkel hat die Größe von 360 Grad. Multipliziere die Gradzahl in der Runde mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Rotationen, um zu sehen, ob diese funktionieren!\n\nHier sind einige Beispiele, um dir den Einstieg zu erleichtern:\n\n— Versuche es mit einer 60-Grad-Drehung, die sechsmal ausgeführt wird.\n— Versuche es mit einer 45-Grad-Drehung, die achtmal ausgeführt wird.\n— Versuche es mit einer 30-Grad-Drehung, die 12-mal ausgeführt wird."
         }
       }
     }

@@ -56,7 +56,7 @@ export default class ChangeEmailModal extends React.Component {
   cancel = () => this.props.handleCancel();
 
   onSubmitFailure = error => {
-    if (error && error.hasOwnProperty('serverErrors')) {
+    if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
       this.setState(
         {
           saveState: STATE_INITIAL,
