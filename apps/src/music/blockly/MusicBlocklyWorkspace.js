@@ -9,6 +9,7 @@ import AppConfig, {getBlockMode} from '../appConfig';
 import {BlockMode, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
+  DOCS_BASE_URL,
   DYNAMIC_TRIGGER_EXTENSION,
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
@@ -110,7 +111,7 @@ export default class MusicBlocklyWorkspace {
     const functionBlock = Blockly.Blocks.procedures_defnoreturn;
     functionBlock.initOriginal = functionBlock.init;
     functionBlock.init = function () {
-      this.setHelpUrl('/docs/ide/projectbeats/expressions/create_function');
+      this.setHelpUrl(DOCS_BASE_URL + 'create_function');
       this.initOriginal?.();
     };
 
