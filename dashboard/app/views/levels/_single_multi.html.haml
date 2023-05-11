@@ -10,11 +10,6 @@
 - enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', false)
 - allow_multiple_attempts = enforce_allow_multiple_attempts ? level.allow_multiple_attempts? : false
 
-:ruby
-  js_data = {
-    response_count: @responses&.count || 0,
-    is_contained_level: contained_mode
-  }
 
 - multi_answer_characters = ("A".."Z").to_a
 
@@ -127,6 +122,14 @@
       - answers = localized_answers.map {|answer| answer['correct'] || false}
 
     - answers_feedback = localized_answers.map {|answer| answer['feedback']}
+
+
+  :ruby
+    js_data = {
+      response_count: @responses&.count || 0,
+      is_contained_level: contained_mode,
+      question_content_blank: question_content_blank,
+    }
 
   %script{src: webpack_asset_path('js/levels/_single_multi.js'), data: {summaryinfo: js_data.to_json}}
 

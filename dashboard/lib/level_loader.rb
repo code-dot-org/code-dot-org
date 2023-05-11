@@ -119,13 +119,13 @@ class LevelLoader
     # Only reload level data when file contents change
     level_data = File.read(level_path)
     md5 = Digest::MD5.hexdigest(level_data)
-    if level_md5s_by_name[name] != md5
+    if level_md5s_by_name[name] == md5
+      nil
+    else
       level = Level.find_by_name(name) || Level.new(name: name)
       level.md5 = md5
       level = load_custom_level_xml(level_data, level)
       level
-    else
-      nil
     end
   rescue Exception => exception
     # print filename for better debugging

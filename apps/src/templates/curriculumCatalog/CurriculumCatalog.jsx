@@ -140,6 +140,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 image,
                 display_name,
                 grade_levels,
+                duration,
                 school_subject,
                 cs_topic,
                 course_version_path,
@@ -148,7 +149,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   key={key}
                   courseDisplayName={display_name}
                   imageSrc={image || undefined}
-                  duration={'school_year'} // TODO [MEG] actually pass in this data
+                  duration={duration}
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
@@ -158,7 +159,6 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 />
               )
             )}
-          }
         </div>
       </div>
     </>

@@ -10,6 +10,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -413,6 +414,15 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \

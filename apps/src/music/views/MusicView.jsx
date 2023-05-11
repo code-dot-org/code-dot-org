@@ -55,6 +55,13 @@ import {setIsLoading, setIsPageError} from '@cdo/apps/labs/labRedux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
+import header from '../../code-studio/header';
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+} from '../../code-studio/projectRedux';
+import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -68,6 +75,14 @@ class UnconnectedMusicView extends React.Component {
     progressLevelType: PropTypes.string,
     appOptions: PropTypes.object,
     appConfig: PropTypes.object,
+
+    /**
+     * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),
+     * false/undefined if as part of a script or standalone level.
+     * */
+    inIncubator: PropTypes.bool,
+
+    // populated by Redux
     currentLevelIndex: PropTypes.number,
     levels: PropTypes.array,
     currentLevelId: PropTypes.string,
@@ -93,6 +108,9 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     sendSuccessReport: PropTypes.func,
+    setProjectUpdatedSaving: PropTypes.func,
+    setProjectUpdatedAt: PropTypes.func,
+    setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
     setLevelCount: PropTypes.func,
@@ -124,6 +142,9 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       showingVideo: true,
     };
+
+    // Music Lab currently does not support share and remix
+    header.showHeaderForProjectBacked({showShareAndRemix: false});
   }
 
   componentDidMount() {
@@ -194,6 +215,30 @@ class UnconnectedMusicView extends React.Component {
         this.onBlockSpaceChange,
         this.player,
         this.progressManager?.getCurrentStepDetails().toolbox
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveStart,
+        () => {
+          this.props.setProjectUpdatedSaving();
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveSuccess,
+        status => {
+          this.props.setProjectUpdatedAt(status.updatedAt);
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveNoop,
+        status => {
+          this.props.setProjectUpdatedAt(status.updatedAt);
+        }
+      );
+      this.musicBlocklyWorkspace.addSaveEventListener(
+        ProjectManagerEvent.SaveFail,
+        () => {
+          this.props.setProjectUpdatedError();
+        }
       );
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
@@ -503,6 +548,7 @@ class UnconnectedMusicView extends React.Component {
     this.compileSong();
 
     this.executeCompiledSong();
+    this.musicBlocklyWorkspace.saveCode(true);
 
     this.player.playSong(this.sequencer.getPlaybackEvents());
 
@@ -631,6 +677,7 @@ class UnconnectedMusicView extends React.Component {
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
+                  canShowSaveStatus={this.props.inIncubator}
                 />
               </div>
               <div id="blockly-div" />
@@ -714,6 +761,9 @@ const MusicView = connect(
       dispatch(addPlaybackEvents(playbackEvents)),
     setLevelCount: levelCount => dispatch(setLevelCount(levelCount)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
+    setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
+    setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
+    setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
   })
