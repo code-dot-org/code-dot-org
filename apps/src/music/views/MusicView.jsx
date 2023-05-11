@@ -44,6 +44,7 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
+import MetricsReporter from '../../lib/metrics/MetricsReporter';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -443,6 +444,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = () => {
+    MetricsReporter.logInfo({
+      lab: 'music',
+      event: 'play',
+    });
     this.player.stopSong();
     this.playingTriggers = [];
 
