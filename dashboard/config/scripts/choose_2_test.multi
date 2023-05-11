@@ -26,3 +26,5 @@ Consider the following incorrect program, which is intended to move the robot ar
 ![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)
 
 MARKDOWN
+
+allow_multiple_attempts true

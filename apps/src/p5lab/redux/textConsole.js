@@ -1,4 +1,5 @@
 import {CLEAR_CONSOLE, ADD_MESSAGE} from '../actions';
+import {MAX_NUM_TEXTS} from '../spritelab/constants';
 
 export default function textConsole(state, action) {
   state = state || [];
@@ -7,12 +8,12 @@ export default function textConsole(state, action) {
       return [];
     case ADD_MESSAGE:
       return [
-        // 1000 items is an arbitrary limit. Change as needed.
-        ...state.slice(0, 999),
+        // the last MAX_NUM_TEXTS text console statements will be displayed
+        ...state.slice(-(MAX_NUM_TEXTS - 1)),
         {
           name: action.name,
-          text: action.text
-        }
+          text: action.text,
+        },
       ];
     default:
       return state;
@@ -21,7 +22,7 @@ export default function textConsole(state, action) {
 
 export function clearConsole() {
   return {
-    type: CLEAR_CONSOLE
+    type: CLEAR_CONSOLE,
   };
 }
 
@@ -29,6 +30,6 @@ export function addConsoleMessage(message) {
   return {
     type: ADD_MESSAGE,
     name: message.name,
-    text: message.text
+    text: message.text,
   };
 }

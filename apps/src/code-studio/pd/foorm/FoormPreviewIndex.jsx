@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class FoormPreviewIndex extends React.Component {
   static propTypes = {
-    forms: PropTypes.arrayOf(PropTypes.object)
+    forms: PropTypes.arrayOf(PropTypes.object),
   };
 
   properties = [
@@ -12,7 +12,7 @@ export default class FoormPreviewIndex extends React.Component {
     {id: 'regionalPartnerName', caption: 'Regional partner name', type: 'text'},
     {id: 'isVirtual', caption: 'Is virtual', type: 'checkbox'},
     {id: 'isFridayInstitute', caption: 'Is Friday Institute', type: 'checkbox'},
-    {id: 'workshopAgenda', caption: 'Workshop Agenda', type: 'text'}
+    {id: 'workshopAgenda', caption: 'Workshop Agenda', type: 'text'},
   ];
 
   constructor(props) {
@@ -29,7 +29,7 @@ export default class FoormPreviewIndex extends React.Component {
     const type = this.properties.find(property => property.id === id).type;
 
     this.setState({
-      [id]: type === 'checkbox' ? event.target.checked : event.target.value
+      [id]: type === 'checkbox' ? event.target.checked : event.target.value,
     });
   }
 
@@ -94,19 +94,19 @@ export default class FoormPreviewIndex extends React.Component {
 
 const styles = {
   row: {
-    clear: 'both'
+    clear: 'both',
   },
   caption: {
     float: 'left',
-    width: 300
+    width: 300,
   },
   input: {
-    float: 'left'
+    float: 'left',
   },
   linkContainer: {
-    marginBottom: 7
+    marginBottom: 7,
   },
   link: {
-    fontSize: 15
-  }
+    fontSize: 15,
+  },
 };

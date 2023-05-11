@@ -7,7 +7,7 @@ import OwnedSections from '../teacherDashboard/OwnedSections';
 import {
   asyncLoadSectionData,
   hiddenPlSectionIds,
-  hiddenStudentSectionIds
+  hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -17,13 +17,15 @@ import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
 
 class TeacherSections extends Component {
   static propTypes = {
+    userId: PropTypes.number,
+
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool
+    asyncLoadComplete: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -35,7 +37,8 @@ class TeacherSections extends Component {
       plSectionIds,
       studentSectionIds,
       hiddenPlSectionIds,
-      hiddenStudentSectionIds
+      hiddenStudentSectionIds,
+      userId,
     } = this.props;
 
     const hasSections =
@@ -55,6 +58,7 @@ class TeacherSections extends Component {
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
             <OwnedSections
+              userId={userId}
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
             />
@@ -63,14 +67,15 @@ class TeacherSections extends Component {
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
             <OwnedSections
+              userId={userId}
               isPlSections={true}
               sectionIds={plSectionIds}
               hiddenSectionIds={hiddenPlSectionIds}
             />
           </ContentContainer>
         )}
-        <RosterDialog />
-        <AddSectionDialog />
+        <RosterDialog userId={this.props.userId} />
+        <AddSectionDialog userId={this.props.userId} />
         <EditSectionDialog />
       </div>
     );
@@ -83,15 +88,15 @@ export default connect(
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   }),
   {
-    asyncLoadSectionData
+    asyncLoadSectionData,
   }
 )(TeacherSections);
 
 const styles = {
   spinner: {
-    marginTop: '10px'
-  }
+    marginTop: '10px',
+  },
 };

@@ -11,7 +11,7 @@ GamelabJr.all.each do |level|
   next unless level.custom_blocks
   blocks = JSON.parse level.custom_blocks
   blocks.each do |block|
-    if block['returnType'] && block['returnType'].downcase == 'function'
+    if block['returnType']&.casecmp?('function')
       block['returnType'] = 'Behavior'
     end
     next unless block['args']

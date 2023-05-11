@@ -4,14 +4,14 @@ class MarkdownHandlerTest < ActiveSupport::TestCase
   test 'basic ActiveRecord markdown support' do
     markdown = "a **simple** string with _markdown formatting_"
     expected = "<p>a <strong>simple</strong> string with <em>markdown formatting</em></p>\n"
-    actual = ActionView::Base.new.render(inline: markdown, type: :md)
+    actual = ActionView::Base.with_empty_template_cache.empty.render(inline: markdown, type: :md)
     assert_equal expected, actual
   end
 
   test 'markdown supports autolink' do
     markdown = "<https://code.org>"
     expected = "<p><a href=\"https://code.org\">https://code.org</a></p>\n"
-    actual = ActionView::Base.new.render(inline: markdown, type: :md)
+    actual = ActionView::Base.with_empty_template_cache.empty.render(inline: markdown, type: :md)
     assert_equal expected, actual
   end
 
@@ -39,7 +39,7 @@ class MarkdownHandlerTest < ActiveSupport::TestCase
       </tr>
       </tbody></table>
     HTML
-    actual = ActionView::Base.new.render(inline: markdown, type: :md)
+    actual = ActionView::Base.with_empty_template_cache.empty.render(inline: markdown, type: :md)
     assert_equal expected, actual
   end
 end

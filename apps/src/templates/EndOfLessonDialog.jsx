@@ -19,7 +19,7 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
       ? `summary-progress-row-${lessonNumber}`
       : `progress-lesson-${lessonNumber}`;
 
-    document.getElementById(completedLessonElementId).scrollIntoView();
+    document.getElementById(completedLessonElementId)?.scrollIntoView();
   };
 
   return (
@@ -47,22 +47,22 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
 
 EndOfLessonDialog.propTypes = {
   lessonNumber: PropTypes.string.isRequired,
-  isSummaryView: PropTypes.bool.isRequired
+  isSummaryView: PropTypes.bool.isRequired,
 };
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };
 
 export const UnconnectedEndOfLessonDialog = EndOfLessonDialog;
 
 export default connect(state => ({
-  isSummaryView: state.progress.isSummaryView
+  isSummaryView: state.progress.isSummaryView,
 }))(EndOfLessonDialog);

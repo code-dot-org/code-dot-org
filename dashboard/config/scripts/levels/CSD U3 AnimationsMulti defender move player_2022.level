@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:42:08.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -45,15 +41,15 @@
     "parent_level_id": 20891,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/javascript/functions/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/game-lab/sprites/collision-detection/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/game-lab/sprites/velocity/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/animation-tab/editing-images/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/functions",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/collision-detection",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/velocity",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/editing-images",
+      "/courses/csd-2022/guides/multi-frame-animations"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -61,6 +57,10 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:42:08.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "Need to add gif of what it should look like.",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:42:08.247+00:00\",\"changed\":[\"cloned from \\\"CSD U3 AnimationsMulti defender move player_2021\\\"\"],\"cloned_from\":\"CSD U3 AnimationsMulti defender move player_2021\"}]"

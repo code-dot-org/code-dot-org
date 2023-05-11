@@ -4,7 +4,6 @@ class Queries::UserSchoolInfo
       user_school_infos.
       includes(:school_info).
       select {|usi| usi.school_info.complete?}.
-      sort_by(&:created_at).
-      last
+      max_by(&:created_at)
   end
 end

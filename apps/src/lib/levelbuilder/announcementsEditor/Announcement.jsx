@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   announcementShape,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
@@ -12,7 +12,7 @@ export default class Announcement extends Component {
     inputStyle: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onRemove: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -42,6 +42,21 @@ export default class Announcement extends Component {
             value={announcement.link}
             style={inputStyle}
             onChange={event => onChange(index, 'link', event.target.value)}
+          />
+        </label>
+        <label>
+          Button Text
+          <input
+            className="uitest-announcement-button-text"
+            value={
+              announcement.buttonText === undefined
+                ? ''
+                : announcement.buttonText
+            }
+            style={inputStyle}
+            onChange={event =>
+              onChange(index, 'buttonText', event.target.value)
+            }
           />
         </label>
         <label>
@@ -78,6 +93,22 @@ export default class Announcement extends Component {
             </select>
           </div>
         </label>
+        <label>
+          Dismissible
+          <input
+            className="uitest-announcement-dismissible"
+            type="checkbox"
+            checked={
+              announcement.dismissible === undefined
+                ? true
+                : announcement.dismissible
+            }
+            style={styles.checkbox}
+            onChange={event =>
+              onChange(index, 'dismissible', event.target.checked)
+            }
+          />
+        </label>
         <button
           className="btn btn-danger"
           type="button"
@@ -94,6 +125,9 @@ const styles = {
   announcement: {
     border: '1px solid #ccc',
     padding: 5,
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
+  checkbox: {
+    margin: '0 0 0 7px',
+  },
 };

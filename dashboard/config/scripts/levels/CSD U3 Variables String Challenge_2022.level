@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:04.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -75,14 +71,18 @@
     "encrypted_examples": "XH8A0FdybfV5+BGUR3BJxzALV31tk3T923YFgX8FDwCXeKRDaO2QBAgxteZ2\n+ri/HpvJaVmoYPn9jQtwz205vw==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": " /docs/concepts/javascript/naming-variables/",
+    "map_reference": "/courses/csd-2022/guides/naming-variables",
     "bubble_choice_description": "Use variables with colors!",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:04.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:04.384+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables String Challenge_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables String Challenge_2021\"}]"

@@ -9,7 +9,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     File.stubs(:write)
     @levelbuilder = create :levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Script.stubs(:should_cache?).returns false
+    Unit.stubs(:should_cache?).returns false
   end
 
   test 'data is passed down to edit page' do
@@ -134,6 +134,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'can create a new programming environment' do
+    @request.host = CDO.dashboard_hostname
     sign_in @levelbuilder
 
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "new-ide.json"}.once

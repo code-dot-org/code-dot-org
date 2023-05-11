@@ -4,16 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSP Virtual PL",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "vpl-csp",
-    "serialized_at": "2022-06-06 22:41:02 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-31 21:19:28 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
     "participant_audience": "teacher",
@@ -625,7 +627,7 @@
       "key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
       "position": 3,
       "properties": {
-        "progression_name": "Using the Google Trends Tool (~20 minutes)"
+        "progression_name": "Using the NYT Resource (~20 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "4ed1c2db-38f7-42aa-b8e4-2dd889cdb144",
@@ -2033,6 +2035,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Choice Levels_2022"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -2308,7 +2313,7 @@
         "level_keys": [
           "CSP-PL M7 - Google Trends_2022"
         ],
-        "progression": "Using the Google Trends Tool (~20 minutes)"
+        "progression": "Using the NYT Resource (~20 minutes)"
       },
       "bonus": false,
       "seeding_key": {

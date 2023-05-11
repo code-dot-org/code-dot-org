@@ -44,8 +44,8 @@ class S3Packaging
     rescue Aws::S3::Errors::NoSuchKey
       @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
-    rescue Exception => e
-      @logger.info "update_from_s3 failed: #{e.message}"
+    rescue Exception => exception
+      @logger.info "update_from_s3 failed: #{exception.message}"
       return false
     end
     return true
@@ -79,7 +79,7 @@ class S3Packaging
   private def target_commit_hash(location)
     filename = "#{location}/commit_hash"
     return nil unless File.exist?(filename)
-    IO.read(filename)
+    File.read(filename)
   end
 
   # Creates a zipped package of the provided assets folder
@@ -101,7 +101,7 @@ class S3Packaging
     @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
-      IO.write('commit_hash', @commit_hash)
+      File.write('commit_hash', @commit_hash)
       RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
     end
     @logger.info 'Created'
@@ -120,10 +120,10 @@ class S3Packaging
         }
       end.compact
     )
-  rescue => e
+  rescue => exception
     # Just log and continue
     warn 'Failed to log bundle size with error:'
-    warn e
+    warn exception
     warn 'Proceeding with build...'
   end
 
@@ -197,7 +197,7 @@ class S3Packaging
       # https://github.com/aws/aws-sdk-ruby/issues/1149
       url = Aws::S3::Bucket.new(BUCKET_NAME, credentials: 0).object(s3_key).public_url
       File.open(package, 'wb') do |file|
-        IO.copy_stream URI.open(url), file
+        IO.copy_stream URI.parse(url).open, file
       rescue OpenURI::HTTPError
         raise Aws::S3::Errors::NoSuchKey.new(nil, file.path)
       end

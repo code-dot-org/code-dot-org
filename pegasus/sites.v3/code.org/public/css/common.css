@@ -177,9 +177,6 @@
   font-size: 12px;
   padding-right: 75px;
 }
-.course-carousel .slide div.slide-participants-count {
-  display: none;
-}
 .course-carousel .slide .slide-teachers-notes-link {
   display: none;
 }
@@ -348,12 +345,6 @@
     font-size: 14px;
     padding-right: 120px;
   }
-  .course-carousel .slide div.slide-participants-count {
-    margin: 0 0 .5em;
-    display: block;
-    font-size: 14px;
-    padding-right: 120px;
-  }
   .course-carousel .slide .slide-teachers-notes-link {
     display: block;
     margin: 0.2em 0 0 0;
@@ -410,6 +401,17 @@
 
 button {
   margin-top: 10px;
+}
+
+a.link-button {
+  display: inline-block;
+  color: white;
+  background-color: #ffa400;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
 }
 
 #map .mapboxgl-popup-close-button {

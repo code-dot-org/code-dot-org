@@ -21,7 +21,7 @@ social:
 # Yapay Zeka (AI) hakkında bilgi edinin
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">YENİ AI ve Makine Öğrenimi Modülü</h2><p>Yeni öğretim müfredat modülümüz AI etiğine odaklanır, önyargı konularını inceler ve bir dizi çevrimiçi ve bağlantısız etkinlik ve tam grup tartışmaları yoluyla temel kavramları araştırır ve açıklar.</p><a  href="#about-aimodule"><button>Daha fazla bilgi edinin</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Modülü keşfedin</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">YENİ AI ve Makine Öğrenimi Modülü</h2><p>Yeni öğretim müfredat modülümüz AI etiğine odaklanır, önyargı konularını inceler ve bir dizi çevrimiçi ve bağlantısız etkinlik ve tam grup tartışmaları yoluyla temel kavramları araştırır ve açıklar.</p><a  href="#about-aimodule"><button>Daha fazla bilgi</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Modülü keşfedin</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Yeni bir video serisinde AI'yı keşfetmek, 25'ten fazla dilde Okyanuslar için 
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## YENİ AI ve Makine Öğrenimi Modülü
 <div>
-<div class="col-50">
-<p>AI ve Makine Öğrenimi Modülü, kabaca beş haftalık bir müfredat modülüdür.Bu ise <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >veya seçenek olarak CS Discoveries'dekie</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">ünitesi aracılığıyla öğretilebilir</a>. AI etiğine odaklanır, önyargı konularını inceler ve temel kavramları araştırır ve açıklar</p><p>Makine öğrenimi büyük veri kümelerine bağlı olduğundan, yeni ünite, bir yandan "Makine Öğreniminin çözülmesine yardımcı olabileceği bir sorun nedir?" gibi soruları keşfederken. öğrencilerin ilgisini çekmek için sağlık hizmetleri, demografi ve daha fazlasına ilişkin gerçek yaşam veri kümelerini içerir “AI topluma nasıl yardımcı olabilir?” “AI'dan kimler yararlanır?” "Kimler zarar görür?" “Kimler dâhildir?” "Kimler eksiktir?"  </p>
-<p>Bu teknolojilerin etkileri hakkında sık sık tartışma noktaları ve derslerle birlikte etik hususlar bu tartışmaların ön saflarında yer alacaktır. Bu, öğrencilerin teknolojilerin nasıl çalıştığının teknik temellerini öğrenirken bu teknolojiler hakkında bütünsel ve düşünceli bir anlayış geliştirmelerine yardımcı olacaktır.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>AI ve Makine Öğrenimi Modülü, <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >bağımsız bir modül</a> veya isteğe bağlı bir <a href="https://studio.code.org/s/csd7-2022">CS Discoveries birimi</a> olarak öğretilebilen kabaca beş haftalık bir müfredat modülüdür. AI etiğine odaklanır, önyargı konularını inceler ve temel kavramları araştırır ve açıklar</p><p>Makine öğrenimi büyük veri kümelerine bağlı olduğundan, yeni ünite, bir yandan "Makine Öğreniminin çözülmesine yardımcı olabileceği bir sorun nedir?" gibi soruları keşfederken. öğrencilerin ilgisini çekmek için sağlık hizmetleri, demografi ve daha fazlasına ilişkin gerçek yaşam veri kümelerini içerir “AI topluma nasıl yardımcı olabilir?” “AI'dan kimler yararlanır?” "Kimler zarar görür?" “Kimler dâhildir?” "Kimler eksiktir?"  </p>
+    <p>Bu teknolojilerin etkileri hakkında sık sık tartışma noktaları ve derslerle birlikte etik hususlar bu tartışmaların ön saflarında yer alacaktır. Bu, öğrencilerin teknolojilerin nasıl çalıştığının teknik temellerini öğrenirken bu teknolojiler hakkında bütünsel ve düşünceli bir anlayış geliştirmelerine yardımcı olacaktır.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Modülü keşfedin</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## AI Nasıl Çalışır
 
 Microsoft CEO'su Satya Nadella'nın giriş yaptığı bu kısa video serisi size yapay zekanın nasıl çalıştığını ve neden önemli olduğunu tanıtacak. Sinir ağları veya AI'nın nasıl öğrendiği hakkında bilgi edinin ve algoritmik önyargı ve AI karar verme etiği gibi konuları araştırın.
@@ -114,4 +113,6 @@ Seviye 2-4, [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github
 
 Seviye 6-8, bir \[Destek-Vektör Makinesi\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) kullanır. Balığın her bir bileşenine (gözler, ağız, vücut gibi) bakarız ve bileşenlerin (diş sayısı, vücut şekli gibi) tüm meta verilerini her balık için bir sayı vektörü halinde birleştiririz. Bu vektörleri SVM'yi eğitmek için kullanırız. Eğitim verilerine dayanarak, SVM, tüm olası balıkların "boşluğunu", öğrenmeye çalıştığımız sınıflara ("mavi" veya "mavi değil" gibi) karşılık gelen iki bölüme ayırır.
 
-[[Back to top]](#top)
+[[Başa dön]](#top)
+
+{{ visit_partial_event_logger }}

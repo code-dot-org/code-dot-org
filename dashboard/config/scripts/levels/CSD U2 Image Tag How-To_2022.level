@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:35.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
     "instructions_important": "false",
@@ -13,15 +9,15 @@
     "parent_level_id": 18960,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/images-in-html/",
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Challenge: Make a How-To Guide",
@@ -29,6 +25,10 @@
     "thumbnail_url": "https://images.code.org/097a8d80fafddafa327bb5bc45ab3ca5-image-1564771882198.JPG",
     "validation_enabled": "false"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:35.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:35.496+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag How-To_2021\\\"\"],\"cloned_from\":\"CSD U2 Image Tag How-To_2021\"}]"

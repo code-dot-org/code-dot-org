@@ -6,19 +6,16 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {
-  setAllSources,
-  setDisableFinishButton
-} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 
 describe('Javalab', () => {
   let javalab;
@@ -35,7 +32,7 @@ describe('Javalab', () => {
     javalab.studioApp_ = studioApp();
     config = {
       level: {},
-      skin: {}
+      skin: {},
     };
   });
 
@@ -51,7 +48,7 @@ describe('Javalab', () => {
     beforeEach(() => {
       eventStub = {
         preventDefault: sinon.stub(),
-        returnValue: undefined
+        returnValue: undefined,
       };
     });
 
@@ -68,64 +65,21 @@ describe('Javalab', () => {
     });
   });
 
-  describe('finish button', () => {
-    it('is disabled when reviewing code', () => {
-      config.isCodeReviewing = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is disabled on readonly workspaces', () => {
-      config.readonlyWorkspace = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is disabled when reviewing code on submittable levels', () => {
-      config.isCodeReviewing = true;
-      config.level.submittable = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(true)
-      );
-    });
-
-    it('is enabled on submitted levels', () => {
-      config.readonlyWorkspace = true;
-      config.level.submittable = true;
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(false)
-      );
-    });
-
-    it('is enabled by default', () => {
-      javalab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setDisableFinishButton(false)
-      );
-    });
-  });
-
   describe('populates sources', () => {
     it('with start_sources if there are any and there is no lastAttempt', () => {
       config.level = {
         startSources: {
           'File.java': {
             text: 'Some code',
-            visible: true
-          }
-        }
+            visible: true,
+          },
+        },
       };
 
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.startSources)
+        setAllSourcesAndFileMetadata(config.level.startSources)
       );
     });
 
@@ -134,26 +88,26 @@ describe('Javalab', () => {
         startSources: {
           'File.java': {
             text: 'Some code',
-            visible: true
-          }
+            visible: true,
+          },
         },
         lastAttempt: {
           'MyClass.java': {
             text: 'Some code 2',
-            visible: true
-          }
-        }
+            visible: true,
+          },
+        },
       };
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.lastAttempt)
+        setAllSourcesAndFileMetadata(config.level.lastAttempt)
       );
     });
 
     it('does not populate if start sources are empty', () => {
       config.level = {
-        startSources: {}
+        startSources: {},
       };
       javalab.init(config);
 
@@ -166,14 +120,14 @@ describe('Javalab', () => {
       config.level = {
         exemplarSources: {
           'File.java': {
-            text: 'Some exemplar code'
-          }
-        }
+            text: 'Some exemplar code',
+          },
+        },
       };
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSources(config.level.exemplarSources)
+        setAllSourcesAndFileMetadata(config.level.exemplarSources)
       );
     });
   });

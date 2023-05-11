@@ -48,7 +48,7 @@ will produce content suitable for embedding inside an existing block-level eleme
     `staging/pegasus/cache/i18n/en-US.yml`
 
 ### Apps
-
+For `.json` files we use [MessageFormat](http://messageformat.github.io/messageformat/guide/) to enable formatting options such as Variables and Plurals.
 -   Make changes in `code-dot-org/apps/i18n/<app>/en_us.json`
 -   If you are creating a new app:
     -   Add the strings in a new file in `code-dot-org/apps/i18n/<new

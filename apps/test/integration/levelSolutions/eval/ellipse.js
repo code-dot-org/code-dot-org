@@ -8,32 +8,32 @@ module.exports = {
     solutionBlocks: blockUtils.mathBlockXml('functional_ellipse', {
       WIDTH: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
       HEIGHT: blockUtils.mathBlockXml('functional_math_number', null, {
-        NUM: 100
+        NUM: 100,
       }),
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
       STYLE: blockUtils.mathBlockXml('functional_string', null, {
-        VAL: 'outline'
-      })
+        VAL: 'outline',
+      }),
     }),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'Nothing',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml>' + '</xml>'
+      xml: '<xml>' + '</xml>',
     },
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var ellipse = user.querySelector('ellipse');
         var fill = ellipse.getAttribute('fill');
@@ -49,19 +49,19 @@ module.exports = {
         '<xml>' +
         blockUtils.mathBlockXml('functional_ellipse', {
           WIDTH: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 50
+            NUM: 50,
           }),
           HEIGHT: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 100
+            NUM: 100,
           }),
           COLOR: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'red'
+            VAL: 'red',
           }),
           STYLE: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'outline'
-          })
+            VAL: 'outline',
+          }),
         }) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

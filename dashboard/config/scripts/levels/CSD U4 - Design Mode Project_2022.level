@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:45:49.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -56,9 +52,9 @@
     "show_type_hints": "false",
     "long_instructions": "# Mocking Up Your App\r\n\r\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\r\n\r\n# Do This\r\n\r\n* Rename the screen to match your _namespace_.\r\n* Use the built-in elements to lay out your app screen, giving each a proper ID\r\n\t* For example, if your namespace is `home_` you might create IDs like:\r\n    \t* `home_title`\r\n        * `home_login_button`\r\n        * `home_logo`\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style",
     "reference_links": [
-      "/docs/concepts/app-lab/design-mode/"
+      "/courses/csd-2022/guides/design-mode"
     ],
-    "map_reference": "/docs/concepts/app-lab/design-mode/design-mode-elements/",
+    "map_reference": "/courses/csd-2022/guides/design-mode-elements",
     "mini_rubric": "true",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",
@@ -69,6 +65,10 @@
     "rubric_performance_level_4": "There are no elements in the digital prototype, or the elements are not consistent with the paper prototype.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-30T23:45:49.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:45:49.008+00:00\",\"changed\":[\"cloned from \\\"CSD U4 - Design Mode Project_2021\\\"\"],\"cloned_from\":\"CSD U4 - Design Mode Project_2021\"}]"

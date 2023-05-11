@@ -9,7 +9,7 @@ const GENDERS = {
   m: i18n.genderMale(),
   f: i18n.genderFemale(),
   n: i18n.genderNonBinary(),
-  o: i18n.genderNotListed()
+  o: i18n.genderNotListed(),
 };
 
 class ManageStudentGenderCell extends Component {
@@ -19,11 +19,11 @@ class ManageStudentGenderCell extends Component {
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
     // Provided by redux
-    editStudent: PropTypes.func.isRequired
+    editStudent: PropTypes.func.isRequired,
   };
 
   state = {
-    genderValue: this.props.gender
+    genderValue: this.props.gender,
   };
 
   onChangeGender = e => {
@@ -59,6 +59,6 @@ export default connect(
   dispatch => ({
     editStudent(id, studentInfo) {
       dispatch(editStudent(id, studentInfo));
-    }
+    },
   })
 )(ManageStudentGenderCell);

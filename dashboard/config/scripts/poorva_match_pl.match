@@ -9,3 +9,5 @@ question 'Press the j key'
 answer 'red\_sprite moves up and blue\_sprite moves down'
 question 'Press the j and k keys'
 answer 'red\_sprite gets bigger and blue\_sprite gets smaller'
+
+allow_multiple_attempts true

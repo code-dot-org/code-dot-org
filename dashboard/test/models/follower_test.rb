@@ -20,8 +20,8 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'admins cannot be student followers' do
-    assert_raises do
-      assert_does_not_create(Follower) do
+    assert_does_not_create(Follower) do
+      assert_raises do
         create :follower, student_user: (create :admin)
       end
     end

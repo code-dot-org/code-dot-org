@@ -4,44 +4,44 @@
   show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
 
   tall_blocks = [
-    Script::COURSE1_NAME,
-    Script::COURSE2_NAME,
-    Script::COURSE3_NAME,
-    Script::COURSE4_NAME,
-    Script::MINECRAFT_AQUATIC_NAME,
-    Script::MINECRAFT_HERO_NAME,
-    Script::STARWARS_NAME,
-    Script::FROZEN_NAME,
-    Script::HOC_NAME,
-    Script::FLAPPY_NAME,
-    Script::INFINITY_NAME,
-    Script::PLAYLAB_NAME,
-    Script::ARTIST_NAME,
-    Script::APPLAB_INTRO,
-    Script::DANCE_PARTY_NAME,
-    Script::DANCE_PARTY_2019_NAME,
-    Script::OCEANS_NAME
+    Unit::COURSE1_NAME,
+    Unit::COURSE2_NAME,
+    Unit::COURSE3_NAME,
+    Unit::COURSE4_NAME,
+    Unit::MINECRAFT_AQUATIC_NAME,
+    Unit::MINECRAFT_HERO_NAME,
+    Unit::STARWARS_NAME,
+    Unit::FROZEN_NAME,
+    Unit::HOC_NAME,
+    Unit::FLAPPY_NAME,
+    Unit::INFINITY_NAME,
+    Unit::PLAYLAB_NAME,
+    Unit::ARTIST_NAME,
+    Unit::APPLAB_INTRO,
+    Unit::DANCE_PARTY_NAME,
+    Unit::DANCE_PARTY_2019_NAME,
+    Unit::OCEANS_NAME
   ]
 
   wide_blocks = [
-    Script::TWENTY_HOUR_NAME,
+    Unit::TWENTY_HOUR_NAME,
     "unplugged",
   ]
 
   # Family name for a set of courses. A block will be generated for the recommended one.
   family_wide_blocks = [
-    Script::EXPRESS,
-    Script::PREEXPRESS,
+    Unit::EXPRESS,
+    Unit::PREEXPRESS,
   ]
 
   # Family name for a set of courses. A block will be generated for the recommended one.
   family_tall_blocks = [
-    Script::COURSEA,
-    Script::COURSEB,
-    Script::COURSEC,
-    Script::COURSED,
-    Script::COURSEE,
-    Script::COURSEF,
+    Unit::COURSEA,
+    Unit::COURSEB,
+    Unit::COURSEC,
+    Unit::COURSED,
+    Unit::COURSEE,
+    Unit::COURSEF,
   ]
 
 .all-course-blocks
@@ -55,14 +55,14 @@
 
   -# Creates a block for the recommended course version in the given course family.
   - family_tall_blocks.each do |family_name|
-    - script = Script.latest_stable_version(family_name, locale: locale)
+    - script = Unit.latest_stable_version(family_name, locale: locale)
     - next unless script
     %div{id: family_name}
       = render partial: 'shared/course_tall_block', locals: { id: script.name, family_name: family_name}
 
   -# Creates a block for the recommended course version in the given course family.
   - family_wide_blocks.each do |family_name|
-    - script = Script.latest_stable_version(family_name, locale: locale)
+    - script = Unit.latest_stable_version(family_name, locale: locale)
     - next unless script
     %div{id: family_name}
       = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small", family_name: family_name }

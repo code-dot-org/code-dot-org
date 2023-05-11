@@ -2,24 +2,31 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Prompt the user to enter a number.\r\n\r\n2. Print the square root of that number using `Math.sqrt(double a)`(#e7e8ea).",
+    "long_instructions": "##In MathPrompter.java:\r\n\r\n1. Write the method `promptForNumber()`(#e7e8ea) to prompt the user to enter a number and return the number entered.\r\n\r\n**Note:** Don't forget to close the `Scanner`(#e7e8ea) object after receiving the user's input!\r\n\r\n2. Write the method `getSquareRoot()`(#e7e8ea) to return the square root of the parameter `number`(#e7e8ea) using `Math.sqrt(double a)`(#e7e8ea).",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    Scanner input = new Scanner(System.in);\n\n    // TO DO #1: Prompt the user to enter a number.\n\n\n    // TO DO #2: Print the square root of the number.\n\n    \n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    double userValue = MathPrompter.promptForNumber();\n    System.out.println(\"square root: \" + MathPrompter.getSquareRoot(userValue));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "MathPrompter.java": {
+        "text": "import java.util.Scanner;\n\npublic class MathPrompter {\n\n  public static double promptForNumber() {\n    Scanner input = new Scanner(System.in);\n\n    // TO DO #1: Prompt the user to enter a number and return the number.\n\n    return 0;\n  }\n\n  public static double getSquareRoot(double number) {\n    // TO DO #2: Return the square root of the number.\n\n    return 0;\n  }\n  \n}",
         "isVisible": true
       }
     },
-    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI5zHu0zhHA7e+fqDfhj\nPPH0u74WamCXZczcMW+6VKCARiA43ppkD6pJskMOqdLXYi72oxfVg41zSH4i\n8tSgcdcx5LqT/w76M+0hBAN7otAuGBZJgDeQPZwazkmXWT/40EImOXEI587j\nPZoVgxexiBfnkKI/pSRRBiiKsvgGk14n1R3igFGXEtNoBgsYPbskGK8lwSmV\nmRsK+Yh+TRnLRF57EyPXkULnhwlmpHJl3Yti0a0h2dWEGsbvam7w0wG2+An6\nPon2x3+HrBSpCasTeQAZkLG+x7puewdBm2lK0l19SO93xX+42R1pSNWswdJU\nDDpYSIz4UWmMaRvTnNxwqt9JeCFANtduIAWe61heQMadLVWw19bCqjLkTO1h\nvFk/GqRJPMDUCsvD8KGGlNr/4nY2Q2bs2OithDvn2ShNCzAVLpeeaUfmCa6T\n0OlC4/5IXx7Z23PF7HIuicULJ/1qnIfSFY9I3wllBTDgkUDMoP58o/ULEf9T\nQRn0OgY5+NjaxjTy3kQ9IWNUPFTXw34AOmKK65xVaqwc0uD/wzVXesB7ItrE\nWr5XTwxVe9ogodyTWLPblo+px4LdxK8lG+rna+4wE5xy6VrMkuiGcyfX7vWR\nLUvFOgxD6N3Adx5OSjWUWuQ=\n"
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2w6U/m3ME1IYhqzfKK\nq8MW+BuPar3WlyczOXIiLPai/iMUvzNABFi4+cb780GAuCuyg70DpVPSdreL\njHRFh+BxW4MjYUW2NeQbikFU9zy0y2gV4jO/jUlysQNBr+1PIbC674kw4AEk\neLYokNCAiVY8DKZKjPAAh+bZUaSOhshzHLTaIsV2w1aH2EnEnD5zjPnJvM3r\ntYQSAjv6RP8INSngjemyqtb3dIfAl9sYd0pOw/6ETJmnvCaL0OWIAULwUfGL\neIHVMKXaqxEq/qJiGHSL39ZbgK42OclCs/gCY752lwZFue9dBbnkmpU2L6Or\n8tZfZ9Q2xSSJ/oFabxVJ7DZYq4po2U/UrVXbI5nZMLKY9ISCnB8w4FWpGL/b\nqQnRcDVfGJ3COvV2WbUEXcNiR5yw3f4JeN7JzL8Hz7pUmfksB8w+5IAuqjsl\nKiRuePntzxQ5C1TdXVTS0hm9qSFFS/v70T3aAJrYNmgOJfUgN1bU+045Vzps\nDQxxynJ8NDW14yJh9cJUMMY7Bg8dXjuFg6drfTp84wuUvyBh6JUjdVC3Bw/j\nGm/Q/73om/TLLtehGS6LVnJ/LgqVS/6IVJTPOZz5TXCiYetN4F+l09DutoL9\nqYYbv1kGQ4Nqpv3JHM286Y06sZP5LpEcBqvaO1a1fQHbBGxlig0vDIQxkuHH\nj6toH8a1R3EZQzna9TXc85USYfNjgBQ2HH8dz30BROzaA3mYAlVn1VGwZD6v\nYa6iWd85zmMMGW0Tk/aqd9lA7uIi3mDkAYKZ0YqosKNM8lZgn09lWZiH/Dps\no33pUfQZrGOZ+xb2OOZXdarwK/Z3vy9T/GgomKk9dCgG0FCE/tKPiBUR3IVs\nsp/x2IBaca6ArIB4+kKpL8JJFyuLImFfgWQiU67dLnjvUJw/RiGZVB8gPzb9\nZq4/Fbk6/KsVxEPT9n3ycytlwcYNq8CAbiQpCvCdWUygIAC6fk/G8giYFIAX\n2YaO7jdm1eEOiBgV38WbJBPvaJLo5E5hgIcIT4aR3WnjuVXu+lZ4WppO8K3y\nNspCWetU\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-04-07T18:25:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:25:56.886+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L3_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L3_2022\"},{\"changed_at\":\"2022-04-07 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:02:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:04:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:44:33 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:25:56.886+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L3_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L3_2022\"},{\"changed_at\":\"2022-04-07 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:02:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:04:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:44:33 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2022-09-19 13:36:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 13:36:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 13:36:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 13:37:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

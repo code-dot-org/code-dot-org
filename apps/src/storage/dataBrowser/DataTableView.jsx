@@ -7,23 +7,23 @@ import DataTable from './DataTable';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import {changeView, showWarning, tableType} from '../redux/data';
-import * as dataStyles from './dataStyles';
-import color from '../../util/color';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import TableDescription from './TableDescription';
-
-const MIN_TABLE_WIDTH = 600;
+import classNames from 'classnames';
+import style from './data-table-view.module.scss';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
-  showDebugView: false
+  showDebugView: false,
 };
 
 class DataTableView extends React.Component {
   static propTypes = {
     // from redux state
+    isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableListMap: PropTypes.object.isRequired,
@@ -33,7 +33,7 @@ class DataTableView extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -98,47 +98,50 @@ class DataTableView extends React.Component {
       tableListMap,
       tableName,
       onViewChange,
-      libraryManifest
+      libraryManifest,
+      isRtl,
     } = this.props;
     const visible = DataView.TABLE === view;
-    const containerStyle = [
-      styles.container,
-      {
-        display: visible ? '' : 'none'
-      }
-    ];
-    const debugDataStyle = [
-      dataStyles.debugData,
-      {
-        display: this.state.showDebugView ? '' : 'none'
-      }
-    ];
+    const debugDataStyle = {
+      ...{
+        display: this.state.showDebugView ? '' : 'none',
+      },
+    };
     const readOnly = tableListMap[tableName] === tableType.SHARED;
 
     return (
-      <div id="dataTable" style={containerStyle} className="inline-flex">
-        <div style={dataStyles.viewHeader}>
-          <span style={dataStyles.backLink}>
+      <div
+        id="dataTable"
+        className={classNames(
+          style.container,
+          visible ? '' : style.containerHidden
+        )}
+      >
+        <div className={style.viewHeader}>
+          <span className={style.backLink}>
             <a
               id="tableBackToOverview"
-              style={dataStyles.link}
+              className={dataStyles.link}
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
-              &nbsp;Back to data
+              &nbsp;{msg.backToData()}
             </a>
           </span>
-          <span style={dataStyles.debugLink}>
+          <span className={isRtl ? style.debugLinkRtl : style.debugLink}>
             <a
               id="uitest-tableDebugLink"
-              style={dataStyles.link}
+              className={dataStyles.link}
               onClick={this.toggleDebugView}
             >
-              {this.state.showDebugView ? 'Table view' : 'Debug view'}
+              {this.state.showDebugView
+                ? msg.dataTableTableView()
+                : msg.dataTableDebugView()}
             </a>
           </span>
         </div>
         <TableControls
+          isRtl={isRtl}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
@@ -151,57 +154,25 @@ class DataTableView extends React.Component {
             libraryTables={libraryManifest.tables}
           />
         )}
-        <div style={debugDataStyle}>{this.getTableJson()}</div>
+        <div className={style.debugData} style={debugDataStyle}>
+          {this.getTableJson()}
+        </div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
     );
   }
 }
 
-const styles = {
-  addColumnHeader: [
-    dataStyles.headerCell,
-    {
-      width: 19
-    }
-  ],
-  container: {
-    flexDirection: 'column',
-    height: '99%',
-    minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '99%',
-    paddingLeft: 8
-  },
-  table: {
-    minWidth: MIN_TABLE_WIDTH
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  plusIcon: {
-    alignItems: 'center',
-    borderRadius: 2,
-    backgroundColor: 'white',
-    color: color.teal,
-    cursor: 'pointer',
-    display: 'inline-flex',
-    height: 18,
-    justifyContent: 'center',
-    width: 18
-  }
-};
-
 export const UnconnectedDataTableView = DataTableView;
 export default connect(
   state => ({
+    isRtl: state.isRtl,
     view: state.data.view,
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
     tableListMap: state.data.tableListMap || {},
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -209,6 +180,6 @@ export default connect(
     },
     onViewChange(view) {
       dispatch(changeView(view));
-    }
+    },
   })
-)(Radium(DataTableView));
+)(DataTableView);

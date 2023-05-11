@@ -5,3 +5,5 @@ answer 'Top-Down Design principles', weight: 1, lesson_name: 'Lessons 4 - 6 : Pr
 answer 'Writing functions with Parameters', weight: 1, lesson_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
 answer 'Using Loops', weight: 1, lesson_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
 answer 'Using an API', weight: 1, lesson_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+
+allow_multiple_attempts true

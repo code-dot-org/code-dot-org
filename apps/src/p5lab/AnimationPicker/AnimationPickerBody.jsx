@@ -1,27 +1,30 @@
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
+import AnimationPickerListItem, {
+  getCategory,
+} from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterOutBackgrounds
+  filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
+import style from './animation-picker-body.module.scss';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
+import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
-    is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
@@ -33,21 +36,40 @@ export default class AnimationPickerBody extends React.Component {
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
-    canDraw: PropTypes.bool.isRequired,
+    hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
-    pickerType: PropTypes.string.isRequired
+    pickerType: PropTypes.string.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   };
 
   state = {
     searchQuery: '',
     categoryQuery: '',
-    currentPage: 0
+    currentPage: 0,
   };
 
   componentDidMount() {
     this.scrollListContainer = React.createRef();
+    if (this.props.defaultQuery) {
+      const currentPage = 0;
+      const {results, pageCount} = this.searchAssetsWrapper(
+        currentPage,
+        this.props.defaultQuery
+      );
+      let nextQuery = this.props.defaultQuery || {
+        categoryQuery: '',
+        searchQuery: '',
+      };
+      this.setState({
+        ...nextQuery,
+        currentPage,
+        results,
+        pageCount,
+      });
+    }
   }
 
+  // Can be safely removed once the 'backgroundsTab' experiment is removed.
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.defaultQuery !== nextProps.defaultQuery) {
       const currentPage = 0;
@@ -57,17 +79,16 @@ export default class AnimationPickerBody extends React.Component {
       );
       let nextQuery = nextProps.defaultQuery || {
         categoryQuery: '',
-        searchQuery: ''
+        searchQuery: '',
       };
       this.setState({
         ...nextQuery,
         currentPage,
         results,
-        pageCount
+        pageCount,
       });
     }
   }
-
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 
@@ -103,14 +124,12 @@ export default class AnimationPickerBody extends React.Component {
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
-      if (this.props.hideBackgrounds) {
-        newResults = filterOutBackgrounds(newResults);
-      }
+      newResults = filterAnimations(newResults, this.props);
 
       this.setState({
         results: [...(results || []), ...newResults],
         currentPage: nextPage,
-        pageCount
+        pageCount,
       });
     }
   };
@@ -118,23 +137,19 @@ export default class AnimationPickerBody extends React.Component {
   onSearchQueryChange = searchQuery => {
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      searchQuery
+      searchQuery,
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
   };
 
   onCategoryChange = event => {
-    const categoryQuery = event.target.className;
+    const categoryQuery = getCategory(event.target);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      categoryQuery
+      categoryQuery,
     });
-    if (this.props.hideBackgrounds) {
-      results = filterOutBackgrounds(results);
-    }
+    results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
@@ -144,7 +159,7 @@ export default class AnimationPickerBody extends React.Component {
       searchQuery: '',
       currentPage: 0,
       results: [],
-      pageCount: 0
+      pageCount: 0,
     });
   };
 
@@ -202,15 +217,28 @@ export default class AnimationPickerBody extends React.Component {
     const {searchQuery, categoryQuery, results} = this.state;
     const {
       hideUploadOption,
-      is13Plus,
       onDrawYourOwnClick,
       onUploadClick,
-      onAnimationSelectionComplete
+      onAnimationSelectionComplete,
+      shouldWarnOnAnimationUpload,
     } = this.props;
 
+    const searching = searchQuery !== '';
+    const inCategory = categoryQuery !== '';
+    const isBackgroundsTab =
+      this.props.pickerType === 'backgrounds' &&
+      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD);
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
+    // We show the draw your own and upload buttons if the user is either:
+    // Not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results
+    const showDrawAndUploadButtons =
+      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
+    // We are showing the upload button if it should be visible per the previous boolean and
+    // hideUploadOption is not set to true.
+    const showingUploadButton = !hideUploadOption && showDrawAndUploadButtons;
 
     return (
       <div style={{marginBottom: 10}}>
@@ -224,21 +252,21 @@ export default class AnimationPickerBody extends React.Component {
         <h1 style={dialogStyles.title}>
           {msg.animationPicker_title({assetType})}
         </h1>
-        {!is13Plus && !hideUploadOption && (
+        {showingUploadButton && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
           placeholderText={msg.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
-        {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.navigation}>
-            {categoryQuery !== '' && (
-              <div style={styles.breadCrumbs}>
+        {(searching || inCategory) && (
+          <div className={style.navigation}>
+            {inCategory && (
+              <div className={style.breadCrumbs}>
                 {this.props.navigable && (
                   <span
                     onClick={this.onClearCategories}
-                    style={styles.allAnimations}
+                    className={style.allAnimations}
                   >
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
@@ -255,25 +283,24 @@ export default class AnimationPickerBody extends React.Component {
             onScroll={this.handleScroll}
           >
             {' '}
-            {(searchQuery !== '' || categoryQuery !== '') &&
-              results.length === 0 && (
-                <div style={styles.emptyResults}>
-                  {msg.animationPicker_noResultsFound()}
-                </div>
-              )}
-            {((searchQuery === '' && categoryQuery === '') ||
-              (results.length === 0 && this.props.canDraw)) && (
+            {(searching || inCategory) && results.length === 0 && (
+              <div className={style.emptyResults}>
+                {msg.animationPicker_noResultsFound()}
+              </div>
+            )}
+            {showDrawAndUploadButtons && (
               <div>
                 <AnimationPickerListItem
                   label={msg.animationPicker_drawYourOwn()}
+                  isBackgroundsTab={isBackgroundsTab}
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
                 {!hideUploadOption && (
-                  <AnimationPickerListItem
-                    label={msg.animationPicker_uploadImage()}
-                    icon="upload"
-                    onClick={onUploadClick}
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+                    isBackgroundsTab={isBackgroundsTab}
                   />
                 )}
               </div>
@@ -286,7 +313,7 @@ export default class AnimationPickerBody extends React.Component {
           </ScrollableList>
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.footer}>
+          <div className={style.footer}>
             <Button
               className="ui-test-selector-done-button"
               text={msg.done()}
@@ -300,40 +327,9 @@ export default class AnimationPickerBody extends React.Component {
   }
 }
 
-export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
-
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
-  children: PropTypes.node
-};
-
-const styles = {
-  allAnimations: {
-    color: color.purple,
-    fontFamily: "'Gotham 7r', sans-serif",
-    cursor: 'pointer'
-  },
-  breadCrumbs: {
-    margin: '8px 0',
-    fontSize: 14,
-    display: 'inline-block'
-  },
-  pagination: {
-    float: 'right',
-    display: 'inline',
-    marginTop: 10
-  },
-  emptyResults: {
-    paddingBottom: 10
-  },
-  navigation: {
-    minHeight: 30
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    marginTop: 5
-  }
+  children: PropTypes.node,
 };

@@ -10,7 +10,19 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "b5b0c936-3bc6-4e69-8796-e205d103151f",
+          "buttonText": "Learn More"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "028e71f9-ebae-48ab-9c69-d616fa7d8165"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -28,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 23:39:51 UTC",
+    "serialized_at": "2023-05-08 22:58:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -634,6 +646,17 @@
       "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\nStudents will plan and build their own game using the project guide from the previous two lessons. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.",
@@ -1760,7 +1783,7 @@
       "key": "42456ccb-4cdc-4cd1-a487-f241db9d20b9",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -7134,6 +7157,18 @@
       },
       "seeding_key": {
         "activity_section.key": "574e77dd-d6f7-4d59-80db-f24e54851aa1",
+        "lesson_activity.key": "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5"
+      }
+    },
+    {
+      "key": "2a29f3c8-fd50-4acf-8506-d7174eb8391f",
+      "position": 3,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a29f3c8-fd50-4acf-8506-d7174eb8391f",
         "lesson_activity.key": "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5"
       }
     },
@@ -16030,7 +16065,6 @@
       "key": "drawing_in_game_lab",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16584,7 +16618,6 @@
       "key": "plotting_shapes",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16597,7 +16630,6 @@
       "key": "programming_for_entertainment",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16707,7 +16739,6 @@
       "key": "shapes_and_parameters_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -16947,7 +16978,6 @@
       "key": "variables_3",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -17756,7 +17786,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize it's functionality",
+      "definition": "Additional information provided as input to a block to customize its functionality",
       "properties": {
       },
       "seeding_key": {

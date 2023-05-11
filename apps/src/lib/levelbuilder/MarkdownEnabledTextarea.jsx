@@ -9,7 +9,8 @@ import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpr
 
 export const markdownFeaturesShape = PropTypes.shape({
   imageUpload: PropTypes.bool,
-  resourceLink: PropTypes.bool
+  programmingExpression: PropTypes.bool,
+  resourceLink: PropTypes.bool,
 });
 
 export default class MarkdownEnabledTextarea extends React.Component {
@@ -18,11 +19,11 @@ export default class MarkdownEnabledTextarea extends React.Component {
     name: PropTypes.string,
     inputRows: PropTypes.number,
     handleMarkdownChange: PropTypes.func.isRequired,
-    features: markdownFeaturesShape
+    features: markdownFeaturesShape,
   };
 
   static defaultProps = {
-    features: {}
+    features: {},
   };
 
   constructor(props) {
@@ -92,32 +93,34 @@ export default class MarkdownEnabledTextarea extends React.Component {
             style={styles.input}
             value={this.props.markdown}
           />
-          <div className="btn-toolbar">
-            <div className="btn-group">
-              <span className="btn dropdown-toggle" data-toggle="dropdown">
-                Add&hellip; <span className="caret" />
-              </span>
-              <ul className="dropdown-menu">
-                {this.props.features.imageUpload && (
-                  <li>
-                    <a onClick={this.handleOpenUploadImage}>Image</a>
-                  </li>
-                )}
-                {this.props.features.resourceLink && (
-                  <li>
-                    <a onClick={this.handleOpenAddResourceLink}>Resource</a>
-                  </li>
-                )}
-                {this.props.features.programmingExpression && (
-                  <li>
-                    <a onClick={this.handleOpenAddProgrammingExpression}>
-                      Code Block
-                    </a>
-                  </li>
-                )}
-              </ul>
+          {Object.values(this.props.features).includes(true) && (
+            <div className="btn-toolbar">
+              <div className="btn-group">
+                <span className="btn dropdown-toggle" data-toggle="dropdown">
+                  Add&hellip; <span className="caret" />
+                </span>
+                <ul className="dropdown-menu">
+                  {this.props.features.imageUpload && (
+                    <li>
+                      <a onClick={this.handleOpenUploadImage}>Image</a>
+                    </li>
+                  )}
+                  {this.props.features.resourceLink && (
+                    <li>
+                      <a onClick={this.handleOpenAddResourceLink}>Resource</a>
+                    </li>
+                  )}
+                  {this.props.features.programmingExpression && (
+                    <li>
+                      <a onClick={this.handleOpenAddProgrammingExpression}>
+                        Code Block
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {this.props.features.imageUpload && (
@@ -150,7 +153,7 @@ const styles = {
   container: {
     flex: '1 1 500px',
     maxWidth: 970,
-    margin: 5
+    margin: 5,
   },
   input: {
     width: '100%',
@@ -159,9 +162,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   icon: {
-    marginRight: 7
-  }
+    marginRight: 7,
+  },
 };

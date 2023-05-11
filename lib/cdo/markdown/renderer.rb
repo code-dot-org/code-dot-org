@@ -15,18 +15,16 @@ module Cdo
         process_div_brackets(full_document)
       end
 
-      private
-
       # CDO-Markdown div_brackets extension.
       # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
-      def process_div_brackets(full_document)
+      private def process_div_brackets(full_document)
         full_document.
           gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
           gsub(/<p>\[(.*)\]<\/p>/) do
           value = $1
           if value[0] == '#'
             attribute = 'id'
-            value = value[1..-1]
+            value = value[1..]
           else
             attribute = 'class'
           end

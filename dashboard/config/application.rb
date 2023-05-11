@@ -3,15 +3,14 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'cdo/properties'
 require 'varnish_environment'
-require 'files_api'
-require 'channels_api'
-require 'tables_api'
+require_relative '../legacy/middleware/files_api'
+require_relative '../legacy/middleware/channels_api'
+require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
-require 'net_sim_api'
-require 'sound_library_api'
-require 'animation_library_api'
+require_relative '../legacy/middleware/net_sim_api'
+require_relative '../legacy/middleware/sound_library_api'
+require_relative '../legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -24,17 +23,25 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    # Eventually, we want to simply call:
-    #config.load_defaults 6.0
-    config.active_record.belongs_to_required_by_default = true
-    config.action_dispatch.return_only_media_type_on_content_type = false
-    config.autoloader = :zeitwerk
+    config.load_defaults 6.1
+
+    # Temporarily disable some default values that we aren't yet ready for.
+    # Right now, these changes to cookie functionality break projects
+    #
+    # TODO infra: Figure out why, fix, and reenable.
+    #
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
+    config.action_dispatch.use_authenticated_cookie_encryption = false
+    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
+    config.active_support.use_authenticated_message_encryption = false
+    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
+    config.action_dispatch.use_cookies_with_metadata = false
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      require 'cdo/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
@@ -137,6 +144,7 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      font-awesome.css
     )
 
     # Support including code from directories outside of the normal Rails directory

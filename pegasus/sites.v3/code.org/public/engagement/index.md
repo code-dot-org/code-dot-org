@@ -7,9 +7,9 @@ rightbar: blank
 ---
 
 
-<iframe width="750" height="493" src="https://www.youtube.com/embed/jdUkMM3fbfE" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="493" src="https://www.youtube-nocookie.com/embed/jdUkMM3fbfE" frameborder="0" allowfullscreen></iframe>
 
-Vista Equity Group hosts an Hour of Code with the Boys and Girls Club 
+Vista Equity Group hosts an Hour of Code with the Boys and Girls Club
 
 # Employee Engagement Opportunities
 

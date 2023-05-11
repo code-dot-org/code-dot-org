@@ -2,6 +2,7 @@ require 'cdo/firehose'
 require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
+  include User::GenderExperimentHelper
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -21,7 +22,6 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params.permit(:user_type), session)
     else
       save_default_sign_up_user_type
-      @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
@@ -101,6 +101,9 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
+    gender = params.dig(:user, :gender)
+    gender_input_type = gender_input_type?(request, session)
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(
@@ -120,6 +123,7 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
+      SignUpTracking.log_gender_input_type_account_created(session, gender, gender_input_type, request.locale, 'email_signup', current_user)
     end
 
     SignUpTracking.log_sign_up_result resource, session
@@ -182,12 +186,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def sign_up_params
     super.tap do |params|
-      if params[:user_type] == "teacher"
+      case params[:user_type]
+      when 'teacher'
         params[:email_preference_opt_in_required] = true
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
-      elsif params[:user_type] == "student"
+      when 'student'
         params[:parent_email_preference_request_ip] = request.ip
         params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end
@@ -211,7 +216,7 @@ class RegistrationsController < Devise::RegistrationsController
   # from cached pages which will not populate the CSRF token
   def set_age
     return head(:forbidden) unless current_user
-    current_user.update(age: params[:user][:age]) unless current_user.age.present?
+    current_user.update(age: params[:user][:age]) if current_user.age.blank?
   end
 
   def upgrade
@@ -336,9 +341,7 @@ class RegistrationsController < Devise::RegistrationsController
     render 'existing_account'
   end
 
-  private
-
-  def update_user_email
+  private def update_user_email
     return false if forbidden_change?(current_user, params)
 
     if current_user.migrated?
@@ -357,7 +360,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
+  private def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
     user = current_user
     respond_to do |format|
       if successfully_updated
@@ -386,7 +389,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Reject certain changes for certain users outright
-  def forbidden_change?(user, params)
+  private def forbidden_change?(user, params)
     return true if params[:user][:password].present? && !user.can_edit_password?
     return true if params[:user][:email].present? && !user.can_edit_email?
     return true if params[:user][:hashed_email].present? && !user.can_edit_email?
@@ -396,7 +399,7 @@ class RegistrationsController < Devise::RegistrationsController
   # check if we need password to update user data
   # ie if password or email was changed
   # extend this as needed
-  def needs_password?(user, params)
+  private def needs_password?(user, params)
     return false if user.migrated? && user.encrypted_password.blank? && params[:user][:password].blank?
 
     email_is_changing = params[:user][:email].present? &&
@@ -414,7 +417,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Accept only whitelisted params for update and upgrade.
-  def upgrade_params
+  private def upgrade_params
     params.require(:user).permit(
       :username,
       :parent_email,
@@ -426,7 +429,7 @@ class RegistrationsController < Devise::RegistrationsController
     )
   end
 
-  def update_params(params)
+  private def update_params(params)
     params.require(:user).permit(
       :parent_email,
       :username,
@@ -460,21 +463,21 @@ class RegistrationsController < Devise::RegistrationsController
     )
   end
 
-  def set_email_params
+  private def set_email_params
     params.
       require(:user).
       permit(:email, :hashed_email, :current_password).
       merge(email_preference_params(EmailPreference::ACCOUNT_EMAIL_CHANGE, "0"))
   end
 
-  def set_user_type_params
+  private def set_user_type_params
     params.
       require(:user).
       permit(:user_type, :email, :hashed_email).
       merge(email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0"))
   end
 
-  def email_preference_params(source, form_kind)
+  private def email_preference_params(source, form_kind)
     params.
       require(:user).
       tap do |user|
@@ -492,7 +495,7 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  def log_account_deletion_to_firehose(current_user, dependent_users)
+  private def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
       :analysis,
@@ -525,7 +528,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def destroy_users(current_user, dependent_users)
+  private def destroy_users(current_user, dependent_users)
     users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)

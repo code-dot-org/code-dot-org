@@ -11,13 +11,13 @@ describe('MethodSummaryTable', () => {
       {
         key: 'turnleft',
         name: 'turnLeft()',
-        content: 'A description about what this method does'
+        content: 'A description about what this method does',
       },
       {
         key: 'step',
         name: 'step(int steps)',
-        content: 'A description about what this method and parameter does'
-      }
+        content: 'A description about what this method and parameter does',
+      },
     ];
   });
 
@@ -32,16 +32,10 @@ describe('MethodSummaryTable', () => {
     const wrapper = shallow(<MethodSummaryTable methods={defaultMethods} />);
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(2);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal('A description about what this method does');
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.equal('A description about what this method and parameter does');
   });
 

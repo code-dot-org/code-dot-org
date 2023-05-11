@@ -730,6 +730,212 @@
   "https://studio.code.org/s/csd3-2017/lessons/14/levels/8": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-free-response U3Ch1": {
+        "long_instructions": "Anything else you’d like your teacher to know?",
+        "placeholder": "Write anything you'd like here. Your responses will be anonymous."
+      }
     }
   },
   "https://studio.code.org/s/csd3-2017/lessons/15/levels/1": {
@@ -1246,11 +1452,1246 @@
   "https://studio.code.org/s/csd3-2017/lessons/22/levels/13": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-free-response U3Ch2": {
+        "long_instructions": "Anything else you’d like your teacher to know?",
+        "placeholder": "Write anything you'd like here. Your responses will be anonymous."
+      }
     }
   },
   "https://studio.code.org/s/csd3-2017/lockable/1/levels/1": {
     "dsls": {
       "title": "CS Discoveries End of Semester Student Survey"
+    },
+    "sublevels": {
+      "csp-post-survey-2017 preamble 1": {
+        "dsls": {
+          "markdown": "### **This survey is anonymous** \n\n* This survey has 5 short parts.  \n* The whole thing should take **15 minutes or less** to complete.\n\n*Code.org takes your privacy very seriously.* Your responses here will be kept **anonymous**. No one, not even your teacher, can link your responses back to you as an individual.\n\nWe do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.\n\n***\n\n### Part 1: School in general\n\n#### *First, we want to ask you about your thoughts and feelings about school, in general.*\n",
+          "teacher_markdown": "This mid-course survey should be administered **after** all class activities have taken place that you intend to teach during the semester. \n\nYou will be able to see the anonymized results of the survey for your students.\n\nWhy is this survey here?\n\n* A major goal of CS Principles is to broaden participation in computer science.\n* It is crucial therefore to have insight into students' attitudes and beliefs about computer science before, during and after the course so we can measure the change over time.\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n\n\n* Please help by having your students contribute to this vital dataset. Their voices make the difference!\n"
+        }
+      },
+      "csp-post-survey-2017-q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am very good at school."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think my schoolwork is interesting."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important for me to be good at my schoolwork."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is hard for people like me to be accepted at my school."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q8": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am treated with as much respect as other students at my school."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself at school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 2 cs in general": {
+        "dsls": {
+          "markdown": "### Part 2: Computer Science in general\n\n#### *Next, we'd like to ask for your thoughts and feelings about Computer Science, generally.*\n\n***\n"
+        }
+      },
+      "csp-post-survey-2017-q11": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think computer science is interesting. "
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am better at computer science than other kids at my school."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important to me to be good at computer science."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q17": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "People like me do computer science."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q18": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I could become a computer scientist one day."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Learning computer science helps me in my other school subjects."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 3 this class": {
+        "dsls": {
+          "markdown": "### Part 3: You and computer science\n\n#### *Next we ask for your thoughts about this computer science class and your future.* \n\n***\n"
+        }
+      },
+      "csp-post-survey-2017-q22": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Sometimes I feel unsure whether I belong in this class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q23": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am treated with as much respect as other students in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q24": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel like I can be myself in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It has been hard for people like me to to be accepted in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Computer science is important for my future."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I expect that I will use computer science in my job."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-implementation-teacher": {
+        "dsls": {
+          "markdown": "### Part 4: The last month in this class\n\nFor the next questions please focus on things that happened in your computer science class **during the past month**.  \n\n***\n\n<h3><em>During the past month how often did your <strong>teacher</strong> do the following?</em></h3>\n"
+        }
+      },
+      "csd-post-survey-q26": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school)."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q27": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life)."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q28": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to problem solve when something didn't work the way I wanted it to work."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q29": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to explain the logic and reasoning supporting my solutions to problems."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-implementation-student": {
+        "dsls": {
+          "markdown": "<h3><em>During the past month how often did <strong>you</strong> do the following?</em></h3>\n"
+        }
+      },
+      "csd-post-survey-q30": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Worked collaboratively with other students in a small group."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q31": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Shared responsibility for activity and project work with group members."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q32": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Made my own choices about assignments in computer science class."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-FR": {
+        "long_instructions": "Anything else you'd like to say about your experience in the course?",
+        "placeholder": "Write whatever you like here.  Your responses will be anonymous."
+      }
     }
   },
   "https://studio.code.org/s/csd3-2017/lockable/2/levels/1": {

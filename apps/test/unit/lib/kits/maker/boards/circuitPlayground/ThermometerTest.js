@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
 import Playground from 'playground-io';
 
-describe('Thermometer', function() {
+describe('Thermometer', function () {
   let testObj;
 
   beforeEach(() => {
@@ -56,9 +56,7 @@ describe('Thermometer', function() {
     Thermometer.initialize.value.call(testObj);
     for (let i = 0; i < 1024; i++) {
       Thermometer.toCelsius.value.call(testObj, i);
-      expect(testObj.raw)
-        .to.equal(testObj.value)
-        .to.equal(i);
+      expect(testObj.raw).to.equal(testObj.value).to.equal(i);
     }
   });
 });

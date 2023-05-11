@@ -54,7 +54,7 @@ CSV.foreach(dashboard_dir('config/videos.csv'), headers: true) do |row|
 
   # Skip checking this video if it doesn't match a provided filter
   if options[:filter]
-    next unless Regexp.new(options[:filter]) =~ video_key
+    next unless Regexp.new(options[:filter])&.match?(video_key)
   end
 
   # Check both Strict and Moderate restricted mode for each video

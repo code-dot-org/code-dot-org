@@ -7,11 +7,11 @@ import {DataView} from '../constants';
 import EditKeyRow from './EditKeyRow';
 import DataEntryError from './DataEntryError';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
+import msg from '@cdo/locale';
 
 class KVPairs extends React.Component {
   static propTypes = {
@@ -21,12 +21,12 @@ class KVPairs extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {
     showDebugView: false,
-    showError: false
+    showError: false,
   };
 
   showError = () => this.setState({showError: true});
@@ -44,16 +44,16 @@ class KVPairs extends React.Component {
 
   render() {
     const keyValueDataStyle = {
-      display: this.state.showDebugView ? 'none' : ''
+      display: this.state.showDebugView ? 'none' : '',
     };
 
     const kvTable = (
       <table style={keyValueDataStyle} className="uitest-kv-table">
         <tbody>
           <tr>
-            <th style={dataStyles.headerCell}>Key</th>
-            <th style={dataStyles.headerCell}>Value</th>
-            <th style={dataStyles.headerCell}>Actions</th>
+            <th className={dataStyles.headerCell}>{msg.dataTableKey()}</th>
+            <th className={dataStyles.headerCell}>{msg.dataTableValue()}</th>
+            <th className={dataStyles.headerCell}>{msg.actions()}</th>
           </tr>
 
           <AddKeyRow
@@ -84,10 +84,11 @@ class KVPairs extends React.Component {
   }
 }
 
+export const UnconnectedKVPairs = KVPairs;
 export default connect(
   state => ({
     view: state.data.view,
-    keyValueData: state.data.keyValueData || {}
+    keyValueData: state.data.keyValueData || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -95,6 +96,6 @@ export default connect(
     },
     onViewChange(view) {
       dispatch(changeView(view));
-    }
+    },
   })
-)(Radium(KVPairs));
+)(KVPairs);

@@ -1,7 +1,9 @@
 // Base styles that apply to all apps
-$root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/applab/"; //TODO: Parameterize for asset pipeline
 
-#divApplab, #designModeViz, .draggingParent {
+#divApplab,
+#designModeViz,
+.draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -23,7 +25,7 @@ $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
   }
 
   img {
-    opacity: 1.0;
+    opacity: 1;
     max-width: none;
   }
 
@@ -47,14 +49,19 @@ $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
     font-size: 14px;
   }
 
-  input, div.textArea, button, select, img, label {
+  input,
+  div.textArea,
+  button,
+  select,
+  img,
+  label {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px;
 
     p {
-      line-height: inherit
+      line-height: inherit;
     }
   }
 
@@ -73,7 +80,9 @@ $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
   }
 }
 
-#divApplab.notRunning, #designModeViz, .draggingParent {
+#divApplab.notRunning,
+#designModeViz,
+.draggingParent {
 
   canvas:not(#turtleCanvas) {
     background-color: #eee;

@@ -13,16 +13,13 @@ describe('Module assignment element', () => {
           <ModuleAssignment
             moduleAssignmentData={{
               category: 'Overview',
-              status: key
+              status: key,
             }}
           />
         );
 
         expect(
-          moduleAssignment
-            .find('div')
-            .last()
-            .props().style.backgroundColor
+          moduleAssignment.find('div').last().props().style.backgroundColor
         ).to.equal(value);
       }
     );

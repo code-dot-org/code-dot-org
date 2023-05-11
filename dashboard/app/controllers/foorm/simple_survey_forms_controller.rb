@@ -28,8 +28,8 @@ module Foorm
           survey_data: survey_data
         )
       # Admin only page, so return any errors in plain text.
-      rescue StandardError => e
-        return render status: :bad_request, json: {error: e.message}
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
       end
 
       render 'index'
@@ -58,7 +58,7 @@ module Foorm
       unless form_data.allow_signed_out
         return render :logged_out unless current_user
         return render :not_teacher unless current_user.teacher?
-        return render :no_teacher_email unless current_user.email.present?
+        return render :no_teacher_email if current_user.email.blank?
 
         key_params[:user_id] = current_user.id
       end
@@ -176,7 +176,7 @@ module Foorm
         key = "survey_data_key_#{id}".to_sym
         value = "survey_data_value_#{id}".to_sym
 
-        survey_data[params[key]] = params[value] unless params[key].blank?
+        survey_data[params[key]] = params[value] if params[key].present?
       end
 
       survey_data

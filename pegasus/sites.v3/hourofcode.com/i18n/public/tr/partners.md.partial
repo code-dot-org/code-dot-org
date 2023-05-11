@@ -2,13 +2,11 @@
 title: Ortaklar
 ---
 
-Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve Değerlendirme Komiteleri tarafından yönetilmektedir.
+Hour of Code, Hour of Code İnceleme Komitesi tarafından yürütülmektedir.
 
-[Danışma Komitesi]({{ urls/advisory_committee }}); K-12, akademi, kâr amacı gütmeyen ve güden kuruluşlar ve uluslararası kuruluşların temsilcilerden oluşmaktadır. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
+[İnceleme Komitesi]({{ urls/review_committee }}) K-12 sınıf gruplarında, bir danışma komitesi tarafından oluşturulan bir değerlendirme tablosunu kullanarak etkinlikleri değerlendiren ve tavsiye eden görevine devam eden ve eski 12 eğitimciden oluşur. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
 
-[Değerlendirme Komitesi]({{ urls/review_committee }}) Danışma Komitesi'nin değerlendirme tablosunu kullanarak aktiviteleri değerlendiren ve uygun bulduklarını tavsiye eden K-12 sınıflarından 15 eğitimciden oluşur. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
-
-Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her öğrenci için bilgisayar bilimlerine bir giriş sunma vizyonuna katkıda bulunmuştur.
+Komitenin çalışmaları ve özverisi, Hour of Code'un başarısına ve her öğrenci için bilgisayar bilimlerini tanıtma vizyonuna katkıda bulunmuştur.
 
 # Ana Ortaklar ve Kurumsal Destekçiler
 
@@ -16,13 +14,13 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 * * *
 
-# Uluslararası Ortaklarımız
+# Uluslararası Ortaklar
 
 {{ partners/international_partners }}
 
 * * *
 
-# Müfredat ve Eğitim Ortaklarımız
+# Müfredat ve Eğitim Ortakları
 
 {{ partners/curriculum_tutorial_partners }}
 

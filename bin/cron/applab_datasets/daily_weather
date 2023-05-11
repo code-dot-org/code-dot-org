@@ -8,10 +8,10 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-require_relative '../../../shared/middleware/helpers/firebase_helper'
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'honeybadger/ruby'
 
-WeatherForecastOffice = Struct.new(:city, :state, :zip)
+WeatherForecastOffice = Struct.new(:city, :state, :zip_code)
 
 API_KEY = CDO.open_weather_api_key
 NUM_DAYS = 5
@@ -156,7 +156,7 @@ def get_weather_data
   forecast_offices.each do |office|
     forecast_number = 1
 
-    url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
+    url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip_code},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
     if response.code != '200'
       Honeybadger.notify(

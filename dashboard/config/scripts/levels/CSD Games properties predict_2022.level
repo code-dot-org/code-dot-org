@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:19.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -69,14 +65,14 @@
     "parent_level_id": 20692,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/",
-      "/docs/concepts/game-lab/sprites/sprite-interactions/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/sprite-interactions"
     ],
     "video_key": "csd_gamelab_animation_tab",
     "disable_procedure_autopopulate": "false",
@@ -90,10 +86,14 @@
       "CSD Games Properties multi predict_2022"
     ],
     "display_name": "Sprite Properties: Predict",
-    "map_reference": "/docs/concepts/game-lab/sprites/sprite-properties/",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:19.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:19.892+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties predict_2021\\\"\"],\"cloned_from\":\"CSD Games properties predict_2021\"}]"

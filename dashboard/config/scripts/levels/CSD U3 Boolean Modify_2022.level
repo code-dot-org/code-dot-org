@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -91,7 +87,7 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"8cf12b56-3091-4817-8c73-a9f2a12eb3b0\",\r\n    \"08c988f7-21e8-4256-8930-215311a62e37\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"8cf12b56-3091-4817-8c73-a9f2a12eb3b0\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/_C2x10SnwauWvJRCQq.u2jEtcmNrPifb/category_food/apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_C2x10SnwauWvJRCQq.u2jEtcmNrPifb\"\r\n    },\r\n    \"08c988f7-21e8-4256-8930-215311a62e37\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/fCiFCbsTDOoiLsbStivUZ249XH0TOxIY/category_food/carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"fCiFCbsTDOoiLsbStivUZ249XH0TOxIY\"\r\n    }\r\n  }\r\n}",
     "parent_level_id": 20746,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/javascript/if-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-statements",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
@@ -103,18 +99,22 @@
     "thumbnail_url": "https://images.code.org/4dfe1966ca484d401504b92df7066cff-image-1585695221052.png",
     "encrypted_examples": "dEZkAoLKyFt2ruNFGHyrPx6ITWm7K6wug1B1mhV/uuGtRhfGsQB77tYPIwtH\nM8m2DxSvmAm0R8zQQtl9eJ3csw==\n",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:11.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:11.258+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Boolean Modify_2021\\\"\"],\"cloned_from\":\"CSD U3 Boolean Modify_2021\"}]"

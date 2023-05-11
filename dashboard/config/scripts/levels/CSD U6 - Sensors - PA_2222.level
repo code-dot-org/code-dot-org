@@ -89,7 +89,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20453,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/analog-sensors/",
+    "map_reference": "/courses/csd-2022/guides/analog-sensors",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -103,11 +103,11 @@
     "encrypted_examples": "RPQZTJ3CpoZyFDPswAvJyr3IvufZH9UKZFK/OODBkMGuDF67jDdlamWh5jO9\n2SnTxbV9YFv/02xwUh0r7H99uw==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:06:08.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:08.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:08.935+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PA_2022\"},{\"changed_at\":\"2022-04-13 21:41:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-13 21:42:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

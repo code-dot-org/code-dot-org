@@ -28,7 +28,7 @@ module ActiveSupport
           if use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
-              connection.begin_transaction joinable: false, _lazy: false, lock_thread: true
+              connection.begin_transaction joinable: false, _lazy: false
               connection.pool.lock_thread = true
             end
           end
@@ -43,12 +43,10 @@ module ActiveSupport
           end
         end
 
-        private
-
         # Only select connections that support savepoints,
         # because individual test transactions will be nested
         # within the outer test case transaction.
-        def enlist_transaction_connections
+        private def enlist_transaction_connections
           ActiveRecord::Base.connection_handler.connection_pool_list.
             map(&:connection).
             select(&:supports_savepoints?)

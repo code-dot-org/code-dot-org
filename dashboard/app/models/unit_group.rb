@@ -21,7 +21,6 @@
 #  index_unit_groups_on_published_state       (published_state)
 #
 
-require 'cdo/script_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
@@ -60,6 +59,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
@@ -143,10 +143,10 @@ class UnitGroup < ApplicationRecord
 
     unit_group.save!
     unit_group
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in course: #{hash['name']}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 
@@ -213,10 +213,10 @@ class UnitGroup < ApplicationRecord
   def update_scripts(new_units, alternate_units = nil)
     alternate_units ||= []
     new_units = new_units.reject(&:empty?)
-    new_units_objects = new_units.map {|s| Script.find_by_name!(s)}
+    new_units_objects = new_units.map {|s| Unit.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
-    units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
+    units_to_remove -= alternate_units.map {|hash| Unit.find_by_name!(hash['alternate_script'])}
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
@@ -240,8 +240,8 @@ class UnitGroup < ApplicationRecord
     end
 
     alternate_units.each do |hash|
-      alternate_unit = Script.find_by_name!(hash['alternate_script'])
-      default_unit = Script.find_by_name!(hash['default_script'])
+      alternate_unit = Unit.find_by_name!(hash['alternate_script'])
+      default_unit = Unit.find_by_name!(hash['default_script'])
       # alternate units should have the same position as the unit they replace.
       position = default_unit_group_units.find_by(script: default_unit).position
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_unit) do |ugu|
@@ -294,39 +294,41 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize(user = nil, for_edit: false, locale_code: nil)
-    {
-      name: name,
-      id: id,
-      title: localized_title,
-      assignment_family_title: localized_assignment_family_title,
-      family_name: family_name,
-      version_year: version_year,
-      published_state: published_state,
-      instruction_type: instruction_type,
-      instructor_audience: instructor_audience,
-      participant_audience: participant_audience,
-      pilot_experiment: pilot_experiment,
-      description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
-      description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
-      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
-      scripts: units_for_user(user).map do |unit|
-        include_lessons = false
-        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
-      end,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      is_migrated: has_migrated_unit?,
-      has_verified_resources: has_verified_resources?,
-      has_numbered_units: has_numbered_units?,
-      course_versions: summarize_course_versions(user, locale_code),
-      show_assign_button: course_assignable?(user),
-      announcements: announcements,
-      course_offering_id: course_version&.course_offering&.id,
-      course_version_id: course_version&.id,
-      course_path: link,
-      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        name: name,
+        id: id,
+        title: localized_title,
+        assignment_family_title: localized_assignment_family_title,
+        family_name: family_name,
+        version_year: version_year,
+        published_state: published_state,
+        instruction_type: instruction_type,
+        instructor_audience: instructor_audience,
+        participant_audience: participant_audience,
+        pilot_experiment: pilot_experiment,
+        description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
+        description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
+        description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
+        version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
+        scripts: units_for_user(user).map do |unit|
+          include_lessons = false
+          unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
+        end,
+        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        is_migrated: has_migrated_unit?,
+        has_verified_resources: has_verified_resources?,
+        has_numbered_units: has_numbered_units?,
+        course_versions: summarize_course_versions(user, locale_code),
+        show_assign_button: course_assignable?(user),
+        announcements: announcements,
+        course_offering_id: course_version&.course_offering&.id,
+        course_version_id: course_version&.id,
+        course_path: link,
+        course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
+      }
+    end
   end
 
   def summarize_for_rollup(user = nil)
@@ -378,9 +380,9 @@ class UnitGroup < ApplicationRecord
   # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
-    # @return [Array<Script>]
+    # @return [Array<Unit>]
     units = default_unit_group_units.map do |ugu|
-      Script.get_from_cache(select_unit_group_unit(user, ugu).script_id)
+      Unit.get_from_cache(select_unit_group_unit(user, ugu).script_id)
     end
     units.compact.reject do |unit|
       unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
@@ -479,12 +481,12 @@ class UnitGroup < ApplicationRecord
   # @param family_name [String] The family name for a course family.
   # @return [UnitGroup] Returns the latest stable version in a course family.
   def self.latest_stable_version(family_name)
-    return nil unless family_name.present?
+    return nil if family_name.blank?
 
     all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.sort_by(&:version_year).last
+    end.max_by(&:version_year)
   end
 
   # @param family_name [String] The family name for a course family.
@@ -497,7 +499,7 @@ class UnitGroup < ApplicationRecord
     all_courses.select do |course|
       assigned_course_ids.include?(course.id) &&
         course.family_name == family_name
-    end.sort_by(&:version_year).last
+    end.max_by(&:version_year)
   end
 
   # @param user [User]
@@ -544,7 +546,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.should_cache?
-    Script.should_cache?
+    Unit.should_cache?
   end
 
   # generates our course_cache from what is in the Rails cache

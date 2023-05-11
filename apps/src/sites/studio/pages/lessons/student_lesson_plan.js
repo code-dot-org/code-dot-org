@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import announcementsReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
@@ -12,7 +12,7 @@ import {registerReducers} from '@cdo/apps/redux';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {retrieveProgress} from '@cdo/apps/code-studio/progress';
 
-$(document).ready(function() {
+$(document).ready(function () {
   displayLessonOverview();
   prepareExpandableImageDialog();
 });
@@ -31,15 +31,7 @@ async function displayLessonOverview() {
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});
     lessonData.announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 

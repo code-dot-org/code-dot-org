@@ -60,7 +60,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 
   test 'show link to pair programming when in a section that has pairing enabled' do
@@ -94,6 +94,6 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 end

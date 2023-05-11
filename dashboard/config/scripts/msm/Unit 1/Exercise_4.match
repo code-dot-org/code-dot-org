@@ -14,3 +14,4 @@ answer '/script_assets/msm/Unit 1/Exercise_4_question_3.png'
 
 question "(2 + 3 * 5) / 2"
 answer '/script_assets/msm/Unit 1/Exercise_4_question_4.png'
+allow_multiple_attempts true

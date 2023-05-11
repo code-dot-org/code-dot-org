@@ -633,8 +633,8 @@ class LevelTest < ActiveSupport::TestCase
       'data' => {
         'callouts' => {
           level_name => {
-            "first": "first test markdown",
-            "second": "second test markdown",
+            first: "first test markdown",
+            second: "second test markdown",
           }
         }
       }
@@ -647,8 +647,8 @@ class LevelTest < ActiveSupport::TestCase
       level_num: 'custom',
       callout_json: JSON.generate(
         [
-          {"callout_text": "first english markdown", "localization_key": "first"},
-          {"callout_text": "second english markdown", "localization_key": "second"},
+          {callout_text: "first english markdown", localization_key: "first"},
+          {callout_text: "second english markdown", localization_key: "second"},
         ]
       )
     )
@@ -669,8 +669,8 @@ class LevelTest < ActiveSupport::TestCase
       level_num: 'custom',
       callout_json: JSON.generate(
         [
-          {"callout_text": "first english markdown", "localization_key": "first"},
-          {"callout_text": "second english markdown", "localization_key": "second"},
+          {callout_text: "first english markdown", localization_key: "first"},
+          {callout_text: "second english markdown", localization_key: "second"},
         ]
       )
     )
@@ -706,6 +706,78 @@ class LevelTest < ActiveSupport::TestCase
 
     assert_equal callouts[0].callout_text, "first english markdown"
     assert_equal callouts[1].callout_text, "second english markdown"
+  end
+
+  test 'localizes rubric properties' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'mini_rubric' => {
+          level_name => {
+            rubric_key_concept: "first test markdown",
+            rubric_performance_level_1: "second test markdown",
+            rubric_performance_level_2: "third test markdown",
+            rubric_performance_level_3: "fourth test markdown",
+            rubric_performance_level_4: "fifth test markdown"
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      mini_rubric: 'true',
+      rubric_key_concept: "first english markdown",
+      rubric_performance_level_1: "second english markdown",
+      rubric_performance_level_2: "third english markdown",
+      rubric_performance_level_3: "fourth english markdown",
+      rubric_performance_level_4: "fifth english markdown"
+    )
+
+    assert_equal level.localized_rubric_property('rubric_key_concept'), "first test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_1'), "second test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_2'), "third test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_3'), "fourth test markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_4'), "fifth test markdown"
+  end
+
+  test 'handles rubric properties localization with non-existent translations' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'mini_rubric' => {
+          level_name => {
+            rubric_key_concept: nil,
+            rubric_performance_level_1: nil
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      mini_rubric: 'true',
+      rubric_key_concept: "first english markdown",
+      rubric_performance_level_1: "second english markdown"
+    )
+
+    # Should return default English string if it exists and translation lookup is nil
+    assert_equal level.localized_rubric_property('rubric_key_concept'), "first english markdown"
+    assert_equal level.localized_rubric_property('rubric_performance_level_1'), "second english markdown"
+    # Should return nil on a non-existing property
+    assert_nil level.localized_rubric_property('rubric_performance_level_9')
   end
 
   test 'create unplugged level from level builder' do
@@ -1173,7 +1245,7 @@ class LevelTest < ActiveSupport::TestCase
       "All types", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
-      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
       "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab"
@@ -1278,5 +1350,73 @@ class LevelTest < ActiveSupport::TestCase
     # the maximum is 70. allow a little extra room for longer numbers.
     assert next_name.length <= 68
     assert next_name.match /_copy1_2020$/
+  end
+
+  test 'localized_teacher_markdown reads from top-level locale' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_teacher_markdown'
+
+    custom_i18n = {
+      'data' => {
+        'teacher_markdown' => {
+          level_name => "translated markdown"
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      properties: {
+        teacher_markdown: "untranslated markdown"
+      }
+    )
+
+    # Falls back to the untranslated version normalized in the level
+    assert_equal level.localized_teacher_markdown, "untranslated markdown"
+
+    # Uses the localized form
+    I18n.locale = test_locale
+    assert_equal level.localized_teacher_markdown, "translated markdown"
+  end
+
+  test 'localized_teacher_markdown reads from dsl locale for DSL-based levels' do
+    test_locale = :"te-ST"
+    level_name = 'test_dsl_localize_teacher_markdown'
+
+    custom_i18n = {
+      'data' => {
+        'teacher_markdown' => {
+          level_name => "bogus translated markdown"
+        },
+        'dsls' => {
+          level_name => {
+            'teacher_markdown' => "actual translated markdown"
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # An "External" level is a prime example of where this will generally get
+    # used in a level. This is used for blocks of text, such as the preliminary
+    # text in pre/post surveys.
+    level = External.create(
+      name: level_name,
+      level_num: 'custom',
+      properties: {
+        teacher_markdown: "untranslated markdown"
+      }
+    )
+
+    # Falls back to the untranslated version normalized in the level
+    assert_equal level.localized_teacher_markdown, "untranslated markdown"
+
+    # Uses the localized form
+    I18n.locale = test_locale
+    assert_equal level.localized_teacher_markdown, "actual translated markdown"
   end
 end

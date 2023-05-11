@@ -8,25 +8,24 @@ export const CsaViewMode = {
   NEIGHBORHOOD: 'neighborhood',
   CONSOLE: 'console',
   THEATER: 'theater',
-  PLAYGROUND: 'playground'
 };
 
 export const WebSocketMessageType = {
   NEIGHBORHOOD: 'NEIGHBORHOOD',
   THEATER: 'THEATER',
-  PLAYGROUND: 'PLAYGROUND',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
   DEBUG: 'DEBUG',
   STATUS: 'STATUS',
   TEST_RESULT: 'TEST_RESULT',
   AUTHORIZER: 'AUTHORIZER',
-  CONNECTED: 'CONNECTED'
+  CONNECTED: 'CONNECTED',
 };
 
 export const JavabuilderExceptionType = {
   CLASS_NOT_FOUND: 'CLASS_NOT_FOUND',
   COMPILER_ERROR: 'COMPILER_ERROR',
+  CONNECTION_POOL_SHUT_DOWN: 'CONNECTION_POOL_SHUT_DOWN',
   FILE_NOT_FOUND: 'FILE_NOT_FOUND',
   ILLEGAL_METHOD_ACCESS: 'ILLEGAL_METHOD_ACCESS',
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
@@ -34,13 +33,16 @@ export const JavabuilderExceptionType = {
   INTERNAL_RUNTIME_EXCEPTION: 'INTERNAL_RUNTIME_EXCEPTION',
   INVALID_CLASS: 'INVALID_CLASS',
   INVALID_JAVA_FILE_NAME: 'INVALID_JAVA_FILE_NAME',
+  INVALID_MAIN_METHOD: 'INVALID_MAIN_METHOD',
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
+  LOW_DISK_SPACE: 'LOW_DISK_SPACE',
   MISSING_PROJECT_FILE_NAME: 'MISSING_PROJECT_FILE_NAME',
   NO_FILES_TO_COMPILE: 'NO_FILES_TO_COMPILE',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
+  TEMP_DIRECTORY_CLEANUP_ERROR: 'TEMP_DIRECTORY_CLEANUP_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
-  UNKNOWN_ERROR: 'UNKNOWN_ERROR'
+  UNKNOWN_ERROR: 'UNKNOWN_ERROR',
 };
 
 export const NeighborhoodSignalType = {
@@ -65,7 +67,7 @@ export const NeighborhoodSignalType = {
   // Show all paint buckets
   SHOW_BUCKETS: 'SHOW_BUCKETS',
   // We will not receive any more commands
-  DONE: 'DONE'
+  DONE: 'DONE',
 };
 
 export const NeighborhoodExceptionType = makeEnum(
@@ -84,7 +86,9 @@ export const TheaterSignalType = {
   // This message contains the url to a visual element
   VISUAL_URL: 'VISUAL_URL',
   // Get an image from the user via Prompter
-  GET_IMAGE: 'GET_IMAGE'
+  GET_IMAGE: 'GET_IMAGE',
+  // There is no audio
+  NO_AUDIO: 'NO_AUDIO',
 };
 
 export const StatusMessageType = {
@@ -99,19 +103,18 @@ export const StatusMessageType = {
   EXITED: 'EXITED',
   RUNNING_VALIDATION: 'RUNNING_VALIDATION',
   RUNNING_PROJECT_TESTS: 'RUNNING_PROJECT_TESTS',
-  NO_TESTS_FOUND: 'NO_TESTS_FOUND'
+  NO_TESTS_FOUND: 'NO_TESTS_FOUND',
 };
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  PLAYGROUND: 'PLAYGROUND',
-  THEATER: 'THEATER'
+  THEATER: 'THEATER',
 };
 
 export const InputMessage = {
   // Theater-specific messages
   UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
-  UPLOAD_ERROR: 'UPLOAD_ERROR'
+  UPLOAD_ERROR: 'UPLOAD_ERROR',
 };
 
 export const SoundExceptionType = makeEnum(
@@ -128,81 +131,42 @@ export const TheaterExceptionType = makeEnum(
   'VIDEO_TOO_LARGE'
 );
 
-export const PlaygroundExceptionType = {
-  PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
-  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING',
-  INVALID_MESSAGE: 'INVALID_MESSAGE'
-};
-
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
-export const EXCEPTION_PREFIX = '[EXCEPTION]';
-
-export const PlaygroundSignalType = {
-  // Indicate that the Playground game has started
-  RUN: 'RUN',
-  // Indicate that the Playground game has ended
-  EXIT: 'EXIT',
-  // Add an image item to the Playground
-  ADD_IMAGE_ITEM: 'ADD_IMAGE_ITEM',
-  // Add a clickable item to the Playground
-  ADD_CLICKABLE_ITEM: 'ADD_CLICKABLE_ITEM',
-  // Add a text item to the Playground
-  ADD_TEXT_ITEM: 'ADD_TEXT_ITEM',
-  // Remove an item from the Playground
-  REMOVE_ITEM: 'REMOVE_ITEM',
-  // Change an item's properties
-  CHANGE_ITEM: 'CHANGE_ITEM',
-  // Play a sound
-  PLAY_SOUND: 'PLAY_SOUND',
-  // Set the background image of the Playground
-  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE',
-  // Set of updates to the playground
-  UPDATE: 'UPDATE',
-  // Indicate that the current update cycle has completed
-  UPDATE_COMPLETE: 'UPDATE_COMPLETE'
-};
-
-export const PlaygroundFontTypeFontFamilies = {
-  SANS: 'Arial, Helvetica, sans-serif',
-  SERIF: '"Times New Roman", Times, serif',
-  MONO: '"Courier New", Courier, monospace'
-};
-
-export const PlaygroundFontStyleType = makeEnum(
-  'NORMAL',
-  'BOLD',
-  'ITALIC',
-  'BOLD_ITALIC'
-);
-
-export const PlaygroundItemType = {
-  IMAGE: 'image',
-  TEXT: 'text'
-};
 
 export const ExecutionType = {
   // Compile and run the main method
   RUN: 'RUN',
   // Compile and run tests
-  TEST: 'TEST'
+  TEST: 'TEST',
 };
 
 export const UserTestResultSignalType = {
   TEST_STATUS: 'TEST_STATUS',
-  STATUS_DETAILS: 'STATUS_DETAILS'
+  STATUS_DETAILS: 'STATUS_DETAILS',
 };
 
 export const TestStatus = {
   SUCCESSFUL: 'SUCCESSFUL',
   FAILED: 'FAILED',
-  ABORTED: 'ABORTED'
+  ABORTED: 'ABORTED',
 };
 
 export const AuthorizerSignalType = {
   TOKEN_USED: 'TOKEN_USED',
   NEAR_LIMIT: 'NEAR_LIMIT',
   USER_BLOCKED: 'USER_BLOCKED',
-  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED'
+  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED',
+  USER_BLOCKED_TEMPORARY: 'USER_BLOCKED_TEMPORARY',
+};
+
+export const JavabuilderLockoutType = {
+  PERMANENT: 'PERMANENT',
+  TEMPORARY: 'TEMPORARY',
+};
+
+export const JavabuilderLockoutPeriod = {
+  DAY: 'DAY',
+  HOUR: 'HOUR',
 };

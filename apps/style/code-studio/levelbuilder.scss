@@ -1,7 +1,7 @@
 @import "codemirror/lib/codemirror";
 @import "codemirror/addon/lint/lint";
 @import "codemirror-spell-checker/src/css/spell-checker";
-@import 'json_editor';
+@import "json_editor";
 
 .CodeMirror {
   border: 1px solid #eee;
@@ -12,7 +12,7 @@
   overflow-x: auto;
 }
 .CodeMirror-matchingtag {
-  background: rgba(255, 150, 0, .3);
+  background: rgb(255 150 0 / 0.3);
 }
 
 .cm-trailingspace {
@@ -24,7 +24,8 @@
 }
 
 table.checkboxes {
-  td, th {
+  td,
+  th {
     padding: 0 0.5em;
     vertical-align: top;
   }
@@ -36,23 +37,23 @@ table.checkboxes {
 }
 
 #grid {
-  .label { background-color: black }
-  .border { background-color: dimgray !important }
-  .path { background-color: darkgreen !important }
-  .start { background-color: firebrick !important }
-  .end { background-color: lime !important }
-  .obstacle { background-color: gold !important }
-  .dirt { background-color: #d1d567 !important }
-  .conditional { background-color: green !important }
+  .label { background-color: black; }
+  .border { background-color: dimgray !important; }
+  .path { background-color: darkgreen !important; }
+  .start { background-color: firebrick !important; }
+  .end { background-color: lime !important; }
+  .obstacle { background-color: gold !important; }
+  .dirt { background-color: #d1d567 !important; }
+  .conditional { background-color: green !important; }
   td {
     width: 40px;
-    border: 1px solid #CCC;
+    border: 1px solid #ccc;
     padding: 0 4px 0 4px;
     vertical-align: top;
     overflow: hidden;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 
     &.highlighted {
       border-color: yellow;
@@ -61,42 +62,42 @@ table.checkboxes {
       border-color: cyan;
     }
     &.start {
-      background-image: url('/blockly/media/skins/birds/small_static_avatar.png');
+      background-image: url("/blockly/media/skins/birds/small_static_avatar.png");
       background-size: 100% 100%;
     }
     &.end {
-      background-image: url('/blockly/media/skins/birds/goal.png');
+      background-image: url("/blockly/media/skins/birds/goal.png");
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
     &.obstacle {
-      background-image: url('/blockly/media/skins/birds/obstacle.png');
+      background-image: url("/blockly/media/skins/birds/obstacle.png");
       background-size: 100% 100%;
     }
     &.dirt {
-      background-image: url('/blockly/media/skins/farmer/dirt.png');
+      background-image: url("/blockly/media/skins/farmer/dirt.png");
       background-size: 1100px 100%;
     }
     &.conditional {
       background-size: 100% 100%;
     }
     &.flower {
-      background-image: url('/blockly/media/skins/bee/redFlower.png');
+      background-image: url("/blockly/media/skins/bee/redFlower.png");
     }
     &.hive {
-      background-image: url('/blockly/media/skins/bee/honey.png');
+      background-image: url("/blockly/media/skins/bee/honey.png");
     }
     &.flower-or-nothing {
-      background-image: url('/levelbuilder/flower-or-nothing.png');
+      background-image: url("/levelbuilder/flower-or-nothing.png");
     }
     &.hive-or-nothing {
-      background-image: url('/levelbuilder/hive-or-nothing.png');
+      background-image: url("/levelbuilder/hive-or-nothing.png");
     }
     &.flower-or-hive {
-      background-image: url('/levelbuilder/hive-or-flower.png');
+      background-image: url("/levelbuilder/hive-or-flower.png");
     }
     &.flower-hive-or-nothing {
-      background-image: url('/levelbuilder/flower-hive-or-nothing.png');
+      background-image: url("/levelbuilder/flower-hive-or-nothing.png");
     }
     &.playlab {
       &.none {
@@ -104,7 +105,7 @@ table.checkboxes {
       }
       &.goal {
         background-color: #b9bf15 !important;
-        background-image: url('/blockly/media/skins/studio/goal.png');
+        background-image: url("/blockly/media/skins/studio/goal.png");
         background-size: contain;
         background-position: center;
       }
@@ -117,8 +118,8 @@ table.checkboxes {
   tr {
     height: 40px;
   }
-  .htInvalid { background-color: orangered !important}
-  .htNumeric { text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF }
+  .htInvalid { background-color: orangered !important; }
+  .htNumeric { text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
   table {
     border-collapse: separate;
     table-layout: fixed;
@@ -152,14 +153,14 @@ table.checkboxes {
   padding-left: 10px;
 }
 
- [data-toggle="collapse"] {
-   cursor: pointer;
-   padding: 15px;
-   padding-left: 0;
-   line-height: 18px;
-   margin-bottom: 10px;
-   font-size: 18px;
-   border-bottom: 1px solid #e5e5e5;
+[data-toggle="collapse"] {
+  cursor: pointer;
+  padding: 15px;
+  padding-left: 0;
+  line-height: 18px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5;
 
   &:after {
     content: "\25B2";
@@ -174,7 +175,7 @@ table.checkboxes {
   }
 }
 
-.aligned-input-group{
+.aligned-input-group {
   padding-top: 1%;
   display: flex;
   align-items: flex-start;
@@ -189,33 +190,33 @@ table.checkboxes {
     color: #6c757d;
   }
 }
-.collapsed_area_header{
+.collapsed_area_header {
   font-size: 1.5em;
 }
-#audit_log_info{
+#audit_log_info {
   padding-top: 2%;
 }
-.audit_log{
+.audit_log {
   width: 100%;
 
-  tr:nth-child(odd){
+  tr:nth-child(odd) {
     background-color: #f9cb81;
   }
 
-  td{
+  td {
     padding: 2%;
   }
 
-  .aud_date{
+  .aud_date {
     width: 25%;
   }
 
-  .aud_person{
+  .aud_person {
     width: 43%;
   }
 }
 
-.levelTypeHeader{
+.levelTypeHeader {
   font-weight: bold;
   padding: 2% 2% 2% 0%;
 }

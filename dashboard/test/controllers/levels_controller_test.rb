@@ -29,6 +29,8 @@ class LevelsControllerTest < ActionController::TestCase
     }
     stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
       to_return({"status" => 200, "body" => "{}", "headers" => {}})
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "should get rubric" do
@@ -72,6 +74,16 @@ class LevelsControllerTest < ActionController::TestCase
       rubric_performance_level_3: 'This is okay',
       rubric_performance_level_4: 'This is bad'
     )
+  end
+
+  test "should return level_data " do
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+
+    get :level_data, params: {id: level}
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal({"level_data" => {"hello" => "there"}}, body)
   end
 
   test "should get filtered levels with just page param" do
@@ -698,7 +710,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
-    level_path = 'config/scripts/test_demo_level.external'
+    level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -711,7 +723,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = 'config/scripts/test_external_markdown.external'
+    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -720,8 +732,8 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
 
     assert_equal level_path, assigns(:level).filename
-    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
   end
 
   test "should allow rename of new level" do
@@ -767,7 +779,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}
@@ -842,7 +854,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should route new to levels" do
-    assert_routing({method: "post", path: "/levels"}, {controller: "levels", action: "create"})
+    assert_routing({method: "post", path: "http://#{CDO.dashboard_hostname}/levels"}, {controller: "levels", action: "create"})
   end
 
   test "should use level for route helper" do
@@ -953,14 +965,14 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update karel data properly" do
     game = Game.find_by_name("CustomMaze")
     maze_array = [
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 2}, {tileType: 1, featureType: 2, value: 1, cloudType: 1, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 2, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 3, range: 1}, {tileType: 1, featureType: 1, value: 1, cloudType: 4, range: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}]
     ]
     post :create, params: {
       level: {

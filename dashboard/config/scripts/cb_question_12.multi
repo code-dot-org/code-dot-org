@@ -1,25 +1,27 @@
 name 'CB_Question_12'
-encrypted '9f1sUtjAVzK8a6rxlSZu+Q/HBbN/ZkWrSv4vVF6uwUe0W2rFpwgQm76ksTr/
-7hQd7lrDcakti9k+I43cQZdXcUxToX6LNXpJOPiM+QqgTTH9/x9m3HybcBbP
-N//QqtB0rfGe/l3PvOgHDrAuLCbVlVRwoZpvuwbeuA7XW3ixNIO7XnDKBYTw
-+qrJrDn8b5+QL3SGR76fMHnyRN54LpVnQ7E/m3WRByXG7OvYgiEsyNplGIFL
-8DsXhmxMqJ/9hbzZ2ofvZ6dMqaHZCKfJ/YZLGzCmqpDC+LqBA8DAT1H0P00a
-B6en/OLKxWzEhCIaCJOjWpXPdgrmN1q5mIVC5oqYi3Q9dZH/hY65IHG7MaPz
-jM87BnhevMfwQjJdmxsmlaqrwIuqwcmBIpF0tPECyFPFicrKepfqEm1HHUxC
-Iy9HZTIvZun4bxSE36kHhU4JFxR1RW2Yt9axA6nEA92jd1uTAIhwIvKAM6/F
-OIbOC3pu04yz9mjx7TxmuG7d9Ryh0CzW6A4F2DW4SiFtzAKQStna9wO4D8In
-NrJQ7wlayyyf8dcTNzFjSF3MCJ/uMKTwFt0EZHlnwl9Fod85ylslVQPhl/+e
-wdK82r1d0EP0HB4BnAlDXjv8paZfvTXi6e53dgGHhwebeTw63UjgWY5jKqo3
-evROlV0RUFCvD+byW2PoYIbsgJwUv0H529mzRRvtMOVKKmZUuKZ6yg6vMUpn
-8XfP4v8ZYhLztq+5CzJ1oyhQ/515kZBpMIcZkGdfYxR2Yzq0kdrfXlqzMb2R
-xaOz9ByqMNsYpvSJnJ2FNxZhjXZHN4yueIaKReEFLItzeAQoFVIxp74ITuOe
-kGEgq+mq907xhuZU9kmjxiI10HfzfOeGygaGDx778/ijh4HzbTYrxYtzwjRg
-ZLAB4x6p0436B84BxOwn4QM6ZrNPsCl+Hp89TelFNJQr08ohV0Qa63Mc5N5e
-ucB4wfRiX7s7mjsNXUqTwljOvrQiweW9n4K+hP0T3Uc3wEFvK4SyRVCi1DUC
-znsZwhJO6xWIYQ8/G1Xm3GK01dphCFwoeskNRfmJu1SZPgc+pRKXhDPAdvfv
-bK4WDkQkVYiNxnVSNvtM4HolcUYiDjsbn8P1IVAYQX68iAQQcimlrBgZsjST
-d6a5nxgZRqizyn5Xcvv8mGQh+VnbpIEf3b4R4VPkwSOxVzKHcaLprDDIRtDO
-CueQS6i4u0h+36iCMoLNyQ5s8NgqWEReJpe69ROrw98+VZ+p56E2vOYktLwR
-PY1flkewM31BNr2FiAg5zVrZ2wvAQidJDsOdhrXTfpEPVvSaFh7n5kHfAywe
-w6RAzRut6+WWpF4z8+EDt/ZgfamDAjpYs1A42IXwb0dTdw==
-'
+
+right 'I only'
+wrong 'II only'
+wrong 'I and II'
+wrong 'Neither I nor II'
+
+markdown <<MARKDOWN
+Which of the following are true statements about digital certificates in Web browsers?
+
+I. Digital certificates are used to verify the ownership of encrypted keys used in secured communication  
+II. Digital certificates are used to verify that the connection to a Web site is fault tolerant.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Note:** this question appeared on an AP practice exam. We do not cover the topic explicitly in the curriculum and so this represents the likely scenario that students will encounter questions they have not explcitly prepared for.  
+
+Digital certificates are a relatively simple thing to lookup.  The line from the AP CSP framework reads: 
+
+```
+6.3.1M Certificate authorities (CAs) issue digital certificates that validate the ownership 
+of encrypted keys used in secured communication and are based on a trust model.
+```
+
+MARKDOWN
+
+allow_multiple_attempts true

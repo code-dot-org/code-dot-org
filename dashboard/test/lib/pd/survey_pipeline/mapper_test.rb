@@ -1,6 +1,6 @@
 require 'test_helper'
-require 'pd/survey_pipeline/generic_mapper.rb'
-require 'pd/survey_pipeline/reducer.rb'
+require 'pd/survey_pipeline/generic_mapper'
+require 'pd/survey_pipeline/reducer'
 
 module Pd::SurveyPipeline
   class GenericMapperTest < ActiveSupport::TestCase
@@ -56,13 +56,13 @@ module Pd::SurveyPipeline
     test 'group data using one key' do
       summary = group_and_summarize([:a])
       assert_equal 2, summary.size
-      assert summary.all? {|v| v == @data.size / 2}
+      assert summary.all?(@data.size / 2)
     end
 
     test 'group data using all keys' do
       summary = group_and_summarize([:a, :b, :c])
       assert_equal @data.size, summary.size
-      assert summary.all? {|v| v == 1}
+      assert summary.all?(1)
     end
 
     test 'map groups to matched reducers' do

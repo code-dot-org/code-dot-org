@@ -21,7 +21,7 @@ social:
 # 인공지능(AI) 에 대해 알아보기
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">새로운 AI 및 기계 학습 모듈</h2><p>새 커리큘럼 모듈에서는 AI 윤리에 초점을 맞추고 편향 문제를 분석하며 여러 가지 온라인 및 언플러그드 활동과 전체 그룹 토론을 통해 기초 개념을 탐구하고 설명합니다.</p><a  href="#about-aimodule"><button>자세히 알아보기</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>모듈 살펴보기</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">새로운 AI 및 기계 학습 모듈</h2><p>새 커리큘럼 모듈에서는 AI 윤리에 초점을 맞추고 편향 문제를 분석하며 여러 가지 온라인 및 언플러그드 활동과 전체 그룹 토론을 통해 기초 개념을 탐구하고 설명합니다.</p><a  href="#about-aimodule"><button>자세히 알아보기</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>모듈 살펴보기</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI 랩"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ AI와 기계 학습은 온 세상에 영향을 미쳐 우리가 사는 방식과
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## 새로운 AI 및 기계 학습 모듈
 <div>
-<div class="col-50">
-<p>AI 및 기계 학습 모듈은 <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >표준 모듈</a>로서 또는 <a href="https://studio.code.org/s/csd7-2021">CS 발견의 단원</a>에서 선택적으로 가르칠 수 있는 5주 정도 되는 커리큘럼 모듈입니다. AI 윤리에 초점을 맞추고 편향 문제를 분석하며 기초 개념을 탐구하고 설명합니다.</p><p>기계 학습은 대규모 데이터 집합에 의존하기 때문에 새 단원에는 의료, 인구 통계 등에 대한 실제 데이터 집합이 포함되어 있으며, 이는 학생들의 참여를 유도하는 동시에 “기계 학습이 해결에 도움을 줄 수 있는 문제는 무엇인가?” 같은 질문을 탐구하게 합니다. “AI가 어떻게 사회를 돕지?” “AI로 누가 혜택을 받지?” “누가 피해를 보지?” “누가 연관되어 있지?” “누가 제외되어 있지?”  </p>
-<p>윤리적으로 고려할 부분은 이러한 토론들의 화두가 되며, 이 기술들의 영향에 대한 논점이자 수업으로 자주 등장할 것입니다. 학생들은 이를 통해 이 기술들이 작동하는 원리에 대한 기술적 토대를 배우면서 이러한 기술들을 총체적이고 사려 깊게 이해하게 됩니다.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>AI 및 기계 학습 모듈은 <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >표준 모듈</a>로서 또는 <a href="https://studio.code.org/s/csd7-2022">CS 발견의 단원</a>에서 선택적으로 가르칠 수 있는 5주 정도 되는 커리큘럼 모듈입니다. AI 윤리에 초점을 맞추고 편향 문제를 분석하며 기초 개념을 탐구하고 설명합니다.</p><p>기계 학습은 대규모 데이터 집합에 의존하기 때문에 새 단원에는 의료, 인구 통계 등에 대한 실제 데이터 집합이 포함되어 있으며, 이는 학생들의 참여를 유도하는 동시에 “기계 학습이 해결에 도움을 줄 수 있는 문제는 무엇인가?” 같은 질문을 탐구하게 합니다. “AI가 어떻게 사회를 돕지?” “AI로 누가 혜택을 받지?” “누가 피해를 보지?” “누가 연관되어 있지?” “누가 제외되어 있지?”  </p>
+    <p>윤리적으로 고려할 부분은 이러한 토론들의 화두가 되며, 이 기술들의 영향에 대한 논점이자 수업으로 자주 등장할 것입니다. 학생들은 이를 통해 이 기술들이 작동하는 원리에 대한 기술적 토대를 배우면서 이러한 기술들을 총체적이고 사려 깊게 이해하게 됩니다.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>모듈 살펴보기</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## AI 작동 원리
 
 Microsoft CEO Satya Nadella의 소개로 시작되는 이 짧은 동영상 시리즈에서는 인공 지능이 어떻게 작동하며 왜 중요한지가 소개됩니다. 신경망, 즉 AI가 어떻게 학습하는지 알아보고 알고리즘 편향 및 AI 의사 결정 윤리와 같은 문제를 파고드세요.
@@ -115,3 +114,5 @@ Microsoft CEO Satya Nadella의 소개로 시작되는 이 짧은 동영상 시�
 레벨 6~8에서는 \[서포트 벡터 머신\](https://en.wikipedia.org/wiki/Support-vector_machine)(SVM)을 사용합니다. 물고기의 각 구성 요소(눈, 입, 몸통 등) 를 보고 해당 요소들에 대한 모든 메타데이터(이빨의 개수, 몸통 모양 등) 를 취합해 물고기별로 숫자 벡터를 만듭니다. 이 벡터들은 SVM을 훈련하는 데 사용됩니다. 그 훈련 데이터를 바탕으로 SVM은 가능한 한 모든 물고기의 “공간”을 우리가 학습하려고 하는 클래스(“파랑” 또는 “파랑 아님” 등) 에 부합하는 두 부분으로 구분합니다.
 
 [[맨 위로]](#top)
+
+{{ visit_partial_event_logger }}

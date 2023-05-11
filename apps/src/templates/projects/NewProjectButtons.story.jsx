@@ -1,59 +1,36 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import i18n from '@cdo/locale';
+import {reduxStore} from '@cdo/storybook/decorators';
 import NewProjectButtons from './NewProjectButtons';
 
-export default storybook => {
-  storybook
-    .storiesOf('Buttons/NewProjectButtons', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Default project buttons',
-        description:
-          'Buttons to make a new App Lab, Game Lab, Play Lab and Artist project',
-        story: () => <NewProjectButtons />
-      },
-      {
-        name: 'Modified project buttons',
-        description:
-          'Buttons to make a new Web Lab, App Lab, Calc and Eval project',
-        story: () => (
-          <NewProjectButtons
-            projectTypes={['weblab', 'applab', 'calc', 'eval']}
-          />
-        )
-      },
-      {
-        name: 'Brand project buttons',
-        description:
-          'Buttons to make a new Frozen, Starwars, and both Minecraft projects',
-        story: () => (
-          <NewProjectButtons
-            projectTypes={[
-              'frozen',
-              'starwars',
-              'minecraft_adventurer',
-              'minecraft_designer'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'More options',
-        description: 'Buttons for Starwars Blocks, Flappy, Sports, Basketball',
-        story: () => (
-          <NewProjectButtons
-            projectTypes={['starwarsblocks', 'flappy', 'sports', 'basketball']}
-          />
-        )
-      },
-      {
-        name: 'Even more options',
-        description: 'Buttons for Bounce, Infinity, Ice Age, Gumball',
-        story: () => (
-          <NewProjectButtons
-            projectTypes={['bounce', 'infinity', 'iceage', 'gumball']}
-          />
-        )
-      }
-    ]);
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <NewProjectButtons {...args} />
+  </Provider>
+);
+
+const DEFAULT_PROJECT_TYPES_BASIC = ['spritelab', 'artist', 'dance', 'playlab'];
+
+const MINECRAFT_PROJECT_TYPES = [
+  'minecraft_adventurer',
+  'minecraft_designer',
+  'minecraft_hero',
+  'minecraft_aquatic',
+];
+
+export const DefaultProjectButtons = Template.bind({});
+DefaultProjectButtons.args = {
+  projectTypes: DEFAULT_PROJECT_TYPES_BASIC,
+};
+
+export const MinecraftProjectButtons = Template.bind({});
+MinecraftProjectButtons.args = {
+  projectTypes: MINECRAFT_PROJECT_TYPES,
+  description: i18n.projectGroupMinecraft(),
+};
+
+export default {
+  title: 'NewProjectButtons',
+  component: NewProjectButtons,
 };

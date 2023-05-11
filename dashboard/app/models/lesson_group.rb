@@ -19,9 +19,9 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   def script
-    Script.get_from_cache(script_id)
+    Unit.get_from_cache(script_id)
   end
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
@@ -30,7 +30,7 @@ class LessonGroup < ApplicationRecord
 
   validates :position, numericality: {greater_than: 0}
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true
 
   validates :key,
     presence: {
@@ -60,14 +60,7 @@ class LessonGroup < ApplicationRecord
     counters = Counters.new(0, 0, 0, 0)
 
     raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
-      if !raw_lesson_group[:user_facing]
-        lesson_group = LessonGroup.find_or_create_by!(
-          key: '',
-          script: script,
-          user_facing: false,
-          position: 1
-        )
-      else
+      if raw_lesson_group[:user_facing]
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
         LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
@@ -89,6 +82,13 @@ class LessonGroup < ApplicationRecord
           }
         )
         lesson_group.save! if lesson_group.changed?
+      else
+        lesson_group = LessonGroup.find_or_create_by!(
+          key: '',
+          script: script,
+          user_facing: false,
+          position: 1
+        )
       end
 
       new_lessons =
@@ -177,7 +177,7 @@ class LessonGroup < ApplicationRecord
   def seeding_key(seed_context)
     my_key = {'lesson_group.key': key}
 
-    raise "No Script found for #{self.class}: #{my_key}" unless seed_context.script
+    raise "No Unit found for #{self.class}: #{my_key}" unless seed_context.script
     script_seeding_key = seed_context.script.seeding_key(seed_context)
 
     my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
@@ -247,7 +247,7 @@ class LessonGroup < ApplicationRecord
       copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
       raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
     end
-    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    Unit.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
     copied_lesson_group
   end
 end

@@ -17,7 +17,7 @@ title: Policy implementation summary
   %img{ src: '/images/logo.png'}
   %h1 K–12 Computer Science Policy and Implementation in States
 
-  %p 
+  %p
   %ul.link-bar
     %li= link_to 'Code.org’s Nine Policy Elements','https://code.org/files/Making_CS_Fundamental.pdf'
     %li= link_to 'State-by-state data on the 9 policies','https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml'
@@ -28,7 +28,7 @@ title: Policy implementation summary
     %p
       Our advocacy coalition (
       =link_to('https://advocacy.code.org','https://advocacy.code.org')
-      ) recommends nine policies states can adopt to make computer science foundational for all students (see: 
+      ) recommends nine policies states can adopt to make computer science foundational for all students (see:
       =link_to('https://code.org/files/Making_CS_Fundamental.pdf','https://code.org/files/Making_CS_Fundamental.pdf')
       ). Below is a list of state actions working toward these statewide policies and/or implementation plans for scaling K–12 computer science, including efforts prioritizing equity.
 
@@ -39,10 +39,10 @@ title: Policy implementation summary
       - policy_label_pairs.each do |policy|
         - unless state[policy[0]] == nil
           %li
-            %b #{policy[1]}: 
+            %b #{policy[1]}:
             = state[policy[0]]
 
-%p 
-  %i 
-    See a comparison chart of the 9 policies by state at 
+%p
+  %i
+    See a comparison chart of the 9 policies by state at
     =link_to 'www.bit.ly/9policies','www.bit.ly/9policies'

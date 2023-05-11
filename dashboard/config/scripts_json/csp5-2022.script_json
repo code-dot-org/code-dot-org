@@ -8,9 +8,11 @@
         {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=5",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "buttonText": "Learn More",
+          "key": "7264ade6-1bfd-47a2-b1b2-1e17d8afb9a4"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -28,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-22 15:36:29 UTC",
+    "serialized_at": "2023-03-15 18:02:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2513,7 +2515,7 @@
       "key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
       "position": 5,
       "properties": {
-        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
+        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results\n* Level 4: Students complete a choice level."
       },
       "seeding_key": {
         "activity_section.key": "3a8658b4-b115-4a31-8093-9303fc1e4d98",
@@ -2546,7 +2548,7 @@
       "key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 4-6 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
+        "description": "\n**Levels 5-7 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 5: Students use a for loop to print the numbers 0-99\n* Level 6: Students use a for loop to print a message 100 times\n* Level 7: Students use a for loop to fill an array and print the results"
       },
       "seeding_key": {
         "activity_section.key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
@@ -2568,7 +2570,7 @@
       "key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
       "position": 10,
       "properties": {
-        "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
+        "description": "\n\n**Levels 8-9 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 8: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 9: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
       "seeding_key": {
         "activity_section.key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
@@ -6380,7 +6382,7 @@
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/view",
+      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/copy",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "audience": "Teacher",

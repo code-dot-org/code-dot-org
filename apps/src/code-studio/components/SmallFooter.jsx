@@ -1,3 +1,10 @@
+/*
+We have to disable the jsx-no-target-blank here because we rely on the
+referrer to determine the abuse url:
+https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f64cc29b5d9/apps/src/sites/studio/pages/report_abuse/report_abuse_form.js#L14
+*/
+
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import _ from 'lodash';
@@ -6,12 +13,13 @@ import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import i18n from '@cdo/locale';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
   MINIMIZED: 'MINIMIZED',
   EXPANDED: 'EXPANDED',
-  COPYRIGHT: 'COPYRIGHT'
+  COPYRIGHT: 'COPYRIGHT',
 };
 
 export default class SmallFooter extends React.Component {
@@ -26,7 +34,7 @@ export default class SmallFooter extends React.Component {
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
       trademark: PropTypes.string.isRequired,
-      built_on_github: PropTypes.string.isRequired
+      built_on_github: PropTypes.string.isRequired,
     }),
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
@@ -36,7 +44,7 @@ export default class SmallFooter extends React.Component {
         text: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired,
         copyright: PropTypes.bool,
-        newWindow: PropTypes.bool
+        newWindow: PropTypes.bool,
       })
     ).isRequired,
     // True if we're displaying this inside a phone (real, or our wireframe)
@@ -45,13 +53,14 @@ export default class SmallFooter extends React.Component {
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
     fullWidth: PropTypes.bool,
-    channel: PropTypes.string
+    channel: PropTypes.string,
+    unitYear: PropTypes.string,
   };
 
   state = {
     menuState: MenuState.MINIMIZED,
     baseWidth: 0,
-    baseHeight: 0
+    baseHeight: 0,
   };
 
   componentDidMount() {
@@ -66,7 +75,7 @@ export default class SmallFooter extends React.Component {
     const base = this.refs.base;
     this.setState({
       baseWidth: base.offsetWidth,
-      baseHeight: base.offsetHeight
+      baseHeight: base.offsetHeight,
     });
   };
 
@@ -74,7 +83,7 @@ export default class SmallFooter extends React.Component {
     // The first time we click anywhere, hide any open children
     $(document.body).one(
       'click',
-      function(event) {
+      function (event) {
         // menu copyright has its own click handler
         if (event.target === this.refs.menuCopyright) {
           return;
@@ -82,13 +91,13 @@ export default class SmallFooter extends React.Component {
 
         this.setState({
           menuState: MenuState.MINIMIZING,
-          moreOffset: 0
+          moreOffset: 0,
         });
 
         // Create a window during which we can't show again, so that clicking
         // on copyright doesnt immediately hide/reshow
         setTimeout(
-          function() {
+          function () {
             this.setState({menuState: MenuState.MINIMIZED});
           }.bind(this),
           200
@@ -144,16 +153,16 @@ export default class SmallFooter extends React.Component {
   render() {
     const styles = {
       smallFooter: {
-        fontSize: this.props.fontSize
+        fontSize: this.props.fontSize,
       },
       base: {
         // subtract top/bottom padding from row height
-        height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
+        height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined,
       },
       // Additional styling to base, above.
       baseFullWidth: {
         width: '100%',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
       },
       copyright: {
         display: this.state.menuState === MenuState.COPYRIGHT ? 'flex' : 'none',
@@ -161,27 +170,34 @@ export default class SmallFooter extends React.Component {
         bottom: 0,
         width: 650,
         maxWidth: '50%',
-        minWidth: this.state.baseWidth
+        minWidth: this.state.baseWidth,
       },
       copyrightScrollArea: {
         maxHeight: this.props.phoneFooter ? 210 : undefined,
-        marginBottom: this.state.baseHeight - 1
+        marginBottom: this.state.baseHeight - 1,
       },
       moreMenu: {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
-        width: this.state.baseWidth
+        width: this.state.baseWidth,
       },
       awsLogo: {
-        width: 190
-      }
+        width: 190,
+      },
+      version: {
+        margin: 'auto 0',
+      },
     };
 
     const combinedBaseStyle = {
       ...styles.base,
       ...this.props.baseStyle,
-      ...(this.props.fullWidth && styles.baseFullWidth)
+      ...(this.props.fullWidth && styles.baseFullWidth),
     };
+
+    // Possible edge cases include unitYear with value 'unversioned'.
+    // Filter for year ('20XX') all-numeral format.
+    const yearIsNumeric = /^[0-9]+$/.test(this.props.unitYear);
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
@@ -193,6 +209,11 @@ export default class SmallFooter extends React.Component {
         >
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
+          {!!this.props.unitYear && yearIsNumeric && (
+            <p style={styles.version}>
+              {i18n.version()}: {this.props.unitYear}
+            </p>
+          )}
           {this.renderMoreMenuButton()}
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
@@ -243,7 +264,7 @@ export default class SmallFooter extends React.Component {
           </span>
           <div
             dangerouslySetInnerHTML={{
-              __html: decodeURIComponent(this.props.i18nDropdown)
+              __html: decodeURIComponent(this.props.i18nDropdown),
             }}
           />
         </div>
@@ -292,13 +313,13 @@ export default class SmallFooter extends React.Component {
     const channelId = this.props.channel;
     const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
     if (alreadyReportedAbuse) {
-      _.remove(this.props.menuItems, function(menuItem) {
+      _.remove(this.props.menuItems, function (menuItem) {
         return menuItem.key === 'report-abuse';
       });
     }
 
     const menuItemElements = this.props.menuItems.map(
-      function(item, index) {
+      function (item, index) {
         return (
           <li
             key={index}

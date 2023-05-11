@@ -1,5 +1,5 @@
 // This gets replaced by karma webpack with the updated files on rebuild
-import '@babel/polyfill';
+import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
@@ -22,7 +22,7 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', function() {
+describe('unit tests', function () {
   throwOnConsoleErrorsEverywhere();
 
   // TODO: Add warnings back once redux/react-redux have been upgraded.

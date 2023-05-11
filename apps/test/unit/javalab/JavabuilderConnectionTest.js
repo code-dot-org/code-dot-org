@@ -6,14 +6,14 @@ import {
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
-  CsaViewMode
+  CsaViewMode,
 } from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {
   UserTestResultSignalType,
-  TestStatus
+  TestStatus,
 } from '../../../src/javalab/constants';
 
 describe('JavabuilderConnection', () => {
@@ -64,10 +64,10 @@ describe('JavabuilderConnection', () => {
     it('passes the parsed event data to the exception handler', () => {
       const data = {
         type: WebSocketMessageType.EXCEPTION,
-        value: 'my exception'
+        value: 'my exception',
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       connection.onMessage(event);
       expect(handleException).to.have.been.calledWith(data, onOutputMessage);
@@ -76,10 +76,10 @@ describe('JavabuilderConnection', () => {
     it('passes the data value for system out', () => {
       const data = {
         type: WebSocketMessageType.SYSTEM_OUT,
-        value: 'my system out message'
+        value: 'my system out message',
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
@@ -92,15 +92,15 @@ describe('JavabuilderConnection', () => {
         detail: {
           status: TestStatus.SUCCESSFUL,
           className: 'MyTestClass',
-          methodName: 'myTestMethod'
-        }
+          methodName: 'myTestMethod',
+        },
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       handleTestResult.returns({
         success: true,
-        isValidation: false
+        isValidation: false,
       });
       connection.onMessage(event);
       expect(handleTestResult).to.have.been.calledWith(data, onOutputMessage);
@@ -109,10 +109,10 @@ describe('JavabuilderConnection', () => {
     it('appends [JAVALAB] to status messages', () => {
       const data = {
         type: WebSocketMessageType.STATUS,
-        value: StatusMessageType.COMPILING
+        value: StatusMessageType.COMPILING,
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(
@@ -125,12 +125,24 @@ describe('JavabuilderConnection', () => {
     it('closes web socket on closeConnection', () => {
       const closeStub = sinon.stub();
       sinon.stub(window, 'WebSocket').returns({
-        close: closeStub
+        close: closeStub,
       });
-      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      const javabuilderConnection = new JavabuilderConnection(
+        null,
+        onOutputMessage,
+        null,
+        null,
+        null,
+        sinon.stub()
+      );
+
       javabuilderConnection.establishWebsocketConnection('fake-token');
       javabuilderConnection.closeConnection();
+
       expect(closeStub).to.have.been.calledOnce;
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Program stopped.`
+      );
       window.WebSocket.restore();
     });
   });
@@ -161,15 +173,15 @@ describe('JavabuilderConnection', () => {
         detail: {
           status: TestStatus.SUCCESSFUL,
           className: 'MyTestClass',
-          methodName: 'myTestMethod'
-        }
+          methodName: 'myTestMethod',
+        },
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       handleTestResult.returns({
         success: true,
-        isValidation: true
+        isValidation: true,
       });
       // send a single passed validation message
       connection.onMessage(event);
@@ -185,20 +197,20 @@ describe('JavabuilderConnection', () => {
         detail: {
           status: TestStatus.SUCCESSFUL,
           className: 'MyTestClass',
-          methodName: 'myTestMethod'
-        }
+          methodName: 'myTestMethod',
+        },
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       // two tests, first succeeds, second passes
       handleTestResult.onCall(0).returns({
         success: true,
-        isValidation: true
+        isValidation: true,
       });
       handleTestResult.onCall(1).returns({
         success: false,
-        isValidation: true
+        isValidation: true,
       });
       connection.onMessage(event);
       connection.onMessage(event);
@@ -214,15 +226,15 @@ describe('JavabuilderConnection', () => {
         detail: {
           status: TestStatus.SUCCESSFUL,
           className: 'MyTestClass',
-          methodName: 'myTestMethod'
-        }
+          methodName: 'myTestMethod',
+        },
       };
       const event = {
-        data: JSON.stringify(data)
+        data: JSON.stringify(data),
       };
       handleTestResult.returns({
         success: true,
-        isValidation: false
+        isValidation: false,
       });
       connection.onMessage(event);
       connection.handleExecutionFinished();

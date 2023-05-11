@@ -18,6 +18,7 @@
         "name": "VAL",
         "type": "Number"
       }
-    ]
+    ],
+    "style": "variable_blocks"
   }
 }

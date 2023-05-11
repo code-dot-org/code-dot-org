@@ -6,18 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Curriculum Videos",
-          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
           "notice": "More Opportunities for Feedback",
-          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
-          "link": "",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "End of Unit Survey",
+          "key": "defdc3f1-b1e5-46a0-a380-277cfa7f5d83"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -32,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-30 14:23:24 UTC",
+    "serialized_at": "2023-02-22 18:13:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -268,9 +264,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
+        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or that is meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
         "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-4-abstract-data-art-project/36361/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
+        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -354,7 +350,7 @@
     },
     {
       "key": "Console",
-      "name": "Console",
+      "name": "Sandbox: Console",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -369,7 +365,7 @@
     },
     {
       "key": "The Neighborhood",
-      "name": "The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -384,7 +380,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "The Theater",
+      "name": "Sandbox: The Theater",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
@@ -5988,6 +5984,7 @@
       "key": "abstract_data_art_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6045,6 +6042,7 @@
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6057,6 +6055,7 @@
       "key": "bingocaller_scoring_guidelines",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6065,7 +6064,7 @@
     },
     {
       "name": "Casting",
-      "url": "https://youtu.be/l4BCk46Y9AA",
+      "url": "https://youtu.be/Xy1lVNguW3s",
       "key": "casting",
       "properties": {
         "audience": "Student",
@@ -6081,6 +6080,7 @@
       "key": "cs_bingo_cards_3",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6105,6 +6105,7 @@
       "key": "dataset_summaries",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6117,6 +6118,7 @@
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6129,6 +6131,7 @@
       "key": "finding_patterns",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6141,6 +6144,7 @@
       "key": "investigating_casting",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6153,6 +6157,7 @@
       "key": "investigating_the_theater",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6196,8 +6201,21 @@
       }
     },
     {
+      "name": "Station Print-outs",
+      "url": "https://docs.google.com/document/d/1Q7z2dGMiSeSD3coG21qyFqIRXsGsCLRO3DK67-yP88U/edit",
+      "key": "station_print-outs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
       "name": "The equals() Method",
-      "url": "https://youtu.be/ryrczp_4OcE",
+      "url": "https://youtu.be/F1WhwH4abX4",
       "key": "the_equals_method",
       "properties": {
         "audience": "Student",
@@ -6213,6 +6231,7 @@
       "key": "the_math_class",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6225,6 +6244,7 @@
       "key": "truth_tables",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6237,6 +6257,7 @@
       "key": "u4l10_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6249,6 +6270,7 @@
       "key": "u4l1_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6261,6 +6283,7 @@
       "key": "u4l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6273,6 +6296,7 @@
       "key": "u4l3_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6285,6 +6309,7 @@
       "key": "u4l4_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6297,6 +6322,7 @@
       "key": "u4l5_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6309,6 +6335,7 @@
       "key": "u4l6_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6321,6 +6348,7 @@
       "key": "u4l7_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6333,6 +6361,7 @@
       "key": "u4l8_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6345,6 +6374,7 @@
       "key": "u4l9_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6357,10 +6387,23 @@
       "key": "unit_4_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "name": "Unit 4 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1cOUPPIicbhfv6BBl17cfND_WiCWXcZlUxbzzCvcAFHA/edit?usp=sharing",
+      "key": "unit_4_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_"
       }
     },
     {
@@ -6393,6 +6436,7 @@
       "key": "unit_4_study_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6409,6 +6453,18 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Welcome to The Theater",
+      "url": "https://youtu.be/Qa5NtHzPmos",
+      "key": "welcome_to_the_theater",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_the_theater"
       }
     }
   ],
@@ -6619,6 +6675,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "welcome_to_the_theater"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u4l2_extra_practice"
       }
@@ -6728,6 +6790,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "station_print-outs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u4l5_extra_practice"
       }
     },
@@ -6826,6 +6894,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_4_guide",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_guide_exemplar_",
         "script.name": "csa4-2022"
       }
     },

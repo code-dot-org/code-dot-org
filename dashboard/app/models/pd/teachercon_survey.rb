@@ -126,7 +126,7 @@ class Pd::TeacherconSurvey < ApplicationRecord
   def validate_required_fields
     return if owner_deleted?
 
-    hash = sanitize_form_data_hash
+    hash = sanitized_form_data_hash
 
     # validate conditional required fields
     if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met))

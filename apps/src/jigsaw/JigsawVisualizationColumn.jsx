@@ -7,7 +7,7 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
  * For jigsaw, this all ends up being hidden, but StudioApp still has expectation
  * about certain elements existing
  */
-var JigsawVisualizationColumn = function() {
+var JigsawVisualizationColumn = function () {
   return (
     <span>
       <ProtectedVisualizationDiv />

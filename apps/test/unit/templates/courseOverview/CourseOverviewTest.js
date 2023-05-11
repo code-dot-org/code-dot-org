@@ -26,22 +26,22 @@ const defaultProps = {
       id: 112,
       title: 'CSP Unit 1',
       name: 'csp1',
-      description: 'desc'
+      description: 'desc',
     },
     {
       course_id: 30,
       id: 113,
       title: 'CSP Unit 2',
       name: 'csp2',
-      description: 'desc'
-    }
+      description: 'desc',
+    },
   ],
   isVerifiedInstructor: true,
   hasVerifiedResources: false,
   versions: {},
   sectionsForDropdown: [],
   announcements: [],
-  isSignedIn: true
+  isSignedIn: true,
 };
 
 const fakeTeacherAnnouncement = {
@@ -49,21 +49,21 @@ const fakeTeacherAnnouncement = {
   details: 'Teachers are the best',
   link: '/foo/bar/teacher',
   type: NotificationType.information,
-  visibility: VisibilityType.teacher
+  visibility: VisibilityType.teacher,
 };
 const fakeStudentAnnouncement = {
   notice: 'Notice - Student',
   details: 'Students are the best',
   link: '/foo/bar/student',
   type: NotificationType.information,
-  visibility: VisibilityType.student
+  visibility: VisibilityType.student,
 };
 const fakeTeacherAndStudentAnnouncement = {
   notice: 'Notice - Teacher And Student',
   details: 'More detail here',
   link: '/foo/bar/teacherAndStudent',
   type: NotificationType.information,
-  visibility: VisibilityType.teacherAndStudent
+  visibility: VisibilityType.teacherAndStudent,
 };
 
 describe('CourseOverview', () => {
@@ -93,7 +93,7 @@ describe('CourseOverview', () => {
         {...defaultProps}
         announcements={[
           fakeTeacherAnnouncement,
-          fakeTeacherAndStudentAnnouncement
+          fakeTeacherAndStudentAnnouncement,
         ]}
       />
     );
@@ -127,7 +127,7 @@ describe('CourseOverview', () => {
     const propsToShow = {
       ...defaultProps,
       isVerifiedInstructor: false,
-      hasVerifiedResources: true
+      hasVerifiedResources: true,
     };
 
     it('is shown to unverified instructors if course has verified resources', () => {

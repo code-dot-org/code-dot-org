@@ -13,7 +13,7 @@ class LevelAssetsController < ApplicationController
       }, status: :payload_too_large
     end
 
-    filename = AWS::S3.upload_to_bucket('images.code.org', params[:file].original_filename, open(params[:file]), acl: 'public-read')
+    filename = AWS::S3.upload_to_bucket('images.code.org', params[:file].original_filename, File.open(params[:file]), acl: 'public-read')
     render json: {newAssetUrl: "https://images.code.org/#{filename}"}
   end
 end

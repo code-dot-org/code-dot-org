@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ڈانس پارٹی</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لیے ڈانس پارٹی کو کوڈ کریں۔. کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا! ایٹ دی ڈسکو، لِل ناس X، جونز برادرز، نیکی میناج، اور 34 مزید!</div><a class="linktag" id="danceparty" href="/dance" target="_blank"><button>سرگرمی آزمائیں</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ڈانس پارٹی</strong></h3><div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">دوستوں اور خاندان کے ساتھ اشتراک کرنے کے لیے ڈانس پارٹی کو کوڈ کریں۔. Beyoncé، Harry Styles، Lizzo، Lil Nas X، Selena Gomez، Disney کے "Encanto" کی موسیقی اور مزید فیچرڈ ہیں!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
 </div>

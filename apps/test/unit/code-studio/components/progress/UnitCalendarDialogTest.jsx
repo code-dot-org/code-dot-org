@@ -2,7 +2,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import UnitCalendarDialog, {
-  WEEK_WIDTH
+  WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import {testLessons} from './unitCalendarTestData';
@@ -39,7 +39,7 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(6);
+    expect(wrapper.find('option').length).to.equal(10);
     expect(
       wrapper.containsMatchingElement(
         <option value={45} key={`minutes-45`}>
@@ -68,7 +68,7 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(7);
+    expect(wrapper.find('option').length).to.equal(11);
     expect(
       wrapper.containsMatchingElement(
         <option value={20} key={`minutes-20`}>

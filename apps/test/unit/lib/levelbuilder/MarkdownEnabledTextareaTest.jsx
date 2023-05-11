@@ -11,7 +11,7 @@ describe('MarkdownEnabledTextarea', () => {
     defaultProps = {
       markdown:
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-      handleMarkdownChange
+      handleMarkdownChange,
     };
   });
 
@@ -53,5 +53,17 @@ describe('MarkdownEnabledTextarea', () => {
         .find('li')
         .map(li => li.text())
     ).to.eql(['Image', 'Resource']);
+  });
+
+  it('does not show toolbar if all features disabled', () => {
+    const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
+    expect(wrapper.find('textarea').length).to.equal(1);
+    expect(wrapper.find('textarea').props().value).to.equal(
+      '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+    );
+
+    wrapper.find('textarea').simulate('change', {target: {value: '## Title'}});
+    expect(handleMarkdownChange).to.have.been.calledOnce;
+    expect(wrapper.find('.btn-toolbar')).to.be.empty;
   });
 });

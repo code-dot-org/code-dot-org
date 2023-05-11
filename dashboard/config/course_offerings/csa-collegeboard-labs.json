@@ -1,0 +1,15 @@
+{
+  "key": "csa-collegeboard-labs",
+  "display_name": "AP CSA Magpie Lab",
+  "category": "other",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "csa_labs",
+  "image": "https://images.code.org/6a88a4ae52652c27b3ed9c56faf2511f-High School Image 2.png",
+  "cs_topic": "programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+}

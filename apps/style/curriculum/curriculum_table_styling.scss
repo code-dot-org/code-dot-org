@@ -1,0 +1,40 @@
+@import "color.scss";
+@import "font";
+@import "markdown";
+
+.page-content {
+  display: flex;
+  gap: 16px;
+}
+
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+}
+
+.guides-table {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: auto;
+
+  .header {
+    background-color: $dark_gray;
+    font-weight: bold;
+    color: $white;
+  }
+
+  & > * {
+    border: 1px solid $light_gray;
+    padding: 4px;
+  }
+}
+
+.actions-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input {
+  display: block;
+}

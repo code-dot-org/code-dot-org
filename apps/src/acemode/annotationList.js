@@ -31,12 +31,12 @@ function updateGutter() {
  * go away the next time jstlint gets run (when code changes)
  */
 module.exports = {
-  detachFromSession: function() {
+  detachFromSession: function () {
     aceSession = null;
     dropletEditor = null;
   },
 
-  attachToSession: function(session, editor) {
+  attachToSession: function (session, editor) {
     if (aceSession && session !== aceSession) {
       throw new Error('Already attached to ace session');
     }
@@ -44,7 +44,7 @@ module.exports = {
     dropletEditor = editor;
   },
 
-  setJSLintAnnotations: function(jslintResults, appType) {
+  setJSLintAnnotations: function (jslintResults, appType) {
     errorMapper.processResults(jslintResults, appType);
     // clone annotations in case anyone else has a reference to data
     lintAnnotations = jslintResults.data.slice();
@@ -56,7 +56,7 @@ module.exports = {
    *
    * @returns {!Array} annotations from most recent linting pass
    */
-  getJSLintAnnotations: function() {
+  getJSLintAnnotations: function () {
     return lintAnnotations;
   },
 
@@ -65,23 +65,23 @@ module.exports = {
    * @param {number} lineNumber One index line number
    * @param {string} text Error string
    */
-  addRuntimeAnnotation: function(level, lineNumber, text) {
+  addRuntimeAnnotation: function (level, lineNumber, text) {
     var annotation = {
       row: lineNumber - 1,
       col: 0,
       raw: text,
       text: text,
-      type: level.toLowerCase()
+      type: level.toLowerCase(),
     };
     runtimeAnnotations.push(annotation);
     updateGutter();
   },
 
-  clearRuntimeAnnotations: function() {
+  clearRuntimeAnnotations: function () {
     if (runtimeAnnotations.length === 0) {
       return;
     }
     runtimeAnnotations = [];
     updateGutter();
-  }
+  },
 };

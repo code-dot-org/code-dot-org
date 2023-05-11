@@ -12,3 +12,5 @@ answer "dog.x &gt; cat.x"
 question "Is the dog sprite's x equal to the cat sprite's x?"
 answer "dog.x == cat.x"
 
+
+allow_multiple_attempts true

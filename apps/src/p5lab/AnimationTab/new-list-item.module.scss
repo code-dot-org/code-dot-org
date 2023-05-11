@@ -1,0 +1,65 @@
+@import "color.scss";
+
+$polar-blue: #0094ca;
+
+.tile {
+  width: 95%;
+  padding: 0 0 4px 0;
+  margin-bottom: 0;
+  background: none;
+  border: 20px;
+  margin-right: 0;
+  margin-left: 5px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+
+    .border {
+      background-color: $polar-blue;
+      border: solid 4px $polar-blue;
+    }
+
+    .addButton {
+      color: $white;
+    }
+
+    .animationName {
+      color: $white;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: block;
+  padding-top: 100%;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  background-color: $white;
+  border: solid 2px $polar-blue;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.addButton {
+  color: $polar-blue;
+  font-size: 76px;
+  margin-top: -45px;
+}
+
+.animationName {
+  margin-top: 5px;
+  text-align: center;
+  user-select: none;
+  font-weight: normal;
+  color: $polar-blue;
+  font-size: 14px;
+}

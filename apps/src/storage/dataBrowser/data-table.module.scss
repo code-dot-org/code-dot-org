@@ -1,0 +1,23 @@
+@import "color.scss";
+
+$min-table-width: 600px;
+
+.addColumnHeader {
+  width: 19px;
+}
+
+.table {
+  min-width: $min-table-width;
+}
+
+.plusIcon {
+  align-items: center;
+  border-radius: 2px;
+  background-color: white;
+  color: $teal;
+  cursor: pointer;
+  display: inline-flex;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
+}

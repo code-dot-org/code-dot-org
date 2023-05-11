@@ -13,9 +13,3 @@ end
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 WebMock.disable_net_connect!
-
-# Decide whether we may use real Redis in tests.
-# Disallow in environments other than dev/test to safeguard production data.
-def use_real_redis?
-  ENV['USE_REAL_REDIS'] && [:develpoment, :test].include?(rack_env)
-end

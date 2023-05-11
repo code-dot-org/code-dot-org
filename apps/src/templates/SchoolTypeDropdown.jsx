@@ -10,12 +10,12 @@ export default class SchoolTypeDropdown extends Component {
     country: PropTypes.string,
     fieldName: PropTypes.string,
     showRequiredIndicator: PropTypes.bool,
-    showErrorMsg: PropTypes.bool
+    showErrorMsg: PropTypes.bool,
   };
 
   static defaultProps = {
     value: '',
-    fieldName: 'user[school_info_attributes][school_type]'
+    fieldName: 'user[school_info_attributes][school_type]',
   };
 
   render() {
@@ -68,14 +68,14 @@ const styles = {
   asterisk: {
     fontSize: 20,
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    color: color.red,
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.red,
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   singleLineLayoutStyles: {
     display: 'table-cell',
@@ -85,16 +85,16 @@ const styles = {
     fontSize: 13,
     fontFamily: '"Gotham 4r", sans-serif',
     color: '#333',
-    padding: 0
+    padding: 0,
   },
   singleLineContainerStyles: {
     display: 'table',
-    width: '100%'
+    width: '100%',
   },
   selectStyle: {
     width: 390,
     verticalAlign: 'top',
     marginBottom: '5px',
-    marginTop: '5px'
-  }
+    marginTop: '5px',
+  },
 };

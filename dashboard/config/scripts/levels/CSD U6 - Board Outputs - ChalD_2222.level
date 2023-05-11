@@ -62,10 +62,10 @@
     "parent_level_id": 20396,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/maker-toolkit/producing-output/"
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/courses/csd-2022/guides/producing-output"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/",
+    "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -76,16 +76,13 @@
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype that could be used in an educational setting",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play** level: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their app, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop an app of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-07T23:49:48.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-07T23:49:48.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:48.344+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalD_2022\"},{\"changed_at\":\"2022-04-08 22:11:40 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

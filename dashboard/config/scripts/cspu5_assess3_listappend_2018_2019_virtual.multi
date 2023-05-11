@@ -32,3 +32,5 @@ Going through the code line by line while keeping track of what data looks like 
 * APPEND (data, 1). data = [2,6,9,3,1]
 * At index 2, data[2] = 6
 MARKDOWN
+
+allow_multiple_attempts true

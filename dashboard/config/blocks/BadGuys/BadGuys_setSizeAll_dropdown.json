@@ -3,6 +3,7 @@
   "config": {
     "func": "setSizeAll_dropdown",
     "blockText": "set all sprites size to {SIZE}",
+    "style": "default",
     "args": [
       {
         "name": "SIZE",

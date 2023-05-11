@@ -10,7 +10,7 @@ export default function loadArtist(options) {
   options.blocksModule = blocks;
   var artist = new Artist();
 
-  window.__TestInterface.setSpeedSliderValue = function(value) {
+  window.__TestInterface.setSpeedSliderValue = function (value) {
     artist.speedSlider.setValue(value);
   };
   artist.injectStudioApp(studioApp());

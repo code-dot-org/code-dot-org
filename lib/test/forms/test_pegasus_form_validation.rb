@@ -79,7 +79,7 @@ class PegasusFormValidationTest < Minitest::Test
 
   def test_uploaded_file
     mock_file = mock
-    FormValidationMethods.expects(:open).with('temp-filename').returns(mock_file).once
+    File.expects(:open).with('temp-filename').returns(mock_file).once
     AWS::S3.expects(:upload_to_bucket).with('cdo-form-uploads', 's3-filename', mock_file).once
     FormValidationMethods.uploaded_file({filename: 's3-filename', tempfile: 'temp-filename'})
 
@@ -171,9 +171,7 @@ class PegasusFormValidationTest < Minitest::Test
     assert_equal({key: ['error']}, e.errors)
   end
 
-  private
-
-  def assert_field_error(error_params, error)
+  private def assert_field_error(error_params, error)
     assert_instance_of FieldError, error
     assert_equal error_params[:value], error.value
     assert_equal error_params[:message] || :invalid, error.message

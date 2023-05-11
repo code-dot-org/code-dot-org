@@ -11,6 +11,7 @@ module Pd
     POST_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_post_survey',
       SUBJECT_CSF_101 => 'surveys/pd/workshop_csf_intro_post',
+      SUBJECT_CSF_DISTRICT => 'surveys/pd/workshop_csf_intro_post',
       SUBJECT_CSP_FOR_RETURNING_TEACHERS => 'surveys/pd/csp_wfrt_post_survey',
       SUBJECT_CSF_201 => 'surveys/pd/csf_deep_dive_post',
       SUBJECT_WORKSHOP_1 => 'surveys/pd/ayw_workshop_post_survey',
@@ -32,6 +33,20 @@ module Pd
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_pre_survey',
       SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_pre_survey'
     }
+
+    TEST_PARTICIPANT_SURVEY_CONFIG_PATHS = [
+      'surveys/pd/workshop_csf_intro_post_test',
+      'surveys/pd/summer_workshop_pre_survey_test',
+      'surveys/pd/summer_workshop_post_survey_test'
+    ]
+
+    ALL_PARTICIPANT_SURVEY_CONFIG_PATHS = [
+      DAILY_SURVEY_CONFIG_PATHS,
+      POST_SURVEY_CONFIG_PATHS,
+      PRE_SURVEY_CONFIG_PATHS
+    ].map(&:values).flatten.concat(TEST_PARTICIPANT_SURVEY_CONFIG_PATHS)
+
+    FACILITATOR_POST_SURVEY_CONFIG_PATH = 'surveys/pd/csd_csp_facilitator_post_survey'
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'
 

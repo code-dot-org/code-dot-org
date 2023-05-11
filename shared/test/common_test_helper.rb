@@ -11,7 +11,6 @@ require 'vcr'
 require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
-require_relative './capture_queries'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
@@ -40,7 +39,7 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects code_review_comments reviewable_projects project_versions).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   DASHBOARD_DB[table.to_sym].truncate
 end.freeze

@@ -16,7 +16,7 @@ def parse_email_address_string(string)
   # The regular expression itself matches commas unless they are surrounded
   # by a pair of double-quotes, and is adapted from
   # https://stackoverflow.com/a/18893443.
-  if /,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/ =~ string
+  if /,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/.match?(string)
     Honeybadger.notify(
       error_message: "Comma outside of surrounding double-quotes detected in address string: #{string}"
     )
@@ -29,9 +29,9 @@ def parse_email_address_string(string)
   # without them being confused with the < > wrapping the email address at the end.
   #
   # Or just treat the entire string as an email address.
-  if !(/(.*)<(.*)>$/ =~ string).nil?
-    {name: $1.strip, email: $2}
-  else
+  if (/(.*)<(.*)>$/ =~ string).nil?
     {name: nil, email: string}
+  else
+    {name: $1.strip, email: $2}
   end
 end
