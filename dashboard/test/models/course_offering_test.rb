@@ -571,6 +571,52 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'duration returns label associated with sum of units duration' do
+    # Create a unit with multiple lessons, each with a different number of lesson activities.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 40)
+
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+
+    # A course_offering of this unit should have a 'week' duration since a week is labeled as 91-250 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 120, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :week, co.duration
+  end
+
+  test 'duration returns lesson if sum of units duration is 0' do
+    # Create a unit with single lesson with an unspecified duration (defaults to 0).
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson)
+
+    # A course_offering of this unit should have a 'lesson' duration since a lesson is labeled as 0-90 minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 0, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :lesson, co.duration
+  end
+
+  test 'duration returns school_year if sum of units duration is greater than 5000' do
+    # Create a unit with multiple lessons with durations that sum up to >5000.
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+
+    # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
+    co = CourseOffering.add_course_offering(unit)
+    assert_equal 6000, co.latest_published_version.units.sum(&:duration_in_minutes)
+    assert_equal :school_year, co.duration
+  end
+
   test "can serialize and seed course offerings" do
     course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
     serialization = course_offering.serialize
