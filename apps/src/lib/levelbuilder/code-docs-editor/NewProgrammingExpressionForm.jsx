@@ -4,7 +4,7 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default function NewProgrammingExpressionForm({
-  programmingEnvironmentsForSelect
+  programmingEnvironmentsForSelect,
 }) {
   return (
     <form action="/programming_expressions" method="post">
@@ -48,11 +48,11 @@ export default function NewProgrammingExpressionForm({
 NewProgrammingExpressionForm.propTypes = {
   programmingEnvironmentsForSelect: PropTypes.arrayOf(
     PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
-  ).isRequired
+  ).isRequired,
 };
 
 const styles = {
   inputStyle: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

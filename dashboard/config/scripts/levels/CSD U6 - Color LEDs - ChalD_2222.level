@@ -23,11 +23,11 @@
       "setProperty": null,
       "setText": null,
       "randomNumber_min_max": null,
-      "on": null,
-      "off": null,
-      "pulse": null,
-      "blink": null,
-      "toggle": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].pulse": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].toggle": null,
       "color": null,
       "intensity": null
     },
@@ -69,7 +69,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Long-Distance Signal\r\n\r\nCreate an app prototype that can communicate long distances using the color LEDs. This involves coming up with a visual code for certain words or phrases, sharing that code with a partner, then using that code to communicate. For this example, imagine you needed to communicate directions across a long distance or across the classroom.\r\n\r\n::: details [**Wait - is this a real thing? Click here to find out**]\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/c31a064979cf7d45566264b26db5e81b-image-1646099374771.png)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n<!-- <img src=\"https://images.code.org/c31a064979cf7d45566264b26db5e81b-image-1646099374771.png\" style=\"float:right; border: solid 2px black; margin: 5px; width: 300px;\" /> -->\r\n\r\nBefore the invention of the telephone or even the telegram, people used symbols and visuals to communicate long distances. These methods were especially useful on ships that were traveling together and needed to communicate across the water. A common system was to use flags to symbol letters and numbers to neighboring ships.\r\n\r\n[Click here to learn more about this system](https://www.britannica.com/technology/semaphore)\r\n\r\n:::\r\n\r\n## Do This\r\n\r\n**Planning:**\r\n1) Decide on an LED pattern to represent `North`, `South`, `East`, and `West`. You could use different colors, or turn some LEDs on and leave others off, or come up with completely unique patterns for each direction. You may want to draw a picture to represent your pattern, since you will be sharing it with a partner\r\n\r\n**In Code Mode:**\r\n2) Add code to each of the buttons to match the pattern you decided on above\r\n\r\n**Run Your Code:**\r\n3) Have a partner stand across the room with the code that you created. Set some obstacles in the way that they will need to avoid.\r\n4) Run the app and give your partner directions using the color LEDs\r\n5) Guide them to cross the room and avoid the obstacles\r\n\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
@@ -80,13 +80,13 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/physical-input/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/color-lights",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/physical-input",
+      "/courses/csd-2022/guides/producing-output",
+      "/courses/csd-2022/guides/board-events"
     ],
     "callout_json": "[]",
     "display_name": "Long-Distance Signal",
@@ -105,7 +105,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:08.342+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - ChalD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - ChalD_2022\"},{\"changed_at\":\"2022-04-08 22:19:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:08.342+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - ChalD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - ChalD_2022\"},{\"changed_at\":\"2022-04-08 22:19:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-16 17:26:42 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

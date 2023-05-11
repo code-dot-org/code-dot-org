@@ -1,11 +1,15 @@
 import {assert} from '../../../../util/reconfiguredChai';
 import {
   shouldUseFoormSurvey,
-  shouldShowSurveyResults
+  shouldShowSurveyResults,
 } from '../../../../../src/code-studio/pd/workshop_dashboard/workshop_summary_utils';
 
 describe('Workshop Summary Utils', () => {
   it('shouldUseFoormSurvey returns correct result', () => {
+    assert(
+      shouldUseFoormSurvey('District', new Date('2020-05-08')),
+      'CSF District uses Foorm'
+    );
     assert(
       shouldUseFoormSurvey('Intro', new Date('2020-05-08')),
       'CSF Intro past May 2020 uses Foorm'
@@ -88,6 +92,16 @@ describe('Workshop Summary Utils', () => {
         new Date('2020-06-08')
       ),
       'Any CSF Deep Dive shows button'
+    );
+
+    assert(
+      shouldShowSurveyResults(
+        'Not Started',
+        'CS Fundamentals',
+        'District',
+        new Date('2020-05-08')
+      ),
+      'Any CSF District shows button'
     );
   });
 });

@@ -5,13 +5,13 @@ import color from '@cdo/apps/util/color';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
-    onAdd: PropTypes.func.isRequired
+    onAdd: PropTypes.func.isRequired,
   };
 
   state = {
     spriteName: '',
     spriteCategory: '',
-    displaySuccess: false
+    displaySuccess: false,
   };
 
   handleNameChange = event => {
@@ -35,9 +35,9 @@ export default class AddDefaultSprite extends React.Component {
     let {displaySuccess} = this.state;
     return (
       <div style={styles.assetRow}>
-        <h3>Add a sprite: </h3>
+        <h3>Add an animation: </h3>
         <label htmlFor="sprite-name" style={styles.addSpriteLabel}>
-          Sprite name:
+          Name:
         </label>
         <input
           type="text"
@@ -47,7 +47,7 @@ export default class AddDefaultSprite extends React.Component {
           required
         />
         <label htmlFor="sprite-path" style={styles.addSpriteLabel}>
-          Sprite category path:
+          Category path:
         </label>
         <input
           type="text"
@@ -71,7 +71,7 @@ export default class AddDefaultSprite extends React.Component {
         <i
           style={{
             ...styles.checkmark,
-            visibility: displaySuccess ? 'visible' : 'hidden'
+            visibility: displaySuccess ? 'visible' : 'hidden',
           }}
           className="fa fa-check"
           aria-hidden="true"
@@ -87,10 +87,10 @@ const styles = {
     borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   addSpriteLabel: {
-    padding: 10
+    padding: 10,
   },
   checkmark: {
     color: color.light_green,
@@ -98,6 +98,6 @@ const styles = {
     left: 5,
     lineHeight: '25px',
     position: 'relative',
-    top: 7
-  }
+    top: 7,
+  },
 };

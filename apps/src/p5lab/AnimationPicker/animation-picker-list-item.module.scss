@@ -1,0 +1,124 @@
+@import "color.scss";
+
+$thumbnail-size: 105px;
+$thumbnail-border-width: 1px;
+$hover-plus-size: 24px;
+
+// Used for the width and height properties of AnimationPreview
+:export {
+  previewSize: calc(($thumbnail-size - 2 * $thumbnail-border-width) / 1px);
+}
+
+.root {
+  float: left;
+  width: $thumbnail-size;
+  text-align: center;
+  margin: 1px 1px 10px 1px;
+  position: relative;
+  border: 0;
+  padding-right: 10px;
+  outline: none;
+}
+
+.thumbnail {
+  height: $thumbnail-size;
+  width: 100%;
+  border-style: solid;
+  border-color: $light_gray;
+  border-width: $thumbnail-border-width;
+  border-radius: 12px;
+  padding: 2px;
+  cursor: pointer;
+  background: none;
+  box-shadow: none;
+  margin: 0 0 0 0;
+  outline: none;
+}
+
+.thumbnailIcon {
+  color: $white;
+  background-color: $purple;
+  border-color: $purple;
+  font-size: calc($thumbnail-size / 2);
+  &:hover {
+    background-color: $light_purple;
+    border-color: $light_purple;
+  }
+  &:focus {
+    background-color: $light_purple;
+    border-color: $light_purple;
+  }
+}
+
+.icon {
+  padding-top: 10px;
+}
+
+.label {
+  margin-top: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.noLabel {
+  padding-bottom: 10px;
+}
+
+.labelIcon {
+  font-style: italic;
+}
+
+.categoryImage {
+  border-radius: 10px;
+}
+
+.multiSelectIcon {
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  font-size: $hover-plus-size;
+  height: $hover-plus-size;
+  width: $hover-plus-size;
+  border-radius: 5px;
+  top: calc($thumbnail-size / 2 - $hover-plus-size / 2);
+  left: calc($thumbnail-size / 2 - $hover-plus-size / 2);
+}
+
+.hoverIcon {
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
+}
+
+.selectIcon {
+  color: $white;
+  background-color: $level_perfect;
+  border-color: $level_perfect;
+}
+
+.multiSelectBorder {
+  border-style: solid;
+  border-radius: 12px;
+  cursor: pointer;
+  border-width: 3px;
+  padding: 0;
+}
+
+.hoverBorder {
+  border-color: $purple;
+}
+
+.selectBorder {
+  border-width: 3px;
+  padding: 0;
+  border-color: $level_perfect;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}

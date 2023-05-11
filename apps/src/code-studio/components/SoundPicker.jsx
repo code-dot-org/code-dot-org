@@ -4,7 +4,7 @@ import AssetManager from './AssetManager';
 import color from '../../util/color';
 import {
   SOUND_PREFIX,
-  DEFAULT_SOUND_PATH_PREFIX
+  DEFAULT_SOUND_PATH_PREFIX,
 } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
@@ -15,7 +15,7 @@ const audioExtension = '.mp3';
 
 const MODE = {
   files: 'files',
-  sounds: 'sounds'
+  sounds: 'sounds',
 };
 
 /**
@@ -32,7 +32,7 @@ export default class SoundPicker extends React.Component {
     libraryOnly: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
   };
 
   state = {mode: MODE.sounds};
@@ -59,15 +59,15 @@ export default class SoundPicker extends React.Component {
         fontFamily: isFileMode ? null : '"Gotham 5r"',
         color: isFileMode ? color.light_gray : null,
         fontSize: 16,
-        cursor: 'pointer'
+        cursor: 'pointer',
       },
       fileModeToggle: {
         margin: 0,
         fontSize: 16,
         fontFamily: isFileMode ? '"Gotham 5r"' : null,
         color: isFileMode ? null : color.light_gray,
-        cursor: 'pointer'
-      }
+        cursor: 'pointer',
+      },
     };
 
     let modeSwitch;
@@ -123,15 +123,15 @@ export default class SoundPicker extends React.Component {
 
 const styles = {
   root: {
-    margin: '0 0 0 5px'
+    margin: '0 0 0 5px',
   },
   divider: {
     borderColor: color.purple,
-    margin: '5px 0'
+    margin: '5px 0',
   },
   warning: {
     color: color.red,
     fontSize: 13,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };

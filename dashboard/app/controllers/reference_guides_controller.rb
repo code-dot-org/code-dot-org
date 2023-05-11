@@ -1,8 +1,9 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
+  before_action :redirect_unit_group, only: [:show, :index]
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
   before_action :find_reference_guides, only: [:show, :edit, :edit_all]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :index]
   authorize_resource id_param: :key
 
   # GET /courses/:course_name/guides/edit
@@ -73,16 +74,24 @@ class ReferenceGuidesController < ApplicationController
     @edit_all_url = edit_all_reference_guides_url(params[:course_course_name])
   end
 
-  private
-
-  def after_last_child_position(course_version_id, parent_key)
+  private def after_last_child_position(course_version_id, parent_key)
     (ReferenceGuide.
       where(course_version_id: course_version_id, parent_reference_guide_key: parent_key).
       order('position').
       last&.position || 0) + 1
   end
 
-  def find_reference_guide
+  private def redirect_unit_group
+    course_name = params[:course_course_name]
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if UnitGroup.family_names.include?(course_name)
+      unit_group = UnitGroup.latest_stable_version(course_name)
+      redirect_to action: params[:action], course_course_name: unit_group.name, key: params[:key] if unit_group
+    end
+  end
+
+  private def find_reference_guide
     course_version_id = CurriculumHelper.find_matching_course_version(params[:course_course_name])&.id
     unless course_version_id
       flash[:alert] = 'No matching course version found.'
@@ -95,7 +104,7 @@ class ReferenceGuidesController < ApplicationController
     end
   end
 
-  def find_reference_guides
+  private def find_reference_guides
     course_version = CurriculumHelper.find_matching_course_version(params[:course_course_name])
     authorize! :read, course_version.content_root
     unless course_version&.id
@@ -105,7 +114,7 @@ class ReferenceGuidesController < ApplicationController
     @reference_guides = ReferenceGuide.where(course_version_id: course_version&.id).map(&:summarize_for_index)
   end
 
-  def reference_guide_params
+  private def reference_guide_params
     params.permit(
       :parent_reference_guide_key,
       :display_name,

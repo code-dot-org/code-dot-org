@@ -1,0 +1,20 @@
+{
+  "blockly_blockPlaySoundTooltip": "mainkan bunyi",
+  "blockly_blockPlaySoundAtMeasureTooltip": "mainkan bunyi",
+  "blockly_blockRepeatTooltip": "Ulang",
+  "blockly_blockRestTooltip": "berehat",
+  "blockly_blockWhenRun": "apabila berjalan",
+  "blockly_blockWhenRunTooltip": "apabila berjalan",
+  "blockly_functionNamePlaceholder": "fungsi saya",
+  "blockly_toolboxCategoryEffects": "Kesan",
+  "blockly_toolboxCategoryEvents": "Acara-acara",
+  "blockly_toolboxCategoryFunctions": "Fungsi",
+  "blockly_toolboxCategoryLogic": "Logik",
+  "blockly_toolboxCategoryMath": "Matematik",
+  "blockly_toolboxCategoryPlay": "Main",
+  "blockly_toolboxCategoryVariables": "Pemboleh ubah",
+  "feedback": "Maklum balas",
+  "share": "Kongsi",
+  "startOver": "Mula Sekali Lagi",
+  "upload": "Muat naik"
+}

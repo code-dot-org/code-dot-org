@@ -1,0 +1,368 @@
+{
+  "el-GR": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Εργαστήρι Ιστού"
+        },
+        "gamelab": {
+          "name": "Game Lab",
+          "categories": {
+            "game_lab": {
+              "name": "Game Lab",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Ασπρόμαυρο"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Αναπαράγει το αρχείο ήχου MP3 από την καθορισμένη διεύθυνση URL."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Χαρακτήρας",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Σπιράλ"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Ομάδες",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Χρώμα"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Χρώμα"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Σχεδίαση",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Αστέρι"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Μαθηματικά",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Επιστρέφεται ο ελάχιστον αριθμός"
+                    },
+                    "max": {
+                      "description": "Επιστρέφεται ο μέγιστος αριθμός"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Επιστρέφεται ο ελάχιστον αριθμός"
+                    },
+                    "max": {
+                      "description": "Επιστρέφεται ο μέγιστος αριθμός"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Μεταβλητές",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Αναθέτει μία τιμή σε μία υπάρχουσα μεταβλητή. Για παράδειγμα, x = 0."
+                },
+                "declareAssign_x": {
+                  "short_description": "Ορίζει μία μεταβλητή με το δεδομένο όνομα μετά το 'var' και θέτει την τιμή τις σε αυτήν που βρίσκεται στα δεξιά της έκφρασης"
+                }
+              }
+            },
+            "functions": {
+              "name": "Συναρτήσεις"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "Το App Lab (Εργαστήριο Εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app), γράψε κώδικα με μπλοκ ή JavaScript για να την κάνεις να δουλέψει και μετά μοιράσου την εφαρμογή σου σε δευτερόλεπτα.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Συνάρτηση"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Αναπαράγει το αρχείο ήχου MP3 από την καθορισμένη διεύθυνση URL."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "name": "Δεδομένα",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Συνάρτηση"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "αντικείμενο"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Συνάρτηση"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Μαθηματικά",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Επιστρέφεται ο ελάχιστον αριθμός"
+                    },
+                    "max": {
+                      "description": "Επιστρέφεται ο μέγιστος αριθμός"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Επιστρέφεται ο ελάχιστον αριθμός"
+                    },
+                    "max": {
+                      "description": "Επιστρέφεται ο μέγιστος αριθμός"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Μεταβλητές",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Διαλέξτε Τη Δική Σας Περιπέτεια"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Ορίζει μία μεταβλητή με το δεδομένο όνομα μετά το 'var' και θέτει την τιμή τις σε αυτήν που βρίσκεται στα δεξιά της έκφρασης"
+                },
+                "addPair": {
+                  "return_value": "Κανένα"
+                }
+              }
+            },
+            "functions": {
+              "name": "Συναρτήσεις"
+            },
+            "advanced": {
+              "name": "Για προχωρημένους"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "Χαρακτήρας"
+            },
+            "world": {
+              "name": "Κόσμος"
+            },
+            "location": {
+              "name": "Τοποθεσίες"
+            },
+            "actions": {
+              "name": "Ενέργειες"
+            },
+            "events": {
+              "name": "Συμβάντα"
+            },
+            "behaviors": {
+              "name": "Συμπεριφορές"
+            },
+            "loops": {
+              "name": "Βρόχοι"
+            },
+            "variables": {
+              "name": "Μεταβλητές"
+            },
+            "math": {
+              "name": "Μαθηματικά"
+            },
+            "logic": {
+              "name": "Λογική"
+            },
+            "functions": {
+              "name": "Συναρτήσεις"
+            },
+            "text": {
+              "name": "κείμενο"
+            },
+            "comments": {
+              "name": "Σχόλια"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Εργαστήριο Java"
+        }
+      }
+    }
+  }
+}

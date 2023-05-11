@@ -1,4 +1,4 @@
-$root: '/blockly/media/jigsaw/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/jigsaw/"; //TODO: Parameterize for asset pipeline
 
 #codeApp {
   height: 600px;
@@ -15,13 +15,13 @@ $root: '/blockly/media/jigsaw/'; //TODO: Parameterize for asset pipeline
   background-image: url("#{$root}icons.png");
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 .run {
-  background-position: 0px -21px;
+  background-position: 0 -21px;
   margin-right: 3px;
 }
 .stop {
@@ -36,5 +36,5 @@ $root: '/blockly/media/jigsaw/'; //TODO: Parameterize for asset pipeline
   margin: 5px;
 }
 .modal-image {
-  margin-top: 0px;
+  margin-top: 0;
 }

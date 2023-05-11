@@ -9,7 +9,6 @@
   }
 }
 
-
 .activity-section-text {
   // We only want to apply table styling to the text areas or it will apply on the progression details
   table {
@@ -48,8 +47,9 @@
 }
 
 .lessons-dropdown {
- .Select-menu, .Select-menu-outer {
-    z-index: 3000
+  .Select-menu,
+  .Select-menu-outer {
+    z-index: 3000;
   }
 }
 

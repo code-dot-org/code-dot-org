@@ -33,11 +33,11 @@
       "lessThanOrEqualOperator": null,
       "randomNumber_min_max": null,
       "setScreen": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "color": null,
       "intensity": null,
       "buzzer.frequency": null,
@@ -81,15 +81,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20562,
     "name_suffix": "_2222",
     "text_mode_at_start": "false",
     "long_instructions": "# Safety Settings\r\n\r\nMany construction tools or equipment have safety sensors built-in to the devices so they can only be operated under certain conditions. This helps avoid situations where someone injures themselves by accidentally using the device without taking the proper safety precautions.\r\n\r\nCreate an app that simulates firing a laser (aka: the colorLEDs) by pressing a button, but will only work when the device is pointed away from the user so the laser doesn't go into their eyes. This requires using the Accelerometer and detecting the `roll` or `pitch` of the device.\r\n\r\nThe app has already been started for you so that the screen will display the roll and pitch of the circuit playground. Your task is to determine the roll or pitch when the circuit playground is facing away from you, then add code so the colorLEDs only turn on when the circuit playground is in the correct position.\r\n\r\n## Do This\r\n**Planning:**\r\n- Run the app and rotate the Circuit Playground to determine the correct `roll` or `pitch` values that represent when the circuit playground is facing away from you\r\n\r\n**In Code Mode:**\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) Create an event to check when the left button is pressed\r\n2) ::: details [If the circuit playground is facing away from the user: turn on all of the LEDs]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check the value of the `roll` or `pitch` that represents when it is turned away from the user\r\n\t- Inside the [`if statement`(#64B5F6)](/docs/applab/ifBlock/): turn on all of the LEDs, which represents firing the laser\r\n   :::\r\n\r\n**Run Your Code!** If you press the button while the circuit playground is flat on the table, nothing should happen. But if you hold the circuit playground so it is facing away from you, the lights should turn on.",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/accelerometer-events/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/accelerometer-events",
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events"
     ],
     "mini_rubric": "false",
     "encrypted": "false",
@@ -112,7 +112,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:53.691+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalA_2022\"},{\"changed_at\":\"2022-04-08 22:45:03 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:53.691+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalA_2022\"},{\"changed_at\":\"2022-04-08 22:45:03 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-16 17:57:06 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

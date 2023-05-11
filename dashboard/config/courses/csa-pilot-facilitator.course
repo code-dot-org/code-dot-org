@@ -18,7 +18,7 @@
   "properties": {
     "family_name": "csa-pilot-facilitator",
     "has_numbered_units": true,
-    "pilot_experiment": "csa-pilot-facilitators",
+    "pilot_experiment": "deprecated",
     "version_year": "2021"
   },
   "resources": [

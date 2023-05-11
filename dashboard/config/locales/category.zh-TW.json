@@ -2,6 +2,9 @@
   "zh-TW": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "閱讀文獻"
+        },
         "ccela/SL": {
           "description": "說話與聆聽"
         },
@@ -20,11 +23,29 @@
         "iste/4": {
           "description": "學生運用批判思維技巧，計畫與進行研究、管理專案、解決問題，並使用適當的數位工具和資源做出知情的決定。"
         },
+        "iste/6": {
+          "description": "學生展現出對技術概念、系統和運行的良好理解。"
+        },
         "ccela/L": {
           "description": "語言"
         },
         "ccela/RI": {
           "description": "閱讀資訊文件"
+        },
+        "ccmath/OA": {
+          "description": "運算與代數思維"
+        },
+        "csta2011/CD": {
+          "description": "電腦與通訊裝置"
+        },
+        "csta2011/CI": {
+          "description": "社群、全球與倫理影響"
+        },
+        "ccmath/NBT": {
+          "description": "數字和十進字運算"
+        },
+        "ccmath/G": {
+          "description": "幾何"
         },
         "ccela/W": {
           "description": "寫作"
@@ -37,6 +58,15 @@
         },
         "csta/IC": {
           "description": "運算的影響"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "解釋計算資源如何被保護和如何被濫用。"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "比較數據壓縮算法，以確定在特定背景中哪種演算法最佳。"
+        },
+        "csta/DA": {
+          "description": "數據和分析"
         }
       }
     }

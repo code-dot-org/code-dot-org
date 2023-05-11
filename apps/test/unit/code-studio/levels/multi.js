@@ -17,6 +17,7 @@ describe('multi', () => {
   const otherLastAttemptString = '0';
   const emptyLastAttemptString = '';
   const containedMode = false;
+  const allowMultipleAttempts = false;
 
   before(() => {
     replaceOnWindow('appOptions', {});
@@ -39,7 +40,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       multi.clickItem(1);
       assert.strictEqual(multi.validateAnswers(), true);
@@ -55,7 +57,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       multi.clickItem(0);
       assert.strictEqual(multi.validateAnswers(), false);
@@ -71,7 +74,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       assert.strictEqual(multi.validateAnswers(), false);
     });
@@ -88,7 +92,8 @@ describe('multi', () => {
         noAnswers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
 
       multi.clickItem(1);
@@ -109,7 +114,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       expect(multi.selectedAnswers).to.be.empty;
     });
@@ -124,7 +130,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         lastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
     });
@@ -146,7 +153,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         emptyLastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
@@ -169,10 +177,39 @@ describe('multi', () => {
         answers,
         answersFeedback,
         lastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
+    });
+
+    it('selects none after attempt is reset', () => {
+      window.appOptions.scriptName = scriptName;
+      writeSourceForLevel(
+        scriptName,
+        levelId,
+        +new Date(2017, 1, 19),
+        lastAttemptString
+      );
+      const multi = new Multi(
+        levelId,
+        id,
+        app,
+        standalone,
+        numAnswers,
+        answers,
+        answersFeedback,
+        emptyLastAttemptString,
+        containedMode,
+        allowMultipleAttempts
+      );
+
+      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+
+      multi.resetAnswers();
+
+      expect(multi.selectedAnswers.length).to.equal(0);
     });
   });
 
@@ -187,7 +224,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         lastAttemptString,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       multi.clickItem(1);
       const result = multi.getResult(true);
@@ -197,7 +235,7 @@ describe('multi', () => {
         result: true,
         errorDialog: undefined,
         submitted: false,
-        valid: true
+        valid: true,
       });
     });
 
@@ -212,7 +250,8 @@ describe('multi', () => {
         answers,
         answersFeedback,
         null,
-        containedMode
+        containedMode,
+        allowMultipleAttempts
       );
       const result = multi.getResult(true);
 

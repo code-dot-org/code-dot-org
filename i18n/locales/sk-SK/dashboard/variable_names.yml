@@ -64,6 +64,7 @@ sk:
       name: meno
       nectar: nektár
       nectars: nektár
+      object: predmet
       padYOffset: vnútornýPosunY
       planet: planéta
       player_score: body_hráča
@@ -85,6 +86,7 @@ sk:
       speed: rýchlosť
       startX: štartX
       startY: štartY
+      type: typ
       variable: premenná
       width: šírka
       wizard: čarodejník

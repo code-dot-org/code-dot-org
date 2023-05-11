@@ -13,11 +13,11 @@ export default class SectionSelector extends React.Component {
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        students: studentsShape
+        students: studentsShape,
       })
     ),
     selectedSectionId: PropTypes.number,
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
   };
 
   render() {

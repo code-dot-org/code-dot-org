@@ -9,13 +9,13 @@ layout: wide
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Guia per crear i enviar tutorials i lliçons de Hour of Code™ i la Setmana de l'Educació en Ciències de la Computació
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org allotja una gran selecció de vídeos, lliçons i activitats a les pàgines web de Code.org i de l'Hora del Codi. Trobareu la llista actual a [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Voleu enviar el vostre propi tutorial autònom, una lliçó dirigida o una activitat de robòtica o amb Maker on s'expliqui un principi de la informàtica? Uniu-vos a aquest moviment global i ajudeu els participants de tot el món a començar amb una hora de codi o anar més enllà amb activitats que contenen diverses lliçons o que duren tot un dia o una setmana.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Després de llegir les directrius, podeu enviar la vostra activitat a través de la nostra [pàgina per trametre activitats de l'Hora del Codi](https://forms.gle/eeAt6kVuz3RKg5n18). Podeu enviar una activitat en qualsevol moment, però la data límit per incloure-la en un any natural és l'1 d'octubre. (Per exemple, les activitats rebudes després de l'1 d'octubre de 2022 no apareixeran a l'Hora del Codi de 2022).** Si teniu cap pregunta sobre l'enviament de l'activitat, poseu-vos en contacte amb nosaltres a support@code.org.
 
 A few tips:
 
@@ -232,12 +232,15 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 ## Trademark Guidelines
 
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
-4. No use of "Hour of Code" in app names.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**Back to the top**](#top)
 

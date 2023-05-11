@@ -17,9 +17,9 @@ module LevelsHelper
   include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
-    if script_level.script.name == Script::HOC_NAME
+    if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Script::FLAPPY_NAME
+    elsif script_level.script.name == Unit::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
       if script_level.lesson.numbered_lesson?
@@ -116,13 +116,19 @@ module LevelsHelper
   # Other levels are considered started when progress has been saved for the level (for example
   # clicking the run button saves progress).
   def level_started?(level, script, user)
-    return false unless user.present?
+    return false if user.blank?
 
     if level.channel_backed?
       return get_channel_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
     end
+  end
+
+  def level_passing?(level, script, user)
+    return false if user.blank?
+    last_attempt = user.last_attempt(level, script)
+    return last_attempt.present? && last_attempt.passing?
   end
 
   def select_and_track_autoplay_video
@@ -190,7 +196,7 @@ module LevelsHelper
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
     level_requires_channel = (@level.channel_backed? &&
-          !@level.try(:contained_levels).present? &&
+          @level.try(:contained_levels).blank? &&
           params[:action] != 'edit_blocks')
     # Javalab requires a channel if Javabuilder needs to access project-specific assets,
     # or if we want to access a project's code from S3.
@@ -254,7 +260,7 @@ module LevelsHelper
     end
 
     if @script
-      view_options(script_name: @script.name)
+      view_options(script_name: @script.name, unit_year: @script.get_course_version&.key)
     end
 
     unless params[:share]
@@ -363,6 +369,7 @@ module LevelsHelper
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+        @app_options[:level][:isPassing] = level_passing?(@level, @script, @user || current_user)
       end
     end
 
@@ -406,6 +413,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_javalab = @level.is_a?(Javalab)
+    use_ailab = @level.is_a?(Ailab)
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
@@ -419,6 +427,7 @@ module LevelsHelper
         use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
+        use_ailab: use_ailab,
         use_phaser: use_phaser,
         use_p5: use_p5,
         hide_source: hide_source,
@@ -597,7 +606,7 @@ module LevelsHelper
     level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
 
-    # Script-dependent option
+    # Unit-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
     app_options[:scriptName] = script.name if script
@@ -660,11 +669,6 @@ module LevelsHelper
       end
     end
 
-    # Expo-specific options (only needed for Applab and Gamelab)
-    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
-      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
-    end
-
     # User/session-dependent options
     app_options[:disableSocialShare] = true if current_user&.under_13? || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
@@ -722,14 +726,14 @@ module LevelsHelper
     # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      thank_you: ERB::Util.url_encode(I18n.t('footer.thank_you')),
       help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+      art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year)),
       built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
+      google_copyright: ERB::Util.url_encode(I18n.t('footer.google_copyright'))
     }
   end
 
@@ -755,7 +759,11 @@ module LevelsHelper
       nonGlobal: true,
     }
     app = level.game.app
+    # We can safely treat this string as HTML-safe because it's constructed
+    # from levelbuilder-provided data, not user- or translator-provided.
+    # rubocop:disable Rails/OutputSafety
     blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+    # rubocop:enable Rails/OutputSafety
 
     unless @blockly_loaded
       @blockly_loaded = true
@@ -801,7 +809,11 @@ module LevelsHelper
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
     @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    # We can safely treat this string as HTML-safe because the markdown
+    # renderer is configured to filter out any non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
     @@markdown_renderer.render(text).html_safe
+    # rubocop:enable Rails/OutputSafety
   end
 
   def level_title
@@ -937,34 +949,41 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
+    error_message = under_13_without_tos_teacher?(level)
+    return false unless error_message
+
+    if error_message == I18n.t("errors.messages.too_young")
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: "redirect_under_13",
+          event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
+          data_json: {
+            game: level.game.name
+          }.to_json
+        }
+      )
+    end
+    redirect_to '/', flash: {alert: error_message}
+    return true
+  end
+
+  def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
-        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+        return I18n.t("errors.messages.teacher_must_accept_terms")
       else
-        error_message = I18n.t("errors.messages.too_young")
-        FirehoseClient.instance.put_record(
-          :analysis,
-          {
-            study: "redirect_under_13",
-            event: "student_with_no_teacher_redirected",
-            user_id: current_user.id,
-            data_json: {
-              game: level.game.name
-            }.to_json
-          }
-        )
+        return I18n.t("errors.messages.too_young")
       end
-      redirect_to '/', flash: {alert: error_message}
-      return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
-        return true
+        return I18n.t("errors.messages.pair_programmer")
       end
     end
 

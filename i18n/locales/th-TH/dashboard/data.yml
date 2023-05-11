@@ -326,6 +326,7 @@ th:
         csp_applab_parameters: ฟังก์ชันกับพารามิเตอร์
         CSA-PL-intro-to-arrays: อาร์เรย์มิติเดียว (1D)
         CS_Changing_Everything: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง
+        csd_sprite_properties: คุณสมบัติของสไปร์ท
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

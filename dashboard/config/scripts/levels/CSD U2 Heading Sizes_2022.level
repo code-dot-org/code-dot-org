@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:03.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <h3>Biggest</h3>\\n    <h6>Big</h6>\\n    <h4>Medium Big</h4>\\n    <h1>Medium Small</h1>\\n    <h5>Small</h5>\\n    <h2>Smallest</h2>\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
@@ -15,15 +11,19 @@
     "parent_level_id": 20008,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/csd-2022/guides/headings-and-paragraphs",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"
   },
+  "game_id": 58,
   "published": true,
+  "created_at": "2022-03-30T23:32:03.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:03.896+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Sizes_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Sizes_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:03.896+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Sizes_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Sizes_2021\"},{\"changed_at\":\"2023-02-14 17:36:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

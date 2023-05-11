@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-animals",
-    "serialized_at": "2022-03-11 12:08:38 UTC",
+    "serialized_at": "2022-09-13 19:05:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,7 @@
       "key": "a026407c-221b-4f0a-a88d-ec29365ee5fe",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +74,7 @@
       "key": "32a95e21-140b-4b72-bd7a-b000ff574b18",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -86,6 +88,7 @@
       "key": "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

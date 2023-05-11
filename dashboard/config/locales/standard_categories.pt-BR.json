@@ -1,0 +1,128 @@
+{
+  "pt-BR": {
+    "data": {
+      "standard_categories": {
+        "DAT-1": {
+          "description": "O método utilizado pelo computador para representar dados é diferente da forma como os dados são interpretados e exibidos para o usuário. Os programas são utilizados para traduzir dados em um representação que seja mais facilmente compreendida pelas pessoas."
+        },
+        "IOC-2": {
+          "description": "O uso de inovações em computação pode envolver riscos à segurança e identidade do seu pessoal."
+        },
+        "DAT-1.D": {
+          "description": "Compare os algoritmos de compactação de dados para determinar qual é o melhor em um contexto específico."
+        },
+        "IOC-2.B": {
+          "description": "Explique como os recursos de computação podem ser protegidos, mas podem ser utilizados indevidamente."
+        },
+        "CD": {
+          "description": "Computadores e dispositivos de comunicação"
+        },
+        "CI": {
+          "description": "Impactos na comunidade, globais e éticos"
+        },
+        "CL": {
+          "description": "Colaboração"
+        },
+        "CPP": {
+          "description": "Programação e Prática Computacional"
+        },
+        "CT": {
+          "description": "Pensamento computacional"
+        },
+        "L": {
+          "description": "Idioma"
+        },
+        "RI": {
+          "description": "Lendo Informativos"
+        },
+        "RL": {
+          "description": "Leitura de literatura"
+        },
+        "SL": {
+          "description": "Falando e Escutando"
+        },
+        "W": {
+          "description": "Escrevendo"
+        },
+        "C": {
+          "description": "Túnel"
+        },
+        "F": {
+          "description": "funções"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "MP": {
+          "description": "Práticas Matemáticas"
+        },
+        "NBT": {
+          "description": "Números e operações na base dez"
+        },
+        "OA": {
+          "description": "Operações e raciocínio algébrico"
+        },
+        "1": {
+          "description": "Estudantes demonstram pensamento crítico, constroem conhecimento e desenvolvem produtos e processos inovadores usando a tecnologia."
+        },
+        "2": {
+          "description": "Estudantes usam mídia digital para se comunicar e trabalhar de maneira colaborativa, inclusive a distância, para apoiar o aprendizado individual e contribuir para o aprendizado de outras pessoas."
+        },
+        "4": {
+          "description": "Estudantes usam habilidades de pensamento crítico para planejar e conduzir pesquisas, gerenciar projetos, solucionar problemas e tomar decisões informadas usando recursos e ferramentas digitais apropriadas."
+        },
+        "6": {
+          "description": "Estudantes demonstram boa compreensão de conceitos, sistemas e operações tecnológicas."
+        },
+        "BI-1": {
+          "description": "Computadores percebem o mundo usando sensores"
+        },
+        "BI-2": {
+          "description": "Os agentes mantêm representações do mundo e as usam para raciocinar"
+        },
+        "BI-3": {
+          "description": "Os computadores podem aprender com os dados"
+        },
+        "BI-4": {
+          "description": "Agentes inteligentes exigem muitos tipos de conhecimento para interagir naturalmente com humanos"
+        },
+        "BI-5": {
+          "description": "A IA pode impactar a sociedade de formas positivas e negativas"
+        },
+        "3-A-i": {
+          "description": "Natureza da aprendizagem - humanos versus máquinas"
+        },
+        "3-A-ii": {
+          "description": "Natureza da aprendizagem - encontrando padrões nos dados"
+        },
+        "3-A-iii": {
+          "description": "Natureza da aprendizagem - treinando um modelo"
+        },
+        "3-A-iv": {
+          "description": "Natureza da aprendizagem - construindo versus usando um raciocínio"
+        },
+        "3-A-v": {
+          "description": "Natureza da aprendizagem - ajustando representações internas"
+        },
+        "3-A-vi": {
+          "description": "Natureza da aprendizagem - aprendendo com a experiência"
+        },
+        "3-B-i": {
+          "description": "Redes Neurais - estrutura de uma rede neural"
+        },
+        "3-B-ii": {
+          "description": "Redes Neurais - ajuste de peso"
+        },
+        "3-C-i": {
+          "description": "Conjuntos de dados - conjuntos de recursos"
+        },
+        "3-C-ii": {
+          "description": "Conjuntos de dados - grandes conjuntos de dados"
+        },
+        "3-C-iii": {
+          "description": "Conjuntos de dados - viés"
+        }
+      }
+    }
+  }
+}

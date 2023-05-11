@@ -4,7 +4,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   test '/join with code in query param renders followers#student_user_new with section_code' do
     section = create :section
 
-    join_url = "/join?utf8=%E2%9C%93&section_code=#{section.code}&commit=Go"
+    join_url = "http://#{CDO.dashboard_hostname}/join?utf8=%E2%9C%93&section_code=#{section.code}&commit=Go"
     assert_recognizes(
       {controller: 'followers', action: 'student_user_new', section_code: section.code},
       join_url,
@@ -20,7 +20,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   test '/join with code in url renders followers#student_user_new with section_code' do
     section = create :section
 
-    join_url = "/join/#{section.code}"
+    join_url = "http://#{CDO.dashboard_hostname}/join/#{section.code}"
     assert_recognizes(
       {controller: 'followers', action: 'student_user_new', section_code: section.code},
       join_url
@@ -30,7 +30,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   end
 
   test '/join without code renders followers#student_user_new' do
-    join_url = '/join'
+    join_url = "http://#{CDO.dashboard_hostname}/join"
     assert_recognizes(
       {controller: 'followers', action: 'student_user_new'},
       join_url

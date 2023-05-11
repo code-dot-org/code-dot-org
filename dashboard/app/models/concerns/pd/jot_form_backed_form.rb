@@ -150,9 +150,9 @@ module Pd
 
                 last_processed_submission_id = submission_id
                 imported += 1 if res == IMPORTED
-              rescue => e
+              rescue => exception
                 # Store message and first line of backtrace for context
-                errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
+                errors_per_form[form_id][submission_id] = "#{exception.message}, #{exception.backtrace.first}"
                 batch_error_count += 1
                 all_sync_results[form_id][ERROR] ||= 0
                 all_sync_results[form_id][ERROR] += 1
@@ -273,7 +273,7 @@ module Pd
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
-        raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
+        raise KeyError, "Mising jotform form: #{category}.#{name}" if forms[name].blank?
         forms[name]&.to_i
       end
 
@@ -297,9 +297,9 @@ module Pd
           end
 
           count += 1
-        rescue => e
+        rescue => exception
           # Store message and first line of backtrace for context
-          errors[placeholder.submission_id] = "#{e.message}, #{e.backtrace.first}"
+          errors[placeholder.submission_id] = "#{exception.message}, #{exception.backtrace.first}"
         end
 
         CDO.log.info "#{count} placeholders filled."
@@ -383,7 +383,7 @@ module Pd
     # Update answers for this submission from the JotForm API
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
-      raise 'Missing submission id' unless submission_id.present?
+      raise 'Missing submission id' if submission_id.blank?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
       questions_details = self.class.use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
@@ -428,12 +428,12 @@ module Pd
       @form_data_hash ||= {}
       @form_data_hash[show_hidden_questions ? 'all' : 'visible'] ||= begin
         questions.process_answers(answers_hash, show_hidden_questions: show_hidden_questions)
-      rescue => e
-        raise e, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{e}", e.backtrace
+      rescue => exception
+        raise exception, "Error processing answers for submission id #{submission_id}, form #{form_id}: #{exception}", exception.backtrace
       end
     end
 
-    def sanitize_form_data_hash
+    def sanitized_form_data_hash
       @sanitized_form_data_hash ||=
         form_data_hash.transform_keys {|key| key.underscore.to_sym}
     end

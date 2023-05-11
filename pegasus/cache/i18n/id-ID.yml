@@ -461,6 +461,7 @@ id-ID:
   homepage_banner_40k_teachers_link: Pelajari lebih lanjut
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
+  homepage_slot_text_blurb_hoc_2022: Menjelajah, Bermain, Berkreasi!
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Selenggarakan Hour of Code
@@ -488,7 +489,7 @@ id-ID:
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
   homepage_slot_text_link_thebadguys: Buat Kode dengan The Bad Guys
   homepage_slot_text_link_administrators: Bawa CS ke sekolah mu
-  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org telah
+  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org yang telah
     dibuat
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
@@ -824,6 +825,7 @@ id-ID:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 relawan
   volunteer_engineer_submission_num_volunteers_10: 10 relawan
   volunteer_engineer_submission_num_volunteers_25: 25 relawan
@@ -2391,6 +2393,13 @@ id-ID:
   hoc_overview_dance_2019_subtitle: Kode Pesta Dansa untuk berbagi dengan teman-teman
     Anda. Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas
     Brothers, Nicki Minaj, dan 34 artis lainnya!
+  hoc_overview_dance_2022_subtitle: Buat Kode Pesta Dansa untuk dibagikan kepada teman-temanmu.
+    Menampilkan Beyonce, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik dari
+    “Encanto” Disney, dan masih banyak lagi!
+  hoc_overview_hello_world_2022_subtitle: Pilih dari empat tema seru untuk membuat
+    coding karakter yang interaktif di dunia yang kamu ciptakan.
+  hoc_overview_hello_world_2022_alt_text: Animasi astronot dan karakter hewan yang
+    mengambang di sekitar ilustrasi bumi
   hoc_overview_title: Aktifitas Hour of Code dari Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code </a> adalah
     gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa
@@ -2464,10 +2473,19 @@ id-ID:
     Hour of Code gratis. untuk partisipan semua level keterampilan, usia sembilan
     dan diatasnya.
   hoc2018_mc_educators_box3_button: Temukan workshop
+  hoc2022_mc_educators_box3_desc_markdown: 'Manfaatkan [kursus gratis] (%{free_course_link})
+    on demand ini atau daftarkan seluruh kelas Anda untuk menghadiri lokakarya Hour
+    of Code langsung dengan guru tamu. Ditawarkan beberapa kali selama CSEW, 6 - 11
+    Desember. '
+  hoc2022_mc_educators_box3_button: Daftar sekarang
   hoc2018_mc_educators_box4_title: Akses lebih sumber ilmu komputer
   hoc2018_mc_educators_box4_desc: Ciptakan perubahan di komunitas anda dengan keterampilan
     digital dan sumber pendidikan ilmu komputer dari Mikrosoft.
   hoc2018_mc_educators_box4_button: Eksplorasi sumber
+  hoc2022_mc_educators_box4_desc: Bangkitkan semangat STEM pada peserta didik K-12
+    dengan kurikulum ilmu komputer selama 200 jam, mulai dari blok hingga python,
+    yang didukung dengan pengembangan profesi.
+  hoc2022_mc_educators_box4_button: Lanjutkan Pembelajaran
   hoc2018_mc_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif
     ini
   hoc2018_mc_videos_more: Selengkapnya <a href='%{inspiring_videos_playlist}'>video
@@ -2642,6 +2660,13 @@ id-ID:
   hoc2021_mc_mee_ai_title: AI Untuk Kebaikan
   hoc2021_mc_mee_ai_description: 'Telusuri AI bersama murid-murid Anda dan belajar
     meng-code di Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_title: Minecraft Escape Estate
+  hoc2022_mc_mee_description: 'Selamatkan diri rumah misterius saat fajar dan dapatkan
+    satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini tersedia di Minecraft:
+    Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad, dan Mobile. Mulailah dengan
+    sumber daya, pelatihan, dan video edukator gratis. '
+  hoc2022_mc_mee_timecraft_description: 'Kembali ke masa lalu untuk menyelamatkan
+    masa depan dalam pelajaran coding gratis ini dalam Minecraft: Edisi Pendidikan.'
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   footer_built_on_github: Bawaan GitHub dari Microsoft
   codebytes_skinny_banner_title: Bergabunglah dengan kami pada Desember 7-11  untuk  pelajaran
@@ -2727,6 +2752,10 @@ id-ID:
   ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
   ai_ecs_description: Unit kurikulum alternatif baru untuk kurikulum Exploring Computer
     Science (ECS).
+  ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
+  ai_aiedu_intro_description: Pengantar Kecerdasan Buatan adalah sebuah kurikulum
+    yang gratis, inovatif, relevan secara budaya dimana murid mengembangkan pengetahuan
+    konseptual tentang kecerdasan buatan dan bagaimana penggunaannya di dunia nyata.
   ai_elements: Unsur AI
   ai_elements_description: Serangkaian kursus online gratis yang dibuat oleh Reaktor
     dan University of Helsinki.
@@ -2745,3 +2774,26 @@ id-ID:
     biru
   minecraft_tile_alt: Dua karakter Minecraft, Steve dan Alex, dengan latar belakang
     yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut
+  hoc2022_banner_title: Menjelajah, Bermain, Berkreasi!
+  hoc2022_banner_description: Jelajahi alam semesta, cetak gol, atau lakukan gerakan
+    — ada banyak cara untuk mencoba ilmu komputer!
+  hoc2022_cta_primary: Lihat yang baru
+  hoc2022_cta_secondary: Coba kegiatan lainnya
+  hoc2022_landing_page_explore_title: Jelajahi
+  hoc2022_landing_page_explore_description: Buka pintu menuju dunia baru dengan ilmu
+    komputer!
+  hoc2022_landing_page_play_title: Bermain
+  hoc2022_landing_page_play_description: Ambil lapangan dan skor!
+  hoc2022_landing_page_create_title: Buat
+  hoc2022_landing_page_create_description: Ciptakan sesuatu yang unik dan indah!
+  hoc2022_landing_page_banner_alt_left: Alien yang menari di samping Saturnus di luar
+    angkasa
+  hoc2022_landing_page_banner_alt_right: Robot yang menggiring bola di luar angkasa
+    di depan roket yang lepas landas
+  try_it_yourself: Cobalah sendiri!
+  try_an_activity: Coba aktivitas
+  see_more_activities: Lihat aktivitas lainnya
+  hoc2022_nasa_banner_heading: Bergabunglah dengan NASA untuk fitur Hour of Code khusus
+    tentang ilmu komputer di luar angkasa!
+  hoc2022_nasa_banner_description: Tayang perdana pukul 10 pagi ET, 5 Desember di
+    saluran YouTube NASA STEM.

@@ -8,7 +8,7 @@ Scenario: Basic GameLab level
   Then I see no difference for "initial load" using stitch mode "none"
   When I switch to the animation tab
   Then I see no difference for "animation tab" using stitch mode "none"
-  And I press ".animationList .newListItem" using jQuery
+  And I press ".animationList #newListItem" using jQuery
   Then I see no difference for "new animation" using stitch mode "none"
   And I close my eyes
 

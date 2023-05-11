@@ -1,7 +1,8 @@
 {
   "cancel": "Cancelar",
+  "create": "Crear",
   "delete": "Eliminar",
   "rename": "Renomear",
-  "submit": "Enviar",
-  "saving": "Gardando..."
+  "saving": "Gardando...",
+  "submit": "Enviar"
 }

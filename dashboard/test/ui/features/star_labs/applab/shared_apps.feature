@@ -32,7 +32,7 @@ Feature: App Lab Scenarios
     And I wait until element "#divApplab > .screen > button#testButton1" is visible
     Then element "#testButton1" contains text "Click me"
     When I press "testButton1"
-    Then element "#testButton1" contains text "Clicked"
+    And I wait until element "#testButton1" contains text "Clicked"
 
   Scenario: Can change a dropdown value in shared app
     Given I ensure droplet is in text mode
@@ -85,9 +85,8 @@ Feature: App Lab Scenarios
     When I navigate to the shared version of my project
     And I wait until element ".screen > input" is visible
     And I press keys "GLULX" for element ".screen > input"
-    Then element ".screen > input" has value "GLULX"
+    And I wait until element ".screen > input" has the value "GLULX"
 
-  @no_ie
   @no_mobile
   Scenario: Can type in textarea on share page
     Given I switch to design mode

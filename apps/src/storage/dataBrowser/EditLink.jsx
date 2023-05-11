@@ -1,21 +1,20 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 
 class EditLink extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
     return (
-      <a style={dataStyles.link} onClick={this.props.onClick}>
+      <a className={dataStyles.link} onClick={this.props.onClick}>
         {this.props.name}
       </a>
     );
   }
 }
 
-export default Radium(EditLink);
+export default EditLink;

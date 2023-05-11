@@ -37,6 +37,6 @@ See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show,
 کوڈ کا قیام صرف کس طرح ٹیکنالوجی کام کرتا ہے اور سافٹ ویئر ایپلی کیشنز کو کیسے بنانے کے بارے میں مزید جاننے کے لئے سفر پر پہلا قدم ہے. اس سفر کو جاری رکھنے کے لئے:
 
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

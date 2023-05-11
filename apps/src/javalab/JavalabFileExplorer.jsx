@@ -1,25 +1,26 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
+import i18n from '@cdo/locale';
+import CloseOnEscape from './components/CloseOnEscape';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if
  * you click on the buttons or outside of the dropdown.
  */
-class JavalabFileExplorerComponent extends Component {
+class JavalabFileExplorer extends Component {
   static propTypes = {
     fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
-    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -63,13 +64,14 @@ class JavalabFileExplorerComponent extends Component {
     const files = this.transformFileMetadata();
 
     return (
-      <div style={styles.main}>
+      <CloseOnEscape style={styles.main} handleClose={this.handleClickOutside}>
         <button
+          aria-label={i18n.fileExplorer()}
           type="button"
           onClick={this.toggleDropdown}
           style={{
             ...styles.button,
-            ...(displayTheme === DisplayTheme.DARK && styles.darkButton)
+            ...(displayTheme === DisplayTheme.DARK && styles.darkButton),
           }}
         >
           <FontAwesome icon="folder" />
@@ -90,7 +92,7 @@ class JavalabFileExplorerComponent extends Component {
               ))}
           </JavalabDropdown>
         )}
-      </div>
+      </CloseOnEscape>
     );
   }
 }
@@ -100,11 +102,11 @@ const styles = {
     float: 'left',
     height: 29,
     width: 29,
-    margin: 2
+    margin: 2,
   },
   dropdown: {
     maxHeight: 190,
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   button: {
     height: '100%',
@@ -112,11 +114,11 @@ const styles = {
     padding: 3,
     margin: 0,
     borderRadius: 2,
-    backgroundColor: color.background_gray
+    backgroundColor: color.background_gray,
   },
   darkButton: {
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };
 
-export default onClickOutside(Radium(JavalabFileExplorerComponent));
+export default onClickOutside(JavalabFileExplorer);

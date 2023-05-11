@@ -461,6 +461,7 @@ vi:
         CSA-PL-Printing-in-Java: Hiển thị văn bản trong Java
         CSA-PL-multi-selection-statements: Câu lệnh nhiều lựa chọn
         CS_Changing_Everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
+        csd_sprite_properties: Thuộc tính của nhân vật
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

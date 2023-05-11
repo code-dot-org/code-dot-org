@@ -21,7 +21,7 @@ social:
 # Învățați despre Inteligența artificială (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NOU - Modul IA și Învățare automată</h2><p>Noul modul al curriculumului nostru abordează aspectele etice legate de AI, analizează erorile sistematice și explorează și explică concepte fundamentale printr-o serie de activități online și offline și discuții în grup.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explorați modulul</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">NOU - Modul IA și Învățare automată</h2><p>Noul modul al curriculumului nostru abordează aspectele etice legate de AI, analizează erorile sistematice și explorează și explică concepte fundamentale printr-o serie de activități online și offline și discuții în grup.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="Laboratorul AI"/></div>
 <div class="clear"></div>
 </div>
@@ -42,20 +42,19 @@ Veniți alături de noi pentru a explora IA într-un nou serial video, pentru a 
 
 {{ ai_microsoft_block }}
 
-{{ ai_videos_link }}
-
 <a id="about-aimodule"></a>
 
 ## NOU - Modul IA și Învățare automată
 <div>
-<div class="col-50">
-<p>Modulul IA și învățare programată are durata de aproximativ cinci săptămâni și poate fi predat <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >ca modul de sine stătător</a> sau ca unitate opțională <a href="https://studio.code.org/s/csd7-2021">în Descoperiri despre ȘC</a>. Acesta abordează aspectele etice legate de IA, analizează erorile sistematice și explorează și explică concepte fundamentale</p><p>Deoarece învățarea programată depinde de seturi mari de date, noua unitate include seturi de date din viața reală cu privire la sănătate, date demografice și multe altele, pentru a-i determina pe elevi să răspundă la întrebări precum: „Care sunt problemele care pot fi rezolvate cu ajutorul învățării programate?” „Cum poate IA să ajute societatea?” ”Cine beneficiază de pe urma AI?” „Cine este afectat negativ?” „Cine este implicat?” „Cine lipsește?”  </p>
-<p>Aspectele etice vor fi în prim-plan în aceste discuții, cu subiecte de discuție și lecții legate de impactul acestor tehnologii. Acest lucru îi va ajuta pe elevi să înțeleagă aceste tehnologii dintr-o perspectivă holistică, în timp ce învață noțiunile tehnice de bază ale funcționării acestor tehnologii.</p>
-</div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
-<div class="clear"></div>
+  <div class="col-50">
+    <p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml?viewAs=Instructor" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2022">unit in CS Discoveries</a>. Acesta abordează aspectele etice legate de IA, analizează erorile sistematice și explorează și explică concepte fundamentale</p><p>Deoarece învățarea programată depinde de seturi mari de date, noua unitate include seturi de date din viața reală cu privire la sănătate, date demografice și multe altele, pentru a-i determina pe elevi să răspundă la întrebări precum: „Care sunt problemele care pot fi rezolvate cu ajutorul învățării programate?” „Cum poate IA să ajute societatea?” ”Cine beneficiază de pe urma AI?” „Cine este afectat negativ?” „Cine este implicat?” „Cine lipsește?”  </p>
+    <p>Aspectele etice vor fi în prim-plan în aceste discuții, cu subiecte de discuție și lecții legate de impactul acestor tehnologii. Acest lucru îi va ajuta pe elevi să înțeleagă aceste tehnologii dintr-o perspectivă holistică, în timp ce învață noțiunile tehnice de bază ale funcționării acestor tehnologii.</p>
+  </div>
+  <div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
+  <div class="clear"></div>
 </div>
 
+{{ ai_videos_link }}
 ## Cum funcționează IA
 
 Cu o introducere prezentată de Satya Nadella, CEO Microsoft, această serie de videoclipuri scurte vă va prezenta modul în care funcționează inteligența artificială și de ce este importantă. Aflați mai multe despre rețelele neuronale sau despre modul în care inteligența artificială învață și aprofundați aspecte precum erorile sistematice ale algoritmilor și aspectele etice ale procesului decizional al IA.
@@ -115,3 +114,5 @@ Nivelurile 2-4 utilizează un model instruit în prealabil, pus la dispoziție d
 Nivelurile 6-8 utilizează o \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Analizăm fiecare componentă a peștilor (cum ar fi ochii, gura, corpul) și asamblăm toate meta-datele pentru componente (cum ar fi numărul de dinți, forma corpului) într-un vector de numere pentru fiecare pește. Folosim acești vectori pentru a instrui SVM. Pe baza datelor de instruire, SVM separă „spațiul” tuturor peștilor posibili în două părți, care corespund claselor pe care încercăm să le învățăm (cum ar fi „albastru” sau „nu e albastru”).
 
 [[Sus]](#top)
+
+{{ visit_partial_event_logger }}

@@ -157,3 +157,16 @@ Scenario: Toolbox Categories in Arabic (RTL)
   Then element ".blocklyTreeRoot #\\:7" has "ar-SA" text from key "data.block_categories.Logic"
   Then element ".blocklyTreeRoot #\\:8" has "ar-SA" text from key "data.block_categories.Math"
   Then element ".blocklyTreeRoot #\\:9" has "ar-SA" text from key "data.block_categories.Text"
+
+Scenario: Pixelation Widget long and short instructions in Spanish
+  Given I am on "http://studio.code.org/s/allthethings/lessons/17/levels/2/lang/es-MX"
+  And I rotate to landscape
+  # We cannot use 'fully load' because that assumes there is a run button
+  # and the Pixelation widget has no such button. Instead, we wait until the
+  # instructions dialog appears, which appears dynamically at the 'ready' event,
+  # but just in case, we click on the short instructions div which also brings
+  # it up for us, since a video might pop up first, instead.
+  And I click selector "#below_viz_instructions" once I see it
+  And I wait to see ".markdown-instructions-container"
+  Then element ".markdown-instructions-container .instructions-markdown > div" has "es-MX" markdown from key "data.long_instructions.AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+  Then element "#below_viz_instructions" has "es-MX" text from key "data.short_instructions.AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"

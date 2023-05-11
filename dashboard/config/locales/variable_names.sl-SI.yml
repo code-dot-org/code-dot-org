@@ -6,6 +6,7 @@ sl:
       age: starost
       answer: odgovor
       binary: binarno
+      birds: ptice
       cats: muce
       color: barva
       counter: števec
@@ -24,6 +25,7 @@ sl:
       score: rezultat
       size: velikost
       speed: hitrost
+      type: Vrsta
       variable: spremenljivka
       wizard: čarovnik
       x: x

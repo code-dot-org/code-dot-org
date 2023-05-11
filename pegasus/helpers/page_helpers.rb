@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string/indent'
-require 'cdo/pegasus/donor'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
@@ -53,7 +52,7 @@ end
 # Setting `is_retina` to `false` matches non-retina displays.
 def css_retina?(is_retina = true)
   css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
-  css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
+  css_query_parts.map {|q| "#{is_retina ? '' : 'not all and '}(#{q})"}.join(', ')
 end
 
 # Returns a concatenated, minified CSS string from all CSS files in the given paths,
@@ -66,7 +65,7 @@ def combine_css(*paths)
 
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
   css = files.sort_by(&File.method(:basename)).map do |i|
-    IO.read(i)
+    File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,
     syntax: :scss,

@@ -1,7 +1,7 @@
 /** @overview a button which shows a spinner while an operation is pending */
 import FontAwesome from './FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 class PendingButton extends React.Component {
@@ -13,7 +13,7 @@ class PendingButton extends React.Component {
     pendingStyle: PropTypes.any,
     pendingText: PropTypes.string.isRequired,
     style: PropTypes.any,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
   };
 
   render() {

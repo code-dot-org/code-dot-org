@@ -20,5 +20,6 @@ lt:
       score: rezultatas
       size: dydis
       speed: greitis
+      type: tipas
       wizard: burtininkas
       x: x

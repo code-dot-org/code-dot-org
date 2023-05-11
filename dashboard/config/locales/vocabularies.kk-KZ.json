@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Шарттар"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
         },
         "loops/aquatic/unversioned": {
           "word": "Ілмек"
@@ -56,6 +56,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Код"
         },
@@ -68,8 +76,118 @@
         "debugging/basketball/unversioned": {
           "word": "Бағдарламаны дұрыстау"
         },
+        "debugging/coursed/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursed/2022": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Шарттар"
+        },
+        "variable/coursef/2022": {
+          "word": "Айнымалы"
+        },
+        "internet/coursef/2022": {
+          "word": "Ғаламтор"
+        },
+        "define/coursef/2022": {
+          "word": "Анықта"
+        },
+        "function/coursee/2022": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Шарттар"
+        },
+        "copyright/coursee/2022": {
+          "word": "Авторлық құқық"
+        },
+        "define/coursee/2022": {
+          "word": "Анықта"
+        },
+        "debugging/courseb/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/courseb/2022": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/express/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/express/2022": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/express/2022": {
+          "word": "Шарттар"
+        },
+        "function/express/2022": {
+          "word": "Функция"
+        },
+        "variable/express/2022": {
+          "word": "Айнымалы"
+        },
+        "define/express/2022": {
+          "word": "Анықта"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/pre-express/2022": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/coursea/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursea/2022": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/coursec/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursec/2022": {
+          "word": "Бағдарламалау"
+        },
+        "binary/coursec/2022": {
+          "word": "Бинарлы"
+        },
+        "debugging/csd/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "variable/csd/2022": {
+          "word": "Айнымалы"
+        },
+        "conditionals/csd/2022": {
+          "word": "Шарттар"
+        },
+        "abstraction/csd/2022": {
+          "word": "Абстракция"
+        },
+        "function/csd/2022": {
+          "word": "Функция"
+        },
+        "copyright/csd/2022": {
+          "word": "Авторлық құқық"
+        },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Айнымалы"

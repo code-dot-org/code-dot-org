@@ -956,6 +956,91 @@ pl:
         CSA-PL-debugging-22: Debugowanie w Java Lab
         CSD_Unit6_InteractiveArtExemplar: Interaktywny Art Exemplar
         CS_Changing_Everything: Informatyka zmienia wszystko
+        csa-alias-video: Równe i aliasy
+        csa-equals-video: Metoda equals()
+        csa-user-stories: Historie użytkowników w inżynierii oprogramowania
+        csa-pl-vpl-m1-unit-3: Inżynieria oprogramowania w Jednostce 3
+        csa-pl-intro-to-equality: Wprowadzenie do równości
+        csa-pl-intro-to-equals-method: Wprowadzenie do metody equals()
+        csc_timecapsule_intro: Wprowadzenie do Kapsuły czasu
+        PL_Equity_in_CS_Education: Równość w edukacji informatycznej
+        csc_fm_pilot: Maszyny funkcyjne (Pilotaż)
+        csc_fm_pilot_v2: 'Wprowadzenie do maszyn funkcyjnych '
+        csc-sprite-lab-pixel-editor: Narysuj swojego duszka
+        csa-pl-intro-to-strings: Wprowadzenie do łańcuchów w Javie
+        csa-pl-compareTo: Metoda compareto ()
+        csc-event-short-intro: Krótkie wprowadzenie do zdarzeń.
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Przegląd jednostki Circuit
+          Playground
+        csa-day-in-pm-pl: Co robi kierownik projektu?
+        csa-pl-intro-to-pm: Wprowadzenie do zarządzania projektami
+        PL_CSD_CircuitPlayground_Setup: Konfiguracja Circuit Playground
+        csa_object_oriented_programming: 'CSA: Programowanie obiektowe'
+        csa_creating_objects: 'CSA: Tworzenie obiektów'
+        csa_calling_methods: 'CSA: Wywołanie metod'
+        csa_while_loops: 'CSA: Pętle dopóki'
+        csa_inheritance: 'CSA: Dziedziczenie'
+        csa_writing_a_method: 'CSA: Pisanie metody'
+        csa_software_engineering_code_reviews: 'CSA: Inżynieria oprogramowania - Przegld
+          kodu'
+        csa_conditional_statements: 'CSA: Instrukcje warunkowe'
+        csa_printing_in_java: 'CSA: Drukowanie w Javie'
+        csa_two_way_selection_and_not: 'CSA: Wybór dwukierunkowy i NOT'
+        csa-pl-intro-to-oop: Wprowadzenie do programowania obiektowego
+        csa-pl-welcome-to-Neighborhood: Witamy w The Neighborhood
+        csa-pl-calling-methods: Wywołanie metod w Javie
+        csa-pl-creating-objects: Tworzenie obiektów
+        csa_accessor_methods: 'CSA: Metody accessor'
+        csa_constructors: 'CSA: Konstruktory'
+        csa_creating_a_scanner_object: 'CSA: Tworzenie obiektu skaner'
+        csa_creating_variables: 'CSA: Tworzenie zmiennych'
+        csa_instance_variables_and_attributes: 'CSA: Zmienne instancji i atrybuty'
+        csa_mutator_methods: 'CSA: Metody mutator'
+        csa_overloaded_constructors: 'CSA: Przeciążene konstruktory'
+        csa_the_tostring_method: 'CSA: Metoda toString ()'
+        csa_scanner_class_methods: 'CSA: Metody klasy skaner'
+        csa_for_loops: 'CSD: Pętle ''dla'''
+        csa_enhanced_for_loops: 'CSA: Ulepszone pętle ''dla'''
+        csa_modifying_values_in_a_1d_array: 'CSA: Modyfikowanie wartości w tablicy
+          1D'
+        csa_nested_loops: 'CSA: Zagnieżdżone pętle'
+        csa_one_dimensional_arrays: 'CSA: Tablice jednowymiarowe (1D)'
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: Casting'
+        csa_equals_and_aliases: 'CSA: Równe i aliasy'
+        csa_multi-selection_statements: 'CSA: Instrukcje wielokrotnego wyboru'
+        csa_random_numbers: 'CSA: Liczby losowe'
+        csa_static_methods: 'CSA: Metody statyczne'
+        csa_static_variables: 'CSA: Zmienne statyczne'
+        csa_the_equals_method: 'CSA: Metoda equals() '
+        csa_welcome_to_the_theater: 'CSA: Witamy w Teatrze'
+        enter_your_own_poem: Wpisz swój własny wiersz
+        csa-example-solution-1: 'Programowanie na żywo Przykładowe rozwiązanie '
+        csd_sprite_properties: Właściwości duszka
+        csa-pl-documentation: Dokumentacja w Java Lab
+        csc-starquilts-intro: 'CSC: Gwiezdne Kołdry'
+        csc-mapmakers-intro: 'CSC: Twórcy map\t'
+        csa-pl-vocab-pm: Słownictwo zarządzania projektami
+        csc-ecosystems-intro: Wprowadzenie do ekosystemów
+        PL_CSD_MicroBit_Intro: Wprowadzenie do micro:bita
+        csc_animal_adaptations_intro: Wprowadzenie do adaptacji zwierząt
+        csa_two_dimensional_arrays: 'CSA: Tablice dwuwymiarowe (2D)'
+        csa_working_with_2d_array_elements: 'CSA: Praca z elementami tablicy 2D'
+        csa_row_major_traversal: 'CSA: Przemierzanie Row-Major'
+        csa_column_major_traversal: 'CSA: Przemierzanie Column-Major'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Ulepszone pętle For i tablice
+          2D'
+        csa_images_and_pixels: 'CSA: Obrazy i piksele'
+        csa_wrapper_classes_part_1: 'CSA: Klasy pakowaczy Część 1'
+        csa_wrapper_classes_part_2: 'CSA: Klasy pakowaczy Część 2'
+        csa_the_arraylist_class: 'CSA: Klasa ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Praca z danymi ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Usuwanie danych z ArrayList'
+        csa_private_methods: 'CSA: Metody prywatne'
+        csa_recursion: 'CSA: Rekurencja'
+        csa_searching_algorithms: 'CSA: Algorytmy wyszukiwania'
+        csa_sorting_algorithms: 'CSA: Algorytmy sortowania'
+        star_quilts_intro_to_artist: 'Star Quilts: Wprowadzenie do Artysty'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

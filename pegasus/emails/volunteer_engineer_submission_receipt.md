@@ -13,7 +13,7 @@ If you need to update your information or want to unsubscribe from teacher reque
 
 Thanks again for your support,
 
-Alice Steinglass<br/>
+Cameron Wilson<br/>
 President, Code.org
 
 <hr/>

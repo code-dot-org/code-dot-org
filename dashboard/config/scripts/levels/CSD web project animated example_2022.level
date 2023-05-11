@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:58.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -225,6 +221,10 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:58.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:58.759+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated example_2021\\\"\"],\"cloned_from\":\"CSD web project animated example_2021\"}]"

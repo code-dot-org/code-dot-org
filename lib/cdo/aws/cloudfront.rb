@@ -1,8 +1,8 @@
 require_relative '../../../deployment'
 require 'digest'
 require 'securerandom'
-require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
-require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'cdo/http_cache'
+require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/object/try'
 
 # Manages application-specific configuration of AWS CloudFront distributions.
@@ -22,6 +22,7 @@ module AWS
     ).freeze
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
+    CACHE_INVALIDATION_MAX_RETRIES = 10
 
     # CloudFront distribution config (`pegasus` and `dashboard`):
     # - `aliases`: whitelist of domains this distribution will use (`*`-wildcards are allowed, e.g. `*.example.com`).
@@ -88,7 +89,9 @@ module AWS
       cloudfront = Aws::CloudFront::Client.new(
         logger: Logger.new(dashboard_dir('log/cloudfront.log')),
         log_level: :debug,
-        http_wire_trace: true
+        http_wire_trace: true,
+        retry_mode: 'standard',
+        max_attempts: CACHE_INVALIDATION_MAX_RETRIES
       )
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
@@ -231,7 +234,7 @@ module AWS
       behaviors = config[:behaviors].map do |behavior|
         paths = behavior[:path]
         paths = [paths] unless paths.is_a? Array
-        validate_paths paths
+        LegacyVarnishHelpers.validate_paths paths
         paths.map do |path|
           cache_behavior(behavior, path)
         end

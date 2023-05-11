@@ -1,19 +1,17 @@
-/* globals $ */
-
 /**
  * Send a request to dashboard and retrieve a JSON array listing the
  * sections this user belongs to.
  * @param {function} callback Will be called on success
  */
-export const getUserSections = function(callback) {
+export const getUserSections = function (callback) {
   var memberSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/api/v1/sections/membership'
+    url: '/api/v1/sections/membership',
   });
 
   var ownedSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/api/v1/sections'
+    url: '/api/v1/sections',
   });
 
   $.when(memberSectionsRequest, ownedSectionsRequest).done(
@@ -31,10 +29,10 @@ export const getUserSections = function(callback) {
  * @param {number} sectionId The section to be queried
  * @param {function} callback Will be called on success
  */
-export const getCurrentSection = function(sectionId, callback) {
+export const getCurrentSection = function (sectionId, callback) {
   $.ajax({
     dataType: 'json',
-    url: `/api/v1/sections/${sectionId}`
+    url: `/api/v1/sections/${sectionId}`,
   }).done(result => {
     callback(result);
   });

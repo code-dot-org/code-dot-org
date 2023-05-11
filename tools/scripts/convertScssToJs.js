@@ -14,7 +14,7 @@ var cachedVariables = {};
 
 // In color.scss some variable definitions reference previous
 // variable definitions.  Since we're reading them in order,
-// we can recursively resolve these referential defintions
+// we can recursively resolve these referential definitions
 // until we land on an actual variable.
 function resolveVariable(value) {
   while (/^\$/.test(value)) {

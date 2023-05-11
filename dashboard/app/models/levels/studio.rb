@@ -60,6 +60,24 @@ class Studio < Grid
     solution_image_url
   )
 
+  def project_type
+    if use_contract_editor == 'true'
+      'algebra_game'
+    elsif skin == 'hoc2015'
+      if uses_droplet?
+        'starwars'
+      else
+        'starwarsblocks_hour'
+      end
+    elsif skin == 'iceage' || skin == 'infinity' || skin == 'gumball'
+      skin
+    elsif is_k1 == 'true'
+      'playlab_k1'
+    else
+      'playlab'
+    end
+  end
+
   def self.create_from_level_builder(params, level_params)
     level = new(level_params.merge(user: params[:user], game: Game.custom_studio, level_num: 'custom'))
     level.create_maze(level_params, params)

@@ -1,0 +1,14 @@
+{
+  "pl-PL": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "Korzystanie z innowacji komputerowych może łączyć się z zagrożeniem dla osobistego bezpieczeństwa i tożsamości."
+        },
+        "csp2021/DAT-1": {
+          "description": "Sposób, w jaki komputer przedstawia dane różni się od tego, w jaki dane są interpretowane lub wyświetlane dla użytkownika. Do przekładania danych na sposób ich przedstawienia, który jest bardziej zrozumiały dla odbiorców, stosuje się programy komputerowe."
+        }
+      }
+    }
+  }
+}

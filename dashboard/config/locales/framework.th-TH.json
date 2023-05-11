@@ -5,6 +5,9 @@
         "ccela": {
           "name": "Common Core English Language Arts Standards"
         },
+        "csta": {
+          "name": "มาตรฐานวิทยาการคอมพิวเตอร์ CSTA K-12 (2017)"
+        },
         "ccmath": {
           "name": "มาตรฐานทางคณิตศาสตร์หลักโดยทั่วไป"
         },
@@ -13,6 +16,9 @@
         },
         "iste": {
           "name": "มาตรฐาน ISTE สำหรับนักเรียน"
+        },
+        "csp2021": {
+          "name": "กรอบแนวคิด CSP"
         }
       }
     }

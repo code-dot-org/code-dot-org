@@ -2,9 +2,10 @@ import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../../redux/textConsole';
 import {
   addTextPrompt,
-  addMultipleChoicePrompt
+  addMultipleChoicePrompt,
 } from '../../redux/spritelabInput';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {MAX_NUM_TEXTS} from '../constants';
 
 export const commands = {
   comment(text) {
@@ -49,12 +50,16 @@ export const commands = {
     audioCommands.playSpeech({
       text: speech,
       gender: 'female',
-      language: 'English'
+      language: 'English',
     });
   },
 
   printText(text) {
     this.printLog.push(text);
+    // the last MAX_NUM_TEXTS will be printed
+    if (this.printLog.length > MAX_NUM_TEXTS) {
+      this.printLog.shift();
+    }
     getStore().dispatch(addConsoleMessage({text: text}));
   },
 
@@ -103,7 +108,7 @@ export const commands = {
       addMultipleChoicePrompt(promptText, variableName, [
         choice1,
         choice2,
-        choice3
+        choice3,
       ])
     );
   },
@@ -118,5 +123,5 @@ export const commands = {
 
   textVariableJoin(text1, text2) {
     return [text1, text2].join('');
-  }
+  },
 };

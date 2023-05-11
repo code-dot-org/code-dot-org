@@ -21,6 +21,11 @@ class RedshiftImport
 
         CDO.log.info "Dropping existing table #{schema}.#{target_table} and renaming newly imported #{import_table}."
 
+        # In rare error cases, a previous scheduled export may have left some "_old_" tables behind and the renaming the
+        # existing table to "_old_" fails due to the naming conflict. Proactively attempt to delete the current table's
+        # backup from the previous run.
+        drop_table(schema, backup_table)
+
         # Rename existing table to back it up, if it exists.
         # Note: When a new table created in the source MySQL database is imported for the first time, there won't be an
         # existing table in Redshift to backup.  `rename_table` rescues that non-existing table error.
@@ -137,8 +142,8 @@ class RedshiftImport
       ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
     SQL
     redshift_client.exec(query)
-  rescue PG::UndefinedTable => undefined_table_error
-    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
+  rescue PG::UndefinedTable => exception
+    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{exception}"
   end
 
   # Get name and columns of primary key constraint for a specific table, if constraint exists.

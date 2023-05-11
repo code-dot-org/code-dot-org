@@ -2,6 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  BaseDomainName:
+    Type: String
+    Default: code.org
+    Description: Base domain name.
+  DashboardSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
+    Description: Subdomain name for learning platform ("Dashboard").
+  PegasusSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for corporate web site ("Pegasus").
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -32,7 +44,12 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
-  # Stack-specific IAM permissions applied to both daemon and frontends.
+
+  # ---------------------------------------------
+  # Stack-specific IAM permissions
+  # applied to both daemon and frontends.
+  # ---------------------------------------------
+
   CDOPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -40,15 +57,24 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-          # Read-only access to current secrets.
+          # Read-only access to current secrets that are used by all systems with the same environment-type ("staging", "test", etc.)
           - Effect: Allow
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
-<% if database -%>
+<% if database && !rack_env?(:production) -%>
               - !Ref DatabaseSecret
 <% end -%>
+            Condition:
+              StringEquals:
+                secretsmanager:VersionStage: AWSCURRENT
+          # Read-only access to current Stack-specific Secrets.
+          - Effect: Allow
+            Action: 'secretsmanager:GetSecretValue'
+            Resource:
+              - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/*"
+              - !Ref ChefConfig
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
@@ -114,6 +140,11 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+
+  # ---------------------------------------------
+  # Frontend Servers
+  # ---------------------------------------------
+
 <% if frontends -%>
 <%=  component 'ami', ami: (ami = commit[0..4]),
   image_id: IMAGE_ID,
@@ -137,8 +168,15 @@ Resources:
   )
 %>
 <% end -%>
+
+
 <% if load_balancer -%>
-  # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
+  # Load Balancers
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
   ALB:
@@ -149,7 +187,7 @@ Resources:
       Subnets: <%= public_subnets.to_json %>
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
-          Value: true
+          Value: <%=rack_env?(:adhoc) ? 'false' : 'true'%>
         - Key: access_logs.s3.enabled
           Value: true
         - Key: access_logs.s3.bucket
@@ -198,14 +236,19 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
+        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: least_outstanding_requests
+          Value: round_robin
         - Key: stickiness.enabled
           Value: true
         - Key: stickiness.type
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
+        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+        - Key: slow_start.duration_seconds
+          Value: 300
+
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
@@ -220,8 +263,12 @@ Resources:
 <%  end -%>
 <% end -%>
 
-# Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
+  # Route53 (DNS) and CloudFront (CDN) resources
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
@@ -277,9 +324,17 @@ Resources:
 <%   end -%>
 <% end -%>
 
+
 <% if frontends-%>
+  # ---------------------------------------------
+  # Elasticache
+  # ---------------------------------------------
 <%=  component 'cache'%>
 <% end -%>
+
+  # ---------------------------------------------
+  # Daemon Server
+  # ---------------------------------------------
 
   DaemonRole:
     Type: AWS::IAM::Role
@@ -289,7 +344,7 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # APIs used by ci:flush_cache task.
+              # APIs used by ci:flush_cloudfront_cache task.
               - Effect: Allow
                 Action:
                   - 'ec2:DescribeInstances'
@@ -453,7 +508,7 @@ Resources:
 <% end -%>
     CreationPolicy:
       ResourceSignal:
-        Timeout: PT2H
+        Timeout: PT4H
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
@@ -500,10 +555,15 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-<% if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
+
+  # ---------------------------------------------
+  # Console Server
+  # ---------------------------------------------
 
 <% if options.console -%>
   Console:
@@ -515,6 +575,7 @@ Resources:
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
       Tags:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
@@ -542,28 +603,47 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-<%   if database %>
+# We don't yet provision the production database cluster/instances via CloudFormation.
+<%   if database && !rack_env?(:production)%>
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>
 
+
 <% if alarms-%>
+  # ---------------------------------------------
+  # CloudWatch Alarms
+  # ---------------------------------------------
 <%=  component 'alarms'%>
 <% end -%>
 
+
+
 <% if database-%>
+  # ---------------------------------------------
+  # Database
+  # ---------------------------------------------
 <%=  component 'database'%>
 <% end -%>
 
+  # ---------------------------------------------
+  # Codeprojects Resources
+  # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Custom Chef Configuration Secret
+  #
+  # Update this secret string manually after the stack is created to
+  # customize Chef configuration. The value should never be changed in
+  # the stack itself, since it would clobber all other changes.
+  # ---------------------------------------------
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
       Name: !Sub "CfnStack/${AWS::StackName}/chef"
-      # Update this secret manually after the stack is created to customize Chef configuration.
-      # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
 
 Outputs:

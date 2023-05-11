@@ -56,10 +56,10 @@
     "parent_level_id": 20396,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/app-lab/responding-to-user-input/",
-      "/docs/concepts/maker-toolkit/producing-output/"
+      "/courses/csd-2022/guides/responding-to-user-input",
+      "/courses/csd-2022/guides/producing-output"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/",
+    "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -74,11 +74,11 @@
     "encrypted_examples": "/ErCMOYEGqpGHO/g1tWFtn0EM3rWqeOEpNRy256kXWnh6cM0XhX16gwW5p/T\nulp20NBMSr7C3y7buP80SyFF6g==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-07T23:49:46.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-07T23:49:46.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:46.657+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracD_2022\"},{\"changed_at\":\"2022-04-15 21:34:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

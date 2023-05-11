@@ -1,20 +1,21 @@
 name 'cspu5_assess1_flowchart'
-encrypted 'xQ5prQr22p+ksQ1cXS90CXeNKpq1FX8IdFSdPR9iKdjYO1KC0ASCsCy9JAsA
-UsL8FMxC3vYEZhKXIoeziuPDu//af31I+WtLJP3PA5Ivfi5Wk/DcPaDHu0Tc
-JPIWZMezjx/sE2wa9pvblntfdz0zL6ITZjYW2S8H5M6aRvFXgz8u8zJGSmi/
-BEBic8FZuncivxL8Dn8PCpx2aa0Ht70jqfwMMdSRKPcdBE9Cnc9XFlkypf6H
-FD5QS29pWuB4cVZbKsV/ftZRApkC40z+0CDUyyXVpDwBwOdnUboe1+vCv1Cf
-G85HVNR9iUy5oqmEhFJ1IfjBNrtdbbfFAfeHG/gqmw+10v5Skh8kU1m13dUG
-C/AdbJvFmZWBQM4wZMuI/LtVWXRFWi0dKLKw8Ttbxl7XnjUAKQzCzinBBf/y
-AOd9elkbJbtBwau0F9Qy57goBHseL4rvUUivZurkX4bGp2Ai7LfE8Rhqm8HX
-39zu7ADp2aH+nYF3SHufdQa6beopxK1pKSv3wFrMskxQOCu/ohIGwFHJOmR4
-UZutfj9jo7VlB7mVon1PplKVmW5HouCH8gmmQxYa6Q9WDJT0YoNjU0SVknN0
-aTscKDp1viVjf+IvsAxQ/UrjQCBofcZHuW2euIFT+wlB+ZeE77jTPvZhqToZ
-R3oaqhB0iNw+LxtTk/Bpm3udnDaMA19mskiVkcpdIc/+osAH73JhwjZCe5xS
-BbgA/ecJd1A4qiep19aO2pIj58TG28PpyQzi+qTHhIQvBH3rTV3BLvhEdNLM
-Y9yEcT8PDuXMqSveMfFQbO8XTENArdURU2DvI0+Rr4Wi9xlZVkemyfQyhZLd
-33bVl+8cm1IkgN0epQFHhrXKETXvUZOGLe2539LRtHi8J+C/yQubzKnqt/H4
-54q2NcpQ6kiAzvp1TduFL+UMtVWITIvaHA2Tn4PLe9GOD2kkWc8ViCRH3iDN
-mQO93BoozCKAR6+ddkYt1hbGt5nnfuVNV19sSYa0uhbCA3hvXNDDty0GjGQz
-+gg0
-'
+wrong 'a is bigger'
+wrong 'b'
+wrong '5'
+right '10'
+wrong 'Nothing will be displayed'
+
+
+markdown <<MARKDOWN
+Consider the following flow chart showing a process for program execution.  Given that a = 5, and b = 10, what will be displayed by the program?
+
+![](https://images.code.org/41b0153a6075970cba4741d6a81e71e3-image-1475973004769.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8** -- condiitonals, if statments
+
+The statement is "a < b" and since a = 5, b = 10, and 5 is less than 10, then the statement is true. Following the arrow for a "true" statement, the computer is told to print the value of b. As the value of b is 10, the program will display "10."
+MARKDOWN
+
+allow_multiple_attempts true

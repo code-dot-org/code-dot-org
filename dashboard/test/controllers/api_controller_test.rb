@@ -268,7 +268,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get no text_responses results for section with script without text response" do
-    script = Script.find_by_name('course1')
+    script = Unit.find_by_name('course1')
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -892,6 +892,7 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal false, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
   end
@@ -913,6 +914,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal true, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
     assert_equal true, body['isStarted']
@@ -1132,7 +1134,7 @@ class ApiControllerTest < ActionController::TestCase
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     level_source = create :level_source, level: level1a, data: 'level source'
-    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
 
     get :user_app_options, params: {
@@ -1146,9 +1148,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with section script" do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
-    assert_queries 7 do
+    assert_queries 5 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1205,7 +1207,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_progress, params: {
       section_id: @section.id,
@@ -1217,7 +1219,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
@@ -1280,7 +1282,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get section level progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {
       section_id: @section.id,
       script_id: script.id
@@ -1289,7 +1291,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated section level progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
@@ -1629,30 +1631,30 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
-      {method: "get", path: "/dashboardapi/user_menu"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/user_menu"},
       {controller: "api", action: "user_menu"}
     )
 
     assert_routing(
-      {method: "get", path: "/dashboardapi/section_progress/2"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
-      {method: "get", path: "/api/user_menu"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
     )
 
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "/api/section_progress/2"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 

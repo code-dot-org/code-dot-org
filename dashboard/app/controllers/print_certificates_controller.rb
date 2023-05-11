@@ -20,4 +20,19 @@ class PrintCertificatesController < ApplicationController
     @student_name = data['name']
     @certificate_image_url = certificate_image_url(data['name'], data['course'], data['donor'])
   end
+
+  # POST /print_certificates/batch
+  def batch
+    view_options(no_header: true, no_footer: true, white_background: true, full_width: true)
+
+    student_names = params[:studentNames]&.strip&.split("\n")&.map(&:strip)&.shift(30)
+    course_name = params[:courseName].presence || ScriptConstants::HOC_NAME
+    image_urls = student_names.map do |student_name|
+      certificate_image_url(student_name, course_name, nil)
+    end
+
+    @certificate_data = {
+      imageUrls: image_urls,
+    }
+  end
 end

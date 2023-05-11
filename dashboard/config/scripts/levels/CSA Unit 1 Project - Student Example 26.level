@@ -5214,13 +5214,15 @@
         "isVisible": true
       }
     },
-    "long_instructions": "**Teacher Feedback:** Unit project of a student's vision of a beautiful outdoor scence"
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-01-03T16:29:39.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-01-03T16:29:39.330+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 16\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 16\"},{\"changed_at\":\"2022-01-03 16:30:05 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-03 16:31:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-03T16:29:39.330+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 16\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 16\"},{\"changed_at\":\"2022-01-03 16:30:05 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-03 16:31:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-03 15:59:59 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

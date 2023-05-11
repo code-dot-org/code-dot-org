@@ -5,10 +5,11 @@ import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
 import {
   scriptDataPropType,
-  studentTableRowType
+  studentTableRowType,
 } from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
-import progressTableStyles from './progressTableStyles.scss';
+import styleConstants from './progress-table-constants.module.scss';
+import './progressTableStyles.scss';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -20,7 +21,7 @@ export default class ProgressTableStudentList extends React.Component {
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    onToggleRow: PropTypes.func.isRequired
+    onToggleRow: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -80,8 +81,8 @@ export default class ProgressTableStudentList extends React.Component {
         renderers={{
           body: {
             wrapper: Virtualized.BodyWrapper,
-            row: Virtualized.BodyRow
-          }
+            row: Virtualized.BodyRow,
+          },
         }}
         columns={[{property: 'name', cell: {formatters: [this.cellFormatter]}}]}
       >
@@ -92,9 +93,9 @@ export default class ProgressTableStudentList extends React.Component {
             {
               header: {
                 label: header,
-                props: {className: 'content'}
-              }
-            }
+                props: {className: 'content'},
+              },
+            },
           ])}
         />
         <Virtualized.Body
@@ -104,7 +105,7 @@ export default class ProgressTableStudentList extends React.Component {
           style={{
             overflowX: 'scroll',
             overflowY: 'hidden',
-            maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+            maxHeight: parseInt(styleConstants.MAX_BODY_HEIGHT),
           }}
           ref={r => {
             this.body = r && r.getRef();
@@ -123,6 +124,6 @@ const styles = {
     justifyContent: 'flex-end',
     alignItems: 'center',
     height: '100%',
-    paddingInlineEnd: '10px'
-  }
+    paddingInlineEnd: '10px',
+  },
 };

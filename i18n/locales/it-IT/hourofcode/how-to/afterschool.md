@@ -8,7 +8,7 @@ title: Guida pratica all'Ora del Codice per il doposcuola
 
 ### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
 
-Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
 Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta. Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale]({{ urls/volunteer_local }}) che ti aiuti a svolgere l'Ora del Codice nella tua classe del doposcuola o del tuo club.
 
@@ -16,7 +16,7 @@ Provare un'Ora di Codice è un modo semplice e divertente per presentare l'infor
 
 * * *
 
-## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Scegli un'esercitazione
 

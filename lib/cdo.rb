@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -110,6 +110,14 @@ module Cdo
       host
     end
 
+    def dashboard_site_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_site_host
+      site_host('code.org')
+    end
+
     def site_url(domain, path = '', scheme = '')
       path = '/' + path unless path.empty? || path[0] == '/'
       "#{scheme}//#{site_host(domain)}#{path}"
@@ -137,23 +145,32 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'wss://<your-javabuilder-domain>.dev-code.org'
-        'ws://localhost:8080/javabuilder'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{stack_name}.code.org"
       else
-        # TODO: Update to use this URL once we have Route53 set up for API Gateway
-        # site_url('javabuilder.code.org', '', 'wss')
-        'wss://javabuilderbeta.code.org'
+        DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
     end
 
     def javabuilder_upload_url(path = '', scheme = '')
       if rack_env?(:development)
-        # To use a developer instance of Javabuilder instead, replace this url with
-        # 'https://<your-javabuilder-domain>-http.dev-code.org/seedsources/sources.json'
-        'http://localhost:8080/javabuilderfiles/seedsources'
+        # On localhost, we default to using the "test" Javabuilder stack. To point
+        # to your Javabuilder WebSocket server running on localhost, set
+        # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
+        # deployed development instance of Javabuilder, set
+        # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
+        return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
+        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{stack_name}-http.code.org/seedsources/sources.json"
       else
-        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
+        http_url + "/seedsources/sources.json"
       end
     end
 
@@ -200,8 +217,8 @@ module Cdo
 
     def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
       return unless uri
-      uri = URI.encode(uri)
-      uri = URI.parse(uri)
+      uri = URI::DEFAULT_PARSER.escape(uri)
+      uri = URI::DEFAULT_PARSER.parse(uri)
 
       uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
       uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path
@@ -213,6 +230,15 @@ module Cdo
       end
 
       uri.to_s
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Amplitude API key.
+    def safe_amplitude_api_key
+      CDO.cdo_amplitude_api_key
+    rescue ArgumentError
+      # Return an empty string, instead of raising.
+      ''
     end
 
     def dir(*dirs)
@@ -244,7 +270,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end

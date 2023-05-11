@@ -37,6 +37,7 @@ pt:
       level: nível
       name: nome
       nectar: néctar
+      object: objeto
       planet: planeta
       points: pontos
       random: aleatório
@@ -49,6 +50,7 @@ pt:
       speed: velocidade
       startX: startX
       startY: startY
+      type: tipo
       variable: variável
       width: largura
       wizard: mago

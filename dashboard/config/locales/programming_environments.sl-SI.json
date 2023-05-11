@@ -1,0 +1,1022 @@
+{
+  "sl-SI": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Niz"
+                    },
+                    "loop": {
+                      "type": "Boolova"
+                    }
+                  },
+                  "short_description": "Predvaja MP3 zvočno datoteko iz danega URL-ja."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Niz"
+                    },
+                    "gender": {
+                      "type": "Niz"
+                    },
+                    "language": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "spaceButtonVisible": {
+                      "type": "Boolova"
+                    },
+                    "dpadVisible": {
+                      "type": "Boolova"
+                    },
+                    "dpadFourWay": {
+                      "type": "Boolova"
+                    },
+                    "mobileOnly": {
+                      "type": "Boolova"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "name": "liki",
+              "expressions": {
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Niz"
+                    },
+                    "xOffset": {
+                      "type": "Število"
+                    },
+                    "yOffset": {
+                      "type": "Število"
+                    },
+                    "width/radius": {
+                      "type": "Število"
+                    },
+                    "height": {
+                      "type": "Število"
+                    },
+                    "rotationOffset": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Število"
+                    },
+                    "angle": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "createSprite": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "width": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "height": {
+                      "type": "Število"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Skupine",
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Niz"
+                    },
+                    "yOffset": {
+                      "type": "Število"
+                    },
+                    "width/radius": {
+                      "type": "Število"
+                    },
+                    "height": {
+                      "type": "Število"
+                    },
+                    "rotationOffset": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolova"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Število"
+                    },
+                    "angle": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Barva"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolova"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Število"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "w": {
+                      "type": "Število"
+                    },
+                    "h": {
+                      "type": "Število"
+                    },
+                    "start": {
+                      "type": "Število"
+                    },
+                    "stop": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "w": {
+                      "type": "Število"
+                    },
+                    "h": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Število"
+                    },
+                    "y1": {
+                      "type": "Število"
+                    },
+                    "x2": {
+                      "type": "Število"
+                    },
+                    "y2": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "w": {
+                      "type": "Število"
+                    },
+                    "h": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "sides": {
+                      "type": "Število"
+                    },
+                    "size": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Število"
+                    },
+                    "g": {
+                      "type": "Število"
+                    },
+                    "b": {
+                      "type": "Število"
+                    },
+                    "a": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "shape": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Število"
+                    },
+                    "y1": {
+                      "type": "Število"
+                    },
+                    "x2": {
+                      "type": "Število"
+                    },
+                    "y2": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "str": {
+                      "type": "Niz"
+                    },
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    },
+                    "width": {
+                      "type": "Število"
+                    },
+                    "height": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Niz"
+                    },
+                    "vert": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Število"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematika",
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Število"
+                    },
+                    "value2": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Spremenljivke"
+            },
+            "functions": {
+              "name": "Funkcije"
+            }
+          }
+        },
+        "applab": {
+          "description": "App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Niz"
+                    },
+                    "property": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "type": {
+                      "type": "Niz"
+                    },
+                    "id": {
+                      "type": "Niz"
+                    },
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolova"
+                    }
+                  },
+                  "short_description": "Predvaja MP3 zvočno datoteko iz danega URL-ja."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "text": {
+                      "type": "Niz"
+                    },
+                    "gender": {
+                      "type": "Niz"
+                    },
+                    "language": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Število"
+                    },
+                    "g": {
+                      "type": "Število"
+                    },
+                    "b": {
+                      "type": "Število"
+                    },
+                    "a": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Niz"
+                    },
+                    "property": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Niz"
+                    },
+                    "column": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "name": {
+                      "type": "Niz"
+                    },
+                    "id": {
+                      "type": "Niz"
+                    },
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Število"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "ms": {
+                      "type": "Število"
+                    },
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematika",
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vrne najmanjše število"
+                    },
+                    "max": {
+                      "description": "Vrne največje število"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Spremenljivke",
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "advanced": {
+              "name": "Napredno",
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Niz"
+                    },
+                    "css": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Število"
+                    },
+                    "mode": {
+                      "type": "Niz"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "isPressed": {
+                  "return_value": "Boolova"
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolova"
+                }
+              }
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Število"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Niz"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Število"
+                    },
+                    "y": {
+                      "type": "Število"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Svet"
+            },
+            "location": {
+              "name": "Lokacije"
+            },
+            "actions": {
+              "name": "Dejanja"
+            },
+            "events": {
+              "name": "Dogodki"
+            },
+            "behaviors": {
+              "name": "Vedenje"
+            },
+            "loops": {
+              "name": "Zanke"
+            },
+            "variables": {
+              "name": "Spremenljivke"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "text": {
+              "name": "Besedilo"
+            },
+            "comments": {
+              "name": "Komentarji"
+            }
+          }
+        }
+      }
+    }
+  }
+}

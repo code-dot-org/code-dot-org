@@ -3,7 +3,7 @@
   "blocksUsed": "Felhasznált blokkok: %1",
   "branches": "ágak",
   "catColour": "Szín",
-  "catControl": "hurkok",
+  "catControl": "Ciklusok",
   "catMath": "Matematika",
   "catProcedures": "funkciók",
   "catTurtle": "Műveletek",
@@ -38,6 +38,8 @@
   "drawATriangle": "Rajzolj egy háromszöget",
   "drawUpperWave": "rajzolj felső hullámot",
   "drawLowerWave": "rajzolj alsó hullámot",
+  "drawShape": "Forma rajzolása",
+  "drawShapeWithSideLength": "rajzolj egy alakot oldalhosszúsággal",
   "drawSticker": "rajzolj matricát",
   "drawStickerWithSize": "rajzolj matricát ezzel a vastagsággal",
   "forward": "előre",
@@ -46,7 +48,7 @@
   "jump": "Ugorj",
   "jumpBackward": "ugrás hátra",
   "jumpForward": "ugrás előre",
-  "jumpToOverDown": "ugorj %1 helyről %2 helyre",
+  "jumpToOverDown": "ugrás a következő helyre: x=%1 y=%2 ",
   "jumpToPosition": "ugorj a %1 helyre",
   "jumpByDirection": "ugorj %1 %2 képpontnyit",
   "jumpTooltip": "A művészt mozgatja rajzolás nélkül.",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "A művészt láthatóvá, vagy láthatatlanná teszi.",
   "widthTooltip": "A ceruza szélességének módosítása.",
   "withSize": "mérettel",
+  "withSideLength": "oldalhosszúsággal",
   "wrongColour": "A kép színe hibás.  Ehhez a feladványhoz %1 színűnek kell lennie."
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
@@ -21,7 +21,7 @@ class ProgressLevelSet extends React.Component {
     selectedSectionId: PropTypes.number,
     onBubbleClick: PropTypes.func,
     // Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   render() {
@@ -32,7 +32,7 @@ class ProgressLevelSet extends React.Component {
       selectedSectionId,
       onBubbleClick,
       isRtl,
-      lessonName
+      lessonName,
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -110,27 +110,27 @@ class ProgressLevelSet extends React.Component {
 
 const styles = {
   table: {
-    marginTop: 12
+    marginTop: 12,
   },
   nameText: {
-    color: color.charcoal
+    color: color.charcoal,
   },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
-    letterSpacing: -0.12
+    letterSpacing: -0.12,
   },
   col2: {
-    paddingLeft: 20
+    paddingLeft: 20,
   },
   col2RTL: {
-    paddingRight: 20
+    paddingRight: 20,
   },
   linesAndDot: {
     whiteSpace: 'nowrap',
     marginLeft: '50%',
-    marginRight: 14
+    marginRight: 14,
   },
   verticalLine: {
     display: 'inline-block',
@@ -138,7 +138,7 @@ const styles = {
     height: 15,
     width: 3,
     position: 'relative',
-    bottom: 2
+    bottom: 2,
   },
   horizontalLine: {
     display: 'inline-block',
@@ -146,7 +146,7 @@ const styles = {
     position: 'relative',
     top: -2,
     height: 3,
-    width: '100%'
+    width: '100%',
   },
   dot: {
     display: 'inline-block',
@@ -156,12 +156,12 @@ const styles = {
     backgroundColor: color.lighter_gray,
     height: 10,
     width: 10,
-    borderRadius: 10
-  }
+    borderRadius: 10,
+  },
 };
 
 export const UnconnectedProgressLevelSet = ProgressLevelSet;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(ProgressLevelSet));

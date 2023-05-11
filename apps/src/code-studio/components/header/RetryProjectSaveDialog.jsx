@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {
   projectUpdatedStatuses as statuses,
-  retryProjectSave
-} from '../../headerRedux';
+  retryProjectSave,
+} from '../../projectRedux';
 import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
@@ -15,7 +15,7 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
     isOpen: PropTypes.bool,
-    onTryAgain: PropTypes.func.isRequired
+    onTryAgain: PropTypes.func.isRequired,
   };
 
   handleClick = () => {
@@ -42,7 +42,6 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
         </div>
         <DialogFooter rightAlign={true}>
           <Button
-            __useDeprecatedTag
             text={i18n.retryProjectSaveDialogButton()}
             onClick={this.handleClick}
             color={Button.ButtonColor.orange}
@@ -63,18 +62,18 @@ const styles = {
     fontSize: 15,
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
 export default connect(
   state => ({
-    projectUpdatedStatus: state.header.projectUpdatedStatus,
-    isOpen: state.header.showTryAgainDialog
+    projectUpdatedStatus: state.project.projectUpdatedStatus,
+    isOpen: state.project.showTryAgainDialog,
   }),
   dispatch => ({
     onTryAgain() {
       dispatch(retryProjectSave());
-    }
+    },
   })
 )(UnconnectedRetryProjectSaveDialog);

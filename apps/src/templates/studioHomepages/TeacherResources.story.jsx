@@ -1,15 +1,26 @@
 import React from 'react';
 import TeacherResources from './TeacherResources';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
-export default storybook => {
-  return storybook
-    .storiesOf('Homepages/Teachers/TeacherResources', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Resources for teachers',
-        description: `This is the TeacherResources section that will be used on the teacher homepage.`,
-        story: () => <TeacherResources />
-      }
-    ]);
+export default {
+  title: 'TeacherResources',
+  component: TeacherResources,
 };
+
+//
+// TEMPLATE
+//
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <TeacherResources {...args} />
+  </Provider>
+);
+
+//
+// STORIES
+//
+
+export const Default = Template.bind({});
+Default.args = {};

@@ -1,0 +1,14 @@
+{
+  "pt-BR": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "O uso de inovações em computação pode envolver riscos à segurança e identidade do seu pessoal."
+        },
+        "csp2021/DAT-1": {
+          "description": "O método utilizado pelo computador para representar dados é diferente da forma como os dados são interpretados e exibidos para o usuário. Os programas são utilizados para traduzir dados em um representação que seja mais facilmente compreendida pelas pessoas."
+        }
+      }
+    }
+  }
+}

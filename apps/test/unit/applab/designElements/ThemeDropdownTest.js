@@ -7,7 +7,7 @@ import ThemeDropdown from '@cdo/apps/applab/designElements/ThemeDropdown';
 const DEFAULT_PROPS = {
   initialValue: 'citrus',
   handleChange: () => {},
-  description: 'Theme'
+  description: 'Theme',
 };
 
 describe('ThemeDropdown', () => {

@@ -1,0 +1,15 @@
+{
+  "key": "csa-celebrity-lab",
+  "display_name": "AP CSA Consumer Review Lab",
+  "category": "other",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "csa_labs",
+  "image": "https://images.code.org/42075dad0776adcecd074f3e6514cafc-High School Image 3.png",
+  "cs_topic": "data,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+}

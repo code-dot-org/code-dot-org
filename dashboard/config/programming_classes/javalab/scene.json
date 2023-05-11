@@ -1,9 +1,9 @@
 {
   "category_key": "org_code_theater",
   "content": "",
-  "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawText(\\\"Hello World!\\\", 200, 200);\\n\\n// Performs the scene and shows it to the screen.\\nTheater.playScenes(myScene);\\n```\"}]",
+  "examples": "[]",
   "external_documentation": "",
-  "fields": "[{\"name\":\"DEFAULT_FONT = Font.SANS\",\"type\":\"static final Font\",\"description\":\"the default `Font` for text\"},{\"name\":\"DEFAULT_FONT_STYLE = FontStyle.NORMAL\",\"type\":\"static final FontStyle\",\"description\":\"the default `FontStyle` for text\"},{\"name\":\"DEFAULT_TEXT_HEIGHT = 20\",\"type\":\"static final int\",\"description\":\"the default size of text\"},{\"name\":\"DEFAULT_COLOR = Color.BLACK\",\"type\":\"static final Color\",\"description\":\"the default color to use for the fill color, stroke color, and text color\"},{\"name\":\"DEFAULT_STROKE_WIDTH = 1.0\",\"type\":\"static final double\",\"description\":\"the default stroke width for shapes and lines\"},{\"name\":\"DEFAULT_INSTRUMENT = Instrument.PIANO\",\"type\":\"static final Instrument\",\"description\":\"the default `Instrument` used to play notes\"},{\"name\":\"font\",\"type\":\"Font\",\"description\":\"the `Font` to use to draw text\\n\\nSee the documentation for the [Font class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/Font) for options that can be used for the font.\"},{\"name\":\"fontStyle\",\"type\":\"FontStyle\",\"description\":\"the `FontStyle` to use for text\\n\\nSee the documentation for the [FontStyle class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/FontStyle) for options that can be used for the font style of the text.\"},{\"name\":\"textHeight\",\"type\":\"int\",\"description\":\"the size of the text\"},{\"name\":\"textColor\",\"type\":\"Color\",\"description\":\"the color the text is drawn with\\n\\nSee the documentation for the [Color class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"strokeColor\",\"type\":\"Color\",\"description\":\"the color strokes are drawn with\\n\\nSee the documentation for the [Color class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"fillColor\",\"type\":\"Color\",\"description\":\"the color used to fill drawings\\n\\nSee the documentation for the [Color class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"strokeWidth\",\"type\":\"double\",\"description\":\"the size of the stroke on drawings and lines that are drawn\"}]",
+  "fields": "[{\"name\":\"DEFAULT_FONT = Font.SANS\",\"type\":\"static final Font\",\"description\":\"the default `Font` for text\\n\\n```\\nScene.DEFAULT_FONT\\n```\"},{\"name\":\"DEFAULT_FONT_STYLE = FontStyle.NORMAL\",\"type\":\"static final FontStyle\",\"description\":\"the default `FontStyle` for text\\n\\n```\\nScene.DEFAULT_FONT_STYLE\\n```\"},{\"name\":\"DEFAULT_TEXT_HEIGHT = 20\",\"type\":\"static final int\",\"description\":\"the default size of text\\n\\n```\\nScene.DEFAULT_TEXT_HEIGHT\\n```\"},{\"name\":\"DEFAULT_COLOR = Color.BLACK\",\"type\":\"static final Color\",\"description\":\"the default color to use for the fill color, stroke color, and text color\\n\\n```\\nScene.DEFAULT_COLOR\\n```\"},{\"name\":\"DEFAULT_STROKE_WIDTH = 1.0\",\"type\":\"static final double\",\"description\":\"the default stroke width for shapes and lines\\n\\n```\\nScene.DEFAULT_STROKE_WIDTH\\n```\"},{\"name\":\"DEFAULT_INSTRUMENT = Instrument.PIANO\",\"type\":\"static final Instrument\",\"description\":\"the default `Instrument` used to play notes\\n\\n```\\nScene.DEFAULT_INSTRUMENT\\n```\"},{\"name\":\"font\",\"type\":\"Font\",\"description\":\"the `Font` to use to draw text\\n\\nSee the documentation for the [Font class](https://studio.code.org/docs/ide/javalab/classes/Font) for options that can be used for the font.\"},{\"name\":\"fontStyle\",\"type\":\"FontStyle\",\"description\":\"the `FontStyle` to use for text\\n\\nSee the documentation for the [FontStyle class](https://studio.code.org/docs/ide/javalab/classes/FontStyle) for options that can be used for the font style of the text.\"},{\"name\":\"textHeight\",\"type\":\"int\",\"description\":\"the size of the text\"},{\"name\":\"textColor\",\"type\":\"Color\",\"description\":\"the color the text is drawn with\\n\\nSee the documentation for the [Color class](https://studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"strokeColor\",\"type\":\"Color\",\"description\":\"the color strokes are drawn with\\n\\nSee the documentation for the [Color class](https://studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"fillColor\",\"type\":\"Color\",\"description\":\"the color used to fill drawings\\n\\nSee the documentation for the [Color class](https://studio.code.org/docs/ide/javalab/classes/Color) for color options.\"},{\"name\":\"strokeWidth\",\"type\":\"double\",\"description\":\"the size of the stroke on drawings and lines that are drawn\"}]",
   "key": "Scene",
   "name": "Scene",
   "syntax": "",
@@ -16,7 +16,7 @@
       "overload_of": null,
       "content": "Creates a new `Scene` object to be played in The Theater. A `Scene` is a set of steps of animation, such as drawing an image, text or a shape. A `Scene` can also include sound, like playing a sound file or musical notes.",
       "parameters": "[]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n```\"}]",
       "syntax": "`public Scene()`",
       "external_link": null,
       "return_value": null
@@ -28,7 +28,7 @@
       "overload_of": null,
       "content": "Returns the width of the canvas in pixels.\n",
       "parameters": "[]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nint sceneWidth = myScene.getWidth();\\n```\"}]",
       "syntax": "`public final int getWidth()`",
       "external_link": null,
       "return_value": null
@@ -40,7 +40,7 @@
       "overload_of": null,
       "content": "Returns the height of the canvas in pixels.\n",
       "parameters": "[]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nint sceneHeight = myScene.getHeight();\\n```\"}]",
       "syntax": "`public final int getHeight()`",
       "external_link": null,
       "return_value": null
@@ -52,7 +52,7 @@
       "overload_of": null,
       "content": "Clears the canvas and sets the background color to the specified color name. If the name provided does not match a known color or hex value, this method will set the background to black.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the color to use as the color of the canvas\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.clear(\\\"black\\\");\\nmyScene.pause(0.5);\\nmyScene.clear(\\\"green\\\");\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/5abe489a1fa52224f767152a02be55d4-clear_withstring.gif)\"}]",
       "syntax": "`public final void clear(String color)`",
       "external_link": null,
       "return_value": null
@@ -63,8 +63,8 @@
       "key": "void-clear-color-color",
       "overload_of": "clear",
       "content": "Clears the canvas and sets the background color to the specified `Color`.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to use as the background color of the canvas\"}]",
-      "examples": "[]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to use as the background color of the canvas\\n\\nSee the documentation for the [**Color**](https://studio.code.org/docs/ide/javalab/classes/Color) class to see the options available.\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.clear(Color.TEAL);\\nmyScene.pause(0.5);\\n\\nColor myColor = new Color(242, 109, 249);\\nmyScene.clear(myColor);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/6c718db884bd761577c7ada28a8d00e0-clear_withcolor.gif)\"}]",
       "syntax": "`public final void clear(Color color)`",
       "external_link": null,
       "return_value": null
@@ -76,7 +76,7 @@
       "overload_of": null,
       "content": "Plays the sound referenced by the specified filename.",
       "parameters": "[{\"name\":\"filename\",\"type\":\"String\",\"required\":true,\"description\":\"the filename of the sound to play\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.playSound(\\\"sample.wav\\\");\\n```\"}]",
       "syntax": "`public final void playSound(String filename)`",
       "external_link": null,
       "return_value": null
@@ -88,7 +88,7 @@
       "overload_of": "playsound",
       "content": "Plays an array of sound samples provided.",
       "parameters": "[{\"name\":\"sound\",\"type\":\"double[]\",\"required\":true,\"description\":\"the array of sound samples to play\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\ndouble[] soundSamples = SoundLoader.read(\\\"sample.wav\\\");\\nmyScene.playSound(soundSamples);\\n```\"}]",
       "syntax": "`public final void playSound(double[] sound)`",
       "external_link": null,
       "return_value": null
@@ -100,7 +100,7 @@
       "overload_of": null,
       "content": "Plays a note with the default `Instrument` (`Instrument.PIANO`).",
       "parameters": "[{\"name\":\"note\",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.playNote(70, 2);\\n```\"}]",
       "syntax": "`public final void playNote(int note, double seconds)`",
       "external_link": null,
       "return_value": null
@@ -110,9 +110,9 @@
       "position": 8,
       "key": "playnote2",
       "overload_of": "playnote",
-      "content": "Plays a note with the specified `Instrument`.\n\nSee the documentation for the [Instrument class](https://levelbuilder-studio.code.org/docs/ide/javalab/classes/Instrument) to see the options available.",
-      "parameters": "[{\"name\":\"instrument \",\"type\":\"Instrument\",\"required\":true,\"description\":\"the `Instrument` to use to play the note\"},{\"name\":\"note\",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
-      "examples": "[]",
+      "content": "Plays a note with the specified `Instrument`.",
+      "parameters": "[{\"name\":\"instrument \",\"type\":\"Instrument\",\"required\":true,\"description\":\"the `Instrument` to use to play the note\\n\\nSee the documentation for the [Instrument class](https://studio.code.org/docs/ide/javalab/classes/Instrument) to see the options available.\"},{\"name\":\"note\",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.playNote(Instrument.BASS, 70, 2);\\n```\"}]",
       "syntax": "`public final void playNote(Instrument instrument, int note, double seconds)`",
       "external_link": null,
       "return_value": null
@@ -124,7 +124,7 @@
       "overload_of": null,
       "content": "Plays a note with the default `Instrument` (`Instrument.PIANO`) and adds a pause in the `Scene` for the duration of the note, so that subsequent play commands begin after the note has finished playing.",
       "parameters": "[{\"name\":\"note\",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.playNoteAndPause(70, 2);\\n```\"}]",
       "syntax": "`public final void playNoteAndPause(int note, double seconds)`",
       "external_link": null,
       "return_value": null
@@ -135,8 +135,8 @@
       "key": "playnoteandpause2",
       "overload_of": "playnoteandpause",
       "content": "Plays a note with the specified `Instrument` and adds a pause in the `Scene` for the duration of the note, so that subsequent play commands begin after the note has finished playing.\n",
-      "parameters": "[{\"name\":\"instrument\",\"type\":\"Instrument\",\"required\":true,\"description\":\"the `Instrument` to use to play the note\"},{\"name\":\"note \",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
-      "examples": "[]",
+      "parameters": "[{\"name\":\"instrument\",\"type\":\"Instrument\",\"required\":true,\"description\":\"the `Instrument` to use to play the note\\n\\nSee the documentation for the [Instrument class](https://studio.code.org/docs/ide/javalab/classes/Instrument) to see the options available.\"},{\"name\":\"note \",\"type\":\"int\",\"required\":true,\"description\":\"the note to play\\n\\nThe note `60` represents middle C on a piano.\"},{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the length of the note\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.playNoteAndPause(Instrument.BASS, 70, 2);\\n```\"}]",
       "syntax": "`public final void playNoteAndPause(Instrument instrument, int note, double seconds)`",
       "external_link": null,
       "return_value": null
@@ -148,7 +148,7 @@
       "overload_of": null,
       "content": "Waits the provided number of seconds before performing the next draw or play command.",
       "parameters": "[{\"name\":\"seconds\",\"type\":\"double\",\"required\":true,\"description\":\"the number of seconds to wait\\n\\nThis can be a fraction of a second, but the smallest value can be `0.1` seconds.\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n    \\nmyScene.drawImage(\\\"rocket.png\\\", 100, 50, 200);\\nmyScene.pause(1);\\nmyScene.clear(new Color(68, 17, 61));\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/cf77501456277b77ac206908cd9bcabe-pause.gif)\"}]",
       "syntax": "`public final void pause(double seconds)`",
       "external_link": null,
       "return_value": null
@@ -160,7 +160,7 @@
       "overload_of": null,
       "content": "Draws a specified image at the given x and y coordinate. The specified size sets the width of the image in pixels. The height will stretch to make sure the image does not appear distorted.",
       "parameters": "[{\"name\":\"filename\",\"type\":\"String\",\"required\":true,\"description\":\"the filename of the image to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"size\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the image in pixels\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawImage(\\\"rocket.png\\\", 100, 50, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/42d75d0b04b3f325570b0ced689a5d7d-drawImage1.gif)\"}]",
       "syntax": "`public final void drawImage(String filename, int x, int y, int size)`",
       "external_link": null,
       "return_value": null
@@ -172,7 +172,7 @@
       "overload_of": "drawimage",
       "content": "Draws a specified image at the given x and y coordinate. The specified size sets the width of the image in pixels. The height will stretch to make sure the image does not appear distorted. The specified rotation sets how much to rotate the image.",
       "parameters": "[{\"name\":\"filename\",\"type\":\"String\",\"required\":true,\"description\":\"the filename of the image to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"size\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the image in pixels\"},{\"name\":\"rotation\",\"type\":\"double\",\"required\":true,\"description\":\"the amount to rotate the image in degrees\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawImage(\\\"rocket.png\\\", 150, 50, 200, 30);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/86789bc508ac62cb94f241a24b6ff0aa-drawImage2.gif)\"}]",
       "syntax": "`public final void drawImage(String filename, int x, int y, int size, double rotation)`",
       "external_link": null,
       "return_value": null
@@ -184,7 +184,7 @@
       "overload_of": "drawimage",
       "content": "Draws a specified image at the given x and y coordinate with a given width and height. The specified rotation sets how much to rotate the image.",
       "parameters": "[{\"name\":\"filename\",\"type\":\"String\",\"required\":true,\"description\":\"the filename of the image to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"width\",\"type\":\"int\",\"required\":true,\"description\":\"the width to set the image\"},{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height to set the image\"},{\"name\":\"rotation\",\"type\":\"double\",\"required\":true,\"description\":\"the amount to rotate the image in degrees\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawImage(\\\"rocket.png\\\", 150, 300, 250, 100, -90);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/5d2181c501efc5cb49c1c4408d9a4469-drawImage3.gif)\"}]",
       "syntax": "`public final void drawImage(String filename, int x, int y, int width, int height, double rotation)`",
       "external_link": null,
       "return_value": null
@@ -196,7 +196,7 @@
       "overload_of": "drawimage",
       "content": "Draws a specified `Image` object at the given x and y coordinate. The specified size sets the width of the image in pixels. The height will stretch to make sure the image does not appear distorted.",
       "parameters": "[{\"name\":\"image\",\"type\":\"Image\",\"required\":true,\"description\":\"the `Image` object to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"size\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the image in pixels\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nImage rocket = new Image(\\\"rocket.png\\\");\\nmyScene.drawImage(rocket, 150, 100, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n\\n![](https://images.code.org/c5186c4f1042b9dec8910a582ae3560d-drawImage4.gif)\"}]",
       "syntax": "`public final void drawImage(Image image, int x, int y, int size)`",
       "external_link": null,
       "return_value": null
@@ -208,7 +208,7 @@
       "overload_of": "drawimage",
       "content": "Draws a specified `Image` object at the given x and y coordinate. The specified size sets the width of the image in pixels. The height will stretch to make sure the image does not appear distorted. The specified rotation sets how much to rotate the image.",
       "parameters": "[{\"name\":\"image\",\"type\":\"Image\",\"required\":true,\"description\":\"the `Image` object to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"size\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the image in pixels\"},{\"name\":\"rotation\",\"type\":\"double\",\"required\":true,\"description\":\"the amount to rotate the image in degrees\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nImage rocket = new Image(\\\"rocket.png\\\");\\nmyScene.drawImage(rocket, 250, 100, 200, 90);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/a1a3f01c2c199a16a3022e0529f05004-drawImage5.gif)\"}]",
       "syntax": "`public final void drawImage(Image image, int x, int y, int size, double rotation)`",
       "external_link": null,
       "return_value": null
@@ -220,7 +220,7 @@
       "overload_of": "drawimage",
       "content": "Draws a specified `Image` object at the given x and y coordinate with a given width and height. The specified rotation sets how much to rotate the image.",
       "parameters": "[{\"name\":\"image\",\"type\":\"Image\",\"required\":true,\"description\":\"the `Image` object to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the image from the left side of the image\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the image from the top of the image\"},{\"name\":\"width\",\"type\":\"int\",\"required\":true,\"description\":\"the width to set the image\"},{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height to set the image\"},{\"name\":\"rotation\",\"type\":\"double\",\"required\":true,\"description\":\"the amount to rotate the image in degrees\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nImage rocket = new Image(\\\"rocket.png\\\");\\nmyScene.drawImage(rocket, 300, 100, 150, 250, 90);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/eb1656135abdc7cb467a3a50ac323202-drawImage6.gif)\"}]",
       "syntax": "`public final void drawImage(Image image, int x, int y, int width, int height, double rotation)`",
       "external_link": null,
       "return_value": null
@@ -230,9 +230,9 @@
       "position": 18,
       "key": "settextstyle",
       "overload_of": null,
-      "content": "Sets the `Font` and `FontStyle` to draw the text.\n\nSee the documentation for the [Font class](https://studio.code.org/docs/ide/javalab/classes/Font) and the [FontStyle class](https://studio.code.org/docs/ide/javalab/classes/FontStyle) for options to set the `Font` and `FontStyle`.",
-      "parameters": "[{\"name\":\"font\",\"type\":\"Font\",\"required\":true,\"description\":\"the font to draw with\"},{\"name\":\"style\",\"type\":\"FontStyle\",\"required\":true,\"description\":\"the style of the font\"}]",
-      "examples": "[]",
+      "content": "Sets the `Font` and `FontStyle` to draw the text.",
+      "parameters": "[{\"name\":\"font\",\"type\":\"Font\",\"required\":true,\"description\":\"the font to draw with\\n\\nSee the documentation for the [**Font**](https://studio.code.org/docs/ide/javalab/classes/Font) class to see the options available.\"},{\"name\":\"style\",\"type\":\"FontStyle\",\"required\":true,\"description\":\"the style of the font\\n\\nSee the documentation for the [**FontStyle**](https://studio.code.org/docs/ide/javalab/classes/FontStyle) class to see the options available.\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextStyle(Font.SANS, FontStyle.BOLD);\\nmyScene.drawText(\\\"Hello, World!\\\", 100, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/32c7ae955d86b7115c64e790a5d585a3-settextstyle.gif)\"}]",
       "syntax": "`public final void setTextStyle(Font, FontStyle style)`",
       "external_link": null,
       "return_value": null
@@ -244,7 +244,7 @@
       "overload_of": null,
       "content": "Sets the height of the text in pixels.",
       "parameters": "[{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height in pixels of the text to draw\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextHeight(40);\\nmyScene.drawText(\\\"Hello, World!\\\", 60, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/631b49bbd4e85907c0401afc4a908223-settextheight.gif)\"}]",
       "syntax": "`public final void setTextHeight(int height)`",
       "external_link": null,
       "return_value": null
@@ -256,7 +256,7 @@
       "overload_of": null,
       "content": "Sets the color of the text. If the specified name of the color cannot be found, the default color is used.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the color to use\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextColor(\\\"green\\\");\\nmyScene.drawText(\\\"Hello, World!\\\", 100, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/7077be7ba230d2fc109999f6203a537f-settextcolor.gif)\"}]",
       "syntax": "`public final void setTextColor(String color)`",
       "external_link": null,
       "return_value": null
@@ -267,8 +267,8 @@
       "key": "settextcolor2",
       "overload_of": "settextcolor",
       "content": "Sets the color of the text.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to set the color of the text\"}]",
-      "examples": "[]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to set the color of the text\\n\\nSee the documentation for the [**Color**](https://studio.code.org/docs/ide/javalab/classes/Color) class to see the options available.\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextColor(Color.INDIGO);\\nmyScene.drawText(\\\"Hello, World!\\\", 100, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/bec9c888cf46cc66e995e7e57a3faa30-settextcolor2.gif)\"}]",
       "syntax": "`public final void setTextColor(Color color)`",
       "external_link": null,
       "return_value": null
@@ -280,7 +280,7 @@
       "overload_of": null,
       "content": "Draws text on the canvas.",
       "parameters": "[{\"name\":\"text\",\"type\":\"String\",\"required\":true,\"description\":\"the text to draw\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the text\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the text\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextStyle(Font.SANS, FontStyle.BOLD);\\nmyScene.setTextHeight(40);\\nmyScene.setTextColor(new Color(165, 1, 4));\\n    \\nmyScene.drawText(\\\"Hello, World!\\\", 60, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/562f2423f38153574131a03759abead9-drawtext1.gif)\"}]",
       "syntax": "`public final void drawText(String text, int x, int y)`",
       "external_link": null,
       "return_value": null
@@ -292,7 +292,7 @@
       "overload_of": "drawtext",
       "content": "Draws text on the canvas.",
       "parameters": "[{\"name\":\"text\",\"type\":\"String\",\"required\":true,\"description\":\"the text to draw on the canvas\"},{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the text\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the text\"},{\"name\":\"rotation\",\"type\":\"double\",\"required\":true,\"description\":\"the amount to rotate the text in degrees around its center\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setTextStyle(Font.SANS, FontStyle.BOLD);\\nmyScene.setTextHeight(40);\\nmyScene.setTextColor(new Color(165, 1, 4));\\n    \\nmyScene.drawText(\\\"Hello, World!\\\", 60, 250, -45);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/df8addf75eb6c5130061786244f656c9-drawtext2.gif)\"}]",
       "syntax": "`public final void drawText(String text, int x, int y, double rotation)`",
       "external_link": null,
       "return_value": null
@@ -304,7 +304,7 @@
       "overload_of": null,
       "content": "Draws a line on the canvas.",
       "parameters": "[{\"name\":\"startX\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the line\"},{\"name\":\"startY\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the line\"},{\"name\":\"endX\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to stop drawing the line\"},{\"name\":\"endY\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to stop drawing the line\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawLine(50, 100, 250, 200);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/cb9169d1a834a9165c455e8663ae4703-drawline.gif)\"}]",
       "syntax": "`public final void drawLine(int startX, int startY, int endX, int endY)`",
       "external_link": null,
       "return_value": null
@@ -316,7 +316,7 @@
       "overload_of": null,
       "content": "Draws a regular polygon (triangle, square, pentagon, hexagon, etc.) on the canvas.",
       "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate for the center of the polygon\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate for the center of the polygon\"},{\"name\":\"sides\",\"type\":\"int\",\"required\":true,\"description\":\"the number of sides of the polygon\"},{\"name\":\"radius\",\"type\":\"int\",\"required\":true,\"description\":\"the distance from the center to each point on the polygon\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawRegularPolygon(200, 150, 5, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n\\n![](https://images.code.org/b141080acb14183e5dceb012a1710fd0-drawregularpolygon.gif)\"}]",
       "syntax": "`public final void drawRegularPolygon(int x, int y, int sides, int radius)`",
       "external_link": null,
       "return_value": null
@@ -328,7 +328,7 @@
       "overload_of": null,
       "content": "Draws a shape by connecting the points provided.",
       "parameters": "[{\"name\":\"points\",\"type\":\"int[]\",\"required\":true,\"description\":\"an array of numbers for the x and y coordinates of each point formatted as `[x1, y1, x2, y2, x3, y3, . . .]`\"},{\"name\":\"close\",\"type\":\"boolean\",\"required\":true,\"description\":\"whether to close the shape\\n\\nIf this is set to `true`, the last point and the first point will be connected by a line. If a fill color is set, the shape will be filled with that color.\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nint[] starPoints = {0, 85, 75, 75, 100, 10, 125, 75, 200, 85, 150, 125,\\n                        160, 190, 100, 150, 40, 190, 50, 125, 0, 85};\\n    \\nmyScene.drawShape(starPoints, true);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/b1c92bffbd84db557a72053bab2c2a17-drawshape.gif)\"}]",
       "syntax": "`public final void drawShape(int[] points, boolean close)`",
       "external_link": null,
       "return_value": null
@@ -340,7 +340,7 @@
       "overload_of": null,
       "content": "Draws an ellipse (an oval or a circle) on the canvas.",
       "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the left side of the ellipse\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the top of the ellipse\"},{\"name\":\"width\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the ellipse\"},{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height of the ellipse\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawEllipse(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n\\n![](https://images.code.org/ec9a3a360599d6df5a1de86c6d5fffc2-drawellipse.gif)\"}]",
       "syntax": "`public final void drawEllipse(int x, int y, int width, int height)`",
       "external_link": null,
       "return_value": null
@@ -352,7 +352,7 @@
       "overload_of": null,
       "content": "Draws a rectangle on the canvas.",
       "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to start drawing the left side of the rectangle\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to start drawing the top of the rectangle\"},{\"name\":\"width\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the rectangle\"},{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height of the rectangle\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/8eb54579afb1d734fd7718c375ca57d3-drawrectangle.gif)\"}]",
       "syntax": "`public final void drawRectangle(int x, int y, int width, int height)`",
       "external_link": null,
       "return_value": null
@@ -364,7 +364,7 @@
       "overload_of": null,
       "content": "Sets the thickness of lines drawn.",
       "parameters": "[{\"name\":\"width\",\"type\":\"double\",\"required\":true,\"description\":\"the width in pixels of the line to draw\\n\\nA width of `0` means no line.\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\nmyScene.setStrokeWidth(4.5);\\n```\"}]",
       "syntax": "`public final void setStrokeWidth(double width)`",
       "external_link": null,
       "return_value": null
@@ -376,7 +376,7 @@
       "overload_of": null,
       "content": "Sets the fill color for all shapes drawn. If the name of the color cannot be found, no fill color will be used.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the color to fill the shape\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setFillColor(\\\"purple\\\");\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/d816ebbaf952eeae581c261cda4a62b5-setfillcolor_withstring.gif)\"}]",
       "syntax": "`public final void setFillColor(String color)`",
       "external_link": null,
       "return_value": null
@@ -387,8 +387,8 @@
       "key": "setfillcolor2",
       "overload_of": "setfillcolor",
       "content": "Sets the fill color for all shapes drawn.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to fill the shape\"}]",
-      "examples": "[]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to fill the shape\\n\\nSee the documentation for the [Color class](https://studio.code.org/docs/ide/javalab/classes/Color) to see the options available.\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setFillColor(Color.GOLD);\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/99c96d0b09f814278a568aebedf60426-setfillcolor_withcolor.gif)\"}]",
       "syntax": "`public final void setFillColor(Color color)`",
       "external_link": null,
       "return_value": null
@@ -400,7 +400,7 @@
       "overload_of": null,
       "content": "Sets the color of the lines drawn. If the name of the color cannot be found, no color is used for the stroke.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the name of the color to use for the lines drawn\"}]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setStrokeColor(\\\"red\\\");\\nmyScene.setStrokeWidth(4);\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/5492fa920c110331e501a6ce0277857a-setstrokecolor1.gif)\"}]",
       "syntax": "`public final void setStrokeColor(String color)`",
       "external_link": null,
       "return_value": null
@@ -411,8 +411,8 @@
       "key": "setstrokecolor2",
       "overload_of": "setstrokecolor",
       "content": "Sets the color of the lines drawn.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to set the color of the lines drawn\"}]",
-      "examples": "[]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the `Color` object to use to set the color of the lines drawn\\n\\nSee the documentation for the [Color class](https://studio.code.org/docs/ide/javalab/classes/Color) to see the options available.\"}]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setStrokeColor(Color.TEAL);\\nmyScene.setStrokeWidth(4);\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/cfd331176de7aa042b992f444eba462d-setstrokecolor2.gif)\"}]",
       "syntax": "`public final void setStrokeColor(Color color)`",
       "external_link": null,
       "return_value": null
@@ -424,7 +424,7 @@
       "overload_of": null,
       "content": "Removes the stroke color so all shapes have no stroke.",
       "parameters": "[]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setFillColor(new Color(212, 150, 167));\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nmyScene.pause(1);\\nmyScene.clear(\\\"white\\\");\\n\\nmyScene.removeStrokeColor();\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/c4707b37ec7e0c8d518b175083bdb34f-removeStrokeColor.gif)\"}]",
       "syntax": "`public final void removeStrokeColor()`",
       "external_link": null,
       "return_value": null
@@ -436,7 +436,7 @@
       "overload_of": null,
       "content": "Removes the fill color so all shapes drawn have no fill.",
       "parameters": "[]",
-      "examples": "[]",
+      "examples": "[{\"code\":\"```\\nScene myScene = new Scene();\\n\\nmyScene.setStrokeColor(new Color(212, 150, 167));\\nmyScene.setStrokeWidth(6);\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nmyScene.pause(1);\\nmyScene.clear(\\\"white\\\");\\n\\nmyScene.removeFillColor();\\nmyScene.drawRectangle(100, 50, 200, 100);\\n\\nTheater.playScenes(myScene);\\n```\\n\\n**Output:**\\n\\n![](https://images.code.org/4f0a5cae40a86b3a6a7315f9ef6b1d59-removeFillColor.gif)\"}]",
       "syntax": "`public final void removeFillColor()`",
       "external_link": null,
       "return_value": null

@@ -22,6 +22,9 @@
         },
         "ngss": {
           "name": "Estándares Científicos de la Próxima Generación"
+        },
+        "ai4k12-2021": {
+          "name": "Pautas Nacionales AI4K12 2021"
         }
       }
     }

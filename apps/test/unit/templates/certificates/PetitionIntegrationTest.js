@@ -11,18 +11,18 @@ describe('Petition on submit', () => {
     name_s: {
       tag: 'input',
       id: 'name',
-      target_value: 'Petition Signer'
+      target_value: 'Petition Signer',
     },
     email_s: {
       tag: 'input',
       id: 'email',
-      target_value: 'ps@code.org'
+      target_value: 'ps@code.org',
     },
     age_i: {
       tag: 'select',
       id: 'age',
-      target_value: '16'
-    }
+      target_value: '16',
+    },
   };
 
   const addInputsToPetition = (wrapper, inputs) =>
@@ -30,7 +30,7 @@ describe('Petition on submit', () => {
       wrapper
         .find(`${inputs[name].tag}#${inputs[name].id}`)
         .simulate('change', {
-          target: {name: name, value: inputs[name].target_value}
+          target: {name: name, value: inputs[name].target_value},
         });
     });
 
@@ -40,7 +40,7 @@ describe('Petition on submit', () => {
     zip_code_or_country_s: '',
     age_i: '',
     role_s: 'other',
-    ...mapValues(inputs, input => input.target_value)
+    ...mapValues(inputs, input => input.target_value),
   });
 
   const submitForm = wrapper =>
@@ -85,8 +85,8 @@ describe('Petition on submit', () => {
       age_i: {
         tag: 'select',
         id: 'age',
-        target_value: '15'
-      }
+        target_value: '15',
+      },
     };
     addInputsToPetition(petition, inputs);
     submitForm(petition);
@@ -95,7 +95,7 @@ describe('Petition on submit', () => {
     expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       name_s: '',
-      email_s: 'anonymous@code.org'
+      email_s: 'anonymous@code.org',
     });
   });
   it('sends request with all inputs filled', () => {
@@ -105,13 +105,13 @@ describe('Petition on submit', () => {
       role_s: {
         tag: 'select',
         id: 'profession',
-        target_value: 'Software Engineer'
+        target_value: 'Software Engineer',
       },
       zip_code_or_country_s: {
         tag: 'input',
         id: 'zip-or-country',
-        target_value: 'MX'
-      }
+        target_value: 'MX',
+      },
     };
     addInputsToPetition(petition, inputs);
     submitForm(petition);
@@ -119,7 +119,7 @@ describe('Petition on submit', () => {
     const serverCalledWith = $.ajax.getCall(0).args[0];
     expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
-      role_s: 'engineer' // The 'role' value has a consistent name regardless of language
+      role_s: 'engineer', // The 'role' value has a consistent name regardless of language
     });
   });
   it('reports to google analytics if successful submit', () => {

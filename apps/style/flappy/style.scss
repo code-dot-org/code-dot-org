@@ -1,13 +1,13 @@
-$root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
+$root: "/blockly/media/flappy/"; //TODO: Parameterize for asset pipeline
 
-@import 'font';
+@import "font";
 
 #svgFlappy {
   overflow: hidden;
 }
 
 /* 'Look' icon */
-#look>path {
+#look > path {
   display: none;
   fill: none;
   stroke-width: 10;
@@ -22,13 +22,13 @@ $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
   background-image: url("#{$root}icons.png");
 }
 .code {
-  background-position: -21px 0px;
+  background-position: -21px 0;
 }
 .link {
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 .run {
-  background-position: 0px -21px;
+  background-position: 0 -21px;
   margin-right: 3px;
 }
 .stop {
@@ -40,15 +40,15 @@ $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
   margin-right: 3px;
 }
 .right-btn {
-  background-position: 0px -21px;
+  background-position: 0 -21px;
   margin-right: 3px;
 }
 .up-btn {
-  background-position: 0px -63px;
+  background-position: 0 -63px;
   margin-right: 3px;
 }
 .down-btn {
-  background-position: 0px -42px;
+  background-position: 0 -42px;
   margin-right: 3px;
 }
 

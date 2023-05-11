@@ -8,6 +8,9 @@
         "flappy/Flappy Code": {
           "name": "Flappy kôd"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Pozdrav svijetu: Nogomet"
+        },
         "hourofcode/Maze": {
           "name": "Labirint"
         },
@@ -23,11 +26,20 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Play Lab"
         },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Hello World: Prostor"
+        },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Sat Kodiranja"
         },
         "playlab/Play Lab": {
           "name": "Laboratorij igara"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "infinity/Infinity": {
           "name": "Disney Infinity Laboratorij igara"
@@ -55,6 +67,60 @@
         },
         "k5-onlinepd-2019/Sprite Lab": {
           "name": "Lab likova"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Pomakni, pomakni"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Što je računalo?"
+        },
+        "csd3-2022/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Likovi"
+        },
+        "csd3-2022/Text": {
+          "name": "tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funkcije"
+        },
+        "csd7-2022/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Pomakni, pomakni"
@@ -643,6 +709,9 @@
         },
         "allthethings/Sprite Lab": {
           "name": "Lab likova"
+        },
+        "allthethings/lesson-49": {
+          "name": "Glazba"
         },
         "coursef-2021/For Loop Fun": {
           "name": "For Petlja Zabava"

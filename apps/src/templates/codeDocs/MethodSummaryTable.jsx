@@ -32,7 +32,7 @@ export default function MethodSummaryTable({methods}) {
 }
 
 MethodSummaryTable.propTypes = {
-  methods: PropTypes.arrayOf(PropTypes.object).isRequired
+  methods: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const styles = {
@@ -40,9 +40,9 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.lighter_gray,
-    padding: 5
+    padding: 5,
   },
   methodLink: {
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

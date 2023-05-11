@@ -77,7 +77,6 @@
   "didntMoveRight": "Nhân vật của bạn không sang phải.",
   "didntMoveUp": "Nhân vật của bạn không đi lên.",
   "didntPressKey": "Hãy đảm bảo nhấn một phím mũi tên sau khi nhấn *“Run”* (chạy). Bạn có thể nhấp chuột vào các nút màu cam bên dưới khu vực chơi hoặc nhấn các phím trên bàn phím.",
-  "errorLoadingAnimation": "Dường như chúng tôi đang gặp sự cố khi tải hoạt ảnh “{animationName}” của bạn. Hãy đảm bảo rằng bạn có kết nối internet tốt và thử tải lại trang. Nếu sự cố này vẫn tiếp diễn, có thể hoạt ảnh này đã bị lỗi. Trong trường hợp này, bạn có thể phải tiếp tục bằng cách xóa hoạt ảnh.",
   "eventsOneChange": "Nhân vật của bạn đã thay đổi, nhưng chỉ một lần. Hãy kiểm tra chương trình bằng cách nhấn phím vài lần và đảm bảo sử dụng đúng khối. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"kích thước\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Nhân vật của bạn phải có chính xác 3 hành vi. Hãy thử di chuyển khối `stops everything` (dừng mọi hành động) đến vị trí khác trong mã lệnh.",
   "foodNotTouchPet": "Hãy kéo nhân vật thức ăn để chạm vào nhân vật thú cưng.",

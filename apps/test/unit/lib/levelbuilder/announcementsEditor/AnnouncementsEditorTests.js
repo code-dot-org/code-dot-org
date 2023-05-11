@@ -1,26 +1,35 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import * as utils from '@cdo/apps/utils';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 const sampleAnnouncement = {
+  key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
   notice: 'This course has recently been updated!',
   details: 'See what changed and how it may affect your classroom.',
   link: 'https://support.code.org/hc/en-us/articles/115001931251',
   type: 'information',
-  visibility: 'Teacher-only'
+  visibility: 'Teacher-only',
 };
 
 describe('AnnouncementsEditor', () => {
-  let defaultProps, updateAnnouncements;
+  let defaultProps, updateAnnouncements, createUuid;
   beforeEach(() => {
     updateAnnouncements = sinon.spy();
+    createUuid = sinon
+      .stub(utils, 'createUuid')
+      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     defaultProps = {
       announcements: [],
       inputStyle: {},
-      updateAnnouncements
+      updateAnnouncements,
     };
+  });
+
+  afterEach(() => {
+    createUuid.restore();
   });
 
   it('renders an Announce when we have an announcement', () => {
@@ -53,12 +62,15 @@ describe('AnnouncementsEditor', () => {
     wrapper.find('button').simulate('click');
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: '',
         link: '',
         notice: '',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+        dismissible: true,
+        buttonText: '',
+      },
     ]);
   });
 
@@ -71,19 +83,9 @@ describe('AnnouncementsEditor', () => {
     );
     const announce = wrapper.find('Announcement');
     assert.equal(announce.length, 1);
-    assert.equal(
-      announce
-        .first()
-        .dive()
-        .find('button').length,
-      1
-    );
+    assert.equal(announce.first().dive().find('button').length, 1);
 
-    announce
-      .first()
-      .dive()
-      .find('button')
-      .simulate('click');
+    announce.first().dive().find('button').simulate('click');
     expect(updateAnnouncements).to.have.been.calledWith([]);
   });
 
@@ -103,12 +105,13 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'notice'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'See what changed and how it may affect your classroom.',
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -128,12 +131,13 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'details'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -153,12 +157,13 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'link'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
         type: 'information',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -177,12 +182,13 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'bullhorn'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
         type: 'bullhorn',
-        visibility: 'Teacher-only'
-      }
+        visibility: 'Teacher-only',
+      },
     ]);
   });
 
@@ -201,22 +207,24 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'Student-only'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
         link: 'link',
         notice: 'notice',
         type: 'bullhorn',
-        visibility: 'Student-only'
-      }
+        visibility: 'Student-only',
+      },
     ]);
   });
 
   it('updates visibility when no visibility in existing announcement', () => {
     const oldSampleAnnouncement = {
+      key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
       notice:
         'This announcement was made before students could see announcements',
       details: "So I don't have a visibility",
       link: 'https://support.code.org/hc/en-us/articles/115001931251',
-      type: 'information'
+      type: 'information',
     };
     const wrapper = shallow(
       <AnnouncementsEditor
@@ -232,13 +240,14 @@ describe('AnnouncementsEditor', () => {
       .simulate('change', {target: {value: 'Student-only'}});
     expect(updateAnnouncements).to.have.been.calledWith([
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: "So I don't have a visibility",
         link: 'https://support.code.org/hc/en-us/articles/115001931251',
         notice:
           'This announcement was made before students could see announcements',
         type: 'information',
-        visibility: 'Student-only'
-      }
+        visibility: 'Student-only',
+      },
     ]);
   });
 

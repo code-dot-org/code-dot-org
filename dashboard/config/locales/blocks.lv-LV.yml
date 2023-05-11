@@ -253,10 +253,20 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': rinda
+            '"column"': kolonna
       gamelab_locationModifier:
         options:
           DIRECTION:
             '"North"': Ziemeļi
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"row"': rinda
+            '"column"': kolonna
       gamelab_makeProjectile:
         options:
           DIRECTION:

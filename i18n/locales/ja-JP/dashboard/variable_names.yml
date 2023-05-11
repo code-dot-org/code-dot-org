@@ -65,6 +65,7 @@ ja:
       name: 名前
       nectar: 花のミツ
       nectars: 花のミツ
+      object: オブジェクトを返します
       padYOffset: パッドYオフセット
       planet: 惑星
       player_score: プレイヤー_スコア
@@ -90,6 +91,7 @@ ja:
       speed: スピード
       startX: Xの開始
       startY: Yの開始
+      type: タイプ
       variable: "変数\n"
       width: 幅
       wizard: 魔法使い

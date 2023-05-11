@@ -56,7 +56,23 @@
         "helloworld_food_say": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
         "helloworld_retro_location": "_Daj svakom sprite-u drugu lokaciju._\n\n-   Klikni pribadaču na bloku lokacije da bi premjestio sprite na različita mjesta.\n-   Pritisni _\"Run\"_ kada završiš.",
         "helloworld_retro_multi": "\\_ Razgovarajmo! Neka tvoja dva sprite-a nešto kažu.\\_\n\n-   Dodaj kod kako bi svaki sprite rekao nešto.\n-   Pritisni _\"Run\"_ kada završiš.\n\n\\_ Dodatni izazov:\\_ Postavi pozadinu.",
-        "helloworld_retro_say": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš."
+        "helloworld_retro_say": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "CourseD_EOC_artist2022": "Stvori vlastiti crtež!",
+        "CourseD_EOC_bounce12022": "Stvori vlastitu košarkašku utakmicu!",
+        "CourseD_EOC_dance2022": "Stvori vlastiti ples!",
+        "CourseD_EOC_starwars2022": "Stvori vlastitu igru Star Wars!",
+        "Overworld Move to Sheep2022": "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.",
+        "courseA_playLab_events32022": "Pomozite psu Jorgeu da se pokrene tako što ćete povezati blok <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> s blokom događaja <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> koji je već u radnom prostoru.\n\nUpotrijebite strelice na tastaturi ili pritisnite tipke sa strelicama da premjestite Jorgea do zastave i završite razinu!",
+        "courseD_maze_nestedLoops42022": "Odvedi me do suncokreta!",
+        "coursee_helloworld_say": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "helloworld_food_location_soccer-2022": "_Daj svakom sprite-u drugu lokaciju._\n\n-   Klikni pribadaču na bloku lokacije da bi premjestio sprite na različita mjesta.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "helloworld_food_location_space-2022": "_Daj svakom sprite-u drugu lokaciju._\n\n-   Klikni pribadaču na bloku lokacije da bi premjestio sprite na različita mjesta.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "helloworld_food_multi_soccer-2022": "\\_ Razgovarajmo! Neka tvoja dva sprite-a nešto kažu.\\_\n\n-   Dodaj kod kako bi svaki sprite rekao nešto.\n-   Pritisni _\"Run\"_ kada završiš.\n\n\\_ Dodatni izazov:\\_ Postavi pozadinu.",
+        "helloworld_food_multi_space-2022": "\\_ Razgovarajmo! Neka tvoja dva sprite-a nešto kažu.\\_\n\n-   Dodaj kod kako bi svaki sprite rekao nešto.\n-   Pritisni _\"Run\"_ kada završiš.\n\n\\_ Dodatni izazov:\\_ Postavi pozadinu.",
+        "helloworld_food_say_soccer-2022": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "helloworld_food_say_space-2022": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "poetry_modal_function_editor": "Ovo je razina poezije koja uključuje automatski popunjenu kategoriju `POSTUPCI` i uređivač modalnih funkcija.",
+        "poetry_no_modal_function_editor": "Ovo je razina poezije koja uključuje automatski popunjenu kategoriju `POSTUPCI` i nema uređivač modalnih funkcija."
       }
     }
   }

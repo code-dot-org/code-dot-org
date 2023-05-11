@@ -5,6 +5,67 @@
         "function/hero/unversioned": {
           "word": "Funzjoni"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/coursef/2022": {
+          "word": "Varjabbli"
+        },
+        "define/coursef/2022": {
+          "word": "Idefinixxi"
+        },
+        "function/coursee/2022": {
+          "word": "Funzjoni"
+        },
+        "copyright/coursee/2022": {
+          "word": "Drittijiet tal-Awtur"
+        },
+        "define/coursee/2022": {
+          "word": "Idefinixxi"
+        },
+        "function/express/2022": {
+          "word": "Funzjoni"
+        },
+        "variable/express/2022": {
+          "word": "Varjabbli"
+        },
+        "define/express/2022": {
+          "word": "Idefinixxi"
+        },
+        "variable/csd/2022": {
+          "word": "Varjabbli"
+        },
+        "function/csd/2022": {
+          "word": "Funzjoni"
+        },
+        "copyright/csd/2022": {
+          "word": "Drittijiet tal-Awtur"
+        },
+        "code/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "variable/coursef/2021": {
           "word": "Varjabbli"
         },

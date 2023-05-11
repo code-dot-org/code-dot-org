@@ -17,7 +17,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "show_type_hints": true,
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_sprite_begins\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyDraggable[data-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_sprite_stops\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyDraggable[data-id=\\\"5\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",

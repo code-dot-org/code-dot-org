@@ -1,0 +1,353 @@
+{
+  "nn-NO": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Nett-lab"
+        },
+        "gamelab": {
+          "name": "Spel-lab",
+          "categories": {
+            "game_lab": {
+              "name": "Spel-lab",
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Svart-hvitt"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Spelar MP3-lydfila frå den spesifiserte URL-en."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Sprites",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Grupper",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farge"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farge"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Teikning",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stjerne"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematikk",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    },
+                    "max": {
+                      "description": "Det største talet returnert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    },
+                    "max": {
+                      "description": "Det største talet returnert"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variablar",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Lager en variabel med navnet 'var'"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funksjonar"
+            }
+          }
+        },
+        "applab": {
+          "name": "App-lab",
+          "description": "App-lab er eit programmeringsmiljø kor du kan lage enkle appar. Lag ein app, programmer med blokker eller JavaScript for å få det til å virke, deretter kan du dele appen på få sekunder.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Spelar MP3-lydfila frå den spesifiserte URL-en."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematikk",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    },
+                    "max": {
+                      "description": "Det største talet returnert"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    },
+                    "max": {
+                      "description": "Det største talet returnert"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variablar",
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Lager en variabel med navnet 'var'"
+                },
+                "addPair": {
+                  "return_value": "Ingen"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funksjonar"
+            },
+            "advanced": {
+              "name": "Avansert"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "sprites": {
+              "name": "Sprites"
+            },
+            "world": {
+              "name": "Verd"
+            },
+            "location": {
+              "name": "Stadar"
+            },
+            "actions": {
+              "name": "Handlingar"
+            },
+            "events": {
+              "name": "Hendingar"
+            },
+            "behaviors": {
+              "name": "Atferd"
+            },
+            "loops": {
+              "name": "Løkker"
+            },
+            "variables": {
+              "name": "Variablar"
+            },
+            "math": {
+              "name": "Matematikk"
+            },
+            "logic": {
+              "name": "Logikk"
+            },
+            "functions": {
+              "name": "Funksjonar"
+            },
+            "text": {
+              "name": "Tekst"
+            },
+            "comments": {
+              "name": "Kommentar"
+            }
+          }
+        }
+      }
+    }
+  }
+}

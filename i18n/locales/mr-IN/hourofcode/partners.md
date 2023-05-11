@@ -2,40 +2,38 @@
 title: भागीदार
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+अवर ऑफ कोड हा अवर ऑफ कोड रिव्ह्यू कमिटीद्वारे चालवला जातो.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[रिव्ह्यू कमिटी]({{ urls/review_committee }}) हे K-12 ग्रेड बँडमधील 12 वर्तमान आणि माजी शिक्षकांनी बनलेले आहे जे सल्लागार समितीने स्थापन केलेल्या रूब्रिकचा वापर करून क्रियाकलापांचे मूल्यांकन आणि शिफारस करतात. हे शिक्षक शेकडो क्रियाकलाप भागीदारांद्वारे सादर केलेल्या विद्यार्थ्यांच्या नेतृत्वाखालील क्रियाकलापांचे आणि शिक्षकांच्या नेतृत्वाखालील धड्याच्या योजनांचे पुनरावलोकन करतात, क्रियाकलापांचे शैक्षणिक मूल्य, विद्यार्थ्यांमध्ये सहभागी होण्याची क्षमता आणि विद्यार्थ्यांच्या विविध गटांना संभाव्य अपील यांचे मूल्यांकन करतात.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+अवर ऑफ कोडच्या यशामध्ये आणि प्रत्येक विद्यार्थ्याला कॉम्प्युटर सायन्सची ओळख करून देण्याच्या दृष्टीकोनात समितीचे कार्य आणि समर्पण योगदान दिले आहे.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
-
-# Major Partners and Corporate Supporters
+# प्रमुख भागीदार आणि कॉर्पोरेट सपोर्टर्स
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# आंतरराष्ट्रीय भागीदार
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# अभ्यासक्रम आणि ट्यूटोरियल भागीदार
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# इन्फ्रास्ट्रक्चर भागीदार आणि टूल्स
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# अतिरिक्त भागीदार
 
 {{ partners/additional_partners }}
 
-{{ signup_button }}
+{{ signup_button }}{{ signup_button }}

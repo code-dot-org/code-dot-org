@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
@@ -13,7 +13,7 @@ export class LibraryListItem extends React.Component {
     onUpdate: PropTypes.func,
     onRemove: PropTypes.func,
     onAdd: PropTypes.func,
-    onViewCode: PropTypes.func
+    onViewCode: PropTypes.func,
   };
 
   viewCode = event => {
@@ -97,7 +97,7 @@ export class LibraryListItem extends React.Component {
 const styles = {
   overflowEllipsis: {
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   listItem: {
     padding: 8,
@@ -106,7 +106,7 @@ const styles = {
     textAlign: 'left',
     display: 'flex',
     borderBottom: `1px solid ${color.lightest_gray}`,
-    lineHeight: 1.5
+    lineHeight: 1.5,
   },
   libraryTitle: {
     fontFamily: "'Gotham 5r', sans-serif",
@@ -114,64 +114,64 @@ const styles = {
     cursor: 'pointer',
     color: color.link_color,
     ':hover': {
-      color: color.link_color
-    }
+      color: color.link_color,
+    },
   },
   description: {
     marginRight: 25,
-    flexShrink: 2
+    flexShrink: 2,
   },
   actions: {
     display: 'flex',
     flexGrow: 1,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   actionBtn: {
     padding: 8,
     fontSize: 18,
     backgroundColor: color.white,
     ':hover': {
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
   iconPadding: {
-    padding: '0 2px'
+    padding: '0 2px',
   },
   addBtn: {
     color: color.link_color,
     borderColor: color.link_color,
     ':hover': {
       color: color.white,
-      backgroundColor: color.link_color
-    }
+      backgroundColor: color.link_color,
+    },
   },
   updateBtn: {
     color: color.orange,
     borderColor: color.orange,
     ':hover': {
       color: color.white,
-      backgroundColor: color.orange
-    }
+      backgroundColor: color.orange,
+    },
   },
   updateText: {
     fontFamily: "'Gotham 5r', sans-serif",
     paddingLeft: 5,
-    fontSize: 16
+    fontSize: 16,
   },
   removeBtn: {
     color: color.dark_red,
     borderColor: color.dark_red,
     ':hover': {
       color: color.white,
-      backgroundColor: color.dark_red
+      backgroundColor: color.dark_red,
     },
     ':disabled': {
       color: color.light_gray,
       borderColor: color.light_gray,
       backgroundColor: color.lightest_gray,
-      cursor: 'default'
-    }
-  }
+      cursor: 'default',
+    },
+  },
 };
 
 export default Radium(LibraryListItem);

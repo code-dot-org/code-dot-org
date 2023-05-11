@@ -9,6 +9,7 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 export class QuickViewTable extends React.Component {
@@ -17,13 +18,12 @@ export class QuickViewTable extends React.Component {
     applications: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
-    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     regionalPartnerGroup: PropTypes.number,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -38,16 +38,14 @@ export class QuickViewTable extends React.Component {
       sortingColumns: {
         [sortColumnIndex]: {
           direction,
-          position: 0
-        }
+          position: 0,
+        },
       },
 
       // track live in-memory changes, to avoid unnecessary API refresh
-      applicationsDelta: {}
+      applicationsDelta: {},
     };
   }
-
-  showLocked = () => this.props.viewType === 'facilitator';
 
   handlePrincipalApprovalButtonsChange = (
     applicationId,
@@ -56,8 +54,8 @@ export class QuickViewTable extends React.Component {
     this.setState({
       applicationsDelta: {
         ...this.state.applicationsDelta,
-        [applicationId]: {principal_approval}
-      }
+        [applicationId]: {principal_approval},
+      },
     });
   };
 
@@ -68,7 +66,7 @@ export class QuickViewTable extends React.Component {
   constructColumns() {
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
       container: {whiteSpace: 'nowrap'},
-      default: {color: color.light_gray}
+      default: {color: color.light_gray},
     });
 
     let columns = [];
@@ -76,17 +74,17 @@ export class QuickViewTable extends React.Component {
       {
         property: 'id',
         header: {
-          label: 'Actions'
+          label: 'Actions',
         },
         cell: {
-          formatters: [this.formatActionsCell]
-        }
+          formatters: [this.formatActionsCell],
+        },
       },
       {
         property: 'date_applied',
         header: {
           label: 'Submitted',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
@@ -94,141 +92,129 @@ export class QuickViewTable extends React.Component {
               date_applied
                 ? new Date(date_applied).toLocaleDateString('en-us', {
                     month: 'long',
-                    day: 'numeric'
+                    day: 'numeric',
                   })
-                : 'Not Yet Submitted'
-          ]
-        }
+                : 'Not Yet Submitted',
+          ],
+        },
       },
       {
         property: 'applicant_name',
         header: {
           label: 'Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'district_name',
         header: {
           label: 'School District',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'school_name',
         header: {
           label: 'School Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'status',
         header: {
           label: 'Status',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
-            status =>
-              getApplicationStatuses(this.props.viewType)[status] ||
-              _.upperFirst(status)
+            status => getApplicationStatuses()[status] || _.upperFirst(status),
           ],
           transforms: [
             status => ({
-              style: {...styles.statusCellCommon, ...styles.statusCell[status]}
-            })
-          ]
-        }
+              style: {...styles.statusCellCommon, ...styles.statusCell[status]},
+            }),
+          ],
+        },
       }
     );
 
-    if (this.showLocked()) {
-      columns.push({
-        property: 'locked',
-        cell: {
-          formatters: [this.formatBoolean]
-        },
+    columns.push(
+      {
+        property: 'principal_approval_state',
         header: {
-          label: 'Locked?',
-          transforms: [sortable]
-        }
-      });
-    }
-
-    if (this.props.viewType === 'teacher') {
-      columns.push(
-        {
-          property: 'principal_approval_state',
-          header: {
-            label: 'Principal Approval',
-            transforms: [sortable]
-          },
-          cell: {
-            formatters: [this.formatPrincipalApprovalCell]
-          }
+          label: 'Admin Approval State',
+          transforms: [sortable],
         },
-        {
-          property: 'meets_criteria',
-          header: {
-            label: 'Meets Guidelines',
-            transforms: [sortable]
-          }
+        cell: {
+          formatters: [
+            // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
+            // field shows required states.
+            principal_approval_state =>
+              principal_approval_state?.startsWith(
+                PrincipalApprovalState.inProgress
+              ) ||
+              principal_approval_state?.startsWith(
+                PrincipalApprovalState.complete
+              )
+                ? principal_approval_state
+                : '',
+          ],
         },
-        {
-          property: 'meets_scholarship_criteria',
-          header: {
-            label: 'Meets Scholarship Requirements',
-            transforms: [sortable]
-          }
+      },
+      {
+        property: 'principal_approval_not_required',
+        header: {
+          label: 'Admin Approval Required',
+          transforms: [sortable],
         },
-        {
-          property: 'friendly_scholarship_status',
-          header: {
-            label: 'Scholarship Teacher?',
-            transforms: [sortable]
-          }
-        }
-      );
-    } else {
-      columns.push(
-        {
-          property: 'meets_criteria',
-          header: {
-            label: 'Meets Criteria',
-            transforms: [sortable]
-          }
+        cell: {
+          formatters: [this.formatPrincipalApprovalCell],
         },
-        {
-          property: 'total_score',
-          header: {
-            label: 'Total Score',
-            transforms: [sortable]
-          }
-        }
-      );
-    }
+      },
+      {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Guidelines',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'meets_scholarship_criteria',
+        header: {
+          label: 'Meets Scholarship Requirements',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable],
+        },
+      }
+    );
 
     [
       {property: 'notes', label: 'General Notes'},
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},
-      {property: 'notes_5', label: 'Notes 5'}
+      {property: 'notes_5', label: 'Notes 5'},
     ].forEach(notesField => {
       columns.push({
         property: notesField.property,
         header: {
           label: notesField.label,
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
-              style: {...styles.notesCell}
-            })
-          ]
-        }
+              style: {...styles.notesCell},
+            }),
+          ],
+        },
       });
     });
 
@@ -244,9 +230,9 @@ export class QuickViewTable extends React.Component {
       sortingOrder: {
         FIRST: 'asc',
         asc: 'desc',
-        desc: 'asc'
+        desc: 'asc',
       },
-      selectedColumn
+      selectedColumn,
     });
 
     this.setState({sortingColumns});
@@ -260,7 +246,7 @@ export class QuickViewTable extends React.Component {
     if (Object.keys(this.state.applicationsDelta).length > 0) {
       rows = rows.map(row => ({
         ...row,
-        ...this.state.applicationsDelta[row.id]
+        ...this.state.applicationsDelta[row.id],
       }));
     }
     return rows;
@@ -302,31 +288,20 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatPrincipalApprovalCell = (principal_approval_state, props) => {
-    if (principal_approval_state) {
-      return (
-        <div>
-          <span>{principal_approval_state}</span>
-          <PrincipalApprovalButtons
-            applicationId={props.rowData.id}
-            applicationStatus={props.rowData.status}
-            showResendEmailButton={props.rowData.allow_sending_principal_email}
-            onChange={this.handlePrincipalApprovalButtonsChange}
-          />
-        </div>
-      );
-    }
+  formatPrincipalApprovalCell = (principal_approval_not_required, props) => {
+    const isRequired = !principal_approval_not_required;
 
     return (
-      <div>
-        <PrincipalApprovalButtons
-          applicationId={props.rowData.id}
-          applicationStatus={props.rowData.status}
-          showSendEmailButton={true}
-          showNotRequiredButton={true}
-          onChange={this.handlePrincipalApprovalButtonsChange}
-        />
-      </div>
+      <PrincipalApprovalButtons
+        applicationId={props.rowData.id}
+        applicationStatus={props.rowData.status}
+        showResendEmailButton={
+          isRequired && props.rowData.allow_sending_principal_email
+        }
+        showChangeRequirementButton={true}
+        onChange={this.handlePrincipalApprovalButtonsChange}
+        approvalRequired={isRequired}
+      />
     );
   };
 
@@ -337,7 +312,7 @@ export class QuickViewTable extends React.Component {
     const sortedRows = sort.sorter({
       columns: this.columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rows);
 
     return (
@@ -358,27 +333,27 @@ export class QuickViewTable extends React.Component {
 
 const styles = {
   container: {
-    overflowX: 'auto'
+    overflowX: 'auto',
   },
   table: {
-    width: '100%'
+    width: '100%',
   },
   statusCellCommon: {
-    padding: '5px'
+    padding: '5px',
   },
   statusCell: StatusColors,
   notesCell: {
-    maxWidth: '200px'
+    maxWidth: '200px',
   },
   notesCellContent: {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
+    paddingLeft: '2px',
+  },
 };
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
-  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
 }))(QuickViewTable);

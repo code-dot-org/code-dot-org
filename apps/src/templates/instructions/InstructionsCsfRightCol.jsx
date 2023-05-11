@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
@@ -30,16 +29,16 @@ class InstructionsCsfRightCol extends React.Component {
         hintId: PropTypes.string.isRequired,
         markdown: PropTypes.string.isRequired,
         block: PropTypes.object, // XML
-        video: PropTypes.string
+        video: PropTypes.string,
       })
     ).isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
+      isFailure: PropTypes.bool,
     }),
     height: PropTypes.number.isRequired,
     isMinecraft: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -111,10 +110,10 @@ class InstructionsCsfRightCol extends React.Component {
             ref={c => {
               this.collapser = c;
             }}
-            style={[
-              styles.collapserButton,
-              this.props.isMinecraft && styles.craftStyles.collapserButton
-            ]}
+            style={{
+              ...styles.collapserButton,
+              ...(this.props.isMinecraft && styles.craftStyles.collapserButton),
+            }}
             collapsed={this.props.collapsed}
             onClick={this.props.handleClickCollapser}
             isMinecraft={this.props.isMinecraft}
@@ -123,14 +122,14 @@ class InstructionsCsfRightCol extends React.Component {
         )}
         {this.props.displayScrollButtons && (
           <ScrollButtons
-            style={[
-              styles.scrollButtons,
-              this.props.isMinecraft &&
+            style={{
+              ...styles.scrollButtons,
+              ...(this.props.isMinecraft &&
                 (this.props.isRtl
                   ? styles.craftStyles.scrollButtonsRtl
-                  : styles.craftStyles.scrollButtons),
-              displayCollapserButton && scrollButtonsBelowCollapserStyle
-            ]}
+                  : styles.craftStyles.scrollButtons)),
+              ...(displayCollapserButton && scrollButtonsBelowCollapserStyle),
+            }}
             ref={c => {
               this.scrollButtons = c;
             }}
@@ -150,40 +149,38 @@ const styles = {
     position: 'absolute',
     right: 0,
     marginTop: 9,
-    marginRight: 5
+    marginRight: 5,
   },
   scrollButtons: {
     margin: '10px 0px 5px 0px',
     minWidth: '40px',
-    position: 'relative'
+    position: 'relative',
   },
   scrollButtonsBelowCollapser: {
     position: 'relative',
     top: 50,
-    margin: '0px'
+    margin: '0px',
   },
   craftStyles: {
     collapserButton: {
       padding: 5,
-      marginBottom: 0
+      marginBottom: 0,
     },
     scrollButtons: {
-      left: 0
+      left: 0,
     },
     scrollButtonsRtl: {
-      right: 0
+      right: 0,
     },
     scrollButtonsBelowCollapser: {
       position: 'relative',
       top: 60,
-      margin: '0px'
-    }
-  }
+      margin: '0px',
+    },
+  },
 };
 
-export const UnconnectedInstructionsCsfRightCol = Radium(
-  InstructionsCsfRightCol
-);
+export const UnconnectedInstructionsCsfRightCol = InstructionsCsfRightCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -193,10 +190,10 @@ export default connect(
       feedback: state.instructions.feedback,
       height: state.instructions.renderedHeight,
       isMinecraft: !!state.pageConstants.isMinecraft,
-      isRtl: state.isRtl
+      isRtl: state.isRtl,
     };
   },
   null,
   null,
-  {withRef: true}
-)(Radium(InstructionsCsfRightCol));
+  {forwardRef: true}
+)(InstructionsCsfRightCol);

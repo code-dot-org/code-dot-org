@@ -12,7 +12,7 @@ class ChartProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -68,7 +68,7 @@ class ChartEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getDrawChartCode() {
@@ -135,7 +135,7 @@ export default {
   PropertyTab: ChartProperties,
   EventTab: ChartEvents,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('div');
     element.setAttribute('class', 'chart');
     element.style.height = '100px';
@@ -145,5 +145,5 @@ export default {
 
     // Note: we use CSS to make this element have a background in design mode
     // but not in code mode.
-  }
+  },
 };

@@ -1,0 +1,81 @@
+{
+  "te-IN": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "బ్లాక్ అండ్ వైట్"
+                    }
+                  }
+                }
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "స్పైరల్"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "గుంపులు"
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "స్టార్"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "ఏదీ కాదు"
+                }
+              }
+            },
+            "advanced": {
+              "name": "అత్యాధునికమైన"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "ప్రపంచం"
+            },
+            "location": {
+              "name": "స్థానాలు"
+            },
+            "events": {
+              "name": "ఈవెంట్లు"
+            },
+            "behaviors": {
+              "name": "ప్రవర్తన"
+            },
+            "comments": {
+              "name": "వ్యాఖ్యలు"
+            }
+          }
+        }
+      }
+    }
+  }
+}

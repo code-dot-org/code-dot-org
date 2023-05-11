@@ -23,7 +23,7 @@ import NoSectionCodeDialog from './NoSectionCodeDialog';
 import {
   sectionCode,
   sectionName,
-  selectedSection
+  selectedSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -34,7 +34,7 @@ import {
   TransferStatus,
   TransferType,
   ParentLetterButtonMetricsCategory,
-  PrintLoginCardsButtonMetricsCategory
+  PrintLoginCardsButtonMetricsCategory,
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -53,14 +53,14 @@ import SafeMarkdown from '../SafeMarkdown';
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
-  SectionLoginType.email
+  SectionLoginType.email,
 ];
 const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
   SectionLoginType.email,
   SectionLoginType.google_classroom,
-  SectionLoginType.clever
+  SectionLoginType.clever,
 ];
 
 export const studentSectionDataPropType = PropTypes.shape({
@@ -77,7 +77,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   hasEverSignedIn: PropTypes.bool,
   dependsOnThisSectionForLogin: PropTypes.bool,
   rowType: PropTypes.oneOf(Object.values(RowType)),
-  userType: PropTypes.string
+  userType: PropTypes.string,
 });
 
 /** @enum {number} */
@@ -86,7 +86,7 @@ export const COLUMNS = {
   AGE: 1,
   GENDER: 2,
   PASSWORD: 3,
-  ACTIONS: 4
+  ACTIONS: 4,
 };
 
 class ManageStudentsTable extends Component {
@@ -106,14 +106,13 @@ class ManageStudentsTable extends Component {
     showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
     transferData: PropTypes.object,
-    transferStatus: PropTypes.object
+    transferStatus: PropTypes.object,
   };
 
   constructor(props) {
     super(props);
-    this.renderTransferSuccessNotification = this.renderTransferSuccessNotification.bind(
-      this
-    );
+    this.renderTransferSuccessNotification =
+      this.renderTransferSuccessNotification.bind(this);
     this.studentDataMinusBlanks = this.studentDataMinusBlanks.bind(this);
     this.isMoveStudentsEnabled = this.isMoveStudentsEnabled.bind(this);
     this.passwordHeaderFormatter = this.passwordHeaderFormatter.bind(this);
@@ -133,12 +132,12 @@ class ManageStudentsTable extends Component {
     sortingColumns: {
       [COLUMNS.NAME]: {
         direction: 'asc',
-        position: 0
-      }
+        position: 0,
+      },
     },
     showCopiedMsg: false,
     showSectionCodeDialog: false,
-    showPasswordLengthFailure: false
+    showPasswordLengthFailure: false,
   };
 
   renderTransferSuccessNotification() {
@@ -162,7 +161,7 @@ class ManageStudentsTable extends Component {
         notice={notification.notice()}
         details={notification.details({
           numStudents: numStudents,
-          section: sectionDisplay
+          section: sectionDisplay,
         })}
         dismissible={false}
       />
@@ -214,7 +213,7 @@ class ManageStudentsTable extends Component {
     const labels = {
       [SectionLoginType.picture]: i18n.picturePassword(),
       [SectionLoginType.word]: i18n.secretWords(),
-      [SectionLoginType.email]: i18n.password()
+      [SectionLoginType.email]: i18n.password(),
     };
 
     return labels[loginType];
@@ -224,7 +223,7 @@ class ManageStudentsTable extends Component {
     const tooltipContent = {
       [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
       [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
-      [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc()
+      [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
     };
 
     return tooltipContent[loginType];
@@ -409,10 +408,10 @@ class ManageStudentsTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   }
 
@@ -422,7 +421,7 @@ class ManageStudentsTable extends Component {
     const columns = [
       this.nameColumn(sortable),
       this.ageColumn(sortable),
-      this.genderColumn(sortable)
+      this.genderColumn(sortable),
     ];
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
@@ -446,19 +445,19 @@ class ManageStudentsTable extends Component {
         label: i18n.name(),
         props: {
           style: {
-            ...tableLayoutStyles.headerCell
-          }
+            ...tableLayoutStyles.headerCell,
+          },
         },
-        transforms: [sortable]
+        transforms: [sortable],
       },
       cell: {
         formatters: [this.nameFormatter],
         props: {
           style: {
-            ...tableLayoutStyles.cell
-          }
-        }
-      }
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
     };
   }
 
@@ -470,20 +469,20 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 90
-          }
+            width: 90,
+          },
         },
-        transforms: [sortable]
+        transforms: [sortable],
       },
       cell: {
         formatters: [this.ageFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 90
-          }
-        }
-      }
+            width: 90,
+          },
+        },
+      },
     };
   }
 
@@ -495,20 +494,20 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            width: 120
-          }
+            width: 120,
+          },
         },
-        transforms: [sortable]
+        transforms: [sortable],
       },
       cell: {
         formatters: [this.genderFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 120
-          }
-        }
-      }
+            width: 120,
+          },
+        },
+      },
     };
   }
 
@@ -521,19 +520,19 @@ class ManageStudentsTable extends Component {
           style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 180
-          }
-        }
+            width: 180,
+          },
+        },
       },
       cell: {
         formatters: [this.passwordFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            width: 180
-          }
-        }
-      }
+            width: 180,
+          },
+        },
+      },
     };
   }
 
@@ -547,19 +546,19 @@ class ManageStudentsTable extends Component {
           style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 130
-          }
-        }
+            width: 130,
+          },
+        },
       },
       cell: {
         formatters: [this.projectSharingFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,
-            ...{textAlign: 'center', width: 130}
-          }
-        }
-      }
+            ...{textAlign: 'center', width: 130},
+          },
+        },
+      },
     };
   }
 
@@ -572,18 +571,18 @@ class ManageStudentsTable extends Component {
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
-            ...tableLayoutStyles.unsortableHeader
-          }
-        }
+            ...tableLayoutStyles.unsortableHeader,
+          },
+        },
       },
       cell: {
         formatters: [this.actionsFormatter],
         props: {
           style: {
-            ...tableLayoutStyles.cell
-          }
-        }
-      }
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
     };
   }
 
@@ -597,8 +596,8 @@ class ManageStudentsTable extends Component {
         study_group: 'manage-students-actions',
         event: 'copy-section-code-join-link',
         data_json: JSON.stringify({
-          sectionId: sectionId
-        })
+          sectionId: sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -624,8 +623,8 @@ class ManageStudentsTable extends Component {
         study_group: 'manage-students-actions',
         event: 'no-section-code-link',
         data_json: JSON.stringify({
-          sectionId: sectionId
-        })
+          sectionId: sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -648,12 +647,12 @@ class ManageStudentsTable extends Component {
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
-      editingData: this.props.editingData[rowData.id]
+      editingData: this.props.editingData[rowData.id],
     }));
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: sortRows
+      sort: sortRows,
     })(decoratedRows);
 
     const {
@@ -665,12 +664,12 @@ class ManageStudentsTable extends Component {
       sectionName,
       sectionCode,
       studentData,
-      isSectionAssignedCSA
+      isSectionAssignedCSA,
     } = this.props;
 
     const noSectionCode = [
       SectionLoginType.google_classroom,
-      SectionLoginType.clever
+      SectionLoginType.clever,
     ];
 
     return (
@@ -680,7 +679,7 @@ class ManageStudentsTable extends Component {
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
             details={i18n.manageStudentsNotificationAddSuccess({
-              numStudents: addStatus.numStudents
+              numStudents: addStatus.numStudents,
             })}
             dismissible={false}
           />
@@ -704,7 +703,7 @@ class ManageStudentsTable extends Component {
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
             details={i18n.manageStudentsNotificationCannotAdd({
-              numStudents: addStatus.numStudents
+              numStudents: addStatus.numStudents,
             })}
             dismissible={false}
           />
@@ -822,41 +821,41 @@ const styles = {
   headerName: {
     width: '60%',
     float: 'left',
-    marginRight: 5
+    marginRight: 5,
   },
   headerIcon: {
     width: '20%',
-    float: 'left'
+    float: 'left',
   },
   button: {
-    float: 'left'
+    float: 'left',
   },
   buttonWithMargin: {
     marginRight: 5,
-    float: 'left'
+    float: 'left',
   },
   verticalAlign: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   sectionCodeBox: {
     float: 'right',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   sectionCode: {
     marginLeft: 5,
     color: color.teal,
     fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'copy'
+    cursor: 'copy',
   },
   noSectionCode: {
     color: color.teal,
     textDecoration: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  }
+    fontFamily: '"Gotham 7r", sans-serif',
+  },
 };
 
 // The "add row" should always be pinned to the top when sorting.
@@ -899,13 +898,13 @@ export const ManageStudentsNotificationFull = ({manageStatus}) => {
     studentLimit: sectionCapacity,
     currentStudentCount: sectionStudentCount,
     sectionCode: sectionCode,
-    availableSpace: sectionSpotsRemaining
+    availableSpace: sectionSpotsRemaining,
   };
 
   const notification = {
     notice: i18n.manageStudentsNotificationCannotVerb({
       numStudents: manageStatus.numStudents,
-      verb: manageStatus.verb || 'add'
+      verb: manageStatus.verb || 'add',
     }),
     details: `${
       sectionSpotsRemaining === 0
@@ -913,8 +912,8 @@ export const ManageStudentsNotificationFull = ({manageStatus}) => {
         : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
     }
           ${i18n.contactSupportFullSection({
-            supportLink: 'https://support.code.org/hc/en-us/requests/new'
-          })}`
+            supportLink: 'https://support.code.org/hc/en-us/requests/new',
+          })}`,
   };
 
   return (
@@ -931,7 +930,7 @@ export const ManageStudentsNotificationFull = ({manageStatus}) => {
 };
 
 ManageStudentsNotificationFull.propTypes = {
-  manageStatus: PropTypes.object.isRequired
+  manageStatus: PropTypes.object.isRequired,
 };
 
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
@@ -948,7 +947,7 @@ export default connect(
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,
     transferData: state.manageStudents.transferData,
-    transferStatus: state.manageStudents.transferStatus
+    transferStatus: state.manageStudents.transferStatus,
   }),
   dispatch => ({
     saveAllStudents() {
@@ -956,6 +955,6 @@ export default connect(
     },
     editAll() {
       dispatch(editAll());
-    }
+    },
   })
 )(ManageStudentsTable);

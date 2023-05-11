@@ -59,8 +59,6 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
-    # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
-    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
@@ -88,6 +86,8 @@ class ActiveSupport::TestCase
     # when called from unit tests. See comments on that method for details.
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
+
+    AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
   end
 
   teardown do
@@ -124,7 +124,7 @@ class ActiveSupport::TestCase
   end
 
   # Add more helper methods to be used by all tests here...
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
   include CaptureQueries
@@ -143,24 +143,24 @@ class ActiveSupport::TestCase
     tested_script_names = [
       'ECSPD',
       'allthethings',
-      Script::COURSE1_NAME,
-      Script::COURSE4_NAME,
-      Script::FLAPPY_NAME,
-      Script::FROZEN_NAME,
-      Script::HOC_NAME,
-      Script::PLAYLAB_NAME,
-      Script::TWENTY_HOUR_NAME
+      Unit::COURSE1_NAME,
+      Unit::COURSE4_NAME,
+      Unit::FLAPPY_NAME,
+      Unit::FROZEN_NAME,
+      Unit::HOC_NAME,
+      Unit::PLAYLAB_NAME,
+      Unit::TWENTY_HOUR_NAME
     ]
 
     tested_script_names.each do |script_name|
-      # create a placeholder factory-provided Script if we don't already have a
+      # create a placeholder factory-provided Unit if we don't already have a
       # fixture-provided one.
       # Specify skip_name_format_validation because 'ECSPD' will fail to be
       # created otherwise, because upper case letters are not allowed.
-      script = Script.find_by_name(script_name) ||
+      script = Unit.find_by_name(script_name) ||
         create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
 
-      # make sure that all the Script's ScriptLevels have associated Levels.
+      # make sure that all the Unit's ScriptLevels have associated Levels.
       # This is expected during the interim period where we are no longer
       # generating Levels from fixtures, but are still generating Scripts
       script.script_levels.each do |script_level|
@@ -319,9 +319,9 @@ class ActiveSupport::TestCase
   def assert_raises_matching(matcher)
     assert_raises do
       yield
-    rescue => err
-      assert_match matcher, err.to_s
-      raise err
+    rescue => exception
+      assert_match matcher, exception.message
+      raise exception
     end
   end
 
@@ -334,11 +334,7 @@ class ActiveSupport::TestCase
   end
 
   def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-store',
-      'max-age=0',
-      'must-revalidate'
-    ]
+    expected_directives = ['no-store']
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -374,8 +370,8 @@ class ActiveSupport::TestCase
   end
 
   def setup_script_cache
-    Script.stubs(:should_cache?).returns true
-    Script.clear_cache
+    Unit.stubs(:should_cache?).returns true
+    Unit.clear_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Rails.application.config.action_controller.perform_caching = true
     Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
@@ -403,7 +399,7 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    @html_document ||= if @response.content_type === Mime[:xml]
+    @html_document ||= if @response.content_type == Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
                          # TODO: Enable strict parsing after fixing html errors (FND-1573)
@@ -444,7 +440,7 @@ class ActionController::TestCase
   # @param method [Symbol, String] http method with which to perform the action (default :get)
   # @param response [Symbol, String, Number] expected response (default :success)
   # @param user [Symbol, String, Proc] user to log in, or nil to test as a not-logged-in user (default: nil)
-  #   It can be a factory name to be passed to FactoryGirl.create,
+  #   It can be a factory name to be passed to FactoryBot.create,
   #   or a proc that runs in the context of the test case and returns a user.
   # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
   #   or a proc that generates a hash at runtime in the context of the test case.
@@ -480,7 +476,7 @@ class ActionController::TestCase
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
-    unless name.present?
+    if name.blank?
       raise 'name is required when a block is provided' if block
       user_display_name =
         if user.is_a?(Proc)
@@ -499,7 +495,7 @@ class ActionController::TestCase
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
-        # user can be a symbol or string for FactoryGirl creation,
+        # user can be a symbol or string for FactoryBot creation,
         # or a proc that returns a user object at runtime
         actual_user = user.is_a?(Proc) ? instance_exec(&user) : create(user)
         sign_in actual_user
@@ -615,31 +611,6 @@ def with_locale(locale)
     yield
   ensure
     I18n.locale = old_locale
-  end
-end
-
-# Mock Projects to generate random tokens
-class Projects
-  def initialize(storage_id)
-    @storage_id = storage_id
-  end
-
-  def create(_, _)
-    # project_id must be an integer > 0
-    project_id = 1 + SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, project_id)
-  end
-
-  def most_recent(_)
-    create(nil, nil)
-  end
-
-  def get(_)
-    {
-      'name' => "Stubbed test project name",
-      'hidden' => false,
-      'frozen' => false
-    }
   end
 end
 

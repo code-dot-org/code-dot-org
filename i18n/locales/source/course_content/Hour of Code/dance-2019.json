@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/dance-2019/lessons/1/levels/1": {
     "short_instructions": "Drag the [blockly block][0] block into the workspace, and connect it inside the [blockly block][1] block.",
-    "long_instructions": "Drag the [blockly block][0] block into the workspace, and connect it inside the [blockly block][1]\n block. \n\n Choose `cat` or `sloth` to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
+    "long_instructions": "Drag the [blockly block][0] block into the workspace, and connect it inside the [blockly block][1]\n block. \n\n Choose `cat` or `sloth` to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._\n-   _Don’t forget to unmute and turn your volume up to start the party! Still can’t hear anything? Click [here][2]_",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Make sure a dancer appears on the screen.\n\n_This level ends after 4 measures._",
       "challenges": "**Optional Challenges**\n\n-   Choose a different song to play.\n-   Move your dancer to a new location.\n-   Make more than one dancer."

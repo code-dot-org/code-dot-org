@@ -38,6 +38,8 @@
   "drawATriangle": "desenează un triunghi",
   "drawUpperWave": "desenează un val superior",
   "drawLowerWave": "desenează un val inferior",
+  "drawShape": "desenează o formă",
+  "drawShapeWithSideLength": "desenează o formă cu lungimea laterală",
   "drawSticker": "desenează autocolant",
   "drawStickerWithSize": "desenează autocolantul cu dimensiunea",
   "forward": "înainte",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Face artistul vizibil sau invizibil.",
   "widthTooltip": "Modifică lăţimea creionului.",
   "withSize": "cu dimensiunea",
+  "withSideLength": "cu lungimea laterală",
   "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1."
 }

@@ -163,12 +163,6 @@ eu:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} aldiro, {START} tik {STOP} ra "
-        options:
-          UNIT:
-            measures: Neurriak
-            seconds: Segunduak
       Dancelab_everyVerseChorus:
         text: "{UNIT} guztietan "
         options:
@@ -477,6 +471,11 @@ eu:
           SONG:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       gamelab_atTime:
@@ -903,3 +902,8 @@ eu:
         text: mugitu aurrera
       craft_placeTorch:
         text: argi-zuzia kokatu
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria

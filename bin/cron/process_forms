@@ -23,7 +23,7 @@ def send_receipts(kind, form)
       if kind.method(:receipt).parameters.empty?
         kind.receipt
       else
-        kind.receipt(JSON.load(form[:data]))
+        kind.receipt(JSON.parse(form[:data]))
       end
   end
   receipts = receipts.flatten.select {|i| i}
@@ -32,9 +32,9 @@ def send_receipts(kind, form)
 
   begin
     recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
-  rescue ArgumentError => e
-    raise e unless e.message =~ /Invalid email address/
-    ChatClient.log "Unable to send receipt for form #{form[:id]} because #{e.message}."
+  rescue ArgumentError => exception
+    raise exception unless /Invalid email address/.match?(exception.message)
+    ChatClient.log "Unable to send receipt for form #{form[:id]} because #{exception.message}."
     return 0
   end
   receipts.each do |template|
@@ -67,21 +67,21 @@ def process_batch_of_forms
       if kind.respond_to?(:process_)
         processed_data = kind.process_(form)
       elsif kind.respond_to?(:process_with_ip)
-        processed_data = kind.process_with_ip(JSON.load(form[:data]), form[:created_ip])
+        processed_data = kind.process_with_ip(JSON.parse(form[:data]), form[:created_ip])
       elsif kind.respond_to?(:process)
-        processed_data = kind.process(JSON.load(form[:data]))
+        processed_data = kind.process(JSON.parse(form[:data]))
       end
-    rescue AbortFormError => e
-      ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
+    rescue AbortFormError => exception
+      ChatClient.log "Unable to process form #{form[:id]} because #{exception.message}."
       DB[:forms].where(id: form[:id]).update(
         processed_at: DATE_FOR_ERRORS,
         indexed_at: DATE_FOR_ERRORS,
         notified_at: DATE_FOR_ERRORS
       )
       next
-    rescue Exception => e
-      ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
-      raise e
+    rescue Exception => exception
+      ChatClient.log "Unable to process form #{form[:id]} because #{exception.message}."
+      raise exception
     end
 
     DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)

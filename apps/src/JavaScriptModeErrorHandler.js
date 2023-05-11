@@ -77,7 +77,9 @@ export default class JavaScriptModeErrorHandler {
       logText += `Line: ${lineNumber}: `;
     }
     logText += message;
-
+    if (!IN_UNIT_TEST) {
+      logText += '\n';
+    }
     // Send the assembled output to our logging service.
     this.logTarget_.log(logText, logLevel);
 
@@ -91,7 +93,7 @@ export default class JavaScriptModeErrorHandler {
       logToCloud.addPageAction(
         logToCloud.PageAction.UserJavascriptError,
         {
-          error: message
+          error: message,
         },
         1 / 20
       );

@@ -6,7 +6,7 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
-    @laurel_section_script = create(:section, user: @laurel, script: Script.find_by_name('course1'))
+    @laurel_section_script = create(:section, user: @laurel, script: Unit.find_by_name('course1'))
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)
@@ -22,6 +22,8 @@ class FollowersControllerTest < ActionController::TestCase
     @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
     @admin = create(:admin)
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "student in picture section should be redirected to picture login when joining section" do
@@ -198,7 +200,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
 
     assert_equal 'A name', assigns(:user).name
-    assert_equal 'F', assigns(:user).gender
+    assert_equal 'f', assigns(:user).gender
     assert_equal Time.zone.now.to_date - 13.years, assigns(:user).birthday
     assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -222,7 +224,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
@@ -247,7 +249,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
-      assert_equal 'F', assigns(:user).gender
+      assert_equal 'f', assigns(:user).gender
       assert_equal Date.today - 11.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal '', assigns(:user).email

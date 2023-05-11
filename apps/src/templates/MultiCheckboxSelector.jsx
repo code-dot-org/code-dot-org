@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../util/color';
 import _ from 'lodash';
@@ -12,25 +11,25 @@ export const styles = {
     fontWeight: 'normal',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    borderBottomColor: color.purple
+    borderBottomColor: color.purple,
   },
   checkbox: {
     marginRight: MARGIN,
-    marginTop: 0
+    marginTop: 0,
   },
   selectAllCheckbox: {
     position: 'relative',
-    bottom: 4
+    bottom: 4,
   },
   list: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   listItem: {
     listStyleType: 'none',
     display: 'flex',
     alignItems: 'center',
-    marginBottom: MARGIN
-  }
+    marginBottom: MARGIN,
+  },
 };
 
 class MultiCheckboxSelector extends Component {
@@ -46,7 +45,7 @@ class MultiCheckboxSelector extends Component {
     noHeader: PropTypes.bool,
     // For cases where items are objects and we need to do a deep comparison to
     // determine if they're selected.
-    checkById: PropTypes.bool
+    checkById: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -54,7 +53,7 @@ class MultiCheckboxSelector extends Component {
     selected: [],
     items: [],
     onChange: () => {},
-    disabled: false
+    disabled: false,
   };
 
   areAllSelected = () => {
@@ -73,7 +72,7 @@ class MultiCheckboxSelector extends Component {
     if (this.props.checkById) {
       let selectedItems = [];
       if (_.map(this.props.selected, 'id').includes(item.id)) {
-        selectedItems = _.remove(this.props.selected, function(selection) {
+        selectedItems = _.remove(this.props.selected, function (selection) {
           return selection.id !== item.id;
         });
       } else {
@@ -86,7 +85,7 @@ class MultiCheckboxSelector extends Component {
         // remove it
         this.props.onChange([
           ...this.props.selected.slice(0, index),
-          ...this.props.selected.slice(index + 1)
+          ...this.props.selected.slice(index + 1),
         ]);
       } else {
         // add it
@@ -108,7 +107,7 @@ class MultiCheckboxSelector extends Component {
           <h2 style={styles.header}>
             <input
               type="checkbox"
-              style={[styles.checkbox, styles.selectAllCheckbox]}
+              style={{...styles.checkbox, ...styles.selectAllCheckbox}}
               checked={this.areAllSelected()}
               onChange={this.toggleSelectAll}
               disabled={this.props.disabled}
@@ -127,7 +126,7 @@ class MultiCheckboxSelector extends Component {
                 disabled={this.props.disabled}
               />
               {React.cloneElement(this.props.children, {
-                [this.props.itemPropName]: item
+                [this.props.itemPropName]: item,
               })}
             </li>
           ))}
@@ -137,4 +136,4 @@ class MultiCheckboxSelector extends Component {
   }
 }
 
-export default Radium(MultiCheckboxSelector);
+export default MultiCheckboxSelector;

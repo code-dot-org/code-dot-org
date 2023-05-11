@@ -1,10 +1,15 @@
 :ruby
-  js_data = {}
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
+  enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', false)
+  allow_multiple_attempts = enforce_allow_multiple_attempts ? level.allow_multiple_attempts? : false
+  js_data = {
+    response_count: @responses&.count || 0,
+    is_contained_level: is_contained_level
+  }
 
 - if level.solution.present? && is_contained_level && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   %div{id: "containedLevelAnswer0"}
@@ -13,7 +18,7 @@
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
-    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}));
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}, #{allow_multiple_attempts}));
 
 - else # Otherwise we need to provide a `getResult` function.
   :javascript
@@ -31,6 +36,8 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
+  - if DCDO.get("show_level_summary_entry_point", false)
+    %div#summaryEntryPoint
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)
     %h1= title

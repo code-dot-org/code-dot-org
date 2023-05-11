@@ -33,7 +33,7 @@ Code.org فرصتی را برای کارمندانتان فراهم می کند 
 - رویداد [ساعت کدنویسی](%= resolve_url('/promote') %) خود را تبلیغ کنید و دیگران را به میزبانی آن تشویق کنید.
 - **مهندسان نرم افزار**شرکتتان را به بازدید کلاسهای محلی تشویق کنید تا به برگزارکنندگان یکساعت کدنویسی کمک کرده و الهام بخش دانش آموزان برای یادگیری علوم کامپیوتر باشند. آنها میتوانند [ثبت نام](%= resolve_url('https://code.org/volunteer/engineer') %) کنند تا با کلاسها در ارتباط باشند.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## ۳. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

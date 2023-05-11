@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:39.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -52,26 +48,30 @@
     "long_instructions": "# Draw Loop\r\n\r\nHere's an example of the draw loop at work.\r\n\r\n# Do this\r\n* Run the code and see how it works.\r\n* Discuss with your partner whether this looks like the flip book you saw in the video.  Why or why not?",
     "parent_level_id": 20710,
     "name_suffix": "_2022",
-    "map_reference": "/docs/concepts/game-lab/the-draw-loop/",
+    "map_reference": "/courses/csd-2022/guides/the-draw-loop",
     "video_key": "csd_gamelab_drawloop",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:39.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:39.703+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged predict 1_2021\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged predict 1_2021\"}]"

@@ -1,41 +1,93 @@
 it:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
       Blue: Blu
       Green: Verdi
       Red: Rossi
       actor: personaggio
       age: età
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
       answer: rispondi
       armlength: lunghezza braccio
       binary: binario
       birds: uccelli
+      bit: bit
+      blue1: blue1
+      blue2: blue2
       bodylength: lunghezza corpo
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
       cats: tutti i gatti
+      centerToPadLeft: centerToPadLeft
+      choice: choice
+      circ: circ
+      codeName: codeName
       color: colore
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
       counter: contatore
+      counter2: counter2
+      currentActor: currentActor
       direction: direzione
+      dog_score: dog_score
+      dog_speed: dog_speed
       dogs: tutti i cani
+      dragons: dragons
+      enemy_speed: enemy_speed
       energy: energia
+      firstName: firstName
+      footlength: footlength
+      gather: gather
+      green1: green1
+      green2: green2
+      guess: guess
       height: altezza
       honey: miele
       i: i
       left: a sinistra
+      legangle: legangle
+      leglength: leglength
       length: lunghezza
       level: livello
+      marginX: marginX
+      marginY: marginY
+      meal: meal
+      myName: myName
       name: nome
       nectar: nettare
       nectars: nettare
+      object: oggetto
+      padYOffset: padYOffset
       planet: pianeta
+      player_score: player_score
       points: punti
+      punchLine: punchLine
       random: a caso
+      red1: red1
+      red2: red2
       repeat: ripeti
+      repetitions: repetitions
       right: a destra
       score: punteggio
+      score1: score1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: set sides
       shout: urlo
       sides: lati
       size: dimensione
       speed: velocità
+      type: tipo
       variable: variabile
       width: larghezza
       wizard: mago

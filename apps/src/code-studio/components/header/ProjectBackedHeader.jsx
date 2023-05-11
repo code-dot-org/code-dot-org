@@ -1,25 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-
 import ProjectShare from './ProjectShare';
-import ProjectExport from './ProjectExport';
 import ProjectRemix from './ProjectRemix';
 
-// Project header for script levels that are backed by a project. Shows a Share,
-// Export, and Remix button, and should be used with the version of ScriptName that
+// Project header for script levels that are backed by a project.
+// Shows Share and Remix buttons,
+// and should be used with the version of ScriptName that
 // places a last_modified time below the lesson name
-class ProjectBackedHeader extends React.Component {
-  static propTypes = {
-    includeExportInProjectHeader: PropTypes.bool.isRequired
-  };
-
+export default class ProjectBackedHeader extends React.Component {
   render() {
-    const {includeExportInProjectHeader} = this.props;
     return (
       <div style={styles.projectButtons}>
         <ProjectShare />
-        {includeExportInProjectHeader && <ProjectExport />}
         <ProjectRemix lightStyle />
       </div>
     );
@@ -28,11 +19,6 @@ class ProjectBackedHeader extends React.Component {
 
 const styles = {
   projectButtons: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 };
-
-export const UnconnectedProjectBackedHeader = ProjectBackedHeader;
-export default connect(state => ({
-  includeExportInProjectHeader: state.header.includeExportInProjectHeader
-}))(ProjectBackedHeader);

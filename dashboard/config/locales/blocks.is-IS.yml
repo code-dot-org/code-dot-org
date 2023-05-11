@@ -2,6 +2,8 @@
 is:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: biðja notanda {QUESTION} um breytu {VAR} með valkosti {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -229,20 +231,12 @@ is:
             MOVES.XArmsUp: Teygja
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-      Dancelab_everyMeasuresRange:
-        text: 'endurtaka hverja {N} takta eftir {START} '
       Dancelab_everySeconds:
         text: 'á {N} {UNIT} fresti '
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
-      Dancelab_everySecondsRange:
-        text: 'á {N} {UNIT} fresti frá {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Taktar
-            seconds: Sekúndur
       Dancelab_everyVerseChorus:
         text: 'á {UNIT} fresti '
         options:
@@ -990,6 +984,14 @@ is:
         text: uppstilling
       Dancelab_whenSetup2:
         text: uppstilling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
+            '"starburst"': Stjörnublossi
       gamelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1171,6 +1173,19 @@ is:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        text: stilla {GROUP} upp sem {FORMAT}
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1195,6 +1210,18 @@ is:
             '"spiral"': spírall
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       gamelab_makeProjectile:
@@ -1263,6 +1290,14 @@ is:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
             "'sound://category_retro/retro_game_ui_select_6.mp3'": velja
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSoundOptionsSoccer:
+        text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": loftlúður
+            "'sound://category_sports/One_Whistle_SFX.mp3'": flauta
+      gamelab_playSoundOptionsSpace:
+        text: spilaHljóð {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1452,6 +1487,8 @@ is:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
         text: y hnit {SPRITE}
+      KatiesBlocks_tumbling:
+        text: veltist
       Mikelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1797,6 +1834,8 @@ is:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': bóla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hoppa
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ljós
+      Poetry_playSoundOptionsSpace:
+        text: spilaHljóð {SOUND}
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
@@ -1851,6 +1890,11 @@ is:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: þegar {VAR} er svarað
       RyanLab_moveForward:
@@ -1859,8 +1903,6 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
-      SpriteLab2Beta_spriteSay:
-        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_createSpriteWith:
         text: |-
           búa til veru
@@ -2051,5 +2093,11 @@ is:
           DIR:
             right: hægri ↻
             left: vinstri ↺
-      validation_validatedBackground:
-        text: stilla bakgrunn á {IMG}
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
+            '"starburst"': Stjörnublossi

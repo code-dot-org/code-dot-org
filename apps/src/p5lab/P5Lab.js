@@ -1,4 +1,3 @@
-/*global Blockly*/
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -8,13 +7,13 @@ import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
-  valueTypeTabShapeMap
+  valueTypeTabShapeMap,
 } from './spritelab/constants';
 import {TOOLBOX_EDIT_MODE} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
-  injectErrorHandler
+  injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
@@ -38,7 +37,7 @@ import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
   saveAnimations,
-  withAbsoluteSourceUrls
+  withAbsoluteSourceUrls,
 } from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
@@ -49,7 +48,7 @@ import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay'
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
@@ -58,7 +57,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -66,17 +64,11 @@ import {
   clearMeasures,
   getEntriesByName,
   mark,
-  measure
+  measure,
 } from '@cdo/apps/util/performance';
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -85,7 +77,7 @@ const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
   dpadVisible: true,
   dpadFourWay: true,
-  mobileOnly: true
+  mobileOnly: true,
 };
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -103,7 +95,9 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultAnimations = []) {
+    this.defaultAnimations = defaultAnimations;
+
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -120,7 +114,6 @@ export default class P5Lab {
     /** @private {JsInterpreterLogger} */
     this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-    this.generatedProperties = {};
     this.eventHandlers = {};
     this.Globals = {};
     this.currentCmdQueue = null;
@@ -138,6 +131,7 @@ export default class P5Lab {
     dropletConfig.injectGameLab(this);
 
     consoleApi.setLogMethod(this.log.bind(this));
+    consoleApi.setClearMethod(this.clear.bind(this));
 
     /** Expose for testing **/
     window.__mostRecentGameLabInstance = this;
@@ -159,7 +153,7 @@ export default class P5Lab {
         spaceButtonVisible,
         dpadVisible,
         dpadFourWay,
-        mobileOnly
+        mobileOnly,
       };
 
       this.mobileControls.update(
@@ -184,6 +178,16 @@ export default class P5Lab {
       getStore().dispatch(
         jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
       );
+    }
+  }
+
+  /**
+   * Clear both loggers.
+   */
+  clear() {
+    this.consoleLogger_.clear();
+    if (this.debuggerEnabled) {
+      getStore().dispatch(jsDebugger.clearLog());
     }
   }
 
@@ -235,7 +239,7 @@ export default class P5Lab {
 
     this.level.softButtons = this.level.softButtons || [];
     if (this.level.useDefaultSprites) {
-      this.startAnimations = defaultSprites;
+      this.startAnimations = this.defaultAnimations;
     } else if (
       this.level.startAnimations &&
       this.level.startAnimations.length > 0
@@ -255,7 +259,7 @@ export default class P5Lab {
       firebaseName: config.firebaseName,
       firebaseAuthToken: config.firebaseAuthToken,
       firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-      showRateLimitAlert: this.studioApp_.showRateLimitAlert
+      showRateLimitAlert: this.studioApp_.showRateLimitAlert,
     });
 
     this.p5Wrapper.init({
@@ -264,10 +268,10 @@ export default class P5Lab {
       onPreload: this.onP5Preload.bind(this),
       onSetup: this.onP5Setup.bind(this),
       onDraw: this.onP5Draw.bind(this),
-      spritelab: this.isBlockly
+      spritelab: this.isBlockly,
     });
 
-    config.afterClearPuzzle = function() {
+    config.afterClearPuzzle = function () {
       let startLibraries;
       if (config.level.startLibraries) {
         startLibraries = JSON.parse(config.level.startLibraries);
@@ -276,10 +280,15 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          null /* spritesForV3Migration */,
+          null /* animationsForV3Migration */,
           this.isBlockly
         )
       );
+      // If we reset a puzzle, it no longer has any custom uploads.
+      // Therefore we can set restricted share mode to false.
+      project.sourceHandler.setInRestrictedShareMode(false);
+      // If we reset a puzzle, we should reset the selected poem on that project.
+      project.sourceHandler.setSelectedPoem(null);
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
@@ -294,16 +303,16 @@ export default class P5Lab {
     config.noHowItWorks = config.droplet;
 
     config.shareWarningInfo = {
-      hasDataAPIs: function() {
+      hasDataAPIs: function () {
         return this.hasDataStoreAPIs(
           this.studioApp_.getCode(true /* opt_showHidden */)
         );
       }.bind(this),
-      onWarningsComplete: function() {
+      onWarningsComplete: function () {
         if (config.share) {
           window.setTimeout(this.studioApp_.runButtonClick, 0);
         }
-      }.bind(this)
+      }.bind(this),
     };
 
     // Display CSF-style instructions when using Blockly (unless there are no
@@ -385,7 +394,7 @@ export default class P5Lab {
       initializeSubmitHelper({
         studioApp: this.studioApp_,
         onPuzzleComplete: this.onPuzzleComplete.bind(this),
-        unsubmitUrl: this.level.unsubmitUrl
+        unsubmitUrl: this.level.unsubmitUrl,
       });
 
       this.setCrosshairCursorForPlaySpace();
@@ -411,9 +420,9 @@ export default class P5Lab {
 
     var showDebugButtons =
       config.level.editCode &&
-      (!config.hideSource &&
-        !config.level.debuggerDisabled &&
-        !config.level.iframeEmbedAppAndCode);
+      !config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.iframeEmbedAppAndCode;
     var showPauseButton = this.isBlockly && !config.level.hidePauseButton;
     var showDebugConsole = config.level.editCode && !config.hideSource;
     this.debuggerEnabled =
@@ -422,7 +431,7 @@ export default class P5Lab {
     if (this.debuggerEnabled) {
       getStore().dispatch(
         jsDebugger.initialize({
-          runApp: this.runButtonClick
+          runApp: this.runButtonClick,
         })
       );
       if (config.level.expandDebugger) {
@@ -430,26 +439,8 @@ export default class P5Lab {
       }
     }
 
-    const setAndroidExportProps = this.setAndroidExportProps.bind(this);
-
     this.studioApp_.setPageConstants(config, {
-      allowExportExpo: experiments.isEnabled('exportExpo'),
       exportApp: this.exportApp.bind(this),
-      expoGenerateApk: expoGenerateApk.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCheckApkBuild: expoCheckApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCancelApkBuild: expoCancelApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
       channelId: config.channel,
       nonResponsiveVisualizationColumnWidth: APP_WIDTH,
       showDebugButtons: showDebugButtons,
@@ -466,7 +457,7 @@ export default class P5Lab {
       isSubmittable: !!config.level.submittable,
       isSubmitted: !!config.level.submitted,
       librariesEnabled: !!config.level.librariesEnabled,
-      validationEnabled: !!config.level.validationEnabled
+      validationEnabled: !!config.level.validationEnabled,
     });
 
     // Push project-sourced animation metadata into store. Always use the
@@ -480,22 +471,16 @@ export default class P5Lab {
       ? config.initialAnimationList
       : this.startAnimations;
     initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
+      initialAnimationList,
+      this.defaultAnimations
     );
 
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        defaultSprites /* spritesForV3Migration */,
+        this.defaultAnimations /* animationsForV3Migration */,
         this.isBlockly
       )
-    );
-
-    this.generatedProperties = {
-      ...config.initialGeneratedProperties
-    };
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
     );
 
     // Pre-register all audio preloads with our Sounds API, which will load
@@ -536,8 +521,12 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
+   * @param {Object} defaultAnimations
    */
-  loadAnyMissingDefaultAnimations(initialAnimationList) {
+  loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultAnimations = {orderedKeys: [], propsByKey: {}}
+  ) {
     if (!this.isBlockly) {
       return initialAnimationList;
     }
@@ -546,24 +535,27 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultAnimations.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
       return categories && categories.includes('backgrounds');
     });
-    const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    const nameCheck = defaultAnimations.orderedKeys.filter(key => {
       return (
-        defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
-        configDictionary[defaultSprites.propsByKey[key].name]
+        defaultAnimations.propsByKey[key].categories.includes('backgrounds') &&
+        configDictionary[defaultAnimations.propsByKey[key].name]
       );
     });
     const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
     if (!hasBackgrounds) {
-      defaultSprites.orderedKeys.forEach(key => {
-        if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+      defaultAnimations.orderedKeys.forEach(key => {
+        if (
+          defaultAnimations.propsByKey[key].categories.includes('backgrounds')
+        ) {
           initialAnimationList.orderedKeys.push(key);
-          initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+          initialAnimationList.propsByKey[key] =
+            defaultAnimations.propsByKey[key];
         }
       });
     }
@@ -571,54 +563,31 @@ export default class P5Lab {
   }
 
   /**
-   * Export the project for web or use within Expo.
-   * @param {Object} expoOpts
+   * Export the project for web.
    */
-  async exportApp(expoOpts) {
+  async exportApp() {
     await this.whenAnimationsAreReady();
     return this.exportAppWithAnimations(
       project.getCurrentName() || 'my-app',
-      getStore().getState().animationList,
-      expoOpts
-    );
-  }
-
-  setAndroidExportProps(props) {
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    this.generatedProperties.export = {
-      ...this.generatedProperties.export,
-      android: props
-    };
-    project.projectChanged();
-    project.saveIfSourcesChanged();
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
+      getStore().getState().animationList
     );
   }
 
   /**
-   * Export the project for web or use within Expo.
+   * Export the project for web.
    * @param {string} appName
    * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
-   * @param {Object} expoOpts
    */
-  exportAppWithAnimations(appName, animationList, expoOpts) {
+  exportAppWithAnimations(appName, animationList) {
     const {pauseAnimationsByDefault} = this.level;
     const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
       getStore().getState()
     );
-    return Exporter.exportApp(
-      appName,
-      this.studioApp_.editor.getValue(),
-      {
-        animationList,
-        allAnimationsSingleFrame,
-        pauseAnimationsByDefault
-      },
-      expoOpts,
-      this.studioApp_.config
-    );
+    return Exporter.exportApp(appName, this.studioApp_.editor.getValue(), {
+      animationList,
+      allAnimationsSingleFrame,
+      pauseAnimationsByDefault,
+    });
   }
 
   /**
@@ -734,7 +703,7 @@ export default class P5Lab {
     this.mobileControls.init({
       notifyKeyCodeDown: code => this.p5Wrapper.notifyKeyCodeDown(code),
       notifyKeyCodeUp: code => this.p5Wrapper.notifyKeyCodeUp(code),
-      softButtonIds: this.level.softButtons
+      softButtonIds: this.level.softButtons,
     });
     this.mobileControls.update(
       defaultMobileControlsConfig,
@@ -752,7 +721,7 @@ export default class P5Lab {
           'validationResult',
           'validationProps',
           'levelSuccess',
-          'levelFailure'
+          'levelFailure',
         ].join(',')
       );
       Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
@@ -772,7 +741,7 @@ export default class P5Lab {
 
     window.addEventListener(
       'resize',
-      function() {
+      function () {
         this.p5Wrapper.scale = this.calculateVisualizationScale_();
       }.bind(this)
     );
@@ -905,7 +874,7 @@ export default class P5Lab {
 
     if (this.executionError) {
       this.testResults = this.studioApp_.getTestResults(levelComplete, {
-        executionError: this.executionError
+        executionError: this.executionError,
       });
     } else if (testResult) {
       this.testResults = testResult;
@@ -936,27 +905,34 @@ export default class P5Lab {
       program = encodeURIComponent(this.studioApp_.getCode());
       this.message = null;
     } else {
-      // We're using blockly, report the program as xml
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      let textBlocks;
+      if (Blockly.version === 'Google') {
+        // We're using Google Blockly, report the program as JSON
+        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      } else {
+        // We're using CDO Blockly, report the program as xml
+        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
 
-      // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-      // are always appended to startBlocks on page load.
-      // See StudioApp -> setStartBlocks_
-      // Because of this, we need to remove the SharedFunctions when we are in
-      // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-      if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-        var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-        var toRemove = allBlocks.filter(element => {
-          return (
-            element.getAttribute('type') === 'behavior_definition' &&
-            element.getAttribute('usercreated') !== 'true'
-          );
-        });
-        toRemove.forEach(element => {
-          xml.removeChild(element);
-        });
+        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+        // are always appended to startBlocks on page load.
+        // See StudioApp -> setStartBlocks_
+        // Because of this, we need to remove the SharedFunctions when we are in
+        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+          var toRemove = allBlocks.filter(element => {
+            return (
+              element.getAttribute('type') === 'behavior_definition' &&
+              element.getAttribute('usercreated') !== 'true'
+            );
+          });
+          toRemove.forEach(element => {
+            xml.removeChild(element);
+          });
+        }
+        textBlocks = Blockly.Xml.domToText(xml);
       }
-      program = encodeURIComponent(Blockly.Xml.domToText(xml));
+      program = encodeURIComponent(textBlocks);
     }
 
     if (this.testResults >= TestResults.FREE_PLAY) {
@@ -985,7 +961,7 @@ export default class P5Lab {
           submitted: submit,
           program: program,
           image: this.encodedFeedbackImage,
-          onComplete
+          onComplete,
         });
       }
     };
@@ -1114,9 +1090,11 @@ export default class P5Lab {
       studioApp: this.studioApp_,
       maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
       shouldRunAtMaxSpeed: () => this.p5Wrapper.stepSpeed >= 1,
-      customMarshalGlobalProperties: this.p5Wrapper.getCustomMarshalGlobalProperties(),
-      customMarshalBlockedProperties: this.p5Wrapper.getCustomMarshalBlockedProperties(),
-      customMarshalObjectList: this.p5Wrapper.getCustomMarshalObjectList()
+      customMarshalGlobalProperties:
+        this.p5Wrapper.getCustomMarshalGlobalProperties(),
+      customMarshalBlockedProperties:
+        this.p5Wrapper.getCustomMarshalBlockedProperties(),
+      customMarshalObjectList: this.p5Wrapper.getCustomMarshalObjectList(),
     });
     this.JSInterpreter.onExecutionError.register(
       this.handleExecutionError.bind(this)
@@ -1152,7 +1130,7 @@ export default class P5Lab {
         this.level.executePaletteApisOnly && this.level.codeFunctions,
       enableEvents: true,
       initGlobals: injectGamelabGlobals,
-      userCodeStartOffset
+      userCodeStartOffset,
     });
     if (!this.JSInterpreter.initialized()) {
       return;
@@ -1161,14 +1139,13 @@ export default class P5Lab {
     p5SpriteWrapper.injectJSInterpreter(this.JSInterpreter);
     p5GroupWrapper.injectJSInterpreter(this.JSInterpreter);
 
-    this.p5Wrapper.p5specialFunctions.forEach(function(eventName) {
+    this.p5Wrapper.p5specialFunctions.forEach(function (eventName) {
       var func = this.JSInterpreter.findGlobalFunction(eventName);
       if (func) {
-        this.eventHandlers[
-          eventName
-        ] = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
-          func
-        );
+        this.eventHandlers[eventName] =
+          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
+            func
+          );
       }
     }, this);
 
@@ -1205,10 +1182,10 @@ export default class P5Lab {
    * code for each event name.
    */
   onP5ExecutionStarting() {
-    this.p5Wrapper.p5eventNames.forEach(function(eventName) {
+    this.p5Wrapper.p5eventNames.forEach(function (eventName) {
       this.p5Wrapper.registerP5EventHandler(
         eventName,
-        function() {
+        function () {
           if (this.JSInterpreter && this.eventHandlers[eventName]) {
             this.eventHandlers[eventName].apply(null);
           }
@@ -1411,8 +1388,9 @@ export default class P5Lab {
   runValidationCode() {
     if (this.level.validationCode) {
       try {
-        const validationResult = this.JSInterpreter.interpreter.marshalInterpreterToNative(
-          this.JSInterpreter.evalInCurrentScope(`
+        const validationResult =
+          this.JSInterpreter.interpreter.marshalInterpreterToNative(
+            this.JSInterpreter.evalInCurrentScope(`
               (function () {
                 validationState = null;
                 validationResult = null;
@@ -1425,7 +1403,7 @@ export default class P5Lab {
                 };
               })();
             `)
-        );
+          );
         if (validationResult.state === 'succeeded') {
           const testResult = validationResult.result || TestResults.ALL_PASS;
           this.onPuzzleComplete(false, testResult);
@@ -1470,7 +1448,7 @@ export default class P5Lab {
       }
     }
 
-    if (this.JSInterpreter.executionError) {
+    if (this.JSInterpreter?.executionError) {
       this.reactToExecutionError(this.JSInterpreter.executionError.message);
     }
 
@@ -1509,8 +1487,8 @@ export default class P5Lab {
       data_string: levelType,
       data_json: JSON.stringify({
         drawLoopAverageMs: drawLoopTimes[Math.floor(drawLoopTimes.length / 2)],
-        spriteAverageCount: this.spriteTotalCount / drawLoopTimes.length
-      })
+        spriteAverageCount: this.spriteTotalCount / drawLoopTimes.length,
+      }),
     });
   }
 
@@ -1593,11 +1571,11 @@ export default class P5Lab {
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
         reinfFeedbackMsg,
-        sharingText: msg.shareGame()
+        sharingText: msg.shareGame(),
       },
       hideXButton: true,
       saveToProjectGallery: saveToProjectGallery,
-      disableSaveToGallery: !isSignedIn
+      disableSaveToGallery: !isSignedIn,
     });
   }
 
@@ -1614,18 +1592,6 @@ export default class P5Lab {
         );
       })
     );
-  }
-
-  /**
-   * Get the project properties for upload to the sources API.
-   * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
-   */
-  getGeneratedProperties() {
-    // Must return a new object instance each time so the project
-    // system can properly compare currentSources vs newSources
-    return {
-      ...this.generatedProperties
-    };
   }
 
   /**
@@ -1655,7 +1621,7 @@ export default class P5Lab {
       const name = animationList.propsByKey[key].name;
       return {
         text: utils.quote(name),
-        display: utils.quote(name)
+        display: utils.quote(name),
       };
     });
   }

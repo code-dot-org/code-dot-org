@@ -1,0 +1,122 @@
+@import "color.scss";
+
+.dropdown {
+  overflow: auto;
+  padding: 10px 0;
+  min-width: inherit;
+}
+
+.dropdownContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 30px;
+  background-color: $white;
+  z-index: 20;
+  border-width: 1px;
+  border-color: $light_gray;
+  border-style: solid;
+  border-radius: 4px;
+  max-width: 35%;
+  max-height: 80%;
+  min-width: 150px;
+  color: $dark_charcoal;
+  margin-left: 3px;
+
+  &Dark {
+    background-color: $darkest_slate_gray;
+    color: $background_gray;
+  }
+}
+
+.listContainer {
+  width: fit-content;
+  min-width: inherit;
+}
+
+.fileListItem {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 7px 15px;
+  width: 100%;
+
+  input[type="checkbox"] {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: $background_gray;
+  }
+
+  &Dark {
+    &:hover {
+      background-color: $dark_charcoal;
+    }
+  }
+}
+
+.dropdownOpenButton {
+  background-color: $cyan;
+}
+
+.fileListLabel {
+  margin: 0 0 0 5px;
+  width: inherit;
+}
+
+.backpackIcon {
+  height: 15px;
+  opacity: 1;
+}
+
+.spinner {
+  font-size: 22px;
+}
+
+.spinnerContainer {
+  text-align: center;
+}
+
+.message {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px;
+}
+
+.importMessageList {
+  margin-bottom: 0;
+}
+
+.importWarningConfirm {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+%backpack-button {
+  color: $white;
+  font-size: 14px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px 5px 10px;
+}
+
+.button {
+  &Orange {
+    @extend %backpack-button;
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  &Red {
+    @extend %backpack-button;
+    background-color: $red;
+    border-color: $red;
+  }
+}

@@ -175,6 +175,201 @@
         },
         "csta/1B-IC-18": {
           "description": "Dunyoni o‘zgartirgan hisoblash texnologiyalarini muhokama qiling va ushbu texnologiyalar madaniy amaliyotlarga qanday ta'sir ko‘rsatayotgani va qanday ta'sir ko‘rsatayotganligini ifoda eting."
+        },
+        "1B-IC-18": {
+          "description": "Dunyoni o‘zgartirgan hisoblash texnologiyalarini muhokama qiling va ushbu texnologiyalar madaniy amaliyotlarga qanday ta'sir ko‘rsatayotgani va qanday ta'sir ko‘rsatayotganligini ifoda eting."
+        },
+        "CD.L1:3-01": {
+          "description": "Kompyuterlar va tegishli texnologiyalarni muvaffaqiyatli ishlatish uchun standart kirish va chiqish qurilmalaridan foydalaning."
+        },
+        "CI.L1:3-01": {
+          "description": "Texnologik tizimlar va dasturiy ta'minotdan foydalanishda mas'uliyatli raqamli fuqarolik (huquqiy va axloqiy xatti-harakatlar) bilan shug‘ullaning."
+        },
+        "CL.L1:6-02": {
+          "description": "Yechimlar yoki mahsulotlarni ishlab chiqish maqsadida muammolarni birgalikda hal qilish faoliyatida ishtirok etish uchun onlayn resurslardan foydalaning (masalan, elektron pochta, onlayn munozaralar, umumiy veb-muhit)."
+        },
+        "CPP.L1:3-01": {
+          "description": "Yoshga mos tadqiqotlarni o‘tkazish uchun texnologik resurslardan foydalaning."
+        },
+        "CPP.L1:3-02": {
+          "description": "O‘quv dasturi bo‘yicha o‘rganishni qo‘llab-quvvatlash uchun rivojlanishga mos multimedia resurslaridan foydalaning (masalan, interaktiv kitoblar va o‘quv dasturlari)."
+        },
+        "CPP.L1:3-04": {
+          "description": "Oddiy vazifani bajarish uchun bajariladigan bayonotlar to‘plamini tuzing (masalan, kaplumbağa ko‘rsatmalari)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Muammoni hal qilish va o‘z-o‘zini boshqarish uchun texnologik resurslardan (masalan, kalkulyatorlar, ma'lumotlarni yig‘ish probalari, mobil qurilmalar, videofilmlar, o‘quv dasturlari va veb-vositalar) foydalaning."
+        },
+        "CPP.L1:6-06": {
+          "description": "Bloklarga asoslangan vizual dasturlash tili yordamida muammoli echimlarni amalga oshirish."
+        },
+        "CPP.L2:3": {
+          "description": "O‘quv dasturlari tushunchalarini namoyish etadigan va yetkazadigan texnologik resurslardan foydalangan holda mahsulotlarni (masalan, veb-sahifalar, mobil ilovalar, animatsiyalar) loyihalash, ishlab chiqish, nashr etish va taqdim etish."
+        },
+        "CT.L2:1": {
+          "description": "Yechimlarni loyihalashtirish uchun algoritmik muammolarni hal qilishning asosiy bosqichlaridan foydalaning (masalan, muammolarni bayon qilish va izlash, namunaviy misollarni tekshirish, loyihalash, yechimni amalga oshirish, sinov va baholash."
+        },
+        "CT.L2:12": {
+          "description": "Muammoni qism muammolarga ajratish uchun abstraktsiyadan foydalaning."
+        },
+        "CT.L2:6": {
+          "description": "Amalga oshirilayotgan ko‘rsatmalar ketma-ketligini tavsiflang va tahlil qiling (masalan, video o‘yinda personajning xatti-harakatlarini qoidalar va algoritmlar asosida tasvirlang)."
+        },
+        "CT.L2:7": {
+          "description": "Ma'lumotlarni matn, tovushlar, rasmlar va raqamlarni o‘z ichiga olgan turli xil usullar bilan ifodalash."
+        },
+        "CT.L2:8": {
+          "description": "Muammoli holatlar, tuzilmalar va ma'lumotlarning vizual tasvirlaridan foydalaning (masalan, grafiklar, diagrammalar, tarmoq diagrammalari, blok-sxemalar)."
+        },
+        "1.L.6": {
+          "description": "Suhbatlashish, o‘qish va o‘qilish hamda matnlarga javob berish orqali olingan so‘zlar va iboralardan foydalaning, shu jumladan oddiy aloqalarni bildirish uchun tez-tez uchraydigan qo‘shma so‘zlardan foydalaning (masalan, chunki)."
+        },
+        "11-12.L.6": {
+          "description": "Kollejda o‘qish, yozish, so‘zlash va tinglash uchun etarli bo‘lgan umumiy akademik va domenga oid so‘zlarni va so‘z birikmalarini aniqlang va ishlating; kasbga tayyorlik darajasi; fikr yuritganda so‘z boyligini to‘plashda mustaqillikni namoyish eting"
+        },
+        "2.L.6": {
+          "description": "Suhbatlashish, o‘qish va o‘qish va matnlarga javob berish natijasida olingan so‘zlar va iboralardan foydalaning, shu jumladan tasvirlash uchun sifatlar va qo‘shimchalardan foydalaning (masalan, boshqa bolalar meni xursand qilganda)."
+        },
+        "3.L.6": {
+          "description": "Sinfga mos nutqiy, umumiy akademik va domenga oid so‘zlar va iboralarni, shu jumladan fazoviy va vaqtinchalik munosabatlarni bildiruvchi so'zlarni va so‘z birikmalarini aniqlang va foydalaning (masalan, o'sha kechki ovqatdan keyin biz ularni izladik)."
+        },
+        "4.L.6": {
+          "description": "Sinfga mos bo‘lgan umumiy akademik va domenga tegishli so‘zlar va iboralarni, shu jumladan aniq harakatlar, his-tuyg‘ular yoki holatni bildiruvchi (masalan, viktorina, hushtakbozlik, dadillik)  va  ma'lum bir mavzuga xos (masalan, yovvoyi tabiat, tabiatni muho..."
+        },
+        "5.L.6": {
+          "description": "Kontrast, qo‘shilish va boshqa mantiqiy aloqalarni ko‘rsatadigan so‘zlarni, shu jumladan sinfga mos keladigan umumiy akademik va domenga oid so‘zlarni va iboralarni aniqlang va foydalaning (masalan, shunga qaramay, shu bilan birga, shuningdek, qo‘shimcha ravishda). "
+        },
+        "9-10.L.6": {
+          "description": "Kollejda o‘qish, yozish, so‘zlash va tinglash uchun etarli bo‘lgan umumiy akademik va domenga oid so‘zlarni va so‘z birikmalarini aniqlang va ishlating; kasbga tayyorlik darajasi; fikr yuritganda so‘z boyligini to‘plashda mustaqillikni namoyish eting"
+        },
+        "11-12.RI.4": {
+          "description": "so‘zlar va iboralarning matnda qanday ishlatilishini, shu jumladan majoziy, konnotativ va texnik ma'nolarni aniqlang; muallif matn davomida qanday qilib asosiy atama yoki atamalarning ma'nosidan foydalanganligi va aniqlanganligini tahlil qiling (masalan, Medison qanday ta'riflaydi "
+        },
+        "1.SL.1": {
+          "description": "1-sinf mavzularidagi turli sheriklar bilan birgalikdagi suhbatlarda qatnashish va kichik va katta guruhlardagi tengdoshlari va kattalar bilan matnlar."
+        },
+        "2.SL.1": {
+          "description": "Ikkinchi darajali mavzular va turli xil sheriklar bilan hamkorlikdagi suhbatlarda qatnashish va kichik va katta guruhlardagi tengdoshlari va kattalar bilan matnlar."
+        },
+        "3.SL.1": {
+          "description": "3-sinf mavzulari va matnlari bo‘yicha turli xil sheriklar bilan (birma-bir, guruhlarda va o‘qituvchilar rahbarligida) birgalikdagi munozaralarda samarali ishtirok eting, boshqalarning g‘oyalari va o‘z fikrlaringizni aniq ifoda eting."
+        },
+        "6.SL.1": {
+          "description": "6-sinf mavzulari va matnlari bo‘yicha turli xil sheriklar bilan (birma-bir, guruhlarda va o‘qituvchilar rahbarligida) birgalikdagi munozaralarda samarali ishtirok eting, boshqalarning g‘oyalari va o‘z fikrlaringizni aniq ifoda eting."
+        },
+        "7.SL.1": {
+          "description": "7-sinf mavzulari va matnlari bo‘yicha turli xil sheriklar bilan (birma-bir, guruhlarda va o‘qituvchilar rahbarligida) birgalikdagi munozaralarda samarali ishtirok eting, boshqalarning g‘oyalari va o‘z fikrlaringizni aniq ifoda eting."
+        },
+        "11-12.W.6": {
+          "description": "Davomiy mulohazalarga, shu jumladan yangi argumentlarga yoki ma'lumotlarga javoban individual yoki birgalikda yoziladigan mahsulotlarni ishlab chiqarish, nashr etish va yangilash uchun texnologiyadan, shu jumladan Internetdan foydalaning."
+        },
+        "3.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tafsilotlar va aniq voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "4.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tafsilotlar va aniq voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "5.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tafsilotlar va aniq voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "6.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tegirshli tafsilotlar va yaxshi tuzilgan voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "6.W.6": {
+          "description": "Yozma asar yaratish va nashr etish, shuningdek boshqalar bilan o‘zaro aloqada bo‘lish va hamkorlik qilish uchun texnologiyalarni, shu jumladan Internetdan foydalanish; bir o‘tirishda kamida uchta sahifani yozish uchun yetarli darajada klaviaturada ishlash qobiliyatlarini namoyish etish. "
+        },
+        "7.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tegirshli tafsilotlar va yaxshi tuzilgan voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "7.W.6": {
+          "description": "Yozma asar yaratish va nashr etish, manbalarga havola qilish va ularni namoyish qilish, shuningdek boshqalar bilan o‘zaro aloqada bo‘lish va hamkorlik qilish, shu jumladan manbalarga ulanish va ularga havolalar kiritish uchun texnologiyalar, shu jumladan Internetdan foydalaning."
+        },
+        "8.W.3": {
+          "description": "Haqiqiy yoki xayoliy tajriba yoki voqealarni samarali texnika, tegirshli tafsilotlar va yaxshi tuzilgan voqealar ketma-ketligi yordamida rivojlantirish uchun rivoyatlar yozing."
+        },
+        "8.W.6": {
+          "description": "Yozuvlarni ishlab chiqarish va nashr etish, axborot va g‘oyalar o‘rtasidagi munosabatlarni samarali taqdim etish, shuningdek boshqalar bilan o‘zaro aloqada bo‘lish va hamkorlik qilish uchun texnologiyalarni, shu jumladan Internetdan foydalaning."
+        },
+        "9-10.W.6": {
+          "description": "Texnologiyaning boshqa ma'lumotlarga ulanish va ma'lumotni moslashuvchan va dinamik ravishda namoyish etish imkoniyatlaridan foydalanib, individual yoki umumiy yozma mahsulotlarni ishlab chiqish, nashr etish va yangilash uchun texnologiyadan, shu jumladan Internetdan foydalaning."
+        },
+        "11-12.WHST.6": {
+          "description": "Davomiy mulohazalarga, shu jumladan yangi argumentlarga yoki ma'lumotlarga javoban individual yoki birgalikda yoziladigan mahsulotlarni ishlab chiqarish, nashr etish va yangilash uchun texnologiyadan, shu jumladan Internetdan foydalaning."
+        },
+        "9-10.WHST.6": {
+          "description": "Texnologiyaning boshqa ma'lumotlarga ulanish va ma'lumotni moslashuvchan va dinamik ravishda namoyish etish imkoniyatlaridan foydalanib, individual yoki umumiy yozma mahsulotlarni ishlab chiqish, nashr etish va yangilash uchun texnologiyadan, shu jumladan Internetdan foydalaning."
+        },
+        "7.G.2": {
+          "description": "Berilgan shartlar bilan geometrik shakllarni chizish (erkin qo‘l bilan, chizg‘ich va protraktor yordamida va texnologiya bilan). Uchburchakni uchta burchak yoki tomonning o‘lchovidan qurishga e'tibor bering. Shartlar noyob uchburchakni aniqlaganida, bir nechta uchburchak"
+        },
+        "4.MD.6": {
+          "description": "Protraktator yordamida burchaklarni butun sonli darajalarda o‘lchang. Belgilangan o‘lchovning eskiz burchaklari."
+        },
+        "MP.1": {
+          "description": "Muammolarni anglang va ularni hal qilishda qat'iyatlang"
+        },
+        "MP.2": {
+          "description": "mavhum va miqdoriy sabab"
+        },
+        "MP.4": {
+          "description": "matematikaga oid model"
+        },
+        "MP.5": {
+          "description": "Tegishli vositalardan strategik foydalaning"
+        },
+        "MP.6": {
+          "description": "aniqlik bilan qatnashish"
+        },
+        "MP.7": {
+          "description": "tuzilmani qidiring va undan foydalaning"
+        },
+        "MP.8": {
+          "description": "takroriy fikr yuritishda muntazamlikni izlang va izohlang"
+        },
+        "4.NBT.4": {
+          "description": "Standart algoritmdan foydalangan holda ko‘p xonali butun sonlarni ravon qo‘shish va ayirish."
+        },
+        "4.NBT.5": {
+          "description": "To‘rtta raqamgacha bo‘lgan butun sonni bir xonali butun songa ko‘paytiring va ikkita qiymatdan iborat ikkita raqamni ko‘paytiring. Joylar qiymati va amallarning xususiyatlariga asoslangan strategiyalardan foydalaning. Tenglama yordamida hisoblab chiqing va tushuntiring. , to‘rtburchaklar ar "
+        },
+        "1.OA.1": {
+          "description": "qo‘shish va ayirboshlashni barcha holatlarda noma'lum narsalar bilan qo‘shish, olish, yig‘ish, ajratish va taqqoslash kabi vaziyatlarni o‘z ichiga olgan so‘z muammolarini hal qilishda foydalaning, masalan, obyektlar, chizmalar va tenglamalarni ishlatish bilan uchun belgi "
+        },
+        "2.OA.1": {
+          "description": "qo‘shish va olib tashlashni 100 pozitsiyasida noma'lum narsalar bilan qo‘shish, olish, yig‘ish, ajratish va taqqoslash vaziyatlarini o‘z ichiga olgan bir va ikki bosqichli so‘z muammolarini hal qilish uchun foydalaning, masalan, chizmalar yordamida va sy bilan tenglamalar "
+        },
+        "3.OA.3": {
+          "description": "Teng guruhlar, massivlar va o‘lchov kattaliklari bilan bog‘liq vaziyatlarda so‘z muammolarini hal qilish uchun 100 ichida ko‘paytirish va bo‘linishni qo‘llang, masalan, noma'lum raqam uchun belgi bilan chizilgan va tenglamalardan foydalanib, muammoni ifodalaydi. 1"
+        },
+        "1.a": {
+          "description": "Yangi g‘oyalar, mahsulotlar yoki jarayonlarni yaratish uchun mavjud bilimlarni qo‘llang."
+        },
+        "1.b": {
+          "description": "Shaxsiy yoki guruhiy ifoda vositasi sifatida asl asarlarni yarating."
+        },
+        "1.c": {
+          "description": "Murakkab tizimlar va muammolarni o‘rganish uchun modellar va simulyatsiyalardan foydalaning."
+        },
+        "2.a": {
+          "description": "Tengdoshlari, mutaxassislari yoki boshqa raqamli muhit va ommaviy axborot vositalarida ishlaydigan boshqalar bilan o‘zaro aloqa o‘rnatish, hamkorlik qilish va nashr etish."
+        },
+        "2.b": {
+          "description": "Axborot va g‘oyalarni turli ommaviy axborot vositalari va formatlardan foydalangan holda ko‘plab auditoriyalarga samarali ravishda etkazish."
+        },
+        "4.b": {
+          "description": "Qarorni ishlab chiqish yoki loyihani bajarish uchun tadbirlarni rejalashtirish va boshqarish."
+        },
+        "4.d": {
+          "description": "Muqobil echimlarni o‘rganish uchun bir nechta jarayonlardan va turli xil istiqbollardan foydalaning."
+        },
+        "6.a": {
+          "description": "Texnologik tizimlarni tushunish va ulardan foydalanish."
+        },
+        "6.c": {
+          "description": "Tizimlar va dasturlarda nosozliklarni tuzatish."
+        },
+        "6.d": {
+          "description": "Hozirgi bilimlarni yangi texnologiyalarni o‘rganishga o‘tkazish."
         }
       }
     }

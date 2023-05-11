@@ -108,6 +108,8 @@ module AWS
     # @param [String] key
     # @return [Boolean]
     def self.cached_exists_in_bucket?(bucket, key)
+      return false unless key.present?
+
       @cached_bucket_contents ||= {}
 
       unless @cached_bucket_contents.key? bucket
@@ -186,7 +188,7 @@ module AWS
     # @param filename [String] The filename to write to.
     # @return [String] The filename written to.
     def self.download_to_file(bucket, key, filename)
-      open(filename, 'wb') do |file|
+      File.open(filename, 'wb') do |file|
         create_client.get_object(bucket: bucket, key: key) do |chunk|
           file.write(chunk)
         end
@@ -290,6 +292,25 @@ module AWS
       Aws::S3::Presigner.new(client: create_client).presigned_url(method, params)
     end
 
+    # Returns a link to the S3 web console for a given presigned S3 URL.
+    # This is useful for finding a file once the presigned URL has expired.
+    # The user will need to authenticate when using the link.
+    # @param [String] a presigned S3 URL
+    # @return [String] a direct link to the file in the S3 console
+    # @raise [Exception] if the provided link isn't a presigned S3 URL
+    def self.get_console_link_from_presigned(presigned_url)
+      presigned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
+      unless presigned_url.match(presigned_regex)
+        raise ArgumentError.new("expected presigned S3 URL like 'https://bucket-name.s3.amazonaws.com/prefix/filename?with=any&query=params'")
+      end
+
+      captured = presigned_regex.match(presigned_url)
+      bucket = captured[1]
+      prefix = captured[2]
+
+      return "https://s3.console.aws.amazon.com/s3/object/#{bucket}?prefix=#{prefix}"
+    end
+
     class LogUploader
       # A LogUploader is constructed with some preconfigured settings that will
       # apply to all log uploads - presumably you may be uploading many similar
@@ -316,6 +337,7 @@ module AWS
       def upload_log(name, body, options={})
         key = "#{@prefix}/#{name}"
 
+        options[:content_type] ||= 'text/plain'
         options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
           options.merge(

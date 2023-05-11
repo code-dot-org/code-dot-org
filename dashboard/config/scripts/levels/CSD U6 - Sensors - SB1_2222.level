@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:05.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -56,7 +52,7 @@
     "encrypted_examples": "wc2/I4l/rEzpWGwKreU8dH4OVxJSGlMxohz21txucge4E21P/zF/A6H1lmeH\nToZPs1svNT3eeRRRwy/pXpYKIA==\n",
     "parent_level_id": 20451,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/analog-sensors/",
+    "map_reference": "/courses/csd-2022/guides/analog-sensors",
     "mini_rubric": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
@@ -64,6 +60,10 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:05.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:05.958+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB1_2022\"}]"

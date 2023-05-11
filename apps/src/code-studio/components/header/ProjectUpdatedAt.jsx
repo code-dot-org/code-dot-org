@@ -5,14 +5,14 @@ import msg from '@cdo/locale';
 
 import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
-import {projectUpdatedStatuses as statuses} from '../../headerRedux';
+import {projectUpdatedStatuses as statuses} from '../../projectRedux';
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string,
-    onContentUpdated: PropTypes.func
+    onContentUpdated: PropTypes.func,
   };
 
   componentDidMount() {
@@ -71,11 +71,11 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };
 
 export default connect(state => ({
-  status: state.header.projectUpdatedStatus,
-  updatedAt: state.header.projectUpdatedAt
+  status: state.project.projectUpdatedStatus,
+  updatedAt: state.project.projectUpdatedAt,
 }))(ProjectUpdatedAt);

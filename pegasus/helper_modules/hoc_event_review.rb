@@ -20,7 +20,7 @@ module HocEventReview
   # Get non-US event counts by country
   # (used for event review overview page)
   def self.event_counts_by_country(**rest)
-    events_query(rest).
+    events_query(**rest).
       exclude(COUNTRY_CODE_COLUMN => 'US').
       group_and_count(COUNTRY_CODE_COLUMN.as(:country_code)).
       all
@@ -29,7 +29,7 @@ module HocEventReview
   # Get US event counts by state
   # (used for event review overview page)
   def self.event_counts_by_state(**rest)
-    events_query(rest).
+    events_query(**rest).
       where(COUNTRY_CODE_COLUMN => 'US').
       exclude(STATE_CODE_COLUMN => nil).
       group_and_count(
@@ -40,7 +40,7 @@ module HocEventReview
 
   # Get events according to given filters
   def self.events(**rest)
-    events_query(rest).
+    events_query(**rest).
       select(:data, :secret, :processed_data).
       limit(100).
       map do |form|

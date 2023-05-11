@@ -579,6 +579,107 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Ny blok!",
           "poetry_remove_sprite": "Ny blok!"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Her vælger du typen af danser."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Føj denne blok til dit program.",
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Føj denne blok til dit program!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Føj en ny begivenhed til dit program."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Ny blok!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Ny blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Ny blok!",
+          "new_block_4": "Ny blok!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klik her for at udvide blokken.",
+          "pointerlocation": "Træk en emneblok her."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Udvind jern!"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Dette er en opfordring"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Ny blok!"
         }
       }
     }

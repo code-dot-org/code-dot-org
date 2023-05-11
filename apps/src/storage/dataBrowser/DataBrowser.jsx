@@ -1,28 +1,18 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
-import color from '../../util/color';
 import msg from '@cdo/locale';
 import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
 import KVPairs from './KVPairs';
-import * as dataStyles from './dataStyles';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import {changeView, showWarning} from '../redux/data';
 import {DataView} from '../constants';
+import style from './data-browser.module.scss';
+import classNames from 'classnames';
 
 const tableWidth = 400;
 const buttonColumnWidth = 124;
-const tabHeight = 35;
-const borderColor = color.lighter_gray;
-const bgColor = color.lightest_gray;
-const baseTabStyle = {
-  borderColor: borderColor,
-  borderStyle: 'solid',
-  boxSizing: 'border-box',
-  height: tabHeight,
-  padding: '0 10px'
-};
 
 class DataBrowser extends React.Component {
   static propTypes = {
@@ -33,7 +23,7 @@ class DataBrowser extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {selectedTab: TabType.DATA_TABLES};
@@ -51,39 +41,44 @@ class DataBrowser extends React.Component {
   render() {
     return (
       <div style={{height: '100%'}}>
-        <div id="dataBrowserTabs" style={styles.workspaceTabs}>
+        <div id="dataBrowserTabs" className={style.workspaceTabs}>
           <div
             id="dataTablesTab"
-            style={
+            className={classNames(
+              style.tab,
               this.state.selectedTab === TabType.DATA_TABLES
-                ? styles.activeTab
-                : styles.inactiveTab
-            }
+                ? style.tabActive
+                : style.tabInactive
+            )}
             onClick={this.handleTabClick.bind(this, TabType.DATA_TABLES)}
           >
-            <span style={styles.tabLabel}>{msg.dataTableHeader()}</span>
+            <span className={style.tabLabel}>{msg.dataTableHeader()}</span>
           </div>
           <div
             id="keyValuePairsTab"
-            style={
+            className={classNames(
+              style.tab,
               this.state.selectedTab === TabType.KEY_VALUE_PAIRS
-                ? styles.activeTab
-                : styles.inactiveTab
-            }
+                ? style.tabActive
+                : style.tabInactive
+            )}
             onClick={this.handleTabClick.bind(this, TabType.KEY_VALUE_PAIRS)}
           >
-            <span style={styles.tabLabel}>{msg.keyValuePairsHeader()}</span>
+            <span className={style.tabLabel}>{msg.keyValuePairsHeader()}</span>
           </div>
-          <div id="emptyTab" style={styles.emptyTab} />
+          <div
+            id="emptyTab"
+            className={classNames(style.tab, style.tabEmpty)}
+          />
         </div>
-        <div id="dataBrowserBody" style={styles.workspaceBody}>
+        <div id="dataBrowserBody" className={style.workspaceBody}>
           <div
             id="dataTablesBody"
-            style={
+            className={classNames(
               this.state.selectedTab === TabType.DATA_TABLES
-                ? styles.activeBody
-                : styles.inactiveBody
-            }
+                ? style.activeBody
+                : style.inactiveBody
+            )}
           >
             <span> {msg.createTableHeader()} </span>
             <table>
@@ -103,10 +98,10 @@ class DataBrowser extends React.Component {
               </colgroup>
               <tbody>
                 <tr>
-                  <th style={dataStyles.headerCell}>
+                  <th className={dataStyles.headerCell}>
                     {msg.dataTableNamePlaceholder()}
                   </th>
-                  <th style={dataStyles.headerCell}>{msg.actions()}</th>
+                  <th className={dataStyles.headerCell}>{msg.actions()}</th>
                 </tr>
                 {Object.keys(this.props.tableListMap).map(tableName => (
                   <EditTableListRow
@@ -123,11 +118,11 @@ class DataBrowser extends React.Component {
           </div>
           <div
             id="keyValuePairsBody"
-            style={
+            className={classNames(
               this.state.selectedTab === TabType.KEY_VALUE_PAIRS
-                ? styles.activeBody
-                : styles.inactiveBody
-            }
+                ? style.activeBody
+                : style.inactiveBody
+            )}
           >
             <KVPairs />
           </div>
@@ -137,92 +132,20 @@ class DataBrowser extends React.Component {
   }
 }
 
-const styles = {
-  activeTab: Object.assign({}, baseTabStyle, {
-    backgroundColor: bgColor,
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderBottomWidth: 0,
-    borderLeftWidth: 0,
-    float: 'left'
-  }),
-  inactiveTab: Object.assign({}, baseTabStyle, {
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    float: 'left'
-  }),
-  // This tab should fill the remaining horizontal space.
-  emptyTab: Object.assign({}, baseTabStyle, {
-    borderTopWidth: 0,
-    borderRightWidth: 0,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    width: '100%'
-  }),
-  workspaceDescription: {
-    height: 28,
-    overflow: 'hidden'
-  },
-  workspaceDescriptionText: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
-  workspaceTabs: {
-    borderColor: borderColor,
-    borderStyle: 'solid',
-    borderTopWidth: 0,
-    borderRightWidth: 0,
-    borderBottomWidth: 0,
-    borderLeftWidth: 1
-  },
-  tabLabel: {
-    lineHeight: tabHeight + 'px',
-    WebkitUserSelect: 'none',
-    MozUserSelect: 'none',
-    msUserSelect: 'none',
-    userSelect: 'none'
-  },
-  workspaceBody: {
-    height: 'calc(100% - 83px)',
-    padding: '10px 10px 10px 0',
-    borderColor: borderColor,
-    borderStyle: 'solid',
-    borderTopWidth: 0,
-    borderRightWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    backgroundColor: bgColor
-  },
-  activeBody: {
-    height: '100%',
-    overflowY: 'auto',
-    padding: '10px',
-    width: '100%'
-  },
-  inactiveBody: {
-    display: 'none',
-    height: '100%',
-    overflowY: 'auto'
-  }
-};
-
 /**
  * @readonly
  * @enum {string}
  */
 const TabType = {
   DATA_TABLES: 'dataTables',
-  KEY_VALUE_PAIRS: 'keyValuePairs'
+  KEY_VALUE_PAIRS: 'keyValuePairs',
 };
 DataBrowser.TabType = TabType;
 
 export default connect(
   state => ({
     view: state.data.view,
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -230,6 +153,6 @@ export default connect(
     },
     onViewChange(view, tableName) {
       dispatch(changeView(view, tableName));
-    }
+    },
   })
-)(Radium(DataBrowser));
+)(DataBrowser);

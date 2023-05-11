@@ -5,7 +5,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :regional_partner_name,
     :regional_partner_id,
     :update_emails_sent_by_system,
-    :locked,
     :notes,
     :notes_2,
     :notes_3,
@@ -41,6 +40,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :registered_fit_weekend,
     :attending_teachercon,
     :principal_approval_state,
+    :principal_approval_not_required,
     :meets_scholarship_criteria,
     :school_stats,
     :status_change_log,
@@ -52,10 +52,6 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def email
     object.user.email
-  end
-
-  def locked
-    object.locked?
   end
 
   # Include the full answers here, unless otherwise specified
@@ -153,6 +149,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object.try(:principal_approval_state)
   end
 
+  def principal_approval_not_required
+    object.try(:principal_approval_not_required)
+  end
+
   # update emails are sent by the system if there is no regional partner or if the regional partner
   # has not set the decision email flag to SENT_BY_PARTNER
   def update_emails_sent_by_system
@@ -181,7 +181,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     stats = school&.school_stats_by_year&.order(school_year: :desc)&.first
     return {} unless stats
 
-    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
+    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).sum || 0
 
     {
       title_i_status: stats.title_i_status,

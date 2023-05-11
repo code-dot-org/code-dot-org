@@ -65,6 +65,7 @@ de:
       name: Name
       nectar: Nektar
       nectars: Nektar
+      object: Objekt
       padYOffset: padYOffset
       planet: Planet
       player_score: player_score
@@ -90,6 +91,7 @@ de:
       speed: Geschwindigkeit
       startX: startX
       startY: startY
+      type: Art
       variable: Variable
       width: Breite
       wizard: Zauberer

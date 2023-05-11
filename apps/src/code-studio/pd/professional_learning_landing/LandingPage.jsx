@@ -15,7 +15,7 @@ export default class LandingPage extends Component {
   static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,
-    professionalLearningCourseData: PropTypes.array
+    deeperLearningCourseData: PropTypes.array,
   };
 
   render() {
@@ -27,17 +27,15 @@ export default class LandingPage extends Component {
           <LastWorkshopSurveyBanner
             subHeading={i18n.plLandingSubheading()}
             description={i18n.plLandingDescription({
-              course: this.props.lastWorkshopSurveyCourse
+              course: this.props.lastWorkshopSurveyCourse,
             })}
             surveyUrl={this.props.lastWorkshopSurveyUrl}
           />
         )}
         <EnrolledWorkshops />
-        {this.props.professionalLearningCourseData && (
+        {this.props.deeperLearningCourseData && (
           <ProfessionalLearningCourseProgress
-            professionalLearningCourseData={
-              this.props.professionalLearningCourseData
-            }
+            deeperLearningCourseData={this.props.deeperLearningCourseData}
           />
         )}
       </div>
@@ -53,7 +51,7 @@ const styles = {
     backgroundSize: 'cover',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   headerText: {
     backgroundColor: 'rgba(0, 0, 0, .5)',
@@ -62,8 +60,8 @@ const styles = {
     textAlign: 'center',
     padding: '30px',
     fontSize: '40px',
-    color: 'white'
-  }
+    color: 'white',
+  },
 };
 
 const HeaderImage = () => (
@@ -75,7 +73,7 @@ const HeaderImage = () => (
 export const LastWorkshopSurveyBanner = ({
   subHeading,
   description,
-  surveyUrl
+  surveyUrl,
 }) => (
   <TwoColumnActionBlock
     isRtl={false}
@@ -87,13 +85,13 @@ export const LastWorkshopSurveyBanner = ({
       {
         url: surveyUrl,
         text: i18n.plLandingStartSurvey(),
-        target: '_blank'
-      }
+        target: '_blank',
+      },
     ]}
   />
 );
 LastWorkshopSurveyBanner.propTypes = {
   subHeading: PropTypes.string,
   description: PropTypes.string,
-  surveyUrl: PropTypes.string
+  surveyUrl: PropTypes.string,
 };

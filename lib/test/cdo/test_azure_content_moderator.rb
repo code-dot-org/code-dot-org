@@ -67,9 +67,7 @@ class AzureContentModeratorTest < Minitest::Test
     end
   end
 
-  private
-
-  def expect_firehose_log_request
+  private def expect_firehose_log_request
     FirehoseClient.any_instance.expects(:put_record).with do |stream, data|
       data[:study] == 'azure-content-moderation' &&
         data[:study_group] == 'v1' &&
@@ -81,7 +79,7 @@ class AzureContentModeratorTest < Minitest::Test
     end
   end
 
-  def expect_firehose_log_result
+  private def expect_firehose_log_result
     FirehoseClient.any_instance.expects(:put_record).with do |stream, data|
       data[:study] == 'azure-content-moderation' &&
         data[:study_group] == 'v1' &&
@@ -101,7 +99,7 @@ class AzureContentModeratorTest < Minitest::Test
     end
   end
 
-  def expect_no_firehose
+  private def expect_no_firehose
     FirehoseClient.any_instance.expects(:put_record).never
   end
 end

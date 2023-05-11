@@ -1,0 +1,14 @@
+@import "color.scss";
+
+.right {
+  float: right;
+}
+
+.confirming {
+  margin-left: 20px;
+}
+
+.red {
+  background-color: $red;
+  color: $white;
+}

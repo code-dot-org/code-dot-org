@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'dynamic_config/datastore_cache'
-require 'dynamic_config/adapters/memory_adapter.rb'
+require 'dynamic_config/adapters/memory_adapter'
 
 class DatastoreCacheTest < ActiveSupport::TestCase
   class FakeListener

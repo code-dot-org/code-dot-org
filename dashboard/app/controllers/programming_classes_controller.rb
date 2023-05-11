@@ -71,8 +71,8 @@ class ProgrammingClassesController < ApplicationController
       @programming_class.save! if @programming_class.changed?
       @programming_class.write_serialization
       render json: @programming_class.summarize_for_edit.to_json
-    rescue ActiveRecord::RecordInvalid => e
-      render(status: :not_acceptable, plain: e.message)
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception.message)
     end
   end
 
@@ -94,15 +94,13 @@ class ProgrammingClassesController < ApplicationController
     return render :not_found unless @programming_class
     begin
       @programming_class.destroy
-      render(status: 200, plain: "Destroyed #{@programming_class.name}")
+      render(status: :ok, plain: "Destroyed #{@programming_class.name}")
     rescue
       render(status: :not_acceptable, plain: @programming_class.errors.full_messages.join('. '))
     end
   end
 
-  private
-
-  def programming_class_params
+  private def programming_class_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
@@ -120,7 +118,7 @@ class ProgrammingClassesController < ApplicationController
     transformed_params
   end
 
-  def set_class_by_keys
+  private def set_class_by_keys
     @programming_class = ProgrammingClass.get_from_cache(params[:programming_environment_name], params[:programming_class_key])
   end
 end

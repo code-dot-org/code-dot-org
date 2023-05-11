@@ -17,6 +17,7 @@ ka:
       length: ხანგრძლივობა
       name: სახელი
       nectar: ნექტარი
+      planet: პლანეტა
       points: ქულები
       random: შემთხვევითი
       repeat: გაიმეორეთ
@@ -24,6 +25,7 @@ ka:
       score: ქულა
       size: ზომა
       speed: სიჩქარე
+      type: ტიპი
       variable: ცვლადი
       width: სიგრძე
       wizard: ჯადოქარი

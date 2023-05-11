@@ -8,7 +8,7 @@ const FAKE_SHOW_ALL = () => {};
 const FAKE_HIDE_ALL = () => {};
 const DEFAULT_PROPS = {
   showAllTutorials: FAKE_SHOW_ALL,
-  hideAllTutorials: FAKE_HIDE_ALL
+  hideAllTutorials: FAKE_HIDE_ALL,
 };
 
 describe('ToggleAllTutorialsButton', () => {

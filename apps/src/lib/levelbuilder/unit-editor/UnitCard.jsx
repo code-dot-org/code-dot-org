@@ -7,7 +7,7 @@ import LessonGroupCard from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupC
 import {
   addGroup,
   convertGroupToUserFacing,
-  convertGroupToNonUserFacing
+  convertGroupToNonUserFacing,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import ReactDOM from 'react-dom';
 import {lessonGroupShape} from './shapes';
@@ -20,14 +20,14 @@ class UnitCard extends Component {
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     addGroup: PropTypes.func.isRequired,
     convertGroupToUserFacing: PropTypes.func.isRequired,
-    convertGroupToNonUserFacing: PropTypes.func.isRequired
+    convertGroupToNonUserFacing: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      targetLessonGroupPos: null
+      targetLessonGroupPos: null,
     };
   }
 
@@ -104,9 +104,10 @@ class UnitCard extends Component {
               lessonGroup={lessonGroup}
               ref={lessonGroupCard => {
                 if (lessonGroupCard) {
-                  const metrics = ReactDOM.findDOMNode(
-                    lessonGroupCard
-                  ).getBoundingClientRect();
+                  const metrics =
+                    ReactDOM.findDOMNode(
+                      lessonGroupCard
+                    ).getBoundingClientRect();
                   this.setLessonGroupMetrics(metrics, lessonGroup.position);
                 }
               }}
@@ -164,14 +165,14 @@ const styles = {
     background: color.cyan,
     borderTopLeftRadius: borderRadius,
     borderTopRightRadius: borderRadius,
-    padding: 10
+    padding: 10,
   },
   unitBody: {
     background: color.lightest_cyan,
     borderBottomLeftRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     padding: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   addLesson: {
     fontSize: 14,
@@ -179,27 +180,27 @@ const styles = {
     background: 'white',
     border: '1px solid #ccc',
     boxShadow: 'none',
-    margin: '0 10px 10px 10px'
+    margin: '0 10px 10px 10px',
   },
   addGroupWithWarning: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   displayNameWarning: {
     marginLeft: 5,
-    marginTop: 5
-  }
+    marginTop: 5,
+  },
 };
 
 export const UnconnectedUnitCard = UnitCard;
 
 export default connect(
   state => ({
-    lessonGroups: state.lessonGroups
+    lessonGroups: state.lessonGroups,
   }),
   {
     addGroup,
     convertGroupToUserFacing,
-    convertGroupToNonUserFacing
+    convertGroupToNonUserFacing,
   }
 )(UnitCard);

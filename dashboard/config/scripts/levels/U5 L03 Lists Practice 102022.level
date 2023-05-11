@@ -21,7 +21,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\nThis app should let the user scroll through their classes but the left button isn't working.\r\n\r\n* Read the starter code\r\n* Add code to the `\"leftButton\"` so the user can scroll back to the left after scrolling to the right.\r\n* **Hint:** Use the List Scrolling Pattern (see Help & Tips above)",
+    "long_instructions": "# Do This\r\n\r\nThis app should let the user scroll through their classes but the left button isn't working.\r\n\r\n* Read the starter code\r\n* Add code to the `\"leftButton\"` so the user can scroll back to the left after scrolling to the right.\r\n* **Hint:** Use the **List Scrolling Pattern** (see Help & Tips above)",
     "submittable": "false",
     "start_blocks": "// Create and assign variables\r\nvar index = 0;\r\nvar classes = [\"Biology\", \"Algebra\", \"Social Studies\",\"Gym\"];\r\nupdateScreen();\r\n\r\nonEvent(\"leftButton\", \"click\", function(){\r\n\t// use the Scroll Pattern to decrease the index\r\n\t\r\n\t// call updateScreen()\r\n\r\n\tplaySound(\"sound://category_accent/puzzle_game_accent_small_d_01.mp3\");\r\n});\r\n\r\nonEvent(\"rightButton\", \"click\", function(){\r\n  \r\n  if(index < (classes.length - 1)){\r\n    index = index + 1;\r\n  }\r\n  updateScreen();\r\n\tplaySound(\"sound://category_accent/puzzle_game_accent_small_d_02.mp3\");\r\n});\r\n\r\nfunction updateScreen(){\r\n\tsetText(\"classLabel\", classes[index]);\r\n\tsetText(\"periodLabel\", \"Period: \" + (index + 1));\r\n}",
     "never_autoplay_video": "true",
@@ -65,7 +65,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:59.005+00:00\",\"changed\":[\"cloned from \\\"U5 L03 Lists Practice 10_2021\\\"\"],\"cloned_from\":\"U5 L03 Lists Practice 10_2021\"},{\"changed_at\":\"2022-04-13 23:52:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:59.005+00:00\",\"changed\":[\"cloned from \\\"U5 L03 Lists Practice 10_2021\\\"\"],\"cloned_from\":\"U5 L03 Lists Practice 10_2021\"},{\"changed_at\":\"2022-04-13 23:52:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-09-01 22:56:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

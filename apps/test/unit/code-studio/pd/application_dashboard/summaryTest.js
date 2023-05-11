@@ -3,53 +3,51 @@ import {shallow} from 'enzyme';
 import {Row} from 'react-bootstrap';
 import {
   Summary,
-  removeIncompleteApplications
+  removeIncompleteApplications,
 } from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
 import sinon from 'sinon';
 
 describe('Summary', () => {
   const dataWithoutIncompleteApps = {
-    unreviewed: {locked: 0, total: 0},
     reopened: {locked: 0, total: 0},
+    awaiting_admin_approval: {locked: 0, total: 0},
+    unreviewed: {locked: 0, total: 0},
     pending: {locked: 0, total: 0},
-    waitlisted: {locked: 0, total: 0},
+    pending_space_availability: {locked: 0, total: 0},
+    accepted: {locked: 0, total: 0},
     declined: {locked: 0, total: 0},
-    accepted_not_notified: {locked: 0, total: 0},
-    accepted_notified_by_partner: {locked: 0, total: 0},
-    accepted_no_cost_registration: {locked: 0, total: 0},
-    registration_sent: {locked: 0, total: 0},
-    paid: {locked: 0, total: 0}
+    withdrawn: {locked: 0, total: 0},
   };
 
   const data = {
     csd_teachers: {
       ...dataWithoutIncompleteApps,
-      incomplete: {locked: 0, total: 0}
+      incomplete: {locked: 0, total: 0},
     },
     csp_teachers: {
       ...dataWithoutIncompleteApps,
-      incomplete: {locked: 0, total: 0}
+      incomplete: {locked: 0, total: 0},
     },
     csa_teachers: {
       ...dataWithoutIncompleteApps,
-      incomplete: {locked: 0, total: 0}
-    }
+      incomplete: {locked: 0, total: 0},
+    },
   };
 
   const fakeRouter = {
-    createHref() {}
+    createHref() {},
   };
 
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
 
   const regionalPartnerFilter = {value: 1, label: 'A Great Organization'};
 
   const createSummary = () =>
     shallow(<Summary regionalPartnerFilter={regionalPartnerFilter} />, {
-      context
+      context,
     });
 
   it('Initially renders a spinner', () => {
@@ -63,7 +61,7 @@ describe('Summary', () => {
     server.respondWith('GET', '/api/v1/pd/applications', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(data)
+      JSON.stringify(data),
     ]);
 
     let summary = createSummary();
@@ -82,14 +80,14 @@ describe('Summary', () => {
   it('removeIncompleteApplications strips incomplete applications from data', () => {
     expect(removeIncompleteApplications(data)).to.deep.equal({
       csd_teachers: {
-        ...dataWithoutIncompleteApps
+        ...dataWithoutIncompleteApps,
       },
       csp_teachers: {
-        ...dataWithoutIncompleteApps
+        ...dataWithoutIncompleteApps,
       },
       csa_teachers: {
-        ...dataWithoutIncompleteApps
-      }
+        ...dataWithoutIncompleteApps,
+      },
     });
   });
 });

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
@@ -19,7 +18,7 @@ class ResourceCard extends Component {
     allowWrap: PropTypes.bool,
     allowMarkdown: PropTypes.bool,
     linkId: PropTypes.string,
-    linkClass: PropTypes.string
+    linkClass: PropTypes.string,
   };
 
   render() {
@@ -34,27 +33,31 @@ class ResourceCard extends Component {
       allowMarkdown,
       linkId,
       linkClass,
-      responsiveSize
+      responsiveSize,
     } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
-    const buttonStyles = [styles.button];
-    const cardStyles = [styles.card, localeStyle];
-    const titleStyles = [styles.title, localeStyle];
-    const descriptionStyles = [styles.text, styles.description, localeStyle];
+    const buttonStyles = styles.button;
+    const cardStyles = {...styles.card, ...localeStyle};
+    const titleStyles = {...styles.title, ...localeStyle};
+    const descriptionStyles = {
+      ...styles.text,
+      ...styles.description,
+      ...localeStyle,
+    };
 
     if (['sm', 'xs'].includes(responsiveSize)) {
-      cardStyles.push(styles.cardSmall);
-      titleStyles.push(styles.titleSmall);
-      descriptionStyles.push(styles.descriptionSmall);
+      Object.assign(cardStyles, styles.cardSmall);
+      Object.assign(titleStyles, styles.titleSmall);
+      Object.assign(descriptionStyles, styles.descriptionSmall);
     }
 
     if (allowWrap) {
-      buttonStyles.push(styles.buttonAllowWrap);
-      cardStyles.push(styles.cardAllowWrap);
-      titleStyles.push(styles.titleAllowWrap);
+      Object.assign(buttonStyles, styles.buttonAllowWrap);
+      Object.assign(cardStyles, styles.cardAllowWrap);
+      Object.assign(titleStyles, styles.titleAllowWrap);
     } else {
-      titleStyles.push(styles.titleNoWrap);
+      Object.assign(titleStyles, styles.titleNoWrap);
     }
 
     let descriptionContent = description;
@@ -79,7 +82,7 @@ class ResourceCard extends Component {
           id={linkId}
           className={linkClass}
           href={link}
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text={buttonText}
           style={buttonStyles}
         />
@@ -91,49 +94,50 @@ class ResourceCard extends Component {
 const styles = {
   card: {
     height: 250,
-    width: 310,
-    background: color.teal
+    width: 308,
+    background: color.neutral_light,
+    border: `1px solid ${color.neutral_dark20}`,
   },
   cardSmall: {
-    width: '100%'
+    width: '100%',
   },
   cardAllowWrap: {
-    position: 'relative'
+    position: 'relative',
   },
   text: {
     paddingLeft: 20,
     paddingRight: 20,
-    color: color.white
+    color: color.neutral_dark,
   },
   titleContainer: {
     display: 'flex',
     alignItems: 'baseline',
-    padding: '14px 20px 10px 20px'
+    padding: '14px 20px 10px 20px',
   },
   title: {
-    color: color.white,
+    color: color.neutral_dark,
     fontFamily: '"Gotham 7r", sans-serif',
     fontSize: 27,
     lineHeight: '29px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   titleSmall: {
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   titleNoWrap: {
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   titleAllowWrap: {
-    lineHeight: '1.1'
+    lineHeight: '1.1',
   },
   callout: {
     flex: 'none',
     fontSize: 14,
     margin: '0px 8px',
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.white
+    color: color.brand_accent_default,
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -141,30 +145,31 @@ const styles = {
     lineHeight: '21px',
     height: 140,
     marginBottom: 5,
-    overflowY: 'auto'
+    overflowY: 'auto',
   },
   descriptionSmall: {
     width: '100%',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   button: {
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    whiteSpace: 'inherit',
   },
   buttonAllowWrap: {
     position: 'absolute',
     bottom: 20,
-    left: 0
+    left: 0,
   },
   ltr: {
-    float: 'left'
+    float: 'left',
   },
   rtl: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
   isRtl: state.isRtl,
-  responsiveSize: state.responsive.responsiveSize
-}))(Radium(ResourceCard));
+  responsiveSize: state.responsive.responsiveSize,
+}))(ResourceCard);

@@ -1,5 +1,3 @@
-/* globals dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
@@ -8,29 +6,30 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   refreshProjectName,
   setNameFailure,
-  unsetNameFailure
-} from '../../headerRedux';
+  unsetNameFailure,
+} from '../../projectRedux';
 import NameFailureDialog from '../NameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 
 export const styles = {
   buttonWrapper: {
     float: 'left',
-    display: 'flex'
+    display: 'flex',
+    margin: 0,
   },
   buttonSpacing: {
     marginTop: 0,
     marginBottom: 0,
     marginLeft: 10,
     marginRight: 0,
-    boxShadow: 'none'
-  }
+    boxShadow: 'none',
+  },
 };
 
 class UnconnectedDisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
-    projectName: PropTypes.string.isRequired
+    projectName: PropTypes.string.isRequired,
   };
 
   render() {
@@ -55,7 +54,7 @@ class UnconnectedDisplayProjectName extends React.Component {
   }
 }
 const DisplayProjectName = connect(state => ({
-  projectName: state.header.projectName
+  projectName: state.project.projectName,
 }))(UnconnectedDisplayProjectName);
 
 class UnconnectedEditProjectName extends React.Component {
@@ -65,11 +64,28 @@ class UnconnectedEditProjectName extends React.Component {
     refreshProjectName: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     setNameFailure: PropTypes.func.isRequired,
-    unsetNameFailure: PropTypes.func.isRequired
+    unsetNameFailure: PropTypes.func.isRequired,
   };
 
   state = {
-    savingName: false
+    savingName: false,
+  };
+
+  componentDidMount() {
+    this.nameChangeInput.focus();
+
+    // Cancel when ESC key is released.
+    this.nameChangeInput.addEventListener('keyup', this.onCancel);
+  }
+
+  componentWillUnmount() {
+    this.nameChangeInput.removeEventListener('keyup', this.onCancel);
+  }
+
+  onCancel = event => {
+    if (event.code === 'Escape') {
+      this.props.finishEdit();
+    }
   };
 
   saveNameChange = () => {
@@ -83,14 +99,14 @@ class UnconnectedEditProjectName extends React.Component {
     }
 
     this.setState({
-      savingName: true
+      savingName: true,
     });
 
     dashboard.project
       .rename(newName)
       .then(() => {
         this.setState({
-          savingName: false
+          savingName: false,
         });
         dashboard.header.updateTimestamp();
         this.props.refreshProjectName();
@@ -101,60 +117,67 @@ class UnconnectedEditProjectName extends React.Component {
           this.props.setNameFailure(error.nameFailure);
         }
         this.setState({
-          savingName: false
+          savingName: false,
         });
       });
+  };
+
+  onSubmit = event => {
+    event.preventDefault();
+    this.saveNameChange();
   };
 
   render() {
     // Use an uncontrolled input for the "rename" operation so our UI tests
     // can easily interface with it
     return (
-      <div style={styles.buttonWrapper}>
-        <div className="project_name_wrapper header_text">
-          <input
-            type="text"
-            className="project_name header_input"
-            maxLength="100"
-            defaultValue={this.props.projectName}
-            ref={input => {
-              this.nameChangeInput = input;
-            }}
-          />
-        </div>
-        <button
-          type="button"
-          className="project_save header_button header_button_light no-mc"
-          onClick={this.saveNameChange}
-          disabled={this.state.savingName}
-          style={styles.buttonSpacing}
-        >
-          {i18n.save()}
-        </button>
+      <>
+        <form onSubmit={this.onSubmit} style={styles.buttonWrapper}>
+          <div className="project_name_wrapper header_text">
+            <input
+              type="text"
+              className="project_name header_input"
+              maxLength="100"
+              defaultValue={this.props.projectName}
+              ref={input => {
+                this.nameChangeInput = input;
+              }}
+            />
+          </div>
+          <button
+            type="button"
+            className="project_save header_button header_button_light no-mc"
+            onClick={this.saveNameChange}
+            disabled={this.state.savingName}
+            style={styles.buttonSpacing}
+          >
+            {i18n.save()}
+          </button>
+        </form>
         <NameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.props.unsetNameFailure}
         />
-      </div>
+      </>
     );
   }
 }
 const EditProjectName = connect(
   state => ({
-    projectName: state.header.projectName,
-    projectNameFailure: state.header.projectNameFailure
+    projectName: state.project.projectName,
+    projectNameFailure: state.project.projectNameFailure,
   }),
   {
     refreshProjectName,
     setNameFailure,
-    unsetNameFailure
+    unsetNameFailure,
   }
 )(UnconnectedEditProjectName);
 
 export default class EditableProjectName extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func
+    onChangedWidth: PropTypes.func,
   };
 
   componentDidUpdate() {
@@ -164,18 +187,18 @@ export default class EditableProjectName extends React.Component {
   }
 
   state = {
-    editName: false
+    editName: false,
   };
 
   beginEdit = () => {
     this.setState({
-      editName: true
+      editName: true,
     });
   };
 
   finishEdit = () => {
     this.setState({
-      editName: false
+      editName: false,
     });
   };
 

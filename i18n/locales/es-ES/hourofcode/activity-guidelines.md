@@ -231,12 +231,15 @@ Toda actividad enviada antes del 1ro de octubre recibirá una evaluación están
 
 ## Directrices de marca registrada
 
-**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”)
+**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”) No queremos impedir este uso, pero queremos asegurarnos de que el uso está dentro de unos límites:
 
-1. Cualquier referencia a la "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu marca, sino que haga referencia a la Hora del Código como un movimiento colectivo. Correcto: "Participa en la Hora del Código™ en ACMECorp.com". Incorrecto: "Participa en la Hora del Código de ACME Corp".
-2. Usa un "TM" como superíndice en los lugares más importantes donde menciones la "Hora del Código", ya sea en tu sitio web o en las descripciones de aplicaciones.
-3. Incluye el idioma en la página (o en el pie de página), así como enlaces hacia los sitios web de la Hora del Código, la Semana por la Educación en Ciencias de la Computación y Code.org, que digan lo siguiente: a. "La '[Hora del Código](http://hourofcode.com)™' es una iniciativa nacional de la [Semana por la Educación en Ciencias de Computación](http://csedweek.org) y [Code.org](http://code.org) para que millones de estudiantes participen en una hora de ciencias de la computación y programación."
-4. No usar la marca "Hora del Código" en nombres de apps.
+1. Utilizar "La Hora del Código" únicamente en relación con las actividades educativas no comerciales de la Educación Informática en el contexto de la campaña de La Hora del Código, y para ningún otro propósito.
+2. Cualquier referencia a la "Hora del Código" debe utilizarse de forma que no sugiera que es su propia marca, sino que hace referencia a la Hora del Código como movimiento de base. Un buen ejemplo: "Participa en la Hora del Código ® en ACMECorp.com". Un mal ejemplo: "Prueba Hour of Code de ACME Corp".
+3. Utiliza un superíndice "®" en los lugares más destacados en los que menciones "La Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
+4. Incluye un texto en la página (o en el pie de página), incluyendo enlaces a los sitios web de La Hora del Código, CSEdWeek y Code.org, que revele lo siguiente: a. Hour of Code® y Hora del Código® son marcas registradas de Code.org; y b. “La '[Hora del Código](http://hourofcode.com/) ® es una iniciativa nacional de [Code.org](http://code.org/) para iniciar a millones de estudiantes en una hora de informática y programación".
+5. No utilices "La Hora del Código" en los nombres de las aplicaciones.
+6. No utilice "La Hora del Código" en relación con cualquier uso o propósito comercial (por ejemplo, colocando su actividad de La Hora del Código detrás de un muro de pago; promocionando otro servicio de pago como parte de su actividad de La Hora del Código; vendiendo mercancía de La Hora del Código).
+7. No utilice "La Hora del Código" en relación con ninguna actividad que requiera un inicio de sesión o la creación de una cuenta.
 
 [**Volver al principio**](#top)
 

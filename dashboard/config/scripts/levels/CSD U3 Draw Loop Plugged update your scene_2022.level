@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:44.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -77,13 +73,13 @@
     "parent_level_id": 20718,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/csd-1718/draw_loop/index.html",
-      "/docs/csd-1718/sprites/index.html",
-      "/docs/csd-1718/animation_tab/index.html",
-      "/docs/csd-1718/variables_intro_csd/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html"
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/csd-1718/sprite_properties/index.html",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "video_key": "csd_gamelab_drawloop",
     "show_type_hints": "false",
     "encrypted": "false",
@@ -98,6 +94,10 @@
     "bubble_choice_description": "Use the draw loop to make your sprite from last lesson move.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:44.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:44.245+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged update your scene_2021\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged update your scene_2021\"}]"

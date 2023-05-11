@@ -21,15 +21,15 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
+      @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      @level = Script.cache_find_level(params[:level_id].to_i)
+      @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -44,7 +44,7 @@ class ActivitiesController < ApplicationController
     #  - post_milestone is true, AND (we post on failed runs, or this was successful), or
     #  - this is the final level in the script - we always post on final level
     unless (post_milestone && (post_failed_run_milestone || solved)) || final_level
-      head 503
+      head :service_unavailable
       return
     end
 
@@ -54,10 +54,11 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
+          share_filtering_error = exception
         end
       end
 
@@ -98,7 +99,7 @@ class ActivitiesController < ApplicationController
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable lesson, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
-        return head 403
+        return head :forbidden
       end
     end
 
@@ -135,18 +136,16 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
-  private
-
-  def milestone_logger
+  private def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_progress_for_user
+  private def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 
@@ -180,7 +179,7 @@ class ActivitiesController < ApplicationController
         time_spent: time_since_last_milestone
       )
 
-      is_sublevel = !@script_level.levels.include?(@level)
+      is_sublevel = @script_level.levels.exclude?(@level)
 
       # The level might belong to more than one bubble choice parent level.
       # Find the one that's in this script.
@@ -213,19 +212,9 @@ class ActivitiesController < ApplicationController
         )
       end
     end
-
-    passed = ActivityConstants.passing?(test_result)
-    if lines > 0 && passed
-      # TODO: The user's total line count is no longer shown anywhere in the UI.
-      # Remove this as part of LP-2291 to clean up the code that stores and
-      # maintains the total line count.
-      current_user.total_lines += lines
-      # bypass validations/transactions/etc
-      User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
-    end
   end
 
-  def track_progress_in_session
+  private def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
@@ -239,7 +228,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def log_milestone(level_source, params)
+  private def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id

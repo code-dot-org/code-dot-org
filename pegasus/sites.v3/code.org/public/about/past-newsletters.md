@@ -10,6 +10,9 @@ style_min: true
 # <a name="previous"></a>Past Newsletters from Code.org
 
 ### 2022
+- <a href="http://go.pardot.com/webmail/153401/875017981/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">July/August 2022</a>
+- <a href="http://go.pardot.com/webmail/153401/863249962/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">May/June 2022</a>
+- <a href="http://go.pardot.com/webmail/153401/855143621/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">March/April 2022</a>
 - <a href="http://go.pardot.com/webmail/153401/838745674/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">January/February 2022</a>
 
 ### 2021

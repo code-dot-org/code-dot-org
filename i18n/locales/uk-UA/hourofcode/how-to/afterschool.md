@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # Як вчити одну Годину Коду в позашкільних класах і клубах
 
-### Join the movement and introduce your students to computer science with these steps.
+### Приєднуйтесь до ініціативи та познайомте ваших учнів з інформатикою, виконавши наведені нижче кроки.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Обчислювальне мислення допомагає розвивати навички розв’язання проблем, логіку та креативність. А технології змінюють кожну галузь на планеті. Сьогодні учні мають вчитися не лише використовувати технології, а й створювати їх. Здобуття цих навичок у ранньому віці є основною для успішної кар’єри у 21-му столітті в будь-якій сфері діяльності.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -16,7 +16,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 * * *
 
-## 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Оберіть урок
 
@@ -65,7 +65,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Спробуймо розібратися разом». – «Технології не завжди працюють так, як ми хочемо». – «Вивчення програмування – це як вивчення нової мови. Неможливо одразу навчитися вільно спілкуватися нею».
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

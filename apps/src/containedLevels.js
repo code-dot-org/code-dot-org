@@ -10,7 +10,7 @@ import queryString from 'query-string';
 const PostState = {
   None: 'None',
   Started: 'Started',
-  Finished: 'Finished'
+  Finished: 'Finished',
 };
 
 let postState = PostState.None;
@@ -34,7 +34,7 @@ export function getContainedLevelResultInfo() {
     testResult: TestResults.CONTAINED_LEVEL_RESULT,
     program: containedResult.result.response,
     feedback: containedResult.feedback,
-    submitted: false
+    submitted: false,
   };
 }
 
@@ -59,13 +59,21 @@ export function getValidatedResult() {
 export function postContainedLevelAttempt({
   hasContainedLevels,
   attempts,
-  onAttempt
+  onAttempt,
 }) {
-  if (!hasContainedLevels || attempts !== 1) {
+  if (!hasContainedLevels) {
+    return;
+  }
+  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
+  const levelAllowsMultipleAttempts = !!codeStudioLevels.getLevel(
+    codeStudioLevels.getLevelIds()[0]
+  )?.allowMultipleAttempts;
+  const canRetryLevel = isTeacher || levelAllowsMultipleAttempts;
+
+  if (!canRetryLevel && attempts !== 1) {
     return;
   }
 
-  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
   if (isTeacher) {
     if (!!queryString.parse(window.location.search).user_id) {
       // if we have a user_id in the search params, we are a viewing student
@@ -93,7 +101,7 @@ export function postContainedLevelAttempt({
         callOnPostCompletion();
         callOnPostCompletion = null;
       }
-    }
+    },
   });
 }
 
@@ -120,19 +128,19 @@ export function initializeContainedLevel() {
   if (!store.getState().instructions.hasContainedLevels) {
     return;
   }
+  let runButton = $('#runButton');
+  let stepButton = $('#stepButton');
+  const disabledRunButtonHandler = e => {
+    $(window).trigger('attemptedRunButtonClick');
+  };
   if (codeStudioLevels.hasValidContainedLevelResult()) {
     // We already have an answer, don't allow it to be changed, but allow Run
     // to be pressed so the code can be run again.
     codeStudioLevels.lockContainedLevelAnswers();
   } else {
     // No answers yet, disable Run button until there is an answer
-    let runButton = $('#runButton');
-    let stepButton = $('#stepButton');
     runButton.prop('disabled', true);
     stepButton.prop('disabled', true);
-    const disabledRunButtonHandler = e => {
-      $(window).trigger('attemptedRunButtonClick');
-    };
     $('#runButton').bind('click', disabledRunButtonHandler);
 
     callouts.addCallouts([
@@ -142,32 +150,31 @@ export function initializeContainedLevel() {
         localized_text: locale.containedLevelRunDisabledTooltip(),
         qtip_config: {
           codeStudio: {
-            canReappear: true
+            canReappear: true,
           },
           position: {
             my: 'top left',
-            at: 'bottom center'
-          }
+            at: 'bottom center',
+          },
         },
-        on: 'attemptedRunButtonClick'
-      }
+        on: 'attemptedRunButtonClick',
+      },
     ]);
     store.dispatch(setAwaitingContainedResponse(true));
-
-    codeStudioLevels.registerAnswerChangedFn(() => {
-      // Ideally, runButton would be declaratively disabled or not based on redux
-      // store state. We might be close to a point where we can do that, but
-      // because runButton is also mutated outside of React (here and elsewhere)
-      // we need to worry about cases where the DOM gets out of sync with the
-      // React layer
-      const validResult = codeStudioLevels.hasValidContainedLevelResult();
-      runButton.prop('disabled', !validResult);
-      stepButton.prop('disabled', !validResult);
-      if (validResult) {
-        runButton.qtip('hide');
-        $('#runButton').unbind('click', disabledRunButtonHandler);
-      }
-      getStore().dispatch(setAwaitingContainedResponse(!validResult));
-    });
   }
+  codeStudioLevels.registerAnswerChangedFn(() => {
+    // Ideally, runButton would be declaratively disabled or not based on redux
+    // store state. We might be close to a point where we can do that, but
+    // because runButton is also mutated outside of React (here and elsewhere)
+    // we need to worry about cases where the DOM gets out of sync with the
+    // React layer
+    const validResult = codeStudioLevels.hasValidContainedLevelResult();
+    runButton.prop('disabled', !validResult);
+    stepButton.prop('disabled', !validResult);
+    if (validResult) {
+      runButton.qtip('hide');
+      $('#runButton').unbind('click', disabledRunButtonHandler);
+    }
+    getStore().dispatch(setAwaitingContainedResponse(!validResult));
+  });
 }

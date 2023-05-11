@@ -3,38 +3,38 @@ import React, {PureComponent} from 'react';
 import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 import color from '@cdo/apps/util/color';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 
 export const styles = {
   frameworkName: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontWeight: 'bold',
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   categoryShortcode: {
     fontFamily: "'Gotham 7r', sans-serif",
     fontWeight: 'bold',
     color: color.link_color,
     ':hover': {
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
   },
   standardShortcode: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontWeight: 'bold',
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   summary: {
-    padding: 3
+    padding: 3,
   },
   standard: {
-    padding: 3
-  }
+    padding: 3,
+  },
 };
 
 export const ExpandMode = {
   NONE: 'none',
-  ALL: 'all'
+  ALL: 'all',
 };
 
 const expandModeShape = PropTypes.oneOf([
@@ -42,7 +42,7 @@ const expandModeShape = PropTypes.oneOf([
   ExpandMode.NONE,
 
   // This component and all its descendants should be expanded.
-  ExpandMode.ALL
+  ExpandMode.ALL,
 ]);
 
 /**
@@ -96,7 +96,7 @@ export default class LessonStandards extends PureComponent {
 }
 LessonStandards.propTypes = {
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
 };
 
 class Framework extends PureComponent {
@@ -136,7 +136,7 @@ class Framework extends PureComponent {
 Framework.propTypes = {
   name: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
 };
 
 class UnconnectedParentCategory extends PureComponent {
@@ -183,7 +183,7 @@ class UnconnectedParentCategory extends PureComponent {
 UnconnectedParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
 };
 const ParentCategory = Radium(UnconnectedParentCategory);
 
@@ -213,7 +213,7 @@ class UnconnectedCategory extends PureComponent {
 UnconnectedCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
 };
 const Category = Radium(UnconnectedCategory);
 

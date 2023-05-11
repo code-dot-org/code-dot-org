@@ -2,39 +2,37 @@
 title: Col·laboradors
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+El Comitè de Revisió de l'Hora del Codi és el responsable de gestionar l'Hora del Codi.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+El [Comitè de Revisió]({{ urls/review_committee }}) consta de 12 educadors que es dediquen o s'han dedicat a l'ensenyament des d'infantil fins a batxillerat i que assessoren i recomanen activitats a partir d'un pla d'estudis establert per un comitè assessor. Aquests educadors revisen les activitats que els alumnes fan de manera autònoma i els plans de lliçons dels professors proporcionats per centenars de socis, i n'avaluen el valor educatiu, la capacitat de guanyar-se l'interès dels alumnes i el potencial d'atraure a grups d'alumnes diversos.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+La feina i la dedicació del comitè han contribuït a l'èxit de l'Hora de Codi i a la seva visió d'oferir una porta d'entrada a les ciències informàtiques per a tots els alumnes.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
-
-# Major Partners and Corporate Supporters
+# Socis principals i col·laboradors corporatius
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Socis internacionals de Code.org
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Pla d'estudis i col·laboradors de tutorials
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Socis d'infraestructura i eines
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Col·laboradors addicionals
 
 {{ partners/additional_partners }}
 

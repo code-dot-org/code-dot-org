@@ -43,7 +43,7 @@ export function scrollTo(element, scrollTop, animate = 400) {
     if (!$elem.is(':animated')) {
       $elem.animate(
         {
-          scrollTop: scrollTop
+          scrollTop: scrollTop,
         },
         animate
       );
@@ -111,11 +111,12 @@ function removeCommentNodes(root) {
  * Converts any inline XML in the container element into embedded
  * readonly BlockSpaces
  * @param {Element} xmlContainer The element in which to search for XML
+ * @param {Boolean} isRtl True if we are displaying in RTL
  */
-export function convertXmlToBlockly(xmlContainer) {
+export function convertXmlToBlockly(xmlContainer, isRtl) {
   const xmls = xmlContainer.getElementsByTagName('xml');
 
-  Array.prototype.forEach.call(xmls, function(xml) {
+  Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
       return;
@@ -144,13 +145,13 @@ export function convertXmlToBlockly(xmlContainer) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
       {
         noScrolling: true,
-        inline: inline
+        inline: inline,
+        rtl: isRtl,
       }
     );
 
@@ -162,7 +163,7 @@ export function convertXmlToBlockly(xmlContainer) {
     // resize after initial render, so we also want to resize the container
     // whenever a blockSpaceChange results in the content size changing.
     let metrics = blockSpace.getMetrics();
-    Blockly.addChangeListener(blockSpace, function() {
+    Blockly.addChangeListener(blockSpace, function () {
       const oldHeight = metrics.contentHeight;
       const oldWidth = metrics.contentWidth;
       const newHeight = blockSpace.getMetrics().contentHeight;

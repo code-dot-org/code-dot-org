@@ -5,6 +5,7 @@ en:
       Actions: Actions
       Advanced: Advanced
       Behaviors: Behaviors
+      'Behaviors ': 'Behaviors '
       Boolean: Boolean
       Brushes: Brushes
       Category: Category
@@ -14,6 +15,7 @@ en:
       Conditionals: Conditionals
       Dancers: Dancers
       Default: Default
+      Effects: Effects
       Events: Events
       Functions: Functions
       'Functions ': 'Functions '

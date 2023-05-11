@@ -24,3 +24,4 @@ wrong 'mystery("on")'
 wrong 'mystery("nnoo")'
 wrong 'mystery("nono")'
 right 'mystery("noon")'
+allow_multiple_attempts true

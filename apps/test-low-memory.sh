@@ -34,7 +34,8 @@ else
   exit 1
 fi
 
-GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
+GRUNT_NODE_FLAGS="--node-options=--max-old-space-size=${MEM_PER_PROCESS}"
+GRUNT_CMD="npx $GRUNT_NODE_FLAGS grunt"
 $GRUNT_CMD preconcat
 
 echo "Running with parallelism: ${PROCS}"

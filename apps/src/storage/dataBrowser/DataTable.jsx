@@ -8,17 +8,16 @@ import DataEntryError from './DataEntryError';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 import {showWarning} from '../redux/data';
-import * as dataStyles from './dataStyles';
-import color from '../../util/color';
+import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
 import {WarningType} from '../constants';
+import style from './data-table.module.scss';
+import classNames from 'classnames';
 
-const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
 
 const INITIAL_STATE = {
@@ -27,7 +26,7 @@ const INITIAL_STATE = {
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
   currentPage: 0,
-  showError: false
+  showError: false,
 };
 
 class DataTable extends React.Component {
@@ -40,7 +39,7 @@ class DataTable extends React.Component {
     tableRecords: PropTypes.array.isRequired,
 
     // from redux dispatch
-    onShowWarning: PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -66,7 +65,7 @@ class DataTable extends React.Component {
         () => {
           this.setState({
             editingColumn: columnName,
-            pendingAdd: false
+            pendingAdd: false,
           });
         },
         msg => {
@@ -79,7 +78,7 @@ class DataTable extends React.Component {
 
   deleteColumn = columnToRemove => {
     this.setState({
-      pendingColumn: columnToRemove
+      pendingColumn: columnToRemove,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -103,7 +102,7 @@ class DataTable extends React.Component {
   renameColumn = (oldName, newName) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: oldName
+      pendingColumn: oldName,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -129,7 +128,7 @@ class DataTable extends React.Component {
     this.setState({
       editingColumn: null,
       pendingAdd: false,
-      pendingColumn: null
+      pendingColumn: null,
     });
   };
 
@@ -144,7 +143,7 @@ class DataTable extends React.Component {
   coerceColumn = (columnName, columnType) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: columnName
+      pendingColumn: columnName,
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -196,7 +195,9 @@ class DataTable extends React.Component {
       <div>
         <DataEntryError isVisible={this.state.showError} />
         <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
-          <table style={styles.table} className="uitest-data-table-content">
+          <table
+            className={classNames(style.table, 'uitest-data-table-content')}
+          >
             <tbody>
               <tr>
                 {columnNames.map(columnName => (
@@ -223,21 +224,26 @@ class DataTable extends React.Component {
                   />
                 ))}
                 {!this.props.readOnly && (
-                  <th style={styles.addColumnHeader}>
+                  <th
+                    className={classNames(
+                      style.addColumnHeader,
+                      dataStyles.headerCell
+                    )}
+                  >
                     {this.state.pendingAdd ? (
                       <FontAwesome icon="spinner" className="fa-spin" />
                     ) : (
                       <FontAwesome
                         id="addColumnButton"
                         icon="plus"
-                        style={styles.plusIcon}
+                        className={style.plusIcon}
                         onClick={this.addColumn}
                       />
                     )}
                   </th>
                 )}
                 {!this.props.readOnly && (
-                  <th style={dataStyles.headerCell}>Actions</th>
+                  <th className={dataStyles.headerCell}>{msg.actions()}</th>
                 )}
               </tr>
 
@@ -280,38 +286,16 @@ class DataTable extends React.Component {
   }
 }
 
-const styles = {
-  addColumnHeader: [
-    dataStyles.headerCell,
-    {
-      width: 19
-    }
-  ],
-  table: {
-    minWidth: MIN_TABLE_WIDTH
-  },
-  plusIcon: {
-    alignItems: 'center',
-    borderRadius: 2,
-    backgroundColor: 'white',
-    color: color.teal,
-    cursor: 'pointer',
-    display: 'inline-flex',
-    height: 18,
-    justifyContent: 'center',
-    width: 18
-  }
-};
-
+export const UnconnectedDataTable = DataTable;
 export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],
-    tableName: state.data.tableName || ''
+    tableName: state.data.tableName || '',
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));
-    }
+    },
   })
-)(Radium(DataTable));
+)(DataTable);

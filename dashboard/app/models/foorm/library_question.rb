@@ -25,7 +25,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
 
   validate :validate_question
   validates :question_name, :question, presence: true
-  validates_uniqueness_of :question_name, scope: [:library_name, :library_version]
+  validates_uniqueness_of :question_name, case_sensitive: true, scope: [:library_name, :library_version]
 
   after_commit :write_to_file
 
@@ -52,8 +52,8 @@ class Foorm::LibraryQuestion < ApplicationRecord
     end
 
     Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
-  rescue StandardError => e
-    errors.add(:question, e.message)
+  rescue StandardError => exception
+    errors.add(:question, exception.message)
   end
 
   def write_to_file

@@ -4,3 +4,5 @@ wrong 'The button background will change to each of the colors in the list'
 right 'The button background will be violet'
 wrong 'The button will change background color each time it is clicked'
 wrong 'The button background will not change'
+
+allow_multiple_attempts false

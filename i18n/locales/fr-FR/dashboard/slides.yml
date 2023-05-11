@@ -19,7 +19,7 @@ fr:
       6:
         text: "Le but de ton premier programme est de guider un Angry Bird dans un labyrinthe, afin qu’il attrape un Cochon Vert."
       7:
-        text: "À gauche se trouve le labyrinthe où ton programme est exécuté. Les instructions de chaque puzzle figurent sous le labyrinthe."
+        text: "À gauche se trouve le labyrinthe où ton programme est exécuté. Les instructions de chaque casse-tête figurent sous le labyrinthe."
       8:
         text: "La boîte à outils du milieu a les commandes pour Angry Bird. Tu vas utiliser celles-ci pour construire ton code."
       9:
@@ -36,16 +36,16 @@ fr:
       1:
         text: "Salut, je suis JR ! Chaque équipe de voitures de course a besoin d'informaticiens pour gagner. Ils analysent les données de la voiture pour la faire aller plus vite."
       2:
-        text: "Dans ces puzzles, tu seras un artiste qui dessine une ligne derrière eux partout où ils vont."
+        text: "Dans ces casse-têtes, tu seras un artiste qui dessine une ligne derrière eux partout où ils vont."
       3:
         text: "Ce bloc dit « Avance de 100 pixels. » Les pixels sont en réalité de tous petits points sur ton écran."
       4:
-        text: "Ce bloc dit « Tourner à droite de 90 degrés. » Cela fera tourner ton artiste du même angle que les blocs « Tourner » dans les puzzles du labyrinthe."
+        text: "Ce bloc dit « Tourner à droite de 90 degrés. » Cela fera tourner ton artiste du même angle que les blocs « Tourner » dans les casse-têtes du labyrinthe."
       5:
         text: "Clique sur la flèche dans l'un de ces blocs pour changer le nombre de pas en avant ou de virages que l'artiste fera. Joue un peu avec l’artiste pour te familiariser avec ces nouveaux blocs."
     farmer_intro:
       1:
-        text: "Salut, je suis Paola ! Dans ces puzzles, tu es un fermier qui doit complètement niveler son terrain avant de commencer à planter."
+        text: "Salut, je suis Paola ! Dans ces casse-têtes, tu es un fermier qui doit complètement niveler son terrain avant de commencer à planter."
       2:
         text: "Tu dois l'aider à enlever tous les tas de terre et remplir tous les trous."
       3:
@@ -55,39 +55,39 @@ fr:
     flappy_intro:
       1:
         image: 'notes/flappy01.jpg'
-        text: "Salut, je suis Katie ! Une des choses les plus excitantes à propos de l'informatique est qu'un programme informatique peut être interactif."
+        text: "Salut ! Moi, c'est Katie. L'un des aspects les plus passionnants de l'informatique, c'est qu'un programme informatique peut être interactif."
       2:
         image: 'notes/flappy02.jpg'
-        text: "Chaque fois que quelqu'un clique ou appuie ou tapote sur un ordinateur ou un téléphone, ça génère un ÉVÈNEMENT, et il y a un code qui décide quoi faire quand un ÉVÈNEMENT a lieu."
+        text: "À chaque fois que quelqu'un clique ou appuie ou tape sur un ordinateur ou un téléphone, ça génère un ÉVÈNEMENT, et il y a du code qui décide quoi faire lorsqu'un ÉVÈNEMENT a lieu."
       3:
         image: 'notes/flappy03.jpg'
-        text: "Par exemple, tu pourrais avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui dit «quand on clique sur la souris, joue un son.» "
+        text: "Par exemple, on pourrait avoir un GESTIONNAIRE D’ÉVÉNEMENTS qui indique « quand on clique sur la souris, jouer un son ». "
       4:
         image: 'notes/flappy04.jpg'
-        text: "As-tu déjà entendu parler du jeu Flappy l’oiseau? En utilisant les Gestionnaires d'événements, nous allons apprendre à programmer notre version personnalisée de Flappy l’oiseau!"
+        text: "As-tu déjà entendu parler du jeu FlappyBird ? En utilisant les Gestionnaires d'Événements, on va apprendre à programmer notre version personnalisée de FlappyBird !"
       5:
         image: 'notes/flappy05.jpg'
-        text: "Le code que tu vas écrire implique de glisser et de déposer des blocs qui représentent des commandes pour l'ordinateur. Mais en fait, chacun de ces blocs est représenté par du code réel."
+        text: "Pour écrire ton code, on va te demander de faire glisser et de déposer des blocs qui représentent des commandes pour l'ordinateur. Mais sous l'envers du décor, chacun de ces blocs représente en fait du vrai code."
       6:
         image: 'notes/flappy06.jpg'
-        text: "Si tu regardes dans l'espace de travail, il y a quelques blocs verts qui sont déjà remplis pour toi - ce sont des «Gestionnaires d'événements.» "
+        text: "Si tu regardes dans l'espace de travail, il y a quelques blocs verts qui sont déjà remplis pour toi - ce sont les « gestionnaires d'événements ». "
       7:
         image: 'notes/flappy07.jpg'
-        text: "Si tu veux que l'oiseau BATTE DES AILES quand tu CLIQUES sur la souris, tu peux le faire en attachant le bloc «BATTRE DES AILES» au gestionnaire d'événements approprié; et maintenant dans ton jeu, chaque fois que tu cliqueras sur la souris, l'oiseau battra des ailes."
+        text: "Si tu veux que l'oiseau BATTE DES AILES quand on CLIQUE sur la souris, tu peux ce faire en attachant le bloc « BATTRE DES AILES » au gestionnaire d'événement adapté ; désormais, dans ton jeu, à chaque fois qu'on clique sur la souris, l'oiseau battra des ailes."
       8:
         image: 'notes/flappy08.jpg'
-        text: "Dans chaque puzzle de cette activité, nous allons introduire des nouveaux types d'événements sous la forme de blocs verts sur l'espace de travail, et tu pourras décider quel est le bloc approprié à ajouter en réponse à ces événements."
+        text: "Dans chaque casse-tête de cette activité, on va introduire des nouveaux types d'événements sous forme de blocs verts dans l'espace de travail, et tu pourras décider quel est le bloc adapté à ajouter en réponse à ces événements."
       9:
         image: 'notes/flappy09.jpg'
-        text: "Quand tu vois une flèche déroulante comme ça, cela veut dire que tu peux changer les paramètres - comme par exemple, quel son jouer quand Flappy l’oiseau touche le sol."
+        text: "Quand tu vois une flèche ouvrant un menu déroulant comme ceci, cela veut dire que tu peux changer les paramètres – comme quel son jouer quand Flappy l’oiseau touche le sol."
       10:
         image: 'notes/flappy10.jpg'
-        text: "Dans le puzzle final, tu seras capable de créer ton propre jeu et de le partager avec tes amis. Amuse-toi bien!"
+        text: "Lors du casse-tête final, tu seras à même de créer ton propre jeu et de le partager avec tes amis. Amuse-toi bien !"
     loop_times:
       1:
         text: "Salut, je suis Mark ! Découvrons les boucles. En utilisant les boucles, tu peux dire à un ordinateur de répéter chaque série d'actions une ou plusieurs fois, jusqu'à des milliers ou même des milliards de fois."
       2:
-        text: "Dans ce puzzle, nous voulons faire avancer l'oiseau de 5 cases pour arriver au cochon."
+        text: "Dans ce casse-tête, nous voulons faire avancer l'oiseau de 5 cases pour arriver au cochon."
       3:
         text: "Nous pouvons tout simplement utiliser le nouveau bloc « Répéter »."
       4:
@@ -100,13 +100,13 @@ fr:
         text: "Amuse-toi en utilisant ton nouveau bloc « Répéter »!"
     loop_until:
       1:
-        text: "Salut, je suis Chris. Avant de rejoindre le Heat de Miami, je suis allé à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc, le bloc «Répéter jusqu'à»."
+        text: "Salut, moi, c'est Chris. Avant de rejoindre le Heat de Miami, j'ai étudié l'informatique à la fac de Georgia Tech. Viens, on essaie notre nouveau bloc, le bloc « répéter jusqu'à »."
       2:
-        text: "Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour arriver au cochon?"
+        text: "Et si on ne savait pas de combien l'oiseau devait se déplacer pour arriver jusqu'au cochon ?"
       3:
-        text: "Si nous mettons un bloc « Avancer » à l'intérieur d'un bloc «Répéter jusqu'à», l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
+        text: "Si on met un bloc « avancer » au sein d'un bloc « répéter jusqu'à », l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
       4:
-        text: 'Et ceci est important: comme avant, on peut mettre plusieurs blocs à l''intérieur du bloc « Répéter jusqu’à », et ils seront tous répétés.'
+        text: 'Et c''est important : tout comme avant, on peut mettre plusieurs blocs à l''intérieur du bloc « répéter jusqu’à », et ils seront tous répétés.'
     if:
       1:
         text: "Salut, je suis Bill ! Nous allons apprendre un nouveau concept fondamental : les instructions «Si». C'est de cette manière que les ordinateurs prennent des décisions."
@@ -153,11 +153,11 @@ fr:
         text: "Amusons-nous avec les fonctions!"
     loop_while:
       1:
-        text: "Salut, je suis Makinde ! Découvrons le bloc «Tant que». "
+        text: "Salut, moi, c'est Makinde ! On va découvrir le bloc « tant que ». "
       2:
-        text: "Le bloc « Tant que » fera tout ce que tu mets dedans TANT QUE la condition énoncée au-dessus reste VRAIE."
+        text: "Le bloc « tant que » exécutera tout ce que tu mets dedans TANT QUE la condition énoncée en haut reste VRAIE."
       3:
-        text: "Par exemple, si la fermière se tient sur un tas de terre, elle continuera à enlever 1 pelletée TANT QUE il reste un tas de terre sous elle."
+        text: "Par exemple, si la fermière se tient sur un tas de terre, elle continuera à enlever 1 pelletée à la fois TANT QU'il reste toujours un tas de terre en dessous d'elle."
     loop_for:
       1:
         text: "Salut, je suis Trina, et je travaille pour Pixar. J'ai travaillé sur plusieurs films, y compris celui de Shrek."
@@ -186,7 +186,7 @@ fr:
         text: "Tu peux maintenant utiliser le bloc « Mathématique » pour saisir différents chiffres et dessiner des triangles de différentes tailles."
     hoc_wrapup:
       1:
-        text: "Félicitations ! Avec le dernier puzzle que tu viens de résoudre, tu viens d'écrire un code qui dit à N'IMPORTE QUEL robot comment trouver son chemin dans un labyrinthe sans ramifications ou dans un tunnel de n'importe quelle longueur, que ce soit un zombie, un oiseau, un engin spatial ou même une voiture qui se conduit toute seule."
+        text: "Félicitations ! Avec le dernier casse-tête que tu viens de résoudre, tu viens d'écrire un code qui dit à N'IMPORTE QUEL robot comment trouver son chemin dans un labyrinthe sans ramifications ou dans un tunnel de n'importe quelle longueur, que ce soit un zombie, un oiseau, un engin spatial ou même une voiture qui se conduit toute seule."
       2:
         text: "Les concepts de base que tu as utilisés sont au cœur de chaque programme ou application que tu essaieras.  Nous avons découvert les boucles «Répéter», les instructions «Répéter jusqu'à», les instructions « Si », et les instructions « Si-Sinon »."
       3:
@@ -202,7 +202,7 @@ fr:
       2:
         text: "Tu vas créer des flocons de neige et des motifs tout en patinant ; et ainsi tu créeras un monde magique hivernal que tu pourras partager avec tes amis."
       3:
-        text: "Dans la prochaine heure, tu apprendras les fondamentaux de la programmation. La programmation se fait traditionnellement avec du texte, mais nous allons utiliser Blockly, qui utilise des blocs visuels que tu peux glisser et déposer pour écrire des programmes. C’est ainsi que même les étudiants à l’université apprennent les fondamentaux. Mais en fait, tu crées toujours du code."
+        text: "Dans la prochaine heure, tu apprendras les fondamentaux de la programmation. La programmation se fait traditionnellement avec du texte, mais nous allons utiliser Blockly, qui utilise des blocs visuels que tu peux glisser et déposer pour écrire des programmes. C’est ainsi que même les élèves à l’université apprennent les fondamentaux. Mais en fait, tu crées toujours du code."
       4:
         text: "Un programme est un ensemble d'instructions qui dit à un ordinateur quoi faire. Construisons un code ou un programme qui aidera Elsa à créer une ligne simple. Nous utiliserons cela plus tard pour créer des motifs plus complexes."
       5:
@@ -214,14 +214,14 @@ fr:
       8:
         text: "Ici, le bloc « Avancer » dit: « Avancer par 100 pixels ». Lorsque nous appuyons sur « Exécuter», que se passe-t-il ? Elsa avance d’un certain montant de pixels sur l'écran, 100 pixels en fait ! Les pixels sont en réalité de tous petits carrés sur ton écran."
       9:
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et lorsque nous utilisons ce bloc «Tourner à droite», cela fait tourner Elsa un certain nombre de degrés. Tu peux jouer avec ces blocs pour faire tourner Elsa comme tu veux. L'angle est mesuré à partir du chemin devant Elsa. Ainsi, c’est un virage à 90 degrés. Et c’est un virage à 120 degrés."
+        text: "L'autre bloc que nous avons dans ce casse-tête dit « Tourner à droite de 90 degrés. » Et lorsque nous utilisons ce bloc «Tourner à droite», cela fait tourner Elsa un certain nombre de degrés. Tu peux jouer avec ces blocs pour faire tourner Elsa comme tu veux. L'angle est mesuré à partir du chemin devant Elsa. Ainsi, c’est un virage à 90 degrés. Et c’est un virage à 120 degrés."
       10:
         text: "N'oublie pas, tu peux changer le nombre de pixels et de degrés en cliquant sur les flèches qui se trouvent à leurs côtés."
     frozen_loops:
       1:
         text: "Salut, je suis Paola ! Les ordinateurs sont vraiment excellents lorsqu’il s’agit de répéter des actions. Tu peux compter jusqu'à 10, 20 ou 100. Mais un ordinateur peut compter jusqu’à un milliard ou mille milliards. Il ne s'ennuiera pas et cela ne lui prendra que quelques secondes. Que ce soit pour compter, ou dessiner, ou autre choses -- les ordinateurs peuvent répéter des choses des centaines, voire des milliards de fois."
       2:
-        text: "En programmation, nous appelons cela une boucle. Une boucle est la façon dont tu répètes ton code encore et encore. Pour le prochain puzzle, ton but est d'aider Anna à créer un carré avec le bloc « Répéter »."
+        text: "En programmation, nous appelons cela une boucle. Une boucle est la façon dont tu répètes ton code encore et encore. Pour le prochain casse-tête, ton but est d'aider Anna à créer un carré avec le bloc « Répéter »."
       3:
         text: "Tous les blocs de code que tu places à l'intérieur du bloc « Répéter » seront répétés en séquence, autant de fois que tu le souhaites."
       4:
@@ -242,7 +242,7 @@ fr:
       6:
         text: "Tu dispose maintenant d'un nouveau bloc que tu peux utiliser plusieurs fois pour créer plusieurs carrés."
       7:
-        text: "Beaucoup de formes simples peuvent être utilisées pour créer des motifs plus complexes. Dans le prochain puzzle, le code que tu as écrit récemment pour faire un cercle est à ta disposition en tant que nouvelle fonction qui peut faire des cercles de différentes tailles. Peux-tu l'utiliser pour aider Elsa à créer de beaux motifs complexes dans la neige ?"
+        text: "Beaucoup de formes simples peuvent être utilisées pour créer des motifs plus complexes. Dans le prochain casse-tête, le code que tu as écrit récemment pour faire un cercle est à ta disposition en tant que nouvelle fonction qui peut faire des cercles de différentes tailles. Peux-tu l'utiliser pour aider Elsa à créer de beaux motifs complexes dans la neige ?"
     playlab_intro:
       1:
         text: "Nous allons créer des jeux à l'aide du Labo de jeux. Les bons jeux ont une histoire et chaque histoire présente des acteurs. Nous allons apprendre comment faire pour que nos acteurs - des sorcières, des extra-terrestres et des animaux - parlent, se déplacent et interagissent entre eux. À la fin de ce tutoriel, tu pourras créer un jeu à partir de zéro et le partager avec tes amis."
@@ -253,14 +253,14 @@ fr:
       4:
         text: "Pour commencer, tu devras lier tes blocs au bloc orange «Lors du lancement». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et alors ils s'emboîteront."
       5:
-        text: "Dans le premier puzzle, notre acteur est un pingouin et on va lui faire dire « Bonjour! » en faisant glisser le bloc «Dire» dehors, en le liant au bloc « Lors du lancement » et en écrivant «Bonjour». Nous pouvons également faire bouger le pingouin en utilisant les blocs « Déplacer vers la droite » et « Déplacer vers la gauche ». Lorsque tes blocs sont en place, clique sur le bouton «Exécuter» pour voir ce que tu as programmé."
+        text: "Dans le premier casse-tête, notre acteur est un pingouin et on va lui faire dire « Bonjour! » en faisant glisser le bloc «Dire» dehors, en le liant au bloc « Lors du lancement » et en écrivant «Bonjour». Nous pouvons également faire bouger le pingouin en utilisant les blocs « Déplacer vers la droite » et « Déplacer vers la gauche ». Lorsque tes blocs sont en place, clique sur le bouton «Exécuter» pour voir ce que tu as programmé."
       6:
         text: "Commençons, et à la fin tu seras capable de créer ton propre jeu avec toutes sortes de joueurs qui peuvent interagir, devenir contents ou tristes, marquer des points, ou jeter des boules de feu, ou même se faire disparaître. Tout dépend de toi et du jeu que tu souhaites faire."
     playlab_events:
       1:
         text: "Maintenant, nous allons apprendre quelque chose que tous les programmeurs de jeux utilisent tous les jours. On les appelle des événements. Un événement dit à ton programme d’écouter lorsque quelque chose se passe. Lorsque cette chose se passe, il effectue une action."
       2:
-        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Quelques exemples d'évènements : guetter un clic de la souris, une touche fléchée ou une tape sur l'écran."
       3:
         text: "Ici, nous allons faire en sorte que le robot venu de l’espace salue les terriens lorsqu'un joueur clique sur lui. Nous allons utiliser le bloc « Quand clic » et lui attacher le bloc «Dire». Lorsque le joueur clique sur le robot venu de l'espace, tout ce qui est attaché à l’événement « Quand clic » sera effectué. Que dit ton extra-terrestre ?"
       4:
@@ -271,7 +271,7 @@ fr:
       2:
         text: "Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer cela dans le bloc « Répéter à l’infini »."
       3:
-        text: "Dans le prochain puzzle, notre objectif est d'aider l'Assistant à patrouiller le long des frontières du royaume, à gauche et à droite en continu. Apprendre comment les commandes de répétition fonctionnent te permettra d'économiser beaucoup de temps plus tard lorsque tu développeras ton propre jeu."
+        text: "Dans le prochain casse-tête, notre objectif est d'aider l'Assistant à patrouiller le long des frontières du royaume, à gauche et à droite en continu. Apprendre comment les commandes de répétition fonctionnent te permettra d'économiser beaucoup de temps plus tard lorsque tu développeras ton propre jeu."
     C1_artist_intro:
       1:
         text: "Ce sont tes blocs de dessin. Utilise le bon bloc pour déplacer l'artiste là où il doit se rendre pour remplir les lignes grises."
@@ -279,11 +279,11 @@ fr:
         text: "Ce sont des blocs de saut. Lorsque tu les utilises, ton artiste se déplace sans dessiner, alors utilise-les pour sauter jusqu'à la prochaine ligne grise."
     C1_bee_level_intro:
       1:
-        text: "Les abeilles ne sont-elles pas super cool ? Dans cette prochaine série de puzzles, ton objectif est d'aider l'abeille à aller jusqu’aux fleurs, recueillir le nectar des fleurs et voler jusqu’au nid d'abeilles pour faire du miel. Tu devras utiliser les blocs « Recueillir du nectar » et «Faire du miel» pour cet exercice."
+        text: "Les abeilles ne sont-elles pas super cool ? Dans cette prochaine série de casse-têtes, ton objectif est d'aider l'abeille à aller jusqu’aux fleurs, recueillir le nectar des fleurs et voler jusqu’au nid d'abeilles pour faire du miel. Tu devras utiliser les blocs « Recueillir du nectar » et «Faire du miel» pour cet exercice."
       2:
         text: "Chaque fleur possède un nombre différent de nectars : 1, 2, 3 ou plus. Nous savons combien de nectars il y a dans les fleurs rouges, grâce au petit nombre dans le coin. Alors n’oublie pas de prendre tout le nectar de la fleur avant d’avancer. De même, chaque nid d'abeilles ne peut contenir que cette quantité de miel : 1, 2, 3 ou plus. Alors assure-toi de faire autant de miel que ce que peut contenir le nid d'abeilles."
       3:
-        text: "Si tu es en mesure de prendre tout le nectar et de faire tout le miel, tu réussis et passes au prochain niveau. Dans le cas contraire, tu dois réessayer ce puzzle. Joue un peu avec le puzzle pour ressentir ce que c’est d’être un programmeur !"
+        text: "Si tu es en mesure de prendre tout le nectar et de faire tout le miel, tu réussis et passes au prochain niveau. Dans le cas contraire, tu dois réessayer ce casse-tête. Joue un peu avec le casse-tête pour ressentir ce que c’est d’être un programmeur !"
     C1_bee_loops:
       1:
         text: "Une boucle est une répétition de l'activité. Alors, pour entrer inspecter dans une ruche, je regarde un cadre et puis je le remets, alors je répète cette même activité plusieurs fois. C'est faire des boucles, ou faire la même activité plusieurs fois."
@@ -346,7 +346,7 @@ fr:
         text: "Réparons cela en ajoutant un autre bloc «Vers l'ouest» et en appuyant sur « Exécuter » pour voir si tu as réussi. Oui, tu as réussi !"
     C1_maze_intro_sequencing:
       1:
-        text: "Pour ce puzzle, tu dois amener l’oiseau jusqu’au cochon. Regarde le puzzle et pense à comment tu le réaliseras."
+        text: "Pour ce casse-tête, tu dois amener l’oiseau jusqu’au cochon. Regarde le casse-tête et pense à comment tu le réaliseras."
       2:
         text: "Tu dois faire glisser les blocs de la boîte à outils vers l'espace de travail. Assure-toi que c'est sous le bloc « Lors du lancement » et lorsque tu penses que tu as la bonne solution, alors tu peux cliquez sur « Exécuter » et regarder l'oiseau aller jusqu'au cochon."
     C1_maze_loops:
@@ -380,13 +380,13 @@ fr:
         text: "Wow, c'était amusant ! Heure du dîner. Je me déconnecte maintenant. Je suis impatient de me reconnecter pour voir ce que je peux encore découvrir."
     C1_pair_programming:
       1:
-        text: "Aujourd'hui, nous allons découvrir la programmation en binôme. Dans la programmation en binôme, tu travailles en équipe. Pourquoi deux personnes devraient-elles utiliser un ordinateur ? Parce que deux têtes valent mieux qu'une. Dans la programmation en binôme, toi et ton partenaire allez vous asseoir ensemble à un ordinateur et allez travailler tous les deux sur le même projet."
+        text: "Aujourd'hui, on va découvrir la programmation en binôme. Dans la programmation en binôme, on travail en équipe. Pourquoi deux personnes devraient-elles utiliser un ordinateur ? Parce que deux têtes valent mieux qu'une. Dans la programmation en binôme, tu vas t'asseoir avec ton partenaire à un ordinateur et vous allez travailler tous les deux sur le même projet."
       2:
-        text: "Dans la programmation en binôme, une personne est le pilote et l'autre personne est le navigateur, tout comme pour conduire une voiture. Le pilote est assis à l'ordinateur et c’est lui qui utilise le clavier et la souris ou l'écran tactile et qui contrôle les principales actions de l'ordinateur. L'autre personne est le navigateur. Le navigateur aide le conducteur en répondant aux questions du conducteur et en soulignant des problèmes potentiels ou des erreurs."
+        text: "Dans la programmation en binôme, une personne est le pilote et l'autre personne est le navigateur, tout comme quand on conduit une voiture. Le pilote est assis à l'ordinateur et c’est lui qui utilise le clavier et la souris ou l'écran tactile et qui contrôle les principales actions de l'ordinateur. L'autre personne est le navigateur. Le navigateur aide le conducteur en répondant aux questions du conducteur et en soulignant des problèmes potentiels ou des erreurs."
       3:
-        text: "La communication est la clé de la réussite de la programmation en binôme. Pas d'insultes, sois respectueux, ne sois pas un navigateur autoritaire, parce que personne n'aime les mouches du coche. Toi et ton partenaire devez toujours communiquer. Le pilote peut expliquer ce qu'il ou elle fait. Et le navigateur peut suggérer quoi faire ensuite."
+        text: "La communication est la clé de la réussite de la programmation en binôme. Pas d'insultes, sois respectueux, ne sois pas un navigateur qui fait son petit chef, parce que personne n'aime les mouches du coche. Il vous faut toujours communiquer entre partneraires. Le pilote peut expliquer ce qu'il ou elle fait. Et le navigateur peut suggérer quoi faire ensuite."
       4:
-        text: "Le navigateur doit penser à la vue d'ensemble et le pilote se concentre sur les détails. Les deux rôles sont importants. La programmation en binôme consiste à travailler ensemble en tant qu’équipe."
+        text: "Le navigateur doit penser à la vue d'ensemble et le pilote se concentrer sur les détails. Les deux rôles sont importants. Dans la programmation en binôme, tout est question de travailler ensemble, en équipe."
     C1_planting_seed:
       1:
         text: "Cette leçon s'appelle Planter une graine et elle va nous aider à comprendre les algorithmes. Les algorithmes sont des instructions spécifiques qui expliquent l'ordre dans lequel faire quelque chose. Même les choses quotidiennes, comme manger le petit déjeuner ou se brosser les dents, sont des algorithmes qui exigent de petites étapes pour que ces actions soient faites."
@@ -409,7 +409,7 @@ fr:
         text: "J’indiquais au chien de venir dire «Salut», mais alors le chat a eu peur et donc s'est enfui. «Ah!» si on avait plus de temps, on aurait pu inventer une fin heureuse. La fin!"
     C1_spelling_bee_intro:
       1:
-        text: "Voici le niveau du concours d'orthographe. Utilise les pièces du puzzle pour déplacer l'abeille. Lorsqu'elle se déplace, elle recueille les lettres pour épeler les mots."
+        text: "Voici le niveau du concours d'orthographe. Utilise les pièces du casse-tête pour déplacer l'abeille. Lorsqu'elle se déplace, elle recueille les lettres pour épeler les mots."
       2:
         text: "Vois si tu peux épeler le mot qu’on te montre dans la zone sous la scène. Mais attention à l’abeille ! La déplacer dans la mauvaise direction ajoutera des lettres que tu ne veux pas."
     C1_zuck_repeat_loop:
@@ -425,15 +425,15 @@ fr:
         text: "Encore une chose, tu peux mettre autant de commandes que tu veux à l'intérieur du bloc « Répéter ». Ainsi dans cet exemple, tu lui dis d’avancer et de tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien!"
     C2_artist_intro:
       1:
-        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens compétents en informatique - à cause de la quantité de données recueillies par les voitures et de la nécessité d'avoir des gens capable d'écrire des programmes afin de savoir comment continuer à être performant."
+        text: "On ne serait même pas qualifié pour la course si on n'avait pas des gens compétents en informatique, à cause de la quantité de données recueillies par les voitures et du besoin d'avoir des gens capables d'écrire des programmes qui nous permettent de voir comment être de plus en plus performant."
       2:
-        text: "Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
+        text: "Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
       3:
-        text: "Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de tous petits carrés sur ton écran."
+        text: "Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés sur ton écran."
       4:
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner l’artiste comme tu veux. C’est un virage à 90 degrés."
+        text: "L'autre bloc que nous avons dans ce casse-tête fait tourner à droite de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de 90 degrés."
       5:
-        text: "Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté des chiffres pour les pixels et les degrés. Amuse-toi à dessiner avec ton artiste !"
+        text: "Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et de degrés. Amuse-toi bien en dessinant avec ton artiste !"
     C2_bee_conditionals:
       1:
         text: "Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou du miel qui est inférieur, égal ou supérieur à un certain nombre, ALORS il faut faire quelque chose."
@@ -502,9 +502,9 @@ fr:
         text: "J'utilise des algorithmes dans mon travail. Si j'écris toutes les étapes, je peux recréer ce même morceau encore une fois, ou je peux apprendre à quelqu'un à le faire. Mets le verre dans le fourneau, il fusionne - suis le reste des instructions pour faire le bol. Les algorithmes te donnent une feuille de route pour effectuer des choses."
     C2_artist_loops:
       1:
-        text: "Ici nous allons utiliser le bloc « Répéter » pour nous aider à sauter des étapes lorsque nous programmons notre artiste. Nous avons déjà quelques blocs dehors sur notre scène, mais ils sont juste là pour nous aider à démarrer."
+        text: "Ici on va utiliser le bloc « répéter » pour nous aider à sauter des étapes en programmant notre artiste. On a déjà quelques blocs en jeu, mais ils sont juste là pour permettre qu'on s'y mette. "
       2:
-        text: "Pour faire boucler 4 fois ces blocs afin de dessiner le carré complet, nous devons juste faire glisser le bloc «Répéter» et mettre les blocs «Avancer» et «Tourner à droite» à l'intérieur du bloc «Répéter». Lorsque nous appuyons sur « Exécuter », l'artiste répète ces étapes quatre fois pour compléter le carré."
+        text: "Pour mettre en boucle quatre fois ces blocs afin de dessiner le carré complet, on à just juste à sortir le bloc « répéter » et mettre les blocs « avancer » et « tourner à droite » à l'intérieur du bloc « répéter ». Quand on appuie sur « Démarrer », l'artiste répètera ces étapes quatre fois pour compléter le carré."
     C2_bee_loops:
       1:
         text: "Une boucle est une répétition de l'activité. En entrant dans une ruche pour inspecter, j'examine un cadre, et puis je le remets. Je répète cette même activité plusieurs fois. C'est faire des boucles, ou faire la même activité plusieurs fois."
@@ -562,20 +562,20 @@ fr:
         text: "Dans le programme que nous avons construit, nous avons appris comment dessiner un carré en avançant et en tournant quatre fois. Nous pouvons prendre cette fonction et lui donner un nom comme «Dessiner un carré» pour que chaque fois qu’on en a envie, on puisse simplement dire « Dessiner un carré », et l’ordinateur appellera cette fonction, ce code. Il le fera pour nous. Nous avons ajouté cette notion dans notre langage de programmation."
     C3_artist_intro:
       1:
-        text: "Tu ne serais même pas qualifié pour la course si tu n'avais pas les gens compétents en informatique - à cause de la quantité de données recueillies par les voitures et de la nécessité d'avoir des gens capable d'écrire des programmes afin de savoir comment continuer à être performant."
+        text: "On ne serait même pas qualifié pour la course si on n'avait pas des gens compétents en informatique, à cause de la quantité de données recueillies par les voitures et du besoin d'avoir des gens capables d'écrire des programmes qui nous permettent de voir comment être de plus en plus performant."
       2:
-        text: "Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
+        text: "Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour dessiner différentes formes. Partout où va ton artiste, il dessinera une ligne derrière lui."
       3:
-        text: "Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de tous petits carrés sur ton écran."
+        text: "Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici, le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés sur ton écran."
       4:
-        text: "L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de 90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner l’artiste comme tu veux. C’est un virage à 90 degrés."
+        text: "L'autre bloc que nous avons dans ce casse-tête fait tourner à droite de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de 90 degrés."
       5:
-        text: "Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté des chiffres pour les pixels et les degrés. Amuse-toi à dessiner avec ton artiste !"
+        text: "Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et de degrés. Amuse-toi bien en dessinant avec ton artiste !"
     C3_artist_nested_loops:
       1:
-        text: "Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Par exemple, ici, nous avons déjà le code pour dessiner un triangle de 100 pixels de côté en utilisant le bloc « Répéter » calé sur trois, une fois pour chaque côté du triangle."
+        text: "Quand on met une boucle à l'intérieur d'une autre boucle, on appelle ça une boucle imbriquée. Par exemple, ici, on a déjà le code pour dessiner un triangle de 100 pixels de côté en utilisant le bloc « répéter » calé sur trois fois, une fois pour chaque côté du triangle. "
       2:
-        text: "Mais nous voulons dessiner six triangles. Pour faire cela, nous allons prendre cette boucle et la placer dans un autre bloc « Répéter jusqu’à». Plutôt cool!"
+        text: "Mais nous, on veut dessiner six triangles. Pour ce faire, on va prendre cette boucle et la placer au sein d'autre bloc « répéter jusqu’à ». Plutôt cool, non ? "
     C3_bee_conditionals:
       1:
         text: "Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou du miel qui est inférieur, égal ou supérieur à un certain nombre, ALORS il faut faire quelque chose."
@@ -601,7 +601,7 @@ fr:
         text: "Dans cet exemple, notre fonction s’appelle «Recueillir 2 nectars», ce bloc vert juste là. Nous savons à quoi ressemble « Recueillir 2 nectars » en regardant cette boîte grise qui donne la définition de la fonction. Si nous regardons à l'intérieur, le bloc « Recueillir 2 nectars » va « Recueillir du nectar » et puis recueillir à nouveau du nectar. Regarde toujours ce qui est à l'intérieur de la boîte grise, afin que tu saches ce que ces blocs de fonction verts peuvent faire."
     C3_bee_nested_loops:
       1:
-        text: "Maintenant nous allons utiliser les boucles imbriquées avec l'abeille. On nous a donné un code de démarrage qui dit à l'abeille d’avancer et d’obtenir le nectar trois fois et puis de tourner à droite. Prenons ce morceau entier de code et imbriquons-le à l'intérieur d’un autre bloc « Répéter » et réglons la répétition à trois fois. Fait !"
+        text: "Maintenant, on va se servir de boucles imbriquées avec l'abeille. On commence d'emblée avec du code qui indique à l'abeille d’avancer et de recueillir trois fois le nectar, puis de tourner à droite. On va prendre tout ce bout de code et l'imbriquer dans un autre bloc « répéter », et régler à trois fois la répétition. Voilà, c'est fait !"
     C3_bounce:
       1:
         text: "Tu vas maintenant créer ton propre jeu de casse-brique à rebond, que tu pourras partager avec tes amis. Super cool !"
@@ -700,48 +700,48 @@ fr:
         text: "Dans cet exemple, nous allons dire, «Si c'est une fleur, recueillir tout le nectar», et ensuite utiliser un autre bloc pour dire «Si c'est un nid d'abeilles, faire du miel». La-la !"
     C4_conditionals:
       1:
-        text: "Nous avons un nouveau bloc qui s’appelle le bloc « Si/Sinon ». Il s'agit d'une instruction conditionnelle, tout comme le bloc « Si » que tu as utilisé dans le puzzle auparavant. Mais il y a maintenant une nouvelle partie en bas qui dit « Sinon ». Le bloc « Si/Sinon » laisse l'abeille prendre une décision entre deux séries d'actions. Si l'abeille est sur une fleur, l'abeille va faire l'ensemble des actions que tu as mis dans la première partie où il est dit « Faire ». Si l'abeille n’est pas sur une fleur, l'abeille va faire l'ensemble des actions que tu mets dans le créneau « Sinon »."
+        text: "On a ici un nouveau bloc qu'on appelle le bloc « Si/Sinon ». Il s'agit d'une instruction conditionnelle, tout comme le bloc « Si » dont tu t'es servi dans les casse-têtes précédents. Mais il y a maintenant une nouvelle partie en bas qui indique « sinon ». Le bloc « Si/Sinon » permet à l'abeille de choisir entre deux séries d'actions. Si l'abeille se retrouve sur une fleur, l'abeille exécutera l'ensemble des actions que tu as mis dans la première partie où il est indiqué de « faire ». Si l'abeille n’est pas sur une fleur, elle exécutera l'ensemble d'actions que tu as mis dans l'espace où il est indiqué « sinon »."
       2:
-        text: "Les instructions « Si » sont la façon dont les ordinateurs sont capables de prendre des décisions. Les humains mettent en place des conditions pour l'ordinateur qui disent: si l’ordinateur rencontre cette situation, alors il doit faire cette action. « Sinon », qui signifie simplement dans le cas contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si/Sinon » dit « Si à une fleur ». Mais la partie supérieure de notre bloc pourrait dire d’autres choses, comme « Si le nectar est égal à 2 » ou « S'il y a un chemin devant », notre bloc se comportera de la même manière. Si l’instruction dans la partie supérieure est vraie, alors elle fera la première série d'actions. Mais si l'instruction dans la partie supérieure est fausse, alors elle fera la deuxième série d'actions."
+        text: "Les instructions « Si » sont ce qui permet aux ordinateurs de prendre des décisions. Les humains mettent en place des conditions pour un ordinateur qui indiquent que si l'ordinateur rencontre telle situation, alors il doit faire ceci. « Sinon », ce qui signifie simplement dans le cas contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si/Sinon » indique « si à une fleur ». Mais la partie supérieure de notre bloc pourrait indiquer autre chose, comme « si le nectar est égal à 2 » ou « s'il y a un chemin devant », et notre bloc se comportera de la même manière. Si l'affirmation dans la partie supérieure est vraie, alors il exécutera la première série d'actions. Mais si l'affirmation dans la partie supérieure est fausse, alors il exécutera la deuxième série d'actions."
     C4_for_loops:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter."
       3:
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui ferait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
-        text: "De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois."
+        text: "Par ailleurs, dans une « boucle pour », tu peux incrémenter le compteur par un nombre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, par 4 ou même par un montant qui change à chaque passage."
     C4_for_loops_bee:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter."
       3:
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui ferait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
-        text: "De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois."
+        text: "Par ailleurs, dans une « boucle pour », tu peux incrémenter le compteur par un nombre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, par 4 ou même par un montant qui change à chaque passage."
     C4_for_loops_no_bee:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner. L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter. L'avantage d'utiliser une vraie « boucle pour » au lieu du bloc « répéter » est que tu peux vraiment voir la variable « compteur » et l’utiliser dans ta boucle."
     C4_function_create:
       1:
         text: "Maintenant que tu as modifié des blocs de fonctions, il est temps de créer un nouveau bloc de fonction à partir de zéro. C'est vraiment simple. Tu verras que la boîte à outils a une catégorie appelée «fonctions». Si tu cliques dessus, tu verras un bouton orange appelé «Créer une fonction». Cliquer dessus affiche l'éditeur de fonction que tu as déjà utilisé pour modifier des blocs de fonctions existants."
       2:
         text: "Tout comme avant, tu as commencé en nommant ta fonction, en rédigeant une description de ce que la fonction doit faire. Par exemple, elle doit dessiner un carré ou dessiner un triangle, et ensuite faire glisser des blocs depuis la boîte à outils vers l'espace de travail blanc ci-dessous. N'oublie pas de glisser ces blocs à l'intérieur du bloc d’emballage vert de la fonction."
       3:
-        text: "Lorsque tu as terminé, clique sur Enregistrer et Quitter. Cela te ramènera à l’espace de travail principal du puzzle. La nouvelle fonction que tu as créée apparaîtra comme un bloc vert dans la catégorie fonctions de ta boîte à outils. Fais glisser et dépose ce bloc dans l'espace de travail principal et utilise-le comme n’importe quel autre bloc pour résoudre le puzzle."
+        text: "Lorsque tu as terminé, clique sur Enregistrer et Quitter. Cela te ramènera à l’espace de travail principal du casse-tête. La nouvelle fonction que tu as créée apparaîtra comme un bloc vert dans la catégorie fonctions de ta boîte à outils. Fais glisser et dépose ce bloc dans l'espace de travail principal et utilise-le comme n’importe quel autre bloc pour résoudre le casse-tête."
     C4_function_edit:
       1:
         text: "Une des choses géniales dans la programmation informatique c’est qu'une fois qu'on a appris à un ordinateur comment faire une action, on peut toujours rappeler cette fonction. Tu lui donnes un nom et ensuite tu l’appelles. C'est vraiment comme prolonger le langage."
       2:
         text: "Dans le programme que nous avons construit, nous avons appris comment dessiner un carré en avançant et en tournant quatre fois. Nous pouvons prendre cette fonction et lui donner un nom comme « Dessiner un carré » pour que chaque fois qu’on en a envie, on puisse simplement dire « Dessiner un carré », et l’ordinateur appellera cette fonction, ce code et il le fera pour nous. Nous avons ajouté cette notion dans notre langage de programmation."
       3:
-        text: "Dans ce puzzle, nous avons déjà créé une fonction « Dessiner un carré » pour toi. Tu la verras dans la boîte à outils comme un bloc vert. Ce que tu devras faire est d'écrire le même code que tu as écrit avant pour dessiner un carré et le mettre dans cette fonction. Pour ce faire, clique sur l'option Modifier dans le bloc vert « Dessiner un carré ». Cela va ouvrir l'éditeur de fonction. L'éditeur de fonction comporte trois parties. Un endroit où tu donnes un nom à ta fonction. Cela apparaîtra sur le bloc vert avant cette fonction. Puis écris une courte description de ce que ta fonction doit faire."
+        text: "Dans ce casse-tête, nous avons déjà créé une fonction « Dessiner un carré » pour toi. Tu la verras dans la boîte à outils comme un bloc vert. Ce que tu devras faire est d'écrire le même code que tu as écrit avant pour dessiner un carré et le mettre dans cette fonction. Pour ce faire, clique sur l'option Modifier dans le bloc vert « Dessiner un carré ». Cela va ouvrir l'éditeur de fonction. L'éditeur de fonction comporte trois parties. Un endroit où tu donnes un nom à ta fonction. Cela apparaîtra sur le bloc vert avant cette fonction. Puis écris une courte description de ce que ta fonction doit faire."
       4:
-        text: "Dans ce cas, elle doit dessiner un carré. L'espace blanc ci-dessous est l'espace de travail et il fonctionne exactement comme l'espace de travail que tu utilises déjà. Fais glisser et dépose les blocs de la boîte à outils dans cet espace de travail. N'oublie pas de mettre ces blocs qui créent un carré à l'intérieur du bloc d’emballage vert de la fonction. Lorsque tu as terminé, clique sur Enregistrer et Quitter. Cela te ramènera à l’espace de travail principal du puzzle. Maintenant, tu peux utiliser le bloc de fonction « Dessiner un carré » comme n’importe quel autre bloc pour résoudre le puzzle."
+        text: "Dans ce cas, elle doit dessiner un carré. L'espace blanc ci-dessous est l'espace de travail et il fonctionne exactement comme l'espace de travail que tu utilises déjà. Fais glisser et dépose les blocs de la boîte à outils dans cet espace de travail. N'oublie pas de mettre ces blocs qui créent un carré à l'intérieur du bloc d’emballage vert de la fonction. Lorsque tu as terminé, clique sur Enregistrer et Quitter. Cela te ramènera à l’espace de travail principal du casse-tête. Maintenant, tu peux utiliser le bloc de fonction « Dessiner un carré » comme n’importe quel autre bloc pour résoudre le casse-tête."
     C4_function_parameters:
       1:
         text: "Voici une fonction qui dessine un carré avec des côtés de 50 pixels. C'est très bien, mais si je voulais dessiner un carré avec des côtés de 50 pixels et un autre carré avec des côtés de 100 pixels ? Nous ne devrions pas avoir à faire deux fonctions séparées qui font presque la même chose. Au lieu de cela, nous pouvons utiliser une fonction avec un paramètre."
@@ -767,7 +767,7 @@ fr:
         text: "Multiplier cinquante par deux dans ta tête n’est pas difficile, mais les ordinateurs sont vraiment bons pour faire des maths, alors il faut leur laisser faire les calculs autant que possible. Si j'avais simplement utilisé une variable appelée «Hauteur», alors j'aurais pu facilement changer la hauteur à cinquante, et ensuite changer mon algorithme pour indiquer à l'artiste de monter de la hauteur voulue, de tourner à droite, et ensuite d'avancer de deux fois la hauteur; ce qui nous donne un rectangle deux fois plus large que haut."
     C4_unplugged_algorithms:
       1:
-        text: "Cette leçon s’appelle les Algorithmes Tangram. Un Tangram est un puzzle à sept pièces qui peuvent être assemblées pour créer d'autres formes. Tu vas utiliser un algorithme pour expliquer à ton partenaire comment assembler le puzzle."
+        text: "Cette leçon s’appelle les Algorithmes Tangram. Un Tangram est un casse-tête à sept pièces qui peuvent être assemblées pour créer d'autres formes. Tu vas utiliser un algorithme pour expliquer à ton partenaire comment assembler le casse-tête."
       2:
         text: "Un algorithme est simplement une liste d’étapes que tu peux suivre pour effectuer une tâche. Nous les utilisons tous les jours avec des choses comme des listes de courses et des recettes. Si ton algorithme est simple, il y a beaucoup de façons de l'interpréter et celui qui effectue cet algorithme peut ne pas obtenir exactement ce que tu voulais. Si tu veux t’assurer que tout le monde termine avec exactement la même chose, alors ton algorithme doit être détaillé et très précis."
       3:
@@ -815,11 +815,11 @@ fr:
         text: "Chaque fois que tu dois stocker un élément d'information pour plus tard, nous utilisons une variable. Disons que nous devons compter le nombre de fois où l'utilisateur a envoyé un message sur Twitter ou qu’il a «twitté», ou gazouillé en français. Chaque fois que l'utilisateur envoie un message sur Twitter, nous allons ajouter 1 à ce nombre et chaque fois que l'utilisateur supprime l’un de ses «gazouillis» (pour utiliser un terme français), nous allons réduire ce nombre de 1. Chaque fois que nous devons savoir combien de fois l'utilisateur a gazouillé, nous regarderons seulement cette variable."
     C4_variables_artist:
       1:
-        text: "Une variable est un conteneur dans lequel tu peux stocker une valeur. Lorsque tu utilises cette variable dans un algorithme, elle ouvre le conteneur et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
+        text: "Une variable est un récipient dans lequel tu peux stocker une valeur. Quand tu utilises cette variable dans un algorithme, elle ouvre le récipient et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
-        text: "Par exemple, si tu voulais écrire un algorithme permettant de dire «Joyeux Anniversaire, tu as 10 ans !» à mon petit frère, c'est très bien maintenant, mais quand j’exécuterai l’algorithme l'année prochaine je voudrais lui dire, «Joyeux Anniversaire, tu as 11 ans !» Je pourrais créer une variable appelée «Âge» pour stocker l'âge de mon frère et écrire mon algorithme pour dire Joyeux Anniversaire, tu as « Âge » à la place. Comme la variable peut changer, chaque année, je peux mettre à jour la variable « Âge » égale à « Âge » plus 1."
+        text: "Par exemple, si je voulais écrire un algorithme pour dire : « Joyeux Anniversaire, tu vas avoir 10 ans ! » à mon petit frère, ce serait très bien pour l'heure, mais quand j’exécuterais l’algorithme l'année prochaine, j'aurais envie qu'il y soit indiqué : « Joyeux Anniversaire, tu vas avoir 11 ans ! ». Je pourrais donc créer une variable que j'appelerais « âge » pour stocker l'âge de mon frère et faire que mon algorithme indique plutôt : « Joyeux Anniversaire, tu as « âge » ». Comme les variables peuvent changer, chaque année, je pourrais mettre à jour la variable « âge » pour qu'elle soit égale à « âge » plus 1."
       3:
-        text: "Dans ce puzzle, nous allons utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « Avancer » examinera cette variable «Longueur» pour voir à quelle valeur tu l’as réglée."
+        text: "Dans ce casse-tête, on va utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « avancer » examinera cette variable « longueur » pour voir à quelle valeur tu l’as fixée."
     C4_variables_playlab:
       1:
         text: "Une variable est un conteneur dans lequel tu peux stocker une valeur. Lorsque tu utilises cette variable dans un algorithme, elle ouvre le conteneur et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
@@ -836,7 +836,7 @@ fr:
       1:
         text: "Alors dans quelle classes es-tu ? CE1. Seconde. CP. J'étais en quatrième quand j'ai appris à programmer. J'ai eu mon premier ordinateur quand j'étais en sixième. Ce qui m’amuse, c’est d’être capable de réparer les problèmes des gens. Tu peux t’exprimer, tu peux construire des choses à partir d'une idée."
       2:
-        text: "L'informatique est la base de beaucoup de choses que les professionnels et les étudiants à l’université vont faire pour les vingt ou trente prochaines années. J’aime programmer parce que j’aime aider les gens. J'ai l'occasion de construire quelque chose qui va simplifier la vie des gens. Je pense que c'est la chose que nous avons qui se rapproche le plus d’un super-pouvoir. Le démarrage est la partie la plus importante. Je suis moi-même un débutant et je veux que tu apprennes avec moi."
+        text: "L'informatique est la base de beaucoup de choses que les professionnels et les élèves à l’université vont faire pour les vingt ou trente prochaines années. J’aime programmer parce que j’aime aider les gens. J'ai l'occasion de construire quelque chose qui va simplifier la vie des gens. Je pense que c'est la chose que nous avons qui se rapproche le plus d’un super-pouvoir. Le démarrage est la partie la plus importante. Je suis moi-même un débutant et je veux que tu apprennes avec moi."
       3:
         text: "Je suis John Vechey, je suis l'un des cofondateurs de PopCap Games. Nous faisons des jeux comme Plants vs. Zombies, Bejeweled et Peggle. L’important dans un jeu, ce n'est pas à quel point ton code est parfait ou à quel point ton art est parfait - c’est ce qu’on ressent en jouant et à quel point c’est amusant. Tu ne peux obtenir cette sensation qu’en l'essayant ou en le faisant; ou encore, en apprenant, en adaptant et en réitérant tes propres compétences à créer des jeux."
       4:
@@ -844,27 +844,27 @@ fr:
       5:
         text: "Ton écran est divisé en trois parties principales. Sur la gauche, il y a l'espace de jeu, où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites ci-dessous. La zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code. La zone blanche à droite est l'espace de travail, et c'est ici que nous allons construire notre programme."
       6:
-        text: "Pour commencer, tu devras lier tes blocs au bloc orange «Lors du lancement». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et ainsi, ils s'emboîteront. Dans ce premier puzzle, Hiro est Acteur 1 et Baymax est Acteur 2. Nous devons aider Hiro à rejoindre Baymax en tirant le bloc « Déplacer vers la droite » dehors et en le liant au bloc « Lors du lancement ». Lorsque tu as tes blocs en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: "Pour commencer, tu devras lier tes blocs au bloc orange «Lors du lancement». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et ainsi, ils s'emboîteront. Dans ce premier casse-tête, Hiro est Acteur 1 et Baymax est Acteur 2. Nous devons aider Hiro à rejoindre Baymax en tirant le bloc « Déplacer vers la droite » dehors et en le liant au bloc « Lors du lancement ». Lorsque tu as tes blocs en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
       7:
         text: "Commence, et à la fin tu pourras créer ton propre jeu avec ces incroyables acteurs qui peuvent interagir, marquer des points, lancer des microbots, des cerises, des poêles, des étincelles et de la glace... et se faire disparaitre. Ça ne dépend que de toi !"
     infinity_playlab_repeat_forever:
       1:
         text: "Tu imagines si tu devais répéter quelque chose encore et toujours? Heureusement tu n’auras jamais à faire ça parce que les ordinateurs savent vraiment bien répéter les choses. C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu."
       2:
-        text: "Alors si on voulait qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous placerions ces blocs à l’intérieur du bloc « Répéter à l’infini ». Dans le prochain puzzle , notre objectif est d'aider Anna à monter et à descendre en permanence. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
+        text: "Alors si on voulait qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous placerions ces blocs à l’intérieur du bloc « Répéter à l’infini ». Dans le prochain casse-tête , notre objectif est d'aider Anna à monter et à descendre en permanence. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
     tutorial_puzzle_challenge:
       1:
         text: "Que veux-tu faire quand tu seras grande Olivia ? Devenir astronaute. Sais-tu ce qu’est un programmeur informatique ? Oui euh non. Hum, attends, quoi ? Je ne sais pas vraiment comment l'expliquer mais la programmation informatique est plutôt simple. C’est un ensemble d’instructions comme une recette; tu dois les suivre pas à pas pour obtenir le résultat souhaité."
       2:
         text: "Je peux changer le nombre de pixels et la longueur de la ligne à l'aide de ce menu déroulant. C’était long comment déjà ? Tu peux revoir les instructions en regardant sous le bouton « Exécuter ». Ici j'ai utilisé le bloc « Avancer » et je vais sélectionner 100 pixels. Je peux supprimer un bloc en le faisant glisser dans la boîte à outils ou dans la poubelle. Remettons-le en place."
       3:
-        text: "Exécute le code en appuyant sur « Exécuter ». Eh bien, cela n’a pas fonctionné ! Je vais appuyer sur Réinitialiser et essayer de comprendre ce qui ne marche pas. Tu peux essayer un puzzle autant de fois que tu le souhaites et sauter des puzzles et y revenir plus tard. Assure-toi de faire de ton mieux et de ne pas abandonner. Ajoutons un autre « Avancer ». Cela ne fonctionne toujours pas. Je peux placer un bloc entre d’autres blocs."
+        text: "Exécute le code en appuyant sur « Exécuter ». Eh bien, cela n’a pas fonctionné ! Je vais appuyer sur Réinitialiser et essayer de comprendre ce qui ne marche pas. Tu peux essayer un casse-tête autant de fois que tu le souhaites et sauter des casse-têtes et y revenir plus tard. Assure-toi de faire de ton mieux et de ne pas abandonner. Ajoutons un autre « Avancer ». Cela ne fonctionne toujours pas. Je peux placer un bloc entre d’autres blocs."
       4:
-        text: "Nous allons prendre un bloc «Tourner» et le placer entre les blocs «Avancer». Tourner à gauche de 45 degrés. Exécutons-le à nouveau. Remise à zéro, exécution, génial ! Voici un autre puzzle. Parfois, on te donne un code de démarrage à compléter. Ici, je dois ajouter les longueurs et les degrés appropriés."
+        text: "Nous allons prendre un bloc «Tourner» et le placer entre les blocs «Avancer». Tourner à gauche de 45 degrés. Exécutons-le à nouveau. Remise à zéro, exécution, génial ! Voici un autre casse-tête. Parfois, on te donne un code de démarrage à compléter. Ici, je dois ajouter les longueurs et les degrés appropriés."
       5:
-        text: "Tu peux parfois supprimer accidentellement le code de démarrage. Que fais-tu alors ? Tu peux appuyer sur «Supprimer le puzzle» et tout recommencer. Je vais faire glisser ce pavé numérique dans les différentes zones de pixels. Sélectionne 100 pour les pixels, 45 pour les degrés et de nouveau 100 pour les pixels. Génial ! Voici l'abeille de Code Studio. J'ai besoin de déplacer l'abeille vers chaque fleur et recueillir du nectar."
+        text: "Tu peux parfois supprimer accidentellement le code de démarrage. Que fais-tu alors ? Tu peux appuyer sur «Supprimer le casse-tête» et tout recommencer. Je vais faire glisser ce pavé numérique dans les différentes zones de pixels. Sélectionne 100 pour les pixels, 45 pour les degrés et de nouveau 100 pour les pixels. Génial ! Voici l'abeille de Code Studio. J'ai besoin de déplacer l'abeille vers chaque fleur et recueillir du nectar."
       6:
-        text: "La première fleur est à trois blocs, alors j’ai besoin de trois « Avancer ». 1, 2, 3. Puis un bloc « Recueillir du nectar », puis un autre bloc « Recueillir du nectar ». Eh bien, cela n’a pas fonctionné ! Je vais placer un autre bloc « Avancer » entre « Recueillir du nectar » et «Exécuter» à nouveau. Youpi, ça marche ! Tu viens d'apprendre comment utiliser l’artiste de Code Studio et les puzzles des abeilles. Bonne chance pour le Défi du puzzle de Code Studio."
+        text: "La première fleur est à trois blocs, alors j’ai besoin de trois « Avancer ». 1, 2, 3. Puis un bloc « Recueillir du nectar », puis un autre bloc « Recueillir du nectar ». Eh bien, cela n’a pas fonctionné ! Je vais placer un autre bloc « Avancer » entre « Recueillir du nectar » et «Exécuter» à nouveau. Youpi, ça marche ! Tu viens d'apprendre comment utiliser l’artiste de Code Studio et les casse-têtes des abeilles. Bonne chance pour le Défi du casse-tête de Code Studio."
     unplug1:
       1:
         text: "Que veux-tu faire quand tu seras grande Olivia ? Euh, un astronaute ! Sais-tu ce qu’est un programmeur informatique ? Oui, euh, non. Euh, quoi, quoi ? Je ne sais pas vraiment comment l'expliquer. Le programmation informatique est assez simple. C'est un ensemble d'instructions, comme une recette. Tu dois les suivre étape par étape pour obtenir le résultat souhaité."
@@ -928,7 +928,7 @@ fr:
       1:
         text: "Cette activité explique de manière simple comment l’Internet fonctionne. Nous expliquons toute la terminologie de façon simple, afin que les élèves puissent simuler la transmission de messages, comme un e-mail."
       2:
-        text: "Les élèves transmettront les messages tout en faisant semblant d'être un des trois modes de transmission. L’Internet sans fil, ADSL ou fibre optique. Les étudiants qui représentent l’Internet sans fil devront porter le message qu'ils transmettent sur leur tête, car le wifi est le moyen de transmission qui est le plus susceptible de laisser tomber certaines informations."
+        text: "Les élèves transmettront les messages tout en faisant semblant d'être un des trois modes de transmission. L’Internet sans fil, ADSL ou fibre optique. Les élèves qui représentent l’Internet sans fil devront porter le message qu'ils transmettent sur leur tête, car le wifi est le moyen de transmission qui est le plus susceptible de laisser tomber certaines informations."
       3:
         text: "Les élèves faisant semblant d'être l’ADSL ou le câble porteront le message sur le dos de leur main, où ils sont légèrement moins susceptibles de laisser tomber des informations. Et les élèves représentant la fibre optique les transporteront avec les deux mains. Cette activité est une excellente façon de comprendre quelque chose que beaucoup d'entre nous utilisent tous les jours."
     unplug11:
@@ -965,7 +965,7 @@ fr:
       2:
         text: "Nous pouvons écrire des centaines de commandes sans avoir à les trouver dans la boîte à outils ou à les faire glisser. Comme tu es en train d’apprendre, écrire peut être moins rapide au début, mais nous voulions que tu essayes."
       3:
-        text: "Dans le coin supérieur droit de ton espace de travail, tu peux cliquer sur le bouton afficher le texte sur n'importe quel puzzle afin de passer des blocs à du code sous forme de texte."
+        text: "Dans le coin supérieur droit de ton espace de travail, tu peux cliquer sur le bouton afficher le texte sur n'importe quel casse-tête afin de passer des blocs à du code sous forme de texte."
       4:
         text: "Dans la leçon suivante, nous te ferons commencer en mode saisie. Ici, tu peux toujours faire glisser le bloc de la boîte à outils, ou tu peux écrire le nom de la commande avec ton clavier. Quand tu commences à écrire, tu verras les noms des commandes possibles s’afficher dessous au fur et à mesure. Au lieu d’écrire tout le nom de la commande, tu peux sélectionner l'une d'entre elles pour aller plus vite. Dans mon travail, j'utilise cette fonctionnalité de saisie semi-automatique tout le temps quand j’écris du code."
       5:
@@ -995,15 +995,15 @@ fr:
         text: "Maintenant, au lieu d'écrire tout le code pour contrôler notre droïde à l'avance, nous pouvons laisser R2-D2 réagir aux événements «bouton pressé» pour le déplacer sur l'écran. Étape par étape, ton jeu devient plus interactif."
     starwars_congrats:
       1:
-        text: "Salut, mon nom est Alice et je dirige les équipes produits et ingénierie ici chez Code.org. J'ai travaillé sur ce tutoriel avec lequel tu joues en ce moment."
+        text: "Salut, moi, c'est Alice et je dirige les équipes produits et ingénierie ici chez Code.org. J'ai travaillé sur le tutoriel auquel tu es en train de jouer en ce moment."
       2:
-        text: "Tu viens de terminer le dernier niveau. Félicitations ! Tu as appris tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant, il n’y a plus d'instructions, plus de puzzles à résoudre. Tu peux créer ton propre jeu et tu choisiras comment celui-ci va fonctionner. Une dernière chose, tu as déverrouillé de nouveaux sons et de nouvelles commandes pour faire encore plus de choses."
+        text: "Tu viens d'arriver au dernier niveau. Félicitations ! Tu viens d'apprendre tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant, il n’y a plus d'instructions, plus de casse-têtes à résoudre. Tu peux créer ton propre jeu et décider comment il va fonctionner. Encore une chose : tu as déverrouillé de nouveaux sons et de nouvelles commandes pour pouvoir faire encore plus de choses."
       3:
-        text: "[élèves parlant] Donc nous avons fait un jeu où, essentiellement, tu obtiens des points lorsque tu attrapes des cochons globes. La subtilité est que chaque fois que tu attrapes un cochon globe un Stormtrooper apparaît. En fait, l'écran entier est rempli de cochons globes et quand tu en touches 10 000, tu gagnes."
+        text: "[élèves parlant] Donc on a fait un jeu où, en gros, on obtient des points en attrapant des cochons globes. Le truc, c'est qu'à chaque fois qu'on attrape un cochon globe, un Stormtrooper apparaît. Au bout d'un moment, l'écran devient complètement rempli de cochons globes. Quand on en touche 10 000, on gagne."
       4:
-        text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et tout que tu tues te donne des points. Pour mon programme, j'ai inversé les clés afin que chaque fois que tu cliques sur monter, ton personnage descende, et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
+        text: "[élèves parlant] Nous, on a fait un jeu où on ne peut pas perdre et tout ce qu'on tue donne des points. Pour mon programme, j'ai inversé les touches ; du coup à chaque fois que tu cliques sur monter, ton personnage descend, et quand tu vas à droite, ton personnage va à gauche. Dont c'est vraiment galère ! Des fois on a juste un avantage, un avantage intrinsèque en étant le développeur du jeu. Est-ce que l'ai eu ? Ouais !"
       5:
-        text: "Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien!"
+        text: "Quand tu as finis de créer ton jeu, sélectionne « partager » pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien !"
     starwars_blocks_intro:
       1:
         text: "Salut, je suis Kathleen Kennedy et je suis la productrice de Star Wars : Le réveil de la force. Aujourd’hui tu vas travailler avec une de nos stars, BB-8. BB-8 est un droïde sphérique. Tout ce qu'il fait et tous les mouvements qu'il fait sont contrôlés par un logiciel informatique. L’informatique a un impact sur toutes les industries, du marketing aux soins de santé et au cinéma. En fait, des centaines d'ingénieurs informaticiens ont travaillé ensemble pour faire un film comme Le Réveil de la Force."
@@ -1042,40 +1042,40 @@ fr:
         text: "Étape par étape, ton jeu devient plus interactif."
     starwars_blocks_congrats:
       1:
-        text: "Salut, mon nom est Alice et je dirige les équipes produits et ingénierie ici chez Code.org. J'ai travaillé sur ce tutoriel avec lequel tu joues en ce moment."
+        text: "Salut, moi, c'est Alice et je dirige les équipes produits et ingénierie ici chez Code.org. J'ai travaillé sur le tutoriel auquel tu es en train de jouer en ce moment."
       2:
-        text: "Tu viens de terminer le dernier niveau. Félicitations ! Tu as appris tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant, il n’y a plus d'instructions, plus de puzzles à résoudre. Tu peux créer ton propre jeu et tu choisiras comment celui-ci va fonctionner. Une dernière chose, tu as déverrouillé de nouveaux sons et de nouvelles commandes pour faire encore plus de choses."
+        text: "Tu viens d'arriver au dernier niveau. Félicitations ! Tu viens d'apprendre tout ce qu'il faut savoir pour créer ton propre jeu Star Wars. Maintenant, il n’y a plus d'instructions, plus de casse-têtes à résoudre. Tu peux créer ton propre jeu et décider comment il va fonctionner. Encore une chose : tu as déverrouillé de nouveaux sons et de nouvelles commandes pour pouvoir faire encore plus de choses."
       3:
-        text: "[élèves parlant] Donc nous avons fait un jeu où, essentiellement, tu obtiens des points lorsque tu attrapes des cochons globes. La subtilité est que chaque fois que tu attrapes un cochon globe un Stormtrooper apparaît. En fait, l'écran entier est rempli de cochons globes et quand tu en touches 10 000, tu gagnes."
+        text: "[élèves parlant] Donc on a fait un jeu où, en gros, on obtient des points en attrapant des cochons globes. Le truc, c'est qu'à chaque fois qu'on attrape un cochon globe, un Stormtrooper apparaît. Au bout d'un moment, l'écran devient complètement rempli de cochons globes. Quand on en touche 10 000, on gagne."
       4:
-        text: "[élèves parlant] Nous avons fait un jeu où tu ne peux pas perdre et tout que tu tues te donne des points. Pour mon programme, j'ai inversé les clés afin que chaque fois que tu cliques sur monter, ton personnage descende, et quand tu vas à droite, ton personnage va à gauche. C'est vraiment difficile ! Parfois, tu obtiens juste un avantage, un avantage inéquitable si tu es le développeur du jeu. Est-ce que j’ai réussi ? Ouais !"
+        text: "[élèves parlant] Nous, on a fait un jeu où on ne peut pas perdre et tout ce qu'on tue donne des points. Pour mon programme, j'ai inversé les touches ; du coup à chaque fois que tu cliques sur monter, ton personnage descend, et quand tu vas à droite, ton personnage va à gauche. Dont c'est vraiment galère ! Des fois on a juste un avantage, un avantage intrinsèque en étant le développeur du jeu. Est-ce que l'ai eu ? Ouais !"
       5:
-        text: "Lorsque tu as terminé de créer ton jeu, choisis «Partager» pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien!"
+        text: "Quand tu as finis de créer ton jeu, sélectionne « partager » pour obtenir un lien à partager avec tes amis, ou pour jouer à ton jeu sur ton téléphone. Amuse-toi bien !"
     mc_intro:
       1:
-        text: "Mon nom est Jens Bergensten, mais je suis mieux connu sous le nom de Jeb. Je suis le développeur en chef de Minecraft, ici chez Mojang à Stockholm. Je pense que j'avais onze ou douze ans quand j'ai commencé à programmer parce que je voulais faire des jeux. Un ami de mon père m'a dit que pour faire des jeux, je devais apprendre à programmer. Voilà comment j'ai commencé. J'aime concevoir et imaginer l'architecture des jeux. C'est ce que j'aime vraiment à propos de Minecraft."
+        text: "Je m'appelle Jens Bergensten, mais je suis mieux connu sous le nom de Jeb. Je suis le développeur en chef de Minecraft, ici chez Mojang à Stockholm. Je pense que j'avais onze ou douze ans quand j'ai commencé à programmer parce que je voulais faire des jeux. Un ami de mon père m'a dit que pour faire des jeux, je devais apprendre à programmer. C'est comme ça que j'ai commencé. J'aime concevoir et imaginer l'architecture des jeux. C'est ce que j'aime vraiment avec Minecraft."
       2:
-        text: "Pendant l'heure qui vient, tu vas apprendre les bases de l'informatique en programmant les déplacements d'Alex ou de Steve dans un endroit simulé du monde de Minecraft."
+        text: "Au cours de l'heure qui vient, tu vas apprendre les bases de l'informatique en programmant les déplacements d'Alex ou de Steve dans un bout simulé du monde de Minecraft."
       3:
-        text: "La programmation se fait traditionnellement avec du texte, mais aujourd'hui nous allons utiliser Blockly qui utilise des blocs visuels que tu peux glisser et déposer pour écrire des programmes. Mais en fait, tu crées du code Javascript."
+        text: "La programmation se fait traditionnellement avec du texte, mais aujourd'hui on va se servir de Blockly, un système qui utilise des blocs visuels que tu peux faire glisser et déposer pour écrire des programmes. Mais sous l'envers du décor, tu crées du code Javascript."
       4:
-        text: "Les concepts que tu vas apprendre sont ceux que les programmeurs utilisent chaque jour et sont les fondamentaux de l'informatique. Chez Mojang, nous utilisons ces mêmes concepts pour faire fonctionner Minecraft."
+        text: "Les notions que tu vas apprendre sont celles que les programmeurs utilisent chaque jour et forment les bases de l'informatique. Chez Mojang, on utilise ces mêmes notions pour faire fonctionner Minecraft."
       5:
-        text: "Avant de commencer, tu vas choisir ton personnage. Je vais choisir Alex. Construisons du code pour un programme qui lui permettra de se déplacer partout sur l'écran."
+        text: "Avant de commencer, tu vas choisir ton personnage. Je vais choisir Alex. On va construire du code pour un programme qui lui permettra de se déplacer autour de l'écran."
       6:
-        text: "Ton écran est divisé en trois parties principales. Sur la gauche, il y a l'espace de jeu Minecraft où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites ci-dessous."
+        text: "Ton écran est divisé en trois parties principales. Sur la gauche, il y a l'espace de jeu Minecraft où ton programme s'exécutera. Les instructions pour chaque niveau sont écrites en dessous."
       7:
-        text: "Au milieu, la boîte à outils : chacun de ces blocs est une commande qui dirige les actions d'Alex."
+        text: "Au milieu se trouve la boîte à outils : chacun de ces blocs est une commande qui va dicter les actions d'Alex."
       8:
-        text: "La zone blanche à droite s’appelle l'espace de travail, et c'est ici que nous allons construire notre programme."
+        text: "La zone blanche à droite s’appelle l'espace de travail, et c'est ici qu'on va construire notre programme."
       9:
-        text: "Si nous glissons le bloc « Avancer ();» dans l'espace de travail et cliquons sur »Exécuter», que se passe-t-il ? Alex avance d'un espace sur la grille."
+        text: "Si on glisse le bloc « Avancer(); » vers l'espace de travail et clique sur « Démarrer », que se passe-t-il ? Alex avance d'un espace sur la grille."
       10:
-        text: "Et que se passe-t-il si nous voulons faire quelque chose après qu'elle a avancé d'un espace ? Nous pouvons ajouter un autre bloc à notre programme. Je vais choisir le bloc « Tourner à droite de 90 degrés();» et je vais le faire glisser sous mon bloc « Avancer ();» jusqu'à ce que cette ligne orange apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque nous appuyons à nouveau sur « Exécuter », Alex effectuera les commandes qui sont empilées du haut vers le bas sur notre espace de travail."
+        text: "Et que se passe-t-il si on veut faire quelque chose une fois qu'elle a avancé d'un espace ? On peut ajouter un autre bloc à notre programme. Je vais choisir le bloc « Tourner à droite de 90 degrés();»  et je vais le faire glisser sous mon bloc « Avancer (); » jusqu'à ce que cette ligne orange apparaisse. Puis je vais le déposer et les deux blocs s’emboîteront. Lorsqu'on appuie à nouveau sur « Démarrer », Alex va exécuter les commandes qui sont empilées du haut vers le bas dans notre espace de travail."
       11:
         text: "Si jamais tu veux supprimer un bloc, il te suffit de le refaire glisser de la pile vers la boîte à outils."
       12:
-        text: "Pour annuler tes modifications et revenir à la façon dont le niveau a démarré, utilise le bouton Recommencer dans le coin supérieur droit de l'espace de travail. Une dernière chose : tu vois le petit triangle sur les blocs «Tourner» ? Chaque fois que tu vois ces triangles, cela signifie que tu peux choisir une option différente. Commençons à coder !"
+        text: "Pour annuler tes modifications et revenir à la version de base du niveau, utilise le bouton « Recommencer » dans le coin en haut à droite de l'espace de travail. Une dernière chose : tu vois le petit triangle sur les blocs « Tourner » ? Chaque fois que tu vois ces triangles, cela veut dire que tu peux choisir parmi différentes options. Allez, on se met à coder !"
     mc_repeat:
       1:
         text: "Je suis Lydia Winters, directrice de la marque Mojang, et nous avons fait un petit jeu appelé Minecraft."
@@ -1102,22 +1102,22 @@ fr:
         text: "Après avoir extrait les pierres, nous devrons vérifier s’il y a de la lave à cet endroit avant d'avancer. S'il y a de la lave, nous voulons placer une pierre en face de notre personnage avant qu’il avance. De cette façon, nous pouvons passer en toute sécurité. Il faut encore extraire quelques pierres ! Et n'oubliez pas d'utiliser l’instruction «Si» pour faire attention où tu marches."
     mc_congrats_share:
       1:
-        text: "Félicitations ! Tu viens juste d'apprendre les blocs de construction de base de l'informatique."
+        text: "Félicitations ! Tu viens d'apprendre les composantes de base de l'informatique."
       2:
-        text: "Maintenant, tu peux utiliser ces blocs pour construire ta propre création. Il n’y a plus d'instructions et plus de puzzles à résoudre. Tu peux construire tout ce que tu veux. Tu dois choisir."
+        text: "Maintenant, tu peux utiliser ces blocs pour faire ta propre création. Il n’y a plus d'instructions et plus de casse-têtes à résoudre. Tu peux construire tout ce que tu veux. C'est à toi de choisir."
       3:
-        text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement. J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau. Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec de la laine !"
+        text: "[élèves parlant] OK, on va se mettre aux choses sérieuses, là. On met un « tondre ». J'ai fait un « L » avec des torches. J'ai fait un « A » en planches de bouleau. Ça a marché ! Ça a marché ! On a construit une maison en laine !"
       4:
         text: "Lorsque tu as terminé ta création, sélectionne «Partager» pour obtenir un lien et partager tes créations avec tes amis. Amuse-toi bien!"
     mc_congrats_no_share:
       1:
-        text: "Félicitations ! Tu viens juste d'apprendre les blocs de construction de base de l'informatique."
+        text: "Félicitations ! Tu viens d'apprendre les composantes de base de l'informatique."
       2:
-        text: "Maintenant, tu peux utiliser ces blocs pour construire ta propre création. Il n’y a plus d'instructions et plus de puzzles à résoudre. Tu peux construire tout ce que tu veux. Tu dois choisir."
+        text: "Maintenant, tu peux utiliser ces blocs pour faire ta propre création. Il n’y a plus d'instructions et plus de casse-têtes à résoudre. Tu peux construire tout ce que tu veux. C'est à toi de choisir."
       3:
-        text: "[élèves parlant] C' est sur le point de se réaliser. Cisaillement. J'ai fait un L avec des torches. J'ai fait un A en planches de bouleau. Cela a fonctionné, cela a fonctionné. Nous avons construit une maison avec de la laine !"
+        text: "[élèves parlant] OK, on va se mettre aux choses sérieuses, là. On met un « tondre ». J'ai fait un « L » avec des torches. J'ai fait un « A » en planches de bouleau. Ça a marché ! Ça a marché ! On a construit une maison en laine !"
       4:
-        text: "Maintenant tu peux construire tout ce que tu veux. Amuse-toi bien!"
+        text: "Maintenant, tu peux construire tout ce que tu veux. Amuse-toi bien !"
     gumball_intro:
       1:
         text: "Si tu souhaites faire ton propre jeu, c’est vraiment facile. Tu as simplement besoin de quelques rudiments de programmation et tu peux commencer à jouer à un jeu que tu as créé."
@@ -1134,7 +1134,7 @@ fr:
       7:
         text: "Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et de cette façon, ils s'emboîteront."
       8:
-        text: "Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: "Dans ce premier casse-tête, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
       9:
         text: "Commence, et à la fin tu pourras créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets et se faire disparaitre. Ça ne dépend que de toi !"
     gumball_events:
@@ -1152,7 +1152,7 @@ fr:
       2:
         text: "C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «Répéter à l'infini»."
       3:
-        text: "Dans le prochain puzzle, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
+        text: "Dans le prochain casse-tête, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
     iceage_intro:
       1:
         text: "Si tu souhaites faire ton propre jeu, c’est vraiment facile. Tu as simplement besoin de quelques rudiments de programmation et tu peux commencer à jouer à un jeu que tu as créé."
@@ -1165,11 +1165,11 @@ fr:
       5:
         text: "Cette zone centrale est la boîte à outils et chacun de ces blocs est un morceau de code."
       6:
-        text: "La zone blanche à droite s’appelle l'espace de travail, et c'est ici que nous allons construire notre programme."
+        text: "La zone blanche à droite s’appelle l'espace de travail, et c'est ici qu'on va construire notre programme."
       7:
         text: "Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies la ligne jaune, et de cette façon, ils s'emboîteront."
       8:
-        text: "Dans ce premier puzzle, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
+        text: "Dans ce premier casse-tête, nous allons faire dire quelque chose aux acteurs en liant le bloc «Dire» au bloc « Lors du lancement » et en y écrivant ton message. Lorsque tes blocs sont en place, clique sur le bouton « Exécuter » pour voir ce que tu as programmé."
       9:
         text: "Commence, et à la fin tu pourras créer ton propre jeu, avec toutes sortes de joueurs qui peuvent interagir, marquer des points, jeter des objets et se faire disparaitre. Ça ne dépend que de toi !"
     iceage_events:
@@ -1187,7 +1187,7 @@ fr:
       2:
         text: "C'est le bloc « Répéter à l’infini». Tout ce qui se trouve dans ce bloc sera effectué à l’infini tout au long du jeu. Si tu veux qu'un acteur fasse quelque chose de manière répétée, sans que le joueur ait à faire quoi que ce soit, nous allons placer ces blocs à l’intérieur du bloc «Répéter à l'infini»."
       3:
-        text: "Dans le prochain puzzle, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
+        text: "Dans le prochain casse-tête, notre objectif est d'aider l'acteur à faire un travail en continu. Apprendre comment toutes les commandes « Répéter » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque tu développeras ton propre jeu."
     mc_2016_intro:
       1:
         text: "Bonjour, je suis Jens, concepteur créatif en chef de Minecraft. Dans l'heure à venir, vous allez créer votre propre jeu Minecraft. Cet écran ressemble à Minecraft, mais le monde s'est arrêté. Les moutons sont immobiles, les poulets ne pondent pas et les zombies restent sur place. À vous d'ajouter le code qui anime le monde de Minecraft."
@@ -1200,7 +1200,7 @@ fr:
       5:
         text: "3) À droite, l'espace de travail : c'est là que nous allons créer notre programme."
       6:
-        text: "Si vous oubliez quoi faire, les instructions de chaque niveau sont en haut."
+        text: "Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau se trouvent en haut."
       7:
         text: "Commençons par programmer un poulet. On glisse la commande « avancer » dans l'espace de travail. Quand je choisis « Exécuter », le poulet avance d'un pas. Pour aller plus loin, je glisse un autre bloc « avancer » sous le premier jusqu'à ce qu'il apparaisse en surbrillance. Je le lâche et les deux blocs s'ancrent l'un à l'autre. Si je choisis à nouveau « Exécuter », le poulet avance de deux pas."
       8:
@@ -1357,110 +1357,110 @@ fr:
         text: "Merci d'être venu. Maintenant, construis et partage ta première application, et continue à créer des applications avec le labo des applis !"
     mc_2017_agent_intro:
       1:
-        text: "Stacy : Stampy, Lizzy, Preston - merci d’être avec moi. Ce que je veux vous montrer est juste au dessus de ce plateau. Je pense que vous allez adorer !"
+        text: "Stacy : Stampy, Lizzy, Preston – merci d’être venu avec moi. Le truc que je veux vous montrer est juste au-delà de ce plateau. Je crois que vous allez adorer !"
       2:
-        text: "Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)"
+        text: "Ouh là, attendez – il y a un trou dans les rails ! (cris)"
       3:
-        text: "Tout le monde va bien? Stampy: Ah, je vois le problème. Regarde! Il y avait un trou dans la voie. Stacy: Vraiment Stampy? Lizzy: Peut-être qu'on doit assembler des blocs pour la réparer. Preston: Faisons-en une course. Le premier arrivé en haut gagne. Stacy: D'accord, à vos marques, prêts, partez! Ok, je vais juste prendre un peu de cette terre cuite. Attendez. Les amis, je ne peux pas creuser! Preston: Pareil. Lizzy: Je ne peux pas non plus. Stacy: Ok, c'est vraiment bizarre. Stampy, est-ce que tu peux creuser? Stampy: Je n'y arrive pas! Stacy: Ok, tout le monde reste calme. Stampy: Est-ce que le jeu est cassé? Stacy: Si c'est le cas, comment allons-nous le réparer? Lizzy: Aucune idée. Stampy: Est-ce que quelqu'un sait écrire du code pour Minecraft?"
+        text: "Tout le monde va bien ? Stampy : Ah, je vois le problème. Regardez ! Il y avait un trou dans les rails. Stacy : Non, sérieux, Stampy ? Lizzy : Peut-être qu'on devrait rassembler des blocs pour les réparer. Preston : On en fait une course ? Le premier arrivé en haut gagne. Stacy : D'accord, à vos marques, prêts, PARTEZ ! Bon, je vais juste ramasser un peu de cette terre cuite. Attendez. Les amis, je n'arrive pas à l'extraire ! Preston : Pareil. Lizzy : Je ne peux pas non plus. Stacy : Ok, c'est vraiment bizarre. Stampy, est-ce que tu arrives à creuser, toi ? Stampy : Non, j'y arrive pas! Stacy : Ok, pas de panique. Stampy : Est-ce que le jeu est cassé ? Stacy : S'il l'est comment est-ce qu'on le répare ? Lizzy : Aucune idée. Stampy : Est-ce que quelqu'un sait écrire du code pour Minecraft ?"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: "(pouf) Preston: Qu'est-ce que c'est que ça? Stampy: Je n'en ai jamais vu avant. Lizzy: C'est trop mignon! Stacy: Est-ce que... est-ce qu'on peut l'apprivoiser? Preston: Ok, qu'est-ce qui se passe? Quelqu'un doit retourner dans le monde réel et réparer. Tous: Pas ça! Stacy: Pas moi (pfffff) Ok, j'y vais."
+        text: "(pouf) Preston : C'est quoi, ça ? Stampy : Je n'en ai jamais vu un. Lizzy : C'est trop mignon! Stacy : Est-ce que... est-ce qu'on peut l'apprivoiser ? Preston : Bon, qu'est-ce qui se passe, là ? Quelqu'un doit retourner au monde réel et réparer tout ça. Tous : Pas moi ! Stacy : Pas mo– (soupire). Bon ok, j'y vais."
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
-        text: "Oh, d'accord, donc je suis maintenant dans le monde réel. Je vais voir si je peux trouver les bureaux de Minecraft."
+        text: "Ah, d'accord, salut, donc je suis dans le monde réel, là. Je vais voir si je peux trouver les bureaux de Minecraft."
       6:
         image: 'notes/mc_2017_agent_intro_6.png'
-        text: "Mais je vais avoir besoin de votre aide. Commencez par suivre le tutoriel, commencer à apprendre à coder, et je vous retrouve après quelques niveaux, d'accord? Souhaitez-moi bonne chance! Je pense que c'est par là. Aie! Un cactus! Je vais bien!"
+        text: "Mais je vais avoir besoin de ton aide. Commence par faire le tutoriel, commence à apprendre à coder, et on se retrouve dans quelques niveaux, d'accord ? Souhaite-moi bonne chance ! Je pense que c'est par là. Aïe ! Un cactus ! Tout va bien !"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
-        text: "Pour terminer le défi de l'Heure de Code, vous allez devoir coder pour programmer l'agent. Vous allez travailler avec l'Agent pour supprimer les obstacles sur votre chemin, de manière à récolter les objets nécessaires à votre voyage. Seul l'Agent peut placer et casser des blocs, et vous seul pouvez récolter des objets. L'écran est divisé en trois parties principales. À gauche, vous trouvez Minecraft."
+        text: "Pour terminer le défi de l'Heure de Code, tu vas devoir écrire du code qui programmera l'Agent. Tu vas travailler avec l'Agent pour enlever les obstacles de ton chemin, pour que tu puisses récolter les objets nécessaires pour ton voyage. Seul l'Agent peut placer et casser des blocs, et toi tu es le seul à pouvoir récolter des objets. L'écran va se diviser en trois parties principales. Sur la gauche se trouve Minecraft."
       8:
         image: 'notes/mc_2017_agent_intro_8.png'
-        text: "La zone centrale est la boîte à outils avec les commandes que l'Agent peut comprendre."
+        text: "La zone centrale, c'est la boîte à outils, qui contient des commandes que l'Agent peut comprendre."
       9:
         image: 'notes/mc_2017_agent_intro_9.png'
-        text: "Et sur la droite se trouve l'espace de travail. C'est à cet endroit que vous allez empiler les commandes pour construire le programme contrôlant l'Agent."
+        text: "Et sur la droite se trouve l'espace de travail. C'est là que tu vas empiler des commandes pour construire le programme qui contrôlera l'Agent."
       10:
         image: 'notes/mc_2017_agent_intro_10.png'
-        text: "L'Agent peut avancer, tourner et activer des plaques par pression. Il peut aussi détruire des blocs et placer des blocs. Quand il place un bloc comme des rails de wagonnet, il les place en dessous de lui."
+        text: "L'Agent peut avancer, tourner et activer des plaques de pression. Il peut aussi détruire des blocs et placer des blocs. Quand il place un bloc comme ces rails de wagonnet, il les place en dessous de lui."
       11:
         image: 'notes/mc_2017_agent_intro_11.png'
-        text: "Si vous oubliez quoi faire, les instructions de chaque niveau sont en haut."
+        text: "Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau se trouvent en haut."
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
-        text: "Si vous voulez recommencer, vous pouvez appuyer sur le bouton bleu réinitialiser pour tout remettre comme au début. Et si vous voulez supprimer un bloc de code, glissez-le de l'espace de travail vers la boîte à outils. N'oubliez pas d'appuyer sur démarrer pour que l'Agent se déplace. Alors allez-y et essayez ces quelques premiers niveaux. Bonne chance!"
+        text: "Si tu veux recommencer, tu peux appuyer sur le bouton bleu réinitialiser pour remettre tout en place comme au début. Et si tu veux supprimer un bloc de code, glisse-le de l'espace de travail vers la boîte à outils. N'oublie pas d'appuyer sur démarrer pour que l'Agent se mette en route. Allez, vas-y, essaie ces quelques premiers niveaux. Bonne chance !"
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: "Stampy: Je me demande ce que fait Stacy?"
+        text: "Stampy : Je me demande ce que fait Stacy ?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: "Stacy: Ouaah, je pense que je suis au bon endroit. C'est impressionnant!"
+        text: "Stacy: Ouaah, je pense que je suis au bon endroit. C'est incroyable !"
       3:
         image: 'notes/mc_2017_repeat_3.png'
-        text: "C'est comme si j'étais de nouveau dans Minecraft! Bonjour. Comment vas-tu? Bonjour?"
+        text: "J'ai l'impression d'être de retour dans Minecraft ! Bonjour, comment ça va ? Allô ?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: "Oh, il y a une plante grimpante. Tu ne fais rien, n'est-ce pas? Katie: Stacy? Stacy: Bonjour, Katie? Katie: Oui, bienvenue chez Minecraft!"
+        text: "Oh, il y a un creeper. Tu ne fais rien, si ? Katie : Stacy ? Stacy : Bonjour, Katie ? Katie : Oui, bienvenue chez Minecraft !"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: "Stacy: C'est incroyable. Donc tu travailles ici tous les jours comme développeur. Katie: Oui, c'est assez impressionnant. Je suis développeur dans l'équipe qui s'occupe de la place du marché de Minecraft. Stacy: Combien connais-tu de langages de programmation? Katie: Dans ma carrière, j'ai probablement travaillé avec plus d'une douzaine. Stacy: Une douzaine? Katie: Oui. Stacy: Donc maintenant, est-ce que tu connaîtrais des choses sur ce petit golem qui se fait appelé l'Agent? Katie: Nous utilisons l'Agent pour faire des choses que Steve et Alex ne peuvent pas faire, comme survoler la lave. Stacy: Super, je veux apprendre à coder, et ils veulent aussi apprendre à coder, alors quelle est l'une des premières choses à connaître quand on apprend?"
+        text: "Stacy : C'est incroyable. Donc tu travailles ici tous les jours en tant que développeuse. Katie : Oui, c'est assez génial. Je suis développeuse dans l'équipe qui s'occupe de la place du marché de Minecraft. Stacy : Combien connais-tu de langages de programmation ? Katie : Au cours de ma carrière, j'ai probablement travaillé avec plus d'une douzaine. Stacy : Une douzaine ? Katie : Oui. Stacy : Alors, maintenant, est-ce que tu sais quelque chose au sujet de ce petit golem qui se fait appelé l'Agent ? Katie : Nous utilisons l'Agent pour faire des choses que Steve et Alex ne peuvent pas faire, comme traverser de la lave. Stacy : Eh bien, moi je veux apprendre à coder, et eux ils veulent aussi apprendre à coder, alors qu'est-ce qu'une des premières choses à savoir quand on apprend ?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: "Katie: Et bien, vous devez apprendre comment utiliser les boucles. Une boucle est ce que les développeurs écrivent pour donner des ordres à un ordinateur qui peuvent être exécuter encore et encore. Stacy: Compris, donc je pense que les niveaux suivant vont aborder le sujet, alors continuez et essayez les boucles."
+        text: "Katie : Eh bien, il faut apprendre à utiliser les boucles. Une boucle est ce que les développeurs écrivent pour donner des ordres à un ordinateur qui peuvent être exécuter encore et encore. Stacy : Compris, alors je pense que les niveaux suivant vont aborder ce sujet, alors on y va, on va essayer les boucles."
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer l'Agent le long du chemin. Glisse le bloc répéter dans l'espace de travail et place un bloc avancer plus à l'intérieur du bloc répéter. Ça signifie que l'ordinateur doit faire plusieurs fois de suite la même chose sans avoir à glisser un tas de blocs à l'intérieur de l'espace de travail. Vous pouvez choisir combien de répétitions effectuer en plaçant un nombre dans le bloc répéter."
+        text: "Dans le prochain niveau, tu vas pouvoir utiliser une boucle pour déplacer l'Agent le long du chemin. Fais glisser le bloc répéter vers l'espace de travail et place un bloc avancer à l'intérieur du bloc répéter. Ça indique à l'ordinateur qu'il doit faire la même chose plusieurs fois de suite sans avoir à glisser un tas de blocs vers l'espace de travail. Tu peux choisir combien de répétitions effectuer en changeant le nombre dans le bloc répéter."
       8:
         image: 'notes/mc_2017_repeat_8.png'
-        text: "Vous pouvez aussi mettre des blocs tourner et plusieurs commandes à l'intérieur d'un bloc répéter, mais pour le moment, essayez d'utiliser répéter pour faire avancer l'Agent de quelques pas. Rappelez-vous, si vous êtes coincés sur un puzzle, vous pouvez toujours utiliser le bouton bleu Réinitialiser et recommencer."
+        text: "Tu peux aussi mettre des blocs tourner et de multiples commandes à l'intérieur d'un bloc répéter, mais pour le moment, essaie d'utiliser répéter pour faire avancer l'Agent de quelques pas. N'oublie pas que si tu te retrouves coincé sur un casse-tête, tu peux toujours utiliser le bouton bleu « réinitialiser » et réessayer."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: "Si vous pensez avoir un travail aussi cool que Katie, allez-y et cliquez sur le bouton montrer le code quand vous finissez chaque niveau. Cela va vous montrer le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie: Oui, bonne chance à tous!"
+        text: "Si toi aussi, tu aimerais avoir un travail aussi cool que celui de Katie, vas-y, clique sur le bouton montrer le code quand tu termines chaque niveau. Cela te montrera le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie : Oui, bonne chance, tout le monde !"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: "Preston: Ce n'est pas pour frimer mais je suis plutôt bon en parkour. Lizzy: Dormons comme ça il fera jour quand Stacy reviendra."
+        text: "Preston : C'est pas pour crâner, mais je suis plutôt fort en parkour. Lizzy : Viens, on dort, comme ça il fera jour quand Stacy revient."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: "Stacy: Ok les amis, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai dans le jeu. Je pense que je peux utiliser une fonction. J'ouvre juste ceci."
+        text: "Stacy : Ok les gens, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai avec le jeu. Je crois que je peux utiliser une fonction. Je vais juste ouvrir ceci."
       3:
         image: 'notes/mc_2017_functions_3.png'
-        text: "Alors une fonction est une liste spécifique d'instructions pour accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, vous aurez accès aux fonctions et vous pourrez les utiliser pour résoudre les puzzles."
+        text: "Alors, une fonction, c'est une liste précise d'instructions qui sert à accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, tu auras accès aux fonctions, que tu vas pouvoir utiliser pour résoudre les casse-têtes."
       4:
         image: 'notes/mc_2017_functions_4.png'
-        text: "Examinez le code dans la fonction quand celle-ci est dans l'espace de travail pour voir ce qu'elle fait."
+        text: "Examine le code au sein de fonction quand il est dans l'espace de travail pour voir ce qu'il fait."
       5:
         image: 'notes/mc_2017_functions_5.png'
-        text: "Ensuite, trouvez le bloc avec ce nom dans la boîte à outils et glissez-le de la boîte à outils vers le bloc quand l'exécution commence."
+        text: "Puis, trouve le bloc de ce nom dans la boîte à outils et glisse-le de la boîte à outils vers le bloc quand l'exécution commence."
       6:
         image: 'notes/mc_2017_functions_6.png'
-        text: "Rappelez-vous, vous pouvez utiliser la même fonction à chaque fois que vous voulez exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que vous allez y arriver!"
+        text: "N'oublie pas que tu peux utiliser la même fonction à chaque fois que tu as besoin d'exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que tu vas y arriver !"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: "Preston: Félicitations!"
+        text: "Preston : Félicitations !"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: "Lizzy: Félicitations!"
+        text: "Lizzy : Félicitations !"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: "Stampy: Félicitations, vous avez réussi!"
+        text: "Stampy : Félicitations, tu as réussi !"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: "Stacy: Félicitations les amis, vous avez assuré! Et maintenant que vous avez terminé l'Heure de Code, vous pouvez commencer à coder dans Minecraft. Vous avez appris les boucles, les fonctions et ce que l'Agent peut faire."
+        text: "Stacy : Félicitations les amis, vous avez assuré ! Et maintenant qu'on a terminé l'Heure de Code, on peut commencer à coder dans Minecraft. On a découvert les boucles, les fonctions et ce que fait un agent logiciel."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
-        text: "Maintenant, c'est le moment de jouer sur un niveau libre, où vous êtes le développeur. Utiliser le reste du temps pour écrire vos propres fonctions pour explorer, creuser et construire."
+        text: "Maintenant, c'est l'heure du niveau en jeu libre, où c'est toi, le développeur. Utilise le temps qui reste pour écrire tes propres fonctions afin d'explorer, creuser et construire."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: "Vous pouvez prendre le code que vous avez écrit dans ce niveau pour l'utiliser dans votre monde Minecraft de Minecraft: Education Edition. Cliquez juste sur 'Finir' et suivez les instructions pour avoir un lien à utiliser dans votre monde, pour continuer à coder avec l'Agent. Amusez-vous bien, et bon travail!"
+        text: "Tu peux prendre le code que tu as écrit dans ce niveau et l'utiliser dans ton univers Minecraft avec Minecraft : Education Edition. Clique simplement sur « Terminer » et suis les instructions pour avoir un lien à utiliser dans ton univers, pour que tu puisses continuer à coder avec l'Agent. Amuse-toi bien, et bon travail !"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: "Stacy: Et je suis de retour! Donc là les amis, c'est l'Agent! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait! Je lui ai dit de construire un escalier à partir de blocs de terre cuite, et maintenant nous pouvons l'utiliser pour sortir de là. Et en plus, il n'y a pas que des escaliers. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
+        text: "Stacy : Et voilà, je suis de retour ! Donc ça, les amis, c'est l'Agent ! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait ! Je lui ai dit de construire un escalier en utilisant ces blocs de terre cuite, et maintenant on peut s'en servir pour sortir de là. Et il n'y a pas que des escaliers qu'il puisse faire. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: "Stampy: Comment tu as fait ça? Stacy: C'était facile en fait. J'ai juste utilisé du code!"
+        text: "Stampy : Comment tu as fait ça ? Stacy : C'était facile, en fait. J'ai juste utilisé du code !"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
@@ -1610,7 +1610,7 @@ fr:
         text: "Le CPU est le composant maître qui contrôle toutes les autres parties de l'ordinateur. Un CPU a besoin d'exécuter différentes tâches, il est donc composé en interne de parties plus petites et plus simples pour réaliser chaque tâche spécifique. Il a des circuits dédiés aux maths simples et à la logique. Il a d'autres circuits qui envoient et reçoivent des informations vers et en provenance des autres composants de l'ordinateur."
       7:
         image: 'notes/csd_concept_hardware_software_7.png'
-        text: "La vraie magie du CPU est comment il connaît les circuits à utiliser et quand les utiliser. Le processeur reçois des commandes simples qui lui disent quel circuit utiliser pour une tâche spécifique. Par exemple, une commande \"add\" (ajouter) ordonne au processeur d'utiliser un de ses circuits externes pour calculer un nouveau nombre. Ensuite, la commande \"store\" (ranger) ordonne au processeur d'utiliser un autre circuit pour enregistrer le résultat dans la mémoire."
+        text: "La vraie magie du CPU est comment il connaît les circuits à utiliser et quand les utiliser. Le processeur reçois des commandes simples qui lui disent quel circuit utiliser pour une tâche spécifique. Par exemple, une commande « add » (ajouter) ordonne au processeur d'utiliser un de ses circuits externes pour calculer un nouveau nombre. Ensuite, la commande « store » (ranger) ordonne au processeur d'utiliser un autre circuit pour enregistrer le résultat dans la mémoire."
       8:
         image: 'notes/csd_concept_hardware_software_8.png'
         text: "Comme pour les nombres, toutes ces commandes simples peuvent être représentées en binaire par des zéros et des uns ou des signaux électriques ouvert et fermé. Les commandes binaires sont rangées dans la mémoire et le processeur accède à ces commandes en séquence, l'une après l'autre. Cette séquence de commandes est en fait un programme informatique très simple."
@@ -1641,34 +1641,34 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : Échauffement"
       2:
-        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
+        text: "Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique et la créatrice d'iLuminate."
       3:
         text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
       4:
-        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
+        text: "Au cours de l'heure qui vient, tu vas te mettre à l'informatique en programmant ta propre soirée dansante ! On a sélectionné de la musique branchée et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser."
       5:
-        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
+        text: "Tu vas te servir de blocs de code pour choisir différents danseurs, modifier leurs pas de danse, les faire réagir à la musique et les rendre interactifs."
       6:
-        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
+        text: "Tu verras que ton écran se divise en 3 parties principales. Sur la gauche se trouve l'espace de jeu. C'est là que tes danseurs apparaîtront. "
       7:
         text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace au fur et à mesure des cours."
       8:
-        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
+        text: "À droite, tu as l’espace de travail. Tu peux faire glisser des blocs depuis la boîte à outils jusque dans l'espace de travail pour construire ton programme."
       9:
-        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule."
       10:
-        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle \"my_first_dancer\". Vous pouvez changer le nom en cliquant ici."
+        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle « my_first_dancer ». Vous pouvez changer le nom en cliquant ici."
       11:
-        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
+        text: "Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace de jeu, avec ça."
       12:
-        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a un très gros choix de chansons, alors amuse-toi à trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître dans l'espace de jeu et la musique va démarrer."
       13:
         text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va ?"
     hoc_dance_events:
       1:
         text: "Heure de Code | Soirée Dansante : Événements"
       2:
-        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète et artiste. Je pense que c'est très important d’avoir des connaissances en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même de contrôler la technologie qui contrôle littéralement nos vies."
       3:
         text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
       4:
@@ -1678,26 +1678,26 @@ fr:
       6:
         text: "En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4 temps."
       7:
-        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
+        text: "Pour faire se déchaîner tes danseurs, tu vas avoir besoin d'un bloc événement vert. Ce bloc évènement indique : « après 4 mesures »."
       8:
-        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
+        text: "Si tu sors un bloc violet « faire pour toujours », tu peux choisir une danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson passent avant de se mettre à danser."
       9:
-        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
+        text: "Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage."
       10:
-        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+        text: "Observe et guette l'événement qui va déclencher le code de danse. Hop, pile au bon moment, notre danseur s'y met."
     hoc_dance_properties:
       1:
         text: "Heure de Code | Soirée Dansante : Propriétés"
       2:
-        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Future Ingénieure Amazon."
       3:
-        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+        text: "J'adore l'informatique parce que ça demande de la débrouillardise et un esprit critique, et que quand on investit des heures de travail, on peut obtenir quelque chose de vraiment cool et d'enrichissant."
       4:
         text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
       5:
-        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+        text: "Chaque pas de danse est composé d’une série d’images qu'on appel les photogrammes. Chaque photogramme est légèrement différent de celui qui le précède. Quand ton programme s'exécute, ton ordinateur affiche un photogramme après l'autre. Ils s'affichent tellement rapidement qu'on a l'impression que le danseur bouge. C'est ça le secret de tout dessin animé. "
       6:
-        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+        text: "Tu peux non seulement changer les pas de ton danseur, mais aussi ses propriétés. Les propriétés décrivent des choses comme l'emplacement du danseur sur l'écran, sa taille et sa couleur. "
       7:
         text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme. Choisissez ensuite le danseur que vousvoulez modifier et tapez la taille que vous voulez qu’ils aient à l’écran."
       8:
@@ -1710,70 +1710,70 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : C’est la fête !"
       2:
-        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
+        text: "Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant, tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue toi-même et que tu pourras montrer à tes amis."
       3:
-        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
+        text: "Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc disposition pour arranger les danseurs de différentes manières à l'écran."
       4:
-        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
+        text: "Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise colle bien avec ton morceau préféré ?"
       5:
-        text: "Ou bien une chorégraphie avec vos amis ?"
+        text: "Ou bien faire un battle de danse avec tes amis ?"
       6:
-        text: "Ou encore autre chose qui regrouperait tout ?"
+        text: "Ou quelque chose de tout autre encore ? "
       7:
-        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"
+        text: "À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi bien !"
     mc_2018_intro:
       1:
-        text: "Salut! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin caché et je suis très heureux d'avoir ton aide. Qui sait ce que nous allons rencontrer le long de ces mystérieux cours d'eau ? Nous sommes censés rencontrer notre premier guide quelque part sur ce quai."
+        text: "Salut ! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin caché et je suis très heureux d'avoir ton aide. Qui sait ce qu'on va rencontrer le long de ces mystérieux cours d'eau ? On est censé retrouver notre premier guide sur ce quai quelque part."
       2:
-        text: "Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, vous devrez résoudre une série d'énigmes en utilisant le code. Voici comment cela fonctionne. Votre écran est divisé en trois parties principales."
+        text: "Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, il va falloir résoudre une série de casse-têtes avec du code. Voilà comment ça marche. L'écran est divisé en trois zones principales."
       3:
-        text: "Sur la gauche, vous verrez le monde de Minecraft."
+        text: "Sur la gauche se trouvera le monde de Minecraft."
       4:
-        text: "La zone du milieu est ta boîte à outils où tu peux trouver des commandes de codage."
+        text: "La zone du milieu, c'est la boîte à outils, où l'on trouvera des commandes de codage."
       5:
-        text: "Et la grande surface à droite est ton espace de travail. C'est là que tu peux empiler des commandes pour construire ton programme et contrôler tes mouvements."
+        text: "Et la grande zone à droite, c'est l'espace de travail. C'est là qu'on peut empiler les commandes pour construire un programme et contrôler ses mouvements."
       6:
-        text: "Les instructions de chaque niveau sont en haut de la page. Clique sur le signe plus pour changer entre les instructions longues et courtes."
+        text: "Les instructions pour chaque niveau se trouvent en haut de la page. Clique sur le signe plus pour voir plutôt les instructions en version longue ou courte."
       7:
-        text: "Essaye de glisser des blocs de la boîte à outils dans l'espace de travail, de les empiler, puis clique sur le bouton exécuter pour exécuter tes commandes."
+        text: "Essaye de glisser des blocs de la boîte à outils vers l'espace de travail, de les empiler, puis clique sur le bouton « démarrer » pour exécuter tes commandes."
       8:
-        text: "Tu devras peut-être essayer plusieurs fois pour bien faire les choses, et certaines des énigmes ont plus d'une solution. Alors expérimente pour voir ce qui fonctionne."
+        text: "Tu auras peut-être besoin d'essayer plusieurs fois pour y arriver, et certains casse-têtes ont plus d'une solution. Alors fais des tests pour voir ce qui marche."
       9:
-        text: "Si tu souhaites réessayer, clique sur le bouton réinitialiser pour revenir à l'endroit où tu as commencé."
+        text: "Si tu veux réessayer, clique sur le bouton réinitialiser pour revenir là où tu as commencé."
       10:
-        text: "Si tu dois supprimer une commande, glisse simplement le bloc de ton espace de travail dans la boîte à outils. Rappelle-toi de cliquer sur « Exécuter » pour voir à quoi ressemble ton code en action."
+        text: "Si tu as besoin de supprimer une commande, glisse simplement le bloc de ton espace de travail à la boîte à outils. N'oublie pas de cliquer sur « Démarrer » pour voir ce à quoi ressemble ton code en action."
       11:
-        text: "OK, fini les bêtises, camarade aventurier. Commençons à coder pour trouver un trésor sous-marin."
+        text: "Allez, trêve de plaisanteries, camarade aventurier. On va se mettre à coder pour trouver du trésor sous-marin."
     MC_2018_loops:
       1:
-        text: "Très bien! Nous avons attrapé une morue ! Savais-tu que si tu donnes une morue à manger à un dauphin, le dauphin te guidera vers une épave où il peut y avoir un trésor ? Nous devons nous approcher. La prochaine série d'énigmes seront certainement plus délicates, donc nous ferions mieux de gagner d'avantage de compétences en codage. Qu'est-ce ? Une grotte ?"
+        text: "Super ! On a attrapé une morue ! Savais-tu que si tu donnes une morue à manger à un dauphin, le dauphin te guidera vers une épave de navire où il pourrait y avoir un trésor ? On doit être en train de se rapprocher ! La prochaine série de casse-têtes sera sûrement plus corsée, donc on a intérêt à développer nos compétences en codage. Attends, qu'est-ce que c'est ? Une grotte ?"
       2:
-        text: "Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous utilisiez le même ensemble de commandes à plusieurs reprises dans certains des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais souhaité pouvoir faire encore et encore quelque chose comme, vous savez, laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous ennuyer ? Ce serait bien."
+        text: "Bienvenue, aventurier ! Je m'appelle Calamar. J'ai remarqué que tu utilisais le même ensemble de commandes à plusieurs reprises dans certains des derniers casse-têtes. Ça a dû être un peu fatiguant. N’as-tu jamais voulu pouvoir faire quelque chose qu'il faut faire encore et encore, du genre laver la vaisselle ou se brosser les dents, sans t'en fatiguer ou t'ennuyer ? Ça serait sympa."
       3:
-        text: "Les ordinateurs sont vraiment bons à faire la même chose encore et encore en utilisant des boucles de codage. Lorsque tu veux que ton programme fasse les mêmes instructions plusieurs fois, tu peux utiliser une boucle !"
+        text: "Les ordinateurs sont vraiment doués pour faire la même chose encore et encore en utilisant des boucles de codage. Quand tu veux que ton programme exécute les mêmes instructions plusieurs fois, tu peux utiliser une boucle !"
       4:
-        text: "Le bloc de boucle contient des instructions qui sont répétées jusqu'à ce que l'objectif soit atteint. Une fois que ton programme démarre une boucle « Répéter jusqu'à l'objectif », il continuera à répéter les instructions à l'intérieur jusqu'à ce qu'il atteigne l'objectif."
+        text: "Le bloc « boucle » contient des instructions qui se répètent jusqu'à ce que l'objectif soit atteint. Une fois que ton programme démarre une boucle « Répéter jusqu'à l'objectif », il continuera à répéter les instructions qui sont dedans jusqu'à ce qu'il atteigne cet objectif."
       5:
-        text: "Essaye ceci pour toi-même ! Place les commandes que tu souhaites répéter à l'intérieur du bloc « Répéter jusqu'à l'objectif », clique sur \"Exécuter\" et regarde-le partir !"
+        text: "Essaie ça toi-même ! Mets les commandes que tu veux répéter à l'intérieur du bloc « Répéter jusqu'à l'objectif », clique sur « Démarrer » et regarde les choses se faire !"
       6:
-        text: "Eh bien, c'était un peu bizarre. Qui aurait cru que les calmars pouvaient coder ? Je ne pensais même pas qu'ils avaient des doigts. Alors, maintenant, nous connaissons les boucles. Utilisons-les pour nous emparer d'un autre trésor."
+        text: "Bon, c'était un peu bizarre, ça. Qui aurait cru que les calamars pouvaient coder ? Je ne pensais même pas qu'ils avaient des doigts. Bref, maintenant, on en sait plus sur les boucles. Viens, on va s'en servir pour s'emparer de plus de trésor."
     mc_2018_conditionals:
       1:
-        text: "Ça alors ! Trois nouvelles énigmes résolues ! Et nous avons attrapé... un saumon. Pas aussi excitant que des tas d'or, mais nous prendrons ce que nous pouvons obtenir. Et j'ai le sentiment que la coquille de nautile sera utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être un autre indice ! Jetons un coup d'oeil à l'intérieur."
+        text: "Ça alors ! Trois nouveaux casse-têtes de résolus ! Et puis on a attrapé... un saumon. Certes, ce n'est pas aussi palpitant que des montagnes d'or, mais on va faire avec. Et j'ai comme l'impression que ce coquillage de nautile va nous être utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être un autre indice ! Allez, on jette un coup d'oeil à l'intérieur."
       2:
-        text: "Je m'appelle Netty et bienvenue dans mes ruines. Nous prenons des décisions tout le temps, en fonction des conditions. Si ça ressemble à de la pluie, alors nous prendrons un parapluie. Si nous avons faim, alors nous mangerons une collation."
+        text: "Je m'appelle Netty, bienvenue dans mes ruines. On prend tout le temps des décisions, en fonction des conditions. Si on dirait qu'il va pleuvoir, on prendra un parapluie. Si on a faim, on mangera un casse-croûte."
       3:
-        text: "Si nous voyons une plante grimpante, alors nous courons dans la direction opposée. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent réellement répondre aux conditions en utilisant du code."
+        text: "Si on voit un type louche, on courra dans l'autre sens. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent vraiment répondre aux conditions en utilisant du code."
       4:
-        text: "Pour programmer une réponse comme celle-ci, à l'aide de te commandes de code, sélectionnez un bloc de chemin si."
+        text: "Pour programmer une réaction de ce type à l'aide de tes commandes de code, sélectionne un bloc « si chemin »."
       5:
-        text: "Sélectionne la liste déroulante pour créer la commande."
+        text: "Clique sur le menu déroulant pour créer la commande."
       6:
-        text: "Par exemple, si tu écris la commande \"si chemin vers la droite\" et places tourner à droite à l'intérieur de la condition, alors, quand Steve atteint un chemin ouvert vers la droite, il tournera toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes conditionnelles si sont utiles lorsque tu exécutes du code dans des situations imprévisibles, telles que des ruines mystérieuses dans des grottes sous-marines."
+        text: "Par exemple, si tu sélectionnes la commande « si chemin vers la droite » et places « tourner à droite » à l'intérieur de l'instruction conditionnelle, alors, quand Steve rencontre un chemin ouvert sur la droite, il tournera toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes conditionnelles « si » sont utiles quand tu exécutes du code dans des situations imprévisibles, comme dans des ruines mystérieuses dans des grottes sous-marines."
       7:
-        text: "Essaye d'utiliser les blocs « Si » et prends ton code pour un tour."
+        text: "Essaye d'utiliser les blocs « si » et va faire un tour avec ton code."
       8:
-        text: "Ça alors ! Les ruines de Netty étaient géniales. Je dois vraiment quitter la maison de mes parents. Alors, qu'en penses-tu ? Est-ce que les conditions sont bonnes pour que nous réalisions les énigmes finales ? Nous allons lui donner un aller."
+        text: "Waouh ! Les ruines de Netty étaient géniales. Il faut vraiment que j'arrête d'habiter chez mes parents. Bon, qu'en penses-tu ? Est-ce que les conditions sont bonnes pour qu'on termine les derniers casse-têtes ? Allez viens, on tente."
     mc_2018_closing:
       1:
         text: "Amy Lee33 : Félicitations ! Tu l'as fait !"
@@ -1784,15 +1784,15 @@ fr:
       4:
         text: "Tomohawk : Félicitations !"
       5:
-        text: "Quelle formidable journée ! Toute la chasse au trésor nous a amenés à construire un conduit Minecraft, à trouver des coquilles de Nautile et à découvrir des coffres au trésor. J'adore la couleur de prismarine. Nous avons également appris à coder avec des boucles et des conditions."
+        text: "Quelle super journée ! Toute cette chasse au trésor nous a amené à construire un conduit Minecraft, à trouver des coquillages de nautile et à découvrir des coffres de trésor. J'adore la couleur de la prismarine. On a aussi appris à coder avec des boucles et des instructions conditionnelles."
       6:
-        text: "En parlant de codage, il y a un niveau de plus à cette quête. Êtes-vous prêts, aventuriers ?"
+        text: "En parlant de codage, il y a encore un niveau dans cette quête. Alors, tu te sens prêt, aventurier ?"
       7:
-        text: "C'est un niveau de jeu gratuit et tu peux mettre tes compétences de codage à profit et construire quelque chose d'incroyable."
+        text: "C'est un niveau en jeu libre et tu peux mettre en pratique tes compétences de codage et construire quelque chose de formidable."
       8:
-        text: "Hmmm... un endroit pour cacher votre trésor, un monument sous-marin, un château de corail? Ahhh... tant d'idées. Essaye d'utiliser des boucles pour créer une action répétée, et des conditions pour te préparer à tous ces scénarios imprévisibles."
+        text: "Hmmm... une planque pour ton trésor, un monument sous-marin, un château de corail ? Ahhh... tellement d'idées ! Essaye d'utiliser des boucles pour créer une action qui se répète, et des instructions conditionnelles pour te préparer à tous ces scénarios imprévisibles."
       9:
-        text: "Tu as certainement déjà fait tes preuves, en tant que codeur intrépide, et je suis impatient de voir ce que tu construis. Et j'espère que tes aventures avec le code ne s'arrêtent pas là. Bon Voyage !"
+        text: "En tout cas, tu as déjà bien démontré que tu étais un codeur intrépide, et j'ai hâte de voir ce que tu vas construire. Et j'espère que ton aventure avec le code ne s'arrêtera pas là. Bon voyage !"
     teaching_csf_how_it_works:
       1:
         image: 'notes/teaching_cs_fundamentals_1.png'
@@ -1813,10 +1813,10 @@ fr:
     writing_first_program:
       1:
         image: 'notes/writing_first_program_1.png'
-        text: "Code.org utilise un langage de programmation visuel, glisser et déposer, appelé Blockly. Blockly utilise des instructions colorées, appelées blocs, pour créer des programmes et résoudre des énigmes."
+        text: "Code.org utilise un langage de programmation visuel, glisser et déposer, appelé Blockly. Blockly utilise des instructions colorées, appelées blocs, pour créer des programmes et résoudre des casse-têtes."
       2:
         image: 'notes/writing_first_program_2.png'
-        text: "Chaque énigme a quatre parties."
+        text: "Chaque casse-tête a quatre parties."
       3:
         image: 'notes/writing_first_program_3.png'
         text: "L'aire de jeu est sur la gauche, où ton programme s'exécute."
@@ -1828,7 +1828,7 @@ fr:
         text: "Sur la droite est l'espace de travail, où tu vas glisser des blocs pour construire ton programme."
       6:
         image: 'notes/writing_first_program_6.png'
-        text: "Au-dessus de l'espace de travail sont les instructions pour chaque énigme."
+        text: "Au-dessus de l'espace de travail sont les instructions pour chaque casse-tête."
       7:
         image: 'notes/writing_first_program_7.png'
         text: "Si tu glisse trop de blocs de la boîte à outils, glisse simplement le bloc supplémentaire dans la boîte à outils. Clique « Exécuter » pour essayer ton programme, et Réinitialiser pour essayer à nouveau."
@@ -1870,127 +1870,127 @@ fr:
       1:
         text: "Heure de Code | Soirée Dansante : Échauffement"
       2:
-        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
+        text: "Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique et la créatrice d'iLuminate."
       3:
-        text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
+        text: "L'informatique est liée à la créativité de tout un tas de façons. De manière presque illimitée, en fait. Une fois qu'on est capable d'écrire un logiciel, tu peux infuser tout ce que tu veux avec tes idées. Moi, je le fais avec des costumes lumineux. On peut faire tellement de choses, une fois qu’on a les outils pour rédiger des logiciels. Les possibilités sont vraiment infinies."
       4:
-        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
+        text: "Au cours de l'heure qui vient, tu vas te mettre à l'informatique en programmant ta propre soirée dansante ! On a sélectionné de la musique branchée et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser."
       5:
         image: 'notes/hoc_dance_warmup_2019_5.png'
-        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
+        text: "Tu vas te servir de blocs de code pour choisir différents danseurs, modifier leurs pas de danse, les faire réagir à la musique et les rendre interactifs."
       6:
         image: 'notes/hoc_dance_warmup_2019_6.png'
-        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
+        text: "Tu verras que ton écran se divise en 3 parties principales. Sur la gauche se trouve l'espace de jeu. C'est là que tes danseurs apparaîtront. "
       7:
         image: 'notes/hoc_dance_warmup_2019_7.png'
-        text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace, au fur et à mesure des cours."
+        text: "La zone centrale, c'est la boîte à outils. De nouveaux blocs de code deviendront disponibles dans cet espace, au fur et à mesure qu'on avance avec les leçons."
       8:
         image: 'notes/hoc_dance_warmup_2019_8.png'
-        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
+        text: "À droite, tu as l’espace de travail. Tu peux faire glisser des blocs depuis la boîte à outils jusque dans l'espace de travail pour construire ton programme."
       9:
         image: 'notes/hoc_dance_warmup_2019_9.png'
-        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule."
       10:
         image: 'notes/hoc_dance_warmup_2019_10.png'
-        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat."
+        text: "Pour commencer, on va faire un nouveau danseur avec ce bloc rouge. Fais-le d’abord glisser en dehors de la boîte à outils et accroche-le au bas du bloc orange « configuration ». Ce danseur-ci est un chat."
       11:
         image: 'notes/hoc_dance_warmup_2019_11.png'
-        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
+        text: "Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace de jeu, avec ça."
       12:
         image: 'notes/hoc_dance_warmup_2019_12.png'
-        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a un très gros choix de chansons, alors amuse-toi à trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître dans l'espace de jeu et la musique va démarrer."
       13:
-        text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?"
+        text: "Essaie toi-même ! Et si tu te sens coincé, ne t'inquiètes pas, il suffit de se lever et de se lancer sur la piste ! Avant même de t'en rendre compte, tu auras déjà créé ta propre soirée dansante. Alors, on y va ?"
     hoc_dance_events_2019:
       1:
         text: "Heure de Code | Soirée Dansante : Événements"
       2:
         image: 'notes/hoc_dance_events_2019_2.png'
-        text: "Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org. J’ai contribué à l’élaboration de Dance Party !"
+        text: "Je m’appelle Erin, je suis ingénieure logiciel ici chez Code.org et j’ai participé à l'élaboration de Soirée Dansante !"
       3:
         image: 'notes/hoc_dance_events_2019_3.png'
-        text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
+        text: "Pour générer différents pas de danse au rythme de la musique, on va utiliser ce qu'on appelle les événements. Un événement demande à ton programme de « guetter » et puis de réagir tout de suite quand il se passe quelque chose."
       4:
         image: 'notes/hoc_dance_events_2019_4.png'
-        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+        text: "Quelques exemples d'évènements : guetter un clic de la souris, une touche fléchée ou une tape sur l'écran."
       5:
         image: 'notes/hoc_dance_events_2019_5.png'
-        text: "Là vous allez programmer un danseur pour faire un mouvement lorsque vous appuyez sur les boutons fléchés de votre écran, ou sur les touches de votre clavier."
+        text: "Ici, on va programmer un danseur pour lui faire faire un mouvement quand tu appuies sur les boutons fléchés sur l'écran ou sur les touches de ton clavier."
       6:
         image: 'notes/hoc_dance_events_2019_6.png'
-        text: "Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche du haut, le code associé au bloc de flèche « quand en haut » s’exécute. Quelle danse allez-vous choisir ?"
+        text: "Tu peux utiliser le bloc événement « quand flèche du haut » et y connecter un bloc « faire une fois ». Lorsqu'on appuie sur la flèche du haut, le code rattaché au bloc « quand flèche du haut » s’exécutera. Quel pas de danse vas-tu choisir ?"
       7:
         image: 'notes/hoc_dance_events_2019_7.png'
-        text: "Veillez à ce que le type de danseur que vous choisissez corresponde bien à l'un des danseurs que vous avez créés dans le bloc de configuration, sinon il ne se passera rien."
+        text: "Veille à ce que le type de danseur que tu choisis corresponde bien à l'un des danseurs que tu as créés dans le bloc de configuration, ou il risque de ne rien se passer."
       8:
         image: 'notes/hoc_dance_events_2019_8.png'
-        text: "Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour que vos danseurs effectuent des mouvements différents avec chaque touche. Essayez-le et avec les quelques lignes de code, vous pourrez créer votre propre danse interactive !"
+        text: "À terme, tu vas pouvoir créer plus d'événements comme celui-ci pour faire faire différents pas de danse à tes danseurs avec chaque touche. Vas-y, essaie, et avec quelques lignes de code, tu pourras créer ta propre danse interactive !"
     hoc_dance_measures_2019:
       1:
         image: 'notes/hoc_dance_measures_2019_1.png'
         text: "Heure de Code | Soirée Dansante : Temps"
       2:
         image: 'notes/hoc_dance_measures_2019_2.png'
-        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète et artiste. Je pense que c'est très important d’avoir des connaissances en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même de contrôler la technologie qui contrôle littéralement nos vies."
       3:
         image: 'notes/hoc_dance_measures_2019_3.png'
-        text: "L’événement que nous allons utiliser maintenant va écouter les variations dans le morceau. Cette variation incitera votre danseur à faire une nouvelle danse."
+        text: "L’événement qu'on va maintenant utiliser va guetter un changement au sein de la chanson. Ce changement va déclencher nouvelle danse chez ton danseur."
       4:
         image: 'notes/hoc_dance_measures_2019_4.png'
-        text: "Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson. En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4temps."
+        text: "Les danseurs professionnels répètent leur chorégraphie en comptant les temps d'une chanson. En musique, une mesure contient un certain nombre de temps. Dans la plupart des chansons qu'on apprécie, une mesure dure quatre temps."
       5:
         image: 'notes/hoc_dance_measures_2019_5.png'
-        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
+        text: "Pour faire se déchaîner tes danseurs, tu vas avoir besoin d'un bloc événement vert. Ce bloc évènement indique : « après 4 mesures »."
       6:
         image: 'notes/hoc_dance_measures_2019_6.png'
-        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
+        text: "Si tu sors un bloc violet « faire pour toujours », tu peux choisir une danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson passent avant de se mettre à danser."
       7:
         image: 'notes/hoc_dance_measures_2019_7.png'
-        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
+        text: "Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage."
       8:
         image: 'notes/hoc_dance_measures_2019_8.png'
-        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+        text: "Observe et guette l'événement qui va déclencher le code de danse. Hop, pile au bon moment, notre danseur s'y met."
     hoc_dance_properties_2019:
       1:
         text: "Heure de Code | Soirée Dansante : Propriétés"
       2:
-        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Future Ingénieure Amazon."
       3:
-        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+        text: "J'adore l'informatique parce que ça demande de la débrouillardise et un esprit critique, et que quand on investit des heures de travail, on peut obtenir quelque chose de vraiment cool et d'enrichissant."
       4:
-        text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
+        text: "Jusque-là, tu as pu jouer avec différents types de danseurs, que tu as programmés pour faire différents types de pas de danse. Mais comment ça marche en fait, ces pas ?"
       5:
-        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+        text: "Chaque pas de danse est composé d’une série d’images qu'on appel les photogrammes. Chaque photogramme est légèrement différent de celui qui le précède. Quand ton programme s'exécute, ton ordinateur affiche un photogramme après l'autre. Ils s'affichent tellement rapidement qu'on a l'impression que le danseur bouge. C'est ça le secret de tout dessin animé. "
       6:
-        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+        text: "Tu peux non seulement changer les pas de ton danseur, mais aussi ses propriétés. Les propriétés décrivent des choses comme l'emplacement du danseur sur l'écran, sa taille et sa couleur. "
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
-        text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme."
+        text: "Pour modifier les propriétés d'un danseur, tu vas utiliser un bloc « définir ». On va utiliser un bloc définir pour rendre nos danseurs plus petits. Fais d’abord glisser le bloc définir dans ton programme."
       8:
         image: 'notes/hoc_dance_properties_2019_8.png'
-        text: "Choisissez ensuite le danseur que vous voulez modifier et tapez la taille que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus le danseur est petit, plus il semble éloigné."
+        text: "Ensuite, sélectionne le danseur que tu veux modifier et saisis la taille que tu veux qu'il ait à l'écran. La taille normale est de 100. Si tu choisis un nombre inférieur, ça va rétrécir le danseur. Plus le danseur est petit, plus il va sembler éloigné."
       9:
         image: 'notes/hoc_dance_properties_2019_9.png'
-        text: "À l'aide du bloc Définir, vous pouvez également modifier les dimensions, la rotation, la position et la couleur d'un danseur. En jouant avec ces propriétés, vous pouvez faire plein de modifications, et les relier à différentes parties de la chanson."
+        text: "En te servant du bloc définir, tu peux aussi modifier les dimensions, l'angle, la position et la couleur d'un danseur. En jouant avec ces propriétés, tu peux faire plein de changements, et les relier à différents morceaux de la chanson."
       10:
         image: 'notes/hoc_dance_properties_2019_10.png'
-        text: "N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celuiCréer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatifet à vous amuser !"
+        text: "N'oublie pas que tu ne peux définir que les propriétés d'un danseur qui existe déjà. Veille à ce que ton bloc définir vienne bien à la suite du bloc « Créer un nouveau danseur ». N'hésite pas à faire des essais, à faire preuve d'inventivité, et à t'amuser !"
     hoc_dance_congrats_2019:
       1:
         text: "Heure de Code | Soirée Dansante : C’est la fête !"
       2:
-        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
+        text: "Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant, tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue toi-même et que tu pourras montrer à tes amis."
       3:
-        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
+        text: "Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc disposition pour arranger les danseurs de différentes manières à l'écran."
       4:
-        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
+        text: "Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise colle bien avec ton morceau préféré ?"
       5:
-        text: "Ou bien une chorégraphie avec vos amis ?"
+        text: "Ou bien faire un battle de danse avec tes amis ?"
       6:
-        text: "Ou encore autre chose qui regrouperait tout ?"
+        text: "Ou quelque chose de tout autre encore ? "
       7:
         image: 'notes/hoc_dance_congrats_7.png'
-        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"
+        text: "À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi bien !"
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'

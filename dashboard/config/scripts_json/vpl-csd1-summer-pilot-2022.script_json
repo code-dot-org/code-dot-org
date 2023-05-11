@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-11 01:55:39 UTC",
+    "serialized_at": "2022-08-05 19:59:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -81,7 +81,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce themselves and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+        "student_overview": "**You will:**\n\n* Have the opportunity to introduce themselves and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1424,6 +1424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Units-Pilot"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -1446,6 +1449,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Chapters-PILOT"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -1719,6 +1725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-tour-vid-PL Pilot"
+        ],
         "progression": "Code.org Tour"
       },
       "bonus": false,
@@ -1741,6 +1750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TaskResources_CSD-PL-PILOT-22"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1763,6 +1775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-navigating support_CSD-PL-PILOT-22"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1785,6 +1800,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_CSD-PL-PILOT-22"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1807,6 +1825,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_CSD-PL-PILOT-22"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1829,6 +1850,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_CSD-PL-PILOT-22"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,

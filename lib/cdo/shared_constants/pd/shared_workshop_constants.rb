@@ -27,13 +27,15 @@ module Pd
 
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
 
-    # Academic Year Workshop subjects shared between CSP and CSD.
-    SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze
-    SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
-    SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
-    SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze
-    SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze
-    SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    # Academic Year Workshop subjects shared between CSA, CSD, and CSP
+    ACADEMIC_YEAR_SUBJECTS = [
+      SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze,
+      SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze,
+      SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze,
+      SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze,
+      SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze,
+      SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    ]
 
     # Note: the original intent of this constant is to put subjects
     # in here that will be used explicitly in JS code.
@@ -96,6 +98,7 @@ module Pd
         SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSA_FIT = SUBJECT_FIT,
+        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -143,6 +146,10 @@ module Pd
     ].freeze
 
     HIDE_ON_WORKSHOP_MAP_SUBJECTS = [
+      SUBJECT_CSF_DISTRICT
+    ].freeze
+
+    HIDE_FUNDED_SUBJECTS = [
       SUBJECT_CSF_DISTRICT
     ].freeze
 

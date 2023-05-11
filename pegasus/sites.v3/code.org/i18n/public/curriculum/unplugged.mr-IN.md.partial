@@ -21,8 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## CS ची मूलतत्त्वे यातील अनप्लग धडे 2021-22
-खालील धडे <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS ची मूलतत्वे 2021-22</a> यात मिळतील. <br><br>
+## CS फंडामेंटल्स 2022-23 मधील अनप्लग्ड धडे
+CS फंडामेंटल्स 2022-23 <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">मध्ये खालील धडे मिळू शकतात</a>. <br><br>
 
 <style>
 table, th, td {
@@ -31,7 +31,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t01 {
   width: 10%;
@@ -60,71 +60,70 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>अभ्यासक्रम</th>
-    <th><center><big>धड्यांचा अनुक्रम</th> 
-    <th width=10%><center><big>संकल्पना</th>
-    <th width=20%><center><big>व्हिडिओ</th>
+    <th><center><big>Course</th>
+    <th><center><big>Lesson Plan</th>
+    <th width=10%><center><big>Concept</th>
+    <th width=20%><center><big>Video</th>
      <tr>
-    <th rowspan="3" id="t01">अभ्यासक्रम अ</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">अ.3 - हसरे नकाशे</a><br><small>या अनप्लग धड्यामध्ये एक सोपे काम करण्यासाठी टीम एकत्र येतात: "फ्लर्ब"ला फळापर्यंत न्या. सूचनांचे रूपांतरण दिलेल्या चिन्हांमध्ये करताना विद्यार्थी नेमक्या सूचना लिहिण्याचा सराव करतील. जर कोडमध्ये काही समस्या आल्या, तर विद्यार्थ्यांनी एकत्र मिळून समस्या कुठे आहेत आणि त्यांचे समाधान कसे करावे यावर काम केले पाहिजे.</td><td>सीक्वेंसिंग</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Course A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. सूचनांचे रूपांतरण दिलेल्या चिन्हांमध्ये करताना विद्यार्थी नेमक्या सूचना लिहिण्याचा सराव करतील. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">अ.7 - हसरे लूप</a><br><small>ही गतिविधी हसरे नकाशे सारखीच आहे. या वेळी विद्यार्थी अधिक मोठी, अधिक वेळ घेणारी कोडी सोडवतील ज्यामुळे त्यांना अशा बांधणीची उपयुक्तता कळेल ज्यामुळे ते अधिक मोठा कोड अधिक सोप्या रीतिने लिहू शकतील.</td><td>लूप</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">अ.11 - मोठा इव्हेंट जूनियर</a><br><small>आधीपासून तयार अल्गोरिदम मध्ये विविधता आणण्यासाठी इव्हेंट हा एक फार चांगला मार्ग आहे. काही वेळा तुम्हाला असा प्रोग्रॅम पाहिजे असतो ज्यात वापरकर्त्याला पाहिजे असेल तेव्हाच त्यांना प्रतिसाद मिळेल. इव्हेंट यासाठीच असतात.</td><td>इव्हेंट</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. काही वेळा तुम्हाला असा प्रोग्रॅम पाहिजे असतो ज्यात वापरकर्त्याला पाहिजे असेल तेव्हाच त्यांना प्रतिसाद मिळेल. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="3" id="t02">अभ्यासक्रम ब</th>    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">ब.2 - ही चाल तुरुतुरु</a><br><small>हा धडा विद्यार्थ्यांना कोडिंगच्या त्या सरावासाठी मानसिकरीत्या तयार करतो ज्याचा उपयोग त्यांना या संपूर्ण अभ्यासक्रमामध्ये होईल. लहान टीम बनवून विद्यार्थी शारीरिक गतिविधी करतील आणि आपल्या वर्गमित्रांना प्रोग्रॅम करतील ज्याने ते एका ठिकाणहून दुसऱ्या ठिकाणी सावधपणे पावले उचलून जातील आणि एक उद्दिष्ट साध्य करतील.</td><td>सीक्वेंसिंग</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t02">Course B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">बी.6 - लूप होऊ द्या</a><br><small>जेव्हा आपण अधिक मोठे आणि मजेशीर प्रोग्रॅम लिहायला सुरुवात करतो, तेव्हा आपल्या कोडमध्ये बरेचदा पुन्हा-पुन्हा करण्याची कामे येतात. तर या धड्यामध्ये विद्यार्थी हे शिकतील की लूप वापरून अशा पुन्हा-पुन्हा करण्याची कामे करण्याच्या सूचना कशा देता येतात. यासाठी नाचातील पुन्हा-पुन्हा केल्या जाणाऱ्या हालचालींचा वापर केला जातो.</td><td>लूप</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">ब.10 - योग्य अॅप</a><br><small>या धड्यामध्ये विद्यार्थी हे ओळखणे शिकतील की कॉम्प्युटर सायंस लोकांना वास्तविक जीवनात कशा प्रकारे मदत करू शकते. सर्वात आधी विद्यार्थी अनेक अशा काल्पनिक लोकांच्या समस्यांशी समरस होतील जे स्मार्टफोन वापरतात आणि त्यांना त्यांच्या गरजेप्रमाणे "योग अॅप” शोधण्यात मदत करतील. त्यानंतर विद्यार्थी या सहानुभूतिचा आणि स्वतःच्या कल्पकतेचा वापर करून अशा स्मार्टफोन अॅपचे डिझाइन तयार करतील ज्याने एका इतर वापरकर्त्याची मदत होईल.</td><td>कॉम्प्युटिंगचे प्रभाव</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. सर्वात आधी विद्यार्थी अनेक अशा काल्पनिक लोकांच्या समस्यांशी समरस होतील जे स्मार्टफोन वापरतात आणि त्यांना त्यांच्या गरजेप्रमाणे "योग अॅप” शोधण्यात मदत करतील. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
   </tr>
        <tr>
-    <th rowspan="4" id="t03">अभ्यासक्रम क</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">क.2 - माझे रोबॉटिक मित्र जूनियर</a><br><i>*साहित्य: प्लॅस्टिकचे कप (10/ 2-3च्या गटात)</i><br><small>कोडच्या ऐवजी काही चिह्ने वापरून विद्यार्थी अशा अल्गोरिदम तयार करतील ज्यांत एखाद्या "रोबॉट"ला निरनिराळ्या प्रकारे कपांची रास जमवता येईल. विद्यार्थी आळी-पाळीने रोबॉटचे काम करतील आणि फक्त त्यांच्या सहकाऱ्यांनी सांगितलेल्या अल्गोरिदम प्रमाणेच कामे करतील. या सेगमेंटमध्ये विद्यार्थी चिह्ने आणि काम यांतील परस्पर संबंध काय आहे, अल्गोरिदम आणि प्रोग्रॅम यांमधील फरक काय असतो आणि डीबगिंगचे बहुमोल कौशल्य हे सर्व शिकतील.</td><td>सीक्वेंसिंग</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. विद्यार्थी आळी-पाळीने रोबॉटचे काम करतील आणि फक्त त्यांच्या सहकाऱ्यांनी सांगितलेल्या अल्गोरिदम प्रमाणेच कामे करतील. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
   </tr>
-   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">क.7 - माझा लूपी रोबॉटिक मित्र जूनियर</a><br><i>*साहित्य : कागदाचे कप (20/ 4 चा गट)</i><br><small>अगोदरच्या "माझे रोबॉटिक मित्र” या गतिविधीला पुढे नेण्याबद्दल सिंहावलोकन, यात विद्यार्थी अधिक मोठे आणि गुंतागुंतीचे डिझाइन तयार करतात. त्यांच्या "रोबॉट"ने हे अधिक मोठे डिझाइन करून दाखवावे याचा प्रोग्रॅम तयार करण्यासाठी विद्यार्थ्यांना त्यांच्या सूचनांमधील अशा पुन्हा-पुन्हा येणाऱ्या पॅटर्न ओळखाव्या लागतील ज्यांसाठी लूप तयार केला जाऊ शकतो.</td><td>लूप</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
-  </tr> 
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+  </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">क.11 - मोठा इव्हेंट</a><br><small>विद्यार्थ्यांना लवकरच समजेल की एखाद्या आधीपासून लिहीलेल्या अल्गोरिदम मध्ये फेरफार करून पहाण्यासाठी इव्हेंट फार चांगला मार्ग आहे. काही वेळा तुम्हाला असा प्रोग्रॅम पाहिजे असतो ज्यात वापरकर्त्याला पाहिजे असेल तेव्हाच त्यांना प्रतिसाद मिळेल. इव्हेंटमुळे तुमचा प्रोग्रॅम अधिक मनोरंजक आणि परस्पर-संवादी होऊ शकतो.</td><td>इव्हेंट</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
-   </tr> 
-       </tr> 
-     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">क.15 - बायनरी ब्रेसलेट</a><br><i>*साहित्य : मार्कर्स. ऐच्छिक – 18 काळे/ 18 पांढरे मणी, प्रत्येक विद्यार्थ्यासाठी 1 पाईप क्लीनर</i><br><small>कॉम्प्युटरच्या जगात बायनरीबद्दल जाणून घेणे फार महत्त्वाचे आहे. आजचे बहुतांश कॉम्प्युटर सर्व प्रकारच्या माहितीला बायनरी स्वरूपात स्टोअर करून ठेवतात. या धड्यावरून हे समजेल की वास्तविक जगातील एखादी वस्तू घेऊन तिचे "चालू” आणि "बंद” म्हणजेच "ऑन” आणि "ऑफ” या मालिकेत रूपांतरण कसे केले जाऊ शकते.</td><td>बायनरी</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. काही वेळा तुम्हाला असा प्रोग्रॅम पाहिजे असतो ज्यात वापरकर्त्याला पाहिजे असेल तेव्हाच त्यांना प्रतिसाद मिळेल. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr>
+       </tr>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. ऐच्छिक – 18 काळे/ 18 पांढरे मणी, प्रत्येक विद्यार्थ्यासाठी 1 पाईप क्लीनर</i><br><small>कॉम्प्युटरच्या जगात बायनरीबद्दल जाणून घेणे फार महत्त्वाचे आहे. आजचे बहुतांश कॉम्प्युटर सर्व प्रकारच्या माहितीला बायनरी स्वरूपात स्टोअर करून ठेवतात. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
   </tr>
          <tr>
     <th rowspan="3" id="t04">Course D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">ड.2 - ग्राफ पेपर वापरून प्रोग्रॅमिंग<br></a><small>चित्र काढण्यासाठी एकमेकांना "प्रोग्रॅम" केल्याने विद्यार्थ्यांना एका मजेशीर आणि सोप्या मार्गाने प्रोग्रॅमिंगच्या संकल्पनांचा अनुभव घेण्याची संधी मिळते. वर्गाच्या सुरुवातीला विद्यार्थी चिह्नांच्या सहाय्याने एकमेकांना सूचना देतील आणि ग्राफ पेपरवर चौकोनांमध्ये रंग भरून एखाद्या चित्रासारखे चित्र काढण्याचा प्रयत्न करतील. जर वेळ असेल, तर या धड्याच्या शेवटी विद्यार्थी स्वतःच्या मनाने एखादे चित्र काढू शकतात.</td><td>सीक्वेंसिंग</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. वर्गाच्या सुरुवातीला विद्यार्थी चिह्नांच्या सहाय्याने एकमेकांना सूचना देतील आणि ग्राफ पेपरवर चौकोनांमध्ये रंग भरून एखाद्या चित्रासारखे चित्र काढण्याचा प्रयत्न करतील. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">ड.4 - रीले प्रोग्रॅमिंग<br></a><small>या गतिविधीमध्ये सुरुवातीला एक लहानसा धडा डीबगिंग आणि परसिस्टंस बद्दल आहे आणि नंतर लगेच विद्यार्थ्यांचे गट पाडून त्यांना एकत्र काम करायला लावून एका वेळी एक सूचना देत प्रोग्रॅमिंग करण्याची शर्यत सुरू होते.</td><td>सीक्वेंसिंग</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">ड.12 - कार्डांसोबत कंडीशनल्स</a><br><small>या धड्यामध्ये हे शिकवले जाती की विविक्षित माहितीसाठी एखाद्य प्रोग्रॅममध्ये पाहिजे तसे बदल करण्यासाठी कंडीशनल्सचा वापर कसा केला जाऊ शकतो. एखादा प्रोग्रॅम लिहत असताना आपल्याला पाहिजे ती सर्व माहिती आपल्याकडे असतेच असे नाही. काही वेळा एका परिस्थितीमध्ये तुम्हाला एक काम करायचे असते आणि निराळ्या परिस्थितीमध्ये निराळे, पण तुम्हाला माहीत नसते की तुमचा कोड चालवल्यावर कुठली परिस्थिती समोर येईल ते. यासाठी कंडीशनल्स तुमची मदत करतात. कंडीशनल्स मुळे तुमचा कोड चालवत असताना कॉम्प्युटर समोर असलेल्या परिस्थितीप्रमाणे निर्णय घेऊ शकतो.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. एखादा प्रोग्रॅम लिहत असताना आपल्याला पाहिजे ती सर्व माहिती आपल्याकडे असतेच असे नाही. काही वेळा एका परिस्थितीमध्ये तुम्हाला एक काम करायचे असते आणि निराळ्या परिस्थितीमध्ये निराळे, पण तुम्हाला माहीत नसते की तुमचा कोड चालवल्यावर कुठली परिस्थिती समोर येईल ते. यासाठी कंडीशनल्स तुमची मदत करतात. कंडीशनल्स तुमचा कोड कधीही रन झाल्यावर सत्य असलेल्या माहितीच्या आधारे संगणकाला निर्णय घेण्यास अनुमती देतात.+</td><td>कंडीशनल्स</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>. फंक्शन (यांना प्रोसीजर सुद्धा म्हणतात) असे लहान प्रोग्रॅम असतात ज्यांचा वापर एखाद्या मोठ्या प्रोग्रॅममध्ये पुन्हा-पुन्हा वापरून केला जातो. हा धडा विद्यार्थ्यांना अंतर्ज्ञानाने समजून घेण्यास मदत करेल की फंक्शन्समध्ये कोडचे भाग एकत्र करणे ही एक उपयुक्त सराव का असू शकते.</td><td>फंक्शन्स</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}
+   </tr>
+   <tr>
+<td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - प्रवेशयोग्यतेसाठी डिझाइनिंग</a><br><small>या धड्यात, विचारमंथन करून आणि काल्पनिक अॅप्ससाठी ऍक्सेसिबल सोल्यूशन्स डिझाइन करून विद्यार्थी प्रवेशयोग्यता आणि सहानुभूतीचे मूल्य शिकतील.</td><td>संगणनाचे परिणाम</td><td><img src="/images/e18.png" width="90%"></td>
+   <tr>
+<td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - डिजिटल शेअरिंग</a><br><i>*सप्लायज: स्मार्टफोन किंवा टॅबलेट</i><br><लहान>कॉपीराइट आणि क्रिएटिव्हिटीच्या टीमने कॉम्प्युटर सायन्स फंडामेंटल्ससाठी कर्ज दिलेले आहे, हा धडा विद्यार्थ्यांना मालकी आणि कॉपीराइटचा आदर करण्याच्या आव्हाने आणि फायदे समजून घेण्यास मदत करण्यासाठी अस्तित्वात आहे, विशेषतः डिजिटल वातावरणात. नैतिक डिजिटल नागरिक होण्याचा एक महत्त्वाचा भाग म्हणून कलाकारांच्या हक्कांचा आदर करण्यासाठी विद्यार्थ्यांना प्रोत्साहित केले पाहिजे.</td><td>डिजिटल नागरिकत्व</td><td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">अभ्यासक्रम इ</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">इ.7 - डिजिटल शेअरिंग</a><br><i>*साहित्य : स्मार्टफोन किंवा टॅबलेट</i><br><small>Computer Science ची मूलतत्त्वे यासाठी Copyright and Creativity यांनी वापरण्यासाठी दिलेल्या या धड्यामध्ये विद्यार्थ्यांना हे समजावून सांगितले जाते की मालकी हक्क आणि कॉपीराइट यांचे लक्ष ठेवण्याचे फायदे काय असतात आणि यांच्यासमोर आव्हाने कशी आहेत, विशेषकरून डिजिटल वातावरणामध्ये. नैतिक दृष्ट्या एक चांगले डिजिटल नागरिक होण्यासाठी विद्यार्थ्यांना कलाकारांच्या अधिकारांचा सन्मान करणे शिकवले पाहिजे.</td><td>डिजिटल नागरिकत्व</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+   </tr>
+     </tr>
+          <tr>
+<th rowspan="3" id="t06">कोर्स F</th>
+            <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6"> F.6 -रिकाम्या स्पेसच्या गोष्टी</a><br><i>*सप्लाय: 6 लिफाफे (सुयोग्य: कागद किंवा इंडेक्स कार्ड, अर्ध्यामध्ये दुमडलेले)</i><br><small>विद्यार्थी  रिकाम्या जागा भरा स्वरुपात गोष्टी  वापरतील (मॅड लिब्स® प्रमाणे) संगणक वापरकर्त्याकडून इनपुट कसे घेतात आणि संग्रहित कसे करतात हे समजून घेण्यासाठी संदर्भ म्हणून, नंतर प्रोग्राम चालू असताना त्याचा वापर करा.
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">इ.11 - गीतलेखन</a><br><small>कॉम्प्युटर सायंसच्या जगातील सर्वात सुंदर संरचना म्हणजे फंक्शन. फंक्शन (यांना प्रोसीजर सुद्धा म्हणतात) असे लहान प्रोग्रॅम असतात ज्यांचा वापर एखाद्या मोठ्या प्रोग्रॅममध्ये पुन्हा-पुन्हा वापरून केला जातो. या धड्यामध्ये विद्यार्थी हे शिकतील की बराचसा कोड एका फंक्शनमध्ये ठेवणे किती सोयीचे असते.</td><td>फंक्शन</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">इ.17 - सुलभतेसाठी डिझाइन तयार करणे</a><br><small>या धड्यामध्ये विचारमंथन आणि चर्चेद्वारे विद्यार्थी सुलभतेबद्दल, तसेच सहानुभूति बद्दल शिकतील आणि काल्पनिक अॅपसाठी सुलभ समाधान डिझाइन करणे शिकतील.</td><td>कॉम्प्युटिंगचे प्रभाव</td><td><img src="/images/e18.png" width="90%"></td>
-  </tr>
-    </tr>
-         <tr>
-    <th rowspan="3" id="t06">अभ्यासक्रम फ</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">फ.6 -रिकाम्या स्पेसच्या गोष्टी</a><br><i>*साहित्य : 6 पाकिटे(हे सुद्धा चालेल : मधून अर्धी घडी केलेले कागद किंवा इंडेक्स कार्डे)</i><br><small>विद्यार्थी रिकाम्या जागा भरून पूर्ण करण्याच्या गोष्टी वापरतील (Mad Libs® सारखेच) आणि त्यांतून हे समजून घेतील की कॉम्प्युटर एखाद्या वापरकर्त्याकडून इनपुट कसा घेतात आणि त्याला स्टोअर करून कसे ठेवतात, तसेच नंतर प्रोग्रॅम सुरू असताना ते याचा वापर करतील.
-   </td><td>व्हेरिएबल्स</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
-    </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">फ.13 - For लूपची मजा</a><br><i>*साहित्य : फासे (3 फासे/ 2-4 च्या समूहासाठी)</i><br><small>आपल्याला माहीत आहे की लूप वापरून आपण काही कामे पुन्हा-पुन्हा करू शकतो, पण आता आपण शिकणार आहोत की लूपमध्ये इतर संरचना कशा वापराव्यात. या संरचनांमुळे विद्यार्थी असा कोड तयार करू शकतील जो अधिक प्रभावी आणि गतिमान असेल.</td><td>For लूप</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">फ.19 - इंटरनेट</a><br><small>अनेक लोक जरी रोज इंटरनेट वापरत असले, तरीही खूप लोकांना माहीत नाही की इंटरनेट कसे काम करते. या धड्यामध्ये विद्यार्थी स्वतः इंटरनेटमधून प्रवास करतील आणि तसे करताना कनेक्शन, URL, IP पत्ता आणि DNS यांच्याबद्दल शिकतील.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. या नवीन संरचना विद्यार्थ्यांना अधिक शक्तिशाली आणि गतिमान असलेला कोड तयार करण्यास अनुमती देतील.</td><td>लूपसाठी</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - इंटरनेट</a><br><लहान>जरी अनेक लोक दररोज इंटरनेट वापरतात, पण ते कसे कार्य करते हे अनेकांना माहीत नाही. या धड्यामध्ये विद्यार्थी स्वतः इंटरनेटमधून प्रवास करतील आणि तसे करताना कनेक्शन, URL, IP पत्ता आणि DNS यांच्याबद्दल शिकतील.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
@@ -147,7 +146,7 @@ table, th, td {
 }
 th, td {
   padding: 5px;
-  text-align: left;    
+  text-align: left;
 }
 #t07 {
   width: 10%;
@@ -160,17 +159,17 @@ th, td {
     <th><center><big>संकल्पना</th>
     <th width=65%><center><big>धड्यांची योजना <br>
 <small> धड्यांच्या योजनेमध्ये आणखी संसाधने आहेत (स्लाइड्स, व्हिडिओ, उत्तरांचे संकेत इत्यादी).
-</th> 
-    <th><center><big>संसाधने</th>
+</th>
+    <th><center><big>Resources</th>
      <tr>
-    <th rowspan="2" id=t07 width=5%>डिजिटल नागरिकत्व</th>
-    <td><a href="https://curriculum.code.org/csf-19/coursef/18">क्राउडसोर्सिंग</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
   </tr>
   <tr>
-      <td colspan="2">*Common Sense Education मध्ये एक <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">संपूर्ण डिजिटल नागरिकत्व अभ्यासक्रम</a> आहे ज्यात अनेक अनप्लग गतिविधी आहेत.</td>
+      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
     <tr>
-    <th id=t07>बायनरी</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">बायनरी चित्रे </a><br><small>*साहित्य : ऐच्छिक - विद्यार्थ्यांना दाखवण्यासाठी अनेक वस्तूंचे समूह. जरी अनेक लोकांना असे वाटते की बायनरी म्हणजे फक्त शून्य आणि एक, तरीही विद्यार्थ्यांपुढे हा विचार मांडला जाईल की माहितीची मांडणी अनेक प्रकारच्या बायनरी पर्यायांद्वारे केली जाऊ शकते. या धड्यामध्ये ही संकल्पना आणखी पुढे नेली आहे आणि दाखवले आहे की कॉम्प्युटरमध्ये यापेक्षा अधिक गुंतागुंतीची माहितीसुद्धा बायनरी स्वरूपात स्टोअर केली जाऊ शकते (जसे चित्र आणि रंग).</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+    <th id=t07>Binary</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. जरी अनेक लोकांना असे वाटते की बायनरी म्हणजे फक्त शून्य आणि एक, तरीही विद्यार्थ्यांपुढे हा विचार मांडला जाईल की माहितीची मांडणी अनेक प्रकारच्या बायनरी पर्यायांद्वारे केली जाऊ शकते. या धड्यामध्ये ही संकल्पना आणखी पुढे नेली आहे आणि दाखवले आहे की कॉम्प्युटरमध्ये यापेक्षा अधिक गुंतागुंतीची माहितीसुद्धा बायनरी स्वरूपात स्टोअर केली जाऊ शकते (जसे चित्र आणि रंग).</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
     <th id=t07>लूप</th>

@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PromptIcon from './PromptIcon';
@@ -25,8 +24,8 @@ class InstructionsCsfLeftCol extends React.Component {
     failureAvatar: PropTypes.string,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
-    })
+      isFailure: PropTypes.bool,
+    }),
   };
 
   componentDidMount() {
@@ -85,14 +84,14 @@ class InstructionsCsfLeftCol extends React.Component {
         ref={c => {
           this.leftCol = c;
         }}
-        style={[
-          commonStyles.bubble,
-          !hasAuthoredHints && styles.noAuthoredHints
-        ]}
+        style={{
+          ...commonStyles.bubble,
+          ...(!hasAuthoredHints && styles.noAuthoredHints),
+        }}
       >
         <div
           className={classNames('prompt-icon-cell', {
-            authored_hints: hasAuthoredHints
+            authored_hints: hasAuthoredHints,
           })}
           onClick={this.handleClickLightbulb}
         >
@@ -114,11 +113,11 @@ class InstructionsCsfLeftCol extends React.Component {
 const styles = {
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
-    cursor: 'default'
-  }
+    cursor: 'default',
+  },
 };
 
-export const UnconnectedInstructionsCsfLeftCol = Radium(InstructionsCsfLeftCol);
+export const UnconnectedInstructionsCsfLeftCol = InstructionsCsfLeftCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -127,10 +126,10 @@ export default connect(
       hasAuthoredHints: state.instructions.hasAuthoredHints,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
-      feedback: state.instructions.feedback
+      feedback: state.instructions.feedback,
     };
   },
   null,
   null,
-  {withRef: true}
-)(Radium(InstructionsCsfLeftCol));
+  {forwardRef: true}
+)(InstructionsCsfLeftCol);

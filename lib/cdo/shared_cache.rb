@@ -19,8 +19,8 @@ module Cdo
         if CDO.memcached_endpoint
           begin
             memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
-          rescue => e # Notify if Auto Discovery fails.
-            Honeybadger.notify(e)
+          rescue => exception # Notify if Auto Discovery fails.
+            Honeybadger.notify(exception)
           end
         end
         return nil unless memcached_hosts.present?

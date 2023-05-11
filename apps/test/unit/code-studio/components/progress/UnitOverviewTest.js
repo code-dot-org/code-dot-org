@@ -18,7 +18,7 @@ const defaultProps = {
   scriptId: 123,
   scriptName: 'csp1',
   unitTitle: 'CSP 1',
-  professionalLearningCourse: false,
+  deeperLearningCourse: false,
   viewAs: ViewType.Instructor,
   isRtl: false,
   sectionsForDropdown: [],
@@ -28,7 +28,7 @@ const defaultProps = {
   versions: {},
   redirectScriptUrl: null,
   unitCalendarLessons: [],
-  completedLessonNumber: undefined
+  completedLessonNumber: undefined,
 };
 
 const setUp = (overrideProps = {}) => {

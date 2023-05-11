@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   announcementShape,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
@@ -13,7 +13,7 @@ export default class Announcements extends Component {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    firehoseAnalyticsData: PropTypes.object
+    firehoseAnalyticsData: PropTypes.object,
   };
 
   /*
@@ -46,9 +46,17 @@ export default class Announcements extends Component {
             type={announcement.type}
             notice={announcement.notice}
             details={announcement.details}
-            buttonText={i18n.learnMore()}
+            buttonText={
+              announcement.buttonText === undefined
+                ? i18n.learnMore()
+                : announcement.buttonText
+            }
             buttonLink={announcement.link}
-            dismissible={true}
+            dismissible={
+              announcement.dismissible === undefined
+                ? true
+                : announcement.dismissible
+            }
             width={this.props.width}
             firehoseAnalyticsData={this.props.firehoseAnalyticsData}
           />

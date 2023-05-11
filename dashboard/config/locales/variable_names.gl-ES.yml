@@ -21,5 +21,6 @@ gl:
       score: puntuación
       size: tamaño
       speed: velocidade
+      type: tipo
       variable: variable
       wizard: mago

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:30.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -111,18 +107,18 @@
     "name_suffix": "_2022",
     "long_instructions": "<img src=\"https://images.code.org/25ca3c6b3c97eecaad3da2f34ee8baa4-image-1604786816070.gif\" style=\"float:right\" width=\"25%\">\r\n\r\n# Ghost Moving with the Mouse\r\n\r\nIn this level, you'll make the ghost move either left or right depending on the position of the mouse pointer. In the example shown, if the mouse pointer is on the left, the ghost moves left. The opposite is also true.\r\n\r\n# Do This\r\n\r\n* Write at least two if-statements to check for the location of the mouse.\r\n* Make the ghost move in a different direction for each mouse location.",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/",
-      "/docs/concepts/game-lab/animation-tab/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/javascript/random-numbers/",
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/random-numbers",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables"
     ],
-    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "map_reference": "/courses/csd-2022/guides/if-else-statements",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "false",
     "encrypted": "false",
@@ -134,6 +130,10 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:30.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:30.808+00:00\",\"changed\":[\"cloned from \\\"CSD games practice move with mouse_2021\\\"\"],\"cloned_from\":\"CSD games practice move with mouse_2021\"}]"

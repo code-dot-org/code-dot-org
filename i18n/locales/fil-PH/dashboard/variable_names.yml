@@ -20,6 +20,7 @@ fil:
       length: haba
       name: pangalan
       nectar: nectar
+      object: bagay
       planet: planeta
       points: mga puntos
       random: nang hindi pinipili
@@ -31,6 +32,7 @@ fil:
       speed: bilis
       startX: startx
       startY: startY
+      type: tipo
       variable: variable
       width: lapad
       wizard: salamangkero

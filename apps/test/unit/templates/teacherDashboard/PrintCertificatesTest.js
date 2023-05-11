@@ -11,7 +11,7 @@ describe('PrintCertificates', () => {
   const wrapper = shallow(
     <PrintCertificates
       sectionId={sectionId}
-      assignmentName="playlab"
+      courseVersionName="playlab"
       curriedPegasusUrl={path => `${path}`}
     />
   );
@@ -21,20 +21,15 @@ describe('PrintCertificates', () => {
     assert(wrapper.props().action, pegasus('/certificates'));
   });
 
-  it('has a hidden input for the assigned script', () => {
-    assert(wrapper.childAt(0).is('input'));
-    assert.equal(wrapper.childAt(0).props().type, 'hidden');
-    assert.equal(wrapper.childAt(0).props().defaultValue, 'playlab');
+  it('has a hidden input for the course name', () => {
+    assert(wrapper.childAt(1).is('input'));
+    assert.equal(wrapper.childAt(1).props().type, 'hidden');
+    assert.equal(atob(wrapper.childAt(1).props().value), 'playlab');
   });
 
   it('has trigger to open /certificates', () => {
     assert.equal(wrapper.find('div').length, 2);
-    assert(
-      wrapper
-        .find('div')
-        .last()
-        .contains('Print Certificates')
-    );
+    assert(wrapper.find('div').last().contains('Print Certificates'));
   });
 
   it('loads student names', finish => {
@@ -44,7 +39,7 @@ describe('PrintCertificates', () => {
         const mockResponse = JSON.stringify([
           {name: 'Student A'},
           {name: 'Student B'},
-          {name: 'Student C'}
+          {name: 'Student C'},
         ]);
         request.respond(
           200,
@@ -58,16 +53,13 @@ describe('PrintCertificates', () => {
       assert.deepEqual(wrapper.state('names'), [
         'Student A',
         'Student B',
-        'Student C'
+        'Student C',
       ]);
       finish();
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper
-      .find('div')
-      .last()
-      .simulate('click');
+    wrapper.find('div').last().simulate('click');
     sinon.restore();
   });
 });

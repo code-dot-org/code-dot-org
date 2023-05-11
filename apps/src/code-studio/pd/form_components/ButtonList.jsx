@@ -6,7 +6,7 @@ import {
   Checkbox,
   ControlLabel,
   FormGroup,
-  HelpBlock
+  HelpBlock,
 } from 'react-bootstrap';
 
 import utils from './utils';
@@ -31,15 +31,15 @@ class ButtonList extends React.Component {
           answerText: PropTypes.string.isRequired,
           inputId: PropTypes.string,
           inputValue: PropTypes.string,
-          onInputChange: PropTypes.func
+          onInputChange: PropTypes.func,
         }),
 
         // ... or an answer with different strings for display vs value.
         // (see typedef Answer in utils)
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
-          answerValue: PropTypes.string.isRequired
-        })
+          answerValue: PropTypes.string.isRequired,
+        }),
       ])
     ).isRequired,
     includeOther: PropTypes.bool,
@@ -49,11 +49,11 @@ class ButtonList extends React.Component {
     validationState: PropTypes.string,
     errorText: PropTypes.string,
     columnCount: PropTypes.number,
-    suppressLineBreak: PropTypes.bool
+    suppressLineBreak: PropTypes.bool,
   };
 
   static defaultProps = {
-    suppressLineBreak: false
+    suppressLineBreak: false,
   };
 
   handleChange = event => {
@@ -70,7 +70,7 @@ class ButtonList extends React.Component {
       value = currentSelection.size > 0 ? Array.from(currentSelection) : null;
     }
     this.props.onChange({
-      [this.props.groupName]: value
+      [this.props.groupName]: value,
     });
   };
 
@@ -81,7 +81,7 @@ class ButtonList extends React.Component {
   renderInputComponents() {
     const InputComponent = {
       radio: Radio,
-      check: Checkbox
+      check: Checkbox,
     }[this.props.type];
 
     let answers = this.props.answers;
@@ -89,7 +89,7 @@ class ButtonList extends React.Component {
     if (this.props.includeOther) {
       answers = _.concat(answers, {
         answerText: otherString,
-        inputId: `${this.props.groupName}_other`
+        inputId: `${this.props.groupName}_other`,
       });
     }
 
@@ -172,8 +172,8 @@ class ButtonList extends React.Component {
 const styles = {
   inputLabel: {
     verticalAlign: 'top',
-    marginRight: 15
-  }
+    marginRight: 15,
+  },
 };
 
 export default ButtonList;

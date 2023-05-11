@@ -2,13 +2,11 @@
 title: Partnerzy
 ---
 
-Godziną Kodowania kieruje Komitet Doradczo-Odwoławczy inicjatyw Godzina Kodowania i Tydzień Edukacji Informatycznej.
+Godziną Kodowania kieruje Komisja Rewizyjna inicjatywy Godzina Kodowania.
 
-[Komitet Doradczy]({{ urls/advisory_committee }}) składa się z przedstawicieli ze szkół K-12, środowisk akademickich, organizacji non-profit, organizacji komercyjnych i organizacji międzynarodowych. Komitet ten kieruje strategią dotyczącą kampanii Godzina Kodowania.
+[Komisja Rewizyjna]({{ urls/review_committee }}) składa się z 12 obecnych i byłych edukatorów ze wszystkich grup wiekowych do K-12 włącznie, którzy oceniają i zalecają aktywności w kategoriach opracowanych przez komitet doradczy. Edukatorzy oceniają aktywności wykonywane przez uczniów oraz plany lekcji prowadzonych przez nauczycieli oraz przesłanych przez setki partnerów, badając ich wartość edukacyjną, zdolność do angażowania uczniów oraz potencjalną atrakcyjność dla różnych grup uczniów.
 
-[ Komitet ds. Oceny ]({{ urls/review_committee }}) składa się z 15 edukatorów z różnych poziomów K-12, oceniających i rekomendujących działania przy użyciu tabeli Komitetu Doradczego. Ci edukatorzy sprawdzają samouczki dla uczniów i scenariusze lekcji dla nauczycieli nadsyłane przez setki partnerów, oceniając edukacyjną wartość działań, zdolność angażowania uczniów i potencjalne odwołania do różnych grup uczniów.
-
-Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu Godziny Kodowania i wizji tej inicjatywy proponującej każdemu uczniowi wprowadzenia do informatyki.
+Prace i zaangażowanie komisji przyczyniły się do sukcesu inicjatywy Godzina Kodowania i jej misji oferującej każdemu uczniowi wprowadzenie do informatyki .
 
 # Główni Partnerzy oraz Korporacje Wspierające
 
@@ -22,7 +20,7 @@ Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu
 
 * * *
 
-# Partnerzy związani z programami nauczania i samouczkami
+# Partnerzy programów nauczania i samouczków
 
 {{ partners/curriculum_tutorial_partners }}
 
@@ -34,7 +32,7 @@ Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu
 
 * * *
 
-# Dodatkowi partnerzy
+# Partnerzy dodatkowi
 
 {{ partners/additional_partners }}
 

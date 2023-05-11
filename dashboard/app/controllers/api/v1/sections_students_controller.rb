@@ -94,8 +94,8 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
         )
         @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
-      rescue ActiveRecord::RecordInvalid => e
-        errors << e.message
+      rescue ActiveRecord::RecordInvalid => exception
+        errors << exception.message
       end
       raise ActiveRecord::Rollback if errors.any?
     end

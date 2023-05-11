@@ -60,8 +60,7 @@ module Pd::WorkshopSurveyResultsHelper
     surveys = workshops.flat_map(&:survey_responses)
 
     raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
-      surveys.all? {|survey| survey.is_a? Pd::TeacherconSurvey} ||
-        surveys.all? {|survey| survey.is_a? Pd::LocalSummerWorkshopSurvey}
+      surveys.all?(Pd::TeacherconSurvey) || surveys.all?(Pd::LocalSummerWorkshopSurvey)
 
     return Hash.new if surveys.empty?
 
@@ -100,7 +99,7 @@ module Pd::WorkshopSurveyResultsHelper
                 sum_hash[k][name] += questions[k].index(answer) + 1
               end
             else
-              sum_hash[k] += v.values.map {|value| questions[k].index(value) + 1}.reduce(:+)
+              sum_hash[k] += v.values.sum {|value| questions[k].index(value) + 1}
             end
           else
             next unless v.presence && questions[k].include?(v)
@@ -141,7 +140,7 @@ module Pd::WorkshopSurveyResultsHelper
               # For facilitator specific questions, take the average over all responses for that facilitator
               (v / responses_per_facilitator[facilitator_name_filter].to_f).round(2)
             else
-              (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
+              (v / responses_per_facilitator.values.sum.to_f).round(2)
             end
           else
             # For non facilitator specific answers, take the average over all surveys

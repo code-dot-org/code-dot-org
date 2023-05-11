@@ -26,9 +26,6 @@
         "gumball/Gumball Play Lab": {
           "name": "Gumball Spel-lab"
         },
-        "dance/Dance Party": {
-          "name": "Dansefest"
-        },
         "hoc-encryption/Simple Encryption": {
           "name": "Enkel kryptering"
         },
@@ -41,11 +38,20 @@
         "playlab/Play Lab": {
           "name": "Spel-lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Infinity Spel-Lab"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kodetimen 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Dansefest"
         },
         "k5-onlinepd-2019/Sequencing": {
           "name": "Sekvensiering"
@@ -109,6 +115,81 @@
         },
         "kodea-pd-2021/Next Steps": {
           "name": "Neste steg"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programmeringsstafett"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dansefest"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Vilkår med kort"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internett"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Privat og personleg informasjon"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Låtskriving"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digital deling"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Flytt den, flytt den"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Me blir sløyfete"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Den rette appen"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dansefest"
+        },
+        "pre-express-2022/On the Move with Events": {
+          "name": "Hendingar i Spellab"
+        },
+        "pre-express-2022/A Royal Battle with Events": {
+          "name": "Hendingar i Spellab"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Glade Kart"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Den store hendinga"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binær armbånd"
+        },
+        "csd3-2022/Variables": {
+          "name": "Variablar"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Eigenskapar ved Sprite"
+        },
+        "csd3-2022/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Fart"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funksjonar"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funksjonar"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Flytt den, flytt den"
@@ -865,6 +946,9 @@
         },
         "allthethings/Web Lab": {
           "name": "Nett-lab"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musikk"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Morro med for-løkker"

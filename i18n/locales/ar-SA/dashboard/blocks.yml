@@ -2,6 +2,12 @@
 ar:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+      AmysBlocks_setPromptWithChoices:
+        text: مستخدم فوري {QUESTION} للمتغير {VAR} مع خيارات {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}قُل{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -238,20 +244,12 @@ ar:
             MOVES.Rest: لا شيء
       Dancelab_eval:
         text: تقييم{CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'كرر كل {N} بعد التدابير {START} '
       Dancelab_everySeconds:
         text: 'كل {N} {UNIT} '
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
-      Dancelab_everySecondsRange:
-        text: 'كل {N} {UNIT} من {START} إلى {STOP} '
-        options:
-          UNIT:
-            measures: الإجراءات
-            seconds: ثوان
       Dancelab_everyVerseChorus:
         text: 'كل {UNIT} '
         options:
@@ -385,6 +383,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"spiral"': لولبي
             '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
@@ -515,6 +514,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"spiral"': لولبي
             '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_mixColors:
@@ -1013,6 +1013,39 @@ ar:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: يحتوي المجهر على {INPUT1}
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: عمل {EFFECT} تأثير
+        options:
+          EFFECT:
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"emojis"': رموز تعبيرية سعيدة
+            '"rain"': مطر
+            '"starburst"': النجمي
+            '"glass"': زجاج محطم
+            '"twinkling"': وميض
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: التواصل {VAR1} مع {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: اصنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: قم بتمثيل {NUM} النقوش المتحركة {ANIMATION_NAME} الجديدة [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}قُل{TEXT1}"
       gamelab_addBehaviorSimple:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       gamelab_addTarget:
@@ -1033,6 +1066,8 @@ ar:
         text: تجنب الأهداف
       gamelab_beginCollectingData:
         text: البدء في جمع قيمة {BREAK} البيانات  {VALUE} مع تسمية {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} الارتدادات {TARGET}"
       gamelab_changePropBy:
@@ -1218,6 +1253,19 @@ ar:
             '"x"': x
             '"y"': ص
             '"z"': z
+      gamelab_layoutSprites:
+        text: تخطيط {GROUP} كـ {FORMAT}
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1241,8 +1289,21 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
+            '"spiral"': لولبي
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"top"': الصف العلوي
+            '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
+            '"column"': عمود
+            '"right"': العمود الأيمن
       gamelab_makeNumSprites:
         text: صنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة
       gamelab_makeProjectile:
@@ -1317,6 +1378,7 @@ ar:
             "'sound://category_nature/thunderstorm_1.mp3'": عاصفة رعدية
             "'sound://category_animals/chick.mp3'": فرخ
             "'sound://category_animals/dog.mp3'": كلب
+            "'sound://category_animals/tiger.mp3'": نمر
             "'sound://category_collect/trill_stings.mp3'": ارتعاش
             "'sound://category_instrumental/harpe_pluck_1.mp3'": قيثارة
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": نقر
@@ -1328,6 +1390,32 @@ ar:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": تحديد
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": باس ملتوي
             "'sound://category_digital/jump_7.mp3'": قفز
+      gamelab_playSoundOptionsSoccer:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": بوق هوائي
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": تصفيق
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": نشيد
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ابتهاج
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ركلة
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": صافرتان
+            "'sound://category_sports/One_Whistle_SFX.mp3'": صافرة
+      gamelab_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ثقب أسود
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": كتلة رصاص
+            "'sound://category_space/Carina_SFX.mp3'": كارينا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": كاسيوبيا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": كراب نيبولا
+            "'sound://category_space/Launch_SFX.mp3'": إطلاق
+            "'sound://category_space/Lift_Off.mp3'": انطلاق
+            "'sound://category_space/Pillars_SFX.mp3'": ركائز
+            "'sound://category_space/Southern_ring_SFX.mp3'": الحلقة الجنوبية
+            "'sound://category_space/Supernova_SFX.mp3'": سوبرنوفا
+            "'sound://category_space/Tycho_SFX.mp3'": تايكو
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
       gamelab_playerBehaviors:
@@ -1389,11 +1477,14 @@ ar:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': قوس قزح
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': الخيال العلمي
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ملعب كرة القدم
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحلة
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': نجوم
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': نفق
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': الشمس وقوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': شروق الشمس
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': ملعب التنس
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزيرة أشجار
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': تحت الأرض
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
             undefined: لا شيء
@@ -1570,6 +1661,10 @@ ar:
         text: x إحداثيات {SPRITE}
       gamelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} الانتقال إلى {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: الشقلبة
       Mikelab_addBehaviorSimple:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1799,10 +1894,13 @@ ar:
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': إطلالة الحديقة
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': أشجار الصنوبر
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ملعب كرة القدم
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحلة
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': نفق
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': الشمس وقوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': شروق الشمس
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': ملعب التنس
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزيرة أشجار
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': تحت الأرض
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1885,6 +1983,39 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: يحتوي المجهر على {INPUT1}
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': عصير ليمون
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): صلب
+            new Behavior(liquid, []): سائل
+            new Behavior(wandering, []): غاز
+      ParticlesBlocks_statesOfMatter2:
+        text: اضبط {COSTUME} إلى سلوك {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': جسيم صلب
+            '"liquid"': جسيم سائل
+            '"gas"': جسيم غاز
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': جسيم صلب
+            '"liquid"': جسيم سائل
+            '"gas"': جسيم غاز
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1913,6 +2044,7 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
+            '"spiral"': لولبي
       Poetry_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Poetry_makeNumSprites:
@@ -1928,7 +2060,9 @@ ar:
             '"sound://category_background/inside_plane.mp3"': دندنة
             '"sound://category_loops/red_flag_loop1.mp3"': المهمة
             '"sound://category_nature/summer_night_loop.mp3"': ليل
+            '"sound://category_background/ocean_waves.mp3"': محيط
             '"sound://category_background/repitition.mp3"': ركوب
+            '"sound://category_background/wavering_wind.mp3"': نائم
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': بطيء
       Poetry_playSound:
         text: بلاي ساوند {SOUND}
@@ -1950,6 +2084,21 @@ ar:
             '"sound://category_achievements/peaceful_win_1.mp3"': فوز
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': دوامة
             '"sound://category_achievements/peaceful_win_6.mp3"': نغمات الرياح
+      Poetry_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ثقب أسود
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": كتلة رصاص
+            "'sound://category_space/Carina_SFX.mp3'": كارينا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": كاسيوبيا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": كراب نيبولا
+            "'sound://category_space/Launch_SFX.mp3'": إطلاق
+            "'sound://category_space/Lift_Off.mp3'": انطلاق
+            "'sound://category_space/Pillars_SFX.mp3'": ركائز
+            "'sound://category_space/Southern_ring_SFX.mp3'": الحلقة الجنوبية
+            "'sound://category_space/Supernova_SFX.mp3'": سوبرنوفا
+            "'sound://category_space/Tycho_SFX.mp3'": تايكو
       Poetry_setAuthor:
         text: تحديد المنشيء{AUTHOR}
       Poetry_setBackground:
@@ -1976,6 +2125,7 @@ ar:
             '"sunrise"': الفجر
             '"sunset"': الغسق
             '"grayscale"': رمادي
+            '"ocean"': محيط
             '"rainbow"': قوس قزح
             '"roses"': الورود
             '"sky"': سماوي
@@ -2038,6 +2188,7 @@ ar:
             '"shrinking"': الانقباض
             '"spinning_left"': الدوران ناحية اليسار
             '"spinning_right"': الدوران ناحية اليمين
+            '"swimming_left_and_right"': السباحة
             '"wandering"': التحرك
       Poetry_stopBehavior:
         text: 'النقش المتحرك {ANIMATION_NAME} يتوقف {BEHAVIOR} '
@@ -2048,6 +2199,7 @@ ar:
             '"shrinking"': الانقباض
             '"spinning_left"': الدوران ناحية اليسار
             '"spinning_right"': الدوران ناحية اليمين
+            '"swimming_left_and_right"': السباحة
             '"wandering"': التحرك
             '"all"': "--جميع السلوكيات--"
       Poetry_stringValue:
@@ -2071,6 +2223,11 @@ ar:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: عند الإجابة على {VAR}
       RyanLab_moveForward:
@@ -2079,8 +2236,6 @@ ar:
         text: اتجه إلى اليسار
       RyanLab_turnRight:
         text: اتجه إلى اليمين
-      SpriteLab2Beta_spriteSay:
-        text: العفريت {SPRITE} اقول {TEXT} من أجل {SECONDS} ثانيه
       Vector_createSpriteWith:
         text: |-
           إنشاء العفريت
@@ -2129,6 +2284,17 @@ ar:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} قُل {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): الدوران ناحية اليمين
+            new Behavior(spinning_left, []): الدوران ناحية اليسار
+            new Behavior(jittering, []): الاهتزاز
+            new Behavior(wandering, []): التحرك
+            new Behavior(patrolling, []): التجوُّل
+      adaptations_startFollowing:
+        text: "{SPRITE} يبدأ في متابعة {TARGET}"
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:
@@ -2271,5 +2437,17 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
-      validation_validatedBackground:
-        text: تعيين الخلفية إلى {IMG}
+      storylab_setForegroundEffect2:
+        text: عمل {EFFECT} تأثير
+        options:
+          EFFECT:
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"rain"': مطر
+            '"starburst"': النجمي
+            '"twinkling"': وميض
+      storylab_setHeading:
+        text: ضبط عنوان {HEADING}
+      storylab_setSubheading:
+        text: ضبط عنوان فرعي  {SUBHEADING}

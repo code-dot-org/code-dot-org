@@ -18,6 +18,7 @@ ms:
       length: panjang
       name: nama
       nectar: nektar
+      object: objek
       planet: planet
       points: mata
       random: rawak
@@ -28,6 +29,7 @@ ms:
       sides: tepi
       size: saiz
       speed: kelajuan
+      type: jenis
       variable: pemboleh ubah
       width: lebar
       wizard: ahli sihir

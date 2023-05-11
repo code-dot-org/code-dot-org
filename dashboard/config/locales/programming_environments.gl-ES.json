@@ -1,0 +1,181 @@
+{
+  "gl-ES": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "Etiquetas HTML"
+            }
+          }
+        },
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "Grupos",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cor"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cor"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matemáticas",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    },
+                    "max": {
+                      "description": "O máximo número devolto"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    },
+                    "max": {
+                      "description": "O máximo número devolto"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcións"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorio de aplicacións",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Función"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matemáticas",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    },
+                    "max": {
+                      "description": "O máximo número devolto"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "O mínimo número devolto"
+                    },
+                    "max": {
+                      "description": "O máximo número devolto"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcións"
+            },
+            "advanced": {
+              "name": "Avanzado"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Mundo"
+            },
+            "location": {
+              "name": "Localizacións"
+            },
+            "actions": {
+              "name": "Accións"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "behaviors": {
+              "name": "Comportamentos"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "logic": {
+              "name": "Lóxica"
+            },
+            "functions": {
+              "name": "Funcións"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "comments": {
+              "name": "Comentarios"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:26.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -51,11 +47,11 @@
     "parent_level_id": 23035,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/csd-1718/drawing_shapes_map/index.html",
-      "/docs/csd-1718/shape_size_map/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html"
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters",
+      "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/csd-1718/variables_intro_csd/index.html",
+    "map_reference": "/courses/csd-2022/guides/variables",
     "video_key": "csd_gamelab_variables_1",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -68,6 +64,10 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:26.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:26.764+00:00\",\"changed\":[\"cloned from \\\"CSD web text explore_2021\\\"\"],\"cloned_from\":\"CSD web text explore_2021\"}]"

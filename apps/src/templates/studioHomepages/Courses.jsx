@@ -13,24 +13,24 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import color from '../../util/color';
 
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     isSignedOut: PropTypes.bool.isRequired,
-    linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
     specialAnnouncement: shapes.specialAnnouncement,
-    showAiCard: PropTypes.bool
+    showAiCard: PropTypes.bool,
   };
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('#flashes')
-      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
-      .show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
   getHeroStrings() {
@@ -40,16 +40,17 @@ class Courses extends Component {
     let heroStrings = {
       headingText: i18n.coursesLearnHeroHeading(),
       subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
-      buttonText: i18n.coursesLearnHeroButton()
+      buttonText: i18n.coursesLearnHeroButton(),
     };
 
-    // Apply overrides if this is the "Teach" view
+    // Apply overrides if this is the "Teach" view and log teacher visiting this page.
     if (isTeacher) {
       heroStrings = {
         headingText: i18n.coursesTeachHeroHeading(),
         subHeadingText: i18n.coursesTeachHeroSubHeading(),
-        buttonText: i18n.coursesTeachHeroButton()
+        buttonText: i18n.coursesTeachHeroButton(),
       };
+      analyticsReporter.sendEvent(EVENTS.TEACH_PAGE_VISITED_EVENT);
     }
 
     // We show a long version of the banner when you're signed out,
@@ -68,15 +69,11 @@ class Courses extends Component {
       isTeacher,
       isSignedOut,
       modernElementaryCoursesAvailable,
-      specialAnnouncement
+      specialAnnouncement,
     } = this.props;
 
-    const {
-      headingText,
-      subHeadingText,
-      description,
-      buttonText
-    } = this.getHeroStrings();
+    const {headingText, subHeadingText, description, buttonText} =
+      this.getHeroStrings();
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = isTeacher
@@ -96,7 +93,9 @@ class Courses extends Component {
             <Button
               __useDeprecatedTag
               href="/users/sign_up"
+              className="bannerContentButton"
               color={Button.ButtonColor.gray}
+              style={styles.headerButton}
               text={buttonText}
             />
           )}
@@ -141,8 +140,15 @@ class Courses extends Component {
 
 const styles = {
   content: {
-    maxWidth: styleConstants['content-width']
-  }
+    maxWidth: styleConstants['content-width'],
+  },
+  headerButton: {
+    margin: 'unset',
+    backgroundColor: color.white,
+    borderColor: color.white,
+    color: color.neutral_dark,
+    fontFamily: `"Gotham 5r", sans-serif`,
+  },
 };
 
 export default Courses;

@@ -6,7 +6,7 @@ describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';
   const sampleFileJson = {
     'test.java': {text: 'hello'},
-    'test2.java': {text: 'hello'}
+    'test2.java': {text: 'hello'},
   };
 
   let server,
@@ -19,7 +19,15 @@ describe('BackpackClientApi', () => {
     server.respondWith('put', `/v3/libraries/${channelId}/${filename}`, [
       status,
       {'Content-Type': 'application/json'},
-      '{}'
+      '{}',
+    ]);
+  };
+
+  const setDeleteResponse = (status, filename) => {
+    server.respondWith('delete', `/v3/libraries/${channelId}/${filename}`, [
+      status,
+      {'Content-Type': 'application/json'},
+      '{}',
     ]);
   };
 
@@ -67,6 +75,34 @@ describe('BackpackClientApi', () => {
       setSaveResponse(500, 'test2.java');
       backpackClientApi.saveFiles(
         sampleFileJson,
+        ['test2.java'],
+        errorCallback,
+        successCallback
+      );
+      // need to respond twice because we retry failures
+      server.respond();
+      server.respond();
+      expect(errorCallback).to.have.been.calledOnce;
+      assert(successCallback.notCalled);
+      // expect 2 calls to attempt to save test2.java
+      expect(server.requests.length).to.equal(2);
+    });
+
+    it('can delete multiple files', () => {
+      setDeleteResponse(200, 'test.java');
+      setDeleteResponse(200, 'test2.java');
+      backpackClientApi.deleteFiles(
+        ['test.java', 'test2.java'],
+        errorCallback,
+        successCallback
+      );
+      server.respond();
+      expect(successCallback).to.have.been.calledOnce;
+    });
+
+    it('delete retries, then calls error on failure', () => {
+      setDeleteResponse(500, 'test2.java');
+      backpackClientApi.deleteFiles(
         ['test2.java'],
         errorCallback,
         successCallback

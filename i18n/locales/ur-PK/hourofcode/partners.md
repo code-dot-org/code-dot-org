@@ -1,40 +1,38 @@
 ---
-title: پارٹنرز
+title: شراکت دار
 ---
 
-کوڈ کا قیام کوڈ آفس اور کمپیوٹر سائنس تعلیم ہفتہ مشاورتی اور جائزہ لینے والے کمیٹیوں کے ذریعہ چلایا جاتا ہے.
+آور آف کوڈ کی نظرثانی کمیٹی آور آف کوڈ کے ادارتی کام سرانجام دیتا ہے.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. یہ کمیٹی کوڈ آفس کی مہم کے لئے حکمت عملی کی ہدایت کرتا ہے.
+[نظرثانی کی کمیٹی]({{ urls/review_committee }}) میں کے-12 تک کے 12 حالیہ اور سابقہ معلمین ہیں جو مشاورتی کمیٹی کی جانب سے مقرر کردہ معیارات کے مطابق سرگرمیوں کا تجزیہ لیتے ہیں اور سفارشات دیتے ہیں. یہ معلمین طالب علموں کی رہنمائی میں انجام دیئے جانے والی سرگرمیوں اور اساتذ کی رہنمائی میں پڑھائے جانے والے درسی منصوبوں، جو درسی منصوبے بنانے والے ہمارے سینکڑوں شراکت داروں نے دیئے ہوتے ہیں، کی نظرثانی کرتے ہیں، ان سرگرمیوں کی تعلیمی وقعت، سیکھنے والوں کی توجہ مبذول کرنے کے لیے ان کی اہلیت، اور طلبا‎ء کے ایک متنوع مجموعے کے لیے ان سرگرمیوں کی ممکنہ جاذبیت کا جائزہ لیتے ہیں.</p> 
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. یہ محققین طالب علم کی قیادت کی سرگرمیوں اور سینکڑوں سرگرمی شراکت داروں کی جانب سے جمع کردہ طالب علموں کی قیادت کی منصوبہ بندی کا مطالعہ کرتے ہیں، سرگرمیوں کی 'تعلیمی قیمت، سیکھنے والوں کو مشغول کرنے کی صلاحیت، اور طالب علموں کے متنوع سیٹوں پر ممکنہ اپیل کی تشخیص کرتے ہیں.
+آور آف کوڈ کی کامیابی میں اس کمیٹی کے کام اور عہد کا اور ان کی اس بصیرت کا کہ ہر طالب علم کو کمپیوٹر سائنس سے متعارف کرایا جائے اہم کردار ہے۔
 
-کمیٹریشن کی کامیابی اور ہر طالب علم کے لئے کمپیوٹر سائنس کے تعارف پیش کرنے کے اس نقطہ نظر میں دونوں کمیٹیوں کے کام اور وقفے نے حصہ لیا.
-
-# Major Partners and Corporate Supporters
+# بڑے شراکت دار اور کارپوریٹ معاونین
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# بین الاقوامی شراکت دار
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# نصاب اور ٹیوٹوریل کے شراکت دار
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# بنیادی ڈھانچہ اور اوزار فراہم کرنے کے شراکت دار
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# اضافی شراکت دار
 
 {{ partners/additional_partners }}
 

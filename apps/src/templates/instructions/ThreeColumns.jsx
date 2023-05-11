@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 
 /**
@@ -18,7 +17,7 @@ const ThreeColumns = props => {
       paddingRight: isRtl ? leftColWidth : rightColWidth,
       float: isRtl ? 'right' : 'left',
       width: '100%',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
     },
     middle: {
       width: '100%',
@@ -29,7 +28,7 @@ const ThreeColumns = props => {
       paddingRight: isRtl ? undefined : 300,
       marginLeft: isRtl ? -300 : undefined,
       paddingLeft: isRtl ? 300 : undefined,
-      overflowY: 'scroll'
+      overflowY: 'scroll',
     },
     left: {
       position: 'relative',
@@ -37,22 +36,24 @@ const ThreeColumns = props => {
       width: leftColWidth,
       right: leftColWidth,
       marginLeft: isRtl ? 0 : '-100%',
-      marginRight: isRtl ? '-100%' : 0
+      marginRight: isRtl ? '-100%' : 0,
     },
     right: {
       position: 'relative',
       float: isRtl ? 'right' : 'left',
       width: rightColWidth,
       marginRight: isRtl ? 0 : -rightColWidth,
-      marginLeft: isRtl ? -rightColWidth : 0
-    }
+      marginLeft: isRtl ? -rightColWidth : 0,
+    },
   };
 
   return (
-    <div style={[defaultStyles.container, styles.container]}>
-      <div style={[defaultStyles.middle, styles.middle]}>{children[1]}</div>
-      <div style={[defaultStyles.left, styles.left]}>{children[0]}</div>
-      <div style={[defaultStyles.right, styles.right]}>{children[2]}</div>
+    <div style={{...defaultStyles.container, ...styles.container}}>
+      <div style={{...defaultStyles.middle, ...styles.middle}}>
+        {children[1]}
+      </div>
+      <div style={{...defaultStyles.left, ...styles.left}}>{children[0]}</div>
+      <div style={{...defaultStyles.right, ...styles.right}}>{children[2]}</div>
     </div>
   );
 };
@@ -70,11 +71,11 @@ ThreeColumns.propTypes = {
         'ThreeColumns expects exactly 3 children, got ' + props.children.length
       );
     }
-  }
+  },
 };
 
 export default connect(state => {
   return {
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
   };
-})(Radium(ThreeColumns));
+})(ThreeColumns);

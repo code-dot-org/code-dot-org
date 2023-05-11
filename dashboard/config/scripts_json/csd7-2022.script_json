@@ -10,7 +10,19 @@
           "details": "If you are interested in teaching this course, we recommend completing the free AI and Machine Learning Self Paced Professional Learning module. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.",
           "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "ed6a61e5-23b1-4249-a182-874156f2d135",
+          "buttonText": "Learn More"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "c0ef1240-b469-4ee7-a778-e7d5b30b0332"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -27,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-08 17:25:48 UTC",
+    "serialized_at": "2023-04-03 14:18:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -507,6 +519,17 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To conclude this unit, students develop an AI app that addresses the social issue of their interest. Students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app. Students perform a peer review and make any necessary updates to their projects while reflecting on the outcome.\n\n**Question of the Day:** How can I create an AI App the solves a problem in my community?",
         "preparation": "- Print copies of the Project Guide.\n- Print copies of the Rubric.\n- Print copies of the Peer Review Guide.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-design-an-ai-app-ai-and-machine-learning-lesson-21/36220) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
@@ -5759,10 +5782,23 @@
       "key": "2ec19797-3426-461d-aac6-3e9af661f97b",
       "position": 1,
       "properties": {
-        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed.",
+        "name": "Ethics in AI"
       },
       "seeding_key": {
         "activity_section.key": "2ec19797-3426-461d-aac6-3e9af661f97b",
+        "lesson_activity.key": "49145ed8-ab17-41b0-9502-807c1f24845a"
+      }
+    },
+    {
+      "key": "93f00dad-64f7-4871-889d-44ea834beff4",
+      "position": 2,
+      "properties": {
+        "description": "This lesson provides an opportunity for students to be critical of existing AI programs, developing a Code of Ethics as a potential solution to existing issues in the industry. This critical lens can be extended to additional learning objectives and activities as outlined in the [Artificial Intelligence](https://criticallyconsciouscomputing.org/ai) chapter of the [Critically Conscious Computing: Methods for Secondary Education](https://criticallyconsciouscomputing.org/) online textbook from Dr. Amy Ko.\n\nThis chapter provides an overview of additional concepts related to AI and Machine Learning, and ends with a \"unit sketch\" which outlines additional lessons and activities that could be introduces in a unit on AI and Machine Learning from a critical lens. These activities could be appropriate if you would like to continue exploring artificial intelligence from a critical lens with your students.",
+        "name": "Critically Conscious AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "93f00dad-64f7-4871-889d-44ea834beff4",
         "lesson_activity.key": "49145ed8-ab17-41b0-9502-807c1f24845a"
       }
     },
@@ -5947,7 +5983,7 @@
       "key": "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2",
@@ -7726,6 +7762,18 @@
       },
       "seeding_key": {
         "activity_section.key": "5d04c580-a932-46bd-86c4-649793eac948",
+        "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
+      }
+    },
+    {
+      "key": "baa6c46e-1c8b-4c42-a82a-147ab9ffce37",
+      "position": 5,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "baa6c46e-1c8b-4c42-a82a-147ab9ffce37",
         "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
       }
     },
@@ -10760,7 +10808,6 @@
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11068,7 +11115,6 @@
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11141,7 +11187,6 @@
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11353,7 +11398,6 @@
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11552,7 +11596,6 @@
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

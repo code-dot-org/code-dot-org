@@ -88,7 +88,7 @@ module SerializedProperties
     def init_internals
       sti_hierarchy.map {|x| serialized_properties[x.to_s] || []}.flatten.each do |property|
         property = property.to_s
-        if property =~ ENCRYPTED_PROPERTY_REGEX
+        if ENCRYPTED_PROPERTY_REGEX.match?(property)
           define_methods_for_encrypted_property property
         else
           define_methods_for_property property
@@ -97,9 +97,7 @@ module SerializedProperties
     end
   end
 
-  private
-
-  def init_properties
+  private def init_properties
     write_attribute('properties', {}) unless read_attribute('properties')
   end
 end

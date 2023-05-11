@@ -1,0 +1,26 @@
+{
+  "cs-CZ": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "Standardy informatiky CSTA K-12 (2017)"
+        },
+        "csp2021": {
+          "name": "Principy informatiky Konceptuální framework"
+        },
+        "csta2011": {
+          "name": "Normy počítačových věd CSTA K-12 (2011)"
+        },
+        "ccela": {
+          "name": "Obecné základní normy umění v anglickém jazyce"
+        },
+        "ccmath": {
+          "name": "Obecné základní normy matematiky"
+        },
+        "iste": {
+          "name": "Normy ISTE pro studenty"
+        }
+      }
+    }
+  }
+}

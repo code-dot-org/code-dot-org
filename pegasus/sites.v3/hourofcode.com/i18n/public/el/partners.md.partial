@@ -2,39 +2,37 @@
 title: Συνεργάτες
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Το Hour of Code ελέγχεται από την Επιτροπή Εξέτασης του Hour of Code.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+Η [Επιτροπή Εξέτασης]({{ urls/review_committee }}) αποτελείται από 12 τρέχοντες και πρώην εκπαιδευτικούς της πρωτοβάθμιας εκπαίδευσης, οι οποίοι αξιολογούν και συνιστούν δραστηριότητες με τη χρήση κανόνων που θεσμοθετούνται από μια συμβουλευτική επιτροπή. Αυτοί οι εκπαιδευτικοί εξετάζουν δραστηριότητες που καθοδηγούνται από τους μαθητές, καθώς και σχέδια μαθημάτων που καθοδηγούνται από δασκάλους, τα οποία υποβάλλονται από εκατοντάδες συνεργάτες δραστηριοτήτων, αξιολογώντας την εκπαιδευτική αξία των δραστηριοτήτων, την ικανότητα να προσελκύουν μαθητές και την πιθανή απήχηση σε διαφορετικά σύνολα μαθητών.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Το έργο και η αφοσίωση της επιτροπής συνέβαλαν στην επιτυχία του Hour of Code και στο όραμά του να προσφέρει μια εισαγωγή στην επιστήμη των υπολογιστών για κάθε μαθητή.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
-
-# Major Partners and Corporate Supporters
+# Κύριοι Συνεργάτες και Εταιρικοί Υποστηρικτές
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Διεθνής Συνεργάτες
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Συνεργάτες προγράμματος σπουδών και διδακτικού υλικού
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Συνεργάτες Υλικοτεχνικής Υποδομής και Εργαλείων
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Άλλοι Συνεργάτες
 
 {{ partners/additional_partners }}
 

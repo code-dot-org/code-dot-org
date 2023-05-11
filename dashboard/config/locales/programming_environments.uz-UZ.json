@@ -1,0 +1,393 @@
+{
+  "uz-UZ": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab",
+          "categories": {
+            "html_tags": {
+              "name": "HTML Teglar"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "O‘yin laboratoriyasi",
+          "categories": {
+            "game_lab": {
+              "name": "O‘yin laboratoriyasi",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprait"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprait"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Qora va oq"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                }
+              }
+            },
+            "sprites": {
+              "name": "Spraytlar",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Guruhlar",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprait"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprait"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprait"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Rang"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Rang"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "Rasm chizish",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Yulduz raqsi"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    },
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    },
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "O‘zgaruvchilar"
+            },
+            "functions": {
+              "name": "Funksiyalar"
+            }
+          }
+        },
+        "applab": {
+          "name": "Ilovalar laboratoriyasi",
+          "description": "App Lab - bu oddiy dasturlarni yaratishingiz mumkin bo‘lgan dasturiy muhit. Ilovani ishlab chiqing, uni ishlashi uchun bloklar yoki JavaScript bilan kodni yarating, so‘ngra bir necha soniya ichida o‘z ilovangiz bilan o'rtoqlashing.",
+          "categories": {
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "examples": {
+                    "Example: Simple Turtle Control 1": {
+                      "description": "Har bir tugmani bosishda toshbaqani oldinga siljiting."
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Ko'rsatilgan URL-dan MP3 ovozli faylni ishga tushiradi."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "obyekt"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "obyekt"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "obyekt"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksiya"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    },
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimal raqam qaytarildi"
+                    },
+                    "max": {
+                      "description": "Maksimal raqam qaytarildi"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "O‘zgaruvchilar",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Hech biri"
+                }
+              }
+            },
+            "functions": {
+              "name": "Funksiyalar"
+            },
+            "advanced": {
+              "name": "Chuqurlashtirilgan"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite Lab",
+          "categories": {
+            "sprites": {
+              "name": "Spraytlar"
+            },
+            "world": {
+              "name": "Dunyo"
+            },
+            "location": {
+              "name": "Joylashuvlar"
+            },
+            "actions": {
+              "name": "Harakatlar"
+            },
+            "events": {
+              "name": "Hodisalar"
+            },
+            "behaviors": {
+              "name": "Xatti-harakatlar"
+            },
+            "loops": {
+              "name": "Sikllar"
+            },
+            "variables": {
+              "name": "O‘zgaruvchilar"
+            },
+            "math": {
+              "name": "Matematik"
+            },
+            "logic": {
+              "name": "Mantiq"
+            },
+            "functions": {
+              "name": "Funksiyalar"
+            },
+            "text": {
+              "name": "Matn"
+            },
+            "comments": {
+              "name": "Fikrlar"
+            }
+          }
+        }
+      }
+    }
+  }
+}

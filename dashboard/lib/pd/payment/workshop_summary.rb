@@ -69,7 +69,7 @@ module Pd::Payment
 
     # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
     def total_teacher_attendance_days
-      teacher_summaries.select(&:qualified?).map(&:days).reduce(0, :+)
+      teacher_summaries.select(&:qualified?).sum(&:days)
     end
 
     # Get number of teachers attending all sessions, except for admin and counselor PD where logging in

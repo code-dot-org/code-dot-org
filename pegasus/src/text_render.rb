@@ -51,7 +51,7 @@ module TextRender
   end
 
   def self.f(engine, path, locals={})
-    r(engine, IO.read(path), locals)
+    r(engine, File.read(path), locals)
   end
 
   #
@@ -118,18 +118,16 @@ module TextRender
         process_div_brackets(full_document)
       end
 
-      private
-
       # CDO-Markdown div_brackets extension.
       # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
-      def process_div_brackets(full_document)
+      private def process_div_brackets(full_document)
         full_document.
           gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
           gsub(/<p>\[(.*)\]<\/p>/) do
           value = $1
           if value[0] == '#'
             attribute = 'id'
-            value = value[1..-1]
+            value = value[1..]
           else
             attribute = 'class'
           end
@@ -144,9 +142,7 @@ module TextRender
         wrap_details_tags_in_divs(full_document)
       end
 
-      private
-
-      def wrap_details_tags_in_divs(full_document)
+      private def wrap_details_tags_in_divs(full_document)
         full_document.
             gsub(/<details>/, "\n<div><details>").
             gsub(/<\/details>/, "</details></div>\n")
@@ -208,7 +204,7 @@ module TextRender
     end
 
     def result(binding=nil)
-      YAML.load(@template.result(binding))
+      YAML.safe_load(@template.result(binding))
     end
   end
 

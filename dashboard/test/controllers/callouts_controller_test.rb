@@ -8,6 +8,8 @@ class CalloutsControllerTest < ActionController::TestCase
 
     @user = create(:admin)
     sign_in(@user)
+
+    @request.host = CDO.dashboard_hostname
   end
 
   test "should get index" do

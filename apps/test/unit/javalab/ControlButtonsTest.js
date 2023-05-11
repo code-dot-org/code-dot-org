@@ -15,12 +15,11 @@ describe('Java Lab Control Buttons Test', () => {
       isEditingStartSources: false,
       disableFinishButton: false,
       onContinue: () => {},
-      renderSettings: () => {},
       disableRunButton: false,
       disableTestButton: false,
       showTestButton: true,
       isSubmittable: false,
-      isSubmitted: false
+      isSubmitted: false,
     };
   });
 

@@ -10,7 +10,19 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "79a249d7-fb90-4e9c-bd8b-e7884ad2034b",
+          "buttonText": "Learn More"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
+          "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Teacher Survey",
+          "key": "be317006-f86b-44a9-9036-34c0508cc0e9"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -28,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-20 23:39:02 UTC",
+    "serialized_at": "2023-04-03 14:12:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -263,6 +275,17 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Take Teacher Survey"
+          }
+        ],
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.  You may also choose to assign the post-project test through code studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\r\n\r\nTo conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.",
@@ -3160,6 +3183,18 @@
       }
     },
     {
+      "key": "78d806c0-dab8-4b10-bf35-6beb8c9eafdb",
+      "position": 2,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "78d806c0-dab8-4b10-bf35-6beb8c9eafdb",
+        "lesson_activity.key": "e228135e-7cba-44db-93d4-93ed63ec0cfc"
+      }
+    },
+    {
       "key": "62bf93c9-f7ae-40b7-a515-4b81b83acee9",
       "position": 1,
       "properties": {
@@ -5502,7 +5537,6 @@
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5540,7 +5574,6 @@
       "key": "apps_with_storage_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1YX99Zyb1-Mwgl9TiY5P2DEx9Wb4_xffJUDu05VxTh_I/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5644,7 +5677,6 @@
       "key": "exploring_problem_solving",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5681,7 +5713,6 @@
       "key": "exploring_problem_solving_animals_",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5694,7 +5725,6 @@
       "key": "exploring_problem_solving_games_",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5732,7 +5762,6 @@
       "key": "input_and_output_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5745,7 +5774,6 @@
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5770,7 +5798,6 @@
       "key": "intro_to_problem_solving_newspapers_",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5778,12 +5805,11 @@
       }
     },
     {
-      "name": "Intro to Problem Solving (Paper Towels)",
+      "name": "Intro to Problem Solving (Paper Tower)",
       "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
       "key": "intro_to_problem_solving_paper_towels_",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5796,7 +5822,6 @@
       "key": "intro_to_problem_solving_spaghetti_",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5870,7 +5895,6 @@
       "key": "project_-_propose_an_app",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1wkcHClx2M7iHLvZa4yO0Mj9FuRxZgqA8WyxkFD5wP60/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6020,7 +6044,6 @@
       "key": "the_problem_solving_process_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6071,7 +6094,6 @@
       "key": "what_is_a_computer_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

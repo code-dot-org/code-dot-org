@@ -1,0 +1,461 @@
+{
+  "ro-RO": {
+    "data": {
+      "standards": {
+        "ccela/3.RL.4": {
+          "description": "Determinarea înțelesului cuvintelor și expresiilor astfel cum sunt utilizate într-un text, făcând distincție între limbajul literal și neliteral."
+        },
+        "ccela/4.RL.7": {
+          "description": "Să facă legături între textul unei povestiri sau al unei drame și o prezentare de text vizuală sau orală, identificând unde fiecare versiune reflectă descrierile și indicațiile specifice din text."
+        },
+        "ccela/5.RL.4": {
+          "description": "Să determine înțelesul cuvintelor și expresiilor astfel cum sunt utilizate intr-un text, inclusiv limbajul figurativ precum metafore și comparații."
+        },
+        "ccela/5.RL.7": {
+          "description": "Să analizeze modul în care elementele vizuale și multimedia contribuie la înțelesul, tonul sau frumusețea unui text (de ex. nuvelă grafică, prezentarea multimedia de ficțiune, poveste populară, mit, poem)."
+        },
+        "ccela/6.SL.1": {
+          "description": "Participă efectiv într-o serie de discuții în colaborare (individual, în grupuri și sub îndrumarea profesorului) cu diverști parteneri pe teme, texte și probleme din clasa a 6-a, bazându-te pe ideile celorlalți și exprimându-ți clar propriile idei."
+        },
+        "ccela/7.SL.1": {
+          "description": "Participă efectiv într-o serie de discuții în colaborare (individual, în grupuri și sub îndrumarea profesorului) cu diverști parteneri pe teme, texte și probleme din clasa a 7-a, bazându-te pe ideile celorlalți și exprimându-ți clar propriile idei."
+        },
+        "ccmath/MP.1": {
+          "description": "Înțelege problemele și perseverează în rezolvarea lor"
+        },
+        "ccmath/MP.2": {
+          "description": "Gândește în mod abstract și cantitativ"
+        },
+        "ccmath/MP.5": {
+          "description": "Utilizează instrumentele adecvate în mod strategic"
+        },
+        "ccmath/MP.6": {
+          "description": "Acordă atenție preciziei"
+        },
+        "ccmath/MP.7": {
+          "description": "Caută și utilizează structura"
+        },
+        "ccmath/MP.8": {
+          "description": "Caută și exprimă regularitatea în raționamente repetate"
+        },
+        "csta2011/CPP.L1:6-06": {
+          "description": "Implementează soluțiile problemei utilizând un bloc pe bază de limbaj de programare vizuală."
+        },
+        "csta2011/CT.L2:1": {
+          "description": "Utilizează pașii de bază în rezolvarea algoritmică a problemei pentru a proiecta soluții (de ex. declararea și explorarea problemei, examinarea exemplelor de eșantioane, proiectarea, implementarea unei soluții, testarea și evaluarea)."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Utilizează abstracția pentru a descompune o problemă în sub-probleme."
+        },
+        "csta2011/CT.L2:6": {
+          "description": "Descrie și analizează o secvență de instrucțiuni care s-au urmărit (de ex. descrie comportamentul unui personaș într-un joc video ca fiind condus de reguli și algoritmi)."
+        },
+        "csta2011/CT.L2:7": {
+          "description": "Reprezentarea datelor într-o varietate de moduri inclusiv text, sunete, fotografii și numere."
+        },
+        "csta2011/CT.L2:8": {
+          "description": "Utilizarea reprezentărilor vizuale ale stărilor, structurilor și datelor problemei (de ex. grafice, scheme, diagrame de rețea, scheme logice)."
+        },
+        "iste/1.a": {
+          "description": "Aplicarea cunoștințelor existente, pentru generarea de idei, produse sau procese noi."
+        },
+        "iste/1.b": {
+          "description": "Crearea de lucrări originale ca un mijloc de expresie personală sau de grup."
+        },
+        "iste/1.c": {
+          "description": "Utilizarea de modele și simulări pentru explorarea sistemelor și problemelor complexe."
+        },
+        "iste/4.b": {
+          "description": "Planificarea și gestionarea activităților de dezvoltare a unei soluții sau finalizarea unui proiect."
+        },
+        "iste/6.a": {
+          "description": "Înțelegerea și utilizarea sistemelor de tehnologie."
+        },
+        "iste/6.c": {
+          "description": "Rezolvarea problemelor de sisteme și aplicații. "
+        },
+        "iste/6.d": {
+          "description": "Transferarea cunoștințelor actuale către învățarea de noi tehnologii."
+        },
+        "ccela/1.L.6": {
+          "description": "Să folosească cuvinte și fraze dobândite prin conversații, citind și fiind citit și răspunzând la texte, inclusiv folosind conjuncții frecvente pentru a semnala relații simple (de exemplu, deoarece)."
+        },
+        "ccela/1.SL.1": {
+          "description": "Să participe în conversații de colaborare cu diverși parteneri despre subiecte și texte de clasa 1 cu colegi și adulți din grupuri mici și mai mari."
+        },
+        "ccela/11-12.RI.4": {
+          "description": "Să determine înțelesul cuvintelor și expresiilor astfel cum sunt utilizate într-un text, inclusiv sensurile figurative, conotative și tehnice; să analizeze modul în care un autor utilizează și rafinează sensul unui termen sau unor termeni cheie în cuprinsul unui text (de ex. cum definește Madison"
+        },
+        "ccela/2.L.6": {
+          "description": "Să utilizeze cuvintele și expresiile dobândite prin conversații, citind și fiind citit și răspunzând la texte, inclusiv folosind adjective și adverse pentru descriere (de ex., Când alți copii sunt fericiți, asta mă face si pe mine fericit)."
+        },
+        "ccela/2.SL.1": {
+          "description": "Să participe în conversații de colaborare cu diverși parteneri despre subiecte și texte de clasa a 2-a cu colegi și adulți din grupuri mici și mai mari."
+        },
+        "ccela/3.L.6": {
+          "description": "Să dobândească și să folosească cu acuratețe cuvinte și expresii conversaționale, academice generale și specifice domeniului și clasei, inclusiv acelea care semnalează relațiile spațiale și temporale (de ex. În acea seara după cină am plecat să îi căutăm)."
+        },
+        "ccela/3.SL.1": {
+          "description": "Să se angajeze efectiv într-o serie de discuții de colaborare (individuale, în grupuri și conduse de profesor) cu diverși parteneri despre subiecte și texte de clasa a 3-a, bazându-se pe ideile celorlalți și exprimându-le pe ale lor cu claritate."
+        },
+        "ccmath/1.OA.1": {
+          "description": "Să utilizeze adunarea și scăderea până la 20 pentru a rezolva probleme de cuvinte care implică situații de adăugare la, scădere din, unire, separare și comparare, cu necunoscuți în toate pozițiile, de ex., folosind obiecte, desene și ecuații cu un simbol pentru "
+        },
+        "ccmath/2.OA.1": {
+          "description": "Să folosească adunarea și scăderea până la 100 pentru rezolvarea problemelor de cuvinte în unul sau doi pași, care implică situații de adăugare la, scădere din, unire, separare și comparare cu necunoscuți în toate pozițiile, de ex. prin utilizarea desenelor și ecuațiilor cu un simbol"
+        },
+        "ccmath/3.OA.3": {
+          "description": "Să folosească înmulțirea și împărțirea până la 100 pentru rezolvarea problemelor de cuvinte în situații care implică grupuri egale, grămezi și cantități de măsură, de ex. prin folosirea desenelor și ecuațiilor cu un simbol pentru ca numărul necunoscut să reprezinte problema.1"
+        },
+        "csta2011/CD.L1:3-01": {
+          "description": "Să folosească dispozitive standard de intrare și ieșire pentru a opera cu succes computerele și tehnologiile asociate."
+        },
+        "csta2011/CI.L1:3-01": {
+          "description": "Să exerseze cetățenia digitală responsabilă (comportamente legale și etice) în utilizarea sistemelor tehnologice și a software-ului."
+        },
+        "csta2011/CPP.L1:6-01": {
+          "description": "Să utilizeze resurse tehnologice (de ex. calculatoare, probe de colectare a datelor, dispozitive mobile, video, software educațional și instrumente web) pentru rezolvarea unei probleme și învățarea autodirijată."
+        },
+        "ccela/11-12.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale și specifice unui domeniu, suficiente pentru a citi, scrie, vorbi și asculta la nivelul de pregătire pentru colegiu și carieră; să demonstreze independență în colectarea cunoștințelor de vocabular atunci când consideră"
+        },
+        "ccela/4.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale specifice clasei și specifice unui domeniu, inclusiv cele care semnalează acțiuni, emoții sau stări precise (de exemplu, interog, whined, bâlbâit) și care sunt de bază pentru un anumit subiect (de exemplu interogat, lamentat, bâlbâit) și care sunt de bază pentru un anumit subiect (de exemplu"
+        },
+        "ccela/5.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale și specifice unui domeniu, inclusiv cele care semnealează contrastul, adunarea și alte relații logice (de ex. cu toate aestea, deși, fără a lua în considerare, în mod similar, de asemenea, în plus)."
+        },
+        "ccmath/4.MD.6": {
+          "description": "Să măsoare unghiurile în grade cu numere întregi folosind un raportor. Să schițeze unghiuri de o anumită măsură."
+        },
+        "ccmath/4.NBT.4": {
+          "description": "Să adune și să scadă în mod fluent numere întregi cu multe cifre utilizând algoritmul standard."
+        },
+        "ccmath/4.NBT.5": {
+          "description": "Să înmulțească un număr întreg de până la patru cifre cu un număr întreg de o cifră și să înmulțească două numere de două cifre, utilizând strategii bazate pe valoarea locului și proprietățile operațiilor. Ilustrați și explicați calculul folosind ecuații,"
+        },
+        "ccmath/7.G.2": {
+          "description": "Să deseneze (cu mâna liberă, cu rigla și raportor și cu ajutorul tehnologiei) forme geometrice în condiții date. Concentrați-vă pe construirea de triunghiuri din trei măsuri de unghiuri sau laturi, observând când condițiile determină un triunghi unic, mai multe triunghiuri"
+        },
+        "csta2011/CPP.L1:3-02": {
+          "description": "Să utilizeze din punctul de vedere al dezvoltării resurse multimedia corespunzătoare (de ex. cărți interactive și software educațional) pentru sprijinirea învățării în cadrul programei școlare."
+        },
+        "csta2011/CPP.L1:3-04": {
+          "description": "Să construiască un set de enunțuri care să fie interpretate pentru a îndeplini o sarcină simplă (de exemplu, instrucțiuni pentru broasca țestoasă)."
+        },
+        "ccela/11-12.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și actualizeze produse scrise individuale sau comune ca răspuns la feedback-ul continuu, inclusiv argumente sau informații noi."
+        },
+        "ccela/4.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiente sau evenimente reale sau imaginare, folosind tehnica efectivă, detaliile descriptive și secventele clare ale evenimentului."
+        },
+        "ccela/6.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, pentru a produce și publica scrieri, precum și pentru a interacționa și a colabora cu alte persoane; să demonstreze că stăpânește suficient de bine aptitudinile de tastare pentru a scrie cel puțin trei pagini într-o singură ședință."
+        },
+        "ccela/7.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiențe sau evenimente reale sau imaginare prin utilizarea tehnicii efective, a detaliilor descriptive relevante, precum și a secvențelor bine-structurate ale evenimentului."
+        },
+        "ccela/7.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, pentru a produce și publica scrieri și să le lege cu și să citeze surse, precum și să interacționeze și să colaboreze cu ceilalți, inclusiv legarea cu și citarea surselor."
+        },
+        "ccela/8.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice scrieri și să prezinte relația dintre informații și idei în mod eficient, precum și să interacționeze și să colaboreze cu ceilalți."
+        },
+        "ccela/9-10.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și să actualizeze produsele scrise individuale sau comune, folosindu-se capacitatea tehnologiei de a face legătura cu alte informații și de a afișa informațiile în mod flexibil și dinamic."
+        },
+        "ccmath/MP.4": {
+          "description": "Model cu matematica"
+        },
+        "csta2011/CL.L1:6-02": {
+          "description": "Să utilizeze resursele online (de ex. email, discuții online, medii web de colaborare), pentru a participa în activități de colaborare pentru soluționarea unei probleme în scopul dezvoltării soluțiilor sau produselor."
+        },
+        "csta2011/CPP.L1:3-01": {
+          "description": "Să utilizeze resursele tehnologice pentru a efectua cercetarea corespunzătoare vârstei."
+        },
+        "csta2011/CPP.L2:3": {
+          "description": "Să proiecteze, să dezvolte, să publice și să prezinte produse (de ex. pagini web, aplicații mobile, animații), utilizând resursele tehnologice care demonstrează și comunică concepte curriculare."
+        },
+        "iste/2.a": {
+          "description": "Să interacționeze, să colaboreze și să publice cu colegii, experții sau cu alții, angajând o diversitate de medii și metode."
+        },
+        "iste/2.b": {
+          "description": "Să comunice informațiile și ideile în mod efectiv, pentru a multiplica auditorii, utilizând o diversitate de mijloace și formate."
+        },
+        "iste/4.d": {
+          "description": "Să utilizeze procese multiple și diverse perspective pentru a explora soluții alternative."
+        },
+        "csp2021/IOC-2.B.5": {
+          "description": "Criptarea este un proces de codificare a datelor pentru împiedicarea accesului neautorizat. Decriptarea este procesul de decodificare a datelor. Două abordări comune ale criptării sunt: ●Criptarea cu cheie simetrică implică o cheie atât pentru criptare cât și pentru decriptare.●Criptarea cu cheie publică împerechează o cheie publică pentru criptare și o cheie privată pentru decriptare. Expeditorul nu are nevoie de cheia privată a destinatarului pentru a cripta un mesaj, dar cheia privată a destinatarului este necesară pentru decriptarea mesajului.  DECLARAȚIE DE EXCLUDERE(EKIOC-2.B.5): Procedurile matematice specifice pentru criptare și decriptare depășesc scopul acestui curs și al Examenului AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Să recomande măsuri de securitate pentru a aborda diferite scenarii pe baza factorilor precum eficiență, fezabilitate și impacturi etice."
+        },
+        "csta/3A-NI-07": {
+          "description": "Să compare diferite măsuri de securitate, luând în considerare impedimentele dintre capacitatea de utilizare și siguranța unui sistem informatic."
+        },
+        "csta/3B-NI-04": {
+          "description": "Să compare modurile în care dezvoltatorii de software protejează dispozitivele și informațiile împotriva accesului neautorizat."
+        },
+        "csp2021/DAT-1.D.1": {
+          "description": "Comprimarea datelor poate reduce dimensiunea (numărul de biți) a datelor transmise sau stocate."
+        },
+        "csp2021/DAT-1.D.2": {
+          "description": "Mai puțini biți nu înseamnă neapărat mai puține informații."
+        },
+        "csp2021/DAT-1.D.3": {
+          "description": "Nivelul de reducere a dimensiunii în urma compresiei depinde atât de gradul de redundanță din reprezentarea datelor originale, cât și de algoritmul de compresie aplicat."
+        },
+        "csp2021/DAT-1.D.4": {
+          "description": "Algoritmii de compresie a datelor fără pierderi pot, de obicei, să reducă numărul de biți stocați sau transmiși, garantând în același timp reconstrucția completă a datelor originale."
+        },
+        "csta/3A-DA-10": {
+          "description": "Să evalueze impedimentele modului în care elementele datelor sunt organizate și locul în care sunt stocate datele."
+        },
+        "csta/1B-IC-18": {
+          "description": "Discutați tehnologiile informatice care au schimbat lumea și exprimați modul în care acele tehnologii influențează și sunt influențate de practicile culturale."
+        },
+        "csta/1B-DA-07": {
+          "description": "Utilizați datele pentru a scoate în evidență sau a propune relația cauză-efect, a prezice rezultate, sau a comunica o idee."
+        },
+        "1B-DA-07": {
+          "description": "Utilizați datele pentru a scoate în evidență sau a propune relația cauză-efect, a prezice rezultate, sau a comunica o idee."
+        },
+        "3A-DA-10": {
+          "description": "Să evalueze impedimentele modului în care elementele datelor sunt organizate și locul în care sunt stocate datele."
+        },
+        "1B-IC-18": {
+          "description": "Discutați tehnologiile informatice care au schimbat lumea și exprimați modul în care acele tehnologii influențează și sunt influențate de practicile culturale."
+        },
+        "3A-NI-06": {
+          "description": "Să recomande măsuri de securitate pentru a aborda diferite scenarii pe baza factorilor precum eficiență, fezabilitate și impacturi etice."
+        },
+        "3A-NI-07": {
+          "description": "Să compare diferite măsuri de securitate, luând în considerare impedimentele dintre capacitatea de utilizare și siguranța unui sistem informatic."
+        },
+        "3B-NI-04": {
+          "description": "Să compare modurile în care dezvoltatorii de software protejează dispozitivele și informațiile împotriva accesului neautorizat."
+        },
+        "DAT-1.D.1": {
+          "description": "Comprimarea datelor poate reduce dimensiunea (numărul de biți) a datelor transmise sau stocate."
+        },
+        "DAT-1.D.2": {
+          "description": "Mai puțini biți nu înseamnă neapărat mai puține informații."
+        },
+        "DAT-1.D.3": {
+          "description": "Nivelul de reducere a dimensiunii în urma compresiei depinde atât de gradul de redundanță din reprezentarea datelor originale, cât și de algoritmul de compresie aplicat."
+        },
+        "DAT-1.D.4": {
+          "description": "Algoritmii de compresie a datelor fără pierderi pot, de obicei, să reducă numărul de biți stocați sau transmiși, garantând în același timp reconstrucția completă a datelor originale."
+        },
+        "IOC-2.B.5": {
+          "description": "Criptarea este un proces de codificare a datelor pentru împiedicarea accesului neautorizat. Decriptarea este procesul de decodificare a datelor. Două abordări comune ale criptării sunt: ●Criptarea cu cheie simetrică implică o cheie atât pentru criptare cât și pentru decriptare.●Criptarea cu cheie publică împerechează o cheie publică pentru criptare și o cheie privată pentru decriptare. Expeditorul nu are nevoie de cheia privată a destinatarului pentru a cripta un mesaj, dar cheia privată a destinatarului este necesară pentru decriptarea mesajului.  DECLARAȚIE DE EXCLUDERE(EKIOC-2.B.5): Procedurile matematice specifice pentru criptare și decriptare depășesc scopul acestui curs și al Examenului AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Să folosească dispozitive standard de intrare și ieșire pentru a opera cu succes computerele și tehnologiile asociate."
+        },
+        "CI.L1:3-01": {
+          "description": "Să exerseze cetățenia digitală responsabilă (comportamente legale și etice) în utilizarea sistemelor tehnologice și a software-ului."
+        },
+        "CL.L1:6-02": {
+          "description": "Să utilizeze resursele online (de ex. email, discuții online, medii web de colaborare), pentru a participa în activități de colaborare pentru soluționarea unei probleme în scopul dezvoltării soluțiilor sau produselor."
+        },
+        "CPP.L1:3-01": {
+          "description": "Să utilizeze resursele tehnologice pentru a efectua cercetarea corespunzătoare vârstei."
+        },
+        "CPP.L1:3-02": {
+          "description": "Să utilizeze din punctul de vedere al dezvoltării resurse multimedia corespunzătoare (de ex. cărți interactive și software educațional) pentru sprijinirea învățării în cadrul programei școlare."
+        },
+        "CPP.L1:3-04": {
+          "description": "Să construiască un set de enunțuri care să fie interpretate pentru a îndeplini o sarcină simplă (de exemplu, instrucțiuni pentru broasca țestoasă)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Să utilizeze resurse tehnologice (de ex. calculatoare, probe de colectare a datelor, dispozitive mobile, video, software educațional și instrumente web) pentru rezolvarea unei probleme și învățarea autodirijată."
+        },
+        "CPP.L1:6-06": {
+          "description": "Implementează soluțiile problemei utilizând un bloc pe bază de limbaj de programare vizuală."
+        },
+        "CPP.L2:3": {
+          "description": "Să proiecteze, să dezvolte, să publice și să prezinte produse (de ex. pagini web, aplicații mobile, animații), utilizând resursele tehnologice care demonstrează și comunică concepte curriculare."
+        },
+        "CT.L2:1": {
+          "description": "Utilizează pașii de bază în rezolvarea algoritmică a problemei pentru a proiecta soluții (de ex. declararea și explorarea problemei, examinarea exemplelor de eșantioane, proiectarea, implementarea unei soluții, testarea și evaluarea)."
+        },
+        "CT.L2:12": {
+          "description": "Utilizează abstracția pentru a descompune o problemă în sub-probleme."
+        },
+        "CT.L2:6": {
+          "description": "Descrie și analizează o secvență de instrucțiuni care s-au urmărit (de ex. descrie comportamentul unui personaș într-un joc video ca fiind condus de reguli și algoritmi)."
+        },
+        "CT.L2:7": {
+          "description": "Reprezentarea datelor într-o varietate de moduri inclusiv text, sunete, fotografii și numere."
+        },
+        "CT.L2:8": {
+          "description": "Utilizarea reprezentărilor vizuale ale stărilor, structurilor și datelor problemei (de ex. grafice, scheme, diagrame de rețea, scheme logice)."
+        },
+        "1.L.6": {
+          "description": "Să folosească cuvinte și fraze dobândite prin conversații, citind și fiind citit și răspunzând la texte, inclusiv folosind conjuncții frecvente pentru a semnala relații simple (de exemplu, deoarece)."
+        },
+        "11-12.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale și specifice unui domeniu, suficiente pentru a citi, scrie, vorbi și asculta la nivelul de pregătire pentru colegiu și carieră; să demonstreze independență în colectarea cunoștințelor de vocabular atunci când consideră"
+        },
+        "2.L.6": {
+          "description": "Să utilizeze cuvintele și expresiile dobândite prin conversații, citind și fiind citit și răspunzând la texte, inclusiv folosind adjective și adverse pentru descriere (de ex., Când alți copii sunt fericiți, asta mă face si pe mine fericit)."
+        },
+        "3.L.6": {
+          "description": "Să dobândească și să folosească cu acuratețe cuvinte și expresii conversaționale, academice generale și specifice domeniului și clasei, inclusiv acelea care semnalează relațiile spațiale și temporale (de ex. În acea seara după cină am plecat să îi căutăm)."
+        },
+        "4.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale specifice clasei și specifice unui domeniu, inclusiv cele care semnalează acțiuni, emoții sau stări precise (de exemplu, interog, whined, bâlbâit) și care sunt de bază pentru un anumit subiect (de exemplu interogat, lamentat, bâlbâit) și care sunt de bază pentru un anumit subiect (de exemplu"
+        },
+        "5.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale și specifice unui domeniu, inclusiv cele care semnealează contrastul, adunarea și alte relații logice (de ex. cu toate aestea, deși, fără a lua în considerare, în mod similar, de asemenea, în plus)."
+        },
+        "9-10.L.6": {
+          "description": "Să dobândească și să utilizeze cu acuratețe cuvinte și expresii academice generale și specifice unui domeniu, suficiente pentru a citi, scrie, vorbi și asculta la nivelul de pregătire pentru colegiu și carieră; să demonstreze independență în colectarea cunoștințelor de vocabular atunci când consideră"
+        },
+        "11-12.RI.4": {
+          "description": "Să determine înțelesul cuvintelor și expresiilor astfel cum sunt utilizate într-un text, inclusiv sensurile figurative, conotative și tehnice; să analizeze modul în care un autor utilizează și rafinează sensul unui termen sau unor termeni cheie în cuprinsul unui text (de ex. cum definește Madison"
+        },
+        "3.RL.4": {
+          "description": "Determinarea înțelesului cuvintelor și expresiilor astfel cum sunt utilizate într-un text, făcând distincție între limbajul literal și neliteral."
+        },
+        "4.RL.7": {
+          "description": "Să facă legături între textul unei povestiri sau al unei drame și o prezentare de text vizuală sau orală, identificând unde fiecare versiune reflectă descrierile și indicațiile specifice din text."
+        },
+        "5.RL.4": {
+          "description": "Să determine înțelesul cuvintelor și expresiilor astfel cum sunt utilizate intr-un text, inclusiv limbajul figurativ precum metafore și comparații."
+        },
+        "5.RL.7": {
+          "description": "Să analizeze modul în care elementele vizuale și multimedia contribuie la înțelesul, tonul sau frumusețea unui text (de ex. nuvelă grafică, prezentarea multimedia de ficțiune, poveste populară, mit, poem)."
+        },
+        "1.SL.1": {
+          "description": "Să participe în conversații de colaborare cu diverși parteneri despre subiecte și texte de clasa 1 cu colegi și adulți din grupuri mici și mai mari."
+        },
+        "2.SL.1": {
+          "description": "Să participe în conversații de colaborare cu diverși parteneri despre subiecte și texte de clasa a 2-a cu colegi și adulți din grupuri mici și mai mari."
+        },
+        "3.SL.1": {
+          "description": "Să se angajeze efectiv într-o serie de discuții de colaborare (individuale, în grupuri și conduse de profesor) cu diverși parteneri despre subiecte și texte de clasa a 3-a, bazându-se pe ideile celorlalți și exprimându-le pe ale lor cu claritate."
+        },
+        "6.SL.1": {
+          "description": "Participă efectiv într-o serie de discuții în colaborare (individual, în grupuri și sub îndrumarea profesorului) cu diverști parteneri pe teme, texte și probleme din clasa a 6-a, bazându-te pe ideile celorlalți și exprimându-ți clar propriile idei.\n"
+        },
+        "7.SL.1": {
+          "description": "Participă efectiv într-o serie de discuții în colaborare (individual, în grupuri și sub îndrumarea profesorului) cu diverști parteneri pe teme, texte și probleme din clasa a 7-a, bazându-te pe ideile celorlalți și exprimându-ți clar propriile idei."
+        },
+        "11-12.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și actualizeze produse scrise individuale sau comune ca răspuns la feedback-ul continuu, inclusiv argumente sau informații noi."
+        },
+        "3.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiente sau evenimente reale sau imaginare, folosind tehnica efectivă, detaliile descriptive și secventele clare ale evenimentului."
+        },
+        "4.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiente sau evenimente reale sau imaginare, folosind tehnica efectivă, detaliile descriptive și secventele clare ale evenimentului."
+        },
+        "5.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiente sau evenimente reale sau imaginare, folosind tehnica efectivă, detaliile descriptive și secventele clare ale evenimentului."
+        },
+        "6.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiențe sau evenimente reale sau imaginare prin utilizarea tehnicii efective, a detaliilor descriptive relevante, precum și a secvențelor bine-structurate ale evenimentului."
+        },
+        "6.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, pentru a produce și publica scrieri, precum și pentru a interacționa și a colabora cu alte persoane; să demonstreze că stăpânește suficient de bine aptitudinile de tastare pentru a scrie cel puțin trei pagini într-o singură ședință."
+        },
+        "7.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiențe sau evenimente reale sau imaginare prin utilizarea tehnicii efective, a detaliilor descriptive relevante, precum și a secvențelor bine-structurate ale evenimentului."
+        },
+        "7.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, pentru a produce și publica scrieri și să le lege cu și să citeze surse, precum și să interacționeze și să colaboreze cu ceilalți, inclusiv legarea cu și citarea surselor."
+        },
+        "8.W.3": {
+          "description": "Să scrie narațiuni pentru a dezvolta experiențe sau evenimente reale sau imaginare prin utilizarea tehnicii efective, a detaliilor descriptive relevante, precum și a secvențelor bine-structurate ale evenimentului."
+        },
+        "8.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice scrieri și să prezinte relația dintre informații și idei în mod eficient, precum și să interacționeze și să colaboreze cu ceilalți."
+        },
+        "9-10.W.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și să actualizeze produsele scrise individuale sau comune, folosindu-se capacitatea tehnologiei de a face legătura cu alte informații și de a afișa informațiile în mod flexibil și dinamic."
+        },
+        "11-12.WHST.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și actualizeze produse scrise individuale sau comune ca răspuns la feedback-ul continuu, inclusiv argumente sau informații noi."
+        },
+        "9-10.WHST.6": {
+          "description": "Să utilizeze tehnologia, inclusiv Internetul, să producă, publice și să actualizeze produsele scrise individuale sau comune, folosindu-se capacitatea tehnologiei de a face legătura cu alte informații și de a afișa informațiile în mod flexibil și dinamic."
+        },
+        "7.G.2": {
+          "description": "Să deseneze (cu mâna liberă, cu rigla și raportor și cu ajutorul tehnologiei) forme geometrice în condiții date. Concentrați-vă pe construirea de triunghiuri din trei măsuri de unghiuri sau laturi, observând când condițiile determină un triunghi unic, mai multe triunghiuri"
+        },
+        "4.MD.6": {
+          "description": "Să măsoare unghiurile în grade cu numere întregi folosind un raportor. Să schițeze unghiuri de o anumită măsură."
+        },
+        "MP.1": {
+          "description": "Înțelege problemele și perseverează în rezolvarea lor"
+        },
+        "MP.2": {
+          "description": "Gândește în mod abstract și cantitativ"
+        },
+        "MP.4": {
+          "description": "Model cu matematica"
+        },
+        "MP.5": {
+          "description": "Utilizează instrumentele adecvate în mod strategic"
+        },
+        "MP.6": {
+          "description": "Acordă atenție preciziei"
+        },
+        "MP.7": {
+          "description": "Caută și utilizează structura"
+        },
+        "MP.8": {
+          "description": "Caută și exprimă regularitatea în raționamente repetate"
+        },
+        "4.NBT.4": {
+          "description": "Să adune și să scadă în mod fluent numere întregi cu multe cifre utilizând algoritmul standard."
+        },
+        "4.NBT.5": {
+          "description": "Să înmulțească un număr întreg de până la patru cifre cu un număr întreg de o cifră și să înmulțească două numere de două cifre, utilizând strategii bazate pe valoarea locului și proprietățile operațiilor. Ilustrați și explicați calculul folosind ecuații,"
+        },
+        "1.OA.1": {
+          "description": "Să utilizeze adunarea și scăderea până la 20 pentru a rezolva probleme de cuvinte care implică situații de adăugare la, scădere din, unire, separare și comparare, cu necunoscuți în toate pozițiile, de ex., folosind obiecte, desene și ecuații cu un simbol pentru "
+        },
+        "2.OA.1": {
+          "description": "Să folosească adunarea și scăderea până la 100 pentru rezolvarea problemelor de cuvinte în unul sau doi pași, care implică situații de adăugare la, scădere din, unire, separare și comparare cu necunoscuți în toate pozițiile, de ex. prin utilizarea desenelor și ecuațiilor cu un simbol"
+        },
+        "3.OA.3": {
+          "description": "Să folosească înmulțirea și împărțirea până la 100 pentru rezolvarea problemelor de cuvinte în situații care implică grupuri egale, grămezi și cantități de măsură, de ex. prin folosirea desenelor și ecuațiilor cu un simbol pentru ca numărul necunoscut să reprezinte problema.1"
+        },
+        "1.a": {
+          "description": "Aplicarea cunoștințelor existente, pentru generarea de idei, produse sau procese noi."
+        },
+        "1.b": {
+          "description": "Crearea de lucrări originale ca un mijloc de expresie personală sau de grup."
+        },
+        "1.c": {
+          "description": "Utilizarea de modele și simulări pentru explorarea sistemelor și problemelor complexe."
+        },
+        "2.a": {
+          "description": "Să interacționeze, să colaboreze și să publice cu colegii, experții sau cu alții, angajând o diversitate de medii și metode."
+        },
+        "2.b": {
+          "description": "Să comunice informațiile și ideile în mod efectiv, pentru a multiplica auditorii, utilizând o diversitate de mijloace și formate."
+        },
+        "4.b": {
+          "description": "Planificarea și gestionarea activităților de dezvoltare a unei soluții sau finalizarea unui proiect."
+        },
+        "4.d": {
+          "description": "Să utilizeze procese multiple și diverse perspective pentru a explora soluții alternative."
+        },
+        "6.a": {
+          "description": "Înțelegerea și utilizarea sistemelor de tehnologie."
+        },
+        "6.c": {
+          "description": "Rezolvarea problemelor de sisteme și aplicații. "
+        },
+        "6.d": {
+          "description": "Transferarea cunoștințelor actuale către învățarea de noi tehnologii."
+        }
+      }
+    }
+  }
+}

@@ -217,17 +217,14 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-30T23:39:59.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:59.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:59.080+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated plan_2021\\\"\"],\"cloned_from\":\"CSD web project animated plan_2021\"},{\"changed_at\":\"2022-05-09 17:12:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

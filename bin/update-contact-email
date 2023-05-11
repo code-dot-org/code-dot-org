@@ -22,7 +22,7 @@ def update_email(old_email, new_email)
   end
   puts "Update #{old_email} with #{new_email}? (y/N)"
 
-  unless STDIN.readline.strip.downcase == 'y'
+  unless STDIN.readline.strip.casecmp?('y')
     puts 'Canceled.'
     exit
   end

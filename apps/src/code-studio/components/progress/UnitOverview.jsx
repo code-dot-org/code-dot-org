@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
@@ -14,7 +14,7 @@ import UnitOverviewHeader from './UnitOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   onDismissRedirectDialog,
-  dismissedRedirectDialog
+  dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
@@ -22,6 +22,9 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -54,6 +57,9 @@ class UnitOverview extends React.Component {
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
+    isProfessionalLearningCourse: PropTypes.bool,
+    publishedState: PropTypes.oneOf(Object.values(PublishedState)),
+    participantAudience: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -61,7 +67,8 @@ class UnitOverview extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    userType: PropTypes.string,
   };
 
   constructor(props) {
@@ -69,6 +76,15 @@ class UnitOverview extends React.Component {
     const showRedirectDialog =
       props.redirectScriptUrl && props.redirectScriptUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName,
+        }
+      );
+    }
   }
 
   onCloseRedirectDialog = () => {
@@ -76,7 +92,7 @@ class UnitOverview extends React.Component {
     // Use course name if available, and script name if not.
     onDismissRedirectDialog(courseName || scriptName);
     this.setState({
-      showRedirectDialog: false
+      showRedirectDialog: false,
     });
   };
 
@@ -109,7 +125,10 @@ class UnitOverview extends React.Component {
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      isProfessionalLearningCourse,
+      publishedState,
+      participantAudience,
     } = this.props;
 
     const displayRedirectDialog =
@@ -134,9 +153,10 @@ class UnitOverview extends React.Component {
           )}
           {this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
-              <a href={this.props.courseLink} style={styles.navLink}>{`< ${
-                this.props.courseTitle
-              }`}</a>
+              <a
+                href={this.props.courseLink}
+                style={styles.navLink}
+              >{`< ${this.props.courseTitle}`}</a>
             </div>
           )}
           {displayRedirectDialog && (
@@ -179,6 +199,10 @@ class UnitOverview extends React.Component {
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
+            isProfessionalLearningCourse={isProfessionalLearningCourse}
+            courseLink={this.props.courseLink}
+            publishedState={publishedState}
+            participantAudience={participantAudience}
           />
         </div>
         <ProgressTable minimal={false} />
@@ -196,11 +220,11 @@ const styles = {
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
-    color: color.purple
+    color: color.purple,
   },
   navArea: {
-    padding: '10px 0px'
-  }
+    padding: '10px 0px',
+  },
 };
 
 export const UnconnectedUnitOverview = Radium(UnitOverview);
@@ -209,5 +233,5 @@ export default connect((state, ownProps) => ({
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
   hiddenLessonState: state.hiddenLesson,
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(UnconnectedUnitOverview);

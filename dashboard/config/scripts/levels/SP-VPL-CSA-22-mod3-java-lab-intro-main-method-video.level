@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-20T13:15:23.495+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-java-lab-intro-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-java-lab-intro-video\"},{\"changed_at\":\"2022-04-20 21:42:07 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-20T13:15:23.495+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-java-lab-intro-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-java-lab-intro-video\"},{\"changed_at\":\"2022-04-20 21:42:07 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-10-26 17:53:43 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

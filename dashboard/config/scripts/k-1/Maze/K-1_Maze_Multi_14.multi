@@ -13,3 +13,5 @@ right '/script_assets/k_1_images/move_blocks/WS.png'
 wrong '/script_assets/k_1_images/move_blocks/WN.png'
 
 # http://staging.learn.code.org/s/course1/lessons/2/levels/13
+
+allow_multiple_attempts true

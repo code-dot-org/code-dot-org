@@ -31,7 +31,7 @@ Code.org ផ្តល់នូវឱកាសសម្រាប់បុគ្�
 - ផ្សព្វផ្សាយកម្មវិធី [Hour of Code របស់អ្នក]({{ urls/promote }}) និងលើកទឹកចិត្តឱ្យអ្នកដទៃធ្វើជាអ្នករៀបចំ។
 - លើកទឹកចិត្តឱ្យ software engineers នៅក្រុមហ៊ុនរបស់អ្នក ទៅមើលថ្នាក់រៀនថ្នាក់មូលដ្ឋានដើម្បីជួយដឹកនាំ Hour of Code និងជម្រុញសិស្សឱ្យសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ។ ពួកគេអាច [ចុះឈ្មោះ]({{ urls/volunteer_engineer }}) ដើម្បីនឹងភ្ជាប់ទំនាក់ទំនងជាមួយនឹងថ្នាក់រៀន.
 
-## 2. មើលវីដេអូរបៀបធ្វើនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. មើលវីដេអូរបៀបធ្វើនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. ជ្រើសរើសសកម្មភាពមួយ
 យើងរៀបចំ [សកម្មភាពសប្បាយៗរយ:ពេលមួយម៉ោង]({{ urls/learn }}) ជាច្រើនសម្រាប់អ្នកចូលរួមគ្រប់វ័យ ដែលបង្កើតឡើងដោយដៃគូជាច្រើន។ [សាកល្បងមើល!]({{ urls/learn }})

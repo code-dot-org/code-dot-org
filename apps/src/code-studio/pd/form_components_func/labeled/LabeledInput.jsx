@@ -8,13 +8,13 @@ export const LabeledInput = props => {
   const passProps = {
     ...defaults,
     type: 'text',
-    ...props
+    ...props,
   };
   return <FieldGroup {...passProps} />;
 };
 LabeledInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 export const LabeledNumberInput = props => {
@@ -22,13 +22,13 @@ export const LabeledNumberInput = props => {
   const passProps = {
     ...defaults,
     type: 'number',
-    ...props
+    ...props,
   };
   return <FieldGroup {...passProps} />;
 };
 LabeledNumberInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 export const LabeledLargeInput = props => {
@@ -37,7 +37,7 @@ export const LabeledLargeInput = props => {
     controlWidth: {md: 12},
     rows: 4,
     maxLength: 500,
-    ...props
+    ...props,
   };
   return <LabeledInput {...passProps} />;
 };
