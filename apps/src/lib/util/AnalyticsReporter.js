@@ -15,8 +15,6 @@ import {
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
-// A flag that can be toggled to console log events in development
-const LOG_EVENT_IN_DEV = false;
 
 class AnalyticsReporter {
   constructor() {
@@ -64,7 +62,7 @@ class AnalyticsReporter {
 
   // Will only log in development if LOG_EVENT_IN_DEV is set to true.
   log(message) {
-    if (isDevelopmentEnvironment() && LOG_EVENT_IN_DEV) {
+    if (isDevelopmentEnvironment()) {
       console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
     }
   }
