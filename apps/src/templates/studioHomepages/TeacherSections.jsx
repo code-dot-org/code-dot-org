@@ -75,7 +75,7 @@ class TeacherSections extends Component {
           </ContentContainer>
         )}
         <RosterDialog userId={this.props.userId} />
-        <AddSectionDialog />
+        <AddSectionDialog userId={this.props.userId} />
         <EditSectionDialog />
       </div>
     );
