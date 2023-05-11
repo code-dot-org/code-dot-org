@@ -8,10 +8,10 @@ export const bonusLevel = {
   url: PropTypes.string.isRequired,
   perfect: PropTypes.bool,
   type: PropTypes.string,
-  maze_summary: PropTypes.object
+  maze_summary: PropTypes.object,
 };
 
 export const lessonOfBonusLevels = {
   lessonNumber: PropTypes.number.isRequired,
-  levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel))
+  levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };

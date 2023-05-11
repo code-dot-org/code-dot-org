@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+require_relative 'http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -97,7 +97,6 @@ module SharedConstants
     artist_k1
     playlab_k1
     dance
-    spritelab
     poetry
     poetry_hoc
     thebadguys
@@ -109,17 +108,20 @@ module SharedConstants
     gamelab
   ).freeze
 
+  # For privacy reasons, sprite lab projects can only be published if they are not in "restricted share mode".
+  # This mode is triggered if the user is a student and has uploaded an image to their project.
+  RESTRICTED_PUBLISH_PROJECT_TYPES = %w(spritelab).freeze
+
   UNPUBLISHABLE_PROJECT_TYPES = %w(
     algebra_game
     calc
     eval
     minecraft_codebuilder
-    spritelab
     weblab
   )
 
   ALL_PUBLISHABLE_PROJECT_TYPES =
-    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES + RESTRICTED_PUBLISH_PROJECT_TYPES
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
@@ -265,6 +267,7 @@ module SharedConstants
       "declareAssign_x_prompt": null,
       "declareAssign_x_promptNum": null,
       "console.log": null,
+      "console.clear": null,
       "declareAssign_str_hello_world": null,
       "substring": null,
       "indexOf": null,
@@ -304,11 +307,16 @@ module SharedConstants
       "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "__.on": null,
+      "__.off": null,
+      "__.toggle": null,
+      "__.blink": null,
+      "__.pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -340,9 +348,6 @@ module SharedConstants
       "onBoardEvent": null,
 
       // micro:bit
-      "on": null,
-      "off": null,
-      "toggle": null,
       "ledScreen.on": null,
       "ledScreen.off": null,
       "ledScreen.toggle": null,
@@ -568,6 +573,7 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
+      "console.clear": null,
       "comment_Variables": null,
 
       // Functions

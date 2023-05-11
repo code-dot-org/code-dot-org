@@ -8,7 +8,7 @@ import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import {
   DATE_FORMAT,
-  TIME_FORMAT
+  TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
 
 class EnrolledWorkshops extends React.Component {
@@ -26,31 +26,29 @@ class EnrolledWorkshops extends React.Component {
 
 class EnrolledWorkshopsTable extends React.Component {
   static propTypes = {
-    workshops: PropTypes.arrayOf(workshopShape)
+    workshops: PropTypes.arrayOf(workshopShape),
   };
 
   state = {
     showCancelModal: false,
-    enrollmentCodeToCancel: undefined
+    enrollmentCodeToCancel: undefined,
   };
 
   cancelEnrollment = event => {
-    window.location = `/pd/workshop_enrollment/${
-      this.state.enrollmentCodeToCancel
-    }/cancel`;
+    window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
   };
 
   dismissCancelModal = event => {
     this.setState({
       showCancelModal: false,
-      enrollmentCodeToCancel: undefined
+      enrollmentCodeToCancel: undefined,
     });
   };
 
   showCancelModal = enrollmentCode => {
     this.setState({
       showCancelModal: true,
-      enrollmentCodeToCancel: enrollmentCode
+      enrollmentCodeToCancel: enrollmentCode,
     });
   };
 
@@ -220,8 +218,8 @@ class EnrolledWorkshopsTable extends React.Component {
 
 const styles = {
   button: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export {EnrolledWorkshops, EnrolledWorkshopsTable};

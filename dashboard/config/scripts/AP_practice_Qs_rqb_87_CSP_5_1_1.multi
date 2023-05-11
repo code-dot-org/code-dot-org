@@ -60,3 +60,5 @@ Learning Objective: **5.1.1** and Essential Knowledge statements: **5.1.1A**
 ---
 (D) Line 1 returns `num1` when it is less than `num2`, meaning it can't be the correct answer choice.
 MARKDOWN
+
+allow_multiple_attempts true

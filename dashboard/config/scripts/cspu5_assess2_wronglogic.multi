@@ -1,32 +1,33 @@
 name 'cspu5_assess2_wrongLogic'
-encrypted 'ujew8JYOAQ5+F9hsBEC2t7jmNcyRVTr07dj5a6rBu2XRsvj/EjLADuHX3MrM
-laq4uuSyYTNaj/W5c6kzs6BqgHVJX6JwMrEnvDipAW5XBmTcqP9ujoP6U9c2
-wTDaVoaUP66JOSmgRQoKiM/JfOvVio9GOUBXrEvXkKUKpLggo2yGQNaDVkrx
-w2OjqlaP0ysGO4SBWeNen4vjsVkQ/jTiplrqxokFZEJPcWiMxqeX3hBZwJ3r
-8vZ1FLZU8gRJIiDZLi0d0gkv/rj8KQe0yDZxRLZKays1pLrobi+T+l8eVLE/
-Ol81VFPN78dGVTYlmTRMXQMS52/pRUUu/QWPqzAi52zX9/xe9FhUUrMiRa6e
-LjL8M/3qbgQcV1VEnOU5PGEHQbIEZ9u0u39a0/LjaoNgKVRNhMwQmz7PNzAs
-ykbyHgsCJfnDTMT4+hgz/55in6RCa+OiB0xKeICl8cGPk00iFVSTmLUht45z
-2r79Q9hC8oLWwuYKKoT3gKb4ZHZpW/mA9edQX9Z4S2w8N2sbOfswx8PEGw2t
-sRIsZ4IxWT4A9AvqUG1d1m0HlU4AXI7LBMlQAlNT1oMtMMuE2Dk7JOEqz5kF
-P9Mrg1uXWs6Z7ujJ+rqNUHgqnNPzjJvyKvgyoeJiA872xFhObAC6DODlKHhf
-dFa7r2Np1saShttBwJzMMYYj1rxkIYoz1Mg4TC+p4YSmVOX1nmsfNpggGOUD
-wzHCZqKJKDEygMaYS98Hq8+cv8NsfLwlnR0YF6pZ/BjooDE0AdMe8OGpbFsa
-q+yHCn70Ae5TA4DRKXmi9t+uGEsHKuUqLJZG7LmUXBnxRSUyW+/+UzNkqEW/
-lsdbS0x/NK/88Mo0ABqgxG06bbXLakeK1YbY1VbdTXueu3myrZfPdsWKsceP
-p8u2wrwToPH6D3Td6b2TpX/pgKAFhu9ZKNGR7nsKuYgHl0P3ym+vkPKGKWhy
-Dzik9MrZQBYWgK7sKeSmzlSZbbqM7XUeEA+KsDwnLzP8vzcry+MFIRb6VWBr
-3bnEqC5CkDhypZ8ezjNbLnOH1pqdsAPvlxWIGOl7LhXj+2RmtjqO1LGapKLO
-7W0zoNpsCEDMKB1rtyilneJdRKUIRSdRzXM4TsHYX5UgBnaG8SkKDqkLxZYg
-xb1c+GzrE85Mgo7Sy+XziGATSdbInWPERCJiYVdc1rGDsWZaaHsz71Vl3wq0
-W23zwriB0TFTB7zjmoPRY4d/fA7E2zGhOCQ5pyQMZM3zVhG4o5vNMxRLbC1z
-LmAkp4gWoo0/YOArSXqdgtdP4PpfuKYRHFLOZo6OTOhpAgPmJlu7h/furhG1
-bKRhu5C+oWuUkfWBgAO+NDJB73Oh1hkYJiDcRtJ9W4l/h9q2+erTcD1nJyIp
-m7bqlWE2jhCndCVQbZKZqSXF5iI57hUvrZddRJ0rFM+Fvl1mOsQEd6xeV8hC
-22ynsz7DCKuslo0uKpHKSH7/nsHAZTkohH8LLf5eqISr6gY35fvH6geTjzrZ
-mVcqE4Wma2mHml+TkE+Qqi3PMA5JRKJ/yOl1pNEdNgfFXq2cWsk+pFX8JUBR
-xE3Iyk4cklUVZ4FG1ciCv+cWjm6/+K2iLmqikB0hg7xSQAChRpJM34AsWulJ
-xcvWAit1psmRn9zY6TMrkvZ2OEosuKpssj5uwleEQCvtr8+7HPhLUWHPxrmQ
-s+VlEF5QRrZKc4rYW2gxMrJATlQ16hPj+yCHBdzB9qY9GfAsGFggPUaSIekI
-W1T+rIcgdgxgalY6DQYii2KUHekfHm4=
-'
+wrong 'Any time between 6 and 9'
+wrong 'Any time between 10 and 19'
+wrong 'Any time between 0 and 20'
+right 'There is no value of time that will result in “Good Morning” being displayed'
+wrong 'The logic error will cause the program to stop running at line 7.'
+
+markdown <<MARKDOWN
+**Content: Unit 5 Lesson 9** - ordering of conditions in else-if
+
+Consider the following JavaScript code segment.  
+
+    var time = promptNum(“What hour is it (on a 24 hour clock)?”);
+    var greeting = “”;
+    if (time < 6) {
+        greeting = "It is too early!";
+    } else if (time < 20) {
+        greeting = "Good Day!";
+    } else if (time < 10) {
+        greeting = “Good Morning!”;
+    } else {
+        greeting = "Good Evening!";
+    }
+    console.log(greeting);
+
+Something is wrong with the logic in the program above. For which values of time will the greeting “Good Morning” be displayed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the two else if statements in the middle, we notice that (time < 20) comes before (time < 10). Since code executes sequentially, "Good Morning" will never be displayed because all values that are between 6 and 10 will first go into the (time < 20) statement due to the order of the code.
+MARKDOWN
+
+allow_multiple_attempts true

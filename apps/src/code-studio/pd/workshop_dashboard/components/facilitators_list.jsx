@@ -9,9 +9,9 @@ export default class FacilitatorsList extends React.Component {
     facilitators: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
-        email: PropTypes.string
+        email: PropTypes.string,
       })
-    ).isRequired
+    ).isRequired,
   };
 
   render() {

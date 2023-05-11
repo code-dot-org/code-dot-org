@@ -1,28 +1,19 @@
 import _ from 'lodash';
+import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
-// Used for custom field type ClampedNumber(,)
-// Captures two optional arguments from the type string
-// Allows:
-//   ClampedNumber(x,y)
-//   ClampedNumber( x , y )
-//   ClampedNumber(,y)
-//   ClampedNumber(x,)
-//   ClampedNumber(,)
-const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
-
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
  */
-exports.createToolbox = function(blocks) {
+exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-const appendBlocks = function(toolboxDom, blockTypes) {
+const appendBlocks = function (toolboxDom, blockTypes) {
   const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
@@ -33,7 +24,7 @@ const appendBlocks = function(toolboxDom, blockTypes) {
 };
 exports.appendBlocks = appendBlocks;
 
-exports.appendBlocksByCategory = function(toolboxXml, blocksByCategory) {
+exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
@@ -73,7 +64,7 @@ exports.appendBlocksByCategory = function(toolboxXml, blocksByCategory) {
  * @param {string} values.titleName Name of the title block
  * @param {string} values.titleValue Input value
  */
-exports.blockOfType = function(type, titles, values) {
+exports.blockOfType = function (type, titles, values) {
   let inputText = '';
   if (titles) {
     for (let key in titles) {
@@ -84,9 +75,7 @@ exports.blockOfType = function(type, titles, values) {
     for (let key in values) {
       inputText += `<value name="${key}">
         <block type="${values[key].type}">
-          <title name="${values[key].titleName}">${
-        values[key].titleValue
-      }</title>
+          <title name="${values[key].titleName}">${values[key].titleValue}</title>
         </block>
       </value>`;
     }
@@ -97,7 +86,7 @@ exports.blockOfType = function(type, titles, values) {
 /*
  * Creates an XML node for an individual block. See blockOfType for params
  */
-exports.blockAsXmlNode = function(type, inputs = {}) {
+exports.blockAsXmlNode = function (type, inputs = {}) {
   return xml.parseElement(
     exports.blockOfType(type, inputs.titles, inputs.values)
   ).firstChild;
@@ -110,7 +99,7 @@ exports.blockAsXmlNode = function(type, inputs = {}) {
  * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
  * @param {string} child Xml for the child block
  */
-exports.blockWithNext = function(type, titles, child) {
+exports.blockWithNext = function (type, titles, child) {
   var titleText = '';
   if (titles) {
     for (var key in titles) {
@@ -132,7 +121,7 @@ exports.blockWithNext = function(type, titles, child) {
  * Give a list of types, returns the xml assuming each block is a child of
  * the previous block.
  */
-exports.blocksFromList = function(types) {
+exports.blocksFromList = function (types) {
   if (types.length === 1) {
     return this.blockOfType(types[0]);
   }
@@ -143,7 +132,7 @@ exports.blocksFromList = function(types) {
 /**
  * Create the xml for a category in a toolbox
  */
-exports.createCategory = function(name, blocks, custom) {
+exports.createCategory = function (name, blocks, custom) {
   return (
     '<category name="' +
     name +
@@ -158,8 +147,8 @@ exports.createCategory = function(name, blocks, custom) {
 /**
  * Generate a simple block with a plain title and next/previous connectors.
  */
-exports.generateSimpleBlock = function(blockly, generator, options) {
-  ['name', 'title', 'tooltip', 'functionName'].forEach(function(param) {
+exports.generateSimpleBlock = function (blockly, generator, options) {
+  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
     if (!options[param]) {
       throw new Error('generateSimpleBlock requires param "' + param + '"');
     }
@@ -174,7 +163,7 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
 
   blockly.Blocks[name] = {
     helpUrl: helpUrl,
-    init: function() {
+    init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var input = this.appendDummyInput();
@@ -187,10 +176,10 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(tooltip);
-    }
+    },
   };
 
-  generator[name] = function() {
+  generator[name] = function () {
     // Generate JavaScript for putting dirt on to a tile.
     return functionName + "('block_id_" + this.id + "');\n";
   };
@@ -201,7 +190,7 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
  * @param blockDOM {Element}
  * @returns {*}
  */
-exports.domToBlock = function(blockDOM) {
+exports.domToBlock = function (blockDOM) {
   return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
@@ -211,7 +200,7 @@ exports.domToBlock = function(blockDOM) {
  * @param blockDOMString
  * @returns {*}
  */
-exports.domStringToBlock = function(blockDOMString) {
+exports.domStringToBlock = function (blockDOMString) {
   return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
 };
 
@@ -220,7 +209,7 @@ exports.domStringToBlock = function(blockDOMString) {
  * block inserted in front of the first non-function block.  If we already have
  * this block, does nothing.
  */
-exports.forceInsertTopBlock = function(input, blockType) {
+exports.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
 
   if (blockType === null || input.indexOf(blockType) !== -1) {
@@ -286,7 +275,7 @@ exports.forceInsertTopBlock = function(input, blockType) {
  * @param {number[]|string[]} args List of args, where each arg is either the
  *   xml for a child block, a number, or the name of a variable.
  */
-exports.calcBlockXml = function(type, args) {
+exports.calcBlockXml = function (type, args) {
   var str = '<block type="' + type + '" inline="false">';
   for (var i = 1; i <= args.length; i++) {
     str += '<functional_input name="ARG' + i + '">';
@@ -314,7 +303,7 @@ exports.calcBlockXml = function(type, args) {
  * @returns the xml for a functional_parameters_get block with the given
  *   variableName
  */
-exports.calcBlockGetVar = function(variableName) {
+exports.calcBlockGetVar = function (variableName) {
   return (
     '' +
     '<block type="functional_parameters_get" uservisible="false">' +
@@ -335,7 +324,7 @@ exports.calcBlockGetVar = function(variableName) {
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */
-exports.mathBlockXml = function(type, inputs, titles) {
+exports.mathBlockXml = function (type, inputs, titles) {
   var str = '<block type="' + type + '" inline="false">';
   for (var title in titles) {
     str += '<title name="' + title + '">' + titles[title] + '</title>';
@@ -356,20 +345,20 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
  * @param {string} blockXml Xml for the blocks that actually define the function
  */
-exports.functionalDefinitionXml = function(
+exports.functionalDefinitionXml = function (
   name,
   outputType,
   argList,
   blockXml
 ) {
   var mutation = '<mutation>';
-  argList.forEach(function(argInfo) {
+  argList.forEach(function (argInfo) {
     mutation +=
       '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
   });
@@ -393,20 +382,20 @@ exports.functionalDefinitionXml = function(
  * @param {string} name The name of the function
  * @param {Object<string, string>[]} argList Name and type for each arg
  */
-exports.functionalCallXml = function(name, argList, inputContents) {
+exports.functionalCallXml = function (name, argList, inputContents) {
   if (argList.length !== inputContents.length) {
     throw new Error('must define contents for each arg');
   }
 
   var mutation = '<mutation name="' + name + '">';
-  argList.forEach(function(argInfo) {
+  argList.forEach(function (argInfo) {
     mutation +=
       '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
   });
   mutation += '</mutation>';
 
   var contents = '';
-  inputContents.forEach(function(blockXml, index) {
+  inputContents.forEach(function (blockXml, index) {
     contents +=
       '<functional_input name="ARG' +
       index +
@@ -422,7 +411,7 @@ exports.functionalCallXml = function(name, argList, inputContents) {
  * Removes all the deletable, movable, and uservisible attributes from the
  * blocks in blocksDom.
  */
-exports.cleanBlocks = function(blocksDom) {
+exports.cleanBlocks = function (blocksDom) {
   xml.visitAll(blocksDom, block => {
     if (!block.getAttribute) {
       return;
@@ -435,7 +424,7 @@ exports.cleanBlocks = function(blocksDom) {
  * Adds any functions from functionsXml to blocksXml. If a function with the
  * same id is already present in blocksXml, it won't be added again.
  */
-exports.appendNewFunctions = function(blocksXml, functionsXml) {
+exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
@@ -578,7 +567,7 @@ const findAndRemoveInputConfig = (args, inputName) => {
  *
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
-const determineInputs = function(text, args, strictTypes = []) {
+const determineInputs = function (text, args, strictTypes = []) {
   const tokens = text.match(LABELED_INPUTS_REGEX);
   if (tokens.length && tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -615,7 +604,7 @@ const determineInputs = function(text, args, strictTypes = []) {
         options: arg.options,
         assignment: arg.assignment,
         defer: arg.defer,
-        customOptions: arg.customOptions
+        customOptions: arg.customOptions,
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -626,7 +615,7 @@ const determineInputs = function(text, args, strictTypes = []) {
     } else {
       return {
         mode: DUMMY_INPUT,
-        label
+        label,
       };
     }
   });
@@ -634,7 +623,7 @@ const determineInputs = function(text, args, strictTypes = []) {
     .filter(arg => arg.statement)
     .map(arg => ({
       mode: STATEMENT_INPUT,
-      name: arg.name
+      name: arg.name,
     }));
   inputs.push(...statementInputs);
   args = args.filter(arg => !arg.statement);
@@ -669,7 +658,7 @@ const STANDARD_INPUT_TYPES = {
         inputConfig.name,
         Blockly.JavaScript.ORDER_COMMA
       );
-    }
+    },
   },
   [STATEMENT_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -678,7 +667,7 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       const code = Blockly.JavaScript.statementToCode(block, inputConfig.name);
       return `function () {\n${code}}`;
-    }
+    },
   },
   [INLINE_DUMMY_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -696,7 +685,7 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -704,7 +693,7 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -725,28 +714,28 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
+    },
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       // Make sure the variable name gets declared at the top of the program
-      block.getVars = function() {
+      block.getVars = function () {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name)
-          ]
+            block.getFieldValue(inputConfig.name),
+          ],
         };
       };
 
       // The following functions make sure that the variable naming/renaming options work for this block
-      block.renameVar = function(oldName, newName) {
+      block.renameVar = function (oldName, newName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
-      block.removeVar = function(oldName) {
+      block.removeVar = function (oldName) {
         if (
           Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
@@ -754,7 +743,7 @@ const STANDARD_INPUT_TYPES = {
         }
       };
       block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function(newValue, name) {
+      block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
@@ -770,15 +759,12 @@ const STANDARD_INPUT_TYPES = {
       return Blockly.JavaScript.translateVarName(
         block.getFieldValue(inputConfig.name)
       );
-    }
+    },
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
-      const field = new BlocklyField(
-        '',
-        getFieldInputChangeHandler(blockly, inputConfig.type)
-      );
+      const {type} = inputConfig;
+      const field = Blockly.cdoUtils.getField(type);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -790,31 +776,11 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
-  }
+    },
+  },
 };
 
-/**
- * Given a type string for a field input, returns an appropriate change handler function
- * for that type, which customizes the input field and provides validation on blur.
- * @param {Blockly} blockly
- * @param {string} type
- * @returns {?function}
- */
-function getFieldInputChangeHandler(blockly, type) {
-  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
-  if (clampedNumberMatch) {
-    const min = parseFloat(clampedNumberMatch[1]);
-    const max = parseFloat(clampedNumberMatch[2]);
-    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
-  } else if ('Number' === type) {
-    return blockly.FieldTextInput.numberValidator;
-  } else {
-    return undefined;
-  }
-}
-
-const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
+const groupInputsByRow = function (inputs, inputTypes = STANDARD_INPUT_TYPES) {
   const inputRows = [];
   let lastGroup = [];
   inputRows.push(lastGroup);
@@ -845,7 +811,7 @@ exports.groupInputsByRow = groupInputsByRow;
  *   their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function(
+const interpolateInputs = function (
   blockly,
   block,
   inputRows,
@@ -891,7 +857,7 @@ exports.interpolateInputs = interpolateInputs;
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
-exports.createJsWrapperBlockCreator = function(
+exports.createJsWrapperBlockCreator = function (
   blockly,
   strictTypes,
   defaultObjectType,
@@ -903,7 +869,7 @@ exports.createJsWrapperBlockCreator = function(
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,
-    ...customInputTypes
+    ...customInputTypes,
   };
 
   /**
@@ -948,6 +914,7 @@ exports.createJsWrapperBlockCreator = function(
   return (
     {
       color,
+      style,
       func,
       expression,
       orderPrecedence,
@@ -965,7 +932,7 @@ exports.createJsWrapperBlockCreator = function(
       simpleValue,
       extraArgs,
       callbackParams,
-      miniToolboxBlocks
+      miniToolboxBlocks,
     },
     helperCode,
     pool
@@ -1009,6 +976,23 @@ exports.createJsWrapperBlockCreator = function(
     if (inline === undefined) {
       inline = true;
     }
+
+    if (style && !styleTypes.includes(style)) {
+      // Attempt to guess the intended styles based on the first three letters.
+      const bestGuess =
+        styleTypes[
+          styleTypes.findIndex(type =>
+            type.startsWith(style.toLowerCase().slice(0, 3))
+          )
+        ];
+      throw new Error(
+        `"${style}" is not a valid style for ${name || func}. ` +
+          (bestGuess
+            ? `Did you mean "${bestGuess}"?`
+            : `Choose one of [${styleTypes.sort().join(', ')}]`)
+      );
+    }
+
     args = args || [];
     if (args.filter(arg => arg.statement).length > 1 && inline) {
       console.warn('blocks with multiple statement inputs cannot be inlined');
@@ -1028,7 +1012,7 @@ exports.createJsWrapperBlockCreator = function(
       // just tack one onto the end
       args.push({
         name: 'DO',
-        statement: true
+        statement: true,
       });
     }
     const inputs = [...args];
@@ -1038,7 +1022,7 @@ exports.createJsWrapperBlockCreator = function(
       inputs.push({
         name: 'THIS',
         type: thisType,
-        strict: strictTypes.includes(thisType)
+        strict: strictTypes.includes(thisType),
       });
     }
     const inputConfigs = determineInputs(blockText, inputs, strictTypes);
@@ -1049,11 +1033,18 @@ exports.createJsWrapperBlockCreator = function(
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
-      init: function() {
-        if (color) {
+      init: function () {
+        // Styles should be used over hard-coded colors in Google Blockly blocks
+        if (style && this.setStyle) {
+          this.setStyle(style);
+        } else if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          if (this.setStyle) {
+            this.setStyle('default');
+          } else {
+            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
+          }
         }
 
         if (returnType) {
@@ -1115,13 +1106,13 @@ exports.createJsWrapperBlockCreator = function(
               if (this.isMiniFlyoutOpen) {
                 let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
                 let rootInputBlocks = this.getConnections_(true /* all */)
-                  .filter(function(connection) {
+                  .filter(function (connection) {
                     return connection.type === Blockly.INPUT_VALUE;
                   })
-                  .map(function(connection) {
+                  .map(function (connection) {
                     return connection.targetBlock();
                   });
-                miniToolboxBlocks.forEach(function(block, index) {
+                miniToolboxBlocks.forEach(function (block, index) {
                   block.shadowBlockValue_(rootInputBlocks[index]);
                 });
               }
@@ -1135,51 +1126,54 @@ exports.createJsWrapperBlockCreator = function(
           this.initMiniFlyout(miniToolboxXml);
         }
 
-        // Set block to shadow for preview field if needed
-        switch (this.type) {
-          case 'gamelab_clickedSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_spriteClicked' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_newSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_whenSpriteCreated' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_subjectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[1] &&
-                root.getConnections_()[1].targetBlock()
-            );
-            break;
-          case 'gamelab_objectSpritePointer':
-            this.setBlockToShadow(
-              root =>
-                root.type === 'gamelab_checkTouching' &&
-                root.getConnections_()[2] &&
-                root.getConnections_()[2].targetBlock()
-            );
-            break;
-          default:
-            // Not a pointer block, so no block to shadow
-            break;
+        // These blocks should not be loaded into a Google Blockly level.
+        // In the event that they are, skip this so the page doesn't crash.
+        if (this.setBlockToShadow) {
+          // Set block to shadow for preview field if needed
+          switch (this.type) {
+            case 'gamelab_clickedSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_spriteClicked' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_newSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_whenSpriteCreated' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_subjectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[1] &&
+                  root.getConnections_()[1].targetBlock()
+              );
+              break;
+            case 'gamelab_objectSpritePointer':
+              this.setBlockToShadow(
+                root =>
+                  root.type === 'gamelab_checkTouching' &&
+                  root.getConnections_()[2] &&
+                  root.getConnections_()[2].targetBlock()
+              );
+              break;
+            default:
+              // Not a pointer block, so no block to shadow
+              break;
+          }
         }
-
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
-      }
+      },
     };
 
-    generator[blockName] = function() {
+    generator[blockName] = function () {
       let prefix = '';
       const values = args
         .map(arg => {
@@ -1216,7 +1210,7 @@ exports.createJsWrapperBlockCreator = function(
         if (returnType !== undefined) {
           return [
             code,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return code + ';\n';
@@ -1264,7 +1258,7 @@ exports.createJsWrapperBlockCreator = function(
         if (returnType !== undefined) {
           return [
             `${prefix}${valueExpression}`,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return `${prefix}${valueExpression}`;
@@ -1282,10 +1276,10 @@ exports.createJsWrapperBlockCreator = function(
   };
 };
 
-exports.installCustomBlocks = function({
+exports.installCustomBlocks = function ({
   blockly,
   blockDefinitions,
-  customInputTypes
+  customInputTypes,
 }) {
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
@@ -1293,7 +1287,7 @@ exports.installCustomBlocks = function({
       // Strict Types
       blockly.BlockValueType.SPRITE,
       blockly.BlockValueType.BEHAVIOR,
-      blockly.BlockValueType.LOCATION
+      blockly.BlockValueType.LOCATION,
     ],
     blockly.BlockValueType.SPRITE,
     customInputTypes
@@ -1339,7 +1333,7 @@ exports.installCustomBlocks = function({
  * @param  {string[][]| string[]} dropdownOptions
  * @returns {string[][]} Sanitized array of dropdownOptions, ensuring that both a first and second value exist
  */
-const sanitizeOptions = function(dropdownOptions) {
+const sanitizeOptions = function (dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );

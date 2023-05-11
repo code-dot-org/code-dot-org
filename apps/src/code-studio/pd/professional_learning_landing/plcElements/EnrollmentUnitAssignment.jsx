@@ -5,7 +5,7 @@ import ModuleAssignment from './ModuleAssignment';
 
 export default class EnrollmentUnitAssignment extends React.Component {
   static propTypes = {
-    courseUnitData: PropTypes.object
+    courseUnitData: PropTypes.object,
   };
 
   renderModuleAssignments() {
@@ -44,17 +44,17 @@ const styles = {
     borderRadius: '5px',
     margin: '1em',
     padding: '1em',
-    width: '400px'
+    width: '400px',
   },
   courseUnitSectionHeader: {
     color: color.dark_charcoal,
     fontFamily: '"Gotham 4r"',
-    fontSize: '18px'
+    fontSize: '18px',
   },
   comingSoonMessage: {
     textAlign: 'center',
     fontSize: '16px',
     paddingTop: '20px',
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };

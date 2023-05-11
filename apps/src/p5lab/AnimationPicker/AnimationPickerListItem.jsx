@@ -16,12 +16,13 @@ export default class AnimationPickerListItem extends React.Component {
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string,
-    selected: PropTypes.bool
+    selected: PropTypes.bool,
+    isBackgroundsTab: PropTypes.bool,
   };
 
   state = {
     loaded: false,
-    hover: false
+    hover: false,
   };
 
   render() {
@@ -32,7 +33,8 @@ export default class AnimationPickerListItem extends React.Component {
       onClick,
       playAnimations,
       label,
-      selected
+      selected,
+      isBackgroundsTab,
     } = this.props;
     const {loaded, hover} = this.state;
 
@@ -66,6 +68,7 @@ export default class AnimationPickerListItem extends React.Component {
             animationProps && !loaded && style.none
           )}
           type="button"
+          aria-label={label}
         >
           <div>
             {animationProps && (
@@ -78,7 +81,19 @@ export default class AnimationPickerListItem extends React.Component {
                 onPreviewLoad={() => this.setState({loaded: true})}
               />
             )}
-            {icon && <i className={'fa fa-' + icon} />}
+            {icon && (
+              <i
+                className={classNames(
+                  'fa fa-' + icon,
+                  isBackgroundsTab && style.icon
+                )}
+              />
+            )}
+            {isBackgroundsTab && (
+              <span className={classNames(style.label, style.labelIcon)}>
+                {label}
+              </span>
+            )}
             {category && (
               <img
                 data-category={category}
@@ -98,7 +113,7 @@ export default class AnimationPickerListItem extends React.Component {
             />
           )}
         </button>
-        {label && (
+        {label && !isBackgroundsTab && (
           <div
             className={classNames(
               style.label,

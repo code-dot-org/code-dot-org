@@ -5,14 +5,14 @@ import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import {
   addAnimation,
   editAnimation,
-  setInitialAnimationList
+  setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
@@ -29,9 +29,9 @@ const backgroundSprite = {
       name: 'grid',
       sourceUrl:
         'https://studio.code.org/api/v1/animation-library/spritelab/nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ/category_backgrounds/background_grid.png',
-      categories: ['backgrounds']
-    }
-  }
+      categories: ['backgrounds'],
+    },
+  },
 };
 
 describe('SpriteLab', () => {
@@ -63,7 +63,7 @@ describe('SpriteLab', () => {
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
         isUsingBlockly: () => false,
-        loadLibraries: () => Promise.resolve()
+        loadLibraries: () => Promise.resolve(),
       };
     });
 
@@ -115,9 +115,9 @@ describe('SpriteLab', () => {
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
               name: 'bear',
-              categories: ['animals']
-            }
-          }
+              categories: ['animals'],
+            },
+          },
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           initialAnimationList,
@@ -133,9 +133,9 @@ describe('SpriteLab', () => {
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
               name: 'bear',
-              categories: ['backgrounds']
-            }
-          }
+              categories: ['backgrounds'],
+            },
+          },
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           initialAnimationList,
@@ -150,9 +150,9 @@ describe('SpriteLab', () => {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
-              name: 'grid'
-            }
-          }
+              name: 'grid',
+            },
+          },
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           initialAnimationList,
@@ -166,7 +166,7 @@ describe('SpriteLab', () => {
         beforeEach(() => {
           alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
           sinon.stub(instance, 'getMsg').returns({
-            workspaceAlertError: () => 'translated string'
+            workspaceAlertError: () => 'translated string',
           });
         });
 
@@ -204,15 +204,15 @@ describe('SpriteLab', () => {
                   'https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png',
                 frameSize: {
                   x: 254,
-                  y: 333
+                  y: 333,
                 },
                 frameCount: 1,
                 looping: true,
                 frameDelay: 2,
                 version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
-                categories: ['animals']
-              }
-            }
+                categories: ['animals'],
+              },
+            },
           };
           store.dispatch(
             setInitialAnimationList(initialAnimationList, false, true)
@@ -232,13 +232,13 @@ describe('SpriteLab', () => {
               'https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png',
             frameSize: {
               x: 152,
-              y: 193
+              y: 193,
             },
             frameCount: 1,
             looping: true,
             frameDelay: 2,
             version: 'kBiszeGACcLTGTrqmS4laPVQKPGQnDln',
-            categories: ['animals', 'characters']
+            categories: ['animals', 'characters'],
           };
 
           store.dispatch(addAnimation('key2', newAnimation));
@@ -252,13 +252,13 @@ describe('SpriteLab', () => {
               'https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png',
             frameSize: {
               x: 254,
-              y: 333
+              y: 333,
             },
             frameCount: 1,
             looping: true,
             frameDelay: 2,
             version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
-            categories: ['animals']
+            categories: ['animals'],
           };
           store.dispatch(editAnimation('key1', newProps));
           expect(eventSpy).to.have.been.called;

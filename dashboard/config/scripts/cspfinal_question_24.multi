@@ -7,3 +7,5 @@ markdown <<MARKDOWN
 The internet is comprised of a series of free and open protocols intended to promote wide scale use.  The fact that the protocols are well-known, publicly available standards is sometimes referred to as the "Open Internet" with the intent that all digital data transmitted over the internet is treated equally. Which of the following is **NOT** an example of an open internet where all internet traffic is treated equally?
 
 MARKDOWN
+
+allow_multiple_attempts true

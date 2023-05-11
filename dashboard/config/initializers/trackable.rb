@@ -19,4 +19,6 @@ module OverrideUpdateTrackedFields
   end
 end
 
-User.prepend OverrideUpdateTrackedFields
+Rails.application.config.to_prepare do
+  User.prepend OverrideUpdateTrackedFields
+end

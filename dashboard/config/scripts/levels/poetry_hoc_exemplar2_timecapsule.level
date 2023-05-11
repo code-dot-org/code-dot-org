@@ -17,7 +17,7 @@
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "show_type_hints": true,
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "true",
     "instructions_important": "true",
     "short_instructions": "What images come to mind?",

@@ -14,3 +14,4 @@ answer 'an object-oriented programming principle where a subclass inherits the a
 
 question 'logic error'
 answer 'an error that occurs when the code runs but does not do what was expected'
+allow_multiple_attempts true

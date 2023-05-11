@@ -4,10 +4,6 @@ markdown <<MARKDOWN
 
 Just as the introduction of logic expanded the world of possibilities in Game Lab, incorporating a little bit of conditional logic into your apps can also make a big difference.
 
-## A Refresher on if statements
-
-<iframe allowfullscreen="" frameborder="0" height="480" src="//levelbuilder-studio.code.org/videos/embed/y3rCKJNOwpA" width="853"></iframe>
-[Download Video](https://videos.code.org/2015/csp/applab/conditionals_1.mp4)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:51:53.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -32,7 +28,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "fill(\"teal\");\r\nellipse(100,100);",
+    "start_blocks": "fill(\"teal\");\r\nellipse(100,100);\r\n//2) Add a new ellipse of a different color.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -64,8 +60,8 @@
     "expand_debugger": "false",
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
-    "callout_json": "[ \r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"fill\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"fill\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c2\",\r\n  \"callout_text\": \"Drag this block into the code area.\",\r\n  \"element_id\": \"#droplet_palette_block_rect\",\r\n  \"on\": \"rect_block\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "long_instructions": "<img src=\"https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# ellipse\r\n\r\nYou can use `ellipse` to make a circle.\r\n\r\n# Do This\r\n\r\n* Look at the code that makes the ellipse.\r\n* Add a new ellipse of a different color.\r\n",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"U3L3.3 - grid\",\r\n  \"callout_text\": \"Turn on the grid here!\",\r\n  \"element_id\": \"#grid-checkbox\",\r\n  \"on\": \"grid\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "<img src=\"https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png\" style=\"float:right;width:150px;\">\r\n\r\n# ellipse\r\n\r\nYou can use [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) to make a circle.\r\n\r\n# Do This\r\n\r\n1) Look at the code that makes the ellipse.\r\n2) Add a new ellipse of a different color.\r\n\t- Remember you can always turn on the grid ([Show Me Where](#triggercallout=grid)) or hover with the mouse to help find the x and y position you want.\r\n",
     "encrypted_examples": "6KFhDLyZ3JulDPghxVVkfBWB6lprojyP+kRTKOsJ7+iAbJq4WN4mxcLfxLbB\n5pVJfWIJAZWXBJR2D+xBEWIEuw==\n",
     "parent_level_id": 20646,
     "name_suffix": "_2023",
@@ -78,9 +74,13 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:51:53.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:51:53.045+00:00\",\"changed\":[\"cloned from \\\"CSD U3 ellipse_2022\\\"\"],\"cloned_from\":\"CSD U3 ellipse_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:51:53.045+00:00\",\"changed\":[\"cloned from \\\"CSD U3 ellipse_2022\\\"\"],\"cloned_from\":\"CSD U3 ellipse_2022\"},{\"changed_at\":\"2022-10-12 16:02:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-12 16:13:02 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-12 18:47:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

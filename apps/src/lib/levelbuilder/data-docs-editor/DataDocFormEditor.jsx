@@ -25,8 +25,8 @@ const DataDocFormEditor = props => {
       method: 'PUT',
       data: {
         name: dataDocName,
-        content: dataDocContent
-      }
+        content: dataDocContent,
+      },
     })
       .done(() => {
         setIsSaving(false);
@@ -42,10 +42,6 @@ const DataDocFormEditor = props => {
     <div>
       <RailsAuthenticityToken />
       <h1>Edit Data Doc</h1>
-      <h2>
-        This feature is in progress. It is not ready for use on Levelbuilder
-        yet.
-      </h2>
       <label style={styles.label}>
         Slug
         <input
@@ -92,20 +88,20 @@ const DataDocFormEditor = props => {
 
 const styles = {
   label: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   input: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   helptip: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };
 
 DataDocFormEditor.propTypes = {
   dataDocKey: PropTypes.string,
   originalDataDocName: PropTypes.string,
-  originalDataDocContent: PropTypes.string
+  originalDataDocContent: PropTypes.string,
 };
 
 export default DataDocFormEditor;

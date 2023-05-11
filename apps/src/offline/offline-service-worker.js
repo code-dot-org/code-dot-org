@@ -91,8 +91,8 @@ async function getOfflineFilesList() {
   const response = await fetch('/offline-files.json', {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   });
   // TODO Add check for 404 status
   const responseJson = await response.json();

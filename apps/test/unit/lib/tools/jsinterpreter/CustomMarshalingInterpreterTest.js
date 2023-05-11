@@ -5,7 +5,7 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 import {
   makeAssertableObj,
-  attachAssertToInterpreter
+  attachAssertToInterpreter,
 } from './interpreterTestUtils';
 
 describe('The CustomMarshalingInterpreter', () => {
@@ -40,8 +40,8 @@ describe('The CustomMarshalingInterpreter', () => {
     beforeEach(() => {
       interpreter.customMarshaler.objectList = [
         {
-          instance: Foo
-        }
+          instance: Foo,
+        },
       ];
       value = makeAssertableObj(interpreter, new Foo('hello world'));
     });
@@ -85,11 +85,11 @@ describe('The CustomMarshalingInterpreter', () => {
       interpreter.customMarshaler.objectList = [
         {
           instance: Array,
-          requiredMethod: 'draw'
-        }
+          requiredMethod: 'draw',
+        },
       ];
       const nativeValue = [1, 2, 3];
-      nativeValue.draw = function() {
+      nativeValue.draw = function () {
         return this.join(',');
       };
       value = makeAssertableObj(interpreter, nativeValue);
@@ -184,12 +184,12 @@ describe('The CustomMarshalingInterpreter', () => {
           nativeObject = {
             someProp: 'hello',
             realWindow: window,
-            realBody: document.body
+            realBody: document.body,
           };
           [
             `assert(value.someProp === "hello");`,
             `assert(value.realWindow === undefined);`,
-            `assert(value.realBody === undefined);`
+            `assert(value.realBody === undefined);`,
           ].forEach(assertion => {
             interpreter = new CustomMarshalingInterpreter(
               assertion,
@@ -214,14 +214,14 @@ describe('The CustomMarshalingInterpreter', () => {
 
     describe('when used for setting object/array/function properties on custom marshaled objects', () => {
       let nativeObject;
-      let existingFunction = function() {
+      let existingFunction = function () {
         return 5;
       };
       beforeEach(() => {
         nativeObject = {
           existingFunction,
           existingArray: [5],
-          existingObject: {prop: 5}
+          existingObject: {prop: 5},
         };
         interpreter = new CustomMarshalingInterpreter(
           'assert(custom.existingFunction() === 5);' +
@@ -297,8 +297,8 @@ describe('The CustomMarshalingInterpreter', () => {
         player = {};
         customMarshaler = new CustomMarshaler({
           globalProperties: {
-            name: player
-          }
+            name: player,
+          },
         });
       });
 
@@ -326,7 +326,7 @@ describe('The CustomMarshalingInterpreter', () => {
         beforeEach(() => {
           customMarshaler = new CustomMarshaler({
             globalProperties: customMarshaler.globalProperties,
-            blockedProperties: ['name']
+            blockedProperties: ['name'],
           });
         });
         it('will not set the property on the corresponding global', () => {
@@ -394,7 +394,7 @@ describe('The CustomMarshalingInterpreter', () => {
          myArray.sort();
         `,
         new CustomMarshaler({
-          globalProperties: {}
+          globalProperties: {},
         })
       );
       interpreter.run();
@@ -443,10 +443,10 @@ describe('The CustomMarshalingInterpreter', () => {
           globalProperties: {
             name: player, // meaning the 'name' property on the 'player' object
             // goes into the global scope
-            age: player // also the 'age' property on the 'player' object
+            age: player, // also the 'age' property on the 'player' object
           },
           blockedProperties: ['name'],
-          objectList: [{instance: Foo}]
+          objectList: [{instance: Foo}],
         })
       );
     });
@@ -500,7 +500,7 @@ describe('The CustomMarshalingInterpreter', () => {
       globals = {
         a: sinon.spy(),
         b: sinon.spy(),
-        c: sinon.spy()
+        c: sinon.spy(),
       };
     });
 
@@ -519,7 +519,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when given event handlers that accept arguments', () => {
       beforeEach(() => {
         hooks = CustomMarshalingInterpreter.evalWithEvents(globals, {
-          takesArgs: {code: 'c(foo*2, bar/3)', args: ['foo', 'bar']}
+          takesArgs: {code: 'c(foo*2, bar/3)', args: ['foo', 'bar']},
         }).hooks;
       });
       it('will pass the args provided to the hook along to the event handler', () => {
@@ -531,7 +531,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when given event handlers that return values', () => {
       beforeEach(() => {
         hooks = CustomMarshalingInterpreter.evalWithEvents(globals, {
-          returnsValues: {code: 'return 5'}
+          returnsValues: {code: 'return 5'},
         }).hooks;
       });
       it('will return the values returned by the event handler back to the caller of the hook', () => {
@@ -544,7 +544,7 @@ describe('The CustomMarshalingInterpreter', () => {
         hooks = CustomMarshalingInterpreter.evalWithEvents(
           globals,
           {
-            someEvent: {code: 'b()'}
+            someEvent: {code: 'b()'},
           },
           'a();'
         ).hooks;
@@ -574,7 +574,7 @@ describe('The CustomMarshalingInterpreter', () => {
       beforeEach(() => {
         hooks = CustomMarshalingInterpreter.evalWithEvents(globals, {
           someEvent: {code: ['a()', 'b()']},
-          someOtherEvent: {code: 'c()'}
+          someOtherEvent: {code: 'c()'},
         }).hooks;
       });
 
@@ -586,7 +586,7 @@ describe('The CustomMarshalingInterpreter', () => {
         expect(hooks.map(hook => hook.name)).to.deep.equal([
           'someEvent',
           'someEvent',
-          'someOtherEvent'
+          'someOtherEvent',
         ]);
       });
 
@@ -771,18 +771,18 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when given a native function, the corresponding interpreter object', () => {
       let nativeFunc;
       beforeEach(() => {
-        nativeFunc = function(a, b) {
+        nativeFunc = function (a, b) {
           return a + b;
         };
         Object.defineProperty(nativeFunc, 'foo', {
           enumerable: true,
-          value: 'bar'
+          value: 'bar',
         });
         Object.defineProperty(nativeFunc, 'throwsOnRead', {
           enumerable: true,
           get: () => {
             throw new Error("can't read this");
-          }
+          },
         });
         nativeFunc['foo'] === 'bar';
         value = boundMakeAssertableObj(nativeFunc);
@@ -830,7 +830,7 @@ describe('The CustomMarshalingInterpreter', () => {
     beforeEach(() => {
       options = {
         add: sinon.spy(),
-        a: 3
+        a: 3,
       };
       window.nativeAdd = sinon.spy();
     });
@@ -856,33 +856,33 @@ describe('The CustomMarshalingInterpreter', () => {
       it("the evaluated code will have access to 'native' functions", () => {
         expect(() =>
           CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
-            legacy: true
+            legacy: true,
           })
         ).not.to.throw;
         CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
-          legacy: true
+          legacy: true,
         });
         expect(window.nativeAdd).to.have.been.calledWith(1, 2);
         CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
-          legacy: true
+          legacy: true,
         });
         expect(window.nativeAdd).to.have.been.calledWith(1, 2);
       });
 
       it('the evaluated code will have access to functions passed in through options', () => {
         CustomMarshalingInterpreter.evalWith('add(1,2)', options, {
-          legacy: true
+          legacy: true,
         });
         expect(options.add).to.have.been.calledWith(1, 2);
       });
 
       it('the evaluated code will have access to variables passed in through options', () => {
         CustomMarshalingInterpreter.evalWith('add(a,2)', options, {
-          legacy: true
+          legacy: true,
         });
         expect(options.add).to.have.been.calledWith(3, 2);
         CustomMarshalingInterpreter.evalWith('nativeAdd(a,2)', options, {
-          legacy: true
+          legacy: true,
         });
         expect(window.nativeAdd).to.have.been.calledWith(3, 2);
       });
@@ -906,7 +906,7 @@ describe('The CustomMarshalingInterpreter', () => {
       expect(evalExpression(`["one", 2, ["three"]]`)).to.deep.equal([
         'one',
         2,
-        ['three']
+        ['three'],
       ]);
     });
 
@@ -920,14 +920,14 @@ describe('The CustomMarshalingInterpreter', () => {
     });
 
     it('marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction', () => {
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = sinon
-        .stub()
-        .returns('foo');
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
+        sinon.stub().returns('foo');
       expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
       expect(
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
       ).to.have.been.calledOnce;
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = null;
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
+        null;
     });
 
     it('marshals functions by doing nothing when CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction is not set', () => {
@@ -996,7 +996,7 @@ describe('The CustomMarshalingInterpreter', () => {
         dontMarshal: true,
         nativeFunc: sinon.stub().returns(6),
         nativeParentObj: {},
-        maxDepth: 5
+        maxDepth: 5,
       }));
 
       testTheBasics();
@@ -1016,7 +1016,7 @@ describe('The CustomMarshalingInterpreter', () => {
         dontMarshal: false,
         nativeFunc: sinon.stub().returns(6),
         nativeParentObj: {},
-        maxDepth: 5
+        maxDepth: 5,
       }));
       testTheBasics();
 
@@ -1035,7 +1035,7 @@ describe('The CustomMarshalingInterpreter', () => {
         nativeFunc: sinon.stub().returns(6),
         nativeParentObj: {},
         maxDepth: 5,
-        nativeIsAsync: true
+        nativeIsAsync: true,
       }));
 
       it('will call the nativeFunc', () => {
@@ -1105,7 +1105,7 @@ describe('The CustomMarshalingInterpreter', () => {
           nativeFunc: sinon.stub().returns(6),
           nativeParentObj: {},
           maxDepth: 5,
-          nativeCallsBackInterpreter: true
+          nativeCallsBackInterpreter: true,
         })
       );
 

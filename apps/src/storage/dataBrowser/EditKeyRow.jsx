@@ -6,12 +6,13 @@ import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isDeleting: false,
   isEditing: false,
   isSaving: false,
-  newValue: ''
+  newValue: '',
 };
 
 class EditKeyRow extends React.Component {
@@ -19,7 +20,7 @@ class EditKeyRow extends React.Component {
     keyName: PropTypes.string.isRequired,
     value: PropTypes.any,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -37,7 +38,7 @@ class EditKeyRow extends React.Component {
   handleEdit = () =>
     this.setState({
       isEditing: true,
-      newValue: editableValue(this.props.value)
+      newValue: editableValue(this.props.value),
     });
 
   handleSave = () => {
@@ -106,13 +107,13 @@ class EditKeyRow extends React.Component {
               <PendingButton
                 isPending={this.state.isSaving}
                 onClick={this.handleSave}
-                pendingText="Saving..."
+                pendingText={msg.saving()}
                 className={classNames(
                   dataStyles.button,
                   dataStyles.buttonBlue,
                   dataStyles.buttonBlueSave
                 )}
-                text="Save"
+                text={msg.save()}
               />
             ) : (
               <button
@@ -124,7 +125,7 @@ class EditKeyRow extends React.Component {
                 )}
                 onClick={this.handleEdit}
               >
-                Edit
+                {msg.edit()}
               </button>
             ))}
 
@@ -133,9 +134,9 @@ class EditKeyRow extends React.Component {
               isPending={this.state.isDeleting}
               onClick={this.handleDelete}
               pendingStyle={{float: 'right'}}
-              pendingText="Deleting..."
+              pendingText={msg.deletingWithEllipsis()}
               className={classNames(dataStyles.button, dataStyles.buttonRed)}
-              text="Delete"
+              text={msg.delete()}
             />
           )}
         </td>

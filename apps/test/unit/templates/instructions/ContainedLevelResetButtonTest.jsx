@@ -54,6 +54,20 @@ describe('ContainedLevelResetButton', () => {
     expect(button.props().disabled).to.be.false;
   });
 
+  it('displays nothing if teacher is viewing student work', () => {
+    const wrapper = shallow(
+      <ContainedLevelResetButton
+        userId={1}
+        teacherViewingStudentWork={true}
+        queryUserProgress={queryUserProgressSpy}
+        hasLevelResults
+        userRoleInCourse="Instructor"
+        codeIsRunning={false}
+      />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
   it('queries user progress after successfully resetting level', async () => {
     const resetContainedLevelStub = sinon
       .stub(CodeStudioLevels, 'resetContainedLevel')

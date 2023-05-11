@@ -6,7 +6,7 @@ import AddPasswordForm, {
   SAVING_STATE,
   SUCCESS_STATE,
   PASSWORD_TOO_SHORT,
-  PASSWORDS_MUST_MATCH
+  PASSWORDS_MUST_MATCH,
 } from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
 import * as utils from '@cdo/apps/utils';
 
@@ -26,7 +26,7 @@ describe('AddPasswordForm', () => {
   it('enables form submission if passwords have minimum length and match', () => {
     wrapper.setState({
       password: 'mypassword',
-      passwordConfirmation: 'mypassword'
+      passwordConfirmation: 'mypassword',
     });
     const submitButton = wrapper.find('button');
     expect(submitButton).not.to.have.attr('disabled');
@@ -35,7 +35,7 @@ describe('AddPasswordForm', () => {
   it('disables form submission if passwords are empty', () => {
     wrapper.setState({
       password: '',
-      passwordConfirmation: ''
+      passwordConfirmation: '',
     });
     expect(wrapper.find('button')).to.have.attr('disabled');
   });
@@ -43,7 +43,7 @@ describe('AddPasswordForm', () => {
   it('disables form submission if passwords are too short', () => {
     wrapper.setState({
       password: 'short',
-      passwordConfirmation: 'short'
+      passwordConfirmation: 'short',
     });
     expect(wrapper.find('button')).to.have.attr('disabled');
   });
@@ -51,7 +51,7 @@ describe('AddPasswordForm', () => {
   it('disables form submission if passwords do not match', () => {
     wrapper.setState({
       password: 'newpassword',
-      passwordConfirmation: 'notnewpassword'
+      passwordConfirmation: 'notnewpassword',
     });
     expect(wrapper.find('button')).to.have.attr('disabled');
   });
@@ -59,7 +59,7 @@ describe('AddPasswordForm', () => {
   it('renders password length validation errors if passwords are too short', () => {
     wrapper.setState({
       password: 'short',
-      passwordConfirmation: 'short'
+      passwordConfirmation: 'short',
     });
     const fieldErrors = wrapper.find('FieldError');
     expect(fieldErrors).to.have.length(2);
@@ -70,14 +70,14 @@ describe('AddPasswordForm', () => {
   it('renders a password mismatch validation error if passwords do not match', () => {
     wrapper.setState({
       password: 'newpassword',
-      passwordConfirmation: 'notnewpassword'
+      passwordConfirmation: 'notnewpassword',
     });
     expect(wrapper.find('FieldError')).to.have.text(PASSWORDS_MUST_MATCH);
   });
 
   it('renders the form submission state', () => {
     wrapper.setState({
-      submissionState: {message: SAVING_STATE}
+      submissionState: {message: SAVING_STATE},
     });
     expect(wrapper.find('#uitest-add-password-status')).to.have.text(
       SAVING_STATE
@@ -90,7 +90,7 @@ describe('AddPasswordForm', () => {
       wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',
-        passwordConfirmation: 'mypassword'
+        passwordConfirmation: 'mypassword',
       });
       const submitButton = wrapper.find('button');
       submitButton.simulate('click');
@@ -120,7 +120,7 @@ describe('AddPasswordForm', () => {
       wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',
-        passwordConfirmation: 'mypassword'
+        passwordConfirmation: 'mypassword',
       });
       const submitButton = wrapper.find('button');
       submitButton.simulate('click');

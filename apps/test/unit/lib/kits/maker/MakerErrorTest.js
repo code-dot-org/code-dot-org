@@ -2,7 +2,7 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import MakerError, {
   ConnectionFailedError,
-  wrapKnownMakerErrors
+  wrapKnownMakerErrors,
 } from '@cdo/apps/lib/kits/maker/MakerError';
 
 describe('MakerError', () => {

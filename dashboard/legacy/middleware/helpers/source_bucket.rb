@@ -24,6 +24,10 @@ class SourceBucket < BucketHelper
     0
   end
 
+  def self.main_json_filename
+    MAIN_JSON_FILENAME
+  end
+
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
   # Copies the animations at the given version and makes them the current version.
@@ -52,6 +56,13 @@ class SourceBucket < BucketHelper
           user_id
         )
         psj.set_animation_version(a['key'], anim_response[:version_id])
+      end
+    end
+
+    if psj.in_restricted_share_mode?
+      project = Project.find_by_channel_id(encrypted_channel_id)
+      unless project.published_at.nil?
+        Projects.new(owner_id).unpublish(encrypted_channel_id)
       end
     end
 

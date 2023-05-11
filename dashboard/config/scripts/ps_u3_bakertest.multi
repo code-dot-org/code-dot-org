@@ -8,3 +8,5 @@ markdown <<MARKDOWN
 **Here is my markdown**
 # What's this?
 MARKDOWN
+
+allow_multiple_attempts true

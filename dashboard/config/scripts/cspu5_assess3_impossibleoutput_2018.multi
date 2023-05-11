@@ -44,3 +44,5 @@ Going through the code, we can see what condition needs to be met before we exit
 
 Looking at the second loop that runs until (y = 3), the condition is to repeat until y = 3. When y = 3, it exits this loop. Therefore, y is never greater than 3 when "Display" is called and thus, "2, 4" is an impossible option.
 MARKDOWN
+
+allow_multiple_attempts true

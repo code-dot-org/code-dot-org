@@ -3,8 +3,8 @@ import {assert} from '../../util/reconfiguredChai';
 var Token = require('@cdo/apps/calc/token');
 var jsnums = require('@code-dot-org/js-numbers');
 
-describe('Token', function() {
-  it('handles repeated decimals properly', function() {
+describe('Token', function () {
+  it('handles repeated decimals properly', function () {
     function createJsnum(num, denom) {
       var n = jsnums.makeFloat(num).toExact();
       var d = jsnums.makeFloat(denom).toExact();
@@ -39,7 +39,7 @@ describe('Token', function() {
     validate(jsnums.makeFloat(0.25), '0.25', null);
   });
 
-  it('can convert a number to a string with commas', function() {
+  it('can convert a number to a string with commas', function () {
     assert.equal(Token.numberWithCommas_(1), '1');
     assert.equal(Token.numberWithCommas_(100), '100');
     assert.equal(Token.numberWithCommas_(1000), '1,000');

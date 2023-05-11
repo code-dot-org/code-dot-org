@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-31 20:15:07 UTC",
+    "serialized_at": "2022-10-20 21:56:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -717,7 +717,7 @@
       }
     },
     {
-      "name": "CSD 22 M1 Pilot Agenda",
+      "name": "CSD 2022 M1 Pilot Agenda",
       "url": "https://docs.google.com/document/d/1hZo0u3QCn8QKJOSq3bWM491FsYwPq0ZHPiWDqYKr2vY/edit?usp=sharing",
       "key": "csd_22_m1_pilot_agenda",
       "properties": {

@@ -8,7 +8,7 @@ import {sectionForDropdownShape} from './shapes';
 export default class TeacherSectionSelectorMenuItem extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,7 +16,7 @@ export default class TeacherSectionSelectorMenuItem extends Component {
     const checkMarkStyle = {
       marginRight: 5,
       color: color.level_perfect,
-      visibility: section.isAssigned ? 'visible' : 'hidden'
+      visibility: section.isAssigned ? 'visible' : 'hidden',
     };
 
     return (
@@ -40,6 +40,6 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };

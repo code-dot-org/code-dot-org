@@ -18,21 +18,21 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'displayGoal',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
       customValidator: displayGoalCustomValidator,
-      xml: ''
-    }
-  ]
+      xml: '',
+    },
+  ],
 };
 
 function replaceSpaces(str) {
@@ -46,7 +46,7 @@ function displayGoalCustomValidator(assert) {
   var answerExpression = document.getElementById('answerExpression');
   assert(answerExpression);
 
-  displayGoalTest(assert, 'simple target', function() {
+  displayGoalTest(assert, 'simple target', function () {
     var targetSet = new EquationSet();
     targetSet.addEquation_(new Equation(null, [], new ExpressionNode(5)));
 
@@ -60,7 +60,7 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.childNodes[0].getAttribute('class'), null);
   });
 
-  displayGoalTest(assert, 'single function', function() {
+  displayGoalTest(assert, 'single function', function () {
     // f(x) = x
     // compute: f(5)
     var targetSet = new EquationSet();
@@ -90,7 +90,7 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.childNodes[5].getAttribute('class'), null);
   });
 
-  displayGoalTest(assert, 'multiple functions', function() {
+  displayGoalTest(assert, 'multiple functions', function () {
     // f(x) = x
     // g(y) = y
     // compute: f(1) + g(2)
@@ -103,17 +103,17 @@ function displayGoalCustomValidator(assert) {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [1]),
-          new ExpressionNode('g', [2])
+          new ExpressionNode('g', [2]),
         ])
       )
     );
 
-    assert.throws(function() {
+    assert.throws(function () {
       displayGoal(targetSet);
     });
   });
 
-  displayGoalTest(assert, 'function and variable', function() {
+  displayGoalTest(assert, 'function and variable', function () {
     // f(x) = x
     // myvar = 1
     // compute: f(1) + myvar
@@ -126,17 +126,17 @@ function displayGoalCustomValidator(assert) {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [1]),
-          new ExpressionNode('myvar')
+          new ExpressionNode('myvar'),
         ])
       )
     );
 
-    assert.throws(function() {
+    assert.throws(function () {
       displayGoal(targetSet);
     });
   });
 
-  displayGoalTest(assert, 'function that calls another function', function() {
+  displayGoalTest(assert, 'function that calls another function', function () {
     // f(x) = x
     // g(y) = f(y)
     // compute: g(1)
@@ -168,7 +168,7 @@ function displayGoalCustomValidator(assert) {
     assert.equal(g.childNodes[5].getAttribute('class'), null);
   });
 
-  displayGoalTest(assert, 'single variable in compute', function() {
+  displayGoalTest(assert, 'single variable in compute', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = age * 12
@@ -194,7 +194,7 @@ function displayGoalCustomValidator(assert) {
   displayGoalTest(
     assert,
     'variables without single variable in compute',
-    function() {
+    function () {
       // compute: age * 12
       // age = 17
       var targetSet = new EquationSet();

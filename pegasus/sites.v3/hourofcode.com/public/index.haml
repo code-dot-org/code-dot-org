@@ -95,8 +95,7 @@ social:
     .wrapper
       %h2=hoc_s(:hoc_live_join_us)
       %h3=hoc_s(:hoc_homepage_join_the_movement_description)
-      -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
-        = view :home_signup, hoc_mode: hoc_mode
+      = view :home_signup, hoc_mode: hoc_mode
 
   -# What is HoC?
   -# This section remains evergreen, and the video no longer moves next to the signup form during different hoc_modes.
@@ -108,7 +107,7 @@ social:
       %p=hoc_s(:hoc_homepage_what_is_hoc_description)
       %a{href: resolve_url('/learn')}
         %button=hoc_s(:cta_try_an_activity)
-      //%p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide, markdown: :inline, locals: {howto_guide_url: resolve_url('/how-to')})
+      %p=hoc_s(:hoc_homepage_what_is_hoc_cta_how_to_guide, markdown: :inline, locals: {howto_guide_url: resolve_url('/how-to')})
 
   -# Highlights
   %section.highlights
@@ -125,6 +124,9 @@ social:
   %section.host-an-hour
     .wrapper
       =view :signup_button
+      %p=hoc_s(:hoc_homepage_organized_by, markdown: :inline, locals: {codeorg_url: resolve_url('https://code.org')})
+      %a{href: 'https://code.org'}
+        %img{src: '/images/code-dot-org-logo-40x40.svg'}
 
   = view 'popup_window.js'
 

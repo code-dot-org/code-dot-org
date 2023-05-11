@@ -87,7 +87,7 @@ export const fileMetadataForEditor = (sources, isEditingStartSources) => {
     fileMetadata,
     orderedTabKeys,
     activeTabKey: firstTabKey,
-    lastTabKeyIndex: orderedTabKeys.length - 1
+    lastTabKeyIndex: orderedTabKeys.length - 1,
   };
 };
 

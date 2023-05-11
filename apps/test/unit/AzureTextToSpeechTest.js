@@ -41,7 +41,7 @@ describe('AzureTextToSpeech', () => {
         beforeEach(() => {
           const badWord = 'badWord';
           cachedSoundResponse = azureTTS.createSoundResponse_({
-            profaneWords: [badWord]
+            profaneWords: [badWord],
           });
           azureTTS.setCachedSound_(
             'en-US',
@@ -53,7 +53,7 @@ describe('AzureTextToSpeech', () => {
             text: `hi ${badWord}`,
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           });
         });
 
@@ -73,7 +73,7 @@ describe('AzureTextToSpeech', () => {
 
         beforeEach(() => {
           cachedSoundResponse = azureTTS.createSoundResponse_({
-            bytes: new ArrayBuffer()
+            bytes: new ArrayBuffer(),
           });
           azureTTS.setCachedSound_(
             'en-US',
@@ -85,7 +85,7 @@ describe('AzureTextToSpeech', () => {
             text: 'hi',
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           });
         });
 
@@ -121,18 +121,18 @@ describe('AzureTextToSpeech', () => {
           server.respondWith('POST', `/profanity/find`, [
             200,
             {'Content-Type': 'application/json'},
-            JSON.stringify([badWord])
+            JSON.stringify([badWord]),
           ]);
           options = {
             text: badWord,
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           };
           soundPromise = azureTTS.createSoundPromise(options);
           expectedSoundResponse = azureTTS.createSoundResponse_({
             ...options,
-            profaneWords: [badWord]
+            profaneWords: [badWord],
           });
         });
 
@@ -164,7 +164,7 @@ describe('AzureTextToSpeech', () => {
           server.respondWith('POST', `/profanity/find`, [
             200,
             {'Content-Type': 'application/json'},
-            JSON.stringify([])
+            JSON.stringify([]),
           ]);
         });
 
@@ -177,12 +177,12 @@ describe('AzureTextToSpeech', () => {
             options = {
               text: 'hello',
               gender: 'male',
-              locale: 'es-MX'
+              locale: 'es-MX',
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              bytes
+              bytes,
             });
           });
 
@@ -212,12 +212,12 @@ describe('AzureTextToSpeech', () => {
               text: 'hello',
               gender: 'male',
               locale: 'es-MX',
-              onFailure: onFailureSpy
+              onFailure: onFailureSpy,
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error
+              error,
             });
           });
 
@@ -252,7 +252,7 @@ describe('AzureTextToSpeech', () => {
     beforeEach(() => {
       playSpy = sinon.spy();
       successfulResponse = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
+        bytes: new ArrayBuffer(),
       });
     });
 
@@ -290,7 +290,7 @@ describe('AzureTextToSpeech', () => {
 
     it('ends sound if response was unsuccessful', async () => {
       const unsuccessfulResponse = azureTTS.createSoundResponse_({
-        error: new Error()
+        error: new Error(),
       });
       unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
       const dequeueStub = sinon

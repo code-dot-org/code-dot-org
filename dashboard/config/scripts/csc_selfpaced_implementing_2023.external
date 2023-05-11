@@ -1,0 +1,18 @@
+name 'CSC-SelfPaced-implementing_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implementing CS Connections
+
+## Getting started
+
+* ##### Since CS Connections includes an integrated approach, consider also introducing your students to <a href="https://code.org/helloworld" target="blank" rel="noopener noreferrer">Hello World!</a> to provide additional support with learning stand-alone computer science concepts.
+* ##### Be sure to complete all lesson levels for any module on your own before teaching them.
+
+### Intro to **Hello World!**
+
+##### In Computer Science 101, the first program many students create is a simple one that outputs an iconic line of text: "Hello World!"  Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps.  Choose from six fun themes to code interactive characters in a world students create!  Students can choose their Hello World theme.
+
+<img src="https://images.code.org/2b0b44fc3c5b37f7a3909b9a4e6ca3b0-image-1682375877066.png" alt=" variety of images from cartoon characters, food, and emojis" width="700px" style="border-radius:10px; float:center;">
+MARKDOWN
