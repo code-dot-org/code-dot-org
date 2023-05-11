@@ -120,49 +120,52 @@ export function getCode(workspace) {
 
 function testJsonSerialization(workspace) {
   const FIREHOSE_STUDY = 'blockly-json';
-  const FIREHOSE_EVENT_PASS = 'blocks-identical';
-  const FIREHOSE_EVENT_FAIL = 'differences-found';
+  const FIREHOSE_EVENT = 'block-differences';
   Blockly.Events.disable();
-
-  const workspaceBlocks = workspace.getAllBlocks();
 
   // Create an array of blocks based on JSON serialization of the current workspace.
   const blockJson = Blockly.serialization.workspaces.save(workspace);
-  const tempWorkspace = new Blockly.Workspace();
-  Blockly.serialization.workspaces.load(blockJson, tempWorkspace);
-  const jsonBlocks = tempWorkspace.getAllBlocks();
+  const tempJsonWorkspace = new Blockly.Workspace();
+  Blockly.serialization.workspaces.load(blockJson, tempJsonWorkspace);
+  const jsonBlocks = tempJsonWorkspace.getAllBlocks();
+
+  // Create an array of blocks based on the XML encoding of the current workspace.
+  const blockXml = Blockly.Xml.blockSpaceToDom(workspace);
+  const tempXmlWorkspace = new Blockly.Workspace();
+  Blockly.Xml.domToWorkspace(blockXml, tempXmlWorkspace);
+  const xmlBlocks = tempXmlWorkspace.getAllBlocks();
 
   // compareBlockArrays returns an array of differences found.
-  const differences = compareBlockArrays(workspaceBlocks, jsonBlocks);
-  const result =
-    differences.length > 0 ? FIREHOSE_EVENT_FAIL : FIREHOSE_EVENT_PASS;
-  // Log a record to Firehose/Redshift.
-  const recordData = {
-    projectUrl: dashboard.project.getShareUrl(),
-    blocklyVersion: Blockly.blockly_.VERSION,
-    differences: differences,
-  };
-  firehoseClient.putRecord(
-    {
-      study: FIREHOSE_STUDY,
-      event: result,
-      data_json: JSON.stringify(recordData),
-    },
-    {
-      alwaysPut: true, // Allows logging from development environments
-      includeUserId: true,
-    }
-  );
+  const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
+  if (differences.length > 0) {
+    // Log a record to Firehose/Redshift.
+    const recordData = {
+      projectUrl: dashboard.project.getShareUrl(),
+      blocklyVersion: Blockly.blockly_.VERSION,
+      differences: differences,
+    };
+    firehoseClient.putRecord(
+      {
+        study: FIREHOSE_STUDY,
+        event: FIREHOSE_EVENT,
+        data_json: JSON.stringify(recordData),
+      },
+      {
+        alwaysPut: true, // Allows logging from development environments
+        includeUserId: true,
+      }
+    );
+  }
   if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
     // Avoid logging to the console for typical users.
-    console.log(recordData);
+    console.log({differences: differences});
   }
 }
 
 // Used to find differences between blocks created from xml and json sources.
 // Called when the app is initialized and each time the app runs.
 // Compares two block arrays and returns an array of differences between them.
-export function compareBlockArrays(workspaceBlocks, jsonBlocks) {
+export function compareBlockArrays(xmlBlocks, jsonBlocks) {
   // compareValues() will be called recursively so we need to keep track of objects
   // that it has already compared, to prevent infinite loops caused by circular
   // references.
@@ -265,7 +268,7 @@ export function compareBlockArrays(workspaceBlocks, jsonBlocks) {
     });
   }
 
-  return compareValues(workspaceBlocks, jsonBlocks);
+  return compareValues(xmlBlocks, jsonBlocks);
 }
 
 export function soundField(onClick, transformText, icon) {
