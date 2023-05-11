@@ -12,7 +12,7 @@ class DataVisualizer extends React.Component {
     bucketSize: PropTypes.string,
     chartTitle: PropTypes.string,
     selectedColumn1: PropTypes.string,
-    selectedColumn2: PropTypes.string
+    selectedColumn2: PropTypes.string,
   };
 
   render() {
@@ -21,7 +21,7 @@ class DataVisualizer extends React.Component {
         <CrossTabChart
           records={ignoreMissingValues(this.props.records, [
             this.props.selectedColumn1,
-            this.props.selectedColumn2
+            this.props.selectedColumn2,
           ])}
           numericColumns={this.props.numericColumns}
           chartTitle={this.props.chartTitle}

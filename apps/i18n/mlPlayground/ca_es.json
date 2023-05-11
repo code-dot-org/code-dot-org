@@ -1,0 +1,329 @@
+{
+  "navigateForward": "Continuar",
+  "navigateBack": "Tornar",
+  "tryAgain": "Intentar de nou",
+  "navigateDone": "Acabar",
+  "saveProgress": "Desa",
+  "correctAnswer": "Correcte",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelCardPossibleValuesMaximum": "màx",
+  "columnInspectorDescription": "Descripció",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsMaximumValue": "màx",
+  "dataCardLastUpdated": "Darrera actualització",
+  "predictButton": "Fes una predicció",
+  "uniqueOptionsWarningNotice": "Nota",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edat"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "clima"
+        },
+        "day": {
+          "id": "dia"
+        },
+        "shoe": {
+          "id": "sabata"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "ceba"
+        },
+        "avocado": {
+          "id": "alvocat"
+        },
+        "corn": {
+          "id": "blat de moro"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "lime": {
+          "id": "llima"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "bolets"
+        },
+        "lobster": {
+          "id": "llagosta"
+        },
+        "bacon": {
+          "id": "bacó"
+        },
+        "cheese": {
+          "id": "formatge"
+        },
+        "meat": {
+          "id": "carn"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        },
+        "music": {
+          "id": "música"
+        },
+        "food": {
+          "id": "menjar"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "edat"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Categoria"
+        },
+        "Description": {
+          "id": "Descripció"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "maduixa"
+        },
+        "lime": {
+          "id": "llima"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "costats"
+        },
+        "size": {
+          "id": "mida"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "tomàquet"
+        },
+        "avocado": {
+          "id": "alvocat"
+        },
+        "chicken": {
+          "id": "gallina"
+        },
+        "fruit": {
+          "id": "fruita"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "cheese": {
+          "id": "formatge"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Edat"
+        },
+        "Gender": {
+          "id": "Sexe"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "escola"
+        },
+        "age": {
+          "id": "edat"
+        },
+        "health": {
+          "id": "salut"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "gallina"
+        },
+        "lamb": {
+          "id": "xai"
+        },
+        "onion": {
+          "id": "ceba"
+        },
+        "cheese": {
+          "id": "formatge"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "edat"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Puntuació"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Name": {
+          "id": "Nom"
+        },
+        "Star": {
+          "id": "Estrella"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "gent"
+        },
+        "rhino": {
+          "id": "rinoceront"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "alligator": {
+          "id": "cocodril"
+        },
+        "trees": {
+          "id": "arbres"
+        }
+      },
+      "name": "Safari"
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Longitud"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Aquàtic"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "alvocat"
+        },
+        "onion": {
+          "id": "ceba"
+        },
+        "ginger": {
+          "id": "gingebre"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Achievements": {
+          "id": "Assoliments"
+        },
+        "Age": {
+          "id": "Edat",
+          "description": "Edat"
+        },
+        "Gender": {
+          "id": "Sexe",
+          "description": "Sexe"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "plàtan"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Edat"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "costats"
+        },
+        "size": {
+          "id": "mida"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Música"
+        },
+        "Country": {
+          "id": "País"
+        }
+      }
+    }
+  }
+}

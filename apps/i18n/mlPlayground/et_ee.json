@@ -1,0 +1,256 @@
+{
+  "navigateForward": "Jätka",
+  "navigateBack": "Tagasi",
+  "tryAgain": "Proovi uuesti",
+  "navigateDone": "Lõpeta",
+  "saveProgress": "Salvesta",
+  "correctAnswer": "Õige",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelCardPossibleValuesMaximum": "max",
+  "columnInspectorDescription": "Kirjeldus",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsMaximumValue": "max",
+  "dataCardLastUpdated": "Viimati uuendatud",
+  "datasets": {
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "ilm"
+        },
+        "day": {
+          "id": "päev"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "corn": {
+          "id": "mais"
+        },
+        "beans": {
+          "id": "oad"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "index": {
+          "id": "indeks"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "cheese": {
+          "id": "juust"
+        },
+        "meat": {
+          "id": "liha"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "värv"
+        },
+        "food": {
+          "id": "toit"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategooria"
+        },
+        "Description": {
+          "id": "Kirjeldus"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "suurus"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "chicken": {
+          "id": "kana"
+        },
+        "fruit": {
+          "id": "puuvili"
+        },
+        "beans": {
+          "id": "oad"
+        },
+        "cheese": {
+          "id": "juust"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Vanus"
+        },
+        "Gender": {
+          "id": "Sugu"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "kana"
+        },
+        "cheese": {
+          "id": "juust"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Score": {
+          "id": "Tulemus"
+        },
+        "Country": {
+          "id": "Riik"
+        },
+        "Name": {
+          "id": "Nimi"
+        },
+        "Star": {
+          "id": "Täht"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Kunstnik"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "elephant": {
+          "id": "elevant"
+        },
+        "alligator": {
+          "id": "alligaator"
+        }
+      }
+    },
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Pikkus"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "ginger": {
+          "id": "ingver"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Country": {
+          "id": "Riik"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Achievements": {
+          "id": "Saavutused"
+        },
+        "Age": {
+          "id": "Vanus",
+          "description": "Vanus"
+        },
+        "Gender": {
+          "id": "Sugu",
+          "description": "Sugu"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banaan"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Vanus"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "suurus"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Riik"
+        }
+      }
+    }
+  }
+}

@@ -17,9 +17,9 @@ module Services
         # version of the script in the environment.
         #
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+('21-'22)+-+Resources.pdf>
-        def get_script_resources_pathname(script)
+        def get_script_resources_pathname(script, versioned: true)
           filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + "-Resources.pdf").to_s
-          script_overview_pathname = get_script_overview_pathname(script)
+          script_overview_pathname = get_script_overview_pathname(script, versioned: versioned)
           return nil unless script_overview_pathname
           subdirectory = File.dirname(script_overview_pathname)
           return Pathname.new(File.join(subdirectory, filename))
@@ -31,13 +31,14 @@ module Services
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29+-+Resources.pdf
         def get_unit_resources_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_resource_pdf?(script)
-          pathname = get_script_resources_pathname(script)
+          versioned = script_resources_pdf_exists_for?(script)
+          pathname = get_script_resources_pathname(script, versioned: versioned)
           return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
 
         # Generate a PDF containing a rollup of all Resources in the given
-        # Script, grouped by Lesson
+        # Unit, grouped by Lesson
         def generate_script_resources_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
@@ -59,6 +60,7 @@ module Services
 
           # Merge all gathered PDFs
           destination = File.join(directory, get_script_resources_pathname(script))
+          fallback_destination = File.join(directory, get_script_resources_pathname(script, versioned: false))
           FileUtils.mkdir_p(File.dirname(destination))
 
           # We've been having an intermittent issue where this step will fail
@@ -72,9 +74,9 @@ module Services
           # I'm adding some explicit logging.
           begin
             PDF.merge_local_pdfs(destination, *pdfs)
-          rescue Exception => e
+          rescue Exception => exception
             ChatClient.log(
-              "Error when trying to merge resource PDFs for #{script.name}: #{e}",
+              "Error when trying to merge resource PDFs for #{script.name}: #{exception}",
               color: 'red'
             )
             ChatClient.log(
@@ -89,9 +91,12 @@ module Services
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
               color: 'red'
             )
-            raise e
+            raise exception
           end
           FileUtils.remove_entry_secure(pdfs_dir)
+
+          FileUtils.mkdir_p(File.dirname(fallback_destination))
+          FileUtils.cp(destination, fallback_destination)
 
           return destination
         end
@@ -174,15 +179,15 @@ module Services
             IO.copy_stream(URI.parse(url)&.open, path)
             return path
           end
-        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
           ChatClient.log(
-            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
+            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
             color: 'yellow'
           )
           return nil
-        rescue URI::InvalidURIError, OpenURI::HTTPError => e
+        rescue URI::InvalidURIError, OpenURI::HTTPError => exception
           ChatClient.log(
-            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
+            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
             color: 'yellow'
           )
           return nil

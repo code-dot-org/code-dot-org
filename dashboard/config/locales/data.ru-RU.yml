@@ -956,6 +956,7 @@ ru:
         csa-pl-equals-book: Написание метода equals() для класса Book
         csa-multi-select-pl: Операторы множественного выбора в Java
         csc_timecapsule_intro: Введение Капсулы Времени
+        csd_sprite_properties: Свойства спрайтов
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

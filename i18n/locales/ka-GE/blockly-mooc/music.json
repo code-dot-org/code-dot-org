@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundTooltip": "ხმის დაკვრა",
+  "blockly_blockPlaySoundAtMeasureTooltip": "ხმის დაკვრა",
+  "blockly_blockRepeatTooltip": "გაიმეორეთ",
+  "blockly_blockRestTooltip": "დასვენება",
+  "blockly_blockWhenRun": "გაშვებისას",
+  "blockly_blockWhenRunTooltip": "გაშვებისას",
+  "blockly_functionNamePlaceholder": "ჩემი ფუნქცია",
+  "blockly_toolboxCategoryEffects": "ეფექტები",
+  "blockly_toolboxCategoryEvents": "მოვლენები",
+  "blockly_toolboxCategoryFunctions": "ფუნქციები",
+  "blockly_toolboxCategoryLogic": "ლოგიკა",
+  "blockly_toolboxCategoryMath": "მათემატიკა",
+  "blockly_toolboxCategoryPlay": "Თამაში",
+  "blockly_toolboxCategoryVariables": "ცვლადები",
+  "feedback": "უკუკავშირი",
+  "share": "გაზიარება",
+  "startOver": "ხელახლა დაწყება"
+}

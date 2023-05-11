@@ -29,7 +29,7 @@ Hay innumerables [actividades de la Hora del Código](https://hourofcode.com/us/
 Todas nuestras actividades integran la resolución de problemas y el pensamiento crítico con diversión y creatividad, pero estas son algunas de las favoritas de los estudiantes:
 
 - Para el niño al que le encanta jugar: [Minecraft](https://code.org/minecraft) o [Fiesta de baile](https://code.org/dance)
-- Para los niños que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para los niños y niñas a los que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1) o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Para el niño al que le encanta aprender: [IA para océanos](https://code.org/oceans) o [Hacer música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
@@ -87,7 +87,7 @@ La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas s
 
 - Imprime [Certificados de la Hora del Código](https://staging.code.org/certificates) que otorgues cuando tu hijo complete su actividad
 - [Imprime stickers](https://staging.hourofcode.com/us/promote/resources#stickers) en casa o [cómpralas en línea](https://store.code.org/), a modo de sorpresa adicional.
-- Comparte fotos y videos de tu Hora del Código en casa en las redes sociales. Utiliza [#HourOfCode](https://twitter.com/hashtag/hourofcode) y [@codeorg](https://twitter.com/codeorg) para que también podamos destacar tu éxito.
+- Comparte fotos y videos de tu Hora del Código en casa en las redes sociales. Utiliza el hashtag [#HoraDelCódigo](https://twitter.com/hashtag/hourofcode) y etiqueta a [@codeorg](https://twitter.com/codeorg) para que también podamos destacar tu éxito.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

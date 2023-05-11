@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2017-10-02T20:11:42.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Free Response: Abstraction to Manage Complexity",
     "long_instructions": "In the Create Performance Task, you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3x3 square problem and explain how it helps manage the complexity of your program.",
@@ -13,8 +9,13 @@
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
-    "peer_reviewable": "false"
+    "peer_reviewable": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2017-10-02T20:11:42.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-10-02 20:12:06 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"}]",

@@ -39,12 +39,7 @@ class School < ApplicationRecord
 
   has_many :school_stats_by_year
   has_many :school_info
-  has_many :state_cs_offering, class_name: 'Census::StateCsOffering', foreign_key: :state_school_id, primary_key: :state_school_id
-  has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
-
-  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
-  has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
 
@@ -73,7 +68,7 @@ class School < ApplicationRecord
     (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
-  # Determines if school meets Amazon Fugure Engineer criteria.
+  # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,
   # b) >40% URM students,
@@ -439,17 +434,32 @@ class School < ApplicationRecord
           }
         end
       end
-    end
-  end
 
-  def load_state_cs_offerings(offerings_to_load, is_dry_run)
-    offerings_to_load.each do |offering|
-      new_offering = offering.slice(:course, :school_year)
-      new_offering[:state_school_id] = state_school_id
-      Census::StateCsOffering.create!(new_offering) unless is_dry_run
+      # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
+      CDO.log.info "Seeding 2021-2022 public school data."
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/schools_public.csv") do |filename|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          {
+            id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+            name:                         row['School Name'].upcase,
+            address_line1:                row['Location Address 1 [Public School] 2021-22'].to_s.upcase.truncate(50).presence,
+            address_line2:                row['Location Address 2 [Public School] 2021-22'].to_s.upcase.truncate(30).presence,
+            address_line3:                row['Location Address 3 [Public School] 2021-22'].to_s.upcase.presence,
+            city:                         row['Location City [Public School] 2021-22'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [Public School] 2021-22'].to_s.strip.upcase.presence,
+            zip:                          row['Location ZIP [Public School] 2021-22'],
+            latitude:                     row['Latitude [Public School] 2021-22'].to_f,
+            longitude:                    row['Longitude [Public School] 2021-22'].to_f,
+            school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2021-22'].to_s] || 'public',
+            school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
+            state_school_id:              row['State School ID [Public School] 2021-22'],
+            school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2021-22']].presence,
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2021-22']) ? '2021-2022' : nil
+          }
+        end
+      end
     end
-
-    return state_cs_offering.reload
   end
 
   # format a list of schools to a string
@@ -473,12 +483,10 @@ class School < ApplicationRecord
     updated_schools_attribute_frequency = {}
     unchanged_schools = 0
     duplicate_schools = []
-    state_cs_offerings_deleted_count = 0
-    state_cs_offerings_reloaded_count = 0
     lines_processed = 0
 
     ActiveRecord::Base.transaction do
-      schools = CSV.read(filename, options).each do |row|
+      schools = CSV.read(filename, **options).each do |row|
         break if limit && lines_processed > limit
         lines_processed += 1
         csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys
@@ -496,13 +504,6 @@ class School < ApplicationRecord
             duplicate_schools << csv_entry
           end
         elsif !db_entry.nil? && update_existing
-          old_state_school_id = db_entry.state_school_id.clone
-
-          # skip DB query if state school ID not in provided set of data
-          has_state_cs_offerings = csv_entry.key?(:state_school_id) ?
-            db_entry.state_cs_offering.any? :
-            false
-
           db_entry.assign_attributes(csv_entry)
 
           if db_entry.changed?
@@ -519,30 +520,11 @@ class School < ApplicationRecord
                 updated_schools_attribute_frequency[attribute] = 1
             end
 
-            # We need to delete and reload state_cs_offerings
-            # if we're going to update the state_school_id for a given school.
-            deleted_state_cs_offerings = []
-            if has_state_cs_offerings && db_entry.changed.include?('state_school_id')
-              deleted_state_cs_offerings = Census::StateCsOffering.where(state_school_id: old_state_school_id).destroy_all unless is_dry_run
-              state_cs_offerings_deleted_count += deleted_state_cs_offerings.count
-            end
-
             begin
               db_entry.update!(csv_entry)
             rescue ActiveRecord::RecordNotUnique
               CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
               duplicate_schools << csv_entry
-            end
-
-            if deleted_state_cs_offerings.any?
-              reloaded_state_cs_offerings = db_entry.load_state_cs_offerings(deleted_state_cs_offerings, is_dry_run)
-              state_cs_offerings_reloaded_count += reloaded_state_cs_offerings.count
-
-              # Check and see if old and new are the same
-              reconstituted = reloaded_state_cs_offerings.pluck(:course, :school_year)
-              original = deleted_state_cs_offerings.pluck(:course, :school_year)
-              failure = ((reconstituted - original) + (original - reconstituted)).any?
-              raise "Mismatch between state CS offerings deleted and recreated for NCES ID #{db_entry.id}, originally #{original.length} records, now #{reconstituted.length} records" if failure
             end
           else
             unchanged_schools += 1
@@ -560,7 +542,6 @@ class School < ApplicationRecord
         "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
         "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n"\
         "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
-        "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
       if updated_schools_attribute_frequency.any?
         summary_message <<

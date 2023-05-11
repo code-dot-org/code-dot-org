@@ -64,9 +64,7 @@ class ManifestBuilder
     output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
 
     # Write result to file
-    File.open(output_file, 'w') do |file|
-      file.write(generate_json(animation_metadata, alias_map, category_map))
-    end
+    File.write(output_file, generate_json(animation_metadata, alias_map, category_map))
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -90,8 +88,8 @@ class ManifestBuilder
     end
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -144,10 +142,10 @@ class ManifestBuilder
         objects['json'].get(response_target: json_destination)
         verbose "Writing #{png_destination}"
         objects['png'].get(response_target: png_destination)
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json and #{name}.png from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -165,8 +163,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -323,16 +321,16 @@ class ManifestBuilder
       begin
         json_response = objects['json'].get
         metadata = JSON.parse(json_response.body.read)
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
-      rescue JSON::JSONError => json_error
+      rescue JSON::JSONError => exception
         next <<~WARN
           There was an error parsing #{name}.json:
-          #{json_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -355,10 +353,10 @@ class ManifestBuilder
       # consistently reference the version they originally imported.
       begin
         metadata['version'] = objects['png'].object.version_id
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving the version_id for #{name}.png from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -430,13 +428,13 @@ class ManifestBuilder
         # Strip aliases from metadata - they're no longer needed since they
         #   are represented in the alias map.
         # Also sort for stable updates
-        'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+        metadata: animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
         # Sort category map for stable updates
-        'categories': category_map.sort.to_h,
+        categories: category_map.sort.to_h,
 
         # Sort alias map for stable updates
-        'aliases': alias_map.sort.to_h
+        aliases: alias_map.sort.to_h
       }
     )
   end

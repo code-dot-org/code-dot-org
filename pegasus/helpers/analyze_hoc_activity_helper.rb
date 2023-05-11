@@ -89,9 +89,9 @@ def analyze_day_fast(date)
   # Code.org hosted tutorials below.
   codedotorg_tutorials = []
   PEGASUS_DB_READER.fetch(
-    "SELECT code FROM tutorials WHERE orgname = 'Code.org'"
+    "SELECT code_s FROM cdo_tutorials WHERE orgname_s = 'Code.org'"
   ).each do |row|
-    codedotorg_tutorials.push(row[:code])
+    codedotorg_tutorials.push(row[:code_s])
   end
 
   codedotorg_tutorial_count = 0

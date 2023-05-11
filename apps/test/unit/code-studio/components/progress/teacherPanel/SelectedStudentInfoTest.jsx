@@ -15,21 +15,24 @@ const LEVEL_WITH_PROGRESS = {
   isConceptLevel: false,
   levelNumber: 4,
   passed: false,
-  status: LevelStatus.not_tried
+  status: LevelStatus.not_tried,
 };
 
 const DEFAULT_SELECTED_USER = 1;
 
 const DEFAULT_PROPS = {
-  students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
+  students: [
+    {id: 1, name: 'Student 1'},
+    {id: 2, name: 'Student 2'},
+  ],
   levelsWithProgress: [
     {...LEVEL_WITH_PROGRESS, userId: 1},
     {...LEVEL_WITH_PROGRESS, userId: 2},
-    {...LEVEL_WITH_PROGRESS, userId: 5}
+    {...LEVEL_WITH_PROGRESS, userId: 5},
   ],
   onSelectUser: () => {},
   selectedUserId: DEFAULT_SELECTED_USER,
-  teacherId: 5
+  teacherId: 5,
 };
 
 const setUp = overrideProps => {
@@ -61,11 +64,11 @@ describe('SelectedStudentInfo', () => {
     const teacherLevelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       userId: 5,
-      id: 'test'
+      id: 'test',
     };
     const wrapper = setUp({
       levelsWithProgress: [teacherLevelWithProgress],
-      selectedUserId: null
+      selectedUserId: null,
     });
     const progressBubble = wrapper.find('ProgressBubble');
     expect(progressBubble).to.have.length(1);
@@ -78,7 +81,7 @@ describe('SelectedStudentInfo', () => {
       submitLevel: true,
       submitted: true,
       status: LevelStatus.submitted,
-      userId: DEFAULT_SELECTED_USER
+      userId: DEFAULT_SELECTED_USER,
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
     expect(wrapper.contains('Submitted On:')).to.equal(true);
@@ -90,7 +93,7 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       contained: true,
       status: LevelStatus.perfect,
-      userId: DEFAULT_SELECTED_USER
+      userId: DEFAULT_SELECTED_USER,
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
 
@@ -102,11 +105,11 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      userId: DEFAULT_SELECTED_USER
+      userId: DEFAULT_SELECTED_USER,
     };
 
     const wrapper = setUp({
-      levelsWithProgress: [levelWithProgress]
+      levelsWithProgress: [levelWithProgress],
     });
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
@@ -122,7 +125,7 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      userId: DEFAULT_SELECTED_USER
+      userId: DEFAULT_SELECTED_USER,
     };
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
     expect(wrapper.find('SelectedStudentPairing')).to.have.length(1);

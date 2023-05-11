@@ -660,6 +660,26 @@
         },
         "courseB_maze_seq12022": {
           "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Ny blok!"
         }
       }
     }

@@ -1,0 +1,23 @@
+{
+  "ur-PK": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/javascript": {
+          "display_name": "جاوا اسکرپٹ"
+        },
+        "csd-2022/lists": {
+          "display_name": "فہرستیں"
+        },
+        "csd-2022/other": {
+          "display_name": "دیگر"
+        },
+        "csd-2022/variables": {
+          "display_name": "متغیرات"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "ویب لیب"
+        }
+      }
+    }
+  }
+}

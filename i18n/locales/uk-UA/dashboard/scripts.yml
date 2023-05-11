@@ -128,6 +128,9 @@ uk:
           description: Всі типи рівнів для тестування інтерфейсу
           description_short: Всі типи рівнів для тестування інтерфейсу
           student_description: Всі типи рівнів для тестування інтерфейсу
+          lessons:
+            lesson-49:
+              name: Музика
         algebraPD2b:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -1113,6 +1116,7 @@ uk:
               display_name: Функції
         express-2019:
           title: Експрес курс (2019)
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
           lesson_groups:
             csf_warmup:
@@ -1131,6 +1135,7 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         csd1-2019:
           description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення проблем."
           lesson_groups:
@@ -1201,6 +1206,7 @@ uk:
               display_name: Події
           student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
         pre-express-2019:
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 4-8'
           lesson_groups:
             csf_sequencing:
@@ -1209,6 +1215,7 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         csd2-2019:
           description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження та коментування.  До кінця пристрою у вас буде особистий веб-сайт, який можна опублікувати в Інтернеті."
           description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
@@ -1613,7 +1620,8 @@ uk:
             required:
               display_name: Огляд
         dance-2019:
-          description_short: За участі Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, і 34 інших!
+          title: Танцювальна вечірка
+          description_short: Створіть танцювальну вечірку та поділіться нею з друзями. Ви можете використовувати треки Бейонсе, Гаррі Стайлза, Ліззо, Ліл Нас Ікс, Селени Гомес, музику з диснеївського мультфільму «Енканто» та багато іншого!
         k5-onlinepd-2019:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі!
@@ -1625,6 +1633,7 @@ uk:
               display_name: Наступні Кроки
           student_description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі!
         dance-extras-2019:
+          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
           student_description: Рухайся далі однієї години з розширеними проектними ідеями.
         csp4-preview:
@@ -1883,6 +1892,7 @@ uk:
               display_name: Спрайти
         express-2020:
           title: Експрес курс (2020)
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
           lesson_groups:
             csf_warmup:
@@ -1901,7 +1911,9 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         pre-express-2020:
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 4-8'
           lesson_groups:
             csf_sequencing:
@@ -1910,6 +1922,7 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -2243,6 +2256,7 @@ uk:
             lessonGroup-7:
               display_name: Цифрове громадянство
         express-2021:
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
           lesson_groups:
             csf_warmup:
@@ -2263,7 +2277,10 @@ uk:
               display_name: Спрайти
             lessonGroup-9:
               display_name: Події
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         pre-express-2021:
+          title: Дошкілля Експрес (2021)
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 4-8'
           lesson_groups:
             csf_sequencing:
@@ -2272,6 +2289,7 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
@@ -2561,6 +2579,8 @@ uk:
               display_name: Змінні
             csf_for_loops:
               display_name: Цикли For
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
           description_audience: 'Вік: 9-18'
         csp1-2022:
           lesson_groups:
@@ -2698,6 +2718,8 @@ uk:
             csf_events:
               display_name: Події
           description_audience: 'Вік: 4-8'
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
         csa2-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2706,6 +2728,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Починаємо
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2755,6 +2781,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Вступ до спрайтів
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2815,8 +2845,19 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Розширення для асинхронного налагодження
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Модуль 2 Асинхронна робота
         soccer:
           name: футбол
+          title: Напишіть код власної футбольної гри
+          description_short: Створіть футбольну гру
+          description: Створіть футбольну гру
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -2853,6 +2894,66 @@ uk:
               display_name: Зміст
             lessonGroup-5:
               display_name: Опитування
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Змінні
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Цикли For
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Інтелектуальна власність
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-4:
+              display_name: Опитування
+        hello-world-space-2022:
+          title: 'Привіт Світ: Космос'
+        hello-world-soccer-2022:
+          title: 'Привіт Світ: Футбол'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            lessonGroup-3:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csd2-2023:
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2873,7 +2974,393 @@ uk:
               display_name: 'Глава 1: Зображення та анімації'
             lessonGroup-3:
               display_name: 'Глава 2: Побудова ігор'
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Що це за звук?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проект
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Дані
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списки
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+            lessonGroup-3:
+              display_name: Цикли
+            lessonGroup-4:
+              display_name: Переходи
+            lessonGroup-5:
+              display_name: Проект
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування після закінчення курсу
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Завдання
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          description_audience: 'Вік: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_sprites:
+              display_name: Спрайти
+            lessonGroup-9:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+          description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          student_description: Вивчайте інформатику, проходячи ці уроки у власному темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення проблем і справлятися з цікавими викликами! Створюйте ігри та творчі проєкти, якими можна ділитися з друзями, родиною та вчителями.
+          description_audience: 'Вік: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          student_description: Вивчення основ інформатики та безпеки в інтернеті. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Вік: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+            csf_data:
+              display_name: Дані
+          description_audience: 'Вік: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+          title: Курс D (2021)
+          description_audience: 'Вік: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sprites:
+              display_name: Спрайти
+            ramp_up:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+            csf_nested_loops:
+              display_name: Умови
+          description_audience: 'Вік: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            lessonGroup-3:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опитування
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+            lessonGroup-4:
+              display_name: Опитування
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+            lessonGroup-4:
+              display_name: Опитування
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            lessonGroup-4:
+              display_name: Опитування
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опитування
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+        focus-on-creativity2-2023:
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            lessonGroup-3:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+        focus-on-design-with-purpose2-2023:
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+        focus-on-coding2-2023:
+          student_description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування, такі як налагодження, використання ресурсів і командна робота.  "
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+          student_description: " У блоці 3 ви будете спиратися на свій досвід кодування під час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій починається з простих форм і будує до більш складних ігор на основі спрайтів, використовуючи ті ж концепції програмування та процес проектування, який комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте персоналізовану інтерактивну програму."
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процес вирішення проблем'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опитування
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            lessonGroup-5:
+              display_name: Опитування
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ласкаво просимо
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Вступ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 1
+          title: День 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Підведення підсумків
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 2
+          title: День 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 3
+          title: День 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Підведення підсумків
+          lesson_groups:
+            lessonGroup-2:
+              display_name: День 4
+          title: День 4
+        csd-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-data-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-impact-in-society-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-coding-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-hardware-post-survey-2023:
+          title: Опитування після закінчення курсу
+        focus-on-creativity-post-survey-2023:
+          title: Опитування після закінчення курсу

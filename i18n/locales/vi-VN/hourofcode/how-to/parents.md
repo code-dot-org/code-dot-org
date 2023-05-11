@@ -29,7 +29,7 @@ Có vô số [hoạt động Giờ lập trình](https://hourofcode.com/us/learn
 Tất cả các hoạt động của chúng tôi đều tích hợp kỹ năng giải quyết vấn đề và tư duy phản biện cùng sự vui vẻ và sáng tạo, nhưng đây là một số hoạt động yêu thích của học sinh:
 
 - Dành cho trẻ thích vui chơi: [Minecraft](https://code.org/minecraft) hoặc [Bữa tiệc khiêu vũ](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Dành cho trẻ yêu thích Disney: [Chiến tranh giữa các vì sao](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1) hoặc [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Dành cho trẻ thích khám phá: [Trí tuệ nhân tạo cho đại dương](https://code.org/oceans) or [Sáng tác nhạc với Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Thiết bị yếu hoặc không có thiết bị?</h3>
@@ -87,7 +87,7 @@ Giờ lập trình là một sự kiện toàn cầu và gia đình bạn xứng
 
 - In [Chứng chỉ Giờ lập trình](https://staging.code.org/certificates) và trao cho trẻ khi trẻ hoàn thành hoạt động của mình
 - [In sticker](https://staging.hourofcode.com/us/promote/resources#stickers) tại nhà hoặc [mua trực tuyến](https://store.code.org/) để tạo thêm sự bất ngờ.
-- Chia sẻ ảnh và video về sự kiện Giờ lập trình của bạn trên mạng xã hội. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Chia sẻ ảnh và video về sự kiện Giờ lập trình của bạn trên mạng xã hội. Sử dụng hashtag [#GiờLậpTrình](https://twitter.com/hashtag/hourofcode) và [@codeorg](https://twitter.com/codeorg) để chúng tôi có thể tôn vinh thành công của bạn nữa nhé!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

@@ -8,7 +8,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 export default class LessonGroupInfo extends Component {
   static propTypes = {
     description: PropTypes.string,
-    bigQuestions: PropTypes.string
+    bigQuestions: PropTypes.string,
   };
 
   render() {
@@ -44,13 +44,13 @@ export default class LessonGroupInfo extends Component {
 const styles = {
   description: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
   },
   bigQuestion: {
     fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   subTitle: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };

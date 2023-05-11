@@ -74,6 +74,15 @@
         "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
           "name": "Vertiefendes Lernen"
         },
+        "372347a4-5034-4888-9232-160ad727c83d": {
+          "name": "Aufwärmen"
+        },
+        "b42c3a8b-45a1-4991-88b1-362b1491e81b": {
+          "name": "Hauptaktivität"
+        },
+        "970b0cb3-e914-4b54-9457-7c328aa70870": {
+          "name": "Zusammenfassung"
+        },
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Erste Schritte"
         },
@@ -212,6 +221,15 @@
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Vertiefendes Lernen"
         },
+        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
+          "name": "Aufwärmen"
+        },
+        "b8fea377-abb5-4ee6-b1cc-7d25f9c7459c": {
+          "name": "Hauptaktivität"
+        },
+        "cda96f31-2f49-4c74-946c-101bea687c76": {
+          "name": "Zusammenfassung"
+        },
         "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
           "name": "Aufwärmen"
         },
@@ -315,7 +333,7 @@
           "name": "Aufwärmen"
         },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
-          "name": "Hauptaktivität"
+          "name": "Hauptaktivität\n"
         },
         "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
           "name": "Zusammenfassung"
@@ -459,7 +477,7 @@
           "name": "Aufwärmen"
         },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Hauptaktivität"
+          "name": "Hauptaktivität\n"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Zusammenfassung"
@@ -787,6 +805,9 @@
         },
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Zusammenfassung"
+        },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Vertiefendes Lernen"
         },
         "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
           "name": "Aufwärmen: Dasselbe Wort, verschiedene Bedeutungen."
@@ -1174,6 +1195,9 @@
         },
         "f4c94b25-e0f0-4caa-bebd-1557f771a849": {
           "name": "Tag 5 und Tag 6 - Projekt präsentieren"
+        },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
+          "name": "Vertiefendes Lernen"
         },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
           "name": "Beobachten: Folgen Sie der digitalen Spur"
@@ -2158,6 +2182,9 @@
         },
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Zusammenfassung"
+        },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Vertiefendes Lernen"
         },
         "e756dd3c-ceff-4018-ae32-e393404279eb": {
           "name": "Aufwärmen"
@@ -5691,7 +5718,7 @@
           "name": "Aufwärmen"
         },
         "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Hauptaktivität"
+          "name": "Hauptaktivität\n"
         },
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Zusammenfassung"

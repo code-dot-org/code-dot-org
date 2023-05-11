@@ -308,7 +308,11 @@
         "Underground Avoiding Lava2022": "Joidenkin kuutioiden alla on laavaa piilossa. Se täytyy peittää, ennen kuin voit kulkea eteenpäin. Nyt \"jos\"-komento tulee tarpeeseen. Louhi nämä kuutiot lisäämällä \"siirry eteenpäin\"-komento oikeaan paikkaan.",
         "Underground If Statements2022": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa.",
         "courseD_bee_nestedLoops82022": "Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. ",
-        "courseD_maze_nestedLoops42022": "Vie minut auringonkukan luo!"
+        "courseD_maze_nestedLoops42022": "Vie minut auringonkukan luo!",
+        "Course 4 Bee 1": "Mehiläinen ei näe mitä on pilven alla!\n\nKäytä \"jos\"-lohkoa tarkistaaksesi, onko pilven alla kukkaa.\n\nHae nektari yhden kerran vain, **JOS** pilven alla on kukka.",
+        "Course 4 Bee 2": "Käytä \"jos-muuten\"-lohkoa tarkistaaksesi onko pilven alla kukka vai hunajakenno. Jos se on kukka, kerää yksi nektari, muuten tee yksi hunaja!",
+        "Course 4 Bee 3": "Joskus pilvi peittää kukan, joskus hunajakennon! **Jos** löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai **muuten**-palikkaa tehdäksesi hunajaa (koska löysit hunajakennon).",
+        "Course 4 Maze 4": "Kokeile \"toista\"-lohkoa ratkaistaaksesi ongelman vähemmillä lohkoilla..."
       }
     }
   }

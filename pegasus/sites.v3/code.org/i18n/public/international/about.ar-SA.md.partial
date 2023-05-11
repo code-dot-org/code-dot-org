@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>يستخدم دورات Code.org عشرات الملايين من الطلاب ومليون معلم في جميع أنحاء العالم.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## السجل
 
 في عام 2013، تم إطلاق Code.org من قبل الأخوين التوأمين هادي وعلي بارتوفي بواسطة [ فيديو لترويج علوم الحاسوب](https://www.youtube.com/watch؟v=nKIu9yen5nc). هذا الفيديو أصبح #1 على اليوتيوب لمدة يوم واحد ،واتصلت بنا 15000 مدرسة تطلب المساعدة. منذ ذلك الحين، قمنا بتوسيع نطاق فريق العمل من المتطوعين لإنشاء منظمة يدعمها الجميع عبر العالم. نؤمن أن تعليم علوم الحاسوب الجيد يجب أن يتاح لكل طفل، وليس مجرد لبعض الأطفال المحظوظين.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## ماذا نعمل
 

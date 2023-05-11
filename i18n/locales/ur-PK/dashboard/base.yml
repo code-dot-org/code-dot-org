@@ -110,7 +110,6 @@ ur:
     valid_password: "تصدیق شدہ پاس ورڈ!"
     invalid_password: "پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے"
     mismatch_password: "داخل کے گئے دونوں پاس ورڈزمختلف ہیں"
-    additional_information: "ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے."
     user_type_button: "اکاؤنٹ کی قسم اپڈیٹ کریں"
     user_type_label: "اکاؤنٹ کی قسم"
     user_type_student: "Talib-e-ilm"
@@ -250,32 +249,33 @@ ur:
       link: "مزید سیکھے"
   view_lesson_plan: 'سبق پلان دیکھیں'
   upsell:
-    dance:
-      title: 'ڈانس پارٹی'
     dance-2019:
       title: 'ڈانس پارٹی'
-    hello-world:
-      title: 'ہیلو ورلڈ'
-    poem-art:
-      title: 'نظم کا فن'
-    20-hour:
-      title: 'تیز کردہ کورس'
-      body_short: '2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔'
-    hoc2014:
-      try_frozen: 'آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ'
+    dance:
+      title: 'ڈانس پارٹی'
     frozen:
       title: "فروزن"
-    starwars:
-      title: "اسٹار وارز"
+    hello-world:
+      title: 'ہیلو ورلڈ'
+      body: 'اپنی تخلیق کردہ دنیا میں انٹرایکٹو کرداروں کو کوڈ کرنے کے لیے چار مزیدار تھیمز میں سے کسی کا انتخاب کریں۔'
+    hoc2014:
+      try_frozen: 'آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ'
+    poem-art:
+      title: 'نظم کا فن'
     sports:
       title: "کھیل کود"
+    starwars:
+      title: "اسٹار وارز"
+    widgets:
+      audience: "عمر 14+"
+    unplugged_conditionals:
+      title: "شرائط"
     unplugged:
       title: "ان پلگڈ اسباق"
       body_short: "اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق کو آزمائیں۔"
-    unplugged_conditionals:
-      title: "شرائط"
-    widgets:
-      audience: "عمر 14+"
+    20-hour:
+      title: 'تیز کردہ کورس'
+      body_short: '2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔'
   landing:
     help_support: "مدد اور معاونت"
   multi-submittable:
@@ -341,6 +341,12 @@ ur:
       email_opt_in:
         opt_in_yes: 'جی'
         opt_in_no: 'نہيں'
+  course_offering:
+    headers:
+      hello_world: 'ہیلو ورلڈ'
+      sports: 'کھیل کود'
+      csf: 'CS کے بنیادی اصول'
+      csc: 'کمپیوٹر سائنس (CS) کنکشنز'
   cookie_banner:
     accept: 'ma manta ho'
   copy: 'کاپی'

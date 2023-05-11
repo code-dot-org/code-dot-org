@@ -14,3 +14,4 @@ answer 'Blended Summer Study: 2 days in-person and 7 hours online'
 
 question 'Phase 3'
 answer 'Academic Year Development: 2 days in-person and 10 hours online'
+allow_multiple_attempts true

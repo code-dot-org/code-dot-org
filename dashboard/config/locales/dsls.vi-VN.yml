@@ -11686,20 +11686,12 @@ vi-VN:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat sẽ đến được chỗ hạt sồi. Không có lỗi trong mã lệnh.
-          feedback: Sai rồi. Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không tiến
-            lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
           correct: true
-          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
-            tiến lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không đến được chỗ hạt sồi vì không có đủ số lượng khối `move
             forward` (tiến lên).
-          correct: true
-          feedback: Chính xác! Thứ nhất, Scrat xoay sai hướng, sau đó Scrat không
-            tiến lên đủ số lần để đến chỗ hạt sồi.
         - text: Scrat sẽ không di chuyển từ khối đầu tiên.
-          feedback: Có hai lỗi trong mã lệnh này. Thứ nhất, Scrat xoay sai hướng,
-            sau đó Scrat không tiến lên đủ số lần để đến chỗ hạt sồi.
+          feedback: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
         questions:
         - text: Hãy tìm lỗi trong mã lệnh này. Liệu Scrat có đến được chỗ hạt sồi
             không hay có vấn đề gì xảy ra?
@@ -11912,18 +11904,11 @@ vi-VN:
             vào nút “Run” (chạy)?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến và lùi mãi mãi.
-          correct: true
+        - correct: true
           feedback: Chính xác!
         - text: Thây ma sẽ đến được chỗ hoa hướng dương.
-          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
-            và lùi mãi mãi.
         - text: Thây ma sẽ xoay phải ở lối đi đầu tiên và đi vòng quanh mãi mãi.
-          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
-            và lùi mãi mãi.
         - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
-          feedback: Trong mã lệnh này, thây ma sẽ bỏ qua đường đi đúng và cuối cùng
-            sẽ tiến và lùi mãi mãi.
         questions:
         - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
             vào nút “Run” (Chạy)?

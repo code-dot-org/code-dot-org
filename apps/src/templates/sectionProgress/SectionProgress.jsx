@@ -12,12 +12,14 @@ import {h3Style} from '../../lib/ui/Headings';
 import {
   getCurrentUnitData,
   setLessonOfInterest,
-  setCurrentView
+  setCurrentView,
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -40,14 +42,14 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
-    showStandardsIntroDialog: PropTypes.bool
+    showStandardsIntroDialog: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      reportedInitialRender: false
+      reportedInitialRender: false,
     };
   }
 
@@ -61,7 +63,7 @@ class SectionProgress extends Component {
         logToCloud.PageAction.SectionProgressRenderedWithData,
         {
           sectionId: this.props.sectionId,
-          scriptId: this.props.scriptId
+          scriptId: this.props.scriptId,
         }
       );
       this.setState({reportedInitialRender: true});
@@ -74,7 +76,13 @@ class SectionProgress extends Component {
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
-      new_script_id: scriptId
+      new_script_id: scriptId,
+    });
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
+      sectionId: this.props.sectionId,
+      oldUnitId: this.props.scriptId,
+      unitId: scriptId,
     });
   };
 
@@ -83,7 +91,13 @@ class SectionProgress extends Component {
 
     this.recordEvent('jump_to_lesson', {
       script_id: this.props.scriptId,
-      stage_id: this.props.scriptData.lessons[lessonOfInterest].id
+      stage_id: this.props.scriptData.lessons[lessonOfInterest].id,
+    });
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_JUMP_TO_LESSON, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      lesson: this.props.scriptData.lessons[lessonOfInterest].id,
     });
   };
 
@@ -99,8 +113,8 @@ class SectionProgress extends Component {
         event: eventName,
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          ...dataJson
-        })
+          ...dataJson,
+        }),
       },
       {includeUserId: true}
     );
@@ -117,7 +131,7 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      showStandardsIntroDialog
+      showStandardsIntroDialog,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -181,34 +195,34 @@ class SectionProgress extends Component {
 
 const styles = {
   heading: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   topRowContainer: {
     display: 'flex',
     alignItems: 'flex-end',
-    marginBottom: 10
+    marginBottom: 10,
   },
   chevronLink: {
     display: 'flex',
     flex: 1,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   icon: {
-    paddingRight: 5
+    paddingRight: 5,
   },
   toggle: {
-    margin: '0px 30px'
+    margin: '0px 30px',
   },
   show: {
-    display: 'block'
+    display: 'block',
   },
   hide: {
-    display: 'none'
+    display: 'none',
   },
   studentTooltip: {
     display: 'flex',
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 export const UnconnectedSectionProgress = SectionProgress;
@@ -222,7 +236,7 @@ export default connect(
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
   }),
   dispatch => ({
     setScriptId(scriptId) {
@@ -233,6 +247,6 @@ export default connect(
     },
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    }
+    },
   })
 )(SectionProgress);

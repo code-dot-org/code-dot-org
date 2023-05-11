@@ -13,7 +13,7 @@
     "use_default_sprites": "true",
     "hide_animation_mode": "false",
     "show_type_hints": true,
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "callout_json": "[]",
     "instructions_important": "false",

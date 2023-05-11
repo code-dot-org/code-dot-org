@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 
 class ReadOnlyReviewState extends React.Component {
   static propTypes = {
-    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates))
+    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
   };
 
   renderCompleted() {
@@ -57,15 +57,15 @@ const styles = {
     color: color.dimgray,
     fontSize: 12,
     fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   keepWorkingBadge: {
     fontSize: 8,
-    marginRight: 5
+    marginRight: 5,
   },
   keepWorking: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 export default ReadOnlyReviewState;

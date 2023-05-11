@@ -27,11 +27,13 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಸಂಪರ್ಕಗಳು
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
 
-## Modules
+## ಮಾಡ್ಯೂಲ್‌ಗಳು
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
@@ -77,3 +79,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>ಸಿಎಸ್ ಕನೆಕ್ಷನ್ ಚಟುವಟಿಕೆ ಮುಗಿಸಿದ್ದೀರಿ ಮತ್ತು/ಅಥವಾ ನಿಮ್ಮ ಕ್ಲಾಸ್‌ರೂಮ್‌ಗೆ ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳನ್ನು ಎದುರು ನೋಡುತ್ತಿದ್ದೀರಾ? ದಯವಿಟ್ಟು <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ</a> ಮತ್ತು ಐಡಿಯಾಗಳನ್ನು ಇನ್ನಷ್ಟು ಅಧ್ಯಾಯಗಳಿಗೆ ಇಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ!</em>
+
+{{ visit_partial_event_logger }}

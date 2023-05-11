@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org अभ्यासक्रम जगाभरातील कोट्यावधी विद्यार्थ्यांकडून आणि दहा लाख शिक्षकांकडून वापरले जातात.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## इतिहास
 
 2013 मध्ये, हादी आणि अली पार्टोव्ही या जुळ्या भावांनी [संगणक शास्त्राचा प्रचार करणाऱ्या व्हिडीओसह](https://www.youtube.com/watch?v=nKIu9yen5nc) Code.org सुरू केले. हा व्हिडीओ एके दिवशी युट्यूबवर #1 व्हिडीओ झाला आणि 15,000 शाळांनी मदतीसाठी आमच्याकडे धाव घेतली. तेव्हापासून आम्ही स्वयंसेवकांच्या एका टीमपासून ते जागतिक चळवळीला पाठिंबा देणाऱ्या एका पूर्ण संस्थेपर्यंत आमचा विस्तार केला. आमचा असा विश्वास आहे की चांगल्या गुणवत्तेचे संगणक शास्त्राचे शिक्षण केवळ काही नशीबवान मुलांनाच नव्हे तर सर्वच मुलांना उपलब्ध असायला हवे.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## आम्ही काय करतो?
 

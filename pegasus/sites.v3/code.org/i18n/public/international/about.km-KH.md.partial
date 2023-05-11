@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>វគ្គសិក្សា Code.org ត្រូវបានប្រើប្រាស់ដោយសិស្សរាប់សិបលាននាក់និងដោយគ្រូមួយលាននាក់នៅលើពិភពលោក។</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## ប្រវត្តិ
 
 នៅឆ្នាំ ២០១៣ Code.org ត្រូវបានបង្កើតឡើងដោយបងប្អូនភ្លោះ Hadi និង Ali Partovi ជាមួយ [វីដេអូផ្សព្វផ្សាយពីវិទ្យាសាស្ត្រកុំព្យូទ័រ](https://www.youtube.com/watch?v=nKIu9yen5nc). វីដេអូនេះឈរលំដាប់លេខ ១ នៅលើយូធូបរយៈពេលមួយថ្ងៃ ហើយមានសាលារៀនចំនួន ១៥, ០០០ បានទាក់ទងមកយើងសុំជំនួយ។ ចាប់តាំងពីពេលនោះមកយើងបានពង្រីកពីបុគ្គលិកស្ម័គ្រចិត្តដើម្បីបង្កើតអង្គការពេញលក្ខណ: មួយដែលគាំទ្រដល់សកម្មភាពទូទាំងពិភពលោក។ យើងជឿជាក់ថាការអប់រំវិទ្យាសាស្ត្រកុំព្យូទ័រដែលមានគុណភាពគួរតែមានសម្រាប់កុមារគ្រប់រូបមិនមែនសំរាប់តែអ្នកមានសំណាងពីរបីអ្នកនោះទេ។
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## អ្វីដែលយើងធ្វើ
 

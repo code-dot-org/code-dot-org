@@ -73,14 +73,14 @@ class SharedResources < Sinatra::Base
     pass unless settings.javascript_extnames.include?(extname)
 
     if File.file?(path)
-      content_type extname[1..-1].to_sym
+      content_type extname[1..].to_sym
       cache :static
       send_file(path)
     end
 
     erb_path = "#{path}.erb"
     if File.file?(erb_path)
-      content_type extname[1..-1].to_sym
+      content_type extname[1..].to_sym
       cache :static
       return ERB.new(File.read(erb_path)).result
     end

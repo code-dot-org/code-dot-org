@@ -202,6 +202,9 @@ nl:
           description: Alle de level types voor UI testing
           description_short: Alle de level types voor UI testing
           student_description: Alle de level types voor UI testing
+          lessons:
+            lesson-49:
+              name: Muziek
         algebraPD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -1511,6 +1514,7 @@ nl:
             required:
               display_name: Overzicht
         dance-2019:
+          title: Dansfeest
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
           student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
         k5-onlinepd-2019:
@@ -1518,6 +1522,7 @@ nl:
             k5_next_steps:
               display_name: Volgende stappen
         dance-extras-2019:
+          title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
@@ -1883,7 +1888,7 @@ nl:
             outbreak:
               display_name: Uitbraaksimulator
             debugging:
-              display_name: Foutopsporing
+              display_name: Debugging
           description_audience: Intern
           description_short: Intern
         csd1-2021:
@@ -2755,22 +2760,66 @@ nl:
               display_name: Content
             lessonGroup-5:
               display_name: Vragenlijst
-        csd1-2023:
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Lussen
           lesson_groups:
             lessonGroup-2:
-              display_name: Hoofdstuk 1
+              display_name: Vragenlijst
             lessonGroup-3:
-              display_name: Hoofdstuk 2
+              display_name: Content
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabelen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: For-lussen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Intellectuele Eigendom
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Vragenlijst
+        hello-world-space-2022:
+          title: 'Hallo World: Space'
+        hello-world-soccer-2022:
+          title: 'Hello World: Voetbal'
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Hoofdstuk 1
             lessonGroup-3:
-              display_name: Hoofdstuk 2
+              display_name: 'Hoofdstuk 2: Hardware Input'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2781,3 +2830,268 @@ nl:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            csp_loops:
+              display_name: Lussen
+            csp_project:
+              display_name: Project
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lijsten
+            lessonGroup-3:
+              display_name: Lussen
+            lessonGroup-5:
+              display_name: Project
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Evaluaties
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-3:
+              display_name: Hoofdstuk 2
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          description_audience: 'Leeftijden: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+          description_audience: 'Leeftijden: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
+          description_audience: 'Leeftijden: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
+          description_audience: 'Leeftijden: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_data:
+              display_name: Data
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
+          description_audience: 'Leeftijden: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaal Burgerschap
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
+            csf_nested_loops:
+              display_name: Voorwaardelijke instructies
+          description_audience: 'Leeftijden: 8-12'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+            lessonGroup-4:
+              display_name: Vragenlijst
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hoofdstuk 1
+            lessonGroup-4:
+              display_name: Hoofdstuk 2
+            lessonGroup-5:
+              display_name: Vragenlijst
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hoofdstuk 1
+            lessonGroup-4:
+              display_name: Hoofdstuk 2
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-4:
+              display_name: Hoofdstuk 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            lessonGroup-5:
+              display_name: Vragenlijst
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welkom
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introductie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 1
+          title: Dag 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Afronden
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 2
+          title: Dag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 3
+          title: Dag 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Afronden
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 4
+          title: Dag 4

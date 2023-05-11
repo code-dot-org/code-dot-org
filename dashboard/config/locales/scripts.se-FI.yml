@@ -154,6 +154,10 @@ se:
             Angy Bird:as, Šattut Zombiid vuostá!
         text-compression:
           title: TeakstaKomprimeren
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Musihkka
         asUnplugged:
           description_audience: Ahki 6-13
         afterschool1:
@@ -1552,6 +1556,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Álgge
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1672,6 +1680,48 @@ se:
               display_name: Sisdoallu
             lessonGroup-5:
               display_name: Iskkadeapmi
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1684,3 +1734,217 @@ se:
               display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
             lessonGroup-3:
               display_name: 'Kapihtal 2: Hukse Spealuid'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp5-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_sprites:
+              display_name: Sprite:at
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-3:
+              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Hukse Spealuid'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
+            lessonGroup-3:
+              display_name: 'Kapihtal 2: Prototyhpet App:a'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Iskkadeapmi
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Input:at ja Output:at
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Loahpat
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Loahpat
+        csd-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-data-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-impact-in-society-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-coding-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-hardware-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi
+        focus-on-creativity-post-survey-2023:
+          title: Maŋŋil Kurssa Iskkadeapmi

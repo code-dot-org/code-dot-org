@@ -77,7 +77,6 @@
   "didntMoveRight": "スプライトが右に動きませんでした。",
   "didntMoveUp": "スプライトが上に動きませんでした。",
   "didntPressKey": "*「実行（じっこう）」*を押した後、必ず矢印キーを押してください。プレイエリアの下にあるオレンジ色のボタンをクリックするか、キーボードのキーを押してください。",
-  "errorLoadingAnimation": "「{animationName}」というアニメーションをアップロードすることができません。インターネット接続を確かめてページをリロードしてみてください。問題が続いたら、アニメーションが壊れている可能性があります。その場合は、アニメーションを外してください。",
   "eventsOneChange": "スプライトが変更されましたが、一度のみでした。キーを数回押してプログラムをテストし、正しいブロックを使用しているか確認してください。 \n<xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"スケール\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"生き物_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "eventsWrongBehaviors": "スプライトには正確には3つの動作が必要です。「すべて止める」ブロックをコード内の別の場所に動かしてみてください。",
   "foodNotTouchPet": "ペットのスプライトにさわるように、エサのスプライトをドラッグします。",

@@ -5,7 +5,7 @@ export default storybook => {
   return storybook.storiesOf('AgeDialog', module).addStoryTable([
     {
       name: 'AgeDialog',
-      story: () => <AgeDialog signedIn={false} turnOffFilter={() => {}} />
-    }
+      story: () => <AgeDialog signedIn={false} turnOffFilter={() => {}} />,
+    },
   ]);
 };

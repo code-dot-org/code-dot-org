@@ -30,7 +30,7 @@ function createNested() {
 const defaultProps = {
   elementType: defaultType,
   cacheKey: defaultKeys[0],
-  createElement: createDiv
+  createElement: createDiv,
 };
 
 const spy = sinon.spy(createDiv);
@@ -60,12 +60,8 @@ describe('CachedElement', () => {
 
     // verify that the nested `CachedElement` isn't in the tree
     expect(wrapper.find(CachedElement)).to.have.lengthOf(1);
-    expect(
-      wrapper
-        .find(CachedElement)
-        .childAt(0)
-        .find(CachedElement)
-    ).to.be.empty;
+    expect(wrapper.find(CachedElement).childAt(0).find(CachedElement)).to.be
+      .empty;
 
     expect(getCachedElement()).to.equal(defaultHtml);
     expect(getCachedElement('CachedElement')).to.equal(nestedHtml);

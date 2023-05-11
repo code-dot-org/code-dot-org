@@ -190,6 +190,10 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           student_description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Μουσική
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -1232,11 +1236,16 @@ el:
             required:
               display_name: Επισκόπηση
         dance-2019:
+          title: Πάρτι Χορού
+          description_short: Κωδικοποιήστε ένα Dance Party για να το μοιραστείτε με
+            τους φίλους και την οικογένεια. Οι Beyoncé, Harry Styles, Lizzo, Lil Nas
+            X, Selena Gomez, μουσική από το «Encanto» της Disney και πολλά άλλα!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
         dance-extras-2019:
+          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για πρότζεκτ.
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
@@ -1833,6 +1842,7 @@ el:
               display_name: Μεταβλητές
             csf_for_loops:
               display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -1944,6 +1954,10 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Εισαγωγή στα μοτίβα
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2000,5 +2014,193 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
-        csd1-2023:
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Εργαστήριο Java
+            lesson-6:
+              name: Βρόχοι
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Έρευνα
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Μεταβλητές
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Βρόχοι Για
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        hello-world-space-2022:
+          title: 'Γεια σας κόσμο: Διάστημα'
+        hello-world-soccer-2022:
+          title: 'Γεια σας κόσμο: Ποδόσφαιρο'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Τι είναι αυτός ο ήχος;
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Έρευνα
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Μεταβλητές
+            csp_conditionals:
+              display_name: Συνθήκες
+            csp_functions:
+              display_name: Συναρτήσεις
+            csp_project:
+              display_name: Έργο
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Δεδομένα
+            csp_loops:
+              display_name: Βρόχοι
+            csp_project:
+              display_name: Έργο
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Λίστες
+            lessonGroup-3:
+              display_name: Βρόχοι
+            lessonGroup-5:
+              display_name: Έργο
+        csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Βιβλιοθήκες
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Αξιολογήσεις
+        tess-testing-problem-solving-2023:
           title: Επίλυση Προβλημάτων
+        testing-focus-on-creativity1:
+          title: Επίλυση Προβλημάτων
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Χαρακτήρας
+            lessonGroup-9:
+              display_name: Συμβάντα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+            csf_functions:
+              display_name: Συναρτήσεις
+            csf_variables:
+              display_name: Μεταβλητές
+            csf_for_loops:
+              display_name: Βρόχοι Για
+          title: Γρήγορο Μάθημα (2022)
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+          description_short: Μια εισαγωγή στην επιστήμη της πληροφορικής για νεαρούς
+            αναγνώστες.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
+            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
+            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_events:
+              display_name: Συμβάντα
+            csf_data:
+              display_name: Δεδομένα
+          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
+            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
+            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
+            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
+            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
+          description_short: Μάθετε τα βασικά της επιστήμης της πληροφορικής και δημιουργήστε
+            τη δική σας τέχνη, ιστορίες και παιχνίδια.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_events:
+              display_name: Συμβάντα
+            csf_loops:
+              display_name: Βρόχοι
+            csf_conditionals:
+              display_name: Συνθήκες
+          title: Μάθημα D (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ψηφιακή υπηκοότητα
+            csf_sprites:
+              display_name: Χαρακτήρας
+            ramp_up:
+              display_name: Φωλιασμένες Επαναλήψεις
+            csf_functions:
+              display_name: Συναρτήσεις
+            csf_nested_loops:
+              display_name: Συνθήκες
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Εισαγωγή

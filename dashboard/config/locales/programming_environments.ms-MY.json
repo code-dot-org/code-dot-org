@@ -7,17 +7,122 @@
         },
         "gamelab": {
           "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Hitam dan Putih"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
+                }
+              }
+            },
             "sprites": {
-              "name": "Jin"
+              "name": "Jin",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Lingkaran"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "Kumpulan"
+              "name": "Kumpulan",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Peperi"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Warna"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "Lukisan"
+              "name": "Lukisan",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Gerakan Bintang"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematik"
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    },
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    },
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Pemboleh ubah"
@@ -30,14 +135,203 @@
         "applab": {
           "description": "App Lab ialah persekitaran pengaturcaraan di mana anda boleh membuat aplikasi mudah. Reka apl, kod dengan blok atau JavaScript untuk menjadikannya berfungsi, kemudian kongsi apl anda dalam beberapa saat.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Mengecil dan Membesar"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Memainkan fail bunyi MP3 daripada URL yang ditentukan."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objek"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data"
+              "name": "Data",
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objek"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objek"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Fungsi"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematik"
+              "name": "Matematik",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    },
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Minimum nombor yang kembali"
+                    },
+                    "max": {
+                      "description": "Nombor maksimum yang dipulangkan"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Pemboleh ubah"
+              "name": "Pemboleh ubah",
+              "expressions": {
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Pilih Pengembaraan Anda Sendiri"
+                    }
+                  }
+                },
+                "addPair": {
+                  "return_value": "Tiada"
+                }
+              }
             },
             "functions": {
               "name": "Fungsi"

@@ -1,0 +1,22 @@
+name 'CSC-SelfPaced-eventsintro_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Events
+
+##### The previous level was a preview of events.  When the two sprites were each clicked, each sprite said something.  Remember, events in computer science are actions that cause something to happen.  
+
+## You will:
+
+* ##### Watch a video that introduces events to students.
+* ##### Use Sprite Lab to code different types of events.
+
+
+### **Suggested time:** 15 minutes
+
+## Let's keep learning! 
+
+
+
+MARKDOWN

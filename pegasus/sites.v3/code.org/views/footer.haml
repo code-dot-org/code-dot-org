@@ -43,14 +43,14 @@
         =view :language
       .social-media{:style=>"margin-top: 10px; margin-left: 10px;"}
         %small
-          %a.whitefooterlink{:href=>"https://www.facebook.com/Code.org/", :target=>"_blank", :style=>'text-decoration: none;'}
+          %a.whitefooterlink{:href=>"https://www.facebook.com/Code.org/", :'aria-label'=>hoc_s(:footer_menu_facebook), :target=>"_blank", :style=>'text-decoration: none;'}
             %i.fa.fa-facebook.fa-lg
             &nbsp; &nbsp;
-          %a.whitefooterlink{:href=>"https://twitter.com/codeorg", :target=>"_blank", :style=>'text-decoration: none;'}
+          %a.whitefooterlink{:href=>"https://twitter.com/codeorg", :'aria-label'=>hoc_s(:footer_menu_twitter), :target=>"_blank", :style=>'text-decoration: none;'}
             %i.fa.fa-twitter.fa-lg
             &nbsp; &nbsp;
-          %a.whitefooterlink{:href=>"https://www.instagram.com/codeorg/", :target=>"_blank", :style=>'text-decoration: none;'}
+          %a.whitefooterlink{:href=>"https://www.instagram.com/codeorg/", :'aria-label'=>hoc_s(:footer_menu_instagram), :target=>"_blank", :style=>'text-decoration: none;'}
             %i.fa.fa-instagram.fa-lg
             &nbsp; &nbsp;
-          %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank", :style=>'text-decoration: none;'}
-            %img{src: '/images/icons/medium-monogram-white.png', style: "width: 20px"}
+          %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :'aria-label'=>hoc_s(:footer_menu_medium), :target=>"_blank", :style=>'text-decoration: none;'}
+            %img{src: '/images/icons/medium-monogram-white.png', alt: '', style: "width: 20px"}

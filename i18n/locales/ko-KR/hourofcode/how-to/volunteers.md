@@ -6,7 +6,7 @@ title: 자원봉사자를 위한 아워오브코드 하우 투 가이드
 
 ### 수 천명의 교사가 학생에게 영감을 줄 자원봉사자를 찾고 있습니다. 지금 변화를 일으키세요!
 
-[<button>자원봉사자로 등록해보세요.</button>]({{ urls/volunteer }})
+[<button>자원봉사자로 등록하세요.</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -52,7 +52,7 @@ title: 자원봉사자를 위한 아워오브코드 하우 투 가이드
 - "특히 어린 여학생들에게 과학기술에 대한 관심을 갖게 한 점이 뿌듯했습니다. 내 지역의 다음 세대를 돕는 느낌이었어요."
 - "아이들이 즐거워하는 것을 보는게 아주 즐겁습니다. 한 가지 놀라운 일은, 일부 학과 성적이 그리 좋지 못한 학생이 개발자처럼 사고하고 다른 이를 돕는 일에 뛰어난 역량을 발휘해 스스로 자신감을 갖는 기회가 되었다는 사실입니다."
 
-[<button>자원봉사자로 등록해보세요.</button>]({{ urls/volunteer }})
+[<button>자원봉사자로 등록하세요.</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -76,7 +76,7 @@ title: 자원봉사자를 위한 아워오브코드 하우 투 가이드
 
 자원봉사를 하는 데 저희의 자원봉사 맵을 반드시 사용할 필요는 없습니다! 만약 신청자가 자원봉사를 하고 싶은 학급이 있으면, 직접 교사와 관리자에게 연락을 취할 것을 권장합니다.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - 다른 학교를 마음에 두고 계시다면, 그 학교의 웹사이트를 방문하여, 교장이나 교감, 기술 또는 컴퓨터 과학 교사, 심지어 학교의 PTSA와 상담하기 위한 연락처를 찾아 보십시오. 또한 이벤트 공동 주최를 위해 Boys & Girls Clubs of America, Junior Achievement, YMCA 지점 등과 같은 조직과 파트너 관계를 맺을 수도 있습니다. - 아워오브코드를 주최하는 학교를 찾을 수 없다면, 귀사와 자체 이벤트를 진행하는 데 자원봉사로 도울 수 있습니다. 더 자세한 내용은 [기업을 위한 하우 투 가이드](https://hourofcode.com/us/how-to/companies)에서 확인하세요.
+시작하기: - 학부모 또는 보호자께서는 [이 이메일](https://hourofcode.com/us/promote/resources#help-schools)을 자녀의 교사에게 보내 아워오브코드를 하는데 도움을 주고 싶다는 의사를 밝혀 주십시오. - 다른 학교를 마음에 두고 계시다면, 그 학교의 웹사이트를 방문하여, 교장이나 교감, 기술 또는 컴퓨터 과학 교사, 심지어 학교의 PTSA와 상담하기 위한 연락처를 찾아 보십시오. 또한 이벤트 공동 주최를 위해 Boys & Girls Clubs of America, Junior Achievement, YMCA 지점 등과 같은 조직과 파트너 관계를 맺을 수도 있습니다. - 아워오브코드를 주최하는 학교를 찾을 수 없다면, 귀사와 자체 이벤트를 진행하는 데 자원봉사로 도울 수 있습니다. 더 자세한 내용은 [기업을 위한 How-To 가이드](https://hourofcode.com/us/how-to/companies)에서 확인하세요.
 
 * * *
 
@@ -116,17 +116,18 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 가정 또는 지역사회에서 아워오브코드 개최를 고려 중이시면, [학부모](https://hourofcode.com/us/how-to/parents) 및 [조직 또는 기업](https://hourofcode.com/us/how-to/companies)을 위한 깊이 있는 하우 투 가이드를 참조하실 것을 추천합니다.
 
-### 1. 이 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. 이벤트 날짜와 형식, 장소 정하기
 
-학교 또는 교사와 함께 일하며 무엇이 가장 일리가 있는지 협의합니다. [가상](https://hourofcode.com/us/how-to/virtual) 또는 대면으로, 회사 사무실에서 또는 지역사회에서, 그리고 전 연령의 학생들을 위한 이벤트가 개최되고 있습니다! 또한 영감을 주는 아이디어를 얻기 위해 다른 [기업 파트너](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) 와 [기부자](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f)가 과거에 했던 사례를 살펴 볼수 있습니다.
+학교 또는 교사와 함께 일하며 무엇이 가장 일리가 있는지 협의합니다. [가상](https://hourofcode.com/us/how-to/virtual) 또는 대면으로, 회사 사무실에서 또는 지역사회에서, 그리고 전 연령의 학생들을 위한 이벤트가 개최되고 있습니다! 또한 영감을 주는 아이디어를 얻기 위해 다른 [기업 파트너](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf)와 [기부자](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f)가 과거에 했던 사례를 살펴 볼수 있습니다.
 
 <br />
 
 #### 예시 안건:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 무엇이 또는 누가 영감을 주었습니까? 컴퓨터 과학에 어떻게 관심을 갖게 되었습니까? 멘토가 있었습니까? 학생의 질문에 답하고 Q&A 시간을 남겨 두세요. | |30-60 minutes | Code! 이벤트에 직접 참석하는 경우, 학생들 질문에 답하고 어려운 퍼즐을 통해 학생들을 지도하세요. 학생들에게 해답을 바로 알려주지 마세요. 대신, 질문을 하여 무엇이 틀렸는지 스스로 답하게 하며, 질문이 있는 경우 서로 물어보도록 권합니다. 가상의 자원봉사를 하면, 최고의 접근방식이 무엇인지 교사와 협의하세요. 세션 끝 부분에서 다시 돌아와 학생의 진도를 확인하는 것이 더 좋을 수 있습니다. | | |1-3 분 | 모두에게 감사한다고 말하고 격려하는 작별 인사를 나눕니다. 회사 홍보물([스티커](#celebrate) 등)을 나눠 줍니다! | | <br />
+|시간 | 의제 항목 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 분 | [영감을 주는 동영상](https://hourofcode.com/us/promote/resources#videos)|  
+보여 주기 |5-10 분 | 자기 소개 및 학생에 대해 알아보기: 어디에서 일하는지, 맡은 업무, 지금 하는 일에서 가장 좋은 점은? 무엇이 또는 누가 영감을 주었습니까? 컴퓨터 과학에 어떻게 관심을 갖게 되었습니까? 멘토가 있었습니까? 학생의 질문에 답하고 Q&A 시간을 남겨 두세요. | |30-60분 | 코드! 이벤트에 직접 참석하는 경우, 학생들 질문에 답하고 어려운 퍼즐을 통해 학생들을 지도하세요. 학생들에게 해답을 바로 알려주지 마세요. 대신, 질문을 하여 무엇이 틀렸는지 스스로 답하게 하며, 질문이 있는 경우 서로 물어보도록 권합니다. 가상의 자원봉사를 하면, 최고의 접근방식이 무엇인지 교사와 협의하세요. 세션 끝 부분에서 다시 돌아와 학생의 진도를 확인하는 것이 더 좋을 수 있습니다. | | |1-3 분 | 모두에게 감사한다고 말하고 격려하는 작별 인사를 나눕니다. 회사 홍보물([스티커](#celebrate) 등)을 나눠 줍니다! | | <br />
 
 #### 이벤트에 추가할 기타 아이디어
 
@@ -141,12 +142,12 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 #### 기기:
 
-Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 학생마다 한 대의 컴퓨터가 있을 필요는 없으며 심지어 컴퓨터가 없이도 아워오브코드를 할 수 있습니다. 언플러그드 활동을 위해, "컴퓨터 또는 기기 없음' 옵션을 보여주도록 간단히 클래스룸 테크놀로지 섹션을 필터링하세요. 
+아워오브코드를 가장 잘 경험하기 위해서는 인터넷이 연결된 컴퓨터가 있어야 합니다. 하지만 학생마다 한 대의 컴퓨터가 있어야 할 필요는 없으며 심지어 컴퓨터가 없이도 아워오브코드를 할 수 있습니다. 언플러그드 활동을 위해, "컴퓨터 또는 기기 없음' 옵션을 보여주도록 간단히 클래스룸 테크놀로지 섹션을 필터링하세요. 
 
 - 컴퓨터나 기기 상에서 **활동을 테스트**하세요. 브라우저에서 소리와 동영상이 모두 적절히 잘 나오는지 확인하세요.
 - **기기가 충분하지 않으세요?** 페어 프로그래밍을 사용해보세요. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
 - 사운드가 있어야 최고의 효과를 기대할 수 있는 튜토리얼을 할 때는 참가자에게 **헤드폰을 제공**하거나 가져오도록 요청하세요.
-- **인터넷 접속속도가 느립니까**? 이벤트장 앞에서 비디오를 보여주는 방법을 계획하여 각 참가자가 비디오를 다운로드할 필요가 없게 합니다. 또는 언플러그드/오프라인 활동을 시도해 보세요.
+- **인터넷 접속 속도가 느립니까**? 이벤트장 앞에서 비디오를 보여주는 방법을 계획하여 각 참가자가 비디오를 다운로드할 필요가 없게 합니다. 또는 언플러그드/오프라인 활동을 시도해 보세요.
 
 #### 가상 이벤트:
 
@@ -168,8 +169,8 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 학생 또는 게스트가 아워오브코드를 완료하면, 성공적으로 이수한 것을 축하해 줍니다. 다음은 이벤트를 더욱 재미 있게 만드는 몇 가지 아이디어입니다.
 
-- 참여자와 학생을 위한[인증서 공유]({{ urls/certificates }}).
-- ["아워오브코드를 해냈어요! 스티커"]({{ promote/resources_stickers }})를 인쇄하거나 또는[Code.org Amazon Store](https://code.org/shop)에서 다른 상품과 기념품을 찾아보세요.
+- 참여자와 학생을 위한 [인증서 공유]({{ urls/certificates }}).
+- ["아워오브코드를 해냈어요! 스티커"]({{ promote/resources_stickers }})를 인쇄하거나 또는 [Code.org Amazon Store](https://code.org/shop)에서 다른 상품과 기념품을 찾아보세요.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
 
 * * *
@@ -184,7 +185,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ### 1. 이벤트 등록
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. 또한 등록을 하면, 지역 학교 또는 학부모에게 이벤트 주최 소식을 알리는 효과가 있습니다. 
+[아워오브코드 이벤트에 가입](/#join)하면, 뉴스 및 아워오브코드를 성공적으로 주최하기 위한 팁이 담긴 이메일을 받게 됩니다. 또한 등록을 하면, 지역 학교 또는 학부모에게 이벤트 주최 소식을 알리는 효과가 있습니다. 
 
 ### 2. 소셜 미디어에 게시
 
@@ -197,7 +198,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 #### 통계
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- 미국 학교의 45%만이 컴퓨터 과학을 가르치고 있다는 사실을 알고 계셨습니까? 각 학생에게 #HourOfCode https://hourofcode.com/을 배울 기회를 주세요
 - 미국의 소프트웨어 전문가 중 26%만이 여성입니다. 더 많은 젊은 여성에게 #HourOfCode https://hourofcode.com/으로 컴퓨터 과학을 소개하세요.
 - 미국에서 컴퓨팅 일자리의 67%는 테크 부문이 아닙니다. #HourOfCode https://hourofcode.com/으로 컴퓨터 과학이 기본 커리큘럼 안에 포함되도록 도와주세요. 
 
@@ -251,12 +252,12 @@ Code.org와 아워오브코드를 지원하는 방법에 관한 더 많은 제�
 Code.org와 파트너사는 모든 배경의 전 학년 (K-12) 남학생과 여학생이 참여하는 모든 아워오브코드 활동을 설계했습니다. 심지어 성인도 재미있게 즐길 수 있습니다!   
 
 
-### 기술 자원봉사자 또는 게스트 스피커의 선정방식은?
+### 기술 자원봉사자 또는 초청 연사는 어떻게 선정하나요?
 
-교사는 자원봉사자를[자원봉사자 맵](https://code.org/volunteer/local)에서 찾습니다. 교사가 연락을 해올 확률을 높이기 위해 프로필을 가능한 한 완벽하게 만들어야 합니다. 게스트 스피커로서 또는 기술 지원 등 어떤 방식으로 자원봉사하고 싶은지 선호사항이 있으면, 프로필 설명란에 표시해 주십시오.   
-
-
-결정되면, 교사가 자원봉사 플랫폼을 통해 연락합니다 (귀하의 이메일 주소가 교사와 공유되지 않습니다). 교사들로부터 너무 많은 요청을 받으면, 선호사항을 업데이트하거나 또는 교사의 이메일 요청 하단에 있는 링크를 클릭하여 구독을 취소할 수 있습니다.   
+교사는 자원봉사자를 [자원봉사자 맵](https://code.org/volunteer/local)에서 찾습니다. 교사에게서 연락을 받을 가능성을 높이려면 프로필을 가능한 한 완벽하게 만들어야 합니다. 초청 연사로서 또는 기술 지원 등 어떤 방식으로 자원봉사하고 싶으신지 프로필 설명란에 표시해 주십시오.   
 
 
-[<button>자원봉사자로 등록해보세요.</button>]({{ urls/volunteer }})
+결정되면, 교사가 자원봉사 플랫폼을 통해 연락합니다 (신청인의 이메일 주소는 교사에게 제공하지 않습니다). 교사들로부터 너무 많은 요청을 받으면, 선호사항을 업데이트하거나 또는 교사의 이메일 요청 하단에 있는 링크를 클릭하여 구독을 취소할 수 있습니다.   
+
+
+[<button>자원봉사자로 등록하세요.</button>]({{ urls/volunteer }})

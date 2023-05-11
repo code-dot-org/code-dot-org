@@ -3797,7 +3797,6 @@
         "courseD_artist_42022": "Tambahkan bentuk kecil ke ujung garis Anda!",
         "courseD_artist_52022": "Bermain dengan keping salju!",
         "courseD_artist_62022": "Coba ubah garis panjang Anda sebesar 150 piksel menjadi 6 garis pendek sebesar **25** piksel, dengan sedikit putaran di akhir.",
-        "courseD_artist_nestedLoops102022": "Ambil kotak dari sebelumnya, tetapi kali ini buat 7 saja, dan letakkan dalam sebuah baris.",
         "courseD_artist_nestedLoops12022": "Gambarlah segitiga untuk memulai tahapan ini.\\\n(Panjang setiap sisi adalah 100 piksel dan Anda harus belok 120 derajat untuk setiap sudut luar.)",
         "courseD_artist_nestedLoops1a2022": "Sekarang ulangi segitiga 6 kali. ",
         "courseD_artist_nestedLoops22022": "Kali ini, selesaikan puzzle dengan menggunakan jumlah blok sesedikit mungkin.",
@@ -4058,7 +4057,29 @@
         "ramp_artist_loops72022": "Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan loops!",
         "ramp_artist_loops82022": "Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan loops.",
         "ramp_artist_loops92022": "Pecahkan puzzle ini dengan menggambar sebuah persegi.",
-        "simcustom_-2022-2": "Coba lakukan sedikit perubahan pada kostum sprite atau code berikut. "
+        "simcustom_-2022-2": "Coba lakukan sedikit perubahan pada kostum sprite atau code berikut. ",
+        "helloworld_food_backgrounds_soccer-2022": "Ayo pelajari cara mengubah latar belakang.",
+        "helloworld_food_backgrounds_space-2022": "Ayo pelajari cara mengubah latar belakang.",
+        "helloworld_food_behaviors_soccer-2022": "Ayo belajar cara menganimasikan sprite dengan perilaku.",
+        "helloworld_food_behaviors_space-2022": "Ayo belajar cara menganimasikan sprite dengan perilaku.",
+        "helloworld_food_click_soccer-2022": "Apa yang membuat sprite ini berbicara?",
+        "helloworld_food_click_space-2022": "Apa yang membuat sprite ini berbicara?",
+        "helloworld_food_costumes_soccer-2022": "Ayo Pelajari cara mengubah tampilan sprite.",
+        "helloworld_food_costumes_space-2022": "Ayo Pelajari cara mengubah tampilan sprite.",
+        "helloworld_food_events_soccer-2022": "Gunakan event `ketika diklik` agar sprite mengucapkan sesuatu.",
+        "helloworld_food_events_space-2022": "Gunakan event `ketika diklik` agar sprite mengucapkan sesuatu.",
+        "helloworld_food_freeplay_soccer-2022": "Saatnya membuat apapun yang kamu inginkan!",
+        "helloworld_food_freeplay_space-2022": "Saatnya membuat apapun yang kamu inginkan!",
+        "helloworld_food_location_soccer-2022": "Berikan lokasi yang berbeda untuk tiap sprite.",
+        "helloworld_food_location_space-2022": "Berikan lokasi yang berbeda untuk tiap sprite.",
+        "helloworld_food_multi_soccer-2022": "Buat masing-masing dari dua sprite kamu mengucapkan sesuatu.",
+        "helloworld_food_multi_space-2022": "Buat masing-masing dari dua sprite kamu mengucapkan sesuatu.",
+        "helloworld_food_say_soccer-2022": "Gunakan blok 'ucapan' untuk membuat saya mengucapkan yang kamu mau!",
+        "helloworld_food_say_space-2022": "Gunakan blok 'ucapan' untuk membuat saya mengucapkan yang kamu mau!",
+        "helloworld_food_sizes_soccer-2022": "Ayo pelajari cara mengubah ukuran sprite.",
+        "helloworld_food_sizes_space-2022": "Ayo pelajari cara mengubah ukuran sprite.",
+        "helloworld_food_sounds_soccer-2022": "Ayo belajar cara memainkan suara.",
+        "helloworld_food_sounds_space-2022": "Ayo belajar cara memainkan suara."
       }
     }
   }

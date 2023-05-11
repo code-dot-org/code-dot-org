@@ -2,16 +2,33 @@
 is:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: leikmaður_1_teljari
+      Actor_2_Counter: leikmaður_2_teljari
       Blue: Blár
       Green: Grænn
       Red: Rauður
       actor: leikmaður
+      adjective: lýsingarorð
       age: aldur
+      animal1score: dýr1skor
+      animal1speed: dýr1hraði
+      animal2score: dýr2skor
+      animal2speed: dýr2hraði
       answer: svar
       armlength: armlengd
       binary: tvíund
       birds: fuglar
+      bit: biti
+      blue1: blátt1
+      blue2: blátt2
+      body-part: líkamshluti
       bodylength: líkamslengd
+      buttonHeight: hnappHæð
+      buttonMargin: hnappJaðar
+      buttonWidth: hnappBreidd
+      cat_score: köttur_skor
+      cat_speed: köttur_hraði
       cats: allir kettir
       color: litur
       counter: teljari

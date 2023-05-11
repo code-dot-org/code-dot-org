@@ -4,14 +4,14 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
-  sortRows
+  sortRows,
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
@@ -29,11 +29,11 @@ import manageStudents, {
   transferStudentsSuccess,
   transferStudentsFailure,
   TransferStatus,
-  TransferType
+  TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
-  selectSection
+  selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -52,7 +52,7 @@ describe('ManageStudentsTable', () => {
       {id: 2, name: 'studentf', rowType: RowType.NEW_STUDENT},
       {id: 4, name: 'studenta', rowType: RowType.STUDENT},
       {id: 3, name: 'studenta', rowType: RowType.STUDENT},
-      {id: 6, name: 'studentf', rowType: RowType.STUDENT}
+      {id: 6, name: 'studentf', rowType: RowType.STUDENT},
     ];
     const columnIndexList = [];
     const orderList = ['asc'];
@@ -72,7 +72,7 @@ describe('ManageStudentsTable', () => {
       studentData: [],
       editingData: {},
       addStatus: {},
-      transferStatus: {}
+      transferStatus: {},
     };
 
     it('does not render MoveStudents if loginType is google_classroom', () => {
@@ -105,7 +105,7 @@ describe('ManageStudentsTable', () => {
         <UnconnectedManageStudentsTable
           {...{
             ...DEFAULT_PROPS,
-            ...{isSectionAssignedCSA: true, sectionId: 101}
+            ...{isSectionAssignedCSA: true, sectionId: 101},
           }}
         />
       );
@@ -122,10 +122,10 @@ describe('ManageStudentsTable', () => {
       hasEverSignedIn: true,
       dependsOnThisSectionForLogin: true,
       loginType: 'picture',
-      rowType: RowType.STUDENT
+      rowType: RowType.STUDENT,
     };
     const fakeStudents = {
-      [fakeStudent.id]: fakeStudent
+      [fakeStudent.id]: fakeStudent,
     };
     const fakeSection = {
       id: 101,
@@ -141,7 +141,7 @@ describe('ManageStudentsTable', () => {
       course_id: 29,
       studentCount: 10,
       students: Object.values(fakeStudents),
-      hidden: false
+      hidden: false,
     };
 
     beforeEach(() => {
@@ -150,7 +150,7 @@ describe('ManageStudentsTable', () => {
         teacherSections,
         manageStudents,
         isRtl,
-        unitSelection
+        unitSelection,
       });
       const store = getStore();
       store.dispatch(setLoginType(fakeSection.login_type));
@@ -206,10 +206,7 @@ describe('ManageStudentsTable', () => {
       expect(manageStudentNameCell().prop('isEditing')).to.be.true;
 
       // Find the name input
-      const nameInput = () =>
-        manageStudentNameCell()
-          .find('input')
-          .first();
+      const nameInput = () => manageStudentNameCell().find('input').first();
       expect(nameInput().prop('value')).to.equal(fakeStudent.name);
 
       // Simulate a name change
@@ -244,7 +241,7 @@ describe('ManageStudentsTable', () => {
       const wordSection = {...fakeSection, loginType: SectionLoginType.word};
       const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
       const wordStudents = {
-        [wordStudent.id]: wordStudent
+        [wordStudent.id]: wordStudent,
       };
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
@@ -273,7 +270,7 @@ describe('ManageStudentsTable', () => {
       const emailSection = {...fakeSection, loginType: SectionLoginType.email};
       const emailStudent = {...fakeStudent, loginType: SectionLoginType.email};
       const emailStudents = {
-        [emailStudent.id]: emailStudent
+        [emailStudent.id]: emailStudent,
       };
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
@@ -299,7 +296,7 @@ describe('ManageStudentsTable', () => {
     it('displays notification for password reset length if state.showPasswordLengthFailure is true', () => {
       const emailSection = {
         ...fakeSection,
-        loginType: SectionLoginType.email
+        loginType: SectionLoginType.email,
       };
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
@@ -323,7 +320,7 @@ describe('ManageStudentsTable', () => {
     it('renders correctly if loginType is clever', () => {
       const cleverSection = {
         ...fakeSection,
-        loginType: SectionLoginType.clever
+        loginType: SectionLoginType.clever,
       };
       getStore().dispatch(setLoginType(SectionLoginType.clever));
       getStore().dispatch(setSections([cleverSection]));
@@ -344,7 +341,7 @@ describe('ManageStudentsTable', () => {
     it('renders correctly if loginType is google_classroom', () => {
       const googleSection = {
         ...fakeSection,
-        loginType: SectionLoginType.google_classroom
+        loginType: SectionLoginType.google_classroom,
       };
       getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
       getStore().dispatch(setSections([googleSection]));
@@ -367,7 +364,7 @@ describe('ManageStudentsTable', () => {
     it('opens dialog correctly for Google Classroom sections', () => {
       const googleSection = {
         ...fakeSection,
-        loginType: SectionLoginType.google_classroom
+        loginType: SectionLoginType.google_classroom,
       };
       getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
       getStore().dispatch(setSections([googleSection]));
@@ -390,7 +387,7 @@ describe('ManageStudentsTable', () => {
     it('opens dialog correctly for Clever sections', () => {
       const cleverSection = {
         ...fakeSection,
-        loginType: SectionLoginType.clever
+        loginType: SectionLoginType.clever,
       };
       getStore().dispatch(setLoginType(SectionLoginType.clever));
       getStore().dispatch(setSections([cleverSection]));
@@ -414,7 +411,7 @@ describe('ManageStudentsTable', () => {
       const wordSection = {...fakeSection, loginType: SectionLoginType.word};
       const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
       const wordStudents = {
-        [wordStudent.id]: wordStudent
+        [wordStudent.id]: wordStudent,
       };
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
@@ -424,7 +421,7 @@ describe('ManageStudentsTable', () => {
         sectionCapacity: 500,
         sectionCode: 'ABCDEF',
         sectionStudentCount: 500,
-        numStudents: 1
+        numStudents: 1,
       };
 
       describe('does not render on success, or non-capacity related fail', () => {
@@ -436,13 +433,13 @@ describe('ManageStudentsTable', () => {
             gender: 'f',
             secretPicturePath: '/wizard.jpg',
             loginType: 'picture',
-            isEditing: false
+            isEditing: false,
           };
           describe('add', () => {
             it('does not fire full notification', () => {
               getStore().dispatch(
                 addStudentsSuccess(1, -10, {
-                  111: studentDataToAdd
+                  111: studentDataToAdd,
                 })
               );
 
@@ -469,7 +466,7 @@ describe('ManageStudentsTable', () => {
                 type: TransferType.MOVE_STUDENTS,
                 error: null,
                 numStudents: 3,
-                sectionDisplay: 'ABCDEF'
+                sectionDisplay: 'ABCDEF',
               };
               const {type, numStudents, sectionDisplay} = transferStatus;
 
@@ -576,7 +573,7 @@ describe('ManageStudentsTable', () => {
                     type: null,
                     error: null,
                     sectionDisplay: '',
-                    verb: 'move'
+                    verb: 'move',
                   }}
                 />
               )
@@ -602,7 +599,7 @@ describe('ManageStudentsTable', () => {
                     type: null,
                     error: null,
                     sectionDisplay: '',
-                    verb: 'copy'
+                    verb: 'copy',
                   }}
                 />
               )
@@ -652,7 +649,7 @@ describe('ManageStudentsTable', () => {
                     type: null,
                     error: null,
                     sectionDisplay: '',
-                    verb: 'move'
+                    verb: 'move',
                   }}
                 />
               )
@@ -678,7 +675,7 @@ describe('ManageStudentsTable', () => {
                     type: null,
                     error: null,
                     sectionDisplay: '',
-                    verb: 'copy'
+                    verb: 'copy',
                   }}
                 />
               )

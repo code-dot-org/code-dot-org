@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 Direct students to the activity
 
-- एक व्हाइटबोर्ड पर ट्यूटोरियल लिंक लिखें। प्रतिभागियों की संख्या के तहत [आपके चयनित ट्यूटोरियल के लिए जानकारी]({{ urls/learn }}) पर सूचीबद्ध लिंक ढूंढें।
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -138,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
 
 * * *
@@ -152,6 +151,6 @@ What if a student finishes early?
 
 ### अवर ओफ कोड के बाद क्या?
 
-कंप्यूटर विज्ञान को ऑवर ऑफ़ कोड के साथ समाप्त नहीं करना है! हमारा पाठ्यक्रम वेब-आधारित है और हमेशा के लिए उपयोग करने के लिए नि:शुल्क है। अपने स्कूल और छात्रों के लिए सीएस लाने के बारे में [जानें](/beyond)। 
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

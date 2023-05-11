@@ -1,0 +1,20 @@
+{
+  "blockly_blockPlaySoundTooltip": "přehraj zvuk",
+  "blockly_blockPlaySoundAtMeasureTooltip": "přehraj zvuk",
+  "blockly_blockRepeatTooltip": "opakuj",
+  "blockly_blockRestTooltip": "zbytek",
+  "blockly_blockWhenRun": "při spuštění",
+  "blockly_blockWhenRunTooltip": "při spuštění",
+  "blockly_functionNamePlaceholder": "moje funkce",
+  "blockly_toolboxCategoryEffects": "Efekty",
+  "blockly_toolboxCategoryEvents": "Události",
+  "blockly_toolboxCategoryFunctions": "Funkce",
+  "blockly_toolboxCategoryLogic": "Logické",
+  "blockly_toolboxCategoryMath": "Matematické",
+  "blockly_toolboxCategoryPlay": "Hrát",
+  "blockly_toolboxCategoryVariables": "Proměnné",
+  "feedback": "Připomínky",
+  "share": "Sdílet",
+  "startOver": "Začít znovu",
+  "upload": "Nahrát"
+}

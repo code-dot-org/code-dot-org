@@ -4,3 +4,4 @@ wrong 'The bird will not move.', feedback: 'Incorrect. The repeat block will `mo
 wrong 'The bird will move forward only one space.', feedback: 'Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.'
 right 'The bird will repeat `move forward` 5 times, taking him to the pig.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The repeat block will `move the bird forward` 5 times, taking him to the pig.'
+allow_multiple_attempts false

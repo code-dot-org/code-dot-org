@@ -1,0 +1,1526 @@
+{
+  "hu-HU": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "cute": "cuki"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "cute": "cuki"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "cute": "cuki"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "cute": "cuki"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "Név",
+          "Color": "Szín",
+          "Food": "Étel",
+          "City": "Település",
+          "text": "szöveg"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "Név",
+          "Color": "Szín",
+          "Food": "Étel",
+          "City": "Település",
+          "text": "szöveg"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing fastest_2021": {
+          "s": "s",
+          "k": "p",
+          "0": "0"
+        },
+        "CSD U1 processing fastest_2022": {
+          "s": "s",
+          "k": "p",
+          "0": "0"
+        },
+        "CSD U1 processing guess_2021": {
+          "?": "?",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "szöveg"
+        },
+        "CSD U1 processing guess_2022": {
+          "?": "?",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "szöveg"
+        },
+        "CSD U1 processing live_2021": {
+          "walking": "séta",
+          "bear": "medve",
+          "rat": "patkány"
+        },
+        "CSD U1 processing live_2022": {
+          "walking": "séta",
+          "bear": "medve",
+          "rat": "patkány"
+        },
+        "CSD U1 processing npark_2021": {
+          "Correct!": "Helyes!",
+          "Sorry!": "Ne haragudj!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Correct!": "Helyes!",
+          "Sorry!": "Ne haragudj!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Vissza"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Vissza"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Star Wars",
+          "Yes": "Igen",
+          "No": "Nem",
+          "text": "szöveg"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Star Wars",
+          "Yes": "Igen",
+          "No": "Nem",
+          "text": "szöveg"
+        },
+        "CSD U1 storage outfit_2021": {
+          "Clear": "Törlés",
+          "white": "fehér",
+          "pink": "pink",
+          "green": "zöld",
+          "black": "fekete",
+          "purple": "lila"
+        },
+        "CSD U1 storage outfit_2022": {
+          "Clear": "Törlés",
+          "white": "fehér",
+          "pink": "pink",
+          "green": "zöld",
+          "black": "fekete",
+          "purple": "lila"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Vidám"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Hal"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "Észak",
+          "South": "Dél",
+          "East": "Kelet",
+          "West": "Nyugat"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Közepes"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "balra",
+          "right": "jobbra",
+          "red": "piros",
+          "yellow": "sárga",
+          "green": "zöld",
+          "purple": "lila"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "on": "be",
+          "fast": "gyors",
+          "slow": "lassú",
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "balra",
+          "right": "jobbra"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "yellow": "sárga",
+          "green": "zöld",
+          "blue": "kék",
+          "orange": "narancs"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "csendes",
+          "Test": "Teszt"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "Red": "Piros",
+          "Blue": "Kék"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0",
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Név"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Vidám"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B",
+          "Note:": "Megjegyzés:"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Eredmény",
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "Név:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Save": "Mentés"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "fekete",
+          "white": "fehér"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "fekete",
+          "white": "fehér"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "Vidám",
+          "?": "?"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "cím"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "Fehér",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "fel",
+          "down": "le",
+          "left": "balra",
+          "right": "jobbra"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "név"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "ki",
+          "on": "be"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "szöveg",
+          "high": "magas",
+          "low": "alacsony"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Frissíteni"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "Megcsináltad!"
+        },
+        "CSD U6 LED all": {
+          "on": "be"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "be"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "be"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "be"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 analog light": {
+          "Update": "Frissíteni"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Frissíteni"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Frissíteni"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Frissíteni"
+        },
+        "CSD U6 array piano": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "Első"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "Első"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "Első"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "Első"
+        },
+        "CSD U6 change": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 change_2018": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 change_2019": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 change_2021": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Közepes"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Közepes"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Közepes"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Közepes"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "Vidám",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "Vidám",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "Vidám",
+          "?": "?"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "Vidám",
+          "?": "?"
+        },
+        "CSD U6 frequency": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 get toggle": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Save": "Mentés"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Save": "Mentés"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Save": "Mentés"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Save": "Mentés"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Elküldés"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Elküldés"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Elküldés"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Elküldés"
+        },
+        "CSD U6 getters debug": {
+          "slow": "lassú",
+          "fast": "gyors",
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "gyors",
+          "slow": "lassú",
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "gyors",
+          "slow": "lassú",
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "gyors",
+          "slow": "lassú",
+          "short": "rövid",
+          "long": "hosszú",
+          "low": "alacsony",
+          "high": "magas"
+        },
+        "CSD U6 interval": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 interval_2018": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 interval_2019": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 interval_2021": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 light show": {
+          "on": "be",
+          "off": "ki"
+        },
+        "CSD U6 light show_2018": {
+          "on": "be",
+          "off": "ki"
+        },
+        "CSD U6 light show_2019": {
+          "on": "be",
+          "off": "ki"
+        },
+        "CSD U6 light show_2021": {
+          "on": "be",
+          "off": "ki"
+        },
+        "CSD U6 params create colors": {
+          "Red": "Piros",
+          "Blue": "Kék"
+        },
+        "CSD U6 params create colors_2018": {
+          "Red": "Piros",
+          "Blue": "Kék"
+        },
+        "CSD U6 params create colors_2019": {
+          "Red": "Piros",
+          "Blue": "Kék"
+        },
+        "CSD U6 params create colors_2021": {
+          "Red": "Piros",
+          "Blue": "Kék"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "szöveg",
+          "high": "magas",
+          "low": "alacsony"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "szöveg",
+          "high": "magas",
+          "low": "alacsony"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "szöveg",
+          "high": "magas",
+          "low": "alacsony"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "szöveg",
+          "high": "magas",
+          "low": "alacsony"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "cím"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "cím"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "cím"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "cím"
+        },
+        "CSD U6 slider intro": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "rövid",
+          "long": "hosszú"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Siker!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Siker!"
+        },
+        "CSDU4 Connecting Screens": {
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék"
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Cancel": "Mégsem",
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Yes": "Igen",
+          "No": "Nem",
+          "Save": "Mentés"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Cancel": "Mégsem",
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Yes": "Igen",
+          "No": "Nem",
+          "Save": "Mentés"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Cancel": "Mégsem",
+          "Name:": "Név:",
+          "Red": "Piros",
+          "Green": "Zöld",
+          "Blue": "Kék",
+          "Yes": "Igen",
+          "No": "Nem",
+          "Save": "Mentés"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "Rólunk",
+          "Why?": "Miért?",
+          "I don't know": "Nem tudom",
+          "When?": "Mikor?",
+          "About Us": "Rólunk"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "Rólunk",
+          "Why?": "Miért?",
+          "I don't know": "Nem tudom",
+          "When?": "Mikor?",
+          "About Us": "Rólunk"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "Rólunk",
+          "Why?": "Miért?",
+          "I don't know": "Nem tudom",
+          "When?": "Mikor?",
+          "About Us": "Rólunk"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Elrejt",
+          "Show": "Mutat"
+        },
+        "CSDU4 List App Demo": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Done": "Kész",
+          "Cancel": "Mégsem"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Done": "Kész",
+          "Cancel": "Mégsem"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "Rólunk",
+          "About Us": "Rólunk",
+          "Done": "Kész",
+          "Cancel": "Mégsem"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "Rólunk",
+          "Submit": "Elküldés",
+          "Why?": "Miért?",
+          "When?": "Mikor?",
+          "About Us": "Rólunk",
+          "Correct!": "Helyes!"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "Rólunk",
+          "Submit": "Elküldés",
+          "Why?": "Miért?",
+          "When?": "Mikor?",
+          "About Us": "Rólunk",
+          "Correct!": "Helyes!"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "Rólunk",
+          "Submit": "Elküldés",
+          "Why?": "Miért?",
+          "When?": "Mikor?",
+          "About Us": "Rólunk",
+          "Correct!": "Helyes!"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Vissza"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Siker!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Siker!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Siker!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Siker!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Siker!"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "C",
+          "D": "D",
+          "E": "K",
+          "F": "F",
+          "G": "G",
+          "A": "A",
+          "B": "B"
+        },
+        "allthethings design mode elements": {
+          "text": "szöveg"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Kezdés"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Kezdés"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Kezdés"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Kezdés"
+        },
+        "csd-apps for good-2": {
+          "Next": "Következő",
+          "Home": "Főmenü"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Következő",
+          "Home": "Főmenü"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-explore ui-2": {
+          "Next": "Következő",
+          "Home": "Főmenü"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Következő",
+          "Home": "Főmenü"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-4": {
+          "Correct!": "Helyes!",
+          "Sorry!": "Ne haragudj!"
+        },
+        "csd-explore ui-4_2022": {
+          "Correct!": "Helyes!",
+          "Sorry!": "Ne haragudj!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-6": {
+          "Next": "Következő"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Következő"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Green Glass Door": "Zöld üvegajtó",
+          "Accepted": "Elfogadva",
+          "Rejected": "Elutasítva"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Green Glass Door": "Zöld üvegajtó",
+          "Accepted": "Elfogadva",
+          "Rejected": "Elutasítva"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Következő"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Következő"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "igen",
+          "no": "nem",
+          "Raspado Recommender": "Raspado ajánló",
+          "Predict": "Előrejelzés"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "igen",
+          "no": "nem",
+          "Raspado Recommender": "Raspado ajánló",
+          "Predict": "Előrejelzés"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Tovább",
+          "Loading...": "Betöltés..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Tovább",
+          "Loading...": "Betöltés..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "Őrült",
+          "Predict": "Előrejelzés"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Őrült",
+          "Predict": "Előrejelzés"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "Ny",
+          "A": "A",
+          "yes": "igen",
+          "no": "nem",
+          "head": "fej"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "Ny",
+          "A": "A",
+          "yes": "igen",
+          "no": "nem",
+          "head": "fej"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "Őrült",
+          "Predict": "Előrejelzés"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "Őrült",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice if quotes": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés",
+          "Back": "Vissza"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés",
+          "Back": "Vissza"
+        },
+        "ml-models in applab-choice predict typos": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "B": "B",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "B": "B",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "Igen",
+          "No": "Nem",
+          "Predict": "Előrejelzés"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Improved Shoe Recommender": "Továbbfejlesztett cipőajánló",
+          "Sports": "Sportok"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Improved Shoe Recommender": "Továbbfejlesztett cipőajánló",
+          "Sports": "Sportok"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "A legjobb cipőajánló"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "A legjobb cipőajánló"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Cipőajánló"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Cipőajánló"
+        },
+        "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Riasztórendszer vezetőknek",
+          "rain": "esős",
+          "snow": "hó",
+          "cloudy": "felhős",
+          "night": "éjszaka",
+          "dusk": "Alkonyat",
+          "Predict": "Előrejelzés"
+        },
+        "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Riasztórendszer vezetőknek",
+          "rain": "esős",
+          "snow": "hó",
+          "cloudy": "felhős",
+          "night": "éjszaka",
+          "dusk": "Alkonyat",
+          "Predict": "Előrejelzés"
+        }
+      }
+    }
+  }
+}

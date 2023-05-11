@@ -1,5 +1,5 @@
 /** @file Wrapper around Johnny-Five Button component */
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 import '../../../../../utils'; // For Function.prototype.inherits
 import {EXTERNAL_PINS} from './PlaygroundConstants';
 
@@ -16,7 +16,7 @@ export default function PlaygroundButton(opts) {
 
   // Add a read-only `isPressed` property
   Object.defineProperty(this, 'isPressed', {
-    get: () => this.value === 1
+    get: () => this.value === 1,
   });
 }
 PlaygroundButton.inherits(five.Button);

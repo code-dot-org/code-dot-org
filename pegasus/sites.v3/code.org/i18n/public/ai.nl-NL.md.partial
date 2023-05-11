@@ -114,3 +114,5 @@ De niveaus 2-4 gebruiken een vooraf getraind model geleverd door de [TensorFlow]
 De niveaus 6-8 gebruiken een \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We kijken naar elk onderdeel van de vis (zoals ogen, mond, lichaam) en assembleren alle metadata voor de onderdelen (zoals aantal tanden, lichaamsvorm) in een vector van getallen voor elke vis. We gebruiken deze vectoren om de SVM te trainen. Op basis van de trainingsgegevens verdeelt de SVM de "ruimte" van alle mogelijke vissen in twee delen, die corresponderen met de klassen die we proberen te leren (zoals "blauw" of "niet blauw").
 
 [[Terug aan de top]](#top)
+
+{{ visit_partial_event_logger }}

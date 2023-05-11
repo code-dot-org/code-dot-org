@@ -13,15 +13,35 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {
   dismissedRedirectWarning,
-  onDismissRedirectWarning
+  onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {pegasus, studio} from '../../../lib/util/urlHelpers';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
+// Scripts that users will be warned are outdated and have been succeeded by others.
+// This object in the form of {scriptName : description of warning}.
+const OUTDATED_SCRIPT_NAMES_AND_DESC = {
+  course1: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide'),
+  }),
+  course2: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide'),
+  }),
+  course3: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide'),
+  }),
+  course4: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide'),
+  }),
+  '20-hour': i18n.outdatedCourseWarningDescCoursesAccelCourse({
+    expressCourseLink: studio('/s/express'),
+  }),
+};
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -44,7 +64,7 @@ class UnitOverviewHeader extends Component {
     // provided by redux
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
-      courseViewPath: PropTypes.string.isRequired
+      courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
     courseVersionId: PropTypes.number.isRequired,
@@ -57,7 +77,7 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   componentDidMount() {
@@ -80,7 +100,7 @@ class UnitOverviewHeader extends Component {
       url: `/api/v1/user_scripts/${this.props.scriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true})
+      data: JSON.stringify({version_warning_dismissed: true}),
     });
   };
 
@@ -102,7 +122,7 @@ class UnitOverviewHeader extends Component {
       courseName,
       userId,
       isVerifiedInstructor,
-      hasVerifiedResources
+      hasVerifiedResources,
     } = this.props;
 
     const displayVerifiedResources =
@@ -113,6 +133,10 @@ class UnitOverviewHeader extends Component {
     const displayVersionWarning =
       showRedirectWarning &&
       !dismissedRedirectWarning(courseName || scriptName);
+
+    // Detect if the user is using an outdated script
+    const displayOutdatedCourseWarning =
+      !!OUTDATED_SCRIPT_NAMES_AND_DESC[scriptName];
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -136,13 +160,26 @@ class UnitOverviewHeader extends Component {
             viewAs={viewAs}
             firehoseAnalyticsData={{
               script_id: scriptId,
-              user_id: userId
+              user_id: userId,
             }}
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
+        )}
+        {displayOutdatedCourseWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.outdatedCourseWarningTitle()}
+            details={
+              <SafeMarkdown
+                markdown={OUTDATED_SCRIPT_NAMES_AND_DESC[scriptName]}
+              />
+            }
+            dismissible={true}
+            width={SCRIPT_OVERVIEW_WIDTH}
+          />
         )}
         {displayVersionWarning && (
           <Notification
@@ -214,31 +251,31 @@ class UnitOverviewHeader extends Component {
 
 const styles = {
   heading: {
-    width: '100%'
+    width: '100%',
   },
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   title: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   versionLabel: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
-    color: color.charcoal
+    color: color.charcoal,
   },
   versionDropdown: {
-    marginBottom: 13
+    marginBottom: 13,
   },
   description: {
-    width: 700
-  }
+    width: 700,
+  },
 };
 
 export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
@@ -256,5 +293,5 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  localeCode: state.locales.localeCode
+  localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);

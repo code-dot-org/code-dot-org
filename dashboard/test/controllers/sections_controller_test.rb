@@ -14,14 +14,14 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
   setup do
     # Expect any scripts/courses to be assignable unless specified by test
     UnitGroup.stubs(:course_assignable?).returns(true)
-    Script.stubs(:course_assignable?).returns(true)
+    Unit.stubs(:course_assignable?).returns(true)
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
@@ -193,5 +193,34 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to section_path(id: @picture_section.code)
+  end
+
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :redirect
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :teacher, response: :success
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
+
+  test "new redirects to home if loginType and participantType are not present" do
+    user = create :admin
+    sign_in user
+
+    get :new
+    assert_redirected_to '/home'
+
+    get :new, params: {participantType: 'student'}
+    assert_redirected_to '/home'
+
+    get :new, params: {loginType: 'word'}
+    assert_redirected_to '/home'
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
+  end
+
+  test 'returns forbidden if requested edit section does not belong to teacher' do
+    sign_in @teacher
+    other_teacher_section = create :section
+    get :edit, params: {id: other_teacher_section.id}
+    assert_response :forbidden
   end
 end

@@ -31,7 +31,7 @@ export default class CollisionMaskWalls extends Walls {
             wallColor: WALL_COLOR,
             wallMap: wallMap,
             overlayURI: this.wallOverlayURI(imageData, wallMap),
-            srcUrl: skin.wallMaps[mapName].srcUrl
+            srcUrl: skin.wallMaps[mapName].srcUrl,
           };
         });
       })

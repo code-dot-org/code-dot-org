@@ -30,14 +30,14 @@ export default function ChangeEventHandler(element, callback) {
   this.initialValue_ = '';
 }
 
-ChangeEventHandler.prototype.onFocus = function() {
+ChangeEventHandler.prototype.onFocus = function () {
   this.initialValue_ = this.getValue();
 };
 
 /**
  * @param {!Event} event
  */
-ChangeEventHandler.prototype.onEnter = function(event) {
+ChangeEventHandler.prototype.onEnter = function (event) {
   if (this.getValue() !== this.initialValue_) {
     this.initialValue_ = this.getValue();
     this.callback_(event);
@@ -47,7 +47,7 @@ ChangeEventHandler.prototype.onEnter = function(event) {
 /**
  * @param {!Event} event
  */
-ChangeEventHandler.prototype.onBlur = function(event) {
+ChangeEventHandler.prototype.onBlur = function (event) {
   if (this.getValue() !== this.initialValue_) {
     this.callback_(event);
   }
@@ -59,7 +59,7 @@ ChangeEventHandler.prototype.onBlur = function(event) {
  * to the user when the element is a contenteditable div.
  * @returns {string}
  */
-ChangeEventHandler.prototype.getValue = function() {
+ChangeEventHandler.prototype.getValue = function () {
   var elementType = elementLibrary.getElementType(this.element_);
   switch (elementType) {
     case elementLibrary.ElementType.TEXT_INPUT:
@@ -79,7 +79,7 @@ ChangeEventHandler.prototype.getValue = function() {
  * @param {Element} element
  * @param {Function} callback
  */
-ChangeEventHandler.addChangeEventHandler = function(element, callback) {
+ChangeEventHandler.addChangeEventHandler = function (element, callback) {
   var handler = new ChangeEventHandler(element, callback);
   element.addEventListener('focus', handler.onFocus.bind(handler));
   // Handle enter key for text inputs, which cannot contain newlines.
@@ -87,7 +87,7 @@ ChangeEventHandler.addChangeEventHandler = function(element, callback) {
   if (elementType === elementLibrary.ElementType.TEXT_INPUT) {
     element.addEventListener(
       'keydown',
-      function(event) {
+      function (event) {
         if (event.keyCode === KeyCodes.ENTER) {
           this.onEnter(event);
         }

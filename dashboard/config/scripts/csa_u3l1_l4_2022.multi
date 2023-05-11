@@ -9,3 +9,5 @@ wrong '`nums = {2, 4, 6, 8, 10};`'
 markdown <<MARKDOWN
 Which of the following code segments declares and initializes a 1D array to store the values 2, 4, 6, 8, 10?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -168,6 +168,10 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           student_description: 'Fáze 2 Online: Promíchané letní studium'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Hudba
         algebraPD2b:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -1604,6 +1608,9 @@ cs:
               display_name: Přehled
         dance-2019:
           title: Taneční večírek (2019)
+          description_short: Naprogramujte si taneční párty ke sdílení se svými přáteli.
+            K vidění a slyšení bude Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+            Gomez, hudba z Disneyho „Encanto,“ a další!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
           student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
             s kamarády!
@@ -2817,6 +2824,10 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Začínáme
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2997,6 +3008,9 @@ cs:
           description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi
             životopisu
           description: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi životopisu
+          lessons:
+            lesson-7:
+              name: Úvod ke sprajtům
         csd1-2022:
           lesson_groups:
             csd1_1:
@@ -3079,18 +3093,65 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Obsah
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Proměnné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Jednorozměnrá (1D) pole
+            lesson-3:
+              name: Cykly "For"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        hello-world-space-2022:
+          title: 'Hello World: Prostora'
+        hello-world-soccer-2022:
+          title: 'Hello World: Fotbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitola 1
+              display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
-              display_name: Kapitola 2
-          title: Řešení problémů
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
         csd4-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Prototypování aplikací'
-          title: Proces návrhu
         csd5-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3103,17 +3164,466 @@ cs:
               display_name: 'Kapitola 2: Tvorba her'
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitola 1
             lessonGroup-3:
-              display_name: Kapitola 2
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
             lessonGroup-3:
               display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Lab
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Co je to za zvuk?
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '1.  lekce: Digitální informace'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lekce: Internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Data
+            csp_loops:
+              display_name: Cykly
+            csp_project:
+              display_name: Projekt
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznamy
+            lessonGroup-3:
+              display_name: Cykly
+            lessonGroup-5:
+              display_name: Projekt
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '9.  lekce: Data'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Hodnocení
+        csp-playground:
+          description_audience: Pisatelé životopisů
+          description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi
+            životopisu
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Řešení problémů
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+          title: Řešení problémů
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+          description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce
+            vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti
+            řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní
+            projekty ke sdílení s přáteli, rodinou a učiteli.
+          student_description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené
+            lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet
+            schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry
+            a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          description_short: 'Úvod do počítačové vědy pro předškoláky: kombinuje naše
+            nejlepší kurzy pro mateřskou školu a pro první třídu.'
+          description_audience: 'Věk: 4-8 let'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_sprites:
+              display_name: Postavy
+            lessonGroup-9:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_functions:
+              display_name: Funkce
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          title: Rychlý kurz (2021)
+          description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené lekce
+            vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet schopnosti
+            řešení problémů a pracovat na zábavných výzvách! Dělejte hry a kreativní
+            projekty ke sdílení s přáteli, rodinou a učiteli.
+          student_description: Učte se počítačovou vědu tak, že vyzkoušíte níže uvedené
+            lekce vlastním tempem! Učte se vytvářet počítačové programy, rozvíjet
+            schopnosti řešení problémů a pracovat na zábavných výzvách! Dělejte hry
+            a kreativní projekty ke sdílení s přáteli, rodinou a učiteli.
+          description_short: 'Úvod do počítačové vědy: kombinuje to nejlepší z našich
+            osnov pro starší ročníky základní školy.'
+          description_audience: 'Věk: 9-18 let'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+            lessonGroup-5:
+              display_name: Projekt na zakončení kurzu
+          student_description: Učte se základy počítačových věd a internetové bezpečnosti.
+            Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete
+            moci sdílet.
+          description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+          description_audience: 'Věk: 4-7 let'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_impacts:
+              display_name: Dopady počítačů
+            csf_events:
+              display_name: Události
+            lessonGroup-6:
+              display_name: Projekt na zakončení kurzu
+          student_description: Učte se základy počítačových věd a internetové bezpečnosti.
+            Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete
+            moci sdílet.
+          description_short: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+            Obdoba kurzu A, ale s větší hloubkou probíraných koncepcí.
+          description_audience: 'Věk: 5-8 let'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          student_description: Vytvářejte programy s posloupnostmi, cykly a událostmi.
+            Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení
+            problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu
+            vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
+          description_short: Naučte se základy počítačové vědy a tvořte své vlastní
+            umění, příběhy a hry.
+          description_audience: 'Věk: 6-10 let'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_events:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          title: Kurz D (2021)
+          description_short: Naučte se něco o podmíněných příkazech. Vytvořte své
+            vlastní umění, hry a dokonce i taneční večírek.
+          description_audience: 'Věk: 7-11 let'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sprites:
+              display_name: Postavy
+            ramp_up:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
+            csf_nested_loops:
+              display_name: Podmínky
+            lessonGroup-7:
+              display_name: Dopady počítačů
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          description_audience: 'Věk: 8-12 let'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-3:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-3:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Úvod do App Lab
+            lessonGroup-4:
+              display_name: Kapitola 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        vpl-csd-ci-1:
+          title: 'Modul 1: Příprava na výuku řešení problémů a výpočtů'
+          description: "Tento profesionální výukový modul je navržen tak, aby Vám
+            pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto
+            profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod so řešení
+            problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené v této
+            jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:**
+            30 minut"
+          student_description: "Tento profesionální výukový modul je navržen tak,
+            aby Vám pomohl připravit se na jednotku řešení problémů a výpočtů Code.org.
+            \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat
+            úvod so řešení problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené
+            v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná
+            doba:** 30 minut"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Výuka vývoje webu
+          title: 'Modul 2: Příprava na výuku vývoje webu'
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám
+            pomohl připravit se na výuku jednotky Vývoj webu Code.org. \n\n**V tomto
+            profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do vývoje
+            webu.\n-   Praktikovat klíčové koncepce obsažené v této jednotce.\n-   Zapojovat
+            se do Webové laboratoře.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná
+            doba:** 90 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu,
+            aby Vám pomohl připravit se na výuku jednotky Vývoj webu Code.org. \n\n**V tomto
+            profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do vývoje
+            webu.\n-   Praktikovat klíčové koncepce obsažené v této jednotce.\n-   Zapojovat
+            se do Webové laboratoře.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná
+            doba:** 90 minut"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Příprava na výuku interaktivních animací a her
+          title: 'Modul 3: Příprava na výuku interaktivních animací a her '
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám
+            pomohl připravit se na výuku jednotky Interaktivní animace a hry Code.org.
+            \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat
+            úvod do Interaktivních animací a her.\n-   Praktikovat klíčové koncepce
+            obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-   Zkoumat
+            projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu,
+            aby Vám pomohl připravit se na výuku jednotky Interaktivní animace a hry
+            Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-
+            \  Absolvovat úvod do Interaktivních animací a her.\n-   Praktikovat klíčové
+            koncepce obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-
+            \  Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+        vpl-csd-ci-4:
+          title: " Modul 4: Příprava na výuku procesu návrhu"
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám
+            pomohl připravit se na výuku jednotky Proces návrhu Code.org. \n\n**V tomto
+            profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Procesu
+            návrhu.\n-   Praktikovat klíčové koncepce obsažené v této jednotce.\n-
+            \  Zapojovat se do Laboratoře aplikací.\n-   Zkoumat projekty na koncích
+            kapitol.\n\n**Navrhovaná doba:** 90 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu,
+            aby Vám pomohl připravit se na výuku jednotky Proces návrhu Code.org.
+            \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat
+            úvod do Procesu návrhu.\n-   Praktikovat klíčové koncepce obsažené v této
+            jednotce.\n-   Zapojovat se do Laboratoře aplikací.\n-   Zkoumat projekty
+            na koncích kapitol.\n\n**Navrhovaná doba:** 90 minut"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Příprava na výuku dat a společnosti'
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám
+            pomohl připravit se na výuku jednotky Data a společnost Code.org. \n\n**V tomto
+            profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Dat
+            a společnosti.\n-   Praktikovat klíčové koncepce obsažené v této jednotce.\n-
+            \  Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 90 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu,
+            aby Vám pomohl připravit se na výuku jednotky Data a společnost Code.org.
+            \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat
+            úvod do Dat a společnosti.\n-   Praktikovat klíčové koncepce obsažené
+            v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná
+            doba:** 90 minut"
+        vpl-csd-ci-7:
+          title: 'Modul 7: Příprava na výuku umělé inteligence a strojového učení'
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám
+            pomohl připravit se na výuku jednotky Umělá inteligence a strojové učení
+            Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-
+            \  Absolvovat úvod do umělé inteligence a strojového učení.\n-   Praktikovat
+            klíčové koncepce obsažené v této jednotce.\n-   Zapojovat se do Laboratoře
+            umělé inteligence a Laboratoře aplikací.\n-   Zkoumat projekty na koncích
+            kapitol.\n-   Dělat plán na zavedení jednotky se studenty.\n\n**Navrhovaná
+            doba:** 120 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu,
+            aby Vám pomohl připravit se na výuku jednotky Umělá inteligence a strojové
+            učení Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-
+            \  Absolvovat úvod do umělé inteligence a strojového učení.\n-   Praktikovat
+            klíčové koncepce obsažené v této jednotce.\n-   Zapojovat se do Laboratoře
+            umělé inteligence a Laboratoře aplikací.\n-   Zkoumat projekty na koncích
+            kapitol.\n-   Dělat plán na zavedení jednotky se studenty.\n\n**Navrhovaná
+            doba:** 120 minut"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Úvod
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Rekapitulace
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Rekapitulace

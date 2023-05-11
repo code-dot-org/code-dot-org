@@ -1,0 +1,18 @@
+{
+  "addCSSButton": "Dodaj CSS",
+  "addImageButton": "Dodaj obraz",
+  "addHTMLButton": "Dodaj HTML",
+  "closeFullscreenPreview": "Zamknij podgląd pełnoekranowy",
+  "currentProjectCapacity": "{currentMegabytes}MB z {totalMegabytes}MB używane",
+  "loadFailure": "Przykro nam, z jakiegoś powodu nie udało się załadować Web Lab. Błąd: {message}",
+  "openFullscreenPreview": "Otwórz podgląd pełnoekranowy",
+  "refreshPreview": "Odśwież i zapisz",
+  "reloading": "Przeładowanie...",
+  "reset": "Zresetuj Web Lab",
+  "resetComplete": "Resetowanie Web Lab zakończone",
+  "resetFailure": "Nie udało się zresetować Web Lab: {message}.",
+  "toggleInspectorOn": "Inspektor: Wył",
+  "toggleInspectorOff": "Inspektor: Wł.",
+  "troubleshootingSupport": "Zapoznaj się z naszym artykułem pomocy technicznej [\"Rozwiązywanie problemów z laboratorium internetowym\"]({url}), aby uzyskać więcej informacji.",
+  "uploadError": "Błąd przesyłania"
+}

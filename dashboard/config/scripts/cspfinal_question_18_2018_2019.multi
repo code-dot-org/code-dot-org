@@ -23,3 +23,5 @@ It would be "lossy" if the transformation did something that would *not* let you
 
 Reversing the process, subtracting 200 from each of the *transformed* values does not restore the original.  Since there is no process or computation you can perform on the transformed data to recover the original, it is "lossy".
 MARKDOWN
+
+allow_multiple_attempts true

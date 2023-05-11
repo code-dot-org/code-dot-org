@@ -435,7 +435,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def cannot_create_user_with_email(*args)
-    assert_fails_email_uniqueness_validation FactoryGirl.build(*args)
+    assert_fails_email_uniqueness_validation FactoryBot.build(*args)
   end
 
   test "cannot update multi-auth user with duplicate of multi-auth user's email" do
@@ -476,7 +476,7 @@ class UserTest < ActiveSupport::TestCase
 
   def cannot_give_user_additional_email(type, email)
     user = create type
-    user.authentication_options << FactoryGirl.build(:google_authentication_option, user: user, email: email)
+    user.authentication_options << FactoryBot.build(:google_authentication_option, user: user, email: email)
     refute user.save
     assert_fails_email_uniqueness_validation user
   end
@@ -2170,15 +2170,20 @@ class UserTest < ActiveSupport::TestCase
       new_email: taken_email
   end
 
-  def update_primary_contact_info_fails_safely_for(user, *params)
+  def update_primary_contact_info_fails_safely_for(user, **params)
     original_primary_contact_info = user.primary_contact_info
 
     refute_creates_or_destroys AuthenticationOption do
-      refute user.update_primary_contact_info(*params)
+      refute user.update_primary_contact_info(**params)
     end
 
     user.reload
-    assert_equal original_primary_contact_info, user.primary_contact_info
+    if original_primary_contact_info.nil?
+      # starting in Minitest 6, don't use assert_equal to compare nil values
+      assert_nil user.primary_contact_info
+    else
+      assert_equal original_primary_contact_info, user.primary_contact_info
+    end
   end
 
   def upgrade_to_personal_login_params(**args)
@@ -3261,32 +3266,32 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_script creates UserScript if necessary' do
     assert_creates(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
+      user_script = @student.assign_script(Unit.first)
+      assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script reuses UserScript if available' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first)
+      UserScript.create!(user: @student, script: Unit.first)
     end
     assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
+      user_script = @student.assign_script(Unit.first)
+      assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+      UserScript.create!(user: @student, script: Unit.first, assigned_at: DateTime.now)
     end
 
     Timecop.travel(2018, 3, 4, 12, 0, 0) do
       assert_does_not_create(UserScript) do
-        user_script = @student.assign_script(Script.first)
-        assert_equal Script.first.id, user_script.script_id
+        user_script = @student.assign_script(Unit.first)
+        assert_equal Unit.first.id, user_script.script_id
         assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
       end
     end
@@ -3379,11 +3384,11 @@ class UserTest < ActiveSupport::TestCase
           'script' => {
             'name' => {
               'other' => {
-                'title': 'Script Other',
+                title: 'Unit Other',
                 'description_short' => 'other-description'
               },
               'pl-other' => {
-                'title': 'PL Script Other',
+                title: 'PL Unit Other',
                 'description_short' => 'pl-other-description'
               }
             }
@@ -3428,7 +3433,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
 
       assert_equal 'other', courses_and_scripts[1][:name]
-      assert_equal 'Script Other', courses_and_scripts[1][:title]
+      assert_equal 'Unit Other', courses_and_scripts[1][:title]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
@@ -3443,29 +3448,29 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/courses/pl-csd', courses_and_scripts[0][:link]
 
       assert_equal 'pl-other', courses_and_scripts[1][:name]
-      assert_equal 'PL Script Other', courses_and_scripts[1][:title]
+      assert_equal 'PL Unit Other', courses_and_scripts[1][:title]
       assert_equal 'pl-other-description', courses_and_scripts[1][:description]
       assert_equal '/s/pl-other', courses_and_scripts[1][:link]
     end
 
     test "it does not return student scripts that are in returned student courses" do
-      script = Script.find_by_name('csd1')
+      script = Unit.find_by_name('csd1')
       @student.assign_script(script)
 
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
-      script = Script.find_by_name('pl-csd1')
+      script = Unit.find_by_name('pl-csd1')
       @teacher.assign_script(script)
 
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3883,7 +3888,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
-      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grade: participant_type == 'student' ? '9' : 'pl'
+      section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
     end
@@ -4747,7 +4752,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'section attempts last reset value resets if more than 24 hours has passed' do
     user = create :user
-    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    user.properties = {section_attempts: 5, section_attempts_last_reset: DateTime.now - 1}
     # invoking display_captcha? will return false without causing section_attempts values to be reset
     assert_equal false, user.display_captcha?
     # now we mimic joining a section, which should reset attempts and then increment
@@ -4794,11 +4799,21 @@ class UserTest < ActiveSupport::TestCase
 
   test 'marketing_segment_data returns expected grades for teacher with sections' do
     teacher = create :teacher
-    create :section, user: teacher, grade: "6"
-    create :section, user: teacher, grade: "6"
-    create :section, user: teacher, grade: "7"
+    create :section, user: teacher, grades: ["6"]
+    create :section, user: teacher, grades: ["6"]
+    create :section, user: teacher, grades: ["7"]
 
     expected_grades = ["6", "7"]
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
+  test 'marketing_segment_data returns expected grades for teacher with multi-grade sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grades: ["6", "K", "10"]
+    create :section, user: teacher, grades: ["7", "K", "12"]
+
+    expected_grades = %w(6 K 10 7 12)
     marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
     assert_equal expected_grades.sort, marketing_segment_grades.sort
   end

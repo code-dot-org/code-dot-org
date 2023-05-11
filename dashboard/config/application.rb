@@ -4,13 +4,13 @@ require 'rails/all'
 
 require 'cdo/geocoder'
 require 'varnish_environment'
-require_relative '../../dashboard/legacy/middleware/files_api'
-require_relative '../../dashboard/legacy/middleware/channels_api'
-require_relative '../../dashboard/legacy/middleware/tables_api'
+require_relative '../legacy/middleware/files_api'
+require_relative '../legacy/middleware/channels_api'
+require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
-require_relative '../../dashboard/legacy/middleware/net_sim_api'
-require_relative '../../dashboard/legacy/middleware/sound_library_api'
-require_relative '../../dashboard/legacy/middleware/animation_library_api'
+require_relative '../legacy/middleware/net_sim_api'
+require_relative '../legacy/middleware/sound_library_api'
+require_relative '../legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -41,7 +41,7 @@ module Dashboard
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      require 'cdo/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
@@ -144,6 +144,7 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      font-awesome.css
     )
 
     # Support including code from directories outside of the normal Rails directory

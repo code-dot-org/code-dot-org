@@ -3,7 +3,7 @@ import unitSelection, {
   setScriptId,
   getSelectedScriptName,
   getSelectedScriptDescription,
-  setCoursesWithProgress
+  setCoursesWithProgress,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
@@ -21,8 +21,8 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: 5,
-          coursesWithProgress: fakeCoursesWithProgress
-        }
+          coursesWithProgress: fakeCoursesWithProgress,
+        },
       };
       assert.equal(getSelectedScriptName(state), 'csd1-2018');
     });
@@ -31,8 +31,8 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          coursesWithProgress: fakeCoursesWithProgress
-        }
+          coursesWithProgress: fakeCoursesWithProgress,
+        },
       };
       assert.equal(getSelectedScriptName(state), null);
     });
@@ -43,8 +43,8 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: 9,
-          coursesWithProgress: fakeCoursesWithProgress
-        }
+          coursesWithProgress: fakeCoursesWithProgress,
+        },
       };
       assert.equal(getSelectedScriptDescription(state), 'Make a flappy game!');
     });
@@ -53,8 +53,8 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          coursesWithProgress: fakeCoursesWithProgress
-        }
+          coursesWithProgress: fakeCoursesWithProgress,
+        },
       };
       assert.equal(getSelectedScriptDescription(state), null);
     });

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-06 00:29:41 UTC",
+    "serialized_at": "2022-10-25 20:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3500,7 +3500,7 @@
     },
     {
       "name": "Data Visualizer in App Lab - Part 2",
-      "url": "https://youtu.be/OjUEFHo3Yw0",
+      "url": "https://youtu.be/4vaWVvrnsFk",
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",

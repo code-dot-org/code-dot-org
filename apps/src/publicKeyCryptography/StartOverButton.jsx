@@ -6,7 +6,7 @@ import Dialog from '../templates/Dialog';
 
 export default class StartOverButton extends React.Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   state = {confirming: false};

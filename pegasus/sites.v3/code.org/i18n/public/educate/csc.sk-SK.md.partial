@@ -27,6 +27,8 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # Medzipredmetové vzťahy a informatika
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
@@ -77,3 +79,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Dokončili ste aktivitu medzimedmetových vzťahov a informatiky a/alebo hľadáte ďalšie možnosti pre svoju triedu? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Podeľte sa o svoju spätnú väzbu</a> a nápady na ďalšie lekcie tu!</em>
+
+{{ visit_partial_event_logger }}

@@ -16,7 +16,7 @@ title: 推薦文と役立つ統計情報
 
 #### 学校にコンピューターサイエンスを。Hour of Codeで始めよう！
 
-技術が地球上のあらゆる産業を変えている状況下でコンピューターの知識は多彩なスキルセットの一部となりました。 しかしコンピューターサイエンスを教えているのは半数の学校のみです！ 良いお知らせは、私たちはこれを変えようとしているということです！ もしあなたが昨年Hour of Codeについて聞いていたなら、それが歴史を作ったことをご存知かもしれません。 Hour of Codeをたった1回行うだけで、いまや1億人の生徒たちがコンピューターサイエンスがいかに取り付きやすく楽しいかに気づきました。
+技術が地球上のあらゆる産業を変えている状況下でコンピューターの知識は多彩なスキルセットの一部となりました。 しかしコンピューターサイエンスを教えているのは半数の学校のみです！ 良いお知らせは、私たちはこれを変えようとしているということです！ If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Hour of Codeは1時間のコンピューターサイエンス入門で、コードをわかりやすく説明し、誰もがその基礎を学べるよう設計されています。 詳しくは[http://HourOfCode.com](http://HourofCode.com)をお読みになったり、自身で1時間試したり、あるいはコンピューティングの世界を他の人に紹介するHour of Codeイベントを開催してください！
 
@@ -30,7 +30,7 @@ Hour of Codeは1時間のコンピューターサイエンス入門で、コー�
 
 #### なぜこれが重要なのですか？
 
-技術は地球上のあらゆる産業を変えています。 2015年、米国における700万の求人は、芸術とデザインを含むプログラミングスキルを高く評価する職業でした。 しかしコンピューターサイエンスを教えているのは米国の学校の49%です。 今こそ私たちが21世紀に追いつくべきときです。 生徒たちが大人になって、医療や事業、政治、芸術といったどのような分野で何を行おうとも、技術を組み立てる方法を知ることは彼らに自信や競争力を与えるということを私たちは知っています。 <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. 生徒たちが大人になって、医療や事業、政治、芸術といったどのような分野で何を行おうとも、技術を組み立てる方法を知ることは彼らに自信や競争力を与えるということを私たちは知っています。 <br /> <br />
 
 #### 資料の中で使える引用文
 

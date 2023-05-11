@@ -15,6 +15,7 @@ es-MX:
       Conditionals: Condicionales
       Dancers: Bailarines
       Default: Incumplimiento
+      Effects: Efectos
       Events: Eventos
       Functions: Funciones
       'Functions ': 'Funciones '
@@ -30,11 +31,11 @@ es-MX:
       Math: Matemáticas
       Number: Número
       Numbers: Números
-      Picker: Rocolector/a
-      Prebuilt: Prefabricado
+      Picker: Recogedor
+      Prebuilt: Preconstruido
       Properties: Propiedades
       Sprites: Sprites
-      String: Cadena
+      String: String
       Text: Texto
       Variables: Variables
       'Variables ': 'Variables '

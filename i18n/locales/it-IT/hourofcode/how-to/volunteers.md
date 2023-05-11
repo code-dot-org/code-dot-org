@@ -10,7 +10,7 @@ title: Guida pratica all'Ora del Codice per i volontari
 
 * * *
 
-Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
+Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
 L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per demistificare il "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
 
@@ -76,7 +76,7 @@ Se ricevi troppe richieste dagli insegnanti, puoi sempre aggiornare le tue prefe
 
 Non è necessario utilizzare la nostra mappa dei volontari per fare volontariato! In effetti, ti consigliamo di contattare direttamente insegnanti e amministratori se c'è una classe con cui vorresti fare volontariato.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - Se hai in mente un'altra scuola, visita il loro sito web per trovare contatti appropriati da contattare, ad esempio un preside o un vice preside, istruttori di tecnologia o informatica o anche il consiglio d'istituto della scuola. È possibile collaborare anche con organizzazioni tipo Boys & Girls Clubs of America, un ramo della YMCA e altre ancora per ospitare insieme un evento. - Se non riesci a trovare una scuola che ospita un'Ora del Codice, puoi offrirti volontario per aiutare a organizzare il tuo evento con la tua azienda. Dai uno sguardo alla nostra [Guida pratica per le aziende](https://hourofcode.com/us/how-to/companies) per saperne di più e lasciarti ispirare.
+Per iniziare: - Se sei un genitore o un tutore, invia [questa email](https://hourofcode.com/us/promote/resources#help-schools) all'insegnante di tuo figlio che si offre di aiutarlo a svolgere un'Ora di Codice. - Se hai in mente un'altra scuola, visita il loro sito web per trovare contatti appropriati da contattare, ad esempio un preside o un vice preside, istruttori di tecnologia o informatica o anche il consiglio d'istituto della scuola. È possibile collaborare anche con organizzazioni tipo Boys & Girls Clubs of America, un ramo della YMCA e altre ancora per ospitare insieme un evento. - Se non riesci a trovare una scuola che ospita un'Ora del Codice, puoi offrirti volontario per aiutare a organizzare il tuo evento con la tua azienda. Dai uno sguardo alla nostra [Guida pratica per le aziende](https://hourofcode.com/us/how-to/companies) per saperne di più e lasciarti ispirare.
 
 * * *
 
@@ -101,7 +101,7 @@ Se fai volontariato con una classe, discuti in anticipo questi aspetti logistici
 ### Pensa ai tuoi partecipanti
 
 - Considera gli studenti con cui parlerai e cosa potrebbe interessarli. Come volontario, puoi aiutarli a rendersi conto che l'informatica è ovunque e anche loro possono diventare informatici. Considera la loro età, formazione e identità di genere e preparati con argomenti che possono risvegliare il loro interesse. Ecco una guida aggiuntiva su come ispirare [giovanni donne](http://code.org/girls) a partecipare.
-- Emoziona e coinvolgi i tuoi studenti! Collabora con l'insegnante per scegliere un [video ispiratore](https://hourofcode.com/us/promote/resources#videos) che ti aiuti a far concentrare la classe e a rendere gli studenti entusiasti di fare un'Ora di Codice.
+- Emoziona e coinvolgi i tuoi studenti! Collabora con l'insegnante per scegliere un [video motivazionale](https://hourofcode.com/us/promote/resources#videos) che ti aiuti a far concentrare la classe e a rendere gli studenti entusiasti di fare un'Ora di Codice.
 - Se sei un volontario virtuale, prendi in considerazione la possibilità di creare alcune diapositive come parte della presentazione per aiutare gli studenti a concentrarsi.
 
 Hai bisogno di altre risorse? [Dai un'occhiata a questi altri suggerimenti](https://code.org/files/CSTT_Volunteers.pdf).
@@ -126,7 +126,7 @@ Collabora con la scuola o l'insegnante per discutere di ciò che ha più senso. 
 
 #### Agenda di esempio:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Che cosa o chi ti ha ispirato? Come ti è nata la passione per l'informatica? Hai avuto un mentore? Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. | |30-60 minutes | Code! Se il tuo evento è in presenza, questo è il momento di rispondere alle domande e guidare gli studenti attraverso esercizi difficili. Cerca di non dare loro la soluzione in modo definitivo, invece, prova a porre loro domande in modo che possano rispondere da soli cosa non ha funzionato e incoraggia gli studenti a confrontarsi l'un l'altro se hanno domande. Se fai volontariato virtualmente, lavora con l'insegnante su quale potrebbe essere l'approccio migliore. Potrebbe essere più proficuo tornare alla fine della sessione per vedere quali progressi hanno fatto gli studenti. | | |1-3 minuti | Ringrazia tutti e condividi parole di buon auspicio. Distribuisci i gadget della tua azienda ([gli adesivi](#celebrate) sono fantastici)! | | <br />
+|Orario | Attività | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuti | Mostra un [video motivazionale](https://hourofcode.com/us/promote/resources#videos)| |5-10 minuti | Presentati e conosci gli studenti: dove lavori, cosa fai e cosa ami di più del tuo lavoro? Che cosa o chi ti ha ispirato? Come ti è nata la passione per l'informatica? Hai avuto un mentore? Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. | |30-60 minuti | Programma! Se il tuo evento è in presenza, questo è il momento di rispondere alle domande e guidare gli studenti attraverso esercizi difficili. Cerca di non dare loro la soluzione in modo definitivo, invece, prova a porre loro domande in modo che possano rispondere da soli cosa non ha funzionato e incoraggia gli studenti a confrontarsi l'un l'altro se hanno domande. Se fai volontariato virtualmente, lavora con l'insegnante su quale potrebbe essere l'approccio migliore. Potrebbe essere più proficuo tornare alla fine della sessione per vedere quali progressi hanno fatto gli studenti. | | |1-3 minuti | Ringrazia tutti e condividi parole di buon auspicio. Distribuisci i gadget della tua azienda ([gli adesivi](#celebrate) sono fantastici)! | | <br />
 
 #### Altre idee da aggiungere al tuo evento
 
@@ -154,7 +154,7 @@ Se il tuo evento sarà virtuale, ti consigliamo di decidere quale la piattaforma
 
 ### 4. Scegli un'attività
 
-Forniamo una varietà di esercitazioni divertenti e guidate dagli studenti per tutte le età e livelli di esperienza. È popolare tra gli studenti provare esercitazioni autogestite, anche se potresti iniziare l'evento con un [ video di ispirazione ](https://hourofcode.com/us/promote/resources#videos) per tutti da vedere insieme.
+Forniamo una varietà di esercitazioni divertenti e guidate dagli studenti per tutte le età e livelli di esperienza. È popolare tra gli studenti provare esercitazioni autogestite, anche se potresti iniziare l'evento con un [ video motivazionale](https://hourofcode.com/us/promote/resources#videos) per tutti da vedere insieme.
 
 <a href="https://hourofcode.com/us/learn">Esplora le attività</a> e decidi prima se scegliere un'esercitazione specifica da assegnare a tutti i tuoi studenti o se lasciarli liberi di scegliere ognuno la sua. **Tutte le esercitazioni dell'Ora del Codice** richiedono un tempo di preparazione minimo e sono autogestite consentendo ai partecipanti di lavorare seguendo il proprio ritmo e livello di abilità.
 
@@ -186,7 +186,7 @@ Uno dei modi migliori per supportarci è spargere la voce e promuovere l'Ora del
 
 ### 1. Registra il tuo evento
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
+Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. In questo modo puoi anche far sapere alle scuole o ai genitori locali che stai ospitando un evento vicino a loro.
 
 ### 2. Posta sui Social Media
 
@@ -199,7 +199,7 @@ Aiuta ad aumentare la consapevolezza del movimento dell'informatica con questo c
 
 #### Statistiche
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Sapevi che solo il 53% delle scuole statunitensi insegna informatica? Dai a ogni studente la possibilità di impararla con #HourOfCode https://hourofcode.com/
 - Negli Stati Uniti, solo il 26% dei professionisti del software sono donne. Introduci più giovani donne all'informatica con #HourOfCode https://hourofcode.com/ 
 - Il 67% dei posti di lavoro informatici negli Stati Uniti non è nel settore tecnologico. Aiuta a inserire l'informatica nel curriculum standard con #HourOfCode https://hourofcode.com/
 

@@ -111,7 +111,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -138,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Dalies ar sava Programmēšanas stundas pasākuma fotogrāfijām un video sociālajos medijos. Izmanto #HourOfCode un @codeorg, lai mēs arī varētu izcelt tavus panākumus!
 
 * * *
@@ -152,6 +151,6 @@ What if a student finishes early?
 
 ### Kas nāk pēc "Programmēšanas stundas"?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

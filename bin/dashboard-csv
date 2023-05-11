@@ -11,7 +11,7 @@ class DB < ActiveRecord::Base
     host:     DashboardDbUri.host,
     username: DashboardDbUri.user,
     password: DashboardDbUri.password,
-    database: DashboardDbUri.path[1..-1],
+    database: DashboardDbUri.path[1..],
     strict:   true
   )
 end

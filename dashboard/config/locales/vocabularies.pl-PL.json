@@ -22,10 +22,6 @@
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
         },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
         "event/minecraft/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
@@ -33,6 +29,10 @@
         "loop/minecraft/unversioned": {
           "word": "Pętla",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/hero/unversioned": {
           "word": "kod/koduj",
@@ -42,13 +42,13 @@
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
         },
-        "program/hero/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
         "function/hero/unversioned": {
           "word": "Funkcja",
           "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -142,6 +142,10 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
+        "code/dance/unversioned": {
+          "word": "kod/koduj",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
         "event/dance/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
@@ -150,21 +154,9 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "code/dance/unversioned": {
-          "word": "kod/koduj",
-          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
         "code/aquatic/unversioned": {
           "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugowanie",
-          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "condition/aquatic/unversioned": {
           "word": "Warunek",
@@ -174,9 +166,17 @@
           "word": "Zdania z warunkami",
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
         "loops/aquatic/unversioned": {
           "word": "Pętle",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "Szyfr Cezara",
@@ -262,10 +262,6 @@
           "word": "Modele i symulacje",
           "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
         },
-        "event/sports/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
         "code/sports/unversioned": {
           "word": "Kod",
           "definition": "(v) napisać kod lub instrukcje dla komputera."
@@ -273,6 +269,10 @@
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "event/sports/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "program/sports/unversioned": {
           "word": "Program",
@@ -290,10 +290,6 @@
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
-        "event/basketball/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
         "code/basketball/unversioned": {
           "word": "kod/koduj",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
@@ -301,6 +297,10 @@
         "debugging/basketball/unversioned": {
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "event/basketball/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "program/basketball/unversioned": {
           "word": "Program",
@@ -871,8 +871,7 @@
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "parameter/csd/2022": {
-          "word": "Parametr",
-          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
+          "word": "Parametr"
         },
         "variable/csd/2022": {
           "word": "Zmienna",
@@ -957,6 +956,10 @@
           "word": "Użytkownik",
           "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
         },
+        "algorithm/coursef/2021": {
+          "word": "Algorytm",
+          "definition": "Lista kroków do ukończenia zadania. "
+        },
         "behavior/coursef/2021": {
           "word": "Zachowanie",
           "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
@@ -964,10 +967,6 @@
         "program/coursef/2021": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algorytm",
-          "definition": "Lista kroków do ukończenia zadania. "
         },
         "event/coursef/2021": {
           "word": "Zdarzenie",
@@ -1009,9 +1008,21 @@
           "word": "DNS",
           "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel",
+          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Światłowód",
+          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
+        },
         "internet/coursef/2021": {
           "word": "Internet",
           "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adres IP",
+          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
         },
         "packets/coursef/2021": {
           "word": "Pakiety",
@@ -1024,18 +1035,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Światłowód",
-          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
-        },
-        "ip_address/coursef/2021": {
-          "word": "Adres IP",
-          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -1073,6 +1072,10 @@
           "word": "Kliknij",
           "definition": "Wciśnij przycisk myszy"
         },
+        "double_click/courseb/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
         "drag/courseb/2021": {
           "word": "Przeciągnij",
           "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
@@ -1080,10 +1083,6 @@
         "drop/courseb/2021": {
           "word": "Drop",
           "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "double_click/courseb/2021": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "program/courseb/2021": {
           "word": "Program",
@@ -1125,6 +1124,10 @@
           "word": "Kliknij",
           "definition": "Wciśnij przycisk myszy"
         },
+        "double_click/coursea/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
         "drag/coursea/2021": {
           "word": "Przeciągnij",
           "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
@@ -1132,10 +1135,6 @@
         "drop/coursea/2021": {
           "word": "Drop",
           "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "double_click/coursea/2021": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "bug/coursea/2021": {
           "word": "Błąd",
@@ -1335,13 +1334,13 @@
           "word": "Funkcja",
           "definition": "Część kodu, który można łatwo przywoływać bez końca."
         },
-        "variable/express/2021": {
-          "word": "Zmienna",
-          "definition": "Etykieta informacji użyta w programie."
-        },
         "prompt/express/2021": {
           "word": "szybka",
           "definition": "Komunikat na ekranie komputera, który czeka na wejście od użytkownika."
+        },
+        "variable/express/2021": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
         },
         "for_loop/express/2021": {
           "word": "Pętla \"dla\"",
@@ -1367,6 +1366,10 @@
           "word": "Kliknij",
           "definition": "Wciśnij przycisk myszy"
         },
+        "double_click/pre-express/2021": {
+          "word": "Kliknij dwukrotnie",
+          "definition": "Naciśnij przycisk myszy bardzo szybko"
+        },
         "drag/pre-express/2021": {
           "word": "Przeciągnij",
           "definition": "Kliknij przycisk myszki i przytrzymaj w czasie przesuwania kursora myszki do nowej lokalizacji"
@@ -1374,10 +1377,6 @@
         "drop/pre-express/2021": {
           "word": "Drop",
           "definition": "Zwolnij przycisk myszki, aby \"puścić\" pozycję, którą przeciągasz"
-        },
-        "double_click/pre-express/2021": {
-          "word": "Kliknij dwukrotnie",
-          "definition": "Naciśnij przycisk myszy bardzo szybko"
         },
         "algorithm/pre-express/2021": {
           "word": "Algorytm",
@@ -1415,13 +1414,13 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
-        "behavior/coursee/2021": {
-          "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
-        },
         "algorithm/coursee/2021": {
           "word": "algorytm",
           "definition": "Lista kroków, aby ukończyć zadanie."
+        },
+        "behavior/coursee/2021": {
+          "word": "Zachowanie",
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
         },
         "sprite/coursee/2021": {
           "word": "Duszek",

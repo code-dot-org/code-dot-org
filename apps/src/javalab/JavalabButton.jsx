@@ -15,7 +15,7 @@ export default function JavalabButton({
   onClick,
   isHorizontal,
   tooltipText,
-  isDisabled = false
+  isDisabled = false,
 }) {
   let textStyle;
   if (icon) {
@@ -52,9 +52,9 @@ JavalabButton.propTypes = {
   isHorizontal: PropTypes.bool,
   isDisabled: PropTypes.bool,
   id: PropTypes.string,
-  tooltipText: PropTypes.string
+  tooltipText: PropTypes.string,
 };
 
 JavalabButton.defaultProps = {
-  isHorizontal: false
+  isHorizontal: false,
 };

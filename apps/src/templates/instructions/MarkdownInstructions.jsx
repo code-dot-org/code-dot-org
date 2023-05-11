@@ -14,11 +14,11 @@ class MarkdownInstructions extends React.Component {
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
-    showImageDialog: PropTypes.func
+    showImageDialog: PropTypes.func,
   };
 
   static defaultProps = {
-    noInstructionsWhenCollapsed: false
+    noInstructionsWhenCollapsed: false,
   };
 
   componentDidMount() {
@@ -55,7 +55,7 @@ class MarkdownInstructions extends React.Component {
       detailsDOM.on({
         'toggle.details.TopInstructions': () => {
           this.props.onResize();
-        }
+        },
       });
     }
 
@@ -71,9 +71,7 @@ class MarkdownInstructions extends React.Component {
     }
 
     // Parent needs to readjust some sizing after images have loaded
-    $(thisNode)
-      .find('img')
-      .load(this.props.onResize);
+    $(thisNode).find('img').load(this.props.onResize);
   }
 
   render() {
@@ -86,7 +84,7 @@ class MarkdownInstructions extends React.Component {
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          inTopPane && canCollapse && styles.inTopPaneCanCollapse
+          inTopPane && canCollapse && styles.inTopPaneCanCollapse,
         ]}
       >
         <EnhancedSafeMarkdown markdown={markdown} expandableImages />
@@ -98,17 +96,17 @@ class MarkdownInstructions extends React.Component {
 const styles = {
   standard: {
     marginBottom: 35,
-    paddingTop: 19
+    paddingTop: 19,
   },
   inTopPane: {
     marginTop: 10,
     marginBottom: 10,
-    paddingTop: 0
+    paddingTop: 0,
   },
   inTopPaneCanCollapse: {
     marginTop: 0,
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 export default Radium(MarkdownInstructions);

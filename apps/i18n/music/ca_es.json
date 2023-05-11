@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundTooltip": "reprodueix el so",
+  "blockly_blockPlaySoundAtMeasureTooltip": "reprodueix el so",
+  "blockly_blockRepeatTooltip": "repeteix",
+  "blockly_blockRestTooltip": "silenci",
+  "blockly_blockWhenRun": "quan s'executa",
+  "blockly_blockWhenRunTooltip": "quan s'executa",
+  "blockly_functionNamePlaceholder": "la meva funció",
+  "blockly_toolboxCategoryEffects": "Efectes",
+  "blockly_toolboxCategoryEvents": "Esdeveniments",
+  "blockly_toolboxCategoryFunctions": "Funcions",
+  "blockly_toolboxCategoryLogic": "Lògica",
+  "blockly_toolboxCategoryMath": "Matemàtiques",
+  "blockly_toolboxCategoryPlay": "Juga",
+  "blockly_toolboxCategoryVariables": "Variables",
+  "feedback": "Comentaris",
+  "share": "Compartir",
+  "startOver": "Torna a començar"
+}

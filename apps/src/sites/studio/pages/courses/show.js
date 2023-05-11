@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import announcementReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import {getStore} from '@cdo/apps/code-studio/redux';
@@ -14,17 +14,17 @@ import {
   pageTypes,
   selectSection,
   setPageType,
-  setSections
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {registerReducers} from '@cdo/apps/redux';
 import {
   setUserSignedIn,
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
@@ -102,6 +102,8 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
+        userType={scriptData.user_type}
+        participantAudience={courseSummary.participant_audience}
       />
     </Provider>,
     document.getElementById('course_overview')

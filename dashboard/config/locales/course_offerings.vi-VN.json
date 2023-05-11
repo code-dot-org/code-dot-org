@@ -58,7 +58,10 @@
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplars",
         "katie-practice": "katie-practice",
-        "soccer": "bóng đá"
+        "soccer": "bóng đá",
+        "hello-world-space": "Xin chào Thế giới: vũ trụ",
+        "hello-world-soccer": "Hello World: Bóng đá",
+        "playground": "sân chơi"
       }
     }
   }

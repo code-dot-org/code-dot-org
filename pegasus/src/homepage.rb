@@ -31,8 +31,13 @@ class Homepage
       # If the banner has an array of languages, then the current language must be one of them.
       next if banner["languages"] && !banner["languages"].include?(request.language)
 
+      # If the banner has a showInternationally flag,
+      # only show if exactly one of showInternationally or location_unknown_or_usa are true
+      location_unknown_or_usa = request.country.nil? || request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
+      next if banner.key?("showInternationally") && !(banner["showInternationally"] ^ location_unknown_or_usa)
+
       # We have a banner.  Add the ID to the hash that we return.
-      return banner.merge({"id": banner_id_for_page})
+      return banner.merge({id: banner_id_for_page})
     end
 
     # If we made it to here, none of the potential banners was available.
@@ -554,15 +559,15 @@ class Homepage
   end
 
   def self.get_dance_stars
-    stars = [
-      "Katy Perry", "Lil Nas X (ft. Billy Ray Cyrus)", "Jonas Brothers", "Panic! At The Disco",
-      "Shawn Mendes", "Nicki Minaj", "KIDZ BOP", "Pedro Capó", "Francesco Gabbani", "Sia",
-      "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
-      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
+    [
+      "Beyoncé", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
+      "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
+      "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
+      "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
+      "Carly Rae Jepsen", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    DCDO.get("hoc2019_dance_stars", stars)
   end
 end

@@ -1,4 +1,4 @@
-/** @file Test maker command behavior */
+/** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
@@ -11,20 +11,22 @@ import {
   digitalWrite,
   injectBoardController,
   onBoardEvent,
-  pinMode
+  pinMode,
 } from '@cdo/apps/lib/kits/maker/commands';
-import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
+import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-describe('maker/commands.js', () => {
+describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(FakeBoard);
+    stubBoardController = sinon.createStubInstance(VirtualCPBoard);
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),
-      outputError: sinon.stub()
+      outputError: sinon.stub(),
     };
     injectErrorHandler(errorHandler);
   });
@@ -148,20 +150,54 @@ describe('maker/commands.js', () => {
     describe(`event aliases`, () => {
       let component, callback;
 
-      beforeEach(function() {
+      beforeEach(function () {
         component = {on: sinon.spy()};
         callback = () => {};
       });
 
-      it(`aliases 'tap:single' event to 'singleTap'`, function() {
+      it(`aliases 'tap:single' event to 'singleTap'`, function () {
         onBoardEvent({component, event: 'singleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:single', callback);
       });
 
-      it(`aliases 'tap:double' event to 'doubleTap'`, function() {
+      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
         onBoardEvent({component, event: 'doubleTap', callback});
         expect(component.on).to.have.been.calledWith('tap:double', callback);
       });
+    });
+  });
+});
+
+describe('maker/commands.js - MicroBit', () => {
+  let stubBoardController, errorHandler;
+
+  beforeEach(() => {
+    stubBoardController = sinon.createStubInstance(MicroBitBoard);
+    stubBoardController.boardClient_ = new MBFirmataClientStub();
+    injectBoardController(stubBoardController);
+    errorHandler = {
+      outputWarning: sinon.spy(),
+      outputError: sinon.stub(),
+    };
+    injectErrorHandler(errorHandler);
+  });
+
+  afterEach(() => {
+    injectBoardController(undefined);
+    injectErrorHandler(null);
+  });
+
+  describe('pinMode(pin, mode)', () => {
+    it('delegates to makerBoard.pinMode with mapped mode id', () => {
+      pinMode({pin: 1, mode: 'input'});
+      expect(stubBoardController.pinMode).to.have.been.calledWith(1, 0);
+    });
+
+    it('display error when invalid pin 3 is used', () => {
+      pinMode({pin: 3, mode: 'input'});
+      expect(errorHandler.outputError).to.have.been.calledWith(
+        'pinMode() pin parameter value (3) is not a valid pinid. Please use a different pinid.'
+      );
     });
   });
 });

@@ -57,7 +57,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
  * 'autoResizeScrollableElement': if selected, makes the specified selector's
  *           element scrollable and auto-resizes dialog to window's dimensions
  */
-var LegacyDialog = (module.exports = function(options) {
+var LegacyDialog = (module.exports = function (options) {
   // Cache visibility to avoid expensive lookup during debounced window resizing
   this.isVisible = true;
 
@@ -74,7 +74,7 @@ var LegacyDialog = (module.exports = function(options) {
   if (options.width) {
     this.div.css({
       width: `${options.width}px`,
-      marginLeft: `-${options.width / 2}px`
+      marginLeft: `-${options.width / 2}px`,
     });
   }
 
@@ -86,9 +86,7 @@ var LegacyDialog = (module.exports = function(options) {
   modalBody.addClass('dash_modal_body');
 
   if (header) {
-    var modalHeader = $('<div/>')
-      .addClass('modal-header')
-      .append(header);
+    var modalHeader = $('<div/>').addClass('modal-header').append(header);
     if (close) {
       modalHeader.append(closeLink);
       createOpenInNewTabButton(modalHeader, options.link);
@@ -109,7 +107,7 @@ var LegacyDialog = (module.exports = function(options) {
     scrollableElement.css('overflow-y', 'auto');
 
     resizeCallback = debounce(
-      function() {
+      function () {
         if (!this.isVisible) {
           return;
         }
@@ -128,7 +126,7 @@ var LegacyDialog = (module.exports = function(options) {
   // If redirect option is passed in, redirect the page.
   // After that, close the dialog.
   var thisDialog = this;
-  $(this.div).on('hidden.bs.modal', function() {
+  $(this.div).on('hidden.bs.modal', function () {
     if (resizeCallback) {
       thisDialog.isVisible = false;
       $(window).off('resize', resizeCallback);
@@ -148,7 +146,7 @@ var LegacyDialog = (module.exports = function(options) {
 
   $(this.div).on(
     'hide.bs.modal',
-    function(e) {
+    function (e) {
       if (this.hideOptions) {
         // Let's have the dialog object handle hide options.
         this.processHideOptions(this.hideOptions);
@@ -175,14 +173,14 @@ var LegacyDialog = (module.exports = function(options) {
  * close the dialog when clicked.
  * The caller can also specify hideOptions, for special behavior when the dialog is dismissed.
  */
-LegacyDialog.prototype.show = function(options) {
+LegacyDialog.prototype.show = function (options) {
   options = options || {};
 
   $(this.div).modal({
     show: true,
     // The default value for backdrop is true, meaning clicking the backdrop
     // will close the modal. A value of 'static' will not close the modal.
-    backdrop: options.backdrop || true
+    backdrop: options.backdrop || true,
   });
 
   this.isVisible = true;
@@ -195,12 +193,12 @@ LegacyDialog.prototype.show = function(options) {
   this.div.offset(options);
 };
 
-LegacyDialog.prototype.hide = function() {
+LegacyDialog.prototype.hide = function () {
   $(this.div).modal('hide');
   this.isVisible = false;
 };
 
-LegacyDialog.prototype.focus = function() {
+LegacyDialog.prototype.focus = function () {
   if (this.isVisible) {
     $(this.div).focus();
   }
@@ -213,7 +211,7 @@ LegacyDialog.prototype.focus = function() {
  * Certain elements are faded out more quickly so that they are gone before
  * the dialog gets too small.
  */
-LegacyDialog.prototype.processHideOptions = function(options) {
+LegacyDialog.prototype.processHideOptions = function (options) {
   var startCss = {};
   startCss.opacity = '1';
   startCss.left = this.div.css('left');
@@ -260,7 +258,7 @@ LegacyDialog.prototype.processHideOptions = function(options) {
   // Slide the instruction box from its current position to its destination.
   $(this.div)
     .css(startCss)
-    .animate(endCss, totalFadeTime, 'swing', function() {
+    .animate(endCss, totalFadeTime, 'swing', function () {
       // Just hide the dialog at the end.
       $(this).modal('hide');
     });

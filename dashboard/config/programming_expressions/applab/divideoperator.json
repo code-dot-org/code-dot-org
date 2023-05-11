@@ -3,8 +3,23 @@
   "name": "Divide operator",
   "category": "Math",
   "category_key": "math",
-  "content": "[name]\n\n## Divide operator\n\n[/name]\n\n[category]\n\nCategory: Math\n\n[/category]\n\n[description]\n\n[short_description]\n\nDivides two numbers.\n\n[/short_description]\n\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Divide two numbers.\nconsole.log(3/5);\nvar x=3;\nvar y=5;\nconsole.log(x/y);\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\n___ / ___\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| ___ | any | Yes | The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nThe quotient of two numbers.\n\n[/returns]\n\n[tips]\n\n### Tips\n\n- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction.\n\n[/tips]\n\n",
+  "content": "Divides two numbers.\n\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.",
+  "examples": [
+    {
+      "name": "Example: Divide Two Numbers",
+      "code": "```\n// Divide two numbers.\nconsole.log(3/5);\nvar x=3;\nvar y=5;\nconsole.log(x/y);\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "___",
+      "type": "any",
+      "required": true,
+      "description": "The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression."
+    }
+  ],
   "return_value": "A number, the result of division.",
-  "short_description": "\nDivide operator\nCategory: Math",
-  "syntax": "num1 / num2;"
+  "short_description": "All programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.",
+  "syntax": "```\n___ / ___\n```",
+  "tips": "### Tips\n\n- Operator precedence is the same as standard arithmetic\n- Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction."
 }

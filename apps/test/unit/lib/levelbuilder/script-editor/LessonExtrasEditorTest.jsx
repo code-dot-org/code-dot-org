@@ -20,7 +20,7 @@ describe('LessonExtrasEditor', () => {
       lessonExtrasAvailable: false,
       updateLessonExtrasAvailable,
       updateProjectWidgetVisible,
-      updateProjectWidgetTypes
+      updateProjectWidgetTypes,
     };
   });
   it('project settings are not visible when lesson extras is not checked', () => {

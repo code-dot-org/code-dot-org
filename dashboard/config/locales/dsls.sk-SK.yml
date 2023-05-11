@@ -586,9 +586,9 @@ sk-SK:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
-          si z možností  napravo . '
-        title: 'Kontrola nadpisov '
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
+        title: Rýchle zopakovanie nadpisov
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -600,9 +600,9 @@ sk-SK:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
-          si z možností  napravo . '
-        title: 'Kontrola nadpisov '
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
+        title: Rýchle zopakovanie nadpisov
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -614,18 +614,18 @@ sk-SK:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
-          si z možností  napravo . '
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
         teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
-          style=\"width:200px; float:right\">\n\n**Druhy urovní:** Na otázku, ako
-          budú HTML nadpisy zobrazené na webovej stránke, sú študenti vyzvaní odpovedať
+          style=\"width:200px; float:right\">\n\n**Druhy úrovní:** Na otázku, ako
+          sa budú HTML nadpisy zobrazovať na webovej stránke, sú žiaci vyzvaní odpovedať
           výberom správnej odpovede spomedzi viacerých možností. Ak chcete vidieť,
-          ktorí študenti odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          ktorí žiaci odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
           na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
-          Študenti so správnou odpoveďou budú mať zobratený zelený gombík. Študenti
-          majú možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
+          Žiaci so správnou odpoveďou budú mať zobrazenú zelenú bublinku. Žiaci majú
+          možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
           kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
-        title: 'Kontrola nadpisov '
+        title: Rýchle zopakovanie nadpisov
       CSD U2 image debug match:
         answers:
         - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -641,10 +641,10 @@ sk-SK:
         questions:
         - text: Atribút `src` je napísaný nesprávne.
         - text: Atribúty `src` a `alt` sú vymenené.
-        - text: Prípona súboru (.jpg) chýba v adrese obrázka.
-        - text: Adresa obrázka nie je zadaná ako `src` attribút.
+        - text: V adrese obrázka chýba prípona súboru (.jpg).
+        - text: Adresa obrázka nie je zadaná ako `src` atribút.
         - text: V názve súboru je medzera.
-        content1: Priraďte chybný HTML kód k popisu chyby.
+        content1: Priraď chybný HTML kód k popisu chyby.
         teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie porozumenia
           študentov syntaxu `<img>` tagu, jej hlavným účelom je upozorniť študentov
           na najbežnejšie typy chýb, s ktorými sa môžu stretnúť pri pridávaní obrázkov
@@ -1026,6 +1026,10 @@ sk-SK:
           ##Zdroje
 
           *[Informatika v zábavnom priemysle - Pracovný list] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: |+
+          * [Informatika v zábavnom priemysle](https://docs.google.com/document/d/16RuelgpCshUu7sZRIPcfzImsUq8LaI1SrVPBl2gm_Hk/edit) - Riešenie ([PDF](https://docs.google.com/document/d/16RuelgpCshUu7sZRIPcfzImsUq8LaI1SrVPBl2gm_Hk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/16RuelgpCshUu7sZRIPcfzImsUq8LaI1SrVPBl2gm_Hk/export?format=doc))
+
+
       CSD U3 Lesson Overview 10:
         markdown: |-
           # Prehľad
@@ -4088,71 +4092,71 @@ sk-SK:
       csd-post-survey-levelgroup-2018:
         title: 'Objavujeme informatiku: Záverečný dotazník pre žiakov'
       csd-pulse-check-survey-1-levelgroup U1Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch1:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch2:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csf_be_a_super_digital_citizen:
         markdown: |-
           #  Skvelý digitálny občan
@@ -4984,7 +4988,7 @@ sk-SK:
           - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
         content1: Sem pridať popis
       CSD U1 Test:
-        title: 'Záverečný test: Počítače a riešenie problémov'
+        title: 'Počítače a riešenie problémov: záverečný test'
       CSD User Centered Design Post-Project Test:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Physical Computing Post-Project Test:
@@ -5026,7 +5030,7 @@ sk-SK:
           - `<ol></ol>`"
         content1: Sem pridať popis
       CSD Web Development Post-Project Test:
-        title: 'Záverečný test: Vývoj webových stránok'
+        title: 'Vývoj webových stránok: záverečný test'
       Responding to User Input:
         markdown: "# Odpoveď na vstup od užívateľa\n\nRežim dizajnu umožňuje jednoduché
           rozloženie užívateľského rozhrania aplikácie. Na to aby aplikácia skutočne
@@ -6031,7 +6035,7 @@ sk-SK:
         content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
         title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2021:
-        display_name: Vlastnosti postáv
+        display_name: Vlastnosti sprajtov
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
@@ -6044,31 +6048,39 @@ sk-SK:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
-          si z možností  napravo . '
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
         teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
-          style=\"width:200px; float:right\">\n\n**Druhy urovní:** Na otázku, ako
-          budú HTML nadpisy zobrazené na webovej stránke, sú študenti vyzvaní odpovedať
+          style=\"width:200px; float:right\">\n\n**Druhy úrovní:** Na otázku, ako
+          sa budú HTML nadpisy zobrazovať na webovej stránke, sú žiaci vyzvaní odpovedať
           výberom správnej odpovede spomedzi viacerých možností. Ak chcete vidieť,
-          ktorí študenti odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          ktorí žiaci odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
           na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
-          Študenti so správnou odpoveďou budú mať zobratený zelený gombík. Študenti
-          majú možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
+          Žiaci so správnou odpoveďou budú mať zobrazenú zelenú bublinku. Žiaci majú
+          možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
           kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
-        title: 'Kontrola nadpisov '
+        title: Rýchle zopakovanie nadpisov
+        markdown: |
+          <pre>
+          &lt;h3&gt; Vajcia &lt;/h3&gt;
+          &lt;h1&gt; Slanina &lt;/h1&gt;
+          &lt;h6&gt; Vafle &lt;/h6&gt;
+          </pre>
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Physical Computing Post-Project Test_2021:
         title: 'Záverečný test: Fyzické výpočty'
       CSD U1 Test_2021:
-        title: 'Záverečný test: Počítače a riešenie problémov'
+        title: 'Počítače a riešenie problémov: záverečný test'
       CSD U2 Image challenge_pilot_2021:
-        display_name: Pridanie obrázkov
+        display_name: Pridávanie obrázkov
+        description: Tu nájdeš náročnejšie úlohy a nové typy kódu.
       CSD U2 Image practice_pilot_2021:
-        display_name: Pridanie obrázkov
+        display_name: Pridávanie obrázkov
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
             PM.png
         - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
@@ -6077,15 +6089,15 @@ sk-SK:
             PM.png
         - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
             PM.png
-        content1: Priraďte chybný HTML kód k popisu chyby.
+        content1: Priraď chybný HTML kód k popisu chyby.
         questions:
         - text: Atribút `src` je napísaný nesprávne.
         - text: Atribúty `src` a `alt` sú vymenené.
-        - text: Prípona súboru (.jpg) chýba v adrese obrázka.
-        - text: Adresa obrázka nie je zadaná ako `src` attribút.
+        - text: V adrese obrázka chýba prípona súboru (.jpg).
+        - text: Adresa obrázka nie je zadaná ako `src` atribút.
         - text: V názve súboru je medzera.
-        teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie porozumenia
-          študentov syntaxu `<img>` tagu, jej hlavným účelom je upozorniť študentov
+        teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie toho, či
+          žiaci chápu syntax značky `<img>`, jej hlavným účelom je upozorniť žiakov
           na najbežnejšie typy chýb, s ktorými sa môžu stretnúť pri pridávaní obrázkov
           na webové stránky.
       CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
@@ -6113,6 +6125,14 @@ sk-SK:
         questions:
         - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
+        markdown: |
+          # Logické výrazy
+
+          **Logický výraz** – výraz, ktorý sa môže vyhodnotiť len ako „TRUE“ alebo „FALSE“
+
+          # Predpovedaj
+
+          Prečítaj si nasledujúci kód. Je v ňom niekoľko nových symbolov, s ktorými sme sa ešte nestretli. Skús uhádnuť, čo znamenajú, a pokús sa odpovedať na nasledujúcu otázku
       CSD U3 Card Examples_2018_2019_pilot_2021:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
@@ -6213,11 +6233,17 @@ sk-SK:
       CSD User Centered Design Post-Project Test_2021:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Web Development Post-Project Test_pilot_2021:
-        title: 'Záverečný test: Vývoj webových stránok'
+        title: 'Vývoj webových stránok: záverečný test'
       CSD games cake challenge choice_2021:
         display_name: Náročnejšie úlohy
+        description: |2-
+
+          Uprav si ju podľa seba
+
+          Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
       CSD games platform challenge choice_2021:
         display_name: Náročnejšie úlohy
+        description: Vylepši si hru pomocou týchto úloh!
       CSD web draw loop practice choice_2021:
         display_name: Cvičenie
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
@@ -6230,27 +6256,27 @@ sk-SK:
       csd-pre-survey-levelgroup_21_22:
         title: Objavujeme Informatiku – Úvodný dotazník pre žiakov
       csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       CSD U2 Design Project:
         content1: Sem pridať popis
       CSD U2 Design Project_2018:
@@ -6267,12 +6293,55 @@ sk-SK:
         content1: Sem pridať popis
       CSD U2 project guide:
         content1: Sem pridať popis
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
       CSD U2 project guide_2018:
         content1: Sem pridať popis
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
       CSD U2 project guide_2018_2019:
         content1: Sem pridať popis
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
       CSD U2 project guide_2018_2019_pilot_2021:
         content1: Sem pridať popis
+        markdown: |
+          # Tvoja osobná webová stránka
+
+          V niekoľkých nasledujúcich úrovniach si vytvoríš a zverejníš vlastnú webovú stránku. Máš teda príležitosť podeliť sa o svoje myšlienky so zvyškom sveta a ukázať, čo všetko už vďaka tomuto kurzu vieš.
+
+          Budeš potrebovať…
+
+          * Vyplneného sprievodcu projektom
+          * Stiahnuté obrázky
+          * Hodnotiacu tabuľku k projektu
+
+          A tu je zoznam vecí, ktoré sme sa učili…
+
+          * Ako pomocou HTML dodať obsahu stránky štruktúru
+          * Ako pomocou CSS nastaviť štýl textu, farby a rozvrhnutie stránky
+          * Ako formátovať kód tak, aby sa ľahšie čítal
+          * Ako ladiť HTML a CSS kód
+          * Ako používať obrázky zodpovedne
+          * Ako na internete ochraňovať svoje osobné údaje
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
       CSD U3 combining rep:
         content1: Sem pridať popis
       CSD U3 combining rep_2018:
@@ -6281,6 +6350,26 @@ sk-SK:
         content1: Sem pridať popis
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: Sem pridať popis
+        markdown: |
+          # Vytvorenie skákacej plošinovky
+
+          Pri vytváraní skákacej plošinovky budeš používať proces riešenia problémov.
+
+          ## Definovanie
+
+          Problém je pre túto hru jasne definovaný, pretože už poznáš ukážkovú verziu.  Možno však budeš chcieť urobiť nejaké zmeny. Uisti sa, že všetky nové prvky pre tvoju hru sú jasne definované.
+
+          ## Príprava
+
+          Skôr ako začneš programovať, treba vyplniť sprievodcu projektom. Pripraví ťa na projekt a výrazne ti uľahčí programovanie.
+
+          ## Skúšanie
+
+          Keď začneš kódovať, vyskúšaš si svoj plán. Pri programovaní nezabudni používať všetky zdroje, ktoré máš k dispozícii, ako sú dokumentácia a karta Pomoc a tipy.
+
+          ## Zamyslenie
+
+          Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
       CSD U5 Encryption 1:
         content1: Sem pridať popis
       CSD U5 Encryption 1_2018:
@@ -6489,7 +6578,7 @@ sk-SK:
         content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
         title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2022:
-        display_name: Vlastnosti postáv
+        display_name: Vlastnosti sprajtov
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
       CSD Header Size MC_2018_2019_pilot_2022:
         answers:
@@ -6502,18 +6591,18 @@ sk-SK:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
-        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
-          si z možností  napravo . '
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
         teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
-          style=\"width:200px; float:right\">\n\n**Druhy urovní:** Na otázku, ako
-          budú HTML nadpisy zobrazené na webovej stránke, sú študenti vyzvaní odpovedať
+          style=\"width:200px; float:right\">\n\n**Druhy úrovní:** Na otázku, ako
+          sa budú HTML nadpisy zobrazovať na webovej stránke, sú žiaci vyzvaní odpovedať
           výberom správnej odpovede spomedzi viacerých možností. Ak chcete vidieť,
-          ktorí študenti odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          ktorí žiaci odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
           na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
-          Študenti so správnou odpoveďou budú mať zobratený zelený gombík. Študenti
-          majú možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
+          Žiaci so správnou odpoveďou budú mať zobrazenú zelenú bublinku. Žiaci majú
+          možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
           kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
-        title: 'Kontrola nadpisov '
+        title: Rýchle zopakovanie nadpisov
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Physical Computing Post-Project Test_2022:
@@ -6576,7 +6665,7 @@ sk-SK:
         - text: Pýtanie sa učiteľov, aký typ nástennej maľby treba spraviť a aký veľký
             má byť
         questions:
-        - text: Pripraviť
+        - text: Príprava
         - text: Reflexia
         - text: Pokus
         - text: Definuj
@@ -6593,7 +6682,7 @@ sk-SK:
         - text: Pýtanie sa učiteľov, aký typ nástennej maľby treba spraviť a aký veľký
             má byť
         questions:
-        - text: Pripraviť
+        - text: Príprava
         - text: Reflexia
         - text: Pokus
         - text: Definuj
@@ -6610,7 +6699,7 @@ sk-SK:
         - text: Pýtanie sa učiteľov, aký typ nástennej maľby treba spraviť a aký veľký
             má byť
         questions:
-        - text: Pripraviť
+        - text: Príprava
         - text: Reflexia
         - text: Pokus
         - text: Definuj
@@ -6708,209 +6797,341 @@ sk-SK:
             ducha školy. Ktorý problém je lepšie definovaný?
         title: Otázka č. 4
       CSD U1 Test_2022:
-        title: 'Záverečný test: Počítače a riešenie problémov'
+        title: 'Počítače a riešenie problémov: záverečný test'
       CSD U2 Image challenge_pilot_2022:
-        display_name: Pridanie obrázkov
+        display_name: Pridávanie obrázkov
+        description: Tu nájdeš náročnejšie úlohy a nové typy kódu.
       CSD U2 Image practice_pilot_2022:
-        display_name: Pridanie obrázkov
+        display_name: Pridávanie obrázkov
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
       CSD U2 Test Classes:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Chcú, aby boli značky h3 väčšie než značky h1.
+        - text: Chcú, aby sa nadpisy farebne odlišovali od odsekov.
+        - text: Chcú, aby boli niektoré obrázky zarovnané vľavo a iné vpravo.
+          correct: true
+        - text: Chcú, aby mali všetky stránky na danom webe rovnaký štýl.
+        - text: Chcú vytvoriť špeciálnu farbu pomocou RGB kódov.
         questions:
-        - {}
+        - text: Skupina umelcov vytvára webovú stránku. Kedy by mali využívať triedy?
         title: Otázka č. 3
       CSD U2 Test Classes_pilot_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Chcú, aby boli značky h3 väčšie než značky h1.
+        - text: Chcú, aby sa nadpisy farebne odlišovali od odsekov.
+        - text: Chcú, aby boli niektoré obrázky zarovnané vľavo a iné vpravo.
+          correct: true
+        - text: Chcú, aby mali všetky stránky na danom webe rovnaký štýl.
+        - text: Chcú vytvoriť špeciálnu farbu pomocou RGB kódov.
         questions:
-        - {}
+        - text: Skupina umelcov vytvára webovú stránku. Kedy by mali využívať triedy?
         title: Otázka č. 3
       CSD U2 Test Classes_pilot_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Chcú, aby boli značky h3 väčšie než značky h1.
+        - text: Chcú, aby sa nadpisy farebne odlišovali od odsekov.
+        - text: Chcú, aby boli niektoré obrázky zarovnané vľavo a iné vpravo.
+          correct: true
+        - text: Chcú, aby mali všetky stránky na danom webe rovnaký štýl.
+        - text: Chcú vytvoriť špeciálnu farbu pomocou RGB kódov.
         questions:
-        - {}
+        - text: Skupina umelcov vytvára webovú stránku. Kedy by mali využívať triedy?
         title: Otázka č. 3
       CSD U2 Test ContentStructureStyle:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Pre ľudí je mätúce čítať a písať kód, kde je všetko pomiešané.
+        - text: Štruktúra je dôležitejšia ako štýl alebo obsah a potrebuje svoj vlastný
+            jazyk
+        - text: Komunikácia o štruktúre a štýle sú rôzne úlohy, takže je užitočné
+            používať dva rôzne jazyky, z ktorých každý slúži na niečo iné
+        - text: A a C
+          correct: true
+        - text: Všetky uvedené možnosti
         questions:
-        - {}
+        - text: Programátorovi napadlo, že by mohol používať rovnaký jazyk pre obsah,
+            štruktúru aj štýl webových stránok. Na aký problém by mohol naraziť?
         title: Otázka č. 2
       CSD U2 Test ContentStructureStyle_pilot_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Pre ľudí je mätúce čítať a písať kód, kde je všetko pomiešané.
+        - text: Štruktúra je dôležitejšia ako štýl alebo obsah a potrebuje svoj vlastný
+            jazyk
+        - text: Komunikácia o štruktúre a štýle sú rôzne úlohy, takže je užitočné
+            používať dva rôzne jazyky, z ktorých každý slúži na niečo iné
+        - text: A a C
+          correct: true
+        - text: Všetky uvedené možnosti
         questions:
-        - {}
+        - text: Programátorovi napadlo, že by mohol používať rovnaký jazyk pre obsah,
+            štruktúru aj štýl webových stránok. Na aký problém by mohol naraziť?
         title: Otázka č. 2
       CSD U2 Test ContentStructureStyle_pilot_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Pre ľudí je mätúce čítať a písať kód, kde je všetko pomiešané.
+        - text: Štruktúra je dôležitejšia ako štýl alebo obsah a potrebuje svoj vlastný
+            jazyk
+        - text: Komunikácia o štruktúre a štýle sú rôzne úlohy, takže je užitočné
+            používať dva rôzne jazyky, z ktorých každý slúži na niečo iné
+        - text: A a C
+          correct: true
+        - text: Všetky uvedené možnosti
         questions:
-        - {}
+        - text: Programátorovi napadlo, že by mohol používať rovnaký jazyk pre obsah,
+            štruktúru aj štýl webových stránok. Na aký problém by mohol naraziť?
         title: Otázka č. 2
       CSD U2 Test Copyright:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ak je už obrázok použitý na jednej stránke, dá sa použiť aj na ľubovoľnej
+            inej.
+        - text: Ak obrázok výrazne upravíš, nepotrebuješ povolenie pôvodného autora,
+            keď ho budeš chcieť uverejniť na svojom webe.
+        - text: Autori obrázkov sa môžu rozhodnúť, kto a ako môže ich obrázky používať.
+          correct: true
+        - text: Ak pri obrázku nie sú uvedené žiadne informácie o autorských právach,
+            ktokoľvek ho môže použiť na svojom webe.
+        - text: Vždy sa musíš obrátiť na autora obrázka a vypýtať si povolenie používať
+            ho na svojom webe.
         questions:
-        - {}
+        - text: Ktoré z nasledujúcich tvrdení o autorských právach je pravdivé?
         title: Otázka č. 7
       CSD U2 Test Copyright_pilot_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ak je už obrázok použitý na jednej stránke, dá sa použiť aj na ľubovoľnej
+            inej.
+        - text: Ak obrázok výrazne upravíš, nepotrebuješ povolenie pôvodného autora,
+            keď ho budeš chcieť uverejniť na svojom webe.
+        - text: Autori obrázkov sa môžu rozhodnúť, kto a ako môže ich obrázky používať.
+          correct: true
+        - text: Ak pri obrázku nie sú uvedené žiadne informácie o autorských právach,
+            ktokoľvek ho môže použiť na svojom webe.
+        - text: Vždy sa musíš obrátiť na autora obrázka a vypýtať si povolenie používať
+            ho na svojom webe.
         questions:
-        - {}
+        - text: Ktoré z nasledujúcich tvrdení o autorských právach je pravdivé?
         title: Otázka č. 7
       CSD U2 Test Copyright_pilot_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ak je už obrázok použitý na jednej stránke, dá sa použiť aj na ľubovoľnej
+            inej.
+        - text: Ak obrázok výrazne upravíš, nepotrebuješ povolenie pôvodného autora,
+            keď ho budeš chcieť uverejniť na svojom webe.
+        - text: Autori obrázkov sa môžu rozhodnúť, kto a ako môže ich obrázky používať.
+          correct: true
+        - text: Ak pri obrázku nie sú uvedené žiadne informácie o autorských právach,
+            ktokoľvek ho môže použiť na svojom webe.
+        - text: Vždy sa musíš obrátiť na autora obrázka a vypýtať si povolenie používať
+            ho na svojom webe.
         questions:
-        - {}
+        - text: Ktoré z nasledujúcich tvrdení o autorských právach je pravdivé?
         title: Otázka č. 7
       CSD U2 Test Debug:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Iba 1
+          correct: true
+        - text: Iba 3
+        - text: Iba 1 a 2
+        - text: Iba 1 a 3
+        - text: 1, 2 a 3
         title: Otázka č. 4
       CSD U2 Test Debug_pilot_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Iba 1
+          correct: true
+        - text: Iba 3
+        - text: Iba 1 a 2
+        - text: Iba 1 a 3
+        - text: 1, 2 a 3
         title: Otázka č. 4
+        markdown: |
+          Žiak využíva súbor štýlov, aby boli všetky odseky na jeho webe zelené. Pri stránke index.html to nefunguje, ale pri áno. Čím môže byť tento problém spôsobený?
+
+          1. Žiak zabudol prepojiť súbor štýlov so stránkou index.html.
+          1. Žiak nenahral obrázky, ktoré sa používajú na stránke index.html.
+          1. Žiak spravil v súbore štýlov pri slove „green“ preklep.
       CSD U2 Test Debug_pilot_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Iba 1
+          correct: true
+        - text: Iba 3
+        - text: Iba 1 a 2
+        - text: Iba 1 a 3
+        - text: 1, 2 a 3
         title: Otázka č. 4
+        markdown: |
+          Žiak využíva súbor štýlov, aby boli všetky odseky na jeho webe zelené. Pri stránke index.html to nefunguje, ale pri áno. Čím môže byť tento problém spôsobený?
+
+          1. Žiak zabudol prepojiť súbor štýlov so stránkou index.html.
+          1. Žiak nenahral obrázky, ktoré sa používajú na stránke index.html.
+          1. Žiak spravil v súbore štýlov pri slove „green“ preklep.
       CSD U2 Test HTML Usage:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
+        - text: Nastavenie inej farby textu.
+        - text: Oddeľovanie nadpisov od odsekov
+          correct: true
+        - text: Pridanie rámika na obrázok
+        - text: Pridanie informácií o autorských právach
+        - text: Usporiadanie textu do zoznamu
+          correct: true
         questions:
-        - {}
+        - text: Keď vytváraš webovú stránku, pre ktoré dve z nasledujúcich úloh je
+            HTML najdôležitejším jazykom? (Vyber DVE)
         title: Otázka č. 1
       CSD U2 Test HTML Usage_pilot_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
+        - text: Nastavenie inej farby textu.
+        - text: Oddeľovanie nadpisov od odsekov
+          correct: true
+        - text: Pridanie rámika na obrázok
+        - text: Pridanie informácií o autorských právach
+        - text: Usporiadanie textu do zoznamu
+          correct: true
         questions:
-        - {}
+        - text: Keď vytváraš webovú stránku, pre ktoré dve z nasledujúcich úloh je
+            HTML najdôležitejším jazykom? (Vyber DVE)
         title: Otázka č. 1
       CSD U2 Test HTML Usage_pilot_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - correct: true
+        - text: Nastavenie inej farby textu.
+        - text: Oddeľovanie nadpisov od odsekov
+          correct: true
+        - text: Pridanie rámika na obrázok
+        - text: Pridanie informácií o autorských právach
+        - text: Usporiadanie textu do zoznamu
+          correct: true
         questions:
-        - {}
+        - text: Keď vytváraš webovú stránku, pre ktoré dve z nasledujúcich úloh je
+            HTML najdôležitejším jazykom? (Vyber DVE)
         title: Otázka č. 1
       CSD U2 Test code styles:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Použi &lt;h6&gt; namiesto &lt;h3&gt;
+        - text: Použi &lt;h1&gt; namiesto &lt;h3&gt;
+          correct: true
+        - text: Vložiť text „Moja stránka“ do značiek <head> .
+        - text: Pomocou CSS nastaviť značke h3 vlastnosť font-size
+          correct: true
+        - text: Pridať do značky h3 kód `style=“larger”`.
         questions:
-        - {}
+        - text: Webový vývojár chce zväčšiť text „Moja stránka“. Ktoré z nasledujúcich
+            možností by fungovali? (Vyber DVE)
         title: Otázka č. 6
+        markdown: |
+          Otázky č. 5 a 6 sa zaoberajú nasledujúcou webovou stránkou:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
       CSD U2 Test code styles_pilot_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Použi &lt;h6&gt; namiesto &lt;h3&gt;
+        - text: Použi &lt;h1&gt; namiesto &lt;h3&gt;
+          correct: true
+        - text: Vložiť text „Moja stránka“ do značiek <head> .
+        - text: Pomocou CSS nastaviť značke h3 vlastnosť font-size
+          correct: true
+        - text: Pridať do značky h3 kód `style=“larger”`.
         questions:
-        - {}
+        - text: Webový vývojár chce zväčšiť text „Moja stránka“. Ktoré z nasledujúcich
+            možností by fungovali? (Vyber DVE)
         title: Otázka č. 6
+        markdown: |
+          Otázky č. 5 a 6 sa zaoberajú nasledujúcou webovou stránkou:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
       CSD U2 Test code styles_pilot_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: Použi &lt;h6&gt; namiesto &lt;h3&gt;
+        - text: Použi &lt;h1&gt; namiesto &lt;h3&gt;
+          correct: true
+        - text: Vložiť text „Moja stránka“ do značiek <head> .
+        - text: Pomocou CSS nastaviť značke h3 vlastnosť font-size
+          correct: true
+        - text: Pridať do značky h3 kód `style=“larger”`.
         questions:
-        - {}
+        - text: Webový vývojár chce zväčšiť text „Moja stránka“. Ktoré z nasledujúcich
+            možností by fungovali? (Vyber DVE)
         title: Otázka č. 6
+        markdown: |
+          Otázky č. 5 a 6 sa zaoberajú nasledujúcou webovou stránkou:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
       CSD U2 Test code stylesheet:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 1 a 3
+        - text: 2 a 4
+        - text: 2 a 3
+          correct: true
+        - text: 3 a 4
+        - text: 1, 2, 3 a 4
         title: Otázka č. 5
       CSD U2 Test code stylesheet_pilot_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 1 a 3
+        - text: 2 a 4
+        - text: 2 a 3
+          correct: true
+        - text: 3 a 4
+        - text: 1, 2, 3 a 4
         title: Otázka č. 5
+        markdown: |
+          Otázky č. 5 a 6 za zaoberajú nasledujúcou webovou stránkou:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          Aký kód v súbore štýlov by zmenil farbu textu na zelenú?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+          </div>
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 1 a 3
+        - text: 2 a 4
+        - text: 2 a 3
+          correct: true
+        - text: 3 a 4
+        - text: 1, 2, 3 a 4
         title: Otázka č. 5
+        markdown: |
+          Otázky č. 5 a 6 za zaoberajú nasledujúcou webovou stránkou:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          Aký kód v súbore štýlov by zmenil farbu textu na zelenú?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+          </div>
       CSD U2 image debug match_2022:
         answers:
         - {}
@@ -6921,7 +7142,7 @@ sk-SK:
         questions:
         - text: Atribút `src` je napísaný nesprávne.
         - text: Atribúty `src` a `alt` sú vymenené.
-        - text: Prípona súboru (.jpg) chýba v adrese obrázka.
+        - text: V adrese obrázka chýba prípona súboru (.jpg).
         - {}
         - text: V názve súboru je medzera.
         teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie porozumenia
@@ -6930,6 +7151,37 @@ sk-SK:
           na webové stránky.
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: Sem pridať popis
+        markdown: |
+          # Tvoja osobná webová stránka
+
+          V niekoľkých nasledujúcich úrovniach si vytvoríš a zverejníš vlastnú webovú stránku. Máš teda príležitosť podeliť sa o svoje myšlienky so zvyškom sveta a ukázať, čo všetko už vďaka tomuto kurzu vieš.
+
+          Budeš potrebovať…
+
+          * Vyplneného sprievodcu projektom
+          * Stiahnuté obrázky
+          * Hodnotiacu tabuľku k projektu
+
+          A tu je zoznam vecí, ktoré sme sa učili…
+
+          * Ako pomocou HTML dodať obsahu stránky štruktúru
+          * Ako pomocou CSS nastaviť štýl textu, farby a rozvrhnutie stránky
+          * Ako formátovať kód tak, aby sa ľahšie čítal
+          * Ako ladiť HTML a CSS kód
+          * Ako používať obrázky zodpovedne
+          * Ako na internete ochraňovať svoje osobné údaje
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
       CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -6955,6 +7207,14 @@ sk-SK:
         questions:
         - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
+        markdown: |
+          # Logické výrazy
+
+          **Logický výraz** – výraz, ktorý sa môže vyhodnotiť len ako „TRUE“ alebo „FALSE“
+
+          # Predpovedaj
+
+          Prečítaj si nasledujúci kód. Je v ňom niekoľko nových symbolov, s ktorými sme sa ešte nestretli. Skús uhádnuť, čo znamenajú, a pokús sa odpovedať na nasledujúcu otázku
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
@@ -7055,27 +7315,30 @@ sk-SK:
         title: Otázka č. 6
       CSD U3 Test debugging:
         answers:
+        - text: Iba 3
         - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 1 a 3
+        - text: 2 a 3
+          correct: true
+        - text: 1, 2 a 3
         title: Otázka č. 5
       CSD U3 Test debugging_pilot_2021:
         answers:
+        - text: Iba 3
         - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 1 a 3
+        - text: 2 a 3
+          correct: true
+        - text: 1, 2 a 3
         title: Otázka č. 5
       CSD U3 Test debugging_pilot_2022:
         answers:
+        - text: Iba 3
         - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 1 a 3
+        - text: 2 a 3
+          correct: true
+        - text: 1, 2 a 3
         title: Otázka č. 5
       CSD U3 Test functions:
         answers:
@@ -7192,6 +7455,26 @@ sk-SK:
         description: Veľa precvičuj!
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: Sem pridať popis
+        markdown: |
+          # Vytvorenie skákacej plošinovky
+
+          Pri vytváraní skákacej plošinovky budeš používať proces riešenia problémov.
+
+          ## Definovanie
+
+          Problém je pre túto hru jasne definovaný, pretože už poznáš ukážkovú verziu.  Možno však budeš chcieť urobiť nejaké zmeny. Uisti sa, že všetky nové prvky pre tvoju hru sú jasne definované.
+
+          ## Príprava
+
+          Skôr ako začneš programovať, treba vyplniť sprievodcu projektom. Pripraví ťa na projekt a výrazne ti uľahčí programovanie.
+
+          ## Skúšanie
+
+          Keď začneš kódovať, vyskúšaš si svoj plán. Pri programovaní nezabudni používať všetky zdroje, ktoré máš k dispozícii, ako sú dokumentácia a karta Pomoc a tipy.
+
+          ## Zamyslenie
+
+          Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
       CSD U4 test feature match:
         answers:
         - {}
@@ -7644,11 +7927,17 @@ sk-SK:
       CSD User Centered Design Post-Project Test_2022:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Web Development Post-Project Test_pilot_2022:
-        title: 'Záverečný test: Vývoj webových stránok'
+        title: 'Vývoj webových stránok: záverečný test'
       CSD games cake challenge choice_2022:
         display_name: Náročnejšie úlohy
+        description: |2-
+
+          Uprav si ju podľa seba
+
+          Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
       CSD games platform challenge choice_2022:
         display_name: Náročnejšie úlohy
+        description: Vylepši si hru pomocou týchto úloh!
       CSD web draw loop practice choice_2022:
         display_name: Cvičenie
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
@@ -9099,15 +9388,15 @@ sk-SK:
       csd-pre-survey-levelgroup_21_22_2022:
         title: Objavujeme Informatiku – Úvodný dotazník pre žiakov
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
-        title: Objavujeme informatiku - rýchly prieskum!
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - text: Úplne súhlasím
@@ -16552,8 +16841,10 @@ sk-SK:
         display_name: Precvičovanie používania premenných
       CSD U2 CSS practice_pilot_2021:
         display_name: Štýlovanie textu pomocou CSS
+        description: Vyskúšaj si svoje nové zručnosti na týchto rôznych úlohách!
       CSD U2 CSS practice_pilot_2022:
         display_name: Štýlovanie textu pomocou CSS
+        description: Vyskúšaj si svoje nové zručnosti na týchto rôznych úlohách!
       CSD U3 drawing challenges_2021:
         description: Vyskúšaj si niektoré úlohy!
         display_name: Úlohy na kreslenie
@@ -16794,20 +17085,12 @@ sk-SK:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: Scrat sa dostane k žaluďu. V tomto kóde nie sú žiadne chyby.
-          feedback: Nesprávne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
           correct: true
-          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nedostane až k žaluďu, pretože je použitých málo bokov `posuň
             sa dopredu`.
-          correct: true
-          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
-            ďaleko vpred aby sa dostal až k žaluďu.
         - text: Scrat sa nepohne z prvého bloku.
-          feedback: V tomto kóde sú dve chyby. Ako prvé Scrat zle odbočí, potom sa
-            neposunie dostatočne ďaleko vpred aby sa dostal až k žaluďu.
+          feedback: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
         questions:
         - text: Hľadaj chyby v kóde. Dostane sa Scrat až k žaluďu alebo narazí na
             problém?
@@ -17012,18 +17295,11 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
-          correct: true
+        - correct: true
           feedback: Správne!
         - text: Zombík sa dostane k slnečnici.
-          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
-          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         - text: Zombík sa zasekne na konci cesty vpred.
-          feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until2_predict12022:
@@ -17460,8 +17736,10 @@ sk-SK:
         display_name: Prispôsob si aplikáciu
       CSD games istouching practice choice_2021:
         description: V týchto aktivitách si precvičíš používanie detekcie kolízií.
+        display_name: Kolízie – cvičenia
       CSD games istouching practice choice_2022:
         description: V týchto aktivitách si precvičíš používanie detekcie kolízií.
+        display_name: Kolízie – cvičenia
       CSD games random practice_2021:
         description: Vyskúšaj si svoje nové zručnosti na týchto úrovniach.
         display_name: Precvičovanie náhodných čísel
@@ -17470,37 +17748,43 @@ sk-SK:
         display_name: Precvičovanie náhodných čísel
       CSD games velocity practice choice_2021:
         description: V týchto aktivitách si precvičíš používanie blokov rýchlosti.
+        display_name: Rýchlosť – cvičenia
       CSD games velocity practice choice_2022:
         description: V týchto aktivitách si precvičíš používanie blokov rýchlosti.
+        display_name: Rýchlosť – cvičenia
       CSD web conditionals practice choice_2021:
         description: V týchto aktivitách si precvičíš používanie logických hodnôt
           a podmienených príkazov.
+        display_name: Podmienky – cvičenia
       CSD web conditionals practice choice_2022:
         description: V týchto aktivitách si precvičíš používanie logických hodnôt
           a podmienených príkazov.
+        display_name: Podmienky – cvičenia
       CSD web keyboard practice choice_2021:
-        description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice.
+        description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
+        display_name: Vstup z klávesnice – cvičenie
       CSD web keyboard practice choice_2022:
-        description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice.
+        description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
+        display_name: Vstup z klávesnice – cvičenie
       CSD web mouse practice choice_2021:
         description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice
           a používanie bloku if/else.
+        display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD web mouse practice choice_2022:
-        description: V týchto aktivitách si precvičíš zadávanie údajov pomocou klávesnice
-          a používanie bloku if/else.
+        display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD Games Properties challenge_2021:
-        description: Vyskúšaj tieto nové úlohy s vlastnosťami sprajtov
+        description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov
         display_name: 'Úlohy: Vlastnosti sprajtov'
       CSD Games Properties challenge_2022:
-        description: Vyskúšaj tieto nové úlohy s vlastnosťami sprajtov
+        description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov
         display_name: 'Úlohy: Vlastnosti sprajtov'
       CSD Games Sprites Challenges_2021:
-        description: Vyskúšajte tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
-          tvoje sprajty.
+        description: Vyskúšaj si tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
+          svoje sprajty.
         display_name: 'Úlohy: Sprajty a animácie'
       CSD Games Sprites Challenges_2022:
-        description: Vyskúšajte tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
-          tvoje sprajty.
+        description: Vyskúšaj si tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
+          svoje sprajty.
         display_name: 'Úlohy: Sprajty a animácie'
       CSD Games Sprites practice_2021:
         description: Na dokončenie týchto úrovní využi svoje nové vedomosti o sprajtoch
@@ -17512,8 +17796,12 @@ sk-SK:
         display_name: Vytváranie sprajtov a animácií
       CSD Web Headings challenge_2021:
         display_name: Nadpisy v jazyku HTML
+        description: Tu máš ďalší HTML kód na vyskúšanie a voľnú úroveň, kde ho môžeš
+          použiť
       CSD Web Headings challenge_2022:
         display_name: Nadpisy v jazyku HTML
+        description: Tu máš ďalší HTML kód na vyskúšanie a voľnú úroveň, kde ho môžeš
+          použiť
       CSD Web Headings practice_2021:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
@@ -17523,20 +17811,492 @@ sk-SK:
           z nasledujúcich aktivít.
         display_name: Nadpisy v jazyku HTML
       CSD games random challenge_2021:
-        description: Vyskúšaj tieto ďalšie úlohy s náhodnými číslami.
+        description: Vyskúšaj si tieto ďalšie úlohy s náhodnými číslami.
         display_name: 'Úlohy: Náhodné čísla'
       CSD games random challenge_2022:
-        description: Vyskúšaj tieto ďalšie úlohy s náhodnými číslami.
+        description: Vyskúšaj si tieto ďalšie úlohy s náhodnými číslami.
         display_name: 'Úlohy: Náhodné čísla'
       CSD web text challenge choice_2021:
         description: Vyskúšaj si tieto nové bloky a úlohy.
-        display_name: Textové úlohy
+        display_name: Text – úlohy
       CSD web text challenge choice_2022:
         description: Vyskúšaj si tieto nové bloky a úlohy.
-        display_name: Textové úlohy
+        display_name: Text – úlohy
       ml-models in applab-choice parent:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
+        display_name: Karta modelu – cvičenia
       ml-models in applab-choice parent_2022:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
+        display_name: Karta modelu – cvičenia
+      CSD CSS project RGB_2021:
+        description: Zisti, ako môžeš používať ešte viac farieb pomocou RGB kódov.
+        display_name: RGB farby
+      CSD CSS project RGB_2022:
+        description: Zisti, ako môžeš používať ešte viac farieb pomocou RGB kódov.
+        display_name: RGB farby
+      CSD CSS project Review_2021:
+        description: Tu je niekoľko CSS vlastností, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké štýly použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie CSS
+      CSD CSS project Review_2022:
+        description: Tu je niekoľko CSS vlastností, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké štýly použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie CSS
+      CSD HTML project Lists_2021:
+        description: Prehliadni si tieto nové značky, pomocou ktorých budeš môcť na
+          svoju webovú stránku pridávať zoznamy.
+        display_name: Zoznamy v HTML
+      CSD HTML project Lists_2022:
+        description: Prehliadni si tieto nové značky, pomocou ktorých budeš môcť na
+          svoju webovú stránku pridávať zoznamy.
+        display_name: Zoznamy v HTML
+      CSD HTML project Review_2021:
+        description: Tu je niekoľko HTML značiek, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké značky použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie HTML
+      CSD HTML project Review_2022:
+        description: Tu je niekoľko HTML značiek, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké značky použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie HTML
+      CSD U2 CSS challenge_pilot_2021:
+        description: Existuje množstvo rôznych spôsobov, ako štýlovať text. Prejdi
+          si nasledujúce úlohy, v ktorých nájdeš nové nápady, čo všetko môžeš urobiť
+          na svojej webovej stránke.
+        display_name: Úlohy a ďalší kód
+      CSD U2 CSS challenge_pilot_2022:
+        description: Existuje množstvo rôznych spôsobov, ako štýlovať text. Prejdi
+          si nasledujúce úlohy, v ktorých nájdeš nové nápady, čo všetko môžeš urobiť
+          na svojej webovej stránke.
+        display_name: Úlohy a ďalší kód
+      CSD U2 Expression Exemplars_2018_2019_pilot_2021:
+        markdown: |
+          # Príklady osobných webov
+
+          Na nasledujúcich odkazoch si môžeš pozrieť, aké webové stránky povytvárali iní žiaci.
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Expression Exemplars_2018_2019_pilot_2022:
+        markdown: |
+          # Príklady osobných webov
+
+          Na nasledujúcich odkazoch si môžeš pozrieť, aké webové stránky povytvárali iní žiaci.
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Sample CSS layout_2021:
+        markdown: |+
+          # Ukážkové weby
+
+          Na nasledujúcich odkazoch si môžeš prezrieť nové typy štýlov, ktoré môžeš využiť na svojich webových stránkach.
+
+          |Príklad č. 1| Príklad č. 2| Príklad č. 3|
+          |-|-|-|
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
+
+
+      CSD U2 Sample CSS layout_2022:
+        markdown: |+
+          # Ukážkové weby
+
+          Na nasledujúcich odkazoch si môžeš prezrieť nové typy štýlov, ktoré môžeš využiť na svojich webových stránkach.
+
+          |Príklad č. 1| Príklad č. 2| Príklad č. 3|
+          |-|-|-|
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
+
+
+      CSD U2 Sample CSS text_2021:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web, kde objavíš niekoľko nových spôsobov štýlovania webových stránok.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+      CSD U2 Sample CSS text_2022:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web, kde objavíš niekoľko nových spôsobov štýlovania webových stránok.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+      CSD U2 Sample classes_2021:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web a skús na ňom nájsť nové spôsoby, ako HTML prvkom nastaviť štýl.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Sample classes_2022:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web a skús na ňom nájsť nové spôsoby, ako HTML prvkom nastaviť štýl.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Top Websites_2018_2019_pilot_2021:
+        markdown: |
+          # Weby na riešenie problémov
+
+          Tieto weby boli vytvorené na vyriešenie nejakého problému. Vyber si z nich dve a vyplň pomocou nich sprievodcu aktivitou.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 Top Websites_2018_2019_pilot_2022:
+        markdown: |
+          # Weby na riešenie problémov
+
+          Tieto weby boli vytvorené na vyriešenie nejakého problému. Vyber si z nich dve a vyplň pomocou nich sprievodcu aktivitou.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 layout style challenge_pilot_2021:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Štýlovanie prvkov
+      CSD U2 layout style challenge_pilot_2022:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Štýlovanie prvkov
+      CSD U2 layout style practice_pilot_2021:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Štýlovanie prvkov
+      CSD U2 layout style practice_pilot_2022:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Štýlovanie prvkov
+      CSD U2 links challenge_2021:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Vytváranie odkazov
+      CSD U2 links challenge_2022:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Vytváranie odkazov
+      CSD games collisions challenge choice_2021:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games collisions challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games istouching challenge choice_2021:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games istouching challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games velocity challenge choice_2021:
+        description: Vyskúšaj tieto nové bloky a úlohy týkajúce sa rýchlosti.
+        display_name: Rýchlosť – úlohy
+      CSD games velocity challenge choice_2022:
+        description: Vyskúšaj tieto nové bloky a úlohy týkajúce sa rýchlosti.
+        display_name: Rýchlosť – úlohy
+      CSD web classes challenge_2021:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Používanie tried
+      CSD web classes challenge_2022:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Používanie tried
+      CSD web classes practice_2021:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Používanie tried
+      CSD web classes practice_2022:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Používanie tried
+      CSD web conditionals challenge choice_2021:
+        description: Vyskúšaj si tieto úlohy s podmienkami.
+        display_name: Podmienky – úlohy
+      CSD web conditionals challenge choice_2022:
+        description: Vyskúšaj si tieto úlohy s podmienkami.
+        display_name: Podmienky – úlohy
+      CSD web draw loop challenge choice_2021:
+        description: Vyskúšaj si tieto úlohy s cyklom kreslenia.
+        display_name: Úlohy s cyklom kreslenia
+      CSD web draw loop challenge choice_2022:
+        description: Vyskúšaj si tieto úlohy s cyklom kreslenia.
+        display_name: Úlohy s cyklom kreslenia
+      CSD web keyboard challenge choice_2021:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom z klávesnice.
+        display_name: Vstup z klávesnice – úlohy
+      CSD web keyboard challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom z klávesnice.
+        display_name: Vstup z klávesnice – úlohy
+      CSD web mouse challenge choice_2021:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom pomocou myši.
+        display_name: Myš – úlohy
+      CSD web mouse challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom pomocou myši.
+        display_name: Myš – úlohy
+      CSD web movement challenge choice_2021:
+        description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
+          nové.
+        display_name: Pohyb sprajtov – úlohy
+      CSD web movement challenge choice_2022:
+        description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
+          nové.
+        display_name: Pohyb sprajtov – úlohy
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Naplánuj si svoj projekt
+
+          Pozri si sprievodcu projektom, ktorý už bol pre teba vyplnený.
+
+          * Opisuje sprievodca projektom tie isté sprajty, ktoré máš vymyslené?
+          * Používa na ukladanie informácií rovnaké premenné?
+          * Opisuje tie isté funkcie ako ty?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Naplánuj si svoj projekt
+
+          Pozri si sprievodcu projektom, ktorý už bol pre teba vyplnený.
+
+          * Opisuje sprievodca projektom tie isté sprajty, ktoré máš vymyslené?
+          * Používa na ukladanie informácií rovnaké premenné?
+          * Opisuje tie isté funkcie ako ty?
+      CSD games collisions practice choice_2021:
+        description: Precvič si používanie nových blokov kolízie sprajtov.
+        display_name: Kolízie – cvičenia
+      CSD games collisions practice choice_2022:
+        description: Precvič si používanie nových blokov kolízie sprajtov.
+        display_name: Kolízie – cvičenia
+      CSD games functions challenge choice_2021:
+        description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
+        display_name: Funkcie – úlohy
+      CSD games functions challenge choice_2022:
+        description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
+        display_name: Funkcie – úlohy
+      CSD games functions practice choice_2021:
+        description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
+          užitočné.
+        display_name: Funkcie – cvičenia
+      CSD games functions practice choice_2022:
+        description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
+          užitočné.
+        display_name: Funkcie – cvičenia
+      CSD games movement2 challenge choice_2021:
+        description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
+        display_name: Zložité pohyby sprajtu – úlohy
+      CSD games movement2 challenge choice_2022:
+        description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
+        display_name: Zložité pohyby sprajtu – úlohy
+      CSD games movement2 practice choice_2021:
+        description: Precvič si používanie nových spôsobov pohybu sprajtov.
+        display_name: Pohyb sprajtov – cvičenia
+      CSD games movement2 practice choice_2022:
+        description: Precvič si používanie nových spôsobov pohybu sprajtov.
+        display_name: Pohyb sprajtov – cvičenia
+      aiml-ch1-pulse-survey_2021:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-ch1-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-intro-pulse-survey_2021:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-intro-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+      ml-models-shoe survey_2022:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+      ml-model card-medical-1-2021:
+        markdown: |
+          # ER Recommender V1
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # ER Recommender V1
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-2_2022:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # AI Medical Recommender
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # AI Medical Recommender
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Odporúčanie domáceho zvieratka – karta modelu
+
+          **S partnerom:** Ako dokážete rozlíšiť kategorické vlastnosti a číselné vlastnosti na karte modelu?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Odporúčanie domáceho zvieratka – karta modelu
+
+          **S partnerom:** Ako dokážete rozlíšiť kategorické vlastnosti a číselné vlastnosti na karte modelu?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: Rýchly prieskum o informatike!
+      csd-post-survey-markdown-with-link-to-survey_2021:
+        markdown: |+
+          # Objavujeme informatiku - Záverečný dotazník
+
+          **Tvoje pripomienky a spätná väzba sú pre nás dôležité!** Používame ich na to, aby sme:
+
+          * zistili viac o tvojej skúsenosti s týmto kurzom
+          * vylepšovanie kurzu
+
+          Ďakujeme za tvoj čas a ochotu pomôcť nám pri vylepšovaní kurzu Objavujeme informatiku!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Klikni sem a vyplň dotazník</a>
+
+          (otvorí sa na novej karte)
+
+          <br>
+
+
+
+
+
+        teacher_markdown: |-
+          Táto úroveň sa objaví na konci každého tematického celku. **Nechajte žiakov vyplniť tento dotazník na konci posledného tematického celku!** Žiaci musia dotazník vyplniť len raz na konci kurzu.
+
+          -   Výsledky sú pre nás (code.org) veľmi dôležité, aby sme mohli pokračovať v našich kurzoch a zlepšovať ich.
+          -   K dispozícii bude aj dotazník pre učiteľov, v ktorom môžete uviesť svoje vlastné názory. O dotazníku pre učiteľov vás budeme informovať e-mailom.
+
+          **Pokyny na odomknutie dotazníka pre žiakov:** [[Google dokument](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Ak žiaci kliknú na odkaz a zobrazí sa chybové hlásenie o tom, že je dotazník uzamknutý, podľa vyššie uvedených pokynov odomknite žiakom dotazník.
+      csd-post-survey-markdown-with-link-to-survey_2022:
+        teacher_markdown: |-
+          Táto úroveň sa objaví na konci každého tematického celku. **Nechajte žiakov vyplniť tento dotazník na konci posledného tematického celku!** Žiaci musia dotazník vyplniť len raz na konci kurzu.
+
+          -   Výsledky sú pre nás (code.org) veľmi dôležité, aby sme mohli pokračovať v našich kurzoch a zlepšovať ich.
+          -   K dispozícii bude aj dotazník pre učiteľov, v ktorom môžete uviesť svoje vlastné názory. O dotazníku pre učiteľov vás budeme informovať e-mailom.
+
+          **Pokyny na odomknutie dotazníka pre žiakov:** [[Google dokument](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Ak žiaci kliknú na odkaz a zobrazí sa chybové hlásenie o tom, že je dotazník uzamknutý, podľa vyššie uvedených pokynov odomknite žiakom dotazník.
+      ml-customize apps-practice choice-2021:
+        display_name: Prispôsobenie aplikácií – cvičenia
+      ml-customize apps-practice choice_2022:
+        display_name: Prispôsobenie aplikácií – cvičenia
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) a vytvor kópiu Isaacovych údajov.
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) a vytvor kópiu Isaacovych údajov.
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) a vytvor kópiu Kiminych údajov.
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) a vytvor kópiu Kiminych údajov.
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) a vyplň Kimin dotazník.
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) a vyplň Kimin dotazník.
+      ml-plan survey-copy form:
+        markdown: |
+          # Skopírovanie Formulára Google
+
+          ## [Klikni sem](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) a vytvor si kópiu šablóny prieskumu, ktorú budeme dnes používať.
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Skopírovanie Formulára Google
+
+          ## [Klikni sem](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) a vytvor si kópiu šablóny prieskumu, ktorú budeme dnes používať.
+      ml-use models applab-practice choice-2021:
+        display_name: Modely v App Labe – cvičenia
+      ml-use models applab-practice choice_2022:
+        display_name: Modely v App Labe – cvičenia

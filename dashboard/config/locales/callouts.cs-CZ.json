@@ -2052,6 +2052,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "kolík"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "kolík"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "kolík"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "kolík"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Nejprve klikněte sem!"
         }
       }
     }
