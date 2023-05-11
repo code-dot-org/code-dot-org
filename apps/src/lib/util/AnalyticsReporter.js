@@ -60,7 +60,6 @@ class AnalyticsReporter {
     }
   }
 
-  // Will only log in development.
   log(message) {
     if (isDevelopmentEnvironment()) {
       console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
