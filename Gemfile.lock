@@ -421,8 +421,6 @@ GEM
       httpclient
       json
     firebase_token_generator (2.0.0)
-    font-awesome-rails (4.7.0.8)
-      railties (>= 3.2, < 8.0)
     fspath (3.1.0)
     gemoji (2.1.0)
     geocoder (1.6.4)
@@ -662,7 +660,7 @@ GEM
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
     racc (1.6.2)
-    rack (2.2.6.2)
+    rack (2.2.6.4)
     rack-cache (1.13.0)
       rack (>= 0.4)
     rack-mini-profiler (3.0.0)
@@ -966,7 +964,6 @@ DEPENDENCIES
   fakeredis
   firebase
   firebase_token_generator
-  font-awesome-rails (~> 4.7.0.8)
   full-name-splitter!
   gctools!
   gemoji

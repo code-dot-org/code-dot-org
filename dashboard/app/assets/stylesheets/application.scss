@@ -47,8 +47,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
