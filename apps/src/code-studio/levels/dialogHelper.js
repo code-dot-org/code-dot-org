@@ -103,9 +103,7 @@ export function processResults(onComplete, beforeHook) {
   }
   function sendResultsCompletion() {
     var results = getResult();
-    var response = results.response;
-    var result = results.result;
-    var errorDialog = results.errorDialog;
+    const {errorDialog, pass, response, result} = results;
     var testResult = results.testResult ? results.testResult : result ? 100 : 0;
     var submitted = results.submitted || false;
 
@@ -137,7 +135,7 @@ export function processResults(onComplete, beforeHook) {
       app: appOptions.dialog.app,
       level: appOptions.dialog.level,
       result: result,
-      pass: result,
+      pass: pass || result,
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {

@@ -97,7 +97,7 @@
       .clear
 
       - if standalone
-        = render partial: 'levels/dialog', locals: {app: app}
+        = render partial: 'levels/dialog', locals: {app: app, next_level_link: @next_level_link}
 
   .clear
   -unless contained_mode

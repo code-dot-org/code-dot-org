@@ -9,6 +9,7 @@ import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {TestResults} from '../../constants';
 
 var Multi = function (
   levelId,
@@ -226,12 +227,7 @@ Multi.prototype.getAppName = function () {
 // called by external result-posting code
 Multi.prototype.getResult = function (dontAllowSubmit) {
   let answer;
-  let errorDialog;
   let valid;
-
-  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorDialog = <LegacyTooFewDialog />;
-  }
 
   if (this.numAnswers === 1) {
     answer = this.lastSelectionIndex;
@@ -241,8 +237,19 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     valid = this.selectedAnswers.length === this.numAnswers;
   }
 
-  var result;
-  var submitted;
+  let result;
+  let pass;
+  let submitted;
+  let errorDialog;
+  let testResult;
+
+  const answerIsCorrect = this.validateAnswers();
+
+  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
+    errorDialog = <LegacyTooFewDialog />;
+  } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
+    errorDialog = <LegacyTooFewDialog />;
+  }
 
   if (
     !dontAllowSubmit &&
@@ -250,17 +257,27 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   ) {
     result = true;
     submitted = true;
+    pass = true;
+  } else if (!this.allowMultipleAttempts) {
+    pass = true;
+    submitted = false;
+    result = answerIsCorrect;
+    testResult = TestResults.CONTAINED_LEVEL_RESULT;
   } else {
-    result = this.validateAnswers();
+    result = answerIsCorrect;
+    pass = result;
     submitted = false;
   }
+  console.log('getResult:', result, submitted);
 
   return {
     response: answer,
-    result: result,
-    errorDialog: errorDialog,
-    submitted: submitted,
-    valid: valid,
+    result,
+    pass,
+    errorDialog,
+    submitted,
+    valid,
+    testResult,
   };
 };
 
