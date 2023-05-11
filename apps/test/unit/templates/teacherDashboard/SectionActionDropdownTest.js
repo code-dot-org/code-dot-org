@@ -145,22 +145,21 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Restore Section');
   });
 
-  // Uncomment for launch
-  // it('sends selected user to the new edit page', () => {
-  //   const wrapper = shallow(
-  //     <SectionActionDropdown
-  //       {...DEFAULT_PROPS}
-  //       sectionData={sections[3]}
-  //       userId={1539340}
-  //     />
-  //   );
-  //   const sectionId = wrapper.instance().props.sectionData.id;
-  //   const expectedUrl = '/sections/' + sectionId + '/edit';
-  //   expect(wrapper).to.contain('Edit Section Details');
-  //   expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-  //     expectedUrl
-  //   );
-  // });
+  it('sends selected user to the new edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[3]}
+        userId={1539340}
+      />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
 
   // this test can be deleted once we fully switch over to the new flow
   it('sends user to the old edit page', () => {
