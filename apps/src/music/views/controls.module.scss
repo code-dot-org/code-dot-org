@@ -4,11 +4,12 @@
 
 .controlsContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-color: $neutral_dark80;
   z-index: 70;
   border-radius: $default-border-radius;
-  margin: $default-spacing 0;
+  margin: 0 $default-spacing 0 0;
   position: relative;
 }
 
@@ -18,7 +19,7 @@
   text-align: center;
 
   &.center {
-    flex: 1;
+    flex: 0;
   }
 
   &.side {

@@ -15,14 +15,7 @@ const documentationUrl = '/docs/ide/projectbeats';
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
-const Controls = ({
-  setPlaying,
-  playTrigger,
-  top,
-  instructionsAvailable,
-  toggleInstructions,
-  instructionsOnRight,
-}) => {
+const Controls = ({setPlaying, playTrigger, top}) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
   const dispatch = useDispatch();
@@ -39,9 +32,9 @@ const Controls = ({
     return (
       <div
         style={{
-          position: 'absolute',
-          [top ? 'bottom' : 'top']: -175,
-          [instructionsOnRight ? 'left' : 'right']: 10,
+          position: 'fixed',
+          bottom: top ? 20 : 220,
+          right: 20,
         }}
       >
         <BeatPad
@@ -75,18 +68,10 @@ const Controls = ({
     });
     dispatch(toggleBeatPad());
   });
-  const infoIconSection = instructionsAvailable
-    ? renderIconButton('info-circle', toggleInstructions)
-    : null;
-
-  const [leftIcon, rightIcon] = instructionsOnRight
-    ? [beatPadIconSection, infoIconSection]
-    : [infoIconSection, beatPadIconSection];
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       {isBeatPadShowing && renderBeatPad()}
-      {leftIcon}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
       >
@@ -96,6 +81,7 @@ const Controls = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      {beatPadIconSection}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
       >
@@ -112,7 +98,6 @@ const Controls = ({
           />
         </a>
       </div>
-      {rightIcon}
     </div>
   );
 };
@@ -121,9 +106,6 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
-  instructionsAvailable: PropTypes.bool.isRequired,
-  toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired,
 };
 
 export default Controls;

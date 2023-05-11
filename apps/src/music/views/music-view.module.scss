@@ -1,5 +1,5 @@
 // Constants
-$timeline-area-height: 200px;
+$timeline-area-height: 180px;
 $default-border-radius: 4px;
 $default-spacing: 5px;
 
@@ -15,6 +15,7 @@ $default-spacing: 5px;
   user-select: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .instructionsArea {
@@ -57,7 +58,7 @@ $default-spacing: 5px;
   flex: 1;
   display: flex;
   flex-direction: row;
-  max-height: calc(100% - $timeline-area-height);
+  max-height: calc(100% - $timeline-area-height - $default-spacing);
 
   .topButtonsContainer {
     position: absolute;
@@ -81,10 +82,10 @@ $default-spacing: 5px;
   display: flex;
 
   &.timelineBottom {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   &.timelineTop {
-    flex-direction: column-reverse;
+    flex-direction: row;
   }
 }

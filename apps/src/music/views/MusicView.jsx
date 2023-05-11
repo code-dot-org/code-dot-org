@@ -573,9 +573,6 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
-          instructionsAvailable={!!this.progressManager}
-          toggleInstructions={() => this.toggleInstructions(false)}
-          instructionsOnRight={instructionsOnRight}
         />
         <Timeline />
       </div>
