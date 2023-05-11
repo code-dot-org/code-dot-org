@@ -1,3 +1,5 @@
+import styles from '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+
 import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -12,6 +14,7 @@ import {
   Button as ChatButton,
   Loader
 } from '@chatscope/chat-ui-kit-react';
+
 import Button from '@cdo/apps/templates/Button';
 import {openaiCompletion} from '@cdo/apps/util/openai';
 import eduBotPng from '@cdo/apps/templates/instructions/edubot.png';
