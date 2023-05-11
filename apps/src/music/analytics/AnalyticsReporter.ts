@@ -101,6 +101,11 @@ export default class AnalyticsReporter {
   async initialize(): Promise<void> {
     const response = await fetch(API_KEY_ENDPOINT);
     const responseJson = await response.json();
+
+    if (!responseJson.key) {
+      return;
+    }
+
     return init(responseJson.key, undefined, {minIdLength: 1}).promise;
   }
 
