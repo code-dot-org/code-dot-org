@@ -99,4 +99,7 @@ export const SongTitlesToArtistTwitterHandle = {
   sunroof_nickyoureanddazy: 'Nicky_Youre',
   taconesrojos_sebastianyatra: 'SebastianYatra',
   wedonttalkaboutbruno_encanto: 'EncantoMovie',
+  // 2022 Songs
+  butter_bts: 'BTS',
+  dynamite_bts: 'BTS',
 };
