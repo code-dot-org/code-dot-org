@@ -4,7 +4,7 @@
 
 // describe('S3BucketConfiguration', () => {
 //     describe('handler', () => {
-//         it('is an untested function', async () => {
+//         it.skip('is an untested function', async () => {
 //             try {
 //                 await S3BucketConfiguration.handler();
 //             } catch (error) {
