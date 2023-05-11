@@ -37,7 +37,8 @@ Scenario: Free Response level 3
 Scenario: Multi level 1
   # Multiple content blocks, images in question and answers
   When I open my eyes to test "multi summary 1"
-  Given I am a teacher
+  Given I create a teacher named "Teacher_1"
+  And I give user "Teacher_1" authorized teacher permission
   And I create a new student section
   And I am on "http://studio.code.org/s/allthethings/lessons/9/levels/1/summary"
   And I wait until element "#summary-container" is visible
@@ -50,7 +51,8 @@ Scenario: Multi level 1
 Scenario: Multi level 2
   # Markdown in question, images and text in answers, more than 4 answers
   When I open my eyes to test "multi summary 2"
-  Given I am a teacher
+  Given I create a teacher named "Teacher_1"
+  And I give user "Teacher_1" authorized teacher permission
   And I create a new student section
   And I am on "http://studio.code.org/s/allthethings/lessons/9/levels/4/summary"
   And I wait until element "#summary-container" is visible
