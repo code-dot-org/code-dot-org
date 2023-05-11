@@ -13,7 +13,7 @@ export default class SoundList extends React.Component {
     search: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     selectedSound: PropTypes.object.isRequired,
-    soundsRegistry: PropTypes.object.isRequired
+    soundsRegistry: PropTypes.object.isRequired,
   };
 
   getMatches(searchQuery) {
@@ -58,6 +58,6 @@ const styles = {
   root: {
     height: 315,
     overflowY: 'scroll',
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };

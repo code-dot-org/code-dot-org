@@ -83,7 +83,7 @@ Fish.prototype.init = function (config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
   });
 
   ReactDOM.render(
@@ -108,7 +108,7 @@ Fish.prototype.onContinue = function () {
     program: '',
     onComplete: result => {
       onReportComplete(result);
-    }
+    },
   });
 };
 
@@ -132,7 +132,7 @@ Fish.prototype.initMLActivities = function () {
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: fishMsg
+    i18n: fishMsg,
   });
 };
 

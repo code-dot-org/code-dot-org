@@ -86,7 +86,7 @@ GlowFilter.prototype.createFilterSteps_ = function () {
     feCompositeSilhouette,
     feGaussianBlur,
     feCompositeMaskedGlow,
-    feCompositeLayers
+    feCompositeLayers,
   ];
 };
 

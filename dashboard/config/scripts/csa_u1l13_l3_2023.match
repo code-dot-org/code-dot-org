@@ -14,3 +14,4 @@ answer 'determines whether or not to execute a block of code'
 
 question 'efficient'
 answer 'getting the best outcome with the least amount of waste'
+allow_multiple_attempts true

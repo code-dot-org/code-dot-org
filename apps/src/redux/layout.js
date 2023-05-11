@@ -2,7 +2,7 @@
 const SET_VISUALIZATION_SCALE = 'layout/SET_VISUALIZATION_SCALE';
 
 const initialState = {
-  visualizationScale: null
+  visualizationScale: null,
 };
 
 /**

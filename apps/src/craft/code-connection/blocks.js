@@ -24,57 +24,57 @@ const sixDirections = [
   [i18n.directionLeft(), 'left'],
   [i18n.directionRight(), 'right'],
   [i18n.directionUp(), 'up'],
-  [i18n.directionDown(), 'down']
+  [i18n.directionDown(), 'down'],
 ];
 
 const fourDirections = [
   [i18n.directionForward(), 'forward'],
   [i18n.directionBack(), 'back'],
   [i18n.directionLeft(), 'left'],
-  [i18n.directionRight(), 'right']
+  [i18n.directionRight(), 'right'],
 ];
 
 const rotateDirections = [
   [i18n.directionLeft() + ' \u21BA', 'left'],
-  [i18n.directionRight() + ' \u21BB', 'right']
+  [i18n.directionRight() + ' \u21BB', 'right'],
 ];
 
 const positionTypes = [
   [i18n.relative(), '~'],
-  [i18n.absolute(), '']
+  [i18n.absolute(), ''],
 ];
 
 const timeTypes = [
   [i18n.timeDay(), 'day'],
-  [i18n.timeNight(), 'night']
+  [i18n.timeNight(), 'night'],
 ];
 
 const weatherTypes = [
   [i18n.weatherTypeClear(), 'clear'],
   [i18n.weatherTypeRain(), 'rain'],
-  [i18n.weatherTypeThunder(), 'thunder']
+  [i18n.weatherTypeThunder(), 'thunder'],
 ];
 
 const oldBlockHandlings = [
   [i18n.oldBlockHandlingsReplace(), 'replace'],
   [i18n.oldBlockHandlingsDestroy(), 'destroy'],
-  [i18n.oldBlockHandlingsKeep(), 'keep']
+  [i18n.oldBlockHandlingsKeep(), 'keep'],
 ];
 
 const testModes = [
   [i18n.testModeAll(), 'all'],
-  [i18n.testModeMasked(), 'masked']
+  [i18n.testModeMasked(), 'masked'],
 ];
 
 const maskModes = [
   [i18n.maskModeReplace(), 'replace'],
-  [i18n.maskModeMasked(), 'masked']
+  [i18n.maskModeMasked(), 'masked'],
 ];
 
 const cloneModes = [
   [i18n.cloneModeNormal(), 'normal'],
   [i18n.cloneModeForce(), 'force'],
-  [i18n.cloneModeMove(), 'move']
+  [i18n.cloneModeMove(), 'move'],
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -106,7 +106,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setCheck('Number')
         .appendField(new blockly.FieldLabel('Z:'));
       this.setOutput(true, 'Number');
-    }
+    },
   };
 
   blockly.JavaScript.craft_vecThree = function () {
@@ -127,7 +127,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `getVec3(${x}, ${y}, ${z})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -146,7 +146,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_move = function () {
@@ -168,7 +168,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(rotateDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_turn = function () {
@@ -193,7 +193,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.inSlotNumber()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_place = function () {
@@ -220,7 +220,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_till = function () {
@@ -242,7 +242,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_attack = function () {
@@ -264,7 +264,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_destroy = function () {
@@ -286,7 +286,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_collectall = function () {
@@ -307,7 +307,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionCollect()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_collect = function () {
@@ -339,7 +339,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_drop = function () {
@@ -371,7 +371,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_dropall = function () {
@@ -392,14 +392,14 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionDetect()))
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
+    },
   };
 
   blockly.JavaScript.craft_detect = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `detect('block_id_${this.id}','${dir}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -416,14 +416,14 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionInspect()))
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.JavaScript.STRING);
-    }
+    },
   };
 
   blockly.JavaScript.craft_inspect = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `inspect('block_id_${this.id}','${dir}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -440,14 +440,14 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionInspectData()))
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
-    }
+    },
   };
 
   blockly.JavaScript.craft_inspectdata = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `inspectdata('block_id_${this.id}','${dir}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -464,14 +464,14 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionDetectRedstone()))
         .appendField(new blockly.FieldDropdown(sixDirections), 'DIR');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
+    },
   };
 
   blockly.JavaScript.craft_detectredstone = function () {
     var dir = this.getFieldValue('DIR');
     return [
       `detectredstone('block_id_${this.id}','${dir}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -490,7 +490,7 @@ export const install = (blockly, blockInstallOptions) => {
           new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.STRING);
-    }
+    },
   };
 
   blockly.JavaScript.craft_getitemdetail = function () {
@@ -501,7 +501,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `getitemdetail('block_id_${this.id}',${slotNumber})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -520,7 +520,7 @@ export const install = (blockly, blockInstallOptions) => {
           new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
-    }
+    },
   };
 
   blockly.JavaScript.craft_getitemspace = function () {
@@ -531,7 +531,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `getitemspace('block_id_${this.id}',${slotNumber})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -550,7 +550,7 @@ export const install = (blockly, blockInstallOptions) => {
           new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber())
         );
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
-    }
+    },
   };
 
   blockly.JavaScript.craft_getitemcount = function () {
@@ -561,7 +561,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `getitemcount('block_id_${this.id}',${slotNumber})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -588,7 +588,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_transfer = function () {
@@ -624,7 +624,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_tptoplayer = function () {
@@ -652,7 +652,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel('ms'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_wait = function () {
@@ -682,7 +682,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_executeasother = function () {
@@ -711,7 +711,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(timeTypes), 'TIME');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_timesetbyname = function () {
@@ -735,7 +735,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendValueInput('TIME').setCheck('Number');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_timesetbynumber = function () {
@@ -762,7 +762,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(weatherTypes), 'WEATHER');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_weather = function () {
@@ -788,7 +788,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldTextInput(''), 'DESTINATION');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_tptotarget = function () {
@@ -816,7 +816,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_tptopos = function () {
@@ -863,7 +863,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_fill = function () {
@@ -908,7 +908,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldTextInput(''), 'PLAYER');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_give = function () {
@@ -942,7 +942,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldTextInput(''), 'TARGET');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_kill = function () {
@@ -978,7 +978,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_setblock = function () {
@@ -1018,7 +1018,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_summon = function () {
@@ -1054,7 +1054,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.blockIs()));
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
+    },
   };
 
   blockly.JavaScript.craft_testforblock = function () {
@@ -1071,7 +1071,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `testforblock('block_id_${this.id}',createBlockPosFromVec3(${vec3}, "${positionType}"),${item})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1113,7 +1113,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldDropdown(testModes), 'TESTMODE');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
+    },
   };
 
   blockly.JavaScript.craft_testforblocks = function () {
@@ -1138,7 +1138,7 @@ export const install = (blockly, blockInstallOptions) => {
     var testMode = this.getFieldValue('TESTMODE');
     return [
       `testforblocks('block_id_${this.id}',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${testMode}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1183,7 +1183,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_clone = function () {
@@ -1249,7 +1249,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.JavaScript.craft_clonefiltered = function () {
@@ -1297,7 +1297,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setCheck(Blockly.JavaScript.STRING)
         .appendField(new blockly.FieldLabel(i18n.blockData()));
       this.setOutput(true, ITEM_TYPE);
-    }
+    },
   };
 
   blockly.JavaScript.craft_createblock = function () {
@@ -1313,7 +1313,7 @@ export const install = (blockly, blockInstallOptions) => {
     );
     return [
       `item('block_id_${this.id}',${blockType},${blockData})`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1332,14 +1332,14 @@ export const install = (blockly, blockInstallOptions) => {
           'BLOCK'
         );
       this.setOutput(true, ITEM_TYPE);
-    }
+    },
   };
 
   blockly.JavaScript.craft_block = function () {
     var block = this.getFieldValue('BLOCK');
     return [
       `item('block_id_${this.id}','${getName(block)}','${getData(block)}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1358,14 +1358,14 @@ export const install = (blockly, blockInstallOptions) => {
           'ITEM'
         );
       this.setOutput(true, ITEM_TYPE);
-    }
+    },
   };
 
   blockly.JavaScript.craft_miscellaneous = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1384,14 +1384,14 @@ export const install = (blockly, blockInstallOptions) => {
           'ITEM'
         );
       this.setOutput(true, ITEM_TYPE);
-    }
+    },
   };
 
   blockly.JavaScript.craft_decoration = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1410,14 +1410,14 @@ export const install = (blockly, blockInstallOptions) => {
           'ITEM'
         );
       this.setOutput(true, ITEM_TYPE);
-    }
+    },
   };
 
   blockly.JavaScript.craft_tool = function () {
     var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
-      Blockly.JavaScript.ORDER_FUNCTION_CALL
+      Blockly.JavaScript.ORDER_FUNCTION_CALL,
     ];
   };
 
@@ -1433,7 +1433,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setCheck(ITEM_TYPE)
         .appendField(new blockly.FieldLabel(i18n.getnameof()));
       this.setOutput(true, Blockly.JavaScript.STRING);
-    }
+    },
   };
 
   blockly.JavaScript.craft_getnameof = function () {
@@ -1457,7 +1457,7 @@ export const install = (blockly, blockInstallOptions) => {
         .setCheck(ITEM_TYPE)
         .appendField(new blockly.FieldLabel(i18n.getdataof()));
       this.setOutput(true, Blockly.JavaScript.STRING);
-    }
+    },
   };
 
   blockly.JavaScript.craft_getdataof = function () {

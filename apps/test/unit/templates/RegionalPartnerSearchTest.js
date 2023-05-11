@@ -4,14 +4,14 @@ import {isolateComponent} from 'isolate-react';
 import {UnconnectedRegionalPartnerSearch as RegionalPartnerSearch} from '@cdo/apps/templates/RegionalPartnerSearch';
 import {
   WorkshopApplicationStates,
-  ActiveCourseWorkshops
+  ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
 const MINIMUM_PROPS = {
-  responsiveSize: 'md'
+  responsiveSize: 'md',
 };
 
 // All course types of which programs can be offered (i.e. CSD, CSP, and CSA)
@@ -23,7 +23,7 @@ const OFFERED_WORKSHOP = {
   course: ActiveCourseWorkshops[OFFERED_PROGRAMS[0]],
   workshop_date_range_string: 'Test CSD workshop dates',
   location_name: 'Test CSD workshop location',
-  location_address: 'Test CSD workshop address'
+  location_address: 'Test CSD workshop address',
 };
 
 const createServerResponses = (
@@ -37,14 +37,14 @@ const createServerResponses = (
     application_state: {
       state: applicationsClosed
         ? WorkshopApplicationStates.now_closed
-        : WorkshopApplicationStates.currently_open
+        : WorkshopApplicationStates.currently_open,
     },
     summer_workshops: summerWorkshops || [],
-    pl_programs_offered: programsOffered || []
+    pl_programs_offered: programsOffered || [],
   };
 
   const responseWithoutRP = {
-    error: 'no_partner'
+    error: 'no_partner',
   };
 
   server.respondWith(
@@ -124,7 +124,7 @@ describe('RegionalPartnerSearch', () => {
   });
   it('shows Not Offering note on workshop card(s) for the program(s) not being offered when other programs are offered', () => {
     createServerResponses(server, true, false, OFFERED_PROGRAMS, [
-      OFFERED_WORKSHOP
+      OFFERED_WORKSHOP,
     ]);
     const wrapper = isolateComponent(
       <RegionalPartnerSearch {...MINIMUM_PROPS} />
@@ -148,7 +148,7 @@ describe('RegionalPartnerSearch', () => {
   });
   it('shows Details Coming Soon note on workshop card(s) for offered program(s) that do not currently have summer workshops', () => {
     createServerResponses(server, true, false, OFFERED_PROGRAMS, [
-      OFFERED_WORKSHOP
+      OFFERED_WORKSHOP,
     ]);
     const wrapper = isolateComponent(
       <RegionalPartnerSearch {...MINIMUM_PROPS} />
@@ -171,7 +171,7 @@ describe('RegionalPartnerSearch', () => {
   });
   it('shows summer workshop details on workshop cards for offered programs with summer workshops', () => {
     createServerResponses(server, true, false, OFFERED_PROGRAMS, [
-      OFFERED_WORKSHOP
+      OFFERED_WORKSHOP,
     ]);
     const wrapper = isolateComponent(
       <RegionalPartnerSearch {...MINIMUM_PROPS} />

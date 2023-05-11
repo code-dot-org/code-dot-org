@@ -32,11 +32,11 @@ export default function PrintCertificateBatch({imageUrls}) {
 }
 
 PrintCertificateBatch.propTypes = {
-  imageUrls: PropTypes.arrayOf(PropTypes.string).isRequired
+  imageUrls: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const styles = {
   wrapper: {
-    fontSize: 15
-  }
+    fontSize: 15,
+  },
 };

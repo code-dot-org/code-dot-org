@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import {
   AdministratorResourcesActionBlock,
-  CscInfoActionBlock
+  CscInfoActionBlock,
 } from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -16,7 +16,7 @@ import {
   TeacherGradeBandCards,
   ToolsAIExtrasCard,
   ToolsWidgetsCard,
-  ToolsCards
+  ToolsCards,
 } from '@cdo/apps/util/courseBlockCardsConstants';
 
 /**
@@ -25,7 +25,7 @@ import {
  */
 class CoursesTeacherEnglish extends Component {
   static propTypes = {
-    showAiCard: PropTypes.bool
+    showAiCard: PropTypes.bool,
   };
 
   componentDidMount() {

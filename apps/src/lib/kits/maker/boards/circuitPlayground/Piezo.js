@@ -35,7 +35,7 @@ Piezo.prototype.play = function (notes, tempo = 120) {
       }
       return n;
     }),
-    tempo
+    tempo,
   });
 };
 

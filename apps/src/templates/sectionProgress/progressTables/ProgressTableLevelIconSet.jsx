@@ -11,12 +11,12 @@ import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 const styles = {
   icon: {
     color: color.charcoal,
-    fontSize: 20
+    fontSize: 20,
   },
   unpluggedPlaceholderContainer: {
     height: 0,
-    opacity: 0
-  }
+    opacity: 0,
+  },
 };
 
 /**
@@ -56,7 +56,7 @@ function LevelIcon({icon, isUnplugged}) {
 }
 LevelIcon.propTypes = {
   icon: PropTypes.string.isRequired,
-  isUnplugged: PropTypes.bool
+  isUnplugged: PropTypes.bool,
 };
 
 /**
@@ -75,11 +75,11 @@ export default function ProgressTableLevelIconSet({levels}) {
     return {
       node: icon,
       nodeStyle: styles.icon,
-      sublevelCount: level.sublevels?.length
+      sublevelCount: level.sublevels?.length,
     };
   });
   return <ProgressTableLevelSpacer items={items} />;
 }
 ProgressTableLevelIconSet.propTypes = {
-  levels: PropTypes.arrayOf(levelType)
+  levels: PropTypes.arrayOf(levelType),
 };

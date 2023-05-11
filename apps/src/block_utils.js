@@ -176,7 +176,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(tooltip);
-    }
+    },
   };
 
   generator[name] = function () {
@@ -604,7 +604,7 @@ const determineInputs = function (text, args, strictTypes = []) {
         options: arg.options,
         assignment: arg.assignment,
         defer: arg.defer,
-        customOptions: arg.customOptions
+        customOptions: arg.customOptions,
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -615,7 +615,7 @@ const determineInputs = function (text, args, strictTypes = []) {
     } else {
       return {
         mode: DUMMY_INPUT,
-        label
+        label,
       };
     }
   });
@@ -623,7 +623,7 @@ const determineInputs = function (text, args, strictTypes = []) {
     .filter(arg => arg.statement)
     .map(arg => ({
       mode: STATEMENT_INPUT,
-      name: arg.name
+      name: arg.name,
     }));
   inputs.push(...statementInputs);
   args = args.filter(arg => !arg.statement);
@@ -658,7 +658,7 @@ const STANDARD_INPUT_TYPES = {
         inputConfig.name,
         Blockly.JavaScript.ORDER_COMMA
       );
-    }
+    },
   },
   [STATEMENT_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -667,7 +667,7 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       const code = Blockly.JavaScript.statementToCode(block, inputConfig.name);
       return `function () {\n${code}}`;
-    }
+    },
   },
   [INLINE_DUMMY_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -685,7 +685,7 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -693,7 +693,7 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -714,7 +714,7 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
+    },
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -722,8 +722,8 @@ const STANDARD_INPUT_TYPES = {
       block.getVars = function () {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name)
-          ]
+            block.getFieldValue(inputConfig.name),
+          ],
         };
       };
 
@@ -759,7 +759,7 @@ const STANDARD_INPUT_TYPES = {
       return Blockly.JavaScript.translateVarName(
         block.getFieldValue(inputConfig.name)
       );
-    }
+    },
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -776,8 +776,8 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
-  }
+    },
+  },
 };
 
 const groupInputsByRow = function (inputs, inputTypes = STANDARD_INPUT_TYPES) {
@@ -869,7 +869,7 @@ exports.createJsWrapperBlockCreator = function (
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,
-    ...customInputTypes
+    ...customInputTypes,
   };
 
   /**
@@ -932,7 +932,7 @@ exports.createJsWrapperBlockCreator = function (
       simpleValue,
       extraArgs,
       callbackParams,
-      miniToolboxBlocks
+      miniToolboxBlocks,
     },
     helperCode,
     pool
@@ -1012,7 +1012,7 @@ exports.createJsWrapperBlockCreator = function (
       // just tack one onto the end
       args.push({
         name: 'DO',
-        statement: true
+        statement: true,
       });
     }
     const inputs = [...args];
@@ -1022,7 +1022,7 @@ exports.createJsWrapperBlockCreator = function (
       inputs.push({
         name: 'THIS',
         type: thisType,
-        strict: strictTypes.includes(thisType)
+        strict: strictTypes.includes(thisType),
       });
     }
     const inputConfigs = determineInputs(blockText, inputs, strictTypes);
@@ -1170,7 +1170,7 @@ exports.createJsWrapperBlockCreator = function (
         }
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
-      }
+      },
     };
 
     generator[blockName] = function () {
@@ -1210,7 +1210,7 @@ exports.createJsWrapperBlockCreator = function (
         if (returnType !== undefined) {
           return [
             code,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return code + ';\n';
@@ -1258,7 +1258,7 @@ exports.createJsWrapperBlockCreator = function (
         if (returnType !== undefined) {
           return [
             `${prefix}${valueExpression}`,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return `${prefix}${valueExpression}`;
@@ -1279,7 +1279,7 @@ exports.createJsWrapperBlockCreator = function (
 exports.installCustomBlocks = function ({
   blockly,
   blockDefinitions,
-  customInputTypes
+  customInputTypes,
 }) {
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
@@ -1287,7 +1287,7 @@ exports.installCustomBlocks = function ({
       // Strict Types
       blockly.BlockValueType.SPRITE,
       blockly.BlockValueType.BEHAVIOR,
-      blockly.BlockValueType.LOCATION
+      blockly.BlockValueType.LOCATION,
     ],
     blockly.BlockValueType.SPRITE,
     customInputTypes

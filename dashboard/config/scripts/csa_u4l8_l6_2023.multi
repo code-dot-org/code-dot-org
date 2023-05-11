@@ -46,3 +46,5 @@ The next `if` condition checks if `x` is equal to `0` and `y` is greater than `0
 
 This means that the code inside the `else` block will execute, so the `"O"` is printed.
 MARKDOWN
+
+allow_multiple_attempts true

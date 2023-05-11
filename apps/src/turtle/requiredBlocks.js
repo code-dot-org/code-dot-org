@@ -11,7 +11,7 @@ function drawASquare(number) {
   return {
     test: 'draw_a_square',
     type: 'draw_a_square',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(number)}
+    values: {VALUE: requiredBlockUtils.makeMathNumber(number)},
   };
 }
 
@@ -20,7 +20,7 @@ function drawASnowman(number) {
   return {
     test: 'draw_a_snowman',
     type: 'draw_a_snowman',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(number)}
+    values: {VALUE: requiredBlockUtils.makeMathNumber(number)},
   };
 }
 
@@ -33,7 +33,7 @@ var MOVE_FORWARD_OR_BACKWARD_INLINE = {
   test: function (block) {
     return block.type === 'draw_move_by_constant';
   },
-  type: 'draw_move_by_constant'
+  type: 'draw_move_by_constant',
 };
 
 // This tests for and creates the limited "move forward" block used on the
@@ -42,7 +42,7 @@ var moveForwardInline = function (pixels) {
   return {
     test: 'moveForward',
     type: 'draw_move_by_constant',
-    titles: {VALUE: pixels}
+    titles: {VALUE: pixels},
   };
 };
 
@@ -51,7 +51,7 @@ var moveForwardInline = function (pixels) {
 var MOVE_BACKWARD_INLINE = {
   test: 'moveBackward',
   type: 'draw_move_by_constant',
-  titles: {DIR: 'moveBackward'}
+  titles: {DIR: 'moveBackward'},
 };
 
 // This tests for a [right] draw_turn_by_constant_restricted block
@@ -62,7 +62,7 @@ var turnRightRestricted = function (degrees) {
   return {
     test: 'turnRight(',
     type: 'draw_turn_by_constant_restricted',
-    titles: {VALUE: degrees}
+    titles: {VALUE: degrees},
   };
 };
 
@@ -74,7 +74,7 @@ var turnLeftRestricted = function (degrees) {
   return {
     test: 'turnLeft(',
     type: 'draw_turn_by_constant_restricted',
-    titles: {VALUE: degrees}
+    titles: {VALUE: degrees},
   };
 };
 
@@ -94,7 +94,7 @@ var turnRightByConstant = function (degrees) {
       );
     },
     type: 'draw_turn_by_constant',
-    titles: {VALUE: degrees}
+    titles: {VALUE: degrees},
   };
 };
 
@@ -110,7 +110,7 @@ var turnRight = function (degrees) {
     },
     type: 'draw_turn',
     titles: {DIR: 'turnRight'},
-    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)}
+    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)},
   };
 };
 
@@ -126,7 +126,7 @@ var turnLeft = function (degrees) {
     },
     type: 'draw_turn',
     titles: {DIR: 'turnLeft'},
-    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)}
+    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)},
   };
 };
 
@@ -138,7 +138,7 @@ var move = function (distance) {
       return block.type === 'draw_move';
     },
     type: 'draw_move',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(distance)}
+    values: {VALUE: requiredBlockUtils.makeMathNumber(distance)},
   };
 };
 
@@ -149,7 +149,7 @@ var drawTurnRestricted = function (degrees) {
       return block.type === 'draw_turn_by_constant_restricted';
     },
     type: 'draw_turn_by_constant_restricted',
-    titles: {VALUE: degrees}
+    titles: {VALUE: degrees},
   };
 };
 
@@ -160,7 +160,7 @@ var drawTurn = function () {
       return block.type === 'draw_turn';
     },
     type: 'draw_turn',
-    values: {VALUE: requiredBlockUtils.makeMathNumber('???')}
+    values: {VALUE: requiredBlockUtils.makeMathNumber('???')},
   };
 };
 
@@ -169,7 +169,7 @@ var drawTurn = function () {
 var SET_COLOUR_PICKER = {
   test: "penColour('#",
   type: 'draw_colour',
-  values: {COLOUR: '<block type="colour_picker"></block>'}
+  values: {COLOUR: '<block type="colour_picker"></block>'},
 };
 
 // This tests for and creates a "set colour" block with a random colour
@@ -177,7 +177,7 @@ var SET_COLOUR_PICKER = {
 var SET_COLOUR_RANDOM = {
   test: 'penColour(colour_random',
   type: 'draw_colour',
-  values: {COLOUR: '<block type="colour_random"></block>'}
+  values: {COLOUR: '<block type="colour_random"></block>'},
 };
 
 /**
@@ -204,7 +204,7 @@ var defineWithArg = function (func_name, arg_name) {
     },
     type: 'procedures_defnoreturn',
     titles: {NAME: func_name},
-    extra: '<mutation><arg name="' + arg_name + '"></arg></mutation>'
+    extra: '<mutation><arg name="' + arg_name + '"></arg></mutation>',
   };
 };
 
@@ -228,5 +228,5 @@ module.exports = {
   drawTurn: drawTurn,
   SET_COLOUR_PICKER: SET_COLOUR_PICKER,
   SET_COLOUR_RANDOM: SET_COLOUR_RANDOM,
-  defineWithArg: defineWithArg
+  defineWithArg: defineWithArg,
 };

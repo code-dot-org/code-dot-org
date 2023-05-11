@@ -15,7 +15,7 @@ import styles from './js-debugger.module.scss';
 import Watchers from '../../../templates/watchers/Watchers';
 import PaneHeader, {
   PaneSection,
-  PaneButton
+  PaneButton,
 } from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
@@ -23,7 +23,7 @@ import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
 import * as utils from '../../../utils';
 import {
   add as addWatchExpression,
-  remove as removeWatchExpression
+  remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
 import DebugConsole from './DebugConsole';
 import DebugButtons from './DebugButtons';
@@ -38,7 +38,7 @@ import {
   isAttached,
   isOpen,
   canRunNext,
-  getCommandHistory
+  getCommandHistory,
 } from './redux';
 
 const debugAreaTransitionValue = 'height 0.4s';
@@ -78,7 +78,7 @@ class JsDebugger extends React.Component {
     // passed from above
     onSlideShut: PropTypes.func,
     onSlideOpen: PropTypes.func,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   constructor(props) {
@@ -89,7 +89,7 @@ class JsDebugger extends React.Component {
       openedHeight: 120,
       consoleWidth: 0,
       // For Google Analytics to see if student has opened the debugger
-      userInteracted: false
+      userInteracted: false,
     };
   }
 
@@ -230,7 +230,7 @@ class JsDebugger extends React.Component {
       transitionType: 'closing',
       open: false,
       openedHeight: $(this.root).height(),
-      closedHeight
+      closedHeight,
     });
     this.props.onSlideShut && this.props.onSlideShut(closedHeight);
   }
@@ -238,7 +238,7 @@ class JsDebugger extends React.Component {
   slideOpen() {
     this.setState({
       open: true,
-      transitionType: 'opening'
+      transitionType: 'opening',
     });
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   }
@@ -290,11 +290,11 @@ class JsDebugger extends React.Component {
       this.props.open();
       this.setState({
         open: true,
-        openedHeight: height
+        openedHeight: height,
       });
     } else {
       this.setState({
-        openedHeight: height
+        openedHeight: height,
       });
     }
   };
@@ -438,7 +438,7 @@ class JsDebugger extends React.Component {
         style={[
           {transition: debugAreaTransitionValue},
           this.props.style,
-          {height}
+          {height},
         ]}
         onTransitionEnd={this.onTransitionEnd}
         ref={root => (this.root = root)}
@@ -638,7 +638,7 @@ export default connect(
     isOpen: isOpen(state),
     isAttached: isAttached(state),
     canRunNext: canRunNext(state),
-    commandHistory: getCommandHistory(state)
+    commandHistory: getCommandHistory(state),
   }),
   {
     setStepSpeed,
@@ -647,6 +647,6 @@ export default connect(
     removeWatchExpression,
     clearLog,
     open,
-    close
+    close,
   }
 )(Radium(JsDebugger));

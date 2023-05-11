@@ -2,6 +2,7 @@
 
 import {DEFAULT_SOUND, DEFAULT_PATTERN, DEFAULT_CHORD} from '../constants';
 import Globals from '../globals';
+import musicI18n from '../locale';
 import {
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
@@ -9,7 +10,7 @@ import {
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
   FIELD_CHORD_TYPE,
-  FIELD_CHORD_NAME
+  FIELD_CHORD_NAME,
 } from './constants';
 
 export const fieldSoundsDefinition = {
@@ -19,7 +20,7 @@ export const fieldSoundsDefinition = {
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
-  currentValue: DEFAULT_SOUND
+  currentValue: DEFAULT_SOUND,
 };
 
 export const fieldPatternDefinition = {
@@ -36,7 +37,7 @@ export const fieldPatternDefinition = {
   cancelPreviews: () => {
     Globals.getPlayer().cancelPreviews();
   },
-  currentValue: DEFAULT_PATTERN
+  currentValue: DEFAULT_PATTERN,
 };
 
 export const fieldChordDefinition = {
@@ -52,17 +53,17 @@ export const fieldChordDefinition = {
   cancelPreviews: () => {
     Globals.getPlayer().cancelPreviews();
   },
-  currentValue: DEFAULT_CHORD
+  currentValue: DEFAULT_CHORD,
 };
 
 export const fieldRestDurationDefinition = {
   type: 'field_dropdown',
   name: FIELD_REST_DURATION_NAME,
   options: [
-    ['\u00bd beat', '0.125'],
-    ['1 beat', '0.25'],
-    ['2 beats', '0.5'],
-    ['1 measure', '1'],
-    ['2 measures', '2']
-  ]
+    [musicI18n.blockly_fieldRestHalfBeat(), '0.125'],
+    [musicI18n.blockly_fieldRestOneBeat(), '0.25'],
+    [musicI18n.blockly_fieldRestBeats({num: 2}), '0.5'],
+    [musicI18n.blockly_fieldRestOneMeasure(), '1'],
+    [musicI18n.blockly_fieldRestMeasures({num: 2}), '2'],
+  ],
 };

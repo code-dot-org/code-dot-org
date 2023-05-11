@@ -10,11 +10,11 @@ class SecretsConfigTest < Minitest::Test
 
   def setup
     self.config = CdoSecrets.new
-    AWS::CloudFormation.stubs(:current_stack_name).returns('test')
+    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns('test')
   end
 
   def teardown
-    AWS::CloudFormation.unstub(:current_stack_name)
+    Cdo::SecretsConfig::StackSecret.unstub(:current_stack_name)
   end
 
   def test_load
@@ -28,7 +28,7 @@ class SecretsConfigTest < Minitest::Test
     file.write yml_erb
     file.close
     config.load_configuration(file.path)
-    config.freeze
+    config.freeze_config
   end
 
   # Helper method which allows tests to easily mock a single secret being

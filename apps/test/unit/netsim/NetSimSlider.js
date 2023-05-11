@@ -39,7 +39,7 @@ describe('NetSimSlider', function () {
       slider = new NetSimSlider(null, {
         min: 0,
         max: 100,
-        step: -1
+        step: -1,
       });
     });
 
@@ -70,7 +70,7 @@ describe('NetSimSlider', function () {
         min: 0,
         max: 100,
         lowerBoundInfinite: true,
-        upperBoundInfinite: true
+        upperBoundInfinite: true,
       });
     });
 
@@ -130,12 +130,12 @@ describe('NetSimSlider.DecimalPrecisionSlider', function () {
   it('can be constructed with greater precision', function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, {
       precision: 3,
-      step: 0.001
+      step: 0.001,
     });
     assert.throws(function () {
       slider = new NetSimSlider.DecimalPrecisionSlider(null, {
         precision: 3,
-        step: 0.0001
+        step: 0.0001,
       });
     }, Error);
   });
@@ -144,7 +144,7 @@ describe('NetSimSlider.DecimalPrecisionSlider', function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, {
       min: 0.1,
       max: 1.0,
-      step: 0.1
+      step: 0.1,
     });
 
     assert.equal(0.1, roundTrip(0.1));
@@ -158,7 +158,7 @@ describe('NetSimSlider.DecimalPrecisionSlider', function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, {
       min: 0.1,
       max: 1.0,
-      step: 0.1
+      step: 0.1,
     });
 
     assert.equal(0.1, roundTrip(0.09));
@@ -245,7 +245,7 @@ describe('NetSimSlider.LogarithmicSlider', function () {
         min: 16,
         max: 64,
         lowerBoundInfinite: true,
-        upperBoundInfinite: true
+        upperBoundInfinite: true,
       });
     });
 
@@ -283,7 +283,7 @@ describe('NetSimSlider.LogarithmicSlider', function () {
         min: 25,
         max: 75,
         lowerBoundInfinite: true,
-        upperBoundInfinite: true
+        upperBoundInfinite: true,
       });
     });
 
@@ -322,7 +322,7 @@ describe('NetSimSlider.LogarithmicSlider', function () {
       slider = new LogarithmicSlider(null, {
         logBase: 10,
         min: 8,
-        max: 1024
+        max: 1024,
       });
     });
 

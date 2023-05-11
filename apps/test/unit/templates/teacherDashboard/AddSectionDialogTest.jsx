@@ -42,7 +42,7 @@ describe('AddSectionDialog', () => {
         unitId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       },
       beginImportRosterFlow,
       setRosterProvider,
@@ -50,7 +50,7 @@ describe('AddSectionDialog', () => {
       setParticipantType,
       handleCancel,
       availableParticipantTypes: ['student'],
-      asyncLoadComplete: true
+      asyncLoadComplete: true,
     };
   });
 

@@ -13,7 +13,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   setDynamicInstructionsDefaults,
   setDynamicInstructionsKey,
-  setDynamicInstructionsOverlayDismissCallback
+  setDynamicInstructionsOverlayDismissCallback,
 } from '../redux/instructions';
 
 /**
@@ -38,7 +38,7 @@ function getInstructionsDefaults() {
     results: ailabMsg.results(),
     resultsDetails: ailabMsg.resultsDetails(),
     saveModel: ailabMsg.saveModel(),
-    modelSummary: ailabMsg.modelSummary()
+    modelSummary: ailabMsg.modelSummary(),
   };
 
   return instructions;
@@ -119,7 +119,7 @@ Ailab.prototype.init = function (config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
   });
 
   getStore().dispatch(
@@ -148,7 +148,7 @@ Ailab.prototype.onContinue = function () {
     program: '',
     onComplete: result => {
       onReportComplete(result);
-    }
+    },
   });
 };
 
@@ -167,7 +167,7 @@ Ailab.prototype.initMLActivities = function () {
         url: '/api/v1/ml_models/save',
         type: 'json',
         contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify(dataToSave)
+        data: JSON.stringify(dataToSave),
       })
         .then(response => {
           callback(response);
@@ -186,7 +186,7 @@ Ailab.prototype.initMLActivities = function () {
         study: 'ai-ml',
         study_group: 'ai-lab',
         event: eventName,
-        data_json: JSON.stringify(details)
+        data_json: JSON.stringify(details),
       },
       {includeUserId: true}
     );
@@ -196,7 +196,7 @@ Ailab.prototype.initMLActivities = function () {
 
   const {
     initAll,
-    instructionsDismissed
+    instructionsDismissed,
   } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
@@ -206,7 +206,7 @@ Ailab.prototype.initMLActivities = function () {
     setInstructionsKey,
     i18n: mlPlaygroundMsg,
     saveTrainedModel,
-    logMetric
+    logMetric,
   });
 
   if (instructionsDismissed) {

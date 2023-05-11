@@ -3,7 +3,6 @@
  *
  * @see https://developers.google.com/chart/
  */
-/* global google, Promise */
 
 require('../utils'); // Provides Function.prototype.inherits
 
@@ -48,7 +47,7 @@ export default class GoogleChart {
       try {
         GoogleChart.lib.load('visualization', '1', {
           packages: this.getDependencies(),
-          callback: resolve
+          callback: resolve,
         });
       } catch (e) {
         // We catch and return a different error so that we don't surface Google

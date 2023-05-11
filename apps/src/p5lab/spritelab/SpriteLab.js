@@ -43,7 +43,7 @@ export default class SpriteLab extends P5Lab {
   preloadLabAssets() {
     return Promise.all([
       this.preloadSpriteImages_(),
-      this.p5Wrapper.preloadBackgrounds()
+      this.p5Wrapper.preloadBackgrounds(),
     ]);
   }
 
@@ -109,7 +109,7 @@ export default class SpriteLab extends P5Lab {
         'div',
         {},
         this.getMsg().workspaceAlertError({
-          error: msg || ''
+          error: msg || '',
         })
       ),
       true /* bottom */

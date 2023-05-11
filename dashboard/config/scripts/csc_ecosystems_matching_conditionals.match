@@ -1,5 +1,5 @@
 name 'csc_ecosystems_matching_conditionals'
-title 'Match the code to the screen'
+title 'Match the code to the image'
 height '300'
 question 'Too little algae makes the fish leave. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)'
 answer '![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41 PM.png)'
@@ -15,9 +15,11 @@ answer '![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-16801
 markdown <<MARKDOWN
 ## Look at the three ecosystems
 
-One ecosystem is balanced and the other two are imbalanced in different ways. Drag the if statement to the correct image.
+One ecosystem is balanced and the other two are imbalanced in different ways. Drag the code to the matching image.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

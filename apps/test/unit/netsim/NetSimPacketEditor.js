@@ -21,7 +21,7 @@ describe('NetSimPacketEditor', function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     editor = new NetSimPacketEditor({
       packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
-      contentChangeCallback: function () {}
+      contentChangeCallback: function () {},
     });
     rootDiv = editor.getRoot();
   });
@@ -52,7 +52,7 @@ describe('NetSimPacketEditor', function () {
       EncodingType.DECIMAL,
       EncodingType.HEXADECIMAL,
       EncodingType.BINARY,
-      EncodingType.A_AND_B
+      EncodingType.A_AND_B,
     ]);
 
     assert.equal(1, rootDiv.find('tr.ascii').length);

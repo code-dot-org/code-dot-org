@@ -27,3 +27,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The name of the superclass is indicated after the `extends` keyword. In this example, the superclass is `Painter`.
 MARKDOWN
+
+allow_multiple_attempts true

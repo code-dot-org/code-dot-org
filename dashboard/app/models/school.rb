@@ -68,7 +68,7 @@ class School < ApplicationRecord
     (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
   end
 
-  # Determines if school meets Amazon Fugure Engineer criteria.
+  # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,
   # b) >40% URM students,
@@ -431,6 +431,31 @@ class School < ApplicationRecord
             id:                 row['PPIN'],
             latitude:           row['LAT'].to_f,
             longitude:          row['LON'].to_f
+          }
+        end
+      end
+
+      # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
+      CDO.log.info "Seeding 2021-2022 public school data."
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/schools_public.csv") do |filename|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          {
+            id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+            name:                         row['School Name'].upcase,
+            address_line1:                row['Location Address 1 [Public School] 2021-22'].to_s.upcase.truncate(50).presence,
+            address_line2:                row['Location Address 2 [Public School] 2021-22'].to_s.upcase.truncate(30).presence,
+            address_line3:                row['Location Address 3 [Public School] 2021-22'].to_s.upcase.presence,
+            city:                         row['Location City [Public School] 2021-22'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [Public School] 2021-22'].to_s.strip.upcase.presence,
+            zip:                          row['Location ZIP [Public School] 2021-22'],
+            latitude:                     row['Latitude [Public School] 2021-22'].to_f,
+            longitude:                    row['Longitude [Public School] 2021-22'].to_f,
+            school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2021-22'].to_s] || 'public',
+            school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
+            state_school_id:              row['State School ID [Public School] 2021-22'],
+            school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2021-22']].presence,
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2021-22']) ? '2021-2022' : nil
           }
         end
       end

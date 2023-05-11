@@ -7,19 +7,19 @@ import reducers, {
   initActivities,
   initLevelSearching,
   initUnitInfo,
-  mapActivityDataForEditor
+  mapActivityDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import createStandardsReducer, {
-  initStandards
+  initStandards,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
-  initVocabularies
+  initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import programmingExpressionsEditor, {
-  initProgrammingExpressions
+  initProgrammingExpressions,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
@@ -41,7 +41,7 @@ $(document).ready(function () {
     vocabularies: vocabulariesEditor,
     programmingExpressions: programmingExpressionsEditor,
     standards: createStandardsReducer('standard'),
-    opportunityStandards: createStandardsReducer('opportunityStandard')
+    opportunityStandards: createStandardsReducer('opportunityStandard'),
   });
   const store = getStore();
 

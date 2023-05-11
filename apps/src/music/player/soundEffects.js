@@ -40,7 +40,7 @@ export default class SoundEffects {
       {filter: 'medium'},
       {filter: 'low'},
       {delay: 'medium'},
-      {delay: 'low'}
+      {delay: 'low'},
     ];
 
     busEffectsCombinations.forEach(busEffects => {

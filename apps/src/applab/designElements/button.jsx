@@ -21,7 +21,7 @@ class ButtonProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -153,7 +153,7 @@ class ButtonEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -235,5 +235,5 @@ export default {
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-  }
+  },
 };

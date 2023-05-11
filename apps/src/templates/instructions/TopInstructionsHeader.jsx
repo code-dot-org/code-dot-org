@@ -44,7 +44,7 @@ function TopInstructionsHeader(props) {
     isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
-    collapsible
+    collapsible,
   } = props;
 
   const showContainedLevelAnswer =
@@ -55,7 +55,7 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
-    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
   return (
@@ -92,7 +92,7 @@ function TopInstructionsHeader(props) {
         <div
           style={{
             ...styles.helpTabs,
-            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr)
+            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
           }}
         >
           <InstructionsTab
@@ -182,7 +182,7 @@ function TopInstructionsHeader(props) {
               src={ttsLongInstructionsUrl}
               style={{
                 ...styles.audio,
-                ...(isRtl ? styles.audioRTL : styles.audioLTR)
+                ...(isRtl ? styles.audioRTL : styles.audioLTR),
               }}
               autoplayTriggerElementId="codeApp"
               isRoundedVolumeIcon
@@ -199,42 +199,42 @@ const styles = {
     color: color.default_text,
     display: 'flex',
     width: '100%',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   audioRTL: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   audio: {
     button: {
       height: 24,
       marginTop: '3px',
-      marginBottom: '3px'
+      marginBottom: '3px',
     },
     buttonImg: {
       lineHeight: '20px',
       fontSize: 15,
-      paddingLeft: 12
-    }
+      paddingLeft: 12,
+    },
   },
   audioLTR: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   helpTabs: {
     paddingTop: 6,
     width: '100%',
     boxSizing: 'border-box',
     display: 'flex',
-    minWidth: 100
+    minWidth: 100,
   },
   helpTabsLtr: {
-    paddingLeft: 30
+    paddingLeft: 30,
   },
   helpTabsRtl: {
-    paddingRight: 30
+    paddingRight: 30,
   },
   collapserIcon: {
     showHideButton: {
@@ -246,28 +246,28 @@ const styles = {
       fontSize: 18,
       ':hover': {
         cursor: 'pointer',
-        color: color.white
-      }
+        color: color.white,
+      },
     },
     showHideButtonLtr: {
-      left: 8
+      left: 8,
     },
     showHideButtonRtl: {
-      right: 8
+      right: 8,
     },
     teacherOnlyColor: {
       color: color.lightest_cyan,
       ':hover': {
         cursor: 'pointer',
-        color: color.default_text
-      }
-    }
+        color: color.default_text,
+      },
+    },
   },
   documentationButton: {
     order: 4,
     whiteSpace: 'nowrap',
-    minWidth: 'fit-content'
-  }
+    minWidth: 'fit-content',
+  },
 };
 
 TopInstructionsHeader.propTypes = {
@@ -302,7 +302,7 @@ TopInstructionsHeader.propTypes = {
   isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
-  collapsible: PropTypes.bool.isRequired
+  collapsible: PropTypes.bool.isRequired,
 };
 
 export default TopInstructionsHeader;

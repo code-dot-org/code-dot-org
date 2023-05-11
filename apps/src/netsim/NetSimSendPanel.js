@@ -133,7 +133,7 @@ var NetSimSendPanel = (module.exports = function (
 
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-send-panel',
-    panelTitle: panelTitle
+    panelTitle: panelTitle,
   });
 });
 NetSimSendPanel.inherits(NetSimPanel);
@@ -197,7 +197,7 @@ NetSimSendPanel.prototype.render = function () {
   // Put our own content into the panel body
   var newMarkup = $(
     markup({
-      level: this.levelConfig_
+      level: this.levelConfig_,
     })
   );
   this.getBody().html(newMarkup);
@@ -215,7 +215,7 @@ NetSimSendPanel.prototype.render = function () {
       this.packetSizeChangeCallback_.bind(this),
       {
         minimumPacketSize: encoder.getHeaderLength(),
-        sliderStepValue: 1
+        sliderStepValue: 1,
       }
     );
     this.packetSizeControl_.setValue(this.maxPacketSize_);
@@ -277,7 +277,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     removePacketCallback: this.removePacket_.bind(this),
     doneSendingCallback: this.doneSendingPacket_.bind(this),
     contentChangeCallback: this.onContentChange_.bind(this),
-    enterKeyPressedCallback: this.onSendEventTriggered_.bind(this)
+    enterKeyPressedCallback: this.onSendEventTriggered_.bind(this),
   });
 
   // Attach the new packet to this SendPanel

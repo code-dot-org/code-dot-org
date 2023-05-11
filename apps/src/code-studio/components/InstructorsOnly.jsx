@@ -8,5 +8,5 @@ const InstructorsOnly = ({isInstructor, children}) => {
 };
 
 export default connect(state => ({
-  isInstructor: state.currentUser.userRoleInCourse === CourseRoles.Instructor
+  isInstructor: state.currentUser.userRoleInCourse === CourseRoles.Instructor,
 }))(InstructorsOnly);

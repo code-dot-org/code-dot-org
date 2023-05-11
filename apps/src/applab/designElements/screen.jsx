@@ -16,7 +16,7 @@ import {getStore} from '../../redux';
 class ScreenProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -76,7 +76,7 @@ class ScreenEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   // The screen click event handler code currently receives clicks to any
@@ -200,5 +200,5 @@ export default {
       return true;
     }
     return false;
-  }
+  },
 };

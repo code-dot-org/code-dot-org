@@ -39,3 +39,5 @@ public static int binarySearch(int[] a, int target) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

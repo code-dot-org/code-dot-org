@@ -10,7 +10,7 @@ var addClickTouchEvent = function (element, handler) {
   };
   element.on({
     touchstart: wrapper,
-    click: wrapper
+    click: wrapper,
   });
 };
 
@@ -33,7 +33,7 @@ module.exports = function activateReferenceAreaOnLoad() {
               download: $(this).attr('data-download'),
               thumbnail: $(this).attr('data-thumbnail'),
               enable_fallback: true,
-              autoplay: true
+              autoplay: true,
             },
             true
           );

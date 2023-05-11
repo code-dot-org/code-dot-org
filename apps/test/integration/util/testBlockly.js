@@ -12,7 +12,7 @@ var studioApp;
 exports.setupTestBlockly = function () {
   exports.setupBlocklyFrame();
   var options = {
-    assetUrl: studioApp().assetUrl
+    assetUrl: studioApp().assetUrl,
   };
   var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);

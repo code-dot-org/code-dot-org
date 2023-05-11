@@ -62,7 +62,7 @@ class MetricsReporter {
     const payload = {
       level,
       message,
-      deviceInfo: this.getDeviceInfo()
+      deviceInfo: this.getDeviceInfo(),
     };
 
     if (!this.isReportingEnabled()) {
@@ -89,7 +89,7 @@ class MetricsReporter {
       window_width: window.innerWidth,
       window_height: window.innerHeight,
       hostname: window.location.hostname,
-      full_path: window.location.href
+      full_path: window.location.href,
     };
   }
 

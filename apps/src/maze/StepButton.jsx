@@ -16,7 +16,7 @@ var StepButton = function (props) {
 };
 
 StepButton.propTypes = {
-  showStepButton: PropTypes.bool.isRequired
+  showStepButton: PropTypes.bool.isRequired,
 };
 
 module.exports = StepButton;

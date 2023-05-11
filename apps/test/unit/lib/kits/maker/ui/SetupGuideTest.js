@@ -13,7 +13,7 @@ describe('MakerSetupGuide', () => {
       makerSetupCircuitPlaygroundTitle: 'i18n-CP-title',
       makerSetupCircuitPlaygroundDescription: 'i18n-CP-description',
       makerSetupMicrobitTitle: 'i18n-MB-title',
-      makerSetupMicrobitDescription: 'i18n-MB-description'
+      makerSetupMicrobitDescription: 'i18n-MB-description',
     };
 
     for (const key in i18n) {
