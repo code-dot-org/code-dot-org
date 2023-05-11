@@ -779,6 +779,64 @@
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
+        },
+        "courseC_PlayLab_eventsA_embed2022": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2019": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2020": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
+        },
+        "courseC_artist_loops1b2022": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2019": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2020": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Cel krog ima 360°. Pomnoži stopinje v tvojem obratu s številom ponovitev. Je produkt enak 360°?\nPreveri predlagane zasuke, da vidiš, če deluje.\n\nNekaj primerov za začetek:\n– poskusi se 6-krat zavrteti za 60°\n– poskusi se 8-krat zavrteti za 45°\n– poskusi se 12-krat zavrteti za 30°."
+        },
+        "courseC_harvester_loops_challenge1a": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a2022": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2019": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2020": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
         }
       }
     }

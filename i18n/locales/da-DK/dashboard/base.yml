@@ -171,7 +171,6 @@ da:
     data_collection_us: "Jeg forstår, at Code.org er et non-profit-websted baseret i USA, og at lovgivningen om dataindsamling i USA kan afvige fra lovene i mit land."
     visit_privacy: 'Besøg Code.org''s [Privacy Policy](%{privacy_url}) for at lære mere.'
     student_terms_markdown: "E-mailadresser er ikke gemt i form af, at vi kontakter eleverne. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er genopretning af adgangskoder. Se vores [privatlivspolitik](http://code.org/privacy) for mere information."
-    additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
     user_type_button: "Opdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "Elev"

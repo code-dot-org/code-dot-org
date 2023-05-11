@@ -395,6 +395,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
+
+  // Block fields are referred to as titles in CDO Blockly.
+  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+    return this.setFieldValue(newValue, name);
+  };
+
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.fieldRow;
