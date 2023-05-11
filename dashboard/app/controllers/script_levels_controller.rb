@@ -381,7 +381,14 @@ class ScriptLevelsController < ApplicationController
         )
         readonly_view_options
       end
-      readonly_view_options if user_level&.readonly_answers?
+      if user_level.present?
+        readonly_view_options if user_level.readonly_answers?
+        if (@level.is_a?(Match) || @level.is_a?(FreeResponse)) && !@level.allow_multiple_attempts? && DCDO.get('enforce_allow_multiple_attempts', false)
+          readonly_view_options
+          @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
+          puts @next_level_link.inspect
+        end
+      end
     end
 
     @last_attempt = level_source.try(:data)

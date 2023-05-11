@@ -3,12 +3,14 @@
 
 - unless app == 'external'
   .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
-    - if local_assigns[:previous_button]
+    - if local_assigns[:previous_page_button]
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
-    - if local_assigns[:next_button]
+    - if local_assigns[:next_page_button]
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
+    - elsif local_assigns[:next_level_link]
+      %div{id: 'next_level_link'}
     - elsif local_assigns[:continue_button]
       %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('continue')
@@ -20,4 +22,4 @@
           =t('unsubmit')
 .clear
 
-%script{src: webpack_asset_path('js/levels/_dialog.js')}
+%script{src: webpack_asset_path('js/levels/_dialog.js'), data: {nextlevellink: next_level_link.to_json}}
