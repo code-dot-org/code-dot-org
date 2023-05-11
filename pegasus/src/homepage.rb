@@ -560,7 +560,7 @@ class Homepage
 
   def self.get_dance_stars
     [
-      "Beyoncé", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
+      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
       "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
