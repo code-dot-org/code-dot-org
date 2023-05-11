@@ -143,11 +143,6 @@ def main
     end
   end
 
-  # Verify that the data size is sensible.
-  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 10000" if contained_levels.size > 10_000
-  raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
-  raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
-
   # Maximum rows to insert per query
   batch_size = 2000
 
