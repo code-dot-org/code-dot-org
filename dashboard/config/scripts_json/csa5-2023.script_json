@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-09 21:09:38 UTC",
+    "serialized_at": "2023-05-10 21:08:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -86,7 +86,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, students are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. Students discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. They learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data.",
-        "preparation": "* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-1-two-dimensional-2d-arrays/37910) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L1 Guided Notes (one for each student)\n* Preview the *Two-Dimensional (2D) Arrays* video\n* Print copies of the Unit 5 Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-1-two-dimensional-2d-arrays/37910) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What if the data I need to store is best represented as a table?**\n\nIn this lesson, you are introduced to two-dimensional (2D) arrays and explore how these can be used to store tables of data. You discover that 2D arrays are arrays of arrays and identify similarities and differences between the structure and functionality of 1D and 2D arrays. You learn how to declare and initialize 2D arrays using the `new` keyword and initializer lists and practice creating 2D arrays to store data."
       },
       "seeding_key": {
@@ -104,7 +104,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
-        "preparation": "* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L2 Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
       },
       "seeding_key": {
@@ -122,7 +122,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I traverse a 2D array?**\n\nStudents have previously learned how to traverse a 1D array and use nested loops. In this lesson, students build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. Students explore how elements can be accessed in a 2D array using nested loops and consider the types of questions they could ask or problems they could solve with this approach. They trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements.",
-        "preparation": "* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-3-row-major-traversal/37912) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L3 Guided Notes (one for each student)\n* Preview the *Row-Major Traversal* video\n* Print copies of the Tracing 2D Array Traversals handout (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-3-row-major-traversal/37912) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I traverse a 2D array?**\n\nYou have previously learned how to traverse a 1D array and use nested loops. In this lesson, you build on this knowledge to learn how to traverse a two-dimensional (2D) array in row-major order. You explore how elements can be accessed in a 2D array using nested loops and consider the types of questions you could ask or problems you could solve with this approach. You trace code segments that traverse a 2D array in row-major order, then practice writing nested loops to traverse a 2D array and access its elements."
       },
       "seeding_key": {
@@ -140,7 +140,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How do I access elements in a 2D array by column?**\n\nStudents learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.",
-        "preparation": "* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-4-column-major-traversal/37913) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L4 Guided Notes (one for each student)\n* Preview the *Column-Major Traversal* video\n* Print copies of the Tracing Column-Major Traversals handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-4-column-major-traversal/37913) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How do I access elements in a 2D array by column?**\n\nYou learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations."
       },
       "seeding_key": {
@@ -158,7 +158,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
-        "preparation": "* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L5 Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
       },
       "seeding_key": {
@@ -176,7 +176,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I create image filters using The Theater?**\n\nStudents apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.",
-        "preparation": "* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-6-images-in-the-theater/37915) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L6 Guided Notes (one for each student)\n* Preview the *Images and Pixels* video\n* Print copies of the Creating Image Filters handout (one for each student)\n* (Optional) Cut out the manipulatives from the Creating Image Filters handout\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-6-images-in-the-theater/37915) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create image filters using The Theater?**\n\nYou may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java."
       },
       "seeding_key": {
@@ -194,7 +194,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. They learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. Students then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array.",
-        "preparation": "* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-7-2d-array-algorithms/37916) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with 2D Arrays handout (one for each student)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-7-2d-array-algorithms/37916) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 2D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a two-dimensional (2D) array. You learn about the `indexOf()` method in the `String` class and how it can be used to check if a specific character or `String` appears in a `String` object and explore algorithms using the `indexOf()` method. You then work with a partner and use manipulatives to plan and implement an algorithm to search or modify elements in a 2D array."
       },
       "seeding_key": {
@@ -212,7 +212,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I modify standard algorithms to create image filters?**\n\nStudents practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a new image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.",
-        "preparation": "* Print copies of the Modifying Colors handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L8 Guided Notes (one for each student)\n* Print copies of the Modifying Colors handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-8-modifying-images/37917) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I modify standard algorithms to create image filters?**\n\nIn this lesson, you practice working with two-dimensional (2D) arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a new image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array."
       },
       "seeding_key": {
@@ -230,7 +230,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, students explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. Students look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, students explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image.",
-        "preparation": "* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-9-impacts-of-programs/37918) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U5L9 Guided Notes (one for each student)\n* Preview the *This is Not Morgan Freeman* video\n* Print copies of the Unit 5 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-9-impacts-of-programs/37918) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nIn this lesson, you explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deep fakes. You look at examples of deep fakes and realize the difficulty in identifying the difference between real and manipulated images. After considering the beneficial and harmful impacts of deep fakes, you explore some common image manipulation algorithms used to detect objects in an image or replace parts of an image with a different image."
       },
       "seeding_key": {
@@ -965,7 +965,7 @@
       "key": "0fd47257-e36a-421f-9d2a-b176bdc79933",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: 2D Arrays"
       },
       "seeding_key": {
@@ -6368,6 +6368,114 @@
       }
     },
     {
+      "name": "[EXEMPLAR] U5L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1-jOb7WOg_TG3LLvtJE2AawWeRRYErO708UF64VodNrU/edit?usp=sharing",
+      "key": "_exemplar_u5l1_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l1_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1TX3IDgk08OYgoJ-K9Wfd11j3fCQWBDT49WV6NOJDrlI/edit?usp=sharing",
+      "key": "_exemplar_u5l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1VQjT9FPHMXtZ_MRmpMluyO1xND5v5J3bV4ZDAhEaIgI/edit?usp=sharing",
+      "key": "_exemplar_u5l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/109yMcQpj3I6A86ByqUOlEnZn9UmH4CimNsfWTljyFbI/edit?usp=sharing",
+      "key": "_exemplar_u5l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1aZHvFfIW2t9uM13d31RfMRPHjGoZvYl5fSdfqYOMd5o/edit?usp=sharing",
+      "key": "_exemplar_u5l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1TVq2ccMwSCaQyOdc1HHrOjkyxUoT5IVe5G2clgmWo5M/edit?usp=sharing",
+      "key": "_exemplar_u5l6_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l6_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1ooaHZLUXkUPwQrJRNCEIrHdO31WIy8xdYcdhKEwRyYI/edit?usp=sharing",
+      "key": "_exemplar_u5l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ighe4NWSyYaex0Tf_fuy-2P6m01laUmu-J1Qq9FpKZM/edit?usp=sharing",
+      "key": "_exemplar_u5l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U5L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1MRIurFr2KH5S8FcV1LsvuawpKQzGDtQRugnJHzWrAM0/edit?usp=sharing",
+      "key": "_exemplar_u5l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u5l9_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Unit 5 Guide",
       "url": "https://docs.google.com/document/d/1pFYOmi8Lv7vUeHHVO_jUNpXvyYZeDr_2b1AhOOKY8hA/edit?usp=share_link",
       "key": "_exemplar_unit_5_guide",
@@ -6654,6 +6762,30 @@
       }
     },
     {
+      "name": "CSA Unit 5 Slides",
+      "url": "https://docs.google.com/presentation/d/1cIdMWFqVAjkKXCjSNafe_yySdswkSCh75fqVOKfTmms/edit?usp=sharing",
+      "key": "csa_unit_5_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_5_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 5 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1YKcWQef1lgwC1FsQx-CUT2ivskdXMuBsXQDoGbdHhdg/edit?usp=sharing",
+      "key": "csa_unit_5_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_5_word_wall_cards"
+      }
+    },
+    {
       "name": "Enhanced For Loops",
       "url": "https://docs.google.com/presentation/d/1vu3ObiYpOYba0ORGV-gF3OJT7JTGI8hU4WkzHN9Naog/edit?usp=sharing",
       "key": "enhanced_for_loops_2",
@@ -6739,6 +6871,18 @@
       },
       "seeding_key": {
         "resource.key": "grayscaleimage_frq_scoring_guidelines"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
       }
     },
     {
@@ -6977,6 +7121,19 @@
       }
     },
     {
+      "name": "U5L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1DSF2DnpHU-ZKf5PfAJ63iorO4wJKPNVNE7YaET0MdKg/edit?usp=sharing",
+      "key": "u5l1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l1_guided_notes"
+      }
+    },
+    {
       "name": "U5L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1Kpa5cvPJtx6cOitpWf_h7Uyji5VhDWICYsUTlp5E8F4/edit?usp=sharing",
       "key": "u5l2_extra_practice",
@@ -6987,6 +7144,19 @@
       },
       "seeding_key": {
         "resource.key": "u5l2_extra_practice"
+      }
+    },
+    {
+      "name": "U5L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1ekdkpZT0GdmtbawHaxbVaS-DLI3ub8M8EDonWM6UK0I/edit?usp=sharing",
+      "key": "u5l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l2_guided_notes"
       }
     },
     {
@@ -7003,6 +7173,19 @@
       }
     },
     {
+      "name": "U5L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1P4VZ7-vYFyXaMwjLdpdkdTJqJiTIM-m0P1bsJuAebpU/edit?usp=sharing",
+      "key": "u5l3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l3_guided_notes"
+      }
+    },
+    {
       "name": "U5L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1NY5EGKkib6-sSEu3nitEqvG7qSq2tnqW3gF2YxMzUKE/edit?usp=sharing",
       "key": "u5l4_extra_practice",
@@ -7013,6 +7196,19 @@
       },
       "seeding_key": {
         "resource.key": "u5l4_extra_practice"
+      }
+    },
+    {
+      "name": "U5L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1jcYlFcx8LqQeHLIsnPt7GNty-IlE60YDsl_BJD_l53I/edit?usp=sharing",
+      "key": "u5l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l4_guided_notes"
       }
     },
     {
@@ -7029,6 +7225,19 @@
       }
     },
     {
+      "name": "U5L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1oVcXNTG6kZ3mC03dt4hdwRTgw9G5vfCPwU0GgVEZ7qM/edit?usp=sharing",
+      "key": "u5l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l5_guided_notes"
+      }
+    },
+    {
       "name": "U5L6 Extra Practice",
       "url": "https://docs.google.com/document/d/1zqe5-lqtgoyqGSFyIc810q2v-m1daVG9LEXdyqcJPNs/edit?usp=sharing",
       "key": "u5l6_extra_practice",
@@ -7039,6 +7248,19 @@
       },
       "seeding_key": {
         "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "U5L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1DeXptsGP99ru8BFNgaEH5AVj8Q01OSbAW3UsD-4BVT0/edit?usp=sharing",
+      "key": "u5l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l6_guided_notes"
       }
     },
     {
@@ -7055,6 +7277,19 @@
       }
     },
     {
+      "name": "U5L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1wJybbyQ34Dlf4EipGRbtR8IXJSWIUO7eS2JFCBikfBU/edit?usp=sharing",
+      "key": "u5l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l7_guided_notes"
+      }
+    },
+    {
       "name": "U5L8 Extra Practice",
       "url": "https://docs.google.com/document/d/12wfCs84uN30reaB2uqILtslCl6kU6_sWYqlRYqHoo1E/edit?usp=sharing",
       "key": "u5l8_extra_practice",
@@ -7068,6 +7303,19 @@
       }
     },
     {
+      "name": "U5L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1lnMmdXIvmMAxPH_paNg7Ess-gnS3AZLRhwtsbJqjyDI/edit?usp=sharing",
+      "key": "u5l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l8_guided_notes"
+      }
+    },
+    {
       "name": "U5L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1Ntgb-UOSVIFrYzQaTld62a74O18g8dPaiCFFHEWgOQ8/edit?usp=sharing",
       "key": "u5l9_extra_practice",
@@ -7078,6 +7326,19 @@
       },
       "seeding_key": {
         "resource.key": "u5l9_extra_practice"
+      }
+    },
+    {
+      "name": "U5L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Zf9VUf6tm4ySf8nvc68DiqATcdWAzm3RHrm8k8ERIfI/edit?usp=sharing",
+      "key": "u5l9_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l9_guided_notes"
       }
     },
     {
@@ -7185,7 +7446,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l1_guided_notes"
       }
     },
     {
@@ -7221,7 +7482,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l1_guided_notes"
       }
     },
     {
@@ -7305,7 +7566,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l2_guided_notes"
       }
     },
     {
@@ -7329,7 +7590,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l2_guided_notes"
       }
     },
     {
@@ -7341,7 +7602,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l3_guided_notes"
       }
     },
     {
@@ -7401,7 +7662,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l3_guided_notes"
       }
     },
     {
@@ -7413,7 +7674,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l4_guided_notes"
       }
     },
     {
@@ -7461,13 +7722,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l4_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l5_guided_notes"
       }
     },
     {
@@ -7515,13 +7776,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l5_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l6_guided_notes"
       }
     },
     {
@@ -7569,7 +7830,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l6_guided_notes"
       }
     },
     {
@@ -7581,7 +7842,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l7_guided_notes"
       }
     },
     {
@@ -7617,7 +7878,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l7_guided_notes"
       }
     },
     {
@@ -7629,7 +7890,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l8_guided_notes"
       }
     },
     {
@@ -7671,13 +7932,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "_exemplar_unit_5_guide"
+        "resource.key": "_exemplar_u5l9_guided_notes"
       }
     },
     {
@@ -7713,7 +7974,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_5_guide"
+        "resource.key": "u5l9_guided_notes"
       }
     },
     {
@@ -7745,6 +8006,24 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_5",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_5_slides",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_5_word_wall_cards",
+        "script.name": "csa5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
         "script.name": "csa5-2023"
       }
     },
