@@ -52,78 +52,87 @@ const getEmptyFilters = () => {
   return filters;
 };
 
+// Returns whether the given curriculum matches the checked grade level filters.
+const filterByGradeLevel = (curriculum, gradeFilters) => {
+  if (gradeFilters.length > 0) {
+    if (!curriculum.grade_levels) {
+      return false;
+    } else {
+      const curriculumGradeLevels = curriculum.grade_levels.split(',');
+      const supportsFilteredGradeLevel = gradeFilters.some(grade =>
+        curriculumGradeLevels.includes(gradeLevelsMap[grade])
+      );
+      if (!supportsFilteredGradeLevel) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// Returns whether the given curriculum matches the checked duration filters.
+const filterByDuration = (curriculum, durationFilters) => {
+  return (
+    durationFilters.length === 0 ||
+    durationFilters.includes(curriculum.duration)
+  );
+};
+
+// Returns whether the given curriculum matches the checked topic filters.
+// (Note: the Interdisciplinary topic will show any course that has been tagged
+// with a school subject (e.g. Math, Science, etc.))
+const filterByTopic = (curriculum, topicFilters) => {
+  if (topicFilters.length > 0) {
+    if (!curriculum.cs_topic) {
+      return false;
+    } else {
+      // Handle main CS topics
+      const curriculumTopics = curriculum.cs_topic.split(',');
+      const supportsFilteredTopics = topicFilters.some(topic =>
+        curriculumTopics.includes(topic)
+      );
+      // Handle case of Interdisciplinary topic
+      const hasAndSupportsInterdisciplinary =
+        topicFilters.includes('interdisciplinary') && curriculum.school_subject;
+      if (!supportsFilteredTopics && !hasAndSupportsInterdisciplinary) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// Returns whether the given curriculum matches the checked device filters.
+const filterByDevice = (curriculum, deviceFilters) => {
+  if (deviceFilters.length > 0) {
+    if (!curriculum.device_compatibility) {
+      return false;
+    } else {
+      const curriculumDevComp = JSON.parse(curriculum.device_compatibility);
+      const supportsFilteredDevice = deviceFilters.some(
+        device => curriculumDevComp[device] === 'ideal'
+      );
+      if (!supportsFilteredDevice) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
-    const newFilteredCurricula = curriculaData.filter(curriculum => {
-      // Filter by grade level
-      const gradeFilters = appliedFilters['grade'];
-      if (gradeFilters.length > 0) {
-        if (!curriculum.grade_levels) {
-          return false;
-        } else {
-          const curriculumGradeLevels = curriculum.grade_levels.split(',');
-          const supportsFilteredGradeLevel = gradeFilters.some(grade =>
-            curriculumGradeLevels.includes(gradeLevelsMap[grade])
-          );
-          if (!supportsFilteredGradeLevel) {
-            return false;
-          }
-        }
-      }
-
-      // Filter by duration
-      const durationFilters = appliedFilters['duration'];
-      if (
-        durationFilters.length > 0 &&
-        !durationFilters.includes(curriculum.duration)
-      ) {
-        return false;
-      }
-
-      // Filter by topic (note: the Interdisciplinary topic will show any course that has been
-      // tagged with a school subject (e.g. Math, Science, etc.))
-      const topicFilters = appliedFilters['topic'];
-      if (topicFilters.length > 0) {
-        if (!curriculum.cs_topic) {
-          return false;
-        } else {
-          // Handle main CS topics
-          const curriculumTopics = curriculum.cs_topic.split(',');
-          const supportsFilteredTopics = topicFilters.some(topic =>
-            curriculumTopics.includes(topic)
-          );
-          // Handle case of Interdisciplinary topic
-          const hasAndSupportsInterdisciplinary =
-            topicFilters.includes('interdisciplinary') &&
-            curriculum.school_subject;
-          if (!supportsFilteredTopics && !hasAndSupportsInterdisciplinary) {
-            return false;
-          }
-        }
-      }
-
-      // Filter by device
-      const deviceFilters = appliedFilters['device'];
-      if (deviceFilters.length > 0) {
-        if (!curriculum.device_compatibility) {
-          return false;
-        } else {
-          const curriculumDevComp = JSON.parse(curriculum.device_compatibility);
-          const supportsFilteredDevice = deviceFilters.some(
-            device => curriculumDevComp[device] === 'ideal'
-          );
-          if (!supportsFilteredDevice) {
-            return false;
-          }
-        }
-      }
-
-      return true;
-    });
+    const newFilteredCurricula = curriculaData.filter(
+      curriculum =>
+        filterByGradeLevel(curriculum, appliedFilters['grade']) &&
+        filterByDuration(curriculum, appliedFilters['duration']) &&
+        filterByTopic(curriculum, appliedFilters['topic']) &&
+        filterByDevice(curriculum, appliedFilters['device'])
+    );
 
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
