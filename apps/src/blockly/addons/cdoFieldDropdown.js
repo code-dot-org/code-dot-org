@@ -7,45 +7,37 @@ import {
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /**
-   * Add ability to initialize field value with an option not included
-   * in the `menuGenerator`.
+   * Add special case for '???'.
    * @override
    */
   doClassValidation_(newValue) {
-    return newValue;
+    if (newValue === EMPTY_OPTION) {
+      return newValue;
+    } else {
+      return super.doClassValidation_(newValue);
+    }
   }
 
   /**
-   * Add special case for ??? and options not defined in `menuGenerator`
+   * Add special case for '???'.
    * @override
    */
   doValueUpdate_(newValue) {
-    this.value_ = newValue;
-    this.isDirty_ = true;
     if (newValue === EMPTY_OPTION) {
+      this.value_ = newValue;
+      this.isDirty_ = true;
       this.selectedOption_ = [EMPTY_OPTION, ''];
     } else {
-      const options = this.getOptions(true);
-      this.selectedOption_ = null;
-      for (let i = 0, option; (option = options[i]); i++) {
-        if (option[1] === this.value_) {
-          this.selectedOption_ = option;
-        }
-      }
-      if (!this.selectedOption_) {
-        this.selectedOption_ = [this.toHumanReadableString(newValue), newValue];
-      }
+      super.doValueUpdate_(newValue);
     }
   }
 
   /**
    * Converts xml element into dropdown field
    * @param element xml
+   * @override
    */
   fromXml(element) {
-    // Call super so value is set.
-    super.fromXml(element);
-
     // If the field xml contains a `config`, then the dropdown options
     // are determined by `config`.
     // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
@@ -88,6 +80,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
 
       // set the menuGenerator_ to those config options.
       this.menuGenerator_ = options;
+
+      // Call super so value is set.
+      super.fromXml(element);
     }
   }
 
@@ -95,6 +90,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * Converts dropdown field options into xml element
    * @param element xml
    * @return element
+   * @override
    */
   toXml(element) {
     super.toXml(element);
@@ -104,6 +100,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     return element;
   }
 
+  /**
+   * Converts language-neutral string to humnan-readable string.
+   */
   toHumanReadableString(text) {
     return text.replace(/['"]+/g, '').toLowerCase();
   }
