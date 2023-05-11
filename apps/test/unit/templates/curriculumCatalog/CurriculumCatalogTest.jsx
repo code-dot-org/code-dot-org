@@ -84,12 +84,14 @@ describe('CurriculumCatalog', () => {
     assert(grade2FilterCheckbox.checked);
 
     // Filters for all courses for kindergarten and/or grade 2
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      gradesKAnd2ShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(gradesKAnd2ShownCurricula.length);
+    gradesKAnd2ShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('filtering by duration shows any shown course that is one of the selected durations', () => {
@@ -104,10 +106,14 @@ describe('CurriculumCatalog', () => {
     assert(weekFilterCheckbox.checked);
 
     // Filters for all week-long courses
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(weeklongShownCurricula.length);
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(weeklongShownCurricula.length);
+    weeklongShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('filtering by topic shows any course with at least 1 of the selected topics', () => {
@@ -123,12 +129,14 @@ describe('CurriculumCatalog', () => {
     assert(physicalCompFilterCheckbox.checked);
 
     // Filters for all courses with the physical_computing topic
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      physicalCompShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(physicalCompShownCurricula.length);
+    physicalCompShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('filtering by Interdisciplinary topic shows any course labeled with school subjects', () => {
@@ -144,12 +152,14 @@ describe('CurriculumCatalog', () => {
     assert(interdisciplinaryFilterCheckbox.checked);
 
     // Filters for all courses with school subjects
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      nonNullSchoolSubjectShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(nonNullSchoolSubjectShownCurricula.length);
+    nonNullSchoolSubjectShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('filtering by device compatibility shows any course with at least 1 of the selected devices', () => {
@@ -167,12 +177,14 @@ describe('CurriculumCatalog', () => {
     assert(noDeviceFilterCheckbox.checked);
 
     // Filters for all courses compatible with chromebooks and tablets
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      tabletAndNoDeviceShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(tabletAndNoDeviceShownCurricula.length);
+    tabletAndNoDeviceShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('filtering by each filter shows subset of courses that match the filters', () => {
@@ -211,12 +223,14 @@ describe('CurriculumCatalog', () => {
     // - Grades 2 or 3
     // - Physical Computing or Interdisciplinary topics
     // - Chromebooks or tablets
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      multipleFiltersAppliedShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(multipleFiltersAppliedShownCurricula.length);
+    multipleFiltersAppliedShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 
   it('applying every filter only filters out courses that have null for one of the filtered properties', () => {
@@ -232,11 +246,13 @@ describe('CurriculumCatalog', () => {
     });
 
     // With every filter applied
-    const numFilteredCurriculumCards = screen.getAllByText('Quick View', {
-      exact: false,
-    }).length;
-    expect(numFilteredCurriculumCards).to.equal(
-      allFiltersAppliedShownCurricula.length
-    );
+    expect(
+      screen.getAllByText('Quick View', {
+        exact: false,
+      }).length
+    ).to.equal(allFiltersAppliedShownCurricula.length);
+    allFiltersAppliedShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
   });
 });
