@@ -61,7 +61,7 @@ class AnalyticsReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment()) {
+    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
       console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
     }
   }
