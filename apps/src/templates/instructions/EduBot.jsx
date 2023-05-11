@@ -1,8 +1,21 @@
-import React, {useState} from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  Avatar,
+  MainContainer,
+  ChatContainer,
+  ConversationHeader,
+  MessageList,
+  Message,
+  MessageInput,
+  TypingIndicator,
+  Button as ChatButton,
+  Loader
+} from '@chatscope/chat-ui-kit-react';
 import Button from '@cdo/apps/templates/Button';
 import {openaiCompletion} from '@cdo/apps/util/openai';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import eduBotPng from '@cdo/apps/templates/instructions/edubot.png';
+import {Modal} from 'react-bootstrap';
 
 const systemPrompts = [
   'You are a chatbot for a middle school classroom where they can chat with a historical figure. Do not answer any questions that are not about the formation of america and the founding fathers. You will be acting as george washington and every question you answer must be from his perspective.'
@@ -14,249 +27,187 @@ class EduBot extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      editSystemPrompt: false,
       selectedPrompt: systemPrompts[0],
+      loeading: false,
       conversation: [],
-      userInput: ''
+      userInput: '',
+      savingPrompt: false
     };
   }
 
-  handleAsk = () => {
-    const {conversation, userInput} = this.state;
-    // Here you would make the API call and add the response to the conversation
-    const newMessage = {sender: 'user', text: userInput};
-    this.setState({
-      conversation: [...conversation, newMessage],
-      userInput: ''
+  formatForOpenAI = messages => {
+    const {selectedPrompt} = this.state;
+    let payload = [{content: selectedPrompt, role: 'system'}];
+    messages.forEach(message => {
+      payload.push({content: message.text, role: message.sender});
     });
+    return payload;
+  };
+
+  handleSend = () => {
+    const {conversation, userInput} = this.state;
+
+    const newMessage = {sender: 'user', text: userInput};
+    const updatedConversation = [...conversation, newMessage];
+
+    this.setState({
+      conversation: updatedConversation,
+      userInput: '',
+      loading: true
+    });
+
+    const payload = this.formatForOpenAI(updatedConversation);
+    if (!payload.length) {
+      return;
+    }
+
+    openaiCompletion(payload).done(({content, role}) => {
+      this.setState({
+        conversation: [...updatedConversation, {sender: role, text: content}],
+        loading: false
+      });
+    });
+  };
+
+  handleSaveSystemPrompt = () => {
+    const {selectedPrompt} = this.state;
+    this.setState({savingPrompt: true});
+
+    openaiCompletion([{content: selectedPrompt, role: 'system'}]).done(
+      ({content, role}) => {
+        this.setState({
+          conversation: [{sender: role, text: content}],
+          savingPrompt: false,
+          userInput: '',
+          editSystemPrompt: false
+        });
+      }
+    );
   };
 
   handleClear = () => {
     this.setState({conversation: []});
   };
 
+  closeModal = () => this.setState({editSystemPrompt: false});
+
   render() {
-    const {isOpen, selectedPrompt, conversation, userInput} = this.state;
-    console.log('isOpen?', isOpen);
+    const {isOpen, conversation} = this.state;
     if (!isOpen) {
       return (
-        <button
-          type="button"
+        <Button
           onClick={() => this.setState({isOpen: true})}
-          style={{position: 'fixed', bottom: 20, right: 20, zIndex: 1000}}
+          style={{
+            position: 'fixed',
+            bottom: 20,
+            right: 20,
+            zIndex: 1000,
+            backgroundColor: '#6232a8'
+          }}
         >
           Open EduBot
-        </button>
+        </Button>
       );
     }
 
     return (
       <div
+        id="edubot"
         style={{
           position: 'fixed',
+          height: '400px',
+          width: '600px',
           bottom: 0,
           right: 0,
-          width: '800px',
-          height: '600px',
-          border: '1px solid black',
-          backgroundColor: 'white',
           zIndex: 1000
         }}
       >
-        <button
-          type="button"
-          onClick={() => this.setState({isOpen: false})}
-          style={{
-            position: 'absolute',
-            top: 10,
-            right: 10,
-            border: 'none',
-            background: 'none',
-            fontSize: 'large'
-          }}
-        >
-          X
-        </button>
-        <h1>EduBot</h1>
-        <div>
-          <select
-            value={selectedPrompt}
-            onChange={({target: {value}}) =>
-              this.setState({selectedPrompt: value})
-            }
-          >
-            {systemPrompts.map((prompt, index) => (
-              <option key={index} value={prompt}>
-                {prompt}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div style={{height: '400px', overflow: 'auto'}}>
-          {conversation.map((message, index) => (
-            <p
-              key={index}
-              style={{color: message.sender === 'user' ? 'blue' : 'red'}}
+        <MainContainer>
+          <ChatContainer>
+            <ConversationHeader>
+              <Avatar src={eduBotPng} name="EduBot" />
+              <ConversationHeader.Content userName="EduBot" />
+              <ConversationHeader.Actions>
+                <ChatButton
+                  icon={<FontAwesome icon="edit" />}
+                  onClick={() => this.setState({editSystemPrompt: true})}
+                />
+                <ChatButton
+                  icon={<FontAwesome icon="trash" />}
+                  onClick={() => this.setState({conversation: []})}
+                />
+                <ChatButton
+                  icon={<FontAwesome icon="caret-down" />}
+                  onClick={() => this.setState({isOpen: false})}
+                />
+              </ConversationHeader.Actions>
+            </ConversationHeader>
+            <MessageList
+              typingIndicator={
+                this.state.loading ? (
+                  <TypingIndicator content="EduBot is typing" />
+                ) : null
+              }
             >
-              {message.text}
-            </p>
-          ))}
-          <button
-            type="button"
-            onClick={this.handleClear}
-            style={{
-              display: 'block',
-              margin: '0 auto',
-              border: 'none',
-              background: 'none',
-              color: 'blue',
-              textDecoration: 'underline'
-            }}
-          >
-            Clear
-          </button>
-        </div>
-        <div>
-          <input
-            type="text"
-            value={userInput}
-            onChange={({target: {value}}) => this.setState({userInput: value})}
-            style={{width: '90%', margin: '0 auto'}}
-          />
-          <button type="button" onClick={this.handleAsk}>
-            Ask!
-          </button>
-        </div>
+              {conversation.map((message, idx) => {
+                return (
+                  <Message
+                    key={`$edubot-message-${idx}`}
+                    model={{
+                      message: message.text,
+                      sender: message.sender,
+                      direction:
+                        message.sender === 'user' ? 'outgoing' : 'incoming'
+                    }}
+                  />
+                );
+              })}
+            </MessageList>
+            <MessageInput
+              onKeyDown={ev => {
+                const {userInput} = this.state;
+                if (ev.key === 'Backspace') {
+                  this.setState({userInput: userInput.slice(0, -1)});
+                }
+              }}
+              onChange={value => this.setState({userInput: value})}
+              onSend={this.handleSend}
+              placeholder="Type message here"
+              autoFocus
+              attachButton={false}
+              value={this.state.userInput}
+            />
+          </ChatContainer>
+        </MainContainer>
+        <Modal show={this.state.editSystemPrompt} onHide={this.closeModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Edit System Prompt</Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{marginLeft: '-110px'}}>
+            <textarea
+              style={{width: '95%', height: '150px'}}
+              placeholder="value"
+              value={this.state.selectedPrompt}
+              onChange={({target: {value}}) =>
+                this.setState({selectedPrompt: value})
+              }
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            {this.savingPrompt ? (
+              <Loader />
+            ) : (
+              <ChatButton onClick={this.handleSaveSystemPrompt}>
+                Save
+              </ChatButton>
+            )}
+            <ChatButton onClick={this.closeModal}>Close</ChatButton>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   }
 }
 
 export default EduBot;
-
-// class AiTab extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       preprompt:
-//         "You are a chatbot for a middle school classroom where they can chat with a historical figure. Do not answer any questions that are not about the formation of america and the founding fathers. You will be acting as george washington and every question you answer must be from his perspective. You do not know about anything that happened after he died. You will refuse to answer any questions that are not about George Washington's life, the revolutionary war, the founding of America and his death.",
-//       prompt: '',
-//       result: '',
-//       loading: false,
-//     };
-//   }
-
-//   handleChange1 = ({target: {value}}) => {
-//     console.log(value);
-//     this.setState({preprompt: value});
-//   };
-
-//   handleChange2 = ({target: {value}}) => {
-//     console.log(value);
-//     this.setState({prompt: value});
-//   };
-
-//   handleSubmit = () => {
-//     this.setState({loading: true});
-//     openaiCompletion(prompt).then((result) => {
-//       this.setState({loading: false, result: result});
-//     });
-//   };
-
-//   render() {
-//     const result = '';
-
-//     // const historyText =
-//     //   "You are a chatbot for a middle school classroom where they can chat with a historical figure. Do not answer any questions that are not about the formation of america and the founding fathers. You will be acting as george washington and every question you answer must be from his perspective. You do not know about anything that happened after he died. You will refuse to answer any questions that are not about George Washington's life, the revolutionary war, the founding of America and his death.";
-
-//     return (
-//       <div>
-//         <div>
-//           <label htmlFor="preprompt">Preprompt</label>
-//           <textarea
-//             type="text"
-//             id="preprompt"
-//             value={this.state.preprompt}
-//             onChange={this.handleChange1}
-//             style={{width: '700px', height: '100px'}} // Set the width and height of the textarea
-//             wrap="soft" // Enable text wrapping
-//           />
-//         </div>
-//         <div>
-//           <label htmlFor="prompt">Student Question</label>
-//           <textarea
-//             id="prompt"
-//             type="text"
-//             value={this.state.prompt}
-//             onChange={this.handleChange2}
-//             style={{width: '700px', height: '100px'}} // Set the width and height of the textarea
-//             wrap="soft" // Enable text wrapping
-//           />
-//           <Button
-//             text={'Generate!'}
-//             onClick={this.handleSubmit}
-//             color={Button.ButtonColor.orange}
-//           />
-//         </div>
-//         {this.state.loading && <div>loading...</div>}
-//         {!!this.state.result && (
-//           <div className="ai-tab">
-//             <SafeMarkdown markdown={result} />
-//           </div>
-//         )}
-//       </div>
-//     );
-//   }
-// }
-
-// export default AiTab;
-
-// // export const AiTab = props => {
-// //   // const {
-// //   //   teacherOnly,
-// //   // } = props;
-
-// //   const [result, setResult] = useState(null);
-
-// //   const currentCode = window.currentCode;
-
-// //   useEffect(() => {
-// //     const prompt = `Please evaluate and briefly summarize whether each of the
-// //     following statements are true or false with respect to the javascript code for my
-// //     program which follows. Please give your response formatted as a markdown
-// //     table with the following columns: "Statement", "True/False", and "Reason".
-// //     please use backticks to escape any code in your reason. the statement column
-// //     should contain the entire original statement. please be sure to ignore any
-// //     commented-out code when deciding what the program does or does not do.
-
-// //     statements:
-
-// //     ${exampleStatements}
-
-// //     code:
-
-// //     ${currentCode}`;
-
-// //     console.log(prompt);
-
-// //     openaiCompletion(prompt).then(setResult);
-// //   }, [currentCode]);
-
-// //   return (
-// // <div>
-// //   {!result && <div>loading...</div>}
-// //   {result && (
-// //     <div className="ai-tab">
-// //       <SafeMarkdown markdown={result} />
-// //     </div>
-// //   )}
-// // </div>
-// //   );
-// // };
-
-// // const exampleStatements = `
-// // 1. You used multiple sprites
-// // 2. Your program uses at least one random number to set the value of a property on a sprite or other object.
-// // 3. Your program uses multiple conditionals inside the draw loop
-// // 4. At least one variable or property uses the counter pattern
-// // `;
