@@ -20,7 +20,7 @@
   DatabaseSecretAdmin:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Database credentials for ${AWS::StackName} admin user."
       GenerateSecretString:
         SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
         GenerateStringKey: password
@@ -30,7 +30,7 @@
   DatabaseSecretWriter:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Database credentials for ${AWS::StackName} writer user."
       GenerateSecretString:
         SecretStringTemplate: !Sub '{"username": "application-writer"}'
         GenerateStringKey: password
@@ -40,7 +40,7 @@
   DatabaseSecretReader:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Database credentials for ${AWS::StackName} reader user."
       GenerateSecretString:
         SecretStringTemplate: !Sub '{"username": "readonly"}'
         GenerateStringKey: password
@@ -125,6 +125,18 @@
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
       # Publish a placeholder string for production. We set the value of the Secret manually in production.
       SecretString: <%=rack_env?(:production) ? 'PLACEHOLDER' : '!GetAtt AuroraCluster.Endpoint.Address'%>
+  DBProxyWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
+      SecretString: !GetAtt DBProxy.Endpoint
+  DBProxyReaderEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
+      SecretString: !GetAtt ReaderDBProxyEndpoint.Endpoint
   DBProxyReportingEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
