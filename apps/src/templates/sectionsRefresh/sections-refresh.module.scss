@@ -80,6 +80,7 @@ label.typographyLabel {
 .buttonsInRow .buttonStyle.activeMarketingAudienceButton {
   color: $brand_primary_default;
   border-bottom: 2px solid $brand_primary_default;
+  border-radius: 0;
 }
 
 .buttonsInRow .buttonStyle:hover {
@@ -134,17 +135,13 @@ label.typographyLabel {
 
 .courseTableRow {
   &:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
 .courseHeaders {
   position: relative;
   left: 10px;
-
-  h5 {
-    margin-top: 20px;
-  }
 }
 
 .courseOption {
