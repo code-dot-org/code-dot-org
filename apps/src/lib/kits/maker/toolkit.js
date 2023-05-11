@@ -10,12 +10,12 @@ import VirtualMBBoard from './boards/VirtualMBBoard';
 import * as commands from './commands';
 import dropletConfig, {
   configMicrobit,
-  configCircuitPlayground
+  configCircuitPlayground,
 } from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
-  wrapKnownMakerErrors
+  wrapKnownMakerErrors,
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
@@ -25,7 +25,7 @@ import {MB_API} from './boards/microBit/MicroBitConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {
   WEB_SERIAL_FILTERS,
-  shouldUseWebSerial
+  shouldUseWebSerial,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 

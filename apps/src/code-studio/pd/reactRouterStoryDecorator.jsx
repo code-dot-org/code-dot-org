@@ -11,8 +11,8 @@ const context = {
   router: {
     createHref() {},
     push() {},
-    replace() {}
-  }
+    replace() {},
+  },
 };
 
 export default story => <WithContext context={context}>{story()}</WithContext>;

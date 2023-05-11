@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 23:19:24 UTC",
+    "serialized_at": "2023-04-28 03:54:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -219,7 +219,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a multiple choice assessment which covers the unit topics. ",
-        "preparation": "Preview the assessment questions",
+        "preparation": "- Preview the assessment questions\n- If you are teaching this virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1ekc8NpZAUtV5SQiOVBMouevLI_L_hwp7iVa10JZxClw/edit?usp=sharing)",
         "student_overview": "Students complete a multiple choice assessment which covers the unit topics. "
       },
       "seeding_key": {
@@ -605,21 +605,8 @@
       }
     },
     {
-      "key": "398b73da-46a5-4fd5-822d-6ab5b9c94ddd",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "398b73da-46a5-4fd5-822d-6ab5b9c94ddd",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
       "key": "b9d8c89e-9c8f-401f-8605-21cc170ea95e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -633,7 +620,7 @@
     },
     {
       "key": "03499eba-04ed-4878-a77a-47adf09cd8b4",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -2096,25 +2083,15 @@
       }
     },
     {
-      "key": "71a339f4-c665-4ab1-96cb-4a14ca2f5aaf",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ekc8NpZAUtV5SQiOVBMouevLI_L_hwp7iVa10JZxClw/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "71a339f4-c665-4ab1-96cb-4a14ca2f5aaf",
-        "lesson_activity.key": "398b73da-46a5-4fd5-822d-6ab5b9c94ddd"
-      }
-    },
-    {
       "key": "9adf1cd2-7372-455b-a257-1f60c085c205",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 9 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "progression_name": "Unit Assessment - Data",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/Screenshot-2020-03-06-at-7.39.15-PM.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://images.code.org/0d6b35d829fc61f2a2a09c3b7b368b53-Screenshot 2023-04-25 at 2.47.07 PM.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing)\n"
           }
         ]
       },
@@ -2809,6 +2786,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 2_2023"
+        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2833,7 +2813,8 @@
       "properties": {
         "level_keys": [
           "CSP Unit 9 AP-Style Assessment 2022_2023"
-        ]
+        ],
+        "progression": "Unit Assessment - Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -3249,6 +3230,18 @@
       }
     },
     {
+      "name": "Assessment Day - Data",
+      "url": "https://docs.google.com/presentation/d/18tJ6kC-TCmAxEJTN3n4TTiFsKBltoKv7bI3AbNe4WPA/edit?usp=sharing",
+      "key": "assessment_day_-_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_data"
+      }
+    },
+    {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
       "key": "big_open_and_crowdsourced_data",
@@ -3284,7 +3277,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 2 - Learning from Data",
+      "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
       "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
       "key": "csp_data_-_lesson_2_-_learning_from_data",
       "properties": {
@@ -3310,7 +3303,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 3 - Exploring One Column",
+      "name": "CSP Unit 5 - Lesson 2 - Exploring One Column",
       "url": "https://docs.google.com/presentation/d/1jrF77jto1ZR_XWchlm0DHNxLygkx5L-FQQlqr9VYTU8/copy",
       "key": "csp_unit_5_-_lesson_3_-_exploring_one_column",
       "properties": {
@@ -3323,7 +3316,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 4 - Filtering and Cleaning Data",
+      "name": "CSP Unit 5 - Lesson 3 - Filtering and Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1ZA_vZPjoF1TbWAq0k-_VkIIP3M8WNdTyGWMeAAx0YhI/copy",
       "key": "csp_unit_5_-_lesson_4_-_filtering_and_cleaning_data",
       "properties": {
@@ -3336,7 +3329,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 5 - Exploring Two Columns",
+      "name": "CSP Unit 5 - Lesson 4 - Exploring Two Columns",
       "url": "https://docs.google.com/presentation/d/14G7ptwES6IcNnpXccTD-09noprIzbdnXuYM3aVEeFJE/copy",
       "key": "csp_unit_5_-_lesson_5_-_exploring_two_columns",
       "properties": {
@@ -3349,7 +3342,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 6 - Big, Open, and Crowdsourced Data",
+      "name": "CSP Unit 5 - Lesson 5 - Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/presentation/d/1VIGRaI9M3G4HXKyPQOOvxucg5q5C4tLaVSxClSvC6Ng/copy",
       "key": "csp_unit_5_-_lesson_6_-_big_open_and_crowdsourced_data",
       "properties": {
@@ -3362,7 +3355,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 7 - Machine Learning",
+      "name": "CSP Unit 5 - Lesson 6 - Machine Learning",
       "url": "https://docs.google.com/presentation/d/1R0cyJ3KIqc0-joNe2yHOkrhC1UZrDU3OsJN9ctp885k/copy",
       "key": "csp_unit_5_-_lesson_7_-_machine_learning",
       "properties": {
@@ -3375,7 +3368,7 @@
       }
     },
     {
-      "name": "CSP Unit 5 - Lesson 8 - Algorithmic Bias",
+      "name": "CSP Unit 5 - Lesson 7 - Algorithmic Bias",
       "url": "https://docs.google.com/presentation/d/1ySR0KHBdwpQIugYalf5NRnlGvI9YMeAEgvKmZtw8jcs/copy",
       "key": "csp_unit_5_-_lesson_8_-_algorithmic_bias",
       "properties": {
@@ -3440,7 +3433,7 @@
       }
     },
     {
-      "name": "Exploring One Column Unit 9 Lesson 2",
+      "name": "Exploring One Column Data Unit Lesson 2",
       "url": "https://docs.google.com/document/d/1R6cgFwz6_DRDelbKlX86-frQp2sCijUB4nOY3yTJRh8/edit?usp=sharing",
       "key": "exploring_one_column_unit_9_lesson_2",
       "properties": {
@@ -3465,7 +3458,7 @@
       }
     },
     {
-      "name": "Filtering Data Unit 9 Lesson 3",
+      "name": "Filtering Data",
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
       "key": "filtering_data_unit_9_lesson_3",
       "properties": {
@@ -3478,7 +3471,7 @@
       }
     },
     {
-      "name": "Filtering Data Unit 9 Lesson 3",
+      "name": "Filtering Data Unit 5 Lesson 3",
       "url": "https://docs.google.com/document/d/1gjb51mzUUjIgCPsT95wueh3jhikVl0KsSgKUjhKNgqs/edit?usp=sharing",
       "key": "filtering_data_unit_9_lesson_3_1",
       "properties": {
@@ -3526,6 +3519,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3551,7 +3556,7 @@
       }
     },
     {
-      "name": "U9 Sample Project 1",
+      "name": "Sample Project 1",
       "url": "https://docs.google.com/document/d/1sRBpINFb-LXLUKRBdAyRYzHAIAGxW2T3c3Jh8_1ly9c/edit?usp=sharing",
       "key": "u9_sample_project_1",
       "properties": {
@@ -3563,7 +3568,7 @@
       }
     },
     {
-      "name": "U9 Sample Project 2",
+      "name": "Sample Project 2",
       "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
       "key": "u9_sample_project_2",
       "properties": {
@@ -3575,7 +3580,7 @@
       }
     },
     {
-      "name": "U9 Sample Project 3",
+      "name": "Sample Project 3",
       "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
       "key": "u9_sample_project_3",
       "properties": {
@@ -3587,7 +3592,7 @@
       }
     },
     {
-      "name": "U9 Sample Project 4",
+      "name": "Sample Project 4",
       "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
       "key": "u9_sample_project_4",
       "properties": {
@@ -3628,6 +3633,12 @@
       "seeding_key": {
         "lesson.key": "Algorithmic Bias",
         "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Assessment Day",
+        "resource.key": "assessment_day_-_data"
       }
     },
     {
@@ -3797,6 +3808,12 @@
     {
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp5-2023"
       }
     },

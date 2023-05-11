@@ -85,7 +85,7 @@ function PlaySoundByIndex(
   // Set up a tag group if we don't have one already.
   if (!tagGroups[groupTag]) {
     tagGroups[groupTag] = {
-      sources: []
+      sources: [],
     };
   }
 

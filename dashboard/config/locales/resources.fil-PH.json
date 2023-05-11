@@ -271,6 +271,9 @@
           "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
+        "making_sprites/coursef/2022": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "ai_impact_on_society/coursef/2022": {
           "name": "AI: Epekto sa Lipunan",
           "url": "https://youtu.be/ng4c1g3COfs",
@@ -297,7 +300,11 @@
           "name": "The Internet"
         },
         "cs_fundamentals_final_project/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1xt4PzGNhs-qJo-ZuRWmsoX4VpCLsk4NIqv38ThewhGo/edit",
           "type": "Rubric"
+        },
+        "final_project_design_1/coursef/2022": {
+          "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit"
         },
         "2022_change_log/coursee/2022": {
           "name": "2022 Log ng Pagbabago",
@@ -1828,6 +1835,9 @@
           "name": "Ipinapakilala ang Sprite Lab",
           "type": "Video"
         },
+        "making_sprites/coursef/2021": {
+          "name": "Paggawa ng mga Sprite"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
         },
@@ -2188,6 +2198,9 @@
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "making_sprites/express/2021": {
+          "name": "Paggawa ng mga Sprite"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Dokumentasyon ng Sprite Lab"

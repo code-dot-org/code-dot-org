@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import {
   InstructorAudience,
   ParticipantAudience,
-  InstructionType
+  InstructionType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
@@ -13,18 +13,18 @@ const INSTRUCTOR_AUDIENCE_DISPLAY_NAMES = {
   [InstructorAudience.teacher]: 'Teacher',
   [InstructorAudience.facilitator]: 'Facilitator',
   [InstructorAudience.universal_instructor]: 'Universal Instructor',
-  [InstructorAudience.plc_reviewer]: 'PLC Reviewer'
+  [InstructorAudience.plc_reviewer]: 'PLC Reviewer',
 };
 
 const PARTICIPANT_AUDIENCE_DISPLAY_NAMES = {
   [ParticipantAudience.teacher]: 'Teacher',
   [ParticipantAudience.facilitator]: 'Facilitator',
-  [ParticipantAudience.student]: 'Student'
+  [ParticipantAudience.student]: 'Student',
 };
 
 const INSTRUCTION_TYPE_DISPLAY_NAMES = {
   [InstructionType.teacher_led]: 'Teacher Led',
-  [InstructionType.self_paced]: 'Self Paced'
+  [InstructionType.self_paced]: 'Self Paced',
 };
 
 export default function CourseTypeEditor({
@@ -34,7 +34,7 @@ export default function CourseTypeEditor({
   handleInstructionTypeChange,
   handleInstructorAudienceChange,
   handleParticipantAudienceChange,
-  allowMajorCurriculumChanges
+  allowMajorCurriculumChanges,
 }) {
   return (
     <div>
@@ -140,15 +140,15 @@ CourseTypeEditor.propTypes = {
   handleInstructionTypeChange: PropTypes.func,
   handleInstructorAudienceChange: PropTypes.func,
   handleParticipantAudienceChange: PropTypes.func,
-  allowMajorCurriculumChanges: PropTypes.bool.isRequired
+  allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 };
 
 const styles = {
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   tableBorder: {
     border: '1px solid ' + color.white,
-    padding: 5
-  }
+    padding: 5,
+  },
 };

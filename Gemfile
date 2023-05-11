@@ -7,6 +7,10 @@ ruby '2.7.5'
 # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
 gem 'thwait'
 
+# Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
+# validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
+gem 'cgi', '~> 0.3.6'
+
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
 # @see https://github.com/bundler/bundler/issues/4978
@@ -15,7 +19,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.6'
+gem 'rails', '6.1.4.7'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -110,7 +114,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 4.11', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -210,7 +214,7 @@ gem 'twilio-ruby' # SMS API for send-to-phone feature
 # - /pegasus/sites.v3/hourofcode/public/fonts/
 gem 'font-awesome-rails', '~> 4.7.0.8'
 
-gem 'sequel'
+gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
 gem 'paranoia', '~> 2.5.0'
@@ -280,7 +284,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 13.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -337,7 +341,7 @@ gem 'datapackage'
 
 gem 'ruby-progressbar'
 
-gem 'pry'
+gem 'pry', '~> 0.14.0'
 
 # Google's Compact Language Detector
 gem 'cld'

@@ -19,13 +19,13 @@ export default class SessionFormPart extends React.Component {
     session: PropTypes.shape({
       date: PropTypes.string,
       startTime: PropTypes.string,
-      endTime: PropTypes.string
+      endTime: PropTypes.string,
     }).isRequired,
     onAdd: PropTypes.func,
     onRemove: PropTypes.func,
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   handleDateChange = date => {

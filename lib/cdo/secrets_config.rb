@@ -35,7 +35,7 @@ module Cdo
       results
     end
 
-    def freeze
+    def freeze_config
       lazy_load_secrets!
       super
     end
@@ -98,7 +98,7 @@ module Cdo
       # latter is environment-specific and we want stack-specific overrides to
       # apply to all environments.
       def stack_specific_secret_path
-        @stack ||= current_stack_name
+        @stack ||= Cdo::SecretsConfig::StackSecret.current_stack_name
         @stack ? "CfnStack/#{@stack}/#{secret_key}" : nil
       end
 
@@ -106,7 +106,7 @@ module Cdo
 
       # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
       # @return [String]
-      def current_stack_name
+      def self.current_stack_name
         metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_BASE_URL.host, EC2_METADATA_SERVICE_BASE_URL.port)
         # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
         metadata_service_request.open_timeout = metadata_service_request.read_timeout = 10
@@ -134,6 +134,7 @@ module Cdo
     private def process_secrets!(config)
       return if config.nil?
       config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
+        # TODO: Update this to work correctly for Stack Secrets.
         secret.secret_prefix ||= env
         secret.secret_key ||= key
       end
@@ -146,9 +147,9 @@ module Cdo
         Cdo::Secrets.new(logger: log)
       end
 
-      table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
+      @table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
-        table[key] = Cdo.lazy do
+        @table[key] = Cdo.lazy do
           if value.is_a?(Secret)
             value.lookup(cdo_secrets)
           else
@@ -172,7 +173,7 @@ module Cdo
     # Any exceptions or defaults can be re-added later in the YAML document, after secrets have been cleared.
     private def clear_secrets
       @secrets ||= []
-      @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
+      @secrets |= @table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
       @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
     end
   end

@@ -5,7 +5,7 @@ import wizardPng from '../../../static/skins/studio/wizard_thumb.png';
 
 const sampleSection = {
   id: 7,
-  code: 'ABCDEF'
+  code: 'ABCDEF',
 };
 
 const sampleStudents = [
@@ -13,26 +13,26 @@ const sampleStudents = [
     id: 100,
     name: 'Neville',
     secret_picture_path: wizardPng,
-    secret_words: 'wizarding world'
+    secret_words: 'wizarding world',
   },
   {
     id: 101,
     name: 'Hermione',
     secret_picture_path: wizardPng,
-    secret_words: 'wizarding world'
-  }
+    secret_words: 'wizarding world',
+  },
 ];
 
 export default {
   title: 'ParentLetter',
-  component: ParentLetter
+  component: ParentLetter,
 };
 
 const GenericTemplate = args => (
   <ParentLetter
     section={{
       ...sampleSection,
-      loginType: args.loginType
+      loginType: args.loginType,
     }}
     teacherName="Minerva McGonagall"
   />
@@ -57,7 +57,7 @@ const PersonalizedTemplate = args => (
   <ParentLetter
     section={{
       ...sampleSection,
-      loginType: args.loginType
+      loginType: args.loginType,
     }}
     teacherName="Minerva McGonagall"
     students={sampleStudents}
@@ -76,7 +76,7 @@ PersonalizedEmail.args = {loginType: SectionLoginType.email};
 
 export const PersonalizedGoogleClassroom = PersonalizedTemplate.bind({});
 PersonalizedGoogleClassroom.args = {
-  loginType: SectionLoginType.google_classroom
+  loginType: SectionLoginType.google_classroom,
 };
 
 export const PersonalizedClever = PersonalizedTemplate.bind({});

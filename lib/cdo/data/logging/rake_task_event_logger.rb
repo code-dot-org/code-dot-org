@@ -1,8 +1,8 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
+require lib_dir 'cdo/data/logging/infrastructure_logger'
 require 'cdo/github'
 require 'cdo/git_utils'
 class RakeTaskEventLogger
-  CLOUD_WATCH_NAMESPACE = 'Infrastructure'
   STUDY_TABLE = 'rake_performance'.freeze
   CURRENT_LOGGING_VERSION = 'v1'.freeze
   @@depth = 0
@@ -12,7 +12,6 @@ class RakeTaskEventLogger
     @end_time = 0
     @rake_task = rake_task
     @enabled_firehose = !([:development, :test].include?(rack_env))
-    @enable_cloudwatch = true
   end
 
   def self.depth
@@ -84,30 +83,25 @@ class RakeTaskEventLogger
     end
   end
 
+  # Logging 3 metrics to track rake tasks performance
+  # 1) Any task that has no dependencies (root task)
+  # 2) Any task that is a leaf task (children, the processes to optimize)
+  # 3) Any task
   def log_cloud_watch(event, duration_ms)
-    unless @enable_cloudwatch
-      return
+    metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
+    extra_dimensions = {task_name: @rake_task.name}
+    total_dependencies = task_chain.split(',').count
+    if @@depth == 0
+      metric_name = "rake_tasks_root_task_#{event}"
+      Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
     end
-    begin
-      metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{event}"
-      metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
-      dimensions = {environment: rack_env,
-                    commit_hash: RakeUtils.git_revision,
-                    task_name: @rake_task.name,
-                    depth: @@depth.to_s,
-                    total_dependencies: task_chain.split(',').count.to_s,
-                    is_continuous_integration_run: ENV['CI'] ? 'true' : 'false'}
-      Cdo::Metrics.put(metric_name, metric_value, dimensions)
-      Cdo::Metrics.flush!
-    rescue => exception
-      Honeybadger.notify(
-        exception,
-        error_message: "Failed to log rake task information in cloudwatch",
-        context: {
-          event: event
-        }
-      )
+    if total_dependencies == 0
+      metric_name = "rake_tasks_no_dependencies_task_#{event}"
+      Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
     end
+    metric_name = "rake_tasks_#{event}"
+    Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
+    Infrastructure::Logger.flush
   end
 
   def log_event(event, duration = nil, exception = nil)

@@ -4,7 +4,7 @@ import {
   restoreRedux,
   registerReducers,
   hasReducer,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 
 function incrementor(state, action) {
@@ -64,7 +64,7 @@ describe('global redux store', () => {
       getStore().dispatch({type: 'INCREMENT'});
       expect(getStore().getState()).to.deep.equal({
         incrementor: 5,
-        otherIncrementor: 2
+        otherIncrementor: 2,
       });
     });
 

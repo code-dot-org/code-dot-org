@@ -4,7 +4,7 @@
  */
 exports.installTestBlocks = function (blockly) {
   blockly.Blocks.empty_block = {
-    init: function () {}
+    init: function () {},
   };
   blockly.Blocks.block_with_3_titles = {
     init: function () {
@@ -13,6 +13,6 @@ exports.installTestBlocks = function (blockly) {
         .appendField(displayText, 'A')
         .appendField(displayText, 'B')
         .appendField(displayText, 'C');
-    }
+    },
   };
 };

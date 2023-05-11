@@ -10,7 +10,7 @@ describe('StudentSelector', () => {
       {id: 2, name: 'b'},
       {id: 3, name: 'c'},
       {id: 4, name: 'd'},
-      {id: 5, name: 'e'}
+      {id: 5, name: 'e'},
     ];
 
     it('displays warning message', () => {

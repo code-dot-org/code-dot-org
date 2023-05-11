@@ -1,10 +1,17 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {BlockMode} from './constants';
 
-/**
- * Helper function for specifically fetching the 'blocks' config value. Provides
- * a default if an invalid value or no value is found.
- */
+// Static config values passed in via a call to setAppConfig.
+// If these are set, we ignore URL parameters.
+let configValues = null;
+
+// Called to set config values.
+export function setAppConfig(values) {
+  configValues = values;
+}
+
+// Helper function for specifically fetching the 'blocks' config value. Provides
+// a default if an invalid value or no value is found.
 export const getBlockMode = () => {
   const defaultMode = BlockMode.SIMPLE2;
 
@@ -22,7 +29,12 @@ export const getBlockMode = () => {
 };
 
 export default {
+  // Returns a config value.
   getValue(name) {
-    return queryParams(name);
-  }
+    if (configValues) {
+      return configValues[name];
+    } else {
+      return queryParams(name);
+    }
+  },
 };

@@ -1,2 +1,17 @@
 {
+  "blockly_blockPlaySoundTooltip": "השמע צליל",
+  "blockly_blockPlaySoundAtMeasureTooltip": "השמע צליל",
+  "blockly_blockRepeatTooltip": "חזור",
+  "blockly_blockWhenRun": "כשהריצה מתחילה",
+  "blockly_blockWhenRunTooltip": "כשהריצה מתחילה",
+  "blockly_functionNamePlaceholder": "הפונקציה שלי",
+  "blockly_toolboxCategoryEffects": "אפקטים",
+  "blockly_toolboxCategoryEvents": "אירועים",
+  "blockly_toolboxCategoryFunctions": "פונקציות",
+  "blockly_toolboxCategoryLogic": "לוגיקה",
+  "blockly_toolboxCategoryMath": "מתמטיקה",
+  "blockly_toolboxCategoryVariables": "משתנים",
+  "feedback": "משוב",
+  "share": "שתף",
+  "startOver": "להתחיל מחדש"
 }

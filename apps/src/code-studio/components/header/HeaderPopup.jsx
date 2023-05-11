@@ -13,11 +13,11 @@ export default class HeaderPopup extends Component {
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     minimal: PropTypes.bool,
-    windowHeight: PropTypes.number
+    windowHeight: PropTypes.number,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -42,8 +42,8 @@ export default class HeaderPopup extends Component {
         study: 'mini_view',
         event: 'mini_view_opened',
         data_json: JSON.stringify({
-          current_level_id: this.props.currentLevelId
-        })
+          current_level_id: this.props.currentLevelId,
+        }),
       },
       {includeUserId: true}
     );

@@ -15,16 +15,16 @@ import styleConstants from '../../styleConstants';
 const cardInfoByAudience = {
   student: {
     title: i18n.participantTypeStudentTitle(),
-    description: i18n.participantTypeStudentDescription()
+    description: i18n.participantTypeStudentDescription(),
   },
   teacher: {
     title: i18n.participantTypeTeacherTitle(),
-    description: i18n.participantTypeTeacherDescription()
+    description: i18n.participantTypeTeacherDescription(),
   },
   facilitator: {
     title: i18n.participantTypeFacilitatorTitle(),
-    description: i18n.participantTypeFacilitatorDescription()
-  }
+    description: i18n.participantTypeFacilitatorDescription(),
+  },
 };
 
 /**
@@ -36,7 +36,7 @@ export default class ParticipantTypePicker extends Component {
     title: PropTypes.string.isRequired,
     setParticipantType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
-    availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired
+    availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
@@ -82,7 +82,7 @@ const ParticipantTypeCard = props => (
 );
 ParticipantTypeCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 const style = {
@@ -91,15 +91,15 @@ const style = {
     color: color.neutral_dark,
     height: '300px',
     left: '20px',
-    right: '20px'
+    right: '20px',
   },
   bodyText: {
-    fontSize: '1em'
+    fontSize: '1em',
   },
   scroll: {
     overflowX: 'hidden',
     overflowY: 'auto',
-    height: 'calc(80vh - 200px)'
+    height: 'calc(80vh - 200px)',
   },
   footer: {
     position: 'absolute',
@@ -109,6 +109,6 @@ const style = {
     bottom: '-23px',
     padding: '0px 20px 20px 20px',
     backgroundColor: '#fff',
-    borderRadius: '5px'
-  }
+    borderRadius: '5px',
+  },
 };

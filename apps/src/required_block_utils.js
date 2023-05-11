@@ -1,5 +1,3 @@
-/* global Text */
-
 var xml = require('./xml');
 var msg = require('@cdo/locale');
 var _ = require('lodash');
@@ -29,7 +27,7 @@ exports.simpleBlock = function (block_type) {
     test: function (block) {
       return block.type === block_type;
     },
-    type: block_type
+    type: block_type,
   };
 };
 
@@ -48,7 +46,7 @@ exports.repeat = function (count) {
       return block.type === 'controls_repeat';
     },
     type: 'controls_repeat',
-    titles: {TIMES: count}
+    titles: {TIMES: count},
   };
 };
 
@@ -65,7 +63,7 @@ exports.repeatSimpleBlock = function (count) {
       return block.type === 'controls_repeat_simplified';
     },
     type: 'controls_repeat_simplified',
-    titles: {TIMES: count}
+    titles: {TIMES: count},
   };
 };
 
@@ -117,7 +115,7 @@ function testFromBlock(node) {
         true /* ignoreChildBlocks */
       );
     },
-    blockDisplayXML: xml.serialize(node)
+    blockDisplayXML: xml.serialize(node),
   };
 }
 
@@ -167,8 +165,8 @@ function testsFromProcedure(node) {
         return false;
       },
       message: msg.errorRequiredParamsMissing(),
-      blockDisplayXML: '<xml></xml>'
-    }
+      blockDisplayXML: '<xml></xml>',
+    },
   ];
 }
 
@@ -207,8 +205,8 @@ function testsFromFunctionalCall(node, blocksXml) {
         var userTypes = userBlock.getParamTypes();
         return _.isEqual(userTypes, types);
       },
-      blockDisplayXML: xml.serialize(definition) + xml.serialize(node)
-    }
+      blockDisplayXML: xml.serialize(definition) + xml.serialize(node),
+    },
   ];
 }
 
@@ -266,7 +264,7 @@ var ignoredAttributes = [
   'inline',
   'uservisible',
   'usercreated',
-  'id'
+  'id',
 ];
 
 /**

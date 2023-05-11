@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import AssignmentSelector, {
-  getCourseOfferingsByCategory
+  getCourseOfferingsByCategory,
 } from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
@@ -22,8 +22,8 @@ const defaultProps = {
     code: 'asdf',
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
-  }
+    unitId: null,
+  },
 };
 
 const hiddenSectionProps = {
@@ -41,8 +41,8 @@ const hiddenSectionProps = {
     code: 'asdf',
     courseOfferingId: 2,
     courseVersionId: 4,
-    unitId: 6
-  }
+    unitId: 6,
+  },
 };
 
 const newSectionProps = {
@@ -61,8 +61,8 @@ const newSectionProps = {
     unitId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    courseId: null
-  }
+    courseId: null,
+  },
 };
 
 describe('AssignmentSelector', () => {
@@ -75,7 +75,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(Object.keys(courseOfferingsByCategory), [
       'hoc',
       'full_course',
-      'csf'
+      'csf',
     ]);
     assert.deepEqual(
       courseOfferingsByCategory['full_course'].map(s => s.display_name),
@@ -103,7 +103,7 @@ describe('AssignmentSelector', () => {
       'full_course',
       'csf',
       'self_paced_pl',
-      'virtual_pl'
+      'virtual_pl',
     ]);
     assert.deepEqual(
       courseOfferingsByCategory['full_course'].map(s => s.display_name),
@@ -144,7 +144,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
       courseVersionId: null,
-      unitId: null
+      unitId: null,
     });
   });
 
@@ -158,7 +158,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
   });
 
@@ -170,7 +170,7 @@ describe('AssignmentSelector', () => {
           ...defaultProps.section,
           courseOfferingId: 2,
           courseVersionId: 4,
-          unitId: 6
+          unitId: 6,
         }}
       />
     );
@@ -178,7 +178,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 6
+      unitId: 6,
     });
   });
 
@@ -198,7 +198,7 @@ describe('AssignmentSelector', () => {
         'Hello World',
         'Poem Art',
         'Artist',
-        'Flappy'
+        'Flappy',
       ]
     );
   });
@@ -219,7 +219,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
   });
 
@@ -236,7 +236,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 3
+      unitId: 3,
     });
   });
 
@@ -250,7 +250,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
 
     assert.equal(
@@ -265,7 +265,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
       courseVersionId: null,
-      unitId: null
+      unitId: null,
     });
   });
 
@@ -277,7 +277,7 @@ describe('AssignmentSelector', () => {
           ...defaultProps.section,
           courseOfferingId: 2,
           courseVersionId: 3,
-          unitId: 3
+          unitId: 3,
         }}
       />
     );
@@ -292,7 +292,7 @@ describe('AssignmentSelector', () => {
           ...hiddenSectionProps.section,
           courseOfferingId: null,
           courseVersionId: null,
-          unitId: null
+          unitId: null,
         }}
       />
     );
@@ -316,7 +316,7 @@ describe('AssignmentSelector', () => {
           'Hello World',
           'Poem Art',
           'Artist',
-          'Flappy'
+          'Flappy',
         ]
       );
     });
@@ -330,7 +330,7 @@ describe('AssignmentSelector', () => {
       assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
         courseOfferingId: null,
         courseVersionId: null,
-        unitId: null
+        unitId: null,
       });
     });
   });
@@ -357,7 +357,7 @@ describe('AssignmentSelector', () => {
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 4,
-        unitId: 5
+        unitId: 5,
       });
     });
 
@@ -374,7 +374,7 @@ describe('AssignmentSelector', () => {
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 4,
-        unitId: 3
+        unitId: 3,
       });
     });
   });

@@ -170,7 +170,7 @@ export default class SamplePlayer {
 
         this.playingSamples.push({
           eventStart,
-          uniqueId
+          uniqueId,
         });
       }
     }

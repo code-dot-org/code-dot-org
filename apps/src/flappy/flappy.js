@@ -35,7 +35,7 @@ Flappy.GameStates = {
   WAITING: 0,
   ACTIVE: 1,
   ENDING: 2,
-  OVER: 3
+  OVER: 3,
 };
 
 Flappy.gameState = Flappy.GameStates.WAITING;
@@ -70,12 +70,12 @@ var randomObstacleHeight = function () {
 // Default Scalings
 Flappy.scale = {
   snapRadius: 1,
-  stepSpeed: 33
+  stepSpeed: 33,
 };
 
 var twitterOptions = {
   text: flappyMsg.shareFlappyTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: 'FlappyCode'
+  hashtag: 'FlappyCode',
 };
 
 var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
@@ -143,7 +143,7 @@ var loadLevel = function () {
       gapStart: randomObstacleHeight(), // y coordinate of the top of the gap
       hitAvatar: false,
       reset: resetObstacle,
-      containsAvatar: containsAvatar
+      containsAvatar: containsAvatar,
     });
   }
 };
@@ -622,7 +622,7 @@ Flappy.init = function (config) {
     when_run: {x: col1, y: row1},
     flappy_whenCollideGround: {x: col2, y: row1},
     flappy_whenCollideObstacle: {x: col2, y: row2},
-    flappy_whenEnterObstacle: {x: col2, y: row3}
+    flappy_whenEnterObstacle: {x: col2, y: row3},
   };
 
   // if we dont have collide events, have enter obstacle in top row
@@ -779,11 +779,11 @@ var displayFeedback = function () {
         twitter: twitterOptions,
         appStrings: {
           reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
-          sharingText: flappyMsg.shareGame()
+          sharingText: flappyMsg.shareGame(),
         },
         saveToProjectGallery: true,
         feedbackImage: feedbackImageUri,
-        disableSaveToGallery: !isSignedIn
+        disableSaveToGallery: !isSignedIn,
       });
     });
   }
@@ -819,7 +819,7 @@ Flappy.execute = function () {
     whenCollideGround: {code: generator('flappy_whenCollideGround')},
     whenEnterObstacle: {code: generator('flappy_whenEnterObstacle')},
     whenCollideObstacle: {code: generator('flappy_whenCollideObstacle')},
-    whenRunButton: {code: generator('when_run')}
+    whenRunButton: {code: generator('when_run')},
   };
 
   CustomMarshalingInterpreter.evalWithEvents(
@@ -899,7 +899,7 @@ function sendReport() {
     result: Flappy.result === ResultType.SUCCESS,
     testResult: Flappy.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: Flappy.onReportComplete
+    onComplete: Flappy.onReportComplete,
   });
 }
 

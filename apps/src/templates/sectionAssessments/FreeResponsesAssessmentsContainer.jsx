@@ -3,20 +3,20 @@ import React, {Component} from 'react';
 import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
 import {
   freeResponsesDataPropType,
-  QUESTION_CHARACTER_LIMIT
+  QUESTION_CHARACTER_LIMIT,
 } from './assessmentDataShapes';
 import {
   getAssessmentsFreeResponseResults,
   ALL_STUDENT_FILTER,
   currentStudentHasResponses,
-  setQuestionIndex
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText: PropTypes.string,
-  responses: PropTypes.arrayOf(freeResponsesDataPropType)
+  responses: PropTypes.arrayOf(freeResponsesDataPropType),
 });
 
 class FreeResponsesAssessmentsContainer extends Component {
@@ -25,7 +25,7 @@ class FreeResponsesAssessmentsContainer extends Component {
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
     openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   selectQuestion = index => {
@@ -76,8 +76,8 @@ const styles = {
   text: {
     font: 10,
     paddingTop: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
 export const UnconnectedFreeResponsesAssessmentsContainer =
@@ -87,11 +87,11 @@ export default connect(
   state => ({
     freeResponseQuestions: getAssessmentsFreeResponseResults(state),
     studentId: state.sectionAssessments.studentId,
-    currentStudentHasResponses: currentStudentHasResponses(state)
+    currentStudentHasResponses: currentStudentHasResponses(state),
   }),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(FreeResponsesAssessmentsContainer);

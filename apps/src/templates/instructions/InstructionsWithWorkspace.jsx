@@ -21,13 +21,13 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
-    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired
+    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
   };
 
   // only used so that we can rerender when resized
   state = {
     windowWidth: undefined,
-    windowHeight: undefined
+    windowHeight: undefined,
   };
 
   setCodeWorkspaceContainerRef = element => {
@@ -112,11 +112,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
 export default connect(
   state => ({
-    instructionsHeight: state.instructions.renderedHeight
+    instructionsHeight: state.instructions.renderedHeight,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
       dispatch(setInstructionsMaxHeightAvailable(maxHeight));
-    }
+    },
   })
 )(UnwrappedInstructionsWithWorkspace);

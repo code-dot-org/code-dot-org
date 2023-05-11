@@ -49,7 +49,7 @@ class FakeStorybook_DEPRECATED {
       name: `Stories of ${name}`,
       stories: [],
       decorate: story => story(),
-      deprecated: false
+      deprecated: false,
     });
     return this;
   }

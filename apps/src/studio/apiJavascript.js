@@ -15,34 +15,34 @@ exports.setMap = function (value) {
 exports.setMapAndColor = function (color, value) {
   Studio.queueCmd(null, 'setMapAndColor', {
     value: value,
-    color: color
+    color: color,
   });
 };
 
 exports.setAllowSpritesOutsidePlayspace = function (value) {
   Studio.queueCmd(null, 'setAllowSpritesOutsidePlayspace', {
-    value: value
+    value: value,
   });
 };
 
 exports.setSprite = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSprite', {
     spriteIndex: spriteIndex,
-    value: value
+    value: value,
   });
 };
 
 exports.setSpriteEmotion = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpriteEmotion', {
     spriteIndex: spriteIndex,
-    value: value
+    value: value,
   });
 };
 
 exports.setSpriteSpeed = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpriteSpeed', {
     spriteIndex: spriteIndex,
-    value: value
+    value: value,
   });
 };
 
@@ -52,27 +52,27 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
 exports.setDroid = function (value) {
   Studio.queueCmd(null, 'setSprite', {
     spriteIndex: 0,
-    value: value
+    value: value,
   });
 };
 
 exports.setDroidSpeed = function (value) {
   Studio.queueCmd(null, 'setDroidSpeed', {
-    value: value
+    value: value,
   });
 };
 
 exports.setSpriteSize = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpriteSize', {
     spriteIndex: spriteIndex,
-    value: value
+    value: value,
   });
 };
 
 exports.setSpritePosition = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpritePosition', {
     spriteIndex: spriteIndex,
-    value: value
+    value: value,
   });
 };
 
@@ -95,40 +95,40 @@ exports.setSpriteBehavior = function (
   Studio.queueCmd(id, 'setSpriteBehavior', {
     spriteIndex,
     targetSpriteIndex,
-    behavior
+    behavior,
   });
 };
 
 exports.setSpritesWander = function (id, spriteName) {
   Studio.queueCmd(id, 'setSpritesWander', {
-    spriteName: spriteName
+    spriteName: spriteName,
   });
 };
 
 exports.setSpritesStop = function (id, spriteName) {
   Studio.queueCmd(id, 'setSpritesStop', {
-    spriteName: spriteName
+    spriteName: spriteName,
   });
 };
 
 exports.setSpritesChase = function (id, targetSpriteIndex, spriteName) {
   Studio.queueCmd(id, 'setSpritesChase', {
     spriteName: spriteName,
-    targetSpriteIndex: targetSpriteIndex
+    targetSpriteIndex: targetSpriteIndex,
   });
 };
 
 exports.setSpritesFlee = function (id, targetSpriteIndex, spriteName) {
   Studio.queueCmd(id, 'setSpritesFlee', {
     spriteName: spriteName,
-    targetSpriteIndex: targetSpriteIndex
+    targetSpriteIndex: targetSpriteIndex,
   });
 };
 
 exports.setSpritesSpeed = function (id, speed, spriteName) {
   Studio.queueCmd(id, 'setSpritesSpeed', {
     spriteName: spriteName,
-    speed: speed
+    speed: speed,
   });
 };
 
@@ -140,7 +140,7 @@ exports.throwProjectile = function (spriteIndex, dir, className) {
   Studio.queueCmd(null, 'throwProjectile', {
     spriteIndex: spriteIndex,
     dir: dir,
-    className: className
+    className: className,
   });
 };
 
@@ -156,7 +156,7 @@ exports.makeProjectile = function(className, action) {
 exports.move = function (spriteIndex, dir) {
   Studio.queueCmd(null, 'move', {
     spriteIndex: spriteIndex,
-    dir: dir
+    dir: dir,
   });
 };
 
@@ -222,62 +222,62 @@ exports.setScore = function (value) {
 
 exports.addCharacter = function (className) {
   Studio.queueCmd(null, 'addItem', {
-    className: className
+    className: className,
   });
 };
 
 exports.setToChase = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     className: className,
-    type: 'chase'
+    type: 'chase',
   });
 };
 
 exports.setToFlee = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     className: className,
-    type: 'flee'
+    type: 'flee',
   });
 };
 
 exports.setToRoam = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     className: className,
-    type: 'roam'
+    type: 'roam',
   });
 };
 
 exports.setToStop = function (className) {
   Studio.queueCmd(null, 'setItemActivity', {
     className: className,
-    type: 'none'
+    type: 'none',
   });
 };
 
 exports.moveFast = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     className: className,
-    speed: 'fast'
+    speed: 'fast',
   });
 };
 
 exports.moveNormal = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     className: className,
-    speed: 'normal'
+    speed: 'normal',
   });
 };
 
 exports.moveSlow = function (className, speed) {
   Studio.queueCmd(null, 'setItemSpeed', {
     className: className,
-    speed: 'slow'
+    speed: 'slow',
   });
 };
 
 exports.showDebugInfo = function (value) {
   Studio.queueCmd(null, 'showDebugInfo', {
-    value: value
+    value: value,
   });
 };
 
@@ -298,6 +298,6 @@ exports.vanish = function (spriteIndex) {
 exports.onEvent = function (eventName, func) {
   Studio.queueCmd(null, 'onEvent', {
     eventName: eventName,
-    func: func
+    func: func,
   });
 };

@@ -53,7 +53,7 @@ exports.playSoundDropdown = function () {
     var handleChooseClick = function (callback) {
       var playbackOptions = Object.assign(
         {
-          volume: 1.0
+          volume: 1.0,
         },
         _.find(skinSoundMetadata, function (metadata) {
           return metadata.name.toLowerCase().trim() === lowercaseSound;
@@ -66,7 +66,7 @@ exports.playSoundDropdown = function () {
     return {
       text: utils.quote(sound),
       display: utils.quote(sound),
-      click: handleChooseClick
+      click: handleChooseClick,
     };
   });
 };

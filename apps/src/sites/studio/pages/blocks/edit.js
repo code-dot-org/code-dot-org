@@ -8,11 +8,11 @@ import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spr
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
-  setInitialAnimationList
+  setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {BlocklyVersion} from '@cdo/apps/constants';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -41,7 +41,7 @@ function initializeEditPage(defaultSprites) {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
     typeHints: true,
-    isBlockEditMode: true
+    isBlockEditMode: true,
   });
 
   const blockConfigElement = document.getElementById('block_config');
@@ -62,12 +62,12 @@ function initializeEditPage(defaultSprites) {
   const helperCodeElement = document.getElementById('block_helper_code');
   configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
     callback: validateBlockConfig,
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
 
   helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -160,10 +160,10 @@ function updateBlockPreview() {
         pool: poolField.value,
         category: 'Custom',
         config: parsedConfig,
-        helperCode: helperEditor && helperEditor.getValue()
-      }
+        helperCode: helperEditor && helperEditor.getValue(),
+      },
     ],
-    customInputTypes
+    customInputTypes,
   });
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   Blockly.mainBlockSpace.clear();

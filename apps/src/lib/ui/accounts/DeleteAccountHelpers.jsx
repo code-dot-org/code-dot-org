@@ -3,7 +3,7 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
-  RELEASE_OR_DELETE_RECORDS_EXPLANATION
+  RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -14,7 +14,7 @@ export const TeacherWarning = () => {
 
       <SafeMarkdown
         markdown={i18n.deleteAccount_personalLoginInstructions({
-          explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL
+          explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL,
         })}
       />
     </div>
@@ -56,7 +56,7 @@ const CHECKBOX_MAP = {
           {i18n.learnMore()}
         </a>
       </span>
-    )
+    ),
   },
   2: {
     checked: false,
@@ -72,7 +72,7 @@ const CHECKBOX_MAP = {
         </a>
         {i18n.deleteAccountDialog_checkbox2_3()}
       </span>
-    )
+    ),
   },
   3: {
     checked: false,
@@ -80,7 +80,7 @@ const CHECKBOX_MAP = {
       <span>
         <SafeMarkdown markdown={i18n.deleteAccountDialog_checkbox3()} />
       </span>
-    )
+    ),
   },
   4: {
     checked: false,
@@ -88,7 +88,7 @@ const CHECKBOX_MAP = {
       <span>
         <SafeMarkdown markdown={i18n.deleteAccountDialog_checkbox4()} />
       </span>
-    )
+    ),
   },
   5: {
     checked: false,
@@ -96,6 +96,6 @@ const CHECKBOX_MAP = {
       <span>
         <SafeMarkdown markdown={i18n.deleteAccountDialog_checkbox5()} />
       </span>
-    )
-  }
+    ),
+  },
 };

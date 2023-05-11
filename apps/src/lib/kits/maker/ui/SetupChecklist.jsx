@@ -13,7 +13,7 @@ import {
   isChrome,
   isChromeOS,
   isCodeOrgBrowser,
-  isLinux
+  isLinux,
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
@@ -47,7 +47,7 @@ const initialState = {
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING,
-  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING
+  [STATUS_BOARD_UPDATE_FIRMATA]: Status.WAITING,
 };
 
 class SetupChecklist extends Component {
@@ -64,7 +64,7 @@ class SetupChecklist extends Component {
   static propTypes = {
     webSerialPort: PropTypes.object,
     stepDelay: PropTypes.number,
-    firmataPercentComplete: PropTypes.number
+    firmataPercentComplete: PropTypes.number,
   };
 
   fail(selector) {
@@ -121,7 +121,7 @@ class SetupChecklist extends Component {
       .then(() => {
         this.setState({boardTypeDetected: this.setupChecker.detectBoardType()});
         analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_BOARD_TYPE_EVENT, {
-          'Maker Board Type': this.state.boardTypeDetected
+          'Maker Board Type': this.state.boardTypeDetected,
         });
 
         Promise.resolve();
@@ -259,7 +259,7 @@ class SetupChecklist extends Component {
           >
             <SafeMarkdown
               markdown={applabI18n.makerSetupInstallSerialConnector({
-                webstoreURL: CHROME_APP_WEBSTORE_URL
+                webstoreURL: CHROME_APP_WEBSTORE_URL,
               })}
             />
             <br />
@@ -426,7 +426,7 @@ class SetupChecklist extends Component {
     let firmataMarkdown;
     if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
-        firmataURL: MICROBIT_FIRMATA_URL
+        firmataURL: MICROBIT_FIRMATA_URL,
       });
     } else if (
       this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
@@ -434,14 +434,14 @@ class SetupChecklist extends Component {
     ) {
       firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
         firmataURLExpress: EXPRESS_FIRMATA_URL,
-        firmataURLClassic: CLASSIC_FIRMATA_URL
+        firmataURLClassic: CLASSIC_FIRMATA_URL,
       });
     } else {
       // Board Type is Other/Unknown
       firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
         firmataURLExpress: EXPRESS_FIRMATA_URL,
         firmataURLClassic: CLASSIC_FIRMATA_URL,
-        firmataURLMB: MICROBIT_FIRMATA_URL
+        firmataURLMB: MICROBIT_FIRMATA_URL,
       });
     }
     return (
@@ -478,16 +478,16 @@ class SetupChecklist extends Component {
 }
 
 export default connect(state => ({
-  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent
+  firmataPercentComplete: state.microBit.microBitFirmataUpdatePercent,
 }))(SetupChecklist);
 
 const styles = {
   suggestionHeader: {
-    marginTop: 15
-  }
+    marginTop: 15,
+  },
 };
 
 const downloadButtonStyle = {
   textAlign: 'center',
-  marginBottom: 15
+  marginBottom: 15,
 };

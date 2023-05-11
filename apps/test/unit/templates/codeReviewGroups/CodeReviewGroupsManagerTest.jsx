@@ -5,7 +5,7 @@ import _ from 'lodash';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import {
   getAssignedGroupDroppableId,
-  DROPPABLE_ID_UNASSIGNED
+  DROPPABLE_ID_UNASSIGNED,
 } from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsUtils';
 import AssignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/AssignedStudentsPanel';
 import UnassignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/UnassignedStudentsPanel';
@@ -55,7 +55,7 @@ describe('Code Review Groups Manager', () => {
   it('moves group member between code review groups', () => {
     const dragResult = {
       source: {droppableId: getAssignedGroupDroppableId(1), index: 1},
-      destination: {droppableId: getAssignedGroupDroppableId(2), index: 1}
+      destination: {droppableId: getAssignedGroupDroppableId(2), index: 1},
     };
 
     confirmDefaultBeforeActionExpectations();
@@ -76,7 +76,7 @@ describe('Code Review Groups Manager', () => {
   it('moves group member within group', () => {
     const dragResult = {
       source: {droppableId: getAssignedGroupDroppableId(1), index: 1},
-      destination: {droppableId: getAssignedGroupDroppableId(1), index: 0}
+      destination: {droppableId: getAssignedGroupDroppableId(1), index: 0},
     };
 
     confirmDefaultBeforeActionExpectations();
@@ -95,7 +95,7 @@ describe('Code Review Groups Manager', () => {
 
   it('does not move any members when drag ends outside draggable area', () => {
     const dragResult = {
-      source: {droppableId: getAssignedGroupDroppableId(1), index: 1}
+      source: {droppableId: getAssignedGroupDroppableId(1), index: 1},
     };
 
     confirmDefaultBeforeActionExpectations();
@@ -115,7 +115,7 @@ describe('Code Review Groups Manager', () => {
   it('moves group member to unassigned area', () => {
     const dragResult = {
       source: {droppableId: getAssignedGroupDroppableId(1), index: 1},
-      destination: {droppableId: DROPPABLE_ID_UNASSIGNED, index: 0}
+      destination: {droppableId: DROPPABLE_ID_UNASSIGNED, index: 0},
     };
 
     confirmDefaultBeforeActionExpectations();
@@ -136,7 +136,7 @@ describe('Code Review Groups Manager', () => {
   it('moves group member from unassigned area to code review group', () => {
     const dragResult = {
       source: {droppableId: DROPPABLE_ID_UNASSIGNED, index: 1},
-      destination: {droppableId: getAssignedGroupDroppableId(1), index: 0}
+      destination: {droppableId: getAssignedGroupDroppableId(1), index: 0},
     };
 
     draggedMember = getUnassignedGroup().members[1];
@@ -178,16 +178,16 @@ const DEFAULT_GROUPS = [
   {
     id: 1,
     members: getMembers(1, 5),
-    droppableId: getAssignedGroupDroppableId(1)
+    droppableId: getAssignedGroupDroppableId(1),
   },
   {
     id: 2,
     members: getMembers(5, 9),
-    droppableId: getAssignedGroupDroppableId(2)
+    droppableId: getAssignedGroupDroppableId(2),
   },
   {
     members: getMembers(9, 13),
     unassigned: true,
-    droppableId: 'unassigned'
-  }
+    droppableId: 'unassigned',
+  },
 ];

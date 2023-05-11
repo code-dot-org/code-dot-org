@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import createStandardsEditor, {
   addStandard,
-  removeStandard
+  removeStandard,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import _ from 'lodash';
 
@@ -12,7 +12,7 @@ const fakeStandards = [
     categoryShortcode: 'AP',
     categoryDescription: 'Algorithms & Programming',
     shortcode: 'shortcode-1',
-    description: 'Create programs that use variables to store and modify data.'
+    description: 'Create programs that use variables to store and modify data.',
   },
   {
     frameworkShortcode: 'framework-1',
@@ -20,8 +20,8 @@ const fakeStandards = [
     categoryShortcode: 'DA',
     categoryDescription: 'Data & Analysis',
     shortcode: 'shortcode-3',
-    description: 'Translate between different bit representations of numbers.'
-  }
+    description: 'Translate between different bit representations of numbers.',
+  },
 ];
 
 const getInitialState = () => _.cloneDeep(fakeStandards);
@@ -37,7 +37,7 @@ describe('standardsEditorRedux reducer', () => {
       categoryShortcode: 'CS',
       categoryDescription: 'Computing Systems',
       shortcode: 'shortcode-4',
-      description: 'fake description'
+      description: 'fake description',
     };
 
     initialState = getInitialState();
@@ -83,7 +83,7 @@ describe('standardsEditorRedux reducer', () => {
       initialState,
       removeStandard('standard', {
         frameworkShortcode: 'framework-1',
-        shortcode: 'shortcode-1'
+        shortcode: 'shortcode-1',
       })
     );
     assert.deepEqual(

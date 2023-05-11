@@ -163,7 +163,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
       .attr('src', tooltip.getFullDocumentationURL(this.appType)),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox',
-    link: tooltip.getFullDocumentationURL(this.appType)
+    link: tooltip.getFullDocumentationURL(this.appType),
   });
   dialog.show();
 };

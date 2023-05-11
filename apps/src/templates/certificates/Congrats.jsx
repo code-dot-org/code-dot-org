@@ -22,7 +22,7 @@ export default function Congrats(props) {
       hero: '2017Minecraft',
       minecraft: 'pre2017Minecraft',
       mc: 'pre2017Minecraft',
-      oceans: 'oceans'
+      oceans: 'oceans',
     }[tutorial] || 'other');
   /**
    * Renders links to certificate alternatives when there is a special event going on.
@@ -65,7 +65,7 @@ export default function Congrats(props) {
     isHocTutorial,
     nextCourseScriptName,
     nextCourseTitle,
-    nextCourseDesc
+    nextCourseDesc,
   } = props;
 
   const isEnglish = language === 'en';
@@ -123,7 +123,7 @@ Congrats.propTypes = {
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
-  nextCourseDesc: PropTypes.string
+  nextCourseDesc: PropTypes.string,
 };
 
 const styles = {
@@ -131,20 +131,20 @@ const styles = {
     width: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   divider: {
     borderColor: color.lightest_gray,
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
-    margin: '20px 0px 20px 0px'
+    margin: '20px 0px 20px 0px',
   },
   extraLinkContainer: {
     clear: 'both',
-    paddingTop: 20
+    paddingTop: 20,
   },
   extraLink: {
     color: color.teal,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };

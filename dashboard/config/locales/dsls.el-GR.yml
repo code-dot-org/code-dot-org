@@ -1273,8 +1273,9 @@ el-GR:
         title: Πολλαπλή Επιλογή
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - correct: true
+        - text: ΟΡΙΣΕ
+        - text: ΤΕΤΡΆΓΩΝΟ
+          correct: true
         - text: ΝΟΤΙΑ
         questions:
         - text: Ποια λέξη σχηματίζεται;
@@ -9911,9 +9912,11 @@ el-GR:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
         - correct: true
-        - {}
+          feedback: Σωστό! Ο Σκρατ γυρίζει προς τη λάθος κατεύθυνση και δεν θα φτάσει
+            στο βελανίδι.
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
         - {}
         questions:
         - {}

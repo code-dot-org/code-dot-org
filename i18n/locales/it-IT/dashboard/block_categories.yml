@@ -21,6 +21,7 @@ it:
       Game/Score: Gioco/Punteggio
       Games/Score: Giochi/Punteggio
       Groups: Gruppi
+      Image: Immagine
       Input: Input
       Location: Posizione
       Locations: Posizioni

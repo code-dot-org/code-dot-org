@@ -12,10 +12,10 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import microBitReducer, {
-  setMicroBitFirmataUpdatePercent
+  setMicroBitFirmataUpdatePercent,
 } from '@cdo/apps/lib/kits/maker/microBitRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 

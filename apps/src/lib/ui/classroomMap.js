@@ -24,7 +24,7 @@ export function getLocations(results) {
       lon,
       title,
       html,
-      zoom: 10
+      zoom: 10,
     };
   });
 }
@@ -77,7 +77,7 @@ function createSharedContent(location) {
           i18n(location.class_format_category_s) +
           ' - ' +
           i18n(location.class_format_s) +
-          formatSuffix
+          formatSuffix,
       })
     );
   }
@@ -88,7 +88,7 @@ function createSharedContent(location) {
         label: 'Level(s): ',
         text: location.school_level_ss
           .map(key => i18n(`level_${key}`))
-          .join(', ')
+          .join(', '),
       })
     );
   }
@@ -97,7 +97,7 @@ function createSharedContent(location) {
     sharedContent.appendChild(
       createEntryDetail({
         label: 'Language(s): ',
-        text: location.class_languages_all_ss.join(', ')
+        text: location.class_languages_all_ss.join(', '),
       })
     );
   }
@@ -163,7 +163,7 @@ export function i18n(token) {
     level_high_school: 'High school',
     level_college: 'College',
     level_vocational: 'Vocational',
-    languages_other: 'Other language(s)'
+    languages_other: 'Other language(s)',
   };
 
   return labels[token];

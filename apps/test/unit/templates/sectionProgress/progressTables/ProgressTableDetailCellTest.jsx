@@ -7,7 +7,7 @@ import sinon from 'sinon';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   fakeLevel,
-  fakeProgressForLevels
+  fakeProgressForLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
@@ -15,7 +15,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 const level_1 = fakeLevel({
   id: '123',
   levelNumber: 1,
-  isUnplugged: true
+  isUnplugged: true,
 });
 const sublevel_1 = fakeLevel({id: '789', levelNumber: 1});
 const level_2 = fakeLevel({id: '456', levelNumber: 2, sublevels: [sublevel_1]});
@@ -27,8 +27,8 @@ const DEFAULT_PROPS = {
   sectionId: 123,
   levels: levels,
   studentProgress: fakeProgressForLevels(levels, LevelStatus.passed, {
-    teacher_feedback_review_state: ReviewStates.keepWorking
-  })
+    teacher_feedback_review_state: ReviewStates.keepWorking,
+  }),
 };
 
 const setUp = (overrideProps = {}) => {

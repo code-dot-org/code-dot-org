@@ -109,7 +109,7 @@ NetSimWire.prototype.buildRow = function () {
     localAddress: this.localAddress,
     remoteAddress: this.remoteAddress,
     localHostname: this.localHostname,
-    remoteHostname: this.remoteHostname
+    remoteHostname: this.remoteHostname,
   };
 };
 

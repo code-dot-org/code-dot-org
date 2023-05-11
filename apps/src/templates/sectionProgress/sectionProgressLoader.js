@@ -5,16 +5,16 @@ import {
   finishLoadingProgress,
   addDataByUnit,
   startRefreshingProgress,
-  finishRefreshingProgress
+  finishRefreshingProgress,
 } from './sectionProgressRedux';
 import {
   processedLevel,
   processServerSectionProgress,
-  lessonProgressForSection
+  lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {
   fetchStandardsCoveredForScript,
-  fetchStudentLevelScores
+  fetchStudentLevelScores,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
@@ -43,7 +43,7 @@ export function loadScriptProgress(scriptId, sectionId) {
     getStore().dispatch(startLoadingProgress());
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
-      scriptId
+      scriptId,
     });
   }
 
@@ -51,12 +51,12 @@ export function loadScriptProgress(scriptId, sectionId) {
     unitDataByUnit: {},
     studentLevelProgressByUnit: {},
     studentLessonProgressByUnit: {},
-    studentLastUpdateByUnit: {}
+    studentLastUpdateByUnit: {},
   };
 
   // Get the script data
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
-    credentials: 'include'
+    credentials: 'include',
   })
     .then(response => response.json())
     .then(scriptData => {
@@ -64,7 +64,7 @@ export function loadScriptProgress(scriptId, sectionId) {
         [scriptId]: postProcessDataByScript(
           scriptData,
           sectionData.lessonExtras
-        )
+        ),
       };
 
       if (
@@ -85,14 +85,14 @@ export function loadScriptProgress(scriptId, sectionId) {
         sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByUnit[scriptId],
-            ...processServerSectionProgress(data.student_progress)
-          }
+            ...processServerSectionProgress(data.student_progress),
+          },
         };
         sectionProgress.studentLastUpdateByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLastUpdateByUnit[scriptId],
-            ...data.student_last_updates
-          }
+            ...data.student_last_updates,
+          },
         };
       });
   });
@@ -102,7 +102,7 @@ export function loadScriptProgress(scriptId, sectionId) {
   Promise.all(requests).then(() => {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
-      scriptId
+      scriptId,
     });
 
     sectionProgress.studentLessonProgressByUnit = {
@@ -110,7 +110,7 @@ export function loadScriptProgress(scriptId, sectionId) {
       [scriptId]: lessonProgressForSection(
         sectionProgress.studentLevelProgressByUnit[scriptId],
         sectionProgress.unitDataByUnit[scriptId].lessons
-      )
+      ),
     };
     getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
@@ -136,7 +136,7 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     lessons: scriptData.lessons,
     family_name: scriptData.family_name,
     version_year: scriptData.version_year,
-    name: scriptData.name
+    name: scriptData.name,
   };
   if (!filteredScriptData.lessons) {
     return filteredScriptData;
@@ -145,7 +145,7 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     ...filteredScriptData,
     lessons: filteredScriptData.lessons.map(lesson =>
       postProcessLessonData(lesson, includeBonusLevels)
-    )
+    ),
   };
 }
 
@@ -155,6 +155,6 @@ function postProcessLessonData(lesson, includeBonusLevels) {
     : lesson.levels.filter(level => !level.bonus);
   return {
     ...lesson,
-    levels: levels.map(level => processedLevel(level))
+    levels: levels.map(level => processedLevel(level)),
   };
 }

@@ -1,6 +1,6 @@
 name 'CSA U8L7-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Searching Algorithms'
+description 'Implement the iterative or recursive binary search.'
 
 sublevels
 level 'CSA U8L7-L7a_2023'

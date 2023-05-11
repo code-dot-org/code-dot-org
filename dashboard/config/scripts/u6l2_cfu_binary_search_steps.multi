@@ -4,3 +4,4 @@ wrong 'Compare the number 25 to the given number.'
 wrong 'Compare the number 4 to the given number'
 right 'Compare the number 33 to the given number'
 wrong 'Compare the number 47 to the given number.'
+allow_multiple_attempts true

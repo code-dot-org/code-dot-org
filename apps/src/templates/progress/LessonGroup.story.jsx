@@ -3,7 +3,7 @@ import LessonGroup from './LessonGroup';
 import {
   fakeLesson,
   fakeLevels,
-  createStoreWithHiddenLesson
+  createStoreWithHiddenLesson,
 } from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {Provider} from 'react-redux';
@@ -13,7 +13,7 @@ const lessons = [
   fakeLesson('Jigsaw', 1),
   fakeLesson('Maze', 2),
   fakeLesson('Artist', 3),
-  fakeLesson('Something', 4)
+  fakeLesson('Something', 4),
 ];
 
 const levelsByLesson = [
@@ -24,11 +24,11 @@ const levelsByLesson = [
       isLocked: false,
       url: '/step1/level1',
       name: 'First progression',
-      levelNumber: 1
+      levelNumber: 1,
     },
     ...fakeLevels(5, {startLevel: 2}).map(level => ({
       ...level,
-      progression: 'Second Progression'
+      progression: 'Second Progression',
     })),
     {
       id: '21',
@@ -36,23 +36,23 @@ const levelsByLesson = [
       isLocked: false,
       url: '/step3/level1',
       name: 'Last progression',
-      levelNumber: 7
-    }
+      levelNumber: 7,
+    },
   ],
   fakeLevels(2),
   fakeLevels(2),
-  fakeLevels(2)
+  fakeLevels(2),
 ];
 
 const groupedLesson = {
   lessonGroup: {displayName: 'My Group'},
   lessons,
-  levelsByLesson
+  levelsByLesson,
 };
 
 export default {
   name: 'LessonGroup',
-  compoent: LessonGroup
+  compoent: LessonGroup,
 };
 
 export const WithDetailView = () => (
@@ -81,10 +81,10 @@ export const InstructorSummaryWithAllLessonsHidden = () => (
         lessonGroup: {
           displayName: 'My Group',
           description: 'Lesson Group Description',
-          bigQuestions: 'Why? Who? Where?'
+          bigQuestions: 'Why? Who? Where?',
         },
         lessons: [lessons[0]],
-        levelsByLesson: [levelsByLesson[0]]
+        levelsByLesson: [levelsByLesson[0]],
       }}
       isPlc={false}
       isSummaryView={true}
@@ -99,10 +99,10 @@ export const InstructorViewWithNoLessons = () => (
         lessonGroup: {
           displayName: 'My Group',
           description: 'Lesson Group Description',
-          bigQuestions: 'Why? Who? Where?'
+          bigQuestions: 'Why? Who? Where?',
         },
         lessons: [],
-        levelsByLesson: []
+        levelsByLesson: [],
       }}
       isPlc={false}
       isSummaryView={true}
@@ -117,10 +117,10 @@ export const ParticipantViewWithAllLessonsHidden = () => (
         lessonGroup: {
           displayName: 'My Group',
           description: 'Lesson Group Description',
-          bigQuestions: 'Why? Who? Where?'
+          bigQuestions: 'Why? Who? Where?',
         },
         lessons: [lessons[0]],
-        levelsByLesson: [levelsByLesson[0]]
+        levelsByLesson: [levelsByLesson[0]],
       }}
       isPlc={false}
       isSummaryView={true}
@@ -146,8 +146,8 @@ export const WithDescriptionAndBigQuestions = () => (
         lessonGroup: {
           displayName: 'My Group',
           description: 'Lesson Group Description',
-          bigQuestions: 'Why? Who? Where?'
-        }
+          bigQuestions: 'Why? Who? Where?',
+        },
       }}
       isPlc={false}
       isSummaryView={false}
