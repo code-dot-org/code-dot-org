@@ -299,15 +299,13 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I rotate to landscape$/ do
+When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:landscape)
-  end
-end
-
-When /^I rotate to portrait$/ do
-  if ENV['BS_ROTATABLE'] == "true"
-    @browser.rotate(:portrait)
+    $http_client.call(
+      :post,
+      "/wd/hub/session/#{@browser.session_id}/orientation",
+      {orientation: orientation.upcase}
+    )
   end
 end
 
