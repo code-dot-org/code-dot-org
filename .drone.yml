@@ -1,4 +1,11 @@
 ---
+# Drone CI pipeline running at: https://drone.cdn-code.org/code-dot-org/code-dot-org/
+# 
+# Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
+#
+# NOTE: after making changes to this file, you'll need to sign them using
+# `drone sign code-dot-org/code-dot-org --save`
+
 kind: pipeline
 type: docker
 name: unit
@@ -38,6 +45,7 @@ steps:
       filename: unit-tests-cache.tar
 
   - name: unit-tests
+    # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:ruby-3.0.5
     pull: always
     volumes:
@@ -135,7 +143,9 @@ steps:
       restore: true
 
   - name: ui-tests
+    # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:ruby-3.0.5
+    pull: always
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
@@ -200,6 +210,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 753cfe2cb54dcd48fe3b7e788a03307b83b40c6550e6d84d62813b108308f350
+hmac: 94bb1f9096ebcdb4965c265590a1b3496492e1a71bbb65b24169ceedc2b6036f
 
 ...

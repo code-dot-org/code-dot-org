@@ -351,4 +351,5 @@ export default connect(state => ({
   isRtl: state.isRtl,
   appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
+  currentLevelId: state.progress.currentLevelId,
 }))(HeaderMiddle);

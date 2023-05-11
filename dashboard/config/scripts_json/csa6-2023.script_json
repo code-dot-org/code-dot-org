@@ -16,8 +16,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-15 16:17:45 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-05-09 21:11:29 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -193,9 +193,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Why does an `ArrayList` only store objects?\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they discover why an `ArrayList` can only store objects and learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
+        "overview": "**Why would I use generic types?**\n\nStudents have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, they learn about generic types. Students realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. They then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations.",
         "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-7-lists-of-objects/37928) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Why does an `ArrayList` only store objects?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you discover why an `ArrayList` can only store objects and learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
+        "student_overview": "**Why would I use generic types?**\n\nYou have previously learned that an `ArrayList` can only store objects, such as `Integer` or `String`. In this lesson, you learn about generic types. You realize that using the angle brackets when creating an `ArrayList` ensures that an `ArrayList` stores a specific type of object, while leaving out the angle brackets may result in multiple types of objects getting stored in the `ArrayList`. You then practice creating and using an `ArrayList` of objects and implementing algorithms to find information and perform calculations."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -230,7 +230,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nStudents use the knowledge and skills they have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. They explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. Students participate in a code review to obtain feedback and iterate on the development of their programs.",
-        "preparation": "* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-9-arraylist-and-string-algorithms/37930) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the Writing Algorithms with ArrayLists handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-9-arraylist-and-string-algorithms/37930) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and `ArrayList`s to plan and implement algorithms?**\n\nYou use the knowledge and skills you have developed in this unit to implement algorithms to search or modify elements in an `ArrayList`. You explore basic natural language processing techniques, then work with a partner to plan and implement algorithms to work with `String` and `ArrayList` objects. You participate in a code review to obtain feedback and iterate on the development of your programs."
       },
       "seeding_key": {
@@ -3197,7 +3197,7 @@
       "key": "2b6000c8-8e02-4f2e-b5ce-85262b9536a3",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***stop word*** and ***stop word removal*** and demonstrate how it is applied in natural language processing.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms with ArrayLists handout and a set of the Planning Algorithms manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***stop word*** and ***stop word removal*** and demonstrate how it is applied in natural language processing.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms with ArrayLists handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4750,6 +4750,56 @@
     {
       "chapter": 23,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "progression": "Investigate and Modify: The ArrayList Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      },
+      "level_keys": [
+        "CSA U6L4-L3_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L4-L4_2023"
+        ],
+        "progression": "Investigate and Modify: The ArrayList Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L4-L4_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      },
+      "level_keys": [
+        "CSA U6L4-L4_2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4773,8 +4823,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
+      "chapter": 26,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4798,8 +4848,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
+      "chapter": 27,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4823,8 +4873,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
+      "chapter": 28,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4848,7 +4898,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4873,7 +4923,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4898,7 +4948,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4923,7 +4973,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4948,7 +4998,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4973,7 +5023,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4998,7 +5048,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5023,7 +5073,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5048,7 +5098,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5073,7 +5123,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5098,7 +5148,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5123,7 +5173,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5148,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5173,7 +5223,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5198,7 +5248,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5223,7 +5273,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5248,7 +5298,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5273,7 +5323,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5298,7 +5348,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5323,7 +5373,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5348,7 +5398,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5373,7 +5423,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5398,7 +5448,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5423,7 +5473,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5448,7 +5498,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5473,7 +5523,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5498,7 +5548,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5523,7 +5573,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5548,7 +5598,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5573,7 +5623,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5598,7 +5648,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5623,7 +5673,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5648,7 +5698,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5673,7 +5723,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5698,7 +5748,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5723,7 +5773,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5748,7 +5798,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5773,7 +5823,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5798,7 +5848,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5823,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5848,7 +5898,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5873,7 +5923,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5898,7 +5948,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6181,6 +6231,30 @@
         "level.key": "CSA U6L4-L2_2023",
         "script_level.level_keys": [
           "CSA U6L4-L2_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L4-L3_2023",
+        "script_level.level_keys": [
+          "CSA U6L4-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2023",
+        "activity_section.key": "b0a0da7f-f15b-41b3-947b-ce14feadf125"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L4-L4_2023",
+        "script_level.level_keys": [
+          "CSA U6L4-L4_2023"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -6791,18 +6865,6 @@
       }
     },
     {
-      "name": "[KEY] Project Characteristics",
-      "url": "https://docs.google.com/document/d/1qK7GgOOjGm5XF2cXcFN2NeA6fE-Mfptnk6vmAm8rC5s/edit?usp=share_link",
-      "key": "_key_project_characteristics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_project_characteristics"
-      }
-    },
-    {
       "name": "[KEY] TemperatureAction FRQ",
       "url": "https://docs.google.com/document/d/1pzeGQOXDhZqUr_HcAaaKSXldM2FiEAdDxkkzo7gCknc/edit?usp=share_link",
       "key": "_key_temperatureaction_frq",
@@ -7041,6 +7103,18 @@
       }
     },
     {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
       "name": "Integer and Double Objects",
       "url": "https://docs.google.com/presentation/d/1Bjy5TBNgjgaVy61kKdoZywf93pqJ-atsTy56NM19Tu8/edit?usp=sharing",
       "key": "integer_and_double_objects",
@@ -7137,19 +7211,6 @@
       },
       "seeding_key": {
         "resource.key": "natural_language_processing_project_planning_guide_1"
-      }
-    },
-    {
-      "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/document/d/1Hc5f2La2EOimGNsMFWh2o_tVkpq_tUMEfxuH5Py0Yvg/edit?usp=sharing",
-      "key": "planning_algorithms_manipulatives_4",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "planning_algorithms_manipulatives_4"
       }
     },
     {
@@ -7508,13 +7569,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "_key_project_characteristics"
+        "resource.key": "_exemplar_unit_6_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_u6l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7628,7 +7695,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "_key_u6l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7652,7 +7731,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "_key_u6l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7688,6 +7779,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "_key_u6l4_extra_practice"
       }
     },
@@ -7695,6 +7792,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "arraylists"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7718,7 +7821,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "_key_u6l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7748,6 +7863,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "_key_u6l6_extra_practice"
       }
     },
@@ -7772,6 +7893,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u6l6_extra_practice"
       }
     },
@@ -7784,7 +7911,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "_key_u6l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7808,7 +7947,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "_key_u6l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7838,6 +7989,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_unit_6_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "_key_u6l9_extra_practice"
       }
     },
@@ -7856,7 +8013,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "planning_algorithms_manipulatives_4"
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7912,6 +8069,12 @@
     {
       "seeding_key": {
         "resource.key": "developing_project_management_skills",
+        "script.name": "csa6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
         "script.name": "csa6-2023"
       }
     },

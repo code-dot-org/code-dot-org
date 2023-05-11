@@ -6,10 +6,13 @@ import {getToolbox} from './toolbox';
 import FieldSounds from './FieldSounds';
 import FieldPattern from './FieldPattern';
 import AppConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, LOCAL_STORAGE, REMOTE_STORAGE} from '../constants';
+import {BlockMode, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DYNAMIC_TRIGGER_EXTENSION,
+  FIELD_CHORD_TYPE,
+  FIELD_PATTERN_TYPE,
+  FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
   TRIGGER_FIELD,
 } from './constants';
@@ -24,6 +27,7 @@ import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory
 import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
+import musicI18n from '../locale';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -74,9 +78,9 @@ export default class MusicBlocklyWorkspace {
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    Blockly.fieldRegistry.register('field_sounds', FieldSounds);
-    Blockly.fieldRegistry.register('field_pattern', FieldPattern);
-    Blockly.fieldRegistry.register('field_chord', FieldChord);
+    Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
+    Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+    Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(toolboxAllowList),
@@ -97,7 +101,8 @@ export default class MusicBlocklyWorkspace {
     delete Blockly.Blocks.procedures_ifreturn;
 
     // Rename the new function placeholder text for Music Lab specifically.
-    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'my function';
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
+      musicI18n.blockly_functionNamePlaceholder();
 
     Blockly.setInfiniteLoopTrap();
 
@@ -371,7 +376,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   hasUnsavedChanges() {
-    return this.projectManager.hasQueuedSave();
+    return this.projectManager.hasUnsavedChanges();
   }
 
   loadDefaultCode() {
@@ -398,11 +403,11 @@ export default class MusicBlocklyWorkspace {
   }
 
   // Get the project manager for the current storage type.
-  // If no storage type is specified in AppConfig, use local storage.
+  // If no storage type is specified in AppConfig, use remote storage.
   getProjectManager(appOptions) {
     let storageType = AppConfig.getValue('storage-type');
     if (!storageType) {
-      storageType = LOCAL_STORAGE;
+      storageType = REMOTE_STORAGE;
     }
     storageType = storageType.toLowerCase();
 
@@ -421,5 +426,9 @@ export default class MusicBlocklyWorkspace {
         this.getProject.bind(this)
       );
     }
+  }
+
+  addSaveEventListener(event, listener) {
+    this.projectManager.addEventListener(event, listener);
   }
 }

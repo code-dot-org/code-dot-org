@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -25,6 +25,9 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
   # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
+    adaptations: {
+      name: 'New Adaptations Project'
+    },
     artist: {
       name: 'New Artist Project',
       i18n: true
@@ -278,6 +281,24 @@ class ProjectsController < ApplicationController
       channel_id: channel,
       enableMaker: params['enableMaker'] ? true : nil
     )
+  end
+
+  # GET /projects(/script/:script_id)/level/:level_id
+  # Given a level_id and the current user (or signed out user), get the existing project
+  # or create a new project for that level and user. If a script_id is provided, get or
+  # create the project for that level, script and user
+  # Returns json: {channel: <encrypted-channel-token>}
+  def get_or_create_for_level
+    script_id = params[:script_id]
+    level = Level.find(params[:level_id])
+    error_message = under_13_without_tos_teacher?(level)
+    return render(status: :forbidden, json: {error: error_message}) if error_message
+    # get_storage_id works for signed out users as well, it uses the cookie to determine
+    # the storage id.
+    user_storage_id = get_storage_id
+    # Find the channel for the user and level if it exists, or create a new one.
+    channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
+    render(status: :ok, json: {channel: channel_token.channel})
   end
 
   def weblab_footer

@@ -47,8 +47,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
@@ -3462,8 +3460,10 @@ code {
       padding: 20px;
       color: $white;
 
-      h1 {
+      h2 {
         color: $white;
+        font-size: 26px;
+        margin-bottom: 20px;
       }
 
       .subtext {
@@ -3485,7 +3485,7 @@ code {
         width: 100%;
 
         li {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .dots {
@@ -3507,6 +3507,18 @@ code {
 
     #noanswer {
       cursor: pointer;
+      border: none;
+      box-shadow: none;
+      font-family: $gotham-bold;
+      font-size: 100%;
+      color: $brand_secondary_default;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    #noanswer:hover {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
     }
   }
 }

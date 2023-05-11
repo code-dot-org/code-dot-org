@@ -18205,12 +18205,16 @@ de-DE:
         answers:
         - text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
           correct: true
+          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
+            falsche Richtung dreht.
         - text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
             dreht.
           correct: true
         - text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
             bewegen' Blöcke gibt.
           correct: true
+          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
+            falsche Richtung dreht.
         - text: 'Scrat bewegt sich nicht vom ersten Block weg.
 
 '

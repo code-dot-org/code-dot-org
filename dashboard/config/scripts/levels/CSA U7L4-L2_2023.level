@@ -1,8 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-04-11T14:04:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByDiet()</code> method to be a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> method instead of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code> method. Do you still get the same error? Why would we not want this method to be <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code>?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,15 +19,12 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U7L4-L1 Private PBT_2023",
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "Students no longer get the error when the `filterByDiet()` method is `public`. Students should notice that this method is intended to be a helper method for the `getRecommendedRecipes()` method, so other classes should use this method instead of the `filterByDiet()` method."
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-04-11T14:04:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:19.701+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L1_2023\"},{\"changed_at\":\"2023-04-11 14:04:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:19.701+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L1_2023\"},{\"changed_at\":\"2023-04-11 14:04:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:41:56 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:05:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

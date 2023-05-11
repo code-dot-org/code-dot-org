@@ -3437,12 +3437,30 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
         aiml-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
+            lessonGroup-5:
+              display_name: Kérdőív
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3481,3 +3499,29 @@ hu:
               display_name: 1.  fejezet
             lessonGroup-4:
               display_name: 2.  fejezet
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Bevezető
+        csd-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-data-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-impact-in-society-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-coding-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-hardware-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-creativity-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
