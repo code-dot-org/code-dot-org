@@ -195,39 +195,43 @@ class UnconnectedMusicView extends React.Component {
       Globals.setLibrary(this.library);
       Globals.setPlayer(this.player);
 
-      this.musicBlocklyWorkspace.init(
-        document.getElementById('blockly-div'),
-        this.onBlockSpaceChange,
-        this.player,
-        this.progressManager?.getCurrentStepDetails().toolbox,
-        this.props.currentLevelId,
-        this.props.currentScriptId,
-        this.props.channelId
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveStart,
-        () => {
-          this.props.setProjectUpdatedSaving();
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveSuccess,
-        status => {
-          this.props.setProjectUpdatedAt(status.updatedAt);
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveNoop,
-        status => {
-          this.props.setProjectUpdatedAt(status.updatedAt);
-        }
-      );
-      this.musicBlocklyWorkspace.addSaveEventListener(
-        ProjectManagerEvent.SaveFail,
-        () => {
-          this.props.setProjectUpdatedError();
-        }
-      );
+      this.musicBlocklyWorkspace
+        .init(
+          document.getElementById('blockly-div'),
+          this.onBlockSpaceChange,
+          this.player,
+          this.progressManager?.getCurrentStepDetails().toolbox,
+          this.props.currentLevelId,
+          this.props.currentScriptId,
+          this.props.channelId
+        )
+        .then(() => {
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveStart,
+            () => {
+              this.props.setProjectUpdatedSaving();
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveSuccess,
+            status => {
+              this.props.setProjectUpdatedAt(status.updatedAt);
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveNoop,
+            status => {
+              this.props.setProjectUpdatedAt(status.updatedAt);
+            }
+          );
+          this.musicBlocklyWorkspace.addSaveEventListener(
+            ProjectManagerEvent.SaveFail,
+            () => {
+              this.props.setProjectUpdatedError();
+            }
+          );
+        });
+
       this.player.initialize(this.library);
       setInterval(this.updateTimer, 1000 / 30);
     });
