@@ -34,15 +34,15 @@ describe('watchedExpressions', function () {
       Immutable.Map({
         expression: 'test',
         lastValue: 0,
-        uuid: createUuid()
-      })
+        uuid: createUuid(),
+      }),
     ]);
 
     const twoItemState = singleItemState.push(
       Immutable.Map({
         expression: 'test2',
         lastValue: 1,
-        uuid: createUuid()
+        uuid: createUuid(),
       })
     );
 

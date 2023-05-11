@@ -19,7 +19,7 @@ describe('FindVocabularyDialog', () => {
           markdownKey: 'key1/course/year',
           word: 'word1',
           definition: 'definition1',
-          commonSenseMedia: true
+          commonSenseMedia: true,
         },
         {
           id: 2,
@@ -27,9 +27,9 @@ describe('FindVocabularyDialog', () => {
           markdownKey: 'key2/course/year',
           word: 'word2',
           definition: 'definition2',
-          commonSenseMedia: true
-        }
-      ]
+          commonSenseMedia: true,
+        },
+      ],
     };
   });
 

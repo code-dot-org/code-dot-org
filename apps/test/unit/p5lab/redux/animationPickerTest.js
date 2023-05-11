@@ -5,7 +5,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import animationListReducer from '@cdo/apps/p5lab/redux/animationList';
@@ -15,7 +15,7 @@ const testAnimation = {
   sourceUrl: 'path/to/animation',
   frameSize: {
     x: 0,
-    y: 0
+    y: 0,
   },
   frameCount: 1,
   looping: false,
@@ -27,7 +27,7 @@ const testAnimation = {
   blob: null,
   dataURI: '',
   hasNewVersionThisSession: false,
-  categories: []
+  categories: [],
 };
 
 describe('animationPicker', function () {
@@ -41,7 +41,7 @@ describe('animationPicker', function () {
       isSpriteLab: false,
       isBackground: false,
       selectedAnimations: {},
-      uploadWarningShowing: false
+      uploadWarningShowing: false,
     };
 
     it('has expected default state', function () {
@@ -194,7 +194,7 @@ describe('animationPicker', function () {
       registerReducers({
         ...commonReducers,
         animationPicker: reducer,
-        animationList: animationListReducer
+        animationList: animationListReducer,
       });
       getStore().dispatch(show(Goal.NEW_ANIMATION, true));
     });

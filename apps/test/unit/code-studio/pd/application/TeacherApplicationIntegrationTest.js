@@ -25,7 +25,7 @@ describe('TeacherApplication', () => {
     userId: 1,
     errors: [],
     data: {},
-    onChange: () => {}
+    onChange: () => {},
   };
 
   beforeEach(() => {

@@ -33,5 +33,5 @@ export default function JobBoard({jobsByDepartment}) {
 }
 
 JobBoard.propTypes = {
-  jobsByDepartment: PropTypes.object.isRequired
+  jobsByDepartment: PropTypes.object.isRequired,
 };

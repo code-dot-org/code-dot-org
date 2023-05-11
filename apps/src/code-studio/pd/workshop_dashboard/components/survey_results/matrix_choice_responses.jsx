@@ -13,7 +13,7 @@ export default class MatrixChoiceResponses extends React.Component {
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
     questionId: PropTypes.string.isRequired,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   // facilitator responses are in form {facilitator1: {question1: <answer>,...}, facilitator2: {...}}

@@ -6,12 +6,12 @@ import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
 import AnimationPickerListItem, {
-  getCategory
+  getCategory,
 } from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterAnimations
+  filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -39,13 +39,13 @@ export default class AnimationPickerBody extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
-    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   };
 
   state = {
     searchQuery: '',
     categoryQuery: '',
-    currentPage: 0
+    currentPage: 0,
   };
 
   componentDidMount() {
@@ -58,13 +58,13 @@ export default class AnimationPickerBody extends React.Component {
       );
       let nextQuery = this.props.defaultQuery || {
         categoryQuery: '',
-        searchQuery: ''
+        searchQuery: '',
       };
       this.setState({
         ...nextQuery,
         currentPage,
         results,
-        pageCount
+        pageCount,
       });
     }
   }
@@ -79,13 +79,13 @@ export default class AnimationPickerBody extends React.Component {
       );
       let nextQuery = nextProps.defaultQuery || {
         categoryQuery: '',
-        searchQuery: ''
+        searchQuery: '',
       };
       this.setState({
         ...nextQuery,
         currentPage,
         results,
-        pageCount
+        pageCount,
       });
     }
   }
@@ -129,7 +129,7 @@ export default class AnimationPickerBody extends React.Component {
       this.setState({
         results: [...(results || []), ...newResults],
         currentPage: nextPage,
-        pageCount
+        pageCount,
       });
     }
   };
@@ -137,7 +137,7 @@ export default class AnimationPickerBody extends React.Component {
   onSearchQueryChange = searchQuery => {
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      searchQuery
+      searchQuery,
     });
     results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
@@ -147,7 +147,7 @@ export default class AnimationPickerBody extends React.Component {
     const categoryQuery = getCategory(event.target);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      categoryQuery
+      categoryQuery,
     });
     results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
@@ -159,7 +159,7 @@ export default class AnimationPickerBody extends React.Component {
       searchQuery: '',
       currentPage: 0,
       results: [],
-      pageCount: 0
+      pageCount: 0,
     });
   };
 
@@ -220,7 +220,7 @@ export default class AnimationPickerBody extends React.Component {
       onDrawYourOwnClick,
       onUploadClick,
       onAnimationSelectionComplete,
-      shouldWarnOnAnimationUpload
+      shouldWarnOnAnimationUpload,
     } = this.props;
 
     const searching = searchQuery !== '';
@@ -331,5 +331,5 @@ export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

@@ -12,8 +12,8 @@ const style = {
     borderBottomStyle: 'solid',
     borderBottomWidth: 1,
     borderBottomColor: color.charcoal,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };
 
 export default function CharacterPanel({title, children}) {
@@ -26,5 +26,5 @@ export default function CharacterPanel({title, children}) {
 }
 CharacterPanel.propTypes = {
   title: PropTypes.string,
-  children: AnyChildren
+  children: AnyChildren,
 };

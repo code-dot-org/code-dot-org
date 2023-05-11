@@ -1,6 +1,6 @@
 {
   "title": "Share your feedback - Progress Table",
-  "description": "Your opinion matters! Share your experience with us regarding the Progress Table on the Code.org teacher dashboard. We will use your feedback to shape future improvements to our platform.",
+  "description": "Your opinion matters! Share your experience with us regarding the Progress Table on the Code.org teacher dashboard. We will use your feedback to shape future improvements to our platform. For reference, here is an example image of the progress table:",
   "logo": "http://images.code.org/share-feedback-progress-table-ref.png",
   "logoPosition": "right",
   "pages": [
@@ -76,8 +76,10 @@
         {
           "type": "text",
           "name": "non_user_other_detail",
-          "title": "If you selected \"Other\" in the previous question, what do you use?",
-          "enableIf": "{non_user_alternatives} contains 'other'"
+          "title": "If you selected \"Other\", what do you use?",
+          "enableIf": "{non_user_alternatives} contains 'other'",
+          "requiredIf": "{non_user_alternatives} contains 'other'",
+          "hideNumber": true
         }
       ],
       "visibleIf": "{frequency_of_use} = 'never'"

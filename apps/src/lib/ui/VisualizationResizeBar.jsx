@@ -22,7 +22,7 @@ function resizeVisualization(width) {
 class VisualizationResizeBar extends React.Component {
   static propTypes = {
     hidden: PropTypes.bool,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   /** @type {boolean} */
@@ -135,7 +135,7 @@ class VisualizationResizeBar extends React.Component {
         id="visualizationResizeBar"
         className="fa fa-ellipsis-v"
         style={{
-          ...(this.props.hidden && commonStyles.hidden)
+          ...(this.props.hidden && commonStyles.hidden),
         }}
         ref={el => (this.domElement = el)}
       />
@@ -150,5 +150,5 @@ export default connect(state => ({
     state.pageConstants.noVisualization ||
     // e.g. share pages
     (state.pageConstants.hideSource && !state.pageConstants.isResponsive),
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(VisualizationResizeBar);

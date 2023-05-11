@@ -12,7 +12,7 @@ const typeToColorClass = {
   lead: moduleStyles.timelineElementGreen,
   fx: moduleStyles.timelineElementYellow,
   pattern: moduleStyles.timelineElementPattern,
-  chord: moduleStyles.timelineElementChord
+  chord: moduleStyles.timelineElementChord,
 };
 
 /**
@@ -25,7 +25,7 @@ const TimelineElement = ({
   top,
   left,
   when,
-  skipContext
+  skipContext,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const selectedBlockId = useSelector(state => state.music.selectedBlockId);
@@ -63,7 +63,7 @@ const TimelineElement = ({
         width: barWidth * eventData.length,
         height,
         top,
-        left
+        left,
       }}
       onClick={event => {
         dispatch(selectBlockId(eventData.blockId));
@@ -82,7 +82,7 @@ TimelineElement.propTypes = {
   top: PropTypes.number.isRequired,
   left: PropTypes.number,
   when: PropTypes.number.isRequired,
-  skipContext: PropTypes.object
+  skipContext: PropTypes.object,
 };
 
 export default TimelineElement;

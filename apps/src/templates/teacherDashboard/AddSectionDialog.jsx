@@ -13,7 +13,7 @@ import {
   setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
-  assignedCourseOffering
+  assignedCourseOffering,
 } from './teacherSectionsRedux';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -49,7 +49,7 @@ const AddSectionDialog = ({
   handleCancel,
   availableParticipantTypes,
   assignedCourseOffering,
-  asyncLoadComplete
+  asyncLoadComplete,
 }) => {
   useEffect(() => {
     if (
@@ -78,7 +78,7 @@ const AddSectionDialog = ({
       [
         SectionLoginType.picture,
         SectionLoginType.word,
-        SectionLoginType.email
+        SectionLoginType.email,
       ].includes(loginType)
     ) {
       redirectToNewSectionPage(participantType, loginType);
@@ -150,7 +150,7 @@ AddSectionDialog.propTypes = {
   handleCancel: PropTypes.func.isRequired,
   availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
   assignedCourseOffering: PropTypes.object,
-  asyncLoadComplete: PropTypes.bool
+  asyncLoadComplete: PropTypes.bool,
 };
 
 export const UnconnectedAddSectionDialog = AddSectionDialog;
@@ -161,7 +161,7 @@ export default connect(
     section: state.teacherSections.sectionBeingEdited,
     availableParticipantTypes: state.teacherSections.availableParticipantTypes,
     assignedCourseOffering: assignedCourseOffering(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   }),
   dispatch => ({
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
@@ -169,6 +169,6 @@ export default connect(
     setLoginType: loginType => dispatch(editSectionProperties({loginType})),
     setParticipantType: participantType =>
       dispatch(editSectionProperties({participantType})),
-    handleCancel: () => dispatch(cancelEditingSection())
+    handleCancel: () => dispatch(cancelEditingSection()),
   })
 )(AddSectionDialog);

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 22:21:38 UTC",
+    "serialized_at": "2023-04-25 23:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -191,8 +191,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
-        "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
+        "preparation": "* Preview the questions on the assessment.\n* If you are teaching this virtually, consider checking out the [Virtual Modifications](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing)",
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
       "seeding_key": {
@@ -520,21 +519,8 @@
       }
     },
     {
-      "key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10",
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2023"
-      }
-    },
-    {
       "key": "80f0069e-e5e9-49ac-b06f-69e0635ee9ad",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up"
       },
@@ -547,7 +533,7 @@
     },
     {
       "key": "a384dc94-ebe3-4aa7-8aa9-a7c45795b27d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -561,7 +547,7 @@
     },
     {
       "key": "caf786b6-feff-4330-9541-1ffc5217758a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -575,7 +561,7 @@
     },
     {
       "key": "dc3660bc-9a51-4789-a532-7d2ddf8741ea",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -802,7 +788,13 @@
       "key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) provides a template meant to help facilitate the thinking involved in this prompt for students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f2900c95-a53c-4e1d-8c16-891f66a87535",
@@ -813,7 +805,13 @@
       "key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\r\n\r\n* User Interface\r\n* Input\r\n* Output\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\n\n* User Interface\n* Input\n* Output\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5952b01b-5708-4e70-b5f8-01d6f70b7125",
@@ -821,8 +819,19 @@
       }
     },
     {
-      "key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
+      "key": "c5eda6df-f822-408c-9c89-0a6b02286d1f",
       "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5eda6df-f822-408c-9c89-0a6b02286d1f",
+        "lesson_activity.key": "9da73de1-3e08-422a-9f17-96981d0f5aff"
+      }
+    },
+    {
+      "key": "cbc517c1-483e-485c-b5ea-079041b5fcac",
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match term with the example.",
         "name": "Assessment: Check For Understanding\r",
@@ -837,7 +846,13 @@
       "key": "5e8e9fed-9cb9-4cdc-8b2e-9761d7f083e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.*\n* *Compare your sketch with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite / most used non-social media app. \nIn your Unit Journal, explore the function of the app, along with different inputs / outputs*\n* *Compare your journal with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The [Unit 3 Journal](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=sharing) provides a template/directions for how students can complete this in their journals. See an example below:\n\n![](https://images.code.org/af1f30136d351f121db352e137d441fc-Unit Journal 3 Templates.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5e8e9fed-9cb9-4cdc-8b2e-9761d7f083e1",
@@ -960,12 +975,29 @@
       }
     },
     {
-      "key": "b5733f54-2269-48f3-98b4-d59ab961dd38",
+      "key": "b9818ce8-d92c-4c78-afaf-65628ffeafd6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. \n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. ",
         "duration": "5",
         "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Journal includes a template aimed at helping students *show* their responses as much as *tell* them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b9818ce8-d92c-4c78-afaf-65628ffeafd6",
+        "lesson_activity.key": "aa51e124-07b2-41e6-b06c-9223afd095da"
+      }
+    },
+    {
+      "key": "b5733f54-2269-48f3-98b4-d59ab961dd38",
+      "position": 2,
+      "properties": {
+        "description": "\n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -980,7 +1012,7 @@
     },
     {
       "key": "19fb24c8-cf2a-4aec-8bd2-e4d6b3622634",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": "30",
         "name": "Activity"
@@ -992,7 +1024,7 @@
     },
     {
       "key": "abcb6073-47fd-4952-8131-3ae9fdc30257",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Yesterday we learned all about Design Mode. Today you're going to start developing your own app that educates a user on a topic. This is a project that will continue through the rest of the unit.",
         "remarks": true
@@ -1004,7 +1036,7 @@
     },
     {
       "key": "59c19415-bc50-4e17-b439-3cc0c992c584",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r app_development_planning_guide/csp/2023]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students into pairs."
       },
@@ -1015,7 +1047,7 @@
     },
     {
       "key": "9e01ffd9-09e9-4ad1-b505-6bdc560cbe27",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You will work with a partner on this project. Collaboration is a big part of app development. Your team's diverse ideas will help make your app even better, because each partner can keep a lookout for bias. \r\n\r\nHere's an example: A team member puts in their app the phrase: \"All teenagers work after school to earn spending money\" because this is their experience - they work after school themselves. However, the other team member may not have an after school job, and because of this can point out the bias in that statement. \r\n\r\nCollaboration is key to catching bias in your work! \r\n\r\nHere's another example, this time in the design of an app. A team wants to make an app to encourage girls to sign up for a summer camp. One team member assumes that because this app is aimed at girls, the background should be pink. A girl on the team points out that she does not like pink, and using that color in the design may represent bias. \r\n\r\nAs you think about your topics and start designing your apps, remember to keep an eye out for bias and use your team mates to keep you accountable!",
         "remarks": true
@@ -1027,7 +1059,7 @@
     },
     {
       "key": "1889d962-dae7-4b18-aa77-6560a52e137b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 2:** Choose One Topic\r\n\r\n* Working with a partner students narrow down their ideas to one topic and explain what would be covered in their app. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 3:** Survey Your Classmates\r\n\r\n* The goal in this step is for students to understand the needs of their users. This will help inform the overall design of the app."
       },
@@ -1038,7 +1070,7 @@
     },
     {
       "key": "c79ecad6-5fa6-4317-ab92-1d6341da14b8",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 4:** Design the User Interface\n\n* Students use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \n\n\n**Steps 5+** will be completed later on in the unit.",
         "tips": [
@@ -1055,7 +1087,7 @@
     },
     {
       "key": "2732d35f-a749-4dc3-a6e1-b9f2485eeb0f",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did talking with the users of your app impact your design decisions?*",
         "duration": "10",
@@ -1068,7 +1100,7 @@
     },
     {
       "key": "f5b52a99-555c-4084-8b8e-eb6c80f70c90",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "In the following lessons, you will continue to plan and create you apps. What are we doing here? We are following a development process, which is similar to what developers use in the real world when creating their own apps. A development process breaks down the steps into small pieces - we've completed the first few today. \n\nThere are many different versions of the development process. Most use some combination of investigating and reflecting, designing, prototyping and testing. Development processes can be ordered like we have laid out in the Activity Guide or more exploratory in nature. As we continue on through this project, reflect on the steps and consider how they help organize the process.",
         "remarks": true
@@ -1080,7 +1112,7 @@
     },
     {
       "key": "b4b9a5ee-12e9-4b1d-8ab0-4f36f32060c6",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -1091,7 +1123,7 @@
     },
     {
       "key": "d17f3ba3-ad98-4c3d-b2e0-4e5850d3bc2f",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Match the term with the examples.",
         "name": "Assessment: Check For Understanding"
@@ -1512,7 +1544,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw.\r\n"
+            "markdown": "**Reinforcing Vocabulary:** A lot of the vocabulary introduced here is taken straight from the AP framework. The images are designed to help connect the definitions to the experiences they had in this lesson. Help students make these connections by not only writing down definitions but talking through how it's connected to what they saw. The Unit 3 Journal includes a *Coding Breakdown* template designed to help students apply these terms to code snippets they saw in the lesson.\n\n\n![](https://images.code.org/056cc4cefb7a8208f7c85e4742edacdf-Unit%20Journal%203%20Templates%20(1).png)"
           }
         ]
       },
@@ -1658,10 +1690,27 @@
       }
     },
     {
-      "key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
+      "key": "e9035845-3772-44e9-86f3-f7363798acc7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *If you were using the debugging process then you should have some notes of good debugging tips. Share those with your neighbor and add any new ones you forgot to add. Be ready to share with the class.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings. Give the room an opportunity to share as many ideas as they can before sharing the provided slides with some recommended steps.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9035845-3772-44e9-86f3-f7363798acc7",
+        "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
+      }
+    },
+    {
+      "key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Create an analogy in which you compare and contrast the process of debugging with different actions / events / things from your life.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a892aa5e-629a-47ba-b3d9-9c5e453cf21d",
@@ -1670,7 +1719,7 @@
     },
     {
       "key": "8b3e2e45-7542-411b-a265-5f7fa1cdd09c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide which lists some best practices in addition to those students may have mentioned."
       },
@@ -1681,7 +1730,7 @@
     },
     {
       "key": "b04cf468-6d19-44db-855c-f41424b649a9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "Debugging is an important and entirely normal part of programming. Your code won't always work the first time, and that's OK! Debugging is a skill that you can practice and get better at. Using documentation and leaving comments for yourself are important skills, but so is working with classmates or learning to more effectively search for bugs. We'll keep using these skills.",
         "remarks": true,
@@ -1694,17 +1743,6 @@
       },
       "seeding_key": {
         "activity_section.key": "b04cf468-6d19-44db-855c-f41424b649a9",
-        "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
-      }
-    },
-    {
-      "key": "e9035845-3772-44e9-86f3-f7363798acc7",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
-      },
-      "seeding_key": {
-        "activity_section.key": "e9035845-3772-44e9-86f3-f7363798acc7",
         "lesson_activity.key": "5295ac75-7103-448f-b541-7c1179875e88"
       }
     },
@@ -2091,17 +2129,6 @@
       }
     },
     {
-      "key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PgE-pMa_iGneFOXdHuITtFyeGYG_9Fpc2hCCCA3Nw8I/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "4a535566-0d7f-4f17-9cec-718b8733311d",
-        "lesson_activity.key": "68c227f3-b94b-4cf4-b637-5d37bec17d10"
-      }
-    },
-    {
       "key": "b7c17f2d-1483-414b-a819-d24f2fc1caf8",
       "position": 1,
       "properties": {
@@ -2119,7 +2146,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
         "duration": "25",
-        "name": "Unit Assessment"
+        "name": "Unit Assessment",
+        "progression_name": "Unit Assessment - Intro to App Design"
       },
       "seeding_key": {
         "activity_section.key": "2f053470-d91c-44d8-ab9b-5b1114791766",
@@ -3284,7 +3312,8 @@
       "properties": {
         "level_keys": [
           "CSP Unit 3 MC Assessment 2022_2023"
-        ]
+        ],
+        "progression": "Unit Assessment - Intro to App Design"
       },
       "bonus": false,
       "seeding_key": {
@@ -3880,6 +3909,18 @@
       }
     },
     {
+      "name": "Assessment Day - Intro to App Development",
+      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/edit?usp=sharing",
+      "key": "assessment_day_-_intro_to_app_development",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_intro_to_app_development"
+      }
+    },
+    {
       "name": "Class Chats: Olawale Oladehin",
       "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
       "key": "class_chats_olawale_oladehin",
@@ -3902,19 +3943,6 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "CSP Unit 3 - Intro to App Design",
-      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/copy",
-      "key": "csp_unit_3_-_intro_to_app_design",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
       }
     },
     {
@@ -4041,6 +4069,18 @@
       }
     },
     {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -4087,7 +4127,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_3_-_intro_to_app_design"
+        "resource.key": "assessment_day_-_intro_to_app_development"
       }
     },
     {
@@ -4202,6 +4242,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp3-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp3-2023"
       }
@@ -4214,12 +4260,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_journal",
-        "script.name": "csp3-2023"
-      }
-    }
+
   ],
   "vocabularies": [
 

@@ -28,7 +28,7 @@ var DEFAULT_TOOLTIP_CONFIG = {
   theme: 'droplet-block-tooltipster',
   offsetY: 2,
   restoration: 'none',
-  updateAnimation: false
+  updateAnimation: false,
 };
 
 /**
@@ -139,7 +139,7 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction =
             event.stopPropagation();
           }.bind(this)
         );
-      }.bind(this)
+      }.bind(this),
     });
 
     var rowOverlayDiv = $('.ace_selected');
@@ -166,7 +166,7 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink: this.showExamplesLink
+    showExamplesLink: this.showExamplesLink,
   });
   return dropletFunctionTooltipMarkup;
 };

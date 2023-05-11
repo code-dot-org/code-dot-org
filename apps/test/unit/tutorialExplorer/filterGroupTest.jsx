@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   filterEntries: [],
   selection: [],
   onUserInput: TEST_CALLBACK,
-  singleEntry: false
+  singleEntry: false,
 };
 
 describe('FilterGroup', () => {
@@ -25,12 +25,12 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Martin the Warrior',
-            text: 'The Bellmaker'
+            text: 'The Bellmaker',
           },
           {
             name: 'The Legend of Luke',
-            text: 'The Long Patrol'
-          }
+            text: 'The Long Patrol',
+          },
         ]}
       />
     );
@@ -65,8 +65,8 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Martin the Warrior',
-            text: 'The Bellmaker'
-          }
+            text: 'The Bellmaker',
+          },
         ]}
         singleEntry={true}
       />
@@ -93,16 +93,16 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Mariel of Redwall',
-            text: ''
+            text: '',
           },
           {
             name: 'Mattimeo',
-            text: ''
+            text: '',
           },
           {
             name: 'Triss',
-            text: ''
-          }
+            text: '',
+          },
         ]}
         selection={['Mariel of Redwall', 'Triss']}
       />

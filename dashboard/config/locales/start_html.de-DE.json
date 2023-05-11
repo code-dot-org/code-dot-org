@@ -1533,6 +1533,42 @@
           "night": "Nacht",
           "dusk": "Abend",
           "Predict": "Vorhersage"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Mach mich größer und blau!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Mach mich rot!",
+          "Make me blue!": "Mach mich blau!",
+          "Write code to change my text!": "Schreibe Code, um meinen Text zu ändern!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Grüner!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Taschenlampen App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "Pferd!",
+          "You Choose!": "Du wählst!",
+          "Animal Sound Board!!!": "Tiergeräusche Board!!!",
+          "Monkey!": "Affe!",
+          "Tiger!": "Tiger!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
         }
       }
     }

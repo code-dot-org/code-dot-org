@@ -9268,7 +9268,7 @@
           "courseB_maze_seq9_d": "わからない？あかいせん の とおりに いってみよう。"
         },
         "courseB_maze_seq_challenge1_2021": {
-          "courseB_maze_seq_challenge1_a": "みじかい行きかたじゃなくてもいいよ。",
+          "courseB_maze_seq_challenge1_a": "さいたんルートじゃなくてもいいよ。",
           "courseB_maze_seq_challenge1_b": "さいしょのブロックは、<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseB_maze_seq_challenge2_2021": {

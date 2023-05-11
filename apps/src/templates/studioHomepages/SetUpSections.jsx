@@ -12,7 +12,7 @@ const STARTED_EVENT = 'Section Setup Started';
 class SetUpSections extends Component {
   static propTypes = {
     beginEditingSection: PropTypes.func.isRequired,
-    hasSections: PropTypes.bool
+    hasSections: PropTypes.bool,
   };
 
   // Wrapped to avoid passing event args
@@ -46,5 +46,5 @@ class SetUpSections extends Component {
 }
 export const UnconnectedSetUpSections = SetUpSections;
 export default connect(undefined, {
-  beginEditingSection
+  beginEditingSection,
 })(SetUpSections);

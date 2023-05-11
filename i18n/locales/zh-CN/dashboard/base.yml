@@ -172,7 +172,6 @@ zh-CN:
     data_collection_us: "我理解 Code.org 是基于美国的非营利组织，在美国管理该网站资料收集的法律可能会与我所从的国家有不同。"
     visit_privacy: '访问 Code.org 的[隐私条款]（%{privacy_url}）以了解跟多。'
     student_terms_markdown: "注意：电子邮箱不会被存储，并用作与学生取得联系。Code.org 不会向学生发送与密码恢复无关的任何邮件。更多信息请查阅 [隐私政策](http://code.org/privacy)。"
-    additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
     user_type_student: "学生"

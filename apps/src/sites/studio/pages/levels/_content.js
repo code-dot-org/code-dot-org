@@ -30,14 +30,14 @@ $(document).ready(() => {
       }
       appBlocks.install(window.Blockly, {
         skin,
-        app: associatedBlocks
+        app: associatedBlocks,
       });
     } catch (error) {
       console.error(
         `Unable to load blockly blocks for ${associatedBlocks}: ${error}`
       );
       logToCloud.addPageAction(logToCloud.PageAction.BlockLoadFailed, {
-        associatedBlocks
+        associatedBlocks,
       });
     }
   }

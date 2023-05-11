@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Getting Ready 
 
-<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" alt="Image of a cartoon bird wearing a hat" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 ## Suggested Planning Activities
 
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 
 ## Suggested Preparing Activities
 
-<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 <hr style="clear:left">
 

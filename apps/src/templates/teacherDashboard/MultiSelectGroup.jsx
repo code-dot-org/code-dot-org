@@ -15,14 +15,14 @@ export default function MultiSelectGroup({
   required,
   options,
   values,
-  setValues
+  setValues,
 }) {
   const inputName = `${name}[]`;
 
   return (
     <div className={styles.multiSelectGroup}>
       <fieldset>
-        <label>{label}</label>
+        <label className={styles.typographyLabel}>{label}</label>
         {options.map(option => (
           <MultiSelectButton
             label={option.label}
@@ -58,7 +58,7 @@ function MultiSelectButton({
   value,
   checked,
   required,
-  onCheckedChange
+  onCheckedChange,
 }) {
   const uniqueId = `multi-${_.uniqueId()}`;
 
@@ -98,7 +98,7 @@ MultiSelectGroup.propTypes = {
   required: PropTypes.bool,
   options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
   values: PropTypes.arrayOf(PropTypes.string).isRequired,
-  setValues: PropTypes.func.isRequired
+  setValues: PropTypes.func.isRequired,
 };
 
 MultiSelectButton.propTypes = {
@@ -107,5 +107,5 @@ MultiSelectButton.propTypes = {
   value: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
   required: PropTypes.bool.isRequired,
-  onCheckedChange: PropTypes.func.isRequired
+  onCheckedChange: PropTypes.func.isRequired,
 };

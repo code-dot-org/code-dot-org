@@ -19,7 +19,7 @@ describe('DownloadReplayVideoButton', () => {
   before(function () {
     originalAppOptions = window.appOptions;
     window.appOptions = {
-      signedReplayLogUrl: 'some-url.com'
+      signedReplayLogUrl: 'some-url.com',
     };
   });
 
@@ -57,7 +57,7 @@ describe('DownloadReplayVideoButton', () => {
   it('renders as disabled if the download has been initiated before the video has been found', () => {
     wrapper.setState({
       videoExists: false,
-      downloadInitiated: true
+      downloadInitiated: true,
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(false);
@@ -68,7 +68,7 @@ describe('DownloadReplayVideoButton', () => {
   it('renders as enabled if the download has been initiated after the video has been found', () => {
     wrapper.setState({
       videoExists: true,
-      downloadInitiated: true
+      downloadInitiated: true,
     });
 
     expect(wrapper.instance().buttonEnabled()).to.equal(true);
@@ -99,7 +99,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(1);
     expect(
       fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'GET'
+        method: 'GET',
       })
     ).to.equal(true);
   });
@@ -115,7 +115,7 @@ describe('DownloadReplayVideoButton', () => {
     expect(fetchSpy.callCount).to.equal(1);
     expect(
       fetchSpy.calledWith(wrapper.instance().getVideoUrl(), {
-        method: 'HEAD'
+        method: 'HEAD',
       })
     ).to.equal(true);
   });

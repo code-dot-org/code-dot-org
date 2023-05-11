@@ -3,7 +3,7 @@ import {
   SquareType,
   Direction,
   WallTypeMask,
-  WallTypeShift
+  WallTypeShift,
 } from '@cdo/apps/studio/constants';
 import tileGuide from '../../../static/code_studio/tile-guide.png';
 import CellEditor from './CellEditor';
@@ -21,7 +21,7 @@ const options = {
   covered_crates_2a: 0x240000,
   covered_crates_2b: 0x250000,
   covered_crates_3a: 0x340000,
-  covered_crates_3b: 0x350000
+  covered_crates_3b: 0x350000,
 };
 
 const startDirections = {
@@ -29,7 +29,7 @@ const startDirections = {
   East: Direction.EAST,
   West: Direction.WEST,
   North: Direction.NORTH,
-  South: Direction.SOUTH
+  South: Direction.SOUTH,
 };
 
 export default class StarWarsGridCellEditor extends CellEditor {
@@ -42,7 +42,7 @@ export default class StarWarsGridCellEditor extends CellEditor {
 
     this.props.onUpdate({
       tileType: (zoom << WallTypeShift) | this.type.value,
-      direction: direction
+      direction: direction,
     });
   }
 

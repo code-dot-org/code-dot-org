@@ -1,14 +1,18 @@
 name 'CSD U3 MC Q6_2023'
 type 'multi'
-question 'The following program draws this scene, but you want the rectangle to be further to the right. How can you change the code to achieve this?'
+question ' '
 wrong 'Call `.moveRight()`'
 wrong 'Add a line of code to change `rect.x = 100;`'
 right 'Update the first argument of `rect()` to `100`'
 wrong 'No change needed: the rectangle is animated to move right'
 markdown <<MARKDOWN
-| Scene      | Program |
+The program below draws the scene on the right, but you want the rectangle to be further to the right. How can you change the code to achieve this?
+<br><br>
+
+| Program      | Scene |
 | ----------- | ----------- |
-| <img src="https://images.code.org/1083ec43213b23b495c2e4d0a2e82993-CSDunit3parameter.png" style="height: 200px">      | `rect(0, 300, 200, 50);`      |
+| <img src="https://images.code.org/41a7d5893dada7d524bff6a3a8aa5fc9-Q5code.png" style="width:250px;">       |   <img src="https://images.code.org/14300f79bf6319236ee8f6962b8fda5b-q5Scene.png" style="height: 200px">    |
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
@@ -16,3 +20,5 @@ teacher_markdown <<MARKDOWN
 
 The first parameter of `rect()` is the x-location. By increasing the x-location to `100`, the rectangle will be further right.
 MARKDOWN
+
+allow_multiple_attempts true

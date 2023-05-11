@@ -12,7 +12,7 @@ describe('VideoThumbnail', () => {
           name: 'name',
           src: 'video.url',
           key: 'key',
-          thumbnail: 'video.url/thumbnail'
+          thumbnail: 'video.url/thumbnail',
         }}
       />
     );
@@ -28,7 +28,7 @@ describe('VideoThumbnail', () => {
           name: 'name',
           src: 'video.url',
           key: 'key',
-          thumbnail: 'video.url/thumbnail'
+          thumbnail: 'video.url/thumbnail',
         }}
         openInNewTab
       />

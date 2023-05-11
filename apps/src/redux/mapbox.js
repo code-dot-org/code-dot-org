@@ -1,7 +1,7 @@
 const SET_MAPBOX_ACCESS_TOKEN = 'mapbox/SET_MAPBOX_ACCESS_TOKEN';
 
 const initialState = {
-  mapboxAccessToken: null
+  mapboxAccessToken: null,
 };
 
 export default function reducer(state = initialState, action) {

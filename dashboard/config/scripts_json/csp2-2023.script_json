@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-14 22:23:40 UTC",
+    "serialized_at": "2023-04-25 20:59:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -159,7 +159,7 @@
     },
     {
       "key": "Project   Internet Dilemmas Part 1",
-      "name": "Project Internet Dilemmas",
+      "name": "Project - Internet Dilemmas",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -739,7 +739,13 @@
       "key": "9b61edb9-8df0-434d-a612-b0a491327b06",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Video:** Watch the rest of the \"What is the Internet\" video (starting at 1:30)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Video:** Watch the rest of the \"What is the Internet\" video (starting at 1:30).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b61edb9-8df0-434d-a612-b0a491327b06",
@@ -912,7 +918,13 @@
       "key": "d7b2983d-8b87-443d-af9c-53038da99b73",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Vocabulary words with their definitions (students do not write these down yet):\r\n\r\n* Computing Device\r\n* Computing System\r\n* Computing Network\r\n* Path\r\n* Bandwidth"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Vocabulary words for students to add to their Vocabulary Canvas.\n\n* Computing Device\n* Computing System\n* Computing Network\n* Path\n* Bandwidth",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d7b2983d-8b87-443d-af9c-53038da99b73",
@@ -920,10 +932,27 @@
       }
     },
     {
-      "key": "5d609e4d-93a7-4d90-8a40-9c2a68baa655",
+      "key": "6d6d13dd-8403-401a-b173-235ab0362a31",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How would you use these words to describe today’s activity?*\n\n**Discussion Goal:** Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\n\n* Each individual person was acting as a computing device\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\n* The entire system - devices and paths - make up a computer network\n* A computing network is a type of a computing system. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6d6d13dd-8403-401a-b173-235ab0362a31",
+        "lesson_activity.key": "83456fac-2228-4832-9218-96354bfaaf1e"
+      }
+    },
+    {
+      "key": "5d609e4d-93a7-4d90-8a40-9c2a68baa655",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How would you use these words to describe today’s activity?*\n\n**Discussion Goal:** Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\n\n* Each individual person was acting as a computing device\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\n* The entire system - devices and paths - make up a computer network\n* A computing network is a type of a computing system. \n"
       },
       "seeding_key": {
         "activity_section.key": "5d609e4d-93a7-4d90-8a40-9c2a68baa655",
@@ -932,7 +961,7 @@
     },
     {
       "key": "54ab2c06-0819-4e68-8bf9-b23a9f916a62",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "These are the same components that make up our modern Internet! In fact, the challenges we worked with today are the same challenges that the founders of the Internet faced. In the following lessons, we will take a closer look at how the Internet was created.",
         "remarks": true
@@ -944,7 +973,7 @@
     },
     {
       "key": "a000b428-a3ae-4063-8abc-ddc22e3a898b",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record the following words and definitions in your journal: Computing Device, Computing System, Computing Network, Path, Bandwidth. \r\n\r\n\r\n\r\n---"
       },
@@ -955,7 +984,7 @@
     },
     {
       "key": "ed2f077c-9b9c-456a-8092-7926116efa59",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n\n\n\n\n![](https://images.code.org/a15d79d6c9cdb1a0f295a0b6e180f955-network.png)",
         "name": "Assessment: Check For Understanding\r",
@@ -1138,24 +1167,30 @@
       }
     },
     {
-      "key": "75144c00-1566-482a-90c1-161d047a7ca3",
+      "key": "5b34cfc8-f510-461e-9330-4d1243ecf804",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and to your journal: protocol and IP address.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5b34cfc8-f510-461e-9330-4d1243ecf804",
+        "lesson_activity.key": "22745830-eafa-4172-9366-de6bc135dff4"
+      }
+    },
+    {
+      "key": "75144c00-1566-482a-90c1-161d047a7ca3",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "75144c00-1566-482a-90c1-161d047a7ca3",
-        "lesson_activity.key": "22745830-eafa-4172-9366-de6bc135dff4"
-      }
-    },
-    {
-      "key": "5b34cfc8-f510-461e-9330-4d1243ecf804",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and definitions to your journal: protocol, IP address, Internet Protocol."
-      },
-      "seeding_key": {
-        "activity_section.key": "5b34cfc8-f510-461e-9330-4d1243ecf804",
         "lesson_activity.key": "22745830-eafa-4172-9366-de6bc135dff4"
       }
     },
@@ -1395,24 +1430,24 @@
       }
     },
     {
-      "key": "fa650e68-7e67-475e-aa97-100febd200da",
+      "key": "ae454590-0898-49d5-91a4-bd365c07561e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Have students add the following words to their vocabulary canvas: router, redundancy, fault tolerance. \n\n"
       },
       "seeding_key": {
-        "activity_section.key": "fa650e68-7e67-475e-aa97-100febd200da",
+        "activity_section.key": "ae454590-0898-49d5-91a4-bd365c07561e",
         "lesson_activity.key": "34e0ceec-6a86-4684-ab53-aa85cfda01da"
       }
     },
     {
-      "key": "ae454590-0898-49d5-91a4-bd365c07561e",
+      "key": "fa650e68-7e67-475e-aa97-100febd200da",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Have students record the vocabulary definitions for the following words: router, redundancy, fault tolerance. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n\n---\n"
       },
       "seeding_key": {
-        "activity_section.key": "ae454590-0898-49d5-91a4-bd365c07561e",
+        "activity_section.key": "fa650e68-7e67-475e-aa97-100febd200da",
         "lesson_activity.key": "34e0ceec-6a86-4684-ab53-aa85cfda01da"
       }
     },
@@ -1433,7 +1468,13 @@
       "key": "f05eb94e-fb29-4221-b1da-65ca37a4ef62",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* *What approach would you take if you just needed to clear out the space by the end of the day?*\n* *How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?*\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* *What approach would you take if you just needed to clear out the space by the end of the day?*\n* *How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?*\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The [Unit 2 Journal](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=sharing) provides a template you could have students use to respond to this warm up and/or add to throughout the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f05eb94e-fb29-4221-b1da-65ca37a4ef62",
@@ -1642,7 +1683,13 @@
       "key": "dbf3afa8-57da-453f-8278-25898692d0ea",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:**  Have students add the vocabulary words: Datastream, Packet, Packet Metadata, Transmission Control Protocol (TCP), and User Datagram Protocol (UDP)\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:**  Have students add the vocabulary word to their vocabulary canvas: Packet.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Canvas:** You may choose to have students add more than this one term to their journals. For this lesson, you might also have them add Packet Metadata, Transmission Control Protocol (TCP), and/or User Datagram Protocol (UDP). Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dbf3afa8-57da-453f-8278-25898692d0ea",
@@ -1650,8 +1697,19 @@
       }
     },
     {
-      "key": "c46297b7-f386-4b29-9166-6eba5b52058d",
+      "key": "a93ea24a-14bc-442b-9e82-08a14be082a5",
       "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "a93ea24a-14bc-442b-9e82-08a14be082a5",
+        "lesson_activity.key": "43a45318-17c6-4957-b115-fd4e15036a46"
+      }
+    },
+    {
+      "key": "c46297b7-f386-4b29-9166-6eba5b52058d",
+      "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Terminology matching",
         "name": "Assessment: Check For Understanding\r"
@@ -1663,7 +1721,7 @@
     },
     {
       "key": "8ca6e011-3488-4100-ab22-c0ac6d8f8a06",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Check For Understanding"
       },
@@ -1893,7 +1951,13 @@
       "key": "fa4c4cdd-001e-4cf2-a396-c785849da32b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers_of_the_internet/csp/2023]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers_of_the_internet/csp/2023]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Journal has a template students can use to process this information in their own way."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa4c4cdd-001e-4cf2-a396-c785849da32b",
@@ -2215,7 +2279,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics2.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics2.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)\n\n"
           }
         ]
       },
@@ -3004,6 +3068,18 @@
       }
     },
     {
+      "name": "Assessment Day - The Internet",
+      "url": "https://docs.google.com/presentation/d/1C7TRNRrwA9kjLpx5ywlwqF0S3f-iIaSGYiUGBsn63Cg/edit?usp=sharing",
+      "key": "assessment_day_-_the_internet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_the_internet"
+      }
+    },
+    {
       "name": "Building a Network",
       "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
       "key": "building_a_network",
@@ -3028,19 +3104,6 @@
       }
     },
     {
-      "name": "CSP Unit 2 - The Internet",
-      "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/copy",
-      "key": "csp_unit_2_-_the_internet",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_2_-_the_internet"
-      }
-    },
-    {
       "name": "EXEMPLAR: Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1LHCRJlpBK56ynaYp5-RfiKlaAzCoh99QXUU8xbMPJS4/edit?usp=sharing",
       "key": "exemplar_internet_dilemmas",
@@ -3051,6 +3114,54 @@
       },
       "seeding_key": {
         "resource.key": "exemplar_internet_dilemmas"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
+      }
+    },
+    {
+      "name": "Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/view",
+      "key": "guide_to_curriculum_videos",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "Guide to Pre-Unit Pulse Questions",
+      "url": "https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/view",
+      "key": "guide_to_pre-unit_pulse_questions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_pre-unit_pulse_questions"
       }
     },
     {
@@ -3079,7 +3190,7 @@
       }
     },
     {
-      "name": "Internet Dilemmas",
+      "name": "Project - Internet Dilemmas",
       "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/template/preview",
       "key": "internet_dilemmas_1",
       "properties": {
@@ -3137,6 +3248,18 @@
       },
       "seeding_key": {
         "resource.key": "routers_and_redundancy"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -3320,7 +3443,7 @@
     {
       "seeding_key": {
         "lesson.key": "Assessment Day",
-        "resource.key": "csp_unit_2_-_the_internet"
+        "resource.key": "assessment_day_-_the_internet"
       }
     },
     {
@@ -3477,6 +3600,36 @@
     },
     {
       "seeding_key": {
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_pre-unit_pulse_questions",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "teacher_forum",
         "script.name": "csp2-2023"
       }
@@ -3489,12 +3642,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_2_journal",
-        "script.name": "csp2-2023"
-      }
-    }
+
   ],
   "vocabularies": [
 

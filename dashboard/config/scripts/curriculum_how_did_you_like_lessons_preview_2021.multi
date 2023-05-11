@@ -5,3 +5,5 @@ right 'A little bit'
 right 'Somewhat'
 right 'A lot'
 right 'I loved everything!'
+
+allow_multiple_attempts true

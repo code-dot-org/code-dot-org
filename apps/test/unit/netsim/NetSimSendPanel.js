@@ -46,10 +46,10 @@ describe('NetSimSendPanel', function () {
       myNode: localNode,
       runLoop_: {
         tick: {
-          register: function () {}
-        }
+          register: function () {},
+        },
       },
-      updateLayout: function () {}
+      updateLayout: function () {},
     };
   });
 

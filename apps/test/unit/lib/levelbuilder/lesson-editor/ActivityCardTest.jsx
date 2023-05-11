@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 import {
   sampleActivities,
-  sampleActivityForLessonWithoutLessonPlan
+  sampleActivityForLessonWithoutLessonPlan,
 } from './activitiesTestData';
 import sinon from 'sinon';
 
@@ -48,7 +48,7 @@ describe('ActivityCard', () => {
       handleCollapse,
       collapsed: false,
       hasLessonPlan: true,
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
     };
   });
 
@@ -76,7 +76,7 @@ describe('ActivityCard', () => {
           remarks: true,
           scriptLevels: [],
           text: 'Simple text',
-          tips: []
+          tips: [],
         },
         {
           key: 'section-1',
@@ -90,16 +90,16 @@ describe('ActivityCard', () => {
             {
               key: 'tip-1',
               type: 'teachingTip',
-              markdown: 'Teaching tip content'
+              markdown: 'Teaching tip content',
             },
             {
               key: 'tip-2',
               type: 'discussionGoal',
-              markdown: 'Discussion Goal content'
-            }
-          ]
-        }
-      ]
+              markdown: 'Discussion Goal content',
+            },
+          ],
+        },
+      ],
     };
     const wrapper = shallow(
       <ActivityCard

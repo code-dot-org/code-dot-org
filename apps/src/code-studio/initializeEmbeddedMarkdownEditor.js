@@ -54,7 +54,7 @@ module.exports = function (
       }
       dslElement.val(replacedText);
     },
-    attachments: true
+    attachments: true,
   });
 
   // Match against markdown heredoc syntax and capture contents in [2].

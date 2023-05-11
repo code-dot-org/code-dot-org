@@ -21,12 +21,12 @@ class KVPairs extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {
     showDebugView: false,
-    showError: false
+    showError: false,
   };
 
   showError = () => this.setState({showError: true});
@@ -44,7 +44,7 @@ class KVPairs extends React.Component {
 
   render() {
     const keyValueDataStyle = {
-      display: this.state.showDebugView ? 'none' : ''
+      display: this.state.showDebugView ? 'none' : '',
     };
 
     const kvTable = (
@@ -88,7 +88,7 @@ export const UnconnectedKVPairs = KVPairs;
 export default connect(
   state => ({
     view: state.data.view,
-    keyValueData: state.data.keyValueData || {}
+    keyValueData: state.data.keyValueData || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -96,6 +96,6 @@ export default connect(
     },
     onViewChange(view) {
       dispatch(changeView(view));
-    }
+    },
   })
 )(KVPairs);

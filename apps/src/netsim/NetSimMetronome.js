@@ -84,7 +84,7 @@ NetSimMetronome.prototype.render = function (clock) {
   var renderedMarkup = $(
     markup({
       progress: this.progress_,
-      pulseAge: this.pulseAge_
+      pulseAge: this.pulseAge_,
     })
   );
   this.rootDiv_.html(renderedMarkup);

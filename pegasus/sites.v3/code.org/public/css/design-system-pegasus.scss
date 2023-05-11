@@ -138,6 +138,14 @@ a.link-button {
       background: $neutral_dark10;
     }
   }
+
+  &.has-icon {
+    .flex-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0 .75em;
+    }
+  }
 }
 
 // Basic hero banner
@@ -283,6 +291,49 @@ ul {
 
         &:before {
           border-left: 1em solid rgba($brand_primary_light, .6);
+        }
+      }
+    }
+  }
+
+  // Lists of links with icons
+  &.link-list {
+    margin: 2em 0 1em;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1em 3em;
+
+    li {
+      text-indent: 0 !important;
+      padding: 0;
+      display: flex;
+      gap: 0 0.75em;
+
+      &::before {
+        content: none;
+      }
+
+      i {
+        font-size: 1.25em;
+        margin: 3px 0 0;
+        vertical-align: text-bottom;
+
+        &:before {
+          color: $brand_secondary_default;
+          transition: color ease-in-out .2s;
+        }
+      }
+
+      a {
+        @include heading-sm;
+        color: $brand_secondary_default;
+      }
+
+      &:hover {
+
+        i:before {
+          color: $brand_secondary_dark;
         }
       }
     }
@@ -613,7 +664,33 @@ form {
       }
     }
 
+    .with-image {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: $width-sm) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        margin-right: 3em;
+
+        @media screen and (max-width: $width-md) {
+          display: block;
+        }
+
+        @media screen and (max-width: $width-sm) {
+          margin-right: 0;
+        }
+      }
+    }
+
     p {
+      font-family: $barlowSemiCondensed-medium, sans-serif;
       font-size: 1.25em;
 
       &.quote-text {
@@ -689,5 +766,23 @@ form {
   figure {
     width: 49%;
     margin-top: 1.25em;
+  }
+}
+
+// Blog post callout
+.blog-post-callout {
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  i {
+    font-size: 2em;
+  }
+
+  .text-wrapper {
+    width: 100%;
   }
 }

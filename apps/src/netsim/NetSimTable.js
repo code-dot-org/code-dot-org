@@ -299,7 +299,7 @@ NetSimTable.prototype.makeThrottledRefresh_ = function () {
     this.minimumDelayBetweenRefreshes_
   );
   return _.debounce(throttledRefresh, this.minimumDelayBeforeRefresh_, {
-    maxWait: this.minimumDelayBeforeRefresh_
+    maxWait: this.minimumDelayBeforeRefresh_,
   });
 };
 
@@ -537,7 +537,10 @@ NetSimTable.prototype.arrayFromCache_ = function (predicate) {
     };
   var result = [];
   for (var k in this.cache_) {
-    if (this.cache_.hasOwnProperty(k) && predicate(k, this.cache_[k])) {
+    if (
+      Object.prototype.hasOwnProperty.call(this.cache_, k) &&
+      predicate(k, this.cache_[k])
+    ) {
       result.push(this.cache_[k]);
     }
   }

@@ -1,1 +1,18 @@
-{}
+{
+  "blockly_blockPlaySoundTooltip": "παίξε ήχο",
+  "blockly_blockPlaySoundAtMeasureTooltip": "παίξε ήχο",
+  "blockly_blockRepeatTooltip": "επανάλαβε",
+  "blockly_blockWhenRun": "όταν εκτελείται",
+  "blockly_blockWhenRunTooltip": "όταν εκτελείται",
+  "blockly_functionNamePlaceholder": "η συνάρτηση μου",
+  "blockly_toolboxCategoryEffects": "Εφέ",
+  "blockly_toolboxCategoryEvents": "Συμβάντα",
+  "blockly_toolboxCategoryFunctions": "Συναρτήσεις",
+  "blockly_toolboxCategoryLogic": "Λογική",
+  "blockly_toolboxCategoryMath": "Μαθηματικά",
+  "blockly_toolboxCategoryPlay": "Παίξε",
+  "blockly_toolboxCategoryVariables": "Μεταβλητές",
+  "feedback": "Σχόλια",
+  "share": "Μοιράσου",
+  "startOver": "Ξεκινήστε από την αρχή"
+}

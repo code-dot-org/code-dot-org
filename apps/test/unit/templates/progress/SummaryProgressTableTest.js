@@ -5,7 +5,7 @@ import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('SummaryProgressTable', () => {
@@ -13,14 +13,14 @@ describe('SummaryProgressTable', () => {
     fakeLesson('lesson1', 1),
     fakeLesson('lesson2', 2),
     fakeLesson('lesson3', 3),
-    fakeLesson('lesson4', 4)
+    fakeLesson('lesson4', 4),
   ];
 
   const levelsByLesson = [
     fakeLevels(3),
     fakeLevels(3),
     fakeLevels(3),
-    fakeLevels(3)
+    fakeLevels(3),
   ];
 
   const groupedLesson = {lessons, levelsByLesson};

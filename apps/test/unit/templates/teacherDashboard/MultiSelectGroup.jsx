@@ -14,7 +14,7 @@ const BasicExampleComponent = props => {
   return <MultiSelectGroup values={values} setValues={setValues} {...props} />;
 };
 BasicExampleComponent.propTypes = {
-  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired
+  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
 };
 
 describe('MultiSelectGroup', () => {
@@ -27,12 +27,12 @@ describe('MultiSelectGroup', () => {
         options={[
           {
             label: 'test 1',
-            value: 'test-value-1'
+            value: 'test-value-1',
           },
           {
             label: 'test 2',
-            value: 'test-value-2'
-          }
+            value: 'test-value-2',
+          },
         ]}
       />
     );
@@ -41,11 +41,11 @@ describe('MultiSelectGroup', () => {
     const checkbox2 = () => wrapper.find('input[type="checkbox"]').at(1);
     const check = checkbox =>
       checkbox().simulate('change', {
-        target: {setCustomValidity: () => {}, checked: true}
+        target: {setCustomValidity: () => {}, checked: true},
       });
     const uncheck = checkbox =>
       checkbox().simulate('change', {
-        target: {setCustomValidity: () => {}, checked: false}
+        target: {setCustomValidity: () => {}, checked: false},
       });
 
     expect(checkbox1().exists()).to.be.true;

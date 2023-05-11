@@ -71,7 +71,7 @@ module.exports = {
       col: 0,
       raw: text,
       text: text,
-      type: level.toLowerCase()
+      type: level.toLowerCase(),
     };
     runtimeAnnotations.push(annotation);
     updateGutter();
@@ -83,5 +83,5 @@ module.exports = {
     }
     runtimeAnnotations = [];
     updateGutter();
-  }
+  },
 };

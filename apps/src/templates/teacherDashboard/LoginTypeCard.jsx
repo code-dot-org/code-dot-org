@@ -8,11 +8,11 @@ class LoginTypeCard extends Component {
     subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   state = {
-    hover: false
+    hover: false,
   };
 
   // Toggle hover is not working properly when component is rendered with mouse already 'over' the component.
@@ -28,7 +28,7 @@ class LoginTypeCard extends Component {
       card: cardStyle,
       title: titleStyle,
       subtitle: subtitleStyle,
-      description: descriptionStyle
+      description: descriptionStyle,
     } = styles;
     if (this.state.hover) {
       cardStyle = {...cardStyle, background: color.neutral_light};
@@ -67,7 +67,7 @@ const styles = {
     borderColor: color.neutral_dark20,
     borderRadius: 1,
     background: color.neutral_white,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   title: {
     paddingBottom: 4,
@@ -77,7 +77,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily: '"Barlow Semi Condensed Medium", sans-serif',
     zIndex: 2,
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   subtitle: {
     paddingBottom: 0,
@@ -85,7 +85,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     zIndex: 2,
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   description: {
     paddingTop: 12,
@@ -93,7 +93,7 @@ const styles = {
     lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
-    color: color.neutral_dark
-  }
+    color: color.neutral_dark,
+  },
 };
 export default LoginTypeCard;

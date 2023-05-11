@@ -8,7 +8,7 @@ describe('ShareTeacherLibraries', () => {
   const SECTIONS = [
     {id: 1, name: 'a'},
     {id: 2, name: 'b'},
-    {id: 3, name: 'c'}
+    {id: 3, name: 'c'},
   ];
   const DEFAULT_PROPS = {
     onCancel: () => {},
@@ -17,7 +17,7 @@ describe('ShareTeacherLibraries', () => {
     asyncLoadSectionData: () => {},
     setPersonalProjects: () => {},
     updateProjectLibrary: () => {},
-    loadingFinished: true
+    loadingFinished: true,
   };
 
   describe('assignLibrary', () => {
@@ -27,17 +27,17 @@ describe('ShareTeacherLibraries', () => {
       const selectedLibraryId = 'abc';
       const props = {
         ...DEFAULT_PROPS,
-        updateProjectLibrary: updateProjectLibrary
+        updateProjectLibrary: updateProjectLibrary,
       };
       const wrapper = shallow(<ShareTeacherLibraries {...props} />);
       wrapper.setState({
         selectedSections: selectedSections,
-        selectedLibraryId: selectedLibraryId
+        selectedLibraryId: selectedLibraryId,
       });
       wrapper.instance().assignLibrary();
       expect(wrapper.state().sharedSections).to.deep.equal(selectedSections);
       expect(updateProjectLibrary).to.have.been.calledWith(selectedLibraryId, {
-        sharedWith: [1, 2]
+        sharedWith: [1, 2],
       });
     });
   });
@@ -48,7 +48,7 @@ describe('ShareTeacherLibraries', () => {
       const personalProjectsList = [{channel: channel, sharedWith: [1, 2]}];
       const props = {
         ...DEFAULT_PROPS,
-        personalProjectsList: personalProjectsList
+        personalProjectsList: personalProjectsList,
       };
       const wrapper = shallow(<ShareTeacherLibraries {...props} />);
       wrapper.instance().onChooseOption({target: {value: channel}});

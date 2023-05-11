@@ -21,7 +21,7 @@ export default class AddParentEmailModal extends React.Component {
      * @type {function()}
      */
     handleCancel: PropTypes.func.isRequired,
-    currentParentEmail: PropTypes.string
+    currentParentEmail: PropTypes.string,
   };
 
   constructor(props) {
@@ -34,12 +34,12 @@ export default class AddParentEmailModal extends React.Component {
       values: {
         parentEmail: displayedParentEmail,
         confirmedParentEmail: '',
-        parentEmailOptIn: ''
+        parentEmailOptIn: '',
       },
       errors: {
         parentEmail: '',
-        confirmedParentEmail: ''
-      }
+        confirmedParentEmail: '',
+      },
     };
   }
 
@@ -65,11 +65,11 @@ export default class AddParentEmailModal extends React.Component {
   cancel = () => this.props.handleCancel();
 
   onSubmitFailure = error => {
-    if (error && error.hasOwnProperty('serverErrors')) {
+    if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
       this.setState(
         {
           saveState: STATE_INITIAL,
-          errors: error.serverErrors
+          errors: error.serverErrors,
         },
         () => this.focusOnError()
       );
@@ -87,7 +87,7 @@ export default class AddParentEmailModal extends React.Component {
     return {
       parentEmail: errors.parentEmail || this.getNewEmailValidationError(),
       confirmedParentEmail:
-        errors.confirmedParentEmail || this.getConfirmedEmailValidationError()
+        errors.confirmedParentEmail || this.getConfirmedEmailValidationError(),
     };
   }
 
@@ -254,13 +254,13 @@ export default class AddParentEmailModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   parentOptInSection: {
     border: '1px solid',
     borderColor: color.charcoal,
     backgroundColor: color.background_gray,
-    padding: '10px'
+    padding: '10px',
   },
   parentEmailOptInHeading: {
     borderColor: color.charcoal,
@@ -269,30 +269,30 @@ const styles = {
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderStyle: 'solid',
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   parentEmailOptInInput: {
     display: 'flex',
     flexDirection: 'row',
-    paddingTop: 10
+    paddingTop: 10,
   },
   radioSelectors: {
     paddingLeft: 10,
     paddingRight: 10,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   radioButton: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   label: {
-    margin: 'auto'
+    margin: 'auto',
   },
   radio: {
     height: 12,
     width: 12,
-    margin: 4
-  }
+    margin: 4,
+  },
 };

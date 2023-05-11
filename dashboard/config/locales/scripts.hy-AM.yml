@@ -1619,3 +1619,7 @@ hy:
               display_name: գործառույթները
             csf_nested_loops:
               display_name: conditionals
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ներածություն

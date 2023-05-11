@@ -15,7 +15,7 @@ describe('RemoveLevelDialog', () => {
       activitySection: sampleActivities[0].activitySections[2],
       levelPosToRemove: 1,
       handleClose,
-      removeLevel
+      removeLevel,
     };
   });
 

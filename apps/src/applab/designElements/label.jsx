@@ -21,7 +21,7 @@ class LabelProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -137,7 +137,7 @@ class LabelEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -226,7 +226,7 @@ export default {
   getCurrentSize: function (element) {
     return {
       width: parseInt(element.style.width, 10),
-      height: parseInt(element.style.height, 10)
+      height: parseInt(element.style.height, 10),
     };
   },
 
@@ -265,7 +265,7 @@ export default {
           visibility: 'hidden',
           width: 'auto',
           height: 'auto',
-          maxWidth: maxWidth + 'px'
+          maxWidth: maxWidth + 'px',
         })
         .appendTo($(document.body));
 
@@ -363,7 +363,7 @@ export default {
         this._lastFitsExactly = batchChangeId
           ? {
               batchId: batchChangeId,
-              previouslyFitExactly
+              previouslyFitExactly,
             }
           : {};
         return previouslyFitExactly;
@@ -396,5 +396,5 @@ export default {
         return false;
     }
     return true;
-  }
+  },
 };

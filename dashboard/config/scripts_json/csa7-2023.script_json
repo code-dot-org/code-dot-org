@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-15 20:16:51 UTC",
+    "serialized_at": "2023-04-18 14:41:31 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -319,8 +319,9 @@
       "relative_position": 14,
       "properties": {
         "assessment": true,
-        "overview": "**How do I identify and prioritize the tasks I still need to complete for my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers"
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-10-creative-coding-with-the-theater-project/37948) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
       },
       "seeding_key": {
         "lesson.key": "lesson-14",

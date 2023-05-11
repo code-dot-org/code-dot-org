@@ -3,7 +3,7 @@ import GDPRDialog from './GDPRDialog';
 
 export default {
   title: 'GDPRDialog',
-  component: GDPRDialog
+  component: GDPRDialog,
 };
 
 const Template = args => <GDPRDialog {...args} />;
@@ -11,5 +11,5 @@ const Template = args => <GDPRDialog {...args} />;
 export const Simple = Template.bind({});
 Simple.args = {
   isDialogOpen: true,
-  currentUserId: 12345
+  currentUserId: 12345,
 };

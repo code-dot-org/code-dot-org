@@ -175,7 +175,7 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 
   message: function (logEntry) {
     return logEntry.getMessageAscii();
-  }
+  },
 };
 
 NetSimRouterLogModal.prototype.show = function (teacherView = false) {
@@ -238,7 +238,7 @@ NetSimRouterLogModal.prototype.render = function () {
       'from-address': entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS),
       'to-address': entry.getHeaderField(Packet.HeaderType.TO_ADDRESS),
       'packet-info': entry.getLocalizedPacketInfo(),
-      message: entry.getMessageAscii()
+      message: entry.getMessageAscii(),
     })
   );
   ReactDOM.render(

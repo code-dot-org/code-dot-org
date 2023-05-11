@@ -24,7 +24,7 @@ var NetSimMemoryControl = (module.exports = function (
     value: Infinity,
     min: NetSimConstants.BITS_PER_BYTE,
     max: NetSimConstants.BITS_PER_MEGABYTE,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class

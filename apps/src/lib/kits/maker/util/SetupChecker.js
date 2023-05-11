@@ -5,12 +5,12 @@ import {
   isCodeOrgBrowser,
   isChrome,
   gtChrome33,
-  isChromeOS
+  isChromeOS,
 } from './browserChecks';
 import {
   BOARD_TYPE,
   detectBoardTypeFromPort,
-  isWebSerialPort
+  isWebSerialPort,
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
