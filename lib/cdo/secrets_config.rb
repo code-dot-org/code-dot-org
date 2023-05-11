@@ -134,6 +134,7 @@ module Cdo
     private def process_secrets!(config)
       return if config.nil?
       config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
+        # TODO: Update this to work correctly for Stack Secrets.
         secret.secret_prefix ||= env
         secret.secret_key ||= key
       end
