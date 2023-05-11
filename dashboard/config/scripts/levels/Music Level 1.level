@@ -3,7 +3,31 @@
   "properties": {
     "encrypted": "false",
     "preload_asset_list": null,
-    "background": "music-black"
+    "background": "music-black",
+    "level_data": {
+      "text": "First, please play one sound.",
+      "toolbox": {
+        "Play": ["play_sound_at_current_location_simple2"]
+      },
+      "sounds": {
+        "beats": ["disco_beat", "reggaeton_beat"]
+      },
+      "validations": [
+        {
+          "conditions": ["played_one_sound"],
+          "message": "Nice work.",
+          "next": "true"
+        },
+        {"message": "Please play one sound."}
+      ],
+      "starterCode": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 30, "y": 30}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
+    }
   },
   "game_id": 70,
   "published": true,
