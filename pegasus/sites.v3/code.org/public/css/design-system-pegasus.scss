@@ -573,6 +573,14 @@ form {
   flex-direction: column;
   padding: 1em 1.5em;
 
+  // Align copy or button(s) to the bottom of a block when
+  // blocks are vastly different heights due to content length
+  // — use .content-wrapper and .content-footer as seen on
+  // views/maker_curriculum_microbit.haml
+  &.flex-space-between {
+    justify-content: space-between;
+  }
+
   @media screen and (max-width: $width-md) {
     height: 100%;
   }

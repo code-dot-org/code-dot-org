@@ -26,7 +26,6 @@ class TeacherSections extends Component {
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool,
-    userId: PropTypes.number,
   };
 
   componentDidMount() {
@@ -76,7 +75,7 @@ class TeacherSections extends Component {
           </ContentContainer>
         )}
         <RosterDialog userId={this.props.userId} />
-        <AddSectionDialog />
+        <AddSectionDialog userId={this.props.userId} />
         <EditSectionDialog />
       </div>
     );
