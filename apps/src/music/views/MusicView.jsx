@@ -182,8 +182,6 @@ class UnconnectedMusicView extends React.Component {
     // Load library data.
     promises.push(loadLibrary());
 
-    // There are two ways to have a progression: have levels, or be directed
-    // to load a progression.
     if (this.hasProgression()) {
       this.progressManager = new ProgressManager(
         this.props.currentLevelIndex,
