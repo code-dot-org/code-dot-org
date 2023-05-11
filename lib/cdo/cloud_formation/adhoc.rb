@@ -5,14 +5,14 @@ module Cdo::CloudFormation
   # included AWS::CloudFormation in adhoc environment.
   module Adhoc
     def start_inactive_instance
-      if instance.state.name != 'stopped'
-        log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not" \
-            " currently stopped.  Current state - #{instance.state.name}"
-      else
+      if instance.state.name == 'stopped'
         log.info "Starting Instance #{instance.id} ..."
         options[:quiet] = true
         stack.options[:start_inactive_instance] = true
         create_or_update
+      else
+        log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not" \
+            " currently stopped.  Current state - #{instance.state.name}"
       end
       cfn_stack.outputs.each do |output|
         log.info "#{output.output_key}: #{output.output_value}"

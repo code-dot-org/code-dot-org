@@ -1095,7 +1095,8 @@ export const isCurrentScriptCSD = state => {
  *  @returns {boolean} true if current studentId has submitted responses for current script.
  */
 export const currentStudentHasResponses = state => {
-  return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(
+  return !!Object.prototype.hasOwnProperty.call(
+    getAssessmentResponsesForCurrentScript(state),
     state.sectionAssessments.studentId
   );
 };

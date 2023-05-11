@@ -10,3 +10,5 @@ wrong 'wrong answer'
 markdown <<MARKDOWN
 Consider the following superclass and subclass. Which of the following would NOT be an appropriate new subclass to add to the hierarchy?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -15,6 +15,11 @@
           "html": "<h1>Facilitating Summer 2023"
         },
         {
+          "type": "html",
+          "name": "intro_comment",
+          "html": "If you attended more than one LEAD event, please answer this survey for the one you attended most recently."
+        },
+        {
           "type": "radiogroup",
           "name": "event",
           "title": "Which 2023 LEAD Facilitator Training event did you attend?",

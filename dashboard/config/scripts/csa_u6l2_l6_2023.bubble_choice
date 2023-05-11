@@ -1,6 +1,6 @@
 name 'CSA U6L2-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: The substring() Method'
+description 'Practice using the `substring()` method to retrieve characters from a starting index to the end of a `String`.'
 
 sublevels
 level 'CSA U6L2-L6a_2023'

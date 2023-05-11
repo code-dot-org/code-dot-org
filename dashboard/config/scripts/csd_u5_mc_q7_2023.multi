@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 Since the four boxes to the right are uncovered, this representation is equal to 8 + 4 + 2 + 1 = 15.
 MARKDOWN
+
+allow_multiple_attempts true
