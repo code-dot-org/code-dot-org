@@ -11652,6 +11652,8 @@ en:
               name: 'Journaling and Dicussion '
             lesson-10:
               name: 'Day 1 Wrap Up '
+            lesson-11:
+              name: The Problem Solving Process in CSD
           lesson_groups:
             lessonGroup-2:
               display_name: Day 1
