@@ -7,8 +7,10 @@ import {
 } from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
-import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import IncorrectMultiAnswerDialog from '@cdo/apps/templates/IncorrectMultiAnswerDialog';
+import {
+  LegacyIncorrectDialog,
+  LegacyTooFewDialog,
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import {TestResults} from '../../constants';
 
@@ -122,7 +124,6 @@ Multi.prototype.clickItem = function (index) {
       $('#' + this.id + ' #checked_' + unselectIndex).hide();
     }
   }
-
   return true;
 };
 
@@ -205,6 +206,14 @@ Multi.prototype.ready = function () {
       resetButton.click(() => resetContainedLevel());
     }
   }
+
+  if (
+    this.selectedAnswers.length === this.numAnswers &&
+    !this.allowMultipleAttempts
+  ) {
+    console.log('here!!!!');
+    this.lockAnswers();
+  }
 };
 
 Multi.prototype.lockAnswers = function () {
@@ -245,11 +254,13 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   let testResult;
 
   const answerIsCorrect = this.validateAnswers();
+  const tooFewAnswers =
+    this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers;
 
-  if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
+  if (tooFewAnswers) {
     errorDialog = <LegacyTooFewDialog />;
   } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
-    errorDialog = <IncorrectMultiAnswerDialog />;
+    errorDialog = <LegacyIncorrectDialog />;
   }
 
   if (
@@ -259,11 +270,16 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     result = true;
     submitted = true;
     pass = true;
+  } else if (tooFewAnswers) {
+    result = false;
+    submitted = false;
+    pass = false;
   } else if (!this.allowMultipleAttempts) {
     pass = true;
     submitted = false;
     result = answerIsCorrect;
     testResult = TestResults.CONTAINED_LEVEL_RESULT;
+    this.lockAnswers();
   } else {
     result = answerIsCorrect;
     pass = result;
@@ -304,7 +320,13 @@ Multi.prototype.submitButtonClick = function () {
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
   }
-
+  /*
+  if (!this.allowMultipleAttempts) {
+    console.log('here!!!')
+    this.lockAnswers();
+    this.submitAllowed = false; 
+  }
+*/
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
   if (
