@@ -2,13 +2,17 @@
   "script": {
     "name": "virtual-pl-csd-summer-day4",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:43:57 UTC",
+    "serialized_at": "2023-05-11 21:13:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -18,10 +22,266 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Intro to Day 4",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Intro to Unit 5",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "TLO 4: U5L1 Representation Matters",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Intro to Unit 6",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "TLO 5: U6L2 Physical Designs",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Intro to Async",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Asynchronous Work",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Async Debrief",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Intro to Unit 7",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "TLO 6: U7L2 Introduction to Machine Learning",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Barriers, Opportunities, and Commitments",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Differentiation",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Wrap Up",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Asynchronous Work",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    }
   ],
   "lesson_activities": [
 
@@ -36,13 +296,43 @@
 
   ],
   "resources": [
-
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/1rAYHZFEx964DG0OoscJyi-UbciWJY3IszK4aossxtAM/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_4_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1o1zZmJElPROooQt9FZ9w0dRLN7Fxu-XuypWH8C8RD6s/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_agenda",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_slides",
+        "script.name": "virtual-pl-csd-summer-day4"
+      }
+    }
   ],
   "scripts_student_resources": [
 
