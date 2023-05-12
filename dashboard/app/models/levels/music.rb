@@ -31,6 +31,7 @@ class Music < Blockly
     is_project_level
     submittable
     background
+    level_data
   )
 
   def self.create_from_level_builder(params, level_params)
