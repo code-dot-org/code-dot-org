@@ -59,7 +59,7 @@ const AddSectionDialog = ({
 
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
-  const testingUserId = -1;
+  const testingUserId = 0;
 
   const onParticipantTypeSelection = participantType => {
     if (participantType !== 'student' && userId % 10 === testingUserId) {
