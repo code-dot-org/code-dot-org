@@ -37,6 +37,11 @@ class HoneybadgerFaultAnalyzer
     faults
   end
 
+  def get_reports(project_id)
+    validate_api_token!
+    @honeybadger_url_builder.get_api_response("reports_by_user", {project_id: project_id})
+  end
+
   private
 
   def get_all_projects_and_ids

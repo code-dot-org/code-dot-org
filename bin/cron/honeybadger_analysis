@@ -10,24 +10,26 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 def main
   puts rack_env
   filters = ['-is:resolved', '-is:paused%20', '-is:ignored', "environment:\"#{rack_env}\"", 'assignee:"nobody"']
-  time_filters = ["occurred_after=#{1.day.ago.to_i}"]
+  time_filters = ["occurred_after=#{30.day.ago.to_i}"]
   honeybadger_url_builder = HoneybadgerUrlBuilder.new(time_filters, filters)
 
   analyzer = HoneybadgerFaultAnalyzer.new(honeybadger_url_builder)
 
   project_id = 3240
-  faults = analyzer.get_faults_for_project(project_id)
-  notices_within_range_sum = 0
-  affected_users = 0
-  faults.each do |fault|
-    puts fault.id
-    notices_within_range_sum += fault.notices_within_range
 
-    affected_users += fault.get_affected_users.count
-  end
-  puts affected_users
-  puts notices_within_range_sum
-  puts faults.count
+  reports = analyzer.get_reports(project_id)
+  puts reports
+  #faults = analyzer.get_faults_for_project(project_id)
+  #notices_within_range_sum = 0
+  #affected_users = 0
+  #faults.each do |fault|
+  #  puts fault.id
+  #  notices_within_range_sum += fault.notices_within_range
+  #  affected_users += fault.get_affected_users.count
+  #end
+  #puts affected_users
+  #puts notices_within_range_sum
+  #puts faults.count
   #extra_dimensions = {project_id:project_id}
   #Infrastructure::Logger.puts('testing_honey_badger_faults_open_affected_users_30_days', affected_users.count, extra_dimensions)
   #Infrastructure::Logger.puts('testing_honey_badger_faults_open_notices_30_days', notices_within_range_sum, extra_dimensions)
