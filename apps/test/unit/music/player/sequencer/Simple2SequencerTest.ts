@@ -12,7 +12,6 @@ import {
   ChordEventValue,
   ChordEvent,
 } from '@cdo/apps/music/player/interfaces/ChordEvent';
-import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
 
 const testSound: SoundData = {
   name: 'name',
