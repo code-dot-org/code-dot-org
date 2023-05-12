@@ -169,6 +169,51 @@ def grade_student_work(prompt, rubric, student_code, student_id, use_cached: fal
   end
 end
 
+# Given an array of grade rows:
+# [
+#   {
+#     "Key Concept": "Multiple Sprites - Creation",
+#     "Grade": "Extensive Evidence",
+#     "Reason": "..."
+#   },
+#   {
+#     "Key Concept": "Multiple Sprites - Updated Properties",
+#     "Grade": "Convincing Evidence",
+#     "Reason": "..."
+#   }
+# ]
+# merge the grade rows into a single row hash with the following properties:
+#   "Key Concept" is the original concept
+#   "Grade" is the lowest grade
+#   "Reason" is the concatenation of the original rows, joined by formatting and newlines
+def merge_grade_rows(grade_rows, original_concept)
+  {
+    "Key Concept" => original_concept,
+    "Grade" => grade_rows.map {|row| row['Grade']}.max_by {|grade| VALID_GRADES.index(grade)},
+    "Reason" => grade_rows.map {|row| "#{row['Key Concept']}: <b>#{row['Grade']}</b>. #{row['Reason']}"}.join("<br>")
+  }
+end
+
+# For each original key concept, the student has been graded on a set of "split"
+# key concepts which together indicate how well they did on the original
+# concept. This method merges the split key concepts with the other split
+# concepts corresponding to the same original key concept.
+#   original_concepts: an array of the original key concepts
+#   actual_grades: a hash mapping student ids to an array of grade rows, with one row for each split key concept
+#   merge_map: a CSV string mapping split key concepts to original key concepts
+def merge_grades(original_concepts, actual_grades, merge_map)
+  merge_map = CSV.parse(merge_map, headers: true).map(&:to_h)
+
+  actual_grades.map do |student_id, grades|
+    merged_grade_rows = original_concepts.map do |original_concept|
+      split_concepts = merge_map.select {|row| row['Original Key Concept'] == original_concept}.map {|row| row['Split Key Concept']}
+      grade_rows_to_merge = grades.select {|grade_row| split_concepts.include?(grade_row['Key Concept'])}
+      merge_grade_rows(grade_rows_to_merge, original_concept)
+    end
+    [student_id, merged_grade_rows]
+  end.to_h
+end
+
 def accurate?(expected_grade, actual_grade, passing_grades)
   return expected_grade == actual_grade unless passing_grades
 
@@ -345,13 +390,18 @@ def main
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    rubric = standard_rubric
+    rubric = options[:merge] ? split_rubric : standard_rubric
     [student_id, grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached])]
   end
 
   # skip students with invalid api response
   errors = actual_grades.reject(&:last).map(&:first)
   actual_grades = actual_grades.select(&:last).to_h
+
+  if options[:merge]
+    original_concepts = expected_grades.values.first.keys[1..].sort
+    actual_grades = merge_grades(original_concepts, actual_grades, merge_map)
+  end
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades, options[:passing_grades])
   generate_html_output(
