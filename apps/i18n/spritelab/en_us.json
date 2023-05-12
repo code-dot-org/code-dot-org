@@ -110,7 +110,7 @@
   "cscAdaptationsSetSlowSpeed": "Make sure you set the turtle sprite speed to slow.",
   "cscAdaptationsSetSpriteSize": "Make sure you set the sprite size under the new  <code style=\"color:black; background-color:#6AF36C\">when fish created</code> event.",
   "cscAdaptationsShortGiraffe": "Make sure your sprite costume is set to the short giraffe under `when run`.",
-  "cscAdaptationsSize": "Use a `set size` block to resize your sprite. \n \n<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"elephant_1\n\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">150</title></block></value></block></xml>",
+  "cscAdaptationsSize": "Use a `set size` block to resize your sprite. \n \n<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"elephant_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">150</title></block></value></block></xml>",
   "cscAdaptationsTooManyGiraffes": "Make sure to have only one giraffe sprite appear at the beginning of the scene.",
   "cscAdaptationsTooManyOctopuses": "Make sure to have only one octopus sprite appear at the beginning of the scene.",
   "cscAdaptationsUp": "Press the up arrow key to show the adaptation.",
