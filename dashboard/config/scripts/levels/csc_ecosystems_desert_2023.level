@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2023-05-09T20:32:32.000Z",
   "level_num": "custom",
@@ -47,207 +46,67 @@
     "display_name": "Desert Ecologist",
     "bubble_choice_description": "**Off-road vehicle use and mining** are causing many injured rabbits and now they aren't moving!<br><br>\r\nThey should be able to eat the cactus and run from the falcon.<br><br>\r\n**Desert ecologists, can you help?**",
     "thumbnail_url": "https://images.code.org/b8d7faed3fe49206b1ad5bdc19dca34b-desert.jpg",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-05-09T20:32:32.396+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_rainforest_freeplay_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_rainforest_freeplay_2023\"},{\"changed_at\":\"2023-05-09 20:36:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:49:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:51:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:52:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:54:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:58:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:58:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:59:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:59:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:05:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:06:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:08:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:13:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:14:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:29:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:28:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:45:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:52:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:53:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 00:29:42 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:43:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:44:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:47:26 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:52:40 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:54:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:55:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:32:08 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:13:30 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:21:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:21:31 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:23:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 14:15:12 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:24:52 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:26:11 +0000\",\"changed\":[\"start_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:52:38 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 15:33:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 22:31:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 16:00:49 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 16:43:56 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:40:14 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:47:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-05-09T20:32:32.396+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_rainforest_freeplay_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_rainforest_freeplay_2023\"},{\"changed_at\":\"2023-05-09 20:36:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:49:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:51:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:52:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:54:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:58:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:58:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:59:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 20:59:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:05:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:06:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:08:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:13:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_debug_watch\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:14:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 21:29:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 22:28:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:45:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:52:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 23:53:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 00:29:42 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:43:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:44:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:47:26 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:52:40 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:54:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 02:55:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 03:32:08 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:13:30 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:21:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:21:31 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 04:23:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 14:15:12 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:24:52 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:26:11 +0000\",\"changed\":[\"start_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-10 14:52:38 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 15:33:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-10 22:31:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 16:00:49 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 16:43:56 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:40:14 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-11 20:47:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 20:02:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 20:02:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 20:03:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
-          <field name="NAME">DesertSetup</field>
+          <field name="NAME" id="newGrowthSetup">newGrowthSetup</field>
           <statement name="STACK">
-            <block type="gamelab_makeNumSpritesNear">
-              <field name="ANIMATION_NAME">"falcon"</field>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">10</field>
-                </block>
-              </value>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker">
-                  <field name="LOCATION">{"x":193,"y":25}</field>
-                </block>
-              </value>
+            <block type="ecosystems_makeNumSpritesWithinRange">
+              <field name="NUM">5</field>
+              <field name="ANIMATION_NAME">"rabbit-1"</field>
+              <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
               <next>
-                <block type="controls_repeat_ext">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <field name="NUM">10</field>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"rabbit-1"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_locationAt">
-                          <value name="X">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">400</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="Y">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">220</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
+                <block type="ecosystems_makeNumSpritesWithinRange">
+                  <field name="NUM">5</field>
+                  <field name="ANIMATION_NAME">"cactus_01"</field>
+                  <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
                   <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_number">
-                          <field name="NUM">10</field>
+                    <block type="gamelab_setProp">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                          <field name="ANIMATION">"rabbit-1"</field>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"cactus_01"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_locationAt">
-                              <value name="X">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <field name="NUM">400</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="Y">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <field name="NUM">220</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
+                      <value name="VAL">
+                        <block type="math_number" can_disconnect_from_parent="false">
+                          <field name="NUM">60</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp" can_disconnect_from_parent="false">
+                          <field name="PROPERTY">"scale"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                              <field name="ANIMATION">"cactus_01"</field>
                             </block>
                           </value>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="gamelab_setBackgroundImageAs">
-                          <field name="IMG">"desert"</field>
+                          <value name="VAL">
+                            <block type="math_number" can_disconnect_from_parent="false">
+                              <field name="NUM">30</field>
+                            </block>
+                          </value>
                           <next>
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"falcon"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":12,"y":69}</field>
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                  <field name="ANIMATION">"rabbit-1"</field>
                                 </block>
                               </value>
-                              <next>
-                                <block type="gamelab_setProp">
-                                  <field name="PROPERTY">"scale"</field>
-                                  <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                      <field name="ANIMATION">"falcon"</field>
-                                    </block>
-                                  </value>
-                                  <value name="VAL">
-                                    <block type="math_number" can_disconnect_from_parent="false">
-                                      <field name="NUM">90</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_setProp">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                          <field name="ANIMATION">"cactus_01"</field>
-                                        </block>
-                                      </value>
-                                      <value name="VAL">
-                                        <block type="math_number" can_disconnect_from_parent="false">
-                                          <field name="NUM">30</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_setProp">
-                                          <field name="PROPERTY">"scale"</field>
-                                          <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                              <field name="ANIMATION">"rabbit-1"</field>
-                                            </block>
-                                          </value>
-                                          <value name="VAL">
-                                            <block type="math_number" can_disconnect_from_parent="false">
-                                              <field name="NUM">60</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_setProp">
-                                              <field name="PROPERTY">"speed"</field>
-                                              <value name="SPRITE">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"falcon"</field>
-                                                </block>
-                                              </value>
-                                              <value name="VAL">
-                                                <block type="math_number">
-                                                  <field name="NUM">3</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="gamelab_addBehaviorSimple">
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                                      <field name="ANIMATION">"falcon"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="BEHAVIOR">
-                                                    <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                                      <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
+                                  <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
                                 </block>
-                              </next>
+                              </value>
                             </block>
                           </next>
                         </block>
@@ -348,135 +207,102 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation/>
-          <field name="NAME" id="newGrowthSetup">newGrowthSetup</field>
+          <field name="NAME">DesertSetup</field>
           <statement name="STACK">
-            <block type="controls_repeat_ext">
-              <value name="TIMES">
-                <block type="math_number">
-                  <field name="NUM">5</field>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"rabbit-1"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_locationAt">
-                      <value name="X">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <field name="NUM">400</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="Y">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <field name="NUM">220</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </statement>
+            <block type="ecosystems_makeNumSpritesWithinRange">
+              <field name="NUM">10</field>
+              <field name="ANIMATION_NAME">"rabbit-1"</field>
+              <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
               <next>
-                <block type="controls_repeat_ext">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <field name="NUM">5</field>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"cactus_01"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_locationAt">
-                          <value name="X">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">400</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="Y">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">220</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
+                <block type="ecosystems_makeNumSpritesWithinRange">
+                  <field name="NUM">10</field>
+                  <field name="ANIMATION_NAME">"cactus_01"</field>
+                  <field name="RANGE">{x1:0, x2:400, y1:0, y2:200}</field>
                   <next>
-                    <block type="gamelab_setProp">
-                      <field name="PROPERTY">"scale"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                          <field name="ANIMATION">"rabbit-1"</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_number" can_disconnect_from_parent="false">
-                          <field name="NUM">60</field>
-                        </block>
-                      </value>
+                    <block type="gamelab_setBackgroundImageAs">
+                      <field name="IMG">"desert"</field>
                       <next>
-                        <block type="gamelab_setProp" can_disconnect_from_parent="false">
-                          <field name="PROPERTY">"scale"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                              <field name="ANIMATION">"cactus_01"</field>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_number" can_disconnect_from_parent="false">
-                              <field name="NUM">30</field>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"falcon"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <field name="LOCATION">{"x":12,"y":69}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_addBehaviorSimple">
+                            <block type="gamelab_setProp">
+                              <field name="PROPERTY">"scale"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                                  <field name="ANIMATION">"rabbit-1"</field>
+                                  <field name="ANIMATION">"falcon"</field>
                                 </block>
                               </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
-                                  <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
+                              <value name="VAL">
+                                <block type="math_number" can_disconnect_from_parent="false">
+                                  <field name="NUM">90</field>
                                 </block>
                               </value>
+                              <next>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                      <field name="ANIMATION">"cactus_01"</field>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number" can_disconnect_from_parent="false">
+                                      <field name="NUM">30</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_setProp">
+                                      <field name="PROPERTY">"scale"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                          <field name="ANIMATION">"rabbit-1"</field>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_number" can_disconnect_from_parent="false">
+                                          <field name="NUM">60</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_setProp">
+                                          <field name="PROPERTY">"speed"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"falcon"</field>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="math_number">
+                                              <field name="NUM">3</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="gamelab_addBehaviorSimple">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                                  <field name="ANIMATION">"falcon"</field>
+                                                </block>
+                                              </value>
+                                              <value name="BEHAVIOR">
+                                                <block type="gamelab_collectibleBehaviors" can_disconnect_from_parent="false">
+                                                  <field name="BEHAVIOR">new Behavior(patrolling, [])</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
