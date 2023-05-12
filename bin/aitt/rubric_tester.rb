@@ -78,18 +78,18 @@ end
 
 def validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
   expected_concepts = expected_grades.values.first.keys[1..].sort
-  standard_concepts = CSV.parse(standard_rubric, headers: true).map {|row| row['Key Concept']}.sort
-  split_concepts = CSV.parse(split_rubric, headers: true).map {|row| row['Key Concept']}.sort
 
   if options[:merge]
     raise "missing merge map" if options[:merge] && merge_map.nil?
 
+    split_concepts = CSV.parse(split_rubric, headers: true).map {|row| row['Key Concept']}.sort
     merge_concepts = CSV.parse(merge_map, headers: true).map {|row| row['Split Key Concept']}.sort
     raise "merge map split concepts do not match split concepts:\n#{merge_concepts}\n#{split_concepts}" unless merge_concepts == split_concepts
 
     merge_concepts = CSV.parse(merge_map, headers: true).map {|row| row['Original Key Concept']}.sort.uniq
     raise "merge map standard concepts do not match expected concepts:\n#{merge_concepts}\n#{expected_concepts}" unless merge_concepts == expected_concepts
   else
+    standard_concepts = CSV.parse(standard_rubric, headers: true).map {|row| row['Key Concept']}.sort
     raise "standard concepts do not match expected concepts:\n#{standard_concepts}\n#{expected_concepts}" unless standard_concepts == expected_concepts
   end
 end
