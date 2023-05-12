@@ -241,7 +241,7 @@ class RosterDialog extends React.Component {
         break;
     }
 
-    const testingUserId = -1;
+    const testingUserId = 0;
 
     return (
       <BaseDialog
@@ -280,7 +280,7 @@ class RosterDialog extends React.Component {
           </button>
           {this.props.userId % 10 === testingUserId && (
             <button
-              id="import-button"
+              id="import-button-and-redirect"
               type="button"
               onClick={this.handleRedirect}
               style={Object.assign(
