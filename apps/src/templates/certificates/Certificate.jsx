@@ -73,6 +73,9 @@ function Certificate(props) {
     // This method complies with “Base 64 Encoding with URL and Filename
     // Safe Alphabet” in RFC 4648. The alphabet uses ‘-’ instead of ‘+’ and
     // ‘_’ instead of ‘/’.
+    // NOTE: using replaceAll has causes issues in the test machine due to the
+    // version of the google-chrome-stable package installed. replace method has
+    // better support.
     return urlSafeData;
   };
 
