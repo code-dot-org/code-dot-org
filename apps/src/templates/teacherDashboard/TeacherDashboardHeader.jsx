@@ -97,7 +97,7 @@ class TeacherDashboardHeader extends React.Component {
   };
 
   render() {
-    const testingUserId = -1;
+    const testingUserId = 0;
 
     return (
       <div>
