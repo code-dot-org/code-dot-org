@@ -300,7 +300,7 @@ export default connect(
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,
-    isLabLoading: state.lab.isLoading,
+    isLabLoading: state.lab?.isLoading,
   }),
   dispatch => ({
     navigateToLevelId(levelId) {
