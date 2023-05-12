@@ -196,10 +196,11 @@ def main
 
   validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
 
+  rubric = options[:merge] ? split_rubric : standard_rubric
+
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
-    rubric = options[:merge] ? split_rubric : standard_rubric
     [student_id, Grade.new.grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached])]
   end
 
@@ -214,7 +215,7 @@ def main
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades, options[:passing_grades])
   Report.new.generate_html_output(
-    output_file, prompt, standard_rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
+    output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
   )
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 
