@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 18:53:49 UTC",
+    "serialized_at": "2023-05-12 17:21:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,7 +46,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n* Get and orientation to the day"
+        "student_overview": "**You will:**\n* Get oriented to the day"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -97,7 +97,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**Purpose:**\nThis session is a preparation for the next two TLOs that participants will engage in: U3L6 Random Numbers and U3L8 Sprites. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
+        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for your model lesson and TLOs\n* Learn what sprites are in Game Lab "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -135,7 +135,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs, but will also allow you to create more interesting and fun images!\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
       "seeding_key": {
         "lesson.key": "Sprites",
