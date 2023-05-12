@@ -8,6 +8,7 @@ import {
 import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
 import {LegacyTooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import IncorrectMultiAnswerDialog from '@cdo/apps/templates/IncorrectMultiAnswerDialog';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import {TestResults} from '../../constants';
 
@@ -248,7 +249,7 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
     errorDialog = <LegacyTooFewDialog />;
   } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
-    errorDialog = <LegacyTooFewDialog />;
+    errorDialog = <IncorrectMultiAnswerDialog />;
   }
 
   if (
@@ -298,6 +299,7 @@ Multi.prototype.getCurrentAnswerFeedback = function () {
 
 // This behavior should only be available when this is a standalone Multi.
 Multi.prototype.submitButtonClick = function () {
+  console.log('hello!');
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;

@@ -139,6 +139,7 @@ export function processResults(onComplete, beforeHook) {
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {
+        console.log(lastServerResponse);
         var lastServerResponse =
           window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;
