@@ -2,6 +2,7 @@ import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import DCDO from '@cdo/apps/dcdo';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
@@ -110,8 +111,8 @@ export function getUserTheme(themeOption) {
 export function getCode(workspace) {
   // Begin collecting data about our ability to correctly serialize a workspace in JSON format.
   if (
-    experiments.isEnabled(experiments.BLOCKLY_JSON) ||
-    Math.random() <= 0.05
+    DCDO.get('blockly-json-experiment', true) &&
+    (experiments.isEnabled(experiments.BLOCKLY_JSON) || Math.random() <= 0.05)
   ) {
     testJsonSerialization(workspace);
   }
