@@ -22,4 +22,6 @@
           =t('unsubmit')
 .clear
 
-%script{src: webpack_asset_path('js/levels/_dialog.js'), data: {nextlevellink: next_level_link.to_json}}
+- data = {}
+- data[nextlevellink] = local_assigns[:next_level_link] if local_assigns[:next_level_link]
+%script{src: webpack_asset_path('js/levels/_dialog.js'), data: data}
