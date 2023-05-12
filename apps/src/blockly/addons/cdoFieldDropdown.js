@@ -83,10 +83,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
 
       // set the menuGenerator_ to those config options.
       this.menuGenerator_ = options;
-
-      // Call super so value is set.
-      super.fromXml(element);
     }
+    // Call super so value is set.
+    super.fromXml(element);
   }
 
   /**
