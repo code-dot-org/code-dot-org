@@ -107,13 +107,11 @@ class SectionActionDropdown extends Component {
 
   render() {
     const {sectionData, userId} = this.props;
-    const testingUserId = -1;
+    const testingUserId = 0;
 
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          {/* Note that this should be uncommented when
-          ready to launch.  Also, remove line 125 for launch */}
           {userId % 10 === testingUserId && (
             <PopUpMenu.Item
               href={this.editRedirectUrl(sectionData.id)}
