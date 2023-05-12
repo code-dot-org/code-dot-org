@@ -24,7 +24,6 @@ function TopInstructionsHeader(props) {
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
-    handleAiTabClick,
     handleDocumentationClick,
     handleInstructionTabClick,
     handleHelpTabClick,
@@ -47,9 +46,6 @@ function TopInstructionsHeader(props) {
     isCollapsed,
     collapsible,
   } = props;
-
-  // const displayAiTab =
-  //   window.location.pathname === '/s/csd3-2022/lessons/17/levels/7';
 
   const showContainedLevelAnswer =
     hasContainedLevels && $('#containedLevelAnswer0').length > 0;
@@ -170,13 +166,6 @@ function TopInstructionsHeader(props) {
                 isRtl={isRtl}
               />
             )}
-          {
-            <InstructionsTab
-              onClick={handleAiTabClick}
-              selected={tabSelected === TabType.AI}
-              text={'EduBot'}
-            />
-          }
         </div>
         {hasBackgroundMusic && (
           <BackgroundMusicMuteButton
@@ -293,7 +282,6 @@ TopInstructionsHeader.propTypes = {
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
-  handleAiTabClick: PropTypes.func.isRequired,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
   handleHelpTabClick: PropTypes.func.isRequired,
