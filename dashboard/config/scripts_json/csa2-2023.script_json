@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-18 13:48:49 UTC",
+    "serialized_at": "2023-05-10 21:08:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -86,7 +86,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
-        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-1-attributes/37872) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L1 Guided Notes (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-1-attributes/37872) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
@@ -104,7 +104,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
-        "preparation": "* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-2-no-argument-constructors/37873) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L2 Guided Notes (one for each student)\n* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-2-no-argument-constructors/37873) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
@@ -122,7 +122,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
-        "preparation": "* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-3-parameterized-constructors/37874) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L3 Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-3-parameterized-constructors/37874) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
       },
       "seeding_key": {
@@ -140,7 +140,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nStudents continue building on what they have learned about constructors and parameters to explore the functionality of local variables. Students realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. Students also consider how the `this` keyword can be used to minimize redundancies in their code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class.",
-        "preparation": "* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-4-the-this-keyword/37875) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L4 Guided Notes (one for each student)\n* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-4-the-this-keyword/37875) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nIn this lesson, you continue building on what you have learned about constructors and parameters to explore the functionality of local variables. You realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. You also consider how the `this` keyword can be used to minimize redundancies in your code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class."
       },
       "seeding_key": {
@@ -158,7 +158,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-5-constructors-and-inheritance/37876) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-5-constructors-and-inheritance/37876) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
       },
       "seeding_key": {
@@ -176,7 +176,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
-        "preparation": "* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-6-variables/37877) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L6 Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-6-variables/37877) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
       },
       "seeding_key": {
@@ -194,7 +194,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, students learn about accessor methods and explore their syntax and functionality. They consider why they would use accessor methods in a program and how they might decide when to provide an accessor method for an instance variable. Students then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass.",
-        "preparation": "* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-7-accessor-methods/37878) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L7 Guided Notes (one for each student)\n* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-7-accessor-methods/37878) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, you learn about accessor methods and explore their syntax and functionality. You consider why you would use accessor methods in a program and how you might decide when to provide an accessor method for an instance variable. You then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -212,7 +212,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-8-operators-and-expressions/37879) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L8 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-8-operators-and-expressions/37879) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
       },
       "seeding_key": {
@@ -230,7 +230,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, students learn to write and call mutator methods to change the values stored in an object's instance variables. Students explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. They consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. Students then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass.",
-        "preparation": "* Preview the *Scanner Class Methods* and *Mutator Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-9-mutator-methods/37880) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* **(Optional)** Print copies of the U2L9 Guided Notes (one for each student)\n* Preview the *Scanner Class Methods* and *Mutator Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-9-mutator-methods/37880) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, you learn to write and call mutator methods to change the values stored in an object's instance variables. You explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. You consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. You then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -248,7 +248,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
-        "preparation": "* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-10-printing-objects/37881) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* **(Optional)** Print copies of the U2L10 Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-10-printing-objects/37881) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -966,7 +966,7 @@
       "key": "897fc847-8648-4cf2-bf2f-7e2205b79a05",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -7818,6 +7818,126 @@
       }
     },
     {
+      "name": "[EXEMPLAR] U2L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1rtCEQUhsyPKxUYnHRgENoOtCAopQoPjABdrDEJS_ZMw/edit?usp=sharing",
+      "key": "_exemplar_u2l10_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l10_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1JpA2-cJ59a4SxpWIiwUdz8ygJLLzJ45vCAWEnmvjfss/edit?usp=sharing",
+      "key": "_exemplar_u2l1_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l1_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1j0b450ET2przWQJYTvYkdVGwPdvrSVpRxC_ORuuYhXw/edit?usp=sharing",
+      "key": "_exemplar_u2l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Fz8bpusC_-9tf_fi-9cQGyuvcwI91eMKKSt-pMeu7pA/edit?usp=sharing",
+      "key": "_exemplar_u2l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1mZ2TYi_U5V-MmB6YDHxRrdPJaG_n3w9dgPc7q2hsRRQ/edit?usp=sharing",
+      "key": "_exemplar_u2l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/10fBNOIwHiiLO51Fitr4uKtHwGLSW6Sq2Qhdb7KiKsH4/edit?usp=sharing",
+      "key": "_exemplar_u2l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/15Y7g3AI8HPJ8LVt8ttT9HSzXXGH5nWHqYJYkZve06IA/edit?usp=sharing",
+      "key": "_exemplar_u2l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1xijVpfl96ZodziVU7EZrkMoia6hENe7y9wKtWINzn1w/edit?usp=sharing",
+      "key": "_exemplar_u2l7_guided_notes_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l7_guided_notes_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/19gBhx5DIm0YnaUIgaqk3vZ0tdlUnGHGHI_xMnQWslVY/edit?usp=sharing",
+      "key": "_exemplar_u2l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/18PxnbJcnAR4ovl70rgte6otlZiOOml9OASnUr8TlVmk/edit?usp=sharing",
+      "key": "_exemplar_u2l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l9_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Unit 2 Guide",
       "url": "https://docs.google.com/document/d/1TXYNiTnbkFzpuEvReolnu7mrtd8LU6hE1iqx91mNUno/edit?usp=share_link",
       "key": "_exemplar_unit_2_guide",
@@ -8179,6 +8299,54 @@
       }
     },
     {
+      "name": "CSA Unit 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
+      "key": "csa_unit_2_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_2_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 2 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1INlv8xH_l5eCQc09JCb0QYzqlPiEsywNAvyY8qnU3Y8/edit?usp=sharing",
+      "key": "csa_unit_2_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_2_word_wall_cards"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
       "name": "Instance Variables and Attributes",
       "url": "https://youtu.be/49XzLCs8wgU",
       "key": "instance_variables_and_attributes",
@@ -8386,6 +8554,19 @@
       }
     },
     {
+      "name": "U2L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1LzWhhO-px2RyQFZ0sD_55cPl5N42wyOFj20duKdmZPs/edit?usp=sharing",
+      "key": "u2l10_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l10_guided_notes"
+      }
+    },
+    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1xol1ugsQO8w330sOTKis3AB6r0vv0WVjVNBA09JPWtk/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -8396,6 +8577,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "U2L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/17L9RMzHX1dRP3f2jUVr0siB7FjRSMlBlVjKhLt1oQVE/edit?usp=sharing",
+      "key": "u2l1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_guided_notes"
       }
     },
     {
@@ -8412,6 +8606,19 @@
       }
     },
     {
+      "name": "U2L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1uUPYH9F35ZQhR1MavMVyPe0xBOnuvqF1EfR4jgAcO48/edit?usp=sharing",
+      "key": "u2l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l2_guided_notes"
+      }
+    },
+    {
       "name": "U2L3 Extra Practice",
       "url": "https://docs.google.com/document/d/1WSHs_5PNnAJinD60ZPomsLCT81JxSX4uD7fjwoyf8tw/edit?usp=sharing",
       "key": "u2l3_extra_practice",
@@ -8422,6 +8629,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1rFKbiv-4k6fVptDb4AGsMrjghAnJC9NUrpz1g80wsAE/edit?usp=sharing",
+      "key": "u2l3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_guided_notes"
       }
     },
     {
@@ -8438,6 +8658,19 @@
       }
     },
     {
+      "name": "U2L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1-TyvtYHUvLeIGoV-h-skAJrgQaNDpkq0GuSBoJaBJp8/edit?usp=sharing",
+      "key": "u2l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_guided_notes"
+      }
+    },
+    {
       "name": "U2L5 Extra Practice",
       "url": "https://docs.google.com/document/d/10U-0aKiKWWWncQy19YbQgtfTNSGoTNNWitIJ3cHyPIo/edit?usp=sharing",
       "key": "u2l5_extra_practice",
@@ -8451,6 +8684,19 @@
       }
     },
     {
+      "name": "U2L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1u9o-UW2K2v44y5EXR3MjLghOrsQHlL1qgYQ9iQD_rAw/edit?usp=sharing",
+      "key": "u2l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_guided_notes"
+      }
+    },
+    {
       "name": "U2L6 Extra Practice",
       "url": "https://docs.google.com/document/d/1tYy7S2iSLLQr9XXPqhxoBxIpYvXzUXExFVE6m6Qi_6E/edit?usp=sharing",
       "key": "u2l6_extra_practice",
@@ -8461,6 +8707,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "U2L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1g0ajb0DVUAdjsUr-uKRnWnTnI17mvSIo-jA0ZtXnvAE/edit?usp=sharing",
+      "key": "u2l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l6_guided_notes"
       }
     },
     {
@@ -8489,6 +8748,19 @@
       }
     },
     {
+      "name": "U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1tr2pozUOiLptDGYxlbLwW12Tehy1y9GLS_RnDKpk8EU/edit?usp=sharing",
+      "key": "u2l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l7_guided_notes"
+      }
+    },
+    {
       "name": "U2L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1Fmy0ZOIM19by7q_e-YzTwex9_8jfAeVFYv7sej5F1v8/edit?usp=sharing",
       "key": "u2l8_extra_practice",
@@ -8502,6 +8774,19 @@
       }
     },
     {
+      "name": "U2L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1lKEGGyW2SOVwM8lPlJhU5HCgT03fHrVH8H5Bu_O9kGI/edit?usp=sharing",
+      "key": "u2l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l8_guided_notes"
+      }
+    },
+    {
       "name": "U2L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1uVSlbSDYRQyT8z-9mbQ6lsH3splw4WlxdcYVvniUx2k/edit?usp=sharing",
       "key": "u2l9_extra_practice",
@@ -8512,6 +8797,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l9_extra_practice"
+      }
+    },
+    {
+      "name": "U2L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1us3iSd5-KZY-yfpipy0P-_yapaBUgfsEn-Wi948fmyI/edit?usp=sharing",
+      "key": "u2l9_guided_notes_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l9_guided_notes_1"
       }
     },
     {
@@ -8593,6 +8891,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_u2l1_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "_key_u2l1_extra_practice"
       }
     },
@@ -8600,6 +8904,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8617,7 +8927,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l1_guided_notes"
       }
     },
     {
@@ -8713,6 +9023,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_exemplar_u2l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "_key_anticipation_guide"
       }
     },
@@ -8731,6 +9047,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "the_this_keyword"
       }
     },
@@ -8743,7 +9065,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_u2l2_guided_notes"
       }
     },
     {
@@ -8761,6 +9089,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "no-argument_constructors"
       }
     },
@@ -8773,13 +9107,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_u2l3_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8803,7 +9149,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l3_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_u2l7_guided_notes"
       }
     },
     {
@@ -8827,6 +9179,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "investigate_variables"
       }
     },
@@ -8839,13 +9197,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l6_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_u2l7_guided_notes_1"
       }
     },
     {
@@ -8869,6 +9233,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "u2l7_extra_practice"
       }
     },
@@ -8881,7 +9251,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_u2l5_guided_notes"
       }
     },
     {
@@ -8899,19 +9275,37 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u2l5_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l5_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_u2l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8929,13 +9323,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l8_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_u2l9_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8965,13 +9371,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l9_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_u2l10_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8995,7 +9413,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l10_guided_notes"
       }
     },
     {
@@ -9027,6 +9445,30 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_2_slides",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_2_word_wall_cards",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
         "script.name": "csa2-2023"
       }
     },
