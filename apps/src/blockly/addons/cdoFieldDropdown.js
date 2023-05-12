@@ -6,18 +6,16 @@ import {
 } from '@cdo/apps/p5lab/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
-  constructor(menu, validator) {
-    super(menu, validator);
-    console.log('constructor - this.menuGenerator_', this.menuGenerator_);
-  }
-
   /**
    * Add special case for '???'.
    * @override
    */
   doClassValidation_(newValue) {
-    console.log('doClassValidation_ - newValue', newValue);
-    return newValue;
+    if (newValue === EMPTY_OPTION) {
+      return newValue;
+    } else {
+      return super.doClassValidation_(newValue);
+    }
   }
 
   /**
@@ -25,22 +23,12 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   doValueUpdate_(newValue) {
-    console.log('doValueUpdate_ - newValue', newValue);
-    this.value_ = newValue;
-    this.isDirty_ = true;
     if (newValue === EMPTY_OPTION) {
+      this.value_ = newValue;
+      this.isDirty_ = true;
       this.selectedOption_ = [EMPTY_OPTION, ''];
     } else {
-      const options = this.getOptions(true);
-      this.selectedOption_ = null;
-      for (let i = 0, option; (option = options[i]); i++) {
-        if (option[1] === this.value_) {
-          this.selectedOption_ = option;
-        }
-      }
-      if (!this.selectedOption_) {
-        this.selectedOption_ = [this.toHumanReadableString(newValue), newValue];
-      }
+      super.doValueUpdate_(newValue);
     }
   }
 
@@ -50,16 +38,12 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   fromXml(element) {
-    // Call super so value is set.
-    super.fromXml(element);
-
     // If the field xml contains a `config`, then the dropdown options
     // are determined by `config`.
     // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
     // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
     this.config = element.getAttribute('config');
-    console.log('fromXml - config', this.config);
     if (this.config) {
       // If `menuGenerator_` is an array, it is an array of options with
       // each option represented by an array containing 2 elements -
@@ -99,6 +83,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
 
       // set the menuGenerator_ to those config options.
       this.menuGenerator_ = options;
+
+      // Call super so value is set.
+      super.fromXml(element);
     }
   }
 
