@@ -6,17 +6,21 @@ module CustomRake
 
     def execute(args = nil)
       logger = RakeTaskEventLogger.new(self)
+
+      RakeTaskEventLogger.add_task_node(self)
+      RakeTaskEventLogger.increase_depth
       logger.start_task_logging
       begin
-        RakeTaskEventLogger.increase_depth
         puts "Finished #{name} (#{distance_of_time_in_words(Benchmark.realtime {super}.to_f)})"
+        logger.end_task_logging
         RakeTaskEventLogger.decrease_depth
+        RakeTaskEventLogger.remove_task_node
       rescue => exception
-        RakeTaskEventLogger.decrease_depth
         logger.exception_task_logging(exception)
+        RakeTaskEventLogger.decrease_depth
+        RakeTaskEventLogger.remove_task_node
         raise
       end
-      logger.end_task_logging
     end
   end
 end

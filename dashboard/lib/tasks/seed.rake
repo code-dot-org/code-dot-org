@@ -170,8 +170,8 @@ namespace :seed do
     :check_migrations,
     :games,
     :deprecated_blockly_levels,
-    :custom_levels,
-    :dsls,
+    #:custom_levels,
+    #:dsls,
     :code_docs,
     :blocks,
     :standards,
@@ -194,6 +194,7 @@ namespace :seed do
   end
 
   timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
+    puts "Executing scripts"
     update_scripts(incremental: false)
   end
 

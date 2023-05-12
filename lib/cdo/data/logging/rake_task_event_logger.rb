@@ -90,18 +90,22 @@ class RakeTaskEventLogger
   def log_cloud_watch(event, duration_ms)
     metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
     extra_dimensions = {task_name: @rake_task.name}
-    total_dependencies = task_chain.split(',').count
+    dependencies = task_chain.split(',')
     if @@depth == 0
       metric_name = "rake_tasks_root_task_#{event}"
       Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
     end
-    if total_dependencies == 0
+    if dependencies.count == 0
       metric_name = "rake_tasks_no_dependencies_task_#{event}"
       Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
     end
+
+    namespace = @rake_task.name.split(':')[0]
+    extra_dimensions = {task_name: @rake_task.name, depth: @@depth, namespace: namespace, total_dependencies: dependencies.count, dependencies: task_chain}
     metric_name = "rake_tasks_#{event}"
+
     Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
-    Infrastructure::Logger.flush
+    #Infrastructure::Logger.flush
   end
 
   def log_event(event, duration = nil, exception = nil)
