@@ -18,3 +18,8 @@ What is the value of `num` when the code segment is executed?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The code segment provided initializes a `String` variable `str` with the value `"CompSci Rocks!"` and then assigns the length of that `String` to an integer variable `num`.
+
+In this case, `"CompSci Rocks!"` has a length of `14` characters.
+MARKDOWN

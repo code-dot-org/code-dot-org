@@ -22,3 +22,10 @@ public void mystery(int n) {
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The loop starts with `i` initialized to `0`. In the first iteration, the element at index `0` is removed from `numList`, which is the `Integer` object with the value `0`. The removed `Integer` object (`0`) is then added back to the end of `numList`. After the first iteration, `numList` becomes `[5, 1, 3, 7, 0]`.
+
+In the second iteration, the element at index `0` is again removed, which is the `Integer` object with the value `5`. The removed `Integer` object (`5`) is added back to the end of `numList`. After the second iteration, `numList` becomes `[1, 3, 7, 0, 5]`.
+
+This process continues for the remaining iterations. After the fifth and final iteration, `numList` becomes `[0, 5, 1, 3, 7]`.
+MARKDOWN
