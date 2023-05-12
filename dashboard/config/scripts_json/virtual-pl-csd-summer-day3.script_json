@@ -2,13 +2,17 @@
   "script": {
     "name": "virtual-pl-csd-summer-day3",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:43:01 UTC",
+    "serialized_at": "2023-05-12 18:26:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -18,31 +22,664 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Day 3",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get an orientation to the day"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Being a Lead Learner",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nBy this point in the workshop, participants have had experience with the computer science concepts in Units 1-3. This session invites participants to consider what it might feel like to teach these concepts to their students and act as the “lead learner” during the school year.\n\n\n**Objectives:**\n* Participants reflect on how being a lead learner in the classroom is similar to and different from how they have previously taught.\n* Participants understand the importance of modeling as a lead learner in the CS classroom.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Reflect on how being a lead learner in the classroom is similar to and different from how you have previously taught\n* Understand the importance of modeling as a lead learner in the CS classroom"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Unit 3 Curriculum Investigation: Sprites",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is a preparation for the next two TLOs that participants will engage in: U3L6 Random Numbers and U3L8 Sprites. This curriculum investigation builds on the Summer Workshop focus of preparing participants to teach units 1-3 (the most heavily implemented units).\n\n\n**Objectives:**\n* Participants learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Participants know what sprites are in Game Lab \n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Learn how to use variables in Game Lab to prepare for their model lesson and TLOs\n* Learn what sprites are in Game Lab "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "TLO 1: U3L6 Random Numbers",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\n* **Essential Practice:** Students have strategies for debugging\n\n\n* **Potential Teaching Group Decisions:**\n  * The teacher directs participants to the student version of the “Guide to Debugging” (page 24 of the Resource Packet) and prompts them to use the debugging process when they encounter bugs.\n  * Teacher instructs participants to complete at least one debugging level in the practice choice level (Level 6b)\n  * Teacher has participants document bugs in their journals\n  * In the wrap up, after students have written about things that might like to be random in their programs, teachers lead a discussion on potential bugs that might arise.\n\n\n**Objectives:**\n* Participants have brainstormed ways to support students in the process of debugging\n* Participants can generate and use random numbers in a program and update a value stored in a variable\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> \n",
+        "student_overview": "**Question of the Day:** How can we make our programs behave differently each time they are run?\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a> "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Intro to Async",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Asynchronous Work",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Async Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "TLO 2: U3L8 Sprites",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites, which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Unit 3 Connections",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nOn Days 2 and 3, participants engaged in four Unit 3 - Interactive Animations and Games lessons. This session provides participants with space to review what they’ve learned and ask questions about the unit.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 3 that has not been covered in the workshop\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 3 that has not been covered in the workshop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "TLO 3: U4L3 User-Centered Design Define & Prepare",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson.\n\n\n* **Potential Teaching Group Decisions:* \n  * Group students and allow them to work together while circulating around the entire class.\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * When students have to come to a decision about the user they’ve chosen and how they will design their smart clothing, allow them to come to an answer together and facilitate letting all students have a say.\n\n\n**Objectives:**\n* Participants engage in Unit 4 Lesson 3 while playing the role of the student\n* Participants reflect on their experience as a student engaging in the lesson\n* Participants discuss the role of teamwork and collaboration in the CS Discoveries curriculum\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  ",
+        "student_overview": "**Question of the Day:** How can we design for people other than ourselves?\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. \n\n<a href=\"https://studio.code.org/s/csd4-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>  "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Classroom Culture",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Day 3 Wrap Up",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "**Purpose:**\n* Wrap up the themes of the day\n* Pulse check on teachers through gots and needs/survey\n\n\n**Objectives:**\n* Share gots and needs for the day.\n* Take the daily survey\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n* Share gots and needs for the day\n* Take the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/3\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 3 Survey</a> \n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Asynchronous Work",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f9d44658-b62d-42f1-b718-9f73fb3616f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9d44658-b62d-42f1-b718-9f73fb3616f9",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "bc2278e4-0b4c-4b49-9ae5-c735790831a9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc2278e4-0b4c-4b49-9ae5-c735790831a9",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "e90b1e9a-31e4-4511-b017-3fa0572c456d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e90b1e9a-31e4-4511-b017-3fa0572c456d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "d420da02-39da-412e-b390-a8f490b8e47e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d420da02-39da-412e-b390-a8f490b8e47e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "df70317f-368f-4304-9b4a-2893cd5f290a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df70317f-368f-4304-9b4a-2893cd5f290a",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "59a88a1f-8af3-4a9f-8edf-70ab272fdce4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59a88a1f-8af3-4a9f-8edf-70ab272fdce4",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "key": "ceac91c2-c0d3-4958-b351-d3404d4cca74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ceac91c2-c0d3-4958-b351-d3404d4cca74",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "fe0c37ac-279b-47ec-954d-f80a684cf177",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe0c37ac-279b-47ec-954d-f80a684cf177",
+        "lesson_activity.key": "f9d44658-b62d-42f1-b718-9f73fb3616f9"
+      }
+    },
+    {
+      "key": "39a1cab9-b6a9-43cd-b372-f889e44c97f3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "39a1cab9-b6a9-43cd-b372-f889e44c97f3",
+        "lesson_activity.key": "bc2278e4-0b4c-4b49-9ae5-c735790831a9"
+      }
+    },
+    {
+      "key": "f293888a-4b87-43ad-804b-e0f44bec4d0c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f293888a-4b87-43ad-804b-e0f44bec4d0c",
+        "lesson_activity.key": "e90b1e9a-31e4-4511-b017-3fa0572c456d"
+      }
+    },
+    {
+      "key": "e442e1cd-bb1d-417d-8b78-4a0d91ea1167",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e442e1cd-bb1d-417d-8b78-4a0d91ea1167",
+        "lesson_activity.key": "d420da02-39da-412e-b390-a8f490b8e47e"
+      }
+    },
+    {
+      "key": "12fcd219-f473-4033-9240-5a9345baf481",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "12fcd219-f473-4033-9240-5a9345baf481",
+        "lesson_activity.key": "df70317f-368f-4304-9b4a-2893cd5f290a"
+      }
+    },
+    {
+      "key": "31f4eafd-0775-4fe4-ad41-4a8100b34546",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 7: Mini-Project - Robot Faces"
+      },
+      "seeding_key": {
+        "activity_section.key": "31f4eafd-0775-4fe4-ad41-4a8100b34546",
+        "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af"
+      }
+    },
+    {
+      "key": "71716dcc-daf7-4bb1-bd19-63e29c4d582c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson 11: Mini-Project - Captioned Scenes"
+      },
+      "seeding_key": {
+        "activity_section.key": "71716dcc-daf7-4bb1-bd19-63e29c4d582c",
+        "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af"
+      }
+    },
+    {
+      "key": "34f9984e-b4cb-484b-a2be-6fa0195f82e4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 14: Mini-Project - Animation"
+      },
+      "seeding_key": {
+        "activity_section.key": "34f9984e-b4cb-484b-a2be-6fa0195f82e4",
+        "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af"
+      }
+    },
+    {
+      "key": "fe7fdf71-a333-43fb-b488-5211b09d17e0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson 18: Project - Interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe7fdf71-a333-43fb-b488-5211b09d17e0",
+        "lesson_activity.key": "05e810e3-d088-4cfe-ac7e-a2bcef9179af"
+      }
+    },
+    {
+      "key": "8147748f-c5f2-4033-9f74-d8fcec8ad708",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8147748f-c5f2-4033-9f74-d8fcec8ad708",
+        "lesson_activity.key": "59a88a1f-8af3-4a9f-8edf-70ab272fdce4"
+      }
+    },
+    {
+      "key": "d8cf8079-049d-4bd3-b7d1-7965c37dcc07",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8cf8079-049d-4bd3-b7d1-7965c37dcc07",
+        "lesson_activity.key": "ceac91c2-c0d3-4958-b351-d3404d4cca74"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Lesson 7: Mini-Project - Robot Faces"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "31f4eafd-0775-4fe4-ad41-4a8100b34546"
+      },
+      "level_keys": [
+        "PL-summer- CSD U3 L7 mini project_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Lesson 11: Mini-Project - Captioned Scenes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL summer - CSD U3 Scene Example_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "71716dcc-daf7-4bb1-bd19-63e29c4d582c"
+      },
+      "level_keys": [
+        "PL summer - CSD U3 Scene Example_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Lesson 14: Mini-Project - Animation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL Summer - CSD web project animated example_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "34f9984e-b4cb-484b-a2be-6fa0195f82e4"
+      },
+      "level_keys": [
+        "PL Summer - CSD web project animated example_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Lesson 18: Project - Interactive Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "fe7fdf71-a333-43fb-b488-5211b09d17e0"
+      },
+      "level_keys": [
+        "PL Summer CSD U3 - Interactive Card - ExampleChoice_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "PL-summer- CSD U3 L7 mini project_2023",
+        "script_level.level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "31f4eafd-0775-4fe4-ad41-4a8100b34546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL summer - CSD U3 Scene Example_2023",
+        "script_level.level_keys": [
+          "PL summer - CSD U3 Scene Example_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "71716dcc-daf7-4bb1-bd19-63e29c4d582c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL Summer - CSD web project animated example_2023",
+        "script_level.level_keys": [
+          "PL Summer - CSD web project animated example_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "34f9984e-b4cb-484b-a2be-6fa0195f82e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL Summer CSD U3 - Interactive Card - ExampleChoice_2023",
+        "script_level.level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day3",
+        "activity_section.key": "fe7fdf71-a333-43fb-b488-5211b09d17e0"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 3 Agenda",
+      "url": "https://docs.google.com/document/d/17qrQzmNP9AbN1zg5yBrBPf2Z1nctaG0V33n17m-55G8/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1WMKc9_wt3GONzbOnkviQhUP4xE1USoib5_u_4klNHFQ/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_agenda",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_3_slides",
+        "script.name": "virtual-pl-csd-summer-day3"
+      }
+    }
   ],
   "scripts_student_resources": [
 
