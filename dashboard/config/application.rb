@@ -23,7 +23,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
