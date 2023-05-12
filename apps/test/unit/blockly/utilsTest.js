@@ -3,7 +3,7 @@ import {
   numberListToString,
   parseSoundPathString,
   printerStyleNumberRangeToList,
-} from '@cdo/apps/p5lab/utils';
+} from '@cdo/apps/blockly/utils';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 describe('the parseSoundPathString function', () => {

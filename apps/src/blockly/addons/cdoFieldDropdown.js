@@ -3,7 +3,7 @@ import {EMPTY_OPTION} from '../constants';
 import {
   printerStyleNumberRangeToList,
   numberListToString,
-} from '@cdo/apps/p5lab/utils';
+} from '@cdo/apps/blockly/utils';
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   /**

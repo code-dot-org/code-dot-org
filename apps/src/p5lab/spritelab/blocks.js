@@ -10,7 +10,7 @@ import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import experiments from '@cdo/apps/util/experiments';
-import {parseSoundPathString} from '@cdo/apps/p5lab/utils';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
