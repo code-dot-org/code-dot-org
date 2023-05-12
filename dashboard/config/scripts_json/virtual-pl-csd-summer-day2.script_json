@@ -2,13 +2,17 @@
   "script": {
     "name": "virtual-pl-csd-summer-day2",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:42:27 UTC",
+    "serialized_at": "2023-05-11 21:08:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -18,10 +22,221 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Intro to Day 2",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Unit 2 Connections",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Unit 3 Curriculum Investigation: Shapes & Variables",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Model Lesson 3: U3L3 Drawing in Game Lab",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Intro to Async",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Asynchronous Work",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Async Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Model Lesson 4: U3L5 Variables",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson Planning: Make a Plan",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Wrap Up",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Asynchronous Work",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    }
   ],
   "lesson_activities": [
 
@@ -36,13 +251,43 @@
 
   ],
   "resources": [
-
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 2 Agenda",
+      "url": "https://docs.google.com/document/d/11qQySP2NJJ_0mXimjLB7TBt7llAeZIDLbzAF5StpTFY/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_2_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSD Summer Workshop - Day 2 Slides",
+      "url": "https://docs.google.com/presentation/d/18sTUAQETzm0yhBpmKTvJm2PXvMYSV2faoSgAYPNYZeI/edit?usp=sharing",
+      "key": "2023_virtual_csd_summer_workshop_-_day_2_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_agenda",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csd_summer_workshop_-_day_2_slides",
+        "script.name": "virtual-pl-csd-summer-day2"
+      }
+    }
   ],
   "scripts_student_resources": [
 
