@@ -27,6 +27,7 @@ class LessonProgress extends Component {
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
+    isLabLoading: PropTypes.bool,
     navigateToLevelId: PropTypes.func,
   };
 
@@ -69,6 +70,10 @@ class LessonProgress extends Component {
       if (currentLevelChanged || statusChanged || badgeChanged) {
         return true;
       }
+    }
+
+    if (this.props.isLabLoading !== nextProps.isLabLoading) {
+      return true;
     }
 
     return this.props.width !== nextProps.width;
@@ -177,6 +182,18 @@ class LessonProgress extends Component {
                 ? () => navigateToLevelId(level.id)
                 : undefined;
 
+              // If we have a clickable bubble, which means we could switch to that level
+              // without a page reload, then there are two cases in which we will disable it:
+              // Firstly, if it's for the current level.  This means it's already the big
+              // bubble, and clicking it will have no effect.  (Unlike in a normal level
+              // which doesn't support in-page reloads, in which case clicking this bubble
+              // would reload the page.)
+              // Secondly, if the active lab is currently loading.  To keep things simple
+              // for the lab, we don't allow switching to another level while one is loading.
+              const bubbleDisabled =
+                onBubbleClick &&
+                (level.isCurrentLevel || this.props.isLabLoading);
+
               return (
                 <div
                   key={index}
@@ -188,7 +205,7 @@ class LessonProgress extends Component {
                 >
                   <ProgressBubble
                     level={level}
-                    disabled={false}
+                    disabled={bubbleDisabled}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
                     onClick={onBubbleClick}
@@ -283,6 +300,7 @@ export default connect(
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,
+    isLabLoading: state.lab.isLoading,
   }),
   dispatch => ({
     navigateToLevelId(levelId) {
