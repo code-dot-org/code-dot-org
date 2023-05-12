@@ -37,6 +37,12 @@ def command_line_options
       options[:passing_grades] = VALID_GRADES[0...num_passing_grades]
     end
 
+    opts.on(
+      '-m', '--merge', 'Use merge map file to merge ai rubric rows into teacher rubric rows.'
+    ) do
+      options[:merge] = true
+    end
+
     opts.on("-h", "--help", "Prints this help message") do
       puts opts
       exit
@@ -45,10 +51,13 @@ def command_line_options
   options
 end
 
-def read_inputs(prompt_file, rubric_file)
+def read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
   prompt = File.read(prompt_file)
-  rubric = File.read(rubric_file)
-  [prompt, rubric]
+  standard_rubric = File.read(standard_rubric_file)
+  split_rubric = File.read(split_rubric_file)
+  merge_map = File.exist?(merge_map_file) ? File.read(merge_map_file) : nil
+
+  [prompt, standard_rubric, split_rubric, merge_map]
 end
 
 def get_student_files
@@ -62,6 +71,24 @@ def get_expected_grades(expected_grades_file)
     expected_grades[student_id] = row.to_h
   end
   expected_grades
+end
+
+def validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
+  expected_concepts = expected_grades.values.first.keys[1..].sort
+  standard_concepts = CSV.parse(standard_rubric, headers: true).map {|row| row['Key Concept']}.sort
+  split_concepts = CSV.parse(split_rubric, headers: true).map {|row| row['Key Concept']}.sort
+
+  if options[:merge]
+    raise "missing merge map" if options[:merge] && merge_map.nil?
+
+    merge_concepts = CSV.parse(merge_map, headers: true).map {|row| row['Split Key Concept']}.sort
+    raise "merge map split concepts do not match split concepts:\n#{merge_concepts}\n#{split_concepts}" unless merge_concepts == split_concepts
+
+    merge_concepts = CSV.parse(merge_map, headers: true).map {|row| row['Original Key Concept']}.sort.uniq
+    raise "merge map standard concepts do not match expected concepts:\n#{merge_concepts}\n#{expected_concepts}" unless merge_concepts == expected_concepts
+  else
+    raise "standard concepts do not match expected concepts:\n#{standard_concepts}\n#{expected_concepts}" unless standard_concepts == expected_concepts
+  end
 end
 
 def parse_tsv(tsv_text)
@@ -301,19 +328,24 @@ def main
   options = command_line_options
   main_start_time = Time.now
   prompt_file = 'system_prompt.txt'
-  rubric_file = 'rubric.csv'
+  standard_rubric_file = 'standard_rubric.csv'
+  split_rubric_file = 'split_rubric.csv'
+  merge_map_file = 'merge_map.csv'
   expected_grades_file = 'expected_grades.csv'
   output_file = "output/#{options[:output_filename]}"
 
   system("mkdir -p cached_responses")
 
-  prompt, rubric = read_inputs(prompt_file, rubric_file)
+  prompt, standard_rubric, split_rubric, merge_map = read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
   student_files = get_student_files
   expected_grades = get_expected_grades(expected_grades_file)
+
+  validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
 
   actual_grades = Parallel.map(student_files, in_threads: 7) do |student_file|
     student_id = File.basename(student_file, '.js')
     student_code = File.read(student_file)
+    rubric = standard_rubric
     [student_id, grade_student_work(prompt, rubric, student_code, student_id, use_cached: options[:use_cached])]
   end
 
@@ -323,7 +355,7 @@ def main
 
   accuracy_by_criteria, overall_accuracy = compute_accuracy(expected_grades, actual_grades, options[:passing_grades])
   generate_html_output(
-    output_file, prompt, rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
+    output_file, prompt, standard_rubric, overall_accuracy, actual_grades, expected_grades, options[:passing_grades], accuracy_by_criteria, errors
   )
   puts "main finished in #{(Time.now - main_start_time).to_i} seconds"
 

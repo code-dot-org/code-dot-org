@@ -1,0 +1,31 @@
+Key Concept,Extensive Evidence,Convincing Evidence,Limited Evidence,No Evidence
+Multiple Sprites - Creation,"You created at least 2 sprites with animations
+var sprite1 = createSprite(x, y);
+sprite1.setAnimation(""animation_1"");","You created at least 2 sprites with animations
+var sprite = createSprite(x, y);
+sprite.setAnimation(""animation_1"");.","You created 1 sprite created with animations.
+var sprite = createSprite(x, y);
+sprite.setAnimation(""animation_1"");",No sprites are created.
+Multiple Sprites - Updated Properties,"You have at least 2 sprites with at least 2 different properties each (such as `sprite1.a`, `sprite1.b`, `sprite2.a`, `sprite2.b`) updated after the first time through the draw loop",You have at least 2 sprites with 1 property each (such as `sprite1.c` and `sprite2.c`) updated after the first time through the draw loop,You have 1 sprite with only 1 property (such as `sprite1.d`) updated after its creation,No sprite properties are updated after the sprites are created.
+Program Sequence,Your program is well-sequenced.,Your program contains up to 2 incorrectly sequenced code.,Your program has 3 to 4 errors in sequenced code.,Your program has at least 5 errors in sequenced code.
+Program Sequence - Draw Loop,All of the code in the draw loop has some effect after the first time through the draw loop,All of the code in the draw loop has some effect after the first time through the draw loop,Some of your code in the draw loop has no effect after the first time through the draw loop,No draw loop is used
+Elements Used - Number of Items,"You used at least 2 shapes, sprites or text","You used at least 1 shape, sprite or text","You used only 1 shape, sprite or text","You have no shapes, sprites or text"
+Elements Used - Coordinate System,"You have at least 2 shapes, sprites or text with x and y coordinates
+
+var sprite1 = createSprite(x, y);
+ellipse(x, y);
+text(""text"", x, y);","You have at least 1 shape, sprite or text with x and y coordinates
+
+var sprite1 = createSprite(x, y);
+ellipse(x, y);
+text(""text"", x, y);","You have only 1 shape, sprite or text with x and y coordinate
+
+var sprite1 = createSprite(x, y);
+ellipse(x, y);
+text(""text"", x, y);","You have no shapes, sprites, or text with x and y coordinates"
+Elements Used - Movement,"At least 2 sprites, shapes, or text have different properties updated in the draw loop (such as their x, y, scale, or rotation properties)","At least 1 sprite, shape or text has a property updated in the draw loop (such as its x, y, scale, or rotation property)","No sprites, shapes, or text have properties updating in the draw loop (such as their x, y, scale, or rotation)","No sprites, shapes, or text have properties updating in the draw loop (such as their x, y, scale, or rotation)"
+Variables - Number Used,At least 2 non-sprite variables have their values updated inside the draw loop,At least 1 non-sprite variable has its value updated inside the draw loop,At least 1 non-sprite variable1 is used but its value is not updated in the draw loop,No variables are used.
+Variables - Counter Pattern,"At least 1 variable or property uses the counter pattern, such as repeatedly incrementing or decrementing a variable or property inside the draw loop",At least 1 variables or property uses the counter pattern to increment or decrement a variable or property outside the draw loop,No variables or properties use the counter pattern to increment or decrement its value,No variables or properties use the counter pattern to increment or decrement its value
+User Input,Your program responds to at least 2 different types of input (such as keyboard or mouse),Your program responds to 1 type of input,Your program does not respond to input,Your program does not respond to input
+Conditionals - Number,Your program uses at least 2 conditionals inside the draw loop,Your program uses 1 conditional inside the draw loop,Your program does not use a conditional inside the draw loop,Your program does not use a conditional
+Conditionals - Variable,You have at least 1 conditional that uses a variable or sprite property in its boolean expression in the draw loop,You have at least 1 conditional that uses a variable or sprite property in its boolean expression in the draw loop,You have at least 1 conditional that uses user input instead of a variable or sprite property in its boolean expression inside the draw loop,Your program does not use a conditional
