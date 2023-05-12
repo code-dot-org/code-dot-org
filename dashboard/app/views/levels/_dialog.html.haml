@@ -23,5 +23,5 @@
 .clear
 
 - data = {}
-- data[nextlevellink] = local_assigns[:next_level_link] if local_assigns[:next_level_link]
+- data['nextlevellink'] = local_assigns[:next_level_link].to_json if local_assigns[:next_level_link]
 %script{src: webpack_asset_path('js/levels/_dialog.js'), data: data}
