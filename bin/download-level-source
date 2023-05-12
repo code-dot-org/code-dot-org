@@ -221,6 +221,11 @@ tokens.each do |channel|
   source_url = "#{REMOTE_URL}/v3/sources/#{channel}/main.json"
   versions_url = "#{source_url}/versions"
 
+  output_path = File.join(base_output_path, channel)
+  if Dir.exist?(output_path)
+    next
+  end
+
   # Download that file as JSON and parse it out to get version tags
   versions = download_json(versions_url)
   if versions.nil?
@@ -259,8 +264,9 @@ tokens.each do |channel|
     version_url = "#{source_url}?version=#{version['versionId']}"
     metadata = download_json(version_url)
 
+    next if metadata.nil?
+
     # Create the file path and detect JS vs XML
-    output_path = File.join(base_output_path, channel)
     output_file = File.join(output_path, "#{timestamp}.js")
     if metadata["source"].start_with?("<")
       output_file = File.join(output_path, "#{timestamp}.xml")
