@@ -60,7 +60,10 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       const numberList = printerStyleNumberRangeToList(this.config);
       // If numberList is assigned a non-empty array, it contains a list of numbers.
       // Convert this list to a string of dropdown options separated by commas and assign to options.
-      // otherwise, assign options to config string
+      // Otherwise, assign options to config string.
+      // Note that `config` is either a printer-style number range or a string of options separated
+      // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
+      // would NOT be supported.
       let options =
         numberList.length > 0 ? numberListToString(numberList) : this.config;
 
