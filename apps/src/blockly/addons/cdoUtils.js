@@ -114,7 +114,10 @@ export function getCode(workspace) {
     DCDO.get('blockly-json-experiment', true) &&
     (experiments.isEnabled(experiments.BLOCKLY_JSON) || Math.random() <= 0.05)
   ) {
-    testJsonSerialization(workspace);
+    // Execute the Json serialization test asynchronously so we don't block saving.
+    setTimeout(() => {
+      testJsonSerialization(workspace);
+    }, 0);
   }
   return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
 }
