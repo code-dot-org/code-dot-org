@@ -3,7 +3,6 @@ Whenever the mainline `blockly` package version is being upgraded, manual testin
 
 The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-30 minutes.
 
-
 # For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
 - Context menu works (copy, duplicate, collapse, expand, disable, delete, paste). Right-click anywhere on workspace to open menu.
@@ -18,7 +17,6 @@ The following is a manual test checklist to follow and may not be extensive. The
 - When unused blocks are dragged to a different location in workspace, the svg frame should be removed. The svg frame appears around unused blocks when the program is run.
 - Click on the question mark icon of the unused code's svg frame. Check that a callout is displayed and that callout is removed when you click on X.
 
-
 # Dance Lab
 Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/projects/dance/new) [production](https://studio.code.org/projects/dance/new)
 - Check blocks that contain different types of fields such as dropdown menus.
@@ -26,7 +24,6 @@ Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/pr
 - 'set background color' block should have a field that when click displays a 7x10 color grid while the 'set all tint' block's grid is 3x3.
 - Check functions. Compare with function definition blocks on production.
     Once you create a drag out a function definition block, a 'do something' block should appear in Toolbox under 'Functions'. Once the function definition is removed from workspace, the 'do something' block should also be removed.
-
 
 # Flappy
 Create a new Flappy project: [local](http://localhost-studio.code.org:3000/projects/flappy/new) [production](https://studio.code.org/projects/flappy/new)
@@ -42,7 +39,6 @@ Create a new Sports project: [local_sports](http://localhost-studio.code.org:300
 - Has 'skins' that are very similar - Sports and Basketball projects.
 - In Basketball, the 'set hand' block has 3 hands.
 - In Sports, the 'set player' block has 3 hands + 2 items.
-
 
 # Poetry
 Create a new Poetry project: [local_poetry](http://localhost-studio.code.org:3000/projects/poetry/new) [production_poetry](https://studio.code.org/projects/poetry/new)
@@ -62,16 +58,14 @@ Go to Project Beats: [local](http://localhost-studio.code.org:3000/projectbeats)
 - Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
 - Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
 
-
 # Pools
 Check pools for Dancelab, Poetry at [loca](http://localhost-studio.code.org:3000/pools) [production](https://studio.code.org/pools) '/pools'
 - Click on Dancelab and Poetry pools
     - Scroll down each pool page and make sure all blocks are rendered.
 - Check at least one block link - should display a read-only workspace for each block - config and generated code
 
-
-# Instructions (includes blocks)
-When checking levels below, switch to RTL. Using language dropdown at bottom left corner of page, select the first language in dropdown which is RTL.
+# Instructions in Levels
+When checking levels below that include blocks, check the instructions in a RTL language as well. Using language dropdown at bottom left corner of page, select the first language in dropdown which is RTL.
 
 Check that blocks are rendered as expected and check with different themes.
 
