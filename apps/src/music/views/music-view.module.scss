@@ -2,10 +2,11 @@
 $timeline-area-height: 200px;
 $default-border-radius: 4px;
 $default-spacing: 5px;
+$music-black: #121212;
 
 .container {
   position: relative;
-  background-color: black;
+  background-color: $music-black;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -20,7 +21,7 @@ $default-spacing: 5px;
 .instructionsArea {
   display: flex;
   color: white;
-  background-color: black;
+  background-color: $music-black;
   border-radius: $default-border-radius;
   padding: 0;
   box-sizing: border-box;
