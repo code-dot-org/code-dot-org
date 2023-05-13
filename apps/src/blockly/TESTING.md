@@ -27,8 +27,8 @@ Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/pr
 
 # Flappy
 Create a new Flappy project: [local](http://localhost-studio.code.org:3000/projects/flappy/new) [production](https://studio.code.org/projects/flappy/new)
-- Event blocks, for example, 'when hit the ground', have expected x/y position for blocks on workspace.
-- No shadow blocks in this lab.
+- Event blocks, for example, 'when hit the ground', have fixed x/y position for blocks on workspace.
+- No shadow blocks are included in this lab.
 
 # Bounce and related skins
 Create a new Bounce project: [local_bounce](http://localhost-studio.code.org:3000/projects/bounce/new) [production_bounce](https://studio.code.org/projects/bounce/new)
