@@ -32,6 +32,16 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     }
   }
 
+  loadState(state) {
+    if (this.loadLegacyState(CdoFieldDropdown, state)) {
+      return;
+    }
+    if (this.isOptionListDynamic()) {
+      this.getOptions(false);
+    }
+    this.setValue(state);
+  }
+
   /**
    * Converts xml element into dropdown field
    * @param element xml
