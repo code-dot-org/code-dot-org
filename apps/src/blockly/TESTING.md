@@ -1,12 +1,13 @@
 # Mainline Blockly Manual Testing
 Whenever the mainline `blockly` package version is being upgraded, manual testing should be included to ensure there are no regressions or issues with the version bump.
 
-The following is a manual test checklist to follow and may not be extensive:
+The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-30 minutes.
 
 # For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
-- Context menu works (copy, duplicate, collapse, expand, disable, delete, paste).
+- Context menu works (copy, duplicate, collapse, expand, disable, delete, paste). Right-click anywhere on workspace to open menu.
 - The different themes are rendered properly (Modern, High Contrast, Protanopia, Deuteranopia, Tritanopia, and each of these can be combined with dark mode). There are 10 different ways to render workspace.
+    - In particular, check High Contrast since font size changes and pay particular attention to custom fields.
 - Drag any block from toolbox. Block connects to other blocks. When you delete the block, the trashcan animates.
 - The cursor changes appropriately as you move it throughout workspace, hovering over different types of blocks.
 - Click on the 'Show Code' button and confirm generated code looks correct (modal).
@@ -17,4 +18,61 @@ The following is a manual test checklist to follow and may not be extensive:
 - Click on the question mark icon of the unused code's svg frame. Check that a callout is displayed and that callout is removed when you click on X.
 
 # Dance Lab
-- 
+Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/projects/dance/new) [production](https://studio.code.org/projects/dance/new)
+- Check blocks that contain different types of fields such as dropdown menus.
+- Check blocks that contain multiple fields, for example,  '_alternate every_measures_between_and_'.
+- 'set background color' block should have a field that when click displays a 7x10 color grid while the 'set all tint' block's grid is 3x3.
+- Check functions. Compare with function definition blocks on production.
+    Once you create a drag out a function definition block, a 'do something' block should appear in Toolbox under 'Functions'. Once the function definition is removed from workspace, the 'do something' block should also be removed.
+
+
+# Flappy
+Create a new Flappy project: [local](http://localhost-studio.code.org:3000/projects/flappy/new) [production](https://studio.code.org/projects/flappy/new)
+- Event blocks, for example, 'when hit the ground', have expected x/y position for blocks on workspace.
+- No shadow blocks in this lab.
+
+# Bounce and related skins
+Create a new Bounce project: [local_bounce](http://localhost-studio.code.org:3000/projects/bounce/new) [production_bounce](https://studio.code.org/projects/bounce/new)
+
+Create a new Basketball project: [local_basketball](http://localhost-studio.code.org:3000/projects/basketball/new) [production_basketball](https://studio.code.org/projects/basketball/new)
+
+Create a new Sports project: [local_sports](http://localhost-studio.code.org:3000/projects/sports/new) [production_sports](https://studio.code.org/projects/sports/new)
+- Has 'skins' that are very similar - Sports and Basketball projects.
+- In Basketball, the 'set hand' block has 3 hands.
+- In Sports, the 'set player' block has 3 hands + 2 items.
+
+
+# Poetry
+Create a new Poetry project: [local_poetry](http://localhost-studio.code.org:3000/projects/poetry/new) [production_poetry](https://studio.code.org/projects/poetry/new)
+
+Create a new Poetry HOC project: [local_poetry_hoc](http://localhost-studio.code.org:3000/projects/poetry/new) [production_poetry_hoc](https://studio.code.org/projects/poetry/new)
+- Check 2 versions of Poetry lab - poetry and poetry_hoc
+- Check shadow blocks, for example, 'set title' block. Most blocks that accept text have shadow blocks.
+- Check variables - variable picker (purple block with '???') with customized options - look for custom modals to rename variables. 
+- Under 'Effects', check the 'set background to' block. Its dropdown field is grid and includes a 'More' link. When 'More is clicked, modal opens to choose background to add to assets.
+- Check 'make new_sprite at_' block.
+    - Click on the animation dropdown, then click on Costumes button which should take you to Costumes tab.
+    - Click on location field, then confirm you can select new location of animation.
+
+# Project Beats / Music Lab
+Go to Project Beats: [local](http://localhost-studio.code.org:3000/projectbeats) [production](https://studio.code.org/projectbeats)
+- Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
+- Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
+
+# Pools
+Check pools for Dancelab, Poetry at [loca](http://localhost-studio.code.org:3000/pools) [production](https://studio.code.org/pools) '/pools'
+- Click on Dancelab and Poetry pools
+    - Scroll down each pool page and make sure all blocks are rendered.
+- Check at least one block link - should display a read-only workspace for each block - config and generated code
+
+# Instructions (includes blocks)
+When checking levels below, switch to RTL. Using language dropdown at bottom left corner of page, select the first language in dropdown which is RTL.
+
+Check that blocks are rendered as expected and check with different themes.
+
+- First level of dance lab: [local](http://localhost-studio.code.org:3000/s/dance-2019/lessons/1/levels/1) [production](https://studio.code.org/s/dance-2019/lessons/1/levels/1)
+    - This level includes imbedded blocks in instructions.
+- First level in poem art: [local](http://localhost-studio.code.org:3000/s/poem-art-2021/lessons/1/levels/1) [production](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
+    - This level includes blocks in hint
+- First level in flappy: [local](http://localhost-studio.code.org:3000/s/flappy/1) [production](https://studio.code.org/s/flappy/1) 
+    - First fail the level, then you should get a hint which includes a block
