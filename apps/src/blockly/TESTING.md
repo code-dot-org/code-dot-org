@@ -3,6 +3,7 @@ Whenever the mainline `blockly` package version is being upgraded, manual testin
 
 The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-30 minutes.
 
+
 # For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
 - Context menu works (copy, duplicate, collapse, expand, disable, delete, paste). Right-click anywhere on workspace to open menu.
@@ -16,6 +17,7 @@ The following is a manual test checklist to follow and may not be extensive. The
 - Drag blocks to workspace but don't attach blocks to the program. When the program is run, an svg frame should surround unused blocks.
 - When unused blocks are dragged to a different location in workspace, the svg frame should be removed. The svg frame appears around unused blocks when the program is run.
 - Click on the question mark icon of the unused code's svg frame. Check that a callout is displayed and that callout is removed when you click on X.
+
 
 # Dance Lab
 Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/projects/dance/new) [production](https://studio.code.org/projects/dance/new)
@@ -54,16 +56,19 @@ Create a new Poetry HOC project: [local_poetry_hoc](http://localhost-studio.code
     - Click on the animation dropdown, then click on Costumes button which should take you to Costumes tab.
     - Click on location field, then confirm you can select new location of animation.
 
+
 # Project Beats / Music Lab
 Go to Project Beats: [local](http://localhost-studio.code.org:3000/projectbeats) [production](https://studio.code.org/projectbeats)
 - Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
 - Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
+
 
 # Pools
 Check pools for Dancelab, Poetry at [loca](http://localhost-studio.code.org:3000/pools) [production](https://studio.code.org/pools) '/pools'
 - Click on Dancelab and Poetry pools
     - Scroll down each pool page and make sure all blocks are rendered.
 - Check at least one block link - should display a read-only workspace for each block - config and generated code
+
 
 # Instructions (includes blocks)
 When checking levels below, switch to RTL. Using language dropdown at bottom left corner of page, select the first language in dropdown which is RTL.
@@ -75,4 +80,4 @@ Check that blocks are rendered as expected and check with different themes.
 - First level in poem art: [local](http://localhost-studio.code.org:3000/s/poem-art-2021/lessons/1/levels/1) [production](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
     - This level includes blocks in hint
 - First level in flappy: [local](http://localhost-studio.code.org:3000/s/flappy/1) [production](https://studio.code.org/s/flappy/1) 
-    - First fail the level, then you should get a hint which includes a block
+    - First fail the level, then you should get a hint which includes a block.
