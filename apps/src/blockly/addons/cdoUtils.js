@@ -198,11 +198,12 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
 
       if (keys1.length !== keys2.length) {
         differences.push({
-          result: 'different length',
+          result: 'different number of keys',
           path: path,
-          key1: keys1.length,
-          key2: keys2.length,
+          keys1: keys1.toString(),
+          keys2: keys2.toString(),
         });
+        return differences; // Don't try comparing properties if we have the wrong amount.
       }
 
       for (let i = 0; i < keys1.length; i++) {
