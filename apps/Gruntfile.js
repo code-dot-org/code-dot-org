@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     const loadContext = isDirectory
       ? `let testsContext = require.context(${JSON.stringify(
           path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
+        )}, true, /\\.[j|t]sx?$/);`
       : '';
     const runTests = isDirectory
       ? 'testsContext.keys().forEach(testsContext);'
