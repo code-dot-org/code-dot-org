@@ -32,6 +32,12 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     }
   }
 
+  /**
+   * Sets the field's state based on the given state value. Should only be
+   * called by the serialization system.
+   *
+   * @param state The state we want to apply to the field.
+   */
   loadState(state) {
     if (this.loadLegacyState(CdoFieldDropdown, state)) {
       return;
@@ -40,6 +46,23 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       this.getOptions(false);
     }
     this.setValue(state);
+  }
+
+  /**
+   * Saves this fields value as something which can be serialized to JSON.
+   * Should only be called by the serialization system.
+   *
+   * @param _doFullSerialization If true, this signals to the field that if it
+   *     normally just saves a reference to some state (eg variable fields) it
+   *     should instead serialize the full state of the thing being referenced.
+   * @returns JSON serializable state.
+   */
+  saveState(_doFullSerialization) {
+    const legacyState = this.saveLegacyState(CdoFieldDropdown);
+    if (legacyState !== null) {
+      return legacyState;
+    }
+    return this.getValue();
   }
 
   /**
