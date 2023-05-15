@@ -10,7 +10,7 @@ import {
 
 export const dynamicTriggerExtension = function () {
   this.getInput('trigger').appendField(
-    new Blockly.FieldDropdown(function () {
+    new Blockly.MusicFieldDropdown(function () {
       return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
     }),
     'trigger'
