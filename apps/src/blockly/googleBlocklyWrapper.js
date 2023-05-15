@@ -12,6 +12,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import MusicFieldDropdown from './addons/musicFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
@@ -229,6 +230,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   const fieldOverrides = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['music_field_dropdown', 'MusicFieldDropdown', MusicFieldDropdown],
     // Overrides required for a customization of FieldTextInput
     // and its child classes.
     ['field_input', 'FieldTextInput', CdoFieldTextInput],
