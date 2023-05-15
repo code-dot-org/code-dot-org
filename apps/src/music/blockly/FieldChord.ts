@@ -7,6 +7,7 @@ import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
+const color = require('@cdo/apps/util/color');
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
@@ -101,7 +102,7 @@ export default class FieldChord extends Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#54595e',
+        fill: color.neutral_dark90,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -125,7 +126,7 @@ export default class FieldChord extends Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#59b9dc',
+          fill: color.light_cyan,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
@@ -169,7 +170,7 @@ export default class FieldChord extends Field {
 
     this.newDiv.style.color = 'white';
     this.newDiv.style.width = 'auto';
-    this.newDiv.style.backgroundColor = '#121212';
+    this.newDiv.style.backgroundColor = color.music_black;
     this.newDiv.style.padding = '5px';
 
     return this.newDiv;

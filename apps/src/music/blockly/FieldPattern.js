@@ -4,6 +4,7 @@ import PatternPanel from '../views/PatternPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
+import color from '@cdo/apps/util/color';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
@@ -90,7 +91,7 @@ class FieldPattern extends GoogleBlockly.Field {
 
     this.newDiv_.style.color = 'white';
     this.newDiv_.style.width = '420px';
-    this.newDiv_.style.backgroundColor = '#121212';
+    this.newDiv_.style.backgroundColor = color.music_black;
     this.newDiv_.style.padding = '5px';
 
     return this.newDiv_;
@@ -134,7 +135,7 @@ class FieldPattern extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#292F36',
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
