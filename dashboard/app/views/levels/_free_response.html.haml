@@ -57,7 +57,8 @@
 
   - height = level.height || '80'
   - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
-  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  - readonly = @view_options.readonly_workspace || (!allow_multiple_attempts && last_attempt)
+  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: readonly}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response', next_level_link: @next_level_link} unless in_level_group
