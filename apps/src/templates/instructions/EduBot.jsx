@@ -12,16 +12,16 @@ import {
   MessageInput,
   TypingIndicator,
   Button as ChatButton,
-  Loader
+  Loader,
 } from '@chatscope/chat-ui-kit-react';
 
 import Button from '@cdo/apps/templates/Button';
 import {openaiCompletion} from '@cdo/apps/util/openai';
-import eduBotPng from '@cdo/apps/templates/instructions/edubot.png';
+import eduBotPng from '@cdo/apps/templates/instructions/eduBot.png';
 import {Modal} from 'react-bootstrap';
 
 const systemPrompts = [
-  'You are a chatbot for a middle school classroom where they can chat with a historical figure. Do not answer any questions that are not about the formation of america and the founding fathers. You will be acting as george washington and every question you answer must be from his perspective.'
+  'You are a chatbot for a middle school classroom where they can chat with a historical figure. Do not answer any questions that are not about the formation of america and the founding fathers. You will be acting as george washington and every question you answer must be from his perspective.',
   // Add more prompts here...
 ];
 
@@ -35,7 +35,7 @@ class EduBot extends React.Component {
       loeading: false,
       conversation: [],
       userInput: '',
-      savingPrompt: false
+      savingPrompt: false,
     };
   }
 
@@ -57,7 +57,7 @@ class EduBot extends React.Component {
     this.setState({
       conversation: updatedConversation,
       userInput: '',
-      loading: true
+      loading: true,
     });
 
     const payload = this.formatForOpenAI(updatedConversation);
@@ -68,7 +68,7 @@ class EduBot extends React.Component {
     openaiCompletion(payload).done(({content, role}) => {
       this.setState({
         conversation: [...updatedConversation, {sender: role, text: content}],
-        loading: false
+        loading: false,
       });
     });
   };
@@ -83,7 +83,7 @@ class EduBot extends React.Component {
           conversation: [{sender: role, text: content}],
           savingPrompt: false,
           userInput: '',
-          editSystemPrompt: false
+          editSystemPrompt: false,
         });
       }
     );
@@ -106,7 +106,7 @@ class EduBot extends React.Component {
             bottom: 20,
             right: 20,
             zIndex: 1000,
-            backgroundColor: '#6232a8'
+            backgroundColor: '#6232a8',
           }}
         >
           Open EduBot
@@ -123,7 +123,7 @@ class EduBot extends React.Component {
           width: '600px',
           bottom: 0,
           right: 0,
-          zIndex: 1000
+          zIndex: 1000,
         }}
       >
         <MainContainer>
@@ -161,7 +161,7 @@ class EduBot extends React.Component {
                       message: message.text,
                       sender: message.sender,
                       direction:
-                        message.sender === 'user' ? 'outgoing' : 'incoming'
+                        message.sender === 'user' ? 'outgoing' : 'incoming',
                     }}
                   />
                 );
