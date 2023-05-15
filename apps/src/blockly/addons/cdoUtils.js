@@ -127,6 +127,7 @@ export function getCode(workspace) {
 }
 
 function testJsonSerialization(workspace) {
+  const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
   const FIREHOSE_STUDY = 'blockly-json';
   const FIREHOSE_EVENT = 'block-differences';
   Blockly.Events.disable();
@@ -145,7 +146,7 @@ function testJsonSerialization(workspace) {
 
   // compareBlockArrays returns an array of differences found.
   const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
-  if (differences.length > 0) {
+  if (differences.length > 0 || experimentEnabled) {
     // Log a record to Firehose/Redshift.
     const recordData = {
       projectUrl: dashboard.project.getShareUrl(),
