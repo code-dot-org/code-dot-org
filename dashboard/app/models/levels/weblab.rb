@@ -60,8 +60,11 @@ class Weblab < Level
           scope: [:data, dashboard],
           default: nil,
         )
+        puts "dashboard: " + dashboard
+        puts "localized_property: " + localized_property.to_s
         # Select value from properties json
         value = localized_property.nil? ? JSONValue.value(properties[dashboard].presence) : localized_property
+        puts "value: " + value.to_s
         apps_prop_name = dashboard.camelize(:lower)
         # Don't override existing valid (non-nil/empty) values
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
