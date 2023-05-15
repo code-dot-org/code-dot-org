@@ -64,8 +64,8 @@ class Weblab < Level
 
       # FND-985 Create shared API to get localized level properties.
       if should_localize?
-        localized_long_instructions = I18n.t(name, scope: [:data, 'long_instructions'], default: nil)
-        level_prop['longInstructions'] = localized_long_instructions unless localized_long_instructions.nil?
+        localized_long_instructions = I18n.t(name, scope: [:data, 'long_instructions'], default: level_prop['longInstructions'])
+        level_prop['longInstructions'] = localized_long_instructions
       end
 
       level_prop['levelId'] = level_num
