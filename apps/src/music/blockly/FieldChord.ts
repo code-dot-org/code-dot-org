@@ -80,7 +80,7 @@ export default class FieldChord extends Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -168,7 +168,7 @@ export default class FieldChord extends Field {
 
     this.renderContent();
 
-    this.newDiv.style.color = 'white';
+    this.newDiv.style.color = color.neutral_light;
     this.newDiv.style.width = 'auto';
     this.newDiv.style.backgroundColor = color.music_black;
     this.newDiv.style.padding = '5px';
