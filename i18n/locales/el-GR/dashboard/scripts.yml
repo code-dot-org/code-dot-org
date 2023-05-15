@@ -299,6 +299,7 @@ el:
           description_short: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
           description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
           student_description: Αναμείξτε και ταιριάξτε σε όλο το εύρος των αθλημάτων
+          name: αθλήματα
         csp3-support:
           lesson_groups:
             required:
@@ -418,6 +419,7 @@ el:
           description_short: Ο Ναρκαλιευτής επέστρεψε με μια ολοκαίνουρια δραστηριότητα για την Ώρα του Κώδικα!
           description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
           student_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+          name: ήρωας
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -597,6 +599,7 @@ el:
           description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ Ούρμπαν, Κιάρα, και 25 ακόμα!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
+          name: χορός
         aquatic:
           title: 'Minecraft: Υδάτινο Ταξίδι'
           description_short: Το Minecraft επιστρέφει με μία ολοκαίνουργια δραστηριότητα για την Ώρα του Κώδικα!
@@ -1714,6 +1717,8 @@ el:
               name: Μεταβλητές
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Μονοδιάστατες (1D) συστοιχίες
             lesson-3:
               name: Βρόχοι Για
         csa8-2023:
@@ -1879,3 +1884,20 @@ el:
           lessons:
             lesson-3:
               name: Εισαγωγή
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Αξιολόγηση
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-3:
+              display_name: Χαρακτήρας
+            lessonGroup-4:
+              display_name: Μεταβλητές
+          description_short: Μάθετε όλες τις έννοιες των Θεμελιωδών της Επιστήμης της Πληροφορικής και δημιουργήστε τη δική σας τέχνη, ιστορία ή παιχνίδι.
