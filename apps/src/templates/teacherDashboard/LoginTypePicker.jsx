@@ -104,7 +104,6 @@ class LoginTypePicker extends Component {
       },
       warningHeader: {
         color: 'red',
-        fontWeight: 'bold',
       },
       footer: {
         width: styleConstants['content-width'],
@@ -141,7 +140,9 @@ class LoginTypePicker extends Component {
               style={style.warningIcon}
             />
             <span style={style.warningHeader}>
-              {i18n.addStudentsToSectionPermissionHeader() + ' '}
+              <strong>
+                {i18n.addStudentsToSectionPermissionHeader() + ' '}
+              </strong>
             </span>
             {i18n.addStudentsToSectionPermissionWarning() + ' '}
             <Button
