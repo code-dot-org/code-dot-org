@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICONS TEST</title>
+    <!-- delete font awesome script tag before committing, add script after commit. (Prevent secret key for being exposed)   -->
+    <script src="https://kit.fontawesome.com/ea2d9d4413.js" crossorigin="anonymous"></script>
+    <style>
+        button{
+            all: unset;
+            color: #292F36;
+            padding: 8px 16px;
+            border: 2px solid #292F36;
+            border-radius: 4px;
+
+            box-sizing: border-box;
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        .middle-button {
+            font-size: 16px;
+        }
+
+        .large-button {
+            font-size: 20px;
+        }
+
+        #our-shape > div {
+            display: flex;
+            gap: 30px;
+        }
+
+        .font-awesome-text > div {
+            display: flex;
+            gap: 30px;
+        }
+
+        .font-awesome-text .middle-button i {
+            font-size: 20px;
+        }
+        .font-awesome-text .large-button i {
+            font-size: 22px;
+        }
+
+        .font-awesome-text.from-svg .middle-button i{
+            font-size: 19.2px;
+        }
+
+        #option-1 {
+
+        }
+
+        #option-2 {
+
+        }
+
+        #option-3 {
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<h1>Test and compare different Icons approach.</h1>
+
+<div id="our-shape">
+    <Heding2>Our shape Icon</Heding2>
+    <div>
+        <button class="middle-button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 18.3333C12.2102 18.3333 14.3298 17.4554 15.8926 15.8926C17.4554 14.3298 18.3334 12.2101 18.3334 10C18.3334 7.78987 17.4554 5.67025 15.8926 4.10745C14.3298 2.54465 12.2102 1.66667 10 1.66667C7.78988 1.66667 5.67027 2.54465 4.10746 4.10745C2.54466 5.67025 1.66669 7.78987 1.66669 10C1.66669 12.2101 2.54466 14.3298 4.10746 15.8926C5.67027 17.4554 7.78988 18.3333 10 18.3333ZM5.88869 12.3177L6.81968 11.8522C7.10289 12.4219 8.16408 13.6491 10 13.6491C11.836 13.6491 12.8939 12.4219 13.1804 11.8522L14.1113 12.3177C13.7012 13.1348 12.3308 14.6875 10 14.6875C7.66929 14.6875 6.29885 13.1348 5.88869 12.3177ZM6.36721 8.43751C6.36721 8.16124 6.47695 7.89629 6.67231 7.70094C6.86766 7.50559 7.13261 7.39584 7.40887 7.39584C7.68514 7.39584 7.95009 7.50559 8.14544 7.70094C8.3408 7.89629 8.45054 8.16124 8.45054 8.43751C8.45054 8.71377 8.3408 8.97872 8.14544 9.17408C7.95009 9.36943 7.68514 9.47917 7.40887 9.47917C7.13261 9.47917 6.86766 9.36943 6.67231 9.17408C6.47695 8.97872 6.36721 8.71377 6.36721 8.43751ZM12.6172 7.39584C12.8935 7.39584 13.1584 7.50559 13.3538 7.70094C13.5491 7.89629 13.6589 8.16124 13.6589 8.43751C13.6589 8.71377 13.5491 8.97872 13.3538 9.17408C13.1584 9.36943 12.8935 9.47917 12.6172 9.47917C12.3409 9.47917 12.076 9.36943 11.8806 9.17408C11.6853 8.97872 11.5755 8.71377 11.5755 8.43751C11.5755 8.16124 11.6853 7.89629 11.8806 7.70094C12.076 7.50559 12.3409 7.39584 12.6172 7.39584Z" fill="#292F36"/>
+            </svg>
+            <span>Button</span>
+        </button>
+        <button class="large-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 9.34784 20.9464 6.8043 19.0711 4.92893C17.1957 3.05357 14.6522 2 12 2C9.34784 2 6.8043 3.05357 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C6.8043 20.9464 9.34784 22 12 22ZM7.06641 14.7813L8.18359 14.2227C8.52344 14.9062 9.79687 16.3789 12 16.3789C14.2031 16.3789 15.4727 14.9062 15.8164 14.2227L16.9336 14.7813C16.4414 15.7617 14.7969 17.625 12 17.625C9.20313 17.625 7.55859 15.7617 7.06641 14.7813ZM7.64062 10.125C7.64062 9.79348 7.77232 9.47554 8.00674 9.24112C8.24116 9.0067 8.5591 8.875 8.89062 8.875C9.22215 8.875 9.54009 9.0067 9.77451 9.24112C10.0089 9.47554 10.1406 9.79348 10.1406 10.125C10.1406 10.4565 10.0089 10.7745 9.77451 11.0089C9.54009 11.2433 9.22215 11.375 8.89062 11.375C8.5591 11.375 8.24116 11.2433 8.00674 11.0089C7.77232 10.7745 7.64062 10.4565 7.64062 10.125ZM15.1406 8.875C15.4721 8.875 15.7901 9.0067 16.0245 9.24112C16.2589 9.47554 16.3906 9.79348 16.3906 10.125C16.3906 10.4565 16.2589 10.7745 16.0245 11.0089C15.7901 11.2433 15.4721 11.375 15.1406 11.375C14.8091 11.375 14.4912 11.2433 14.2567 11.0089C14.0223 10.7745 13.8906 10.4565 13.8906 10.125C13.8906 9.79348 14.0223 9.47554 14.2567 9.24112C14.4912 9.0067 14.8091 8.875 15.1406 8.875Z" fill="#292F36"/>
+            </svg>
+            <span>Button</span>
+        </button>
+    </div>
+</div>
+
+<hr/>
+
+<div class="font-awesome-text">
+    <Heding2>Font Awesome Text</Heding2>
+    <div>
+        <button class="middle-button">
+            <i class="fa fa-smile"></i>
+            <span>Button</span>
+        </button>
+        <button class="large-button">
+            <i class="fa fa-smile"></i>
+            <span>Button</span>
+        </button>
+    </div>
+</div>
+
+<hr/>
+
+<div class="font-awesome-text">
+    <Heding2>Font Awesome Text (Fixed width)</Heding2>
+    <div>
+        <button class="middle-button">
+            <i class="fa fa-smile fa-fw"></i>
+            <span>Button</span>
+        </button>
+        <button class="large-button">
+            <i class="fa fa-smile fa-fw"></i>
+            <span>Button</span>
+        </button>
+    </div>
+</div>
+
+<hr/>
+
+<div class="font-awesome-text from-svg">
+    <Heding2>Font Awesome Text (From SVG)</Heding2>
+    <div>
+        <button class="middle-button">
+            <i class="fa fa-smile fa-fw"></i>
+            <span>Button</span>
+        </button>
+<!--        <button class="large-button">-->
+<!--            <i class="fa fa-smile fa-fw"></i>-->
+<!--            <span>Button</span>-->
+<!--        </button>-->
+    </div>
+</div>
+
+<hr/>
+
+<div id="">
+
+</div>
+
+
+
+
+<div id="option-1">
+    <i class="fa fa-house"></i>
+    <i class="fa fa-smile"></i>
+    <i class="fa fa-book"></i>
+</div>
+
+<div id="option-2">
+
+</div>
+
+<div id="option-3">
+
+</div>
+
+</body>
+</html>
