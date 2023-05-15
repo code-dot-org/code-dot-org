@@ -3,17 +3,24 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##The Food Chain:
+##The Food Chain
+###All ecosystems have a delicately balanced food chain. The first two lessons demonstrated a marine ecosystem food chain:
 
-###1.  The sun provides energy for photosynthesis in algae.
-###2. The algae is eaten by fish.
-###3. Humans catch the fish using nets and boats then they eat it.
+<div style= "width: 80%"> 
 
-![](https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg)
+>###1. The sun provides energy for photosynthesis to occur in algae.
+>###2. The algae is eaten by fish.
+>###3. Fish are caught and eaten by humans, who use fishing boats with nets. 
 
->**All ecosystems have a delicately balanced food chain. In the first two lessons we observed the effects of overfishing. The boat took too many fish which lead to too much algae. Then we modeled three sustainable fishing practices so the boat removed less fish from the ecosystem.** <br> <br>
->In the next level you will explore a few other ecosystems that are facing challenges. <br><br>
->Can you modify the simulation to bring the system back into balance? 
+</div>
+
+<img src="https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg" style= "width:80%">
+
+###In our simulation, the boat took too many fish out of the ecosystem. Since fish eat the algae, removing fish meant that the algae was overgrown. Too much algae in the ecosystem caused the coral to die.
+ <br><br>
+>**In the next level, you will explore a few other ecosystems that are facing challenges from human interference. You will get to choose what ecosystem to balance.**   
+  <br>
+>Will you be a Rainforest ecologist, Desert ecologist, Wetlands ecologist, or Arctic ecologist? The choice is yours!
 
 
 MARKDOWN
