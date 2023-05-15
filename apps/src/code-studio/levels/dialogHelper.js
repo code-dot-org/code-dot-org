@@ -103,7 +103,9 @@ export function processResults(onComplete, beforeHook) {
   }
   function sendResultsCompletion() {
     var results = getResult();
-    const {errorDialog, pass, response, result} = results;
+    var response = results.response;
+    var result = results.result;
+    var errorDialog = results.errorDialog;
     var testResult = results.testResult ? results.testResult : result ? 100 : 0;
     var submitted = results.submitted || false;
 
@@ -135,11 +137,10 @@ export function processResults(onComplete, beforeHook) {
       app: appOptions.dialog.app,
       level: appOptions.dialog.level,
       result: result,
-      pass: pass || result,
+      pass: result,
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {
-        console.log(lastServerResponse);
         var lastServerResponse =
           window.dashboard.reporting.getLastServerResponse();
         var willRedirect = !!lastServerResponse.nextRedirect;

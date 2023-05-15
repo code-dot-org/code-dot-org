@@ -11912,16 +11912,3 @@ en:
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
-        bethany-test:
-          lessons: {}
-          lesson_groups:
-            lessonGroup-2:
-              display_name: CFU Allow Multiple Attempts
-            lessonGroup-3:
-              display_name: SS Standards
-          name: bethany-test
-          title: ''
-          description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
