@@ -33,17 +33,23 @@ def command_line_options
     end
 
     opts.on(
-      '-p', '--num_passing_grades N', Integer, 'Number of grades which are considered passing.',
-      'If specified, report based on whether the pass/fail result is accurate for each criteria.',
-      'For example, N=2 means that Extensive Evidence and Convincing Evidence are both passing.'
-    ) do |num_passing_grades|
-      options[:passing_grades] = VALID_GRADES[0...num_passing_grades]
+      '-l', '--llm-model MODEL_NAME', String, "Reserved. Which LLM model to use. Currently GPT-4, but could include other LLMs in the future."
+    ) do
+      options[:llm_model] = 'gpt-4'
     end
 
     opts.on(
       '-m', '--merge', 'Use merge map file to merge ai rubric rows into teacher rubric rows.'
     ) do
       options[:merge] = true
+    end
+
+    opts.on(
+      '-p', '--num_passing_grades N', Integer, 'Number of grades which are considered passing.',
+      'If specified, report based on whether the pass/fail result is accurate for each criteria.',
+      'For example, N=2 means that Extensive Evidence and Convincing Evidence are both passing.'
+    ) do |num_passing_grades|
+      options[:passing_grades] = VALID_GRADES[0...num_passing_grades]
     end
 
     opts.on("-h", "--help", "Prints this help message") do
