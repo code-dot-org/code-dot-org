@@ -51,7 +51,7 @@ describe('Simple2Sequencer', () => {
     expect(sequencer.getPlaybackEvents()[0].triggered).to.be.true;
   });
 
-  it('Adds a sound event', () => {
+  it('adds a sound event', () => {
     sequencer.newSequence();
     sequencer.startFunctionContext('when_run');
     sequencer.playSound('id', 'blockId');
@@ -71,7 +71,7 @@ describe('Simple2Sequencer', () => {
     expect((event as SoundEvent).soundType).to.equal(testSound.type);
   });
 
-  it('Adds a pattern event', () => {
+  it('adds a pattern event', () => {
     const patternValue: PatternEventValue = {
       kit: 'machine',
       events: [],
@@ -94,7 +94,7 @@ describe('Simple2Sequencer', () => {
     expect((event as PatternEvent).value).to.equal(patternValue);
   });
 
-  it('Adds a chord event', () => {
+  it('adds a chord event', () => {
     const chordValue: ChordEventValue = {
       instrument: 'piano',
       notes: [],
@@ -122,6 +122,7 @@ describe('Simple2Sequencer', () => {
     sequencer.newSequence();
     sequencer.startFunctionContext('when_run');
 
+    // Preserve indentation
     // prettier-ignore
     {
       sequencer.playSequential();
@@ -252,7 +253,7 @@ describe('Simple2Sequencer', () => {
     sequencer.newSequence();
     sequencer.startFunctionContext('when_run');
 
-    // Preserve the indentation:
+    // Preserve indentation:
     // prettier-ignore
     {
       // Override to play index 1.
