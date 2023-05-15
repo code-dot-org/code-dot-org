@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import SoundsPanel from '../views/SoundsPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
+import color from '@cdo/apps/util/color';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
@@ -181,7 +182,7 @@ class FieldSounds extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#3f444b',
+        fill: color.neutral_dark90,
         x: 1,
         y: 1,
         width: this.currentFieldWidth,
