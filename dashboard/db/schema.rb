@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_23_175726) do
+ActiveRecord::Schema.define(version: 2023_05_15_203259) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -785,6 +785,13 @@ ActiveRecord::Schema.define(version: 2023_03_23_175726) do
     t.string "kind", default: "sublevel", null: false
     t.index ["child_level_id"], name: "index_parent_levels_child_levels_on_child_level_id"
     t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id"
+  end
+
+  create_table "parental_permission_requests", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "parent_email", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "pd_accepted_programs", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
