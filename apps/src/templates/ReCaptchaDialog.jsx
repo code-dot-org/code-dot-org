@@ -120,6 +120,7 @@ export default class ReCaptchaDialog extends React.Component {
               color={Button.ButtonColor.gray}
             />
             <Button
+              id={'uitest-recaptcha-submit'}
               text={submitText}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
