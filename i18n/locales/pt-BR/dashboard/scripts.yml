@@ -4796,6 +4796,32 @@ pt:
             lessonGroup-2:
               display_name: Dia 4
           title: Dia 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introdução
+            lesson-12:
+              name: Resumo
+          title: Dia 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Resumo
+          title: Dia 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Resumo
+          title: Dia 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Resumo
+          title: Dia 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Avaliação
         csd-post-survey-2023:
           title: Pesquisa Pós-Curso
         focus-on-data-post-survey-2023:
@@ -4810,3 +4836,15 @@ pt:
           title: Pesquisa Pós-Curso
         focus-on-creativity-post-survey-2023:
           title: Pesquisa Pós-Curso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sprite
+            lessonGroup-4:
+              display_name: variáveis
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
