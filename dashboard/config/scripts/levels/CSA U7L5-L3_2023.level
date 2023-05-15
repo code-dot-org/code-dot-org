@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-04-11T14:08:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object and call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getLikes()</code> method. Then change the number of likes for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object and call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getLikes()</code> method again.\r\n\r\nWhy does the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">isTrending()</code> method return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> even if the number of likes for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object is changed?",
@@ -14,16 +19,12 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U7L5-L1 Overriding PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U7L5-L1 Overriding PBT_2023"
+    "teacher_markdown": "`isTrending` is only set in the constructor. It is not changed when the number of likes is changed."
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-04-11T14:08:57.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T14:08:57.843+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U7L5-L2_2023\"},{\"changed_at\":\"2023-04-11 14:08:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:05:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T14:08:57.843+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L2_2023\\\"\"],\"cloned_from\":\"CSA U7L5-L2_2023\"},{\"changed_at\":\"2023-04-11 14:08:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:05:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-11 20:32:22 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
