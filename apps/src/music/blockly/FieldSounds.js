@@ -60,7 +60,7 @@ class FieldSounds extends GoogleBlockly.Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -87,9 +87,9 @@ class FieldSounds extends GoogleBlockly.Field {
 
     this.renderContent();
 
-    this.newDiv_.style.color = 'white';
+    this.newDiv_.style.color = color.neutral_light;
     this.newDiv_.style.width = '300px';
-    this.newDiv_.style.backgroundColor = 'black';
+    this.newDiv_.style.backgroundColor = color.music_black;
     this.newDiv_.style.padding = '5px';
     this.newDiv_.style.cursor = 'pointer';
 
@@ -152,7 +152,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Create the text element so we can measure it.
     const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
-      fill: 'white',
+      fill: color.neutral_light,
       x: 25,
       y: 16,
       width: 100,

@@ -62,7 +62,7 @@ class FieldPattern extends GoogleBlockly.Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -89,7 +89,7 @@ class FieldPattern extends GoogleBlockly.Field {
 
     this.renderContent();
 
-    this.newDiv_.style.color = 'white';
+    this.newDiv_.style.color = color.neutral_light;
     this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = color.music_black;
     this.newDiv_.style.padding = '5px';
@@ -158,7 +158,7 @@ class FieldPattern extends GoogleBlockly.Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: 'white',
+          fill: color.neutral_light,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,

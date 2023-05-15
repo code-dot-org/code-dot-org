@@ -13,7 +13,7 @@
 }
 
 .controlButtons {
-  color: $white;
+  color: $neutral_light;
   margin: 5px 15px;
   text-align: center;
 
@@ -36,13 +36,13 @@
   font-size: 30px;
 
   &Link {
-    color: white;
+    color: $neutral_light;
   }
 }
 
 .startOverButton {
   background-color: rgba(0 0 0 / 0);
-  color: $white;
+  color: $neutral_light;
   font-size: 14px;
   padding: 0 8px;
 }
