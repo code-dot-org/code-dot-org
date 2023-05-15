@@ -12237,6 +12237,75 @@ es:
             lessonGroup-2:
               display_name: Día 4
           title: Día 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introducción
+            lesson-12:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Actividad de cierre
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
         csd-post-survey-2023:
           title: Encuesta de final de curso
         focus-on-data-post-survey-2023:
@@ -12251,3 +12320,30 @@ es:
           title: Encuesta de final de curso
         focus-on-creativity-post-survey-2023:
           title: Encuesta de final de curso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciudadanía Digital
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variables
+            lessonGroup-5:
+              display_name: Datos y Simulaciones
+            lessonGroup-6:
+              display_name: Proyecto de fin de curso
+          description_audience: De 9 a 13 años
+          description_short: Aprende todos los conceptos de Fundamentos de Informática
+            y crea tu propio arte, historia o juego.
+          description: Hemos creado el curso F para alumnos de quinto curso. El curso
+            comienza analizando cómo los usuarios eligen las aplicaciones que utilizan.
+            A continuación, los alumnos aprenden a crear una serie de aplicaciones
+            de Laboratorio de Sprite que también ofrecen opciones al usuario. En las
+            últimas lecciones del curso, los estudiantes aprenderán sobre las variables
+            en una serie de contextos. A lo largo de este curso, los estudiantes tienen
+            mayor autonomía y más opciones. Al final del curso, los estudiantes habrán
+            creado proyectos interactivos para compartir con sus amigos y familiares.
+          student_description: Aprende a codificar con sprites y variables, así como
+            a debatir el impacto social de la informática e Internet. Al final de
+            este curso, diseña y crea un proyecto que puedas compartir con tus amigos
+            y familiares.
