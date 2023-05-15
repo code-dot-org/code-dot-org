@@ -62,6 +62,7 @@ import {
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
 import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
+import SaveStatus from './SaveStatus';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -671,11 +672,16 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.LEFT)}
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
+              {(this.props.inIncubator ||
+                this.props.progressLevelType === ProgressLevelType.LEVEL) && (
+                <div className={moduleStyles.saveStatusContainer}>
+                  <SaveStatus />
+                </div>
+              )}
               <div className={moduleStyles.topButtonsContainer}>
                 <TopButtons
                   clearCode={this.clearCode}
                   uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={this.props.inIncubator}
                 />
               </div>
               <div id="blockly-div" />
