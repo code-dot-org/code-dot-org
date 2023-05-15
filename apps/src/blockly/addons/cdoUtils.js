@@ -109,13 +109,17 @@ export function getUserTheme(themeOption) {
 }
 
 export function getCode(workspace) {
-  // Begin collecting data about our ability to correctly serialize a workspace in JSON format.
-  if (
-    DCDO.get('blockly-json-experiment', true) &&
-    (experiments.isEnabled(experiments.BLOCKLY_JSON) || Math.random() <= 0.05)
-  ) {
-    // Execute the Json serialization test asynchronously so we don't block saving.
+  const dcdoFlagSet = DCDO.get('blockly-json-experiment', false);
+  const dcdoSampleRate = DCDO.get('blockly-json-sample-rate', 0);
+  const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
+
+  // This feature can be turned off with DCDO.set('blockly-json-experiment', false).
+  // Additionally rate must be specified, e.g. DCDO.set('blockly-json-sample-rate', 0.05).
+  // The rate is ignored if the user has added ?enableExperiments=blocklyJson to the URL.
+  if (dcdoFlagSet && (experimentEnabled || dcdoSampleRate >= Math.random())) {
+    // Begin collecting data about our ability to correctly serialize a workspace in JSON format.
     setTimeout(() => {
+      // Execute the Json serialization test asynchronously so we don't block saving.
       testJsonSerialization(workspace);
     }, 0);
   }
