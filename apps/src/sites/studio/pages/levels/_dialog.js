@@ -31,7 +31,6 @@ $(document).ready(() => {
       $('.unsubmitButton').show();
     }
 
-    console.log(appOptions);
     // Set the entire page background to be light grey.
     $('.full_container').addClass('submitted_readonly');
   }
@@ -72,7 +71,6 @@ $(document).ready(() => {
     }
 
     var result = getResult();
-    console.log(result);
     if (result.confirmationDialog) {
       // This is only used by level_group.js, and only uses the React approach to
       // showDialog

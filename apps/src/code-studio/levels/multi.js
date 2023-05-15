@@ -162,7 +162,6 @@ Multi.prototype.ready = function () {
 
   $('#' + this.id + ' .answerbutton').click(
     $.proxy(function (event) {
-      //console.log("answerbutton clicked", this.id);
       this.choiceClicked($(event.currentTarget));
     }, this)
   );
@@ -211,7 +210,6 @@ Multi.prototype.ready = function () {
     this.selectedAnswers.length === this.numAnswers &&
     !this.allowMultipleAttempts
   ) {
-    console.log('here!!!!');
     this.lockAnswers();
   }
 };
@@ -285,7 +283,6 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     pass = result;
     submitted = false;
   }
-  console.log('getResult:', result, submitted);
 
   return {
     response: answer,
@@ -315,18 +312,11 @@ Multi.prototype.getCurrentAnswerFeedback = function () {
 
 // This behavior should only be available when this is a standalone Multi.
 Multi.prototype.submitButtonClick = function () {
-  console.log('hello!');
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
   }
-  /*
-  if (!this.allowMultipleAttempts) {
-    console.log('here!!!')
-    this.lockAnswers();
-    this.submitAllowed = false; 
-  }
-*/
+ 
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
   if (
