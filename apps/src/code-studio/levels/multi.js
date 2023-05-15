@@ -316,7 +316,7 @@ Multi.prototype.submitButtonClick = function () {
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
   }
- 
+
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
   if (
