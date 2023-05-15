@@ -1050,3 +1050,13 @@ gl:
           lessons:
             lesson-3:
               name: Introdución
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introdución
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Variables
