@@ -189,6 +189,7 @@ def main
   output_file = "output/#{options[:output_filename]}"
 
   system("mkdir -p cached_responses")
+  system("rm -f cached_responses/*") unless options[:use_cached]
 
   prompt, standard_rubric, split_rubric, merge_map = read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
   student_files = get_student_files
