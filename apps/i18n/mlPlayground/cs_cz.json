@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Naposledy aktualizováno",
   "predictButton": "Předpověď",
+  "uniqueOptionsWarningNotice": "Poznámka",
   "datasets": {
     "medical_priority": {
       "fields": {
