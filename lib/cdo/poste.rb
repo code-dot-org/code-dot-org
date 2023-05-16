@@ -292,10 +292,10 @@ class Deliverer
     message.puts ''
     message.puts "--#{marker}--"
 
-    if !rack_env?(:development)
-      @smtp.send_message message.string, from_address[:email], *to_addresses
-    else
+    if rack_env?(:development)
       puts(message.string)
+    else
+      @smtp.send_message message.string, from_address[:email], *to_addresses
     end
   end
 

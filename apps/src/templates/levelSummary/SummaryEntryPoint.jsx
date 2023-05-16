@@ -17,14 +17,16 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
 
+  let className = styles.summaryEntryPoint;
+  if (!scriptData.is_contained_level) {
+    className += ' ' + styles.isStandalone;
+    if (scriptData.question_content_blank) {
+      className += ' ' + styles.noQuestionContent;
+    }
+  }
+
   return (
-    <div
-      className={
-        styles.summaryEntryPoint +
-        ' ' +
-        (scriptData.is_contained_level ? '' : styles.isStandalone)
-      }
-    >
+    <div className={className}>
       <Button
         color={Button.ButtonColor.neutralDark}
         text={i18n.viewStudentResponses()}

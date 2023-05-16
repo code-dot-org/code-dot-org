@@ -7,7 +7,7 @@ wrong '`[6, 8, 2]`'
 right '`[2, 6, 8]`'
 wrong 'An `IndexOutOfBoundsException` will occur.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Assume an `ArrayList` called `nums` has been initialized with the following `Integer` values: `[3, 6, 9, 1, 8, 5, 2]`. What will be the output of the following code segment?

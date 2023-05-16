@@ -21,9 +21,10 @@ theme: responsive_full_width
       %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p{style: "color: white"}=hoc_s(:ai_hero_desc)
       - if !!DCDO.get('teach-ai-launch-2023', false)
-        %a.link-button{href: "#teach-ai-callout"}
-          %i{class: "#{icon_megaphone}", style: "margin-right: 6px"}
-          =hoc_s(:call_to_action_special_announcement)
+        %a.link-button.has-icon{href: "#teach-ai-callout"}
+          %div.flex-wrapper
+            %i{class: "#{icon_megaphone}"}
+            =hoc_s(:call_to_action_special_announcement)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}

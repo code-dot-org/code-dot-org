@@ -21,7 +21,7 @@ export function renderRows(
 ) {
   const headers = Object.keys(courseData);
   return headers.map(header => (
-    <tr key={header}>
+    <tr key={header} className={moduleStyles.courseTableRow}>
       <td className={moduleStyles.courseHeaders}>
         <Heading5>{header}</Heading5>
         {renderOfferings(
@@ -48,7 +48,13 @@ function renderOfferings(
   const courseValues = Object.values(courseData);
 
   return courseValues.map(course => (
-    <div className={moduleStyles.flexDisplay} key={course.display_name}>
+    <div
+      className={classnames(
+        moduleStyles.flexDisplay,
+        moduleStyles.courseOption
+      )}
+      key={course.display_name}
+    >
       <input
         id={course.display_name}
         className={classnames(
@@ -64,7 +70,10 @@ function renderOfferings(
           setSelectedCourseOffering(course);
         }}
       />
-      <label className={moduleStyles.label} htmlFor={course.display_name}>
+      <label
+        className={moduleStyles.courseOptionLabel}
+        htmlFor={course.display_name}
+      >
         {course.display_name}
       </label>
     </div>

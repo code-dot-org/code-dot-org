@@ -16,3 +16,5 @@ II. `grade`
 
 III. `goToSleep`
 MARKDOWN
+
+allow_multiple_attempts true

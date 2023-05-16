@@ -12,6 +12,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import MusicFieldDropdown from './addons/musicFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
@@ -229,6 +230,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   const fieldOverrides = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['music_field_dropdown', 'MusicFieldDropdown', MusicFieldDropdown],
     // Overrides required for a customization of FieldTextInput
     // and its child classes.
     ['field_input', 'FieldTextInput', CdoFieldTextInput],
@@ -350,11 +352,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function (
-    helpClickFunc
-  ) {
+  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
+      this.unusedSvg_ = new BlockSvgUnused(this);
       this.unusedSvg_.render(this.svgGroup_, this.RTL);
     }
   };
@@ -395,27 +395,32 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
+
+  // Block fields are referred to as titles in CDO Blockly.
+  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+    return this.setFieldValue(newValue, name);
+  };
+
   // We use fieldRow because it is public.
   blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.fieldRow;
   };
 
-  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener = function (
-    helpClickFunc
-  ) {
-    blocklyWrapper.browserEvents.bind(
-      blocklyWrapper.mainBlockSpace.getCanvas(),
-      blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-      blocklyWrapper.mainBlockSpace,
-      function () {
-        this.getTopBlocks().forEach(block => {
-          if (block.disabled) {
-            block.addUnusedBlockFrame(helpClickFunc);
-          }
-        });
-      }
-    );
-  };
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
+    function () {
+      blocklyWrapper.browserEvents.bind(
+        blocklyWrapper.mainBlockSpace.getCanvas(),
+        blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
+        blocklyWrapper.mainBlockSpace,
+        function () {
+          this.getTopBlocks().forEach(block => {
+            if (block.disabled) {
+              block.addUnusedBlockFrame();
+            }
+          });
+        }
+      );
+    };
 
   blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => !block.disabled);

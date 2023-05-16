@@ -5,17 +5,24 @@ import {AnalyticsContext} from '../context';
 import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
-import musicLocale from '../locale';
+import musicI18n from '../locale';
+import commonI18n from '@cdo/locale';
+import {useSelector} from 'react-redux';
+import Spinner from '../../code-studio/pd/components/spinner';
+import {projectUpdatedStatuses} from '../../code-studio/projectRedux';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
  * including Start Over, Share, Feedback, and optionally Upload Sound.
  */
-const TopButtons = ({clearCode, uploadSound}) => {
+const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
   const showUploadSound = AppConfig.getValue('show-upload') === 'true';
+  const updatedStatus = useSelector(
+    state => state.project.projectUpdatedStatus
+  );
 
   const startOverClicked = () => {
     analyticsReporter.onButtonClicked('start-over');
@@ -45,6 +52,38 @@ const TopButtons = ({clearCode, uploadSound}) => {
     uploadSound(inputRef.current.files[0]);
   };
 
+  const renderSaveMessage = () => {
+    return (
+      <div className={moduleStyles.saveMessageContainer}>
+        <div
+          className={classNames(
+            moduleStyles.saveMessage,
+            moduleStyles.saveMessageSaving,
+            updatedStatus === projectUpdatedStatuses.saving &&
+              moduleStyles.saveMessageShow
+          )}
+        >
+          <Spinner size={'small'} />
+          <div className={moduleStyles.saveMessageText}>
+            {commonI18n.saving()}
+          </div>
+        </div>
+        <div
+          className={classNames(
+            moduleStyles.saveMessage,
+            moduleStyles.saveMessageError,
+            updatedStatus === projectUpdatedStatuses.error &&
+              moduleStyles.saveMessageShow
+          )}
+        >
+          <div className={moduleStyles.saveMessageText}>
+            {commonI18n.projectSaveError()}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className={moduleStyles.buttonRow}>
       <button
@@ -53,7 +92,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={startOverClicked}
       >
         <FontAwesome icon={'refresh'} />
-        &nbsp; {musicLocale.startOver()}
+        &nbsp; {musicI18n.startOver()}
       </button>
       <button
         type="button"
@@ -61,7 +100,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onShareClicked}
       >
         <FontAwesome icon={'share-square-o'} />
-        &nbsp; {musicLocale.share()}
+        &nbsp; {musicI18n.share()}
         <div
           className={classNames(
             moduleStyles.shareComingSoon,
@@ -69,7 +108,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
           )}
         >
           <FontAwesome icon={'clock-o'} />
-          &nbsp; {musicLocale.shareComingSoon()}
+          &nbsp; {musicI18n.shareComingSoon()}
         </div>
       </button>
       <button
@@ -78,8 +117,9 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onFeedbackClicked}
       >
         <FontAwesome icon={'commenting'} />
-        &nbsp; {musicLocale.feedback()}
+        &nbsp; {musicI18n.feedback()}
       </button>
+      {canShowSaveStatus && renderSaveMessage()}
       {showUploadSound && (
         <fieldset>
           <input
@@ -95,7 +135,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
             id="compress_btn"
             className={moduleStyles.button}
           >
-            {musicLocale.upload()}
+            {musicI18n.upload()}
           </button>
         </fieldset>
       )}
@@ -106,6 +146,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
   uploadSound: PropTypes.func.isRequired,
+  canShowSaveStatus: PropTypes.bool,
 };
 
 export default TopButtons;

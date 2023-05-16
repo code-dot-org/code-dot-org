@@ -10,3 +10,5 @@ right 'I thought it would be challenging'
 right 'I wanted to take an AP class'
 right 'It\'s required, or I was placed in it.'
 right 'Other reasons not listed'
+
+allow_multiple_attempts true

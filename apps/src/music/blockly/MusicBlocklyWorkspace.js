@@ -9,7 +9,11 @@ import AppConfig, {getBlockMode} from '../appConfig';
 import {BlockMode, REMOTE_STORAGE} from '../constants';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
+  DOCS_BASE_URL,
   DYNAMIC_TRIGGER_EXTENSION,
+  FIELD_CHORD_TYPE,
+  FIELD_PATTERN_TYPE,
+  FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
   TRIGGER_FIELD,
 } from './constants';
@@ -24,6 +28,7 @@ import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory
 import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
+import musicI18n from '../locale';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -74,9 +79,9 @@ export default class MusicBlocklyWorkspace {
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
 
-    Blockly.fieldRegistry.register('field_sounds', FieldSounds);
-    Blockly.fieldRegistry.register('field_pattern', FieldPattern);
-    Blockly.fieldRegistry.register('field_chord', FieldChord);
+    Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
+    Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+    Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(toolboxAllowList),
@@ -97,7 +102,18 @@ export default class MusicBlocklyWorkspace {
     delete Blockly.Blocks.procedures_ifreturn;
 
     // Rename the new function placeholder text for Music Lab specifically.
-    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] = 'my function';
+    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
+      musicI18n.blockly_functionNamePlaceholder();
+
+    // Wrap the create function block's init function in a function that
+    // sets the block's help URL to the appropriate entry in the Music Lab
+    // docs, and calls the original init function if present.
+    const functionBlock = Blockly.Blocks.procedures_defnoreturn;
+    functionBlock.initOriginal = functionBlock.init;
+    functionBlock.init = function () {
+      this.setHelpUrl(DOCS_BASE_URL + 'create_function');
+      this.initOriginal?.();
+    };
 
     Blockly.setInfiniteLoopTrap();
 
@@ -371,7 +387,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   hasUnsavedChanges() {
-    return this.projectManager.hasQueuedSave();
+    return this.projectManager.hasUnsavedChanges();
   }
 
   loadDefaultCode() {
@@ -421,5 +437,9 @@ export default class MusicBlocklyWorkspace {
         this.getProject.bind(this)
       );
     }
+  }
+
+  addSaveEventListener(event, listener) {
+    this.projectManager.addEventListener(event, listener);
   }
 }

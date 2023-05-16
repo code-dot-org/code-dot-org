@@ -713,7 +713,7 @@ en:
         csa-pl-intro-to-equals-method: Introduction to the .equals() method
         csa-pl-equals-book: Writing the equals() method for the Book class
         csa-multi-select-pl: Multi-selection Statements in Java
-        csc_timecapsule_intro: Time Capsule Introduction
+        csc_timecapsule_intro: Coding a Time Capsule
         PL_Equity_in_CS_Education: Equity in CS Education
         csc_fm_pilot: Function Machines (Pilot)
         csc_fm_pilot_v2: 'Function Machines Intro '
@@ -766,12 +766,12 @@ en:
         csa-example-solution-1: 'Live Coding an Example Solution '
         csd_sprite_properties: Sprite Properties
         csa-pl-documentation: Documentation in Java Lab
-        csc-starquilts-intro: 'CSC: Star Quilts'
-        csc-mapmakers-intro: "CSC: Mapmakers\t"
+        csc-starquilts-intro: Coding a Geometric Star Quilt
+        csc-mapmakers-intro: Coding Interactive Maps
         csa-pl-vocab-pm: Project Management Vocabulary
-        csc-ecosystems-intro: Ecosystems Intro
+        csc-ecosystems-intro: Simulating a Marine Ecosystem
         PL_CSD_MicroBit_Intro: Introduction to the Micro:bit
-        csc_animal_adaptations_intro: Animal Adaptations Intro
+        csc_animal_adaptations_intro: Modeling Animal Adaptations
         csa_two_dimensional_arrays: 'CSA: Two-Dimensional (2D) Arrays'
         csa_working_with_2d_array_elements: 'CSA: Working with 2D Array Elements'
         csa_row_major_traversal: 'CSA: Row-Major Traversal'
@@ -788,6 +788,7 @@ en:
         csa_searching_algorithms: 'CSA: Searching Algorithms'
         csa_sorting_algorithms: 'CSA: Sorting Algorithms'
         star_quilts_intro_to_artist: 'Star Quilts: Intro to Artist'
+        upload_sprites_backgrounds: Uploading Custom Sprites and Backgrounds
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

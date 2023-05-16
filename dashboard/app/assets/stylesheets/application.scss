@@ -47,8 +47,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
@@ -220,19 +218,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 971px) {
+  @media screen and (min-width: 1011px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1010px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1120px) {
     .create_menu {
       display: none !important;
     }
@@ -319,6 +317,7 @@ img.video_thumbnail {
       margin-top: 2px;
       font-size: 12px;
       display: inline-block;
+      border-radius: 4px;
     }
   }
 
@@ -1535,12 +1534,12 @@ a.download-video {
   cursor: pointer;
   width: 40px;
   height: 34px;
-  font-size: 36px;
+  font-size: 28px;
   background-color: $neutral_white;
   color: $neutral_dark;
   border: 2px solid $neutral_dark;
   padding: 0;
-  line-height: 40px;
+  line-height: 36px;
 
   &:hover {
     background: $neutral_dark20;
@@ -3462,8 +3461,10 @@ code {
       padding: 20px;
       color: $white;
 
-      h1 {
+      h2 {
         color: $white;
+        font-size: 26px;
+        margin-bottom: 20px;
       }
 
       .subtext {
