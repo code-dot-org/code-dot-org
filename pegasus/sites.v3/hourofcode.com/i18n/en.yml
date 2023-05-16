@@ -96,6 +96,7 @@
   call_to_action_try_activity: 'Try activity'
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_explore_curriculum: 'Explore curriculum'
+  call_to_action_explore_modules: "Explore modules"
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
   call_to_action_watch_panel: 'Watch panel'
@@ -274,11 +275,12 @@
   self_paced_pl_intro_list_title_02: "Personalized Learning Experience"
   self_paced_pl_intro_list_desc_02: "Focus on the areas that are most important to your needs and teaching context."
   self_paced_pl_intro_list_title_03: "Access to High-Quality Content"
-  self_paced_pl_intro_list_desc_03: "Access to the latest best practices, research, and strategies for teaching computer science effectively."
-  self_paced_pl_callout: "Looking for facilitator-led professional learning options? We offer in person or virtual workshops around the country."
+  self_paced_pl_intro_list_desc_03: "Get the latest best practices, research, and strategies for teaching computer science effectively."
+  self_paced_pl_callout: "Looking for facilitator-led professional learning options?"
+  self_paced_pl_callout_link: "Check out our in-person and virtual workshops."
   self_paced_pl_modules_heading: "Self-paced professional learning modules"
   self_paced_pl_modules_desc: "Through reading, viewing videos, completing interactive puzzles, and reflecting on your learning, you will develop your own understanding while preparing to teach computer science in your classroom."
-  self_paced_pl_modules_list_heading: "Through completing one of these modules, participants will:"
+  self_paced_pl_modules_list_heading: "After completing one of these modules, participants will:"
   self_paced_pl_modules_list_01: "Learn how to navigate the Code.org website and teacher tools."
   self_paced_pl_modules_list_02: "Gain a high level understanding of the content, tools, and pedagogy."
   self_paced_pl_modules_list_03: "Prepare to begin teaching the curriculum with your students."

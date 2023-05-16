@@ -22,37 +22,39 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:self_paced_pl_intro_heading)
     %p=hoc_s(:self_paced_pl_intro_desc)
-    %div.flex-container.justify-space-between.align-items-center.wrap
-      %ul.icon-bullet-list.full-width.col-45
-        %li
-          %div
-            %i{class: "#{icon_calendar_clock}"}
-          .text-wrapper
-            %h3=hoc_s(:self_paced_pl_intro_list_title_01)
-            %p=hoc_s(:self_paced_pl_intro_list_desc_01)
-        %li
-          %div
-            %i{class: "#{icon_person_rays}"}
-          .text-wrapper
-            %h3=hoc_s(:self_paced_pl_intro_list_title_02)
-            %p=hoc_s(:self_paced_pl_intro_list_desc_02)
-        %li.no-margin-bottom
-          %div
-            %i{class: "#{icon_star}"}
-          .text-wrapper
-            %h3=hoc_s(:self_paced_pl_intro_list_title_03)
-            %p=hoc_s(:self_paced_pl_intro_list_desc_03)
+    %div.flex-container.justify-space-between.align-items-start.wrap
+      %div.col-45
+        %ul.icon-bullet-list.full-width
+          %li
+            %div
+              %i{class: "#{icon_calendar_clock}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_01)
+              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_01)
+          %li
+            %div
+              %i{class: "#{icon_person_rays}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_02)
+              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_02)
+          %li.no-margin-bottom
+            %div
+              %i{class: "#{icon_star}"}
+            .text-wrapper
+              %h3=hoc_s(:self_paced_pl_intro_list_title_03)
+              %p=hoc_s(:self_paced_pl_intro_list_desc_03)
+        %a.link-button{href: "#modules"} Explore modules
       %figure.col-50
-        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 1em;"}
+        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5em;"}
     .clear
 
 %section.bg-primary-light
   .wrapper
     %p.heading-sm.no-margin-bottom
       =hoc_s(:self_paced_pl_callout)
-      %a{href: "/professional-learning"}=hoc_s(:call_to_action_learn_more)
+      %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
 
-%section
+%section{id: "modules"}
   .wrapper
     %h2=hoc_s(:self_paced_pl_modules_heading)
     %p=hoc_s(:self_paced_pl_modules_desc)

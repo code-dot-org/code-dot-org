@@ -46,17 +46,10 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 .flex-container {
   display: flex;
 
-  &.justify-space-between {
-    justify-content: space-between;
-  }
-
-  &.align-items-center {
-    align-items: center;
-  }
-
-  &.wrap {
-    flex-wrap: wrap;
-  }
+  &.justify-space-between { justify-content: space-between }
+  &.align-items-center { align-items: center; }
+  &.align-items-start { align-items: flex-start; }
+  &.wrap { flex-wrap: wrap; }
 }
 
 // Line divider for use between sections
