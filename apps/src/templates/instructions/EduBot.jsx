@@ -36,6 +36,7 @@ class EduBot extends React.Component {
       conversation: [],
       userInput: '',
       savingPrompt: false,
+      error: null,
     };
   }
 
@@ -58,6 +59,7 @@ class EduBot extends React.Component {
       conversation: updatedConversation,
       userInput: '',
       loading: true,
+      error: null,
     });
 
     const payload = this.formatForOpenAI(updatedConversation);
@@ -65,17 +67,26 @@ class EduBot extends React.Component {
       return;
     }
 
-    openaiCompletion(payload).done(({content, role}) => {
-      this.setState({
-        conversation: [...updatedConversation, {sender: role, text: content}],
-        loading: false,
-      });
-    });
+    openaiCompletion(payload).then(
+      response => {
+        const {content, role} = response;
+        this.setState({
+          conversation: [...updatedConversation, {sender: role, text: content}],
+          loading: false,
+        });
+      },
+      err => {
+        this.setState({
+          error: JSON.stringify(err.responseJSON),
+          loading: false,
+        });
+      }
+    );
   };
 
   handleSaveSystemPrompt = () => {
     const {selectedPrompt} = this.state;
-    this.setState({savingPrompt: true});
+    this.setState({savingPrompt: true, error: null});
 
     openaiCompletion([{content: selectedPrompt, role: 'system'}]).done(
       ({content, role}) => {
@@ -90,7 +101,7 @@ class EduBot extends React.Component {
   };
 
   handleClear = () => {
-    this.setState({conversation: []});
+    this.setState({conversation: [], error: null});
   };
 
   closeModal = () => this.setState({editSystemPrompt: false});
@@ -166,6 +177,16 @@ class EduBot extends React.Component {
                   />
                 );
               })}
+              {this.state.error && (
+                <Message
+                  key={'edubot-error'}
+                  model={{
+                    message: this.state.error,
+                    sender: 'assistant',
+                    direction: 'incoming',
+                  }}
+                />
+              )}
             </MessageList>
             <MessageInput
               onKeyDown={ev => {
@@ -174,12 +195,14 @@ class EduBot extends React.Component {
                   this.setState({userInput: userInput.slice(0, -1)});
                 }
               }}
-              onChange={value => this.setState({userInput: value})}
+              onChange={value => {
+                this.setState({userInput: value.replace(/&nbsp;/g, ' ')});
+              }}
               onSend={this.handleSend}
               placeholder="Type message here"
               autoFocus
               attachButton={false}
-              value={this.state.userInput}
+              value={this.state.userInput.replace(/ /g, '\u00A0')}
             />
           </ChatContainer>
         </MainContainer>
@@ -198,7 +221,7 @@ class EduBot extends React.Component {
             />
           </Modal.Body>
           <Modal.Footer>
-            {this.savingPrompt ? (
+            {this.state.savingPrompt ? (
               <Loader />
             ) : (
               <ChatButton onClick={this.handleSaveSystemPrompt}>
