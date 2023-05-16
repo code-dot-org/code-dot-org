@@ -6,8 +6,8 @@ import DCDO from '@cdo/apps/dcdo';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
-export function loadBlocksToWorkspace(workspace, blockXml, serializationJson) {
-  return Blockly.Xml.domToBlockSpace(workspace, blockXml);
+export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
+  return Blockly.Xml.domToWorkspace(xml, workspace);
 }
 
 export function setHSV(block, h, s, v) {
