@@ -11,7 +11,10 @@ $(document).ready(function () {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <MusicLabView appOptions={{channel: channelId, app: 'music'}} />
+      <MusicLabView
+        appOptions={{channel: channelId, app: 'music'}}
+        inIncubator={true}
+      />
     </Provider>,
     document.getElementById('musiclab-container')
   );
