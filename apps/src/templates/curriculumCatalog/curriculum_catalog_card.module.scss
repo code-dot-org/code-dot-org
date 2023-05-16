@@ -39,10 +39,6 @@ $container-width: 309px;
     color: $neutral_dark80;
   }
 
-  button {
-    margin: 0;
-  }
-
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
@@ -116,27 +112,39 @@ $container-width: 309px;
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
 }
 
 .buttonsContainer_notEnglish {
   flex-direction: column-reverse;
   row-gap: 1em;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     width: 100%;
-    height: 40px;
-    font-size: 1em;
   }
 }
 
 .buttonsContainer_english {
   justify-content: space-between;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
     width: math.div($container-width - (2 * 16) - 12, 2);
-    height: 40px;
-    font-size: 1em;
   }
 }

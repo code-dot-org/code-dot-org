@@ -487,6 +487,8 @@ def distribute_translations(upload_manifests)
       destination_dir << "/.." if relative_path.start_with? "/views"
       relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
+      # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
+      next if %w[ai].include? name # ai.md file has been substituted by ai.haml
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
       FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)
@@ -609,6 +611,9 @@ def restore_markdown_headers
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
     begin
+      # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
+      # ai.md file has been substituted by ai.haml therefore source_path for ai.md translations does not exist
+      next unless File.exist? source_path # if source path does not exist, the markdown heaader can not be restored
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
     rescue Exception => exception
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"

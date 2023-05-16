@@ -7,7 +7,7 @@ wrong 'The method returns `true` if the size of the `Dessert` list is greater th
 wrong 'The method returns a coupon code for any `Dessert` that costs more than $1.'
 wrong 'The method returns `true` if at least one `Dessert` is served with a flag.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the purpose of the following method?

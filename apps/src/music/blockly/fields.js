@@ -2,6 +2,7 @@
 
 import {DEFAULT_SOUND, DEFAULT_PATTERN, DEFAULT_CHORD} from '../constants';
 import Globals from '../globals';
+import musicI18n from '../locale';
 import {
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
@@ -56,13 +57,13 @@ export const fieldChordDefinition = {
 };
 
 export const fieldRestDurationDefinition = {
-  type: 'field_dropdown',
+  type: 'music_field_dropdown',
   name: FIELD_REST_DURATION_NAME,
   options: [
-    ['\u00bd beat', '0.125'],
-    ['1 beat', '0.25'],
-    ['2 beats', '0.5'],
-    ['1 measure', '1'],
-    ['2 measures', '2'],
+    [musicI18n.blockly_fieldRestHalfBeat(), '0.125'],
+    [musicI18n.blockly_fieldRestOneBeat(), '0.25'],
+    [musicI18n.blockly_fieldRestBeats({num: 2}), '0.5'],
+    [musicI18n.blockly_fieldRestOneMeasure(), '1'],
+    [musicI18n.blockly_fieldRestMeasures({num: 2}), '2'],
   ],
 };

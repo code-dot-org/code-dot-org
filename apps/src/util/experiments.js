@@ -38,6 +38,8 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
+// Experiment for testing Blockly workspace serialization with the JSON system.
+experiments.BLOCKLY_JSON = 'blocklyJson';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

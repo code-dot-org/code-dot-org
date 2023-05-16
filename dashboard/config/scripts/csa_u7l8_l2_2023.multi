@@ -7,7 +7,7 @@ right 'The value `10` should be added to the variable `total` instead of `n`.'
 wrong 'The condition in the `while` loop header should be `x < n - 1`.'
 wrong 'No change is required; the methods, as currently written, return the same values when they are called with the same positive integer parameter.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following two methods, which are intended to return the same values when they are called with the same positive integer parameter n.

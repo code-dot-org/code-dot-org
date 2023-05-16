@@ -7,7 +7,7 @@ wrong '`ArrayList myList = new ArrayList<String>();`'
 wrong '`ArrayList<String> myList = new ArrayList();`'
 wrong '`ArrayList<String> myList = ArrayList<String>();`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is the correct syntax for creating an `ArrayList` in Java?

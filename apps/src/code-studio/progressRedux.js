@@ -649,6 +649,48 @@ const peerReviewLevels = state =>
   }));
 
 /**
+ * Returns whether we appear to be in a script level or a standalone level.
+ * A script level is identified because it has lessons.
+ * A standalone level doesn't have lessons, but it does have a level ID.
+ */
+export const ProgressLevelType = {
+  SCRIPT_LEVEL: 'script_level',
+  LEVEL: 'level',
+};
+
+export const getProgressLevelType = state => {
+  if (state.progress.lessons) {
+    return ProgressLevelType.SCRIPT_LEVEL;
+  } else if (state.progress.currentLevelId) {
+    return ProgressLevelType.LEVEL;
+  } else {
+    return undefined;
+  }
+};
+
+/**
+ * Returns the dashboard URL path to retrieve the level_data for a script
+ * level (if we have lessons) or a level (if we don't have lessons).
+ */
+export const getLevelDataPath = state => {
+  if (state.progress.lessons) {
+    const scriptName = state.progress.scriptName;
+    const lessonPosition = state.progress.lessons?.find(
+      lesson => lesson.id === state.progress.currentLessonId
+    ).relative_position;
+    const levelNumber =
+      levelsForLessonId(
+        state.progress,
+        state.progress.currentLessonId
+      ).findIndex(level => level.isCurrentLevel) + 1;
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_data`;
+  } else {
+    const levelId = state.progress.currentLevelId;
+    return `/levels/${levelId}/level_data`;
+  }
+};
+
+/**
  * The level object passed down to use via the server (and stored in lesson.lessons.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of

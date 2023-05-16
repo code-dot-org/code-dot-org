@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "data-society",
-    "serialized_at": "2023-05-03 02:29:43 UTC",
+    "serialized_at": "2023-05-04 21:23:27 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -49,6 +49,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -381,6 +393,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 18,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -1107,6 +1134,18 @@
         "lesson_activity.key": "f065db40-9b4c-4491-b6a1-f86ae8813966",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "f2321ea5-7e55-4407-bb0b-d08459a99598",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2321ea5-7e55-4407-bb0b-d08459a99598",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -4639,7 +4678,7 @@
       "key": "ecf2dcbe-b4ce-4da1-a69f-a357eeb2875a",
       "position": 2,
       "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "description": "Have students take the end-of-course survey. See the [Post-Course Survey Instructions](https://docs.google.com/document/d/1gb5gLQAIQyMc_o4RP7zParEvpyO9kfAYp7cGnYyvZLw/edit#) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
@@ -4655,6 +4694,17 @@
       "seeding_key": {
         "activity_section.key": "8a17f70d-dce1-4ffa-840b-792364fcaeca",
         "lesson_activity.key": "f065db40-9b4c-4491-b6a1-f86ae8813966"
+      }
+    },
+    {
+      "key": "d848263d-42e2-4d56-bad4-f2e109a8e0df",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df",
+        "lesson_activity.key": "f2321ea5-7e55-4407-bb0b-d08459a99598"
       }
     }
   ],
@@ -5107,6 +5157,28 @@
       "level_keys": [
         "CSD U5 test_2023"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-society-2023",
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5324,6 +5396,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "data-society-2023",
         "activity_section.key": "8a17f70d-dce1-4ffa-840b-792364fcaeca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2023",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-society-2023",
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df"
       }
     }
   ],

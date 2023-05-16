@@ -5,3 +5,5 @@ question 'Question'
 right 'right answer'
 wrong 'wrong answer'
 right 'right answer'
+
+allow_multiple_attempts true

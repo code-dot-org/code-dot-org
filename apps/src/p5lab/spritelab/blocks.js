@@ -1,14 +1,16 @@
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
-import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
 import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import experiments from '@cdo/apps/util/experiments';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -75,7 +77,7 @@ function getAllBehaviors() {
   });
   behaviors.sort();
   if (allowBehaviorEditing || behaviors.length === 0) {
-    behaviors.push([noBehaviorLabel, Blockly.FieldDropdown.NO_OPTIONS_MESSAGE]);
+    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
   }
   return behaviors;
 }
@@ -104,38 +106,27 @@ const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow.appendField(
-        `${inputConfig.label}(0, 0)`,
+        `${inputConfig.label}`,
         `${inputConfig.name}_LABEL`
       );
-      const fieldRow = currentInputRow.getFieldRow();
-      const label = fieldRow[fieldRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
-      icon.textContent = '\uf276';
-      const button = new Blockly.FieldButton(
-        icon,
-        updateValue => {
-          getLocation(loc => {
-            if (loc) {
-              button.setValue(JSON.stringify(loc));
-            }
-          });
-        },
-        block.getHexColour(), // Google Blockly includes block.getColour
-        value => {
-          if (value) {
-            try {
-              const loc = JSON.parse(value);
-              label.setValue(
-                `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
-              );
-            } catch (e) {
-              // Just ignore bad values
-            }
+      icon.textContent = ' \uf276'; // map-pin
+      const onChange = () => {
+        getLocation(loc => {
+          if (loc) {
+            fieldButton.setValue(JSON.stringify(loc));
           }
-        }
+        });
+      };
+      const fieldButton = Blockly.cdoUtils.locationField(
+        icon,
+        onChange,
+        block,
+        inputConfig,
+        currentInputRow
       );
-      currentInputRow.appendField(button, inputConfig.name);
+      currentInputRow.appendField(fieldButton, inputConfig.name);
     },
     generateCode(block, arg) {
       return `(${block.getFieldValue(arg.name)})`;
@@ -186,17 +177,26 @@ const customInputTypes = {
   },
   soundPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const icon = document.createElementNS(SVG_NS, 'tspan');
+      icon.style.fontFamily = 'FontAwesome';
+      icon.textContent = ' \uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
-      const onChange = () => {
+      const onClick = () => {
         dashboard.assets.showAssetManager(onSelect, 'audio', null, {
           libraryOnly: true,
         });
       };
+      const transformText = soundPath => {
+        return parseSoundPathString(soundPath);
+      };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(Blockly.cdoUtils.soundField(onChange), inputConfig.name);
+        .appendField(
+          Blockly.cdoUtils.soundField(onClick, transformText, icon),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
@@ -404,8 +404,7 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       const invalidBehavior =
-        block.getFieldValue(arg.name) ===
-        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE;
+        block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
       const behaviorId = Blockly.JavaScript.variableDB_?.getName(
         block.getFieldValue(arg.name),
         'PROCEDURE'
@@ -419,10 +418,7 @@ const customInputTypes = {
     },
     openEditor(e) {
       e.stopPropagation();
-      if (
-        this.getFieldValue('BEHAVIOR') ===
-        Blockly.FieldDropdown.NO_OPTIONS_MESSAGE
-      ) {
+      if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
         Blockly.behaviorEditor.openWithNewFunction();
       } else {
         Blockly.behaviorEditor.openEditorForFunction(

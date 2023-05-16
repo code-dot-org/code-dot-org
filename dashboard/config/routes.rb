@@ -268,8 +268,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    # Get or create a project for the given level_id
-    get 'projects/for_level/:level_id', to: 'projects#get_or_create_for_level'
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -318,6 +319,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 
@@ -469,6 +471,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level data via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_data
+            get 'level_data', to: 'script_levels#level_data'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do

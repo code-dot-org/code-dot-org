@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -270,7 +270,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end
