@@ -1017,8 +1017,6 @@ And /^I dismiss the language selector$/ do
     And I click selector ".close" if I see it
     And I wait until I don't see selector ".close"
   GHERKIN
-  puts "Nah, lets wait for the lanaguage selector."
-  sleep 2
 end
 
 And /^I dismiss the login reminder$/ do
