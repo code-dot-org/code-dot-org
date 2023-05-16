@@ -65,29 +65,6 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   }
 
   /**
-   * Returns a stringified version of the XML state, if it should be used.
-   * Otherwise this returns null, to signal the field should use its own
-   * serialization.
-   *
-   * @param callingClass The class calling this method.
-   *     Used to see if `this` has overridden any relevant hooks.
-   * @returns The stringified version of the XML state, or null.
-   * @override since the condition: `callingClass.prototype.saveState === this.saveState &&
-      callingClass.prototype.toXml !== this.toXml` is true.
-   */
-  saveLegacyState(callingClass) {
-    let elem = GoogleBlockly.utils.xml.createElement('field');
-    elem.setAttribute('name', this.name || '');
-    elem = this.setElementConfig(elem);
-    let text = GoogleBlockly.utils.xml.domToText(this.toXml(elem));
-    text = text.replace(
-      ' xmlns="https://developers.google.com/blockly/xml"',
-      ''
-    );
-    return text;
-  }
-
-  /**
    * Converts xml element into dropdown field
    * @param element xml
    * @override
@@ -114,7 +91,15 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   toXml(element) {
-    element = this.setElementConfig(element);
+    if (Array.isArray(this.menuGenerator_) && this.hasConfig) {
+      // convert array of options back into string config
+      const config = this.menuGenerator_
+        .map(val => {
+          return val[1];
+        })
+        .join();
+      element.setAttribute('config', config);
+    }
     super.toXml(element);
     return element;
   }
@@ -167,24 +152,5 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       }
     });
     return options;
-  }
-
-  /**
-   * Sets the field element's config attribute if instance variable `hasConfig` is set to `true` and
-   * `menuGenerator` is an array of options.
-   * @param elem field element
-   * @return updated field element
-   */
-  setElementConfig(elem) {
-    if (Array.isArray(this.menuGenerator_) && this.hasConfig) {
-      // convert array of options back into string config
-      const config = this.menuGenerator_
-        .map(val => {
-          return val[1];
-        })
-        .join();
-      elem.setAttribute('config', config);
-    }
-    return elem;
   }
 }
