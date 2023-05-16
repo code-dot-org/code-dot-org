@@ -20,7 +20,6 @@ const Template = args => {
   return (
     <Provider store={store}>
       <SectionProgressToggle
-        currentView={ViewType.SUMMARY}
         setCurrentView={() => console.log('Toggle view.')}
         scriptId={1}
         {...args}
@@ -30,13 +29,13 @@ const Template = args => {
 };
 
 export const SummaryView = Template.bind({});
-SummaryView.args = {setCurrentView: ViewType.SUMMARY};
+SummaryView.args = {currentView: ViewType.SUMMARY};
 
 export const DetailsView = Template.bind({});
-DetailsView.args = {setCurrentView: ViewType.DETAIL};
+DetailsView.args = {currentView: ViewType.DETAIL};
 
 export const StandardsView = Template.bind({});
 StandardsView.args = {
-  setCurrentView: ViewType.STANDARDS,
+  currentView: ViewType.STANDARDS,
   showStandardsToggle: true,
 };
