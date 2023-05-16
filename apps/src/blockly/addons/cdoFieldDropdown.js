@@ -42,21 +42,18 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * For other labs, `state` is stringified xml.
    */
   loadState(state) {
-    // Check if state is not stringified xml.
+    if (this.isOptionListDynamic()) {
+      this.getOptions(false);
+    }
+    // Check if state is not stringified xml, i.e., value from json.
     const fieldTagRegEx = /<field/;
     if (!fieldTagRegEx.test(state)) {
+      // TODO: handle config if stored in json
       this.setValue(state);
       return;
     }
     const field = GoogleBlockly.utils.xml.textToDom(state);
-    const config = field.getAttribute('config');
-    if (config) {
-      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(config);
-    }
-    if (this.isOptionListDynamic()) {
-      this.getOptions(false);
-    }
-    this.setValue(field.textContent);
+    this.fromXml(field);
   }
 
   /**
