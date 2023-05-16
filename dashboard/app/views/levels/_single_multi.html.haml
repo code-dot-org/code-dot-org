@@ -66,13 +66,6 @@
     - unless use_tight_layout
       %br/
 
-    - if standalone && !data['options'].try(:[], 'hide_submit')
-      .buttons{class: data['submittable'] == 'true' ? 'submittable' : nil}
-        %a.btn.btn-large.btn-primary.next-lesson.submitButton{id: "submit_level_#{level.id}"}
-          =t('submit')
-        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
-          =t('unsubmit')
-
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 18:32:57 UTC",
+    "serialized_at": "2023-05-12 17:19:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,7 +46,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Purpose:**\nReflect on the Gots and Needs from the previous day. Introduce the themes of the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n* Participants use a shared definition for equity and inclusion in the context of CS education\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n* Get orientated to the day\n* Use a shared definition for equity and inclusion in the context of CS education"
+        "student_overview": "**You will:**\n* Get oriented to the day\n* Use a shared definition for equity and inclusion in the context of CS education"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -62,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session leads into a discussion around assessment in CS Discoveries. By the end of this session, participants should know how to locate and use both teacher facing and student facing resources alone. There is also time for participants to reflect on the role of assessment in their own classroom followed by a tour of assessment tools and resources.\n\n\n**Objectives:**\n* Participants have located the resources available to them to support student learning in their classrooms\n* Participants have reflected on the role assessment plays in their classroom\n* Participants are able to locate and use applicable assessment tools and resources\n\n**Suggested Time:** 40 minutes",
-        "student_overview": "**You will:**\n* Locate the resources available to teachers to support student learning in their classrooms\n* Reflect on the role assessment plays in your classroom\n* Locate and use applicable assessment tools and resources"
+        "overview": "**Purpose:**\nThis session leads into a discussion around assessment in CS Discoveries. By the end of this session, participants should know how to locate and use both teacher-facing and student-facing resources alone. There is also time for participants to reflect on the role of assessment in their own classroom followed by a tour of assessment tools and resources.\n\n\n**Objectives:**\n* Participants have located the resources available to them to support student learning in their classrooms\n* Participants have reflected on the role assessment plays in their classroom\n* Participants are able to locate and use applicable assessment tools and resources\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Locate the resources available to teachers to support student learning in your classrooms\n* Reflect on the role assessment plays in your classroom\n* Locate and use applicable assessment tools and resources"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -80,7 +80,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**Purpose:**\nOn Day 1, participants engaged in two model lessons: U2L2 Intro to HTML and U2L6 Styling Text with CSS. This session provides participants with space to review what they’ve learned and ask questions about Unit 2 - Web Development.\n\n\n**Objectives:**\n* Participants are aware of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Participants are introduced to the Curriculum Investigation to continue practicing their HTML and CSS skills\n\n**Suggested Time:** 30 minutes",
-        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Get and introduction to the Curriculum Investigation to continue practicing their HTML and CSS skills"
+        "student_overview": "**You will:**\n* Get an overview of the content in Unit 2 - Web Development that has not been covered in the workshop\n* Get an introduction to the Curriculum Investigation to continue practicing your HTML and CSS skills"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -152,7 +152,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**Purpose:** In this session, participants will learn more about what TLOs are and how they will be participating in them.\n\n\n**Objectives:**\n* Participants have their assigned lesson\n* Participants know how the lesson planning process will work\n* Participants have a shared definition for identity\n* Participants are able to describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "**You will:**\n* Recieve your lesson assignment \n* Learn how the lesson planning process will work\n* Develop a shared definition for identity\n* Describe how your identity, experiences, and beliefs shape how you see their role as a CS teacher"
+        "student_overview": "**You will:**\n* Recieve your lesson assignment \n* Learn how the lesson planning process will work\n* Develop a shared definition for identity\n* Describe how your identity, experiences, and beliefs shape how you see your role as a CS teacher"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -196,14 +196,14 @@
     },
     {
       "key": "lesson-10",
-      "name": "Wrap Up",
+      "name": "Day 2 Wrap Up",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to wrap up the theme and logistics of the day.\n\n\n**Objectives:**\n* Participants share an instructional strategy that they would like to try in their classroom\n* Participants articulate things they got from the workshop today and things they still need in the future\n* Participants complete the daily survey\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**You will:**\n*  Share an instructional strategy that you would like to try in their classroom\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/2\" target=\"blank\" rel=\"noopener noreferrer\">Link to Survey</a> \n\n\n"
+        "student_overview": "**You will:**\n*  Share an instructional strategy that you would like to try in your classroom\n* Articulate things you got from the workshop today and things you still need in the future\n* Complete the daily survey\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/2\" target=\"blank\" rel=\"noopener noreferrer\">Link to Survey</a> \n\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",

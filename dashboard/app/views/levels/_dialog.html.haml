@@ -12,9 +12,6 @@
     - if local_assigns[:next_page_button]
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
-    - elsif local_assigns[:continue_button]
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
-        =t('continue')
     - else
       %a.btn.btn-large.btn-primary.next-lesson.submitButton{style: !!local_assigns[:show_submit] ? nil : 'display:none'}
         =t('submit')
