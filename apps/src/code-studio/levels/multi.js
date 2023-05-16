@@ -222,6 +222,10 @@ Multi.prototype.lockAnswers = function () {
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 
+Multi.prototype.correctNumberAnswersSelected = function () {
+  return this.selectedAnswers.length === this.numAnswers;
+};
+
 Multi.prototype.resetAnswers = function () {
   $('#' + this.id + ' .answerbutton').removeClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', true);
@@ -277,7 +281,6 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     submitted = false;
     result = answerIsCorrect;
     testResult = TestResults.CONTAINED_LEVEL_RESULT;
-    this.lockAnswers();
   } else {
     result = answerIsCorrect;
     pass = result;
@@ -315,6 +318,12 @@ Multi.prototype.submitButtonClick = function () {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
+  }
+
+  if (!this.allowMultipleAttempts) {
+    this.lockAnswers();
+    $('.submitButton')?.hide();
+    $('.nextLevelButton')?.show();
   }
 
   // If the solution only takes one answer, and it's wrong, and it's not

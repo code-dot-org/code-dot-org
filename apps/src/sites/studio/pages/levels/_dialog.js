@@ -1,14 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
 
 /**
  * This file does some handling of submit button interactions.
@@ -34,19 +29,6 @@ $(document).ready(() => {
     // Set the entire page background to be light grey.
     $('.full_container').addClass('submitted_readonly');
   }
-
-  $('#next_level_link').each(function () {
-    const el = this;
-    const nextLevelLink = getScriptData('nextlevellink');
-    ReactDOM.render(
-      <Button
-        __useDeprecatedTag
-        href={nextLevelLink}
-        text={i18n.nextLevelLink()}
-      />,
-      el
-    );
-  });
 
   // Unsubmit button should only be available when this is a standalone level.
   $('.unsubmitButton').click(function () {
