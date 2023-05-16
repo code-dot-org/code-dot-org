@@ -16,6 +16,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+// import {videoDataShape} from './types';
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -207,6 +209,33 @@ export default function SectionsSetUpContainer({
       });
   };
 
+  const onURLClick = () => {
+    // need to find the video...
+    // const video = this.props.video;
+    // if (this.props.openInNewTab) {
+    //   window.open(video.src, '_blank', 'noopener,noreferrer');
+    // } else {
+    showVideoDialog(
+      {
+        autoplay: true,
+        download:
+          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
+        enable_fallback: true,
+        key: 'Gettting_Started_ClassSection',
+        name: 'Creating a Class Section',
+        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
+        // src: video.src,
+        // name: video.name,
+        // key: video.key,
+        // download: video.download,
+        // thumbnail: video.thumbnail,
+        // enable_fallback: video.enable_fallback,
+        // autoplay: video.autoplay,
+      },
+      true
+    );
+  };
+
   return (
     <form id={FORM_ID}>
       <div className={moduleStyles.containerWithMarginTop}>
@@ -221,9 +250,12 @@ export default function SectionsSetUpContainer({
               {i18n.setUpClassSectionsSubheader()}
             </BodyOneText>
             <BodyOneText>
-              <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+              <a onClick={onURLClick}>
                 {i18n.setUpClassSectionsSubheaderLink()}
               </a>
+              {/* <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+                {i18n.setUpClassSectionsSubheaderLink()}
+              </a> */}
             </BodyOneText>
           </>
         )}
