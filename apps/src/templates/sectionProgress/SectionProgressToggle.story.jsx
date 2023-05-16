@@ -20,7 +20,6 @@ const Template = args => {
   return (
     <Provider store={store}>
       <SectionProgressToggle
-        currentView={ViewType.SUMMARY}
         setCurrentView={() => console.log('Toggle view.')}
         scriptId={1}
         {...args}
