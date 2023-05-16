@@ -1,3 +1,5 @@
+@no_mobile
+
 Feature: Music Lab block can be dragged
 
 Scenario: Dragging play sound block
