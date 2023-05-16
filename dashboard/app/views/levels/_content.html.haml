@@ -1,7 +1,7 @@
 / This partial contains general content-display code applicable across all of our content-based level types.
 / Set 'data' and 'app' to use this partial.
 / Note that content_class, source_level, hide_header, and postcontent are optional.
-- app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
+- app, data, content_class, source_level, hide_header, header_class, postcontent = %i(app data content_class source_level hide_header header_class postcontent).map{ |x| local_assigns[x] }
 - level = source_level || @level
 - content_for(:head) do
   %script{src: webpack_asset_path('js/common.js')}
