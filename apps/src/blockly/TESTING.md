@@ -74,7 +74,7 @@ When checking levels below that include blocks, check the instructions in a RTL 
 Check that blocks are rendered as expected and check with different themes.
 
 - First level of dance lab: [[local]](http://localhost-studio.code.org:3000/s/dance-2019/lessons/1/levels/1) [[production]](https://studio.code.org/s/dance-2019/lessons/1/levels/1)
-    - This level includes imbedded blocks in instructions.
+    - This level includes embedded blocks in instructions.
 - First level in poem art: [[local]](http://localhost-studio.code.org:3000/s/poem-art-2021/lessons/1/levels/1) [[production]](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
     - This level includes blocks in hint
 - First level in flappy: [[local]](http://localhost-studio.code.org:3000/s/flappy/1) [[production]](https://studio.code.org/s/flappy/1) 
