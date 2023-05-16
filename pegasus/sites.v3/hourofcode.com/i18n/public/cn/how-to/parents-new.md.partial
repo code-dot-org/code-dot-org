@@ -2,7 +2,7 @@
 title: 家长操作指南
 ---
 
-# How to do an Hour of Code with your child
+# 如何与孩子一起学习编程一小时
 尝试编程一小时是向你的孩子（也许是第一次）介绍计算机科学的简单而有趣的方式。 计算机科学不仅是所有学习领域的基础，而且<a href="https://medium.com/@codeorg/cs-helps-students outperform-in-school-college-and-workplace-66dd64a69536">最近的研究表明</a>：学习计算机科学的孩子在其他科目中表现更好、在解决问题方面表现出色，并且<font color="00adbc"><b>进入大学的可能性高出17%</b></font>。
 
 你可以和全球数千万学生一起参加这个全球性的活动。 我们可以一起激发孩子们的学习热情，打破陈规陋习，帮助孩子们发现新的兴趣。 最重要的是，你已经拥有了将“编程一小时”带入家中所需的一切！

@@ -8,7 +8,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import lessonLock from './lessonLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
-import exportDialog from './components/exportDialogRedux';
 import hiddenLesson from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
@@ -18,6 +17,8 @@ import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import microBit from '../lib/kits/maker/microBitRedux';
+import lab from '../labs/labRedux';
 
 registerReducers({
   header,
@@ -29,7 +30,6 @@ registerReducers({
   lessonLock,
   viewAs,
   shareDialog,
-  exportDialog,
   hiddenLesson,
   isRtl,
   responsive,
@@ -37,7 +37,9 @@ registerReducers({
   projects,
   verifiedInstructor,
   currentUser,
-  arrowDisplay
+  arrowDisplay,
+  microBit,
+  lab,
 });
 
 export {getStore};

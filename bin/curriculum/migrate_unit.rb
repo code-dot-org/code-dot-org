@@ -63,7 +63,7 @@ end
 
 def main(options)
   options.unit_names.each do |unit_name|
-    script = Script.find_by_name!(unit_name)
+    script = Unit.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
     if script.is_migrated?
@@ -76,8 +76,8 @@ def main(options)
     models = ['Lesson', 'Activity']
     script.lessons.each do |lesson|
       LessonImportHelper.update_lesson(lesson, models)
-    rescue => e
-      raise e, "Error migrating unit #{script.name.dump} lesson #{lesson.name.dump}: #{e}", e.backtrace
+    rescue => exception
+      raise exception, "Error migrating unit #{script.name.dump} lesson #{lesson.name.dump}: #{exception}", exception.backtrace
     end
 
     has_lesson_plans = script.lessons.any?(&:has_lesson_plan)

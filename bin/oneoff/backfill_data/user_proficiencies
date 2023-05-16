@@ -376,9 +376,9 @@ def update_database
       end
       slice_count += 1
     end
-  rescue Exception => e
+  rescue Exception => exception
     puts "EXCEPTION: PROCESSING #{slice_count}..."
-    raise e
+    raise exception
   end
   puts "UPDATED DB."
 end

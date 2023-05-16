@@ -22,7 +22,7 @@ module Services
     # @see GloballyUniqueIdentifiers.find_vocab
     def self.build_vocab_key(vocab)
       if vocab&.course_version&.course_offering.blank?
-        STDERR.puts "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
+        warn "Vocabulary object #{vocab.key.inspect} is missing course version and/or offering"
         return
       end
 
@@ -54,7 +54,7 @@ module Services
     # @see GloballyUniqueIdentifiers.find_resource
     def self.build_resource_key(resource)
       if resource&.course_version&.course_offering.blank?
-        STDERR.puts "Resource object #{resource.key.inspect} is missing course version and/or offering"
+        warn "Resource object #{resource.key.inspect} is missing course version and/or offering"
         return
       end
 
@@ -90,6 +90,12 @@ module Services
     def self.build_lesson_key(lesson)
       return if lesson&.script.blank?
       [lesson.script.name, lesson.key].join('/')
+    end
+
+    # Returns a key which can be used by to globally and uniquely identify the
+    # given Reference Guide object
+    def self.build_reference_guide_key(reference_guide)
+      [reference_guide.course_offering_version, reference_guide.key].join('/')
     end
   end
 end

@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Calc is DEPRECATED
  */
 var Calc = module.exports;
 
@@ -41,6 +43,7 @@ var Token = require('./token');
 var InputIterator = require('./inputIterator');
 
 import {TestResults, ResultType} from '../constants';
+import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var level;
 var skin;
@@ -61,7 +64,7 @@ var appState = {
   message: null,
   result: null,
   testResults: null,
-  failedInput: null
+  failedInput: null,
 };
 Calc.appState_ = appState;
 
@@ -125,7 +128,7 @@ function asExpressionNode(val) {
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
-Calc.init = function(config) {
+Calc.init = function (config) {
   // replace studioApp() methods with our own
   studioApp().runButtonClick = this.runButtonClick.bind(this);
 
@@ -146,13 +149,13 @@ Calc.init = function(config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
     studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
@@ -202,6 +205,8 @@ Calc.init = function(config) {
   };
 
   studioApp().setPageConstants(config);
+
+  showDeprecatedAlgebraLabWarning();
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -292,7 +297,7 @@ function displayGoal(targetSet) {
   var computesFunction = targetSet.computesFunctionCall();
   if (!computesFunction && !targetSet.computesSingleVariable()) {
     var sortedEquations = targetSet.sortedEquations();
-    sortedEquations.forEach(function(equation) {
+    sortedEquations.forEach(function (equation) {
       if (equation.isFunction() && sortedEquations.length > 1) {
         throw new Error(
           "Calc doesn't support goal with multiple functions or " +
@@ -331,7 +336,7 @@ function displayGoal(targetSet) {
 /**
  * Click the run button.  Start the program.
  */
-Calc.runButtonClick = function() {
+Calc.runButtonClick = function () {
   studioApp().toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
@@ -342,7 +347,7 @@ Calc.runButtonClick = function() {
  * App specific reset button click logic.  studioApp().resetButtonClick will be
  * called first.
  */
-Calc.resetButtonClick = function() {
+Calc.resetButtonClick = function () {
   appState.animating = false;
   appState.waitingForReport = false;
   appState.response = null;
@@ -374,7 +379,7 @@ function generateEquationSetFromBlockXml(blockXml) {
 
   var equationSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(block) {
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
     block.dispose();
   });
 
@@ -386,12 +391,12 @@ function generateEquationSetFromBlockXml(blockXml) {
  * It does this be feeding the function a set of values, and making sure
  * the target and user set evaluate to the same result for each.
  */
-Calc.evaluateFunction_ = function(targetSet, userSet) {
+Calc.evaluateFunction_ = function (targetSet, userSet) {
   var outcome = {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   // if our target is a single function, we evaluate success by evaluating the
@@ -411,7 +416,7 @@ Calc.evaluateFunction_ = function(targetSet, userSet) {
     var targetFunctionName = expression.getValue();
     if (!userSet.getEquation(targetFunctionName)) {
       outcome.message = calcMsg.missingFunctionError({
-        functionName: targetFunctionName
+        functionName: targetFunctionName,
       });
     }
 
@@ -437,7 +442,7 @@ Calc.evaluateFunction_ = function(targetSet, userSet) {
   var numParams = expression.numChildren();
   var iterator = new InputIterator(possibleValues, numParams);
 
-  var setChildToValue = function(val, index) {
+  var setChildToValue = function (val, index) {
     expression.setChildValue(index, val);
   };
 
@@ -480,7 +485,7 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: utils.valueOr(failedInput, null)
+    failedInput: utils.valueOr(failedInput, null),
   };
 }
 
@@ -507,7 +512,7 @@ function divZeroOrFailure(err) {
     result: ResultType.FAILURE,
     testResults: TestResults.LEVEL_INCOMPLETE_FAIL,
     message: null,
-    failedInput: null
+    failedInput: null,
   };
 }
 
@@ -518,12 +523,12 @@ function divZeroOrFailure(err) {
  * name in the user set and (b) that changing that value in both sets still
  * results in the same evaluation
  */
-Calc.evaluateSingleVariable_ = function(targetSet, userSet) {
+Calc.evaluateSingleVariable_ = function (targetSet, userSet) {
   var outcome = {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   if (
@@ -551,7 +556,7 @@ Calc.evaluateSingleVariable_ = function(targetSet, userSet) {
   // Make sure each of our pseudo inputs has a corresponding variable in the
   // user set.
   var userConstants = userSet.getConstants();
-  var userConstantNames = userConstants.map(function(item) {
+  var userConstantNames = userConstants.map(function (item) {
     return item.name;
   });
 
@@ -573,7 +578,7 @@ Calc.evaluateSingleVariable_ = function(targetSet, userSet) {
 
   var targetClone = targetSet.clone();
   var userClone = userSet.clone();
-  var setConstantsToValue = function(val, index) {
+  var setConstantsToValue = function (val, index) {
     var name = targetConstants[index].name;
     targetClone.getEquation(name).expression.setValue(val);
     userClone.getEquation(name).expression.setValue(val);
@@ -591,7 +596,7 @@ Calc.evaluateSingleVariable_ = function(targetSet, userSet) {
     // (2) We have the wrong equation
     // Check to see if we evaluate to the same as target if we give it the
     // values from our userSet.
-    targetConstants.forEach(function(item, index) {
+    targetConstants.forEach(function (item, index) {
       var name = item.name;
       var val = userClone.getEquation(name).expression.evaluate().result;
       setConstantsToValue(val, index);
@@ -642,13 +647,13 @@ Calc.evaluateSingleVariable_ = function(targetSet, userSet) {
  * @static
  * @returns outcome object
  */
-Calc.evaluateResults_ = function(targetSet, userSet) {
+Calc.evaluateResults_ = function (targetSet, userSet) {
   var identical, user, target;
   var outcome = {
     result: ResultType.UNSET,
     testResults: TestResults.NO_TESTS_RUN,
     message: undefined,
-    failedInput: null
+    failedInput: null,
   };
 
   if (targetSet.computesFunctionCall()) {
@@ -705,11 +710,10 @@ Calc.evaluateResults_ = function(targetSet, userSet) {
 /**
  * Execute the user's code.
  */
-Calc.execute = function() {
+Calc.execute = function () {
   Calc.generateResults_();
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
 
   var reportData = {
     app: 'calc',
@@ -717,7 +721,7 @@ Calc.execute = function() {
     result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: onReportComplete,
   };
 
   if (!level.isProjectLevel) {
@@ -745,7 +749,7 @@ Calc.execute = function() {
     Calc.step(0);
   } else {
     displayComplexUserExpressions();
-    timeoutList.setTimeout(function() {
+    timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
     }, stepSpeed);
   }
@@ -765,7 +769,7 @@ function isPreAnimationFailure(testResult) {
  * Fill appState with the results of program execution.
  * @static
  */
-Calc.generateResults_ = function() {
+Calc.generateResults_ = function () {
   appState.message = undefined;
 
   // Check for pre-execution errors
@@ -778,9 +782,8 @@ Calc.generateResults_ = function() {
   if (studioApp().hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    appState.message = studioApp().getUnfilledFunctionalBlockError(
-      'functional_compute'
-    );
+    appState.message =
+      studioApp().getUnfilledFunctionalBlockError('functional_compute');
     return;
   }
 
@@ -851,7 +854,7 @@ Calc.generateResults_ = function() {
 /**
  * @returns {Object} set of appState to be merged by caller
  */
-Calc.checkExamples_ = function() {
+Calc.checkExamples_ = function () {
   var outcome = {};
   if (!level.examplesRequired) {
     return outcome;
@@ -862,7 +865,7 @@ Calc.checkExamples_ = function() {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless
+      functionName: exampleless,
     });
     return outcome;
   }
@@ -887,7 +890,7 @@ Calc.checkExamples_ = function() {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
     outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName
+      functionName: failingBlockName,
     });
   }
 
@@ -956,7 +959,7 @@ function displayNonComputeEquations_(userSet, targetSet) {
   if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
     var targetConstants = targetSet.getConstants();
     // replace constants with failed inputs in the user set.
-    targetConstants.forEach(function(targetEquation, index) {
+    targetConstants.forEach(function (targetEquation, index) {
       var name = targetEquation.name;
       var userEquation = userSet.getEquation(name);
       userEquation.expression.setValue(appState.failedInput[index]);
@@ -965,7 +968,7 @@ function displayNonComputeEquations_(userSet, targetSet) {
 
   var numRows = 0;
   var tokenList;
-  userSet.sortedEquations().forEach(function(userEquation) {
+  userSet.sortedEquations().forEach(function (userEquation) {
     var expectedEquation = highlightAllErrors
       ? targetSet.getEquation(userEquation.name)
       : null;
@@ -1064,9 +1067,9 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function(animationDepth) {
+Calc.step = function (animationDepth) {
   var isFinal = animateUserExpression(animationDepth);
-  timeoutList.setTimeout(function() {
+  timeoutList.setTimeout(function () {
     if (isFinal) {
       // one deeper to remove highlighting
       animateUserExpression(animationDepth + 1);
@@ -1267,9 +1270,9 @@ function displayFeedback() {
     tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     appStrings: {
-      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg(),
     },
-    appDiv: appDiv
+    appDiv: appDiv,
   };
   if (appState.message && !level.edit_blocks) {
     options.message = appState.message;
@@ -1297,6 +1300,6 @@ Calc.__testonly__ = IN_UNIT_TEST
   ? {
       displayGoal: displayGoal,
       displayComplexUserExpressions: displayComplexUserExpressions,
-      appState: appState
+      appState: appState,
     }
   : {};

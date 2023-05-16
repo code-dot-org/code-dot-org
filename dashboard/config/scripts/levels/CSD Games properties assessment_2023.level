@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:53:40.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -85,9 +81,9 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "true",
-    "start_blocks": "background(\"burlywood\");\r\nfill(\"white\");\r\nellipse(200,200, 350);\r\nvar fries = createSprite(250,140);\r\nfries.setAnimation(\"fries\");\r\nvar burger = createSprite(110,200);\r\nburger.setAnimation(\"burger\");\r\nvar dessert = createSprite(240,270);\r\ndessert.setAnimation(\"watermelon\");\r\ndrawSprites();",
+    "start_blocks": "//1) Run the program to see how big the food is.\r\n//2) Use sprite properties to scale all of the food sprites down so they fit on the plate.\r\nbackground(\"burlywood\");\r\nfill(\"white\");\r\nellipse(200,200, 350);\r\nvar fries = createSprite(250,140);\r\nfries.setAnimation(\"fries\");\r\nvar burger = createSprite(110,200);\r\nburger.setAnimation(\"burger\");\r\nvar dessert = createSprite(240,270);\r\ndessert.setAnimation(\"watermelon\");\r\ndrawSprites();",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"5f9cce1d-1665-49a5-aced-9b3470b58375\",\r\n    \"fa1c1b96-bbba-461f-950a-7799db5675be\",\r\n    \"ae786eaf-f054-479e-bfd4-977287404ef7\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"5f9cce1d-1665-49a5-aced-9b3470b58375\": {\r\n      \"name\": \"burger\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/Y6YDkPRJ2GcPqA7JIw6QAtbX3ut98EXF/category_food/burger.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 262\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Y6YDkPRJ2GcPqA7JIw6QAtbX3ut98EXF\"\r\n    },\r\n    \"fa1c1b96-bbba-461f-950a-7799db5675be\": {\r\n      \"name\": \"fries\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/HaT88QgsBanVmgCySHPlMbyDQLgDIyMX/category_food/fries.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 253\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HaT88QgsBanVmgCySHPlMbyDQLgDIyMX\"\r\n    },\r\n    \"ae786eaf-f054-479e-bfd4-977287404ef7\": {\r\n      \"name\": \"watermelon\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/mGF3NpBarn0xMZN6EtyAmG7JRLzN97_9/category_food/sliced_watermelon.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 240\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"mGF3NpBarn0xMZN6EtyAmG7JRLzN97_9\"\r\n    }\r\n  }\r\n}",
-    "long_instructions": "# Make it Fit!\r\n<img src=\"https://images.code.org/3cc33de83a1dee34a3ce07f4d6c24c45-image-1566239215417.25.23 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nThe food is way too big to fit on the plate.  Use your knowledge of sprite properties to make it fit.\r\n\r\n# Do this\r\n\r\n* Run the program to see how big the food is.\r\n* Use sprite properties to scale all of the food sprites down so they fit on the plate.\r\n\r\n",
+    "long_instructions": "# Make it Fit!\r\n<img src=\"https://images.code.org/3cc33de83a1dee34a3ce07f4d6c24c45-image-1566239215417.25.23 AM.png\" style=\"float: right; width: 150px;\">\r\n\r\nThe food is way too big to fit on the plate.  Use your knowledge of sprite properties to make it fit.\r\n\r\n# Do this\r\n\r\n1) Run the program to see how big the food is.\r\n2) Use sprite properties to scale all of the food sprites down so they fit on the plate.\r\n\r\n",
     "encrypted_examples": "PSzjbf1WS7EMRMADdfknIEk36xdHEcmwampUF5jL4QNENjMyaFepI/p2hKGb\n5Bfwx3PIpjGIlPNJV6LcaoFy6Q==\n",
     "libraries_enabled": "false",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
@@ -98,9 +94,13 @@
     "rubric_performance_level_4": "The code is either the same or has been changed in ways unrelated the assignment.",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:53:40.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:40.064+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties assessment_2022\\\"\"],\"cloned_from\":\"CSD Games properties assessment_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:40.064+00:00\",\"changed\":[\"cloned from \\\"CSD Games properties assessment_2022\\\"\"],\"cloned_from\":\"CSD Games properties assessment_2022\"},{\"changed_at\":\"2023-01-10 23:54:30 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

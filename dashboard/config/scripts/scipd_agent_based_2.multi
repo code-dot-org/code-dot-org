@@ -10,3 +10,5 @@ wrong 'simple mechanical systems'
 right 'complex adaptive systems'
 wrong 'systems of mathematical equations'
 wrong 'all of the above'
+
+allow_multiple_attempts true

@@ -4,3 +4,4 @@ question 'What should f(1) produce?'
 wrong 'x'
 wrong '117'
 right '17'
+allow_multiple_attempts true

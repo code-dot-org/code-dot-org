@@ -1,4 +1,5 @@
-@no_circle
+# We don't support Java Lab on mobile.
+@no_circle @no_phone
 Feature: Finish Button
 
 Background:

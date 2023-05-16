@@ -8,3 +8,5 @@ type 'multi2'
 markdown <<MARKDOWN
 #md stuff
 MARKDOWN
+
+allow_multiple_attempts true

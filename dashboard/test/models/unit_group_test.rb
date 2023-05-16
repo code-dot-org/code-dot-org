@@ -260,7 +260,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if unit_group has plc_course" do
-    unit_group = UnitGroup.new(family_name: 'plc')
+    unit_group = create :unit_group, family_name: 'plc'
     unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
     unit_group.save
 
@@ -627,7 +627,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 2, summary[:scripts].length
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false)
+    # spot check that we have fields that show up in Unit.summarize(false)
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 

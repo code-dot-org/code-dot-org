@@ -10,6 +10,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -64,9 +65,11 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
+  ensure
+    Infrastructure::Logger.flush
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -242,11 +245,11 @@ def parse_options
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /(localhost|ngrok)/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /(localhost|ngrok)/
+      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if options.pegasus_domain =~ /test/
-      options.dashboard_db_access = true if options.dashboard_domain =~ /test/
+      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
+      options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
     if options.config
@@ -285,10 +288,12 @@ end
 # @return [String] a public hyperlink to the uploaded log, or empty string.
 def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
+  # Assume all log files are Cucumber reports in html format.
+  # TODO: Set content type dynamically based on filename extension.
+  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -334,7 +339,14 @@ def run_tests(env, feature, arguments, log_prefix)
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
     eyes_succeeded = count_eyes_errors(stdout) == 0
-    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
+    duration = Time.now - start_time
+    extra_dimensions = {test_type: test_type,
+                        feature_name: feature}
+    # Metrics for individual feature runs. They will be flushed once all of them run
+    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
 end
 
@@ -411,6 +423,15 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
@@ -440,8 +461,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read('test_status.haml')
   haml_engine = Haml::Engine.new(test_status_template)
-  File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(
+  File.write(
+    status_page_filename,
+    haml_engine.render(
       Object.new,
       {
         api_origin: CDO.studio_url('', scheme_for_environment),
@@ -454,7 +476,7 @@ def generate_status_page(suite_start_time)
         browser_features: browser_features
       }
     )
-  end
+  )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
 
@@ -472,8 +494,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -482,8 +504,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -559,7 +581,7 @@ def output_synopsis(output_text, log_prefix)
 
   failing_scenarios = lines.rindex("Failing Scenarios:\n")
   if failing_scenarios
-    return lines[failing_scenarios..-1].map {|line| "#{log_prefix}#{line}"}.join
+    return lines[failing_scenarios..].map {|line| "#{log_prefix}#{line}"}.join
   else
     return lines.last(3).map {|line| "#{log_prefix}#{line}"}.join
   end
@@ -628,9 +650,6 @@ def cucumber_arguments_for_browser(browser, options)
       if browser['mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -639,7 +658,6 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
@@ -648,12 +666,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a circle run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -727,10 +744,6 @@ def run_feature(browser, feature, options)
   # These things won't be disabled in the dashboard instance we're testing against.
   run_environment['SKIP_I18N_INIT'] = 'true'
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
-
-  # Force Applitools eyes to use a consistent host OS identifier for now
-  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
 
   max_reruns = how_many_reruns?(test_run_string)
 
@@ -806,7 +819,7 @@ def run_feature(browser, feature, options)
   unless parsed_output.nil?
     scenario_count = parsed_output[:scenarios].to_i
     scenario_info = parsed_output[:info]
-    scenario_info = ", #{scenario_info}" unless scenario_info.blank?
+    scenario_info = ", #{scenario_info}" if scenario_info.present?
   end
 
   rerun_info = " with #{reruns} reruns" if reruns > 0

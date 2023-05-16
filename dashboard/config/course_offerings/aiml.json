@@ -3,5 +3,13 @@
   "display_name": "AI and Machine Learning Module",
   "category": "aiml",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "6,7,8,9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/354488da87cbb925dcf2a2a40c29b598-AIML.png",
+  "cs_topic": "artificial_intelligence,data",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
 }

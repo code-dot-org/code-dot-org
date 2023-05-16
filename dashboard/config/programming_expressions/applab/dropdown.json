@@ -6,7 +6,7 @@
   "content": "\r\n\r\nCreates a dropdown selection box on the screen displaying the *options* provided and referenced by the given *id* at default location (0,0).\r\n\r\n\r\nYour apps will sometimes need to collect specific input from the user, instead of unrestricted input using [`textInput()`(#fff176)](/docs/applab/textInput/). You can code an event handler that is triggered by various events in the dropdown box. Use [`getText()`(#fff176)](/docs/applab/getText/) to get the option currently chosen in the dropdown.\r\n\r\n\r\n",
   "examples": [
     {
-      "name": "",
+      "name": "Example Two Moods",
       "description": "",
       "code": "```\n//Get the user's mood.\r\ndropdown(\"id\", \"happy\", \"sad\");\r\nonEvent(\"id\", \"change\", function(event) {\r\n  write(getText(\"id\"));\r\n});\n```",
       "app": "",

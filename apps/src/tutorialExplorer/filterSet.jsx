@@ -4,7 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FilterGroup from './filterGroup';
-import RoboticsButton from './roboticsButton';
 import FilterGroupSortBy from './filterGroupSortBy';
 import FilterGroupOrgNames from './filterGroupOrgNames';
 import {TutorialsSortByOptions} from './util';
@@ -24,7 +23,6 @@ export default class FilterSet extends React.Component {
     onUserInputFilter: PropTypes.func.isRequired,
     onUserInputOrgName: PropTypes.func.isRequired,
     onUserInputSortBy: PropTypes.func.isRequired,
-    roboticsButtonUrl: PropTypes.string
   };
 
   displayItem = item => {
@@ -67,10 +65,6 @@ export default class FilterSet extends React.Component {
                 key={item.name}
               />
             )
-        )}
-
-        {this.props.roboticsButtonUrl && (
-          <RoboticsButton url={this.props.roboticsButtonUrl} />
         )}
       </div>
     );

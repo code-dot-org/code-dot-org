@@ -37,7 +37,7 @@ body {
   height: 170px;
   padding: 20px;
   overflow: hidden;
-  background-color: #7665a0;
+  background-color: #292F36;
   box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@ body {
 
 #pagefooter .dim {
   display: inline-block;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .powered-by-aws {

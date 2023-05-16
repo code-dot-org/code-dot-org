@@ -29,3 +29,5 @@ public void test(int x) {
 
 Which of the following test values would test each possible output for the method?
 MARKDOWN
+
+allow_multiple_attempts true

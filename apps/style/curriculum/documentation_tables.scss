@@ -1,0 +1,21 @@
+@import "color.scss";
+@import "font";
+@import "markdown";
+
+.docs-pages {
+  th {
+    background-color: $charcoal;
+    color: $white;
+    border: 1px solid $white;
+    text-align: left;
+    font-size: 120%;
+    font-family: $gotham-bold;
+    font-weight: normal;
+    padding: 5px;
+  }
+
+  td {
+    padding: 5px;
+    border: 1px solid $charcoal;
+  }
+}

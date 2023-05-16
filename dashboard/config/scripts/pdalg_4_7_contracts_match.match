@@ -13,3 +13,5 @@ markdown <<MARKDOWN
 <img src="//studio.code.org/script_assets/pd/text.png" style="float:left; margin: 10px; width: 300px;"/>Common mistakes when students first write down contracts include writing values (such as `red`) instead of types (such as `String`) and forgetting arguments. Match the following contracts for the function `text` with the student confusion they reflect.
 
 MARKDOWN
+
+allow_multiple_attempts true

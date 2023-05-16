@@ -12,14 +12,7 @@ require 'json'
 # previous translation, update the new_translation with the prev_translation.
 
 def merge_translation_tree(en_translation, new_translation, prev_translation)
-  if !new_translation.is_a?(Hash)
-    # Leaf node, a translation.
-    # New translation equals to English, and old translation already exists
-    if !prev_translation.nil? && new_translation == en_translation &&
-       new_translation != prev_translation
-      new_translation = prev_translation
-    end
-  else
+  if new_translation.is_a?(Hash)
     # Recursive merge for subtree.
     new_translation.each_key do |key|
       next unless en_translation.key?(key) && prev_translation.key?(key)
@@ -33,6 +26,13 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
       unless new_translation.key?(key)
         new_translation[key] = en_translation[key]
       end
+    end
+  else
+    # Leaf node, a translation.
+    # New translation equals to English, and old translation already exists
+    if !prev_translation.nil? && new_translation == en_translation &&
+       new_translation != prev_translation
+      new_translation = prev_translation
     end
   end
   new_translation
@@ -61,9 +61,7 @@ if file_type == "yml"
     prev_translation.values[0]
   )
 
-  File.open(prev_translation_path, 'w+') do |f|
-    f.write(new_translation.to_yaml)
-  end
+  File.write(prev_translation_path, new_translation.to_yaml)
 else
   en_translation = JSON.parse(File.read(en_translation_path))
   new_translation = JSON.parse(File.read(new_translation_path))
@@ -76,9 +74,7 @@ else
     prev_translation
   )
 
-  File.open(prev_translation_path, 'w+') do |f|
-    f.write(JSON.pretty_generate(new_translation))
-  end
+  File.write(prev_translation_path, JSON.pretty_generate(new_translation))
 end
 
 puts "#{new_translation_path} + #{en_translation_path} => #{prev_translation_path}"

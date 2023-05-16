@@ -8,6 +8,11 @@
 
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
+  # WARNING: Static configuration setting. Merging a change to this setting triggers a restart of all db instances in
+  # the cluster during the build process.
+  # Also, in conjunction with GTID, enabling binary logging causes Pegasus tests that utilize fake dashboard to fail
+  # because they create/drop temporary tables within a transaction:
+  # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
   # Disable binary logging to improve write performance.
   binlog_format: 'OFF'
 

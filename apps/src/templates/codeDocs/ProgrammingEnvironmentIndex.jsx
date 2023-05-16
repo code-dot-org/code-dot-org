@@ -1,3 +1,5 @@
+// TODO: Define all prop types for this file.
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -52,16 +54,16 @@ const ProgrammingEnvironmentShape = PropTypes.shape({
   title: PropTypes.string,
   descriotion: PropTypes.string,
   imageUrl: PropTypes.string,
-  showPath: PropTypes.string.isRequired
+  showPath: PropTypes.string.isRequired,
 });
 
 ProgrammingEnvironmentIndex.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(ProgrammingEnvironmentShape)
-    .isRequired
+    .isRequired,
 };
 
 ProgrammingEnvironmentCard.propTypes = {
-  programmingEnvironment: ProgrammingEnvironmentShape
+  programmingEnvironment: ProgrammingEnvironmentShape,
 };
 
 const styles = {
@@ -76,16 +78,16 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   all: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   image: {
-    width: '100%'
+    width: '100%',
   },
   header: {
-    margin: 5
-  }
+    margin: 5,
+  },
 };

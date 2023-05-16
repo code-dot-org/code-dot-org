@@ -59,13 +59,10 @@ function renderMethodNameEditor(method, updateFunc) {
 
 export default function ProgrammingClassEditor({
   initialProgrammingClass,
-  environmentCategories
+  environmentCategories,
 }) {
-  const [
-    programmingClass,
-    setProgrammingClassProperty,
-    resetProgrammingClass
-  ] = useProgrammingClass(initialProgrammingClass);
+  const [programmingClass, setProgrammingClassProperty, resetProgrammingClass] =
+    useProgrammingClass(initialProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -79,9 +76,9 @@ export default function ProgrammingClassEditor({
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
       },
-      body: JSON.stringify(programmingClass)
+      body: JSON.stringify(programmingClass),
     })
       .then(response => {
         setIsSaving(false);
@@ -107,7 +104,7 @@ export default function ProgrammingClassEditor({
   };
 
   const markdownEditorFeatures = {
-    imageUpload: true
+    imageUpload: true,
   };
 
   return (
@@ -242,12 +239,12 @@ const programmingClassShape = PropTypes.shape({
   tips: PropTypes.string,
   examples: PropTypes.arrayOf(PropTypes.object),
   fields: PropTypes.arrayOf(PropTypes.object),
-  methods: PropTypes.arrayOf(PropTypes.object)
+  methods: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingClassEditor.propTypes = {
   initialProgrammingClass: programmingClassShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired
+  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const styles = {
@@ -258,7 +255,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -267,6 +264,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

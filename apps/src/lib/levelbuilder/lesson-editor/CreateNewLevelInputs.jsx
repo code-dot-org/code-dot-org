@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 export default class CreateNewLevelInputs extends Component {
   static propTypes = {
     levelOptions: PropTypes.array.isRequired,
-    addLevel: PropTypes.func.isRequired
+    addLevel: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -17,7 +17,7 @@ export default class CreateNewLevelInputs extends Component {
       levelName: '',
       levelType: this.props.levelOptions[0][1],
       creatingLevel: false,
-      error: null
+      error: null,
     };
   }
 
@@ -39,7 +39,7 @@ export default class CreateNewLevelInputs extends Component {
         error:
           this.state.levelType === ''
             ? 'Please choose a level type'
-            : 'Please enter a level name'
+            : 'Please enter a level name',
       });
     } else {
       $.ajax({
@@ -48,9 +48,9 @@ export default class CreateNewLevelInputs extends Component {
         dataType: 'json',
         data: JSON.stringify({
           type: this.state.levelType,
-          name: this.state.levelName
+          name: this.state.levelName,
         }),
-        contentType: 'application/json;charset=UTF-8'
+        contentType: 'application/json;charset=UTF-8',
       })
         .done(data => {
           this.props.addLevel(data);
@@ -63,7 +63,7 @@ export default class CreateNewLevelInputs extends Component {
           const message = `Could not create level: ${details}`;
           this.setState({
             creatingLevel: false,
-            error: message
+            error: message,
           });
         });
     }
@@ -116,6 +116,6 @@ export default class CreateNewLevelInputs extends Component {
 
 const styles = {
   input: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

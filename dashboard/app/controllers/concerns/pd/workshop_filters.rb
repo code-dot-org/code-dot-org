@@ -171,13 +171,11 @@ module Pd::WorkshopFilters
     )
   end
 
-  private
-
   # Verifies a date string is valid
   # param @date_str [String] the string to verify
   # raises [ArgumentError] if the date string is invalid
   # returns [String] the original value
-  def ensure_date(date_str)
+  private def ensure_date(date_str)
     # will raise ArgumentError if it's not a valid date string
     DateTime.parse(date_str) && date_str
   end

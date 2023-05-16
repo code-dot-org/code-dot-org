@@ -1,34 +1,16 @@
 @no_mobile
 Feature: Manage Assets
 
-  @no_ie @no_safari @no_firefox
-  Scenario: The manage assets dialog contains the option to record audio on Chrome and Firefox.
+  # Chrome and Safari can record audio on saucelabs, but not on localhost. Therefore we only check
+  # that the record audio button is visible.
+  @no_firefox
+  #@skip
+  Scenario: The manage assets dialog contains the option to record audio on Chrome
     Given I am a student
     And I start a new Game Lab project
     And I wait for the page to fully load
     And I open the Manage Assets dialog
-    Then I click selector "#record-asset" once I see it
-    And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
-
-  # Safari thinks it can record audio on saucelabs, so this tests the success condition.
-  # Skipping for now because safari responds differently for localhost vs adhoc environments.
-  # @no_chrome @no_firefox @no_ie
-  @skip
-  Scenario: The manage assets dialog allows recording audio on Safari.
-    Given I am a student
-    And I start a new Game Lab project
-    And I wait for the page to fully load
-    And I open the Manage Assets dialog
-    Then I click selector "#record-asset" once I see it
-    And I wait until element "#start-stop-record" is visible
-
-  @no_chrome @no_firefox @no_safari
-  Scenario: The manage assets dialog does not contain the option to record audio on IE.
-    Given I am a student
-    And I start a new Game Lab project
-    And I wait for the page to fully load
-    And I open the Manage Assets dialog
-    Then I wait until element "#record-asset" is not visible
+    And I wait until element "#record-asset" is visible
 
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
@@ -42,8 +24,6 @@ Feature: Manage Assets
     And element ".assetThumbnail" is visible
     And element ".fa-play-circle" is visible
 
-  # Skip on IE due to blocked pop-ups
-  @no_ie
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student
     And I start a new Game Lab project

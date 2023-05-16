@@ -10,7 +10,8 @@
           "details": "",
           "link": "https://studio.code.org/courses",
           "type": "warning",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "245b713b-e0ef-4345-bf8e-12dc4a112106"
         }
       ],
       "is_migrated": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:56:40 UTC",
+    "serialized_at": "2022-09-28 14:31:23 UTC",
     "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

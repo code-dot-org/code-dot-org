@@ -14,3 +14,5 @@ Optional markdown area. Delete me if you don't need it.
 **C:** Option C here  
 **D:** Option D here  
 MARKDOWN
+
+allow_multiple_attempts true

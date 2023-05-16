@@ -11,7 +11,9 @@ theme: responsive
 
 Look up details of the Professional Learning Program in your region by submitting your zip code below.
 
+<%= view :analytics_event_log_helper, event_name: AnalyticsConstants::RP_LANDING_PAGE_VISITED_EVENT %>
 <%= view :regional_partner_search, source_page_id: "program-information" %>
 
 <br/>
 <br/>
+

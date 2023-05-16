@@ -1,8 +1,6 @@
-/* globals appOptions */
-
 import {
   showDialog,
-  processResults
+  processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
@@ -33,12 +31,12 @@ $(document).ready(() => {
   }
 
   // Unsubmit button should only be available when this is a standalone level.
-  $('.unsubmitButton').click(function() {
-    showDialog(LegacyUnsubmitDialog, function() {
+  $('.unsubmitButton').click(function () {
+    showDialog(LegacyUnsubmitDialog, function () {
       $.post(
         window.appOptions.unsubmitUrl,
         {_method: 'PUT', user_level: {submitted: false}},
-        function() {
+        function () {
           // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }
@@ -48,7 +46,7 @@ $(document).ready(() => {
 
   // TODO(dave): Dashboard shouldn't be reaching into the internal implementation of
   // individual levels. Instead levels should call appOptions.onAttempt.
-  $(document).on('click', '.submitButton', function() {
+  $(document).on('click', '.submitButton', function () {
     var submitButton = $('.submitButton');
     if (submitButton.attr('disabled')) {
       return;
@@ -63,14 +61,14 @@ $(document).ready(() => {
           'result.confirmationDialog only supports React approach to showDialog'
         );
       }
-      showDialog(result.confirmationDialog, function() {
+      showDialog(result.confirmationDialog, function () {
         processResults(undefined, result.beforeProcessResultsHook);
       });
     } else {
       // Avoid multiple simultaneous submissions.
       submitButton.attr('disabled', true);
 
-      var onComplete = function(willRedirect) {
+      var onComplete = function (willRedirect) {
         if (!willRedirect) {
           $('.submitButton').attr('disabled', false);
         }

@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.orgのコースは世界中の数千万人の生徒と100万人の先生によって使われています。</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## 歴史
 
 2013年、Code.orgは、HadiとAli Partoviの2人の双子の兄弟が、コンピューターサイエンスのプロモーション・ビデオ[を創設しました](https://www.youtube.com/watch?v=nKIu9yen5nc)。 この動画はYouTubeの１日アクセスが1位となり、15,000校もの学校が弊所にサポートを依頼してきました。 それ以来、弊所はこの世界的な動向をサポートする完璧な組織を築けるよう、創設時からのボランティア・スタッフからさらに人員拡大を続けてきています。 弊所は、この質の高いコンピュータサイエンス教育を、一握りの恵まれた子どもだけではなく、全ての子どもにも届けられると信じています。
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## 弊所の活動
 

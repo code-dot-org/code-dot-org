@@ -32,7 +32,7 @@ describe('CourseVersionPublishingEditor', () => {
       versionYearOptions: ['1990', '1991', '1992'],
       initialPublishedState: PublishedState.beta,
       publishedState: PublishedState.beta,
-      courseOfferingEditorLink: null
+      courseOfferingEditorLink: null,
     };
   });
 
@@ -48,53 +48,25 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(7);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('in_development');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('pilot');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(2)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(2).props().value
     ).to.equal('beta');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(3)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(3).props().value
     ).to.equal('preview');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(4)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(4).props().value
     ).to.equal('stable');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(5)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(5).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(6)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(6).props().value
     ).to.equal('deprecated');
   });
 
@@ -110,25 +82,13 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(3);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('pilot');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(2)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(2).props().value
     ).to.equal('deprecated');
   });
 
@@ -144,39 +104,19 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(5);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('beta');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('preview');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(2)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(2).props().value
     ).to.equal('stable');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(3)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(3).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(4)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(4).props().value
     ).to.equal('deprecated');
   });
 
@@ -192,32 +132,16 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(4);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('preview');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('stable');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(2)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(2).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(3)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(3).props().value
     ).to.equal('deprecated');
   });
 
@@ -233,25 +157,13 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(3);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('stable');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(2)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(2).props().value
     ).to.equal('deprecated');
   });
 
@@ -267,18 +179,10 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(2);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(0)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).to.equal('sunsetting');
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .at(1)
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').at(1).props().value
     ).to.equal('deprecated');
   });
 
@@ -294,10 +198,7 @@ describe('CourseVersionPublishingEditor', () => {
       wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(1);
     expect(
-      wrapper
-        .find('.publishedStateSelector')
-        .find('option')
-        .props().value
+      wrapper.find('.publishedStateSelector').find('option').props().value
     ).to.equal('deprecated');
   });
 

@@ -1,5 +1,5 @@
 ---
-title: Průvodce Hodinou kódu
+title: Návodný průvodce Hodinou programování
 layout: wide
 nav: how_to_nav
 ---
@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Přidejte se k hnutí a pomocí těchto kroků uveďte studenty do počítačových věd.
 
-Informatické myšlení pomáhá rozvíjet schopnost řešit problémy, logické uvažování a tvořivost. A technologie mění každý obor na planetě. Studenti by se dnes měli učit technologie nejen používat, ale také je vytvářet. Tím, že začnou brzy, dostanou základ pro úspěch v jakékoli budoucí kariérní dráze, která je ve 21. století čeká.
+Studenti by se dnes měli učit technologie nejen používat, ale také je vytvářet.
 
-Když vyzkoušíte Hodinu kódu, jednoduchou a zábavnou formou tím studentům poskytnete úvod do počítačové vědy – třeba to bude jejich úplně první seznámení s ní. Hodina kódu dokonale zapadne do školní výuky i mimoškolního prostředí. Pokud máte nějaké dotazy, podívejte se do našeho [průvodce pro účastníky]({{ localized_files/participation_guide }}).
+Vyzkoušet „Hodinu programování“ je jednoduchý a zábavný způsob, jak dát svým studentům úvod do počítačových věd, možná i ten úplně první! Najděte si aktivitu vhodnou pro Vaše prostředí, školní nebo domácí, osobní nebo virtuální. Podívejte se do našeho [průvodce účastí, jestliže stále máte dotazy]({{ localized_files/participation_guide }}) i po vyzkoušení níže uvedených kroků:
 
 - [Podívejte se na video s návodem pro Hodinu kódu](#how-to-video)
 - [Prozkoumejte aktivity a výukové kurzy](#explore-activities)
@@ -22,8 +22,6 @@ Když vyzkoušíte Hodinu kódu, jednoduchou a zábavnou formou tím studentům 
 - [Pojďme programovat](#code)
 - [Oslavte úspěchy svých studentů](#celebrate)
 - [Další zdroje k Hodině kódu pro vyučující](#other-resources)
-
-### Hodinu kódu lze uspořádat také na dálku. Chcete-li začít, podívejte se na naše [tipy k pořádání virtuální Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -41,7 +39,7 @@ Nabízíme spoustu zábavných, [na studenty orientovaných výukových kurzů](
 
 Prozkoumejte aktivity a předem se rozhodněte, zda chcete vybrat jeden výukový kurz pro všechny studenty, nebo zda necháte každé dítě vybrat si svůj vlastní.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -49,7 +47,7 @@ Prozkoumejte aktivity a předem se rozhodněte, zda chcete vybrat jeden výukov�
 
 ## 3. Vytvořte si plán dne
 
-### Zamyslete se nad svými technickými potřebami – počítače nejsou nutné!
+### Zamyslete se nad svými technickými potřebami - počítače nejsou nutné!
 
 - Nejpřínosnější je Hodina kódu na počítačích s internetovým připojením. Ale není potřeba zajišťovat počítač pro každé dítě. Navíc Hodinu kódu můžete uspořádat i bez počítače. Jestli vás zajímají [aktivity bez počítače](/learn), jednoduše si v části pro technologie v učebně vyfiltrujte kurzy zvolením možnosti „Žádné počítače ani zařízení“.
 - Otestujte si kurzy na počítačích nebo zařízeních studentů, ať víte, že správně fungují v prohlížečích – včetně zvuku a videa. Máte pomalé připojení? Naplánujte přehrání videa před celou třídou, ať si video nemusí stahovat každý student zvlášť. Nebo vyzkoušejte offline kurzy.
@@ -60,7 +58,7 @@ Prozkoumejte aktivity a předem se rozhodněte, zda chcete vybrat jeden výukov�
 
 ### Vyberte den a čas
 
-Lidé po celém světě se přidávají k oslavám Hodiny kódu během Týdne informatiky (9.–13. prosince), kdy jsou vydány nejnovější výukové kurzy a aktivity. Hodinu kódu ale můžete uspořádat kterýkoli den v roce!
+Lidé na celém světě se v době Týdne vzdělávání v počítačových vědách (5. až 11. prosince) zapojují do oslav Hodiny programování, a tehdy jsou také vydávány nejnovější výukové kurzy a aktivity. Hodinu kódu ale můžete uspořádat kterýkoli den v roce!
 
 * * *
 
@@ -76,11 +74,11 @@ Propaguje Hodinu programování k jiným učitelům, kteří se možná budou ch
 
 ### Zaregistrováním své akce o ní dejte vědět svým dobrovolníkům
 
-Když se zaregistrujete na akci [Hodina programování](/), obdržíte užitečná e-mailová sdělení se zprávami a radami, jak uspořádat úspěšnou Hodinu programování. Jde také o způsob, jak můžete sdělit svým místním dobrovolníkům, že jejich škola se zapojí. Vynikajícím prostředkem jsou dobrovolníci, kteří mohou přijít promluvit k Vaší třídě o počítačové vědě nebo prostě jen pomoci Vašim studentům s aktivitami Hodiny programování.
+Když se [zaregistrujete na svou akci Hodina programování](/#join), budete dostávat užitečné e-maily se zprávami a radami, jak pořádat úspěšnou Hodinu programování. Jde také o způsob, jak můžete sdělit svým místním dobrovolníkům, že jejich škola se zapojí. Vynikajícím prostředkem jsou dobrovolníci, kteří mohou přijít promluvit k Vaší třídě o počítačové vědě nebo prostě jen pomoci Vašim studentům s aktivitami Hodiny programování.
 
 ### Vzrušte své studenty
 
-Připravte žactvo na akci sdílením [inspiračních videí](/promote/resources) zdůrazňujících různorodé lidi a kreativní způsoby využívání počítačových věd. Nebo si objednejte inspirační plakáty pro svou třídu! Studenti vykazují větší ochotu k účasti na nějakém předmětu, když vidí, že lidé kolem nich, kteří jsou podobní jako oni, je v tom podporují.
+Připravte žactvo na akci sdílením [inspiračních videí](/promote/resources) zdůrazňujících různorodé lidi a kreativní způsoby využívání počítačových věd. Nebo si vytiskněte inspirační plakáty pro svou třídu! Studenti vykazují větší ochotu k účasti na nějakém předmětu, když vidí, že lidé kolem nich, kteří jsou podobní jako oni, je v tom podporují.
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ Vůbec nevadí, když je pro vás i vaše studenty počítačová věda něčím
 
 Naveďte studenty k aktivitě
 
-- Napište na tabuli odkaz na výukový kurz. Odkaz najdete v seznamu v [informacích pro vybraný výukový kurz]({{ urls/learn }}) pod počtem účastníků.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Když Vaši studenti narazí na nějaké překážky, je správné zareagovat:
 
@@ -142,7 +140,6 @@ Co když nějaký student skončí dříve?
 
 - Vytiskněte svým studentům [certifikáty]({{ urls/certificates }}).
 - [Natiskněte svým studentům nálepky „Dělal jsem hodinu programování!“]({{ urls/promote_stickers }}).
-- [Objednejte si volitelné trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaší školu.
 - Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
 * * *
@@ -156,6 +153,6 @@ Co když nějaký student skončí dříve?
 
 ### Co následuje po Hodině kódu?
 
-Studium počítačové vědy nemusí skončit Hodinou kódu! Naše osnovy jsou dostupné na webu a vždycky budou zdarma. [Zjistěte, jak můžete](/beyond) informatiku uvést do své školy a přiblížit studentům.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

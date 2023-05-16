@@ -7,7 +7,7 @@ import '@cdo/apps/utils'; // Provides Function.prototype.inherits
  * @constructor
  * @implements CustomGameLogic
  */
-var RocketHeightLogic = function(studio) {
+var RocketHeightLogic = function (studio) {
   CustomGameLogic.apply(this, arguments);
   this.rocketIndex = 0;
   this.last = Date.now();
@@ -21,7 +21,7 @@ var RocketHeightLogic = function(studio) {
 };
 RocketHeightLogic.inherits(CustomGameLogic);
 
-RocketHeightLogic.prototype.onTick = function() {
+RocketHeightLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     // Make sure fields are properly initialized, for example if we've run
     // and then reset.
@@ -53,7 +53,7 @@ RocketHeightLogic.prototype.onTick = function() {
  * @param {number} seconds Time elapsed since rocket launch
  * @returns {number} Height of rocket after seconds
  */
-RocketHeightLogic.prototype.rocket_height = function(seconds) {
+RocketHeightLogic.prototype.rocket_height = function (seconds) {
   const rocketHeight = this.resolveCachedBlock_('VALUE');
   if (rocketHeight) {
     return rocketHeight(seconds);

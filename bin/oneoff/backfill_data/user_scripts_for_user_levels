@@ -132,7 +132,7 @@ NUM_LEVELS_REQUIRED = {
   # 203
   # 204
 }.freeze
-SCRIPTS = Script.all.pluck(:id).freeze
+SCRIPTS = Unit.all.pluck(:id).freeze
 TRANSACTION_SIZE = 5_000
 TIME_NOW = Time.now.freeze
 
@@ -195,8 +195,8 @@ begin
 
     slice_count += 1
   end
-rescue Exception => e
+rescue Exception => exception
   puts "EXCEPTION: #{user_id_script_id}..."
-  raise e
+  raise exception
 end
 puts 'FINISHED DB WRITES.'

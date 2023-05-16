@@ -10,7 +10,7 @@ import logToCloud from '../../../../logToCloud';
 function main(context) {
   Promise.all([
     checkJotFormFrameLoaded(context),
-    checkJotFormReachability()
+    checkJotFormReachability(),
   ]).then(([jotFormFrameLoadedMs, jotformReachability]) => {
     const pageAction =
       jotFormFrameLoadedMs === false
@@ -19,7 +19,7 @@ function main(context) {
     const eventData = {
       route: `GET ${context.location.pathname}`,
       jotFormFrameLoadedMs,
-      ...jotformReachability
+      ...jotformReachability,
     };
     logToCloud.addPageAction(pageAction, eventData);
   });
@@ -33,7 +33,7 @@ function main(context) {
  */
 function checkJotFormFrameLoaded(context) {
   return new Promise(resolve => {
-    context.JotFormFrameLoaded = function() {
+    context.JotFormFrameLoaded = function () {
       const time = performance.now();
       if (timeoutKey) {
         clearTimeout(timeoutKey);
@@ -42,7 +42,7 @@ function checkJotFormFrameLoaded(context) {
       resolve(time);
     };
 
-    const timeoutKey = setTimeout(function() {
+    const timeoutKey = setTimeout(function () {
       console.log(`JotForm failed to load in 5s`);
       resolve(false);
     }, 5000);
@@ -65,7 +65,7 @@ function checkJotFormReachability() {
     'https://cdn.jotfor.ms/favicon.ico',
     'https://www.jotform.com/favicon.ico',
     'https://api.jotform.com/favicon.ico',
-    'https://submit.jotform.us/favicon.ico'
+    'https://submit.jotform.us/favicon.ico',
     // Not using these yet, they're likely to fall under the same policy as www.jotform.com
     // events.jotform.com
     // files.jotform.com

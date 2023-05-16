@@ -11,11 +11,11 @@ import {DATE_FORMAT} from './workshopConstants';
 export default class AttendancePanel extends React.Component {
   static propTypes = {
     workshopId: PropTypes.string,
-    sessions: PropTypes.array
+    sessions: PropTypes.array,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   getSessionAttendanceLink(session) {
@@ -33,9 +33,7 @@ export default class AttendancePanel extends React.Component {
       return null;
     }
 
-    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${
-      session.code
-    }`;
+    return `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${session.code}`;
   }
 
   getAttendanceUrl(sessionId) {
@@ -107,11 +105,11 @@ export default class AttendancePanel extends React.Component {
 
 const styles = {
   attendanceRow: {
-    padding: '5px 0'
+    padding: '5px 0',
   },
   attendanceRowText: {
     fontSize: '14px',
     padding: '6px 0',
-    margin: 1
-  }
+    margin: 1,
+  },
 };

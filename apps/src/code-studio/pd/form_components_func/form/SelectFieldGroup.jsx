@@ -57,7 +57,7 @@ SelectFieldGroup.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
   // if specified, will add a valueless option
   // with the specified placeholder text
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
 };
 
 /**
@@ -71,5 +71,5 @@ export const SelectFieldGroupFromOptions = props => {
 };
 SelectFieldGroupFromOptions.propTypes = {
   // the name of the input. Should match a key in FormContext options
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };

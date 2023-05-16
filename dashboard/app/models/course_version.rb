@@ -17,7 +17,7 @@
 #
 #  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
 #  index_course_versions_on_course_offering_id                     (course_offering_id)
-#  index_course_versions_on_course_offering_id_and_key             (course_offering_id,key) UNIQUE
+#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
@@ -71,9 +71,10 @@ class CourseVersion < ApplicationRecord
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
   delegate :included_in_units?, to: :content_root, allow_nil: true
+  delegate :link, to: :content_root, allow_nil: false
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
-  # potential content root, i.e. a Script or UnitGroup.
+  # potential content root, i.e. a Unit or UnitGroup.
   #
   # Examples:
   #
@@ -134,7 +135,7 @@ class CourseVersion < ApplicationRecord
   end
 
   def self.should_cache?
-    Script.should_cache?
+    Unit.should_cache?
   end
 
   def self.course_offering_keys(content_root_type)
@@ -148,7 +149,7 @@ class CourseVersion < ApplicationRecord
     return true if course_offering.course_versions.length == 1
 
     family_name = course_offering.key
-    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Unit.latest_stable_version(family_name, locale: locale_code)
 
     latest_stable_version == content_root
   end
@@ -185,7 +186,7 @@ class CourseVersion < ApplicationRecord
   end
 
   def self.unit_group_course_versions_with_units(unit_ids)
-    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.content_root_type == 'UnitGroup'}
+    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
 
   def self.unit_group_course_versions_with_units_info(unit_ids)
@@ -197,5 +198,9 @@ class CourseVersion < ApplicationRecord
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
       units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }
+  end
+
+  def hoc?
+    !!course_offering&.hoc?
   end
 end

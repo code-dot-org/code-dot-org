@@ -12,35 +12,16 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @csd_2017 = ensure_course 'csd-2017', '2017'
-    @csd6_2017 = ensure_script Script::CSD6_NAME
-    create(:unit_group_unit, position: 1, unit_group: @csd_2017, script: @csd6_2017)
-    CourseOffering.add_course_offering(@csd_2017)
-    @csd_2017.reload
-    @csd6_2017.reload
+    # Create 3 versions of the devices unit where one is assigned to the user,
+    # one is the version the user most recently made progress in, and the other
+    # is the most recent version (for testing that MakerController.maker_script
+    # prioritizes an assigned unit version over a unit the user has progress in
+    # over the newest version).
+    @assigned_devices_version = ensure_script 'devices-assigned', '2020'
+    @recent_progress_devices_version = ensure_script 'devices-progress', '2021'
+    @most_recent_devices_version = ensure_script 'devices-recent', '2022'
 
-    @csd_2018 = ensure_course 'csd-2018', '2018'
-    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
-    create(:unit_group_unit, position: 1, unit_group: @csd_2018, script: @csd6_2018)
-    CourseOffering.add_course_offering(@csd_2018)
-    @csd_2018.reload
-    @csd6_2018.reload
-
-    @csd_2019 = ensure_course 'csd-2019', '2019'
-    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
-    create(:unit_group_unit, position: 1, unit_group: @csd_2019, script: @csd6_2019)
-    CourseOffering.add_course_offering(@csd_2019)
-    @csd_2019.reload
-    @csd6_2019.reload
-
-    @csd_2020_unstable = ensure_course 'csd-2020-unstable', '2020'
-    @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', false
-    create(:unit_group_unit, position: 1, unit_group: @csd_2020_unstable, script: @csd6_2020_unstable)
-    CourseOffering.add_course_offering(@csd_2020_unstable)
-    @csd_2020_unstable.reload
-    @csd6_2020_unstable.reload
-
-    Script.clear_cache
+    Unit.clear_cache
   end
 
   test_redirect_to_sign_in_for :home
@@ -63,117 +44,37 @@ class MakerControllerTest < ActionController::TestCase
     assert_select '#maker-home'
   end
 
-  test "shows CSD6-2019 when there are no relevant assignments" do
+  test "shows latest stable devices version if it is assigned" do
+    create :user_script, user: @student, script: @most_recent_devices_version, assigned_at: Time.now
+    assert_includes @student.scripts, @most_recent_devices_version
+
+    assert_equal @most_recent_devices_version, MakerController.maker_script(@student)
+  end
+
+  test "prioritizes assigned devices version to show user" do
+    section = create :section, user: @teacher, script: @assigned_devices_version
+    create :user_script, user: @student, script: @assigned_devices_version, assigned_at: Time.now
+    section.students << @student
+    recent_progress_script = create :user_script, user: @student, script: @recent_progress_devices_version, last_progress_at: Time.now
+    assert_includes @student.scripts, @assigned_devices_version
+    assert_equal recent_progress_script, @student.user_script_with_most_recent_progress
+
+    assert_equal @assigned_devices_version, MakerController.maker_script(@student)
+  end
+
+  test "prioritizes recent progress in devices version to show user if no versions assigned" do
+    recent_progress_script = create :user_script, user: @student, script: @recent_progress_devices_version, last_progress_at: Time.now
+    assert_equal recent_progress_script, @student.user_script_with_most_recent_progress
+
+    assert_equal @recent_progress_devices_version, MakerController.maker_script(@student)
+  end
+
+  test "defaults to newest stable devices version if user has no assignments or progress in any version" do
     assert_empty @student.scripts
     assert_empty @student.section_courses
     assert_nil @student.user_script_with_most_recent_progress
 
-    assert_equal @csd6_2019, MakerController.maker_script(@student)
-  end
-
-  test "assignment should take precedence over progress in a script" do
-    create :user_script, user: @student, script: @csd6_2019
-    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
-
-    assert_equal @csd6_2017, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2019 if CSD6-2019 is assigned" do
-    create :user_script, user: @student, script: @csd6_2019, assigned_at: Time.now
-    assert_includes @student.scripts, @csd6_2019
-
-    assert_equal @csd6_2019, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if CSD6-2018 is assigned" do
-    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
-    refute_includes @student.scripts, @csd6_2017
-    assert_includes @student.scripts, @csd6_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2017 if CSD6-2017 is assigned" do
-    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
-    assert_includes @student.scripts, @csd6_2017
-    refute_includes @student.scripts, @csd6_2018
-
-    assert_equal @csd6_2017, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if both CSD6-2017 and CSD6-2018 are assigned" do
-    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
-    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
-    assert_includes @student.scripts, @csd6_2017
-    assert_includes @student.scripts, @csd6_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2019 if both CSD6-2018 and CSD6-2019 are assigned" do
-    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
-    create :user_script, user: @student, script: @csd6_2019, assigned_at: Time.now
-    assert_includes @student.scripts, @csd6_2018
-    assert_includes @student.scripts, @csd6_2019
-
-    assert_equal @csd6_2019, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2019 if CSD-2019 is assigned" do
-    create :follower, section: create(:section, unit_group: @csd_2019), student_user: @student
-    assert_includes @student.section_courses, @csd_2019
-
-    assert_equal @csd6_2019, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if CSD-2018 is assigned" do
-    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
-    refute_includes @student.section_courses, @csd_2017
-    assert_includes @student.section_courses, @csd_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2017 if CSD-2017 is assigned" do
-    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
-    assert_includes @student.section_courses, @csd_2017
-    refute_includes @student.section_courses, @csd_2018
-
-    assert_equal @csd6_2017, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
-    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
-    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
-    @student.reload
-    assert_includes @student.section_courses, @csd_2017
-    assert_includes @student.section_courses, @csd_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
-    create :follower, section: create(:section, script: @csd6_2017), student_user: @student
-    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
-    @student.reload
-    assert_includes @student.scripts, @csd6_2017
-    refute_includes @student.section_courses, @csd_2017
-    refute_includes @student.scripts, @csd6_2018
-    assert_includes @student.section_courses, @csd_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
-  end
-
-  test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
-    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
-    create :follower, section: create(:section, script: @csd6_2018), student_user: @student
-    assert_includes @student.section_scripts, @csd6_2018
-    refute_includes @student.scripts, @csd6_2017
-    assert_includes @student.section_courses, @csd_2017
-    assert_includes @student.scripts, @csd6_2018
-    refute_includes @student.section_courses, @csd_2018
-
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
+    assert_equal @most_recent_devices_version, MakerController.maker_script(@student)
   end
 
   test "apply: fails if unit_6_intention not provided" do
@@ -520,17 +421,12 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name, is_stable=true)
-    Script.find_by_name(script_name) ||
-      create(:script, name: script_name, is_maker_unit: true, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
+  def ensure_script(script_name, version_year='2000', is_stable=true)
+    Unit.find_by_name(script_name) ||
+      create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
       end
-  end
-
-  def ensure_course(course_name, version_year)
-    UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 end

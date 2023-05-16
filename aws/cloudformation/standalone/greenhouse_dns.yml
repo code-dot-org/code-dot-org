@@ -4,23 +4,24 @@
 Resources:
 
   GreenhouseHostedZone:
-    Type: "AWS::Route53::HostedZone"
+    Type: AWS::Route53::HostedZone
     Properties:
       Name: gh-mail.code.org.
+      HostedZoneConfig: 
+        Comment: Records for Greenhouse mail integration
 
   NameServerRecord:
     Type: AWS::Route53::RecordSet
-    DependsOn: GreenhouseHostedZone
     Properties:
       HostedZoneName : code.org.
       Name: gh-mail.code.org
+      Comment: Records for Greenhouse mail integration
       ResourceRecords: !GetAtt GreenhouseHostedZone.NameServers
       TTL: 3600
       Type: NS
 
   GreenhouseRecords:
     Type: AWS::Route53::RecordSetGroup
-    DependsOn: GreenhouseHostedZone
     Properties:
       Comment: Creating records for mail server
       HostedZoneId: !Ref GreenhouseHostedZone
@@ -44,7 +45,6 @@ Resources:
       - Name: k1._domainkey.gh-mail.code.org.
         ResourceRecords: 
         # Values over 255 characters must be broken up
-        - '"k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3DJFLhRJaJAscD2fyydX5ujqvXcvNo7fK62/SgIp1VzGP/PHOD5vy1EJ44erYq+6s2lRjcFEpZzRFwlWkyEumTYiWQumcH8AVTtjWQiRDSDZf4+JLgwNwnuBrH/QSP9wHh5sF3Elf9yrOl9Q5pkwhbZNW0BFxAllLy5rlNiDuy6zvDICmbzykoXWOBwAzWNg5fXcjraD4I"'
-        - '"8DknH2rFDENyg6ai8uSAujafeRfpU8tQQxohDolKMW+n6idbsLWJwB9sdlIbrgW1rPjCzFCKea327+7bK5x/E9qBVo6ARB0ype8M+XY8CK6CSDHxVnpmciRbOUy2jLXT+MdpmKbEI2AwIDAQAB"'
+        - '"k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3DJFLhRJaJAscD2fyydX5ujqvXcvNo7fK62/SgIp1VzGP/PHOD5vy1EJ44erYq+6s2lRjcFEpZzRFwlWkyEumTYiWQumcH8AVTtjWQiRDSDZf4+JLgwNwnuBrH/QSP9wHh5sF3Elf9yrOl9Q5pkwhbZNW0BFx" "AllLy5rlNiDuy6zvDICmbzykoXWOBwAzWNg5fXcjraD4I8DknH2rFDENyg6ai8uSAujafeRfpU8tQQxohDolKMW+n6idbsLWJwB9sdlIbrgW1rPjCzFCKea327+7bK5x/E9qBVo6ARB0ype8M+XY8CK6CSDHxVnpmciRbOUy2jLXT+MdpmKbEI2AwIDAQAB"'
         TTL: 3600
         Type: TXT

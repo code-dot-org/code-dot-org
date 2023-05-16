@@ -3,10 +3,10 @@ import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, SPRITE_WARNING_THRESHOLD} from './constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 import {
   workspaceAlertTypes,
-  displayWorkspaceAlert
+  displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
 
@@ -21,7 +21,7 @@ export default class CoreLibrary {
     this.totalPauseTime = 0;
     this.timerResetTime = {
       seconds: 0,
-      frames: 0
+      frames: 0,
     };
     this.numActivePrompts = 0;
     this.screenText = {};
@@ -30,6 +30,7 @@ export default class CoreLibrary {
     this.promptVars = {};
     this.eventLog = [];
     this.speechBubbles = [];
+    this.storyLabText = {};
     this.soundLog = [];
     this.criteria = [];
     this.bonusCriteria = [];
@@ -40,7 +41,7 @@ export default class CoreLibrary {
       delay: 90,
       fail: 150,
       pass: 90,
-      successFrame: 0
+      successFrame: 0,
     };
 
     this.commands = {
@@ -53,8 +54,9 @@ export default class CoreLibrary {
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
+        commands.drawStoryLabText.apply(this);
       },
-      ...commands
+      ...commands,
     };
   }
 
@@ -172,7 +174,7 @@ export default class CoreLibrary {
       spriteY,
       {
         tailHeight,
-        radius
+        radius,
       },
       bubbleType
     );
@@ -185,7 +187,7 @@ export default class CoreLibrary {
       bubbleY + padding,
       textSize,
       {
-        horizontalAlign: this.p5.CENTER
+        horizontalAlign: this.p5.CENTER,
       }
     );
   }
@@ -204,7 +206,7 @@ export default class CoreLibrary {
       text,
       removeAt,
       renderFrame: this.currentFrame(),
-      bubbleType
+      bubbleType,
     });
     return id;
   }
@@ -266,7 +268,7 @@ export default class CoreLibrary {
     if (!spriteArg) {
       return [];
     }
-    if (spriteArg.hasOwnProperty('id')) {
+    if (Object.prototype.hasOwnProperty.call(spriteArg, 'id')) {
       let sprite = this.nativeSpriteMap[spriteArg.id];
       if (sprite) {
         return [sprite];
@@ -374,18 +376,18 @@ export default class CoreLibrary {
   }
 
   reachedSpriteWarningThreshold() {
-    return this.getNumberOfSprites() === SPRITE_WARNING_THRESHOLD;
+    return (
+      this.getNumberOfSprites() === MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER
+    );
   }
 
   // This function is called within the addSprite function BEFORE a new sprite is created
-  // If the total number of sprites is equal to SPRITE_WARNING_THRESHOLD, a workspace
-  // alert warning is displayed to let user know they have reached the sprite limit
-  // Note that SPRITE_WARNING_THRESHOLD = MAX_NUM_SPRITES - 1
+  // If the total number of sprites is equal to (MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER),
+  // a workspace alert warning is displayed to let user know they have reached the sprite limit
   dispatchSpriteLimitWarning() {
     getStore().dispatch(
       displayWorkspaceAlert(
         workspaceAlertTypes.warning,
-        /* display warning when user exceeds SPRITE_WARNING_THRESHOLD */
         msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
         /* bottom */ true
       )
@@ -434,10 +436,10 @@ export default class CoreLibrary {
     }
 
     sprite.baseScale = 1;
-    sprite.setScale = function(scale) {
+    sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
     };
-    sprite.getScale = function() {
+    sprite.getScale = function () {
       return sprite.scale / sprite.baseScale;
     };
     if (animation) {
@@ -497,7 +499,7 @@ export default class CoreLibrary {
     if (!this.userInputEventCallbacks[variableName]) {
       this.userInputEventCallbacks[variableName] = {
         setterCallbacks: [],
-        userCallbacks: []
+        userCallbacks: [],
       };
     }
     this.userInputEventCallbacks[variableName].setterCallbacks.push(
@@ -512,7 +514,7 @@ export default class CoreLibrary {
     if (!this.userInputEventCallbacks[variableName]) {
       this.userInputEventCallbacks[variableName] = {
         setterCallbacks: [],
-        userCallbacks: []
+        userCallbacks: [],
       };
     }
     this.userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
@@ -672,12 +674,12 @@ export default class CoreLibrary {
   }
 
   whenTouchEvent(inputEvent) {
-    const getFired = function(map, spriteId, targetId) {
+    const getFired = function (map, spriteId, targetId) {
       if (map && map[spriteId] && map[spriteId][targetId]) {
         return map[spriteId][targetId].firedOnce;
       }
     };
-    const setFired = function(map, spriteId, targetId, fired) {
+    const setFired = function (map, spriteId, targetId, fired) {
       if (!map) {
         map = {};
       }
@@ -706,7 +708,7 @@ export default class CoreLibrary {
             this.eventLog.push(`whenTouch: ${sprite.id} ${target.id}`);
             callbackArgList.push({
               subjectSprite: sprite.id,
-              objectSprite: target.id
+              objectSprite: target.id,
             });
             firedOnce = true;
           }
@@ -738,7 +740,7 @@ export default class CoreLibrary {
           }
           callbackArgList.push({
             subjectSprite: sprite.id,
-            objectSprite: target.id
+            objectSprite: target.id,
           });
         }
       });
@@ -842,7 +844,7 @@ export default class CoreLibrary {
         this.behaviors.push({
           func: behavior.func,
           name: behavior.name,
-          sprite: sprite
+          sprite: sprite,
         });
       }
     }
