@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-13 23:13:33 UTC",
+    "serialized_at": "2023-05-15 14:01:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2106,6 +2106,18 @@
       }
     },
     {
+      "key": "3ea4aa43-3feb-4a9d-8917-f3d75fbc8b1a",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea4aa43-3feb-4a9d-8917-f3d75fbc8b1a",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
       "key": "5b5e5cea-be5f-473f-b660-9f072f687185",
       "position": 1,
       "properties": {
@@ -3091,6 +3103,18 @@
       }
     },
     {
+      "key": "ebaba802-185e-46dd-b99c-2ef0ccc15d85",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebaba802-185e-46dd-b99c-2ef0ccc15d85",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
       "key": "e75d2a97-dee4-483f-b55e-73cd961989b2",
       "position": 1,
       "properties": {
@@ -3353,6 +3377,18 @@
       },
       "seeding_key": {
         "activity_section.key": "1f1038ea-4656-4839-83f3-3668950686f4",
+        "lesson_activity.key": "7b69900b-4641-4033-8ac4-c19fa85c0ff2"
+      }
+    },
+    {
+      "key": "9d2ce3e5-d327-4275-84dd-49b4126ff85e",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d2ce3e5-d327-4275-84dd-49b4126ff85e",
         "lesson_activity.key": "7b69900b-4641-4033-8ac4-c19fa85c0ff2"
       }
     },
@@ -4227,6 +4263,18 @@
       }
     },
     {
+      "key": "12dd5504-bb49-412e-b717-f6c7c526c4e0",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "12dd5504-bb49-412e-b717-f6c7c526c4e0",
+        "lesson_activity.key": "363cb5b7-5b66-4ae8-b5c6-002972a7d1a7"
+      }
+    },
+    {
       "key": "e98d5387-b668-462a-b0e0-63d490b2adea",
       "position": 1,
       "properties": {
@@ -4502,6 +4550,18 @@
       },
       "seeding_key": {
         "activity_section.key": "c037c4d7-9ba2-4da2-aea9-e61147dd8611",
+        "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2"
+      }
+    },
+    {
+      "key": "311874a6-4ad4-4dcd-8833-5b4b49755927",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "311874a6-4ad4-4dcd-8833-5b4b49755927",
         "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2"
       }
     },
@@ -5144,6 +5204,18 @@
       },
       "seeding_key": {
         "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "88145dea-d585-49d3-a41d-e17a15db74fb",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "88145dea-d585-49d3-a41d-e17a15db74fb",
         "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
       }
     },
