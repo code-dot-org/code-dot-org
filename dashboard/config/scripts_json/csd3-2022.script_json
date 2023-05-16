@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-08 22:58:45 UTC",
+    "serialized_at": "2023-05-15 19:45:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -625,7 +625,7 @@
       "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
-        "assessment_opportunities": "1. **Identify core programming constructs necessary to build different components of a game**\r\n\r\n\tIn the project guide, check that the student has identified key functions, sprites and variables needed in the program, and that the general description of the program is accurate.\r\n\r\n2. **Implement different features of a program by following a structured project guide**\r\n\r\n\tSee Level 20 in Code Studio.",
+        "assessment_opportunities": "1. **Identify core programming constructs necessary to build different components of a game**\n\n\tIn the project guide, check that the student has identified key functions, sprites and variables needed in the program, and that the general description of the program is accurate.\n\n2. **Implement different features of a program by following a structured project guide**\n\n\tSee Level 17 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\nIn this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game. They start by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.",
         "preparation": "* Print one copy of the project guide for each student or pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",

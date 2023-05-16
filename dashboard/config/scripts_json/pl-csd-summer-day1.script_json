@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 17:43:56 UTC",
+    "serialized_at": "2023-05-12 17:17:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -62,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high level understanding of the overall themes and structure of the CS Discoveries course\n* Participants are aware of CS Discoveries course collections and how and why they would assign them to their students\n\n\n**Suggested time:** 45 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high level understanding of the overall themes and structure of the CS Discoveries course.\n* Be made aware of CS Discoveries course collections and how and why you can assign them to their students. \n"
+        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n* Participants are aware of CS Discoveries course collections and how and why they would assign them to their students\n\n\n**Suggested time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n* Be made aware of CS Discoveries course collections and how and why you can assign them to their students. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -79,8 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nThis session is an opportunity for participants to have time to explore lesson plans and lessons in Code Studio. Participants should leave the session with a basic understanding of how to navigate these resources on the Code.org site. This navigation will be practiced throughout the week.\n\n**Objectives:**\n\n* Participants know what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Participants know how to access lesson materials as a teacher and student.\n* Participants can access materials for their cohort’s professional learning on the Code.org platform.\n\n\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Learn what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Learn how to access lesson materials as a teacher and student\n* Learn how to access materials for the cohort’s professional learning on the Code.org platform\n"
+        "overview": "**Purpose:**\nThis session is an opportunity for participants to have time to explore lesson plans and lessons in Code Studio. Participants should leave the session with a basic understanding of how to navigate these resources on the Code.org site. This navigation will be practiced throughout the week.\n\n**Objectives:**\n\n* Participants know what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Participants know how to access lesson materials as a teacher and student.\n* Participants can access materials for their cohort’s professional learning on the Code.org platform.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Learn what course resources exist and where to find them (lesson plans, Code Studio lessons, etc.)\n* Learn how to access lesson materials as a teacher and student\n* Learn how to access materials for your cohort’s professional learning on the Code.org platform\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -186,7 +186,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**Purpose:**\nIn this session, participants will dig deeper into the teaching and learning strategies for journaling and discussion. The goal is for participants to get ideas for how they might incorporate these strategies into their classroom routines.\n\n**Objectives:**\n\n* Participants have brainstormed ideas for incorporating journaling and discussion into their classroom routines and procedures\n\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n*  Brainstorm ideas for incorporating journaling and discussion into their classroom routines and procedures"
+        "student_overview": "**You will:**\n\n*  Brainstorm ideas for incorporating journaling and discussion into your classroom routines and procedures"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -220,7 +220,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**Purpose:**\nThe previous session gives participants an introduction to the Problem-Solving Process in Unit 1 - Problem Solving and Computing. This session builds on that experience by drawing a through line between all seven CS Discoveries units to show how the Problem-Solving Process is a foundational piece of the course.\n\n\n**Objectives:**\n\n* Participants see the big picture of Unit 1.\n* Participants know what the Input Output Storage Processing model is.\n* Participants understand the role of the Problem Solving Process in the CS Discoveries curriculum.\n* Participants explore the Problem-Solving Process lessons in units 2-7 in a jigsaw activity.\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* See the big picture of Unit 2.\n* Know what the Input Output Storage Processing model is.\n* Understand the rike if the Problem Solving Process in the CS Discoveries curriculum\n* Explore the Problem-Solving Process lessons in units 2-7 in a jigsaw activity."
+        "student_overview": "**You will:**\n\n* See the big picture of Unit 2.\n* Know what the Input Output Storage Processing model is.\n* Understand the role if the Problem Solving Process in the CS Discoveries curriculum\n* Explore the Problem-Solving Process lessons in units 2-7 in a jigsaw activity."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
