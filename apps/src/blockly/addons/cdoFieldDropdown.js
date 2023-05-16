@@ -37,10 +37,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * called by the serialization system.
    *
    * @param state The state we want to apply to the field.
+   * @override because different labs store `state` in different ways.
    * For music lab, `state` is the value of the field.
    * For other labs, `state` is stringified xml.
    */
   loadState(state) {
+    // Instead of calling on GoogleBlockly.utils.xml.textToDom(state), we do the following
+    // to avoid an error when `state` is assigned a value (music lab).
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(state, 'text/xml');
     const field = xmlDoc.querySelector('field');
@@ -69,23 +72,19 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param callingClass The class calling this method.
    *     Used to see if `this` has overridden any relevant hooks.
    * @returns The stringified version of the XML state, or null.
+   * @override since the condition: `callingClass.prototype.saveState === this.saveState &&
+      callingClass.prototype.toXml !== this.toXml` is true.
    */
   saveLegacyState(callingClass) {
-    if (
-      callingClass.prototype.saveState === this.saveState &&
-      callingClass.prototype.toXml !== this.toXml
-    ) {
-      let elem = GoogleBlockly.utils.xml.createElement('field');
-      elem.setAttribute('name', this.name || '');
-      elem = this.setElementConfig(elem);
-      let text = GoogleBlockly.utils.xml.domToText(this.toXml(elem));
-      text = text.replace(
-        ' xmlns="https://developers.google.com/blockly/xml"',
-        ''
-      );
-      return text;
-    }
-    return null;
+    let elem = GoogleBlockly.utils.xml.createElement('field');
+    elem.setAttribute('name', this.name || '');
+    elem = this.setElementConfig(elem);
+    let text = GoogleBlockly.utils.xml.domToText(this.toXml(elem));
+    text = text.replace(
+      ' xmlns="https://developers.google.com/blockly/xml"',
+      ''
+    );
+    return text;
   }
 
   /**
@@ -128,6 +127,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     return text.replace(/['"]+/g, '').toLowerCase();
   }
 
+  /**
+   * Updates field options based on `config` attribute of field
+   * @param config attribute of field
+   * @return Array of option arrays
+   */
   getUpdatedOptionsFromConfig(config) {
     // If `menuGenerator_` is an array, it is an array of options with
     // each option represented by an array containing 2 elements -
@@ -165,6 +169,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     });
     return options;
   }
+
+  /**
+   * Sets the field element's config attribute if instance variable `hasConfig` is set to `true` and
+   * `menuGenerator` is an array of options.
+   * @param elem field element
+   * @return updated field element
+   */
   setElementConfig(elem) {
     if (Array.isArray(this.menuGenerator_) && this.hasConfig) {
       // convert array of options back into string config
