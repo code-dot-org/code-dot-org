@@ -72,9 +72,9 @@ import {ProjectManagerEvent} from '../../labs/projects/ProjectManager';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
+    progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
     channelId: PropTypes.string,
-    progressLevelType: PropTypes.string,
 
     /**
      * True if Music Lab is being presented from the Incubator page (i.e. under /projectbeats),

@@ -2,8 +2,6 @@
  * Class that handles clean up between level switches. Specifically,
  * it handles saving any unsaved project changes, destroying the project manager
  * once those saves are done, then calling out to a reset function provided by the lab.
- * If a level switch is already in progress while another is requested, the second
- * level switch will be enqueued and will happen after the first level switch is complete.
  */
 
 import ProjectManager from './projects/ProjectManager';

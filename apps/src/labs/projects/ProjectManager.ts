@@ -122,7 +122,7 @@ export default class ProjectManager {
   }
 
   /**
-   * Helper function to save a project, called either after a timeout or direclty by save()
+   * Helper function to save a project, called either after a timeout or directly by save()
    * On a save, we check if there are unsaved changes. If there are none, we can skip the save.
    * If only the source has changed, we save both the source and channel, as we want to update the
    * lastUpdatedTime on the channel. If only the channel has changed, we skip saving the source and only
