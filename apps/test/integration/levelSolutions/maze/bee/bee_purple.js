@@ -12,7 +12,7 @@ var levelDef = {
     [2, 'P', 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -23,9 +23,9 @@ var levelDef = {
     [0, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
-  flowerType: 'redWithNectar'
+  flowerType: 'redWithNectar',
 };
 
 module.exports = {
@@ -37,9 +37,9 @@ module.exports = {
       description: 'Get nectar without checking purple flower',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.executionInfo.terminationValue() === 6; //TerminationValue.UNCHECKED_PURPLE
       },
       xml:
@@ -47,15 +47,15 @@ module.exports = {
         blockUtils.blocksFromList([
           'maze_moveForward',
           'maze_moveForward',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get nectar with checking purple flower',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -67,7 +67,7 @@ module.exports = {
         '<statement name="DO">' +
         '<block type="maze_nectar"></block>' +
         '</statement>' +
-        '</block></next></block></xml>'
-    }
-  ]
+        '</block></next></block></xml>',
+    },
+  ],
 };

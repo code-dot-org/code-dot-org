@@ -1,0 +1,5 @@
+{
+  "key": "covid19-per-country",
+  "name": "COVID-19 Cases per Country",
+  "content": "Description: live dataset, updated weekly, on confirmed cases of COVID-19 per country worldwide\r\n\r\nSource: [DataHub](https://datahub.io/core/covid-19#data)  \r\n \r\nColumns\r\n\r\n* Date (string): the recorded date associated with new COVID-19 cases for that country\r\n* State (string): what country recorded new COVID-19 cases\r\n* Confirmed New Cases (numerical): how many new confirmed cases were recorded in that country for that day\r\n* Recovered (numerical): how many previously confirmed COVID-19 patients fully recovered from the virus, per the stated day in that country\r\n* Deaths (numerical)): how many deaths caused by COVID-19 occurred in that country for the day"
+}

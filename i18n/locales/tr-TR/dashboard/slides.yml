@@ -27,7 +27,7 @@ tr:
       10:
         text: "Her blok bir talimattır. Eğer \"ileri taşı\" bloğunu çalışma alanına sürükleyip \"Programı Çalıştır\"a basarsanız, kuş labirent üzerinde bir boşluk kadar hareket eder."
       11:
-        text: "Birden fazla eylemi gerçekleştirmek için, birden fazla bloğu çalışma alanına sürükleyebilir ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan aşağıya doğru yapacaktır."
+        text: "Birden fazla eylemi gerçekleştirmek için, birden fazla bloğu çalışma alanına sürükleyebilir ve birbirlerine ekleyebilirsiniz. Kuş, komutları yukarıdan aşağıya doğru yapacaktır."
       12:
         text: "Eğer bir programı çalıştırmak ve düzeltme yapıp tekrar denemek istiyorsanız \"Sıfırla\" düğmesine basın."
       13:
@@ -54,9 +54,9 @@ tr:
         text: "Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu toprak atması gerektiğini söylemelisin."
     flappy_intro:
       1:
-        text: "Merhabai Ben Katie! Bilgisayar bilimi hakkında en heyecan verici şeylerden birisi bilgisayar programının etkileşimli olabilmesidir."
+        text: "Merhaba, Ben Katie! Bilgisayar bilimi hakkında en heyecan verici şeylerden birisi bilgisayar programının etkileşimli olabilmesidir."
       2:
-        text: "Her zaman birileri tıkladığında veya bir bilgisayar veya telefonla musluklar veya türleri, bu bir OLAY oluşturur ve bir olay meydana geldiğinde ne yapacağını karar bazı kod var."
+        text: "Her zaman birileri bir bilgisayar veya telefona tıkladığında, dokunduğunda  veya yazdığında, bu bir OLAY oluşturur ve bir olay meydana geldiğinde ne yapacağını karar veren bazı kodlar vardır."
       3:
         text: "Örneğin sizin bir \"farenin tuşuna basıldığında, ses çal\" OLAY-TETİKLEYİCİ'niz olabilir "
       4:
@@ -64,13 +64,13 @@ tr:
       5:
         text: "Sürükle bırak yöntemi ile blokları kullanarak program geliştireceksiniz, bu bloklar bilgisayar komutlarına tekabül edecek. Esasında bu blokların arkasında gerçek kod parçacıkları bulunmaktadır. "
       6:
-        text: "Çalışma alanına göz atarsanız, sizin için doldurulmuş olan bazı yeşil bloklar göreceksiniz - bunlar \"olay işleyicileri\"dir. "
+        text: "Çalışma alanına göz atarsanız, sizin için doldurulmuş olan bazı yeşil bloklar göreceksiniz - bunlar \"olay tetikleyicileri\"dir. "
       7:
-        text: "Fareyi tıkladığınızda kuşun kant ÇIRPMAsını istiyorsanız, olay işleyicisine \"ÇIRP\" bloğunu ekleyerek yapabilirsiniz, bu durumda oyununuzda fare ile kuşa tıklandığında kuş kanat çırpma hareketi yapacaktır."
+        text: "Fareyi tıkladığınızda kuşun kanat ÇIRPMAsını istiyorsanız, olay işleyicisine \"ÇIRP\" bloğunu ekleyerek yapabilirsiniz, bu durumda oyununuzda fare ile kuşa tıklandığında kuş kanat çırpma hareketi yapacaktır."
       8:
-        text: "Bu faliyetin her bulmacasında size yeni yeşil bloklar ile ifade edilen yeni tür olayları tanıtacağız ve bu bloklar için siz uygun olan olayları belirleyip çalışma alanına yerleşriyor olacaksınız."
+        text: "Bu faliyetin her bulmacasında size yeni yeşil bloklar ile ifade edilen yeni tür olayları tanıtacağız ve bu bloklar için size uygun olan olayları belirleyip çalışma alanına yerleştiriyor olacaksınız."
       9:
-        text: "Aşağı açılır menüde içinde buna benzer aşağı işret eden ok gördüğünüzde, flappy yere çarptığında çıkarttığı sesi değiştirebileceğiniz anlamına gelmekte."
+        text: "Aşağı işaret eden ok gördüğünüzde bu ayarları değitirebileceğiniz anlamına gelir, flappy yere çarptığında çıkartacağı hangi sesi çıkaracak gibi."
       10:
         text: "Son bulmacada kendi oyununuzu oluşturup arkadaşlarınız ile paylaşabileceksiniz.\nİyi eğlenceler!"
     loop_times:
@@ -188,25 +188,25 @@ tr:
         text: "Notları gösterme yakında geliyor!"
     frozen_intro:
       1:
-        text: "Merhaba, Benim adım Lyndsey. Kendi uygulamalarımı modelliyorum, hareket ettiriyorum ve yazıyorum. Onların buzun büyüsünü ve güzelliğini keşfettiği gibi kod kullanarak Anna ve Elsa'ya katılalım."
+        text: "Merhaba, Benim adım Lyndsey. Kendi uygulamalarımı modelliyorum, harekete geçiriyorum ve yazıyorum. Anna ve Elsa'ya buzun büyüsünü ve güzelliğini keşfetmelerinde kod kullanarak katılalım."
       2:
-        text: "Buzda kaydıkça kar taneleri ve değişik desenler oluşturarak bir kış diyarı yaratabilir ve sonra arkadaşlarınla paylaşabilirsin."
+        text: "Buzda kaydıkça kar taneleri ve değişik desenler oluşturarak bir kış diyarı yaratabilir ve daha sonra arkadaşlarınla paylaşabilirsin."
       3:
-        text: "Bir saat içerisinde, nasıl kod yazılacağının temellerini öğreneceksiniz. Geleneksel programlama yönteminde genellikle metin kullanılır, ama biz Blocky kullanacağız. Blocky ile görsel blokları sürükleyip bırakarak programlar yazabilirsiniz. Üniversite öğrencileri de bu yöntemle programlamanın temellerini öğrenir."
+        text: "Önümüzdeki saatte, nasıl kodlama yapılacağının temellerini öğreneceksiniz. Geleneksel programlamada genellikle metin kullanılır, ama biz Blockly kullanacağız. Blocky ile görsel blokları sürükleyip bırakarak programlar yazabilirsiniz. Üniversite öğrencileri de bu yöntemle programlamanın temellerini öğrenir. Yine de kod yaratıyor olacaksın."
       4:
-        text: "Program, bilgisayara ne yapacağını söyleyen komutlar dizisidir. Elsa'ya basit bir çizgi oluşturmakta yardımcı olacak bir program yazalım. Bu yazdığımız programı sonra daha karmaşık modeller oluşturmak için kullanacağız."
+        text: "Program, bilgisayara ne yapacağını söyleyen komutlar dizisidir. Elsa'ya basit bir çizgi oluşturmakta yardımcı olacak bir kod veya program yazalım. Bu yazdığımız programı sonra daha karmaşık modeller oluşturmak için kullanacağız."
       5:
-        text: "Ekranın üç ana parçaya bölünmüş haldedir. Soldaki buzlu yüzeyde programını çalıştırırsın. Her seviye için gerekli açıklamalar bu yüzeyin hemen altında yer alır."
+        text: "Ekranın üç ana parçaya bölünmüş haldedir. Soldaki buz yüzeyde programını çalıştırırsın. Her seviye için gerekli açıklamalar bu yüzeyin hemen altında yer alır."
       6:
-        text: "Orta bölümde alet kutusu yer alır ve her bir küp Elsa ve Anna'nın yapabileceği şeylerdir."
+        text: "Orta bölümde alet kutusu yer alır ve her bir blok Elsa ve Anna'nın yapabileceği şeylerdir."
       7:
-        text: "Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı bu alanda oluşturacağız. Buzdan oluşan nesneyi hareket ettirebilmek için \"İleriye taşı\" bloğunu göreceksiniz."
+        text: "Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı bu alanda oluşturacağız. Buz üzerinde hareket etmek için \"İleriye taşı\" bloğunu kullanacaksınız."
       8:
-        text: "\"İlerle\" küpü diyor ki: \"100 piksel ilerle\". Eğer \"Çalıştır\"a basarsak ne olur? Elsa ekranda belli bir miktar ileriye gider; evet tam 100 piksel! Piksel, bilgisayarınızdaki ya da televizyonunuzdaki görüntüyü oluşturan en minik karedir."
+        text: "\"İlerle\" bloğunda diyor ki: \"100 piksel ilerle\". Eğer \"Çalıştır\"a basarsak ne olur? Elsa ekranda belli bir miktar ileriye gider; evet tam 100 piksel! Piksel, ekranınızdaki görüntüyü oluşturan çok küçük karedir."
       9:
-        text: "Bulmacadaki diğer küp diyor ki: \"sağa doğru 90 derece dön\". Bu küpü kullandığımız zaman Elsa belli bir miktar sağa döner. Elsa'nın ne kadar döneceğini değiştirmek için değerlerle biraz oynayabilirsiniz. Açı değeri, Elsa'nın önündeki hareket çizgisine göre ölçülür. Yani, bu bir 90 derecedir ve bu da bir 120 derece."
+        text: "Bulmacadaki diğer blok diyor ki: \"sağa doğru 90 derece dön\". \"Sağa dön\" bloğunu kullandığımız zaman Elsa belli bir miktar sağa döner. Elsa'nın ne kadar döneceğini değiştirmek için değerlerle oynayabilirsiniz. Açı değeri, Elsa'nın önündeki hareket çizgisine göre ölçülür. Yani, bu bir 90 derece dönüştür ve bu da bir 120 derece dönüş."
       10:
-        text: "Hatırla, yanındaki oklara tıklayarak piksellerin sayısını ve dereceyi değiştirebilirsin."
+        text: "Yanındaki oklara tıklayarak piksellerin sayısını ve dereceyi değiştirebileceğini hatırla."
     frozen_loops:
       1:
         text: "Merhaba, Ben Paola! Bilgisayarlar tekrarlayan eylemler konusunda gerçekten çok iyiler. 10, 20 yada 100 kadar sayabilirsin. Ama bir bilgisayar milyara yada trilyona kadar sayabilir. Sıkılmazlar ve sayma işlemi birkaç saniye sürer. Sayar, çizer yada tekrarlayan bir şeyi yüzlerce hatta milyarca kez yapabilir."
@@ -826,17 +826,17 @@ tr:
       1:
         text: "Yani kaçıncı sınıfa gidiyorsun? İkinci. Onuncu sınıfta. Birinci sınıf. Programı öğrendiğimde sekizinci sınıftaydım. İlk bilgisayarımı altıncı sınıftayken aldım. Beni heyecanlandıran insanların problemlerini çözmenin mümkün olması. Sen kendini ifade edebilir, bir fikirden bir şeyler inşa edebilirsin."
       2:
-        text: "Bilgisayar bilimleri, üniversite öğrencileri ve profesyonellerin sonraki yirmi ve otuz yıl için yapacakları bir çok şeyin temelidir. Ben programlamayı seviyorum çünkü insanlara yardımcı olmayı seviyorum. İnsanların hayatını kolaylaştıracak bir şeyler inşa etme fırsatı buluyorum. Bence bu süper güce sahip olmaya en yakın şey. Başlamak en önemli kısmı. Ben yeni başlayanlardanım ve kendimle öğrenmek istiyorum."
+        text: "Bilgisayar bilimleri, üniversite öğrencileri ve profesyonellerin önümüzdeki yirmi ve otuz yıl için yapacakları bir çok şeyin temelidir. Ben programlamayı seviyorum çünkü insanlara yardımcı olmayı seviyorum. İnsanların hayatını kolaylaştıracak bir şeyler inşa etme fırsatı buluyorum. Bence bu süper güce sahip olmaya en yakın şey. Başlamak en önemli kısmı. Ben yeni başlayanlardanım ve benimle öğrenmenizi istiyorum."
       3:
-        text: "Ben John Vechey. PopCap Games kurucularından biriyim. Plants vs. Zombies, Bejeweled ve Peggle gibi oyunlar yapıyoruz. Oyunlar hakkında birçok şey kodun ya da sanatınızın ne kadar mükemmel olduğu değil, nasıl hissettirdiği ve ne kadar eğlenceli olduğudur. Bunu sadece oyun yapmada kendi yeteneklerinizi deneyerek, yaparak, öğrenerek, uyarlayarak ve tekrarlayarak öğrenebilirsiniz."
+        text: "Ben John Vechey. PopCap Games kurucularından biriyim. Plants, Zombies, Bejeweled ve Peggle gibi oyunlar yapıyoruz. Oyunlar hakkında birçok şey kodun ya da sanatınızın ne kadar mükemmel olduğu değil, nasıl hissettirdiği ve ne kadar eğlenceli olduğudur. Bunu sadece oyun yapmada kendi yeteneklerinizi deneyerek, yaparak, öğrenerek, uyarlayarak ve tekrarlayarak öğrenebilirsiniz."
       4:
-        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı Anna, Elsa, Hiro, Baymax ve Rapunzel Disney karakterleri ile teker teker öğreneceğiz. Bir çizikten, telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
+        text: "Favori bir video oyununuz var mı? Peki Play Lab'ı kullanarak oyunlar yapmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi ve her hikayeninde oyuncuları vardır. Oyuncular konuşmak, hareket etmek ve başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Hatta oyun kurallarına göre puanları toplamk bile. Bugün tüm bunları nasıl yapacağımızı Anna, Elsa, Hiro, Baymax ve Rapunzel gibi Disney karakterleri ile teker teker öğreneceğiz. Sıfırdan bir  telefonda oynanan ve paylaşılan bir oyun inşa edeceğiz."
       5:
         text: "Ekranınız üç ana bölüme ayrılmıştır. Sol taraftaki programımızın çalışacağı oyun boşluğudur. Her seviye için talimatlar aşağıda yazılmıştır.Orta alan ise araç kutusudur ve her bloklar kodun bir parçasıdır. Sağ taraftaki beyaz boşluğa ise çalışma alanı diyoruz ve burası programımızı inşa edeceğimiz yer."
       6:
-        text: "Başlamak için bloklarınızı turuncu renkli “çalıştırma zamanı” bloğu ile bağlamanız gerekecek. Sarı çerçeveyi görene kadar sürükleyerek birçok bloğu birbirine bağlayabilirsiniz daha sonra birbirlerine yaslanacaklardır. Bu ilk bulmacada Hiro Oyuncu 1 ve Baymax Oyuncu 2’dir. Baymax’a ulaşmak için Hiro’yu, “saga taşı” bloğunu sürükleyip “çalıştırma zamanı” bloğuna bağlayarak hareket ettirmeliyiz. Bloklarınızı mevcut konuma getirdiğinizde, programladıklarınızı görmek için “Çalıştır” butonuna basın."
+        text: "Başlamak için bloklarınızı turuncu renkli “çalıştığında” bloğu ile bağlamanız gerekecek. Sarı çerçeveyi görene kadar sürükleyerek birçok bloğu birbirine bağlayabilirsiniz daha sonra birbirlerine bağlanacaklardır. Bu ilk bulmacada Hiro Oyuncu 1 ve Baymax Oyuncu 2’dir. Baymax’a ulaşmak için Hiro’yu, “saga taşı” bloğunu sürükleyip “çalıştığında” bloğuna bağlayarak hareket ettirmeliyiz. Bloklarınızı düzenlediğinizde, programladıklarınızı görmek için “Çalıştır” butonuna basın."
       7:
-        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, micro robot, vişne, buz, tencere atabilir ve hatta birbirini yok edebilirsin. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
+        text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, micro robot, vişne, buz, tencere atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
     infinity_playlab_repeat_forever:
       1:
         text: "Bir şeyi sonsuza dek tekrarlamak zorunda olduğunu hayal edebiliyor musun? Bilgisayarlar şeyler yinelemekte gerçekten çok iyi olduğu için sen yapmak zorunda değilsin. Bu sürece bloğu var. Bu blok içindeki herşey sonsuza kadar oyunda olacak."
@@ -940,13 +940,13 @@ tr:
       5:
         text: "Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar yer alıyor."
       6:
-        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı."
+        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı. Programı burada yaratacağız."
       7:
-        text: "Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
+        text: "Eğer solaİlerle(); bloğunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
       8:
-        text: "Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle(); blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek."
+        text: "Peki BB-8'in solaİlerle() bloğundan sonra başka bir şey yapmasını istersem ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle(); bloğunu seçip ışıldayana kadar solaİlerle(); bloğunun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek."
       9:
-        text: "Oynata bir daha bastığımda, BB-8, çalışma alanımızdaki dizilmiş komutları yukarıdan aşağıya doğru canlandıracak. Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+        text: "Oynata bir daha bastığımda, BB-8, çalışma alanımızdaki dizilmiş komutları yukarıdan aşağıya doğru yapacak. Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
       10:
         text: "Oynata bastıktan sonra, her zaman sıfırla tuşuna basarak BB-8'in başa dönmesini sağlayabilirsin. Haydi şimdi başlayalım!"
     starwars_typing:
@@ -996,21 +996,21 @@ tr:
         text: "Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda oynayabilirsiniz. İyi eğlenceler!"
     starwars_blocks_intro:
       1:
-        text: "Merhaba, ben Star Wars: Güç Uyanıyor'un yapımcısı Kathleen Kennedy. Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı."
+        text: "Merhaba, ben Star Wars: Güç Uyanıyor'un yapımcısı Kathleen Kennedy. Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel bir droiddir. Yaptığı her şey ve her hareketi bir bilgisayar yazılımı ile kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı."
       2:
         text: "Merhaba, ben Rachel Rose. ILM'de üst düzey bir Ar-Ge mühendisiyim, animasyon ve yaratık geliştirme takımının başındayım. Güç Uyanıyor'da sanatçıların karakterler için donanım geliştirmelerine yardımcı oluyorum. Karakterlerin hareket eden kısımları olan bu donanımlar, onların çok uzak bir galakside inandırıcı olmalarını sağlıyor."
       3:
-        text: "Bir saat içerisinde sana programlamanın temellerini öğretecek bir Star Wars oyunu oluşturacaksın. Genellikle programlama yazı yazarak yapılır fakat biz kod yazmayı blokları sürükleyerek yapacağız. BB-8 programını başlamak için Rey ile tüm hurdaları toplamaya gidiyoruz."
+        text: "Önümüzdeki saatte sana programlamanın temellerini öğretecek bir Star Wars oyunu oluşturacağız. Genellikle programlama yazı yazarak yapılır fakat biz kod yazmayı blokları sürükle ve bırak yaparak yapacağız. BB-8'i programlamaya başlamak için Rey ile çalışarak tüm hurdaları toplamaya gidiyoruz."
       4:
-        text: "Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta Star Wars oyun alanı bulunuyor, programınız işte burada çalışacak. Her bir seviyenin yönergeleri oyun alanının altında yazılıdır."
+        text: "Ekranınız üç ana parçaya ayrılmıştır. Sol tarafta kodunuzun çalışacağı Star Wars oyun alanı bulunuyor. Her bir seviyenin yönergeleri oyun alanının altında yazılıdır."
       5:
         text: "Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar yer alıyor."
       6:
-        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı."
+        text: "Sağdaki beyaz kısım programı inşa edeceğimiz çalışma alanı. Programı burada yazacağız."
       7:
-        text: "Eğer solaİlerle(); blokunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
+        text: "Eğer solaİlerle(); bloğunu çalışma alanına sürükleyip, oynata basarsam ne olur? BB-8 sola bir kare hareket eder."
       8:
-        text: "Peki BB-8'in sola ilerledikten sonra başka bir şey yapmak istiyorsam ne yapmalıyım? Programımıza bir tane daha blok ekleyebilirim. yukarıİlerle(); blokunu seçip renkli ışık belirene kadar solaİlerle(); blokumun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek."
+        text: "Peki BB-8'in sola ilerledikten sonra başka bir şey yapmasını istiyorsam ne yapmalıyım? Programımıza bir başka blok ekleyebilirim. yukarıİlerle(); blokunu seçip ışıldayana kadar solaİlerle(); bloğunun altına sürükleyeceğim. Sonra bırakacağım ve iki blok birbirine kenetlenecek. Çalıştır'a bir daha basınca, BB-8 en üstten aşağıya doğru komutları yapmaya başlayacak."
       9:
         text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
       10:
@@ -1180,9 +1180,9 @@ tr:
         text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
     mc_2016_intro:
       1:
-        text: "Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım. Önümüzdeki bir saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının çalışmasını sağlamak sana bağlı."
+        text: "Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım. Önümüzdeki saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının çalışmasını sağlamak sana bağlı."
       2:
-        text: "Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım. Benim asıl ilgimi çeken insanların teknolojiyle nasıl etkileşim kurdukları, bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek için benim için harika bir meslek."
+        text: "Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım. Benim asıl ilgimi çeken insanların nasıl düşündüğü ve teknolojiyle nasıl etkileşim kurdukları. Bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek benim için harika bir meslek."
       3:
         text: "Ekranınızın üç ana kısıma ayrıldığını göreceksiniz. 1) Sol tarafta Minecraft oyunu var. Şu anda dünya donmuş durumda ama biz bunu kod yazarak düzelteceğiz."
       4:
@@ -1190,13 +1190,13 @@ tr:
       5:
         text: "3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız."
       6:
-        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini ekranın üst kısmında bulabilirsiniz."
       7:
-        text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
+        text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum blok ışıldayana kadar. Bloğu bırakıyorum ve iki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
       8:
         text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
       9:
-        text: "\"Çalıştır\"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak için \"Sıfırla\" düğmesini tıklayabilirsin. Şimdi Minecraft'ın kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!"
+        text: "\"Çalıştır\"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak için \"Sıfırla\" düğmesini her zaman tıklayabilirsin. Şimdi Minecraft'ın kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!"
     mc_2016_loops:
       1:
         text: "Merhaba, ben Lisa. Minecraft'ta yazılım geliştiriciyim ve oyun içindeki bazı hayvanlar ve düşmanlar üzerinde çalışıyorum. Üzerinde çalıştığım hayvanlardan birisi oselot. Oselot'a balık vererek onu kendi kedin kısım üzeinde çalıştım."
@@ -1326,23 +1326,23 @@ tr:
       2:
         text: "Bir dakika - parkurda bir delik var! (çığlık çığlığa)"
       3:
-        text: "Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Ray’da bir delik var. Stacy: Gerçekten mi Stampy? Lizzy: Belkide tamir etmek için blokları toplamalıyız. Preston: Hadi bunu bir yarışa çevirelim. İlk geri dönen kazanır. Stacy: Tamam, işaret edince, hazır ol BAŞLA! Tamam, bu toprak parçalarından birazını bir araya toplayacağım. Bekleyin. Millet kazamıyorum! Preston: Aynı. Lizzy: Bende. Stacy: Tamam, bu cidden garip. Stampy sen kazabiliyor musun? Stampy: Kazamıyorum! Stacy: Tamam, herkes sakin olsun. Stampy: Oyun bozuldu mu? Stacy: Eğer öyleyse nasıl düzelteceğiz? Lizzy: Bilmiyorum. Stampy: MineCraft codunun nasıl yazılacağını bilen biri var mı?"
+        text: "Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Parkurda bir delik var. Stacy: Gerçekten mi Stampy? Lizzy: Belkide tamir etmek için blokları toplamalıyız. Preston: Hadi bunu bir yarışa çevirelim. İlk geri dönen kazanır. Stacy: Tamam, işaret edince, hazır ol BAŞLA! Tamam, bu toprak parçalarından birazını bir araya toplayacağım. Bekleyin. Millet kazamıyorum! Preston: Aynı. Lizzy: Bende. Stacy: Tamam, bu cidden garip. Stampy sen kazabiliyor musun? Stampy: Kazamıyorum! Stacy: Tamam, herkes sakin olsun. Stampy: Oyun bozuldu mu? Stacy: Eğer öyleyse nasıl düzelteceğiz? Lizzy: Bilmiyorum. Stampy: MineCraft kodunun nasıl yazılacağını bilen biri var mı?"
       4:
         text: "(puff) Preston: Bu ne? Stampy: Bunlardan birini daha önce hiç görmedim. Lizzy: Çok sevimli! Stacy: Ev...evcilleştirebilinir mi? Preston: Tamam, neler oluyor? Birinin gerçek dünyaya dönmesi ve bunu düzeltmesi gerekiyor.  Hepsi: Onu değil! Stacy: O deği- (İç çeker.) Tamam, ben giderim."
       5:
         text: "Hah, tamam, hey, şimdi gerçek dünyadayım. Gidip Minecraft ofislerini bulmaya çalışacağım."
       6:
-        text: "Ancak yardımınıza ihtiyacım olacak. Eğitimi yapmaya başlayın, kodlamayı öğrenmeye başlayın, ben birkaç seviye sonra size yetişirim, tamam mı? Bana şans dileyin! Bence bu yönden. Ah! Kaktüs! Ben iyiyim!"
+        text: "Ancak yardımınıza ihtiyacım olacak. Eğitimi yapmaya başlayın, kodlamayı öğrenmeye başlayın, ben birkaç seviye sonra size yetişirim, tamam mı? Bana şans dileyin! Bence bu taraftan. Ah! Kaktüs! Ben iyiyim!"
       7:
         text: "Kod Saati meydan okumasını tamamlamak için Ajan'ı programlamak için kod yazmanız gerekmekte. Yolunuzdaki tüm engelleri kaldırmak için Ajan ile birlikte çalışacaksınız ki yolculuğunuz için ihtiyaç duyacağınız öğeleri alabilin. Yalnızca Ajan blokları yerleştirebilir ve kırabilir, ve öğeleri yalnızca siz toplayabilirsiniz. Ekranınız üç ana kısma ayrılmıştır. Solda Minecraft var."
       8:
         text: "Orta alan Ajan'ın anlayabileceği komutları içeren bir araç kutusu."
       9:
-        text: "Ve sağ tarafta, çalışma alanı. Agent'ı kullanmak için komutları biriktireceğin yer."
+        text: "Ve sağ tarafta, çalışma alanı. Ajan'ı kontrol etmek için yazdığın programın komutlarını biriktireceğin yer."
       10:
-        text: "Ajan, yürüyebilir, baskı plakalarını, döndürebilir ve etkinleştirebilir. Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir."
+        text: "Ajan, yürüyebilir,  döndürebilir ve baskı plakalarını etkinleştirebilir. Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir."
       11:
-        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini ekranın üst kısmında bulabilirsiniz."
       12:
         text: "Tekrar denemek isterseniz, her şeyi sıfırlamak için mavi sıfırlama düğmesine basabilirsiniz. Eğer bir kod bloğunu silmeniz gerekiyorsa çalışma alanından alet kutusuna sürükleyin. Ajan'ı hareket ettirmek için çalıştıra basmayı unutmayın. Tamam, durmayın ve ilk birkaç seviyeyi deneyin. İyi şanslar!"
     mc_2017_repeat:
@@ -1624,7 +1624,7 @@ tr:
       4:
         text: "Orta alanda, kodlama komutlarını bulabileceğiniz araç kutunuz var."
       5:
-        text: "Ve büyük alanda sağda çalışma alanınız var. Bu, programınızı oluşturmaya ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer."
+        text: "Ve  sağdaki büyük alan senin çalışma alanın. Bu, programınızı oluşturmaya ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer."
       6:
         text: "Her bir seviyenin talimatları sayfanın üstündedir. Uzun ve kısa talimatlar arasında değişiklik yapmak için artı işaretine tıklayın."
       7:
@@ -1776,7 +1776,7 @@ tr:
         text: "Ekranınızın üç ana kısma ayrıldığını göreceksiniz. Solda oyun alanı var. Burada dansçılarınızı göreceksiniz."
       7:
         image: 'notes/hoc_dance_warmup_2019_7.png'
-        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanca yeni kod blokları bulunacaktır."
+        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanda yeni kod blokları kullanılır olacaktır."
       8:
         image: 'notes/hoc_dance_warmup_2019_8.png'
         text: "Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç kutusundan çalışma alanına sürükleyebilirsiniz."
@@ -1793,7 +1793,7 @@ tr:
         image: 'notes/hoc_dance_warmup_2019_12.png'
         text: "Oyun alanının üzerinde, müziği seçmeniz için bir menü var. Burada seçebileceğiniz tonlarca müzik var, yani favori müziklerinizi bulmada iyi eğlenceler. Bu oyun alanının altında çalıştır düğmesi var. Bu çalıştırma düğmesine bastığınızda, programınızdaki dansçıları oyun alanında göreceksiniz ve müzik çalacak."
       13:
-        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz fakına varmada kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
+        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz farkına varmadan kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
     hoc_dance_events_2019:
       1:
         text: "Kod Saati | Dans Partisi: Olaylar"
@@ -1887,10 +1887,10 @@ tr:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
-        text: "Benim adım Caia. Şair ve bilgisayar bilimi öğrencisiyim. Kodlama bana daha iyi bir şair olmamı sağlayan çok şey öğretti ve şiirle ilgilenmek kodlamada daha iyi olmamı sağladı çünkü gerçekten seçtiğiniz kelimeleri ve hepsi bir araya geldiğinde nasıl bir şey ortaya çıkacağını düşünmeniz gerekiyor."
+        text: "Benim adım Caia. Şair ve bilgisayar bilimi öğrencisiyim. Kodlama bana daha iyi bir şair olmamı sağlayan çok şey öğretti ve şiirle ilgilenmek kodlamada daha iyi olmamı sağladı. Çünkü gerçekten seçtiğiniz kelimeleri ve hepsi bir araya geldiğinde nasıl bir şey ortaya çıkacağını düşünmeniz gerekiyor."
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
-        text: "Önümüzdeki bir saat boyunca, animasyonlu bir şiir oluşturarak bilgisayar bilimi ve şiir hakkında bilgi edineceksiniz. Özünde şiir, kelimelerle sanat yapmaktır. Kendimi ifade etmek için şiir yazarım. Kendi tarzımı ve ritmimi kullanarak yazarken izleyicinin hayal gücünü ve duygularını harekete geçirmeye çalışırım."
+        text: "Önümüzdeki saatte, animasyonlu bir şiir oluşturarak bilgisayar bilimi ve şiir hakkında bilgi edineceksiniz. Özünde şiir, kelimelerle sanat yapmaktır. Kendimi ifade etmek için şiir yazarım. Kendi tarzımı ve ritmimi kullanarak yazarken izleyicinin hayal gücünü ve duygularını harekete geçirmeye çalışırım."
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
         text: "Tıpkı sanat gibi, şiir de birçok farklı şekilde yorumlanabilir. Aynı şiir farklı insanlar için çok farklı şeyler ifade edebilir ve her şiirin kendi ruh hali vardır. Ruh hali, bir şiirden aldığınız duygudur. Bazen insanlar belirli renkleri ve görüntüleri farklı ruh halleriyle ilişkilendirir."

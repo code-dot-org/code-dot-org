@@ -25,18 +25,18 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20"/>
+        <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20" id="whenPaddleCollided"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="bounce_bounceBall"/>
-        <block type="bounce_playSound"/>
+        <block type="bounce_bounceBall" id="bounceBall"/>
+        <block type="bounce_playSound" id="playSound"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="bounce_bounceBall"/>
+        <block type="bounce_bounceBall" id="bounceBall"/>
       </xml>
     </required_blocks>
   </blocks>

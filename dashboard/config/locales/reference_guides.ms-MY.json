@@ -1,0 +1,77 @@
+{
+  "ms-MY": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/accelerometer-events": {
+          "display_name": "Peristiwa Accelerometer"
+        },
+        "csd-2022/applab-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/board-events": {
+          "display_name": "Acara Papan"
+        },
+        "csd-2022/css-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/design-mode": {
+          "display_name": "Mod Reka Bentuk"
+        },
+        "csd-2022/functions": {
+          "display_name": "Fungsi"
+        },
+        "csd-2022/game-lab-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/html-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/javascript": {
+          "display_name": "JavaScript"
+        },
+        "csd-2022/javascript-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/lists": {
+          "display_name": "Senarai"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Kit Alat Pencipta"
+        },
+        "csd-2022/maker-toolkit-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/other": {
+          "display_name": "Lain-lain"
+        },
+        "csd-2022/other-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/patterns-overview": {
+          "display_name": "Gambaran Keseluruhan"
+        },
+        "csd-2022/playing-notes": {
+          "display_name": "Bermain Nota"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Sifat Peperi"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Jin"
+        },
+        "csd-2022/variables": {
+          "display_name": "Pemboleh ubah"
+        },
+        "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Halaju dan Corak Kaunter"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Makmal Web"
+        },
+        "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+        }
+      }
+    }
+  }
+}

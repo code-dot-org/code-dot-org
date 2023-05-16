@@ -5,7 +5,7 @@ title: Comment héberger Une Heure de Code - Entreprises
 {{ signup_button }}
 
 # Comment organiser une Heure de Code dans votre société
-### Découvrez comment vous pouvez, avec vos collaborateurs, inspirer des élèves à essayer l'informatique !
+### Découvrez comment vous pouvez, avec vos collaborateurs, pousser vos élèves à essayer l'informatique !
 
 ***
 

@@ -71,15 +71,13 @@ class Pd::PaymentTerm < ApplicationRecord
     start_date..(end_date || Date::Infinity.new)
   end
 
-  private
-
-  def sufficient_contract_terms
+  private def sufficient_contract_terms
     unless per_attendee_payment? || fixed_payment
       errors.add(:base, 'Must have either per attendee payment or fixed payment')
     end
   end
 
-  def truncate_previous_term
+  private def truncate_previous_term
     extant_payment_terms = Pd::PaymentTerm.where(
       regional_partner: regional_partner,
       course: course,

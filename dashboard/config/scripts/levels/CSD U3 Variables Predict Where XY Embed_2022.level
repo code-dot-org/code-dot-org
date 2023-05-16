@@ -10,7 +10,8 @@
     "skip_sound": true,
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"grid\",\r\n  \"callout_text\": \"Click here to show the grid.\",\r\n  \"element_id\": \"#grid-checkbox\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 20665,
-    "name_suffix": "_2022"
+    "name_suffix": "_2022",
+    "allow_multiple_attempts": "false"
   },
   "level_num": "custom",
   "game_id": 52,

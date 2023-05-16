@@ -19,3 +19,8 @@ properties_encryption_key: !Secret
 firebase_name: cdo-v3-adhoc
 firebase_secret: !Secret
 firebase_shared_secret: !Secret
+
+# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !Secret
+db_proxy_reporting_endpoint: !Secret
+db_writer_endpoint: !Secret

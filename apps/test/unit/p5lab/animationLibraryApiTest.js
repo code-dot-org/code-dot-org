@@ -2,40 +2,57 @@ import sinon from 'sinon';
 import {expect, assert} from '../../util/reconfiguredChai';
 import {
   regenerateDefaultSpriteMetadata,
-  createDefaultSpriteMetadata,
   buildAnimationMetadata,
   buildMap,
   generateAnimationMetadataForFile,
-  generateLevelAnimationsManifest
+  generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import testAnimationLibrary from './testAnimationLibrary.json';
 
 describe('animationLibraryApi', () => {
   let fetchSpy;
-  const defaultList = {
-    default_sprites: [
-      {
-        name: 'hippo',
-        key: 'category_animals/hippo'
+  const defaultSprites = [
+    {
+      name: 'bear',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png',
+      frameSize: {
+        x: 254,
+        y: 333,
       },
-      {
-        name: 'wheat',
-        key: 'category_video_games/wheat'
-      }
-    ]
-  };
+      frameCount: 1,
+      looping: true,
+      frameDelay: 2,
+      version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
+      categories: ['animals'],
+    },
+    {
+      name: 'bee',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C/category_animals/bee.png',
+      frameSize: {
+        x: 62,
+        y: 50,
+      },
+      frameCount: 1,
+      looping: true,
+      frameDelay: 2,
+      version: 'b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C',
+      categories: ['animals'],
+    },
+  ];
 
   const fileObject = {
     json: {
       key: 'testAlpha.json',
-      last_modified: '12152021'
+      last_modified: '12152021',
     },
     png: {
       key: 'testAlpha.png',
       last_modified: '12152021',
       version: '123',
-      source_size: 456
-    }
+      source_size: 456,
+    },
   };
 
   const testAlphaMetadata = {
@@ -45,7 +62,7 @@ describe('animationLibraryApi', () => {
     looping: true,
     frameDelay: 2,
     aliases: ['fruit'],
-    categories: []
+    categories: [],
   };
 
   const animationLibrary = testAnimationLibrary;
@@ -60,7 +77,7 @@ describe('animationLibraryApi', () => {
       .returns(
         Promise.resolve({
           ok: true,
-          json: () => JSON.stringify(animationLibrary)
+          json: () => JSON.stringify(animationLibrary),
         })
       );
 
@@ -70,7 +87,7 @@ describe('animationLibraryApi', () => {
       .returns(
         Promise.resolve({
           ok: true,
-          json: () => animationFiles
+          json: () => animationFiles,
         })
       );
 
@@ -78,7 +95,7 @@ describe('animationLibraryApi', () => {
     fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
       Promise.resolve({
         ok: true,
-        json: () => testAlphaMetadata
+        json: () => testAlphaMetadata,
       })
     );
   });
@@ -88,14 +105,47 @@ describe('animationLibraryApi', () => {
   });
 
   describe('regenerateDefaultSpriteMetadata', () => {
-    it('sends data to middleware in POST', () => {
+    it('generates sprite metadata from animation library', () => {
       fetchSpy
-        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
         .returns(Promise.resolve({ok: true}));
 
-      return regenerateDefaultSpriteMetadata(defaultList).then(() => {
+      return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
         expect(fetchSpy).calledWith(
-          '/api/v1/animation-library/default-spritelab-metadata'
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        );
+
+        let fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
+        expect(fetchBody).to.have.property('orderedKeys');
+        expect(fetchBody.orderedKeys).to.have.length(2);
+
+        //Check that keys are created in our UUID format
+        const firstKey = fetchBody.orderedKeys[0];
+        expect(firstKey).to.match(/^........-....-4...-....-............$/);
+
+        //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
+        // a properly formatted sourceUrl, and the expected number of props.
+        const firstSpriteProps = fetchBody.propsByKey[firstKey];
+        expect(firstSpriteProps)
+          .to.have.property('sourceUrl')
+          .that.has.string('https://studio.code.org');
+        expect(firstSpriteProps).to.have.property('name').that.equals('bear');
+        expect(Object.keys(firstSpriteProps)).to.have.length(8);
+      });
+    });
+
+    it('sends data to middleware in POST', () => {
+      fetchSpy
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
+        .returns(Promise.resolve({ok: true}));
+
+      return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
+        expect(fetchSpy).calledWith(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
         );
         expect(fetchSpy).calledWithMatch(sinon.match.any, {method: 'POST'});
       });
@@ -103,16 +153,18 @@ describe('animationLibraryApi', () => {
 
     it('throws error when bad response', () => {
       fetchSpy
-        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
         .returns(
           Promise.resolve({
             ok: false,
             status: '000',
-            statusText: 'Test error message'
+            statusText: 'Test error message',
           })
         );
 
-      return regenerateDefaultSpriteMetadata(defaultList).then(
+      return regenerateDefaultSpriteMetadata(defaultSprites).then(
         () => {
           assert.fail('Expected an error message');
         },
@@ -123,31 +175,6 @@ describe('animationLibraryApi', () => {
           );
         }
       );
-    });
-  });
-
-  describe('createDefaultSpriteMetadata', () => {
-    it('generates sprite metadata from animation library', () => {
-      // Check that orderedKeys exists and contains two keys
-      return createDefaultSpriteMetadata(defaultList).then(spriteMetadata => {
-        expect(spriteMetadata).to.have.property('orderedKeys');
-        expect(spriteMetadata.orderedKeys).to.have.length(2);
-
-        // Check that keys are created in our UUID format
-        const firstKey = spriteMetadata.orderedKeys[0];
-        expect(firstKey).to.match(/^........-....-4...-....-............$/);
-
-        //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
-        // a properly formatted sourceUrl, and the expected number of props.
-        const firstSpriteProps = spriteMetadata.propsByKey[firstKey];
-        expect(firstSpriteProps)
-          .to.have.property('sourceUrl')
-          .that.has.string('https://studio.code.org');
-        expect(firstSpriteProps)
-          .to.have.property('name')
-          .that.equals('hippo');
-        expect(Object.keys(firstSpriteProps)).to.have.length(8);
-      });
     });
   });
 
@@ -167,7 +194,7 @@ describe('animationLibraryApi', () => {
           'sourceUrl',
           'sourceSize',
           'aliases',
-          'categories'
+          'categories',
         ];
         expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
@@ -198,12 +225,12 @@ describe('animationLibraryApi', () => {
     const animationMetadata = {
       beta: {
         fruit: ['apple', 'kiwi'],
-        juicy: ['banana', 'blueberry', 'apple']
+        juicy: ['banana', 'blueberry', 'apple'],
       },
       alpha: {
         fruit: ['apple', 'banana', 'kiwi'],
-        delicious: ['banana', 'blueberry', 'apple']
-      }
+        delicious: ['banana', 'blueberry', 'apple'],
+      },
     };
     const getStandardizedContent = metadata => metadata.fruit;
     const normalizingFunction = item => item.replace('a', 'b');

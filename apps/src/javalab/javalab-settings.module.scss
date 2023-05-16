@@ -16,7 +16,8 @@
 .settingsDropdown {
   @extend %dropdown;
   bottom: 40px;
-  margin-left: 5px;
+  margin-left: -47px;
+  flex-direction: column-reverse;
 }
 
 .item {

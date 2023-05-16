@@ -10,3 +10,4 @@ wrong 'Neither lossy nor lossless compression can actually reduce the number of 
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

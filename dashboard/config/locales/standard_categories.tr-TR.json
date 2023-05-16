@@ -1,0 +1,101 @@
+{
+  "tr-TR": {
+    "data": {
+      "standard_categories": {
+        "AP": {
+          "description": "Algoritmalar ve Programlama"
+        },
+        "CS": {
+          "description": "Bilişim Sistemleri"
+        },
+        "DA": {
+          "description": "Veri ve Analiz"
+        },
+        "NI": {
+          "description": "Ağlar ve İnternet"
+        },
+        "DAT-1": {
+          "description": "Bilgisayarın verileri temsil etme biçimi, verilerin kullanıcı için yorumlanma ve görüntülenme biçiminden farklıdır. Programlar, verileri insanlar tarafından daha kolay anlaşılabilecek bir temsile dönüştürmek için kullanılır."
+        },
+        "IOC-2": {
+          "description": "Bilgisayar kullanımında yenilikler kişisel güvenlik ve kimliğiniz için riskler içerebilir."
+        },
+        "DAT-1.D": {
+          "description": "Belirli bir bağlamda hangisinin en iyi olduğunu belirlemek için veri sıkıştırma algoritmalarını karşılaştırın."
+        },
+        "IOC-2.B": {
+          "description": "Bilgi işlem kaynaklarının nasıl korunabileceğini ve kötüye kullanılabileceğini açıklayın."
+        },
+        "CD": {
+          "description": "Bilgisayarlar & İletişim Cihazları"
+        },
+        "CI": {
+          "description": "Topluluk, Küresel ve Etik Etkileri"
+        },
+        "CL": {
+          "description": "İşbirliği"
+        },
+        "CPP": {
+          "description": "Bilişim Pratiği & Programlama"
+        },
+        "CT": {
+          "description": "Sayısal Düşünme"
+        },
+        "L": {
+          "description": "Dil"
+        },
+        "RI": {
+          "description": "Bilgilendirici Okuma"
+        },
+        "RL": {
+          "description": "Literatür Okuması"
+        },
+        "SL": {
+          "description": "Konuşma & Dinleme"
+        },
+        "W": {
+          "description": "Yazma"
+        },
+        "ETS": {
+          "description": "Bilimde Mühendislik"
+        },
+        "ETS1": {
+          "description": "Mühendislik Tasarımı"
+        },
+        "C": {
+          "description": "Çemberler"
+        },
+        "F": {
+          "description": "Fonksiyonlar"
+        },
+        "G": {
+          "description": "Geometri"
+        },
+        "MD": {
+          "description": "Karar Vermek İçin Olasılığı Kullanma"
+        },
+        "MP": {
+          "description": "Matematik Pratikleri"
+        },
+        "NBT": {
+          "description": "Onluk Tabanda Sayı Ve İşlemler"
+        },
+        "OA": {
+          "description": "İşlemler ve Cebirsel Düşünme"
+        },
+        "1": {
+          "description": "Öğrenciler, teknolojiyi kullanarak yaratıcı düşünür, bilgilenir ve yenilikçi ürünler ve süreçler geliştirir."
+        },
+        "2": {
+          "description": "Öğrenciler, belli bir mesafede bireysel öğrenimi desteklemek ve başkalarının öğrenmesine katkı sağlamak dahil olmak üzere işbirliği içerisinde iletişim kurmak ve çalışmak için dijital medya ve ortamları kullanır."
+        },
+        "4": {
+          "description": "Öğrenciler, uygun dijital araçları ve kaynakları kullanarak araştırmayı planlamak ve yürütmek, projeleri yönetmek, sorunları çözmek ve bilinçli kararlar vermek için eleştirel düşünme becerilerini kullanır."
+        },
+        "6": {
+          "description": "Öğrenciler; teknoloji kavramları, sistemleri ve işlemlerini iyi bir şekilde anladığını gösterir."
+        }
+      }
+    }
+  }
+}

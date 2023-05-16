@@ -6,9 +6,9 @@
   "content": "Writes a description of some code.\r\n\r\n// Comments are used document your code so it is easier for humans to understand. You should include a comment at the start of each function to explain what the function does, if it takes any arguments, and if it returns any values. It is also a good idea to comment any complex blocks of code so you, or another programmer, can more easily maintain or modify the code in the future.",
   "examples": [
     {
-      "name": "Example with Comments",
+      "name": "Example: Code with comments",
       "description": "Call functions to generate two die rolls and sum the result. Display the value on the console.",
-      "code": "```\n// Call functions to generate two die rolls and sum the result. Display the value on the console.\r\nconsole.log(rollDie() + rollDie());\r\n\r\nfunction rollDie() { \r\n// Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.\r\n  var roll = randomNumber(1,6);\r\n  return roll;\r\n}\n```",
+      "code": "```\n// Call functions to generate two die rolls and sum the result. Display the value on the console.\nconsole.log(rollDie() + rollDie());\n\nfunction rollDie() { \n  // Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.\n  var roll = randomNumber(1,6);\n  return roll;\n}\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

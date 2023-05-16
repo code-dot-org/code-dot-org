@@ -3161,6 +3161,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "点击这里运行代码。"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "针脚"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "针脚"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "针脚"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "针脚"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "请先点击这里！"
         }
       }
     }

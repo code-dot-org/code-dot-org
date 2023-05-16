@@ -12,14 +12,14 @@ const singleLineLayoutStyles = {
   fontSize: 13,
   fontFamily: '"Gotham 4r", sans-serif',
   color: '#333',
-  padding: 0
+  padding: 0,
 };
 const singleLineContainerStyles = {
   display: 'table',
-  width: '100%'
+  width: '100%',
 };
 const checkboxStyle = {
-  display: 'flex'
+  display: 'flex',
 };
 
 export default class SchoolAutocompleteDropdownWithLabel extends Component {
@@ -34,14 +34,14 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
     disabled: PropTypes.bool,
-    includeSchoolNotFoundCheckbox: PropTypes.bool
+    includeSchoolNotFoundCheckbox: PropTypes.bool,
   };
 
   schoolDropdown = undefined;
 
   static defaultProps = {
     showRequiredIndicator: true,
-    includeSchoolNotFoundCheckbox: true
+    includeSchoolNotFoundCheckbox: true,
   };
 
   sendToParent = selectValue => {
@@ -69,11 +69,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     const {
       showRequiredIndicator,
       singleLineLayout,
-      includeSchoolNotFoundCheckbox
+      includeSchoolNotFoundCheckbox,
     } = this.props;
     const questionStyle = {
       ...styles.question,
-      ...(singleLineLayout && singleLineLayoutStyles)
+      ...(singleLineLayout && singleLineLayoutStyles),
     };
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     const showError =

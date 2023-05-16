@@ -5,22 +5,22 @@ import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import $ from 'jquery';
 
 describe('rgb command', () => {
-  it('returns an rgba string with no alpha', function() {
+  it('returns an rgba string with no alpha', function () {
     const opts = {r: 255, g: 0, b: 75};
     expect(rgb(opts)).to.equal('rgba(255, 0, 75, 1)');
   });
 
-  it('returns an rgba string with alpha', function() {
+  it('returns an rgba string with alpha', function () {
     const alphaOpts = {r: 255, g: 0, b: 75, a: 0.5};
     expect(rgb(alphaOpts)).to.equal('rgba(255, 0, 75, 0.5)');
   });
 
-  it('handles values outside of 0 - 255', function() {
+  it('handles values outside of 0 - 255', function () {
     const alphaOpts = {r: -10, g: 300, b: 75, a: 0.5};
     expect(rgb(alphaOpts)).to.equal('rgba(0, 255, 75, 0.5)');
   });
 
-  it('handles decimal values', function() {
+  it('handles decimal values', function () {
     const alphaOpts = {r: 0, g: 200.5, b: 75, a: 0.5};
     expect(rgb(alphaOpts)).to.equal('rgba(0, 201, 75, 0.5)');
   });
@@ -31,7 +31,7 @@ describe('setSelectionRange', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy()
+      outputWarning: sinon.spy(),
     };
     injectErrorHandler(errorHandler);
 
@@ -58,7 +58,7 @@ describe('setSelectionRange', () => {
     setSelectionRange({
       elementId: testInputId,
       selectionStart: 3,
-      selectionEnd: 6
+      selectionEnd: 6,
     });
     expect(testInput.selectionStart).to.equal(3);
     expect(testInput.selectionEnd).to.equal(6);
@@ -71,7 +71,7 @@ describe('setSelectionRange', () => {
       elementId: testInputId,
       selectionStart: 3,
       selectionEnd: 6,
-      selectionDirection: 'backward'
+      selectionDirection: 'backward',
     });
     expect(testInput.selectionDirection).to.equal('backward');
   });
@@ -80,7 +80,7 @@ describe('setSelectionRange', () => {
     setSelectionRange({
       elementId: 'fakeElementId',
       selectionStart: 0,
-      selectionEnd: 0
+      selectionEnd: 0,
     });
     expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
       'The setSelectionRange() elementId parameter refers to ' +
@@ -92,7 +92,7 @@ describe('setSelectionRange', () => {
     setSelectionRange({
       elementId: testInputId,
       selectionStart: 'string',
-      selectionEnd: 0
+      selectionEnd: 0,
     });
     expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
       'setSelectionRange() start parameter value (string) is not a number.'
@@ -103,7 +103,7 @@ describe('setSelectionRange', () => {
     setSelectionRange({
       elementId: testInputId,
       selectionStart: 0,
-      selectionEnd: 'string'
+      selectionEnd: 'string',
     });
     expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
       'setSelectionRange() end parameter value (string) is not a number.'
@@ -115,7 +115,7 @@ describe('setSelectionRange', () => {
       elementId: testInputId,
       selectionStart: 0,
       selectionEnd: 0,
-      selectionDirection: () => {}
+      selectionDirection: () => {},
     });
     expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
       'setSelectionRange() direction parameter value (function) is not a string.'
@@ -128,7 +128,7 @@ describe('openUrl', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy()
+      outputWarning: sinon.spy(),
     };
     injectErrorHandler(errorHandler);
     sinon.spy(window, 'open');
@@ -136,9 +136,9 @@ describe('openUrl', () => {
       return {
         success() {
           return {
-            fail() {}
+            fail() {},
           };
-        }
+        },
       };
     });
   });

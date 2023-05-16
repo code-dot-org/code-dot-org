@@ -170,7 +170,6 @@ ro:
     data_collection_us: "Înțeleg că Code.org este un site non-profit din SUA, iar legile care guvernează colectarea datelor în SUA pot fi diferite de legile din țara mea."
     visit_privacy: 'Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org  pentru mai multe informații.'
     student_terms_markdown: "Adresele de emai nu sunt depozitate într-o formă care să ne permită să contactăm studenții. Studenții nu vor primi niciodată emailuri din partea Code.org, decât pentru recuperarea parolelor. Pentru mai multe informații, vezi [privacy policy](http://code.org/privacy)."
-    additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
     user_type_button: "Actualizaţi tipul de contul"
     user_type_label: "Tipul contului"
     user_type_student: "Elev"
@@ -548,6 +547,7 @@ ro:
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul de mai jos"
     print_certificate: "Tipărește certificatul"
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza învățarea."
+  certificate_hour_of_code: "Oră de Programare"
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_cant_be_current_section: "Secţiunea curentă nu poate fi la fel ca o secţiune nouă."
@@ -657,27 +657,17 @@ ro:
       body_short: "Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde."
       audience: 'Vârste 13 +'
       cta: 'Află cum'
-    dance:
-      title: 'Petrecere dansantă'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Petrecere dansantă'
-    hello-world:
-      title: 'Bună Lume'
-    poem-art:
-      title: 'Arta Poeziei'
-    hoc:
-      title: 'Labirint Clasic'
-      body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
+    dance:
+      title: 'Petrecere dansantă'
     flappy:
       title: 'Codul Flappy'
       body: 'Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Flappy!'
-    20-hour:
-      title: 'Curs intensiv'
-      body: 'Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.'
-      body_short: 'Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Încearcă noul nostru tutorial Hour of Code în versiune beta'
-      try_frozen: 'Artist cu Anna și Elsa din Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
@@ -686,18 +676,21 @@ ro:
       body: "Laboratorul de jocuri este un mediu de programare în care puteți crea animații simple și jocuri cu obiecte și personaje care interacționează unul cu celălalt."
       audience: "Vârste 13 +"
       cta: "Află cum"
+    hello-world:
+      title: 'Bună Lume'
+      body: 'Alege din patru teme distractive pentru a codifica personaje interactive într-o lume pe care o creezi tu.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
     hoc-encryption:
       title: "Criptare simplă"
       body: "Elevii vor învăţa tehnici pentru a crea şi a sparge mesaje criptate."
-    weblab:
-      title: "Laborator Web (beta)"
-      body: "Laboratorul de web este un mediu de programare în care puteți crea pagini de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți site-ul dvs în câteva secunde."
-      audience: "Vârste 13 +"
-      cta: "Află cum"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Labirint Clasic'
+      body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
+    hoc2014:
+      try_new_tutorial: 'Încearcă noul nostru tutorial Hour of Code în versiune beta'
+      try_frozen: 'Artist cu Anna și Elsa din Frozen'
     infinity:
       title: "Laborator de joc Infinity"
       body: "Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity."
@@ -707,30 +700,38 @@ ro:
     minecraft2016:
       title: "Minecraft"
       body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
+    poem-art:
+      title: 'Arta Poeziei'
     sports:
       title: "Sporturi (Sports)"
       body: "Creați un joc de basketball sau un \"mix and match\" din toate sporturile."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Comprimare de text"
       body: "În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru a comprima textul prin înlocuirea modelelor cu simboluri."
-    unplugged:
-      title: "Lecţii offline"
-      audience: "Vârsta +4 ani"
-      body: "Am alcătuit o listă de lecţii offline pentru a le putea utiliza în clasa ta. Acum puteti preda fundamentele programarii, fie dacă aveţi computere în clasă sau nu! Încercaţi să utilizaţi aceste lecţii ca un curs de sine stătător sau ca lecţii complementare pentru orice curs de informatică."
-      body_short: "Daca nu ai calculatoare, încearcă aceste lecţii offline în clasa ta."
-    unplugged_conditionals:
-      title: "Condiţionale"
-      body: "Aflați mai multe despre algoritmii și instrucțiunile condiționale din această activitate \"deconectată\" utilizând un pachet de cărți."
+    weblab:
+      title: "Laborator Web (beta)"
+      body: "Laboratorul de web este un mediu de programare în care puteți crea pagini de web simple folosind HTML și CSS. Proiectați paginile dvs. de web și distribuiți site-ul dvs în câteva secunde."
+      audience: "Vârste 13 +"
+      cta: "Află cum"
     widgets:
       title: "Widget-uri"
       body: "Elevii pot explora concepte la cursul nostru de Principii în Informatică, cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu sau creați o lecție cu un singur concept pentru clasa dvs."
       audience: "Vârste 14+"
       cta: "Află cum"
+    unplugged_conditionals:
+      title: "Condiţionale"
+      body: "Aflați mai multe despre algoritmii și instrucțiunile condiționale din această activitate \"deconectată\" utilizând un pachet de cărți."
+    unplugged:
+      title: "Lecţii offline"
+      audience: "Vârsta +4 ani"
+      body: "Am alcătuit o listă de lecţii offline pentru a le putea utiliza în clasa ta. Acum puteti preda fundamentele programarii, fie dacă aveţi computere în clasă sau nu! Încercaţi să utilizaţi aceste lecţii ca un curs de sine stătător sau ca lecţii complementare pentru orice curs de informatică."
+      body_short: "Daca nu ai calculatoare, încearcă aceste lecţii offline în clasa ta."
+    20-hour:
+      title: 'Curs intensiv'
+      body: 'Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.'
+      body_short: 'Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor 2-4.'
   landing:
     prerelease_tutorial: "Acest tutorial este în **beta**. Se referă la revizuire în momentul primirii de feedback-uri și când se efectuează îmbunătățiri."
     report_bug: "Raporteazã eroare"
@@ -1094,6 +1095,13 @@ ro:
     no_teacher_email:
       body_markdown: 'Contul tău nu are o adresă de email. Te rugăm [să viziezi setările contului tău](%{user_registration})să adaugi adresa ta de email înainte de finalizarea acestui formular.'
   courses_category: 'Toate cursurile'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Bună Lume'
+      sports: 'Sporturi (Sports)'
+      csf: 'Fundamentele CS'
+      csc: 'Conexiuni CS'
   cookie_banner:
     message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
     more_information: "Consultaţi Politica de confidenţialitate a Code.org."
@@ -1126,3 +1134,5 @@ ro:
       cannot_view_locked_answers: "Nu se pot vizualiza răspunsurile în timp ce sunt blocate"
       forbidden: "Utilizatorul nu poate actualiza starea de blocare a elevului."
   reset_predict_progress_button: "Șterge Răspunsul"
+  pixelation:
+    binary: "Binar"

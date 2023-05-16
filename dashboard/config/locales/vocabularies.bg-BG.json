@@ -47,15 +47,15 @@
         "debugging/gumball/unversioned": {
           "word": "Отстраняване на грешки"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
         "condition/aquatic/unversioned": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Условия"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
         },
         "loops/aquatic/unversioned": {
           "word": "Повторения"
@@ -74,6 +74,14 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Код"
@@ -292,17 +300,34 @@
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "user/coursef/2021": {
           "word": "Потребител",
           "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
-        "behavior/coursef/2021": {
-          "word": "Поведение"
-        },
         "algorithm/coursef/2021": {
           "word": "Алгоритъм"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
         },
         "variable/coursef/2021": {
           "word": "Променлива"

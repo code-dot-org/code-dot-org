@@ -3,7 +3,7 @@ import ProgressTableDetailCell from './ProgressTableDetailCell';
 import {
   fakeLevels,
   fakeLevel,
-  fakeProgressForLevels
+  fakeProgressForLevels,
 } from '../../progress/progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
@@ -12,7 +12,7 @@ const statusForLevel = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.passed,
-  LevelStatus.submitted
+  LevelStatus.submitted,
 ];
 const levels = fakeLevels(5);
 levels[0].isConceptLevel = true;
@@ -74,7 +74,7 @@ export default storybook => {
               levels={[levelWithSublevels]}
               studentProgress={studentProgress}
             />
-          )
+          ),
       },
       {
         name: 'basic bubbles',
@@ -86,7 +86,7 @@ export default storybook => {
               levels={levels}
               studentProgress={studentProgress}
             />
-          )
+          ),
       },
       {
         name: 'diamond bubbles only',
@@ -99,7 +99,7 @@ export default storybook => {
               levels={diamondLevels}
               studentProgress={studentProgress}
             />
-          )
+          ),
       },
       {
         name: 'includes a paired level',
@@ -112,7 +112,7 @@ export default storybook => {
               levels={levels}
               studentProgress={pairedProgress}
             />
-          )
+          ),
       },
       {
         name: 'first level is unplugged',
@@ -125,7 +125,7 @@ export default storybook => {
               levels={[unpluggedLevel, ...levels]}
               studentProgress={studentProgress}
             />
-          )
+          ),
       },
       {
         name: 'only level is unplugged',
@@ -138,7 +138,7 @@ export default storybook => {
               levels={[unpluggedLevel]}
               studentProgress={studentProgress}
             />
-          )
-      }
+          ),
+      },
     ]);
 };

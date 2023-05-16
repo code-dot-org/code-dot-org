@@ -8,3 +8,5 @@ wrong 'The artist will draw four squares on top of one another.', feedback: 'Inc
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts false

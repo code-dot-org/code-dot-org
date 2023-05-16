@@ -918,6 +918,7 @@ id:
         CSA-PL-Printing-in-Java: Mencetak di Java
         CSA-PL-multi-selection-statements: Pernyataan Multi-seleksi
         CS_Changing_Everything: Ilmu Komputer Mengubah Segalanya
+        csd_sprite_properties: Properti Sprite
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

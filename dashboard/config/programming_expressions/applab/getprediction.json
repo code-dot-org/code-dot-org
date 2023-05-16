@@ -3,7 +3,7 @@
   "name": "getPrediction",
   "category": "Data",
   "category_key": "data",
-  "content": "*getPrediction(name, id, data, callback)*\n\nAfter importing an AI Model into App Lab, you can use [`getPrediction()`(#d3e965)](/docs/applab/getPrediction/) to ask your model to make a decision based on the data you supply.\n\nThe *name* and *id* are generated when you import your AI Model into App Lab. The *data* is the information you've collected in your app that is used by the model to make a decision. Once the model makes it's decision, any code inside the *callback* function is executed.\n\n**Want to learn more about AI Lab?** Read a short overview of what it is and how to use it [here](/docs/concepts/ai-lab/introduction-to-ai-lab/).\n\nThe *data* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation (see examples below). Once the model makes its decision, the result is stored in the variable *value* and can be used in the callback function. To view more information about the model that your app uses, use the Import AI Models screen to view the Model Card in your app.",
+  "content": "After importing an AI Model into App Lab, you can use [`getPrediction()`(#d3e965)](/docs/applab/getPrediction/) to ask your model to make a decision based on the data you supply.\n\nThe *name* and *id* are generated when you import your AI Model into App Lab. The *data* is the information you've collected in your app that is used by the model to make a decision. Once the model makes it's decision, any code inside the *callback* function is executed.\n\n**Want to learn more about AI Lab?** Read a short overview of what it is and how to use it [here](/docs/concepts/ai-lab/introduction-to-ai-lab/).\n\nThe *data* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation (see examples below). Once the model makes its decision, the result is stored in the variable *value* and can be used in the callback function. To view more information about the model that your app uses, use the Import AI Models screen to view the Model Card in your app.",
   "examples": [
     {
       "name": "Quiz - Where Is Your Ideal Vacation?",
@@ -41,7 +41,13 @@
       "description": "The callback function that is run automatically after the model makes its decision. The result from the model is stored in the *value* variable and can be used within the callback function."
     }
   ],
-  "return_value": "When *getPrediction()* is finished, the decision from the model is stored in the *value* variable and all code inside the callback function is automatically run.",
+  "parameters": [
+    "name",
+    "id",
+    "data",
+    "callback"
+  ],
+  "return_value": "When **getPrediction()** is finished, the decision from the model is stored in the *value* variable and all code inside the callback function is automatically run.",
   "short_description": "getPrediction(name, id, data, callback)\r\n\r\nUses an AI Model trained in AI Lab to make a prediction based on a collection of data",
   "syntax": "getPrediction(name, id, data, callback)",
   "tips": "Importing an AI Model will automatically generate the [`getPrediction()`(#d3e965)](/docs/applab/getPrediction/) block for your model. You shouldn't need to change the *name* or *id* of the model, but you can make changes to the *data* parameter and the code inside the *callback* function."

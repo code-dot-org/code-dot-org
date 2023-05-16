@@ -9,22 +9,130 @@
           "name": "מעבדת המשחקים",
           "categories": {
             "game_lab": {
-              "name": "מעבדת המשחקים"
+              "name": "מעבדת המשחקים",
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ספרייט"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ספרייט"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "שחור לבן"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "מנגן קובץ שמע MP3 מתוך כתובת URL שצוינה."
+                }
+              }
             },
             "sprites": {
-              "name": "דמויות"
+              "name": "דמויות",
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "ספירלה"
+                    }
+                  }
+                }
+              }
             },
             "groups": {
-              "name": "קבוצות"
+              "name": "קבוצות",
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ספרייט"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ספרייט"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "ספרייט"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "צבע"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "צבע"
+                    }
+                  }
+                }
+              }
             },
             "drawing": {
-              "name": "ציור"
+              "name": "ציור",
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "כוכב"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "מתמטיקה"
+              "name": "מתמטיקה",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "המספר המינימלי המוחזר"
+                    },
+                    "max": {
+                      "description": "המספר המקסימלי המוחזר"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "המספר המינימלי המוחזר"
+                    },
+                    "max": {
+                      "description": "המספר המקסימלי המוחזר"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "משתנים"
+              "name": "משתנים",
+              "expressions": {
+                "assign_x": {
+                  "short_description": "מקצה ערך למשתנה קיים. לדוגמא: x=0;"
+                }
+              }
             },
             "functions": {
               "name": "פונקציות"
@@ -35,11 +143,190 @@
           "name": "מעבדת היישומים",
           "description": "מעבדת האפליקציות זו סביבת תכנות שבה תוכל לייצר אפליקציות פשוטות. תכנן אפליקציה, קודד אותה בעזרת בלוקים או JavaScript כדי לגרום לזה לעבוד, לאחר מכן שתף את האפליקציה בתוך שניות.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "פונקציה"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "מנגן קובץ שמע MP3 מתוך כתובת URL שצוינה."
+                }
+              }
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "אובייקט"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "פונקציה"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "אובייקט"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "אובייקט"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "פונקציה"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "מתמטיקה"
+              "name": "מתמטיקה",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "המספר המינימלי המוחזר"
+                    },
+                    "max": {
+                      "description": "המספר המקסימלי המוחזר"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "המספר המינימלי המוחזר"
+                    },
+                    "max": {
+                      "description": "המספר המקסימלי המוחזר"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "משתנים"
+              "name": "משתנים",
+              "expressions": {
+                "addPair": {
+                  "return_value": "כלום"
+                }
+              }
             },
             "functions": {
               "name": "פונקציות"

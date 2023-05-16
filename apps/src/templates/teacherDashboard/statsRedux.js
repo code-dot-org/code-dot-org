@@ -18,14 +18,14 @@ export const setCompletedLevelCount = (
 ) => ({
   type: SET_COMPLETED_LEVEL_COUNT,
   sectionId,
-  completedLevelCountByStudentId
+  completedLevelCountByStudentId,
 });
 
 /**
  * Initial state of statsRedux
  */
 const initialState = {
-  completedLevelCountBySectionId: {}
+  completedLevelCountBySectionId: {},
 };
 
 /**
@@ -37,8 +37,8 @@ export default function stats(state = initialState, action) {
       ...state,
       completedLevelCountBySectionId: {
         ...state.completedLevelCountBySectionId,
-        [action.sectionId]: action.completedLevelCountByStudentId
-      }
+        [action.sectionId]: action.completedLevelCountByStudentId,
+      },
     };
   }
 
@@ -59,7 +59,7 @@ export const asyncSetCompletedLevelCount = sectionId => dispatch => {
   $.ajax({
     url: `/dashboardapi/sections/${sectionId}/students/completed_levels_count`,
     method: 'GET',
-    dataType: 'json'
+    dataType: 'json',
   }).done(completedLevelCountByStudentId => {
     dispatch(setCompletedLevelCount(sectionId, completedLevelCountByStudentId));
   });

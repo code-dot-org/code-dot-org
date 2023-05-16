@@ -400,6 +400,7 @@ fil:
         csp_applab_functions: Introduksiyon sa mga Functions
         csp_applab_functions_parameters: Mga function na meron mga parameter
         csp_applab_loops: Mga loop
+        csp_cs_is_changing_everything: Binabago ng agham ng Computer ang lahat
         starwars_intro: 'Star Wars: Paglikha ng Galaksiya gamit ang Code - Introduksyon'
         starwars_typing: 'Star Wars: Paglikha ng Galaksiya Gamit ang Code - JavaScript'
         starwars_events: 'Star Wars: Paglikha ng Galaksiya gamit ang Code - Mga Pangyayari'
@@ -456,28 +457,121 @@ fil:
         applab_intro_designmode: App Lab - Pag-design na Mode
         applab_intro_share: App Lab - Ibahagi ang Iyong App
         csd_applab_arrays: Introduksyon sa mga Array
+        CSF_skinOverview_Harvester: Ang Taga-Ani
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Mga Loops kasama si BB-8
+        CSF_harvester_skinOverview_K-1: Ang Taga-Ani
         CSF_harvester_loops_K1: Mga Loops sa Harvester
+        CSF_scrat_loops_K1: Mga loop sa panahon ng yelo
+        CSF_scrat_loops_CF: Mga loop sa panahon ng yelo
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Gamitin ang If / Else Blocks
+        CSF_ifelseifelse_allskins: Gamitin ang If/Elself/Else Blocks
         CSF_loops_AB: Mga loop
+        csd_gamelab_booleans: Mga Expression Ng Boolean
+        csd_gamelab_conditional_statements: Mga Kondisyong ng Pahayag
+        csd_gamelab_if_else: Kung / Iba Pa Pahayag
+        CSF_SpriteLabIntro_CDEF: Ito ang Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Paano gumawa ng Sprite sa Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites sa aksyon
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites sa aksyon
+        CSF_StarWars_ProjectIntro: Intro sa proyekto ng Star Wars
+        mc_2018_intro: 'Minecraft: Paglalayag sa Aquatic Introduksyón'
+        MC_2018_loops: 'Minecraft: Paglalayag sa Aquatic Ulitin Hanggang'
+        mc_2018_conditionals: 'Minecraft: Paglalayag sa Aquatic Conditionals'
+        mc_2018_closing: 'Minecraft: Paglalayag sa Aquatic Binabati Kita'
         hoc_dance_warmup: Dance Party - Warm Up
         hoc_dance_events: Dance Party - Mga Event
         hoc_dance_properties: Dance Party - Mga Katangian
         hoc_dance_congrats: Dance Party - Party On!
         c_and_c_great_to_create: Mahusay na Gumawa at Maglaro ng Patas
         c_and_c_digital_sharing: Digital na Pagbabahagi
+        teaching_csf_how_it_works: 'Pagtuturo ng CS Fundamentals: paano gumagana ang kurso'
+        elem_pd_2: Agham sa computer sa elementarya - PD video 2/2
+        what_is_cs: Ano ang computer science?
+        repeat_block: Gamit ang paulit-ulit na bloke
+        lesson_planning: Pagpaplano Ng Aralin
+        opd_closing: 'Pagtuturo ng CS Fundamentals: pagsasara at susunod na hakbang'
+        why_unplugged_lessons: Pagkuha ng "unplugged"
+        writing_first_program: Pagsusulat ng iyong unang programa sa computer
+        conditionals_with_cards: Unplugged aralin sa aksyon-mga kondisyon na may mga kard
+        songwriting_with_functions: Unplugged aralin sa pagkilos - Songwriting na may mga function
+        what_is_an_event: Ano ang kaganapan?
+        teaching_cs_pair_programming: 'Pagtuturo CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Pagtuturo CS Fundamentals: Pagtuturo paglutas ng problema'
+        csd_applab_designmode: 'CS Discoveries: App Lab-Disenyo Mode'
         csd_pair_programming: Pair programming
+        csd_gamelab_functions: Pagtawag at pagtukoy ng mga function
         csd_applab_parameters: Mga function na meron mga parameter
+        csd_applab_loops: Mga loop sa App Lab
         csd_problem_solving_process: Ang Proseso ng Pagtuklas ng Problema
+        CSF_Going_Places_Safely: Aking Online Na Kapitbahay
+        CSF_SpriteLab_Intro_v2: Ipinapakilala ang Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Paano Gumawa ng Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites sa aksyon
         csd_debugging: Pagdedebug
+        csd_applab_designmode_short: Mode Ng Disenyo Ng Lab Ng App
+        csp-pd-welcome: Maligayang pagdating sa pamilya!
+        CSF-Teaching-Problem-Solving: Paglutas ng problema sa pagtuturo ng CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Gumawa ng iyong sariling mga bloke-Paano Gumamit ng mga Aklat'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Sinubukan ng bata, inaprubahan ng Guro'
+        why-should-teach-unplugged-activities: 'FAQ: Bakit ko dapat turuan ang mga "unplugged" na aktibidad?'
+        cs-principles-intro-to-objects: 'Mga prinsipyo ng CS: Intro sa mga bagay'
+        oceans_machine_learning: Pag-Aaral Ng Makina
+        oceans_training_data: Data Ng Pagsasanay
+        oceans_societal_implications: Mga Implikasyon Sa Lipunan
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_warmup_2019: Dance Party 2019 - Warm up
         hoc_dance_events_2019: Dance Party 2019 - Mga Event
         hoc_dance_measures_2019: Dance Party 2019 - Mga Measure
         hoc_dance_properties_2019: Dance Party 2019 - Mga Property
+        csd_what_computers_do: Ano Ang Ginagawa Ng Mga Computer?
+        csf_my_online_neighborhood_2020: Aking Online Na Kapitbahay
+        csf_follow_the_digital_trail: Sundan ang Digital Trail
         csf_private_and_personal_information: Pribado at Personal na Impormasyon
         csd_what_computers_are: Ano ang isang Kompyuter?
+        codebreak_e01: 'Code Break 1.0: Mga Algorithm na may Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Mga Prototypes kasama sina Mark Cuban at Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Pag-encrypt kasama sina Ashton Kutcher at Mia Gil Epner'
+        codebreak_e04: Code Break 4.0 Digital na Impormasyon kasama sina Mike Krieger at Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Mga simulation at Data kasama si Bill Gates'
+        csd_how_teamwork_works: Paano Gumagana Ang Pagtutulungan Ng Magkasama
+        csd_teamwork_and_disagreement: Pagtutulungan - Pagharap sa hindi pagkakasundo
+        codebreak_e06: 'Code Break 6.0: Ang Internet kasama si Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Mga kondisyon kasama sina Sal Khan at Flo Vaughn'
+        codebreak_e08: 'Code Break 7.0: mga kondisyonon kasama si Sal Khan sa Flo Vaughn'
+        codebreak_e09: 'Code Break 9.0: Mga kaganapan sa Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI kasama sina Kat Graham at Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction kasama sina Susan Wojcicki at China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware na Kasama sila Aloe Blacc, Bret Taylor, & Paula Mejia'
+        csf21pilot_events: 'Sprite Lab: Sprites sa Aksyon'
+        csf21pilot_prompts: 'Sprite Lab: teksto at mga senyas'
+        outbreak_mike: CodeBytes Episode 3 with Mike - Outbreak Simulator
+        poembot-pilot-prompts: Haiku Bots-Prompt sa mga pagpipilian [PILOT]
+        poembot-pilot-text: Haiku Bots - Pag-iimbak ng teksto [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Ipakita ang iyong Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introduksiyon sa AI Lab
+        csd_ml_import_model: Pag-import ng isang modelo ng AI
+        csf_lots_of_sprites: 'Sprite Lab: Maraming Sprites'
         playlab_2021: Introduksiyon sa Play Lab
         playlab_2021_reader: Introduksiyon sa Play Lab
+        csp_defining_calling_functions: Pagtukoy at Pagtawag sa mga function
+        csp_tutorial_datatab: Tab ng Data sa App Lab
+        csp_tutorial_libraries: Mga aklatan sa App Lab
+        PL-Video-21: Maligayang pagdating sa Code.org's Propesyonal na pag-aaral!
+        csp_tutorial_datavis1: Visualizer ng Data sa App Lab - Bahagi 1
+        csp_tutorial_datavis2: Visualizer ng Data sa App Lab - Bahagi 2
+        csd_ml_intro_ai_lab_july2021: Introduksiyon sa AI Lab
+        csd_ml_training_testing_ai_lan: Pagsasanay at pagsubok sa Ai Lab
+        csd_ml_model_cards_july2021: Mga model card sa Ai Lab
+        csd_ml_numerical_ai_lab: Numerical Data sa Ai Lab
+        Gettting_Started_Progress: Progress, Feedback, and Assessment
+        Gettting_Started_ClassSection: Paglikha ng isang seksyon ng klase
+        Gettting_Started_StudentExperience: Ang Karanasan Ng Mag-Aaral
+        Getting_Started_BasicFeatures: Mga pangunahing tampok ng Code.org
+        PL_overview_CSD: Ano ang computer science Discoveries?
         PL_CSD_TeacherTips_Advise: Mga Tip sa Guro - Payo sa mga Bagong Guro
         PL_CSD_TeacherTips_IntroToCSD: Mga Tip sa Guro - Introduksiyon sa CS Discoveries
         PL_CSD_TeacherTips_ProblemSolvingProcess: Mga Tip sa Guro - Ang Proseso ng Paglutas ng Problema
@@ -490,7 +584,33 @@ fil:
         hello_world_intro: Hello World - Maligayang Pagdating sa Sprite Lab
         hello_world_events: Hello World - Pag-program gamit ang Mga Kaganapan
         hello_world_congrats: Hello World - Gawin ang Gusto Mo
+        csp_global_vs_local: Pag-debug ng Global kumpara sa mga lokal na variable
+        rough_poemart_intro: V1 tula Art Intro
+        rough_poemart_events: V1 Mga kaganapan sa sining ng tula
+        rough_poemart_imagery: V1 tula Art Imagery
+        rough_poemart_congrats: V1 tula sining Congrats
+        poetry_module_variables: Mga variable-Coding na may tula
+        poetry_module_textandvariables: Teksto at mga variable-Coding na may tula
+        poetry_module_planningapp: Pagpaplano ng iyong Poem Generator App-Coding na may tula
+        poetry_module_multichoiceprompts: Mga Prompt ng Maramihang Pagpipilian - Coding gamit ang Tula
+        poetry_module_conditionals: Mga Kondisyonal - Coding gamit ang Tula
         poemart_intro: Introduksiyon sa Sining ng Tula
+        poemart_events: Mga Kaganapan sa Sining ng Tula
+        poemart_imagery: Mga Larawan ng Sining ng Tula
+        poemart_celebration: Pagdiriwang ng Sining ng Tula
+        csd_u6_variables_part2: Mga Variable - Bahagi 2
+        csd_ml_ethics_ai: 'Mga Etika at AI '
+        outbreak_intro: 'Simulation ng Outbreak: Introduksiyon'
+        outbreak_events: 'Simulator ng Outbreak: Mga Kaganapan'
+        outbreak_scientist: 'Simulator ng Outbreak: Nag-iisip na Parang Siyentipiko'
+        outbreak_outro: 'Simulator ng Outbreak: Libreng Laro'
+        PL_overview_CSP: Ano ang mga Prinsipyo ng Computer Science?
+        PL_CSP_EIPMOverview: Gabay sa Mga Aralin ng EIPM
+        CSA-PL-debugging-temp: Introduksiyon sa Pag-debug sa Java Lab - temp
+        csd_app_lab_design_mode: Mode ng Disenyo ng CSD App Lab
+        csd_app_lab_events: Mga Kaganapan ng CSD App Lab
+        PL_CSD_Unit4_AppTesting: Pagsubok sa Prototype na Papel
+        csd_u6_circuit_playground: Pisikal na Pagkalkula
         csd_u6_input_output: Input at Output
         CSA-PL-for-loops: Para sa mga loop sa Java
         CSA-PL-variables: Paglikha ng mga Variable sa Java
@@ -504,11 +624,71 @@ fil:
         csd_u6_call_define_functions: 'CSD: Pagtawag at Pagtukoy sa mga Function'
         csp_applab_parameters: Mga function na meron mga parameter
         starquilts_intro_artist: Panimula sa Star Quilts
+        CSA-PL-intro-to-arrays: Isang-Dimensiyonal (1D) na Pagkakaayos
         CSA-PL-1d-arrays-new-values: Paglalagay ng mga value sa 1D arrays
         CSA-PL-conditionals: Mga Kondisyon na Pahayag sa Java
         CSA-PL-two-way-selection: Dalawahang-daan na pagpili
         CSA-PL-Printing-in-Java: Pagpi-print sa Java
         CSA-PL-multi-selection-statements: Mga Pahayag ng Multi-selection
+        PL_CSP_TeacherTips_Advice: 'Mga Tip sa Guro: Payo sa mga Bagong Guro sa CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Mga Tip ng Guro: Panimula sa Mga Prinsipyo ng CS'
+        PL_CSP_TeacherTips_Debugging: 'Mga Tip ng Guro: Tulong sa Pag-debug'
+        PL_CSP_TeacherTips_LeadLearner: 'Mga Tip ng Guro: Paano Maging Nangungunang Mag-aaral'
+        PL_CSP_TeacherTips_APExam: 'Mga Tip ng Guro: Paghahanda sa Pagsusulit sa AP'
+        PL_CSP_TeacherTips_EIPM: 'Mga Tip ng Guro: Ang Proseso ng EIPM'
+        PL_CSD_CircuitPlayground_Overview: Pangkalahatang-ideya ng Circuit Playground
+        CSA-PL-debugging-22: Pag-debug sa Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interaktibong Halimbawa ng Sining
+        CS_Changing_Everything: Binabago ng agham ng Computer ang lahat
+        csa-alias-video: Mga Katumbas at Alyas
+        csa-equals-video: Ang equals() method
+        csa-user-stories: Kwento ng Mga User sa Software Engineering
+        csa-pl-vpl-m1-unit-3: Software Engineering sa Yunit 3
+        csa-pl-intro-to-equality: Introduksiyon sa Pagkakapantay-pantay
+        csa-pl-intro-to-equals-method: Introduksiyon sa .equals() method
+        csa-pl-equals-book: Pagsusulat ng equals() method sa Book class
+        csa-multi-select-pl: Mga Statement ng Multi-selection sa Java
+        csc_timecapsule_intro: Introduksiyon sa Time Capsule
+        PL_Equity_in_CS_Education: Pagiging patas sa Edukasyon ng CS
+        csc_fm_pilot: Mga Function Machine (Pilot)
+        csc_fm_pilot_v2: 'Panimula sa Mga Function Machine '
+        csc-sprite-lab-pixel-editor: Iguhit ng Sarili Mong Sprite
+        csa-pl-intro-to-strings: Introduksiyon sa Mga String sa Java
+        csa-pl-compareTo: Ang compareTo() method
+        csc-event-short-intro: Maikling Panimula sa Mga Event
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Pangkalahatang-ideya ng Circuit Playground na Yunit
+        csa-day-in-pm-pl: Ano ang ginagawa ng project manager?
+        csa-pl-intro-to-pm: Introduksiyon sa Pamamahala ng Proyekto
+        PL_CSD_CircuitPlayground_Setup: Setup ng Circuit Playground
+        csa_object_oriented_programming: 'CSA: Object-Oriented na Pagprograma'
+        csa_creating_objects: 'CSA: Paglikha ng mga Object'
+        csa_calling_methods: 'CSA: Mga Paraan ng Pagtawag'
+        csa_while_loops: 'CSA: Mga While Loop'
+        csa_inheritance: 'CSA: Pamana'
+        csa_writing_a_method: 'CSA: Pagsusulat ng Paraan'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Mga Repaso ng Code'
+        csa_conditional_statements: 'CSA: Kondisyonal na mga Statement'
+        csa_printing_in_java: 'CSA: Pag-imprenta sa Java'
+        csa_two_way_selection_and_not: 'CSA: Two-Way na Seleksiyon at HINDI'
+        csa-pl-intro-to-oop: Introduksiyon sa Object-Oriented na Pagprograma
+        csa-pl-welcome-to-Neighborhood: Maligayang Pagdating sa Komunidad
+        csa-pl-calling-methods: Mga Paraan ng Pagtawag sa Java
+        csa-pl-creating-objects: Paglikha ng mga Object
+        csa_accessor_methods: 'CSA: Mga Paraan ng Pag-access'
+        csa_constructors: 'CSA: Mga Constructor'
+        csa_creating_a_scanner_object: 'CSA: Paglikha ng Scanner Object'
+        csa_creating_variables: 'CSA: Paglikha ng Mga Variable'
+        csa_instance_variables_and_attributes: 'CSA: Mga Variable at Attribute ng Pagkakataon'
+        csa_mutator_methods: 'CSA: Mga Paraan ng Mutator'
+        csa_overloaded_constructors: 'CSA: Mga Overloaded na Constructor'
+        csa_the_tostring_method: 'CSA: Ang toString() na Paraan'
+        csa_scanner_class_methods: 'CSA: Mga Paraan ng Scanner Class'
+        csa_for_loops: 'CSA: Para sa Mga Loop'
+        csa_enhanced_for_loops: 'CSA: Pinahusay Para sa mga Loop'
+        csa_modifying_values_in_a_1d_array: 'CSA: Pagbabago ng mga Value sa 1D na Hanay'
+        csa_nested_loops: 'CSA: Naka-nest na mga Loop'
+        csa_one_dimensional_arrays: 'CSA: Isang-Dimensiyonal (1D) na mga Hanay'
+        csa_polymorphism: 'CSA: Polymorphism'
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

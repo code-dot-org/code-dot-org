@@ -63,7 +63,10 @@
         "halloween": "عيد الهالوين",
         "step": "خطوة",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "كرة القدم"
+        "soccer": "كرة القدم",
+        "hello-world-space": "مرحبا بالعالم: الفضاء",
+        "hello-world-soccer": "مرحبا بالعالم: كرة القدم",
+        "playground": "ملعب"
       }
     }
   }

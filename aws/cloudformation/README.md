@@ -16,6 +16,27 @@ This directory contains CloudFormation stack templates, associated Custom Resour
 
 ## Specific Template/Stack Notes
 
+### IAM
+
+The IAM stack is deployed manually by an AWS Admin. Best practice is to create a PR, obtain approval, then attempt the deployment before merging. If there are issues, fix them in the PR and only merge the PR after the code is known to be good.
+
+To validate the "iam.yml.erb" template:
+
+```
+export AWS_PROFILE=codeorg-admin
+# optionally prefix the following with VERBOSE=1
+bundle exec rake stack:iam:validate RAILS_ENV=production
+unset AWS_PROFILE
+```
+
+To update the stack, you will need to set the `ADMIN` environment variable to [change the role](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/cdo/aws/cloud_formation.rb#L207) executing the change.
+
+```
+export AWS_PROFILE=codeorg-admin
+ADMIN=1 bundle exec rake stack:iam:start RAILS_ENV=production
+unset AWS_PROFILE
+```
+
 ### domain_redirect
 
 "domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect_deploy.sh"

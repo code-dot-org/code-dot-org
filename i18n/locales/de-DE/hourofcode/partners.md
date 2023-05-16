@@ -1,14 +1,14 @@
 ---
-title: Partner
+title: Partners
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Die Hour of Code wird vom Überprüfungsausschuss (Review Committee) für Hour of Code geleitet.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Das [Review Committee]({{ urls/review_committee }}) setzt sich aus zwölf Pädagogen und ehemaligen Pädagogen der Klassenstufe K-12 zusammen, die die Aktivitäten anhand einer von einem Beratungsausschuss erstellten Rubrik bewerten und empfehlen. Diese Pädagogen überprüfen die von Hunderten von Aktivitätspartnern eingereichten von Schülern geleiteten Aktivitäten und von Lehrern geleiteten Unterrichtspläne. Sie bewerten den pädagogischen Wert der Aktivitäten, die Fähigkeit, die Lernenden zu motivieren, und die potenzielle Attraktivität für verschiedene Schülergruppen.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der Hour of Code und ihrer Vision, allen SchülerInnen eine Einführung in die Informatik anzubieten, beigetragen.
 
-# Wichtige Partner und Unterstützer von Unternehmen
+# Wichtige Partner und Unternehmen, die Code of Hour unterstützen
 
 {{ partners/major_partners_corporate_supporters }}
 
@@ -20,13 +20,13 @@ The committee's work and dedication have contributed to the success of the Hour 
 
 * * *
 
-# Curriculum und Tutorial Partner
+# Lehrplan- und Tutorial-Partner
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastruktur Partner und Werkzeuge
+# Infrastruktur-Partner und Tools
 
 {{ partners/infrastructure_partners_tools }}
 

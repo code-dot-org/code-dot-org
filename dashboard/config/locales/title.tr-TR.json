@@ -29,7 +29,7 @@
         "Internet": "İnternet",
         "MadGlibs": "Kızgın konuşkan",
         "MoveIt": "Oynat, Oynat",
-        "MoveItMoveIt_2018": "Çabuk, Çabuk Taşı",
+        "MoveItMoveIt_2018": "Oynat, Oynat",
         "PaperPlanes": "Gerçek-yaşam Algoritmaları: Kağıt Uçaklar",
         "PaperPlanes_2018": "Gerçek-yaşam Algoritmaları: Kağıt Uçaklar",
         "PlantASeed": "Gerçek-yaşam Algoritmaları: Bir Tohum Ek",
@@ -41,10 +41,9 @@
         "TangramAlgorithms": "Tangram Algoritmaları",
         "UnplugHappyMaps": "Mutlu Haritalar",
         "UnplugHappyMaps_2018": "Mutlu Haritalar",
-        "courseA_unplugged_loops": "Bağımsız (Unplugged) Döngüler",
-        "courseA_unplugged_loops_2018": "Bağımsız (Unplugged) Döngüler",
+        "courseA_unplugged_loops": "Bağlantısız (Unplugged) Döngüler",
+        "courseA_unplugged_loops_2018": "Bağlantısız (Unplugged) Döngüler",
         "courseB_unplugged_MRF": "Bilgisayarsız Etkinlik",
-        "courseB_unplugged_MRF_2018": "Robot dostlarım",
         "courseB_unplugged_loopyMRF": "Bilgisayarsız Etkinlik",
         "courseC_Unplugged_ScreenOutTheMean": "Bilgisayarsız Etkinlik",
         "courseC_Unplugged_ScreenOutTheMean_2018": "Bilgisayarsız Etkinlik",
@@ -62,7 +61,8 @@
         "courseB_unplugged_CnC_2018": "Oluşturmak ve Adil Oynamak Mükemmel",
         "courseF_unplugged_powerOfWords_2018": "eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
         "courseB_unplugged_loopyMRF_2018": "eksik çeviri: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
-        "courseE_unplugged_privateInformation_2018": "eksik çeviri: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+        "courseE_unplugged_privateInformation_2018": "eksik çeviri: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title",
+        "courseB_unplugged_MRF_2018": "Robotik Arkadaşlarım"
       }
     }
   }

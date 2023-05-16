@@ -254,6 +254,26 @@
         },
         "Overworld Move to Sheep2022": {
           "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Block အသစ်! "
         }
       }
     }

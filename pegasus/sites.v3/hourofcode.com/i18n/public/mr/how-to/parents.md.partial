@@ -37,7 +37,7 @@ nav: how_to_nav
 </h2>
 
 <p>
-  <a href="{{ urls/learn }}"><img src="/images/fit-600/tutorials.png" /></a>
+  <a href="{{ urls/learn }}"><img src="/images/tutorials.png" /></a>
 </p>
 
 <p>
@@ -68,7 +68,7 @@ href="https://hourofcode.com/us/learn"> अवर ऑफ कोड कृती 
 </p>
 
 <p>
-  <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+  <a href="{{ urls/learn }}"><img src="/images/Marketing/filtering-activities-hoc.jpg" /></a>
 </p>
 
 <p>
@@ -175,7 +175,7 @@ href="https://hourofcode.com/us/learn"> अवर ऑफ कोड कृती 
     घरी <a href="https://staging.hourofcode.com/us/promote/resources#stickers">स्टिकर्स छापा</a> किंवा विशेष सरप्राईज म्हणून <a href="https://store.code.org/"> ते ऑनलाईन खरेदी करा.</a>
   </li>
   <li>
-    तुमच्या घरातील अवर ऑफ कोडची छायाचित्रे आणि व्हिडीओ सोशल मिडीयावर शेअर करा. #HourOfCode आणि @codeorg वापरा म्हणजे आम्हीसुद्धा तुमच्या यशाला ठळक प्रसिद्धी देऊ!
+    तुमच्या सोशल मिडीयावर तुमच्या घरच्या अवर ऑफ कोड कार्यक्रमाचे फोटो आणि व्हिडीओ शेअर करा. <a href="https://twitter.com/hashtag/hourofcode">#HourOfCode</a> आणि <a href="https://twitter.com/codeorg">@codeorg</a> वापरा जेणेकरुन आम्ही तुमचे यश देखील हायलाइट करू शकतो!
   </li>
 </ul>
 

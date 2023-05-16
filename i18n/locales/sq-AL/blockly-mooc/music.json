@@ -1,0 +1,16 @@
+{
+  "blockly_blockPlaySoundTooltip": "luaj tingullin",
+  "blockly_blockPlaySoundAtMeasureTooltip": "luaj tingullin",
+  "blockly_blockRepeatTooltip": "përsërit",
+  "blockly_blockWhenRun": "kur ekzekutohet",
+  "blockly_blockWhenRunTooltip": "kur ekzekutohet",
+  "blockly_functionNamePlaceholder": "funksioni im ",
+  "blockly_toolboxCategoryEvents": "Ngjarje",
+  "blockly_toolboxCategoryFunctions": "funksione",
+  "blockly_toolboxCategoryLogic": "Logjikë",
+  "blockly_toolboxCategoryMath": "Matematikë",
+  "blockly_toolboxCategoryPlay": "Luaj",
+  "blockly_toolboxCategoryVariables": "variabla",
+  "share": "Shpërndaje",
+  "startOver": "Fillo nga fillimi "
+}

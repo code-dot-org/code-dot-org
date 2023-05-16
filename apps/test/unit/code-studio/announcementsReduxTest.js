@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import reducer, {
   addAnnouncement,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
@@ -10,26 +10,28 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -37,26 +39,28 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.student,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.student,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -64,26 +68,28 @@ describe('announcementsRedux', () => {
     const state = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacherAndStudent,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacherAndStudent,
         dismissible: true,
-        buttonText: 'Push the button'
-      }
+        buttonText: 'Push the button',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -92,47 +98,51 @@ describe('announcementsRedux', () => {
     const state1 = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
     const state = reducer(
       state1,
       addAnnouncement({
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
         type: NotificationType.bullhorn,
         visibility: VisibilityType.teacher,
         dismissible: false,
-        buttonText: 'Do you like this button?'
+        buttonText: 'Do you like this button?',
       })
     );
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       },
       {
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
         type: NotificationType.bullhorn,
         visibility: VisibilityType.teacher,
         dismissible: false,
-        buttonText: 'Do you like this button?'
-      }
+        buttonText: 'Do you like this button?',
+      },
     ];
     assert.deepEqual(state, expected);
   });
@@ -140,47 +150,51 @@ describe('announcementsRedux', () => {
     const state1 = reducer(
       undefined,
       addAnnouncement({
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       })
     );
     const state = reducer(
       state1,
       addAnnouncement({
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
         type: NotificationType.bullhorn,
         visibility: VisibilityType.student,
         dismissible: false,
-        buttonText: 'Do you like this button?'
+        buttonText: 'Do you like this button?',
       })
     );
 
     const expected = [
       {
+        key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         notice: 'Hey you',
         details: 'Look what I have to say',
         link: '/very/interesting',
         type: NotificationType.information,
         visibility: VisibilityType.teacher,
         dismissible: true,
-        buttonText: 'Push the button'
+        buttonText: 'Push the button',
       },
       {
+        key: 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
         notice: 'Announce2',
         details: 'details2',
         link: '/link/2',
         type: NotificationType.bullhorn,
         visibility: VisibilityType.student,
         dismissible: false,
-        buttonText: 'Do you like this button?'
-      }
+        buttonText: 'Do you like this button?',
+      },
     ];
     assert.deepEqual(state, expected);
   });

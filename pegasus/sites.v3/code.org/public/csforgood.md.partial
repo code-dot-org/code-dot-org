@@ -17,11 +17,11 @@ social:
 <h1>#CSforGood in your class</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
-  {{hoc_vid_2020 }}
+  {{cs_for_good_vid }}
 </div>
 
 <div class="col-60">
-<p>The events of this year—a global pandemic, economic recession, worldwide protests against racial inequities—have shown us both the great promise and the perils of our technology. We rely on technology to keep us connected (Zoom, anyone?), but we’ve also seen how biased algorithms can divide us on the basis of race or gender. We rely on our technology to keep us informed, but we’ve also seen how easy it is to spread misinformation. We rely on our technology to stay productive, but we’ve left behind those who don’t have access to the internet.</p>
+<p>We rely on technology to keep us connected, but we’ve also seen how biased algorithms can divide us on the basis of race or gender. We rely on our technology to keep us informed, but we’ve also seen how easy it is to spread misinformation. We rely on our technology to stay productive, but we’ve left behind those who don’t have access to the internet.</p>
 <p>How CS and technology are used and applied in the real world is a crucial part of learning computer science. We can help students understand some of the challenges that people around the world face and inspire them to think deeply about the role computer science can play in creating a more equitable and sustainable world.</p>
 </div>
 
@@ -38,12 +38,6 @@ social:
 <p>Here are some themes and questions to spark discussion in your classroom about the role of computer science in creating positive social change. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Download this discussion guide as a PDF</a>.</p>
 
 <h3><strong>We learn CS to detect problems</strong></h3>
-
-<div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
-  <p><strong>Is your class virtual this year?</strong></p>
-  <p>Try using breakout rooms to pair or group students together.</p>
-  <p>If breakout rooms aren’t available, use a shared document or slide deck (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>), designating sections of the document or a single slide for each group of students.</p>
-</div>
 
 <p>Building a society we want to live in begins with understanding the problems we need to address. We can use technology to detect and even predict problems.</p>
 <p>Have students read this story about <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">how smartphones are being used to detect earthquakes</a> and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
@@ -80,8 +74,9 @@ social:
 </ul>
 
 <h3><strong>We learn CS to ensure equity and inclusion</strong></h3>
-<p>The pandemic has exposed the digital divide like never before. Everyone must have the opportunity to learn computer science to have a part in building a future where all of us are included and all our voices heard.</p>
+<p>The people creating technology should look like the people using it. Everyone must have the opportunity to learn computer science to have a part in building a future where all of our voices are heard.</p>
 <p>Have students read this story about a new tool that <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">helps root out potential biases in image sets that are used to train artificial intelligence (AI)</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
+<p><i>Questions for discussion:</i></p>
 <ul>
 <li>What does this tool do and what problem is it trying to solve?</li>
 <li>What do you think ‘open-source’ means? Why would the researchers make their tool open-source?</li>
@@ -110,7 +105,7 @@ social:
 <br>
 <a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
 <p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
-<p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
+<p><i>From Minecraft Education. For grades 2 and up.</i></p>
 
 </div>
 
@@ -131,7 +126,7 @@ social:
 <p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): It’s been a stressful year for students, but practicing mindfulness can be a challenge. Learn to program a meditation app that transports you to your "happy place." For beginners in grades 2 through 8. Great as a teacher-guided tutorial.</p>
 <p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Our robot is learning how to make kind choices when playing with friends. In this game, help Root practice by making four kind decisions in a row. If Root makes a bad choice, it has to start all the way at the beginning again! Let's play together! For beginners in kindergarten through grade 5. Root robot is optional.</p>
 <p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Create a prototype of a low-power, red LED beach light that can be used for lighting on beach paths which is also safe for sea turtles. For beginners in grades 6-8. Great for learning at home.</p>
-<br> 
+<br>
 <p>See the full list of Hour of Code activities and lesson plans, including many more #CSforGood-themed tutorials, at <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
 
 <a id="realworld"></a>

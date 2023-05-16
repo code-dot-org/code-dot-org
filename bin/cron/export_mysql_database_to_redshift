@@ -58,9 +58,9 @@ def main
     RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
     ChatClient.message 'data', "Completed weekly export from Aurora MySQL database to Redshift."
   end
-rescue StandardError => error
-  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
-  raise error
+rescue StandardError => exception
+  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{exception}", color: 'red'
+  raise exception
 ensure
   Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
 end

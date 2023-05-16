@@ -1,0 +1,153 @@
+@import "color", "font", "barlow-semi-condensed-font";
+
+// This stylesheet can be imported to maintain typographic
+// consistency across Dashboard and Pegasus sites.
+
+// Includes heading, paragraph, and caption styles.
+
+// We're using mixins to style semantic tags and also creating
+// identical classes for potential use on other elements if needed.
+
+// ----------------------------------------
+// v 1.0.1
+// ----------------------------------------
+
+// Heading styles
+// Heading mixins are used to maintain accessible heading hierarchy
+// when design calls for a different style (semantic h3, h5 styling).
+
+// Use .heading-[xx] classes on single elements in the markup.
+// This is an h3 heading that will look like an h5.
+// - example: h3.heading-sm
+
+// Use @include [mixin-name] in stylesheets for widespread use.
+
+/* — example: all h3s in a ul need to look like h5s
+    ul.icon-list {
+      h3 { @include heading-sm }
+    }
+*/
+
+@mixin heading-common {
+  color: $neutral-dark;
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+}
+
+@mixin heading-xxl {
+  @include heading-common;
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 3em;
+}
+
+@mixin heading-xl {
+  @include heading-common;
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 2.125em;
+}
+
+@mixin heading-lg {
+  @include heading-common;
+  font-family: $barlowSemiCondensed-semibold;
+  font-size: 1.75em;
+}
+
+@mixin heading-md {
+  @include heading-common;
+  font-family: $barlowSemiCondensed-medium;
+  font-size: 1.5em;
+}
+
+@mixin heading-sm {
+  @include heading-common;
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1.25em;
+}
+
+@mixin heading-xs {
+  @include heading-common;
+  font-family: $gotham-bold, sans-serif;
+  font-size: 1em;
+}
+
+// Paragraph styles
+@mixin paragraph-common {
+  color: $neutral-dark;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+@mixin body-one {
+  @include paragraph-common;
+  font-family: $gotham-regular, sans-serif;
+  font-size: 1em;
+}
+
+@mixin body-two {
+  @include paragraph-common;
+  font-family: $gotham-regular, sans-serif;
+  font-size: 0.875em;
+}
+
+@mixin overline {
+  @include paragraph-common;
+  font-family: $gotham-bold, sans-serif;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@mixin strong {
+  font-family: $gotham-bold, sans-serif;
+}
+
+@mixin em {
+  font-family: $gotham-italics, sans-serif;
+}
+
+// Caption styles
+@mixin figcaption {
+  font-family: $gotham-bold, sans-serif;
+  font-size: 0.875em;
+  margin: 0.5em 0 1em;
+  line-height: 1.2;
+}
+
+// ----------------------------------------
+
+// Headings
+h1,
+.heading-xxl { @include heading-xxl; }
+h2,
+.heading-xl { @include heading-xl; }
+h3,
+.heading-lg { @include heading-lg; }
+h4,
+.heading-md { @include heading-md; }
+h5,
+.heading-sm { @include heading-sm; }
+h6,
+.heading-xs { @include heading-xs; }
+
+// Paragraphs
+// Use on default paragraphs
+p,
+.body-one { @include body-one; }
+// Use on course block descriptions or anywhere
+// else that needs smaller paragraph text
+p.body-two,
+.body-two { @include body-two; }
+// Use on small uppercase labels or descriptions
+p.overline,
+.overline { @include overline; }
+// Use in paragraphs to bold text
+strong,
+.strong { @include strong; }
+// Use in paragraphs to italicize text
+em,
+.em { @include em; }
+
+// Captions
+// Use on figcaption elements that accompany images or videos
+figcaption,
+.figcaption { @include figcaption; }

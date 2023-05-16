@@ -53,7 +53,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_script_level? returns true for if teacher in a K5 course' do
-    Script.any_instance.stubs(:k5_course?).returns(true)
+    Unit.any_instance.stubs(:k5_course?).returns(true)
     assert Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
@@ -118,7 +118,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_unit? returns true for if teacher in a K5 course' do
-    Script.any_instance.stubs(:k5_course?).returns(true)
+    Unit.any_instance.stubs(:k5_course?).returns(true)
     assert Policies::InlineAnswer.visible_for_unit?(@teacher, @teacher_instructed_unit)
   end
 

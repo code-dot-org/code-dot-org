@@ -1,26 +1,18 @@
 name 'U2L15 Assessment4'
-encrypted 'LV3FlGr2odJ651UqDq+bsDNV5PP9f9tWLQlI8/oQdVqPMS7anqi2kTa+HvY3
-FvbYT1A6EXFFd19iAirI7YZkCwxNZ+W5yOKbm4reao4yAII8+KZv32WhKr48
-5Al2VGuEDM0QYdiZhnk13tHbGPEXcwRaSAJ9dmGTTN6h/VhJv/ucqjqqmkE3
-lIcq7ROsm2PpXqumMoPJQtHvGYBJVd9fQnnWa2IOUPgSznZxuXEdUr53i9AL
-5QtAmbXcw/Zh4MGpGuXt0T5p8S4Q/uJue+pKxtkkiKtH/oFRjYFbpn+Lkzng
-E+23/IhgOEvhOIaGcVUFyqQ7casyQVQt29VH4y1JTozd/KFN65CFhId2Eb1N
-ZXHPP5LriYbUEXMq8nsKw57hhxvrSO8a5r4hDWP3HOJTgp8lXLx4I3FG7WWM
-sQvIElweiCzWM36JXkIIaS/TWK2ZHQQ4u+lWIwuFuSp/gR+9HGDaaMqjBxFl
-9UIrI9FbGp9K3ftceQqF/cBZzv4D0ePm9kLNjPNob7+J+3/DeBTeOplll7J6
-gshZXZFe2HU+nQUkKcLWs54DV7xfSdsRDSOA7H7g6NnJjxGd2vYq/kAT7CPn
-8XDxcrdM9mCYiRdIDq+AKz2K4eZNFiEsZMpFS3Cw8y4UmuTNxjGx+MnWUDwj
-6FhMBXDls6WkJ1ddTqdplGEncrFt7JSRRwtCUCa8+P7nESLVnI/COxXPfnGF
-1zmMyjDOEQFjEJRdWU6l0aXRThNrcq7P9bQSzp/8JGBSqKJ8mIt/aNgGJwjZ
-nLTEBMrXA0wJWMk0frIgLNOT1xW24sPRu3IzS4B7oL3iWQDmHXxBNS6npz3M
-T3Bpldv/xigmLFP9Nqgx20tZ/DzqA9MZmaHihYNhjgBQgbgVLkhVGbA8XWfv
-0UChs2tubazllCHdyjOBSx2ezlHbO4+8ZECbw9IPAsUQKxl0wng961vqlWrk
-Ix7AooybrDJ14sAu0iNOYOJPVBOa0sCIIO7kKz48i3givVuek15GPcKxuYIA
-ex1H31ixo/Gbd7Qmzl4pvPDOi1JDO9PqfBGmaFP0I/RZLQ5YDy4sCp6KzVNd
-fV+I/mIHTgnfh6AQ7ZC/8azBqSlsll2bzP2A+r67C0O5DQrIraY9wVca5NJw
-BJwmmYriioDaKRt6gu8SSlyzUOHtuzTAV1Q1SftrkIpIQc/xT215gk1nKrRe
-R+naGVkNfjwRyn5YprA8uVH6CN8Ky2dfppBjkDKzbr2cTXP0ypEsMUtpfP5e
-GujdLsgl2tO61tAVZi82YwjeVsHLYZztMjAwMtHzoN5AA6Fnw6zHz7O7pNyp
-a44Qsnxq3Fe/W6bbFS9K/RuQQW0qhn+2+N3J7JXxy+eQDzSd5szuAWliOxL8
-viilmnchNRbvCMA3JhWNOgheXFsXJENc7RQtd+Q119ZmWCxRIg==
-'
+title 'Assessment: Question 4'
+
+question 'Which makes for a password that is harder to crack:'
+wrong 'A word from the dictionary'
+wrong '8 random characters that include numbers and punctuation'
+wrong 'A 16 character password that is all letters of the alphabet'
+wrong 'A 32 character password that is all letters of the alphabet'
+right 'A 150 character password that is all the same character.'
+
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- A 150 character password that is all the same character. The ease of cracking a password is related to the length of the password. Therefore longer passwords are generally preferred. Picking words from the dictionary can make it significantly easier for a hacker to guess your password. For longer sequences of characters a hacker must simply try every combination of characters of a given length. At 150 characters this is 26^150 if only lowercase letters are used, an unimaginably large number of possibilities and many more than any other option presented.
+MARKDOWN
+
+allow_multiple_attempts true

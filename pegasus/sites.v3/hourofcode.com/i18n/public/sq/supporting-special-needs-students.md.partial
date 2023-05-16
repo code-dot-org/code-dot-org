@@ -4,7 +4,7 @@ title: Mbështetja e studentëve me nevoja të veçanta për Orën e Kodit
 
 # Mbështetja e studentëve me aftësi të kufizuara për Orën e Kodit
 
-Anyone can try an Hour of Code during Computer Science Education Week. Shpesh, studentët me autizëm, ADHD ose ndryshime të tjera në të mësuar zbulojnë se e duan programimin. Inkurajoni të gjithë studentët në klasën tuaj që ta provoni! Gjatë krijimit të përvojës për klasën tuaj, shpërbleni pjesëmarrjen sesa përfundimin. Ju mund t'i jepni të gjithëve një certifikatë ["> ]({{ support-special-needs-students/certificate }cert) pa marrë parasysh se sa enigma ose sfida plotësojnë brenda orës. [ Programimi në çift ](https://www.youtube.com/watch?v=vgkahOzFH2Q) është një mënyrë tjetër e shkëlqyeshme për të mësuar bashkëpunimin dhe për t'i bërë studentët të punojnë së bashku për të zgjidhur problemet.
+Cdokush mund te provoje nje ore kodi gjate Javes se Edukimit ne Shkenca Kompjuterike Shpesh, studentët me autizëm, ADHD ose ndryshime të tjera në të mësuar zbulojnë se e duan programimin. Inkurajoni të gjithë studentët në klasën tuaj që ta provoni! Gjatë krijimit të përvojës për klasën tuaj, shpërbleni pjesëmarrjen sesa përfundimin. Ju mund t'i jepni të gjithëve një certifikatë ["> ]({{ support-special-needs-students/certificate }cert) pa marrë parasysh se sa enigma ose sfida plotësojnë brenda orës. [ Programimi në çift ](https://www.youtube.com/watch?v=vgkahOzFH2Q) është një mënyrë tjetër e shkëlqyeshme për të mësuar bashkëpunimin dhe për t'i bërë studentët të punojnë së bashku për të zgjidhur problemet.
 
 ## Përshtatni një larmi nevojash me udhëzime të online ose unplugged
 

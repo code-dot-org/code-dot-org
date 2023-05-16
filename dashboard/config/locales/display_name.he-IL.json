@@ -293,7 +293,16 @@
         "courseF_sprites_properties_-2022-2": "מאפייני ספרייט",
         "courseF_text_print_-2022-2": "אירועי זמן",
         "courseF_text_review_-2022-2": "אירועי זמן",
-        "ramp_artist_loops42022": "כוכב"
+        "ramp_artist_loops42022": "כוכב",
+        "helloworld_food_costumes_soccer-2022": "תחפושות",
+        "helloworld_food_costumes_space-2022": "תחפושות",
+        "helloworld_food_sizes_soccer-2022": "גודל",
+        "helloworld_food_sizes_space-2022": "גודל",
+        "helloworld_food_sounds_soccer-2022": "צלילים",
+        "helloworld_food_sounds_space-2022": "צלילים",
+        "helloworld_food_backgrounds": "לחץ על אירועים",
+        "helloworld_food_backgrounds_soccer-2022": "לחץ על אירועים",
+        "helloworld_food_backgrounds_space-2022": "לחץ על אירועים"
       }
     }
   }

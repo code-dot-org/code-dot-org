@@ -418,7 +418,7 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "קפוץ"
+            "name": "קפיצה"
           }
         },
         "Course 4 Play Lab Params 10": {
@@ -434,12 +434,12 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "קפוץ"
+            "name": "קפיצה"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"
@@ -1081,7 +1081,7 @@
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"
@@ -1148,7 +1148,7 @@
         },
         "New Play Lab Project": {
           "jump": {
-            "name": "קפוץ",
+            "name": "קפיצה",
             "parameters": {
               "height": "גובה",
               "actor": "שחקן"

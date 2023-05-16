@@ -1,4 +1,10 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "šírka",
+  "dropletBlock_createSprite_param3": "výška",
+  "dropletBlock_setCollider_param0": "typ",
+  "dropletBlock_setCollider_param4": "výška",
+  "dropletBlock_setColliderEach_param0": "typ",
+  "dropletBlock_setColliderEach_param4": "výška",
+  "reinfFeedbackMsg": "Hotovo! Stlač „Pokračovať“ a prejdi na ďalšiu úroveň.",
+  "shareGame": "Zdieľaj svoju hru:"
 }

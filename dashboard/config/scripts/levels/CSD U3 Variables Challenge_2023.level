@@ -1,27 +1,27 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:52:44.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "fill": null,
-      "noStroke": null,
-      "ellipse": null,
-      "rect": null,
-      "randomNumber_min_max": null,
-      "background": null,
-      "declareAssign_x": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "fill": null,
+      "noStroke": null,
+      "ellipse": null,
+      "rect": null,
+      "background": null,
+      "declareAssign_x": null,
       "assign_x": null,
       "noFill": null,
       "stroke": null,
-      "comment_Variables": null
+      "arc": null,
+      "line": null,
+      "point": null,
+      "shape": null,
+      "regularPolygon": null,
+      "strokeWeight": null
     },
     "edit_code": true,
     "embed": "false",
@@ -29,7 +29,7 @@
     "instructions_important": "false",
     "display_name": "Challenge: Updating Variables",
     "hide_share_and_remix": "false",
-    "start_blocks": "var x = 50;\r\nvar y = 50;\r\n\r\nfill(\"red\");\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 100\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 150\r\nellipse(x, y);",
+    "start_blocks": "var x = 50;\r\nvar y = 50;\r\n\r\nfill(\"red\");\r\nellipse(x, y);\r\n// Increase x by 50, now x is 100\r\nx = x + 50;\r\nellipse(x, y);\r\n// Increase x by 50, now x is 150\r\nx = x + 50;\r\nellipse(x, y);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -76,11 +76,16 @@
     "text_mode_at_start": "false",
     "libraries_enabled": "false",
     "bubble_choice_description": "Test your understanding of variables to draw something more complex.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_enabled": "true"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:52:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:44.296+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Challenge_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:44.296+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables Challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables Challenge_2022\"},{\"changed_at\":\"2022-10-13 13:57:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

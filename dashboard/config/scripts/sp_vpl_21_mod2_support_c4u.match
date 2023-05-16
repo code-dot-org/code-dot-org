@@ -10,3 +10,5 @@ answer 'Teacher Community'
 
 question 'I wish there was a way to see how long students are spending on each level in Code Studio. Where can I go to request a new feature?'
 answer 'Report a problem'
+
+allow_multiple_attempts true

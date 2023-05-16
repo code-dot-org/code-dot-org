@@ -512,6 +512,7 @@ cs:
         CSA-PL-Printing-in-Java: Tisk v Java
         CSA-PL-multi-selection-statements: Příkazy s více volbami
         CS_Changing_Everything: Informatika mění vše
+        csd_sprite_properties: Vlastnosti sprajtu
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

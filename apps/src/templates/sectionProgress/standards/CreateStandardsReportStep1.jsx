@@ -10,7 +10,7 @@ import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/
 class CreateStandardsReportStep1 extends Component {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
-    unpluggedLessons: PropTypes.array.isRequired
+    unpluggedLessons: PropTypes.array.isRequired,
   };
 
   render() {
@@ -49,12 +49,12 @@ const styles = {
     fontStyle: 'italic',
     fontWeight: 'bold',
     marginTop: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };
 
 export const UnconnectedCreateStandardsReportStep1 = CreateStandardsReportStep1;
 
 export default connect(state => ({
-  unpluggedLessons: getUnpluggedLessonsForScript(state)
+  unpluggedLessons: getUnpluggedLessonsForScript(state),
 }))(CreateStandardsReportStep1);

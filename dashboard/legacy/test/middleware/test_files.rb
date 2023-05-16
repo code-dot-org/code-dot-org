@@ -24,8 +24,8 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename),
+      new_filename, CGI.escape(new_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -51,8 +51,8 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename),
+      new_filename, CGI.escape(new_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -79,7 +79,7 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = "long_filename#{'_' * 512}.html"
-    delete_all_file_versions old_filename, URI.escape(old_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -689,7 +689,8 @@ class FilesTest < FilesApiTestBase
     post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
     assert_equal escaped_sound_filename, JSON.parse(last_response.body)['filename']
 
-    src_api.patch_abuse(10)
+    # Can't test abuse score functionality, since it's been moved to Rails.
+    #src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
     expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -702,7 +703,7 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
-    dest_api.get_object(URI.escape(image_filename))
+    dest_api.get_object(CGI.escape(image_filename))
     assert successful?
     assert_equal image_body, last_response.body
 
@@ -711,21 +712,22 @@ class FilesTest < FilesApiTestBase
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
-    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
+    # note: these assertions aren't verifying anything, since the abuse score functionality
+    # got moved to Rails, so we can't actually increase the abuse score in this test.
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
-      Custom/ListRequests/FileBucket/BucketHelper.list
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
     )
 
-    src_api.delete_object(URI.escape(image_filename))
-    src_api.delete_object(URI.escape(escaped_sound_filename))
+    src_api.delete_object(CGI.escape(image_filename))
+    src_api.delete_object(CGI.escape(escaped_sound_filename))
     delete_all_manifest_versions
-    dest_api.delete_object(URI.escape(image_filename))
-    dest_api.delete_object(URI.escape(escaped_sound_filename))
+    dest_api.delete_object(CGI.escape(image_filename))
+    dest_api.delete_object(CGI.escape(escaped_sound_filename))
     delete_channel(dest_channel_id)
   end
 

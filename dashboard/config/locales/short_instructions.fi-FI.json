@@ -490,7 +490,15 @@
         "courseC_artist_prog52022": "Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki kolme sivua ovat saman pituisia.",
         "courseD_bee_nestedLoops82022": "Kerää kaikki mesi kukista ja tee hunaja hunajakennoihin. Käytä sisäkkäistä silmukkaa. ",
         "courseD_maze_nestedLoops42022": "Vie minut auringonkukan luo!",
-        "courseD_maze_nestedLoops62022": "Vie minut auringonkukan luo!"
+        "courseD_maze_nestedLoops62022": "Vie minut auringonkukan luo!",
+        "Course 4 Bee 1": "Mehiläinen ei näe mitä on pilven alla!\n\nKäytä \"jos\"-lohkoa tarkistaaksesi, onko pilven alla kukkaa.\n\nHae nektari yhden kerran vain, JOS pilven alla on kukka.",
+        "Course 4 Bee 2": "Käytä \"jos-muuten\"-lohkoa tarkistaaksesi onko pilven alla kukka vai hunajakenno. Jos se on kukka, kerää nektari, muuten tee hunajaa!",
+        "Course 4 Bee 3": "Joskus pilvi peittää kukan, joskus hunajakennon! Jos löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa tehdäksesi hunajaa (koska löysit hunajakennon).",
+        "Course 4 Bee Loops 5 NEW": "Tässä on kolme kukkaa. Keksitkö, mitkä komennot täytyy toistaa 3 kertaa kerätäksesi nektarin mahdollisimman vähillä lohkoilla?",
+        "Course 4 Bee Loops 5a NEW": "Käytä tällä kertaa silmukoita auttaaksesi mehiläistä keräämään kaiken nektarin matkalla hunajakennolle. Käytä mahdollisimman vähän lohkoja ja kun olet perillä, muista tehdä hunajaa!",
+        "Course 4 Maze 2": "Varo räjähteitä!",
+        "Course 4 Maze 3": "Ohjelmoi lintu possun luokse!",
+        "Course 4 Maze 4": "Kokeile \"toista\"-lohkoa ratkaistaaksesi ongelman vähemmillä lohkoilla..."
       }
     }
   }

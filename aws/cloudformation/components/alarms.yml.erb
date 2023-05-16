@@ -52,3 +52,31 @@
       TreatMissingData: breaching
 <%  end -%>
 
+  # ---------------------------------------------
+  # Team Alerting SNS Topics
+  # 
+  # These topics are created in each environment
+  # and will be subscribed to by alerting tools
+  # like PagerDuty, Slack (Chatbot) or others.
+  #
+  # Unmanaged topics that could be migrated here:
+  #   - CDO-LowPriority
+  #   - CDO-WorkdayUrgent
+  #   - CDO-Urgent
+  #
+  # ---------------------------------------------
+
+  InfraLowPriority:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-LowPriority
+
+  InfraWorkdayUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-WorkdayUrgent
+
+  InfraUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-Urgent

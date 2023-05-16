@@ -19,13 +19,13 @@
         "debugging/minecraft/unversioned": {
           "word": "Налагодження"
         },
-        "program/minecraft/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
-        },
         "event/minecraft/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "code/hero/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
@@ -33,12 +33,12 @@
         "debugging/hero/unversioned": {
           "word": "Налагодження"
         },
+        "function/hero/unversioned": {
+          "word": "Функція"
+        },
         "program/hero/unversioned": {
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
-        },
-        "function/hero/unversioned": {
-          "word": "Функція"
         },
         "code/poem-art/2021": {
           "word": "Код"
@@ -112,6 +112,9 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
+        "code/dance/unversioned": {
+          "definition": "писати код або писати інструкції для комп'ютера."
+        },
         "event/dance/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
@@ -120,24 +123,21 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
-        "code/dance/unversioned": {
-          "definition": "писати код або писати інструкції для комп'ютера."
-        },
         "code/aquatic/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Налагодження"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Програма",
-          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Умови"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Налагодження"
+        },
         "loops/aquatic/unversioned": {
           "word": "Цикли"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Програма",
+          "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
         "encryption/hoc-encryption/unversioned": {
           "word": "Шифрування"
@@ -189,15 +189,19 @@
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
-        "event/sports/unversioned": {
-          "word": "Подія",
-          "definition": "Дія, через яку щось відбувається."
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Код"
         },
         "debugging/sports/unversioned": {
           "word": "Налагодження"
+        },
+        "event/sports/unversioned": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
         },
         "program/sports/unversioned": {
           "word": "Програма",
@@ -213,15 +217,15 @@
           "word": "Програма",
           "definition": "Алгоритм, закодований у щось, що може виконуватись комп'ютером."
         },
-        "event/basketball/unversioned": {
-          "word": "Подія",
-          "definition": "Дія, через яку щось відбувається."
-        },
         "code/basketball/unversioned": {
           "definition": "писати код або писати інструкції для комп'ютера."
         },
         "debugging/basketball/unversioned": {
           "word": "Налагодження"
+        },
+        "event/basketball/unversioned": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
         },
         "program/basketball/unversioned": {
           "word": "Програма",
@@ -457,14 +461,24 @@
           "word": "Машинне навчання"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
         },
         "program/poem-art/unversioned": {
-          "word": "Програма"
+          "word": "Програма",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Поведінка"
@@ -617,6 +631,10 @@
         "event/pre-express/2021": {
           "word": "Подія",
           "definition": "Дія, через яку щось відбувається."
+        },
+        "algorithm/coursee/2021": {
+          "word": "алгоритм",
+          "definition": "Перелік кроків для завершення завдання"
         },
         "behavior/coursee/2021": {
           "word": "Поведінка"

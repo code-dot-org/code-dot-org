@@ -7,7 +7,7 @@ class TestWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ''
+      data: '',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -15,7 +15,7 @@ class TestWrapper extends React.Component {
   handleChange(newState) {
     this.props.onChange(newState);
     this.setState({
-      data: newState.full
+      data: newState.full,
     });
   }
 
@@ -39,7 +39,7 @@ class TestWrapper extends React.Component {
 }
 
 TestWrapper.propTypes = {
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export default storybook => {
@@ -53,7 +53,7 @@ export default storybook => {
           label="this is a basic fieldgroup"
           onChange={action('onChange')}
         />
-      )
+      ),
     },
     {
       name: 'dropdown with children',
@@ -69,11 +69,11 @@ export default storybook => {
           <option value="second">Two</option>
           <option value="third">Three</option>
         </FieldGroup>
-      )
+      ),
     },
     {
       name: 'full-featured example',
-      story: () => <TestWrapper onChange={action('onChange')} />
-    }
+      story: () => <TestWrapper onChange={action('onChange')} />,
+    },
   ]);
 };

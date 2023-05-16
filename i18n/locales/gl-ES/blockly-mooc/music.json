@@ -1,0 +1,12 @@
+{
+  "blockly_blockRepeatTooltip": "repetir",
+  "blockly_blockWhenRun": "cando se executa",
+  "blockly_blockWhenRunTooltip": "cando se executa",
+  "blockly_toolboxCategoryEvents": "Eventos",
+  "blockly_toolboxCategoryFunctions": "Funcións",
+  "blockly_toolboxCategoryLogic": "Lóxica",
+  "blockly_toolboxCategoryMath": "Matemáticas",
+  "blockly_toolboxCategoryVariables": "Variables",
+  "share": "Compartir",
+  "startOver": "Empezar de novo"
+}

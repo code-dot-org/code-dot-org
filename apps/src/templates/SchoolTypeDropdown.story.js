@@ -1,30 +1,39 @@
 import React, {Component} from 'react';
 import SchoolTypeDropdown from './SchoolTypeDropdown';
 
-export default storybook => {
-  class DropdownWrapper extends Component {
-    state = {
-      value: ''
-    };
+export default {
+  title: 'SchoolTypeDropdown',
+  component: SchoolTypeDropdown,
+};
 
-    onChange(event) {
-      this.setState({value: event.target.value});
-    }
+//
+// TEMPLATE
+//
 
-    render() {
-      return (
-        <SchoolTypeDropdown
-          value={this.state.value}
-          onChange={this.onChange.bind(this)}
-        />
-      );
-    }
+class DropdownWrapper extends Component {
+  state = {
+    value: '',
+  };
+
+  onChange(event) {
+    this.setState({value: event.target.value});
   }
 
-  storybook.storiesOf('SchoolTypeDropdown', module).addStoryTable([
-    {
-      name: 'SchoolTypeDropdown',
-      story: () => <DropdownWrapper />
-    }
-  ]);
-};
+  render() {
+    return (
+      <SchoolTypeDropdown
+        value={this.state.value}
+        onChange={this.onChange.bind(this)}
+      />
+    );
+  }
+}
+
+const Template = args => <DropdownWrapper {...args} />;
+
+//
+// STORIES
+//
+
+export const Overview = Template.bind({});
+Overview.args = {};

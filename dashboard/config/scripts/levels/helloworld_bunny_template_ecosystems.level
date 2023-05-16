@@ -71,7 +71,7 @@
   "user_id": 9,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-07-25T00:30:32.926+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_template_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_template_ecosystems\"},{\"changed_at\":\"2022-07-25 00:33:59 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-25 00:37:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-25 00:40:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-07-25T00:30:32.926+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_template_ecosystems\\\"\"],\"cloned_from\":\"helloworld_food_template_ecosystems\"},{\"changed_at\":\"2022-07-25 00:33:59 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-25 00:37:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-07-25 00:40:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-11-30 16:16:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -80,21 +80,21 @@
       <xml>
         <block type="when_run" deletable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"meadow"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false">
                   <field name="ANIMATION_NAME">"rabbit-1"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                    <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
                       <field name="LOCATION">{"x":200,"y":200}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
+                    <block type="gamelab_makeNewSpriteAnon" deletable="false">
                       <field name="ANIMATION_NAME">"rabbit-snowy"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                        <block type="gamelab_location_picker" deletable="false" movable="false" can_disconnect_from_parent="false">
                           <field name="LOCATION">{"x":200,"y":200}</field>
                         </block>
                       </value>

@@ -1,0 +1,17 @@
+{
+  "ne-NP": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Computational Thinking"
+        },
+        "L": {
+          "description": "भाषा"
+        },
+        "F": {
+          "description": "Functions"
+        }
+      }
+    }
+  }
+}

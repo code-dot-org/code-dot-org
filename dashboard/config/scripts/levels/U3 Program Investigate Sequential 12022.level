@@ -8,7 +8,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\n* Run this program to see what it does.\r\n\r\n# Discuss\r\n\r\n* Why do you think some information is in quotes and some is not?\r\n\r\n# Modify\r\n\r\n* Add two lines of code, one that displays a string and one that displays a number.",
+    "long_instructions": "# Do This\r\n\r\n* Run this program to see what it does.\r\n\r\n# Discuss\r\n\r\n* Why do you think some information is in quotes and some is not?\r\n\r\n# Modify\r\n\r\n* Add two lines of code, one that displays a string and one that displays a number.\r\n",
     "submittable": "false",
     "start_blocks": "console.log(\"Hi!\");\r\nconsole.log(\"This is a very simple program.\");\r\nconsole.log(\"You can display text in quotes\");\r\nconsole.log(\"But you can also display numbers, like this\");\r\nconsole.log(100);\r\nconsole.log(\"Try adding some code of your own below!\");\r\n",
     "never_autoplay_video": "false",
@@ -30,7 +30,6 @@
     "expand_debugger": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 18802,
     "encrypted": "false",
     "mini_rubric": "false",
@@ -39,8 +38,8 @@
     "libraries_enabled": "false",
     "name_suffix": "2022",
     "encrypted_examples": "koiDD8t4K8z1NjCdlXQmS2hsPC3JVhBIpbyPsHNXcJjQb5HsIJ++A4A0mS9z\nNWGSRUyR39BkKH3dNIk2Avk1hQ==\n",
-    "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -48,7 +47,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:28.840+00:00\",\"changed\":[\"cloned from \\\"U3 Program Investigate Sequential 1_2021\\\"\"],\"cloned_from\":\"U3 Program Investigate Sequential 1_2021\"},{\"changed_at\":\"2022-08-01 16:42:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:28.840+00:00\",\"changed\":[\"cloned from \\\"U3 Program Investigate Sequential 1_2021\\\"\"],\"cloned_from\":\"U3 Program Investigate Sequential 1_2021\"},{\"changed_at\":\"2022-08-01 16:42:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-10-25 20:48:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

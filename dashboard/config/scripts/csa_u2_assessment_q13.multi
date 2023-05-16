@@ -24,3 +24,5 @@ II. With encapsulation, the variables of a class are visible to other classes.
 
 III. Encapsulation is the process Java uses to keep details of the class hidden from a user.
 MARKDOWN
+
+allow_multiple_attempts true

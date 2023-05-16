@@ -12203,22 +12203,15 @@ ro-RO:
         answers:
         - text: Scrat va ajunge la ghindă. Nu există erori în cod.
           correct: true
-          feedback: Greșit. Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția greșită.
           correct: true
-          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu va ajunge la ghindă pentru că nu sunt suficiente blocuri
             `move forward`.
           correct: true
-          feedback: Corect! Mai întâi, Scrat se întoarce în direcția greșită, apoi
-            Scrat nu se deplasează înainte de suficiente ori pentru a ajunge la ghindă.
         - text: Scrat nu se va deplasa de pe primul bloc.
           correct: true
-          feedback: Există două erori în acest cod. Mai întâi, Scrat se întoarce în
-            direcția greșită, apoi Scrat nu se deplasează înainte de suficiente ori
-            pentru a ajunge la ghindă.
+          feedback: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția
+            greșită.
         questions:
         - text: Căutați erorile din acest cod. Va ajunge Scrat la ghindă sau există
             o problemă?
@@ -12472,23 +12465,15 @@ ro-RO:
             ce veți face clic pe „Rulează”?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombiul va trece de calea corectă și se va deplasa înainte și înapoi
-            la nesfârșit.
-          correct: true
+        - correct: true
           feedback: Corect!
         - text: Zombiul va ajunge la floarea-soarelui.
           correct: true
-          feedback: Greșit. Zombi-ul va trece de calea corectă și se va deplasa înainte
-            și înapoi la nesfârșit.
         - text: Zombiul se va întoarce la dreapta pe prima cărare și se va învârti
             în cerc la nesfârșit.
           correct: true
-          feedback: Greșit. Zombi-ul va trece de calea corectă și se va deplasa înainte
-            și înapoi la nesfârșit.
         - text: Zombiul va fi blocat la capătul căii care merge înainte.
           correct: true
-          feedback: În acest cod, zombiul va trece de calea corectă și se va deplasa
-            înainte și înapoi la nesfârșit.
         questions:
         - text: Analizați cu atenție codul care urmează. Ce se va întâmpla după ce
             veți face clic pe „Rulează”?

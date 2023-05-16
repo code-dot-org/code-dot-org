@@ -566,6 +566,7 @@ hi:
         CSA-PL-Printing-in-Java: Java में प्रिंटिंग
         CSA-PL-multi-selection-statements: बहु-चयन स्टेटमेंट्स
         CS_Changing_Everything: कंप्यूटर साइंस सब कुछ बदल रहा है
+        csd_sprite_properties: स्प्राइट्स की विशेषताएं
     callout:
       text:
         drag_blocks: '"मूव करें" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें'

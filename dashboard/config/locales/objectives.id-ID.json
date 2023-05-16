@@ -99,7 +99,7 @@
           "description": "Hubungkan antara konsep ilmu komputer dan dunia nyata"
         },
         "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Identifikasi tempat yang akan dituju untuk terus mempelajari ilmu komputer dan pengodean"
+          "description": "Kenali tempat-tempat untuk terus mempelajari ilmu komputer dan coding"
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "Kembangkan program yang merespons event yang diberi waktu"
@@ -198,7 +198,7 @@
           "description": "Identifikasi tindakan yang berhubungan dengan event input."
         },
         "8e120010-1817-488a-8ca8-ce5198a0883d": {
-          "description": "Buat permainan interaktif menggunakan urutan dan pengendali event."
+          "description": "Buat permainan interaktif menggunakan sequence dan pengendali event."
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Bagikan karya kreatif kepada murid lain."
@@ -228,7 +228,7 @@
           "description": "Identifikasi tindakan yang berhubungan dengan event input."
         },
         "73964b0e-cea1-43cf-a130-410017addf73": {
-          "description": "Buat permainan interaktif menggunakan urutan dan pengendali event."
+          "description": "Buat permainan interaktif menggunakan sequence dan pengendali event."
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Bagikan karya kreatif kepada murid lain."
@@ -268,6 +268,12 @@
         },
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Alasan tentang cara prasangka manusia berperan dalam pembelajaran mesin."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": ""
         },
         "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
           "description": "Definisikan istilah \"kata sandi\" dan jelaskan tujuan kata sandi."
@@ -315,7 +321,7 @@
           "description": "Identifikasi tindakan yang berhubungan dengan event input."
         },
         "df973a96-c08b-4f3f-9a11-c93434193cfe": {
-          "description": "Buat permainan interaktif menggunakan urutan dan pengendali event."
+          "description": "Buat permainan interaktif menggunakan sequence dan pengendali event."
         },
         "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
           "description": "Identifikasi tindakan yang berhubungan dengan event input."
@@ -1719,7 +1725,7 @@
           "description": "Identifikasi tindakan yang berhubungan dengan event input."
         },
         "ed6bda58-2e92-4a38-8847-7f739a13385e": {
-          "description": "Buat permainan interaktif menggunakan urutan dan pengendali event."
+          "description": "Buat permainan interaktif menggunakan sequence dan pengendali event."
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Bagikan karya kreatif kepada murid lain."

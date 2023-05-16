@@ -16,3 +16,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Texas "is-a" State and California "is-a" State.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -12,7 +12,7 @@ import {
   setSaveError,
   setHasJSONError,
   setHasLintError,
-  setLastSavedQuestions
+  setLastSavedQuestions,
 } from '../foormEditorRedux';
 import {getLatestVersionMap} from '../../foormHelpers';
 
@@ -32,12 +32,12 @@ class FoormEntityLoadButtons extends React.Component {
     setSaveError: PropTypes.func,
     setHasJSONError: PropTypes.func,
     setHasLintError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedQuestions: PropTypes.func,
   };
 
   state = {
     latestVersionsOnly: true,
-    selectedOption: null
+    selectedOption: null,
   };
 
   shouldShowLatestVersionsOnly() {
@@ -117,7 +117,7 @@ class FoormEntityLoadButtons extends React.Component {
             label="Only show latest version"
             onChange={() =>
               this.setState({
-                latestVersionsOnly: !this.state.latestVersionsOnly
+                latestVersionsOnly: !this.state.latestVersionsOnly,
               })
             }
             value={this.state.latestVersionsOnly}
@@ -130,14 +130,11 @@ class FoormEntityLoadButtons extends React.Component {
 
 export const UnconnectedFoormEntityLoadButtons = FoormEntityLoadButtons;
 
-export default connect(
-  null,
-  dispatch => ({
-    setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
-    setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
-    setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
-    setLastSavedQuestions: questions =>
-      dispatch(setLastSavedQuestions(questions))
-  })
-)(FoormEntityLoadButtons);
+export default connect(null, dispatch => ({
+  setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
+  setSaveError: saveError => dispatch(setSaveError(saveError)),
+  setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
+  setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
+  setLastSavedQuestions: questions =>
+    dispatch(setLastSavedQuestions(questions)),
+}))(FoormEntityLoadButtons);

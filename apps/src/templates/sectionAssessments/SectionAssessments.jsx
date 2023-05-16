@@ -9,7 +9,7 @@ import {
   countSubmissionsForCurrentAssessment,
   getExportableData,
   setStudentId,
-  ASSESSMENT_FEEDBACK_OPTION_ID
+  ASSESSMENT_FEEDBACK_OPTION_ID,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
@@ -40,7 +40,7 @@ const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.timeStamp, key: 'timestamp'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
-  {label: i18n.correct(), key: 'correct'}
+  {label: i18n.correct(), key: 'correct'},
 ];
 
 const CSV_SURVEY_HEADERS = [
@@ -48,7 +48,7 @@ const CSV_SURVEY_HEADERS = [
   {label: i18n.question(), key: 'questionNumber'},
   {label: i18n.questionText(), key: 'questionText'},
   {label: i18n.response(), key: 'answer'},
-  {label: i18n.count(), key: 'numberAnswered'}
+  {label: i18n.count(), key: 'numberAnswered'},
 ];
 
 class SectionAssessments extends Component {
@@ -70,13 +70,13 @@ class SectionAssessments extends Component {
     exportableData: PropTypes.array,
     studentId: PropTypes.number,
     setStudentId: PropTypes.func,
-    studentList: PropTypes.array
+    studentList: PropTypes.array,
   };
 
   state = {
     freeResponseDetailDialogOpen: false,
     multipleChoiceDetailDialogOpen: false,
-    matchDetailDialogOpen: false
+    matchDetailDialogOpen: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -91,7 +91,7 @@ class SectionAssessments extends Component {
 
     this.logEvent('select_script', {
       old_script_id: scriptId,
-      new_script_id: newScriptId
+      new_script_id: newScriptId,
     });
   };
 
@@ -102,7 +102,7 @@ class SectionAssessments extends Component {
     this.logEvent('select_assessment', {
       script_id: scriptId,
       old_level_group_id: assessmentId,
-      new_level_group_id: newAssessmentId
+      new_level_group_id: newAssessmentId,
     });
   };
 
@@ -113,7 +113,7 @@ class SectionAssessments extends Component {
     this.logEvent('select_student', {
       student_id: studentId,
       script_id: scriptId,
-      level_group_id: assessmentId
+      level_group_id: assessmentId,
     });
   };
 
@@ -121,7 +121,7 @@ class SectionAssessments extends Component {
     const {assessmentId, scriptId} = this.props;
     this.logEvent(`download_${dataType}`, {
       script_id: scriptId,
-      level_group_id: assessmentId
+      level_group_id: assessmentId,
     });
   }
 
@@ -133,8 +133,8 @@ class SectionAssessments extends Component {
         event: event,
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          ...data
-        })
+          ...data,
+        }),
       },
       {includeUserId: true}
     );
@@ -142,37 +142,37 @@ class SectionAssessments extends Component {
 
   showFreeResponseDetailDialog = () => {
     this.setState({
-      freeResponseDetailDialogOpen: true
+      freeResponseDetailDialogOpen: true,
     });
   };
 
   hideFreeResponseDetailDialog = () => {
     this.setState({
-      freeResponseDetailDialogOpen: false
+      freeResponseDetailDialogOpen: false,
     });
   };
 
   showMulitpleChoiceDetailDialog = () => {
     this.setState({
-      multipleChoiceDetailDialogOpen: true
+      multipleChoiceDetailDialogOpen: true,
     });
   };
 
   hideMultipleChoiceDetailDialog = () => {
     this.setState({
-      multipleChoiceDetailDialogOpen: false
+      multipleChoiceDetailDialogOpen: false,
     });
   };
 
   showMatchDetailDialog = () => {
     this.setState({
-      matchDetailDialogOpen: true
+      matchDetailDialogOpen: true,
     });
   };
 
   hideMatchDetailDialog = () => {
     this.setState({
-      matchDetailDialogOpen: false
+      matchDetailDialogOpen: false,
     });
   };
 
@@ -188,7 +188,7 @@ class SectionAssessments extends Component {
       totalStudentSubmissions,
       exportableData,
       studentId,
-      studentList
+      studentList,
     } = this.props;
 
     const isCurrentAssessmentFeedbackOption =
@@ -223,55 +223,56 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && !isCurrentAssessmentFeedbackOption && (
-              <div>
-                <div style={{...h3Style, ...styles.header}}>
-                  {i18n.selectStudent()}
+            {!isCurrentAssessmentSurvey &&
+              !isCurrentAssessmentFeedbackOption && (
+                <div>
+                  <div style={{...h3Style, ...styles.header}}>
+                    {i18n.selectStudent()}
+                  </div>
+                  <StudentSelector
+                    studentList={studentList}
+                    studentId={studentId}
+                    onChange={this.onSelectStudent}
+                  />
+                  {totalStudentSubmissions > 0 && (
+                    <div style={styles.download}>
+                      <CSVLink
+                        filename="assessments.csv"
+                        data={exportableData}
+                        headers={CSV_ASSESSMENT_HEADERS}
+                        onClick={() => this.onClickDownload('assessments')}
+                      >
+                        <div>{i18n.downloadAssessmentCSV()}</div>
+                      </CSVLink>
+                    </div>
+                  )}
+                  {totalStudentSubmissions <= 0 && (
+                    <div>{i18n.emptyAssessmentSubmissions()}</div>
+                  )}
+                  <SubmissionStatusAssessmentsContainer
+                    onClickDownload={() =>
+                      this.onClickDownload('submission_stats')
+                    }
+                  />
+                  {totalStudentSubmissions > 0 && (
+                    <div>
+                      <MultipleChoiceAssessmentsOverviewContainer
+                        openDialog={this.showMulitpleChoiceDetailDialog}
+                      />
+                      <MultipleChoiceByStudentContainer />
+                      <MatchAssessmentsOverviewContainer
+                        openDialog={this.showMatchDetailDialog}
+                      />
+                      <MatchByStudentContainer
+                        openDialog={this.showMatchDetailDialog}
+                      />
+                      <FreeResponsesAssessmentsContainer
+                        openDialog={this.showFreeResponseDetailDialog}
+                      />
+                    </div>
+                  )}
                 </div>
-                <StudentSelector
-                  studentList={studentList}
-                  studentId={studentId}
-                  onChange={this.onSelectStudent}
-                />
-                {totalStudentSubmissions > 0 && (
-                  <div style={styles.download}>
-                    <CSVLink
-                      filename="assessments.csv"
-                      data={exportableData}
-                      headers={CSV_ASSESSMENT_HEADERS}
-                      onClick={() => this.onClickDownload('assessments')}
-                    >
-                      <div>{i18n.downloadAssessmentCSV()}</div>
-                    </CSVLink>
-                  </div>
-                )}
-                {totalStudentSubmissions <= 0 && (
-                  <div>{i18n.emptyAssessmentSubmissions()}</div>
-                )}
-                <SubmissionStatusAssessmentsContainer
-                  onClickDownload={() =>
-                    this.onClickDownload('submission_stats')
-                  }
-                />
-                {totalStudentSubmissions > 0 && (
-                  <div>
-                    <MultipleChoiceAssessmentsOverviewContainer
-                      openDialog={this.showMulitpleChoiceDetailDialog}
-                    />
-                    <MultipleChoiceByStudentContainer />
-                    <MatchAssessmentsOverviewContainer
-                      openDialog={this.showMatchDetailDialog}
-                    />
-                    <MatchByStudentContainer
-                      openDialog={this.showMatchDetailDialog}
-                    />
-                    <FreeResponsesAssessmentsContainer
-                      openDialog={this.showFreeResponseDetailDialog}
-                    />
-                  </div>
-                )}
-              </div>
-            )}
+              )}
             {/* Feedback Download */}
             {isCurrentAssessmentFeedbackOption && (
               <FeedbackDownload
@@ -332,32 +333,32 @@ class SectionAssessments extends Component {
 
 const styles = {
   header: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   tableContent: {
     marginTop: 10,
-    clear: 'both'
+    clear: 'both',
   },
   selectors: {
-    clear: 'both'
+    clear: 'both',
   },
   unitSelection: {
     float: 'left',
-    marginRight: 20
+    marginRight: 20,
   },
   assessmentSelection: {
     float: 'left',
-    marginBottom: 10
+    marginBottom: 10,
   },
   download: {
-    marginTop: 10
+    marginTop: 10,
   },
   loading: {
-    clear: 'both'
+    clear: 'both',
   },
   empty: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export const UnconnectedSectionAssessments = SectionAssessments;
@@ -374,7 +375,7 @@ export default connect(
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
     studentId: state.sectionAssessments.studentId,
-    studentList: state.teacherSections.selectedStudents
+    studentList: state.teacherSections.selectedStudents,
   }),
   dispatch => ({
     setScriptId(scriptId) {
@@ -388,6 +389,6 @@ export default connect(
     },
     setStudentId(studentId) {
       dispatch(setStudentId(studentId));
-    }
+    },
   })
 )(SectionAssessments);

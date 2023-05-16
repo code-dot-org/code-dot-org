@@ -4,6 +4,8 @@ require 'cdo/rake_utils'
 require 'cdo/tempfile'
 require 'pdf/conversion'
 require src_dir 'curriculum_course'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -36,9 +38,9 @@ all_outfiles = []
 
     begin
       PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
-    rescue Exception => e
+    rescue Exception => exception
       ChatClient.log "PDF generation failure for #{url}"
-      ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+      ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
       raise
     end
 
@@ -50,4 +52,4 @@ all_outfiles = []
   all_outfiles << fetchfile_for_pdf
 end
 
-task default: all_outfiles
+timed_task_with_logging default: all_outfiles

@@ -1909,6 +1909,76 @@
         "coursee_helloworld_say": {
           "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
           "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik di sini untuk menjalankan kod."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klik di sini dahulu!"
         }
       }
     }

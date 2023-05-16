@@ -113,7 +113,7 @@
         "courseE_artist_functions1": "ជួយzombieគូរវ៉ែនតាដោយប្រើការ៉េដែលមានជ្រុង ១០០ ភីកសែល។\\\nស្ពានរវាងវ៉ែនតាមានប្រវែង ៧៥ ភីកសែល។",
         "courseE_artist_functions1_copy": "ជួយzombieគូរវ៉ែនតាដោយប្រើការ៉េដែលមានជ្រុង ១០០ ភីកសែល។\\\nស្ពានរវាងវ៉ែនតាមានប្រវែង ៧៥ ភីកសែល។",
         "courseE_artist_functions2": "ពេលនេះប្រើមុខងារ `គូរការ៉េ` ដើម្បីបង្កើតវ៉ែនតា។",
-        "courseE_artist_functions2_copy": "ពេលនេះប្រើមុខងារ `គូរការ៉េ` ដើម្បីបង្កើតវ៉ែនតា។",
+        "courseE_artist_functions2_copy": "ពេលនេះប្រើមុខងារ `គូរការ៉េ` ដើម្បីបង្កើតវ៉ែនតា។\n",
         "courseE_playLab_challenge1": "Something should happen when\nyou get enough points or when you run out of points. Add some code to the\n`win game` and `lose game` functions to make the game work the way it should.\n\\\r\nClick the hints for ideas!",
         "courseF_bee_conditionals8": "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake honey (because there is a honeycomb).",
         "grade5_artist_binary9": "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with the bits?",
@@ -384,7 +384,7 @@
         "courseE_artist_functions5_2018": "គូរតែផ្កាយទាំងបីនេះ ដើម្បីបញ្ចប់បញ្ហា។",
         "courseE_artist_functions5_2019": "គូរតែផ្កាយទាំងបីនេះ ដើម្បីបញ្ចប់បញ្ហា។",
         "courseE_artist_functions5_2020": "គូរតែផ្កាយទាំងបីនេះ ដើម្បីបញ្ចប់បញ្ហា។",
-        "courseE_artist_functions5_copy": "គូរតែផ្កាយទាំងបីនេះ ដើម្បីបញ្ចប់បញ្ហា។",
+        "courseE_artist_functions5_copy": "\nគូរតែផ្កាយទាំងបីនេះ ដើម្បីបញ្ចប់បញ្ហា។",
         "courseE_artist_functions_challenge2": "សាកល្បងកូដនេះ មើលថាតើវាការដំណើដូចម្តេច, បន្ទាប់មកបង្កើតកម្មវិធីដោយខ្លួនឯង!",
         "courseE_artist_functions_challenge2_2018": "សាកល្បងកូដនេះ មើលថាតើវាការដំណើដូចម្តេច, បន្ទាប់មកបង្កើតកម្មវិធីដោយខ្លួនឯង!",
         "courseE_artist_functions_challenge2_2019": "សាកល្បងកូដនេះ មើលថាតើវាការដំណើដូចម្តេច, បន្ទាប់មកបង្កើតកម្មវិធីដោយខ្លួនឯង!",
@@ -1576,7 +1576,22 @@
         "ramp_artist_loops62022": "កែសម្រួលរង្វិលជុំ (Loop) របស់អ្នកដើម្បីគូរជណ្តើរនេះ",
         "ramp_artist_loops72022": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (loop) !",
         "ramp_artist_loops82022": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (Loop)!",
-        "ramp_artist_loops92022": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េ។"
+        "ramp_artist_loops92022": "ដោះស្រាយល្បែងផ្គុំរូបនេះដោយគូរការ៉េ។",
+        "courseA_harvester_seq12_2021": "ប្រមូលពោតទាំងអស់។",
+        "courseA_maze_seq5_2021": "សូម​សាកល្បង​ចំណោទមួយ​នេះ។",
+        "courseA_maze_seq5a_2021": "តើ​អ្នក​គួរតែបន្ថែម​ ប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseB_Scrat_ramp1_2021": "សម្រាប់ល្បែងផ្គុំរូបនេះ ភ្ជាប់កូដប្លុកជាមួយគ្នា ហើយចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp2_2021": "ភ្ជាប់កូដប្លុកទាំងអស់រួមគ្នាដើម្បីបញ្ចប់កូដរបស់អ្នក ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!។",
+        "courseB_Scrat_ramp3a_2021": "បន្ថែមកូដប្លុក 'ខាងជើង' ទៅផ្នែកខាងក្រោមនៃកូដប្លុកផ្សេងទៀត ដើម្បីបញ្ចប់កូដរបស់អ្នក ហើយបន្ទាប់មកចុច \"▶ ប៊ូតុងដំណើរការ\"!។",
+        "courseB_Scrat_ramp3b_2021": "អូសប្លុកដែលលើសត្រឡប់ទៅប្រអប់កូដប្លុក ដើម្បីដកវាចេញ។",
+        "courseB_Scrat_ramp4a_2021": "តើអ្នកអាចដឹងទេថា តើប្លុកមួយណាដែលអ្នកត្រូវបន្ថែមទៅផ្នែកខាងក្រោមនៃប្លុកផ្សេងទៀតដើម្បីបញ្ចប់កូដនេះ?",
+        "courseB_Scrat_ramp5a_2021": "សូមអ្នកសាកល្បងចំណោទទាំងនេះ!",
+        "courseA_maze_seq52022": "សូម​សាកល្បង​ចំណោទមួយ​នេះ។",
+        "courseA_maze_seq5a2022": "តើ​អ្នក​គួរតែបន្ថែម​ ប្លុក​អ្វី​នៅ​ចុង​កូដ​នេះ​ដើម្បី​អាចឱ្យ​បក្សី​ទៅដល់​ជ្រូកបាន?",
+        "courseB_Scrat_ramp12022": "សម្រាប់ល្បែងផ្គុំរូបនេះ ភ្ជាប់កូដប្លុកជាមួយគ្នា ហើយចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2018": "សម្រាប់ល្បែងផ្គុំរូបនេះ ភ្ជាប់កូដប្លុកជាមួយគ្នា ហើយចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2019": "សម្រាប់ល្បែងផ្គុំរូបនេះ ភ្ជាប់កូដប្លុកជាមួយគ្នា ហើយចុច \"▶ ប៊ូតុងដំណើរការ\"!",
+        "courseB_Scrat_ramp1_2020": "សម្រាប់ល្បែងផ្គុំរូបនេះ ភ្ជាប់កូដប្លុកជាមួយគ្នា ហើយចុច \"▶ ប៊ូតុងដំណើរការ\"!"
       }
     }
   }

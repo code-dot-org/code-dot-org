@@ -2,7 +2,7 @@
 title: 給家長的活動指引
 ---
 
-# How to do an Hour of Code with your child
+# 如何與孩子一起學習一小時玩程式
 嘗試一小時玩程式是向你的孩子（也許是第一次）介紹電腦科學的簡單而有趣的方式。   電腦科學不僅是所有學習領域的基礎，而且<a href="https://medium.com/@codeorg/cs-helps-students outperform-in-school-college-and-workplace-66dd64a69536">最近的研究表明</a>：學習電腦科學的孩子在其他科目中表現更好、在解決問題方面表現出色，並且<font color="00adbc"><b>進入大學的可能性高出17%</b></font>。
 
 你可以和全球數千萬學生一起參加這個全球性的活動。   我們可以一起激發孩子們的學習熱情，打破陳規陋習，幫助孩子們發現新的興趣。   最重要的是，你已經擁有了將「一小時玩程式」帶入家中所需的一切！
