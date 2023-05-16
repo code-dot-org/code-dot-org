@@ -7,6 +7,8 @@ import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
+import ProgramSequencer from '../player/ProgramSequencer';
+import RandomSkipManager from '../player/RandomSkipManager';
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
@@ -118,6 +120,8 @@ class UnconnectedMusicView extends React.Component {
     super(props);
 
     this.player = new MusicPlayer();
+    this.programSequencer = new ProgramSequencer();
+    this.randomSkipManager = new RandomSkipManager();
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace(props.appOptions);
     this.soundUploader = new SoundUploader(this.player);

@@ -35,3 +35,8 @@ Which, if any, of the following changes to `mystery2` is required so that the tw
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `mystery1` method is a recursive method that, when given a positive integer `n`, returns `2` if `n` is `1`, and returns `5` plus the result of `mystery1(n - 1)` otherwise. This effectively adds `5` for each number from `n` to `2`, and then adds `2` for the base case of `n` being `1`.
+
+The `mystery2` method is an iterative method intended to do the same thing as `mystery1`, but it's not quite correct as written. It should start `total` at `2`, not `0`, because `mystery1` adds `2` for the base case of `n` being `1`, and `mystery2` should do the same. Then, in the `while` loop, `mystery2` adds `5` to `total` for each number from `n` to `2`, just like `mystery1`.
+MARKDOWN
