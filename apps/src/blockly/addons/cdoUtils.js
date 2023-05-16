@@ -133,15 +133,15 @@ function testJsonSerialization(workspace) {
   Blockly.Events.disable();
 
   // Create an array of blocks based on JSON serialization of the current workspace.
-  const blockJson = Blockly.serialization.workspaces.save(workspace);
+  const jsonSerialization = Blockly.serialization.workspaces.save(workspace);
   const tempJsonWorkspace = new Blockly.Workspace();
-  Blockly.serialization.workspaces.load(blockJson, tempJsonWorkspace);
+  Blockly.serialization.workspaces.load(jsonSerialization, tempJsonWorkspace);
   const jsonBlocks = tempJsonWorkspace.getAllBlocks();
 
   // Create an array of blocks based on the XML encoding of the current workspace.
-  const blockXml = Blockly.Xml.blockSpaceToDom(workspace);
+  const xmlSerialization = Blockly.Xml.blockSpaceToDom(workspace);
   const tempXmlWorkspace = new Blockly.Workspace();
-  Blockly.Xml.domToWorkspace(blockXml, tempXmlWorkspace);
+  Blockly.Xml.domToWorkspace(xmlSerialization, tempXmlWorkspace);
   const xmlBlocks = tempXmlWorkspace.getAllBlocks();
 
   // compareBlockArrays returns an array of differences found.
@@ -167,8 +167,13 @@ function testJsonSerialization(workspace) {
   }
   if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
     // Avoid logging to the console for typical users.
-    console.log({differences: differences});
+    console.log({
+      differences: differences,
+      jsonSerialization: jsonSerialization,
+      xmlSerialization: xmlSerialization,
+    });
   }
+  Blockly.Events.enable();
 }
 
 // Used to find differences between blocks created from xml and json sources.
