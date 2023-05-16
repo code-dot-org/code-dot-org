@@ -1,7 +1,7 @@
 # Mainline Blockly Manual Testing
-Whenever the mainline `blockly` package version is being upgraded, manual testing should be included to ensure there are no regressions or issues with the version bump.
+Whenever the mainline `blockly` package version is being upgraded or updates are added that impact Google Blockly labs, manual testing should be included to ensure there are no regressions or issues with the version bump or update.
 
-The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-30 minutes.
+The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-20 minutes.
 
 # For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
@@ -24,6 +24,8 @@ Create a new Dance Lab project: [local](http://localhost-studio.code.org:3000/pr
 - 'set background color' block should have a field that when click displays a 7x10 color grid while the 'set all tint' block's grid is 3x3.
 - Check functions. Compare with function definition blocks on production.
     Once you create a drag out a function definition block, a 'do something' block should appear in Toolbox under 'Functions'. Once the function definition is removed from workspace, the 'do something' block should also be removed.
+- Go to this Dance Party level: [local](http://localhost-studio.code.org:3000/s/dance-2019/lessons/1/levels/1) [production](https://studio.code.org/s/dance-2019/lessons/1/levels/1).
+Check the block in the toolbox, in particular, that the dropdown field for type of dancer has only 2 options. Then click and drag a block to workspace and check the two dropdown menus again to see if the options and value are correctly displayed.
 
 # Flappy
 Create a new Flappy project: [local](http://localhost-studio.code.org:3000/projects/flappy/new) [production](https://studio.code.org/projects/flappy/new)
