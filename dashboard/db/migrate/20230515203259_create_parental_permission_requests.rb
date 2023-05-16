@@ -6,5 +6,6 @@ class CreateParentalPermissionRequests < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_index :user_id
   end
 end
