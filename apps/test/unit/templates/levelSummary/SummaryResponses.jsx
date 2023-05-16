@@ -108,4 +108,57 @@ describe('SummaryResponses', () => {
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
     expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
   });
+
+  it('renders toggle when appropriate', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'Multi',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+        answer_is_visible: true,
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(1);
+  });
+
+  it('does not render toggle for Free Response', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'FreeResponse',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+        answer_is_visible: true,
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
+  });
+
+  it('does not render toggle without policy permission', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'Multi',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
+  });
 });
