@@ -21,3 +21,12 @@ Which of the following could replace `/* missing code */` so that the code segme
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+To print `"DOG"` using column-major order, we need to access the elements in the first column of the `letters` array.
+
+`letters[0][0]` represents the element in the first row (index `0`) and the first column (index `0`), which is `"D"`.
+
+`letters[1][0]` represents the element in the second row (index `1`) and the first column (index `0`), which is `"O"`.
+
+`letters[2][0]` represents the element in the third row (index `2`) and the first column (index `0`), which is `"G"`.
+MARKDOWN
