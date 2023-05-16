@@ -26,7 +26,7 @@ export function searchAssets(
   const searchRegExp = new RegExp('(?:\\s+|_|^|-)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
-  let resultSet = Object.keys(assetLibrary.aliases)
+  let resultSet = Object.keys(assetLibrary.aliases || {})
     .filter(alias => searchRegExp.test(alias))
     .reduce((resultSet, nextAlias) => {
       return resultSet.union(assetLibrary.aliases[nextAlias]);
