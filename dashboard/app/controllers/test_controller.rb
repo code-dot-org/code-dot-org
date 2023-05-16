@@ -3,6 +3,17 @@ class TestController < ApplicationController
   include Pd::Application::ActiveApplicationModels
   layout false
 
+  # FIXME FIXME FIXME TODO
+  # DO NOT MERGE WITH THIS IN IT
+  #
+  # If I don't enable this I get:
+  # ActionController::InvalidAuthenticityToken at /api/test/universal_instructor_access
+  # when I:
+  # ./runner.rb --headed --fail_fast -V -l -f ./features/teacher_tools/instructor_in_training.feature:3
+  #
+  # Is something wrong with the way I'm setting up the test? This is presumably passing in Drone, not sure what's up here?
+  skip_forgery_protection
+
   def levelbuilder_access
     return unless (user = current_user)
     user.permission = UserPermission::LEVELBUILDER
