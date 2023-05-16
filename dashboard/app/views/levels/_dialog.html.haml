@@ -6,16 +6,17 @@
     - if local_assigns[:previous_page_button]
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
+    - if local_assigns[:next_level_link]
+      %a.btn.btn-large.btn-primary.next-lesson.nextLevelButton{style: !!local_assigns[:show_submit] ? 'display:none' : nil}
+        =t('next_level')
     - if local_assigns[:next_page_button]
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
-    - elsif local_assigns[:next_level_link]
-      %div{id: 'next_level_link'}
     - elsif local_assigns[:continue_button]
       %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('continue')
     - else
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton{style: !!local_assigns[:show_submit] ? nil : 'display:none'}
         =t('submit')
       - if @level.properties['submittable'] && !Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
         %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
