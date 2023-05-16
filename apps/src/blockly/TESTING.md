@@ -1,7 +1,7 @@
 # Mainline Blockly Manual Testing
 Whenever the mainline `blockly` package version is being upgraded or updates are added that impact Google Blockly labs, manual testing should be included to ensure there are no regressions or issues with the version bump or update.
 
-The following is a manual test checklist to follow and may not be extensive. The estimated time to complete the following checklist is 15-20 minutes.
+The following is a manual test checklist to follow and is not exhaustive. The estimated time to complete the following checklist is 15-20 minutes.
 
 # For All Mainline Blockly Labs
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
