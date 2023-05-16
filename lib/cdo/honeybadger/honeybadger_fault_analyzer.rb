@@ -39,7 +39,7 @@ class HoneybadgerFaultAnalyzer
 
   def get_reports(project_id)
     validate_api_token!
-    @honeybadger_url_builder.get_api_response("reports_by_user", {project_id: project_id})
+    @honeybadger_url_builder.get_report_notices_per_day(project_id)
   end
 
   private
