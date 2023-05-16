@@ -73,6 +73,28 @@ describe('multiAnswerCounts', () => {
       D: 2,
     });
   });
+
+  it('generates correct counts with multiple answers selected', () => {
+    const data = multiAnswerCounts(
+      [
+        {text: '0,2'},
+        {text: '0'},
+        {text: '0,3,2'},
+        {text: '0,3'},
+        {text: '0'},
+        {text: '2,3'},
+        {text: '3,0'},
+        {text: '3'},
+      ],
+      4
+    );
+    expect(data).to.eql({
+      A: 6,
+      B: 0,
+      C: 3,
+      D: 5,
+    });
+  });
 });
 
 describe('multiChartData', () => {

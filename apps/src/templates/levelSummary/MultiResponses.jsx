@@ -15,8 +15,12 @@ const multiAnswerCounts = (responses, answerCount) => ({
   ...Object.fromEntries([...LETTERS.slice(0, answerCount)].map(l => [l, 0])),
   // Overwrite the count for any answers that have student responses.
   ...responses.reduce((acc, curr) => {
-    const letter = LETTERS.at(curr.text);
-    acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
+    // Each response can be an index or a comma-separated list of indices.
+    const indices = curr.text.split(',');
+    indices.forEach(index => {
+      const letter = LETTERS.at(index);
+      acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
+    });
     return acc;
   }, {}),
 });
