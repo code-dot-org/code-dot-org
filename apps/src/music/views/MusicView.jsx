@@ -244,12 +244,10 @@ class UnconnectedMusicView extends React.Component {
               this.props.setProjectUpdatedError();
             }
           );
+          this.player.initialize(this.library);
+          setInterval(this.updateTimer, 1000 / 30);
+          this.props.setIsLoading(false);
         });
-
-      this.player.initialize(this.library);
-      setInterval(this.updateTimer, 1000 / 30);
-
-      this.props.setIsLoading(false);
     });
   }
 
@@ -377,9 +375,8 @@ class UnconnectedMusicView extends React.Component {
     this.setAllowedSoundsForProgress();
 
     if (this.props.currentLevelId) {
-      // Initiate the level change for the projects system. Only
-      // do this is we have a level.
-      this.musicBlocklyWorkspace.initiateLevelChange(
+      // Change levels for the projects system. Only do this is we have a level.
+      await this.musicBlocklyWorkspace.changeLevels(
         this.props.currentLevelId,
         this.props.currentScriptId
       );

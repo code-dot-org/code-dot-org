@@ -416,14 +416,14 @@ export default class MusicBlocklyWorkspace {
   }
 
   /**
-   * Initiate a level change to the given level and script.
-   * The request may be enqueued if there is already a level change in progress.
+   * Change levels to the given level and script. Handles cleanup of the old level and
+   * calls loads code for the new level and script.
    * @param {*} newLevelId Id of new level
    * @param {*} newScriptId Id of new script. Can be undefined if this level does
    * not have a script.
    */
-  initiateLevelChange(newLevelId, newScriptId) {
-    this.levelChangeManager.enqueueLevelChange(
+  async changeLevels(newLevelId, newScriptId) {
+    await this.levelChangeManager.changeLevel(
       this.getProject(),
       this.projectManager,
       newLevelId,
