@@ -768,13 +768,24 @@ form {
 // Video series
 // - see example: code.org/blockchain
 .video-series {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 1.25em;
+  margin-top: 2em;
 
-  figure {
-    width: 49%;
-    margin-top: 1.25em;
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Overrides styles on the
+  // display_video_thumbnail partial
+  & > div.col-50 {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+
+    .video_caption_link {
+      @include figcaption;
+    }
   }
 }
 
