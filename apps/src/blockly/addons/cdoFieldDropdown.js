@@ -42,7 +42,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * For other labs, `state` is stringified xml.
    */
   loadState(state) {
-    // Check is state is not stringified xml.
+    // Check if state is not stringified xml.
     const fieldTagRegEx = /<field/;
     if (!fieldTagRegEx.test(state)) {
       this.setValue(state);
