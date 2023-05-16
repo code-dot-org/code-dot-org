@@ -42,26 +42,21 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * For other labs, `state` is stringified xml.
    */
   loadState(state) {
-    // Instead of calling on GoogleBlockly.utils.xml.textToDom(state), we do the following
-    // to avoid an error when `state` is assigned a value (music lab).
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(state, 'text/xml');
-    const field = xmlDoc.querySelector('field');
-    const config = field?.getAttribute('config');
-    if (config) {
-      const value = field.textContent;
-      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(config);
-      this.setValue(value);
+    // Check is state is not stringified xml.
+    const fieldTagRegEx = /<field>/;
+    if (!fieldTagRegEx.test(state)) {
+      this.setValue(state);
       return;
+    }
+    const field = GoogleBlockly.utils.xml.textToDom(state);
+    const config = field.getAttribute('config');
+    if (config) {
+      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(config);
     }
     if (this.isOptionListDynamic()) {
       this.getOptions(false);
     }
-    if (field) {
-      this.setValue(field.textContent);
-    } else {
-      this.setValue(state); // music lab
-    }
+    this.setValue(field.textContent);
   }
 
   /**
