@@ -75,10 +75,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
     // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
     // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
-    const config = element.getAttribute('config');
-    if (config) {
-      this.hasConfig = true;
-      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(config);
+    this.config = element.getAttribute('config');
+    if (this.config) {
+      this.menuGenerator_ = this.getUpdatedOptionsFromConfig(this.config);
     }
     // Call super so value is set.
     super.fromXml(element);
@@ -91,14 +90,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override
    */
   toXml(element) {
-    if (Array.isArray(this.menuGenerator_) && this.hasConfig) {
-      // convert array of options back into string config
-      const config = this.menuGenerator_
-        .map(val => {
-          return val[1];
-        })
-        .join();
-      element.setAttribute('config', config);
+    if (this.config) {
+      element.setAttribute('config', this.config);
     }
     super.toXml(element);
     return element;
