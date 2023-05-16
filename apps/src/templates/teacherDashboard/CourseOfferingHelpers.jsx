@@ -68,6 +68,22 @@ export const translatedGradeLevels = {
   grade_12: i18n.gradeLevel({number: 12}),
 };
 
+export const gradeLevelsMap = {
+  kindergarten: 'K',
+  grade_1: '1',
+  grade_2: '2',
+  grade_3: '3',
+  grade_4: '4',
+  grade_5: '5',
+  grade_6: '6',
+  grade_7: '7',
+  grade_8: '8',
+  grade_9: '9',
+  grade_10: '10',
+  grade_11: '11',
+  grade_12: '12',
+};
+
 export const subjectsAndTopicsOrder = [
   'math',
   'science',
