@@ -24,17 +24,17 @@ def saucelabs_browser(test_run_name)
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
-  sauce_capabilities = {
+  sauce_options = {
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
     idleTimeout: 60,
     seleniumVersion: Selenium::WebDriver::VERSION
   }
-  sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
-  sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
+  sauce_options[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
+  sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
   capabilities["sauce:options"] ||= {}
-  capabilities["sauce:options"].merge!(sauce_capabilities)
+  capabilities["sauce:options"].merge!(sauce_options)
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
