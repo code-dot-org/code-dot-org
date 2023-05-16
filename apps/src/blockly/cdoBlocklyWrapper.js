@@ -243,6 +243,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
+    loadBlocksToWorkspace(workspace, blockXml) {
+      return Blockly.Xml.domToBlockSpace(workspace, blockXml);
+    },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
