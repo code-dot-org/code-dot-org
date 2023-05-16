@@ -192,7 +192,7 @@ export const setEffectAtCurrentLocationSimple2 = {
     message0: musicI18n.blockly_blockSetEffect({effect: '%1', value: '%2'}),
     args0: [
       {
-        type: 'field_dropdown',
+        type: 'music_field_dropdown',
         name: FIELD_EFFECTS_NAME,
         options: [
           ['volume', 'volume'],
@@ -201,7 +201,7 @@ export const setEffectAtCurrentLocationSimple2 = {
         ],
       },
       {
-        type: 'field_dropdown',
+        type: 'music_field_dropdown',
         name: FIELD_EFFECTS_VALUE,
         options: [
           ['normal', ''],
