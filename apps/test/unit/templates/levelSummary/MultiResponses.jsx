@@ -79,7 +79,7 @@ describe('multiAnswerCounts', () => {
       [
         {text: '0,2'},
         {text: '0'},
-        {text: '0,3'},
+        {text: '0,3,2'},
         {text: '0,3'},
         {text: '0'},
         {text: '2,3'},
@@ -91,7 +91,7 @@ describe('multiAnswerCounts', () => {
     expect(data).to.eql({
       A: 6,
       B: 0,
-      C: 2,
+      C: 3,
       D: 5,
     });
   });
