@@ -49,7 +49,7 @@ const CurriculumCatalogCard = ({
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
-    quickViewButtonText={i18n.quickView()}
+    quickViewButtonText={i18n.learnMore()}
     imageAltText={imageAltText}
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
