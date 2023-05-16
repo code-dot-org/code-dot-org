@@ -29,6 +29,8 @@ class Project < ApplicationRecord
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
 
+  validate :validate_thumbnail_url
+
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
@@ -51,5 +53,23 @@ class Project < ApplicationRecord
   # value as project.owner.id but is more efficient if only the user_id is needed.
   def owner_id
     project_storage.user_id
+  end
+
+  def thumbnail_url
+    "/v3/files/#{channel_id}/.metadata/thumbnail.png"
+  end
+
+  # maybe notify on update for now, and block on create?
+  def validate_thumbnail_url
+    begin
+      value_parsed = JSON.parse(value)
+    rescue JSON::ParserError
+      return
+    end
+    return unless value_parsed['thumbnailUrl']
+
+    unless value_parsed['thumbnailUrl'] == thumbnail_url
+      errors.add(:value, "thumbnail URL is invalid")
+    end
   end
 end
