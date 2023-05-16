@@ -51,6 +51,7 @@ const TimelineElement = ({
   return (
     <div
       className={classNames(
+        'timeline-element',
         moduleStyles.timelineElement,
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,
