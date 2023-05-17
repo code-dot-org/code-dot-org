@@ -130,19 +130,20 @@ function testJsonSerialization(workspace) {
   const experimentEnabled = experiments.isEnabled(experiments.BLOCKLY_JSON);
   const FIREHOSE_STUDY = 'blockly-json';
   const FIREHOSE_EVENT = 'block-differences';
+  const SORT_BY_POSITION = true;
   Blockly.Events.disable();
 
   // Create an array of blocks based on JSON serialization of the current workspace.
   const jsonSerialization = Blockly.serialization.workspaces.save(workspace);
   const tempJsonWorkspace = new Blockly.Workspace();
   Blockly.serialization.workspaces.load(jsonSerialization, tempJsonWorkspace);
-  const jsonBlocks = tempJsonWorkspace.getAllBlocks();
+  const jsonBlocks = tempJsonWorkspace.getAllBlocks(SORT_BY_POSITION);
 
   // Create an array of blocks based on the XML encoding of the current workspace.
   const xmlSerialization = Blockly.Xml.blockSpaceToDom(workspace);
   const tempXmlWorkspace = new Blockly.Workspace();
   Blockly.Xml.domToWorkspace(xmlSerialization, tempXmlWorkspace);
-  const xmlBlocks = tempXmlWorkspace.getAllBlocks();
+  const xmlBlocks = tempXmlWorkspace.getAllBlocks(SORT_BY_POSITION);
 
   // compareBlockArrays returns an array of differences found.
   const differences = compareBlockArrays(xmlBlocks, jsonBlocks);
@@ -186,6 +187,7 @@ export function compareBlockArrays(xmlBlocks, jsonBlocks) {
   const visited = new Set();
   // Some block properties are expected to hold different values, or refer to blocks already in the array.
   const keysToSkip = [
+    'childBlocks_', // a circular reference to an array of blocks that are also in the original array
     'parentBlock_', // a circular reference to another block in the array
     'sourceBlock_', // a circular reference to another block in the array
     'workspace', // a reference to the unique temporary workspaces used to create the two block arrays
