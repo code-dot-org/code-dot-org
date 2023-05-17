@@ -119,6 +119,7 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
+    last_verified_captcha_at
   )
 
   attr_accessor(
@@ -2453,7 +2454,7 @@ class User < ApplicationRecord
     !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
 
-  def display_captcha?
+  def display_join_section_captcha?
     # If 24 hours has passed since last reset, return false.
     if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
       return false
