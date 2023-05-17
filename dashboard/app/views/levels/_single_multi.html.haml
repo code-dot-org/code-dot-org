@@ -91,7 +91,7 @@
 
       - if standalone
         - answer_locked = enforce_allow_multiple_attempts && !level.allow_multiple_attempts? && last_attempt
-        = render partial: 'levels/dialog', locals: {app: app, next_level_link: @next_level_link, show_submit: !answer_locked}
+        = render partial: 'levels/dialog', locals: {app: app, next_level_link: @next_level_link, show_next_page_link: answer_locked}
 
   .clear
   -unless contained_mode

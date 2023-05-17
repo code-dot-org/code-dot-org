@@ -61,7 +61,7 @@
   %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: readonly}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
-  = render partial: 'levels/dialog', locals: {app: 'free_response', next_level_link: @next_level_link, show_submit: !readonly} unless (in_level_group || is_contained_level)
+  = render partial: 'levels/dialog', locals: {app: 'free_response', next_level_link: @next_level_link, show_next_page_link: readonly} unless (in_level_group || is_contained_level)
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
 
 - content_for(:head) do
