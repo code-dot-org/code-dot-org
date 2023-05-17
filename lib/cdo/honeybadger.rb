@@ -11,17 +11,23 @@ module Honeybadger
   def self.notify_new_release(environment, revision)
     # As adhoc and development environments are not "linear", we do not track
     # them.
+    ChatClient.log environment
+    ChatClient.log revision
     return if [:adhoc, :development].include? environment
 
-    Dir.chdir(dashboard_dir) do
-      system(
+    output = Dir.chdir(dashboard_dir) do
+      t = system(
         'bundle exec honeybadger deploy '\
           "--environment=#{environment} "\
           "--revision=#{revision} "\
           "--user=#{environment} "\
           "--api-key=#{CDO.dashboard_honeybadger_api_key}"
       )
+      ChatClient.log t
+      t
     end
+    ChatClient.log output
+    ChatClient.log "Done"
   end
 
   # notify_command_error - log an error from an executed command to honeybadger.
