@@ -150,9 +150,8 @@ function testJsonSerialization(workspace) {
   if (differences.length > 0 || experimentEnabled) {
     // Log a record to Firehose/Redshift.
     const recordData = {
-      projectUrl: dashboard.project.getShareUrl(),
-      blocklyVersion: Blockly.blockly_.VERSION,
       differences: differences,
+      blocklyVersion: Blockly.blockly_.VERSION,
     };
     firehoseClient.putRecord(
       {
