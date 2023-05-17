@@ -17,6 +17,8 @@ require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
 require_relative '../lib/cdo/honeybadger'
 require_relative '../lib/cdo/test_server_status'
+require_relative '../lib/cdo/rake_utils'
+
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
@@ -131,9 +133,19 @@ def do_dtp(dotd_name)
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
     )
+    notify_honeybadger_deployment(:production, dotd_name)
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
   @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
+end
+
+def notify_honeybadger_deployment(environment, dotd_name)
+  Honeybadger.track_deployment(
+    environment: environment,
+    revision: RakeUtils.git_revision,
+    local_username: dotd_name.strip,
+    repository: "git@github.com:code-dot-org/code-dot-org.git",
+    )
 end
 
 # Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
@@ -154,6 +166,7 @@ def do_dtl(dotd_name)
   )
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
   @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
+  notify_honeybadger_deployment(:level_builder, dotd_name)
 end
 
 # @return [String] The text for the DOTD menu prompt.
@@ -234,6 +247,12 @@ end
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
 # @param [String] dotd_name The name of the DOTD executing this script.
 def dotd_menu(dotd_name)
+  puts RakeUtils.git_revision
+  puts dotd_name.strip
+  puts "git@github.com:code-dot-org/code-dot-org.git"
+  puts :production
+  puts :level_builder
+  notify_honeybadger_deployment(:development, dotd_name)
   highline_menu = HighLine.new
   show_full_menu = false
   loop do
@@ -276,6 +295,7 @@ def dotd_menu(dotd_name)
           head: 'staging',
           title: "DTT (Staging > Test) [#{dotd_name}]"
         )
+        notify_honeybadger_deployment(:test, dotd_name)
         puts <<-EOS.unindent
 
           DTT (Staging > Test): #{GitHub.url(dtt_pr_number)}
