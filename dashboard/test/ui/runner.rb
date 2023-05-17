@@ -227,6 +227,13 @@ def parse_options
       opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
         options.priority = priority
       end
+      opts.on("--rerun-failed", "Rerun scenarios which failed last time, see #{rerun_filename('*')}") do
+        # concatenate log/*.rerun together and split on whitespace
+        # to get a list of scenarios that failed the last time their
+        # feature was run
+        rerun_files = Dir.glob(rerun_filename('*'))
+        options.features = rerun_files.map {|path| File.read(path)}.join(" ").split
+      end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
         exit
@@ -682,17 +689,15 @@ def cucumber_arguments_for_browser(browser, options)
   arguments
 end
 
-def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
+def cucumber_arguments_for_feature(options, test_run_string)
   arguments = ''
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
   arguments += " --fail-fast" if options.fail_fast
   arguments += " --dry-run" if options.dry_run
 
-  # if auto-retrying, output a rerun file so on retry we only run failed tests
-  if max_reruns > 0
-    arguments += " --format rerun --out #{rerun_filename test_run_string}"
-  end
+  # output a .rerun file: on auto-retry or --retry-failed we only run failed scenarios
+  arguments += " --format rerun --out #{rerun_filename test_run_string}"
 
   # In CircleCI we export additional logs in junit xml format so CircleCI can
   # provide pretty test reports with success/fail/timing data upon completion.
@@ -753,7 +758,7 @@ def run_feature(browser, feature, options)
 
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
-  arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
+  arguments += cucumber_arguments_for_feature(options, test_run_string)
   cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
