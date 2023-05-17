@@ -191,7 +191,7 @@ class LessonProgress extends Component {
               // Secondly, if the active lab is currently loading.  To keep things simple
               // for the lab, we don't allow switching to another level while one is loading.
               const bubbleDisabled =
-                onBubbleClick &&
+                !!onBubbleClick &&
                 (level.isCurrentLevel || this.props.isLabLoading);
 
               return (
