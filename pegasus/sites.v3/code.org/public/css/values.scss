@@ -23,6 +23,10 @@
       flex-direction: column;
       gap: 1em;
 
+      @media screen and (min-width: $width-sm) and (max-width: $width-md) {
+        justify-content: center;
+      }
+
       @media screen and (max-width: $width-sm) {
         padding: 2em 0.5em;
       }
