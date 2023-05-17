@@ -106,10 +106,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '~> 4.2.0' # 4.x is required for Ruby 3 support; <4.3 required for Http:Persistent to not be deprecated yet
+  gem 'selenium-webdriver', '3.141.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 4.7' # 4.7 required for selenium 4.x
+  gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
