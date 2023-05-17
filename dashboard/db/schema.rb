@@ -804,11 +804,12 @@ ActiveRecord::Schema.define(version: 2023_05_15_203259) do
     t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id"
   end
 
-  create_table "parental_permission_requests", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "parental_permission_requests", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "parent_email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_parental_permission_requests_on_user_id"
   end
 
   create_table "pd_accepted_programs", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2174,6 +2175,7 @@ ActiveRecord::Schema.define(version: 2023_05_15_203259) do
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
   add_foreign_key "pd_application_tags_applications", "pd_applications"
