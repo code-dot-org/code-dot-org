@@ -1682,12 +1682,12 @@ FactoryBot.define do
   end
 
   factory :lti_integration do
-    platform_id {"1a2b3c5b"}
-    issuer {"http://some.lms.com"}
-    client_id {"12345678"}
-    platform_name {"canavs"}
-    auth_redirect_url {"http://some.lms.com/lti/authenticate"}
-    jwks_url {"http://some.lms.com/jwks"}
-    access_token_url {"http://some.lms.com/access_token"}
+    platform_id {"platform_id"}
+    issuer {"issuer"}
+    client_id {"client_id"}
+    platform_name {"platform_name"}
+    auth_redirect_url {"auth_redirect_url"}
+    jwks_url {"jwks_url"}
+    access_token_url {"access_token_url"}
   end
 end
