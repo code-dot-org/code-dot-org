@@ -39,6 +39,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
   },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: 'play-sound-block',
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },

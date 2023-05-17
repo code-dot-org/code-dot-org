@@ -55,11 +55,17 @@ class Weblab < Level
       level_prop = {}
 
       properties.keys.each do |dashboard|
-        apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
-        # Don't override existing valid (non-nil/empty) values
         value = JSONValue.value(properties[dashboard].presence)
+        apps_prop_name = dashboard.camelize(:lower)
+        # Don't override existing valid (non-nil/empty) values
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
+      end
+
+      # FND-985 Create shared API to get localized level properties.
+      if should_localize?
+        localized_long_instructions = I18n.t(name, scope: [:data, 'long_instructions'], default: level_prop['longInstructions'])
+        level_prop['longInstructions'] = localized_long_instructions
       end
 
       level_prop['levelId'] = level_num
