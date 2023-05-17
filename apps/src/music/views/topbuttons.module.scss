@@ -8,7 +8,7 @@
   max-width: 130px;
 
   .button {
-    background-color: $neutral_dark;
+    background-color: $music_black;
     color: $neutral_light;
     font-size: 13px;
     padding: 5px 10px;
@@ -19,7 +19,7 @@
     position: relative;
 
     &:hover {
-      background-color: $neutral_dark80;
+      background-color: $neutral_dark90;
     }
   }
 }
