@@ -22,19 +22,35 @@ def saucelabs_browser(test_run_name)
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config)
+  capabilities[:javascript_enabled] = 'true'
 
-  sauce_options = {
+  if ENV['BROWSER_CONFIG'] == 'Firefox'
+    # Firefox >= 66 has an issue with its content blocker causing page loads to block indefinitely.
+    # Set content blocking to 'strict' as a workaround.
+    profile = Selenium::WebDriver::Firefox::Profile.new
+    profile['browser.contentblocking.category'] = 'strict'
+    capabilities[:firefox_profile] = profile
+  end
+
+  sauce_capabilities = {
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
-    idleTimeout: 60,
-    seleniumVersion: Selenium::WebDriver::VERSION
+    idleTimeout: 60
   }
-  sauce_options[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
-  sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
-  capabilities["sauce:options"] ||= {}
-  capabilities["sauce:options"].merge!(sauce_options)
+  sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
+  sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
+
+  # Use w3c-spec sauce:options capabilities format for compatible browsers.
+  # Ref: https://wiki.saucelabs.com/display/DOCS/Selenium+W3C+Capabilities+Support+-+Beta
+  if $browser_config['w3c']
+    sauce_capabilities['seleniumVersion'] = Selenium::WebDriver::VERSION
+    capabilities['sauce:options'] = sauce_capabilities
+    capabilities['platformName'] = capabilities['platform']
+  else
+    capabilities.merge!(sauce_capabilities)
+  end
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -42,7 +58,7 @@ def saucelabs_browser(test_run_name)
   with_read_timeout(5.minutes) do
     Selenium::WebDriver.for(:remote,
       url: url,
-      capabilities: capabilities,
+      desired_capabilities: capabilities,
       http_client: $http_client
     )
   end

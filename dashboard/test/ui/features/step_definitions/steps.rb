@@ -299,13 +299,15 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I rotate to (landscape|portrait)$/ do |orientation|
+When /^I rotate to landscape$/ do
   if ENV['BS_ROTATABLE'] == "true"
-    $http_client.call(
-      :post,
-      "/wd/hub/session/#{@browser.session_id}/orientation",
-      {orientation: orientation.upcase}
-    )
+    @browser.rotate(:landscape)
+  end
+end
+
+When /^I rotate to portrait$/ do
+  if ENV['BS_ROTATABLE'] == "true"
+    @browser.rotate(:portrait)
   end
 end
 
@@ -501,7 +503,7 @@ When /^I click selector "([^"]*)" if I see it$/ do |selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-rescue Selenium::WebDriver::Error::TimeoutError
+rescue Selenium::WebDriver::Error::TimeOutError
   # Element never appeared, ignore it
 end
 
@@ -552,7 +554,7 @@ When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   type_into_selector("\"#{input_text}\"", selector)
-rescue Selenium::WebDriver::Error::TimeoutError
+rescue Selenium::WebDriver::Error::TimeOutError
   # Element never appeared, ignore it
 end
 
@@ -928,7 +930,7 @@ end
 def wait_for_jquery
   wait_until do
     @browser.execute_script("return (typeof jQuery !== 'undefined');")
-  rescue Selenium::WebDriver::Error::ScriptTimeoutError
+  rescue Selenium::WebDriver::Error::ScriptTimeOutError
     puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."
