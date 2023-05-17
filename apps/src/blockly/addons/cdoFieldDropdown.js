@@ -37,9 +37,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * called by the serialization system.
    *
    * @param state The state we want to apply to the field.
-   * @override because different labs store `state` in different ways.
-   * For music lab, `state` is the value of the field.
-   * For other labs, `state` is stringified xml.
+   * @override because `state` is stored as either json or xml in our code base.
    */
   loadState(state) {
     // Check if state is not stringified xml, i.e., value from json.
@@ -48,11 +46,12 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       if (this.isOptionListDynamic()) {
         this.getOptions(false);
       }
-      // TODO: handle config if stored in json
       this.setValue(state);
       return;
     }
     const field = GoogleBlockly.utils.xml.textToDom(state);
+    // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
+    // The config is handled by `fromXml`.
     this.fromXml(field);
   }
 
