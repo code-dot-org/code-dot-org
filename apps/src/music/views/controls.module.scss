@@ -1,6 +1,7 @@
 @import "color.scss";
 @import "./theme/tokens-dark";
 @import "./music-view.module.scss";
+@import "../../mixins.scss";
 
 .controlsContainer {
   display: flex;
@@ -12,32 +13,54 @@
   position: relative;
 }
 
-.controlButtons {
-  color: $neutral_light;
-  margin: 5px 15px;
+.section {
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 
-  &.center {
-    flex: 1;
-  }
-
-  &.side {
+  &Side {
     flex: 0;
   }
 
-  &.hide {
+  &Center {
+    flex: 1;
+  }
+}
+
+.controlButton {
+  text-align: center;
+  color: $neutral_light;
+
+  &Run {
+    display: flex;
+    align-items: center;
+    background-color: $brand_secondary_default;
+    font-size: 14px;
+    padding: 5px 10px;
+
+    .text {
+      padding-left: 10px;
+    }
+  }
+
+  &Icon {
+    @include remove-button-styles;
+    margin: 5px 15px;
+  }
+
+  &Hide {
     opacity: 0;
     pointer-events: none;
   }
 }
 
-.iconButton {
-  cursor: pointer;
+.icon {
   font-size: 30px;
+}
 
-  &Link {
-    color: $neutral_light;
-  }
+.feedbackIcon {
+  color: $neutral_light;
 }
 
 .startOverButton {
