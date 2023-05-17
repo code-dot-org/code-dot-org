@@ -233,6 +233,8 @@ def parse_options
         # feature was run
         rerun_files = Dir.glob(rerun_filename('*'))
         options.features = rerun_files.map {|path| File.read(path)}.join(" ").split
+        puts "Rerunning failed"
+        puts "Features are: #{options.features}"
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
