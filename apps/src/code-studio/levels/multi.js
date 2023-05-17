@@ -250,15 +250,12 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   }
 
   let result;
-  let pass;
   let submitted;
   let errorDialog;
   let testResult;
 
   const answerIsCorrect = this.validateAnswers();
-  const tooFewAnswers =
-    this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers;
-
+  const tooFewAnswers = !this.correctNumberAnswersSelected();
   if (tooFewAnswers) {
     errorDialog = <LegacyTooFewDialog />;
   } else if (!this.allowMultipleAttempts && !answerIsCorrect) {
@@ -271,26 +268,23 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   ) {
     result = true;
     submitted = true;
-    pass = true;
   } else if (tooFewAnswers) {
     result = false;
     submitted = false;
-    pass = false;
   } else if (!this.allowMultipleAttempts) {
-    pass = true;
     submitted = false;
     result = answerIsCorrect;
+    // This isn't a great enum for this, but its description suggests it's the best option.
+    // Particularly: "Not validated, but should be treated as a success"
     testResult = TestResults.CONTAINED_LEVEL_RESULT;
   } else {
     result = answerIsCorrect;
-    pass = result;
     submitted = false;
   }
 
   return {
     response: answer,
     result,
-    pass,
     errorDialog,
     submitted,
     valid,
