@@ -111,8 +111,11 @@ namespace :circle do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
+
+      features_or_rerun_failed = rerun_failed_scenarios? ? '--rerun-failed' : "--feature #{container_features.join(',')}"
+
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-          " --feature #{container_features.join(',')}" \
+          " #{features_or_rerun_failed}" \
           " --pegasus localhost.code.org:3000" \
           " --dashboard localhost-studio.code.org:3000" \
           " --circle" \
@@ -176,6 +179,10 @@ namespace :circle do
       RakeUtils.rake_stream_output 'seed:cached_ui_test'
     end
   end
+end
+
+def rerun_failed_scenarios?
+  ENV['CIRCLE_RERUN_FAILED']
 end
 
 # @return [Array<String>] names of browser configurations for this test run
