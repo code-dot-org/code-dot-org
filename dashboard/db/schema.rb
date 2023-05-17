@@ -746,7 +746,7 @@ ActiveRecord::Schema.define(version: 2023_05_03_220558) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lti_integrations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "platform_id", null: false
     t.string "issuer", null: false
