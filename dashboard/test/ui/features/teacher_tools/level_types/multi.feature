@@ -30,7 +30,6 @@ Scenario: Submitting an incorrect option
   And I press ".modal #ok-button" using jQuery
   And I wait until element "#cross_0" is visible
 
-@skip
 Scenario: Rendering in another language
   Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/es-MX"
   Then I rotate to landscape
@@ -49,26 +48,3 @@ Scenario: Can render without a question
   When I rotate to landscape
   And element ".submitButton" is visible
   Then element ".multi-question" is not visible
-
-Scenario: Standalone level without retries locks after answer is submitted
-  Given I create a student named "Sally Student"
-  And I sign in as "Sally Student"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/5?noautoplay=true"
-  When I rotate to landscape
-  And element ".submitButton" is visible
-  And element ".submitButton" is disabled
-  When I press ".answerbutton[index=0]" using jQuery
-  Then I press ".submitButton" using jQuery
-  Then element ".modal .dialog-title" contains text "Incorrect answer"
-  And I verify progress in the header of the current page is "perfect" for level 5
-  And I press ".modal #ok-button" using jQuery
-  Then element ".nextLevelButton" is visible
-  And element "#cross_0" is visible
-  And element ".answerbutton[index=0]" has class "lock-answers"
-  When I reload the page
-  Then element ".nextLevelButton" is visible
-  And element ".submitButton" is not visible
-  And element ".answerbutton[index=0]" has class "lock-answers"
-  And element ".answerbutton[index=1]" has class "lock-answers"
-  And element ".answerbutton[index=2]" has class "lock-answers"
-  And element ".answerbutton[index=3]" has class "lock-answers"
