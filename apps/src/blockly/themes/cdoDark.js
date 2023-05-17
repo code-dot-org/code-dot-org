@@ -9,7 +9,7 @@ export default GoogleBlockly.Theme.defineTheme(Themes.DARK, {
   base: DarkTheme,
   blockStyles: cdoBlockStyles,
   componentStyles: {
-    workspaceBackgroundColour: color.music_black,
+    workspaceBackgroundColour: color.dark_black,
     blackBackground: color.neutral_dark,
     flyoutBackgroundColour: color.neutral_dark,
     flyoutOpacity: 0.8,
