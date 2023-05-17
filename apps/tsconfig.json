@@ -2,11 +2,11 @@
   "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js", "./src/**/*.jsx"],
   "compilerOptions": {
     "jsx": "react",    
-    "target": "es6",
+    "target": "es5",
     "lib": ["ES2019", "DOM"],
     "module": "es6",
     "rootDir": "./",
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
     "outDir": "build",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

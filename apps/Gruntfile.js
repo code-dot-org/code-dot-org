@@ -325,7 +325,6 @@ describe('entry tests', () => {
   config.ts = {
     default: {
       tsconfig: './tsconfig.json',
-      passThrough: true,
     },
   };
 
