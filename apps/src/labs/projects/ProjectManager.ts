@@ -57,8 +57,7 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   async load(): Promise<Response> {
     if (this.destroyed) {
-      // no-op response
-      return new Response(null, {status: 304});
+      return this.getNoopResponse();
     }
     const sourceResponse = await this.sourcesStore.load(this.channelId);
     // If sourceResponse is not ok, we still want to load the channel. Source can
@@ -108,14 +107,14 @@ export default class ProjectManager {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
-      return this.getNoopResponse();
+      return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.projectToSave = project;
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         this.enqueueSave();
       }
-      return this.getNoopResponse();
+      return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
       this.saveHelper();
     }
@@ -135,7 +134,7 @@ export default class ProjectManager {
    */
   private async saveHelper(): Promise<Response> {
     if (!this.projectToSave) {
-      return this.getNoopResponse();
+      return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.resetSaveState();
     this.saveInProgress = true;
@@ -146,7 +145,7 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
-      return this.getNoopResponse();
+      return this.getNoopResponseAndSendSaveNoopEvent();
     }
     // Only save the source if it has changed.
     if (sourceChanged) {
@@ -229,7 +228,11 @@ export default class ProjectManager {
   }
 
   private getNoopResponse() {
-    const noopResponse = new Response(null, {status: 304});
+    return new Response(null, {status: 304});
+  }
+
+  private getNoopResponseAndSendSaveNoopEvent() {
+    const noopResponse = this.getNoopResponse();
     this.executeListeners(ProjectManagerEvent.SaveNoop, this.lastSaveResponse);
     return noopResponse;
   }
