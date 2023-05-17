@@ -1,7 +1,7 @@
 {
   "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js", "./src/**/*.jsx"],
   "compilerOptions": {
-    "jsx": "react",    
+    "jsx": "react",
     "target": "es5",
     "lib": ["ES2019", "DOM"],
     "module": "es6",
