@@ -52,6 +52,47 @@ const getEmptyFilters = () => {
   return filters;
 };
 
+// Filters out invalid values for the given filter key.
+const getValidParamValues = (filterKey, paramValues) => {
+  return paramValues.filter(value => {
+    switch (filterKey) {
+      case 'grade':
+        return Object.keys(gradeLevelsMap).includes(value);
+      case 'duration':
+        return Object.keys(translatedCourseOfferingDurations).includes(value);
+      case 'topic':
+        return Object.keys(translatedCourseOfferingCsTopics).includes(value);
+      case 'device':
+        return Object.keys(translatedCourseOfferingDeviceTypes).includes(value);
+      default:
+        return false;
+    }
+  });
+};
+
+// Returns initial filter states based on URL parameters (returns empty filters if
+// no relevant parameters in the URL). The filter params are of the form:
+// "filter_name:checked_value_1,checked_value_2,etc."
+const getInitialFilterStates = () => {
+  const filterTypeKeys = Object.keys(filterTypes);
+  const urlParams = location.search?.substring(1).split('&');
+
+  let filters = getEmptyFilters();
+  urlParams.forEach(keyValue => {
+    const [paramKey, paramCSV] = keyValue.split('=');
+    if (filterTypeKeys.includes(paramKey)) {
+      const validParamValues = getValidParamValues(
+        paramKey,
+        paramCSV.split(',')
+      );
+      validParamValues.forEach(validValue =>
+        filters[paramKey].push(validValue)
+      );
+    }
+  });
+  return filters;
+};
+
 // Returns whether the given curriculum matches the checked grade level filters.
 const filterByGradeLevel = (curriculum, gradeFilters) => {
   if (gradeFilters.length > 0) {
@@ -122,7 +163,9 @@ const filterByDevice = (curriculum, deviceFilters) => {
 
 const CurriculumCatalog = ({curriculaData, isEnglish}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
-  const [appliedFilters, setAppliedFilters] = useState(getEmptyFilters());
+  const [appliedFilters, setAppliedFilters] = useState(
+    getInitialFilterStates()
+  );
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
