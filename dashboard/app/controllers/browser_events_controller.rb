@@ -5,8 +5,9 @@ class BrowserEventsController < ApplicationController
   FIREHOSE_STUDY_NAME = 'browser-cloudwatch-metrics-errors'
 
   LOGS_CLIENT = Aws::CloudWatchLogs::Client.new
-  LOG_GROUP_NAME = "#{rack_env}-browser-events-#{CDO.dashboard_hostname}"
-  LOG_STREAM_NAME = CDO.dashboard_hostname
+  LOG_GROUP_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
+  LOG_GROUP_NAME = "#{LOG_GROUP_PREFIX}-browser-events"
+  LOG_STREAM_NAME = LOG_GROUP_PREFIX
 
   before_action :check_preconditions
 
