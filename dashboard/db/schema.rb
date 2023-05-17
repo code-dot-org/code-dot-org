@@ -746,6 +746,23 @@ ActiveRecord::Schema.define(version: 2023_05_15_203259) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lti_integrations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "platform_id", null: false
+    t.string "issuer", null: false
+    t.string "client_id", null: false
+    t.string "platform_name", null: false
+    t.string "auth_redirect_url", null: false
+    t.string "jwks_url", null: false
+    t.string "access_token_url", null: false
+    t.string "admin_email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_lti_integrations_on_client_id"
+    t.index ["issuer"], name: "index_lti_integrations_on_issuer"
+    t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
+  end
+
   create_table "metrics", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
