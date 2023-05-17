@@ -170,7 +170,7 @@ export default class FieldChord extends Field {
 
     this.newDiv.style.color = color.neutral_light;
     this.newDiv.style.width = 'auto';
-    this.newDiv.style.backgroundColor = color.music_black;
+    this.newDiv.style.backgroundColor = color.dark_black;
     this.newDiv.style.padding = '5px';
 
     return this.newDiv;
