@@ -120,7 +120,7 @@ statuses.map(status => {
   stories[`UnpluggedBubbleStatus-${status}`] = story;
 });
 
-const LetterBubbles = (
+const LetterBubbles = () => (
   <div style={{...wrapperStyle, width: null, height: null}}>
     <ProgressTableLevelBubble
       levelStatus={LevelStatus.perfect}
@@ -147,7 +147,7 @@ const LetterBubbles = (
 );
 stories['LetterBubbles'] = LetterBubbles;
 
-const DotBubbles = (
+const DotBubbles = () => (
   <div style={{...wrapperStyle, width: null, height: null}}>
     <ProgressTableLevelBubble
       levelStatus={LevelStatus.perfect}
