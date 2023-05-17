@@ -2,10 +2,11 @@
   BrowserEventLogs:
     Type: AWS::Logs::LogGroup
     Properties:
-      LogGroupName: !Sub "<%=environment%>-browser-events-${DashboardSubdomainName}.<%=domain%>"
+      # Use stack name on adhocs so that log groups are unique per adhoc stack.
+      LogGroupName: "<%=rack_env?(:adhoc) ? stack_name : environment%>-browser-events"
 
   BrowserEventLogsStream:
     Type: AWS::Logs::LogStream
     Properties:
       LogGroupName: !Ref BrowserEventLogs
-      LogStreamName: !Sub "${DashboardSubdomainName}.<%=domain%>"
+      LogStreamName: "<%=rack_env?(:adhoc) ? stack_name : environment%>"
