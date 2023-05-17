@@ -146,6 +146,7 @@ class OwnedSectionsTable extends Component {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
     isPlSections: PropTypes.bool,
+    userId: PropTypes.number,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -195,6 +196,7 @@ class OwnedSectionsTable extends Component {
       <SectionActionDropdown
         sectionData={rowData}
         handleEdit={this.props.onEdit}
+        userId={this.props.userId}
       />
     );
   };

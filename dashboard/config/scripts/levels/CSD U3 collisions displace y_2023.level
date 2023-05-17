@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:01:53.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -54,7 +59,7 @@
     "palette_category_at_start": "sprites",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "encrypted_examples": "PQe6rbqN+Edt+F9AMdr7B2xAS9PLltPwqHcVXewG81Yzy1/d7TEonjhAGM64\nfCYF\n",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -71,13 +76,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:01:53.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:53.468+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions displace y_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions displace y_2022\"},{\"changed_at\":\"2023-01-19 21:36:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:53.468+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions displace y_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions displace y_2022\"},{\"changed_at\":\"2023-01-19 21:36:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:11:28 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

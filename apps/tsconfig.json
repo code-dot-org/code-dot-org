@@ -14,5 +14,9 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"]
+    }
   }
 }

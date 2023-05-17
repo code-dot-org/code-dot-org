@@ -28,6 +28,7 @@ class SectionActionDropdown extends Component {
   static propTypes = {
     handleEdit: PropTypes.func,
     sectionData: sortableSectionShape.isRequired,
+    userId: PropTypes.number,
 
     //Provided by redux
     removeSection: PropTypes.func.isRequired,
@@ -71,8 +72,19 @@ class SectionActionDropdown extends Component {
       });
   };
 
-  onClickEdit = () => {
-    this.props.handleEdit(this.props.sectionData.id);
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    const editSectionUrl = '/sections/' + sectionId + '/edit';
+    return editSectionUrl;
+  };
+
+  /**
+   * Creates the pop-up for the section to be edited
+   */
+  onClickEditPopUp = () => {
+    return this.props.handleEdit(this.props.sectionData.id);
   };
 
   onClickHideShow = () => {
@@ -94,17 +106,28 @@ class SectionActionDropdown extends Component {
   };
 
   render() {
-    const {sectionData} = this.props;
+    const {sectionData, userId} = this.props;
+    const testingUserId = 0;
 
     return (
       <span>
         <QuickActionsCell type={'header'}>
-          <PopUpMenu.Item
-            onClick={this.onClickEdit}
-            className="edit-section-details-link"
-          >
-            {i18n.editSectionDetails()}
-          </PopUpMenu.Item>
+          {userId % 10 === testingUserId && (
+            <PopUpMenu.Item
+              href={this.editRedirectUrl(sectionData.id)}
+              className="edit-section-details-link"
+            >
+              {i18n.editSectionDetails()}
+            </PopUpMenu.Item>
+          )}
+          {userId % 10 !== testingUserId && (
+            <PopUpMenu.Item
+              onClick={this.onClickEditPopUp}
+              className="edit-section-details-link"
+            >
+              {i18n.editSectionDetails()}
+            </PopUpMenu.Item>
+          )}
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"
