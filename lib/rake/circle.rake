@@ -112,7 +112,12 @@ namespace :circle do
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
 
-      features_or_rerun_failed = rerun_failed_scenarios? ? '--rerun-failed' : "--feature #{container_features.join(',')}"
+      if rerun_failed_scenarios?
+        features_or_rerun_failed = eyes_features_or_rerun_failed = '--rerun-failed'
+      else
+        features_or_rerun_failed = "--feature #{container_features.join(',')}"
+        eyes_features_or_rerun_failed = "--feature #{container_eyes_features.join(',')}"
+      end
 
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
           " #{features_or_rerun_failed}" \
@@ -129,7 +134,7 @@ namespace :circle do
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
-            " --feature #{container_eyes_features.join(',')}" \
+            " #{eyes_features_or_rerun_failed}" \
             " --config Chrome,iPhone" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
