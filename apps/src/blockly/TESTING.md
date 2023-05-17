@@ -4,6 +4,7 @@ Whenever the mainline `blockly` package version is being upgraded or updates are
 The following is a manual test checklist to follow and is not exhaustive. The estimated time to complete the following checklist is 15-20 minutes.
 
 # For All Mainline Blockly Labs
+Currently, the mainline Blockly labs are: Dance, Poetry, Music (Project Beats), Flappy, Bounce.
 - Page loads - check for errors and unexpected warnings in console - keep console open throughout manual testing process. Look out for deprecation warnings.
 - Context menu works. 
     - Right-click anywhere on workspace to open context menu menu (Paste, Undo, Redo, Enable Keyboard Navigation, Turn on dark mode, Modern Theme, Enable High Contrast Theme, etc).
