@@ -57,7 +57,7 @@ export const fieldChordDefinition = {
 };
 
 export const fieldRestDurationDefinition = {
-  type: 'field_dropdown',
+  type: 'music_field_dropdown',
   name: FIELD_REST_DURATION_NAME,
   options: [
     [musicI18n.blockly_fieldRestHalfBeat(), '0.125'],
