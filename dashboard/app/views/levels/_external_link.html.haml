@@ -10,7 +10,7 @@
   .external-link-disclaimer
     %h2= t('external_links.disclaimer')
     %strong= t('external_links.leaving_domain')
-    %p!= t('external_links.disclaimer_text', support_url: 'https://support.code.org', markdown: inline)
+    %p!= t('external_links.disclaimer_text', support_url: 'https://support.code.org', markdown: :inline)
 
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}
 

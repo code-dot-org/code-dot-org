@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 1, Asynchronous Part II
+# Day 1, Asynchronous Part 2
 
 ##### Welcome! This asynchronous module is designed to give you an overview of the key instructional strategies in the CS Discoveries curriculum: Pair Programming, Debugging, Journaling, and Discussion.
 
@@ -13,8 +13,8 @@ markdown <<MARKDOWN
 ## In this module, you will:
 
 * ##### Learn more about about the key instructional strategies in the CS Discoveries curriculum.
-* ##### Contribute to your cohort's shared slide deck and learn from other's responses.
-* ##### Complete any remaining challenges you'd like to finish from today's Model Lessons.
+* ##### Contribute to your cohort's shared slide deck and learn from others' responses.
+* ##### Complete any remaining challenges from the Model Lessons.
 
 ### **Suggested time:** 60 minutes
 

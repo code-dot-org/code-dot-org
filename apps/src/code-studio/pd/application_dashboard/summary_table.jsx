@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, Button} from 'react-bootstrap';
+import {Table, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {StatusColors, getApplicationStatuses} from './constants';
 import {difference, upperFirst} from 'lodash';
 import color from '@cdo/apps/util/color';
