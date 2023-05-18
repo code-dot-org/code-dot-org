@@ -37,7 +37,7 @@ class Poetry < GamelabJr
   # not in the list of poems for the subtype.
   def sanitize_default_poem
     self.default_poem = nil if Poetry.subtypes_with_poems.exclude?(standalone_app_name) ||
-      Poetry.poem_list_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
+      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
   end
 
   # Set the available poems to nil if the subtype does not have poems.
@@ -46,7 +46,7 @@ class Poetry < GamelabJr
     self.available_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
     return if Poetry.subtypes_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
     # filter out any invalid poems from available_poems
-    self.available_poems = available_poems & Poetry.poem_list_keys_for_standalone_app(standalone_app_name)
+    self.available_poems = available_poems & Poetry.poem_keys_for_standalone_app(standalone_app_name)
   end
 
   def validate_default_poem_and_available_poems
@@ -113,7 +113,7 @@ class Poetry < GamelabJr
   end
 
   # Used to get all available poems for a Poetry level.
-  def self.poem_list_for_standalone_app(standalone_app_name)
+  def self.poems_for_standalone_app(standalone_app_name)
     case standalone_app_name
     when 'poetry_hoc'
       hoc_poems
@@ -124,7 +124,7 @@ class Poetry < GamelabJr
     end
   end
 
-  def self.poem_list_keys_for_standalone_app(standalone_app_name)
+  def self.poem_keys_for_standalone_app(standalone_app_name)
     # get the keys out of a poem list. Assumes each entry
     # in the list is a 2 element array
     poems_for_standalone_app(standalone_app_name).map {|poem| poem[1]}
