@@ -654,7 +654,8 @@
           "MC_HOC_2017_06_Cole_1": "คุณทิ้งบล็อกเหล่านี้ไม่ได้ แต่แก้ไขได้!"
         },
         "frozen line": {
-          "run": "กด \"เล่น\" เพื่อลองเล่นโปรแกรมของคุณ!"
+          "run": "กด \"เล่น\" เพื่อลองเล่นโปรแกรมของคุณ!",
+          "move_elsa_forward": "ลากบล็อก “ย้ายไปข้างหน้า” และสแนปมันด้านล่างบล็อก “เมื่อเรียกใช้” เพื่อให้ Elsa ก้าวไปข้างหน้า"
         },
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
@@ -2025,6 +2026,111 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "คลิกที่นี่ก่อน!"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "ใส่จำนวนครั้งที่ผีดิบมีการย้ายเพื่อให้เป็นวงกลมเต็มรูปแบบ"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "ลากตัวแปรเคาน์เตอร์ของคุณภายในบล็อกนี้"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "หาร 360 ตามจำนวนด้านเพื่อให้ได้ขนาดของแต่ละมุมเป็นองศา"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "ใช้ปุ่มนี้เพื่อแก้ไขฟังก์ชั่นและเปลี่ยนทิศทางที่ผึ้งจะหันไปรับน้ำหวาน"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "ใช้ลูกศรเพื่อย้ายนักแสดง"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "เล่นเสียงเมื่อเหตุการณ์นี้เกิดขึ้น"
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "ซึ่งบล็อกจะทำให้ Baymax เลื่อนขึ้นเมื่อลูกศรขึ้นจะถูกกด?",
+          "Infinity_move_directions_callout_arrow": "ใช้ลูกศรเหล่านี้เพื่อคัดท้าย"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "เพิ่มบล็อกย้ายที่นี่"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "สถานที่ย้ายบล็อกภายในที่นี่"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "คลิกที่นี่เพื่อเปิด “Functions” flyout จากนั้นคลิกปุ่ม “สร้างฟังก์ชั่น”"
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ",
+          "add_and_drag_parameter": "เขียนชื่อของพารามิเตอร์ของคุณที่นี่คลิกเพิ่มแล้วลากลงในคำจำกัดความของฟังก์ชันของคุณ"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ลากตัวแปรความยาวที่นี่เพื่อแทนที่เครื่องหมายคำถาม"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "กล่องเครื่องมือมีรูปลักษณ์ใหม่!บล็อก “การกระทำ” อยู่ในที่นี่ในขณะนี้"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "ใช้แบบเลื่อนลงนี้เพื่อสร้างเกล็ดหิมะที่แตกต่างกัน!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "ใช้บล็อก “สร้างวงกลม” และเปลี่ยนขนาด"
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) ใช้บล็อกนี้และวางไว้รอบ ๆ บล็อกสีเทาในพื้นที่ทำงาน",
+          "repeat_blocks_2": "(2) ย้ายบล็อก “Repeat” ที่นี่และวางบล็อกสีเทาไว้ด้านใน"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "ใช้ดรอปดาวน์เพื่อแทนที่ “???”ด้วยตัวเลข"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "ใช้บล็อกการทำซ้ำเพื่อสร้างรูปร่างนี้"
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "ใช้บล็อกการทำซ้ำเพื่อสร้างรูปร่างนี้"
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "ใช้แบบเลื่อนลงนี้เพื่อสร้างเกล็ดหิมะที่แตกต่างกัน!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ใช้บล็อก “เปิด” เพื่อให้ Elsa เปิดตัวเลขในแบบเลื่อนลงจะเป็นตัวกำหนดเท่าใด Elsa เปลี่ยน"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "ใช้บล็อก “สร้างสาขาเกล็ดหิมะ”"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "แนบบล็อกเพิ่มเติมที่นี่เพื่อสร้างสี่เหลี่ยม"
+        },
+        "frozen square loop": {
+          "replace_questions": "ใช้ดรอปดาวน์เพื่อแทนที่ “???”ด้วยตัวเลข"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ใช้ดรอปดาวน์เพื่อแทนที่ “???”ด้วยตัวเลข"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "ใช้ดรอปดาวน์เพื่อแทนที่ “???”ด้วยตัวเลข"
         }
       }
     }

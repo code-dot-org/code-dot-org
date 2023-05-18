@@ -728,11 +728,12 @@ es-MX:
         csd_sprite_properties: Propiedades de Sprite
         csa-pl-documentation: Documentación en Laboratorio Java
         csc-starquilts-intro: 'CSC: Colchas de Estrellas'
-        csc-mapmakers-intro: "CSC: Mapmakers\\t"
+        csc-mapmakers-intro: 'CSC: Mapmakers\t'
         csa-pl-vocab-pm: Vocabulario de Gestión de Proyectos
         csc-ecosystems-intro: Introducción a los Ecosistemas
         PL_CSD_MicroBit_Intro: Introducción al Micro:bit
         csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
+        upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

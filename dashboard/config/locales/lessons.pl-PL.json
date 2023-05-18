@@ -1546,6 +1546,9 @@
           "overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\\r\n\\\\r\n**Pytanie dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? ",
           "student_overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. "
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dane numeryczne w laboratorium AI"
+        },
         "csd7-2022/AI Code of Ethics": {
           "name": "Kodeks etyczny AI "
         },
@@ -5226,6 +5229,9 @@
           "name": "KNN bez komputera",
           "overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\\r\n\\\\r\n**Pytanie dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? ",
           "student_overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. "
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dane numeryczne w laboratorium AI"
         },
         "csd7-2021/AI Code of Ethics": {
           "name": "Kodeks etyczny AI "

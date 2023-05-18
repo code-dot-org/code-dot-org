@@ -1575,3 +1575,13 @@ lt:
           lessons:
             lesson-3:
               name: Įvadas
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Įvadas
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kintamieji

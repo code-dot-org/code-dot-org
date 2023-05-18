@@ -676,7 +676,52 @@ de:
         csa_accessor_methods: 'CSA: Accessor-Methoden'
         csa_constructors: 'CSA: Konstruktoren'
         csa_creating_a_scanner_object: 'CSA: Ein Scanner-Objekt erstellen'
+        csa_creating_variables: 'CSA: Variablen erstellen'
+        csa_instance_variables_and_attributes: 'CSA: Instanzvariablen und Attribute'
+        csa_mutator_methods: 'CSA: Mutatormethoden'
+        csa_overloaded_constructors: 'CSA: Überladene Konstruktoren'
+        csa_the_tostring_method: 'CSA: Die toString () -Methode'
+        csa_scanner_class_methods: 'CSA: Methoden der Scanner-Klasse'
+        csa_for_loops: 'CSA: Für Loops'
+        csa_enhanced_for_loops: 'CSA: Verbessert für Loops'
+        csa_modifying_values_in_a_1d_array: 'CSA: Ändern von Werten in einem 1D-Array'
+        csa_nested_loops: 'CSA: Verschachtelte Schleifen'
+        csa_one_dimensional_arrays: 'CSA: Eindimensionale (1D) Arrays'
+        csa_polymorphism: 'CSA: Polymorphismus'
+        csa_casting: 'CSA: Gießen'
+        csa_equals_and_aliases: 'CSA: Gleichungen und Aliase'
+        csa_multi-selection_statements: 'CSA: Stellungnahmen zur Mehrfachauswahl'
+        csa_random_numbers: 'CSA: Zufallszahlen'
+        csa_static_methods: 'CSA: Statische Methoden'
+        csa_static_variables: 'CSA: Statische Variablen'
+        csa_the_equals_method: 'CSA: Die equals () -Methode'
+        csa_welcome_to_the_theater: 'CSA: Willkommen im Theater'
+        enter_your_own_poem: Gib dein eigenes Gedicht ein
+        csa-example-solution-1: 'Live-Coding als Beispiellösung '
         csd_sprite_properties: Sprite Eigenschaften
+        csa-pl-documentation: Dokumentation im Java Lab
+        csc-starquilts-intro: 'CSC: Sternendecken'
+        csa-pl-vocab-pm: Projektmanagement-Vokabular
+        csc-ecosystems-intro: Einführung in Ökosysteme
+        PL_CSD_MicroBit_Intro: Einführung in das micro:bit
+        csc_animal_adaptations_intro: Einführung in Tieranpassungen
+        csa_two_dimensional_arrays: 'CSA: Zweidimensionale (2D) Arrays'
+        csa_working_with_2d_array_elements: 'CSA: Arbeiten mit 2D-Array-Elementen'
+        csa_row_major_traversal: 'CSA: Reihen-Major Traversal'
+        csa_column_major_traversal: 'CSA: Column-Major Traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Verbessert für Loops und 2D-Arrays'
+        csa_images_and_pixels: 'CSA: Bilder und Pixel'
+        csa_wrapper_classes_part_1: 'CSA: Wrapper-Kurse Teil 1'
+        csa_wrapper_classes_part_2: 'CSA: Wrapper-Kurse Teil 2'
+        csa_the_arraylist_class: 'CSA: Die ArrayList-Klasse'
+        csa_working_with_arraylist_data: 'CSA: Arbeiten mit ArrayList-Daten'
+        csa_remving_data_from_an_arraylist: 'CSA: Daten aus einer ArrayList entfernen'
+        csa_private_methods: 'CSA: Private Methoden'
+        csa_recursion: 'CSA: Rekursion'
+        csa_searching_algorithms: 'CSA: Suchalgorithmen'
+        csa_sorting_algorithms: 'CSA: Sortieralgorithmen'
+        star_quilts_intro_to_artist: 'Star Quilts: Einführung in den Künstler'
+        upload_sprites_backgrounds: Hochladen benutzerdefinierter Sprites und Hintergründe
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

@@ -3,37 +3,235 @@ te:
   data:
     script:
       name:
+        playlab:
+          title: ల్యాబ్ ప్లే
+        hourofcode:
+          title: క్లాసిక్ మేజ్
+        infinity:
+          description: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
+            ప్లే ల్యాబ్ ఉపయోగించండి.
+          description_short: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
+            ప్లే ల్యాబ్ ఉపయోగించండి.
+          student_description: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
+            ప్లే ల్యాబ్ ఉపయోగించండి.
+        netsim:
+          title: ఇంటర్నెట్ సిమ్యులేటర్
+        20-hour:
+          description: ఈ 20 గంటల కోర్సు కోర్సులలో కోర్ కంప్యూటర్ సైన్స్ మరియు ప్రోగ్రామింగ్
+            భావనలను కవర్ చేస్తుంది 2-4. కోర్సు 10-18 సంవత్సరాల వయస్సు గల ఉపయోగం కోసం
+            రూపొందించబడింది. మరింత పూర్తి అనుభవం కోసం 2-4 కోర్సులను చూడండి!
+          student_description: ఈ 20 గంటల కోర్సు కోర్సులలో కోర్ కంప్యూటర్ సైన్స్ మరియు
+            ప్రోగ్రామింగ్ భావనలను కవర్ చేస్తుంది 2-4. కోర్సు 10-18 సంవత్సరాల వయస్సు
+            గల ఉపయోగం కోసం రూపొందించబడింది. మరింత పూర్తి అనుభవం కోసం 2-4 కోర్సులను
+            చూడండి!
         events:
           title: ఈవెంట్లు
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
           student_description: ఈవెంట్లు
+        flappy:
+          title: ఫ్లాపీ కోడ్
+          description: మీ స్వంత ఆటను 10 నిమిషాల్లోపు రాయాలనుకుంటున్నారా? మా Flappy
+            కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
+          student_description: మీ స్వంత ఆటను 10 నిమిషాల్లోపు రాయాలనుకుంటున్నారా? మా
+            Flappy కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
+        jigsaw:
+          title: అడ్డదిడ్డంగా
+        allthethings:
+          lessons:
+            lesson-49:
+              name: సంగీతం
+        cspunit4draft:
+          description_short: డేటా
+        mc:
+          description_short: కోడ్ ద్వారా Minecraft ప్రపంచాన్ని అన్వేషించండి.
+        CSDU5-Draft:
+          description_short: డేటా
+        basketball:
+          name: బాస్కెట్బాల్
+        minecraft:
+          description_short: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
+            మరియు ఇతర Minecraft జీవులు.
+          description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు
+            ఇతర Minecraft జీవులు.
+          student_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
+            మరియు ఇతర Minecraft జీవులు.
+        sports:
+          name: క్రీడలు
+        hero:
+          name: హీరో
         dance:
           name: డాన్స్
         aquatic:
           name: జలచర
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_data:
+              display_name: డేటా
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+            csf_internet:
+              display_name: అంతర్జాలం
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
         coursed-2019:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         coursec-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
+        gamelab:
+          title: గేమ్ ల్యాబ్
         coursea-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2019:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         pre-express-2019:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         csl-vn:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         dance-2019:
@@ -41,58 +239,270 @@ te:
           description_short: మీ స్నేహితులతో పంచుకోవడానికి ఒక డాన్స్ పార్టీని కోడ్
             చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్
             నటించారు, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరెన్నో!
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_conditionals:
+              display_name: షరతులు
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
         time4cs-control-unit-1:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         coursea-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2020:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2020:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_data:
+              display_name: డేటా
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         pre-express-2020:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: పరిచయం
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
+            debugging:
+              display_name: డీబగ్గింగ్
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: అల్గోరిథంలు
         coursea-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2021:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_binary:
+              display_name: బైనరీ
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2021:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_binary:
+              display_name: బైనరీ
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
+        coursee-2021:
+          lesson_groups:
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_nested_loops:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_variables:
+              display_name: ఉచ్చులు కోసం
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
         express-2021:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
             lessonGroup-9:
               display_name: ఈవెంట్లు
         pre-express-2021:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: పరిచయం
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
+            variables:
+              display_name: వేరియబుల్స్
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: పరిచయం
+            Introduction:
+              display_name: పరిచయం
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: వనరుల
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: పాఠాలు
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: పాఠాలు
         csd-post-survey-2021:
           name: csd-పోస్ట్-సర్వే-2021
           description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు
@@ -111,34 +521,108 @@ te:
         csa-pl-module-3-test:
           name: csa-pl-మాడ్యూల్-3-టెస్ట్
           title: టెక్స్ట్-ఆధారిత ప్రోగ్రామింగ్‌తో మద్దతు
+        ai-ethics-2021:
+          description_audience: 6-12 తరగతులు
         2022drafting:
           lesson_groups:
             lessonGroup-8:
               display_name: అవర్ ఆఫ్ కోడ్
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: వేరియబుల్స్
         coursea-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         express-2022:
           lesson_groups:
             lessonGroup-9:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: జాబితాలు
+            csp_loops:
+              display_name: ఉచ్చులు
         courseb-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2022:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2022:
           lesson_groups:
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+            csf_nested_loops:
+              display_name: షరతులు
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
         pre-express-2022:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-8:
+              display_name: వేరియబుల్స్
         csd-post-survey-2022:
           description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు
             CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్
@@ -154,9 +638,26 @@ te:
             lesson-6:
               name: మాడ్యూల్ 2 అసమకాలికమైన పని
         soccer:
+          name: సాకర్
           title: మీ స్వంత సాకర్ ఆటను కోడ్ చేయండి
           description_short: ఒక సాకర్ ఆటను చేయండి
           description: ఒక సాకర్ ఆటను చేయండి
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: జావా ల్యాబ్
+            lesson-6:
+              name: ఉచ్చులు
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: వేరియబుల్స్
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: వన్-డైమెన్షనల్ (1 డి) శ్రేణులు
+            lesson-3:
+              name: ఉచ్చులు కోసం
         hello-world-space-2022:
           title: 'హలో వరల్డ్: స్పేస్'
         hello-world-soccer-2022:
@@ -165,27 +666,107 @@ te:
           lessons:
             lesson-1:
               name: ఆ శబ్దం ఏమిటి?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: వేరియబుల్స్
+            csp_conditionals:
+              display_name: షరతులు
+            csp_functions:
+              display_name: విధులు
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: డేటా
+            csp_loops:
+              display_name: ఉచ్చులు
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: జాబితాలు
+            lessonGroup-3:
+              display_name: ఉచ్చులు
         pre-express-2023:
           lesson_groups:
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         express-2023:
           lesson_groups:
             lessonGroup-9:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+            csf_functions:
+              display_name: విధులు
+            csf_variables:
+              display_name: వేరియబుల్స్
+            csf_for_loops:
+              display_name: ఉచ్చులు కోసం
         coursea-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         courseb-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
         coursec-2023:
           lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            csf_loops:
+              display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+            csf_data:
+              display_name: డేటా
         coursed-2023:
           lesson_groups:
+            lessonGroup-6:
+              display_name: డిజిటల్ పౌరసత్వం
             csf_events:
               display_name: ఈవెంట్లు
+            csf_loops:
+              display_name: ఉచ్చులు
+            csf_conditionals:
+              display_name: షరతులు
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: డిజిటల్ పౌరసత్వం
+            ramp_up:
+              display_name: సమూహ ఉచ్చులు
+            csf_functions:
+              display_name: విధులు
+            csf_nested_loops:
+              display_name: షరతులు
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: పరిచయం
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: పరిచయం
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: అసెస్మెంట్
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: డిజిటల్ పౌరసత్వం
+            lessonGroup-4:
+              display_name: వేరియబుల్స్

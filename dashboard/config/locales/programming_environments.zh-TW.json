@@ -30,6 +30,10 @@
                     }
                   },
                   "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                },
+                "showMobileControls": {
+                  "content": "變更遊戲空間下方可見的行動控制項。",
+                  "short_description": "變更遊戲空間下方可見的行動控制項。"
                 }
               }
             },
@@ -42,6 +46,12 @@
                       "name": "螺旋"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "精靈的高度。"
+                },
+                "sprite.width": {
+                  "return_value": "精靈的寬度。"
                 }
               }
             },
@@ -71,6 +81,24 @@
                   "examples": {
                     "Star": {
                       "name": "Star"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次執行函數之間的毫秒數。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "執行函數之前等待的毫秒數。"
                     }
                   }
                 }
@@ -112,6 +140,23 @@
                 },
                 "declareAssign_x": {
                   "short_description": "宣告並分配一個初始值給變數。"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "字符串的長度"
                 }
               }
             },
@@ -126,6 +171,9 @@
           "categories": {
             "ui_controls": {
               "expressions": {
+                "button": {
+                  "short_description": "在屏幕上創建顯示默認位置（0,0）提供和由給定 ID 引用的文本的按鈕。"
+                },
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
@@ -145,22 +193,72 @@
                     }
                   },
                   "short_description": "播放指定網址上的 MP3 音訊檔案。"
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "要變更的屬性。"
+                    }
+                  },
+                  "short_description": "將屬性設置為指定元素的新值。"
+                },
+                "setScreen": {
+                  "short_description": "將屏幕設置為給定的屏幕 ID。"
+                },
+                "showElement": {
+                  "short_description": "顯示具有提供的 ID 的元素。"
+                },
+                "textLabel": {
+                  "short_description": "在屏幕上創建顯示默認位置（0,0）提供和由給定 ID 引用的文本的文本標籤。"
                 }
               }
             },
             "canvas": {
               "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "圓的半徑，以像素為單位。"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "要繪製的影像左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "x": {
+                      "description": "要繪製的影像左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "要繪製的影像左上角的 y 位置 (以像素為單位)。"
+                    }
+                  }
+                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
-                  }
+                  },
+                  "short_description": "返回位於給定圖像數據中給定 x 和 y 位置的像素的顏色阿爾法（不透明度）（範圍從 0 到 255）的量。"
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
                   }
                 },
@@ -168,6 +266,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "開始擷取的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置開始捕獲。"
+                    },
+                    "width": {
+                      "description": "擷取影像資料的邊界矩形寬度。"
+                    },
+                    "height": {
+                      "description": "擷取影像資料的邊界矩形高度。"
                     }
                   }
                 },
@@ -175,6 +295,12 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
                     }
                   }
                 },
@@ -182,6 +308,28 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從圖像的左上角開始，以將數據放置在畫布上。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從圖像的左上角開始，以將數據放置在畫布上。"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "x": {
+                      "description": "矩形左上角的 x 位置 (以像素為單位)。"
+                    },
+                    "y": {
+                      "description": "矩形左上角的 y 位置 (以像素為單位)。"
+                    },
+                    "width": {
+                      "description": "矩形的水平寬度，以像素為單位。"
+                    },
+                    "height": {
+                      "description": "矩形的垂直高度，以像素為單位。"
                     }
                   }
                 },
@@ -189,27 +337,75 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    },
+                    "alphaValue": {
+                      "description": "要在像素中設定的 Alpha (不透明度) 量 (從 0 到 255)。"
                     }
-                  }
+                  },
+                  "short_description": "設定位於給定影像資料中給定 x 和 y 位置的像素顏色中 Alpha (不透明度) 量 (範圍從 0 到 255)。"
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    },
+                    "blueValue": {
+                      "description": "要在像素中設定的藍色量 (從 0 到 255)。"
                     }
-                  }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的藍色量 (範圍從 0 到 255) 設定為 BlueValue 輸入量。"
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    },
+                    "greenValue": {
+                      "description": "要在像素中設定的綠色量 (從 0 到 255)。"
                     }
-                  }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的綠色數量 (範圍從 0 到 255) 設定為 GreenValue 輸入量。"
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    },
+                    "red": {
+                      "description": "要在像素中設定的紅色量 (從 0 到 255)。"
+                    },
+                    "green": {
+                      "description": "要在像素中設定的綠色量 (從 0 到 255)。"
+                    },
+                    "blue": {
+                      "description": "要在像素中設定的藍色量 (從 0 到 255)。"
+                    },
+                    "alpha": {
+                      "description": "選擇性。要在像素中設定的不透明度量 (從 0 到 255)。預設為 255 (完全不透明)。"
                     }
                   }
                 },
@@ -217,8 +413,18 @@
                   "palette_params": {
                     "imageData": {
                       "type": "對象"
+                    },
+                    "x": {
+                      "description": "以像素為單位的 x 位置，從影像的左上角開始。"
+                    },
+                    "y": {
+                      "description": "以像素為單位的 y 位置，從影像的左上角開始。"
+                    },
+                    "redValue": {
+                      "description": "要在像素中設定的紅色量 (從 0 到 255)。"
                     }
-                  }
+                  },
+                  "short_description": "將位於給定影像資料中給定 x 和 y 位置的像素顏色中的紅色量 (範圍從 0 到 255) 設定為 RedValue 輸入量。"
                 }
               }
             },
@@ -248,8 +454,18 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "要從中檢索記錄的表的名稱。"
+                    },
                     "options": {
                       "type": "對象"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要擷取的金鑰名稱。"
                     }
                   }
                 },
@@ -260,10 +476,38 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "獲取此應用程序當前用戶的唯一標識符。"
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "此事件處理常式適用的資料表名稱。"
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
                       "type": "對象"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "要儲存的金鑰名稱。"
+                    },
+                    "value": {
+                      "description": "要存儲的數據。"
+                    }
+                  },
+                  "short_description": "將鍵/值對存儲在 App Lab 的鍵/值數據存儲中，並在操作完成後調用回調函數。"
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "傳回資料之服務的網址。"
                     }
                   }
                 },
@@ -280,11 +524,90 @@
               "expressions": {
                 "arcLeft": {
                   "short_description": "以平滑的圓弧向前和向左移動烏龜。"
+                },
+                "getX": {
+                  "short_description": "取得目前的 x 座標 (以海龜像素為單位)。"
+                },
+                "getY": {
+                  "short_description": "獲取海龜像素的當前 y 坐標。"
+                },
+                "hide": {
+                  "short_description": "使海龜在其當前位置不可見。"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "要向右移動海龜的像素數。"
+                    },
+                    "y": {
+                      "description": "將海龜向下移動的像素數。"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "從目前方向向向移動指定數目的像素，將海龜向後移動。"
+                },
+                "moveForward": {
+                  "short_description": "在目前方向上移動指定數目的像素，龜形向前移動。"
+                },
+                "moveTo": {
+                  "short_description": "將海龜移動到螢幕上特定的 (x, y) 位置。"
+                },
+                "penColor": {
+                  "short_description": "設定烏龜用來繪製線條和點的筆的顏色。"
+                },
+                "penDown": {
+                  "short_description": "將筆放下，以便烏龜在移動時在其後方畫一條線。"
+                },
+                "penRGB": {
+                  "short_description": "使用 RGBA 值，設定烏龜用來繪製線條和點的筆的顏色。"
+                },
+                "penUp": {
+                  "short_description": "拿起筆，這樣海龜就不會在移動時畫出一條線。"
+                },
+                "penWidth": {
+                  "short_description": "以像素為單位，設定龜在移動時在其後面繪製的線條寬度。"
+                },
+                "show": {
+                  "short_description": "使海龜在其目前位置可見。"
+                },
+                "speed": {
+                  "short_description": "設置應用程序的執行速度，其中包括海龜的速度。"
+                },
+                "turnLeft": {
+                  "short_description": "將龜形向左旋轉指定的角度。海龜的位置保持不變。"
+                },
+                "turnRight": {
+                  "short_description": "以指定的角度向右旋轉海龜。海龜的位置保持不變。"
+                },
+                "turnTo": {
+                  "short_description": "將海龜的方向變更為特定的角度。0 表示向上，90 是右邊，180 是下方，剩下 270。"
                 }
               }
             },
             "control": {
               "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "由設置超時函數返回的值取消。"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "每次執行函數之間的毫秒數。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "執行函數之前等待的毫秒數。"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
@@ -335,8 +658,28 @@
                 "declareAssign_x": {
                   "short_description": "宣告並分配一個初始值給變數。"
                 },
+                "declareAssign_list_123": {
+                  "short_description": "聲明並將數組分配給變量"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "要搜尋的字串。"
+                    }
+                  }
+                },
                 "addPair": {
                   "return_value": "無"
+                },
+                "length": {
+                  "return_value": "字符串的長度"
                 }
               }
             },

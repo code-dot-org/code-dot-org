@@ -972,6 +972,12 @@
         "allthethings/Web Lab": {
           "name": "מעבדת האתרים"
         },
+        "allthethings/Java Lab": {
+          "name": "מעבדת ג'אווה"
+        },
+        "allthethings/lesson-48": {
+          "name": "שירה"
+        },
         "allthethings/lesson-49": {
           "name": "מוסיקה"
         },

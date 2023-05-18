@@ -222,8 +222,8 @@
           "description": "Masz dwie karteczki samoprzylepne. Na jednej napisz jedną rzecz, której nauczyłeś się dzisiaj o kodowaniu.\nPo drugie, napisz jedną rzecz, której nauczyłeś się dzisiaj o poezji.\n\nPodziel się z całą klasą, podnosząc rękę do góry, odpowiadając na pytanie: Czego jeszcze masz nadzieję mógłbyś się nauczyć o kodowaniu i informatyce?"
         },
         "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
-          "name": "Budowanie atmosfery",
-          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
+          "name": "Ustawianie sceny",
+          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
@@ -255,18 +255,18 @@
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Poza Godziną Kodowania",
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
@@ -328,7 +328,7 @@
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
           "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
@@ -342,7 +342,7 @@
           "description": "-   Wyświetl wcześniej pierwszy poziom ćwiczenia na ekranach komputerów, aby już na nich był, gdy uczniowie rozpoczną wykonywanie ćwiczenia.\n-   W miarę możliwości niech uczniowie siedzą z dala od komputerów w trakcie wyjaśniania instrukcji do wykonywania ćwiczenia.\n-   Wyjaśnij, jakie 3 komendy jest w stanie wykonywać ptak: idź do przodu, skręć w prawo i skręć w lewo.\n-   Wykonaj przykład \"na żywo\" trzech pierwszych poziomów. Spróbuj nakleić taśmę na podłogą, aby wyglądała jak labirynt ptaka. Zademonstruj komendy samodzielnie, a następnie wybierz 1 lub 2 uczniów-ochotników do zademonstrowania przed klasą. \n-   Niech uczniowie programują w parach, a w tym celu posadź 2 uczniów przy jednym komputerze. Niech osoba kierująca myszka i klawiaturą będzie “1”, a drugi uczeń, podający sugestie, wskazujący błędy i zadający pytania, będzie “2.” Niech uczniowie zmieniają się rolami co 5 minut.\n-   Przećwicz klikanie i przeciąganie bloków, przed próbą rozwiązania łamigłówki. Przećwicz również przeciąganie bloków do kosza."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
@@ -383,7 +383,7 @@
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
@@ -393,7 +393,7 @@
           "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy](https://code.org/volunteer/local)."
         },
         "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
@@ -426,18 +426,18 @@
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Poza Godziną Kodowania",
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
@@ -494,7 +494,7 @@
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy](https://code.org/volunteer/local)\n\nUżyj tego ćwicznia, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Urządzenie do kopiowania**\n\n-   Wręcz uczniom kartki papieru\n-   Na jednej stronie trzeba narysować prosty obrazek posługując się tylko liniami prostymi.\n-   Na drugiej stronie trzeba narysowaćinstrukcje, jak odtworzyć ten obraz, posługując się poleceniami, aby rysować linie proste i skręcać po różnymi kątami\n-   Potem proszę zamienić się kartkami z instrukcjami i spróbować odtworzyć obrazek, posługując się wyłącznie podanymi instrukcjami."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
@@ -527,11 +527,11 @@
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Poza Godziną Kodowania",
@@ -626,7 +626,7 @@
           "description": "\"Godzina kodowania\" poświęcona jest kreatywności i nie możemy doczekać się, aby zobaczyć, co tworzysz! Podziel się w mediach społecznościowych pracami swoich uczniów, ich zdjęciami i filmami! Nauczyciele, nagrajcie swoją klasę kodującą taniec lub wykonującą taniec. Ustaw swoje wideo dodając [kończący klip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0). \n\nPamiętaj, aby dodać #HourOfCode i oznacz nas na Facebooku, Twitterze i Instagramie. Dodatkowe punkty za oznaczanie tagami artysty, którego muzykę użyli Twoi uczniowie. Code.org udostępni nasze ulubione posty milionom internautów w naszej społeczności. 🙂 \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Oczywiście, uszanuj zasady dotyczące mediów społecznościowych obowiązujące w Twojej szkole_"
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
@@ -791,7 +791,7 @@
           "description": "\\[**Przeczytaj \"Rozbite na kawałki\"**\n\n-   Przeczytaj strony 165-169  [\"Rozbite na kawałki\", rozdział 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf).\n-   Odpowiedz na pytania podane w przewodniku w czytaniu i na karcie pracy [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/)\t\t\n\n**Więcej \"Rozbitego na kawałki**\n\n-   W poprzednich częściach rozdziału 5 \"Rozbitego na kawałki\" dokonano odniesień do znaczenia i kontrowersji otaczających szyfrowanie, jako pokłosia wydarzeń z 11 września. Ta lektura może stanowić użyteczne narzędzie do dalszego wprowadzania oddziaływania kryptografii na wiele aspektów współczesnego życia.\n\n-   Poproś uczniów o przejrzenie ich historii przeglądania internetu i dokonania przybliżonych wyliczeń, jaki procent prowadzą z założeniem, że ma ono charakter \"prywatny\". Czy jest jakiś sposób, który daje im pewność w tym przypadku? Czy są strony internetowe, na które wchodzą, na których czują większą pewność tajności niż na innych? Czy wnioski uzasadniają ich poczynania?"
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "3711e1c5-c206-4510-b260-99ee8f061a4c": {
@@ -816,7 +816,7 @@
           "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
@@ -841,7 +841,7 @@
           "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
@@ -874,7 +874,7 @@
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Poza Godziną Kodowania",
@@ -923,14 +923,14 @@
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Poza Godziną Kodowania",
           "description": "Po przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
@@ -963,11 +963,11 @@
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "513a07e1-551a-45d3-bd35-7e1de49293a2": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
           "name": "Poza Godziną Kodowania",
@@ -1010,7 +1010,7 @@
           "description": "**Wydrukuj świadectwa:** Wydrukuj świadectwa dla uczniów, aby świętować ich osiągnięcie.\n\n**code.org/applab:** Na koniec lekcji zachęć uczniów, aby udali się na na stronę internetową App Lab, gdzie mogą uzyskać pomysły sposobów kontynuowania ich przygody z App Lab."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
@@ -1035,7 +1035,7 @@
           "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "#### Budowanie atmosfery\n\nPrzywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** _Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
@@ -1067,7 +1067,7 @@
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Poza Godziną Kodowania",
@@ -1209,8 +1209,8 @@
           "description": "#### Zabierz mnie na mecz\n\nZabierz uczniów na zewnątrz, aby zagrać w jakąś grę w piłkę. Śledź zdarzenia i działania. Na przykład niekozłowanie w koszykówce prowadzi do błędu kroków i piłkę przejmuje drużyna przeciwna. W piłce nożnej wykopanie piłki poza granice boiska prowadzi do wrzutu piłki przez drużynę przeciwną. Trafienie piłką do celu prowadzi do zdobycia punktu! Utwórz więcej zdarzeń jeśli chcą tego Twoi uczniowie. Niech wszyscy uczniowie krzykną \"Yippee\", gdy kapitan jednego z zespołów zdobędzie punkt. Niech każdy padnie na ziemię i przeturla się, jeśli uczeń strzeli dwa gole pod rząd!"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
-          "name": "Budowanie atmosfery",
-          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
+          "name": "Ustawianie sceny",
+          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -1242,11 +1242,11 @@
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "2742e426-46e4-46d9-8e04-314c3469f15e": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Poza Godziną Kodowania",
@@ -1295,7 +1295,7 @@
           "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godziny Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasie z poziomu K-5. Oto kilka pomysłów:\n\n-   **Prowadź kursy [Podatawy informatyki w studio kodowania](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla uczniów młodszych. Rozwiązują oni serię łamigłówek przeznaczonych do nauki kodowania, a prowadzący mają dostęp do konspektów angażujących uczniów, które pomają uczyć się. Code.org proponuje bezpłatne rozwiązania na potrzeby takich kursów, w trybie online oraz bezpośrednim.\n-   **Wejdź na stronę [I ty możesz uczyć informatyki](https://studio.code.org/courses?view=teacher)** i poznaj więcej sugestii.\n-   \\*\\*Zaproś specjalistę ds. informatyki z prośbą o przeprowadzenie wykładu na temat wykonywanego przez niego zawodu \\*\\*. Nie znasz żadnego informatyka działającego lokalnie? Skorzystaj z ochotnika z naszej [mapy ochotników](https://code.org/volunteer/local)\n\n#### Zabierz mnie na mecz\n\nZabierz uczniów, aby zagrali jakiś mecz z piłką. Notuj zdarzenia i akcje. Na przykład niekozłowanie w meczu koszykówki może skutkować \"błędem kroków\" i przejęciem piłki przez drużynę przeciwną.  W piłce nożnej wyrzucenie piłki na aut powoduje wrzut piłki przez drużynę przeciwną. Za zdobycie gola uzyskuje się punkt! Wymyśl więcej zdarzeń, jeśli uczniowie się zaangażują. Niech wszyscy uczniowie krzyczą \"Hurra\", gdy kapitan drużyny zdobędzie punkt. Niech wszyscy padną na ziemię i przerolują się, jeśli uczeń zdobędzie dwa gole pod rząd!"
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów i krótko przedstaw rozkład zajęć. Zachęcaj uczniów, aby nie spieszyli się i poświęcili odpowiednią ilość czasu na ćwiczenie i eksperymentowanie."
         },
         "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
@@ -1369,7 +1369,7 @@
           "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
@@ -1445,7 +1445,7 @@
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
           "description": "\"Godzina kodowania\" poświęcona jest kreatywności i nie możemy doczekać się, aby zobaczyć, co tworzysz! Podziel się w mediach społecznościowych pracami swoich uczniów, ich zdjęciami i filmami! Nauczyciele, nagrajcie swoją klasę kodującą taniec lub wykonującą taniec. Ustaw swoje wideo dodając [kończący klip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0). \n\nPamiętaj, aby dodać #HourOfCode i oznacz nas na Facebooku, Twitterze i Instagramie. Dodatkowe punkty za oznaczanie tagami artysty, którego muzykę użyli Twoi uczniowie. Code.org udostępni nasze ulubione posty milionom internautów w naszej społeczności. 🙂 \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Oczywiście, uszanuj zasady dotyczące mediów społecznościowych obowiązujące w Twojej szkole_"
@@ -1538,7 +1538,7 @@
           "name": "Zakończenie"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
@@ -1806,7 +1806,7 @@
           "name": "Refleksja"
         },
         "87103c82-3389-4983-b9dd-d8ecce58ed92": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
@@ -2795,7 +2795,7 @@
           "name": "Refleksja"
         },
         "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae": {
-          "name": "Budowanie atmosfery"
+          "name": "Ustawianie sceny"
         },
         "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc": {
           "name": "Seria wydarzeń"
@@ -17384,7 +17384,7 @@
           "description": "\\*\\*Pytania: \\*\\*\n\n-   O czym była dzisiejsza lekcja?\n-   Jak się czujesz o dzisiejszej lekcji?\n-   Podać przykład zdarzenia, którego użyłeś w programie dzisiaj?\n-   Dlaczego ważne jest, aby nie udostępniać prywatnych informacji online? Skąd wiesz, czy informacje są prywatne?"
         },
         "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {

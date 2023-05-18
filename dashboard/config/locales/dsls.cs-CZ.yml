@@ -6892,7 +6892,7 @@ cs-CZ:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Vývoj webových aplikací
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

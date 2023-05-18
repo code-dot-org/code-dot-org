@@ -137,9 +137,17 @@ uk:
     resources:
       curriculum/csd/2020:
         name: Навчальний план
+      teacher_forum/csd/2020:
+        name: Форум вчителів
       curriculum/csd/2017:
         name: Навчальний план
+      teacher_forum_6/csd/2017:
+        name: Форум вчителів
       curriculum/csd/2019:
         name: Навчальний план
+      teacher_forum/csd/2019:
+        name: Форум вчителів
       curriculum/csd/2018:
         name: Навчальний план
+      teacher_forum_6/csd/2018:
+        name: Форум вчителів

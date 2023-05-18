@@ -715,6 +715,7 @@
   dashboard_sections_table_secret: "உள்நுழைவு வகை"
   dashboard_sections_table_grade: "வகுப்பு "
   dashboard_sections_table_course: "பாடத்திட்டம்"
+  dashboard_sections_table_pairing_allowed: "ஜோடி நிரலாக்கம்"
   dashboard_sections_table_stage_extras: "ஸ்டேஜ் எக்ஸ்ட்ராக்கள்"
   dashboard_sections_table_students: "மாணவர்கள்"
   dashboard_sections_table_code: "பிரிவு குறியீடு"
@@ -937,6 +938,7 @@
   blockly_name: "புலோக்லி"
   projguts_name: "பாறை, காகிதம், கத்தரிக்கோல்"
   hourofcode_name: "கிளாசிக் மேஸி "
+  playlab_name: "ப்ளே லேப்"
   infinity_name: "முடிவிலி விளையாட்டு ஆய்வகம்"
   artist_name: "கலைஞர்"
   monstercoding_name: "மர்ம தீவு குறியீட்டு குவெஸ்ட்"
@@ -1013,6 +1015,8 @@
   flappy-impact-study_name: கணக்கெடுப்புடன் ஃபிளாப்பி குறியீடு
   hoc-encryption_name: எளிய குறியாக்கம்
   text-compression_name: உரை சுருக்க
+  applab_name: "ஆப் லேப்"
+  gamelab_name: "விளையாட்டு லேப்"
   basketball_name: "கூடைப்பந்து விளையாட்டை உருவாக்கவும்"
   sports_name: "உங்கள் சொந்த விளையாட்டு விளையாட்டைக் குறிக்கவும்"
   applab_gradelevel: "வயது 13+"
@@ -1528,6 +1532,8 @@
   user_header_create: 'உருவாக்குக '
   user_header_applab: 'பயன்பாட்டு ஆய்வகம்'
   user_header_artist: 'கலைஞர் '
+  user_header_gamelab: "விளையாட்டு லேப்"
+  user_header_playlab: "ப்ளே லேப்"
   user_header_dance: "நடன விருந்து"
   user_header_spritelab: "ஸ்பிரைட் லேப்"
   user_header_minecraft: "மைன் கிராஃப்டு"

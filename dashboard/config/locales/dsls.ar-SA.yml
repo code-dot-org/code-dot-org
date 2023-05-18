@@ -7311,7 +7311,7 @@ ar-SA:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: تطوير الويب
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

@@ -1902,6 +1902,7 @@
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Pelatihan dan Pengujian di Lab AI",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1916,7 +1917,14 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Data Numerik di Lab AI"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Data Numerik di Lab AI"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Data Numerik di Lab AI",
           "type": "Video"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -3712,6 +3720,7 @@
           "type": "Video"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Pelatihan dan Pengujian di Lab AI",
           "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3726,7 +3735,14 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Data Numerik di Lab AI"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Data Numerik di Lab AI"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Data Numerik di Lab AI",
           "type": "Video"
         },
         "ai_ethics_research_reflection/csd/2021": {
