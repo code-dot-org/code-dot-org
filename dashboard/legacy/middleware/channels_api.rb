@@ -75,7 +75,7 @@ class ChannelsApi < Sinatra::Base
 
     begin
       _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, Projects::ValidationError
       bad_request
     end
 
@@ -173,7 +173,7 @@ class ChannelsApi < Sinatra::Base
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => exception
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception
       if exception.class == ProfanityPrivacyError
         dont_cache
         status 422

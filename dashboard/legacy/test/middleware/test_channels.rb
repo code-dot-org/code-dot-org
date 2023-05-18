@@ -449,6 +449,28 @@ class ChannelsTest < Minitest::Test
     assert_equal 'gamelab', Projects.table.where(id: storage_app_id).first[:project_type]
   end
 
+  def test_update_with_good_thumbnail_url_succeeds
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "/v3/files/#{channel_id}/.metadata/thumbnail.png"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+  end
+
+  def test_update_with_bad_thumbnail_url_fails
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
+  # make sure this works
+  def test_create_with_bad_thumbnail_fails
+    post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
   private
 
   def timestamp(time)
