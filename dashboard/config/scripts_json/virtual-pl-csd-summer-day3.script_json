@@ -767,7 +767,7 @@
       "key": "7554ba3d-e9a8-4dc2-a6cd-4979d853c501",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r introduction_to_sprites/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -825,7 +825,7 @@
       "key": "4e891752-f648-429c-a0f2-fe1f929ad8b1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd3/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_animation_tab/csd/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\n",
         "progression_name": "Video: The Animation Tab",
         "tips": [
           {
@@ -1033,7 +1033,7 @@
       "key": "741356b0-03c0-4118-ae78-d42a2a424ab2",
       "position": 1,
       "properties": {
-        "description": "**Video:** Show students the [r the_design_thinking_process/csd4/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
