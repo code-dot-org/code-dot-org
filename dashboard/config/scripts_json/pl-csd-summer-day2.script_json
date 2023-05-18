@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-12 17:19:40 UTC",
+    "serialized_at": "2023-05-17 19:04:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -185,7 +185,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to Focus On\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 60 minutes",
+        "overview": "**Purpose:** Creating a plan for how to teach the lesson during a 40 minute period in the TLO session at the workshop.\n* Pick a Classroom Practice to focus on\n* Write out a run of show\n* Make sure everyone in the teaching group has a role\n* Create additional materials needed (posters, etc)\n\n\n**Objectives:**\n* Prepare to deliver TLO lesson\n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n* Prepare to deliver your TLO lesson"
       },
       "seeding_key": {

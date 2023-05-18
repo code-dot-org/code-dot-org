@@ -6,13 +6,12 @@
     "focus-on-data3-2023",
     "focus-on-data-post-survey-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "focus-on-data",
-    "has_numbered_units": true,
     "has_verified_resources": true,
     "version_year": "2023"
   },
