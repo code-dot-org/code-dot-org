@@ -6,6 +6,10 @@ import DCDO from '@cdo/apps/dcdo';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
+export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
+  return Blockly.Xml.domToBlockSpace(workspace, xml);
+}
+
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
