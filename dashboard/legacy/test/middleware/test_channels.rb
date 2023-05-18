@@ -465,7 +465,6 @@ class ChannelsTest < Minitest::Test
     assert_equal 400, last_response.status
   end
 
-  # make sure this works
   def test_create_with_bad_thumbnail_fails
     post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert_equal 400, last_response.status
