@@ -219,7 +219,7 @@
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "\nTo conclude this unit, this project combines the two major themes of Unit 1, the problem-solving process and the input/output/store/process model of a computer, to have students identify real-world problems and find ways to use technology to help solve them. This project will be completed across multiple days and will result in students creating a poster of a proposed app they design to solve a real-world problem, highlighting the features of their app that they will present to their classmates. A project guide provides step-by-step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.\n\n**Question of the Day:**  How can the IOSP model help us to design an app that solves a problem?\n",
-        "preparation": "* Print a copy of [r apps_and_problem_solving/csd1/2023] for each pair of students\n* Poster paper, pens, markers and other supplies for making posters\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+        "preparation": "* Print a copy of [r apps_and_problem_solving/csd/2023] for each pair of students\n* Poster paper, pens, markers and other supplies for making posters\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
         "student_overview": "**Question of the Day:**  How can the IOSP model help us to design an app that solves a problem?\n\nFor this lesson, you will spend a few days creating an idea for an app that solves a real-world problem using input, output, storage, and processing. \n"
       },
       "seeding_key": {
@@ -1066,7 +1066,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd1/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },
@@ -1457,7 +1457,7 @@
       "key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd1/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
         "name": "The Problem Solving Process\r",
         "progression_name": "Video: Problem Solving Process",
         "tips": [
@@ -2001,7 +2001,7 @@
       "key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd1/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2783,7 +2783,7 @@
       "key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd1/2023] video in the slides which introduces the IOSP model.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd/2023] video in the slides which introduces the IOSP model.\n",
         "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
@@ -2989,7 +2989,7 @@
       "key": "71f728a6-8e24-4b3c-b506-6539e6990fd4",
       "position": 8,
       "properties": {
-        "description": "**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the [r apps_and_problem_solving_-_student_checklist/csd1/2023] so students can self-assess how well their project meets the requirements for this project.",
+        "description": "**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the [r apps_and_problem_solving_-_student_checklist/csd/2023] so students can self-assess how well their project meets the requirements for this project.",
         "tips": [
           {
             "type": "teachingTip",
