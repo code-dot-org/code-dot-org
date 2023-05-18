@@ -11,4 +11,9 @@ apt_repository 'google-chrome' do
   retries 3
 end
 
-apt_package 'google-chrome-stable'
+apt_package 'google-chrome-stable' do
+  # Pin to a specific version so that all our servers work the same. In
+  # particular, staging and test having different versions here can result in
+  # unexpected differences building the apps package.
+  version '113.0.5672.126-1'
+end
