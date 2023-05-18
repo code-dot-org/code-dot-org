@@ -5,3 +5,7 @@ ark 'rbspy' do
   strip_components 0
   has_binaries ['rbspy']
 end
+
+link '/usr/local/bin/rbspy' do
+  to '/usr/local/bin/rbspy-1/rbspy-x86_64-musl'
+end
