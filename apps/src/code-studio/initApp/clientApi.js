@@ -191,7 +191,7 @@ var base = {
    *        object.
    * @param {Object} opts - Options object.
    */
-  put: function (id, value, filename, callback, opts) {
+  put: function (id, value, filename, callback, opts = {}) {
     $.ajax({
       url: this.api_base_url + '/' + id + '/' + filename,
       type: 'put',
