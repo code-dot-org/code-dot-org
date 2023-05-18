@@ -202,10 +202,11 @@ var base = {
         callback(null, data);
       })
       .fail(function (request, status, error) {
-        if (opts.includeResponseText) {
-          error += ' ' + request.responseText;
+        const args = [request, status, error];
+        if (opts.includeDetails && request.responseJSON?.details) {
+          args.push(request.responseJSON?.details);
         }
-        var err = errorString(request, status, error);
+        var err = errorString(...args);
         callback(err, false);
       });
   },
@@ -235,10 +236,12 @@ var base = {
   },
 };
 
-function errorString(request, status, error) {
-  return new Error(
-    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`
-  );
+function errorString(request, status, error, details = '') {
+  let str = `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`;
+  if (details.length) {
+    str += `; details: ${details}`;
+  }
+  return new Error(str);
 }
 
 module.exports = {

@@ -424,7 +424,7 @@ class FilesApi < Sinatra::Base
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
       if share_failure && share_failure[:type] != "address"
-        halt 400, "Share failure: #{share_failure.inspect}"
+        return json_bad_request("ShareFailure: content=#{share_failure.content}")
       end
     end
 

@@ -23,7 +23,7 @@ export default class LibraryClientApi {
           onSuccess(data);
         }
       },
-      {includeResponseText: true}
+      {includeDetails: true}
     );
   }
 

@@ -56,7 +56,7 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription: props.libraryDetails.libraryDescription,
       selectedFunctions: validSelectedFunctions,
       profaneWords: null,
-      pIIWords: null,
+      pIIWord: null,
     };
   }
 
@@ -98,7 +98,7 @@ export default class LibraryPublisher extends React.Component {
       } else {
         this.publish();
       }
-    } catch (err) {
+    } catch {
       // Still publish if request errors
       this.publish();
     }
@@ -122,16 +122,14 @@ export default class LibraryPublisher extends React.Component {
       error => {
         console.warn(`Error publishing library: ${error}`);
 
-        const message = error && error.message ? error.message : '';
-        if (message.includes('httpStatusCode: 413')) {
+        if (error.message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
-        } else if (message.includes('ShareFailure')) {
-          let match = message.match(/content="([^"]*)"/);
-          let content = match ? match[1] : null;
-          if (content) {
+        } else if (error.message.includes('ShareFailure')) {
+          let match = error.message.match(/ShareFailure: content=(.+)/);
+          if (match && match.length > 1) {
             this.setState({
               publishState: PublishState.PII_INPUT,
-              pIIWords: content,
+              pIIWord: match[1],
             });
           }
         } else {
@@ -274,7 +272,7 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState, pIIWords, profaneWords} = this.state;
+    const {publishState, pIIWord, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
@@ -282,8 +280,7 @@ export default class LibraryPublisher extends React.Component {
         break;
       case PublishState.PII_INPUT:
         errorMessage = i18n.libraryDetailsPII({
-          pIICount: 1,
-          pIIWords: pIIWords,
+          pIIWord,
         });
         break;
       case PublishState.PROFANE_INPUT:
