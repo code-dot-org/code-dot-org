@@ -35,6 +35,12 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 .no-padding-bottom { padding-bottom: 0 !important;}
 
 // FontAwesome icon defaults
+// Sets fixed height on icon container to maintain consistent
+// spacing when icons have varying widths and heights
+i {
+  line-height: 1.25em !important;
+}
+
 .icon::before {
   display: inline-block;
   text-rendering: auto;
@@ -210,6 +216,7 @@ ul {
       display: flex;
       width: 48%;
       margin: 1.5em 0;
+      gap: 1em;
 
       @media screen and (max-width: $width-sm) {
         width: 100%;
@@ -219,14 +226,8 @@ ul {
         content: none;
       }
 
-      div > i {
-        width: 40px;
-        text-align: center;
-      }
-
       i {
         font-size: 2.25em;
-        margin: 2px 16px 0 0;
       }
 
       h3 {
@@ -328,8 +329,6 @@ ul {
 
       i {
         font-size: 1.25em;
-        margin: 3px 0 0;
-        vertical-align: text-bottom;
 
         &:before {
           color: $brand_secondary_default;
@@ -780,7 +779,7 @@ form {
   .wrapper{
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 1em;
   }
 
   i {
