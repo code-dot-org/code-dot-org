@@ -502,6 +502,7 @@ es:
           title: vpl-csd-verano-piloto-ci
           version_title: 23-24
         self-paced-pl-physical-computing-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (Circuit Playground)
           description_student: "## Bienvenido\n\nBienvenido al aprendizaje en línea
             gratuito de Code.org dirigido a educadores que deseen empezar a enseñar
             con Code.org. Después de completar esta experiencia de aprendizaje profesional,
@@ -532,6 +533,7 @@ es:
             con la plataforma Code.org, puedes saltarte la Introducción a Code.org
             y pasar directamente a la Preparación para Enseñar a crear Aplicaciones
             con Dispositivos. "
+          version_title: 23 - 24
         self-paced-pl-csd-2023:
           title: autodidáctico-pl-csd-2021
           description_student: |-
@@ -555,7 +557,30 @@ es:
 
             -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
           version_title: 23-24
+        self-paced-pl-microbit-2023:
+          title: Enseñando a crear aplicaciones con dispositivos (micro:bit)
         pl-csd-summer-2023:
+          title: Taller de verano - Descubrimientos de Informática
+          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
+            de Informática.\n-   Practicar conceptos clave en el plan de estudios
+            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
+            educación equitativa de la Informática. \n-   Desarrollar empatía por
+            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
+            que realizan un trabajo similar."
+          description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
+            enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
+            en el plan de estudios de Descubrimientos de Informática.\n-   Crecer
+            en tu comprensión de la educación equitativa de la Informática. \n-   Desarrollar
+            empatía por la experiencia de los estudiantes. \n-   Formar parte de una
+            red de educadores que realizan un trabajo similar."
+        virtual-pl-csd-summer-2023:
+          title: virtual-pl-csd-verano-2023
+          description_student: "**Podrás:**\n\n-   Prepararte para enseñar Descubrimientos
+            de Informática.\n-   Practicar conceptos clave en el plan de estudios
+            de Descubrimientos de Informática.\n-   Crecer en tu comprensión de la
+            educación equitativa de la Informática. \n-   Desarrollar empatía por
+            la experiencia de los estudiantes. \n-   Formar parte de una red de educadores
+            que realizan un trabajo similar."
           description_teacher: "**Los participantes podrán:**\n\n-   Prepararse para
             enseñar Descubrimientos de Informática.\n-   Practicar conceptos clave
             en el plan de estudios de Descubrimientos de Informática.\n-   Crecer

@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Dernière mise à jour",
   "predictButton": "Prédire",
+  "uniqueOptionsWarningNotice": "Remarque",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -194,6 +195,9 @@
       "fields": {
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Écriture"
         }
       }
     },
@@ -283,6 +287,9 @@
         },
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Écriture"
         },
         "Achievements": {
           "id": "Réalisations"

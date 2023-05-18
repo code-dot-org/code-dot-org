@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "เพิ่ม CSS",
+  "addImageButton": "เพิ่มรูปภาพ",
+  "addHTMLButton": "เพิ่ม HTML",
+  "closeFullscreenPreview": "ปิดการแสดงตัวอย่างเต็มหน้าจอ",
+  "currentProjectCapacity": "ใช้แล้ว {currentMegabytes}MB จาก {totalMegabytes}MB",
+  "disallowedHtml": "ไฟล์ \"{filename}\" มีองค์ประกอบ HTML ที่ไม่ได้รับอนุญาต: `{disallowedTags}`พวกเขาจะถูกลบออกเมื่อกล่องโต้ตอบนี้ถูกปิด",
+  "errorSavingProject": "บางอย่างไม่ทำงานขณะบันทึกโปรเจ็กต์ของคุณโดยอัตโนมัติตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองบันทึกด้วยตนเองหากปัญหายังคงอยู่ ให้ลองโหลดหน้าใหม่อีกครั้งเพื่อเริ่มต้นใหม่",
+  "fatalError": "ข้อผิดพลาดร้ายแรง: {message}หากคุณอยู่ในโหมดการเรียกดูแบบส่วนตัว จะไม่สามารถเขียนข้อมูลได้",
+  "loadFailure": "ขออภัย Web Lab ล้มเหลวในการโหลดด้วยเหตุผลบางประการข้อผิดพลาด: {message}",
+  "openFullscreenPreview": "เปิดการแสดงตัวอย่างเต็มหน้าจอ",
+  "refreshPreview": "รีเฟรชและบันทึก",
+  "reloading": "กำลังโหลดใหม่...",
+  "reset": "รีเซ็ตห้องปฏิบัติการเว็บ",
+  "resetComplete": "รีเซ็ตห้องปฏิบัติการเว็บเสร็จสมบูรณ์",
+  "resetFailure": "ไม่สามารถรีเซ็ตห้องปฏิบัติการเว็บ: {message}",
+  "toggleInspectorOn": "สารวัตร: ปิด",
+  "toggleInspectorOff": "สารวัตร: เปิด",
+  "troubleshootingSupport": "โปรดดูบทความสนับสนุนของเรา [\"การแก้ไขปัญหา Web Lab\"]({url}) สำหรับข้อมูลเพิ่มเติม",
+  "uploadError": "ข้อผิดพลาดในการอัพโหลด"
+}
