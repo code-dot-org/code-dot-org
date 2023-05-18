@@ -465,14 +465,30 @@ class Projects
     'unknown'
   end
 
+  # Temporarily logging rather than erroring
+  # to confirm that only valid thumbnail URLs are present in existing projects.
+  # DCDO flag in place to choose when to enable/disable logging (off by default).
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
 
-    # Currently, we don't generate thumbnail URLs until a project exists
-    raise ValidationError if thumbnail_url && !channel_id
+    if thumbnail_url && !channel_id && DCDO.get('log_thumbnail_url_validation', false)
+      # raise ValidationError
+      Honeybadger.notify(
+        error_class: 'Project::ValidationError',
+        error_message: 'A new project was created with a thumbnail URL.',
+        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
+      )
+    end
 
     expected_thumbnail_url = "/v3/files/#{channel_id}/.metadata/thumbnail.png"
-    raise ValidationError unless thumbnail_url == expected_thumbnail_url
+    if thumbnail_url != expected_thumbnail_url && DCDO.get('log_thumbnail_url_validation', false)
+      # raise ValidationError
+      Honeybadger.notify(
+        error_class: 'Project::ValidationError',
+        error_message: 'An existing project was updated with an unexpected thumbnail URL.',
+        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
+      )
+    end
 
     true
   end
