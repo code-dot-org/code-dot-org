@@ -7,5 +7,5 @@ ark 'rbspy' do
 end
 
 link '/usr/local/bin/rbspy' do
-  to '/usr/local/bin/rbspy-1/rbspy-x86_64-musl'
+  to '/usr/local/rbspy-1/rbspy-x86_64-musl'
 end
