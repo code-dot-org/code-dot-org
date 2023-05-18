@@ -131,6 +131,9 @@
         "the_internet/coursef/2022": {
           "name": "האינטרנט"
         },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "כותרת"
+        },
         "curriculum_guide/coursee/2022": {
           "name": "מדריך תוכנית לימוד"
         },
@@ -148,6 +151,9 @@
         },
         "digital_sharing_ethics_video_/coursee/2022": {
           "type": "סרטון"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "כותרת"
         },
         "curriculum_guide/courseb/2022": {
           "name": "מדריך תוכנית לימוד"
@@ -226,6 +232,9 @@
         },
         "variables/express/2022": {
           "name": "משתנים"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "כותרת"
         },
         "teacher_forum/pre-express/2022": {
           "name": "פורום מורים"
@@ -351,6 +360,9 @@
         "binary_and_data/csd/2022": {
           "type": "סרטון"
         },
+        "create_a_representation_2/csd/2022": {
+          "type": "כותרת"
+        },
         "amazon_and_data/csd/2022": {
           "type": "סרטון"
         },
@@ -370,6 +382,9 @@
         "video_training_data_and_bias/csd/2022": {
           "type": "סרטון"
         },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "כותרת"
+        },
         "problem_solving_process_1/csd/2022": {
           "type": "סרטון"
         },
@@ -378,6 +393,9 @@
         },
         "what_do_computers_do/csd/2022": {
           "type": "סרטון"
+        },
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "כותרת"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "סרטון"
@@ -415,6 +433,9 @@
         "text/csd/2022": {
           "name": "טקסט"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "כותרת"
+        },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "סרטון"
         },
@@ -423,6 +444,9 @@
         },
         "sprite_movement/csd/2022": {
           "type": "סרטון"
+        },
+        "animated_scene/csd/2022": {
+          "type": "כותרת"
         },
         "boolean_expressions/csd/2022": {
           "type": "סרטון"
@@ -436,8 +460,17 @@
         "if_else_statements/csd/2022": {
           "type": "סרטון"
         },
+        "interactive_card_3/csd/2022": {
+          "type": "כותרת"
+        },
         "velocity/csd/2022": {
           "type": "סרטון"
+        },
+        "side_scroller/csd/2022": {
+          "type": "כותרת"
+        },
+        "flyer_game/csd/2022": {
+          "type": "כותרת"
         },
         "functions/csd/2022": {
           "name": "פונקציות",
@@ -448,6 +481,9 @@
         },
         "functions_4/csd/2022": {
           "name": "פונקציות"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "כותרת"
         },
         "intro_to_web_lab_part_2/csd/2022": {
           "type": "סרטון"
@@ -461,6 +497,9 @@
         "video_pair_programming/csd/2022": {
           "type": "סרטון"
         },
+        "html_web_page/csd/2022": {
+          "type": "כותרת"
+        },
         "lists/csd/2022": {
           "name": "רשימות"
         },
@@ -470,8 +509,14 @@
         "intro_to_css_-_part_2/csd/2022": {
           "type": "סרטון"
         },
+        "your_personal_style/csd/2022": {
+          "type": "כותרת"
+        },
         "creative_commons_overview/csd/2022": {
           "type": "סרטון"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "כותרת"
         },
         "publishing_your_website/csd/2022": {
           "type": "סרטון"
@@ -485,8 +530,14 @@
         "video_how_search_works/csd/2022": {
           "type": "סרטון"
         },
+        "website_for_a_purpose/csd/2022": {
+          "type": "כותרת"
+        },
         "the_design_thinking_process/csd/2022": {
           "type": "סרטון"
+        },
+        "paper_prototypes/csd/2022": {
+          "type": "כותרת"
         },
         "design_mode/csd/2022": {
           "name": "מצב עיצוב"
@@ -499,6 +550,9 @@
         },
         "events_in_app_lab_1/csd/2022": {
           "type": "סרטון"
+        },
+        "app_presentation/csd/2022": {
+          "type": "כותרת"
         },
         "computer_science_is_changing_everything/csd/2022": {
           "type": "סרטון"
@@ -522,8 +576,14 @@
           "name": "משתנים",
           "type": "סרטון"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "כותרת"
+        },
         "input_output_devices/csd/2022": {
           "type": "סרטון"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "כותרת"
         },
         "introduction_to_arrays/csd/2022": {
           "type": "סרטון"
@@ -541,6 +601,12 @@
         },
         "functions_5/csd/2022": {
           "name": "פונקציות"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "כותרת"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "כותרת"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "סרטון"
@@ -572,6 +638,9 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "סרטון"
         },
+        "create_an_ml_app/csd/2022": {
+          "type": "כותרת"
+        },
         "creating_a_survey_in_google_forms/csd/2022": {
           "type": "סרטון"
         },
@@ -580,6 +649,9 @@
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "סרטון"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "כותרת"
         },
         "lesson_plans/courseb/2018": {
           "name": "תוכנית לימודים"
@@ -1062,6 +1134,9 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "האינטרנט"
         },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "כותרת"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "מדריך תוכנית לימוד"
         },
@@ -1312,6 +1387,9 @@
         "variables_video/express/2021": {
           "name": "משתנים"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "כותרת"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "פורום מורים"
         },
@@ -1345,6 +1423,9 @@
         "csf-songwriting-assessment/coursee/2021": {
           "type": "הערכה"
         },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "כותרת"
+        },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "סרטון"
         },
@@ -1375,17 +1456,26 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "סרטון"
         },
+        "create_an_ml_app/csd/2021": {
+          "type": "כותרת"
+        },
         "cleaning_survey_data/csd/2021": {
           "type": "סרטון"
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "סרטון"
         },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "כותרת"
+        },
         "teacher_forum/csd/2021": {
           "name": "פורום מורים"
         },
         "the-design-thinking-process/csd/2021": {
           "type": "סרטון"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "כותרת"
         },
         "design_mode/csd/2021": {
           "name": "מצב עיצוב"
@@ -1398,6 +1488,9 @@
         },
         "design_mode_1/csd/2021": {
           "name": "מצב עיצוב"
+        },
+        "app-presentation/csd/2021": {
+          "type": "כותרת"
         },
         "internet-of-things-video/csd/2021": {
           "type": "סרטון"
@@ -1414,6 +1507,9 @@
         "functions_2/csd/2021": {
           "name": "פונקציות"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "כותרת"
+        },
         "introduction_to_arrays/csd/2021": {
           "type": "סרטון"
         },
@@ -1427,8 +1523,14 @@
         "circuits-logic-video/csd/2021": {
           "type": "סרטון"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "כותרת"
+        },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "סרטון"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "כותרת"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "סרטון"
@@ -1448,6 +1550,9 @@
         },
         "video_training_data_and_bias/csd/2021": {
           "type": "סרטון"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "כותרת"
         },
         "teacher_forum_1/csd/2021": {
           "name": "פורום מורים"
@@ -1476,6 +1581,9 @@
         "sprite_properties/csd/2021": {
           "name": "מאפייני ספרייט"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "כותרת"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "סרטון"
         },
@@ -1484,6 +1592,9 @@
         },
         "animating-sprites/csd/2021": {
           "type": "סרטון"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "כותרת"
         },
         "boolean_expressions/csd/2021": {
           "type": "סרטון"
@@ -1494,8 +1605,17 @@
         "if_else_statements/csd/2021": {
           "type": "סרטון"
         },
+        "interactive_card/csd/2021": {
+          "type": "כותרת"
+        },
         "velocity_1/csd/2021": {
           "type": "סרטון"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "כותרת"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "פונקציות",
@@ -1503,6 +1623,9 @@
         },
         "functions_1/csd/2021": {
           "name": "פונקציות"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "כותרת"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "סרטון"
@@ -1512,6 +1635,9 @@
         },
         "what-do-computers-do/csd/2021": {
           "type": "סרטון"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "כותרת"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "סרטון"
@@ -1525,6 +1651,9 @@
         "video_debugging/csd/2021": {
           "type": "סרטון"
         },
+        "html-web-page-1/csd/2021": {
+          "type": "כותרת"
+        },
         "lists/csd/2021": {
           "name": "רשימות"
         },
@@ -1534,8 +1663,14 @@
         "intro_to_css_-_part_2/csd/2021": {
           "type": "סרטון"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "כותרת"
+        },
         "creative-commons-video/csd/2021": {
           "type": "סרטון"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "כותרת"
         },
         "publishing_your_website/csd/2021": {
           "type": "סרטון"
@@ -1548,6 +1683,9 @@
         },
         "how-search-works-video/csd/2021": {
           "type": "סרטון"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "כותרת"
         },
         "lesson_plans/pre-express/2020": {
           "name": "תוכנית לימודים"

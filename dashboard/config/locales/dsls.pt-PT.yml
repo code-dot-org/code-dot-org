@@ -11162,7 +11162,7 @@ pt-PT:
         - text: azul
         - text: verde
         - {}
-        - {}
+        - text: amarelo
         - correct: true
         - text: vermelho
         questions:

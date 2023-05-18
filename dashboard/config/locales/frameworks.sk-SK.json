@@ -22,6 +22,15 @@
         },
         "iste": {
           "name": "Normy ISTE pre žiakov"
+        },
+        "c3ss": {
+          "name": "C3 Štandardy sociálnych štúdií"
+        },
+        "ngss": {
+          "name": "Veda štandardy novej generácie"
+        },
+        "csa": {
+          "name": "Koncepčný rámec ČSA"
         }
       }
     }

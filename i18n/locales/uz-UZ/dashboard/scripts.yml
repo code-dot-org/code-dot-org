@@ -113,6 +113,8 @@ uz:
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher.
           description_short: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher.
           student_description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher.
+        cspunit4draft:
+          description_short: Maʼlumotlar
         Special Fun:
           description_audience: 'Yosh: 10-18'
         SpecialSeries:
@@ -231,6 +233,8 @@ uz:
               display_name: Kontent
             practice:
               display_name: Teaching Practices
+        CSDU5-Draft:
+          description_short: Maʼlumotlar
         CSF_Secret_Sample_Story:
           description_audience: 'Yosh: 8-18+'
         MikeTest:
@@ -878,6 +882,7 @@ uz:
           description_short: Minecraft is back with a brand new activity for Hour of Code!
           description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft bo‘yicha kod bilan sayohat.
           student_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft bo‘yicha kod bilan sayohat.
+          name: qahramon
         applab-intro-staging:
           title: Intro to App Lab Staging
         csp-explore-2017:
@@ -1419,6 +1424,7 @@ uz:
           description_short: Keti Perri, Madonna, J. Balvin, Sia, Kit Urban, Siyara va yana 25 dan ziyod yulduzlar ishtiroki bilan!
           description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
           student_description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
+          name: raqsga tushish
         frozen-2018-test-b:
           title: New Frozen Script
         aquatic:
@@ -1426,6 +1432,7 @@ uz:
           description_short: Suv osti dunyosini kod bilan o‘rganish va qurish uchun ijodkorlik va muammolarni hal qilish qobiliyatingizdan foydalaning!
           description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
+          name: suvli
         sconyers:
           title: Tracey's Playground
         dance-draft:
@@ -1456,6 +1463,8 @@ uz:
               display_name: Ramp-Up
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_data:
+              display_name: Maʼlumotlar
             csf_for_loops:
               display_name: For sikllari
             csf_internet:
@@ -1577,6 +1586,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -2323,6 +2334,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -2380,6 +2393,8 @@ uz:
               display_name: Raqamli Fuqarolik
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_data:
+              display_name: Maʼlumotlar
             csf_for_loops:
               display_name: For sikllari
             csf_sprites:
@@ -2785,6 +2800,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           name: coursec-2021
@@ -3280,6 +3297,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -3557,6 +3576,8 @@ uz:
               display_name: Survey
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Java laboratoriyasi
             lesson-6:
               name: Sikllar
           lesson_groups:
@@ -3573,6 +3594,8 @@ uz:
               display_name: Kontent
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Bir o'lchovli (1D) massivlar
             lesson-3:
               name: For sikllari
           lesson_groups:
@@ -3676,6 +3699,8 @@ uz:
               display_name: Loyiha
         csp5-2023:
           lesson_groups:
+            csp_lists:
+              display_name: Maʼlumotlar
             csp_loops:
               display_name: Sikllar
             csp_project:
@@ -3813,6 +3838,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            csf_data:
+              display_name: Maʼlumotlar
             end_of_course_project:
               display_name: End of Course Project
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -4085,6 +4112,32 @@ uz:
             lessonGroup-2:
               display_name: 4-kun
           title: 4-kun
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Kirish
+            lesson-12:
+              name: Wrap Up
+          title: 1-kun
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Wrap Up
+          title: 2-kun
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Wrap Up
+          title: 3-kun
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Wrap Up
+          title: 4-kun
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Baholash
         csd-post-survey-2023:
           title: Post-Course Survey
         focus-on-data-post-survey-2023:
@@ -4099,3 +4152,15 @@ uz:
           title: Post-Course Survey
         focus-on-creativity-post-survey-2023:
           title: Post-Course Survey
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Spraytlar
+            lessonGroup-4:
+              display_name: O‘zgaruvchilar
+            lessonGroup-6:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.

@@ -3843,6 +3843,7 @@
           "type": "Guida alle attività"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Formazione e test in AI Lab",
           "type": "Video"
         },
         "using_data_with_categorical_features/csd/2022": {
@@ -3872,6 +3873,7 @@
           "type": "Soluzione"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Schede modello in AI Lab",
           "type": "Video"
         },
         "saving_models_in_ai_lab/csd/2022": {
@@ -3919,13 +3921,16 @@
           "type": "Soluzione"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Dati numerici in AI Lab",
           "type": "Diapositive"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Dati numerici in AI Lab",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
           "type": "Guida alle attività"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Dati numerici in AI Lab",
           "type": "Video"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -6179,6 +6184,7 @@
           "type": "Guida alle attività"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Formazione e test in AI Lab",
           "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
           "type": "Video"
         },
@@ -6220,6 +6226,7 @@
           "type": "Guida alle attività"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Schede modello in AI Lab",
           "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
           "type": "Video"
         },
@@ -6268,14 +6275,17 @@
           "type": "Soluzione"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Dati numerici in AI Lab",
           "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
           "type": "Diapositive"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Dati numerici in AI Lab",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
           "type": "Guida alle attività"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Dati numerici in AI Lab",
           "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
           "type": "Video"
         },

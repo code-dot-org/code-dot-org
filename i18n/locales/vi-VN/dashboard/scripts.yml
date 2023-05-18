@@ -3196,6 +3196,28 @@ vi:
           lessons:
             lesson-12:
               name: Tổng kết
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Giới thiệu
+            lesson-12:
+              name: Tổng kết
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Tổng kết
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Tổng kết
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Tổng kết
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Đánh giá
         csd-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-data-post-survey-2023:
@@ -3210,3 +3232,15 @@ vi:
           title: Khảo sát sau khoá học
         focus-on-creativity-post-survey-2023:
           title: Khảo sát sau khoá học
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Nhân vật
+            lessonGroup-4:
+              display_name: Các biến
+            lessonGroup-6:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
