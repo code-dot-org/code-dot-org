@@ -862,6 +862,10 @@ class Unit < ApplicationRecord
     standards_with_lessons
   end
 
+  def duration_in_minutes
+    lessons.sum(&:total_lesson_duration)
+  end
+
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end

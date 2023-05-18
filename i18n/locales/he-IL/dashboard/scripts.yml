@@ -136,7 +136,8 @@ he:
         ECSPD3-Unit4: {}
         ECSPD3-Unit5: {}
         ECSPD3-Unit6: {}
-        cspunit4draft: {}
+        cspunit4draft:
+          description_short: נתונים
         ScienceP3OLPT2: {}
         algebraPD3b: {}
         CSPPD3-Unit2: {}
@@ -237,6 +238,8 @@ he:
         cspexam2-AKwgAh1ac5: {}
         CSDU4-Draft: {}
         CSDU2-Draft: {}
+        CSDU5-Draft:
+          description_short: נתונים
         CSF_Secret_Sample_Story:
           description_audience: גילאי 8-18+
         MikeTest:
@@ -588,6 +591,7 @@ he:
         k1hoc2017: {}
         hero:
           title: 'מיינקראפט: המסע של הירו'
+          name: גיבור
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -844,10 +848,12 @@ he:
           title: מסיבת ריקודים (2018)
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
+          name: ריקוד
         frozen-2018-test-b: {}
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד!
+          name: ימי
         sconyers: {}
         dance--draft: {}
         dance-draft: {}
@@ -871,6 +877,8 @@ he:
               display_name: העלה רמה
             csf_variables:
               display_name: משתנים
+            csf_data:
+              display_name: נתונים
             csf_for_loops:
               display_name: בשביל לולאות
             csf_internet:
@@ -945,6 +953,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            csf_data:
+              display_name: נתונים
             end_of_course_project:
               display_name: פרויקט סיום קורס
         csp-mid-survey:
@@ -1451,6 +1461,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            csf_data:
+              display_name: נתונים
             end_of_course_project:
               display_name: פרויקט סיום קורס
         coursed-2020:
@@ -1484,6 +1496,8 @@ he:
               display_name: העלה רמה
             csf_variables:
               display_name: משתנים
+            csf_data:
+              display_name: נתונים
             csf_for_loops:
               display_name: בשביל לולאות
             csf_sprites:
@@ -1723,6 +1737,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            csf_data:
+              display_name: נתונים
             end_of_course_project:
               display_name: פרויקט סיום קורס
         coursed-2021:
@@ -2093,6 +2109,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            csf_data:
+              display_name: נתונים
             end_of_course_project:
               display_name: פרויקט סיום קורס
         csp6-2022:
@@ -2317,6 +2335,8 @@ he:
         csa9-validation-pilot-2022: {}
         csa1-2023:
           lessons:
+            lesson-2:
+              name: מעבדת ג'אווה
             lesson-6:
               name: חזרות
           lesson_groups:
@@ -2410,6 +2430,8 @@ he:
               display_name: פּרוֹיֶקט
         csp5-2023:
           lesson_groups:
+            csp_lists:
+              display_name: נתונים
             csp_loops:
               display_name: חזרות
             csp_project:
@@ -2530,6 +2552,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            csf_data:
+              display_name: נתונים
             end_of_course_project:
               display_name: פרויקט סיום קורס
         coursed-2023:
@@ -2559,26 +2583,38 @@ he:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
             lessonGroup-3:
               display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        web-development-2023: {}
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
+            lessonGroup-4:
+              display_name: סקר
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
             lessonGroup-3:
               display_name: 'פרק 2: תכנון אפליקציה'
+            lessonGroup-4:
+              display_name: סקר
         data-society-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: ייצוג מידע'
             lessonGroup-3:
               display_name: 'פרק 2: פתרון בעיות נתונים'
-        aiml-2023: {}
+            lessonGroup-4:
+              display_name: סקר
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2680,7 +2716,10 @@ he:
             lessonGroup-3:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
         csa9-2023: {}
-        microbit-2023: {}
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
         vpl-csd-ci-1: {}
         vpl-csd-ci-2: {}
         vpl-csd-ci-3: {}
@@ -2692,6 +2731,8 @@ he:
           lesson_groups:
             lessonGroup-4:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+            lessonGroup-5:
+              display_name: סקר
         focus-on-creativity4b-2023: {}
         focus-on-hardware3b-2023: {}
         focus-on-design-with-purpose4b-2023: {}
@@ -2699,3 +2740,56 @@ he:
         focus-on-coding4b-2023: {}
         csd6b-2023: {}
         vpl-csd-ci-6b: {}
+        self-paced-pl-physical-computing1-2023: {}
+        self-paced-pl-physical-computing2-2023: {}
+        self-paced-pl-csd1-2023: {}
+        self-paced-pl-csd2-2023: {}
+        self-paced-pl-csd3-2023: {}
+        self-paced-pl-csd4-2023: {}
+        self-paced-pl-csd5-2023: {}
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: מבוא
+        pl-csd-summer-day2: {}
+        pl-csd-summer-day3: {}
+        pl-csd-summer-day4: {}
+        pl-csd-summer-day5: {}
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: מבוא
+        virtual-pl-csd-summer-day2: {}
+        virtual-pl-csd-summer-day3: {}
+        virtual-pl-csd-summer-day4: {}
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: הערכה
+        self-paced-pl-microbit1: {}
+        self-paced-pl-microbit2: {}
+        seesaw-adaptations: {}
+        csp-bingo-2023: {}
+        csd-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-data-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-impact-in-society-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-coding-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-design-with-purpose-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-hardware-post-survey-2023:
+          title: סקר שלאחר הקורס
+        focus-on-creativity-post-survey-2023:
+          title: סקר שלאחר הקורס
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: דמויות
+            lessonGroup-4:
+              display_name: משתנים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        ey-ecosystems: {}

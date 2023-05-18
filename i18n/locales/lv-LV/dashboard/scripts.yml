@@ -1057,3 +1057,17 @@ lv:
               display_name: Funkcijas
             csf_nested_loops:
               display_name: Sazarojumi
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Ievads
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Ievads
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Mainīgie

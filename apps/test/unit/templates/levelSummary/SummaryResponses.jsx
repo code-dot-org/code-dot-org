@@ -12,6 +12,7 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const JS_DATA = {
   level: {
+    type: 'FreeResponse',
     id: 0,
   },
   responses: [{user_id: 0, text: 'student answer'}],
@@ -70,8 +71,6 @@ describe('SummaryResponses', () => {
     // Section selector, with one section.
     expect(wrapper.find('SectionSelector').length).to.eq(1);
     expect(wrapper.find('SectionSelector option').length).to.eq(2);
-    // Feedback sharing notification banner
-    expect(wrapper.find('Notification').length).to.eq(1);
   });
 
   it('applies correct classes when rtl', () => {
@@ -108,5 +107,58 @@ describe('SummaryResponses', () => {
 
     expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
     expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
+  });
+
+  it('renders toggle when appropriate', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'Multi',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+        answer_is_visible: true,
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(1);
+  });
+
+  it('does not render toggle for Free Response', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'FreeResponse',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+        answer_is_visible: true,
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
+  });
+
+  it('does not render toggle without policy permission', () => {
+    const wrapper = setUpWrapper(
+      {},
+      {
+        level: {
+          type: 'Multi',
+          id: 0,
+          properties: {
+            answers: [],
+          },
+        },
+      }
+    );
+
+    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
   });
 });

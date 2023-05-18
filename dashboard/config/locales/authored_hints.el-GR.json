@@ -603,7 +603,8 @@
           "courseA_maze_seq_challenge1_a": "Μερικές διαδρομές θα σε οδηγήσουν στη δυναμίτιδα, αν προχωρήσεις πολύ."
         },
         "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_b": "Αναδιάταξε τα μπλοκ και πάρε το μεσαίο μονοπάτι."
+          "courseB_maze_seq_challenge2_b": "Αναδιάταξε τα μπλοκ και πάρε το μεσαίο μονοπάτι.",
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
         },
         "course1_maze_seq_challenge2": {
           "courseB_maze_seq_challenge1_b": "Προσπάθησε να μετακινηθείς προς τα Δυτικά για αρχή."
@@ -1235,6 +1236,75 @@
         "helloworld_retro_sizes": {
           "hw_retro_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "course1_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Δοκίμασε να αλλάξεις τους αριθμούς σε κάθε βρόχο αν κάτι πάει στραβά."
+        },
+        "course1_maze_seq_challenge1": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "course2_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Το ορθογώνιο έχει πλάτος 200 εικονοστοιχεία και ύψος 100 εικονοστοιχείων. "
+        },
+        "course2_artist_prog_challenge2": {
+          "courseC_artist_prog_challenge2_a": "Μπορείς να βάλεις εντολές μέσα στο μπλοκ `επανέλαβε` για να τις τρέξεις ξανά και ξανά. Δοκίμασέ το!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        },
+        "courseA_maze_seq_challenge2": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge22022": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2018": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2019": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2020": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Προσπάθησε να μετρήσεις τα κενά με το δάχτυλό σου. Θυμήσου να μη μετρήσεις το κενό από όπου ξεκινάς!"
+        },
+        "courseB_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge22022": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2018": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2019": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2020": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Δεν χρειάζεται να προσθέσεις ή να αφαιρέσεις μπλοκ για να λύσεις αυτό το παζλ."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Ένας κύκλος έχει 360 μοίρες. Πολλαπλασιάστε τις μοίρες επί τον αριθμό των φορών που επαναλαμβάνετε. Είναι ίσο με 360;\nΕλέγξτε τις προτεινόμενες περιστροφές για να δείτε ότι αυτό λειτουργεί!\n\nΕδώ είναι μερικά παραδείγματα για να ξεκινήσετε:\n\n-   Δοκιμάστε μια στροφή 60 μοιρών για 6 φορές \n-   Δοκιμάστε μια στροφή 45 μοιρών για 8 φορές \n-   Δοκιμάστε μια στροφή 30 μοιρών για 12 φορές "
+        },
+        "courseD_farmer_while3": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while32022": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2018": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2019": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2020": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_b": "Δεν θα πρέπει να χρειάζεσαι τουβλάκια στροφής για να φτάσεις στο σωρό."
         }
       }
     }

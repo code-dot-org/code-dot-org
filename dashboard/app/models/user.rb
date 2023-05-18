@@ -119,6 +119,7 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
+    last_verified_captcha_at
   )
 
   attr_accessor(
@@ -1311,14 +1312,14 @@ class User < ApplicationRecord
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
-      # hides the lesson
-      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
-    else
+    if script_sections.empty?
       # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    else
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     end
   end
 
@@ -2453,7 +2454,7 @@ class User < ApplicationRecord
     !section_attempts_last_reset || num_section_attempts == 0 || (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
   end
 
-  def display_captcha?
+  def display_join_section_captcha?
     # If 24 hours has passed since last reset, return false.
     if section_attempts_last_reset && (DateTime.now - DateTime.parse(section_attempts_last_reset)).to_i > 0
       return false

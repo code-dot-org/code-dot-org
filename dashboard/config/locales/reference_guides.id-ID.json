@@ -17,6 +17,9 @@
         "csd-2022/board-events": {
           "display_name": "Event Papan"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground Ikhtisar"
+        },
         "csd-2022/classes": {
           "display_name": "Kelas"
         },

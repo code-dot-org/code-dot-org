@@ -237,11 +237,6 @@ Rails/RefuteMethods:
 Rails/SkipsModelValidations:
   Enabled: false
 
-# Offense count: 38
-# This cop supports safe auto-correction (--auto-correct).
-Rails/SquishedSQLHeredocs:
-  Enabled: false
-
 # Offense count: 276
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
@@ -428,11 +423,6 @@ Style/MultilineTernaryOperator:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: literals, strict
 Style/MutableConstant:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-Style/NegatedIfElseCondition:
   Enabled: false
 
 # Offense count: 80

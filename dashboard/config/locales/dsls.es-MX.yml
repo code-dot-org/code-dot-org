@@ -16936,7 +16936,7 @@ es-MX:
         - text: No estoy seguro de qué es esto
           correct: true
         questions:
-        - text: Programación Informática
+        - text: Programación de Ordenadores
       csd-post-survey-2018-topic-robotics:
         answers:
         - text: Sí
@@ -17336,7 +17336,7 @@ es-MX:
       csd-post-survey-unit4-preamble:
         content1: descripción aquí
         markdown: |
-          # Unidad 4: El proceso de Diseño
+          # Unidad 4: El Proceso de Diseño
 
           ![](https://images.code.org/d3c87c83a8c190d86951169c5b9b6c6d-image-1526918019889.png)
       csd-post-survey-unit5-preamble:

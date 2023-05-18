@@ -19,6 +19,18 @@
         },
         "iste": {
           "name": "Tiêu chuẩn ISTE cho học sinh"
+        },
+        "c3ss": {
+          "name": "Tiêu chuẩn Nghiên cứu Xã hội C3"
+        },
+        "ngss": {
+          "name": "Tiêu chuẩn khoa học thế hệ kế tiếp"
+        },
+        "csa": {
+          "name": "Khung Khái niệm CSA"
+        },
+        "ai4k12-2021": {
+          "name": "Hướng dẫn quốc gia AI4K12 2021"
         }
       }
     }

@@ -4659,6 +4659,8 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         vpl-csd3-ayw-pilot-2022: {}
         vpl-csd4-ayw-pilot-2022: {}
         csa-magpie-lab: {}
@@ -5002,6 +5004,9 @@ de:
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
         web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Umfrage
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
         interactive-games-animations-2023:
@@ -5010,6 +5015,8 @@ de:
               display_name: 'Kapitel 1: Bilder und Animationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Erstellen von Spielen'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
         design-process-2023:
           lesson_groups:
@@ -5017,6 +5024,8 @@ de:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
             lessonGroup-3:
               display_name: 'Kapitel 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Umfrage
           student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
         data-society-2023:
           lesson_groups:
@@ -5024,6 +5033,8 @@ de:
               display_name: 'Kapitel 1: Darstellung von Informationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Datenprobleme lösen'
+            lessonGroup-4:
+              display_name: Umfrage
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
           student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
         aiml-2023:
@@ -5034,6 +5045,8 @@ de:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5176,6 +5189,8 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
+            lessonGroup-5:
+              display_name: Umfrage
         vpl-csd-ci-1:
           title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
@@ -5214,6 +5229,8 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -5236,3 +5253,102 @@ de:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
         vpl-csd-ci-6b: {}
+        self-paced-pl-physical-computing1-2023: {}
+        self-paced-pl-physical-computing2-2023: {}
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Willkommen
+          title: 'Modul 1: Willkommen'
+        self-paced-pl-csd2-2023: {}
+        self-paced-pl-csd3-2023: {}
+        self-paced-pl-csd4-2023: {}
+        self-paced-pl-csd5-2023:
+          title: Unterrichten von KI und maschinellem Lernen
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 1
+          title: Tag 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 2
+          title: Tag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 3
+          title: Tag 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 4
+          title: Tag 4
+        pl-csd-summer-day5: {}
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Einführung
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          title: Tag 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Zusammenfassung
+          title: Tag 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Prüfung
+        self-paced-pl-microbit1: {}
+        self-paced-pl-microbit2: {}
+        seesaw-adaptations: {}
+        csp-bingo-2023: {}
+        csd-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-data-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-impact-in-society-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-coding-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-design-with-purpose-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-hardware-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-creativity-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        ey-ecosystems: {}

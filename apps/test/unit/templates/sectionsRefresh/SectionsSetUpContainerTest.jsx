@@ -2,9 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
-// import sinon from 'sinon';
-// import * as utils from '@cdo/apps/code-studio/utils';
-// import * as windowUtils from '@cdo/apps/utils';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
+import * as windowUtils from '@cdo/apps/utils';
 
 describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
@@ -59,7 +59,6 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
   });
 
-  /*  TO DO: Update these tests when save button works
   it('validates the form when save is clicked', () => {
     const reportSpy = sinon.spy();
     sinon
@@ -179,5 +178,4 @@ describe('SectionsSetUpContainer', () => {
 
     sinon.restore();
   });
-  */
 });

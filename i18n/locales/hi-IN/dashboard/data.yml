@@ -512,16 +512,50 @@ hi:
         CSF_SpriteLab_SpritesInAction_v2: क्रिया में स्प्राइट्स
         csd_debugging: डीबगिंग
         csd_applab_designmode_short: ऐप लैब डिज़ाइन मोड
+        csp-pd-welcome: परिवार में आपका स्वागत है!
+        CSF-Teaching-Problem-Solving: CSF टीचिंग प्रॉब्लम सॉल्विंग
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - पायलट वीडियो - डेटा ब्लॉक
+        u7-libraries-explanation: 'ऐप लैब: अपने खुद के ब्लॉक बनाएं - लाइब्रेरी का उपयोग कैसे करें'
+        how-to-k5-workshops: 'Code.org की CS बुनियादी बातें: बच्चे का परीक्षण किया गया, शिक्षक स्वीकृत'
+        why-should-teach-unplugged-activities: 'अक्सर पूछे जाने वाले प्रश्न: मुझे “अनप्लग्ड” गतिविधियाँ क्यों सिखानी चाहिए?'
+        cs-principles-intro-to-objects: 'CS सिद्धांत: वस्तुओं का परिचय'
+        oceans_machine_learning: मशीन लर्निंग
+        oceans_training_data: प्रशिक्षण डेटा
+        oceans_societal_implications: सामाजिक निहितार्थ
         hoc_dance_congrats_2019: '"डांस पार्टी 2019- पार्टी ऑन!"'
         hoc_dance_warmup_2019: डांस पार्टी 2019- तैयारी करें
         hoc_dance_events_2019: डांस पार्टी 2019- इवेंट्स
         hoc_dance_measures_2019: डांस पार्टी 2019- संगीत प्रविधियां
         hoc_dance_properties_2019: डांस पार्टी 2019- विशेषताएं
+        csd_what_computers_do: कंप्यूटर क्या करते हैं?
         csf_my_online_neighborhood_2020: मेरा ऑनलाइन पड़ोस
+        csf_follow_the_digital_trail: डिजिटल ट्रेल का अनुसरण करें
         csf_private_and_personal_information: प्राइवेट और निजी जानकारी
         csd_what_computers_are: कंप्यूटर क्या है?
+        csd_how_teamwork_works: टीमवर्क कैसे काम करता है
+        csd_teamwork_and_disagreement: टीमवर्क - असहमति से निपटना
+        csf21pilot_events: 'स्प्राइट लैब: स्प्राइट्स इन एक्शन'
+        csf21pilot_prompts: 'स्प्राइट लैब: टेक्स्ट एंड प्रॉम्प्ट्स'
+        csd_ml_intro_to_ai_lab: AI लैब का परिचय
+        csd_ml_import_model: AI मॉडल आयात करना
+        csf_lots_of_sprites: 'स्प्राइट लैब: बहुत सारे स्प्राइट्स'
         playlab_2021: प्ले लैब का परिचय
         playlab_2021_reader: प्ले लैब का परिचय
+        csp_defining_calling_functions: कार्यों को परिभाषित करना और कॉल करना
+        csp_tutorial_datatab: ऐप लैब में डेटा टैब
+        csp_tutorial_libraries: ऐप लैब में लाइब्रेरी
+        PL-Video-21: Code.org की प्रोफेशनल लर्निंग में आपका स्वागत है!
+        csp_tutorial_datavis1: ऐप लैब में डेटा विज़ुअलाइज़र - भाग 1
+        csp_tutorial_datavis2: ऐप लैब में डेटा विज़ुअलाइज़र - भाग 2
+        csd_ml_intro_ai_lab_july2021: AI लैब का परिचय
+        csd_ml_training_testing_ai_lan: एआई लैब में प्रशिक्षण और परीक्षण
+        csd_ml_model_cards_july2021: AI लैब में मॉडल कार्ड
+        csd_ml_numerical_ai_lab: AI लैब में संख्यात्मक डेटा
+        Gettting_Started_Progress: प्रगति, फीडबैक, और आकलन
+        Gettting_Started_ClassSection: क्लास सेक्शन बनाना
+        Gettting_Started_StudentExperience: द स्टूडेंट एक्सपीरियंस
+        Getting_Started_BasicFeatures: Code.org की मूलभूत विशेषताएं
+        PL_overview_CSD: कंप्यूटर साइंस डिस्कवरीज क्या है?
         PL_CSD_TeacherTips_Advise: टीचर टिप्स- नए शिक्षकों को सलाह
         PL_CSD_TeacherTips_IntroToCSD: टीचर टिप्स- CS खोजों का परिचय
         PL_CSD_TeacherTips_ProblemSolvingProcess: टीचर टिप्स - समस्या समाधान प्रक्रिया
@@ -534,6 +568,7 @@ hi:
         hello_world_intro: हेलो दुनिया - स्प्राइट लैब में आपका स्वागत है
         hello_world_events: हेलो दुनिया - इवेंट्स के साथ प्रोग्रामिंग
         hello_world_congrats: हेलो दुनिया - करें जो आप करना चाहते हैं
+        csp_global_vs_local: ग्लोबल बनाम लोकल वेरिएबल्स को डिबग करना
         rough_poemart_intro: v1 कविता कला परिचय
         rough_poemart_events: v1 कविता कला इवेंट्स
         rough_poemart_imagery: v1 कविता कला इमेजरी
@@ -544,7 +579,21 @@ hi:
         poetry_module_multichoiceprompts: मल्टीपल चॉइस संकेत - कोडिंग विद पोएट्री
         poetry_module_conditionals: कंडीशनल - कोडिंग विद पोएट्री
         poemart_intro: कविता कला परिचय
+        poemart_events: पोम आर्ट इवेंट्स
+        poemart_imagery: पोम आर्ट इमेजरी
+        poemart_celebration: कविता कला उत्सव
+        csd_u6_variables_part2: वेरिएबल्स - द काउंटर पैटर्न
+        csd_ml_ethics_ai: 'एथिक्स और एआई '
+        outbreak_intro: 'आउटब्रेक सिमुलेशन: परिचय'
+        outbreak_events: 'आउटब्रेक सिम्युलेटर: इवेंट्स'
+        outbreak_scientist: 'आउटब्रेक सिम्युलेटर: थिंकिंग लाइक अ साइंटिस्ट'
+        outbreak_outro: 'आउटब्रेक सिम्युलेटर: फ्री प्ले'
+        PL_overview_CSP: कंप्यूटर विज्ञान सिद्धांत क्या है?
+        PL_CSP_EIPMOverview: EIPM पाठ के लिए गाइड
         CSA-PL-debugging-temp: जावा लैब में डिबगिंग का परिचय - अस्थायी
+        csd_app_lab_design_mode: CSD ऐप लैब डिज़ाइन मोड
+        csd_app_lab_events: CSD ऐप लैब इवेंट्स
+        PL_CSD_Unit4_AppTesting: पेपर प्रोटोटाइप टेस्टिंग
         csd_u6_circuit_playground: भौतिक कंप्यूटिंग
         csd_u6_input_output: इनपुट और आउटपुट
         CSA-PL-for-loops: Java में लूप्स के लिए
@@ -565,8 +614,99 @@ hi:
         CSA-PL-two-way-selection: दोतरफा चयन
         CSA-PL-Printing-in-Java: Java में प्रिंटिंग
         CSA-PL-multi-selection-statements: बहु-चयन स्टेटमेंट्स
+        PL_CSP_TeacherTips_Advice: 'शिक्षक युक्तियाँ: नए सीएस शिक्षकों के लिए सलाह'
+        PL_CSP_TeacherTips_IntroToCSP: 'शिक्षक सुझाव: सीएस सिद्धांतों का परिचय'
+        PL_CSP_TeacherTips_Debugging: 'टीचर टिप्स: डिबगिंग में मदद'
+        PL_CSP_TeacherTips_LeadLearner: 'टीचर टिप्स: लीड लर्नर कैसे बनें'
+        PL_CSP_TeacherTips_APExam: 'टीचर टिप्स: एपी परीक्षा की तैयारी'
+        PL_CSP_TeacherTips_EIPM: 'शिक्षक युक्तियाँ: EIPM प्रक्रिया'
+        PL_CSD_CircuitPlayground_Overview: सर्किट प्लेग्राउंड अवलोकन
+        CSA-PL-debugging-22: जावा लैब में डिबगिंग
+        CSD_Unit6_InteractiveArtExemplar: इंटरएक्टिव आर्ट एक्ज़म्पलर
         CS_Changing_Everything: कंप्यूटर साइंस सब कुछ बदल रहा है
+        csa-alias-video: समान और उपनाम
+        csa-equals-video: बराबर () विधि
+        csa-user-stories: सॉफ़्टवेयर इंजीनियरिंग में उपयोगकर्ता कहानियां
+        csa-pl-vpl-m1-unit-3: यूनिट 3 में सॉफ्टवेयर इंजीनियरिंग
+        csa-pl-intro-to-equality: समानता का परिचय
+        csa-pl-intro-to-equals-method: .equals () विधि का परिचय
+        csa-pl-equals-book: बुक क्लास के लिए equals () मेथड लिखना
+        csa-multi-select-pl: जावा में बहु-चयन कथन
+        csc_timecapsule_intro: टाइम कैप्सूल परिचय
+        PL_Equity_in_CS_Education: सीएस शिक्षा में समानता
+        csc_fm_pilot: फंक्शन मशीन (पायलट)
+        csc_fm_pilot_v2: 'फंक्शन मशीन परिचय '
+        csc-sprite-lab-pixel-editor: अपनी खुद की स्प्राइट बनाएं
+        csa-pl-intro-to-strings: जावा में स्ट्रिंग्स का परिचय
+        csa-pl-compareTo: CompareTo () विधि
+        csc-event-short-intro: इवेंट्स शॉर्ट इंट्रो
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: सर्किट प्लेग्राउंड यूनिट अवलोकन
+        csa-day-in-pm-pl: प्रोजेक्ट मैनेजर क्या करता है?
+        csa-pl-intro-to-pm: प्रोजेक्ट मैनेजमेंट का परिचय
+        PL_CSD_CircuitPlayground_Setup: सर्किट प्लेग्राउंड सेटअप
+        csa_object_oriented_programming: 'CSA: ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग'
+        csa_creating_objects: 'CSA: ऑब्जेक्ट्स बनाना'
+        csa_calling_methods: 'CSA: कॉलिंग के तरीके'
+        csa_while_loops: 'सीएसए: व्हेल लूप्स'
+        csa_inheritance: 'CSA: विरासत'
+        csa_writing_a_method: 'CSA: एक विधि लिखना'
+        csa_software_engineering_code_reviews: 'CSA: सॉफ़्टवेयर इंजीनियरिंग - कोड समीक्षाएं'
+        csa_conditional_statements: 'CSA: सशर्त वक्तव्य'
+        csa_printing_in_java: 'CSA: जावा में प्रिंटिंग'
+        csa_two_way_selection_and_not: 'CSA: दो-तरफ़ा चयन और नहीं'
+        csa-pl-intro-to-oop: ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग का परिचय
+        csa-pl-welcome-to-Neighborhood: नेबरहुड में आपका स्वागत है
+        csa-pl-calling-methods: जावा में कॉलिंग के तरीके
+        csa-pl-creating-objects: ऑब्जेक्ट्स बनाना
+        csa_accessor_methods: 'CSA: एक्सेसर के तरीके'
+        csa_constructors: 'CSA: कंस्ट्रक्टर्स'
+        csa_creating_a_scanner_object: 'CSA: स्कैनर ऑब्जेक्ट बनाना'
+        csa_creating_variables: 'CSA: वेरिएबल्स बनाना'
+        csa_instance_variables_and_attributes: 'CSA: इंस्टेंस वेरिएबल्स और एट्रिब्यूट्स'
+        csa_mutator_methods: 'CSA: म्यूटेटर मेथड्स'
+        csa_overloaded_constructors: 'CSA: ओवरलोडेड कंस्ट्रक्टर्स'
+        csa_the_tostring_method: 'CSA: टूस्ट्रिंग () विधि'
+        csa_scanner_class_methods: 'CSA: स्कैनर क्लास मेथड्स'
+        csa_for_loops: 'CSA: लूप्स के लिए'
+        csa_enhanced_for_loops: 'CSA: लूप्स के लिए उन्नत'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D ऐरे में मानों को संशोधित करना'
+        csa_nested_loops: 'CSA: नेस्टेड लूप्स'
+        csa_one_dimensional_arrays: 'CSA: एक-आयामी (1D) सरणियाँ'
+        csa_polymorphism: 'CSA: बहुरूपता'
+        csa_casting: 'CSA: कास्टिंग'
+        csa_equals_and_aliases: 'CSA: समान और उपनाम'
+        csa_multi-selection_statements: 'CSA: बहु-चयन वक्तव्य'
+        csa_random_numbers: 'CSA: रैंडम नंबर'
+        csa_static_methods: 'CSA: स्टेटिक तरीके'
+        csa_static_variables: 'CSA: स्टेटिक वेरिएबल्स'
+        csa_the_equals_method: 'CSA: बराबर () विधि'
+        csa_welcome_to_the_theater: 'CSA: थिएटर में आपका स्वागत है'
+        enter_your_own_poem: अपनी खुद की कविता दर्ज करें
+        csa-example-solution-1: 'लाइव कोडिंग एक उदाहरण समाधान '
         csd_sprite_properties: स्प्राइट्स की विशेषताएं
+        csa-pl-documentation: जावा लैब में दस्तावेज़ीकरण
+        csc-starquilts-intro: 'CSC: स्टार क्विल्ट्स'
+        csa-pl-vocab-pm: परियोजना प्रबंधन शब्दावली
+        csc-ecosystems-intro: इकोसिस्टम्स इंट्रो
+        PL_CSD_MicroBit_Intro: 'माइक्रो का परिचय: बिट'
+        csc_animal_adaptations_intro: पशु अनुकूलन परिचय
+        csa_two_dimensional_arrays: 'CSA: द्वि-आयामी (2D) सरणियाँ'
+        csa_working_with_2d_array_elements: 'CSA: 2D ऐरे एलिमेंट्स के साथ काम करना'
+        csa_row_major_traversal: 'CSA: रो-मेजर ट्रैवर्सल'
+        csa_column_major_traversal: 'CSA: कॉलम-मेजर ट्रैवर्सल'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: लूप्स और 2D एरेज़ के लिए उन्नत'
+        csa_images_and_pixels: 'CSA: चित्र और पिक्सेल'
+        csa_wrapper_classes_part_1: 'CSA: रैपर क्लासेस पार्ट 1'
+        csa_wrapper_classes_part_2: 'CSA: रैपर क्लासेस पार्ट 2'
+        csa_the_arraylist_class: 'CSA: द ऐरेलिस्ट क्लास'
+        csa_working_with_arraylist_data: 'CSA: ArrayList डेटा के साथ काम करना'
+        csa_remving_data_from_an_arraylist: 'CSA: एक ऐरेलिस्ट से डेटा हटाना'
+        csa_private_methods: 'CSA: निजी तरीके'
+        csa_recursion: 'सीएसए: रिकर्सन'
+        csa_searching_algorithms: 'CSA: सर्चिंग एल्गोरिदम'
+        csa_sorting_algorithms: 'CSA: सॉर्टिंग एल्गोरिदम'
+        star_quilts_intro_to_artist: 'स्टार क्विल्ट्स: इंट्रो टू आर्टिस्ट'
+        upload_sprites_backgrounds: कस्टम स्प्राइट्स और बैकग्राउंड अपलोड करना
     callout:
       text:
         drag_blocks: '"मूव करें" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें'

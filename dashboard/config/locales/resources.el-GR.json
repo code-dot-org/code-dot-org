@@ -131,6 +131,7 @@
           "type": "Βίντεο"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "type": "Βίντεο"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -445,8 +446,17 @@
         "problem_solving_process_1/csd/2022": {
           "type": "Βίντεο"
         },
+        "the_problem_solving_process/csd/2022": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
         "what_is_a_computer/csd/2022": {
           "type": "Βίντεο"
+        },
+        "what_is_a_computer_/csd/2022": {
+          "name": "Τι είναι ένας υπολογιστής;"
         },
         "what_do_computers_do/csd/2022": {
           "type": "Βίντεο"
@@ -772,6 +782,7 @@
           "name": "Γεγονότα Επιταχυνσιόμετρου"
         },
         "introduction_to_arrays/csd/2022": {
+          "name": "Εισαγωγή στις συστοιχίες",
           "type": "Βίντεο"
         },
         "playing_notes/csd/2022": {
@@ -807,22 +818,35 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "Βίντεο"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ai_training_data_bias/csd/2022": {
           "type": "Βίντεο"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Βίντεο"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -1283,7 +1307,11 @@
         "teacher_forum_1/coursef/2021": {
           "name": "Φόρουμ Καθηγητών"
         },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων",
           "type": "Βίντεο"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -1669,22 +1697,35 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "Βίντεο"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ai_training_data_bias/csd/2021": {
           "type": "Βίντεο"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "Βίντεο"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "type": "Βίντεο"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
@@ -1759,6 +1800,7 @@
           "type": "Κατάλογος"
         },
         "introduction_to_arrays/csd/2021": {
+          "name": "Εισαγωγή στις συστοιχίες",
           "type": "Βίντεο"
         },
         "playing_notes/csd/2021": {
@@ -1937,6 +1979,12 @@
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Βίντεο"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Τι είναι ένας υπολογιστής;"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Βίντεο"

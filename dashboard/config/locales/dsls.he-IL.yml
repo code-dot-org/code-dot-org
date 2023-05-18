@@ -3063,7 +3063,8 @@ he-IL:
         - text: ירוק
           correct: true
         - correct: true
-        - correct: true
+        - text: צהוב
+          correct: true
         - correct: true
         - text: אדום
           correct: true

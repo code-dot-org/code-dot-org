@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -66,68 +67,6 @@ const useSections = section => {
   };
 
   return [sections, updateSection];
-};
-
-const saveSection = (
-  section,
-  isNewSection,
-  shouldShowCelebrationDialogOnRedirect
-) => {
-  // Determine data sources and save method based on new vs edit section
-  const dataUrl = isNewSection ? SECTIONS_API : `${SECTIONS_API}/${section.id}`;
-  const method = isNewSection ? 'POST' : 'PATCH';
-  const loginType = isNewSection ? queryParams('loginType') : section.loginType;
-  const participantType = isNewSection
-    ? queryParams('participantType')
-    : section.participantType;
-
-  const form = document.querySelector(`#${FORM_ID}`);
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
-
-  const csrfToken = document.querySelector('meta[name="csrf-token"]')
-    .attributes['content'].value;
-
-  const section_data = {
-    login_type: loginType,
-    participant_type: participantType,
-    course_offering_id: section.course?.courseOfferingId,
-    course_version_id: section.course?.versionId,
-    unit_id: section.course?.unitId,
-    restrict_section: section.restrictSection,
-    lesson_extras: section.lessonExtras,
-    pairing_allowed: section.pairingAllowed,
-    tts_autoplay_enabled: section.ttsAutoplayEnabled,
-    sharing_disabled: section.sharingDisabled,
-    grades: section.grade,
-    ...section,
-  };
-
-  fetch(dataUrl, {
-    method: method,
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': csrfToken,
-    },
-    body: JSON.stringify(section_data),
-  })
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      // Redirect to the sections list.
-      let redirectUrl = window.location.origin + '/home';
-      if (shouldShowCelebrationDialogOnRedirect) {
-        redirectUrl += '?showSectionCreationDialog=true';
-      }
-      navigateToHref(redirectUrl);
-    })
-    .catch(err => {
-      // TODO: Design how we want to show errors.
-      console.error(err);
-    });
 };
 
 export default function SectionsSetUpContainer({
@@ -203,6 +142,87 @@ export default function SectionsSetUpContainer({
     }
   };
 
+  const saveSection = section => {
+    const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
+    // Determine data sources and save method based on new vs edit section
+    const dataUrl = isNewSection
+      ? SECTIONS_API
+      : `${SECTIONS_API}/${section.id}`;
+    const method = isNewSection ? 'POST' : 'PATCH';
+    const loginType = isNewSection
+      ? queryParams('loginType')
+      : section.loginType;
+    const participantType = isNewSection
+      ? queryParams('participantType')
+      : section.participantType;
+
+    const form = document.querySelector(`#${FORM_ID}`);
+    // If we find a missing field in the form, report which one and reset save status
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setIsSaveInProgress(false);
+      return;
+    }
+
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')
+      .attributes['content'].value;
+
+    const section_data = {
+      login_type: loginType,
+      participant_type: participantType,
+      course_offering_id: section.course?.courseOfferingId,
+      course_version_id: section.course?.versionId,
+      unit_id: section.course?.unitId,
+      restrict_section: section.restrictSection,
+      lesson_extras: section.lessonExtras,
+      pairing_allowed: section.pairingAllowed,
+      tts_autoplay_enabled: section.ttsAutoplayEnabled,
+      sharing_disabled: section.sharingDisabled,
+      grades: section.grade,
+      ...section,
+    };
+
+    fetch(dataUrl, {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+      body: JSON.stringify(section_data),
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        recordSectionSetupEvent(section);
+        // Redirect to the sections list.
+        let redirectUrl = window.location.origin + '/home';
+        if (shouldShowCelebrationDialogOnRedirect) {
+          redirectUrl += '?showSectionCreationDialog=true';
+        }
+        navigateToHref(redirectUrl);
+      })
+      .catch(err => {
+        setIsSaveInProgress(false);
+        console.error(err);
+      });
+  };
+
+  const onURLClick = () => {
+    showVideoDialog(
+      {
+        autoplay: true,
+        download:
+          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
+        enable_fallback: true,
+        key: 'Gettting_Started_ClassSection',
+        name: 'Creating a Class Section',
+        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
+      },
+      true
+    );
+  };
+
   return (
     <form id={FORM_ID}>
       <div className={moduleStyles.containerWithMarginTop}>
@@ -217,7 +237,7 @@ export default function SectionsSetUpContainer({
               {i18n.setUpClassSectionsSubheader()}
             </BodyOneText>
             <BodyOneText>
-              <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
                 {i18n.setUpClassSectionsSubheaderLink()}
               </a>
             </BodyOneText>
@@ -309,8 +329,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            recordSectionSetupEvent(sections[0]);
-            saveSection(sections[0], isNewSection, !!isUsersFirstSection);
+            saveSection(sections[0]);
           }}
         />
       </div>

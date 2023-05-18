@@ -7,12 +7,9 @@
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
 - force_wrap_layout = data['layout'] == "wrap"
+- enforce_allow_multiple_attempts = DCDO.get('enforce_allow_multiple_attempts', false)
+- allow_multiple_attempts = enforce_allow_multiple_attempts ? level.allow_multiple_attempts? : false
 
-:ruby
-  js_data = {
-    response_count: @responses&.count || 0,
-    is_contained_level: contained_mode
-  }
 
 - multi_answer_characters = ("A".."Z").to_a
 
@@ -69,13 +66,6 @@
     - unless use_tight_layout
       %br/
 
-    - if standalone && !data['options'].try(:[], 'hide_submit')
-      .buttons{class: data['submittable'] == 'true' ? 'submittable' : nil}
-        %a.btn.btn-large.btn-primary.next-lesson.submitButton{id: "submit_level_#{level.id}"}
-          =t('submit')
-        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
-          =t('unsubmit')
-
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
@@ -126,6 +116,14 @@
 
     - answers_feedback = localized_answers.map {|answer| answer['feedback']}
 
+
+  :ruby
+    js_data = {
+      response_count: @responses&.count || 0,
+      is_contained_level: contained_mode,
+      question_content_blank: question_content_blank,
+    }
+
   %script{src: webpack_asset_path('js/levels/_single_multi.js'), data: {summaryinfo: js_data.to_json}}
 
   :javascript
@@ -138,5 +136,6 @@
       #{answers || "undefined"},
       #{answers_feedback.to_json},
       #{last_attempt.to_json},
-      #{contained_mode}
+      #{contained_mode},
+      #{allow_multiple_attempts}
     ));

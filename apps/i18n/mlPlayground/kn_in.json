@@ -11,6 +11,7 @@
   "columnDetailsMinimumValue": "ನಿಮಿಷ",
   "columnDetailsMaximumValue": "ಗರಿಷ್ಠ",
   "dataCardLastUpdated": "ಕೊನೆಯದಾಗಿ ನವೀಕರಿಸಿದ್ದು",
+  "uniqueOptionsWarningNotice": "ಟಿಪ್ಪಣಿ",
   "datasets": {
     "shoe_survey_toy": {
       "fields": {
@@ -196,7 +197,7 @@
           "id": "ಆನೆ"
         },
         "alligator": {
-          "id": "ಅಲಿಗೇಟರ್"
+          "id": "ಮೊಸಳೆ"
         },
         "trees": {
           "id": "ಮರಗಳು"
