@@ -70,6 +70,7 @@ pl:
   previous_page: Poprzednia strona
   next_page: Następna strona
   next_resource: Kolejne zasoby
+  done_with_module: Sporządzono z tym modułem edukacyjnym
   cancel: "Anuluj"
   okay: "OK"
   or: "lub"
@@ -1012,6 +1013,7 @@ pl:
     instructor_feedback: 'Opinie instruktora'
     peer_feedback: 'Wzajemne opinie'
     outdated: 'Ta opinia została dodana do wcześniej zgłoszonej wersji'
+    review_count: 'Musisz wypełnić %{review_count} recenzji dla tego urządzenia'
     peer_review: 'Wzajemne recenzje'
   external_links:
     disclaimer: Uwaga

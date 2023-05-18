@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "μέγιστο",
   "dataCardLastUpdated": "Τελευταία ενημέρωση",
   "predictButton": "Προβλέψτε",
+  "uniqueOptionsWarningNotice": "Σημείωση",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -28,6 +29,9 @@
         },
         "day": {
           "id": "ημέρα"
+        },
+        "shoe": {
+          "id": "παπούτσι"
         }
       }
     },
@@ -44,6 +48,9 @@
         },
         "beans": {
           "id": "φασόλια"
+        },
+        "lime": {
+          "id": "λάιμ"
         }
       }
     },
@@ -56,11 +63,20 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "μανιτάρια"
+        },
+        "lobster": {
+          "id": "αστακός"
+        },
         "bacon": {
           "id": "μπέικον"
         },
         "cheese": {
           "id": "κασέρι"
+        },
+        "meat": {
+          "id": "κρέας"
         }
       }
     },
@@ -68,6 +84,9 @@
       "fields": {
         "color": {
           "id": "χρώμα"
+        },
+        "music": {
+          "id": "μουσική"
         },
         "food": {
           "id": "φαγητό"
@@ -95,6 +114,9 @@
       "fields": {
         "strawberry": {
           "id": "φράουλα"
+        },
+        "lime": {
+          "id": "λάιμ"
         }
       }
     },
@@ -110,6 +132,9 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "ντομάτα"
+        },
         "avocado": {
           "id": "αβοκάντο"
         },
@@ -139,8 +164,14 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "σχολείο"
+        },
         "age": {
           "id": "ηλικία"
+        },
+        "health": {
+          "id": "υγεία"
         }
       }
     },
@@ -148,6 +179,9 @@
       "fields": {
         "chicken": {
           "id": "κοτόπουλο"
+        },
+        "lamb": {
+          "id": "αρνί"
         },
         "onion": {
           "id": "κρεμμύδι"
@@ -168,6 +202,9 @@
       "fields": {
         "Internet": {
           "id": "Διαδίκτυο"
+        },
+        "Writing": {
+          "id": "Γραφή"
         }
       }
     },
@@ -196,6 +233,12 @@
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "λαός"
+        },
+        "rhino": {
+          "id": "ρινόκερος"
+        },
         "elephant": {
           "id": "ελέφαντας"
         },
@@ -229,6 +272,9 @@
         },
         "onion": {
           "id": "κρεμμύδι"
+        },
+        "ginger": {
+          "id": "τζίντζερ"
         }
       }
     },
@@ -245,6 +291,9 @@
         },
         "Internet": {
           "id": "Διαδίκτυο"
+        },
+        "Writing": {
+          "id": "Γραφή"
         },
         "Achievements": {
           "id": "Επιτεύγματα"

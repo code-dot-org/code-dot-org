@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "minimum",
   "columnDetailsMaximumValue": "maksimum",
   "dataCardLastUpdated": "Oxirgi yangilangan",
+  "uniqueOptionsWarningNotice": "Eslatma",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -27,6 +28,9 @@
         },
         "day": {
           "id": "kun"
+        },
+        "shoe": {
+          "id": "poyafzal"
         }
       }
     },
@@ -35,11 +39,36 @@
         "onion": {
           "id": "piyoz"
         },
+        "avocado": {
+          "id": "avokado"
+        },
         "corn": {
           "id": "makkajo‘xori"
         },
+        "beans": {
+          "id": "dukkaklilar"
+        },
         "lime": {
           "id": "laym"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "qo'ziqorinlar"
+        },
+        "lobster": {
+          "id": "lobster"
+        },
+        "bacon": {
+          "id": "bekon"
+        },
+        "cheese": {
+          "id": "pishloq"
+        },
+        "meat": {
+          "id": "go'sht"
         }
       }
     },
@@ -47,6 +76,9 @@
       "fields": {
         "color": {
           "id": "rang"
+        },
+        "music": {
+          "id": "musiqa"
         },
         "food": {
           "id": "ovqat"
@@ -62,6 +94,9 @@
     },
     "nutrition": {
       "fields": {
+        "Category": {
+          "id": "Turkum"
+        },
         "Description": {
           "id": "Ta‘rif"
         }
@@ -69,6 +104,9 @@
     },
     "raspado_toy": {
       "fields": {
+        "strawberry": {
+          "id": "qulupnay"
+        },
         "lime": {
           "id": "laym"
         }
@@ -86,11 +124,23 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "pomidor"
+        },
+        "avocado": {
+          "id": "avokado"
+        },
         "chicken": {
           "id": "tovuq"
         },
         "fruit": {
           "id": "meva"
+        },
+        "beans": {
+          "id": "dukkaklilar"
+        },
+        "cheese": {
+          "id": "pishloq"
         }
       }
     },
@@ -106,8 +156,14 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "maktab"
+        },
         "age": {
           "id": "yoshi"
+        },
+        "health": {
+          "id": "sog'liq"
         }
       }
     },
@@ -116,8 +172,14 @@
         "chicken": {
           "id": "tovuq"
         },
+        "lamb": {
+          "id": "qo'zichoq"
+        },
         "onion": {
           "id": "piyoz"
+        },
+        "cheese": {
+          "id": "pishloq"
         }
       }
     },
@@ -163,8 +225,17 @@
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "odamlar"
+        },
+        "rhino": {
+          "id": "karkidon"
+        },
         "elephant": {
           "id": "fil"
+        },
+        "alligator": {
+          "id": "alligator"
         },
         "trees": {
           "id": "daraxtlar"
@@ -188,8 +259,14 @@
     },
     "poke_toy": {
       "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
         "onion": {
           "id": "piyoz"
+        },
+        "ginger": {
+          "id": "zanjabil"
         }
       }
     },

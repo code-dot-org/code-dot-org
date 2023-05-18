@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "على الاقل ",
   "columnDetailsMaximumValue": "الأكبر",
   "dataCardLastUpdated": "آخر تحديث",
+  "uniqueOptionsWarningNotice": "ملاحظة",
   "datasets": {
     "medical_priority": {
       "fields": {

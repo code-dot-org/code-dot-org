@@ -435,7 +435,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Poznámka:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -581,7 +582,8 @@
           "low": "nízke"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Dokázal/a si to!"
@@ -656,16 +658,20 @@
           "Success!": "Úspešne!"
         },
         "CSD U6 analog light": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Aktualizovať"
+          "Update": "Aktualizovať",
+          "value": "hodnota"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1064,19 +1070,22 @@
           "About": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "About Us": "O nás",
+          "Why?": "Prečo?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "About Us": "O nás",
+          "Why?": "Prečo?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "O nás",
           "I don't know": "Neviem",
           "When?": "Kedy?",
-          "About Us": "O nás"
+          "About Us": "O nás",
+          "Why?": "Prečo?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Skryť",
@@ -1105,21 +1114,24 @@
           "Submit": "Odoslať",
           "When?": "Kedy?",
           "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Correct!": "Správne!",
+          "Why?": "Prečo?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "O nás",
           "Submit": "Odoslať",
           "When?": "Kedy?",
           "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Correct!": "Správne!",
+          "Why?": "Prečo?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "O nás",
           "Submit": "Odoslať",
           "When?": "Kedy?",
           "About Us": "O nás",
-          "Correct!": "Správne!"
+          "Correct!": "Správne!",
+          "Why?": "Prečo?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1513,27 +1525,27 @@
           "Predict": "Predpoveď"
         },
         "ml-models-shoes decision tree-2021": {
-          "Improved Shoe Recommender": "Vylepšený program na odporúčanie topánok",
+          "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
           "Sports": "Športy"
         },
         "ml-models-shoes decision tree_2022": {
-          "Improved Shoe Recommender": "Vylepšený program na odporúčanie topánok",
+          "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
           "Sports": "Športy"
         },
         "ml-models-shoes points-2021": {
-          "Ultimate Shoe Recommender": "Záverečný program na odporúčanie topánok"
+          "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
         "ml-models-shoes points_2022": {
-          "Ultimate Shoe Recommender": "Záverečný program na odporúčanie topánok"
+          "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
         "ml-models-shoes random-2021": {
-          "Shoe Recommender": "Program na odporúčanie topánok"
+          "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-models-shoes random_2022": {
-          "Shoe Recommender": "Program na odporúčanie topánok"
+          "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-use model card-example3A-2021": {
-          "Driver Alert System": "Výstražný systém pre rodičov",
+          "Driver Alert System": "Výstražný systém pre vodičov",
           "Get Started": "Začíname",
           "rain": "dážď",
           "snow": "sneh",
@@ -1543,7 +1555,7 @@
           "Predict": "Predpoveď"
         },
         "ml-use model card-example3A_2022": {
-          "Driver Alert System": "Výstražný systém pre rodičov",
+          "Driver Alert System": "Výstražný systém pre vodičov",
           "Get Started": "Začíname",
           "rain": "dážď",
           "snow": "sneh",
@@ -1557,6 +1569,54 @@
         },
         "CSD U1 processing countries_2022": {
           "How Many Countries...": "Koľko krajín..."
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "hodnota"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "hodnota"
         }
       }
     }

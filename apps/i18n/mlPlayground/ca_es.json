@@ -194,6 +194,9 @@
       "fields": {
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escriure"
         }
       }
     },
@@ -277,6 +280,9 @@
         },
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escriure"
         },
         "Achievements": {
           "id": "Assoliments"
