@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-28 03:54:22 UTC",
+    "serialized_at": "2023-05-17 22:47:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3267,16 +3267,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Unit 5 - Lesson 1 - Learning from Data",
       "url": "https://docs.google.com/presentation/d/1X9KdBT0PzWgwTBdh5-35-8Bkwm1HyuFwdf6TFYcmZSo/copy",
       "key": "csp_data_-_lesson_2_-_learning_from_data",
@@ -3796,12 +3786,6 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
-        "script.name": "csp5-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
         "script.name": "csp5-2023"
       }
     },
