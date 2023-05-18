@@ -31,7 +31,9 @@ const CurriculumCatalogCard = ({
       course_name: courseDisplayName,
     })}
     courseDisplayName={courseDisplayName}
-    duration={translatedCourseOfferingDurations[duration]}
+    duration={i18n.durationLabel({
+      duration: translatedCourseOfferingDurations[duration],
+    })}
     gradeRange={i18n.gradeRange({
       numGrades: gradesArray.length,
       youngestGrade: gradesArray[0],
@@ -54,7 +56,7 @@ const CurriculumCatalogCard = ({
     isTranslated={isTranslated}
     translationIconTitle={i18n.courseInYourLanguage()}
     isEnglish={isEnglish}
-    pathToCourse={pathToCourse}
+    pathToCourse={pathToCourse + '?viewAs=Instructor'}
   />
 );
 
@@ -109,7 +111,6 @@ const CustomizableCurriculumCatalogCard = ({
             <div>{`+${subjectsAndTopics.length - 1}`}</div>
           )}
         </div>
-        {/*TODO [MEG]: Ensure this icon matches spec when we update FontAwesome */}
         {isTranslated && (
           <FontAwesome
             icon="language"
@@ -124,8 +125,7 @@ const CustomizableCurriculumCatalogCard = ({
         <p>{gradeRange}</p>
       </div>
       <div className={style.iconWithDescription}>
-        {/*TODO [MEG]: Update this to be clock fa-solid when we update FontAwesome */}
-        <FontAwesome icon="clock-o" />
+        <FontAwesome icon="clock" className="fa-solid" />
         <p>{duration}</p>
       </div>
       <div
