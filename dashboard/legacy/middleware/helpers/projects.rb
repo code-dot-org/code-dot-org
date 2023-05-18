@@ -480,7 +480,7 @@ class Projects
       # raise ValidationError
       Honeybadger.notify(
         error_class: 'Project::ValidationError',
-        error_message: 'An existing project was updated with an unexpected thumbnail URL.',
+        error_message: 'A project was saved with an unexpected thumbnail URL.',
         context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
       )
     end
