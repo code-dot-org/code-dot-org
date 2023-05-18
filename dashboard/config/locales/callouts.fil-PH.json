@@ -2030,6 +2030,98 @@
         },
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Gamitin ang block na ito upang iwanan ang sarili mo o ang mga tala ng guro mo tungkol sa kung paano gumagana ang iyong code."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Sinasabi sa iyo ng numerong ito kung ilan sa mga block na ito ang magagamit mo sa palaisipang ito."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ang numerong ito ay nangangahulugan na isa lamang sa ganitong uri ng block ang maaaring gamitin sa huling sagot."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Alam mo ba na maaari kang bumalik sa isang linya kapag kailangan mo?"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Sinasabi sa iyo ng numerong ito kung ilan sa mga block na ito ang magagamit mo sa palaisipang ito."
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Isa itong callout"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Mag-click dito upang baguhin ang direksiyon ng arrow ng kaganapan."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Kunin ang aktor sa bandilang ito upang magpatuloy sa susunod na antas."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Gamitin ang block na ito kapag nagkadikit si Waddles at Chomp!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Napakahalaga ng block na ito sa proyektong ito. Tiyaking gamitin ito!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Idagdag ito sa gitna ng program mo."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Nakikita mo ba ang ilang mga bagong block sa toolbox? Huwag mag-alala, ipapakita namin sa iyo kung paano gamitin ang mga ito sa ibang aralin."
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "I-drag ang mga block sa toolbox papunta sa workspace mo."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Kakailanganin mong gamitin ang block na `habang nasa unahan ang landas` para malutas ang palaisipang ito."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Mag-klik dito!"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Ipagpatuloy ang program na ito sa pamamagitan ng pagdaragdag ng higit pang code sa ibaba.",
+          "courseE_artist_functions_challenge1_callout2": "Kung hindi mo gusto ang disenyong ito, baguhin ito sa anumang gusto mo!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Ipagpatuloy ang program na ito sa pamamagitan ng pagdaragdag ng higit pang code sa ibaba.",
+          "courseE_artist_functions_challenge2_callout2": "Kung hindi mo gusto ang disenyong ito, baguhin ito sa anumang gusto mo!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Ang toolbox ay medyo naiiba sa oras na ito! Mag-click sa iba't ibang kategorya upang makita kung aling mga block ang mayroon ka."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Ang toolbox ay nasa mode na \"kategorya\" upang magkaroon ng higit na puwang sa code mo. Ang `para sa` na mga loop ay nakatira dito."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Makikita mo ang `para sa` na loop dito!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Makikita mo ang `matematika` na block dito."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Makikita mo ang mga variable mo dito sa ibaba!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Mag-click dito upang makita kung paano gumagana ang pag-uugaling ito."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "I-drag ang mga block sa toolbox papunta sa workspace mo."
         }
       }
     }

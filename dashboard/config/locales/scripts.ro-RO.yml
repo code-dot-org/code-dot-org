@@ -3942,6 +3942,28 @@ ro:
           lessons:
             lesson-12:
               name: Încheiere
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introducere
+            lesson-12:
+              name: Încheiere
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Încheiere
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Încheiere
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Încheiere
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Evaluare
         csd-post-survey-2023:
           title: Chestionar după curs
         focus-on-data-post-survey-2023:
@@ -3956,3 +3978,16 @@ ro:
           title: Chestionar după curs
         focus-on-creativity-post-survey-2023:
           title: Chestionar după curs
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cetățenia Digitală
+            lessonGroup-3:
+              display_name: Spiriduși
+            lessonGroup-4:
+              display_name: Variabile
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii
+            şi creați propria dvs. artă, poveste sau joc.

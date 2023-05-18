@@ -3,6 +3,7 @@
   "addAComment": "Adicionar um comentário",
   "addACommentToReview": "Adicionar um comentário à revisão",
   "authorizerNearLimit": "Você executou seu código muitas vezes na última hora. Você tem {attemptsLeft} tentativas restantes antes que sua conta seja bloqueada permanentemente e você não consiga executar o código Java. Aguarde 15 minutos antes de tentar novamente.",
+  "authorizerNearLimitTemporary": "Você executou seu código muitas vezes nos últimos {lockoutPeriod}. Você ainda tem {attemptsLeft} tentativa. Torne-se um professor verificado para ter acesso a uma cota muito maior para você e seus alunos.\nSaiba mais sobre [como se tornar um professor verificado] (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nSaiba [por que a verificação do professor é necessária] (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n",
   "authorizerTokenUsed": "Você está tentando reutilizar um \"token\" que já executou seu código. Verifique se você está em uma rede segura antes de tentar novamente. Se você acredita que esta mensagem está errada, entre em contato com support@code.org.",
   "authorLabel": "autor",
   "allFilesCompile": "Todos os arquivos compilados!",
@@ -121,6 +122,7 @@
   "onlyVisibleToYou": "Os comentários de professores ficam visíveis somente para você",
   "openedDate": "aberto {date}",
   "programCompleted": "Programa concluído.",
+  "programEndedUnexpectedly": "Seu programa parou inesperadamente. Talvez estejamos sem capacidade para executar seu programa ou você pode estar tendo problemas de rede. Verifique sua conexão de rede e tente novamente.",
   "programStopped": "O programa foi interrompido.",
   "refresh": "Atualizar",
   "rename": "Renomear",
@@ -154,6 +156,8 @@
   "unknownError": "Opa. Ocorreu um erro no nosso sistema. Tente executar seu programa novamente. Se o erro persistir, fale conosco pelo e-mail support@code.org. Não se esqueça de incluir a ID da conexão {connectionId} na sua mensagem. {type}",
   "unsupportedMiniAppMessage": "Incompatibilidade de tipo de nível: {miniAppType} projetos não são suportados em um nível diferente de {miniAppType} .",
   "userBlocked": "Você executou seu código muitas vezes e sua conta foi bloqueada. Entre em contato com support@code.org para desbloquear sua conta.",
+  "userBlockedTemporary": "Você atingiu o limite do número de vezes que pode executar o código Java em 24 horas. Torne-se um professor verificado para ter acesso a uma cota muito maior para você e seus alunos.\nSaiba mais sobre [como se tornar um professor verificado] (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nSaiba [por que a verificação de professores é necessária] (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nSe você acredita que esta mensagem está errada, entre em contato com support@code.org.",
+  "waitingForServer": "Esperando por uma resposta...",
   "youHaveProjectsToReview": "Você tem projetos para revisar...",
   "yourPeer": "seu colega"
 }

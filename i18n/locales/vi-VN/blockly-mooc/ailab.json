@@ -1,1 +1,15 @@
-{}
+{
+  "selectDataset": "Chọn tập dữ liệu bạn muốn sử dụng.",
+  "uploadedDataset": "Bạn vừa tải lên một tập dữ liệu.",
+  "selectedDataset": "Bạn vừa chọn một tập dữ liệu.",
+  "dataDisplayLabel": "Chọn một cột để dự đoán.",
+  "dataDisplayFeatures": "Chọn một hoặc nhiều cột làm đầu vào để giúp thực hiện dự đoán.",
+  "selectedFeatureNumerical": "Bạn vừa chọn một tính năng số.",
+  "selectedFeatureCategorical": "Bạn vừa chọn một tính năng phân loại.",
+  "trainModel": "Người mẫu của anh đang được huấn luyện.",
+  "generateResults": "Mô hình của bạn đang được thử nghiệm.",
+  "results": "Xem lại kết quả.",
+  "resultsDetails": "Chi tiết về kết quả đang được hiển thị.",
+  "saveModel": "Lưu mô hình được đào tạo để sử dụng trong App Lab.",
+  "modelSummary": "Bạn đã đào tạo thành công và lưu mô hình của bạn. Xem lại chi tiết mô hình của bạn và nhấp vào Kết thúc để sử dụng mô hình được đào tạo của bạn trong App Lab."
+}

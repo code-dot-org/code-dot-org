@@ -704,9 +704,28 @@ tr:
         csd_sprite_properties: Nesne özellikleri
         csa-pl-documentation: Java Lab'de Belgeler
         csc-starquilts-intro: 'CSC: Yıldız Yorgan'
-        csc-mapmakers-intro: "CSC: Harita yapımcıları\\t"
+        csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
         csa-pl-vocab-pm: Proje Yönetimi Kelime Bilgisi
         csc-ecosystems-intro: Ekosistemlere Giriş
+        PL_CSD_MicroBit_Intro: Micro:bit'e giriş
+        csc_animal_adaptations_intro: Hayvan Uyarlamaları Giriş
+        csa_two_dimensional_arrays: 'CSA: İki Boyutlu (2D) Diziler'
+        csa_working_with_2d_array_elements: 'CSA: 2D Dizi Elemanları ile Çalışma'
+        csa_row_major_traversal: 'CSA: Büyük Sıra-Geçiş'
+        csa_column_major_traversal: 'CSA: Sütun Başlıca Geçişi'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngüler ve 2D Diziler İçin Geliştirilmiş'
+        csa_images_and_pixels: 'CSA: Görüntüler ve Pikseller'
+        csa_wrapper_classes_part_1: 'CSA: Sarıcı Sınıfları Bölümü 1'
+        csa_wrapper_classes_part_2: 'CSA: Sarıcı Sınıfları Bölüm 2'
+        csa_the_arraylist_class: 'CSA: ArrayList Sınıfı'
+        csa_working_with_arraylist_data: 'CSA: ArrayList Verileri ile Çalışma'
+        csa_remving_data_from_an_arraylist: 'CSA: Bir ArrayList''ten Verileri Kaldırma'
+        csa_private_methods: 'CSA: Özel Yöntemler'
+        csa_recursion: 'CSA: Özyineleme'
+        csa_searching_algorithms: 'CSA: Arama Algoritmaları'
+        csa_sorting_algorithms: 'CSA: Sıralama Algoritmaları'
+        star_quilts_intro_to_artist: 'Yıldız Yorganlar: Sanatçıya Giriş'
+        upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

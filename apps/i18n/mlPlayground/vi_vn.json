@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "lớn nhất",
   "dataCardLastUpdated": "Cập nhật lần cuối",
   "predictButton": "Dự đoán",
+  "uniqueOptionsWarningNotice": "Lưu ý",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -36,6 +37,9 @@
     },
     "salsa_toy": {
       "fields": {
+        "onion": {
+          "id": "củ hành"
+        },
         "avocado": {
           "id": "quả bơ"
         },
@@ -44,16 +48,28 @@
         },
         "beans": {
           "id": "những hạt đậu"
+        },
+        "lime": {
+          "id": "vôi"
         }
       }
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "nấm"
+        },
+        "lobster": {
+          "id": "tôm hùm"
+        },
         "bacon": {
           "id": "thịt xông khói\n"
         },
         "cheese": {
           "id": "phô mai"
+        },
+        "meat": {
+          "id": "thịt"
         }
       }
     },
@@ -61,6 +77,9 @@
       "fields": {
         "color": {
           "id": "màu sắc"
+        },
+        "music": {
+          "id": "Âm nhạc"
         },
         "food": {
           "id": "thức ăn"
@@ -81,6 +100,16 @@
         },
         "Description": {
           "id": "Mô tả"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "dâu tây"
+        },
+        "lime": {
+          "id": "vôi"
         }
       }
     },
@@ -105,6 +134,9 @@
         "chicken": {
           "id": "con gà"
         },
+        "fruit": {
+          "id": "trái cây"
+        },
         "beans": {
           "id": "những hạt đậu"
         },
@@ -125,6 +157,9 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "trường học"
+        },
         "age": {
           "id": "tuổi"
         },
@@ -140,6 +175,9 @@
         },
         "lamb": {
           "id": "cừu"
+        },
+        "onion": {
+          "id": "củ hành"
         },
         "cheese": {
           "id": "phô mai"
@@ -188,11 +226,20 @@
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "những người"
+        },
+        "rhino": {
+          "id": "tê giác"
+        },
         "elephant": {
           "id": "voi"
         },
         "alligator": {
           "id": "cá sấu"
+        },
+        "trees": {
+          "id": "cây"
         }
       },
       "name": "Khu hoang dã"
@@ -218,6 +265,12 @@
       "fields": {
         "avocado": {
           "id": "quả bơ"
+        },
+        "onion": {
+          "id": "củ hành"
+        },
+        "ginger": {
+          "id": "gừng"
         }
       }
     },

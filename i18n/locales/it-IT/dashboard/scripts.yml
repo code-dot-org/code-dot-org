@@ -4048,6 +4048,28 @@ it:
           lessons:
             lesson-12:
               name: Conclusione
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduzione
+            lesson-12:
+              name: Conclusione
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Conclusione
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Conclusione
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Conclusione
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Valutazione
         csd-post-survey-2023:
           title: Sondaggio Post-corso
         focus-on-data-post-survey-2023:
@@ -4062,3 +4084,17 @@ it:
           title: Sondaggio Post-corso
         focus-on-creativity-post-survey-2023:
           title: Sondaggio Post-corso
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Personaggi
+            lessonGroup-4:
+              display_name: Variabili
+            lessonGroup-5:
+              display_name: Dati e simulazioni
+            lessonGroup-6:
+              display_name: Progetto di fine corso
+          description_audience: Da 9 a 13 anni
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.

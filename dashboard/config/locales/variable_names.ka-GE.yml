@@ -9,6 +9,7 @@ ka:
       age: ასაკი
       answer: პასუხი
       binary: ორობითი
+      birds: ჩიტები
       color: ფერი
       counter: მრიცხველი
       height: სიმაღლე
@@ -23,6 +24,7 @@ ka:
       repeat: გაიმეორეთ
       right: მარჯვნივ
       score: ქულა
+      shout: ყვირილი
       size: ზომა
       speed: სიჩქარე
       type: ტიპი

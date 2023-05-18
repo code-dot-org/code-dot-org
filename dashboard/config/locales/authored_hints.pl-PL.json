@@ -538,7 +538,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Jak przejść ten poziom?**\n\n-   Wystarczy nacisnąć przycisk „Zakończ”!",
           "repeat_every_ideas": "**Czy potrzebujesz pomysłów?**\n\n-   Wielokrotnie zmieniaj rozmiar tancerza, aby rósł.\n-   Wielokrotnie zmieniaj rotację tancerza, aby się obracał.\n\n_Można również użyć liczb ujemnych, aby uzyskać odwrotny efekt!_",
-          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzeń, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na „(Losowo)”, „(Następny)” lub „(Poprzedni)”.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzenia, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na '(Losowy)', '(Następny)' lub '(Poprzedni)'.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Naprzemienny blok znajduje się w kategorii „Tancerze”."
@@ -632,7 +632,7 @@
         "Dance_2019_09": {
           "validation": "**Jak przejść ten poziom?**\n\n-   Wystarczy nacisnąć przycisk „Zakończ”!",
           "repeat_every_ideas": "**Czy potrzebujesz pomysłów?**\n\n-   Wielokrotnie zmieniaj rozmiar tancerza, aby rósł.\n-   Wielokrotnie zmieniaj rotację tancerza, aby się obracał.\n\n_Można również użyć liczb ujemnych, aby uzyskać odwrotny efekt!_",
-          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzeń, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na „(Losowo)”, „(Następny)” lub „(Poprzedni)”.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzenia, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na '(Losowy)', '(Następny)' lub '(Poprzedni)'.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**Jak mam przejść ten poziom?**\n\n-   Postaraj się, aby na ekranie pojawił się tancerz.\n\n_Ten poziom kończy się po 4 taktach._",
@@ -10906,7 +10906,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Jak przejść ten poziom?**\n\n-   Wystarczy nacisnąć przycisk „Zakończ”!",
           "repeat_every_ideas": "**Czy potrzebujesz pomysłów?**\n\n-   Wielokrotnie zmieniaj rozmiar tancerza, aby rósł.\n-   Wielokrotnie zmieniaj rotację tancerza, aby się obracał.\n\n_Można również użyć liczb ujemnych, aby uzyskać odwrotny efekt!_",
-          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzeń, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na „(Losowo)”, „(Następny)” lub „(Poprzedni)”.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dodatkowe wyzwanie**\n\n-   Możesz również użyć tego nowego bloku zdarzenia, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na '(Losowy)', '(Następny)' lub '(Poprzedni)'.\n     <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Naprzemienny blok znajduje się w kategorii „Tancerze”."

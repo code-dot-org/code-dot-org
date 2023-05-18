@@ -19,6 +19,18 @@
         },
         "iste": {
           "name": "Normy ISTE pro studenty"
+        },
+        "c3ss": {
+          "name": "C3 Standardy sociálních studií"
+        },
+        "ngss": {
+          "name": "Vědecké standardy nové generace"
+        },
+        "csa": {
+          "name": "Koncepční rámec ČSA"
+        },
+        "ai4k12-2021": {
+          "name": "AI4K12 Vnitrostátní pokyny 2021"
         }
       }
     }

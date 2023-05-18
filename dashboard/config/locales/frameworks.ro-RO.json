@@ -19,6 +19,18 @@
         },
         "iste": {
           "name": "Standarde ISTE pentru Elevi"
+        },
+        "c3ss": {
+          "name": "Standarde de studii sociale C3"
+        },
+        "ngss": {
+          "name": "Standarde științifice de generație următoare"
+        },
+        "csa": {
+          "name": "Cadrul conceptual CSA"
+        },
+        "ai4k12-2021": {
+          "name": "AI4K12 Orientări Naționale 2021"
         }
       }
     }

@@ -19,6 +19,18 @@
         },
         "iste": {
           "name": "Standar ISTE untuk Murid"
+        },
+        "c3ss": {
+          "name": "Standar Studi Sosial C3"
+        },
+        "ngss": {
+          "name": "Standar Sains Generasi Berikutnya"
+        },
+        "csa": {
+          "name": "Kerangka Konseptual CSA"
+        },
+        "ai4k12-2021": {
+          "name": "Pedoman Nasional AI4K12 2021"
         }
       }
     }

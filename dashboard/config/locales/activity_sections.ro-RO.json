@@ -2707,6 +2707,9 @@
             "Aceste exerciții pot fi făcute și sub forma unei discuții în clasă, înainte de lecția despre drepturile de autor. Scrieți povestea sau scheciul pe tablă, pe măsură ce elevii vin cu idei noi."
           ]
         },
+        "90986348-020e-4b00-b92f-ba4160018feb": {
+          "name": "Partajare digitală"
+        },
         "3f9da29a-6132-4d1b-937a-5732b48eeb94": {
           "description": "_Aceasta nu este partajare, ci realizarea de noi copii!_",
           "tips": [
@@ -4717,6 +4720,9 @@
         "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
           "name": "Introducere"
         },
+        "3ff8ec4d-fe12-413a-975d-69e143845e37": {
+          "name": "Prietenii mei Robotici Loopy"
+        },
         "b1974523-e458-4364-aeb2-80f00e6de4bd": {
           "tips": [
             "\\*\\* În căutarea buclelor:\\*\\* Fiți atenți la elevii care folosesc bucle. Încercați să evitați să le corectați algoritmii sau să le sugerați o soluție, dar nu ezitați să îndrumați elevii spre modele care ar putea fi scurtate prin utilizarea unui cerc de repetare.Urmăriți elevii în timp ce parcurg codul. Există vreo eroare? Folosiți întrebările de depanare pentru a-i ajuta să găsească o soluție.-   Ce face?-   Ce ar trebui să facă?-   Ce vă spune asta?-   Funcționează la prima etapă?-   Funcționează la a doua etapă?-   Unde nu mai funcționează?"
@@ -4913,6 +4919,10 @@
         },
         "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
           "name": "Introducere"
+        },
+        "7416084b-fb76-4855-aabe-eeaf20181d79": {
+          "name": "Fotografierea datelor",
+          "progression_name": "Fotografierea datelor"
         },
         "4a782ed3-3443-4139-a1bd-88f562c4386e": {
           "tips": [
@@ -8501,6 +8511,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Carduri model în AI Lab",
           "tips": [
             null
           ]
@@ -11199,6 +11210,9 @@
           "name": "Prietenii mei roboții - Recapitulare",
           "description": "**Obiectiv:** În cadrul acestei recapitulări, elevii își vor aminti cât de intense sunt programele pentru activitatea „Prietenii mei roboții”.**Afișați:** Afișați **\\*Cheia simbolurilor** pe care am folosit-o în „Prietenii mei roboții”. Pentru fiecare dintre cele patru simboluri, rugați elevii să vă arate cum arată un robot care urmează instrucțiunile respective.\\<img alt=”” src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png”> style=”max-width: 300px;”>**Exemplificați:** Alături de toți elevii din clasă, scoateți un puzzle ușor din **\\*Idei de stivuire a paharelor** și programați împreună pentru a vă reaminti regulile și terminologia.În continuare, scoateți un puzzle care este puțin mai dificil, dar care necesită mulți pași, cum este cel de mai jos.\\<img alt=”” src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png”> style=”max-width: 300px;”>**Voluntariat:**Rugați un voluntar (sau un grup de voluntari) să ajute la programarea acestuia pe tablă. Dacă vor respecta cu strictețe regula „fără alte simboluri decât cele incluse în cheia simbolurilor”, această operațiune va dura ceva timp!**Afișați:** Acum afișați această imagine:\\<img src=”<https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png”> style=”max-width: 300px;”>Care este reacția clasei?\\*\\*Subiect: \\*\\* Elevii trebuie să aibă posibilitatea de a se gândi la modalități mai scurte de a transmite codul pe care urmează să îl creeze. (Această parte poate fi omisă dacă elevii dvs. încep să spună lucruri precum: „Mergi înainte de 6 ori”, deoarece aceasta va conduce la o discuție despre cum putem indica „de șase ori” cu ajutorul simbolurilor).După ce elevii au înțeles ideea de „repetare” a codului, predați-le vocabularul aferent. Nu uitați să le spuneți că de multe ori termenii „a repeta ceva” și „a face ceva în buclă” sunt utilizați interșanjabil."
         },
+        "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
+          "name": "Prietenii mei Robotici Loopy"
+        },
         "76533bba-6245-4429-b8ef-a406d2dd250b": {
           "description": "#### Introducere și exemplificare**Pregătire: \\*\\* Puneți la dispoziția grupurilor stive de pahare sau trapeze de hârtie.**Afișați:\\*\\* Afișați programul uneia dintre stivele de pahare realizate anterior sau folosiți-l pe cel de mai jos.![Soluția cu 3 pahare](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)**Reflectați:** Cereți elevilor să reflecteze în liniște cu privire la locul din program în care pot găsi un model de instrucțiuni care se repetă neîntrerupt (o repetiție după alta).**Grupați în perechi:** Întoarceți-vă către un coleg și partajați cu acesta unul dintre modelele repetitive pe care le-ați găsit.**Partajați:** Rugați câțiva elevi să partajeze modelele pe care le-au identificat. Încercați să evidențiați diferite abordări pentru gruparea modelelor. Pentru fiecare model, cereți-le elevilor să identifice de câte ori se repetă modelul.**Exemplificați:** Folosind unul dintre modelele care se repetă identificate de către elevi, arătați-le cum să încercuiască instrucțiunea sau modelul care se repetă, scrieți numărul de bucle lângă cerc, apoi ștergeți restul săgeților.![cod în buclă](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)Repetați până când întregul program este scurtat, apoi rescrieți programul într-un mod în care elevii să poată vedea cât de simple sunt instrucțiunile rezultate."
         },
@@ -11415,6 +11429,10 @@
         },
         "b4d7372a-86cd-4d90-855d-0c241617237f": {
           "description": "_Aceste însemnări ne ajută să ținem evidența răspunsurilor date, ceea ce este foarte bine, dar avem nevoie de timp pentru a le număra și a afla care opțiune a fost aleasă de către cei mai mulți sau de către cei mai puțini elevi. Imaginați-vă cum ar fi dacă cineva ne-ar arăta însemnările pentru toată școală. Am avea nevoie de foarte mult timp pentru a le număra!_"
+        },
+        "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
+          "name": "Fotografierea datelor",
+          "progression_name": "Fotografierea datelor"
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
           "description": "**Distribuiți**: Înmânați **\\*fișa de lucru** împreună cu pixuri și creioane de colorat. Îndrumați elevii către Code Studio sau proiectați nivelul pe tablă.",
@@ -13116,6 +13134,9 @@
             "Aceste exerciții pot fi făcute și sub forma unei discuții în clasă, înainte de lecția despre drepturile de autor. Scrieți povestea sau scheciul pe tablă, pe măsură ce elevii vin cu idei noi."
           ]
         },
+        "bba24018-1d90-4a18-b596-eaab2e50567e": {
+          "name": "Partajare digitală"
+        },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {
           "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.***Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?*-   *Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?*-   *În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
         },
@@ -13648,6 +13669,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Carduri model în AI Lab",
           "tips": [
             null
           ]

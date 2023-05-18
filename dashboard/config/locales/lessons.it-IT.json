@@ -1813,6 +1813,9 @@
           "name": "Lezione 6",
           "assessment_opportunities": "1.  **Usa Laboratorio IA per selezionare le caratteristica per addestrare un modello**\n\n<!---->\n\n    Ogni sercizio richiede un punteggio di precisione minimo per continuare. Controllare che gli studenti completino completamente ogni esercizio è sufficiente per verificare che abbiano raggiunto questo obiettivo.\n\n2.  **Usa gli strumenti di visualizzazione dei dati per decidere quali caratteristica includere durante l'addestramento di un modello**\n\n<!---->\n\n    Per valutare questo obiettivo, controlla nella guida alle attività i commenti a risposta libera."
         },
+        "csd7-2022/Numerical Data in AI Lab": {
+          "name": "Dati numerici in AI Lab"
+        },
         "csd7-2022/Issue Statements": {
           "name": "Definizione del problema (issue statement)"
         },
@@ -5289,6 +5292,9 @@
         },
         "csd7-2021/Similarity Models": {
           "name": "Modelli numerici"
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "name": "Dati numerici in AI Lab"
         },
         "csd7-2021/Mini-Project: Make a Machine Learning App": {
           "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione\n-   Stampa per ogni studente, le copie della guida alle attività"

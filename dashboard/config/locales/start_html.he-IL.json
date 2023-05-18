@@ -4,19 +4,23 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "כן",
-          "No": "לא"
+          "No": "לא",
+          "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "כן",
-          "No": "לא"
+          "No": "לא",
+          "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "כן",
-          "No": "לא"
+          "No": "לא",
+          "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "כן",
-          "No": "לא"
+          "No": "לא",
+          "cute": "חמוד"
         },
         "CSD U1 IO Story_2021": {
           "Name": "שם",
@@ -133,10 +137,14 @@
           "text": "טקסט"
         },
         "CSD U1 processing live_2021": {
-          "bear": "דוב"
+          "bear": "דוב",
+          "walking": "הליכה",
+          "rat": "עכברוש"
         },
         "CSD U1 processing live_2022": {
-          "bear": "דוב"
+          "bear": "דוב",
+          "walking": "הליכה",
+          "rat": "עכברוש"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "סליחה!"
@@ -209,12 +217,18 @@
         "CSD U1 storage outfit_2021": {
           "pink": "ורוד",
           "green": "ירוק",
-          "black": "שחור"
+          "black": "שחור",
+          "Clear": "נקה",
+          "white": "לבן",
+          "purple": "סגול"
         },
         "CSD U1 storage outfit_2022": {
           "pink": "ורוד",
           "green": "ירוק",
-          "black": "שחור"
+          "black": "שחור",
+          "Clear": "נקה",
+          "white": "לבן",
+          "purple": "סגול"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -309,7 +323,9 @@
           "left": "שמאלה",
           "right": "ימינה",
           "red": "אדום",
-          "green": "ירוק"
+          "green": "ירוק",
+          "yellow": "צהוב",
+          "purple": "סגול"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "on": "ב",
@@ -335,7 +351,8 @@
         "CSD U6 - Combine Inputs - PracC_2222": {
           "green": "ירוק",
           "blue": "כחול",
-          "orange": "תפוז"
+          "orange": "תפוז",
+          "yellow": "צהוב"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "זמן קצר",
@@ -391,7 +408,8 @@
           "F": "ה",
           "G": "ו",
           "A": "א",
-          "B": "ב"
+          "B": "ב",
+          "Note:": "הערה:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "ג",
@@ -495,10 +513,12 @@
           "0": "0"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "שחור"
+          "black": "שחור",
+          "white": "לבן"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "שחור"
+          "black": "שחור",
+          "white": "לבן"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "שמח"
@@ -534,7 +554,8 @@
           "low": "נמוך"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "עדכון"
+          "Update": "עדכון",
+          "value": "ערך"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "הצלחת!"
@@ -609,16 +630,20 @@
           "Success!": "הצלחה!"
         },
         "CSD U6 analog light": {
-          "Update": "עדכון"
+          "Update": "עדכון",
+          "value": "ערך"
         },
         "CSD U6 analog light_2018": {
-          "Update": "עדכון"
+          "Update": "עדכון",
+          "value": "ערך"
         },
         "CSD U6 analog light_2019": {
-          "Update": "עדכון"
+          "Update": "עדכון",
+          "value": "ערך"
         },
         "CSD U6 analog light_2021": {
-          "Update": "עדכון"
+          "Update": "עדכון",
+          "value": "ערך"
         },
         "CSD U6 array piano": {
           "C": "ג",
@@ -1010,19 +1035,22 @@
           "About": "אודות",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "אודות",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "אודות",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "הסתר",
@@ -1050,19 +1078,22 @@
           "About": "אודות",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "אודות",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "אודות",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו"
+          "About Us": "אודותינו",
+          "Why?": "למה?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -1432,6 +1463,63 @@
           "cloudy": "מעונן",
           "night": "לילה",
           "dusk": "דמדומים"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "שקט"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "ערך"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Sports": "ספורט"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Sports": "ספורט"
         }
       }
     }

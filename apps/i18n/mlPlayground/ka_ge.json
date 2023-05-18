@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "მინ",
   "columnDetailsMaximumValue": "მაქს",
   "dataCardLastUpdated": "ბოლო განახლება",
+  "uniqueOptionsWarningNotice": "შენიშვნა",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -27,16 +28,25 @@
         },
         "day": {
           "id": "დღე"
+        },
+        "shoe": {
+          "id": "ფეხსაცმლის"
         }
       }
     },
     "salsa_toy": {
       "fields": {
+        "onion": {
+          "id": "ხახვი"
+        },
         "avocado": {
           "id": "ავოკადო"
         },
         "corn": {
           "id": "სიმინდი"
+        },
+        "beans": {
+          "id": "ლობიო"
         },
         "lime": {
           "id": "ლაიმი"
@@ -45,11 +55,17 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "სოკო"
+        },
         "lobster": {
           "id": "ომარი"
         },
         "bacon": {
           "id": "ბეკონი"
+        },
+        "cheese": {
+          "id": "ყველი"
         },
         "meat": {
           "id": "ხორცი"
@@ -60,6 +76,9 @@
       "fields": {
         "color": {
           "id": "ფერი"
+        },
+        "music": {
+          "id": "მუსიკა"
         },
         "food": {
           "id": "საჭმელი"
@@ -102,11 +121,23 @@
     },
     "salad_toy": {
       "fields": {
+        "tomato": {
+          "id": "პომიდორი"
+        },
         "avocado": {
           "id": "ავოკადო"
         },
         "chicken": {
           "id": "ქათამი"
+        },
+        "fruit": {
+          "id": "ხილი"
+        },
+        "beans": {
+          "id": "ლობიო"
+        },
+        "cheese": {
+          "id": "ყველი"
         }
       }
     },
@@ -137,6 +168,15 @@
       "fields": {
         "chicken": {
           "id": "ქათამი"
+        },
+        "lamb": {
+          "id": "ცხვრის"
+        },
+        "onion": {
+          "id": "ხახვი"
+        },
+        "cheese": {
+          "id": "ყველი"
         }
       }
     },
@@ -151,6 +191,9 @@
       "fields": {
         "Internet": {
           "id": "ინტერნეტი"
+        },
+        "Writing": {
+          "id": "წერა"
         }
       }
     },
@@ -182,6 +225,9 @@
         "rhino": {
           "id": "მარტორქა"
         },
+        "elephant": {
+          "id": "სპილო"
+        },
         "alligator": {
           "id": "ალიგატორი"
         },
@@ -201,6 +247,12 @@
       "fields": {
         "avocado": {
           "id": "ავოკადო"
+        },
+        "onion": {
+          "id": "ხახვი"
+        },
+        "ginger": {
+          "id": "კოჭა"
         }
       }
     },
@@ -217,6 +269,9 @@
         },
         "Internet": {
           "id": "ინტერნეტი"
+        },
+        "Writing": {
+          "id": "წერა"
         },
         "Achievements": {
           "id": "მიღწევები"
