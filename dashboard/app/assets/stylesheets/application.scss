@@ -2762,6 +2762,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
   .question-header {
     margin-left: $multi-left-margin;
+    padding-bottom: 16px;
   }
 
   &.no-title {
@@ -2851,7 +2852,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       font-size: 16px;
       line-height: 24px;
-      margin-top: 16px;
       margin-bottom: 16px;
 
       @media #{$information-tablet-tall} {
