@@ -205,7 +205,7 @@ export default function CurriculumQuickAssign({
           id="decide-later"
           onChange={toggleDecideLater}
         />
-        <Heading3>{i18n.assignACurriculum()}</Heading3>
+        <Heading3>{i18n.assignCurriculum()}</Heading3>
         <BodyOneText>{i18n.useDropdownMessage()}</BodyOneText>
       </div>
       <CurriculumQuickAssignTopRow
