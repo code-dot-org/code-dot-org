@@ -10,6 +10,9 @@ class Projects
   class NotFound < Sinatra::NotFound
   end
 
+  class ValidationError < StandardError
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -17,6 +20,9 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    # test this
+    validate_thumbnail_url(nil, value['thumbnailUrl'])
+
     project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
@@ -93,6 +99,8 @@ class Projects
 
       raise ProfanityPrivacyError.new(share_failure.content) if share_failure
     end
+
+    validate_thumbnail_url(channel_id, value['thumbnailUrl'])
 
     row = {
       value: value.to_json,
@@ -456,5 +464,14 @@ class Projects
     # Others have no content on S3, and may be just-created stub projects.
     # Report these as 'unknown'.
     'unknown'
+  end
+
+  def validate_thumbnail_url(channel_id, thumbnail_url)
+    return true unless thumbnail_url
+
+    expected_thumbnail_url = "/v3/files/#{channel_id}/.metadata/thumbnail.png"
+    raise ValidationError unless thumbnail_url == expected_thumbnail_url
+
+    true
   end
 end
