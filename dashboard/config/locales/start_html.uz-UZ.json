@@ -4,19 +4,23 @@
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
           "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
           "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser_2021": {
           "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser_2022": {
           "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "cute": "yoqimli"
         },
         "CSD U1 IO Story_2021": {
           "Name": "Ismingiz",
@@ -135,10 +139,14 @@
           "text": "Matn"
         },
         "CSD U1 processing live_2021": {
-          "bear": "ayiq"
+          "bear": "ayiq",
+          "walking": "yurish",
+          "rat": "kalamush"
         },
         "CSD U1 processing live_2022": {
-          "bear": "ayiq"
+          "bear": "ayiq",
+          "walking": "yurish",
+          "rat": "kalamush"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "To‘g’ri!",
@@ -215,14 +223,16 @@
           "pink": "pushti",
           "green": "yashil",
           "black": "qora",
-          "purple": "siyohrang"
+          "purple": "siyohrang",
+          "Clear": "Clear"
         },
         "CSD U1 storage outfit_2022": {
           "white": "oq",
           "pink": "pushti",
           "green": "yashil",
           "black": "qora",
-          "purple": "siyohrang"
+          "purple": "siyohrang",
+          "Clear": "Clear"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -344,7 +354,8 @@
           "orange": "apelsin"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "jim"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "short": "qisqa",
@@ -398,7 +409,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Eslatma:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -545,7 +557,8 @@
           "text": "Matn"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Siz buni amalladingiz!"
@@ -620,16 +633,20 @@
           "Success!": "Muvaffaqiyat!"
         },
         "CSD U6 analog light": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1341,13 +1358,15 @@
           "W": "W",
           "A": "A",
           "yes": "ha",
-          "no": "yo‘q"
+          "no": "yo‘q",
+          "head": "bosh"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "W",
           "A": "A",
           "yes": "ha",
-          "no": "yo‘q"
+          "no": "yo‘q",
+          "head": "bosh"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Axmoqona"
@@ -1432,6 +1451,54 @@
           "snow": "qor",
           "cloudy": "bulutli",
           "night": "qorong‘u"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "qadriyat"
         }
       }
     }

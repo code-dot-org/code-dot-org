@@ -17,6 +17,7 @@
   "trainModelHeading": "Trénovanie",
   "resultsTableFeatureHeader": "Vlastnosti",
   "predictButton": "Predpoveď",
+  "uniqueOptionsWarningNotice": "Poznámka",
   "datasets": {
     "medical_priority": {
       "fields": {

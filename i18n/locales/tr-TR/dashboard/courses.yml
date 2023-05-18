@@ -242,6 +242,31 @@ tr:
           description_teacher: "## Hoş geldiniz\n\nEğitimcilerin CS Discoveries'i öğretmeye başlaması için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi kursuna hoş geldiniz! Bu çevrimiçi kursu tamamladıktan sonra öğrencilerinizle birlikte **Code.org'un Bilgisayar Bilimi Keşifleri kursunu** öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n-   **Kendi hızınızda gidin:** Bu kendi hızınızda kurs, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, **içerikle kendi hızınızda etkileşim kurmanızı** öneririz.\n\n-   **İçeriğinizi seçin:** Bu profesyonel öğrenim kursunun içeriği, hem Code.org hem de CS Discoveries'te yeni olan öğretmenler için önerilen ilerleme şeklinde düzenlenmiştir. Ancak, **ihtiyaçlarınızı en iyi karşılayan sırayla içerikle etkileşim kurabilirsiniz.** Başlamadan önce bu profesyonel öğrenim kursu hakkında daha fazla bilgi edinmek için tüm öğretmenlere **kısa karşılama birimiyle başlamalarını** öneririz."
           version_title: "'23-'24"
         pl-csd-summer-2023:
+          description_student: |-
+            **Olacaksın:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+          description_teacher: |-
+            **Katılımcılar olacaklar:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+        virtual-pl-csd-summer-2023:
+          description_student: |-
+            **Olacaksın:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
           description_teacher: |-
             **Katılımcılar olacaklar:**
 

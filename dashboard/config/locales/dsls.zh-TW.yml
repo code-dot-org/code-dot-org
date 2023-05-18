@@ -7014,7 +7014,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7024,7 +7024,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7034,7 +7034,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7044,7 +7044,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7054,7 +7054,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7064,7 +7064,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}

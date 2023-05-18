@@ -2592,6 +2592,21 @@ fa:
           DIR:
             right: راست ↻
             left: چپ ↺
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: پاک کردن عنوانها
       storylab_setForegroundEffect2:

@@ -191,6 +191,7 @@ cs:
       Headings: Záhlaví
       Hello World: Ahoj, světe
       How to Create a Simple Function: Jak vytvořit jednoduchou funkci
+      How to Make a Sprite: Jak si vyrobit Sprite
       Ice Age Loops: Cykly Doby ledové
       Images and Sounds: Obrázky a zvuky
       Import Your Model: Importuj svůj model
@@ -208,6 +209,8 @@ cs:
       Intro to Side Scrollers: Úvod k side scrollerům
       Intro to Sprites: Úvod ke sprajtům
       Intro to Variables: Úvod do proměnných
+      Introducing Sprite Lab: Představujeme Sprite Lab
+      Introduction to Arrays: Úvod do polí
       Isaac's Survey Data: Data Isaacova průzkumu
       Iteration and Parameters: Iterace a parametry
       Keep On Dancing!: Tancuj dál!
@@ -384,6 +387,7 @@ cs:
       'Technique: Frequency Analysis': 'Technika: Frekvenční analýza'
       Terminology Recap: Rekapitulace terminologie
       Text Compression: Komprese textu
+      The Animation Tab: Karta Animace
       The Artist in Code Studio: Umělec v Code Studiu
       The Big Event - Unplugged Activity: Velká událost – aktivita bez počítače
       The Buzzer: Bzučák
@@ -407,6 +411,7 @@ cs:
       Using Random Numbers: Používání náhodných čísel
       Using Training Data: Používání trénovacích dat
       Using the LED: Používání LED
+      Using the Repeat Block: Použití bloku opakování
       Using the Switch: Používání přepínače
       Variables: Proměnné
       Velocity: Rychlost
