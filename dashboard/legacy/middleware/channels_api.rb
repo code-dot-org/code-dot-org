@@ -102,13 +102,17 @@ class ChannelsApi < Sinatra::Base
       data.delete('shouldPublish')
     end
 
-    id = project.create(
-      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
-      ip: request.ip,
-      type: data['projectType'],
-      published_at: published_at,
-      remix_parent_id: remix_parent_id,
-    )
+    begin
+      id = project.create(
+        data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+        ip: request.ip,
+        type: data['projectType'],
+        published_at: published_at,
+        remix_parent_id: remix_parent_id,
+        )
+    rescue Projects::ValidationError
+      bad_request
+    end
 
     redirect "/v3/channels/#{id}", 301
   end

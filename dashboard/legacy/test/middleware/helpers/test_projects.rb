@@ -227,4 +227,13 @@ class ProjectsTest < Minitest::Test
     updated_value = project.update(channel_id, {'thumbnailUrl' => expected_thumbnail_url}, 123)
     assert_equal expected_thumbnail_url, updated_value['thumbnailUrl']
   end
+
+  def test_project_throws_on_create_with_invalid_thumbnail_url
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+
+    assert_raises Projects::ValidationError do
+      project.create({'thumbnailUrl' => 'bad.com'}, ip: 123)
+    end
+  end
 end

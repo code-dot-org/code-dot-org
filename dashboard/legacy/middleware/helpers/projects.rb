@@ -20,7 +20,6 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
-    # test this
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
     project_type = type || level&.project_type
@@ -468,6 +467,9 @@ class Projects
 
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
+
+    # Currently, we don't generate thumbnail URLs until a project exists
+    raise ValidationError if thumbnail_url && !channel_id
 
     expected_thumbnail_url = "/v3/files/#{channel_id}/.metadata/thumbnail.png"
     raise ValidationError unless thumbnail_url == expected_thumbnail_url
