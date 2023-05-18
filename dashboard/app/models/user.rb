@@ -1312,14 +1312,14 @@ class User < ApplicationRecord
 
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
-      # hides the lesson
-      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
-    else
+    if script_sections.empty?
       # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    else
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
+      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     end
   end
 
