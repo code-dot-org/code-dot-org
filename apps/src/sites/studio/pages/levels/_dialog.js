@@ -22,9 +22,8 @@ $(document).ready(() => {
 
     // Are we a student viewing their own previously-submitted work?
     if (appOptions.submitted) {
-      $('.nextLevelButton')?.hide();
       // show the Unsubmit button.
-      $('.unsubmitButton')?.show();
+      $('.unsubmitButton').show();
     }
 
     // Set the entire page background to be light grey.
