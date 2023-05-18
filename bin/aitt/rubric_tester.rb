@@ -13,7 +13,8 @@ VALID_GRADES = ["Extensive Evidence", "Convincing Evidence", "Limited Evidence",
 
 def command_line_options
   options = {
-    output_filename: 'report.html'
+    output_filename: 'report.html',
+    max_num_students: 100
   }
   OptionParser.new do |opts|
     opts.banner = "Usage: #{$0} [options]"
@@ -52,6 +53,12 @@ def command_line_options
       options[:passing_grades] = VALID_GRADES[0...num_passing_grades]
     end
 
+    opts.on(
+      '-s', '--max-num-students NUM', Integer, 'Maximum number of students to grade. Defaults to 100 students.'
+    ) do |max_num_students|
+      options[:max_num_students] = max_num_students
+    end
+
     opts.on("-h", "--help", "Prints this help message") do
       puts opts
       exit
@@ -69,8 +76,8 @@ def read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_
   [prompt, standard_rubric, split_rubric, merge_map]
 end
 
-def get_student_files
-  Dir.glob('sample_code/*.js').sort
+def get_student_files(max_num_students)
+  Dir.glob('sample_code/*.js').sort.take(max_num_students)
 end
 
 def get_expected_grades(expected_grades_file)
@@ -198,7 +205,7 @@ def main
   system("rm -f cached_responses/*") unless options[:use_cached]
 
   prompt, standard_rubric, split_rubric, merge_map = read_inputs(prompt_file, standard_rubric_file, split_rubric_file, merge_map_file)
-  student_files = get_student_files
+  student_files = get_student_files(options[:max_num_students].to_i)
   expected_grades = get_expected_grades(expected_grades_file)
 
   validate_rubrics(expected_grades, standard_rubric, split_rubric, merge_map, options)
