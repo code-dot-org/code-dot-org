@@ -20,13 +20,13 @@ def command_line_options
     opts.banner = "Usage: #{$0} [options]"
 
     opts.on(
-      '-o', '--output_filename FILENAME', String, 'Output filename within output directory'
+      '-o', '--output-filename FILENAME', String, 'Output filename within output directory'
     ) do |output_filename|
       options[:output_filename] = output_filename
     end
 
     opts.on(
-      '-c', '--use_cached', 'Use cached responses from the API.',
+      '-c', '--use-cached', 'Use cached responses from the API.',
       'This can be useful when debugging a problem with the tool,',
       'or if one of the API requests failed in the previous run.'
     ) do
@@ -46,7 +46,7 @@ def command_line_options
     end
 
     opts.on(
-      '-p', '--num_passing_grades N', Integer, 'Number of grades which are considered passing.',
+      '-p', '--num-passing-grades N', Integer, 'Number of grades which are considered passing.',
       'If specified, report based on whether the pass/fail result is accurate for each criteria.',
       'For example, N=2 means that Extensive Evidence and Convincing Evidence are both passing.'
     ) do |num_passing_grades|
