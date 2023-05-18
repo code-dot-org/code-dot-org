@@ -2,18 +2,16 @@
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    // Include all .js and .jsx files that ts files reference.
+    // Include all folders with .js and .jsx files that ts files reference.
     // If you need to import a .js or .jsx file into a .ts or .tsx file, you
-    // can add it (or its folder if we have many from the same folder) here to enable the syntax:
+    // can add its folder here to enable the syntax:
     // import {component} from "folder/component";
     "./src/music/**/*.js*",
-    "./src/utils.js",
-    "./src/redux.js",
-    "./src/javalab/JavalabFileHelper.js",
-    "./src/javalab/DisplayTheme.js",
-    "./src/util/experiments.js",
-    "./src/lib/util/UserPreferences.js",
-    "./src/templates/FontAwesome.jsx"
+    "./src/*.js*",
+    "./src/javalab/**/*.js",
+    "./src/lib/util/**/*.js",
+    "./src/util/**/*.js*",
+    "./src/templates/**/*.js*"
   ],
   "compilerOptions": {
     "jsx": "react",
