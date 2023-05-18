@@ -3,7 +3,10 @@
 @no_circle
 Feature: Javalab Demo Mode
 
-  Scenario: Solve captcha challenge
+  # Note this only tests showing a captcha to unverified teachers
+  # (rather than the full flow of submitting a captcha and seeing code executed),
+  # as we cannot solve the captcha with automated test software.
+  Scenario: Present captcha challenge
     When I open my eyes to test "Javalab Demo Mode"
     Given I create a teacher named "Ms_Frizzle"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/4"
@@ -14,10 +17,4 @@ Feature: Javalab Demo Mode
     And I switch to the first iframe once it exists
     And I wait to see ".recaptcha-checkbox"
     Then I see no difference for "initial modal view" using stitch mode "none"
-    When I click ".recaptcha-checkbox"
-    And I switch to the default content
-    And I wait until "#uitest-recaptcha-submit" is not disabled
-    Then I see no difference for "captcha submitted" using stitch mode "none"
-    When I click selector "#uitest-recaptcha-submit"
-    And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
     Then I close my eyes
