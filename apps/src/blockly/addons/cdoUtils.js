@@ -175,6 +175,8 @@ function testJsonSerialization(workspace) {
       xmlSerialization: xmlSerialization,
     });
   }
+  tempJsonWorkspace.dispose();
+  tempXmlWorkspace.dispose();
   Blockly.Events.enable();
 }
 function sortBlocksById(blocks) {
