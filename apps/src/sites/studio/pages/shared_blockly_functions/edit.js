@@ -50,7 +50,7 @@ const blockXml = `<xml>
   </block>
 </xml>`;
 
-Blockly.Xml.domToBlockSpace(
+Blockly.cdoUtils.loadBlocksToWorkspace(
   Blockly.mainBlockSpace,
   Blockly.Xml.textToDom(blockXml)
 );
