@@ -1,6 +1,6 @@
 {
   "key": "focus-on-impact-in-society",
-  "display_name": "focus-on-impact-in-society",
+  "display_name": "Focus on Impact in Society",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": null,
-  "image": "https://images.code.org/8c0b6b09b51b4d45e609af01fde3da84-ImpactOnSociety.png",
+  "image": "https://images.code.org/977b3b89b70b54d36f14c590c11ab9f9-Impact on Society.png",
   "cs_topic": "app_design,artificial_intelligence",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
