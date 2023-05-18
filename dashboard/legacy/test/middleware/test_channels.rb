@@ -467,6 +467,11 @@ class ChannelsTest < Minitest::Test
   #   assert_equal 400, last_response.status
   # end
   #
+  # def test_create_with_good_thumbnail_url_succeeds
+  #   post '/v3/channels', {thumbnailUrl: '/v3/files/parentChannelId123/.metadata/thumbnail.png'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+  #   assert last_response.redirection?
+  # end
+  #
   # def test_create_with_bad_thumbnail_fails
   #   post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   #   assert_equal 400, last_response.status

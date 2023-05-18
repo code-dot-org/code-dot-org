@@ -238,4 +238,14 @@ class ProjectsTest < Minitest::Test
   #     project.create({'thumbnailUrl' => 'bad.com'}, ip: 123)
   #   end
   # end
+  #
+  # def test_project_create_succeeds_with_valid_thumbnail_url
+  #   signedin_storage_id = create_storage_id_for_user(20)
+  #   project = Projects.new(signedin_storage_id)
+  #
+  #   expected_thumbnail_url = '/v3/files/parentChannelId123/.metadata/thumbnail.png'
+  #   channel_id = project.create({'thumbnailUrl' => expected_thumbnail_url}, ip: 123)
+  #
+  #   assert_equal expected_thumbnail_url, project.get(channel_id)['thumbnailUrl']
+  # end
 end
