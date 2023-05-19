@@ -1305,6 +1305,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   secretPicturePath: serverStudent.secret_picture_path,
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
+  userType: serverStudent.user_type,
 });
 
 /**
