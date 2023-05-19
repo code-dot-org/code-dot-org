@@ -17,14 +17,32 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
-      if (
-        newValue.length > 0 &&
-        newValue.charAt(0) !== '"' &&
-        newValue.charAt(newValue.length - 1) !== '"'
-      ) {
-        newValue = `"${newValue}"`;
+      const options = this.getOptions(true);
+      let isValueValid = false;
+      options.forEach(option => {
+        if (option[1] === newValue) {
+          isValueValid = true;
+        } else if (option[1] === `"${newValue}"`) {
+          newValue = `"${newValue}"`;
+          isValueValid = true;
+        }
+      });
+
+      if (!isValueValid) {
+        if (this.sourceBlock_) {
+          console.warn(
+            "Cannot set the dropdown's value to an unavailable option." +
+              ' Block type: ' +
+              this.sourceBlock_.type +
+              ', Field name: ' +
+              this.name +
+              ', Value: ' +
+              newValue
+          );
+        }
+        return null;
       }
-      return super.doClassValidation_(newValue);
+      return newValue;
     }
   }
 
