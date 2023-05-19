@@ -16,41 +16,41 @@ Během kampaně Hodina kódu může vaše společnost přispívat k širšímu p
 
 Chcete-li začít, podívejte se na níže uvedené kroky a na našeho [průvodce pro partnerské firmy,](/files/hoc-corporate-toolkit.pdf) kde najdete více o tom, jak ve své firmě zajistit větší vášeň pro Hodinu programování.
 
-- [Povzbuďte zaměstnance v tom, aby se stali dobrovolníky ve třídě](#encourage-employees)
-- [Propojte svou společnost se školou](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Uspořádejte vlastní Hodinu kódu](#host-hour-of-code)
 - [Propagujte Hodinu kódu](#promote-hour-of-code)
 - [Další způsoby, jak podpořit Hodinu kódu](#support-hour-of-code)
 
 * * *
 
-<a id="encourage-employees"></a>
-
-## Povzbuďte zaměstnance v tom, aby se stali dobrovolníky ve třídě
-
-[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
-
-Jedním z nejpříjemnějších způsobů, jak se zúčastnit Hodiny programování, je zapojit se jako dobrovolník do některé místní třídy, ať už osobní nebo virtuální. A co je nejlepší: chcete-li se zapojit jako dobrovolník, nemusíte být inženýr. I tak můžete poskytovat plnohodnotný prožitek studentům tím, že budete sdílet svůj vlastní kariérní prožitek a to, jaký vliv má počítačová věda nebo technika na Vaši roli.
-
-[<button>Zaregistrovat se jako dobrovolník</button>]({{ urls/volunteer }})
-
-Až se dobrovolník zaregistruje, učitel si bude moci prohlédnout jeho profil na naší [mapě dobrovolníků](https://code.org/volunteer/local) – takže profily by měly být podávány pokud možno co nejúplnější. Jestliže budete vhodným pro jeho třídu, kontaktuje Vás učitel prostřednictvím platformy (učiteli nikdy nesdělíme Vaši e-mailovou adresu). Přímo s učitelem můžete koordinovat podrobnosti ohledně toho, jak [se co nejlépe stát dobrovolníkem u jeho třídy](https://hourofcode.com/us/how-to/volunteers).
-
-Další návody k dobrovolnické práci a vzory zpráv k povzbudení Vaší firmy do Hodiny programování najdete v našem [průvodci pro firemní partnery]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
 <a id="connect-with-a-school"></a>
 
-## Propojte svou společnost se školou
+## Connect with a local school
 
-Abyste se spojili s třídou nebo školou, nemusíte používat naši mapu dobrovolníků. Často doporučujeme začínat lokálně. Uvažte, zda jsou nějaké školy, k nimž máte Vy nebo Vaši zaměstnanci silný vztah například jako k alma mater, dětské škole, nebo k organizaci nebo škole zaměřené na službu nějaké populaci, která byla v počítačových vědách vždy nedostatečně zastoupena.
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-Odtamtud můžete navštívit webové stránky školy a najít příslušné kontakty, s nimiž se budete moci spojit, jako například vedení jako ředitele školy nebo zástupce ředitele školy, učitele technologií nebo počítačových věd, nebo i sdružení rodičů a přátel školy. Také můžete navázat spolupráci s některou z organizací jako jsou Boys & Girls Clubs of America, s některou větví YMCA a podobně a pořádat akci společně.
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-Jestliže nemáte možnost spojit se se školou, [kontaktujte nás](https://support.code.org/hc/en-us/requests/new) a pokud to bude možné, spojíme Vás s některým z našich místních partnerů.
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
+<a id="encourage-employees"></a>
+
+## Encourage employees to volunteer with a classroom
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+
+[<button>Zaregistrovat se jako dobrovolník</button>]({{ urls/volunteer }})
+
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -83,7 +83,6 @@ Byli jsme svědky událostí, které probíhaly [virtuálně](https://hourofcode
 - Vysvětlete, jak technologie ovlivňují náš život, a uveďte příklady, které by mohly zaujmout všechny studenty bez rozdílu – zmiňte se o technologiích, která zachraňují životy, pomáhají lidem, spojují je apod.
 - Pokud jste technologická firma, předveďte zábavné, inovativní produkty, na kterých vaše společnost pracuje. Pokud máte jiné zaměření, pohovořte o tom, jak vaše firma využívá technologie k řešení problémů a dosahování cílů.
 - Pozvěte softwarové inženýry z Vaší společnosti, aby promluvili o tom, proč se rozhodli studovat počítačovou vědu, a o projektech, na kterých pracují.
-- V případě, že se na události bude podílet váš personál nebo vyšlete dobrovolníky do místní školy, zvažte objednání [speciálních triček](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more), která si zaměstnanci obléknou.
 
 ### 3. Naplánujte všechno s ohledem na technické požadavky
 
@@ -163,7 +162,7 @@ Pomáhejte zvyšovat povědomí o počítačové vědě pomocí tohoto vzorovéh
 - Když jste napsali svůj úplně první řádek programového kódu, změnilo vám to život? Pomozte studentům ve svém okolí napsat svůj první řádek při události #HourOfCode. https://code.org/volunteer
 - Umíte programovat? Jaké bylo naučit se to? Inspirujte studenta ze svého okolí tím, že mu pomůžete absolvovat jeho první #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Zjistěte si více</a> o plakátech, videích, nálepkách a dalších způsobech, jak můžete svoji událost propagovat ve svém okolí.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

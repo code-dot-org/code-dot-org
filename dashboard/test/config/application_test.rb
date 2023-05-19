@@ -6,7 +6,7 @@ class ApplicationTest < ActiveSupport::TestCase
     english_strings = {
       "data" => {
         "test" => {
-          "example": "english"
+          example: "english"
         }
       }
     }
@@ -24,7 +24,7 @@ class ApplicationTest < ActiveSupport::TestCase
     translated_strings = {
       "data" => {
         "test" => {
-          "example": "translated"
+          example: "translated"
         }
       }
     }

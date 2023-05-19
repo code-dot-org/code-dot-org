@@ -34,16 +34,15 @@
     }
   ]
 
+-# As of 2023 Twitter no longer supports tweet collection embeds.
+-# To account for this we'll feature one tweet and link out to the collection.
 -if @language == 'en'
   .section-wrapper
     .article-wrapper
-      %article.highlights-single
-        %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256"}
+      %article
+        =view :home_twitter_embed_single
+        %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256"}
           =hoc_s(:highlights_header)
-      %article.highlights-scroll
-        %a.twitter-timeline{data: {chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256", height: "100%"}
-          =hoc_s(:highlights_header)
-      %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
     .highlights-column
       .highlight-tiles
         - highlights.each do |item|
@@ -58,13 +57,10 @@
   -# (ISO_3166-1_alpha-2 codes). We should change it to a different code later.
   .row
     .col-md-8
-      %div.highlights-single
-        %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/1299406095904116742"}
+      %div
+        =view :home_twitter_embed_single_es
+        %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/1299406095904116742"}
           =hoc_s(:highlights_header)
-      %div.highlights-scroll
-        %a.twitter-timeline{data: {chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/1299406095904116742", height: "100%"}
-          =hoc_s(:highlights_header)
-      %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
 -else
   -# Highlights
   %br/

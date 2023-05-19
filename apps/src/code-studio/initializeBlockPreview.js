@@ -8,7 +8,7 @@ function update(blockSpace, container, editor) {
     // catch and ignore all errors.
     var xml = Blockly.Xml.textToDom(editor.getValue());
     blockSpace.clear();
-    Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, xml);
   } catch (e) {
     return;
   }
@@ -20,13 +20,13 @@ function update(blockSpace, container, editor) {
   blockSpace.blockSpaceEditor.svgResize();
 }
 
-module.exports = function(editor, container) {
+module.exports = function (editor, container) {
   var xml = Blockly.Xml.textToDom(editor.getValue() || '<xml></xml>');
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
-    noScrolling: true
+    noScrolling: true,
   });
 
-  editor.on('update', function() {
+  editor.on('update', function () {
     update(blockSpace, container, editor);
   });
 

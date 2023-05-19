@@ -26,6 +26,8 @@ mk:
   cancel: "Откажи"
   or: "или"
   continue: 'Продолжи'
+  signup_form:
+    email_preference_privacy: "(Погледнете ја нашата политика за приватност)"
   signin_form:
     submit: 'Најави се'
   signinsection:
@@ -77,4 +79,7 @@ mk:
       subjects:
         cs: 'Компјутерски науки'
         math: 'Математика'
+  course_offering:
+    headers:
+      csf: 'Основи на CS'
   copy: 'копирај'

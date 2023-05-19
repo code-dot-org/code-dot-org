@@ -99,7 +99,7 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://code.org/certificates?script=mc) z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Następne Kroki",
@@ -149,7 +149,7 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://code.org/certificates?script=mc) z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Następne Kroki",
@@ -222,8 +222,8 @@
           "description": "Masz dwie karteczki samoprzylepne. Na jednej napisz jedną rzecz, której nauczyłeś się dzisiaj o kodowaniu.\nPo drugie, napisz jedną rzecz, której nauczyłeś się dzisiaj o poezji.\n\nPodziel się z całą klasą, podnosząc rękę do góry, odpowiadając na pytanie: Czego jeszcze masz nadzieję mógłbyś się nauczyć o kodowaniu i informatyce?"
         },
         "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
-          "name": "Budowanie atmosfery",
-          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
+          "name": "Ustawianie sceny",
+          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
@@ -255,15 +255,40 @@
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Poza Godziną Kodowania",
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
+        },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Ustawianie sceny",
+          "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_W tym ćwiczeniu będziemy dobrze się bawić tworząc interaktywny świat pełen zabawnych postaci zwanych duszkami. Będziesz w stanie sprawiać, by duszki mówiły różne rzeczy korzystając z \"dymków z wypowiedziami\", jakie można zobaczyć w komiksie lub w powieści graficznej i nauczysz się odpowiadać automatycznie, gdy Ty lub ktoś inny je klika._\n\n_Dzisiaj będziecie pisać \"kod\", oznaczający zestaw instrukcji, które komputer jest w stanie zrozumieć. Pisząc opowieść musisz uważnie dobierać słowa. Gdy będziesz pisał kod, musisz uważnie zastanawiać się nad tym, jakie instrukcje przekazujesz komputerowi_",
+          "tips": [
+            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów, najlepiej jest wskoczyć tak szybko, jak to możliwe."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Ogólne wsparcie",
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Witaj świecie",
+          "progression_name": "Witaj świecie"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Refleksja",
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień.\n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
@@ -303,7 +328,7 @@
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
           "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
@@ -317,7 +342,7 @@
           "description": "-   Wyświetl wcześniej pierwszy poziom ćwiczenia na ekranach komputerów, aby już na nich był, gdy uczniowie rozpoczną wykonywanie ćwiczenia.\n-   W miarę możliwości niech uczniowie siedzą z dala od komputerów w trakcie wyjaśniania instrukcji do wykonywania ćwiczenia.\n-   Wyjaśnij, jakie 3 komendy jest w stanie wykonywać ptak: idź do przodu, skręć w prawo i skręć w lewo.\n-   Wykonaj przykład \"na żywo\" trzech pierwszych poziomów. Spróbuj nakleić taśmę na podłogą, aby wyglądała jak labirynt ptaka. Zademonstruj komendy samodzielnie, a następnie wybierz 1 lub 2 uczniów-ochotników do zademonstrowania przed klasą. \n-   Niech uczniowie programują w parach, a w tym celu posadź 2 uczniów przy jednym komputerze. Niech osoba kierująca myszka i klawiaturą będzie “1”, a drugi uczeń, podający sugestie, wskazujący błędy i zadający pytania, będzie “2.” Niech uczniowie zmieniają się rolami co 5 minut.\n-   Przećwicz klikanie i przeciąganie bloków, przed próbą rozwiązania łamigłówki. Przećwicz również przeciąganie bloków do kosza."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
@@ -358,7 +383,7 @@
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
@@ -368,7 +393,7 @@
           "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy](https://code.org/volunteer/local)."
         },
         "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
@@ -401,18 +426,18 @@
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Poza Godziną Kodowania",
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
@@ -469,7 +494,7 @@
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy](https://code.org/volunteer/local)\n\nUżyj tego ćwicznia, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Urządzenie do kopiowania**\n\n-   Wręcz uczniom kartki papieru\n-   Na jednej stronie trzeba narysować prosty obrazek posługując się tylko liniami prostymi.\n-   Na drugiej stronie trzeba narysowaćinstrukcje, jak odtworzyć ten obraz, posługując się poleceniami, aby rysować linie proste i skręcać po różnymi kątami\n-   Potem proszę zamienić się kartkami z instrukcjami i spróbować odtworzyć obrazek, posługując się wyłącznie podanymi instrukcjami."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
@@ -502,11 +527,11 @@
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Poza Godziną Kodowania",
@@ -601,7 +626,7 @@
           "description": "\"Godzina kodowania\" poświęcona jest kreatywności i nie możemy doczekać się, aby zobaczyć, co tworzysz! Podziel się w mediach społecznościowych pracami swoich uczniów, ich zdjęciami i filmami! Nauczyciele, nagrajcie swoją klasę kodującą taniec lub wykonującą taniec. Ustaw swoje wideo dodając [kończący klip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0). \n\nPamiętaj, aby dodać #HourOfCode i oznacz nas na Facebooku, Twitterze i Instagramie. Dodatkowe punkty za oznaczanie tagami artysty, którego muzykę użyli Twoi uczniowie. Code.org udostępni nasze ulubione posty milionom internautów w naszej społeczności. 🙂 \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Oczywiście, uszanuj zasady dotyczące mediów społecznościowych obowiązujące w Twojej szkole_"
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://code.org/certificates?script=mc) z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Następne Kroki",
@@ -765,8 +790,33 @@
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "\\[**Przeczytaj \"Rozbite na kawałki\"**\n\n-   Przeczytaj strony 165-169  [\"Rozbite na kawałki\", rozdział 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf).\n-   Odpowiedz na pytania podane w przewodniku w czytaniu i na karcie pracy [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/)\t\t\n\n**Więcej \"Rozbitego na kawałki**\n\n-   W poprzednich częściach rozdziału 5 \"Rozbitego na kawałki\" dokonano odniesień do znaczenia i kontrowersji otaczających szyfrowanie, jako pokłosia wydarzeń z 11 września. Ta lektura może stanowić użyteczne narzędzie do dalszego wprowadzania oddziaływania kryptografii na wiele aspektów współczesnego życia.\n\n-   Poproś uczniów o przejrzenie ich historii przeglądania internetu i dokonania przybliżonych wyliczeń, jaki procent prowadzą z założeniem, że ma ono charakter \"prywatny\". Czy jest jakiś sposób, który daje im pewność w tym przypadku? Czy są strony internetowe, na które wchodzą, na których czują większą pewność tajności niż na innych? Czy wnioski uzasadniają ich poczynania?"
         },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Ustawianie sceny",
+          "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_W tym ćwiczeniu będziemy dobrze się bawić tworząc interaktywny świat pełen zabawnych postaci zwanych duszkami. Będziesz w stanie sprawiać, by duszki mówiły różne rzeczy korzystając z \"dymków z wypowiedziami\", jakie można zobaczyć w komiksie lub w powieści graficznej i nauczysz się odpowiadać automatycznie, gdy Ty lub ktoś inny je klika._\n\n_Dzisiaj będziecie pisać \"kod\", oznaczający zestaw instrukcji, które komputer jest w stanie zrozumieć. Pisząc opowieść musisz uważnie dobierać słowa. Gdy będziesz pisał kod, musisz uważnie zastanawiać się nad tym, jakie instrukcje przekazujesz komputerowi_",
+          "tips": [
+            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów, najlepiej jest wskoczyć tak szybko, jak to możliwe."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Ogólne wsparcie",
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Witaj świecie",
+          "progression_name": "Witaj świecie"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Refleksja",
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
+        },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
@@ -791,7 +841,7 @@
           "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
@@ -824,7 +874,7 @@
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Poza Godziną Kodowania",
@@ -869,18 +919,18 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://code.org/certificates?script=mc) z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Poza Godziną Kodowania",
           "description": "Po przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”\\_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
@@ -913,11 +963,11 @@
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "513a07e1-551a-45d3-bd35-7e1de49293a2": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "8531cf05-6363-4654-b20a-455e85fa16a0": {
           "name": "Poza Godziną Kodowania",
@@ -960,7 +1010,7 @@
           "description": "**Wydrukuj świadectwa:** Wydrukuj świadectwa dla uczniów, aby świętować ich osiągnięcie.\n\n**code.org/applab:** Na koniec lekcji zachęć uczniów, aby udali się na na stronę internetową App Lab, gdzie mogą uzyskać pomysły sposobów kontynuowania ich przygody z App Lab."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
@@ -985,7 +1035,7 @@
           "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "#### Budowanie atmosfery\n\nPrzywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** _Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
@@ -1017,7 +1067,7 @@
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Poza Godziną Kodowania",
@@ -1075,7 +1125,7 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Wstęp",
-          "description": "**Omówić:**\n\n-   _Co wiemy o rozprzestrzenianiu się wirusa?_\n-   _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n-   _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
+          "description": "**Omówić:**\n\n- _Co wiemy o rozprzestrzenianiu się wirusa?_\n- _Co może powodować szybsze rozprzestrzenianie się wirusa w mieście?_\n- _Co może pomóc w spowolnieniu rozprzestrzeniania się wirusa?_\n\nCelem tej dyskusji jest umożliwienie uczniom uaktywnienia wcześniejszej wiedzy i ujrzenia ich pomysłów na tablicy. Jest to również okazją do zbadania niektórych błędnych przekonań na temat rozprzestrzeniania się wirusów."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemia",
@@ -1107,11 +1157,11 @@
           "description": "_Symulacje to świetny sposób na naukę o tym, co trudno zaobserwować w rzeczywistości. Pomagają naukowcom rozwiązywać problemy, przewidywać sposób ich rozwiązania oraz bezpiecznie i skutecznie testować nowe pomysły. Twoja symulacja to sposób na pokazanie, jak może wyglądać epidemia wirusa w Mieście Potworów._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Omówić:**\n\n-   W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n-   W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n-   W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
+          "description": "**Omówić:**\n\n- W jaki sposób symulacje mogą być pomocne w rzeczywistym świecie?\n- W jaki sposób symulacje mogą pomóc nam zrozumieć otaczający nas świat?\n- W jaki sposób symulacje mogą poprawić sposób sprawdzania pomysłów?\n\nCelem dyskusji jest zrozumienie przez uczniów, że symulacje są sposobem interaktywnego modelowania złożonych systemów. Powinni także zobaczyć, jak symulacje umożliwiają testowanie pomysłów szybko, tanio i bezpiecznie."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Refleksja",
-          "description": "**Monity:**\n\n-   Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n-   Co chciałbyś zmienić/dodać do swojej symulacji?"
+          "description": "**Monity:**\n\n- Jak ta symulacja przypomina prawdziwy świat? Czym się różni?\n- Co chciałbyś zmienić/dodać do swojej symulacji?"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Wstęp",
@@ -1159,8 +1209,8 @@
           "description": "#### Zabierz mnie na mecz\n\nZabierz uczniów na zewnątrz, aby zagrać w jakąś grę w piłkę. Śledź zdarzenia i działania. Na przykład niekozłowanie w koszykówce prowadzi do błędu kroków i piłkę przejmuje drużyna przeciwna. W piłce nożnej wykopanie piłki poza granice boiska prowadzi do wrzutu piłki przez drużynę przeciwną. Trafienie piłką do celu prowadzi do zdobycia punktu! Utwórz więcej zdarzeń jeśli chcą tego Twoi uczniowie. Niech wszyscy uczniowie krzykną \"Yippee\", gdy kapitan jednego z zespołów zdobędzie punkt. Niech każdy padnie na ziemię i przeturla się, jeśli uczeń strzeli dwa gole pod rząd!"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
-          "name": "Budowanie atmosfery",
-          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
+          "name": "Ustawianie sceny",
+          "description": "Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -1192,11 +1242,11 @@
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "2742e426-46e4-46d9-8e04-314c3469f15e": {
           "name": "Zabieraj głos",
-          "description": "Zachęć uczniów, aby udostępniali pewne aspekty swoich doświadczeń w zakresie \"Godziny kodowania\" na mediach społecznościowych z użyciem #hourofcode, aby użyczyć głosu temu światowemu ruchowi. Uczniowie mogą udostępniać swoją grę, obrazy, wideo oraz zwykłe przemyślenia."
+          "description": "Zachęć uczniów, aby podzielili się swoimi doświadczeniami z \"Godziny kodowania\" w mediach społecznościowych z użyciem #hourofcode, aby zabrać głos w ramach tego światowego ruchui. Uczniowie mogą udostępniać swoje gry, obrazy, wideo oraz swoje przemyślenia."
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Poza Godziną Kodowania",
@@ -1245,7 +1295,7 @@
           "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godziny Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasie z poziomu K-5. Oto kilka pomysłów:\n\n-   **Prowadź kursy [Podatawy informatyki w studio kodowania](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla uczniów młodszych. Rozwiązują oni serię łamigłówek przeznaczonych do nauki kodowania, a prowadzący mają dostęp do konspektów angażujących uczniów, które pomają uczyć się. Code.org proponuje bezpłatne rozwiązania na potrzeby takich kursów, w trybie online oraz bezpośrednim.\n-   **Wejdź na stronę [I ty możesz uczyć informatyki](https://studio.code.org/courses?view=teacher)** i poznaj więcej sugestii.\n-   \\*\\*Zaproś specjalistę ds. informatyki z prośbą o przeprowadzenie wykładu na temat wykonywanego przez niego zawodu \\*\\*. Nie znasz żadnego informatyka działającego lokalnie? Skorzystaj z ochotnika z naszej [mapy ochotników](https://code.org/volunteer/local)\n\n#### Zabierz mnie na mecz\n\nZabierz uczniów, aby zagrali jakiś mecz z piłką. Notuj zdarzenia i akcje. Na przykład niekozłowanie w meczu koszykówki może skutkować \"błędem kroków\" i przejęciem piłki przez drużynę przeciwną.  W piłce nożnej wyrzucenie piłki na aut powoduje wrzut piłki przez drużynę przeciwną. Za zdobycie gola uzyskuje się punkt! Wymyśl więcej zdarzeń, jeśli uczniowie się zaangażują. Niech wszyscy uczniowie krzyczą \"Hurra\", gdy kapitan drużyny zdobędzie punkt. Niech wszyscy padną na ziemię i przerolują się, jeśli uczeń zdobędzie dwa gole pod rząd!"
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Przywitaj uczniów i krótko przedstaw rozkład zajęć. Zachęcaj uczniów, aby nie spieszyli się i poświęcili odpowiednią ilość czasu na ćwiczenie i eksperymentowanie."
         },
         "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
@@ -1319,7 +1369,7 @@
           "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
@@ -1395,7 +1445,7 @@
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
           "description": "\"Godzina kodowania\" poświęcona jest kreatywności i nie możemy doczekać się, aby zobaczyć, co tworzysz! Podziel się w mediach społecznościowych pracami swoich uczniów, ich zdjęciami i filmami! Nauczyciele, nagrajcie swoją klasę kodującą taniec lub wykonującą taniec. Ustaw swoje wideo dodając [kończący klip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0). \n\nPamiętaj, aby dodać #HourOfCode i oznacz nas na Facebooku, Twitterze i Instagramie. Dodatkowe punkty za oznaczanie tagami artysty, którego muzykę użyli Twoi uczniowie. Code.org udostępni nasze ulubione posty milionom internautów w naszej społeczności. 🙂 \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Oczywiście, uszanuj zasady dotyczące mediów społecznościowych obowiązujące w Twojej szkole_"
@@ -1459,7 +1509,7 @@
           "progression_name": "Naucz AI nowego słowa"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "[Wydrukuj świadectwa](https://code.org/certificates?script=oceans) dla uczniów, aby świętować ich osiągnięcie.\n\nNa koniec lekcji zachęć uczniów, aby udali się na [Code.org/learn](http://Code.org/learn), gdzie mogą pozyskać pomysły sposobów kontynuowania ich przygody z informatyką."
+          "description": "[Wydrukuj świadectwa](https://studio.code.org/certificates/batch?course=b2NlYW5z) dla uczniów, aby świętować ich osiągnięcie.\n\nNa koniec lekcji zachęć uczniów, aby udali się na [Code.org/learn](http://Code.org/learn), gdzie mogą pozyskać pomysły sposobów kontynuowania ich przygody z informatyką."
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### Pomóż sklasyfikować zwierzęta w Mountain Zebra National Park\n\nSnapshot Safari umieścił setki ukrytych kamer w południowej Afryce, rejestrujących miliony zdjęć pięknych i rzadkich zwierząt. Uczniowie mogą pomóc chronić zagrożoną zebrę górską, klasyfikując różne zwierzęta na tych obrazach. Możesz przeczytać o projekcie [tutaj](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) lub kliknąć poniżej, aby spróbować!\n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1488,7 +1538,7 @@
           "name": "Zakończenie"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
@@ -1756,7 +1806,7 @@
           "name": "Refleksja"
         },
         "87103c82-3389-4983-b9dd-d8ecce58ed92": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "9014dbe4-b770-43d6-aef5-77cf1e032bb9": {
@@ -2140,6 +2190,10 @@
         },
         "558c0510-2a0d-4302-82d1-98f221ecec6f": {
           "name": "Refleksja"
+        },
+        "3dcc5ff1-9cad-46cc-985e-e92e1989a304": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie d Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Pętle, Instrukcje warunkowe (jeśli ... to ... w przeciwnycm razie), Wejścia i Wyjścia, Zadarzenia i Zmienne."
         },
         "5284ed91-ecd3-477a-8e48-cec21b3822f4": {
           "name": "Słownictwo kluczowe",
@@ -2633,6 +2687,9 @@
             "Pytania Flash Chat mają na celu wywołanie wielkiego obrazu myślenia o tym, jak lekcja odnosi się do większego świata i większej przyszłości uczniów. Skorzystaj ze swojej wiedzy o klasie, aby zdecydować, czy chcesz omówić je jako zajęcia, w grupach czy z partnerem łokciowym."
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "Odkrywaj"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Przykłady projektów"
         },
@@ -2682,6 +2739,10 @@
         },
         "c3102dcc-a35a-489f-8461-06e0aa3d5125": {
           "description": "Jeśli Twoi uczniowie czują się swobodnie z koncepcjami kodowania, spróbuj skłonić ich do tworzenia swoich projektów w innej platformie, takiej jak [Scratch](https://scratch.mit.edu/) lub [Alice](http://www.alice.org/index.php)."
+        },
+        "d7eee78e-d5fd-418e-9dce-3cb0f1be8122": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie F Podstaw Informatyki kliknij [here](http://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zmienne, Dane, Zdarzenia, Symulacja, Pętle, i Instrukcje warunkowe."
         },
         "b01367f6-8c61-4417-9d29-193fd67ddac0": {
           "name": "Słownictwo kluczowe"
@@ -2734,7 +2795,7 @@
           "name": "Refleksja"
         },
         "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae": {
-          "name": "Budowanie atmosfery"
+          "name": "Ustawianie sceny"
         },
         "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc": {
           "name": "Seria wydarzeń"
@@ -3063,6 +3124,9 @@
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "Prosimy o  upewnienie się, że odwiedzicie [Copyright & Creativity ](https://copyrightandcreativity.org), aby znaleźć lekcje dotyczące praw do cyfrowego udostępniania i twórczości."
         },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "Odkrywaj"
+        },
         "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8": {
           "progression_name": "Przykłady projektów"
         },
@@ -3098,6 +3162,10 @@
         },
         "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9": {
           "name": "Przemyśl"
+        },
+        "be35b565-6d45-46fa-ae1a-c5d1aeb2f901": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie E Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wpływ informatyki, Projektowanie dla dostępnosci, Pętle, Instrukcje warunkowe (jeśli ... to), i Funkcje."
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "name": "Słownik kluczowy: ",
@@ -3437,9 +3505,6 @@
           "tips": [
             "Przypomnij uczniom, aby dzielili się swoją pracą tylko z bliskimi przyjaciółmi lub rodziną. Aby uzyskać więcej informacji obejrzyj lub pokaż klasę**\\\\ \\*Pause and Think Online - Video**"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Zawarliśmy kilka poziomów przewidywania wielokrotnego wyboru, które są trudne dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć. \n\n\\*\\*Poziom przewidywania: \\*\\* - [Kurs B, Pętle w artyście](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Film: Artysta w Code Studio"
@@ -6048,6 +6113,10 @@
         "5f1c9827-a478-4cf6-98b2-8834ef534cff": {
           "name": "Refleksja"
         },
+        "e79ff65f-c393-4328-8530-e40474ddbca1": {
+          "name": "Lekcje rozszerzeń z mikro:bitem",
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie C Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Zdarzenia, Wejścia i Wyjścia, Sekwencjonowanie, Pętle, Dane i Zmienne."
+        },
         "3640be62-d6b4-4e99-a1c0-b4a53c1e202f": {
           "name": "Dziennik",
           "tips": [
@@ -6666,6 +6735,9 @@
           ],
           "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
         },
+        "957ef2cd-b951-40d7-933b-3e2b61fd10a8": {
+          "name": "Jak to wygląda"
+        },
         "f9167a6d-5aac-465c-8021-e17c9e90b60c": {
           "tips": [
             null
@@ -7078,6 +7150,9 @@
             null
           ]
         },
+        "16665617-63d6-466e-a02b-9f15215ceb4b": {
+          "name": "Informatyka w rozrywce"
+        },
         "56d3bbbd-9eec-4102-8e92-91724e9cdf52": {
           "tips": [
             null
@@ -7096,10 +7171,16 @@
         "db70080e-e443-42ef-af8d-df3a0d609324": {
           "progression_name": "Przykładowe Programy"
         },
+        "88b2ede9-10b9-48d0-943d-9ccfe8204ab7": {
+          "name": "Patrząc w przyszłość"
+        },
         "f3567ee3-1a31-40e8-9a59-6455234aab7a": {
           "tips": [
             null
           ]
+        },
+        "0fbb6687-edd1-44b6-b9fc-a98b0921d929": {
+          "name": "Rysowanie za pomocą komputera"
         },
         "4b5a1abe-5e14-4ee2-989f-dce58df4d3c5": {
           "tips": [
@@ -7443,6 +7524,9 @@
         "8d77cdeb-94a3-4e11-8443-6f0f4011df27": {
           "progression_name": "Dodaj tekst"
         },
+        "bff1cfcd-57b8-40c2-8eaf-ba25b654b71a": {
+          "progression_name": "Przejrzyj swoją scenę"
+        },
         "a3005adc-9fdc-44c5-b692-236229a2d521": {
           "tips": [
             null
@@ -7563,7 +7647,8 @@
         "37116129-33c9-43a6-be07-a81b0bf2f8b5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Zaplanuj swoją scenę"
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
@@ -7573,6 +7658,9 @@
         },
         "cf6e179d-f1d7-427d-8eff-8e47893e30d3": {
           "progression_name": "Dodaj tekst"
+        },
+        "aa2fee6c-82b3-427e-98ad-61cb4bef5324": {
+          "progression_name": "Przejrzyj swoją animowaną scenę"
         },
         "40657117-7d56-4a65-b054-6e21c1ee2d40": {
           "tips": [
@@ -7726,7 +7814,8 @@
         "c0090e7c-168b-4591-9c94-d636a0033dbe": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Stwórz interaktywną kartę"
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
@@ -7836,6 +7925,9 @@
             null
           ]
         },
+        "3c60ea9f-1a3c-4317-a612-25306d8c2e11": {
+          "progression_name": "Przejrzyj swoją grę"
+        },
         "fb103c70-07e6-49be-a12a-ce480a70c199": {
           "tips": [
             null
@@ -7922,8 +8014,14 @@
             null
           ]
         },
+        "d5166021-114c-426a-b036-04fe7db2388e": {
+          "progression_name": "Zrób swoje duszki"
+        },
         "1f891879-1df5-43fa-8960-39d2465556c7": {
           "progression_name": "Ruch duszka"
+        },
+        "b7f340e2-9a25-45ae-b6cf-2c66c7974d11": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "ae1e06e8-299e-4d75-beba-a0c0bf96af15": {
           "tips": [
@@ -8035,7 +8133,8 @@
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przykładowe Gry"
         },
         "b8798164-0848-4f12-b1c2-4e41799cda93": {
           "tips": [
@@ -8055,6 +8154,9 @@
         },
         "e2bfdd8b-2cbb-41be-b227-37e15a8fef70": {
           "progression_name": "Projekt - Duszki i Interakcje"
+        },
+        "3d65a24a-c99b-400e-a632-249258bbe645": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "6a47a229-617f-41c5-a439-47dacbf2aeb4": {
           "tips": [
@@ -8085,10 +8187,16 @@
             null
           ]
         },
+        "2787c6fa-bcb8-4c5a-89e0-a0a003787472": {
+          "name": "Osobiste strony internetowe"
+        },
         "d43801bf-efbb-477d-8bdc-4365121344d0": {
           "tips": [
             null
           ]
+        },
+        "6f6470cd-6589-428d-b3fc-30fbdd935e19": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
         },
         "cd25afa1-2718-46ab-870d-64e47ec1e98f": {
           "name": "Odkrywanie stron",
@@ -8253,10 +8361,16 @@
             null
           ]
         },
+        "a96783a3-24ab-4300-9a2d-971a7dbb6736": {
+          "progression_name": "Recenzja: HTML"
+        },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
             null
           ]
+        },
+        "6794e1bb-c4bc-48f1-9957-438a70f052ce": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "a92fcb8d-a3c4-4b52-ac57-33b2773a6085": {
           "name": "Dziennik"
@@ -8295,7 +8409,8 @@
         "d3fdeb5c-af82-4887-8b01-8451380d7778": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przykładowa strona internetowa"
         },
         "08c20944-96bb-4de7-b140-3eeb37a24f73": {
           "tips": [
@@ -8371,6 +8486,9 @@
             null
           ]
         },
+        "e5b8047c-d4b5-4312-9f2b-07c6d524a651": {
+          "progression_name": "Recenzja: CSS"
+        },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
             null
@@ -8378,6 +8496,9 @@
         },
         "6fe582a0-4693-4d62-9b6c-2f9f4a753e8e": {
           "progression_name": "Dodaj styl do swojej strony"
+        },
+        "dcbcd03b-5df0-4aba-8f2d-0b90c9f30a7a": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "93c4939e-a948-4c3a-9420-8f6fae1a712b": {
           "name": "Wzajemne opinie"
@@ -8466,6 +8587,9 @@
             null
           ]
         },
+        "7142f3bf-61aa-495e-87a3-743053edcc07": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "5d19329e-49ff-4735-8518-d27891d66e6b": {
           "tips": [
             null
@@ -8485,6 +8609,9 @@
           "tips": [
             null
           ]
+        },
+        "8eec073a-68eb-4b40-a842-51b58a4e1e2b": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "f458746f-0808-4e96-96d3-aaf56317b668": {
           "progression_name": "Eksploracja"
@@ -8656,6 +8783,9 @@
           "tips": [
             null
           ]
+        },
+        "50267ce0-8ebd-4e17-ad3d-5e44db1604da": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "6b2aedee-56b9-4dfe-a890-ddd497d10554": {
           "progression_name": "Eksploracja"
@@ -9490,6 +9620,12 @@
             null
           ]
         },
+        "531dec3a-c36d-4a48-9aad-023569475cf7": {
+          "name": "Plakaty innowacji"
+        },
+        "c54ed502-b1d2-4421-9f7d-3b27dd349d46": {
+          "name": "Innowacyjne strony internetowe"
+        },
         "01ae9522-6c73-4653-beb4-2d7fcf1cbff9": {
           "tips": [
             null
@@ -10105,15 +10241,24 @@
             null
           ]
         },
+        "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
+          "progression_name": "Rozpoznawanie ryb"
+        },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
             null
           ]
         },
+        "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
+          "progression_name": "Rozpoznawanie cech ryb"
+        },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
           "tips": [
             null
           ]
+        },
+        "514d167e-9739-4856-9308-39bce3beb983": {
+          "progression_name": "Rozpoznawanie wyrażeń"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
           "tips": [
@@ -10230,10 +10375,16 @@
             null
           ]
         },
+        "72104e9d-9e83-4499-b7bc-4d8f201d2917": {
+          "name": "Rozpoznawanie kształtów"
+        },
         "5f3fc63f-1b69-4c63-9503-69acceb95d5f": {
           "tips": [
             null
           ]
+        },
+        "eeaf3264-8784-4ffd-982a-b01f9356dcd4": {
+          "progression_name": "Rozpoznawanie kształtów"
         },
         "a9e96adb-531c-4cc1-a706-4d3994fd5e57": {
           "tips": [
@@ -10289,7 +10440,8 @@
         "c7870490-6b34-4571-be3e-07cc39510cc1": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importuj model"
         },
         "6407eeff-4883-4d4a-9541-0caa24fab54c": {
           "tips": [
@@ -10374,6 +10526,7 @@
           ]
         },
         "63de58d5-8dcb-4fff-8335-5edfa4439eee": {
+          "name": "Importowanie Twojego modelu",
           "tips": [
             null
           ]
@@ -10381,7 +10534,8 @@
         "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importowanie Twojego modelu"
         },
         "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
           "name": "Dziennik "
@@ -10472,6 +10626,9 @@
         "48946537-7e1a-4b55-9ea6-3a7da44e2cae": {
           "name": "Dziennik "
         },
+        "5b875746-5d5a-436f-8847-fb51a2fdc84b": {
+          "progression_name": "Model Safari"
+        },
         "ced9350a-0ee3-4e2c-9cff-f60a54cc04b5": {
           "tips": [
             null
@@ -10487,6 +10644,9 @@
             null,
             null
           ]
+        },
+        "2e06a5c6-3994-467d-ab86-08d721f8a779": {
+          "progression_name": "Aplikacja Safari"
         },
         "f3f34694-9ca8-40ba-9ca5-58acb28a3d6f": {
           "name": "Dziennik"
@@ -10578,7 +10738,8 @@
           ]
         },
         "08020742-2f96-4a09-8d5a-c3034a4b8962": {
-          "name": "Ankieta"
+          "name": "Ankieta",
+          "progression_name": "Ankieta Kima"
         },
         "218c7165-58fd-4f8f-b70d-52d564cb22a6": {
           "tips": [
@@ -10625,6 +10786,9 @@
         "5d73f27a-b5a4-4f10-938e-1960f88606d9": {
           "name": "Dziennik"
         },
+        "2c99edd9-27d0-4cf3-8ea2-63466bfe5aa0": {
+          "progression_name": "Importuj swój model"
+        },
         "7bfc84f7-0e36-4c21-9018-f7466303b041": {
           "progression_name": "Dodaj powitalny ekran"
         },
@@ -10636,7 +10800,8 @@
         "4b58eb8b-402c-4927-abf9-52bcbde90aea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przejrzyj swoją aplikację"
         },
         "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec": {
           "name": "Dziennik"
@@ -14581,10 +14746,10 @@
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Sztuka poezji ",
-          "description": "#### Ogólne wsparcie\n\nPod koniec tej aktywności uczniowie będą mieli animowany wiersz, który reprezentuje ich wizualną interpretację wybranego przez nich wiersza. Ta lekcja ma na celu umożliwić im majstrowania przy swoim kodzie i znalezienia efektów wizualnych, które najbardziej im się podobają.\n\nChodząc po klasie, doradzaj uczniom:\n\n-   **Nie spiesz się:** Większość poziomów wymaga od uczniów znalezienia idealnych efektów pasujących do ich interpretacji nastroju wiersza. Pozostając na poziomie, zachęcamy majstrowania przy ich kodzie.\n\n-   **Znajdź wiersz, który Ci się podoba:** Wiersz wyświetlany uczniowi na nowym poziomie to tylko sugestia. Na górze obszaru gry znajduje się rozwijane menu wierszy ze wstępnie załadowanymi wierszami. Poproś uczniów, aby przeczytali kilka i znaleźli taki, który do nich przemówi. Następnie mogą zacząć animować wybrany wiersz za pomocą kodu.\n\n-   **Pochwal ukończone poziomy:** Każde całkowicie zielone oznaczenie poziomu oznacza, że ​​uczeń pomyślnie spełnił wszystkie wymagania dla tego poziomu. Poproś takich uczniów, aby kliknęli zielony dymek i pochwalili się tym, co stworzyli.\n\nW sytuacjach, w których uczeń czuje się zablokowany:\n\n-   **Przeczytaj instrukcje:** Instrukcje składają się z punktów, jak ukończyć poziom. Jeśli uczeń czuje, że utknął, poproś go, aby przeczytał ci instrukcje na głos i poproś go, aby powtórzył to, co mówią instrukcje własnymi słowami.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Uczniowie mogą również kliknąć tę ikonę odczytania tekstu, aby usłyszeć odczytanie instrukcji.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Szukaj podpowiedzi**: Większość poziomów zawiera co najmniej jedną, bardziej szczegółową podpowiedź, jak przejść poziom.\n-   **Celebruj błędy:** Zrobienie błędu w kodzie jest naturalną częścią procesu kodowania. Jeśli program nie robi tego, czego uczeń oczekiwał, poproś go, aby najpierw powiedział ci, co ma się wydarzyć, kliknij Uruchom, aby zaobserwować, co się właściwie dzieje, a następnie znajdź w kodzie miejsce, które spowodowało złe działanie. Pamiętaj, aby celebrować znalezienie błędu i jego naprawianie. Pojawienie się błędu oznacza, że ​​uczniowie wykonują świetną robotę, tworząc bardziej złożony program."
+          "description": "#### Ogólne wsparcie\n\nPod koniec tej aktywności uczniowie będą mieli animowany wiersz, który reprezentuje ich wizualną interpretację wybranego przez nich wiersza. Ta lekcja ma na celu umożliwić im majstrowania przy swoim kodzie i znalezienia efektów wizualnych, które najbardziej im się podobają.\n\nChodząc po klasie, doradzaj uczniom:\n\n- **Nie spiesz się:** Większość poziomów wymaga od uczniów znalezienia idealnych efektów pasujących do ich interpretacji nastroju wiersza. Pozostając na poziomie, zachęcamy majstrowania przy ich kodzie.\n\n- **Znajdź wiersz, który Ci się podoba:** Wiersz wyświetlany uczniowi na nowym poziomie to tylko sugestia. Na górze obszaru gry znajduje się rozwijane menu wierszy ze wstępnie załadowanymi wierszami. Poproś uczniów, aby przeczytali kilka i znaleźli taki, który do nich przemówi. Następnie mogą zacząć animować wybrany wiersz za pomocą kodu.\n\n- **Pochwal ukończone poziomy:** Każde całkowicie zielone oznaczenie poziomu oznacza, że ​​uczeń pomyślnie spełnił wszystkie wymagania dla tego poziomu. Poproś takich uczniów, aby kliknęli zielony dymek i pochwalili się tym, co stworzyli.\n\nW sytuacjach, w których uczeń czuje się zablokowany:\n\n- **Przeczytaj instrukcje:** Instrukcje składają się z punktów, jak ukończyć poziom. Jeśli uczeń czuje, że utknął, poproś go, aby przeczytał ci instrukcje na głos i poproś go, aby powtórzył to, co mówią instrukcje własnymi słowami.\n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Uczniowie mogą również kliknąć tę ikonę odczytania tekstu, aby usłyszeć odczytanie instrukcji.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Szukaj podpowiedzi**: Większość poziomów zawiera co najmniej jedną, bardziej szczegółową podpowiedź, jak przejść poziom.\n- **Celebruj błędy:** Zrobienie błędu w kodzie jest naturalną częścią procesu kodowania. Jeśli program nie robi tego, czego uczeń oczekiwał, poproś go, aby najpierw powiedział ci, co ma się wydarzyć, kliknij Uruchom, aby zaobserwować, co się właściwie dzieje, a następnie znajdź w kodzie miejsce, które spowodowało złe działanie. Pamiętaj, aby celebrować znalezienie błędu i jego naprawianie. Pojawienie się błędu oznacza, że ​​uczniowie wykonują świetną robotę, tworząc bardziej złożony program."
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Wsparcie poziomami\n\n**Poziom 1:** Zachęć uczniów do przeczytania wiersza. Następnie poproś, aby znaleźli kolor lub efekt tła pasujący do tonu wybranego przez nich wiersza.\n\n**Poziom 2:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Możesz ich zapytać, czy dźwięk i efekty wybrane przez programistę pasują do ​​nastroju wiersza. Poproś, aby opracowali swoją odpowiedź.\n\n**Poziom 3:** Ten poziom wprowadza dźwięk, uczniowie mogą korzystać ze słuchawek, jeśli je mają.\n\n**Poziom 4:** Poproś uczniów, aby przeczytali wiersz i znaleźli w nim linię, w której zmienia się nastrój wiersza lub jeśli pojawia się nowy obraz, który wprowadził poeta. Użyj bloku zdarzeń, aby dodać odpowiednie efekty do zidentyfikowanych linii wiersza.\n\n**Poziom 5:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Zapytaj ich, czy obrazy pasują do słów wiersza. Poproś ich o rozwinięcie odpowiedzi.\n\n**Poziomy 6, 7, 8:** Zobacz „Celebruj błędy” w sekcji Ogólne wsparcie. Zachęć uczniów do tworzenia programów z więcej niż jednym przejściem za pomocą bloków zdarzeń.\n\n**Poziom 9:** Zachęć uczniów do przeczytania wszystkich wierszy z rozwijanego menu, aby znaleźć ten, który im się podoba. Powiedz im, że mogą podzielić się tym, co zrobili na tym ostatnim poziomie, ze swoimi przyjaciółmi i rodziną. Nadszedł czas, aby połączyć wszystkie umiejętności kodowania i ELA!"
+          "description": "#### Wsparcie poziomami \n\n**Poziom 1:** Zachęć uczniów do przeczytania wiersza. Następnie poproś, aby znaleźli kolor lub efekt tła pasujący do tonu wybranego przez nich wiersza.\n\n**Poziom 2:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Możesz ich zapytać, czy dźwięk i efekty wybrane przez programistę pasują do ​​nastroju wiersza. Poproś, aby opracowali swoją odpowiedź.\n\n**Poziom 3:** Ten poziom wprowadza dźwięk, uczniowie mogą korzystać ze słuchawek, jeśli je mają.\n\n**Poziom 4:** Poproś uczniów, aby przeczytali wiersz i znaleźli w nim linię, w której zmienia się nastrój wiersza lub jeśli pojawia się nowy obraz, który wprowadził poeta. Użyj bloku zdarzeń, aby dodać odpowiednie efekty do zidentyfikowanych linii wiersza.\n\n**Poziom 5:** W tym przykładzie uczniowie powinni najpierw samodzielnie przeczytać wiersz, a następnie nacisnąć Uruchom. Zapytaj ich, czy obrazy pasują do słów wiersza. Poproś ich o rozwinięcie odpowiedzi.\n\n**Poziomy 6, 7, 8:** Zobacz „Celebruj błędy” w sekcji Ogólne wsparcie. Zachęć uczniów do tworzenia programów z więcej niż jednym przejściem za pomocą bloków zdarzeń.\n\n**Poziom 9:** Zachęć uczniów do przeczytania wszystkich wierszy z rozwijanego menu, aby znaleźć ten, który im się podoba. Powiedz im, że mogą podzielić się tym, co zrobili na tym ostatnim poziomie, ze swoimi przyjaciółmi i rodziną. Nadszedł czas, aby połączyć wszystkie umiejętności kodowania i ELA!"
         },
         "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
           "description": "Jeśli podobała Ci się dzisiejsza nauka kodowania, możesz kontynuować odwiedzając code.org/learn. Jeśli chcesz podzielić się tym, co zrobiłeś ze znajomymi i rodziną, kliknij przycisk „Udostępnij” i wyślij link do kogo chcesz!"
@@ -17219,7 +17384,7 @@
           "description": "\\*\\*Pytania: \\*\\*\n\n-   O czym była dzisiejsza lekcja?\n-   Jak się czujesz o dzisiejszej lekcji?\n-   Podać przykład zdarzenia, którego użyłeś w programie dzisiaj?\n-   Dlaczego ważne jest, aby nie udostępniać prywatnych informacji online? Skąd wiesz, czy informacje są prywatne?"
         },
         "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
-          "name": "Budowanie atmosfery",
+          "name": "Ustawianie sceny",
           "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
@@ -19448,15 +19613,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "Rozpoznawanie ryb"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "Rozpoznawanie cech ryb"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "Rozpoznawanie wyrażeń"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -19568,10 +19742,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "Rozpoznawanie kształtów"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "Rozpoznawanie kształtów"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -19627,7 +19807,8 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importuj model"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
@@ -19692,9 +19873,13 @@
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "Importowanie Twojego modelu",
           "tips": [
             null
           ]
+        },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "Importowanie Twojego modelu"
         },
         "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
           "name": "Dziennik "
@@ -19782,6 +19967,9 @@
         "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
           "name": "Dziennik "
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Model Safari"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -19797,6 +19985,9 @@
             null,
             null
           ]
+        },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Aplikacja Safari"
         },
         "b45bc335-aa90-474a-a72e-d53cd598287f": {
           "name": "Dziennik"
@@ -19878,7 +20069,8 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Ankieta"
+          "name": "Ankieta",
+          "progression_name": "Ankieta Kima"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
@@ -19925,13 +20117,17 @@
         "c4594eb3-a313-4824-a608-4558d7783967": {
           "name": "Dziennik"
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "Importuj swój model"
+        },
         "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
           "progression_name": "Dodaj powitalny ekran"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Przejrzyj swoją aplikację"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "Rozgrzewka"
@@ -20700,6 +20896,12 @@
             null
           ],
           "progression_name": "Innowacyjne badania"
+        },
+        "b82e7960-4420-4c1a-9653-0428887167c7": {
+          "name": "Plakaty innowacji"
+        },
+        "bcb31c61-bd73-4a2d-99c4-a2ca8c1e87ef": {
+          "name": "Innowacyjne strony internetowe"
         },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
@@ -21637,6 +21839,9 @@
             null
           ]
         },
+        "3051c3a3-5ddc-4d4c-85c0-502d2a2e1f70": {
+          "name": "Informatyka w rozrywce"
+        },
         "f348d317-252e-4581-b489-fe1bbe700f67": {
           "tips": [
             null
@@ -21650,10 +21855,16 @@
         "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
           "progression_name": "Przykładowe Programy"
         },
+        "88943583-e1bd-4692-bfda-ac470e102014": {
+          "name": "Patrząc w przyszłość"
+        },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
             null
           ]
+        },
+        "f4a90ee4-9385-4001-b025-d6a179b0db97": {
+          "name": "Rysowanie za pomocą komputera"
         },
         "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
           "tips": [
@@ -21953,6 +22164,9 @@
         "c0fc532b-e6eb-4858-af5b-5032cd917616": {
           "progression_name": "Dodaj tekst"
         },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Przejrzyj swoją scenę"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -22057,11 +22271,17 @@
             null
           ]
         },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Zaplanuj swoją scenę"
+        },
         "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
           "progression_name": "Dodaj duszki"
         },
         "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
           "progression_name": "Dodaj tekst"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Przejrzyj swoją animowaną scenę"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -22205,7 +22425,8 @@
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Stwórz interaktywną kartę"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Praca Projektowa"
@@ -22297,6 +22518,9 @@
             null
           ]
         },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "Przejrzyj swoją grę"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
             null
@@ -22368,8 +22592,14 @@
             null
           ]
         },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "Zrób swoje duszki"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Ruch duszka"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -22473,6 +22703,9 @@
             null
           ]
         },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "Przykładowe Gry"
+        },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
             null
@@ -22483,6 +22716,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "Projekt - Duszki i Interakcje"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "Przejrzyj swoją grę"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -22565,6 +22801,9 @@
             null
           ],
           "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
+        },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "name": "Jak to wygląda"
         },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
           "tips": [
@@ -22974,6 +23213,12 @@
             null
           ]
         },
+        "fef149c4-da5f-4737-806d-cee5311c12f2": {
+          "name": "Osobiste strony internetowe"
+        },
+        "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "Odkrywanie stron",
           "tips": [
@@ -23118,6 +23363,12 @@
             null
           ]
         },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "Recenzja: HTML"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "Przejrzyj swoją stronę"
+        },
         "73b0e9cc-22b5-4ca2-9bff-366f69a0f35c": {
           "name": "Wzajemne opinie"
         },
@@ -23154,6 +23405,9 @@
           "tips": [
             null
           ]
+        },
+        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
@@ -23216,8 +23470,14 @@
             null
           ]
         },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "Recenzja: CSS"
+        },
         "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
           "progression_name": "Dodaj styl do swojej strony"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "Przejrzyj swoją stronę"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Wzajemne opinie"
@@ -23305,6 +23565,9 @@
             null
           ]
         },
+        "890f7764-695b-4258-acbb-9b7e29804fc5": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
           "tips": [
             null
@@ -23324,6 +23587,9 @@
           "tips": [
             null
           ]
+        },
+        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "Eksploracja"
@@ -23489,6 +23755,9 @@
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "Klasy"
+        },
+        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
+          "progression_name": "Przykładowa strona internetowa"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "Eksploracja"

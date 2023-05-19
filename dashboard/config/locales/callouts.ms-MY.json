@@ -94,7 +94,8 @@
           "costumes_callout": "Klik untuk mencipta kostum baru"
         },
         "frozen line": {
-          "run": "\nTekan \"Run\" untuk mencuba program anda!"
+          "run": "\nTekan \"Run\" untuk mencuba program anda!",
+          "move_elsa_forward": "Seret blok “Move Forward” dan snap ia di bawah “When Run” blok untuk membuat Elsa bergerak ke hadapan"
         },
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Tambah blok ini kepada atur cara anda!"
@@ -1909,6 +1910,184 @@
         "coursee_helloworld_say": {
           "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
           "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Guna blok ini untuk tetapkan latar belakang baru."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gunakan blok ini dengan salah satu kelakuan di bawah."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik di sini untuk menjalankan kod."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Tambah blok peristiwa ini dalam ruang kerja anda."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik di sini untuk menambah pakaian pada projek anda."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gunakan blok ini untuk membuat pari-pari berbicara.",
+          "hello_world_make_sprite": "Guna blok ini untuk mencipta pari-pari."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Blok baru!",
+          "hello_world_new_block": "Blok baru!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Blok baru!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klik di sini dahulu!"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "Masukkan dalam bilangan kali zombie telah bergerak untuk membuat bulatan penuh"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "Gunakan blok “Ulang” dan bungkusnya di sekitar blok di ruang kerja"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Seret pembolehubah kaunter anda di dalam blok ini"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "Gunakan blok “Ulang” dan bungkusnya di sekitar blok di ruang kerja"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "Gunakan blok ini untuk menetapkan “panjang” ke nilai yang betul."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "Gunakan blok ini untuk menetapkan “panjang” ke nilai yang betul."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "Bahagikan 360 dengan bilangan sisi untuk mendapatkan saiz setiap sudut dalam darjah."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "Gunakan butang ini untuk mengedit fungsi dan menukar arah Bee akan berubah untuk mendapatkan nektar."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "Letakkan blok di dalam gelung untuk mengulangi arahan"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "Klik di sini untuk mengedit fungsi anda."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "Klik edit untuk menambah parameter dalam fungsi anda"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "Gunakan anak panah untuk menggerakkan pelakon"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Memainkan bunyi apabila peristiwa ini berlaku."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Blok mana yang akan membuat Baymax bergerak ke atas apabila anak panah atas ditekan?",
+          "Infinity_move_directions_callout_arrow": "Gunakan anak panah ini untuk memandu"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Tambah blok alih di sini"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Letakkan Pindah blok di dalam sini"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Klik di sini untuk mengedit fungsi anda."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Klik di sini untuk mengedit fungsi anda."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "Klik di sini untuk membuka flyout “Fungsi”, kemudian klik butang “Buat Fungsi”."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "Klik edit untuk menambah parameter dalam fungsi anda",
+          "add_and_drag_parameter": "Tulis dalam nama parameter anda di sini, klik tambah, dan kemudian seret ke dalam definisi fungsi anda"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Seret pembolehubah panjang di sini untuk menggantikan tanda tanya"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "Kotak alat mendapat wajah baru! Blok “Tindakan” ada di sini sekarang."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Gunakan drop-down ini untuk membuat kepingan salji yang berbeza!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Gunakan blok “buat bulatan” dan ubah saiznya."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Gunakan blok ini dan letakkannya di sekitar blok kelabu di ruang kerja",
+          "repeat_blocks_2": "(2) Pindahkan blok “Ulang” di sini, dan letakkan blok kelabu di dalamnya"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Gunakan drop-down untuk menggantikan “???” dengan nombor"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Gunakan blok ulangi untuk membuat bentuk ini."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Gunakan blok ulangi untuk membuat bentuk ini."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Gunakan drop-down ini untuk membuat kepingan salji yang berbeza!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Gunakan “Turn” blok untuk membuat Elsa giliran. Nombor dalam drop-down menentukan berapa banyak Elsa bertukar"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Gunakan blok “Buat Cawangan Snowflake”"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Lampirkan lebih banyak blok di sini untuk membuat persegi"
+        },
+        "frozen square loop": {
+          "replace_questions": "Gunakan drop-down untuk menggantikan “???” dengan nombor"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Gunakan drop-down untuk menggantikan “???” dengan nombor"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Gunakan drop-down untuk menggantikan “???” dengan nombor"
         }
       }
     }

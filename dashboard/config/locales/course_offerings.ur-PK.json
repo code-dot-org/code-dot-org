@@ -8,9 +8,13 @@
         "coursed": "کورس D",
         "coursee": "کورس E",
         "coursef": "کورس F",
+        "flappy": "فلاپی کوڈ",
+        "jigsaw": "پہیلیاں۔",
         "frozen": "اینا اور ایلسا کے ساتھ کوڈ",
+        "hourofcode": "کلاسک بھولبلییا",
         "mc": "Minecraft کوڈ کی گھڑی",
         "outbreak": "وباء کا سیمیولیٹر",
+        "playlab": "لیب کھیلیں",
         "starwars": "اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)",
         "starwarsblocks": "کوڈ کے ساتھ کہکشاں بنانا (بلاکلی)",
         "csa-self-paced-pl": "CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا",
@@ -22,7 +26,10 @@
         "halloween": "ہالووین",
         "step": "اسٹیپ",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "فٹ بال"
+        "soccer": "فٹ بال",
+        "hello-world-space": "ہیلو ورلڈ: خلائی",
+        "hello-world-soccer": "ہیلو ورلڈ: فٹ بال",
+        "playground": "کھیل کا میدان"
       }
     }
   }

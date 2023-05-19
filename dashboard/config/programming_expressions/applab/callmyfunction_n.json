@@ -3,7 +3,32 @@
   "name": "Call a function with parameters",
   "category": "Functions",
   "category_key": "functions",
-  "content": "[name]\n\n## Call a function with parameters\n\n[/name]\n\n[category]\n\nCategory: Functions\n\n[/category]\n\n[description]\n\n[short_description]\n\nCalls a user defined function that takes one or more parameters, and optionally generates a return value.\n\n[/short_description]\n\nWhen you **define** a function you give a name to a set of actions you want the computer to perform. When you **call** a function you are telling the computer to run (or execute) that set of actions. When you call a function with parameters you must match the order of parameters in the function definition.\n\nA function definition can be provided anywhere in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put a function definition. And you can call it from anywhere, either before or after the function definition. We will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Call a function to draw a circle of a given radius.\ndrawCircle(37);\n\nfunction drawCircle(radius) {\n  dot(radius);\n  penColor(\"white\");\n  dot(radius-1);\n  penColor(\"black\");\n}\n```\n\n[/example]\n____________________________________________________\n\n[example]\n\n**Example: Circle using Two Dots** Call a function to draw a circle of a given radius and pen thickness in pixels.\n\n```\n// Call a function to draw a circle of a given radius and pen thickness in pixels..\ndrawCircle(37, 10);\n\nfunction drawCircle(radius, thickness) {\n  dot(radius);\n  penColor(\"white\");\n  dot(radius-thickness);\n  penColor(\"black\");\n}\n```\n\n[/example]\n____________________________________________________\n[example]\n\n**Example: Cylinder Area** Call a function to calculate and return the surface area of a right cylinder given its radius and height.\n\n```\n// Call a function to calculate and return the surface area of a right cylinder given its radius and height.\nvar area = cylinderSurfaceArea(5, 7);\nconsole.log(area);\n\nfunction cylinderSurfaceArea(radius, height) {\n  var topBottom = Math.PI * Math.pow(radius, 2);\n  var sides = 2 * Math.PI * radius * height;\n  return  2*topBottom + sides;\n}\n\n```\n\n[/example]\n____________________________________________________\n[syntax]\n\n### Syntax\n\n```\nmyFunction(param1, ... paramN);  // No value returned.  \n// OR\nvar returnValue = myFunction(param1, ... paramN);  // Value returned and saved.\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\nWhen calling a function the order of the parameters must match the function definition.\n\n[/parameters]\n\n[returns]\n\n### Returns\nIf the function returns a value, you must assign the returned value to a variable or use the value as a parameter in another function call.\n\n[/returns]\n\n### Tips\n- The purpose of a function is to help you organize your code and to avoid writing the same code twice.\n- You can call a function within another function.\n- A function that does not explicitly return a value returns the JavaScript value undefined.\n",
-  "short_description": "\nCall a function with parameters\nCategory: Functions",
-  "syntax": "myFunction(n)"
+  "content": "When you **define** a function you give a name to a set of actions you want the computer to perform. When you **call** a function you are telling the computer to run (or execute) that set of actions. When you call a function with parameters you must match the order of parameters in the function definition.\n\nA function definition can be provided anywhere in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put a function definition. And you can call it from anywhere, either before or after the function definition. We will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.",
+  "examples": [
+    {
+      "name": "Example: Circle With Radius",
+      "code": "```\n// Call a function to draw a circle of a given radius.\ndrawCircle(37);\n\nfunction drawCircle(radius) {\n  dot(radius);\n  penColor(\"white\");\n  dot(radius-1);\n  penColor(\"black\");\n}\n```"
+    },
+    {
+      "name": "Example: Circle using Two Dots",
+      "description": "Call a function to draw a circle of a given radius and pen thickness in pixels.",
+      "code": "```\n// Call a function to draw a circle of a given radius and pen thickness in pixels..\ndrawCircle(37, 10);\n\nfunction drawCircle(radius, thickness) {\n  dot(radius);\n  penColor(\"white\");\n  dot(radius-thickness);\n  penColor(\"black\");\n}\n```"
+    },
+    {
+      "name": "Example: Cylinder Area",
+      "description": "Call a function to calculate and return the surface area of a right cylinder given its radius and height.",
+      "code": "```\n// Call a function to calculate and return the surface area of a right cylinder given its radius and height.\nvar area = cylinderSurfaceArea(5, 7);\nconsole.log(area);\n\nfunction cylinderSurfaceArea(radius, height) {\n  var topBottom = Math.PI * Math.pow(radius, 2);\n  var sides = 2 * Math.PI * radius * height;\n  return  2*topBottom + sides;\n}\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "param1, ... paramN",
+      "type": "Any",
+      "description": "When calling a function the order of the parameters must match the function definition."
+    }
+  ],
+  "return_value": "If the function returns a value, you must assign the returned value to a variable or use the value as a parameter in another function call.",
+  "short_description": "Calls a user defined function that takes one or more parameters, and optionally generates a return value.",
+  "syntax": "myFunction(param1, ... paramN)",
+  "tips": "- The purpose of a function is to help you organize your code and to avoid writing the same code twice.\n- You can call a function within another function.\n- A function that does not explicitly return a value returns the JavaScript value undefined."
 }

@@ -24,6 +24,7 @@ ta:
           title: கோர்ஸ் 3
           description_audience: வயது 8-18
         playlab:
+          title: ப்ளே லேப்
           description: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை
             உருவாக்கவும்!
           description_short: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை
@@ -99,6 +100,7 @@ ta:
           student_description: உங்கள் சொந்த விளையாட்டை 10 நிமிடங்களுக்குள் எழுத வேண்டுமா?
             எங்கள் Flappy Code டுடோரியலை முயற்சிக்கவும்!
         jigsaw:
+          title: இயந்திர வாள்
           name: ஜிக்சா
         step:
           title: அடி
@@ -112,6 +114,10 @@ ta:
             Zombies! ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
         text-compression:
           title: உரை சுருக்க
+        allthethings:
+          lessons:
+            lesson-49:
+              name: இசை
         asUnplugged:
           description_audience: வயது 6-13
         afterschool1:
@@ -680,6 +686,8 @@ ta:
               display_name: மாறிலிகள்
             csf_data:
               display_name: தகவல்கள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             csf_internet:
               display_name: இணையதளம்
             csf_digcit:
@@ -709,6 +717,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            csf_binary:
+              display_name: இரும
             csf_digcit:
               display_name: டிஜிட்டல் குடியுரிமை
             end_of_course_project:
@@ -750,6 +760,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            csf_for_loops:
+              display_name: சுழல்கள்
         andrea-test:
           lesson_groups:
             required:
@@ -774,6 +786,8 @@ ta:
               display_name: டிஜிட்டல் குடியுரிமை
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
+            csf_binary:
+              display_name: இரும
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
@@ -787,6 +801,8 @@ ta:
             சிக்கல்களைத் தீர்க்கும் நுட்பங்களை ஆராயவும் மற்றும் இணைய அச்சுறுத்தலுக்கு
             எவ்வாறு பதிலளிப்பது என்பதை அறியவும். பாடத்திட்டத்தின் முடிவில், நீங்கள்
             பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த விளையாட்டை அல்லது கதையை உருவாக்குங்கள்!
+        gamelab:
+          title: விளையாட்டு லேப்
         coursea-2019:
           title: பாடநெறி அ (2019)
           description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக் கற்றுக்கொள்ளுங்கள்.
@@ -1003,6 +1019,10 @@ ta:
             required:
               display_name: கண்ணோட்டம்
         dance-2019:
+          title: நடன விருந்து
+          description_short: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள ஒரு நடன கட்சி குறியீடு.
+            பியோன்சே இடம்பெறும், ஹாரி ஸ்டைல்ஸ், லிஸ்ஸோ, லில் நாஸ் எக்ஸ், செலினா
+            கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
           description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக்
             குறிக்கவும்!
           student_description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன
@@ -1130,6 +1150,8 @@ ta:
               display_name: டிஜிட்டல் குடியுரிமை
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
+            csf_binary:
+              display_name: இரும
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
@@ -1157,6 +1179,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            csf_binary:
+              display_name: இரும
             csf_digcit:
               display_name: டிஜிட்டல் குடியுரிமை
             end_of_course_project:
@@ -1199,6 +1223,8 @@ ta:
               display_name: மாறிலிகள்
             csf_data:
               display_name: தகவல்கள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
           student_description: பல்வேறு வகையான சுழல்கள், நிகழ்வுகள், செயல்பாடுகள் மற்றும்
@@ -1222,6 +1248,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
         pre-express-2020:
@@ -1262,6 +1290,8 @@ ta:
             ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
         2021drafting:
           lesson_groups:
+            introduction:
+              display_name: அறிமுகம்
             lessonGroup-3:
               display_name: மாறிலிகள்
             outbreak:
@@ -1329,6 +1359,8 @@ ta:
               display_name: டிஜிட்டல் குடியுரிமை
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
+            csf_binary:
+              display_name: இரும
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
@@ -1353,6 +1385,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            csf_binary:
+              display_name: இரும
             csf_digcit:
               display_name: டிஜிட்டல் குடியுரிமை
             end_of_course_project:
@@ -1377,6 +1411,10 @@ ta:
           lesson_groups:
             csf_digcit:
               display_name: டிஜிட்டல் குடியுரிமை
+            csf_variables:
+              display_name: சுழல்கள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
             lessonGroup-8:
@@ -1399,6 +1437,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
             lessonGroup-9:
@@ -1413,6 +1453,8 @@ ta:
               display_name: நிகழ்வுகள்
         csf-2021-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: அறிமுகம்
             outbreak:
               display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
             lessonGroup-3:
@@ -1459,6 +1501,12 @@ ta:
           lesson_groups:
             lessonGroup-5:
               display_name: சாண்ட்பாக்ஸ்
+        k5-onlinepd-2021:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: அறிமுகம்
+            Introduction:
+              display_name: அறிமுகம்
         outbreakmodule:
           lesson_groups:
             Outbreak Module:
@@ -1685,6 +1733,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            csf_for_loops:
+              display_name: சுழல்கள்
             end_of_course_project:
               display_name: பாடநெறி திட்டத்தின் முடிவு
         csp4-2022:
@@ -1998,6 +2048,9 @@ ta:
             புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
           description: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான
             புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
+          lessons:
+            lesson-7:
+              name: ஸ்ப்ரிட்ஸ் அறிமுகம்
         csd-post-survey-2022:
           title: CS டிஸ்கவரிஸ் போஸ்ட்-கோர்ஸ் சர்வே
           description: இந்தத் தொகுதியில் CS கண்டுபிடிப்புகள் பயிற்சிவகுப்புக்குப்
@@ -2025,24 +2078,407 @@ ta:
           title: உங்கள் சொந்த கால்பந்து விளையாட்டை குறியிடவும்
           description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
           description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: அத்தியாயம் 1
-            lessonGroup-3:
-              display_name: அத்தியாயம் 2
-          title: பிரச்சனை தீர்வு
-        csd4-2023:
-          title: வடிவமைப்பு செயல்முறை
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: அத்தியாயம் 1
-            lessonGroup-3:
-              display_name: அத்தியாயம் 2
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-6:
+              name: சுழற்சிகள்
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: மாறிலிகள்
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: ஒரு பரிமாண (1D) அணிவரிசைகள்
+            lesson-3:
+              name: சுழல்கள்
+        hello-world-space-2022:
+          title: 'வணக்கம் உலகம்: விண்வெளி'
+        hello-world-soccer-2022:
+          title: 'வணக்கம் உலகம்: சாக்கர்'
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: அத்தியாயம் 1
             lessonGroup-3:
               display_name: அத்தியாயம் 2
+            lessonGroup-4:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: அந்த ஒலி என்ன?
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
+            csp_functions:
+              display_name: செயல்பாடுகள்
+            csp_project:
+              display_name: திட்டம்
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: தகவல்கள்
+            csp_loops:
+              display_name: சுழற்சிகள்
+            csp_project:
+              display_name: திட்டம்
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: பட்டியல்கள்
+            lessonGroup-3:
+              display_name: சுழற்சிகள்
+            lessonGroup-5:
+              display_name: திட்டம்
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: மதிப்பீடு
+        csp-playground:
+          description_audience: பாடத்திட்ட எழுத்தாளர்கள்
+          description_short: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான
+            புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+          title: பிரச்சனை தீர்வு
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+          title: பிரச்சனை தீர்வு
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            lessonGroup-9:
+              display_name: நிகழ்வுகள்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
+            csf_functions:
+              display_name: செயல்பாடுகள்
+            csf_variables:
+              display_name: மாறிலிகள்
+            csf_for_loops:
+              display_name: சுழல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: டிஜிட்டல் குடியுரிமை
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+            lessonGroup-5:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக்
+            கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய
+            உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: டிஜிட்டல் குடியுரிமை
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+            lessonGroup-6:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக்
+            கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய
+            உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: டிஜிட்டல் குடியுரிமை
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_events:
+              display_name: நிகழ்வுகள்
+            csf_data:
+              display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          student_description: வரிசைமுறை, சுழல்கள் மற்றும் நிகழ்வுகளுடன் நிரல்களை
+            உருவாக்கவும். உங்கள் முதலெழுத்துக்களை பைனரியாக மொழிபெயர்க்கவும், பல்வேறு
+            சிக்கல்களைத் தீர்க்கும் நுட்பங்களை ஆராயவும் மற்றும் இணைய அச்சுறுத்தலுக்கு
+            எவ்வாறு பதிலளிப்பது என்பதை அறியவும். பாடத்திட்டத்தின் முடிவில், நீங்கள்
+            பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த விளையாட்டை அல்லது கதையை உருவாக்குங்கள்!
+          description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
+            உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: டிஜிட்டல் குடியுரிமை
+            csf_sequencing:
+              display_name: வரிசைப்படுத்துதல்
+            csf_events:
+              display_name: நிகழ்வுகள்
+            csf_loops:
+              display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          title: பாடநெறி ஈ (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: டிஜிட்டல் குடியுரிமை
+            ramp_up:
+              display_name: உள்ளமை சுழல்கள்
+            csf_functions:
+              display_name: செயல்பாடுகள்
+            csf_nested_loops:
+              display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+            lessonGroup-3:
+              display_name: அத்தியாயம் 1
+            lessonGroup-4:
+              display_name: அத்தியாயம் 2
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+            lessonGroup-3:
+              display_name: அத்தியாயம் 1
+            lessonGroup-4:
+              display_name: அத்தியாயம் 2
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+            lessonGroup-4:
+              display_name: அத்தியாயம் 2
+        vpl-csd-ci-1:
+          title: 'தொகுதி 1: சிக்கலைத் தீர்ப்பதற்கும் கணிப்பிடுவதற்கும் கற்பிக்கத்
+            தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் சிக்கல் தீர்க்கும் மற்றும் கம்ப்யூட்டிங் யூனிட்டைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   சிக்கலைத் தீர்ப்பது மற்றும் கணக்கிடுவது பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 30 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் சிக்கல் தீர்க்கும் மற்றும் கம்ப்யூட்டிங் யூனிட்டைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   சிக்கலைத் தீர்ப்பது மற்றும் கணக்கிடுவது பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 30 நிமிடங்கள்
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: வலை அபிவிருத்தி கற்பித்தல்
+          title: 'தொகுதி 2: இணைய மேம்பாட்டைக் கற்பிக்கத் தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது, Code.org இன் வலை அபிவிருத்திப் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   வலை அபிவிருத்திக்கான அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   இணைய ஆய்வகத்துடன் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது, Code.org இன் வலை அபிவிருத்திப் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   வலை அபிவிருத்திக்கான அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   இணைய ஆய்வகத்துடன் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ஊடாடும் அனிமேஷன்கள் மற்றும் விளையாட்டுகளை கற்பிக்க தயாராகிறது
+          title: 'தொகுதி 3: ஊடாடும் அனிமேஷன் மற்றும் கேம்களை கற்பிக்கத் தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் இன்டராக்டிவ் அனிமேஷன்கள் மற்றும் கேம்ஸ் யூனிட்டைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   ஊடாடும் அனிமேஷன்கள் மற்றும் கேம்கள் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   கேம் லேப்பில் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 120 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் இன்டராக்டிவ் அனிமேஷன்கள் மற்றும் கேம்ஸ் யூனிட்டைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   ஊடாடும் அனிமேஷன்கள் மற்றும் கேம்கள் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   கேம் லேப்பில் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 120 நிமிடங்கள்
+        vpl-csd-ci-4:
+          title: 'தொகுதி 4: வடிவமைப்பு செயல்முறையை கற்பிக்க தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதி, Code.org இன் வடிவமைப்பு செயல்முறை அலகு கற்பிக்க உங்களுக்கு உதவ வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   வடிவமைப்பு செயல்முறைக்கு ஒரு அறிமுகம் கிடைக்கும்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   ஆப் லேப்பில் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதி, Code.org இன் வடிவமைப்பு செயல்முறை அலகு கற்பிக்க உங்களுக்கு உதவ வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   வடிவமைப்பு செயல்முறைக்கு ஒரு அறிமுகம் கிடைக்கும்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   ஆப் லேப்பில் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+        vpl-csd-ci-5:
+          title: 'தொகுதி 5: தரவு மற்றும் சமூகத்தை கற்பிக்க தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் தரவு மற்றும் சமூகப் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   தரவு மற்றும் சமூகம் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் தரவு மற்றும் சமூகப் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   தரவு மற்றும் சமூகம் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 90 நிமிடங்கள்
+        vpl-csd-ci-7:
+          title: 'தொகுதி 7: AI மற்றும் இயந்திர கற்றலைக் கற்பிக்கத் தயாராகிறது'
+          description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் AI மற்றும் இயந்திர கற்றல் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   AI மற்றும் இயந்திர கற்றல் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   AI ஆய்வகம் மற்றும் பயன்பாட்டு ஆய்வகத்துடன் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+            -   உங்கள் மாணவர்களுடன் யூனிட்டை செயல்படுத்துவதற்கான திட்டத்தை உருவாக்கவும்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 120 நிமிடங்கள்
+          student_description: |-
+            இந்த தொழில்முறை கற்றல் தொகுதியானது Code.org இன் AI மற்றும் இயந்திர கற்றல் பிரிவைக் கற்பிக்க உங்களுக்கு உதவுவதற்காக வடிவமைக்கப்பட்டுள்ளது.
+
+            **இந்த தொழில்முறை கற்றல் தொகுதியில், நீங்கள்:**
+
+            -   AI மற்றும் இயந்திர கற்றல் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+            -   யூனிட்டில் சேர்க்கப்பட்டுள்ள முக்கிய கருத்துகளைப் பயிற்சி செய்யுங்கள்.
+            -   AI ஆய்வகம் மற்றும் பயன்பாட்டு ஆய்வகத்துடன் ஈடுபடுங்கள்.
+            -   அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள்.
+            -   உங்கள் மாணவர்களுடன் யூனிட்டை செயல்படுத்துவதற்கான திட்டத்தை உருவாக்கவும்.
+
+            **பரிந்துரைக்கப்பட்ட நேரம்:** 120 நிமிடங்கள்
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: அறிமுகம்
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: மடக்கு
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: மடக்கு
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: அறிமுகம்
+            lesson-12:
+              name: மடக்கு
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: மடக்கு
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: மடக்கு
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: மடக்கு
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: மதிப்பீடு
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: டிஜிட்டல் குடியுரிமை
+            lessonGroup-4:
+              display_name: மாறிலிகள்
+            lessonGroup-6:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
+          description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
+            கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.

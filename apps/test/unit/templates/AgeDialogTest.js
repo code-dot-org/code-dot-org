@@ -9,7 +9,7 @@ describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
     turnOffFilter: () => {},
-    storage: new FakeStorage()
+    storage: new FakeStorage(),
   };
 
   it('renders null if user is signed in', () => {

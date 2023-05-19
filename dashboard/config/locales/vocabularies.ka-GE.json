@@ -5,6 +5,9 @@
         "debugging/minecraft/unversioned": {
           "word": "გამართვა"
         },
+        "loop/minecraft/unversioned": {
+          "word": "ციკლი"
+        },
         "debugging/hero/unversioned": {
           "word": "გამართვა"
         },
@@ -35,14 +38,14 @@
         "debugging/gumball/unversioned": {
           "word": "გამართვა"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "გამართვა"
-        },
         "condition/aquatic/unversioned": {
           "word": "პირობა"
         },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "გამართვა"
         },
         "loops/aquatic/unversioned": {
           "word": "ციკლები"
@@ -62,6 +65,14 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "გამართვა"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "კოდი"
         },
@@ -74,8 +85,14 @@
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
         },
+        "machine_learning/oceans/unversioned": {
+          "word": "მანქანათმცოდნეობა"
+        },
         "debugging/coursed/2022": {
           "word": "გამართვა"
+        },
+        "loop/coursed/2022": {
+          "word": "ციკლი"
         },
         "programming/coursed/2022": {
           "word": "პროგრამირება"
@@ -89,11 +106,17 @@
         "sprite/coursef/2022": {
           "word": "სპრაიტი"
         },
+        "behavior/coursef/2022": {
+          "word": "ქცევა"
+        },
         "variable/coursef/2022": {
           "word": "ცვლადი"
         },
         "input/coursef/2022": {
           "word": "შემომავალი ინფორმაცია"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "მანქანათმცოდნეობა"
         },
         "internet/coursef/2022": {
           "word": "ინტერნეტი"
@@ -104,8 +127,14 @@
         "define/coursef/2022": {
           "word": "განსაზღვრეთ"
         },
+        "behavior/coursee/2022": {
+          "word": "ქცევა"
+        },
         "sprite/coursee/2022": {
           "word": "სპრაიტი"
+        },
+        "loop/coursee/2022": {
+          "word": "ციკლი"
         },
         "function/coursee/2022": {
           "word": "ფუნქცია"
@@ -128,14 +157,26 @@
         "programming/courseb/2022": {
           "word": "პროგრამირება"
         },
+        "loop/courseb/2022": {
+          "word": "ციკლი"
+        },
         "debugging/express/2022": {
           "word": "გამართვა"
+        },
+        "sequencing/express/2022": {
+          "word": "თანმიმდევრობა"
         },
         "programming/express/2022": {
           "word": "პროგრამირება"
         },
+        "behavior/express/2022": {
+          "word": "ქცევა"
+        },
         "sprite/express/2022": {
           "word": "სპრაიტი"
+        },
+        "loop/express/2022": {
+          "word": "ციკლი"
         },
         "condition/express/2022": {
           "word": "პირობა"
@@ -158,17 +199,32 @@
         "programming/pre-express/2022": {
           "word": "პროგრამირება"
         },
+        "loop/pre-express/2022": {
+          "word": "ციკლი"
+        },
         "debugging/coursea/2022": {
           "word": "გამართვა"
         },
         "programming/coursea/2022": {
           "word": "პროგრამირება"
         },
+        "loop/coursea/2022": {
+          "word": "ციკლი"
+        },
         "debugging/coursec/2022": {
           "word": "გამართვა"
         },
+        "sequencing/coursec/2022": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/coursec/2022": {
           "word": "პროგრამირება"
+        },
+        "loop/coursec/2022": {
+          "word": "ციკლი"
+        },
+        "data/coursec/2022": {
+          "word": "მონაცემები"
         },
         "binary/coursec/2022": {
           "word": "ორობითი"
@@ -206,17 +262,46 @@
         "copyright/csd/2022": {
           "word": "საავტორო უფლება"
         },
+        "machine_learning/csd/2022": {
+          "word": "მანქანათმცოდნეობა"
+        },
         "code/poem-art/unversioned": {
-          "word": "კოდი"
+          "word": "კოდი",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "სპრაიტი"
+        },
+        "behavior/coursef/2021": {
+          "word": "ქცევა"
         },
         "variable/coursef/2021": {
           "word": "ცვლადი"
         },
         "input/coursef/2021": {
           "word": "შემომავალი ინფორმაცია"
+        },
+        "loop/coursef/2021": {
+          "word": "ციკლი"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "მანქანათმცოდნეობა"
         },
         "internet/coursef/2021": {
           "word": "ინტერნეტი"
@@ -233,23 +318,38 @@
         "programming/courseb/2021": {
           "word": "პროგრამირება"
         },
+        "loop/courseb/2021": {
+          "word": "ციკლი"
+        },
         "debugging/coursea/2021": {
           "word": "გამართვა"
         },
         "programming/coursea/2021": {
           "word": "პროგრამირება"
         },
+        "loop/coursea/2021": {
+          "word": "ციკლი"
+        },
         "debugging/coursec/2021": {
           "word": "გამართვა"
         },
+        "sequencing/coursec/2021": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/coursec/2021": {
           "word": "პროგრამირება"
+        },
+        "loop/coursec/2021": {
+          "word": "ციკლი"
         },
         "binary/coursec/2021": {
           "word": "ორობითი"
         },
         "debugging/coursed/2021": {
           "word": "გამართვა"
+        },
+        "loop/coursed/2021": {
+          "word": "ციკლი"
         },
         "programming/coursed/2021": {
           "word": "პროგრამირება"
@@ -263,11 +363,20 @@
         "debugging/express/2021": {
           "word": "გამართვა"
         },
+        "sequencing/express/2021": {
+          "word": "თანმიმდევრობა"
+        },
         "programming/express/2021": {
           "word": "პროგრამირება"
         },
+        "behavior/express/2021": {
+          "word": "ქცევა"
+        },
         "sprite/express/2021": {
           "word": "სპრაიტი"
+        },
+        "loop/express/2021": {
+          "word": "ციკლი"
         },
         "condition/express/2021": {
           "word": "პირობა"
@@ -290,11 +399,20 @@
         "programming/pre-express/2021": {
           "word": "პროგრამირება"
         },
+        "loop/pre-express/2021": {
+          "word": "ციკლი"
+        },
+        "behavior/coursee/2021": {
+          "word": "ქცევა"
+        },
         "sprite/coursee/2021": {
           "word": "სპრაიტი"
         },
         "copyright/coursee/2021": {
           "word": "საავტორო უფლება"
+        },
+        "loop/coursee/2021": {
+          "word": "ციკლი"
         },
         "function/coursee/2021": {
           "word": "ფუნქცია"
@@ -307,6 +425,9 @@
         },
         "define/coursee/2021": {
           "word": "განსაზღვრეთ"
+        },
+        "machine_learning/csd/2021": {
+          "word": "მანქანათმცოდნეობა"
         },
         "debugging/csd/2021": {
           "word": "გამართვა"

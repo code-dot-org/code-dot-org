@@ -7014,7 +7014,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7024,7 +7024,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7034,7 +7034,7 @@ zh-TW:
         - text: 企鵝
         - text: 青蛙
           correct: true
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7044,7 +7044,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7054,7 +7054,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -7064,7 +7064,7 @@ zh-TW:
           correct: true
         - text: 企鵝
         - text: 青蛙
-        - {}
+        - text: 長頸鹿
         - {}
         questions:
         - {}
@@ -13263,15 +13263,11 @@ zh-TW:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - text: 小松鼠即將拿到橡果.程式碼中沒有錯誤.
-          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         - text: 松鼠不會取得橡果因為他轉錯了方向。
           correct: true
-          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         - text: 松鼠不會取得像果，因為「前進」的區塊不夠多。
-          correct: true
-          feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         - text: 鼠奎特不會從第一個方塊開始移動。
-          feedback: 這段程式碼中有兩個臭蟲。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+          feedback: 松鼠不會取得橡果因為他轉錯了方向。
         questions:
         - text: 在這段程式碼裡找找看臭蟲。松鼠會取得橡果還是不會？
       courseC_multi_maze_programming8_predict12022:
@@ -13446,23 +13442,11 @@ zh-TW:
         - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
-          correct: true
+        - correct: true
           feedback: 正確！
         - text: 殭屍將成功吃到向日葵。
-          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
         - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
-          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
         - text: 僵屍將被困在前進道路的盡頭。
-          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
-
-'
         questions:
         - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until2_predict12022:

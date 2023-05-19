@@ -345,6 +345,26 @@
         },
         "courseB_maze_seq12022": {
           "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Нови блок!"
         }
       }
     }

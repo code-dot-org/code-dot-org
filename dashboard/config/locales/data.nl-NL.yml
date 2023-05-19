@@ -623,8 +623,8 @@ nl:
         C4_unplugged_parameters: Liedjes schrijven met Parameters
         C4_unplugged_binary: Binaire
         CSF_create_functions: Maken van functies
-        CSF_debugging_k1_blocks: Foutopsporing
-        CSF_debugging_text_blocks: Foutopsporing
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Informatica doet ertoe
         CSF_maze_intro_k1_blocks: Inleiding tot Code Studio
         CSF_maze_intro_text_blocks: Inleiding tot Code Studio
@@ -731,7 +731,7 @@ nl:
         writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
-        csd_debugging: Foutopsporing
+        csd_debugging: Debugging
         csp-pd-welcome: Welkom bij de Familie!
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_warmup_2019: Dance Party 2019 - Opwarmen

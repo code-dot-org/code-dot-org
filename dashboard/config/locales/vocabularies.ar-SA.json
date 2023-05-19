@@ -22,10 +22,6 @@
           "word": "تصحيح الأخطاء",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
-        "program/minecraft/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
         "event/minecraft/unversioned": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
@@ -33,6 +29,10 @@
         "loop/minecraft/unversioned": {
           "word": "الحلقة",
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
+        },
+        "program/minecraft/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/hero/unversioned": {
           "word": "الكود",
@@ -42,13 +42,13 @@
           "word": "تصحيح الأخطاء",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
-        "program/hero/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
         "function/hero/unversioned": {
           "word": "وظيفة ",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
+        },
+        "program/hero/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/poem-art/2021": {
           "word": "البرمجة",
@@ -142,6 +142,10 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
+        "code/dance/unversioned": {
+          "word": "الكود",
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
         "event/dance/unversioned": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
@@ -150,21 +154,9 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
-        "code/dance/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
         "code/aquatic/unversioned": {
           "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
-        },
-        "program/aquatic/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "condition/aquatic/unversioned": {
           "word": "الشرط",
@@ -174,9 +166,17 @@
           "word": "الجمل الشرطية",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
         "loops/aquatic/unversioned": {
           "word": "الحلقات",
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
+        },
+        "program/aquatic/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "شفرة قيصر",
@@ -258,9 +258,9 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
-        "event/sports/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "البرمجة",
@@ -269,6 +269,10 @@
         "debugging/sports/unversioned": {
           "word": "تصحيح الأخطاء",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "event/sports/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "program/sports/unversioned": {
           "word": "البرنامج",
@@ -286,10 +290,6 @@
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
-        "event/basketball/unversioned": {
-          "word": "الحدث",
-          "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
         "code/basketball/unversioned": {
           "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
@@ -297,6 +297,10 @@
         "debugging/basketball/unversioned": {
           "word": "تصحيح الأخطاء",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "event/basketball/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "program/basketball/unversioned": {
           "word": "البرنامج",
@@ -828,6 +832,9 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
+        "data/coursec/2022": {
+          "word": "البيانات"
+        },
         "binary/coursec/2022": {
           "word": "ثنائي",
           "definition": "طريقة تمثيل معلومات باستخدام خيارين فقط."
@@ -912,6 +919,10 @@
           "word": "مستخدم",
           "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
         },
+        "algorithm/coursef/2021": {
+          "word": "الخوارزمية",
+          "definition": "قائمة الخطوات اللازمة لإنجاز مهمة ما."
+        },
         "behavior/coursef/2021": {
           "word": "السلوك",
           "definition": "إجراء يقوم به كائن ما بشكل مستمر حتى يُطلب منه التوقف."
@@ -919,10 +930,6 @@
         "program/coursef/2021": {
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
-        },
-        "algorithm/coursef/2021": {
-          "word": "الخوارزمية",
-          "definition": "قائمة الخطوات اللازمة لإنجاز مهمة ما."
         },
         "event/coursef/2021": {
           "word": "الحدث",
@@ -960,9 +967,21 @@
           "word": "نظام اسم النطاق (DNS)",
           "definition": "DNS هي اختصار لمصطلح \"Domain Name System\" ويعني \"نظام اسم النطاق\"، وهو نظام يترجم أسماء المواقع الالكترونية (مثل example.com) إلى عناوين بروتوكول الإنترنت \"IP Addresses\" (مثل 93.184.216.34)"
         },
+        "dsl_cable/coursef/2021": {
+          "word": "خط المشترك الرقمي (DSL)/ الكوابل (Cable)",
+          "definition": "طريقة لإرسال المعلومات باستخدام كوابل الهاتف أو التلفاز."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "كيبل (سلك) الألياف الضوئية",
+          "definition": "طريقة اتصال تستخدم الضوء لنقل المعلومات"
+        },
         "internet/coursef/2021": {
           "word": "الإنترنت",
           "definition": "مجموعة من أجهزة الكمبيوتر والخوادم المتصلة بعضها ببعض."
+        },
+        "ip_address/coursef/2021": {
+          "word": "عنوان بروتوكول الإنترنت (IP Address)",
+          "definition": "رقم يتم تعيينه لأي عنصر متصل بالإنترنت."
         },
         "packets/coursef/2021": {
           "word": "الحزم",
@@ -975,18 +994,6 @@
         "url/coursef/2021": {
           "word": "عنوان موقع انترنت URL",
           "definition": "عنوان يسهل تذكره للاتصال بصفحة ويب (مثل www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "خط المشترك الرقمي (DSL)/ الكوابل (Cable)",
-          "definition": "طريقة لإرسال المعلومات باستخدام كوابل الهاتف أو التلفاز."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "كيبل (سلك) الألياف الضوئية",
-          "definition": "طريقة اتصال تستخدم الضوء لنقل المعلومات"
-        },
-        "ip_address/coursef/2021": {
-          "word": "عنوان بروتوكول الإنترنت (IP Address)",
-          "definition": "رقم يتم تعيينه لأي عنصر متصل بالإنترنت."
         },
         "wi_fi/coursef/2021": {
           "word": "انترنت لا سلكي (الواي فاي)",
@@ -1024,6 +1031,10 @@
           "word": "انقر",
           "definition": "اضغط على زر الماوس"
         },
+        "double_click/courseb/2021": {
+          "word": "النقر المزدوج",
+          "definition": "اضغط على زر الماوس بسرعة كبيرة"
+        },
         "drag/courseb/2021": {
           "word": "اسحب",
           "definition": "اضغط على زر الماوس باستمرار أثناء تحريك مؤشر الماوس إلى موقع جديد"
@@ -1031,10 +1042,6 @@
         "drop/courseb/2021": {
           "word": "السقوط",
           "definition": "حرر زر الماوس من أجل \"ترك\" عنصر تسحبه"
-        },
-        "double_click/courseb/2021": {
-          "word": "النقر المزدوج",
-          "definition": "اضغط على زر الماوس بسرعة كبيرة"
         },
         "program/courseb/2021": {
           "word": "البرنامج",
@@ -1076,6 +1083,10 @@
           "word": "انقر",
           "definition": "اضغط على زر الماوس"
         },
+        "double_click/coursea/2021": {
+          "word": "النقر المزدوج",
+          "definition": "اضغط على زر الماوس بسرعة كبيرة"
+        },
         "drag/coursea/2021": {
           "word": "اسحب",
           "definition": "اضغط على زر الماوس باستمرار أثناء تحريك مؤشر الماوس إلى موقع جديد"
@@ -1083,10 +1094,6 @@
         "drop/coursea/2021": {
           "word": "السقوط",
           "definition": "حرر زر الماوس من أجل \"ترك\" عنصر تسحبه"
-        },
-        "double_click/coursea/2021": {
-          "word": "النقر المزدوج",
-          "definition": "اضغط على زر الماوس بسرعة كبيرة"
         },
         "bug/coursea/2021": {
           "word": "خلل",
@@ -1286,13 +1293,13 @@
           "word": "وظيفة ",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
-        "variable/express/2021": {
-          "word": "متغير",
-          "definition": "اسم لجزء من المعلومات المستخدمة في البرنامج."
-        },
         "prompt/express/2021": {
           "word": "محفزات",
           "definition": "رسالة على شاشة الكمبيوتر تنتظر الإدخال من المستخدم."
+        },
+        "variable/express/2021": {
+          "word": "متغير",
+          "definition": "اسم لجزء من المعلومات المستخدمة في البرنامج."
         },
         "for_loop/express/2021": {
           "word": "حلقة \"لِ\"",
@@ -1318,6 +1325,10 @@
           "word": "انقر",
           "definition": "اضغط على زر الماوس"
         },
+        "double_click/pre-express/2021": {
+          "word": "النقر المزدوج",
+          "definition": "اضغط على زر الماوس بسرعة كبيرة"
+        },
         "drag/pre-express/2021": {
           "word": "اسحب",
           "definition": "اضغط على زر الماوس باستمرار أثناء تحريك مؤشر الماوس إلى موقع جديد"
@@ -1325,10 +1336,6 @@
         "drop/pre-express/2021": {
           "word": "السقوط",
           "definition": "حرر زر الماوس من أجل \"ترك\" عنصر تسحبه"
-        },
-        "double_click/pre-express/2021": {
-          "word": "النقر المزدوج",
-          "definition": "اضغط على زر الماوس بسرعة كبيرة"
         },
         "algorithm/pre-express/2021": {
           "word": "الخوارزمية",
@@ -1366,13 +1373,13 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
-        "behavior/coursee/2021": {
-          "word": "السلوك",
-          "definition": "إجراء يقوم به كائن ما بشكل مستمر حتى يُطلب منه التوقف."
-        },
         "algorithm/coursee/2021": {
           "word": "الخوارزمية",
           "definition": "قائمة الخطوات اللازمة لإنجاز مهمة."
+        },
+        "behavior/coursee/2021": {
+          "word": "السلوك",
+          "definition": "إجراء يقوم به كائن ما بشكل مستمر حتى يُطلب منه التوقف."
         },
         "sprite/coursee/2021": {
           "word": "كائن",

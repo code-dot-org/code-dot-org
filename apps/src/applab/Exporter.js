@@ -1,4 +1,3 @@
-/* global dashboard */
 import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
@@ -15,7 +14,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {
   extractSoundAssets,
   rewriteAssetUrls,
-  fetchWebpackRuntime
+  fetchWebpackRuntime,
 } from '../util/exporter';
 
 // This allowlist determines which appOptions properties
@@ -65,7 +64,7 @@ const APP_OPTIONS_ALLOWLIST = {
     lesson_total: true,
     iframeEmbed: true,
     lastAttempt: true,
-    submittable: true
+    submittable: true,
   },
   showUnusedBlocks: true,
   fullWidth: true,
@@ -100,7 +99,7 @@ const APP_OPTIONS_ALLOWLIST = {
   report: {
     fallback_response: true,
     callback: true,
-    sublevelCallback: true
+    sublevelCallback: true,
   },
   isUS: true,
   send_to_phone_url: true,
@@ -110,7 +109,7 @@ const APP_OPTIONS_ALLOWLIST = {
     art_from_html: true,
     code_from_html: true,
     powered_by_aws: true,
-    trademark: true
+    trademark: true,
   },
   teacherMarkdown: false,
   dialog: {
@@ -121,16 +120,16 @@ const APP_OPTIONS_ALLOWLIST = {
     sublevelCallback: true,
     app: true,
     level: true,
-    shouldShowDialog: true
+    shouldShowDialog: true,
   },
-  locale: true
+  locale: true,
 };
 
 // this configuration forces certain values to show up
 // in the appOptions config. These values will be assigned
 // regardless of whether or not they are in the allowlist
 const APP_OPTIONS_OVERRIDES = {
-  readonlyWorkspace: true
+  readonlyWorkspace: true,
 };
 
 export function getAppOptionsFile() {
@@ -166,8 +165,25 @@ export function getAppOptionsFile() {
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
-const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
-const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
+// This list of fonts is derived from the set of fonts needed for V4 compatibility here:
+// https://dsco.code.org/assets/font-awesome-pro/1684178876/css/v4-font-face.css
+// Icons in use in student projects created in Applab are derived from an older version of FontAwesome (V3?), while
+// the rest of Code.org (ie, the pegasus/dashboard sites themselves)
+// are all on v6. See the following for more details:
+// https://github.com/code-dot-org/code-dot-org/blob/960e2e5766ebf4ceb526064a71a91a520dcd61bc/apps/src/code-studio/components/icons.js
+const fontAwesomeBrandsWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/1684178876/webfonts/fa-brands-400.woff2';
+const fontAwesomeSolidWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/1684178876/webfonts/fa-solid-900.woff2';
+const fontAwesomeRegularWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/1684178876/webfonts/fa-regular-400.woff2';
+const fontAwesomeV4CompatibilityWOFFRelativeSourcePath =
+  'https://dsco.code.org/assets/font-awesome-pro/1684178876/webfonts/fa-v4compatibility.woff2';
+
+const fontAwesomeBrandsWOFFPath = 'applab/fa-brands-400.woff2';
+const fontAwesomeSolidWOFFPath = 'applab/fa-solid-900.woff2';
+const fontAwesomeRegularWOFFPath = 'applab/fa-regular-400.woff2';
+const fontAwesomeV4CompatibilityWOFFPath = 'applab/fa-v4compatibility.woff2';
 
 /**
  * Retrieves the export config object.
@@ -189,27 +205,42 @@ export default {
       appName,
       exportConfigPath: exportConfig.path,
       htmlBody: transformedHTML,
-      fontPath: fontAwesomeWOFFPath
+      faBrandsPath: fontAwesomeBrandsWOFFPath,
+      faSolidPath: fontAwesomeSolidWOFFPath,
+      faRegularPath: fontAwesomeRegularWOFFPath,
+      faV4CompatibilityPath: fontAwesomeV4CompatibilityWOFFPath,
     });
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
     const staticAssets = [
       {
-        url: '/blockly/js/en_us/common_locale.js' + cacheBust
+        url: '/blockly/js/en_us/common_locale.js' + cacheBust,
       },
       {
-        url: '/blockly/js/en_us/applab_locale.js' + cacheBust
+        url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
       },
       {
-        url: '/blockly/css/applab.css' + cacheBust
+        url: '/blockly/css/applab.css' + cacheBust,
       },
       {
-        url: '/blockly/css/common.css' + cacheBust
+        url: '/blockly/css/common.css' + cacheBust,
       },
       {
         dataType: 'binary',
-        url: fontAwesomeWOFFRelativeSourcePath + cacheBust
-      }
+        url: fontAwesomeBrandsWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeSolidWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeRegularWOFFRelativeSourcePath + cacheBust,
+      },
+      {
+        dataType: 'binary',
+        url: fontAwesomeV4CompatibilityWOFFRelativeSourcePath + cacheBust,
+      },
     ];
 
     const rootRelativeAssetPrefix = 'assets/';
@@ -219,7 +250,7 @@ export default {
       html,
       code,
       rootRelativeAssetPrefix,
-      zipAssetPrefix
+      zipAssetPrefix,
     });
 
     const mainProjectFilesPrefix = appName + '/';
@@ -231,7 +262,10 @@ export default {
       rewriteAssetUrls(appAssets, html)
     );
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
-      fontPath: fontAwesomeWOFFPath
+      fontBrandsPath: fontAwesomeBrandsWOFFPath,
+      fontSolidPath: fontAwesomeSolidWOFFPath,
+      fontRegularPath: fontAwesomeRegularWOFFPath,
+      fontV4CompatibilityPath: fontAwesomeV4CompatibilityWOFFPath,
     });
     zip.file(mainProjectFilesPrefix + 'style.css', fontAwesomeCSS);
     zip.file(
@@ -275,7 +309,10 @@ export default {
           [applabLocale],
           [applabCSS],
           [commonCSS],
-          [fontAwesomeWOFF],
+          [fontAwesomeBrandsWOFF],
+          [fontAwesomeSolidWOFF],
+          [fontAwesomeRegularWOFF],
+          [fontAwesomeV4CompatibilityWOFF],
           ...rest
         ) => {
           const appOptionsContents = getAppOptionsFile();
@@ -286,12 +323,24 @@ export default {
               appOptionsContents,
               commonLocale,
               applabLocale,
-              applabApi
+              applabApi,
             ].join('\n')
           );
           zip.file(
-            mainProjectFilesPrefix + fontAwesomeWOFFPath,
-            fontAwesomeWOFF
+            mainProjectFilesPrefix + fontAwesomeBrandsWOFFPath,
+            fontAwesomeBrandsWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeSolidWOFFPath,
+            fontAwesomeSolidWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeRegularWOFFPath,
+            fontAwesomeRegularWOFF
+          );
+          zip.file(
+            mainProjectFilesPrefix + fontAwesomeV4CompatibilityWOFFPath,
+            fontAwesomeV4CompatibilityWOFF
           );
           rest.forEach(([data], index) => {
             zip.file(appAssets[index].zipPath, data, {binary: true});
@@ -319,7 +368,7 @@ export default {
             .map(url => ({
               url,
               rootRelativePath: rootRelativeApplabAssetPrefix + url,
-              zipPath: zipApplabAssetPrefix + url
+              zipPath: zipApplabAssetPrefix + url,
             }));
 
           zip.file(appName + '/' + rootApplabPrefix + 'applab.css', applabCSS);
@@ -332,7 +381,7 @@ export default {
             (...assetResponses) => {
               assetResponses.forEach(([data], index) => {
                 zip.file(cssAssetsToDownload[index].zipPath, data, {
-                  binary: true
+                  binary: true,
                 });
               });
               return resolve(zip);
@@ -346,7 +395,7 @@ export default {
           logToCloud.addPageAction(
             logToCloud.PageAction.StaticResourceFetchError,
             {
-              app: 'applab'
+              app: 'applab',
             },
             1 / 100
           );
@@ -357,12 +406,12 @@ export default {
   },
 
   exportApp(appName, code, levelHtml) {
-    return this.exportAppToZip(appName, code, levelHtml).then(function(zip) {
-      zip.generateAsync({type: 'blob'}).then(function(blob) {
+    return this.exportAppToZip(appName, code, levelHtml).then(function (zip) {
+      zip.generateAsync({type: 'blob'}).then(function (blob) {
         saveAs(blob, appName + '.zip');
       });
     });
-  }
+  },
 };
 
 function generateAppAssets(params) {
@@ -370,7 +419,7 @@ function generateAppAssets(params) {
     html = '',
     code = '',
     rootRelativeAssetPrefix = '',
-    zipAssetPrefix = ''
+    zipAssetPrefix = '',
   } = params;
 
   const appAssets = dashboard.assets.listStore.list().map(asset => ({
@@ -378,13 +427,13 @@ function generateAppAssets(params) {
     rootRelativePath: rootRelativeAssetPrefix + asset.filename,
     zipPath: zipAssetPrefix + asset.filename,
     dataType: 'binary',
-    filename: asset.filename
+    filename: asset.filename,
   }));
 
   const soundAssets = extractSoundAssets({
     sources: [html, code],
     rootRelativeAssetPrefix,
-    zipAssetPrefix
+    zipAssetPrefix,
   });
 
   return [...appAssets, ...soundAssets];

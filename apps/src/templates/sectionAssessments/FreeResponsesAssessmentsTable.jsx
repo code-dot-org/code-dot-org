@@ -13,19 +13,19 @@ const PADDING = 15;
 
 export const COLUMNS = {
   NAME: 0,
-  RESPONSE: 1
+  RESPONSE: 1,
 };
 
 class FreeResponsesAssessmentsTable extends Component {
   static propTypes = {
-    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType)
+    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
   };
 
   state = {
     [COLUMNS.NAME]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -39,10 +39,10 @@ class FreeResponsesAssessmentsTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -66,19 +66,19 @@ class FreeResponsesAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.studentNameColumnHeader
-            }
+              ...styles.studentNameColumnHeader,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.studentNameColumnCell
-            }
-          }
-        }
+              ...styles.studentNameColumnCell,
+            },
+          },
+        },
       },
       {
         property: 'response',
@@ -87,15 +87,15 @@ class FreeResponsesAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.responseHeaderCell
-            }
-          }
+              ...styles.responseHeaderCell,
+            },
+          },
         },
         cell: {
           formatters: [this.responseCellFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     return dataColumns;
   };
@@ -113,7 +113,7 @@ class FreeResponsesAssessmentsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.freeResponses);
 
     return (
@@ -127,7 +127,7 @@ class FreeResponsesAssessmentsTable extends Component {
 
 const styles = {
   studentNameColumnHeader: {
-    padding: PADDING
+    padding: PADDING,
   },
   studentNameColumnCell: {
     textOverflow: 'ellipsis',
@@ -135,17 +135,17 @@ const styles = {
     overflow: 'hidden',
     maxWidth: 200,
     padding: PADDING,
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   responseColumnHeader: {
-    padding: PADDING
+    padding: PADDING,
   },
   noResponse: {
-    color: color.lighter_gray
+    color: color.lighter_gray,
   },
   response: {
-    whiteSpace: 'pre-wrap'
-  }
+    whiteSpace: 'pre-wrap',
+  },
 };
 
 export default FreeResponsesAssessmentsTable;

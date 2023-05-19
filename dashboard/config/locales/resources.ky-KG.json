@@ -502,6 +502,11 @@
         "vocabulary_3/csd/2017": {
           "name": "Сөздүк"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Видео"
         },
@@ -514,10 +519,10 @@
         "ai-ml/coursef/2021": {
           "type": "Видео"
         },
-        "ai-training/coursef/2021": {
+        "ai-societal/coursef/2021": {
           "type": "Видео"
         },
-        "ai-societal/coursef/2021": {
+        "ai-training/coursef/2021": {
           "type": "Видео"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -535,10 +540,10 @@
         "unplugged-video-big-event/courseb/2021": {
           "type": "Видео"
         },
-        "wiggles-go_noodle/coursea/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Видео"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Видео"
         },
         "wiggles_-_gonoodle/coursea/2021": {
@@ -559,40 +564,40 @@
         "pause_and_think_online/coursec/2021": {
           "type": "Видео"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Графикалык кагазды програмдоо"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Графикалык кагазды програмдоо"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "relay-assessment/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Релени програмдоо"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Релени програмдоо"
         },
         "pause_and_think_online/coursed/2021": {

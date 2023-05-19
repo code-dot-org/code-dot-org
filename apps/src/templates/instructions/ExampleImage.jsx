@@ -7,7 +7,7 @@ export default function ExampleImage({src}) {
 }
 
 ExampleImage.propTypes = {
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
 
 const styles = {
@@ -18,6 +18,6 @@ const styles = {
     boxShadow: `0 10px 13px -11px ${color.black}`,
     border: `2px solid ${color.light_gray}`,
     borderRadius: 25,
-    boxSizing: 'border-box'
-  }
+    boxSizing: 'border-box',
+  },
 };

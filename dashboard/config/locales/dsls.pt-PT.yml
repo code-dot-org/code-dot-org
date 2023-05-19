@@ -11162,7 +11162,7 @@ pt-PT:
         - text: azul
         - text: verde
         - {}
-        - {}
+        - text: amarelo
         - correct: true
         - text: vermelho
         questions:
@@ -18345,7 +18345,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
-        - correct: true
+        - {}
         - {}
         questions:
         - {}
@@ -18544,19 +18544,12 @@ pt-PT:
             clicar em "Executar"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: O zombie irá andar no caminho correto e terminará indo e voltando
-            eternamente.
-          correct: true
+        - correct: true
           feedback: Certo!
         - text: O zumbi chegará até o girassol.
-          feedback: Incorreto. O zombie irá andar no caminho correto e terminará indo
-            e voltando eternamente.
         - text: O zumbi vai virar à direita no primeiro caminho e ficar andando em
             círculos para sempre.
-          feedback: Incorreto. O zombie irá andar no caminho correto e terminará indo
-            e voltando eternamente.
-        - feedback: Neste código, o zombie irá andar no caminho correto e terminará
-            indo e voltando eternamente.
+        - {}
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?

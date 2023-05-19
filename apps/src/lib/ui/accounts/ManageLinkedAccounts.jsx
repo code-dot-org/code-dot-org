@@ -16,16 +16,16 @@ const authOptionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   credentialType: PropTypes.string.isRequired,
   email: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
 });
 const EMPTY_AUTH_OPTION = {
   credentialType: '',
   email: '',
-  error: ''
+  error: '',
 };
 const DISCONNECT_DISABLED_STATUS = {
   ROSTER_SECTION: 'rosterSection',
-  NO_LOGIN_OPTIONS: 'noLoginOptions'
+  NO_LOGIN_OPTIONS: 'noLoginOptions',
 };
 
 class ManageLinkedAccounts extends React.Component {
@@ -34,7 +34,7 @@ class ManageLinkedAccounts extends React.Component {
     authenticationOptions: PropTypes.objectOf(authOptionPropType),
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
-    isCleverStudent: PropTypes.bool.isRequired
+    isCleverStudent: PropTypes.bool.isRequired,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -109,7 +109,7 @@ class ManageLinkedAccounts extends React.Component {
   emptyAuthOption = provider => {
     return {
       ...EMPTY_AUTH_OPTION,
-      credentialType: provider
+      credentialType: provider,
     };
   };
 
@@ -120,7 +120,7 @@ class ManageLinkedAccounts extends React.Component {
     let formattedOptions = [];
     Object.values(OAuthProviders).forEach(provider => {
       const providerOptions = optionsByProvider[provider] || [
-        this.emptyAuthOption(provider)
+        this.emptyAuthOption(provider),
       ];
       formattedOptions = formattedOptions.concat(providerOptions);
     });
@@ -175,7 +175,7 @@ export default connect(state => ({
   authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
   userHasPassword: state.manageLinkedAccounts.userHasPassword,
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
-  isCleverStudent: state.manageLinkedAccounts.isCleverStudent
+  isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -185,7 +185,7 @@ class OauthConnection extends React.Component {
     credentialType: PropTypes.string.isRequired,
     email: PropTypes.string,
     disconnectDisabledStatus: PropTypes.string,
-    error: PropTypes.string
+    error: PropTypes.string,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -206,7 +206,7 @@ class OauthConnection extends React.Component {
       displayName,
       id,
       email,
-      error
+      error,
     } = this.props;
     // if given an email, we are already connected to this provider and should
     // present the option to disconnect. Otherwise, we should present the
@@ -285,51 +285,51 @@ const BUTTON_PADDING = 8;
 const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
   container: {
-    paddingTop: GUTTER
+    paddingTop: GUTTER,
   },
   header: {
-    fontSize: 22
+    fontSize: 22,
   },
   table: {
     ...tableLayoutStyles.table,
-    marginTop: GUTTER
+    marginTop: GUTTER,
   },
   headerCell: {
     ...tableLayoutStyles.headerCell,
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
-    width: CELL_WIDTH
+    width: CELL_WIDTH,
   },
   cell: {
     ...tableLayoutStyles.cell,
     paddingLeft: GUTTER,
-    paddingRight: GUTTER
+    paddingRight: GUTTER,
   },
   emptyEmailCell: {
     color: color.light_gray,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   button: {
     width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
-    padding: BUTTON_PADDING
+    padding: BUTTON_PADDING,
   },
   tooltipOffset: {
     left:
       CELL_WIDTH / 2 - // This moves the tooltip to be in between the 2nd and 3rd columns of the table
-      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2) // This centers the tooltip over the button in the 3rd column
+      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2), // This centers the tooltip over the button in the 3rd column
   },
   tooltip: {
-    width: BUTTON_WIDTH * 2
+    width: BUTTON_WIDTH * 2,
   },
   error: {
     paddingLeft: GUTTER / 2,
     color: color.red,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   noMargin: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };

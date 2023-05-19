@@ -14,7 +14,7 @@ class Policies::ScriptActivityTest < ActiveSupport::TestCase
         create(:maze, name: 'ScriptActivity test level 1'),
         create(:maze, name: 'ScriptActivity test level 2')
       ],
-      properties: {'ScriptActivity test level 2': {'active': false}}
+      properties: {'ScriptActivity test level 2': {active: false}}
     )
     create :user_script, user: @user, script: @script
   end

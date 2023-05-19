@@ -29,7 +29,7 @@ Hour of Code'u bir bilgisayar, tablet veya akıllı telefon ile veya tamamen ba�
 Tüm aktivitelerimiz problem çözme ve eleştirel düşünmeyi eğlence ve yaratıcılıkla birleştirir ancak öğrencilerin en sevdiği aktivitelerden bazıları şunlardır:
 
 - Oyun oynamayı seven çocuklar için:[Minecraft](https://code.org/minecraft) veya [Dans Partisi](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Disney'i seven çocuklar için: [Star Wars](https://code.org/starwars),[Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1) veya [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Öğrenmeyi seven çock,uklar için: [Okyanuslar için Yapay Zeka](https://code.org/oceans) veya [Scratch ile Müzik Yap](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Düşük teknoloji mi yoksa teknolojisiz mi?</h3>
@@ -87,9 +87,10 @@ Hour of Code küresel bir etkinlik ve aileniz de kutlama yapmayı hak ediyor. Ho
 
 - Çocuğunuz aktivitesini tamamladığında ona vereceğiniz [Hour of Code Sertifikalarının](https://staging.code.org/certificates) çıktısını alın
 - Evde [çıkartmaların çıktısını alın](https://staging.hourofcode.com/us/promote/resources#stickers) veya ekstra bir sürpriz olarak [bunları çevrimiçi satın alın](https://store.code.org/).
-- Evdeki Hour of Code fotoğraflarınızı ve videolarınızı sosyal medyada paylaşın. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Evdeki Hour of Code fotoğraflarınızı ve videolarınızı sosyal medyada paylaşın. Bizim de sizin başarınızı öne çıkarabilmemiz için [#HourOfCode](https://twitter.com/hashtag/hourofcode) ve [@codeorg](https://twitter.com/codeorg) etiketlerini kullanın!
 
-[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg
+)]({{ urls/learn }})
 
 <h2>Hour of Code etkinliğinden sonra ne yapmalı?</h2>
 

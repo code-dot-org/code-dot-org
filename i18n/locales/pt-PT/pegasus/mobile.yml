@@ -386,6 +386,7 @@
   homepage_slot_text_link_buy: "Colaborar"
   homepage_slot_text_link_donate: "Fazer uma doação"
   homepage_slot_text_link_shop: "T-shirts, chapéus e muito mais"
+  homepage_slot_text_link_thebadguys: "Codifique com The Bad Guys"
   homepage_slot_text_link_administrators: "Leve a ciência da computação para sua escola"
   homepage_gallery_header: "Mais de %{project_count} milhões de projetos criados no Code.org"
   homepage_header_donors: "O Code.org agradece a:"
@@ -1736,3 +1737,5 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
   outbreak_tile_title: "Epidemia"
   outbreak_tile_subtitle: "Um vírus infectou a Cidade dos Monstros! Codifique um simulador de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos Monstros."
+  hoc2022_landing_page_create_title: "Criar"
+  try_it_yourself: "Tente você mesmo!"

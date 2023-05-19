@@ -18,3 +18,4 @@ wrong '{1, 5, 4}'
 wrong '0'
 right '10'
 wrong '4'
+allow_multiple_attempts true

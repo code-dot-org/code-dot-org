@@ -21,9 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## CS 기초 2021-22 내 언플러그드 수업
-
-<a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS 기초 2021-22</a>에서는 다음 수업들을 만나볼 수 있습니다. <br><br>
+## CS 기초 2022-23 내 언플러그드 수업
+다음 수업은 <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>에서 찾을 수 있습니다. <br><br>
 
 <style>
 table, th, td {
@@ -105,29 +104,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 우리가 프로그램을 작성할 때 필요한 모든 정보를 항상 가지고 있는 것이 아닙니다. 코드가 실행 중인 때에 어떤 상황이 참이 될지는 모르나 상황에 따라 무언가가 달라지기를 원할 때가 있습니다. 바로 그때 조건문이 필요합니다. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 우리가 프로그램을 작성할 때 필요한 모든 정보를 항상 가지고 있는 것이 아닙니다. 코드가 실행 중인 때에 어떤 상황이 참이 될지는 모르나 상황에 따라 무언가가 달라지기를 원할 때가 있습니다. 바로 그때 조건문이 필요합니다. 조건문을 사용하면 코드가 실행될 때마다 참인 정보를 기반으로 하여 컴퓨터가 결정을 내릴 수 있습니다.+</td><td>조건문</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. 함수(프로시저라고도 합니다) 는 더 큰 프로그램 안에서 몇 번이고 사용할 수 있는 미니 프로그램입니다. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">과정 E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - 작곡</a><br><small>컴퓨터 과학의 세계에서 가장 멋진 구조 중 하나는 함수입니다. 함수(프로시저라고도 합니다) 는 더 큰 프로그램 안에서 몇 번이고 사용할 수 있는 미니 프로그램입니다. 이 강의는 학생들이 코드 덩어리를 함수로 결합하는 것이 어째서 그토록 유용한 연습이 될 수 있는지 직관적으로 이해하는 데 도움이 됩니다.</td><td>함수</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - 접근성을 위한 디자인</a><br><small>이 강의에서 학생들은 가상 앱에 대한 접근 가능한 솔루션을 브레인스토밍하고 설계함으로써, 접근성과 공감의 가치에 대해 배우게 됩니다.</td><td>컴퓨팅의 영향<</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - 디지털 공유</a><br><i>*준비물: 스마트폰 또는 태블릿</i><br><small>저작권 및 창의성에 대해 팀에서 컴퓨터 과학 기초에 대여한 이 수업은 학생들이 특히 디지털 환경에서 소유권과 저작권을 존중할 때의 어려움과 이점을 이해하도록 돕기 위한 것입니다. 학생들은 윤리적인 디지털 시민이 되기 위한 중요한 부분으로서 예술가의 권리를 존중해야 합니다.</td><td>디지털 시민 의식</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">과정 F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -빈 공간 이야기</a><br><i>*준비물: 봉투 6개(종이 또는 색인 카드도 괜찮음, 반으로 접힌 것)</i><br><small>학생들은 빈칸 채우기 이야기(Mad Libs®와 유사)를 컴퓨터가 어떻게 사용하는지 이해하기 위한 맥락으로 사용하게 됩니다. 사용자의 입력을 저장한 다음 나중에 프로그램이 실행될 때 사용합니다.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. 이 새로운 구조들을 사용하면 학생들이 더 강력하고 역동적인 코드를 만들 수 있습니다.</td><td>루프를 위하여</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. 이 수업에서 학생들은 인터넷을 돌고 돌는 상황을 가정하고 연결과 URL, IP 주소, DNS에 대해 배워봅니다.</td><td>데이터</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - 인터넷</a><br><small>인터넷을 매일 사용하는 사람은 많지만 어떻게 작동하는지를 아는 사람은 거의 없습니다. 이 수업에서 학생들은 인터넷을 돌고 돌는 상황을 가정하고 연결과 URL, IP 주소, DNS에 대해 배워봅니다.</td><td>데이터</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 

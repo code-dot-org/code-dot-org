@@ -76,7 +76,7 @@ title: 编程一小时志愿者指南
 
 做志愿者不必使用我们的志愿者地图！事实上，如果你想在某个课堂做志愿者，我们建议直接联系老师和管理人员。
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - 如果你想到了另一所学校，访问他们的网站，寻找合适的联系人，如校长或副校长、技术或计算机科学讲师，甚至学校的PTSA。 你也可以与一些组织合作来共同主办活动，如美国男孩女孩俱乐部、青年成就、基督教青年会分支等等。 - 如果你无法找到举办编程一小时活动的学校，你可以志愿帮助你的公司举办自己的活动。 查看我们的[公司指南](https://hourofcode.com/us/how-to/companies)以了解更多信息并获得灵感。
+开始： - 如果你是家长或监护人，发送[这封电子邮件](https://hourofcode.com/us/promote/resources#help-schools)给孩子的老师，主动帮助他们运行编程一小时。 - 如果你想到了另一所学校，访问他们的网站，寻找合适的联系人，如校长或副校长、技术或计算机科学讲师，甚至学校的PTSA。 你也可以与一些组织合作来共同主办活动，如美国男孩女孩俱乐部、青年成就、基督教青年会分支等等。 - 如果你无法找到举办编程一小时活动的学校，你可以志愿帮助你的公司举办自己的活动。 查看我们的[公司指南](https://hourofcode.com/us/how-to/companies)以了解更多信息并获得灵感。
 
 * * *
 
@@ -126,7 +126,7 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 #### 示例日程：
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 什么/或谁启发你？ 你是如何对计算机科学感兴趣的？ 你有导师吗？ 问学生提问，并留下学生提问时间 | |30-60 minutes | Code! 如果你的活动是面对面的，这是回答问题和指导学生解决难题的时间。 试着不要直接给他们答案，相反，尝试问他们问题，让他们自己回答哪里出了问题，鼓励学生在有疑问时相互探讨。 如果你是虚拟志愿者，与老师一起研究最好的方法是什么。 在课程结束后回过来看看学生取得了哪些进步可能更有意义。 | | |1-3分钟 | 感谢大家并分享鼓舞人心的临别赠言。 分发你们公司的任何饰品（[贴纸](#celebrate)很棒）！ | | <br />
+|时间 | 日程项目 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5分钟 | 展示[励志视频](https://hourofcode.com/us/promote/resources#videos)| |5-10分钟 | 介绍你自己，进一步了解学生：你在哪里工作，你是做什么的，你最喜欢工作中的什么方面？ 什么/或谁启发你？ 你是如何对计算机科学感兴趣的？ 你有导师吗？ 问学生提问，并留下学生提问时间 | |30-60分钟 | 编程！ 如果你的活动是面对面的，这是回答问题和指导学生解决难题的时间。 试着不要直接给他们答案，相反，尝试问他们问题，让他们自己回答哪里出了问题，鼓励学生在有疑问时相互探讨。 如果你是虚拟志愿者，与老师一起研究最好的方法是什么。 在课程结束后回过来看看学生取得了哪些进步可能更有意义。 | | |1-3分钟 | 感谢大家并分享鼓舞人心的临别赠言。 分发你们公司的任何饰品（[贴纸](#celebrate)很棒）！ | | <br />
 
 #### 其他可以添加到你的活动中的想法
 
@@ -186,7 +186,7 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 ### 1. 注册活动
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. 这也是你让当地学校或家长知道你在他们附近举办活动的方式。
+当你[注册编程一小时活动](/#join)时，你将收到有用的电子邮件通讯，其中包括新闻和举办成功的编程一小时活动的提示。 这也是你让当地学校或家长知道你在他们附近举办活动的方式。
 
 ### 2. 在社交媒体上发布
 
@@ -199,7 +199,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 #### 统计数据
 
-- 你是否知道只有53%的美国学校教授计算机科学？让每个学生都有机会学习#编程一小时。https://hourofcode.com/
+- 你是否知道只有53%的美国学校教授计算机科学？让每个学生都有机会学习#HourOfCode。https://hourofcode.com/
 - 在美国，只有26%的软件专业人员为女性。通过#HourOfCode向更多年轻女性介绍计算机科学：https://hourofcode.com/
 - 在美国，67%的计算机工作都不在科技领域。通过#HourOfCode将计算机科学纳入标准课程。https://hourofcode.com/
 

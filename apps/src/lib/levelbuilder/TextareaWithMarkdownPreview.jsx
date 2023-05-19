@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 import MarkdownEnabledTextarea, {
-  markdownFeaturesShape
+  markdownFeaturesShape,
 } from './MarkdownEnabledTextarea';
 
 /**
@@ -19,7 +19,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     inputRows: PropTypes.number,
     helpTip: PropTypes.string,
     handleMarkdownChange: PropTypes.func.isRequired,
-    features: markdownFeaturesShape
+    features: markdownFeaturesShape,
   };
 
   render() {
@@ -66,17 +66,17 @@ const styles = {
     padding: 5,
     display: 'flex',
     alignItems: 'flex-start',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   container: {
     flex: '1 1 500px',
     maxWidth: 970,
-    margin: 5
+    margin: 5,
   },
   preview: {
     marginTop: 5,
     marginBottom: 0,
     border: '1px solid ' + color.lighter_gray,
-    padding: 10
-  }
+    padding: 10,
+  },
 };

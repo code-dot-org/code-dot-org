@@ -1,0 +1,1758 @@
+{
+  "uk-UA": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "Yes": "Так",
+          "No": "Ні",
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Find it!": "Знайти!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
+          "Downtown Pets and More": "Downtown Pets and More",
+          "1584 Maple St": "1584 Мейпл Стріт",
+          "Open Now!": "Працює зараз!"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "Yes": "Так",
+          "No": "Ні",
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Find it!": "Знайти!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!",
+          "Closest pet shop:": "Найближчий зоомагазин:",
+          "Downtown Pets and More": "Downtown Pets and More",
+          "1584 Maple St": "1584 Мейпл Стріт",
+          "Open Now!": "Працює зараз!"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "Yes": "Так",
+          "No": "Ні",
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "Yes": "Так",
+          "No": "Ні",
+          "cute": "милий",
+          "The Ultimate": "Ідеальний",
+          "Pet Chooser!": "підбір улюбленця!",
+          "Click here to start!": "Натисніть тут, щоб почати!",
+          "Do you like going outside?": "Ти любиш виходити на вулицю?",
+          "Are you allergic to pet fur?": "Маєш алергію на шерсть домашніх тварин?",
+          "Should your pet be cute or creepy?": "Твій домашній улюбленець повинен бути милим чи дивним?",
+          "creepy": "Дивний",
+          "Would you rather go with the crowd or be different?": "Ти хочеш бути таким як всі чи вирізнятися з натовпу?",
+          "Crowd": "Як всі",
+          "Different": "Вирізнятися",
+          "How cute should the pet be?": "Наскільки милим має бути домашній улюбленець?",
+          "Very Cute": "Дуже милий",
+          "Medium Cute": "Досить милий",
+          "Should the pet be noisy?": "Чи має домашній улюбленець шуміти?",
+          "Do you want to play with the pet?": "Чи хочеш ти гратися з домашнім улюбленцем?",
+          "Get a goat!": "Заведи козу!",
+          "Get a dog!": "Заведи собаку!",
+          "Get a hamster!": "Заведи хом'яка!",
+          "Get a rat!": "Заведи щура!",
+          "Get a tarantula!": "Заведи тарантула!",
+          "Get a scorpion!": "Заведи скорпіона!",
+          "Get a parrot!": "Заведи папугу!",
+          "Get a bettafish!": "Заведи бійцівську рибку!"
+        },
+        "CSD U1 IO Story_2021": {
+          "Name": "Ім’я",
+          "Color": "Колір",
+          "Food": "Їжа",
+          "City": "Місто",
+          "text": "текст",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Emotion": "Емоція",
+          "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
+          "Make a Western Story!": "Створити історію у стилі вестерн!"
+        },
+        "CSD U1 IO Story_2022": {
+          "Name": "Ім’я",
+          "Color": "Колір",
+          "Food": "Їжа",
+          "City": "Місто",
+          "text": "текст",
+          "Fill in the blanks to create a custom story!": "Заповніть пропуски, щоб створити власну історію!",
+          "Emotion": "Емоція",
+          "Make a Sci-Fi Story!": "Створити науково-фантастичну історію!",
+          "Make a Western Story!": "Створити історію у стилі вестерн!"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing fastest_2021": {
+          "s": "s",
+          "k": "k",
+          "0": "0",
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
+          "It's a tie!": "Нічия!"
+        },
+        "CSD U1 processing fastest_2022": {
+          "s": "s",
+          "k": "k",
+          "0": "0",
+          "Which finger is the FASTEST?": "Який палець НАЙШВИДШИЙ?",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Поставте один палець на клавішу «s», а інший — на клавішу «k». Натискайте клавіші максимально швидко.",
+          "It's a tie!": "Нічия!"
+        },
+        "CSD U1 processing guess_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "текст",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "You haven't guessed yet.": "Не вгадав.",
+          "Your guess:": "Твоє число:",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Ти виграв!",
+          "The number was": "Було загадане число",
+          "No more tries!": "Спроби скінчилися!"
+        },
+        "CSD U1 processing guess_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20",
+          "text": "текст",
+          "I'm thinking of a number from 1 to 100.": "Я думаю про число від 1 до 100.",
+          "Can you guess it?": "Зможеш його вгадати?",
+          "You haven't guessed yet.": "Не вгадав.",
+          "Your guess:": "Твоє число:",
+          "You only have 5 tries.": "У тебе є лише 5 спроб.",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "84": "84",
+          "85": "85",
+          "86": "86",
+          "87": "87",
+          "88": "88",
+          "89": "89",
+          "91": "91",
+          "92": "92",
+          "93": "93",
+          "94": "94",
+          "95": "95",
+          "96": "96",
+          "97": "97",
+          "98": "98",
+          "99": "99",
+          "You won!": "Ти виграв!",
+          "The number was": "Було загадане число",
+          "No more tries!": "Спроби скінчилися!"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "Ведмідь",
+          "rat": "пацюк",
+          "Where should you live?": "Де вам краще жити?",
+          "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
+          "visit museums": "відвідувати музеї",
+          "cookout with friends": "пікніки з друзями",
+          "go to sports games": "ходити на спортивні заходи",
+          "go camping": "ходити в походи",
+          "How do you like to get around?": "Як ви любите пересуватися?",
+          "biking": "велосипедом",
+          "public transit": "громадським транспортом",
+          "drive": "за кермом",
+          "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
+          "racoon": "єнот",
+          "coyote": "койот",
+          "What food do you like?": "Яка їжа вам подобається?",
+          "home cooked meals": "домашня їжа",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "my regular restaurants": "їжа в моїх звичних ресторанах",
+          "delivery/takeout": "їжа на виніс/з доставкою"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "Ведмідь",
+          "rat": "пацюк",
+          "Where should you live?": "Де вам краще жити?",
+          "Answer the questions for advice on where to live. ": "Дайте відповідь на питання, щоб отримати пораду, де жити. ",
+          "You should live in a big city.": "Вам краще жити у великому місті.",
+          "What do you like to do for fun?": "Як ви любите розважатися?",
+          "visit museums": "відвідувати музеї",
+          "cookout with friends": "пікніки з друзями",
+          "go to sports games": "ходити на спортивні заходи",
+          "go camping": "ходити в походи",
+          "How do you like to get around?": "Як ви любите пересуватися?",
+          "biking": "велосипедом",
+          "public transit": "громадським транспортом",
+          "drive": "за кермом",
+          "What animals are you okay with?": "До яких тварин ви ставитеся спокійно?",
+          "racoon": "єнот",
+          "coyote": "койот",
+          "What food do you like?": "Яка їжа вам подобається?",
+          "home cooked meals": "домашня їжа",
+          "trying new restaurants": "їжа в нових ресторанах",
+          "my regular restaurants": "їжа в моїх звичних ресторанах",
+          "delivery/takeout": "їжа на виніс/з доставкою"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "Вибачте!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "Вибачте!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Назад",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
+          "Find Friends": "Знайти друзів",
+          "Friend Finder": "Помічник у пошуку друзів",
+          "Friends": "Друзі"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Назад",
+          "Friend List": "Список друзів",
+          "Friend Requests": "Запити на дружбу",
+          "Find Friends": "Знайти друзів",
+          "Friend Finder": "Помічник у пошуку друзів",
+          "Friends": "Друзі"
+        },
+        "CSD U1 storage movies_2021": {
+          "Star Wars": "Зоряні війни",
+          "Yes": "Так",
+          "No": "Ні",
+          "text": "текст",
+          "-- Select a movie --": "-- Оберіть фільм --",
+          "Harry Potter": "Гаррі Поттер",
+          "The LEGO Movie": "Lego Фільм",
+          "Tangled": "Заплутана історія",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
+          "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "You wanted to watch a:": "Ви хотіли подивитися:",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
+        },
+        "CSD U1 storage movies_2022": {
+          "Star Wars": "Зоряні війни",
+          "Yes": "Так",
+          "No": "Ні",
+          "text": "текст",
+          "-- Select a movie --": "-- Оберіть фільм --",
+          "Harry Potter": "Гаррі Поттер",
+          "The LEGO Movie": "Lego Фільм",
+          "Tangled": "Заплутана історія",
+          "My Neighbor Totoro": "Мій сусід Тоторо",
+          "Select your favorite movie": "Оберіть свій улюблений фільм",
+          "What Should I Watch?": "Що краще подивитися?",
+          "What are you in the mood for?": "Який жанр вам сьогодні до вподоби?",
+          "Choose a Kids Movie: Great for Babysitters!": "Оберіть дитячий фільм: чудово підійде для няні!",
+          "Do you want an animated movie?": "Шукаєте мультфільм?",
+          "You wanted to watch a:": "Ви хотіли подивитися:",
+          "Based on your preferences, we think you should watch:": "На основі ваших уподобань, ми вважаємо, що вам варто подивитися:"
+        },
+        "CSD U1 storage outfit_2021": {
+          "white": "білий",
+          "pink": "рожевий",
+          "green": "зелений",
+          "black": "чорний",
+          "purple": "фіолетовий",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "Autumn": "Осінь",
+          "Winter": "Зима",
+          "What season is it?": "Який зараз сезон?",
+          "Cloudy": "Хмарно",
+          "Generate Outfit!": "Сформувати вбрання!",
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
+        },
+        "CSD U1 storage outfit_2022": {
+          "white": "білий",
+          "pink": "рожевий",
+          "green": "зелений",
+          "black": "чорний",
+          "purple": "фіолетовий",
+          "Spring": "Весна",
+          "Summer": "Літо",
+          "Autumn": "Осінь",
+          "Winter": "Зима",
+          "What season is it?": "Який зараз сезон?",
+          "Cloudy": "Хмарно",
+          "Generate Outfit!": "Сформувати вбрання!",
+          "Outfit Picker": "Помічник з вибору одягу",
+          "Clear": "Очистити"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "Північ",
+          "South": "Південь",
+          "East": "Схід",
+          "West": "Захід"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Середній"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "left": "ліворуч",
+          "right": "праворуч",
+          "red": "червоний",
+          "yellow": "жовтий",
+          "green": "зелений",
+          "purple": "фіолетовий"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "on": "далі",
+          "fast": "швидко",
+          "slow": "повільно",
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "ліворуч",
+          "right": "праворуч"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "yellow": "жовтий",
+          "green": "зелений",
+          "blue": "синій",
+          "orange": "апельсин"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "тихо"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "Red": "Червона",
+          "Blue": "Синя"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0",
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Ім’я"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "А",
+          "B": "Б",
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Рахунок",
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "Ім’я:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Save": "Зберегти"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2222": {
+          "Welcome": "Ласкаво просимо"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "чорний",
+          "white": "білий"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "чорний",
+          "white": "білий"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "назва"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "Білий",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "up": "вгору",
+          "down": "вниз",
+          "left": "ліворуч",
+          "right": "праворуч"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "ім’я"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "вимкнено",
+          "on": "далі"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "текст"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Оновити"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "Ви зробили це!"
+        },
+        "CSD U6 LED all": {
+          "on": "далі"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "далі"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "далі"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "далі"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 analog light": {
+          "Update": "Оновити"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Оновити"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Оновити"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Оновити"
+        },
+        "CSD U6 array piano": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 array piano_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "перший"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "перший"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "перший"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "перший"
+        },
+        "CSD U6 change": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 change_2018": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 change_2019": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 change_2021": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Середній"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Середній"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Середній"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Середній"
+        },
+        "CSD U6 frequency": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 frequency_2018": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 frequency_2019": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 frequency_2021": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 get toggle": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 get toggle_2018": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 get toggle_2019": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 get toggle_2021": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 getProperty Demo": {
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Save": "Зберегти"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Save": "Зберегти"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Save": "Зберегти"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Save": "Зберегти"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Надіслати"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Надіслати"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Надіслати"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Надіслати"
+        },
+        "CSD U6 getters debug": {
+          "slow": "повільно",
+          "fast": "швидко",
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "швидко",
+          "slow": "повільно",
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "швидко",
+          "slow": "повільно",
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "швидко",
+          "slow": "повільно",
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 interval": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 interval_2018": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 interval_2019": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 interval_2021": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 light show": {
+          "on": "далі",
+          "off": "вимкнено"
+        },
+        "CSD U6 light show_2018": {
+          "on": "далі",
+          "off": "вимкнено"
+        },
+        "CSD U6 light show_2019": {
+          "on": "далі",
+          "off": "вимкнено"
+        },
+        "CSD U6 light show_2021": {
+          "on": "далі",
+          "off": "вимкнено"
+        },
+        "CSD U6 params create colors": {
+          "Red": "Червона",
+          "Blue": "Синя"
+        },
+        "CSD U6 params create colors_2018": {
+          "Red": "Червона",
+          "Blue": "Синя"
+        },
+        "CSD U6 params create colors_2019": {
+          "Red": "Червона",
+          "Blue": "Синя"
+        },
+        "CSD U6 params create colors_2021": {
+          "Red": "Червона",
+          "Blue": "Синя"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "текст"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "текст"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "назва"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "назва"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "назва"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "назва"
+        },
+        "CSD U6 slider intro": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 slider intro_2018": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 slider intro_2019": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSD U6 slider intro_2021": {
+          "short": "коротко",
+          "long": "довго"
+        },
+        "CSDU4 Connecting Screens": {
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя"
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Cancel": "Скасувати",
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Yes": "Так",
+          "No": "Ні",
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Cancel": "Скасувати",
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Yes": "Так",
+          "No": "Ні",
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Cancel": "Скасувати",
+          "Name:": "Ім’я:",
+          "Red": "Червона",
+          "Green": "Зелена",
+          "Blue": "Синя",
+          "Yes": "Так",
+          "No": "Ні",
+          "Save": "Зберегти",
+          "User Profile": "Профіль користувача",
+          "User": "Користувач"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "Про нас",
+          "I don't know": "Не знаю",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "Про нас",
+          "I don't know": "Не знаю",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "Про нас",
+          "I don't know": "Не знаю",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Приховати",
+          "Show": "Показати"
+        },
+        "CSDU4 List App Demo": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Done": "Готово",
+          "Cancel": "Скасувати"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Done": "Готово",
+          "Cancel": "Скасувати"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "Про нас",
+          "About Us": "Про нас",
+          "Done": "Готово",
+          "Cancel": "Скасувати"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "Про нас",
+          "Submit": "Надіслати",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "Про нас",
+          "Submit": "Надіслати",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "Про нас",
+          "Submit": "Надіслати",
+          "When?": "Коли?",
+          "About Us": "Про нас",
+          "Why?": "Чому?"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "=": "="
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Назад"
+        },
+        "CSDU6 circuit playground piano": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2018": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2019": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "CSDU6 piano with notes_2021": {
+          "C": "В",
+          "D": "Г",
+          "E": "Сх",
+          "F": "Ґ",
+          "G": "Д",
+          "A": "А",
+          "B": "Б"
+        },
+        "allthethings design mode elements": {
+          "text": "текст"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Початок"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Початок"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Початок"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Початок"
+        },
+        "csd-apps for good-2": {
+          "Next": "Далі",
+          "Home": "Головна"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Далі",
+          "Home": "Головна"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-explore ui-2": {
+          "Next": "Далі",
+          "Home": "Головна"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Далі",
+          "Home": "Головна"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "Вибачте!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "Вибачте!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "20": "20"
+        },
+        "csd-explore ui-6": {
+          "Next": "Далі"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Далі"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "Прийнято",
+          "Rejected": "Відхилено"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "Прийнято",
+          "Rejected": "Відхилено"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Далі"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Далі"
+        },
+        "ml-customize-raspado-2021": {
+          "yes": "так",
+          "no": "ні"
+        },
+        "ml-customize-raspado_2022": {
+          "yes": "так",
+          "no": "ні"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Продовжити",
+          "Loading...": "Завантаження..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Продовжити",
+          "Loading...": "Завантаження..."
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "Зх",
+          "A": "А",
+          "yes": "так",
+          "no": "ні",
+          "head": "голова"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "Зх",
+          "A": "А",
+          "yes": "так",
+          "no": "ні",
+          "head": "голова"
+        },
+        "ml-models in applab-choice if quotes": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Back": "Назад"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1",
+          "Back": "Назад"
+        },
+        "ml-models in applab-choice predict typos": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "3": "3",
+          "2": "2",
+          "1": "1"
+        },
+        "ml-models in applab-zoo assessment": {
+          "Yes": "Так",
+          "No": "Ні",
+          "B": "Б"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "Yes": "Так",
+          "No": "Ні",
+          "B": "Б"
+        },
+        "ml-models in applab-zoo model embed": {
+          "Yes": "Так",
+          "No": "Ні"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "Yes": "Так",
+          "No": "Ні"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Sports": "Спорт"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Sports": "Спорт"
+        },
+        "ml-use model card-example3A-2021": {
+          "rain": "дощ",
+          "snow": "сніг",
+          "cloudy": "хмарно",
+          "night": "ніч"
+        },
+        "ml-use model card-example3A_2022": {
+          "rain": "дощ",
+          "snow": "сніг",
+          "cloudy": "хмарно",
+          "night": "ніч"
+        },
+        "CSD U1 processing countries_2021": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have sent people to space?": "відправляли людей у космос?"
+        },
+        "CSD U1 processing countries_2022": {
+          "How Many Countries...": "Скільки країн...",
+          "are bigger than Alaska?": "більші за Аляску?",
+          "have no land borders?": "не мають сухопутних кордонів?",
+          "are decreasing population?": "з населенням, що скорочується?",
+          "are land locked?": "не мають виходу до моря?",
+          "have won the World Cup?": "вигравали Чемпіонат світу?",
+          "have more than a billion people?": "мають населення понад мільярд людей?",
+          "have sent people to space?": "відправляли людей у космос?"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Успіху!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Успіху!"
+        }
+      }
+    }
+  }
+}

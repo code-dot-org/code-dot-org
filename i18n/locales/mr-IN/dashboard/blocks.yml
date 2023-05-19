@@ -4,6 +4,8 @@ mr:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: "{A}{B}{C} पर्यायांसह व्हेरिएबल {VAR} साठी वापरकर्ता {QUESTION} प्रॉम्प्ट करा"
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}म्हणा{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       BadGuys_setSizeAll_dropdown:
@@ -32,9 +34,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE1:
@@ -85,9 +87,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE:
@@ -144,9 +146,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -167,9 +169,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           MOVE:
@@ -230,12 +232,6 @@ mr:
           UNIT:
             '"measures"': मापे
             '"seconds"': सेकंद
-      Dancelab_everySecondsRange:
-        text: 'every {N} {UNIT} from {START} to {STOP} '
-        options:
-          UNIT:
-            measures: मापे
-            seconds: सेकंद
       Dancelab_everyVerseChorus:
         text: 'every {UNIT} '
         options:
@@ -313,9 +309,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           LOCATION:
@@ -335,9 +331,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           FORMAT:
@@ -345,7 +341,7 @@ mr:
             '"inner"': चौरस च्या आत
             '"diamond"': हिरा
             '"circle"': वर्तुळ
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"row"': ओळ
             '"column"': स्तंभ
             '"x"': क्रिस-क्रॉस
@@ -361,7 +357,7 @@ mr:
             '"DOG"': कुत्रा
             '"DUCK"': बदक
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
@@ -384,7 +380,7 @@ mr:
             '"DOG"': कुत्रा
             '"DUCK"': बदक
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
@@ -445,9 +441,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           LAYOUT:
@@ -455,7 +451,7 @@ mr:
             '"inner"': चौरस च्या आत
             '"diamond"': हिरा
             '"circle"': वर्तुळ
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"row"': ओळ
             '"column"': स्तंभ
             '"x"': क्रिस-क्रॉस
@@ -565,9 +561,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           SPEED:
@@ -634,9 +630,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -669,9 +665,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -695,9 +691,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintEachInline:
@@ -711,9 +707,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintInline:
@@ -735,9 +731,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           VISIBILITY:
@@ -769,9 +765,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -813,9 +809,9 @@ mr:
             '"DOG"': कुत्री
             '"DUCK"': बदके
             '"FROG"': बेडूक
-            '"MOOSE"': मूस
+            '"MOOSE"': शिंग असलेले हरीण
             '"PINEAPPLE"': अननस
-            '"ROBOT"': रोबॉट
+            '"ROBOT"': यंत्रमानव
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           PROPERTY:
@@ -912,6 +908,38 @@ mr:
         text: सेटअप
       Dancelab_whenSetup2:
         text: सेटअप
+      DansBlocks_getMicroscope:
+        text: मायक्रोस्कोपमध्ये {INPUT1} आहे
+        options:
+          INPUT1:
+            '1': लिंबू रस
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} इफेक्ट करा"
+        options:
+          EFFECT:
+            '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
+            '"hearts"': हृदये
+            '"emojis"': हॅपी इमोजी
+            '"rain"': पाऊस
+            '"glass"': तुटलेल्या काचा
+            '"twinkling"': ट्विंकलिंग
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': लिंबू रस
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1} ला {SPRITE1COSTUME} शी संवाद साधा"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स {BEHAVIOR} बनवा"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स [BEHAVIOR][2] चे प्रतिनिधित्व करा"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}म्हणा{TEXT1}"
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       gamelab_addTarget:
@@ -1122,6 +1150,15 @@ mr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {GROUP} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': मंडल
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1148,6 +1185,14 @@ mr:
             '"spiral"': सर्पिलाकार
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': सीमारेषा
+            '"circle"': वर्तुळ
+            '"grid"': मंडल
+            '"row"': ओळ
+            '"column"': स्तंभ
       gamelab_makeNumSprites:
         text: "{NUM} नवीन {ANIMATION_NAME} स्प्राइट्स तयार करा"
       gamelab_makeProjectile:
@@ -1237,6 +1282,32 @@ mr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": निवडा
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": क्वर्की बास
             "'sound://category_digital/jump_7.mp3'": जंप
+      gamelab_playSoundOptionsSoccer:
+        text: आवाज प्ले करा {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": एअरहॉर्न
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": टाळ्या
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": जप
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": जयजयकार
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": किक
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": दोन शिट्ट्या
+            "'sound://category_sports/One_Whistle_SFX.mp3'": शिट्टी
+      gamelab_playSoundOptionsSpace:
+        text: आवाज प्ले करा {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ब्लॅक होल
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": बुलेट क्लस्टर
+            "'sound://category_space/Carina_SFX.mp3'": कॅरिना
+            "'sound://category_space/Cassiopeia_SFX.mp3'": कॅसिओपिया
+            "'sound://category_space/Crab_nebula_SFX.mp3'": क्रॅब नेबुला
+            "'sound://category_space/Launch_SFX.mp3'": प्रक्षेपण/लाँच
+            "'sound://category_space/Lift_Off.mp3'": उचलणे
+            "'sound://category_space/Pillars_SFX.mp3'": खांब
+            "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिण रिंग
+            "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_space/Tycho_SFX.mp3'": टायको
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:
@@ -1287,7 +1358,7 @@ mr:
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': फ्लोटिंग ग्रास
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': फ्रंट ऑफ हाउस
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': आकाशगंगा
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': मंडल
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'किचन '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': लिविंग रूम
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': कुरण
@@ -1511,6 +1582,10 @@ mr:
         text: "{SPRITE} चे x समन्वयक"
       gamelab_yLocationOf:
         text: "{SPRITE} चे y समन्वयक"
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_tumbling:
+        text: टंबलिंग
       Mikelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1774,6 +1849,38 @@ mr:
         text: राक्षसांना तुम्हाला हवे त्या ठिकाणी ठेवा
       Outbreak_stopMoving:
         text: राक्षस हालचाल थांबायला सुरुवात करतात
+      ParticlesBlocks_getMicroscope:
+        text: मायक्रोस्कोपमध्ये {INPUT1} आहे
+        options:
+          INPUT1:
+            '1': लिंबू रस
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': लिंबू रस
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ठोस
+            new Behavior(liquid, []): तरल
+            new Behavior(wandering, []): गॅस
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} ला {BEHAVIOR} वर्तनावर सेट करा"
+        options:
+          BEHAVIOR:
+            '"solid"': ठोस कण
+            '"liquid"': तरल कण
+            '"gas"': गॅसचे कण
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': ठोस कण
+            '"liquid"': तरल कण
+            '"gas"': गॅसचे कण
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1811,7 +1918,7 @@ mr:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/steady_campfire_loop.mp3"': कॅम्प फायर (शेकोटी)
+            '"sound://category_nature/steady_campfire_loop.mp3"': शेकोटी
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': जंगल
             '"sound://category_nature/summer_night_loop.mp3"': रात्र
             '"sound://category_background/ocean_waves.mp3"': महासागर
@@ -1828,6 +1935,21 @@ mr:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': जंप
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
             '"sound://category_background/typewriter.mp3"': टायपरायटर
+      Poetry_playSoundOptionsSpace:
+        text: आवाज प्ले करा {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ब्लॅक होल
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": बुलेट क्लस्टर
+            "'sound://category_space/Carina_SFX.mp3'": कॅरिना
+            "'sound://category_space/Cassiopeia_SFX.mp3'": कॅसिओपिया
+            "'sound://category_space/Crab_nebula_SFX.mp3'": क्रॅब नेबुला
+            "'sound://category_space/Launch_SFX.mp3'": प्रक्षेपण/लाँच
+            "'sound://category_space/Lift_Off.mp3'": उचलणे
+            "'sound://category_space/Pillars_SFX.mp3'": खांब
+            "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिण रिंग
+            "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_space/Tycho_SFX.mp3'": टायको
       Poetry_setAuthor:
         text: लेखक {AUTHOR} सेट करा
       Poetry_setBackground:
@@ -1953,6 +2075,11 @@ mr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
       RyanLab_moveForward:
@@ -1966,7 +2093,7 @@ mr:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': ग्रिड
+            '"grid"': मंडल
             '"border"': सीमारेषा
             '"row"': ओळ
             '"random"': कोणताही
@@ -1986,6 +2113,18 @@ mr:
             '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} {SPEECH} म्हणा"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): उजवीकडे स्पिन होणे
+            new Behavior(spinning_left, []): डावीकडे स्पिन होणे
+            new Behavior(fluttering, []): फडफडणे
+            new Behavior(jittering, []): थरथरणे
+            new Behavior(wobbling, []): डगमगणे
+            new Behavior(wandering, []): भटकणे
+            new Behavior(patrolling, []): गस्त घालणे
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} चे अनुसरण करण्यास सुरवात करते"
       binary_move:
         options:
           DIR:
@@ -2052,5 +2191,30 @@ mr:
           DIR:
             right: उजवीकडे ↻
             left: डावीकडे ↺
-      validation_validatedBackground:
-        text: "{IMG} वर पार्श्वभूमी सेट करा"
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} इफेक्ट करा"
+        options:
+          EFFECT:
+            '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
+            '"hearts"': हृदये
+            '"rain"': पाऊस
+            '"twinkling"': ट्विंकलिंग
+      storylab_setHeading:
+        text: हेडिंग सेट करा {HEADING}
+      storylab_setSubheading:
+        text: सबहेडिंग सेट करा {SUBHEADING}

@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "49b4c824-bd90-438c-9244-9c2a8fc6edb2"
-        },
-        {
-          "notice": "Nominate A Student for Student Insight Groups!",
-          "details": "Do you know of CS Principles students who identify as female or nonbinary, and/or as members of underrepresented racial and ethnic groups? Code.org is recruiting currently enrolled CSP students to participate in our CSP Student Insight Groups for the 22-23 school year. Students who join these groups will meet monthly during the school year to discuss their experiences with the CSP curriculum and provide feedback to our team. If you have students who meet the criteria and would be interested, please complete this nomination form by September 23rd. ",
-          "link": "https://docs.google.com/forms/d/e/1FAIpQLSfS1bvQ3rRx9F5UbdBkXOWSTdONhtReAvIcZUdJR873BVn0Tg/viewform",
-          "type": "bullhorn",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn More",
-          "key": "e9aec0a9-2c65-4395-84f5-60aabdca8388"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:49 UTC",
+    "serialized_at": "2022-12-06 15:27:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5714,11 +5704,10 @@
     },
     {
       "name": "Athletes Don't Own Their Tattoos",
-      "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
+      "url": "https://www.nytimes.com/2018/12/27/style/tattoos-video-games.html?smid=url-share",
       "key": "athletes_don_t_own_their_tattoos",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "athletes_don_t_own_their_tattoos"

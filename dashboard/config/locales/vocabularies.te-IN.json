@@ -2,7 +2,14 @@
   "te-IN": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/hero/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
         "code/poem-art/2021": {
+          "word": "కోడ్",
           "definition": "(v) కంప్యూటర్ కోసం సూచనలు రాయడానికి."
         },
         "line/poem-art/2021": {
@@ -16,25 +23,156 @@
         "program/poem-art/2021": {
           "definition": "దేనిలోకైనా కోడ్ చేయబడిన స్టెప్స్ యొక్క సీరీస్‌ను ఒక మెషిన్ ద్వారా రన్ చేయవచ్చు."
         },
+        "debugging/flappy/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "code/artist/unversioned": {
+          "word": "కోడ్"
+        },
+        "debugging/artist/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "షరతులు"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "ఉచ్చులు"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/mc/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "కోడ్"
+        },
+        "debugging/sports/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "డీబగ్గింగ్"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "మెషిన్ లెర్నింగ్"
+        },
+        "debugging/coursed/2022": {
+          "word": "డీబగ్గింగ్"
+        },
+        "conditionals/coursed/2022": {
+          "word": "షరతులు"
+        },
+        "behavior/coursef/2022": {
+          "word": "ప్రవర్తన"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "మెషిన్ లెర్నింగ్"
+        },
+        "internet/coursef/2022": {
+          "word": "అంతర్జాలం"
+        },
+        "behavior/coursee/2022": {
+          "word": "ప్రవర్తన"
+        },
+        "conditionals/coursee/2022": {
+          "word": "షరతులు"
+        },
         "copyright/coursee/2022": {
           "word": "కాపీరైట్"
+        },
+        "debugging/courseb/2022": {
+          "word": "డీబగ్గింగ్"
         },
         "drop/courseb/2022": {
           "word": "డ్రాప్"
         },
+        "debugging/express/2022": {
+          "word": "డీబగ్గింగ్"
+        },
+        "behavior/express/2022": {
+          "word": "ప్రవర్తన"
+        },
+        "conditionals/express/2022": {
+          "word": "షరతులు"
+        },
         "drop/pre-express/2022": {
           "word": "డ్రాప్"
+        },
+        "debugging/pre-express/2022": {
+          "word": "డీబగ్గింగ్"
+        },
+        "debugging/coursea/2022": {
+          "word": "డీబగ్గింగ్"
         },
         "drop/coursea/2022": {
           "word": "డ్రాప్"
         },
+        "debugging/coursec/2022": {
+          "word": "డీబగ్గింగ్"
+        },
+        "data/coursec/2022": {
+          "word": "డేటా"
+        },
+        "binary/coursec/2022": {
+          "word": "బైనరీ"
+        },
+        "debugging/csd/2022": {
+          "word": "డీబగ్గింగ్"
+        },
+        "conditionals/csd/2022": {
+          "word": "షరతులు"
+        },
+        "abstraction/csd/2022": {
+          "word": "సంగ్రహణ"
+        },
         "copyright/csd/2022": {
           "word": "కాపీరైట్"
         },
+        "machine_learning/csd/2022": {
+          "word": "మెషిన్ లెర్నింగ్"
+        },
         "code/poem-art/unversioned": {
+          "word": "కోడ్",
           "definition": "(v) కంప్యూటర్ కోసం సూచనలు రాయడానికి."
         },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "program/poem-art/unversioned": {
+          "word": "",
           "definition": "దేనిలోకైనా కోడ్ చేయబడిన స్టెప్స్ యొక్క సీరీస్‌ను ఒక మెషిన్ ద్వారా రన్ చేయవచ్చు."
         },
         "mood/poem-art/unversioned": {
@@ -45,17 +183,74 @@
           "word": "లైన్",
           "definition": "(కవిత్వం) - కుడి చేతి మార్జిన్‌లో ముగిసే వరుసలో అమర్చబడిన ఒక కవితలోని ఉప విభాగం. "
         },
+        "behavior/coursef/2021": {
+          "word": "ప్రవర్తన"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "మెషిన్ లెర్నింగ్"
+        },
+        "internet/coursef/2021": {
+          "word": "అంతర్జాలం"
+        },
+        "debugging/courseb/2021": {
+          "word": "డీబగ్గింగ్"
+        },
         "drop/courseb/2021": {
           "word": "డ్రాప్"
+        },
+        "debugging/coursea/2021": {
+          "word": "డీబగ్గింగ్"
         },
         "drop/coursea/2021": {
           "word": "డ్రాప్"
         },
+        "debugging/coursec/2021": {
+          "word": "డీబగ్గింగ్"
+        },
+        "binary/coursec/2021": {
+          "word": "బైనరీ"
+        },
+        "debugging/coursed/2021": {
+          "word": "డీబగ్గింగ్"
+        },
+        "conditionals/coursed/2021": {
+          "word": "షరతులు"
+        },
+        "debugging/express/2021": {
+          "word": "డీబగ్గింగ్"
+        },
+        "behavior/express/2021": {
+          "word": "ప్రవర్తన"
+        },
+        "conditionals/express/2021": {
+          "word": "షరతులు"
+        },
         "drop/pre-express/2021": {
           "word": "డ్రాప్"
         },
+        "debugging/pre-express/2021": {
+          "word": "డీబగ్గింగ్"
+        },
+        "behavior/coursee/2021": {
+          "word": "ప్రవర్తన"
+        },
         "copyright/coursee/2021": {
           "word": "కాపీరైట్"
+        },
+        "conditionals/coursee/2021": {
+          "word": "షరతులు"
+        },
+        "machine_learning/csd/2021": {
+          "word": "మెషిన్ లెర్నింగ్"
+        },
+        "debugging/csd/2021": {
+          "word": "డీబగ్గింగ్"
+        },
+        "conditionals/csd/2021": {
+          "word": "షరతులు"
+        },
+        "abstraction/csd/2021": {
+          "word": "సంగ్రహణ"
         },
         "copyright/csd/2021": {
           "word": "కాపీరైట్"

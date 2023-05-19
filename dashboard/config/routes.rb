@@ -9,7 +9,8 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /.*code.org.*/ do
+  # This matches any host that is not the codeprojects hostname
+  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -36,6 +37,12 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/incubator", to: "incubator#index"
+    get "/musiclab", to: redirect("/projectbeats", status: 302)
+    get "/projectbeats", to: "musiclab#index"
+    get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
+
     resources :activity_hints, only: [:update]
 
     resources :hint_view_requests, only: [:create]
@@ -46,7 +53,6 @@ Dashboard::Application.routes.draw do
     resources :videos do
       collection do
         get 'test'
-        get 'embed/:key', to: 'videos#embed', as: 'embed'
       end
     end
 
@@ -70,12 +76,7 @@ Dashboard::Application.routes.draw do
 
     get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-    # We moved code docs off of curriculum builder in spring 2022.
-    # In that move, we wanted to preserve the previous /docs routes for these
-    # pages. However, there are a lot of other /docs URLs that did not move over
-    # so we're allow-listing the four IDEs that lived on curriculum builder to be
-    # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
-    # with the rest falling back to the old proxying logic.
+    # Code docs are off of curriculum builder as of spring 2022.
     get 'docs/', to: 'programming_environments#docs_index'
     get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
     get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
@@ -94,11 +95,20 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Data docs are off of curriculum builder as of fall 2022.
+    get 'docs/concepts/data-library', to: 'data_docs#index'
+    get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
+
+    # There are still old curricula that live on curriculum.code.org.
+    # There are also old levels that point to docs on curriculum.code.org.
+    # For both, fall back to old proxying logic.
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
+    get '/catalog', to: 'curriculum_catalog#index'
+
     # User-facing section routes
-    resources :sections, only: [:show] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -198,7 +208,6 @@ Dashboard::Application.routes.draw do
       passwords: 'passwords'
     }
     get 'discourse/sso' => 'discourse_sso#sso'
-    post '/auth/lti', to: 'lti_provider#sso'
 
     root to: "home#index"
     get '/home_insert', to: 'home#home_insert'
@@ -259,6 +268,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+
     post '/locale', to: 'home#set_locale', as: 'locale'
 
     # quick links for cartoon network arabic
@@ -275,6 +288,8 @@ Dashboard::Application.routes.draw do
       resources :blocks, constraints: {id: /[^\/]+/}
     end
     resources :shared_blockly_functions, path: '/functions'
+
+    get 'helpful_links', to: 'helpful_links#index', as: 'helpful_links'
 
     resources :libraries do
       collection do
@@ -304,6 +319,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_data'
       end
     end
 
@@ -317,7 +333,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :course_offerings, only: [:edit, :update], param: 'key'
+    resources :course_offerings, only: [:edit, :update], param: 'key' do
+      collection do
+        get 'quick_assign_course_offerings'
+      end
+    end
 
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
@@ -347,7 +367,11 @@ Dashboard::Application.routes.draw do
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-    resources :data_docs, only: [:new, :create, :edit, :update, :show, :index], param: :key
+    resources :data_docs, param: :key do
+      collection do
+        get '/edit', to: 'data_docs#edit_all'
+      end
+    end
 
     resources :lessons, only: [:edit, :update] do
       member do
@@ -447,7 +471,18 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level data via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_data
+            get 'level_data', to: 'script_levels#level_data'
           end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          # /s/xxx/lessons/yyy/levels/zzz/summary
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
         end
       end
 
@@ -480,13 +515,14 @@ Dashboard::Application.routes.draw do
 
     get '/beta', to: redirect('/')
 
-    get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
-    get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
+    get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
+    get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
-    get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
-    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
+    get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
+    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
+    get '/weblab/network-check', to: 'weblab_host#network_check'
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -549,8 +585,6 @@ Dashboard::Application.routes.draw do
     put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
     get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
     post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
-    get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
-    post '/census/review', to: 'census_reviewers#create'
 
     get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -641,7 +675,6 @@ Dashboard::Application.routes.draw do
         post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
         post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
-        post :workshop_surveys, to: 'workshop_surveys#create'
         post :teachercon_surveys, to: 'teachercon_surveys#create'
         post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
         post :international_opt_ins, to: 'international_opt_ins#create'
@@ -712,8 +745,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
-      post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -745,9 +777,7 @@ Dashboard::Application.routes.draw do
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
       get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
-      post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
-      get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
       get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
@@ -911,6 +941,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
+
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
@@ -956,6 +988,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'sprite_upload'
         get 'default_sprites_editor'
+        get 'release_default_sprites_to_production'
         get 'select_start_animations'
       end
     end
@@ -1002,6 +1035,12 @@ Dashboard::Application.routes.draw do
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
 
+    # partial ports of legacy v3 APIs
+    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
+    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
+    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
+    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
+
     # offline-service-worker*.js needs to be loaded the the root level of the
     # domain('studio.code.org/').
     # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
@@ -1009,5 +1048,9 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+
+    get '/get_token', to: 'authenticity_token#get_token'
   end
 end

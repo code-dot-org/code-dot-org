@@ -76,7 +76,7 @@ Kung nakakatanggap ka ng sobrang daming kahilingan mula sa mga guro, maaari mong
 
 Hindi mo kailangang gamitin ang mapa ng volunteer namin upang makapagboluntaryo! Sa katunayan, inirerekomenda namin ang direktang pakikipag-ugnayan sa mga guro at administrator kung mayroon kang gustong silid-aralan upang makapag-boluntaryo.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - Kung mayroon kang ibang paaralan na iniisip, bisitahin ang kanilang website upang makahanap ng mga naaangkop na contact upang makipag-ugnayan sa isang punong-guro o bise-principal, mga instruktor ng teknolohiya o computer science, o maging ang PTSA ng paaralan. Maaari ka ring makipagsosyo sa mga organisasyon tulad ng Boys & Girls Clubs ng America, Junior Achievement, isang YMCA branch, at higit pa para mag-co-host ng isang event. - Kung hindi mo mahanap ang isang paaralan na nagho-host ng Hour of Code, maaari kang magboluntaryo upang tumulong sa pagpapatakbo ng sarili mong event sa kompanya mo. Tingnan ang aming [Gabay sa Paggamit para sa Mga Kompanya](https://hourofcode.com/us/how-to/companies) upang matuto pa at magkaroon ng inspirasyon.
+Upang makapagsimula: - Kung ikaw ay magulang o tagapag-alaga, ipadala [ang email](https://hourofcode.com/us/promote/resources#help-schools) sa guro ng iyong anak na nag-aalok upang tulungan silang magpatakbo ng Hour of Code. - Kung mayroon kang ibang paaralan na iniisip, bisitahin ang kanilang website upang makahanap ng mga naaangkop na contact upang makipag-ugnayan sa isang punong-guro o bise-principal, mga instruktor ng teknolohiya o computer science, o maging ang PTSA ng paaralan. Maaari ka ring makipagsosyo sa mga organisasyon tulad ng Boys & Girls Clubs ng America, Junior Achievement, isang YMCA branch, at higit pa para mag-co-host ng isang event. - Kung hindi mo mahanap ang isang paaralan na nagho-host ng Hour of Code, maaari kang magboluntaryo upang tumulong sa pagpapatakbo ng sarili mong event sa kompanya mo. Tingnan ang aming [Gabay sa Paggamit para sa Mga Kompanya](https://hourofcode.com/us/how-to/companies) upang matuto pa at magkaroon ng inspirasyon.
 
 * * *
 
@@ -187,7 +187,7 @@ Ang isa sa mga pinakamahusay na paraan upang tumulong ay ang ipalaganap ang bali
 
 ### 1. Irehistro ang Event Mo
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
+Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
 
 ### 2. Mag-post sa Social Media
 

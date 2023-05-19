@@ -2892,6 +2892,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klicke hier, um den Code auszuführen."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Klicke zuerst hier!"
         }
       }
     }

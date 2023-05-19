@@ -27,11 +27,13 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # Conexiones a las Ciencias de la Computación
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
 
-## Modules
+## Módulos
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
@@ -40,7 +42,7 @@ They're perfect for teachers who'd like to incorporate computer science into the
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
 <aside>
-  <h3><strong>Feedback</strong></h3>
+  <h3><strong>Sugerencias</strong></h3>
   <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
 </aside>
@@ -77,3 +79,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>¿Has terminado una actividad de Conexiones CS y/o estás buscando más opciones para tu clase? ¡Por favor, <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">comparte tu opinión</a> e ideas para más lecciones aquí!</em>
+
+{{ visit_partial_event_logger }}

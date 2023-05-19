@@ -8,6 +8,10 @@ module Pd::Application
 
     freeze_time
 
+    setup do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'required fields' do
       application = ApplicationBase.new
       refute application.valid?
@@ -46,7 +50,7 @@ module Pd::Application
     end
 
     test 'can update status' do
-      application = create FACILITATOR_APPLICATION_FACTORY
+      application = create TEACHER_APPLICATION_FACTORY
       assert application.unreviewed?
 
       application.update(status: 'pending')
@@ -58,7 +62,7 @@ module Pd::Application
 
     test 'regional partner name' do
       partner = build :regional_partner
-      application = build FACILITATOR_APPLICATION_FACTORY, regional_partner: partner
+      application = build TEACHER_APPLICATION_FACTORY, regional_partner: partner
 
       assert_equal partner.name, application.regional_partner_name
     end
@@ -66,7 +70,7 @@ module Pd::Application
     test 'school name' do
       school_info = build :school_info
       teacher = build :teacher, school_info: school_info
-      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
+      application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_name.titleize, application.school_name
     end
@@ -74,7 +78,7 @@ module Pd::Application
     test 'district name' do
       school_info = create :school_info
       teacher = build :teacher, school_info: school_info
-      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
+      application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
     end
@@ -191,7 +195,7 @@ module Pd::Application
         filtered_question: 'to be removed'
       }
 
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data.except(:filtered_question))
 
       expected_full_answers = {
@@ -213,24 +217,26 @@ module Pd::Application
       assert_equal '2018-03-09', application.date_accepted
     end
 
-    test 'applied_at and date_applied have the first unreviewed status' do
-      application = create :pd_teacher_application, status: 'incomplete'
-      assert_nil application.applied_at
+    %w[unreviewed awaiting_admin_approval].each do |status|
+      test "applied_at and date_applied fields get set once they are submitted with status #{status}" do
+        application = create :pd_teacher_application, status: 'incomplete'
+        assert_nil application.applied_at
 
-      tomorrow = Date.tomorrow.to_time
-      next_day = tomorrow + 1.day
+        tomorrow = Date.tomorrow.to_time
+        next_day = tomorrow + 1.day
 
-      Timecop.freeze(tomorrow) do
-        application.update!(status: 'unreviewed')
+        Timecop.freeze(tomorrow) do
+          application.update!(status: status)
+        end
+
+        Timecop.freeze(next_day) do
+          application.update!(status: 'reopened')
+          application.update!(status: status)
+        end
+
+        assert_equal tomorrow, application.applied_at
+        assert_equal tomorrow, application.date_applied.to_time
       end
-
-      Timecop.freeze(next_day) do
-        application.update!(status: 'reopened')
-        application.update!(status: 'unreviewed')
-      end
-
-      assert_equal tomorrow, application.applied_at
-      assert_equal tomorrow, application.date_applied.to_time
     end
 
     test 'memoized full_answers' do
@@ -245,7 +251,7 @@ module Pd::Application
         string_question_with_extra: 'Other:',
         string_question_with_extra_other: 'my other string answer',
       }
-      application.stubs(sanitize_form_data_hash: form_data)
+      application.stubs(sanitized_form_data_hash: form_data)
       ApplicationBase.stubs(filtered_labels: form_data)
 
       expected_full_answers = {
@@ -261,26 +267,12 @@ module Pd::Application
       assert_nil application.instance_variable_get(:@full_answers)
     end
 
-    test 'queue_email creates an associated unsent Email record' do
+    test 'send_pd_application_email sends email and creates an associated sent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
-      application.expects(:deliver_email).never
+      application.expects(:deliver_email).once
       assert_creates Email do
-        application.queue_email :test_email
-      end
-      email = Email.last
-      assert_equal application, email.application
-      assert_equal 'test_email', email.email_type
-      assert_equal application.status, email.application_status
-      assert_nil email.sent_at
-    end
-
-    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
-      application = create TEACHER_APPLICATION_FACTORY
-
-      application.expects(:deliver_email)
-      assert_creates Email do
-        application.queue_email :test_email, deliver_now: true
+        application.send_pd_application_email :test_email
       end
       email = Email.last
       assert_equal application, email.application
@@ -334,7 +326,7 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = create :pd_facilitator1920_application
+      application = create :pd_teacher_application
 
       partner = create :regional_partner
 
@@ -381,7 +373,7 @@ module Pd::Application
 
       assert teacher_without_email.email.blank?
 
-      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitize_form_data_hash[:alternate_email]}>"
+      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitized_form_data_hash[:alternate_email]}>"
       assert_equal formatted_alternate_email, application.formatted_applicant_email
     end
 
@@ -393,36 +385,10 @@ module Pd::Application
       application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
-      assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?
+      assert application_without_email.sanitized_form_data_hash[:alternate_email].blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end
-    end
-
-    test 'deleting an application also deletes its unsent emails' do
-      # Create two applications, each with sent and unsent email
-      application_a = create TEACHER_APPLICATION_FACTORY
-      application_b = create TEACHER_APPLICATION_FACTORY
-      [application_a, application_b].each do |application|
-        application.stubs(:deliver_email)
-        application.queue_email :test_email
-        application.queue_email :test_email, deliver_now: true
-        assert_equal 2, application.emails.count
-        assert_equal 1, application.emails.unsent.count
-      end
-
-      # Destroy one of the applications
-      application_a.destroy
-
-      # Unsent email for that application was destroyed
-      assert_equal 0, application_a.emails.unsent.count
-      # Sent email for that application was not destroyed
-      assert_equal 1, application_a.emails.count
-      # Email for the other application was not destroyed
-      assert_equal 2, application_b.emails.count
-    ensure
-      application_a.emails.destroy_all
-      application_b.emails.destroy_all
     end
   end
 end

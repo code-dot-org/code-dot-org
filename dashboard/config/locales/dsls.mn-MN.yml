@@ -6898,7 +6898,7 @@ mn-MN:
         - text: цэнхэр
         - text: ногоон
         - {}
-        - {}
+        - text: шар
         - correct: true
         - text: улаан
         questions:
@@ -7676,7 +7676,7 @@ mn-MN:
         - text: оцон шувуу
         - text: мэлхий
           correct: true
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -7686,7 +7686,7 @@ mn-MN:
         - text: оцон шувуу
         - text: мэлхий
           correct: true
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -7696,7 +7696,7 @@ mn-MN:
         - text: оцон шувуу
         - text: мэлхий
           correct: true
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -7706,7 +7706,7 @@ mn-MN:
           correct: true
         - text: оцон шувуу
         - text: мэлхий
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -7716,7 +7716,7 @@ mn-MN:
           correct: true
         - text: оцон шувуу
         - text: мэлхий
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -7726,7 +7726,7 @@ mn-MN:
           correct: true
         - text: оцон шувуу
         - text: мэлхий
-        - {}
+        - text: анааш
         - {}
         questions:
         - {}
@@ -13862,7 +13862,7 @@ mn-MN:
         answers:
         - {}
         - correct: true
-        - correct: true
+        - {}
         - {}
         questions:
         - {}

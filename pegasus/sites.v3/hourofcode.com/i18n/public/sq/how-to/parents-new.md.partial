@@ -3,88 +3,97 @@ title: Udhëzues për prindërit
 ---
 
 # Si të përfundoni një orë kodimi me fëmijën tuaj
-Mencuba Hour of Code ialah cara mudah dan menyeronokkan bagi memperkenalkan anak anda kepada sains komputer, mungkin buat pertama kalinya.     Bukan sahaja sains komputer menjadi asas untuk semua bidang pengajian, tetapi <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">kajian terkini menunjukkan</a>: kanak-kanak yang belajar sains komputer mempunyai prestasi lebih baik dalam mata pelajaran lain, cemerlang dalam menyelesaikan masalah dan <font color="00adbc"><b>17% lebih berkemungkinan mendaftar untuk memasuki kolej</b></font>.
+Provimi i ores se kodit eshte nje menyre e thjeshte dhe zbavitese t'i njoftoni studentet me shkencat kompjuterike, ndoshta edhe per heren e pare.  Jo vetëm që shkenca kompjuterike është themelore për të gjitha fushat e studimit, por [ studimet e fundit tregojnë ](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): fëmijët që studiojnë shkenca kompjuterike paraqiten më mirë në lëndë të tjera, shkëlqejnë në zgjidhjen e problemeve dhe <font color = "00adbc"> <b> 17% më shumë të ngjarë të regjistrohen në kolegj </b> </font>
 
-Anda boleh menyertai puluhan juta pelajar dari seluruh dunia dalam acara global ini.     Bersama, kita boleh memberikan inspirasi kepada kanak-kanak untuk belajar, memecahkan stereotaip dan membantu kanak-kanak menemui minat baharu.     Terbaik daripada semua ini, anda telah mempunyai semua yang anda perlukan untuk membawa Hour of Code (Sejam Mengekod) pulang ke rumah anda!
+Mund te bashkangjiteni se bashku me miliona studente rreth botes ne kete event global. Se bashku ne mund t'i inspirojme femijet qe te mesojne, te thejn stereotipe dhe te ndihmojne femijet te gjejne nje interes te ri. Me se miri, ti tashme ke gjithqka qe te duhet per te sjelle Oren e Kodit ne shtepine tende!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>  Apakah yang saya perlukan untuk bermula?  </h3>
-  Hour of Code (Sejam Mengekod) adalah mudah dikendalikan - walaupun untuk mereka yang baharu bermula.     Anda tidak perlu mempunyai pengalaman dalam sains komputer atau mengajar untuk mengendalikan aktiviti menyeronokkan bagi anak anda yang akan membuatkan mereka belajar dan ketawa.
+<h3>Cfar me nevojitet qe te filloj?</h3>
+Ora e kodit është e çasshme edhe për fillestarët! Nuk ju duhet eksperience ne shkenca kompjuterike ose mesimdhenie ne menyre qe te beni nje aktivitet zbavites per femijet tuaj i cili do t'i bej ata te qeshin dhe te mesojne!
 
-Anda boleh mencuba Hour of Code (Sejam Mengekod) dengan komputer, tablet, telefon pintar, atau tanpa menggunakan komputer sepenuhnya!     Berikut ialah cara memulakannya.
+Mund ta provoni Orën e Kodit me një kompjuter, një tablet, një smartphone ose plotësisht të shkëputur nga priza! Ja se si të filloni. Ja si te filloni.
 
 ***
 
-## 1) Terokai aktiviti dan tutorial.
+## Eksploroni aktivitetet dhe udhëzimet
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-Terdapat sangat banyak <a href="https://hourofcode.com/us/learn">aktiviti Hour of Code (Sejam Mengekod)</a> tersedia untuk anda jika anda menggunakan komputer yang boleh mengakses internet.     Kami menggalakkan anda melihat beberapa pilihan terlebih dahulu supaya anda boleh membantu membimbing anak anda ke arah latihan yang akan menggembirakan mereka.
+Janë të panumërta [ Aktivitetet e Orës së Kodit ](https://hourofcode.com/us/learn) të disponueshëm për ju nëse jeni duke punuar në një kompjuter me qasje në internet. Ne ju inkurajojme t'ia hidhni nje sy disa nga opsionet e juaja para kohes ne menyre qe te ndihoni femijet ne ushtrime te cilat ata do i shijojne.
 
-Semua aktiviti kami menggabungkan penyelesaian masalah dan pemikiran kritis dengan keseronokan dan kreativiti, tetapi berikut ialah beberapa aktiviti kegemaran pelajar:
+Te gjitha aktivitetet tona integrojne zgjidhjen e problemeve dhe mendimin kritik me zbavijtje dhe kreativitet, keto jane disa nga te preferuarat e studenteve:
 
-- Untuk kanak-kanak yang suka bermain: <a href="https://code.org/minecraft">Minecraft</a> atau <a href="https://code.org/dance">Dance Party</a>  
-- Untuk kanak-kanak yang suka Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, atau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
-- Untuk kanak-kanak yang suka belajar: <a href="https://code.org/oceans">AI for Oceans (Kecerdasan Buatan untuk Lautan)</a> atau <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Mencipta Muzik dengan Menggunakan Scratch</a>  
+- Për fëmijën që i pëlqen të luajë: [ Minecraft ](https://code.org/minecraft) ose
 
-<h3>  Berteknologi rendah atau tanpa teknologi?  </h3>
-  Jika anda akan menggunakan teknologi terhad atau tanpa teknologi, anda boleh menyaring <a href="https://hourofcode.com/us/learn">aktiviti Hour of Code (Sejam Mengekod)</a> dengan memilih “Tanpa komputer atau peranti” dalam <em>bahagian</em> teknologi Kelas.
+ Dance Party </ a>></li> 
+  
+  - Për fëmijën që e do Disney: [ Star Wars ](https://code.org/starwars), [ I ngrirë ](https://studio.code.org/s/frozen/stage / 1 / puzzle / 1), ose [ Moana ](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Për fëmijën që i pëlqen të mësojë: [ AI për Oqeanet ](https://code.org/oceans) ose [ Bëni Muzikë me Gërvishtje ](https://scratch.mit.edu/projects/editor /? tutorial = music & utm_source = codeorg)</ul> 
+
+<h3>Teknologji e vjeter ose aspak teknologji?</h3>
+Nëse do të përdorni teknologji të kufizuar ose pa asnjë teknologji, mund të filtroni [ Aktivitetet e orës së kodit ](https://hourofcode.com/us/learn) duke zgjedhur "Pa kompjuterë ose pajisje" në * Seksioni i teknologjisë në klasë *.
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-Anda juga boleh menonton <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">video pendek ini</a> untuk lebih banyak idea mengenai cara mengendalikan aktiviti tanpa menggunakan komputer di rumah!!
+Mund të shikoni gjithashtu këto [ video të shkurtra ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) për më shumë ide se si të lehtësoni një aktivitet në prizë në shtëpi!
 
-## 2) Bersiap sedia dengan lebih awal
-Kini, anda mempunyai beberapa idea mengenai tutorial, mungkin ia sangat berguna untuk anda mencuba aktiviti ini dalam peranti anda sebelum memperkenalkannya kepada anak anda.
+
+
+## 2) Pergadituni perpara kohes 
+
+Tnia qe keni disa udhezues ne mendje, madje mund te jete mire t;i provoni keto aktivitete ne pajisjen tuaj perpara se t''i prezentoni ate femijut tuaj. 
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
-<h3>  Anda memiliki lebih daripada seorang anak di rumah?  </h3>
-  Pertimbangkan untuk memberikan kepada setiap anak anda fon kepala jika mereka akan menggunakan peranti yang berasingan.     Menurut cara ini, mereka akan dapat bermain aktiviti dengan bunyi tanpa mengganggu antara satu sama lain.
+<h3>Keni me shume se nje femije ne shtepi?</h3>
+Konsideroni sigurimin e kufjeve per te gjithe femijet tuaj nese do te punojne ne pajisje te ndara. Ne ate menyre, ata do te jene ne gjendje te luajne aktivitete me tingull, pa i shperqendruar te tjeret. 
 
-Jika anda hanya akan menggunakan satu peranti, atau hanya mahu membuatkan Hour of Code (Sejam Mengekod) anda lebih berinteraktif, cuba <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pengaturcaraan berpasangan</a>.     Pengaturcaraan berpasangan menggalakkan kanak-kanak bekerjasama.     Apabila mereka bergandingan, mereka membantu antara satu sama lain untuk menyelesaikan masalah.   Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
+Nëse do të përdorni vetëm një pajisje ose thjesht dëshironi ta bëni Ora e Kodit tuaj më interaktive, provoni  programimin e çiftit </ a >> Programimi qiftor i inkurajon femijet qe te punojne se bashku. Kur ata behen partnere, ata e ndihmojne njeri tjetrin ne zgjidhje te problemeve. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.</p> 
 
-<h3>  Buatkan kanak-kanak teruja!   </h3>
-  Ini ialah peluang terbaik untuk menambahkan jenis aktiviti baharu pada hari anak anda.     Anda boleh memberikan keseronokan melangkaui satu tutorial dengan cadangan ini:
+<h3>Gezoni femijet! </h3>
+Kjo eshte menyre e mire te shtoni nje aktivitet te ri ne diten e femijes tuaj! Mund te perzgjatni zbavitjen me nje udhezim duke ndikur keto sugjerime: 
 
-- Tunjukkan kepada mereka <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video inspirasi</a> yang menampilkan seorang daripada model peranan kegemaran mereka
-- Berikan inspirasi kepada mereka dengan video mengenai satu daripada <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">banyak kerjaya</a> yang boleh diwujudkan dengan kemahiran sains komputer
-- <a href="https://store.code.org/">Pesan beberapa barangan promosi</a>!     Anda boleh memilih daripada kemeja-T, pelekat, atau bahkan tatu sementara.     Kongsinya bersama mereka dengan segera untuk membuatkan mereka berasa teruja, atau simpannya hingga tamat aktiviti Hour of Code (Sejam Mengekod) anda sebagai hadiah istimewa.  
+- Tregojuni atyre një [ video frymëzuese ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) që paraqet një nga modelet e tyre të preferuara të roleve
+- Frymëzojini ata me një video në një nga [ shumë karriera ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) që aftësitë e shkencave kompjuterike mund të çojnë në
+- <a href="https://store.code.org/">Porosisni swag</a>!   Mund te zgjedhni nga maicat, stikerat dhe tatuve te perkoshme. Ndaje me ta menjehere ne menyre qe t'i gezoni ata, ose ruajeni per fund te Ores se Kodit si nje qmim special. 
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Petua untuk memperkenalkan anak anda kepada CS
+## 3) Udhezime per ta njoftuar femijun tend me shkencat kompjuterike
 
-Tiada masalah jika anda dan anak anda baharu dengan sains komputer.     Berikut ialah beberapa idea untuk memperkenalkan aktiviti Hour of Code (Sejam Mengekod) anda dan mendorong anda berdua berfikir tentang CS:
+Eshte ne rregull nese ju dhe studentet tuaj jeni te panjohur me shkencat kompjuterike! Ketu jane disa ide se si ta prezentoni aktivitetin tuaj te Ores se Kodit dhe te mendoni per shkencat kompjuterike.
 
-- Terangkan cara teknologi memberi kesan kepada kehidupan kita, dengan contoh khusus yang boleh menarik minat anak anda.     Sebagai contohnya, anda boleh bercakap tentang perubatan atau menghubungkan individu secara maya.     Juga, cuba lihat <a href="https://code.org/csforgood">Code.org/CSforGood</a> soalan perbincangan yang dicadangkan.
-- Bersama-sama, senaraikan perkara seharian yang menggunakan kod untuk berfungsi dengan baik.
+- Shpjegoni menyrat se si teknologjia ka efekt ne jeten tone, me shembuj specifik qe mund t'i interesojne femijut tend. Per shembull, ju mund te flisni per mjeksine ose per lidhjen virtuale ne mes njerzve.    Poashtu shihni <a href="https://code.org/csforgood">Code.org/CSforGood</a> sper pyetje te mundshme te diskutimit.
+- Se bashku, listoni gjera te perditshme te cilat perdorin kod per te funksionuar.
 
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
-<h3>  Ada anak perempuan di rumah?  </h3>
-  <a href="https://code.org/girls">Berikut ialah saranan kami</a> untuk membantu mencetuskan minat mereka dalam bidang sains komputer.     **Petua pakar**: Anda boleh bermula dengan hanya memberitahu mereka bahawa mereka akan melakukannya dengan cemerlang!
+<h3>Keni vajza ne shtepi?</h3>
+  <a href="https://code.org/girls">Keto jane rekomandimet tona</a> t'i ndihmoni te shfaqin interesim ne shkenca kompjuterike   Ju mund te filloni duke i terguar atyre se do te jene fantastike 
 
-<h3>  Bersama menyelesaikan masalah  </h3>
-  Akhir sekali, apabila anak anda menghadapi kesukaran, tidak menjadi masalah untuk anda menjelaskan:
-- “I don’t know. Let’s figure this out together.”
+<h3>Zgjedhni probleme se bashku</h3>
+Se fundmi, kur femiju yt ka veshtiresi eshte ne rregull te pergjigjeni me "Nuk e di
+
+- "Nuk e di. Le ta shohim se si funksionon se bashku."
 - "Teknologjia nuk punon gjithmon ashtu siç duam ne."
 - "Të mësuarit se si të programosh është si të mësosh një gjuhë të re; nuk do të jesh i rrjedhshëm menjëherë"
 
-Sains komputer ialah bidang pembelajaran tentang cara "menyahpepijat" situasi yang tidak mengikut jangkaan seperti yang telah kita tetapkan.     Bersama-sama, anda dan anak anda boleh memikirkan cara yang kreatif untuk menyelesaikan masalah itu!
+Shkencat kompjuterike jane teresisht te nderlidhura me aftesine e zgjidhjeve te problemeve qe nuk kane funksionuar ashtu sic keni paramenduar ju. Se bashku, ju dhe femiu yt mund te mendoni per menyra kreative te zgjidhjes se problemit!
 
 
-## 4) Jangan lupa meraikannya!
 
-Hour of Code (Sejam Mengekod) ialah acara global dan keluarga anda berhak meraikannya.     Berikut ialah beberapa cara menjadikan Hour of Code (Sejam Mengekod) anda lebih istimewa:
 
-- Cetak <a href="https://staging.code.org/certificates">Sijil Hour of Code (Sejam Mengekod)</a> yang anda berikan apabila anak anda melengkapkan aktiviti mereka
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Cetak pelekat</a> di rumah atau <a href="https://store.code.org/">beli pelekat tersebut dalam talian</a>, sebagai kejutan tambahan.
-- Kongsi foto dan video Hour of Code (Sejam Mengekod) di rumah anda dalam media sosial.   Use #HourOfCode and @codeorg so we can highlight your success, too!
+## 4) Mos harroni te festoni!
+
+Ora e Kodit eshte event global, dhe familja juaj meriton te festoje. Ketu jane disa menyra se si ta beni Oren e Kodit ekstra speciale: 
+
+- Printoni certifikata te ores se kodit, te cilat ja jepni femijes tuaj kur ata te kompletojne nje aktivitet. 
+- Printo stikera ne shtepi ose blini ato online si nje ekstra surprize. 
+- Shperndani foto dhe video te ores suaj te kodit ne rrjetet sociale.  Perdorni hashtag-un #hourofcode dhe @codeorg ne menyre qe te ndani sukseset tuaj!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Çfarë vjen pas Orës së Kodimit?</h2>
 
-Computer science doesn’t have to end with the Hour of Code!   Walaupun 90% ibu bapa mahu anak mereka mempelajari sains komputer, kebanyakan sekolah masih tidak mengajarnya.     Untuk membantu, kurikulum kami berasaskan web dan boleh digunakan secara percuma, selama-lamanya.     <a href="https://code.org/yourschool">Ketahui cara</a> membawa CS ke sekolah anak anda hari ini.
+Shkencat kompjuterike nuk mbarojne me oren e kodit!  Perderisa 90% e prinderve duan qe femija tyre te mesoj shkenca kopjuterike, shumica e shkollave nuk e ligjerojne ate. Kurrikula eshte e bazuar ne web dhe e lire per t'u perdorur, pergjithmone.  Meso se si ta sjellesh Shkencen Kompjuterike ne shkollen e femijut tuaj sot.

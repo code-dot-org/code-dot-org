@@ -111,7 +111,7 @@ Vůbec nevadí, když je pro vás i vaše studenty počítačová věda něčím
 
 Naveďte studenty k aktivitě
 
-- Napište na tabuli odkaz na výukový kurz. Odkaz najdete v seznamu v [informacích pro vybraný výukový kurz]({{ urls/learn }}) pod počtem účastníků.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Když Vaši studenti narazí na nějaké překážky, je správné zareagovat:
 
@@ -138,7 +138,6 @@ Co když nějaký student skončí dříve?
 
 - Vytiskněte svým studentům [certifikáty]({{ urls/certificates }}).
 - [Natiskněte svým studentům nálepky „Dělal jsem hodinu programování!“]({{ urls/promote_stickers }}).
-- [Objednejte si volitelné trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaší školu.
 - Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
 * * *
@@ -152,6 +151,6 @@ Co když nějaký student skončí dříve?
 
 ### Co následuje po Hodině kódu?
 
-Studium počítačové vědy nemusí skončit Hodinou kódu! Naše osnovy jsou dostupné na webu a vždycky budou zdarma. [Zjistěte, jak můžete](/beyond) informatiku uvést do své školy a přiblížit studentům.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

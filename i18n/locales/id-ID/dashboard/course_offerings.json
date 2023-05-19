@@ -69,6 +69,7 @@
   "poetry-hoc3": "poetry-hoc3",
   "andrea-test": "pengujian-andrea",
   "csa-u8-dev": "csa-u8-dev",
+  "valentine": "valentine",
   "netsim": "netsim",
   "allthethingscourse": "kursussemuabidang",
   "halloween": "halloween",
@@ -76,5 +77,8 @@
   "coursee-ramp": "coursee-ramp",
   "csa5-exemplars": "csa5-exemplars",
   "katie-practice": "katie-practice",
-  "soccer": "sepak bola"
+  "soccer": "sepak bola",
+  "hello-world-space": "Halo Dunia: Ruang",
+  "hello-world-soccer": "Halo Dunia: Sepak bola",
+  "playground": "taman bermain"
 }

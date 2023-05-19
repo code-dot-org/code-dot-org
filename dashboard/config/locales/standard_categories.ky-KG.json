@@ -1,0 +1,17 @@
+{
+  "ky-KG": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Эсептөөчү ой жүгүртүү"
+        },
+        "L": {
+          "description": "Тили"
+        },
+        "F": {
+          "description": "Функциялар"
+        }
+      }
+    }
+  }
+}

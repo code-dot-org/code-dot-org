@@ -1,6 +1,7 @@
 /* This file is only executed within JSInterpreter */
 /* This library supports validation of Sprite Lab projects that use variables.*/
 
+//This has a specific use in the code below...
 var studentVarToken = false;
 var previousVarLog;
 
@@ -11,6 +12,7 @@ var previousVarLog;
 function buildVariableLog() {
   var varLog = {};
   var windowKeys = Object.keys(window);
+  //Here's where that studentVarToken comes back again
   var start = windowKeys.indexOf("studentVarToken") + 1;
   var end = windowKeys.length;
   var index;

@@ -65,7 +65,7 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Ayo cari solusinya bersama-sama.” - “Teknologi tidak selalu bekerja sesuai keinginan kita” - “Belajar membuat program seperti mempelajari bahasa baru; kamu tidak akan langsung bisa melakukannya.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

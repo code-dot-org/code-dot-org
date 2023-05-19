@@ -4,7 +4,7 @@ import PopUpMenu from './PopUpMenu';
 
 export default {
   title: 'PopUpMenu',
-  component: PopUpMenu
+  component: PopUpMenu,
 };
 
 //
@@ -24,7 +24,7 @@ const BasicExampleComponent = props => {
       const rect = targetPoint.current.getBoundingClientRect();
       setTargetPointRect({
         top: rect.bottom,
-        left: rect.left + rect.width / 2
+        left: rect.left + rect.width / 2,
       });
     }
   }, [targetPoint, targetPointRect]);
@@ -36,7 +36,7 @@ const BasicExampleComponent = props => {
         style={{
           border: 'solid black thin',
           margin: '1em',
-          width: '50%'
+          width: '50%',
         }}
         ref={targetPoint}
         onClick={() => !isOpen && setIsOpen(true)}

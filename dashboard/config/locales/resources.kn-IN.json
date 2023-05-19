@@ -110,6 +110,36 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ವೀಡಿಯೊ"
         },
+        "common_core_and_ngss_guidance/coursed/2022": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "cross-curricular_extension_activities/coursed/2022": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
+        },
+        "debugging_guide/coursed/2022": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2022": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
+        },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ವೇಳೆ... ನಂತರ... ಸನ್ನಿವೇಶಗಳು",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
@@ -139,43 +169,56 @@
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit"
         },
         "graph_paper_programming/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
         },
         "graph_paper_programming_1/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "graph_paper_programming_2/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "graph_paper_programming_3/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
         },
         "graph_paper_programming_4/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
         "graph_paper_programming_5/coursed/2022": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "pair_programming/coursed/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay_programming/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
         },
         "relay_programming_1/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
         },
         "relay_programming_2/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "relay_programming_3/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "relay_programming_4/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://youtu.be/ZULpfAVJOBo"
         },
         "relay_programming_5/coursed/2022": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "unplugged_blocks_courses_c-f_/coursed/2022": {
@@ -238,34 +281,36 @@
           "name": "ಸಿಎಸ್‌ಎಫ್‌ ಕೋರ್ಸ್ ಡಿ ಕೋರ್ಸ್ ಅಂತ್ಯದ ಯೋಜನೆ ಯೋಜನೆ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
-        "common_core_and_ngss_guidance/coursed/2022": {
+        "common_core_and_ngss_guidance/coursef/2022": {
           "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
         },
-        "cross-curricular_extension_activities/coursed/2022": {
+        "cross-curricular_extension_activities/coursef/2022": {
           "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "curriculum_guide/coursed/2022": {
+        "curriculum_guide/coursef/2022": {
           "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
         },
-        "debugging_guide/coursed/2022": {
+        "debugging_guide/coursef/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursed/2022": {
+        "implementation_guide/coursef/2022": {
           "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursed/2022": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        "lesson_type_guide/coursef/2022": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ"
         },
-        "teacher_forum/coursed/2022": {
+        "sprite_lab_documentation/coursef/2022": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursef/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursed/2022": {
+        "virtual_lesson_modifications/coursef/2022": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
@@ -296,15 +341,13 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2022": {
+          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಪರಿಚಯಿಸುತ್ತಿದ್ದೇವೆ",
           "url": "https://youtu.be/yd-9xZ275dM",
           "type": "ವೀಡಿಯೊ"
         },
         "making_sprites/coursef/2022": {
           "name": "ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "blank_space_stories/coursef/2022": {
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
@@ -364,6 +407,7 @@
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "the_internet/coursef/2022": {
+          "name": "ಇಂಟರ್ನೆಟ್",
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "cs_fundamentals_final_project/coursef/2022": {
@@ -373,33 +417,37 @@
         "final_project_design_1/coursef/2022": {
           "name": "ಕೋರ್ಸ್‌ನ ಕೊನೆಯಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್"
         },
-        "common_core_and_ngss_guidance/coursef/2022": {
+        "common_core_and_ngss_guidance/coursee/2022": {
           "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
-        "cross-curricular_extension_activities/coursef/2022": {
+        "cross-curricular_extension_activities/coursee/2022": {
           "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "curriculum_guide/coursef/2022": {
+        "curriculum_guide/coursee/2022": {
           "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
         },
-        "debugging_guide/coursef/2022": {
+        "debugging_guide/coursee/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursef/2022": {
+        "implementation_guide/coursee/2022": {
           "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursef/2022": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ"
+        "lesson_type_guide/coursee/2022": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "teacher_forum/coursef/2022": {
+        "sprite_lab_documentation/coursee/2022": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursee/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursef/2022": {
+        "virtual_lesson_modifications/coursee/2022": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
@@ -430,9 +478,6 @@
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
           "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
           "name": "ಈಜು ಮೀನು ಶಿಕ್ಷಕರ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್",
@@ -501,34 +546,34 @@
         "end_of_course_project_guide/coursee/2022": {
           "name": "ಕೋರ್ಸ್‌ನ ಕೊನೆಯಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್"
         },
-        "common_core_and_ngss_guidance/coursee/2022": {
+        "common_core_and_ngss_guidance/courseb/2022": {
           "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
-        "cross-curricular_extension_activities/coursee/2022": {
+        "cross-curricular_extension_activities/courseb/2022": {
           "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "curriculum_guide/coursee/2022": {
+        "curriculum_guide/courseb/2022": {
           "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
         },
-        "debugging_guide/coursee/2022": {
+        "debugging_guide/courseb/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursee/2022": {
+        "implementation_guide/courseb/2022": {
           "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursee/2022": {
+        "lesson_type_guide/courseb/2022": {
           "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "teacher_forum/coursee/2022": {
+        "teacher_forum/courseb/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursee/2022": {
+        "virtual_lesson_modifications/courseb/2022": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "digital_trails_animal_tracks/courseb/2022": {
@@ -554,12 +599,15 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "move_it_move_it/courseb/2022": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
         },
         "move_it_move_it_1/courseb/2022": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "move_it_move_it_2/courseb/2022": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "move_it_move_it_3/courseb/2022": {
@@ -579,10 +627,10 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+          "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು"
         },
         "pair_programming/courseb/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
@@ -607,9 +655,11 @@
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "stevie_and_the_big_project/courseb/2022": {
+          "name": "ಸ್ಟೀವಿ ಮತ್ತು ದೊಡ್ಡ ಯೋಜನೆ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2022": {
+          "name": "ಚುಕ್ಕೆ ಹಾಕದ ದೋಷಗಳು",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ವೀಡಿಯೊ"
         },
@@ -668,41 +718,20 @@
           "name": "ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡಿ",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
-        "common_core_and_ngss_guidance/courseb/2022": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
-        },
-        "cross-curricular_extension_activities/courseb/2022": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "curriculum_guide/courseb/2022": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
-        },
-        "debugging_guide/courseb/2022": {
+        "debugging_guide/express/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "implementation_guide/courseb/2022": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/courseb/2022": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "teacher_forum/courseb/2022": {
+        "teacher_forum/express/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/courseb/2022": {
-          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "unplugged_maze_blocks/express/2022": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಮೇಝ್ ಬ್ಲಾಕ್‌ಗಳು",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ವೀಡಿಯೊ"
         },
@@ -732,6 +761,7 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
+          "name": "ಕ್ರಿಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ಗಳು",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "pause_and_think_online/express/2022": {
@@ -776,11 +806,11 @@
           "name": "CSF ಎಕ್ಸ್‌ಪ್ರೆಸ್ ಕೋರ್ಸ್ ಅಂತ್ಯದ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್",
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
-        "debugging_guide/express/2022": {
+        "debugging_guide/pre-express/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "teacher_forum/express/2022": {
+        "teacher_forum/pre-express/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
@@ -798,6 +828,7 @@
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "pair_programming/pre-express/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
@@ -810,13 +841,35 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "debugging_guide/pre-express/2022": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        "common_core_and_ngss_guidance/coursea/2022": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
         },
-        "teacher_forum/pre-express/2022": {
+        "cross-curricular_extension_activities/coursea/2022": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
+        },
+        "debugging_guide/coursea/2022": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2022": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursea/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
@@ -845,6 +898,7 @@
           "type": "ವೀಡಿಯೊ"
         },
         "pair_programming/coursea/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles-go_noodle/coursea/2022": {
@@ -949,34 +1003,34 @@
           "name": "ಕಲಾವಿದ ಪ್ರಾಜೆಕ್ಟ್ ಯೋಜನಾ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
-        "common_core_and_ngss_guidance/coursea/2022": {
+        "common_core_and_ngss_guidance/coursec/2022": {
           "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
-        "cross-curricular_extension_activities/coursea/2022": {
+        "cross-curricular_extension_activities/coursec/2022": {
           "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
-        "curriculum_guide/coursea/2022": {
+        "curriculum_guide/coursec/2022": {
           "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
         },
-        "debugging_guide/coursea/2022": {
+        "debugging_guide_1/coursec/2022": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
-        "implementation_guide/coursea/2022": {
+        "implementation_guide/coursec/2022": {
           "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
-        "lesson_type_guide/coursea/2022": {
+        "lesson_type_guide/coursec/2022": {
           "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
-        "teacher_forum/coursea/2022": {
+        "teacher_forum/coursec/2022": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursea/2022": {
+        "virtual_lesson_modifications/coursec/2022": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
@@ -1020,6 +1074,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "pair_programming/coursec/2022": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ವೀಡಿಯೊ"
         },
@@ -1057,6 +1112,10 @@
           "name": "ದಿ ಬಿಗ್ ಈವೆಂಟ್ (ಕೋರ್ಸ್ ಸಿ)",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
         },
+        "level_solutions/coursec/2022": {
+          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
+        },
         "open-ended_programming_levels/coursec/2022": {
           "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು"
         },
@@ -1064,10 +1123,6 @@
           "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
-        },
-        "level_solutions/coursec/2022": {
-          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
-          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
         },
         "open-ended_programming_levels_1/coursec/2022": {
           "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
@@ -1110,35 +1165,8 @@
           "name": "ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ (ಉದಾಹರಣೆ)",
           "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
         },
-        "common_core_and_ngss_guidance/coursec/2022": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
-        },
-        "cross-curricular_extension_activities/coursec/2022": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "curriculum_guide/coursec/2022": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ"
-        },
-        "debugging_guide_1/coursec/2022": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursec/2022": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
-          "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/coursec/2022": {
-          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು"
+        "teacher_forum/csd/2022": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
         },
         "binary_and_data/csd/2022": {
           "type": "ವೀಡಿಯೊ"
@@ -1169,20 +1197,32 @@
         "video_training_data_and_bias/csd/2022": {
           "type": "ವೀಡಿಯೊ"
         },
+        "make_a_recommendation/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "make_a_recommendation_1/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "ವೀಡಿಯೊ"
         },
+        "the_problem_solving_process/csd/2022": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
         "what_is_a_computer/csd/2022": {
           "type": "ವೀಡಿಯೊ"
         },
+        "what_is_a_computer_/csd/2022": {
+          "name": "ಕಂಪ್ಯೂಟರ್ ಎಂದರೇನು?"
+        },
         "what_do_computers_do/csd/2022": {
           "type": "ವೀಡಿಯೊ"
+        },
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "apps_and_problem_solving_2/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -1206,6 +1246,7 @@
           "type": "ವೀಡಿಯೊ"
         },
         "the_animation_tab/csd/2022": {
+          "name": "ಅನಿಮೇಷನ್ ಟ್ಯಾಬ್",
           "type": "ವೀಡಿಯೊ"
         },
         "sprite_properties/csd/2022": {
@@ -1233,22 +1274,35 @@
           "type": "ರೂಬ್ರಿಕ್"
         },
         "boolean_expressions/csd/2022": {
+          "name": "ಬೂಲಿಯನ್ ಅಭಿವ್ಯಕ್ತಿಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "conditional_statements/csd/2022": {
+          "name": "ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "conditionals/csd/2022": {
           "name": "ಕಂಡೀಷನಲ್ಸ್‌"
         },
         "if_else_statements/csd/2022": {
+          "name": "/ಬೇರೆ ಹೇಳಿಕೆಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "interactive_card_3/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
         },
         "velocity/csd/2022": {
+          "name": "ವೇಗ",
           "type": "ವೀಡಿಯೊ"
+        },
+        "velocity_1/csd/2022": {
+          "name": "ವೇಗ"
+        },
+        "velocity_2/csd/2022": {
+          "name": "ವೇಗ"
         },
         "side_scroller/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -1260,7 +1314,17 @@
           "type": "ರೂಬ್ರಿಕ್"
         },
         "functions/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "functions_1/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು"
+        },
+        "functions_4/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "make_your_own_game_3/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -1280,20 +1344,31 @@
         "html_web_page/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
         },
+        "html_web_page_2/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "lists/csd/2022": {
           "name": "ಪಟ್ಟಿಗಳು"
         },
         "intro_to_css_-_part_1/csd/2022": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 1",
           "type": "ವೀಡಿಯೊ"
         },
         "intro_to_css_-_part_2/csd/2022": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 2",
           "type": "ವೀಡಿಯೊ"
         },
         "your_personal_style/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
         },
+        "your_personal_style_1/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "creative_commons_overview/csd/2022": {
           "type": "ವೀಡಿಯೊ"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "personal_web_page_1/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -1312,6 +1387,9 @@
         },
         "website_for_a_purpose/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
+        },
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "the_design_thinking_process/csd/2022": {
           "type": "ವೀಡಿಯೊ"
@@ -1376,13 +1454,22 @@
           "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು"
         },
         "introduction_to_arrays/csd/2022": {
+          "name": "ಅರೇಗಳ ಪರಿಚಯ",
           "type": "ವೀಡಿಯೊ"
         },
+        "functions_2/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು"
+        },
         "functions_3/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "functions_with_parameters/csd/2022": {
+          "name": "ನಿಯತಾಂಕಗಳೊಂದಿಗೆ ಕಾರ್ಯಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "functions_5/csd/2022": {
+          "name": "ಕಾರ್ಯಗಳು"
         },
         "student_rubric_-_interactive_art/csd/2022": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -1401,10 +1488,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "ವೀಡಿಯೊ"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ",
           "type": "ವೀಡಿಯೊ"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ತರಬೇತಿ ಮತ್ತು ಪರೀಕ್ಷೆ",
           "type": "ವೀಡಿಯೊ"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1413,12 +1505,20 @@
           "type": "ವೀಡಿಯೊ"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI ಲ್ಯಾಬ್ನಲ್ಲಿ ಮಾದರಿ ಕಾರ್ಡ್ಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "ವೀಡಿಯೊ"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ",
           "type": "ವೀಡಿಯೊ"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -1771,20 +1871,71 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "ಕವಿತೆಗಳ ಪಟ್ಟಿ",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
-        "introducing_sprite_lab/coursef/2021": {
-          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        "2021_change_log/coursef/2021": {
+          "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಡಾಕ್ಯುಮೆಂಟೇಶನ್",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "exploring_apps/coursef/2021": {
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "url": "https://youtu.be/yd-9xZ275dM",
-          "type": "ವೀಡಿಯೊ"
-        },
         "exploring_apps_1/coursef/2021": {
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಪರಿಚಯಿಸುತ್ತಿದ್ದೇವೆ",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಪರಿಚಯಿಸುತ್ತಿದ್ದೇವೆ",
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "ವೀಡಿಯೊ"
         },
         "making_sprites/coursef/2021": {
           "name": "ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು",
@@ -1794,7 +1945,16 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
+          "name": "ಕ್ರಿಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ಗಳು",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಅಧ್ಯಾಯ ಪ್ರಶ್ನಾವಳಿ",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಅಧ್ಯಾಯ ಪ್ರಶ್ನಾವಳಿ",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
           "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಅಧ್ಯಾಯ ಸ್ಲೈಡ್‌ಗಳು",
@@ -1809,63 +1969,39 @@
           "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಶಬ್ದಗಳು ಬೇಸರ ಉಂಟುಮಾಡಬಹುದು",
           "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಅಧ್ಯಾಯ ಪ್ರಶ್ನಾವಳಿ",
-          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        "blank_space_stories/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "ಶಬ್ದಗಳ ಶಕ್ತಿ: ಅಧ್ಯಾಯ ಪ್ರಶ್ನಾವಳಿ",
-          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "ವೇರಿಯಬಲ್‌ಗಳು: ಬಿಟ್ಟ ಸ್ಥಳದ ಸ್ಟೋರಿಗಳು",
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
         },
-        "blank_space_stories_-_worksheet/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
-        },
-        "blank_space_stories/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
-        },
         "text_and_prompts/coursef/2021": {
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
-        },
-        "user_input_programs/coursef/2021": {
-          "name": "ಬಳಕೆದಾರರ ಇನ್‌ಪುಟ್ ಪ್ರೋಗ್ರಾಮ್‌ಗಳು",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
         },
         "mini_project_user_input_programs/coursef/2021": {
           "name": "ಮಿನಿ ಪ್ರಾಜೆಕ್ಟ್: ಬಳಕೆದಾರರ ಇನ್‌ಪುಟ್‌ ಪ್ರೋಗ್ರಾಮ್‌ಗಳು",
           "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
         },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "ಮಿನಿ ಪ್ರಾಜೆಕ್ಟ್: ಬಳಕೆದಾರರ ಇನ್‌ಪುಟ್‌ ಪ್ರೋಗ್ರಾಮ್‌ಗಳು",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
+        },
         "teacher_sandbox_level/coursef/2021": {
           "name": "ಬೋಧಕರ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ ಹಂತ",
           "url": "https://studio.code.org/levels/27300"
         },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "ಮಿನಿ ಪ್ರಾಜೆಕ್ಟ್: ಬಳಕೆದಾರರ ಇನ್‌ಪುಟ್‌ ಪ್ರೋಗ್ರಾಮ್‌ಗಳು",
-          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
+        "user_input_programs/coursef/2021": {
+          "name": "ಬಳಕೆದಾರರ ಇನ್‌ಪುಟ್ ಪ್ರೋಗ್ರಾಮ್‌ಗಳು",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
           "type": "ವೀಡಿಯೊ"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
-          "url": "https://youtu.be/mX857v5B4gE"
-        },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "ಲೂಪ್ ವಿನೋದಕ್ಕಾಗಿ - ಮೌಲ್ಯಮಾಪನ ಕೀ",
-          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
-          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
-          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
@@ -1875,6 +2011,22 @@
           "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
           "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "ಲೂಪ್ ವಿನೋದಕ್ಕಾಗಿ - ಮೌಲ್ಯಮಾಪನ ಕೀ",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "ಲೂಪ್ ಮೋಜಿಗಾಗಿ",
+          "url": "https://youtu.be/mX857v5B4gE"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್‌ಗಳು (ಕೋರ್ಸ್‌ಗಳು CF)",
@@ -1888,35 +2040,36 @@
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ವೀಡಿಯೊ"
         },
-        "ai-training/coursef/2021": {
-          "name": "ಎಐ: ಟ್ರೇನಿಂಗ್ ಡೇಟಾ ಮತ್ತು ತಾರತಮ್ಯ",
-          "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "ವೀಡಿಯೊ"
-        },
         "ai-societal/coursef/2021": {
           "name": "ಎಐ: ಸಮಾಜದ ಮೇಲೆ ಪರಿಣಾಮ",
           "url": "https://youtu.be/ng4c1g3COfs",
           "type": "ವೀಡಿಯೊ"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "url": "https://youtu.be/mFOUbqYv1Sc"
+        "ai-training/coursef/2021": {
+          "name": "ಎಐ: ಟ್ರೇನಿಂಗ್ ಡೇಟಾ ಮತ್ತು ತಾರತಮ್ಯ",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ವೀಡಿಯೊ"
         },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "IP ವಿಳಾಸ ಕಾರ್ಡ್‌ಗಳು ಮತ್ತು ಡೆಲಿವರಿ ಪ್ರಕಾರದ ಕಾರ್ಡ್‌ಗಳು",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+        "assessment-answer-internet/coursef/2021": {
+          "name": "ಇಂಟರ್ನೆಟ್",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "ಇಂಟರ್ನೆಟ್",
           "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "ಇಂಟರ್ನೆಟ್",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP ವಿಳಾಸ ಕಾರ್ಡ್‌ಗಳು ಮತ್ತು ಡೆಲಿವರಿ ಪ್ರಕಾರದ ಕಾರ್ಡ್‌ಗಳು",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
           "url": "http://get-site-ip.com/"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "ಇಂಟರ್ನೆಟ್",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "design-process/coursef/2021": {
           "name": "ವಿನ್ಯಾಸ ಪ್ರಕ್ರಿಯೆ",
@@ -1931,96 +2084,91 @@
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "ರೂಬ್ರಿಕ್"
         },
-        "csta_standards_mapping/coursef/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/coursef-2021/standards"
-        },
-        "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
-        },
-        "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursef/2021": {
-          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/coursef-2021/vocab"
-        },
-        "implementation_guide/coursef/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursef/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursef/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursef/2021": {
+        "2021_change_log/courseb/2021": {
           "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "teacher_forum_1/coursef/2021": {
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/courseb/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಡಾಕ್ಯುಮೆಂಟೇಶನ್",
-          "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "virtual_lesson_modifications/coursef/2021": {
+        "virtual_lesson_modifications/courseb/2021": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
-        },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಲೆಸನ್ ಸ್ಲೈಡ್‌ಗಳು",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಡಿಜಿಟಲ್ ಟ್ರಯಲ್ ಅನ್ನು ಅನುಸರಿಸಿ",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಡಿಜಿಟಲ್ ಟ್ರಯಲ್ ಚೌಕಗಳು",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
-          "type": "ವಿದ್ಯಾರ್ಥಿ ಕೈಪಿಡಿ"
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಅನಿಮಲ್ ಟ್ರ್ಯಾಕ್ಸ್",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
           "type": "ವಿದ್ಯಾರ್ಥಿ ಕೈಪಿಡಿ"
         },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಡಿಜಿಟಲ್ ಟ್ರಯಲ್ ಚೌಕಗಳು",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "ವಿದ್ಯಾರ್ಥಿ ಕೈಪಿಡಿ"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಡಿಜಿಟಲ್ ಟ್ರಯಲ್ ಅನ್ನು ಅನುಸರಿಸಿ",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "ಡಿಜಿಟಲ್ ಟ್ರೇಲ್ಸ್: ಲೆಸನ್ ಸ್ಲೈಡ್‌ಗಳು",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "mimi-activity/courseb/2021": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
         },
         "mimi-debugging/courseb/2021": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "mimi-teacher-puzzle/courseb/2021": {
+          "name": "ಅದನ್ನು ಸರಿಸಿ, ಅದನ್ನು ಸರಿಸಿ",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "ಮೂವ್ ಇಟ್, ಮೂವ್ ಇಟ್",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
-        "feeling_faces_emotion_image/courseb/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
-        "feeling-faces-image/courseb/2021": {
-          "name": "ಭಾವನೆಗಳಿರುವ ಮುಖಗಳು",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
-        },
-        "jigsaw/courseb/2021": {
-          "name": "ಅಭ್ಯಾಸ ಎಳೆದು ಬಿಡಿ",
-          "url": "https://studio.code.org/s/jigsaw"
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20 ನಿಯಮ",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
         },
         "class-section-video/courseb/2021": {
           "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು",
@@ -2030,21 +2178,22 @@
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್‌ಗಳು (ಗ್ರೇಡ್‌ಗಳು K-1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "ಭಾವನೆಗಳಿರುವ ಮುಖಗಳು",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "ಅಭ್ಯಾಸ ಎಳೆದು ಬಿಡಿ",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
         "pair-programming-vid/courseb/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "ವಿಗಲ್ಸ್ - ಗೋ ನೂಡಲ್",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ವೀಡಿಯೊ"
-        },
-        "20_20_20_rule/courseb/2021": {
-          "name": "20/20/20 ನಿಯಮ",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
-        },
-        "happy-map-game-pieces/courseb/2021": {
-          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಗೇಮ್ ಪೀಸಸ್",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "compass-rose/courseb/2021": {
           "name": "ಕಂಪಾಸ್ ರೋಸ್",
@@ -2054,16 +2203,22 @@
           "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಗೇಮ್ ಪೀಸಸ್",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
         "stevie_and_the_big_project/courseb/2021": {
+          "name": "ಸ್ಟೀವಿ ಮತ್ತು ದೊಡ್ಡ ಯೋಜನೆ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
+          "name": "ಚುಕ್ಕೆ ಹಾಕದ ದೋಷಗಳು",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ವೀಡಿಯೊ"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "ಲೂಪಿ ಆಗುವುದು",
-          "url": "https://youtu.be/JoKTqHCni0M"
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "ಲೂಪಿ ಆಗುವುದು",
@@ -2074,9 +2229,9 @@
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "ಲೂಪಿ ಆಗುವುದು",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+          "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "CS ಫಂಡಮೆಂಟಲ್ಸ್ ಮುಖ್ಯ ಚಟುವಟಿಕೆ ಸಲಹೆಗಳು",
@@ -2091,23 +2246,23 @@
           "name": "ಸರಿಯಾದ ಆಪ್ ಸನ್ನಿವೇಶಗಳು",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
-        "unplugged-video-big-event/courseb/2021": {
+        "assessment-answer-big-event/courseb/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://youtu.be/u0WV9shCoak",
-          "type": "ವೀಡಿಯೊ"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
-        },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "ದಿ ಬಿಗ್ ಈವೆಂಟ್ (ಕೋರ್ಸ್ ಎ, ಬಿ)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "ದೊಡ್ಡ ಘಟನೆ",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "ವೀಡಿಯೊ"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡಿ",
@@ -2117,49 +2272,49 @@
           "name": "ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡಿ",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
-        "csta_standards_mapping/courseb/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/courseb-2021/standards"
-        },
-        "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
-        },
-        "cross-curricular_extension_activities/courseb/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/courseb/2021": {
-          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/courseb-2021/vocab"
-        },
-        "implementation_guide/courseb/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/courseb/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/courseb/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/courseb/2021": {
+        "2021_change_log/coursea/2021": {
           "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "teacher_forum_1/courseb/2021": {
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/courseb/2021": {
+        "virtual_lesson_modifications/coursea/2021": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
@@ -2169,59 +2324,60 @@
           "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆ",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
         },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ಸುರಕ್ಷತೆ: ಇದು ನಿಯಮಗಳು!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
-        },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ವಿರಾಮಗೊಳಿಸಿ ಮತ್ತು ಕ್ಷಣವನ್ನು ಯೋಚಿಸಿ",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "ವಿದ್ಯಾರ್ಥಿ ಕೈಪಿಡಿ"
         },
-        "pair-programming-vid/coursea/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "ನನ್ನ ಆನ್‌ಲೈನ್ ನೆರೆಹೊರೆಯಲ್ಲಿ ಸುರಕ್ಷತೆ: ಸುರಕ್ಷತೆ: ಇದು ನಿಯಮಗಳು!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "20/20/20 ನಿಯಮ",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "name": "ವಿಗಲ್ಸ್‌-ಗೋ ನೂಡಲ್",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "ವೀಡಿಯೊ"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "ಪ್ರಾರಂಭಿಸುವುದು - ತರಗತಿ ವಿಭಾಗವನ್ನು ರಚಿಸುವುದು",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
           "type": "ವೀಡಿಯೊ"
         },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "ಸಂತೋಷದ ನಕ್ಷೆಗಳು",
-          "url": "https://youtu.be/hrnhiKAQ1_k"
+        "pair-programming-vid/coursea/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "happy-map-cards/coursea/2021": {
-          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಕಾರ್ಡ್‌ಗಳು",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "ವಿಗಲ್ಸ್‌-ಗೋ ನೂಡಲ್",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "ವೀಡಿಯೊ"
         },
         "activity-answer-happy-maps/coursea/2021": {
           "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಕಾರ್ಡ್‌ಗಳು",
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
-        "happy-map-game-pieces/coursea/2021": {
-          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಗೇಮ್ ಪೀಸಸ್",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
-        },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
-        "course-ab-blockly-blocks/coursea/2021": {
-          "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್‌ಗಳು (ಗ್ರೇಡ್‌ಗಳು K-1)",
-          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        "happy-map-cards/coursea/2021": {
+          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಕಾರ್ಡ್‌ಗಳು",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಗೇಮ್ ಪೀಸಸ್",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "ಸಂತೋಷದ ನಕ್ಷೆಗಳು",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "20/20/20 ನಿಯಮ",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್ಲಿ ಬ್ಲಾಕ್‌ಗಳು (ಗ್ರೇಡ್‌ಗಳು K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "ವಿಗಲ್ಸ್ - ಗೋ ನೂಡಲ್",
@@ -2241,6 +2397,10 @@
           "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
         "happy-map-cards-xl/coursea/2021": {
           "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಕಾರ್ಡ್ಸ್ XL",
           "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
@@ -2248,10 +2408,6 @@
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ ಗೇಮ್ ಪೀಸಸ್ ಬೋನಸ್ ಪ್ಯಾಕ್",
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
-        },
-        "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "ಭಾವನೆಗಳಿರುವ ಮುಖಗಳು",
@@ -2262,59 +2418,59 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ವೀಡಿಯೊ"
         },
-        "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
         "csf_lesson_recommendations/coursea/2021": {
           "name": "CSF ಪಾಠ ಶಿಫಾರಸುಗಳು",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "CSF ಪಾಠ ಶಿಫಾರಸುಗಳು",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "assessment-answer-big-event/coursea/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "ದಿ ಬಿಗ್ ಈವೆಂಟ್ (ಕೋರ್ಸ್ ಎ, ಬಿ)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
-        "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "ದೊಡ್ಡ ಘಟನೆ",
+          "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "CS ಫಂಡಮೆಂಟಲ್ಸ್ ಮುಖ್ಯ ಚಟುವಟಿಕೆ ಸಲಹೆಗಳು",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
-        "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
-        },
         "csf_lesson_recommendations_2/coursea/2021": {
           "name": "CSF ಪಾಠ ಶಿಫಾರಸುಗಳು",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ - ಎಮೋಷನ್ ಇಮೇಜ್",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "ಕಲಾವಿದ ಪ್ರಾಜೆಕ್ಟ್ ಯೋಜನಾ ಮಾರ್ಗದರ್ಶಿ",
@@ -2324,49 +2480,49 @@
           "name": "ಕಲಾವಿದ ಪ್ರಾಜೆಕ್ಟ್ ಯೋಜನಾ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
-        "csta_standards_mapping/coursea/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/coursea-2021/standards"
-        },
-        "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
-        },
-        "cross-curricular_extension_activities/coursea/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursea/2021": {
-          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/coursea-2021/vocab"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursea/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursea/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursea/2021": {
+        "2021_change_log/coursec/2021": {
           "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "teacher_forum_1/coursea/2021": {
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursea/2021": {
+        "virtual_lesson_modifications/coursec/2021": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "ಆನ್‌ಲೈನ್ ಮೀನ್‌ನೆಸ್‌ಗೆ ಸ್ಟಾಪ್ ಹಾಕುವುದು: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
@@ -2380,17 +2536,17 @@
         "csf-mrf-cup-spacing/coursec/2021": {
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
-          "url": "https://youtu.be/xaW3PAzHxCU"
-        },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "c2-maze-bridge/coursec/2021": {
           "name": "ಮೇಝ್ ಬ್ರಿಡ್ಜಿಂಗ್ ಪೇಜ್",
@@ -2400,10 +2556,6 @@
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಮೇಝ್ ಬ್ಲಾಕ್‌ಗಳು",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
-        "pair-programming-vid/coursec/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "ವೀಡಿಯೊ"
-        },
         "csf-lesson-recommend/coursec/2021": {
           "name": "CS ಫಂಡಮೆಂಟಲ್ಸ್ ಮುಖ್ಯ ಚಟುವಟಿಕೆ ಸಲಹೆಗಳು",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
@@ -2411,6 +2563,11 @@
         "debugging_guide/coursec/2021": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ವೀಡಿಯೊ"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್‌ಗಳು (ಕೋರ್ಸ್‌ಗಳು CF)",
@@ -2420,44 +2577,44 @@
           "name": "ಕಲಾಕಾರರ ಪರಿಚಯ",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
-        "csf-turns-angles-video/coursec/2021": {
-          "name": "ತಿರುವುಗಳು ಮತ್ತು ಕೋನಗಳು",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "ತಿರುವುಗಳು ಮತ್ತು ಕೋನಗಳು",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
           "type": "ವಿದ್ಯಾರ್ಥಿ ಕೈಪಿಡಿ"
         },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "ತಿರುವುಗಳು ಮತ್ತು ಕೋನಗಳು",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "ಫೀಲಿಂಗ್ ಫೇಸಸ್ ಎಮೋಷನ್ ಇಮೇಜ್",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "ದೊಡ್ಡ ಘಟನೆ",
           "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "ದೊಡ್ಡ ಘಟನೆ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
-        },
         "the_big_event_course_c_/coursec/2021": {
           "name": "ದಿ ಬಿಗ್ ಈವೆಂಟ್ (ಕೋರ್ಸ್ ಸಿ)",
           "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "ದೊಡ್ಡ ಘಟನೆ",
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "open-ended_programming_levels/coursec/2021": {
+          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
-        },
-        "open-ended_programming_levels/coursec/2021": {
-          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
-          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
         },
         "open-ended_programming_levels_1/coursec/2021": {
           "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
@@ -2467,17 +2624,9 @@
           "name": "ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಿಂದ ಡೇಟಾವನ್ನು ಗ್ರಾಫಿಂಗ್ ಮಾಡುವುದು",
           "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
         },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "ಬಿಟ್ಸ್ ವರ್ಸಸ್ ಬೈಟ್ಸ್",
-          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "ಬೈನರಿ ಕಡಗಗಳು",
-          "url": "https://youtu.be/3S2YfoO4_CM"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "ಬೈನರಿ ಕಡಗಗಳು",
-          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "ಬೈನರಿ ಕಡಗಗಳು",
@@ -2488,61 +2637,85 @@
           "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "ಬೈನರಿ ಕಡಗಗಳು",
-          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "ಬಿಟ್ಸ್ ವರ್ಸಸ್ ಬೈಟ್ಸ್",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ (ಉದಾಹರಣೆ)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "ಬೈನರಿ ಕಡಗಗಳು",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "ಬೈನರಿ ಕಡಗಗಳು",
+          "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡಿ",
           "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
         },
-        "csta_standards_mapping/coursec/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/coursec-2021/standards"
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "ಪ್ಲೇ ಲ್ಯಾಬ್ ಪ್ರಾಜೆಕ್ಟ್ ಪ್ಲಾನಿಂಗ್ ಗೈಡ್ (ಉದಾಹರಣೆ)",
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
         },
-        "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
-        },
-        "cross-curricular_extension_activities/coursec/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursec/2021": {
-          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/coursec-2021/vocab"
-        },
-        "implementation_guide/coursec/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursec/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide_1/coursec/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursec/2021": {
+        "2021_change_log/coursed/2021": {
           "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "teacher_forum_1/coursec/2021": {
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum_1/coursed/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "virtual_lesson_modifications/coursec/2021": {
+        "virtual_lesson_modifications/coursed/2021": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ವೇಳೆ... ನಂತರ... ಸನ್ನಿವೇಶಗಳು",
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ವೇಳೆ... ನಂತರ... ಸನ್ನಿವೇಶಗಳು",
+          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ಪಾಠ ರಸಪ್ರಶ್ನೆ",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ಪಾಠ ರಸಪ್ರಶ್ನೆ",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "ಪಾಸ್‌ವರ್ಡ್ ಪವರ್-ಅಪ್: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
@@ -2556,61 +2729,58 @@
           "name": "ಪಾಸ್‌ವರ್ಡ್ ಪವರ್-ಅಪ್: ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಪವರ್-ಅಪ್ ಮಾಡಿ",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit"
         },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ಪಾಠ ರಸಪ್ರಶ್ನೆ",
-          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ಪಾಠ ರಸಪ್ರಶ್ನೆ",
-          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ವೇಳೆ... ನಂತರ... ಸನ್ನಿವೇಶಗಳು",
-          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "ಪಾಸ್ವರ್ಡ್ ಪವರ್-ಅಪ್: ವೇಳೆ... ನಂತರ... ಸನ್ನಿವೇಶಗಳು",
-          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "url": "https://youtu.be/Y_paSrH2ffw"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
-        },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
         },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+        },
         "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+        "graph-paper-programming/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "pair-programming-vid/coursed/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "relay-assessment/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
         },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
+        },
         "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "url": "https://youtu.be/l5MKkXbzOsk"
-        },
         "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
           "url": "https://youtu.be/ZULpfAVJOBo"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "ರಿಲೇ ಪ್ರೊಗ್ರಾಮಿಂಗ್",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್‌ಗಳು (ಕೋರ್ಸ್‌ಗಳು CF)",
@@ -2620,26 +2790,26 @@
           "name": "ಬೌನ್ಸ್ನಲ್ಲಿನ ಘಟನೆಗಳು - ಅವು ಹೇಗೆ ಸಂಭವಿಸುತ್ತವೆ?",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
-          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
-        },
         "open-ended_programming_levels_1/coursed/2021": {
           "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
         },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
-        },
         "dance-party-playlist/coursed/2021": {
           "name": "Spotify ಪ್ಲೇಲಿಸ್ಟ್‌ (ಎಲ್ಲ ವಯಸ್ಸಿನವರಿಗೆ)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance_party_unplugged/coursed/2021": {
           "url": "https://curriculum.code.org/hoc/unplugged/4/"
@@ -2657,79 +2827,52 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "url": "https://youtu.be/UymN4lTL50s"
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "ಕಾರ್ಡ್‌ಗಳ ಮಾದರಿ ಕಾರ್ಯಕ್ರಮದೊಂದಿಗೆ ಷರತ್ತುಗಳು",
-          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
-          "url": "https://youtu.be/TbUaEnAYPjI"
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "ಕಾರ್ಡ್‌ಗಳ ಮಾದರಿ ಕಾರ್ಯಕ್ರಮದೊಂದಿಗೆ ಷರತ್ತುಗಳು",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "url": "https://youtu.be/UymN4lTL50s"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "ಸಿಎಸ್‌ಎಫ್‌ ಕೋರ್ಸ್ ಡಿ ಕೋರ್ಸ್ ಅಂತ್ಯದ ಯೋಜನೆ ಯೋಜನೆ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/coursed-2021/standards"
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursed/2021": {
+        "course_vocabulary_1/express/2021": {
           "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/coursed-2021/vocab"
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        "csta_standards_mapping/express/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/express-2021/standards"
         },
-        "lesson_type_guide/coursed/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursed/2021": {
+        "debugging_guide/express/2021": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಮೇಝ್ ಬ್ಲಾಕ್‌ಗಳು",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ವೀಡಿಯೊ"
         },
@@ -2751,12 +2894,12 @@
           "name": "ತಿರುವುಗಳು ಮತ್ತು ಕೋನಗಳು",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
+        "sprite_lab_documentation/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
         "swimming_fish_teacher_sandbox/express/2021": {
           "name": "ಈಜು ಮೀನು ಶಿಕ್ಷಕರ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್",
           "url": "https://studio.code.org/levels/18623"
-        },
-        "sprite_lab_documentation/express/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
           "name": "ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು",
@@ -2766,6 +2909,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
+          "name": "ಕ್ರಿಯೆಯಲ್ಲಿ ಸ್ಪ್ರೈಟ್ಗಳು",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "pause_and_think_online/express/2021": {
@@ -2773,13 +2917,13 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "dance-party-project-guide/express/2021": {
-          "name": "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
-        },
         "dance-party-playlist/express/2021": {
           "name": "Spotify ಪ್ಲೇಲಿಸ್ಟ್‌ (ಎಲ್ಲ ವಯಸ್ಸಿನವರಿಗೆ)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "ಮುಕ್ತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಟ್ಟಗಳು",
@@ -2826,24 +2970,26 @@
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "ರೂಬ್ರಿಕ್"
         },
-        "csta_standards_mapping/express/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/express-2021/standards"
-        },
-        "course_vocabulary_1/express/2021": {
+        "course_vocabulary/pre-express/2021": {
           "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/express-2021/vocab"
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
-        "teacher_forum_1/express/2021": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
-          "url": "https://forum.code.org/c/csf/"
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
-        "debugging_guide/express/2021": {
+        "debugging_guide/pre-express/2021": {
           "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
-        "pair-programming-vid/pre-express/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        "teacher_forum_1/pre-express/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20 ನಿಯಮ",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "ವೀಡಿಯೊ"
         },
         "class-section-video/pre-express/2021": {
           "name": "Code.org ನಲ್ಲಿ ತರಗತಿ ವಿಭಾಗವನ್ನು ಹೇಗೆ ಮಾಡುವುದು",
@@ -2853,10 +2999,9 @@
           "name": "ಭಾವನೆಗಳಿರುವ ಮುಖಗಳು",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
-        "20_20_20_rule/pre-express/2021": {
-          "name": "20/20/20 ನಿಯಮ",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": "ವೀಡಿಯೊ"
+        "pair-programming-vid/pre-express/2021": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "ವಿಗಲ್ಸ್ - ಗೋ ನೂಡಲ್",
@@ -2868,31 +3013,63 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
-        "csta_standards_mapping/pre-express/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        "2021_change_log/coursee/2021": {
+          "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
-        "course_vocabulary/pre-express/2021": {
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        },
+        "course_vocabulary/coursee/2021": {
           "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/pre-express-2021/vocab"
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
+          "url": "https://studio.code.org/s/coursee-2021/standards"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಡಾಕ್ಯುಮೆಂಟೇಶನ್",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
           "url": "https://forum.code.org/c/csf/"
         },
-        "debugging_guide/pre-express/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "follow_the_algorithm/coursee/2021": {
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "ಈಜು ಮೀನು ಶಿಕ್ಷಕರ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್",
           "url": "https://studio.code.org/levels/18623"
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "name": "ಸೂಪರ್ ಡಿಜಿಟಲ್ ಸಿಟಿಜನ್ ಆಗಿರಿ: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
@@ -2901,14 +3078,6 @@
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": "ಸೂಪರ್ ಡಿಜಿಟಲ್ ಸಿಟಿಜನ್ ಆಗಿರಿ: ಸೂಪರ್ ಡಿಜಿಟಲ್ ಸಿಟಿಜನ್",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
-          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಟಿಕೆಟ್ ನಿರ್ಗಮಿಸಿ",
@@ -2923,14 +3092,22 @@
           "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಪಾಠ ರಸಪ್ರಶ್ನೆ",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
-        "common-sense-media-pause-think/coursee/2021": {
-          "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
-          "url": "https://youtu.be/X_duZ-1LApg",
-          "type": "ವೀಡಿಯೊ"
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಪಾಠ ಸ್ಲೈಡ್‌ಗಳು",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ: ಖಾಸಗಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "ನನ್ನ ಬಗ್ಗೆ ಪ್ಲಾನಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "ವಿರಾಮ ಮತ್ತು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಯೋಚಿಸಿ",
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "ವೀಡಿಯೊ"
         },
         "digital-sharing-lesson/coursee/2021": {
           "name": "ಡಿಜಿಟಲ್ ಹಂಚಿಕೆ ಪಾಠ ಯೋಜನೆ",
@@ -2950,26 +3127,26 @@
           "name": "ತಿರುವುಗಳು ಮತ್ತು ಕೋನಗಳು",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "ಕಾರ್ಯಗಳೊಂದಿಗೆ ಗೀತರಚನೆ",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
+        "assessment-answer-songwriting/coursee/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಕಾರ್ಯಗಳು: ಗೀತರಚನೆ",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಕಾರ್ಯಗಳು: ಗೀತರಚನೆ",
-          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಕಾರ್ಯಗಳು: ಗೀತರಚನೆ",
           "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
           "type": "ಮೌಲ್ಯಮಾಪನ"
         },
-        "assessment-answer-songwriting/coursee/2021": {
+        "csf-songwriting-worksheets/coursee/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಕಾರ್ಯಗಳು: ಗೀತರಚನೆ",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಕಾರ್ಯಗಳು: ಗೀತರಚನೆ",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "ಕಾರ್ಯಗಳೊಂದಿಗೆ ಗೀತರಚನೆ",
+          "url": "https://youtu.be/5iDCKkI6y2Y"
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "ಅನ್‌ಪ್ಲಗ್ಡ್ ಬ್ಲಾಕ್‌ಗಳು (ಕೋರ್ಸ್‌ಗಳು CF)",
@@ -2982,6 +3159,14 @@
           "name": "ಅಸಾಮರ್ಥ್ಯಗಳ ವಿಧಗಳು",
           "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
         },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ತಮಗೆ ತಿಳಿದಿರುವುದನ್ನು ತೋರಿಸಲು 72 ಸೃಜನಾತ್ಮಕ ಮಾರ್ಗಗಳು",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+        },
+        "design-process/coursee/2021": {
+          "name": "ವಿನ್ಯಾಸ ಪ್ರಕ್ರಿಯೆ",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
         "end-of-course-project-guide/coursee/2021": {
           "name": "ಕೋರ್ಸ್‌ನ ಕೊನೆಯಲ್ಲಿ ಪ್ರಾಜೆಕ್ಟ್ ಗೈಡ್",
           "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit"
@@ -2990,62 +3175,6 @@
           "name": "CS ಫಂಡಮೆಂಟಲ್ಸ್ ಅಂತಿಮ ಯೋಜನೆ",
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
           "type": "ರೂಬ್ರಿಕ್"
-        },
-        "design-process/coursee/2021": {
-          "name": "ವಿನ್ಯಾಸ ಪ್ರಕ್ರಿಯೆ",
-          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ತಮಗೆ ತಿಳಿದಿರುವುದನ್ನು ತೋರಿಸಲು 72 ಸೃಜನಾತ್ಮಕ ಮಾರ್ಗಗಳು",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
-        },
-        "csta_standards_mapping/coursee/2021": {
-          "name": "CSTA ಮಾನದಂಡಗಳ ಮ್ಯಾಪಿಂಗ್",
-          "url": "https://studio.code.org/s/coursee-2021/standards"
-        },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "ಸಾಮಾನ್ಯ ಕೋರ್ ಮತ್ತು NGSS ಮಾರ್ಗದರ್ಶನ",
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "name": "ಕ್ರಾಸ್-ಪಠ್ಯಕ್ರಮದ ವಿಸ್ತರಣೆ ಚಟುವಟಿಕೆಗಳು",
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
-        },
-        "course_vocabulary/coursee/2021": {
-          "name": "ಕೋರ್ಸ್‌ ಶಬ್ದಕೋಶ",
-          "url": "https://studio.code.org/s/coursee-2021/vocab"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "ಅನುಷ್ಠಾನ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
-        },
-        "lesson_type_guide/coursee/2021": {
-          "name": "ಅಧ್ಯಾಯ ವಿಧ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
-        },
-        "debugging_guide/coursee/2021": {
-          "name": "ಡಿಬಗ್ಗಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "ಪಠ್ಯಕ್ರಮ ಮಾರ್ಗದರ್ಶಿ",
-          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
-        },
-        "2021_change_log/coursee/2021": {
-          "name": "2021 ಬದಲಾವಣೆ ವಿವರ",
-          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ",
-          "url": "https://forum.code.org/c/csf/"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಡಾಕ್ಯುಮೆಂಟೇಶನ್",
-          "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -3058,10 +3187,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ",
           "type": "ವೀಡಿಯೊ"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ತರಬೇತಿ ಮತ್ತು ಪರೀಕ್ಷೆ",
           "type": "ವೀಡಿಯೊ"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3070,12 +3204,20 @@
           "type": "ವೀಡಿಯೊ"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI ಲ್ಯಾಬ್ನಲ್ಲಿ ಮಾದರಿ ಕಾರ್ಡ್ಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ",
           "type": "ವೀಡಿಯೊ"
         },
         "ai_ethics_research_reflection/csd/2021": {
@@ -3096,6 +3238,9 @@
         "design_an_ai_app_1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
+        "teacher_forum/csd/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
@@ -3111,9 +3256,6 @@
         "app-presentation/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
-        "teacher_forum/csd/2021": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
-        },
         "internet-of-things-video/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
@@ -3122,6 +3264,7 @@
           "type": "ವೀಡಿಯೊ"
         },
         "how_computers_word_hardware_software/csd/2021": {
+          "name": "ಕಂಪ್ಯೂಟರ್ಗಳು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ: ಯಂತ್ರಾಂಶ ಮತ್ತು ಸಾಫ್ಟ್ವೇರ್",
           "type": "ವೀಡಿಯೊ"
         },
         "board_events/csd/2021": {
@@ -3130,19 +3273,28 @@
         "analog-digital-video/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
+        "functions_2/csd/2021": {
+          "name": "ಕಾರ್ಯಗಳು"
+        },
         "make_a_game_1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
         "introduction_to_arrays/csd/2021": {
+          "name": "ಅರೇಗಳ ಪರಿಚಯ",
           "type": "ವೀಡಿಯೊ"
         },
         "loops_in_app_lab/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ",
           "type": "ವೀಡಿಯೊ"
+        },
+        "for_loops/csd/2021": {
+          "name": "ಲೂಪ್ಸಗಾಗಿ"
         },
         "accelerometer_events/csd/2021": {
           "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು"
         },
         "circuits-logic-video/csd/2021": {
+          "name": "ಕಂಪ್ಯೂಟರ್ಗಳು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ: ಸರ್ಕ್ಯೂಟ್ಗಳು ಮತ್ತು ತರ್ಕ",
           "type": "ವೀಡಿಯೊ"
         },
         "prototype-an-innovation-1/csd/2021": {
@@ -3174,8 +3326,14 @@
         "video_training_data_and_bias/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "make-a-recommendation-1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "ವೀಡಿಯೊ"
@@ -3193,6 +3351,7 @@
           "type": "ವೀಡಿಯೊ"
         },
         "the_animation_tab/csd/2021": {
+          "name": "ಅನಿಮೇಷನ್ ಟ್ಯಾಬ್",
           "type": "ವೀಡಿಯೊ"
         },
         "sprite_properties/csd/2021": {
@@ -3214,19 +3373,29 @@
           "type": "ರೂಬ್ರಿಕ್"
         },
         "boolean_expressions/csd/2021": {
+          "name": "ಬೂಲಿಯನ್ ಅಭಿವ್ಯಕ್ತಿಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "conditional_statements/csd/2021": {
+          "name": "ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಗಳು",
           "type": "ವೀಡಿಯೊ"
         },
         "if_else_statements/csd/2021": {
+          "name": "/ಬೇರೆ ಹೇಳಿಕೆಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "interactive_card/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
         "velocity_1/csd/2021": {
+          "name": "ವೇಗ",
           "type": "ವೀಡಿಯೊ"
+        },
+        "velocity_2/csd/2021": {
+          "name": "ವೇಗ"
         },
         "side-scroller-1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -3235,22 +3404,35 @@
           "type": "ರೂಬ್ರಿಕ್"
         },
         "calling_and_defining_functions/csd/2021": {
+          "name": "ಕಾರ್ಯಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "functions_1/csd/2021": {
+          "name": "ಕಾರ್ಯಗಳು"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "make_your_own_game/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
-        "teacher_forum_1/csd/2021": {
-          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
-        },
         "problem-solving-process-1/csd/2021": {
           "type": "ವೀಡಿಯೊ"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "ಕಂಪ್ಯೂಟರ್ ಎಂದರೇನು?"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ವೀಡಿಯೊ"
         },
         "what-do-computers-do/csd/2021": {
           "type": "ವೀಡಿಯೊ"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "apps_and_problem_solving/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -3270,20 +3452,31 @@
         "html-web-page-1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
+        "html-web-page/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "lists/csd/2021": {
           "name": "ಪಟ್ಟಿಗಳು"
         },
         "intro_to_css_-_part_1/csd/2021": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 1",
           "type": "ವೀಡಿಯೊ"
         },
         "intro_to_css_-_part_2/csd/2021": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 2",
           "type": "ವೀಡಿಯೊ"
         },
         "your-personal-style-1-2-3/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
         "creative-commons-video/csd/2021": {
           "type": "ವೀಡಿಯೊ"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "personal-web-page/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
@@ -3302,6 +3495,9 @@
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "ರೂಬ್ರಿಕ್"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
         },
         "standard_mappings/pre-express/2020": {
           "name": "ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಮ್ಯಾಪಿಂಗ್ಸ್"

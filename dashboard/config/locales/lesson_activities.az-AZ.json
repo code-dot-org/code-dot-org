@@ -71,6 +71,12 @@
         "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
           "name": "Əlavə təlim"
         },
+        "b42c3a8b-45a1-4991-88b1-362b1491e81b": {
+          "name": "Əsas Aktivlik"
+        },
+        "970b0cb3-e914-4b54-9457-7c328aa70870": {
+          "name": "Yekun"
+        },
         "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
           "name": "Başlanğıc"
         },
@@ -200,6 +206,12 @@
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Əlavə təlim"
         },
+        "b8fea377-abb5-4ee6-b1cc-7d25f9c7459c": {
+          "name": "Əsas Aktivlik"
+        },
+        "cda96f31-2f49-4c74-946c-101bea687c76": {
+          "name": "Yekun"
+        },
         "32a95e21-140b-4b72-bd7a-b000ff574b18": {
           "name": "Əsas Aktivlik"
         },
@@ -289,6 +301,9 @@
         },
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Əlavə təlim"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": ""
         },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
           "name": "Əsas Aktivlik"
@@ -421,6 +436,9 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Səviyyələr"
+        },
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": ""
         },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
           "name": "Əsas Aktivlik"
@@ -555,7 +573,7 @@
           "name": "Səviyyələr"
         },
         "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
-          "name": "İstiləşmə: Pssst ... Parol nədir?"
+          "name": "İsinmə: Psst ... Şifrə nədir?"
         },
         "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
           "name": "Qiymətləndirin: Uh-Oh! Əgər... Onda..."
@@ -695,6 +713,9 @@
         "a54509a7-dac6-4985-830d-91272c3de923": {
           "name": "Yekun"
         },
+        "f7559bae-c62e-4cc6-94a2-26b09e8c1eed": {
+          "name": "Əlavə təlim"
+        },
         "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
           "name": "Araşdırın: Problem nədir?"
         },
@@ -805,6 +826,9 @@
         },
         "6114e1af-1c83-4f1f-add9-a97c2523b343": {
           "name": "Analiz et: İnsanlar niyə paylaşır?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Təhlil edin: Özəl və ya şəxsi?"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Əlavə təlim"
@@ -924,6 +948,9 @@
           "name": "Yekun"
         },
         "36227e91-065d-4acc-8155-f954f1fe1ffc": {
+          "name": "Əlavə təlim"
+        },
+        "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
           "name": "Əlavə təlim"
         },
         "5b342453-cd42-4221-8375-618cf1ddb41b": {
@@ -1592,6 +1619,12 @@
         "74e2ce00-926c-4dff-9ffe-161c3e10e05e": {
           "name": "Yekun"
         },
+        "b351a875-cdc3-4da8-a2c0-fb84cee29102": {
+          "name": "Əlavə təlim"
+        },
+        "9299d981-71c8-4dfb-a0b7-3f994bd62bbf": {
+          "name": "Dərsdən əvvəl"
+        },
         "5c108e1d-49dc-4541-af3a-664a08b5ec6b": {
           "name": "Fəaliyyət"
         },
@@ -1691,6 +1724,9 @@
         "f8be9839-437c-4dc5-8668-54b3f62acfc3": {
           "name": "Yekun"
         },
+        "fd12f2a9-cedd-4a08-8af2-5d04b110c8ee": {
+          "name": "Dərsdən sonra"
+        },
         "bc687e20-23c5-4c35-8a58-ab03724de645": {
           "name": "Texniki Quraşdırma"
         },
@@ -1786,6 +1822,9 @@
         },
         "e5bf694c-478b-4bc2-a602-3124d9a8530b": {
           "name": "Yekun"
+        },
+        "0754806a-e34d-4891-a471-399122e56ac9": {
+          "name": "Dərsdən əvvəl"
         },
         "97df4d19-713a-44eb-bb9b-6f4d2cb96d74": {
           "name": "Fəaliyyət"
@@ -1949,6 +1988,12 @@
         "4eecc1fe-e2fa-4c11-90f8-2a10eee72aa5": {
           "name": "Yekun"
         },
+        "367760dc-695e-4391-acd6-d0f12787bc0e": {
+          "name": "Dərsdən sonra"
+        },
+        "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566": {
+          "name": "Dərsdən əvvəl"
+        },
         "5114c102-679b-43ce-9399-33bff161328c": {
           "name": "Fəaliyyət"
         },
@@ -2068,6 +2113,12 @@
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
           "name": "Vitrin"
+        },
+        "305d1465-9166-4ac4-a4e2-bc3bb6d1478e": {
+          "name": "Dərsdən sonra"
+        },
+        "efd63a8a-28a5-4796-bb80-b3203ee15b9a": {
+          "name": "Dərsdən əvvəl"
         },
         "5695acff-6d30-4aa5-944d-738e19e52b12": {
           "name": "Fəaliyyət"
@@ -2195,6 +2246,12 @@
         "36b07898-2f7d-4b48-a979-d2f46cef659b": {
           "name": "Yekun"
         },
+        "f7b8aed1-c4c7-40f4-a640-d4bc5f3e4795": {
+          "name": "Dərsdən sonra"
+        },
+        "7e0487d6-0de0-461b-b6b8-bae53fff3c55": {
+          "name": "Dərsdən əvvəl"
+        },
         "fff615c4-7747-483e-b4c7-6714cc65f995": {
           "name": "Fəaliyyət"
         },
@@ -2302,6 +2359,12 @@
         },
         "ef0f2f8a-5694-4406-9357-17f0d20037e3": {
           "name": "Yekun"
+        },
+        "d383eef2-e74d-4993-b0f3-cbd6fc216128": {
+          "name": "Dərsdən sonra"
+        },
+        "92ecc06f-cf07-4550-9f9f-1fc435c8a453": {
+          "name": "Dərsdən əvvəl"
         },
         "e35a001b-4856-4fa0-a6d4-2b51e012373f": {
           "name": "Fəaliyyət"
@@ -2434,6 +2497,9 @@
         },
         "dd1aa855-e178-45eb-b96b-3df170abed34": {
           "name": "Gün 4"
+        },
+        "63251396-7213-40ae-84c7-2ea28f359d4c": {
+          "name": "Dərsdən sonra"
         },
         "dde1ab27-53a2-4c39-a80e-317f9df72651": {
           "name": "Səviyyələr"
@@ -4715,6 +4781,9 @@
         "ff1dfcf5-d986-40f8-8b7c-6514a123aa59": {
           "name": "Səviyyələr"
         },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": ""
+        },
         "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
           "name": "Əsas Aktivlik"
         },
@@ -5709,7 +5778,7 @@
           "name": "Yekun"
         },
         "aebca980-e26c-4993-b001-dc20e492f04e": {
-          "name": "İstiləşmə: Pssst ... Parol nədir?"
+          "name": "İsinmə: Psst ... Şifrə nədir?"
         },
         "139034de-1cee-48f9-abd8-40e8c15cd439": {
           "name": "Qiymətləndirin: Uh-Oh! Əgər... Onda..."
@@ -6163,6 +6232,9 @@
         },
         "3d33781b-194e-4311-b493-e6cd3bf140ac": {
           "name": "Analiz et: İnsanlar niyə paylaşır?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Təhlil edin: Özəl və ya şəxsi?"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Əlavə təlim"
@@ -7093,6 +7165,9 @@
         },
         "bb408703-11ec-4822-a86b-b8625a121f6f": {
           "name": "Vitrin"
+        },
+        "6e1384cd-1561-474c-bd34-f0b50f33d24a": {
+          "name": "Kurs sorğusunun sonu"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Səviyyələr"

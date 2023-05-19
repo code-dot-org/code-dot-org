@@ -9,12 +9,10 @@ import ProjectsPromo from './ProjectsPromo';
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
-    projectCount: PropTypes.number
+    projectCount: PropTypes.number,
   };
 
   render() {
-    const projectCountWithCommas = this.props.projectCount.toLocaleString();
-
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/project-banner.jpg';
     return (
@@ -22,8 +20,8 @@ export default class ProjectHeader extends React.Component {
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading({
-            project_count: projectCountWithCommas
+          subHeadingText={i18n.projectsSubHeadingMillions({
+            project_count: this.props.projectCount,
           })}
           backgroundUrl={backgroundUrl}
         />

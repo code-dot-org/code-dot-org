@@ -1,31 +1,26 @@
 name 'CB_Question_22'
-encrypted '4YJaWQwwsXG/L+Ka6JjrnkedXYvRDwpCPTIOPR+HLPTqkGw3a9v0aarEJZ3f
-kLw/PsaRodit6SUHgLoaXfnF7u55gUJHutthlwaosf2Mnktguh64gbQOKy+o
-hztK68PfACfjoriZwBuGu6FM43nzFkP5yMJnIPFqyTKp6w2pW0z3v4FpccKj
-aPIg/yZJVZ8wH+ncaoySmoBh+8e57q6eFBoPNv0C3Pp2Cy0Sew98tpzihnzz
-s8H0OlFDYp/okKSGDIh1euRjEZXriPrXE6R+qMID1Uxb1MA+w+U/Zo19zL4+
-qKRzXJGSXS3hbhjhUyWcBvNHvHW+EeCBvOsq7UyXFhMNqV/Pca1H0BmfcVlu
-OHeCBRYoEmhaNBYI2iLxMcP2KlOy0hZvUA4N2RNksRy0c3x+Mz8kVNszUeC+
-I3dRCkzVjnn94ptcNQofQPDXQFW5zQT0OuM0CgrrEnX/sdI3eMvN98x/i8Xl
-rIWxft48pHNgAA2FJg4QArrmUUihnLzD3d92FKmlY99HDknNTsyRGr8hza1u
-lGv9j48JS/h41WDQPxstPz1eNZZHLRVonjdKMzRKQS8vNTRB30kl1Mg2IvzD
-meT3luHEaqinIxsADesBA987Qqjntsn/2XpFasZZRR6rBqzH8itOqVMK6aDt
-Vyx6h3H8ZCPGiN7894It2fxDrAumFUW9H34isvLDBlA+niy/ckps/2mlyOG9
-yh9JhQqKpGGb2A/bTyUdKvqUIV/nt/zciqEH1hX73H2pVXgYw0m9JWXdXDSV
-q91ZpWGgSfEzm8lKcDifWHtXFLKdcF805SXPmDlZhRD0zL/enwIgd6/ct4zW
-jNjhMxq4REOuISHMFwHlvjSmjlJzUkX58dbsMS6hpZyPoWIqRr8BXCyIoK5T
-UqEXLi/IQhbzVt3ghW+vZTWPWyLzt7PiPOGc/qvdsntZ4Bc2MuUfGIui6QCl
-5GmZSPjwMffPGH8nYViLgIolppS2BcbugROKIjztDerz4zIUJxTZju233M2t
-glfwRJpi0CPf+5ZY4wr1fnKIbMhnHxmV0RhdcWA7CE1HN8iPRy/vHWAj3WwF
-z0pCEMnfoeNwfhBNP98v7PghzqekpVtRChrzPoZRKHoRlyUwA8bZFdG7Pdbn
-OcFfeXCFwg8Rh4bPihGewYssW/lNwuzdfkRFLuOP2pF0IDclUlUgLHl74GyX
-hm3LWlXFiwXgF6aDgdsSTk9ksrl5Xt+QyGYsDm0jGy8Kp8/zi+sZefQ+mGYq
-V7SUdE0GowzpPQChX7qxSWs72gnFAIvayLKHcs0N+vskjp588fKrAcZvWGq+
-WE1glWuGvoeFWxR9KZZoF9obpcyIVP1+j0ZQWTNcyU4DUNSoEN99W82o/bKu
-XgYoaygCAXYscfGmgHCnkp5TQZzmvZ/Ikc++4pFLsSiNBPX9cdc7UVqWzzZw
-k4CjyZ3UiJk/a63IGWpc4Eb9JjM8QGS0ED7JG+DjP/T7jLWYhAnLJ/yr+6mI
-QZLQaB+qKgCKPLS3zBPzMjODoOuyBwmcKWLun6Fdxj9Yvmy0OeGKufpBUeRc
-YJmwGCS2gZfR/X/L9IdSXWIhKLCfFFWdE7rWW3G+god4QicriY8sJxILzj7i
-QPKl8gfiSDklpp4UASSOEEnJDR02SBewqABdvNIzMQzHl1b1GeXtaYSzWmom
-nrgwMZF+nq6tyz5vM0j1im5NtCQ=
-'
+type 'multi2'
+height '80'
+layout 'wrap'
+
+right 'https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG,350'
+wrong 'https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG,350'
+wrong 'https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG'
+right 'https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG'
+
+
+markdown <<MARKDOWN
+A teacher uses the following program to adjust student grades on an assignment by adding 5 points to each student's original grade. However, if adding 5 points to a student's original grade causes the grade to exceed 100 points, the student will receive the maximum possible score of 100 points. The students' original grades are stored in the list `gradeList`, which is indexed from 1 to n.
+
+<img src="https://images.code.org/d139d79f2cbca1db095691f716d4992b-image-1461456633848.PNG" width=200>
+
+The teacher has the following procedures available.
+
+<img src="https://images.code.org/ea3b1643247c1cf0f570260839c4696b-image-1461456637613.PNG" width=600>
+
+Which of the following code segments can replace `<MISSING CODE>` so that the program works as intended?
+
+Select **two** answers.
+MARKDOWN
+
+allow_multiple_attempts true
