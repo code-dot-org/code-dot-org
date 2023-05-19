@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+import {queryParams} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
@@ -54,19 +55,11 @@ const getEmptyFilters = () => {
 
 // Filters out invalid values for the given filter key.
 const getValidParamValues = (filterKey, paramValues) => {
-  return paramValues.filter(value => {
-    switch (filterKey) {
-      case 'grade':
-        return Object.keys(gradeLevelsMap).includes(value);
-      case 'duration':
-        return Object.keys(translatedCourseOfferingDurations).includes(value);
-      case 'topic':
-        return Object.keys(translatedCourseOfferingCsTopics).includes(value);
-      case 'device':
-        return Object.keys(translatedCourseOfferingDeviceTypes).includes(value);
-      default:
-        return false;
-    }
+  if (!Array.isArray(paramValues)) {
+    paramValues = [paramValues];
+  }
+  return paramValues.filter(paramValue => {
+    return Object.keys(filterTypes[filterKey].options).includes(paramValue);
   });
 };
 
@@ -75,19 +68,12 @@ const getValidParamValues = (filterKey, paramValues) => {
 // "filter_name:checked_value_1,checked_value_2,etc."
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
-  const urlParams = location.search?.substring(1).split('&');
+  const urlParams = queryParams();
 
   let filters = getEmptyFilters();
-  urlParams.forEach(keyValue => {
-    const [paramKey, paramCSV] = keyValue.split('=');
+  Object.keys(urlParams).forEach(paramKey => {
     if (filterTypeKeys.includes(paramKey)) {
-      const validParamValues = getValidParamValues(
-        paramKey,
-        paramCSV.split(',')
-      );
-      validParamValues.forEach(validValue =>
-        filters[paramKey].push(validValue)
-      );
+      filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
     }
   });
   return filters;
