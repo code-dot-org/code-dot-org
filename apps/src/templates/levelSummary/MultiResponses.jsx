@@ -18,7 +18,7 @@ const multiAnswerCounts = (responses, answerCount) => ({
     // Each response can be an index or a comma-separated list of indices.
     const indices = curr.text.split(',');
     indices.forEach(index => {
-      const letter = LETTERS.at(index);
+      const letter = LETTERS.charAt(index);
       acc[letter] = acc[letter] ? acc[letter] + 1 : 1;
     });
     return acc;

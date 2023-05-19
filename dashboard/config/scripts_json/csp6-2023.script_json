@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-25 23:04:43 UTC",
+    "serialized_at": "2023-05-17 22:46:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5201,16 +5201,6 @@
       }
     },
     {
-      "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
-      "key": "csp_curriculum_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide"
-      }
-    },
-    {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
       "key": "csp_lists_make_-_reminder_app",
@@ -5908,12 +5898,6 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
-        "script.name": "csp6-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
         "script.name": "csp6-2023"
       }
     },
