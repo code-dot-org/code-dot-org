@@ -43,9 +43,8 @@ MONITORING_GROUPS = {
   'international' => ['International Partnerships', 'International'],
   'marketing' => ['Marketing'],
   'programsnpartners_theluau' => ['Programs Team'],
-  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'Professional Learning'],
   'student-learning' => ['Student Learning'],
-  'teacher-tools' => ['Teacher Tools']
+  'teacher-tools' => ['Teacher Tools Team']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
@@ -67,11 +66,14 @@ GROUP_FILTERS = {
   'Professional Learning' => '13462346662541',
   'Programs Team' => '8163316698253',
   'Student Learning' => '9612070142733',
-  'Teacher Tools' => '360082967212'
+  'Teacher Tools Team' => '360082967212'
 }
 
 # Slack room -> username of a code.org email
-MONITORING_USERS = {}
+MONITORING_USERS = {
+  'programs_team' => ['alicia.modoor', 'andrea', 'becky', 'dana', 'danielle', 'dave.frye', 'kristyn', 'sam.morris']
+
+}
 
 class Zendesk
   include HTTParty
@@ -216,24 +218,18 @@ end
 
 def get_tickets_by_user
   zendesk = Zendesk.new
-  user_results = zendesk.user_search(
-    users: MONITORING_USERS.values.flatten.map {|u| "#{u}@code.org"},
-    statuses: STATUSES_TO_REPORT
-  )
-
-  # Ticket count by user email
-  user_counts = user_results.
-    reject {|x| x["assignee_id"].nil?}.
-    group_by {|x| x["assignee_id"]}.
-    map {|assignee_id, tickets| [zendesk.users[assignee_id], tickets.count]}.
-    to_h
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
     user_messages = users.filter_map do |user|
       user_email = "#{user}@code.org"
-      count = user_counts[user_email] || 0
-      next nil if count == 0
+      user_results = zendesk.user_search(
+        users: [user_email],
+        statuses: STATUSES_TO_REPORT
+      )
+
+      count = user_results.count
+      next if count == 0
 
       url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
@@ -257,3 +253,4 @@ end
 #
 #
 get_tickets_by_group
+get_tickets_by_user
