@@ -571,6 +571,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'duration returns nil if latest_published_version does not exist' do
+    unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'in_development')
+    co = CourseOffering.add_course_offering(unit)
+
+    assert_nil co.latest_published_version
+    assert_nil co.duration
+  end
+
   test 'duration returns label associated with sum of units duration' do
     # Create a unit with multiple lessons, each with a different number of lesson activities.
     unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'stable')
