@@ -445,8 +445,12 @@ describe('EventSandboxer', function () {
         target: {tagName: 'TEXTAREA', selectionEnd: undefined},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
-      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
+      );
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
+      );
     });
 
     it('does not add selectionStart or selectionEnd to the new event if the target is the range type of INPUT', () => {
@@ -459,8 +463,12 @@ describe('EventSandboxer', function () {
         },
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
-      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
+      );
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
+      );
     });
   });
 

@@ -9043,23 +9043,23 @@
           "courseA_maze_seq_challenge2_a": "いくつ すすめば いいか、ゆびで かぞえて みよう！"
         },
         "courseA_playLab_events2_2021": {
-          "courseA_playLab_events2_a": "いぬのジョージが ”言う”ブロックを つかってみよう。",
+          "courseA_playLab_events2_a": "犬が ”言う”ブロックを つかってみよう。",
           "courseA_playLab_events2_b": "<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml> のようにブロックをならべてみよう。"
         },
         "courseA_playLab_events3_2021": {
           "courseA_playLab_events3_a": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> の下に <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> を ひっつけてみよう。",
-          "courseA_playLab_events3_b": "左やじるしキーをおしたとき ジョージが左にいくようにできたかな。ジョージが はたに さわれば、はたは みどりに かわるよ。"
+          "courseA_playLab_events3_b": "左やじるしキーをおしたとき 犬が左にいくようにできたかな。犬が はたに さわれば、はたは みどりに かわるよ。"
         },
         "courseA_playLab_events4_2021": {
-          "courseA_playLab_events4_a": "ジョージを右に うごかすには、<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml> をつかいます。",
+          "courseA_playLab_events4_a": "犬を右に うごかすには、<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml> をつかいます。",
           "courseA_playLab_events4_b": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml> をつかってみよう。"
         },
         "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_a": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nと \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>\n\nで、ジョージを上や下にうごかしてみよう。",
+          "courseA_playLab_events5_a": "<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nと \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>\n\nで、犬を上や下にうごかしてみよう。",
           "courseA_playLab_events5_b": "ブロックのやじるしをおせば、やじるしのほうこうをかえることができます。\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
         "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_a": "ジョージがクリックされたときは、<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml> をつかいます。",
+          "courseA_playLab_events6_a": "犬がクリックされたときは、<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml> をつかいます。",
           "courseA_playLab_events6_b": "<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml> で はいけいをかえることができます。",
           "courseA_playLab_events6_c": "<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml> で ランダムに おとを ならすことが できます。"
         },
@@ -9074,7 +9074,7 @@
           "courseA_playlab_events_challenge1_e": "さいごは、ロボットをクリックしたとき、まほうつかいを表示（ひょうじ）します。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2021": {
-          "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で トリをしゃべらせることが できます。",
+          "courseA_playlab_events_challenge2_a": "<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。",
           "courseA_playlab_events_challenge2_b": "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml> をつかいます。",
           "courseA_playlab_events_challenge2_c": "<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml> をつかえば、かおを かえることが できます。"
         },
@@ -9211,12 +9211,12 @@
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "スクラットが ドングリに いく みちを かいてみよう。パターンがわかるかな？",
           "courseB_iceage_loops4_b": "どんどん 実行（じっこう）して、どうなるか みて みよう！",
-          "courseB_iceage_loops4_c": "あかいせんのとおりに いってみよう。"
+          "courseB_iceage_loops4_c": "赤いせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops6_2021": {
           "courseB_iceage_loops6_a": "うごく ほうこうは、ぜんぶで **3つ** です。",
           "courseB_iceage_loops6_b": "**もうひとつ** くりかえしを つくります！",
-          "courseB_iceage_loops6_c": "あかいせんのとおりに いってみよう。"
+          "courseB_iceage_loops6_c": "赤いせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops7_2021": {
           "courseB_iceage_loops7_a": "うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？",
@@ -9225,12 +9225,12 @@
         "courseB_iceage_loops8_2021": {
           "courseB_iceage_loops8_a": "うごく ほうこうは あってる？ほかに かえるところは ない？",
           "courseB_iceage_loops8_b": "さいしょのくりかえしは **3かい** 、2つ目は **5かい** 、3つ目は **4かい** 、さいごは **4かい** くりかえします。",
-          "courseB_iceage_loops8_c": "あかいせんのとおりに いってみよう。"
+          "courseB_iceage_loops8_c": "赤いせんのとおりに いってみよう。"
         },
         "courseB_iceage_loops9_2021": {
           "courseB_iceage_loops9_a": "うまくいかない？そんなときは、すこしづつ つくってみよう。すこし つくったら、どんどん実行（じっこう）してみよう。",
           "courseB_iceage_loops9_b": "**4つ**のくりかえしを つかいます。",
-          "courseB_iceage_loops9_c": "あかいせんのとおりに いってみよう。"
+          "courseB_iceage_loops9_c": "赤いせんのとおりに いってみよう。"
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "<xml><block type=\"when_run\"/></xml> のしたに ブロックを ひっつけて、スクラットを うごかそう。",
@@ -9343,7 +9343,7 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "一度行ったところを もどっても Okです。",
-          "courseB_starWars_prog8_b": "`くりかえし` の中にブロックを入れて、どうなるか みて みよう。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "`くりかしえ` の中にブロックを入れて、どうなるか みて みよう。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。",

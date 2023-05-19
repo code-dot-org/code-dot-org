@@ -107,6 +107,7 @@
                   }
                 },
                 "showMobileControls": {
+                  "content": "Изменяет элементы управления на мобильном устройстве, видимые под игровым пространством.",
                   "palette_params": {
                     "spaceButtonVisible": {
                       "type": "Булево выражение"
@@ -120,7 +121,8 @@
                     "mobileOnly": {
                       "type": "Булево выражение"
                     }
-                  }
+                  },
+                  "short_description": "Изменяет элементы управления на мобильном устройстве, видимые под игровым пространством."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -140,6 +142,9 @@
                       "name": "Спираль"
                     }
                   }
+                },
+                "sprite.height": {
+                  "return_value": "Высота спрайта."
                 },
                 "mirrorX": {
                   "palette_params": {
@@ -220,6 +225,9 @@
                       "type": "Число"
                     }
                   }
+                },
+                "sprite.width": {
+                  "return_value": "Ширина спрайта."
                 },
                 "createSprite": {
                   "palette_params": {
@@ -655,14 +663,16 @@
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество миллисекунд между каждым выполнением функции."
                     }
                   }
                 },
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество миллисекунд ожидания перед выполнением функции."
                     }
                   }
                 }
@@ -751,6 +761,23 @@
                 "declareAssign_x": {
                   "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
                 },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Длина строки"
+                },
                 "substring": {
                   "palette_params": {
                     "start": {
@@ -775,6 +802,9 @@
             "ui_controls": {
               "name": "Элементы управления интерфейса пользователя",
               "expressions": {
+                "button": {
+                  "short_description": "Создает кнопку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
+                },
                 "getProperty": {
                   "palette_params": {
                     "id": {
@@ -869,9 +899,14 @@
                       "type": "Строка"
                     },
                     "property": {
-                      "type": "Строка"
+                      "type": "Строка",
+                      "description": "Свойство, которое нужно изменить."
                     }
-                  }
+                  },
+                  "short_description": "Присваивает свойству новое значение для указанного элемента."
+                },
+                "setScreen": {
+                  "short_description": "Устанавливает экран на заданный ScreenID."
                 },
                 "setSize": {
                   "palette_params": {
@@ -882,6 +917,12 @@
                       "type": "number"
                     }
                   }
+                },
+                "showElement": {
+                  "short_description": "Показывает элемент с указанным идентификатором."
+                },
+                "textLabel": {
+                  "short_description": "Создает текстовую метку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
                 }
               }
             },
@@ -897,7 +938,8 @@
                       "type": "number"
                     },
                     "radius": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Радиус круга в пикселях."
                     }
                   }
                 },
@@ -913,11 +955,16 @@
                 },
                 "drawImage": {
                   "palette_params": {
+                    "id": {
+                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения."
+                    },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение y в пикселях верхнего левого угла рисуемого изображения."
                     },
                     "[width]": {
                       "type": "number"
@@ -933,12 +980,15 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     }
-                  }
+                  },
+                  "short_description": "Возвращает значение альфы (непрозрачности) (от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
                 },
                 "getBlue": {
                   "palette_params": {
@@ -946,10 +996,12 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     }
                   }
                 },
@@ -959,26 +1011,32 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     }
                   }
                 },
                 "getImageData": {
                   "palette_params": {
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция x в пикселях для начала съемки."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях для начала съемки."
                     },
                     "width": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Ширина ограничивающего прямоугольника для захвата данных изображения."
                     },
                     "height": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Высота ограничивающего прямоугольника для захвата данных изображения."
                     }
                   }
                 },
@@ -988,10 +1046,12 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     }
                   }
                 },
@@ -1017,26 +1077,32 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте."
                     }
                   }
                 },
                 "rect": {
                   "palette_params": {
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях верхнего левого угла прямоугольника."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение y в пикселях верхнего левого угла прямоугольника."
                     },
                     "width": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Горизонтальная ширина прямоугольника в пикселях."
                     },
                     "height": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Вертикальная высота прямоугольника в пикселях."
                     }
                   }
                 },
@@ -1046,15 +1112,19 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "alphaValue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Заданное значение альфы (непрозрачности) (от 0 до 255) в пикселе."
                     }
-                  }
+                  },
+                  "short_description": "Задает значение альфы (непрозрачности) (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
                 },
                 "setBlue": {
                   "palette_params": {
@@ -1062,15 +1132,19 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "blueValue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество синего (от 0 до 255), заданное в пикселе."
                     }
-                  }
+                  },
+                  "short_description": "Задает количество синего (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение BlueValue."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -1085,15 +1159,19 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "greenValue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе."
                     }
-                  }
+                  },
+                  "short_description": "Задает количество зеленого (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на значение входного значения GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
@@ -1101,22 +1179,28 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "red": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество красного (от 0 до 255), заданное в пикселе."
                     },
                     "green": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе."
                     },
                     "blue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество синего (от 0 до 255), заданное в пикселе."
                     },
                     "alpha": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Опционально. Степень непрозрачности (от 0 до 255), заданная в пикселе. По умолчанию 255 (полная непрозрачность)."
                     }
                   }
                 },
@@ -1126,15 +1210,19 @@
                       "type": "Объекта"
                     },
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
                     },
                     "redValue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество красного (от 0 до 255), заданное в пикселе."
                     }
-                  }
+                  },
+                  "short_description": "Задает количество красного (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение RedValue."
                 },
                 "setStrokeColor": {
                   "palette_params": {
@@ -1185,6 +1273,9 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
+                    "tableName": {
+                      "description": "Имя таблицы для извлечения записей."
+                    },
                     "options": {
                       "type": "Объекта"
                     }
@@ -1197,6 +1288,13 @@
                     },
                     "column": {
                       "type": "Строка"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Имя ключа, который нужно получить."
                     }
                   }
                 },
@@ -1213,6 +1311,16 @@
                     }
                   }
                 },
+                "getUserId": {
+                  "short_description": "Получает уникальный идентификатор текущего пользователя этого приложения."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Имя таблицы, к которой применяется этот обработчик событий."
+                    }
+                  }
+                },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
@@ -1224,6 +1332,24 @@
                   "palette_params": {
                     "table": {
                       "type": "Строка"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Имя ключа, который нужно сохранить."
+                    },
+                    "value": {
+                      "description": "Данные, которые должны быть сохранены."
+                    }
+                  },
+                  "short_description": "Сохраняет пару ключ/значение в хранилище данных ключ/значение App Lab и вызывает функцию обратного вызова по завершении действия."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Веб-адрес службы, возвращающей данные."
                     }
                   }
                 },
@@ -1247,7 +1373,8 @@
                     "radius": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Перемещает черепаху вперед и влево по плавной круговой дуге."
                 },
                 "arcRight": {
                   "palette_params": {
@@ -1266,13 +1393,24 @@
                     }
                   }
                 },
+                "getX": {
+                  "short_description": "Получает текущую координату x черепахи в пикселях."
+                },
+                "getY": {
+                  "short_description": "Получает текущую координату y черепахи в пикселях."
+                },
+                "hide": {
+                  "short_description": "Делает черепаху невидимой в ее текущем местоположении."
+                },
                 "move": {
                   "palette_params": {
                     "x": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество пикселей для перемещения черепахи вправо."
                     },
                     "y": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество пикселей для перемещения черепахи вниз."
                     }
                   }
                 },
@@ -1281,14 +1419,16 @@
                     "pixels": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Перемещает черепаху назад на заданное количество пикселей от текущего направления."
                 },
                 "moveForward": {
                   "palette_params": {
                     "pixels": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Перемещает черепаху вперед на заданное количество пикселей в текущем направлении."
                 },
                 "moveTo": {
                   "palette_params": {
@@ -1298,14 +1438,19 @@
                     "y": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Перемещает черепаху в определенное положение (x, y) на экране."
                 },
                 "penColor": {
                   "palette_params": {
                     "color": {
                       "type": "Строка"
                     }
-                  }
+                  },
+                  "short_description": "Задает цвет ручки, используемой черепахой для рисования линий и точек."
+                },
+                "penDown": {
+                  "short_description": "Опустите ручку так, чтобы черепаха во время движения рисовала за ней линию."
                 },
                 "penRGB": {
                   "palette_params": {
@@ -1321,42 +1466,54 @@
                     "a": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Используя значения RGBA, задает цвет пера, используемого черепахой для рисования линий и точек."
+                },
+                "penUp": {
+                  "short_description": "Поднимает ручку вверх, чтобы черепаха не рисовала линию во время движения."
                 },
                 "penWidth": {
                   "palette_params": {
                     "width": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Задает ширину линии в пикселях, которую черепаха рисует за собой при движении."
+                },
+                "show": {
+                  "short_description": "Делает черепаху видимой в ее текущем местоположении."
                 },
                 "speed": {
                   "palette_params": {
                     "value": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Задает скорость выполнения приложения, включая скорость черепахи."
                 },
                 "turnLeft": {
                   "palette_params": {
                     "angle": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Поворачивает черепаху влево на заданный угол. Положение черепахи осталось прежним."
                 },
                 "turnRight": {
                   "palette_params": {
                     "angle": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Поворачивает черепаху вправо на заданный угол. Положение черепахи осталось прежним."
                 },
                 "turnTo": {
                   "palette_params": {
                     "angle": {
                       "type": "number"
                     }
-                  }
+                  },
+                  "short_description": "Изменяет направление черепахи на определенный угол. 0 — вверх, 90 — вправо, 180 — вниз и 270 — влево."
                 }
               }
             },
@@ -1373,21 +1530,24 @@
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Значение, возвращаемое функцией setTimeout для отмены."
                     }
                   }
                 },
                 "setInterval": {
                   "palette_params": {
                     "ms": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество миллисекунд между каждым выполнением функции."
                     }
                   }
                 },
                 "setTimeout": {
                   "palette_params": {
                     "ms": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Количество миллисекунд ожидания перед выполнением функции."
                     }
                   }
                 },
@@ -1507,6 +1667,23 @@
                 "declareAssign_x": {
                   "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Объявление и присвоение массива переменной"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
                 "substring": {
                   "palette_params": {
                     "start": {
@@ -1538,6 +1715,9 @@
                       "type": "number"
                     }
                   }
+                },
+                "length": {
+                  "return_value": "Длина строки"
                 },
                 "removeItem": {
                   "palette_params": {

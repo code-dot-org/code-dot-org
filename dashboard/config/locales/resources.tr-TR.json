@@ -1326,13 +1326,13 @@
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursec/2022": {
-          "url": "/s/kursc-2022/kaynaklar"
+          "url": "/s/kursc-2022/resources"
         },
         "all_standards/coursec/2022": {
-          "url": "/s/kursc-2022/standartlar"
+          "url": "/s/kursc-2022/standards"
         },
         "all_vocabulary/coursec/2022": {
-          "url": "/s/kursc-2022/sözcük"
+          "url": "/s/coursec-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Ortak Çekirdek ve NGSS Rehberliği",
@@ -1709,8 +1709,18 @@
           "name": "Proje - Bir Öneri Yapın",
           "type": "Slaytlar"
         },
+        "all_resources_5/csd/2022": {
+          "url": "/s/csd1-2022/kaynaklar"
+        },
+        "all_standards_5/csd/2022": {
+          "url": "/s/csd1-2022/standartlar"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "url": "/s/csd1-2022/kelimeler"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "Problem çözme tanıtımı",
+          "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/preview",
           "type": "Slaytlar"
         },
         "problem_solving_process/csd/2022": {
@@ -1728,6 +1738,7 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Problem çözme süreci",
+          "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
           "type": "Slaytlar"
         },
         "solving_problems/csd/2022": {
@@ -1735,6 +1746,7 @@
         },
         "exploring_problem_solving/csd/2022": {
           "name": "Problem çözmeyi keşfetme",
+          "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
           "type": "Slaytlar"
         },
         "what_is_a_computer/csd/2022": {
@@ -1744,6 +1756,7 @@
           "name": "Bilgisayar nedir?"
         },
         "what_is_a_computer_1/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
           "type": "Slaytlar"
         },
         "input_and_output/csd/2022": {

@@ -1,6 +1,18 @@
 {
+  "blockActionAdd": "జోడించడానికి",
+  "blockActionDestroyEntity": "కనిపించకుండా పోవడం",
+  "blockActionMove": "కదలిక",
+  "blockActionWait": "వేచి",
+  "blockMove": "కదలిక",
+  "blockTypeIce": "మంచు",
+  "cancel": "రద్దు",
+  "cloneModeMove": "కదలిక",
   "directionDown": "డౌన్",
   "directionLeft": "ఎడమ",
   "directionRight": "కుడి",
-  "directionUp": "అప్"
+  "directionUp": "అప్",
+  "entityTypeZombie": "జోంబీ",
+  "eventTypeWhenRun": "పరిగెత్తినప్పుడు",
+  "timeDay": "రోజు",
+  "timeNight": "రాత్రి"
 }

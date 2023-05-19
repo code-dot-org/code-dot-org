@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "最大值",
   "dataCardLastUpdated": "最近一次更新",
   "predictButton": "預測",
+  "uniqueOptionsWarningNotice": "注意",
   "datasets": {
     "medical_priority": {
       "fields": {
@@ -62,11 +63,20 @@
     },
     "poutine_toy": {
       "fields": {
+        "mushrooms": {
+          "id": "蘑菇"
+        },
+        "lobster": {
+          "id": "龍蝦"
+        },
         "bacon": {
           "id": "培根"
         },
         "cheese": {
           "id": "乳酪"
+        },
+        "meat": {
+          "id": "肉"
         }
       }
     },
@@ -74,6 +84,9 @@
       "fields": {
         "color": {
           "id": "顏色"
+        },
+        "music": {
+          "id": "音樂"
         },
         "food": {
           "id": "食物"
@@ -99,6 +112,9 @@
     },
     "raspado_toy": {
       "fields": {
+        "strawberry": {
+          "id": "草莓"
+        },
         "lime": {
           "id": "萊姆"
         }
@@ -148,6 +164,9 @@
     },
     "student_alcohol_consumption": {
       "fields": {
+        "school": {
+          "id": "學校"
+        },
         "age": {
           "id": "年齡"
         },
@@ -214,11 +233,20 @@
     },
     "safari_toy": {
       "fields": {
+        "people": {
+          "id": "人"
+        },
+        "rhino": {
+          "id": "犀牛"
+        },
         "elephant": {
           "id": "大象"
         },
         "alligator": {
           "id": "短吻鰐"
+        },
+        "trees": {
+          "id": "樹木"
         }
       },
       "name": "遊獵"
@@ -247,6 +275,9 @@
         },
         "onion": {
           "id": "洋蔥"
+        },
+        "ginger": {
+          "id": "生薑"
         }
       }
     },

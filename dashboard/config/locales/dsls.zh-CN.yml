@@ -11935,7 +11935,7 @@ zh-CN:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: 网页开发
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

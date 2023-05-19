@@ -4088,6 +4088,7 @@ tr:
               display_name: Proje
         pluralsight:
           title: Pluralsight'a erişim
+          name: Çoğul görüş
         express-2018-vn:
           title: Vietnam için Hızlandırılmış (2018)
           description_short: Vietnamlı öğrenciler için temel bilgisayar bilimine giriş.
@@ -9140,12 +9141,14 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Anket
+            lessonGroup-5:
+              display_name: Alternatif Dersler
           description: |-
             Bu ünite, öğrencilerin 1D ve 2D dizileri ve `ArrayList`leri arama ve sıralamaya yönelik ortak yaklaşımları tanıtmayı öğrendikleri algoritmaları genişletir. Bu süreçte öğrenciler, ifade yürütme sayılarını kullanarak bu algoritmaların verimliliklerini analiz eder ve karşılaştırır ve karmaşık sorunları ayrıştırmak için problem çözme becerilerini daha da geliştirir. Ünite boyunca öğrenciler, nesne yönelimli tasarım, veri yapıları ve algoritmik düşünme içeren konsolu kullanarak yaratıcı bir kodlama projesi planlamak ve geliştirmek için programlama ve yazılım mühendisliği becerilerini kullanırlar. Yıl boyunca edinilen bilgi ve becerilerle öğrenciler, programların ve kullanıcıların gizliliğini ve güvenliğini göz önünde bulundurur.
 
             ### AP Classroom Kişisel İlerleme Kontrolleri
 
-            AP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\*\*Standartlar\*\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [\*\*AP Central\*\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.
+            AP Classroom Soru Bankasından bu üniteyle uyumlu sorular atamak için, ünitenin [\*\*Standartlar\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) sayfasındaki Temel Bilgi ifadeleri için Soru Bankasında arama yaparak AP Classroom'da özel bir sınav oluşturun. [**AP Central**][1]'da bunu yapmak için talimatlar ve video gösterileri bulabilirsiniz.
 
             AP Classroom'da aşağıdaki Kişisel İlerleme Kontrolleri, Bildiğinizi Gösterin haftasında atanabilir:
 
@@ -9155,7 +9158,7 @@ tr:
 
             ## Bu Üniteyi Öğretmeyi Bitirdiniz mi?
 
-            Code.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [\*\*kısa anketi\*\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) yanıtlayın.
+            Code.org müfredat ekibinin ünitenin nasıl gittiğini öğrenmesi için bu [**kısa anketi**][2] yanıtlayın.
           student_description: Bu ünitede, 1D ve 2D dizileri ve `ArrayList`leri aramaya
             ve sıralamaya yönelik yaygın yaklaşımları keşfetmek için öğrendiğiniz
             algoritmaları genişleteceksiniz. Bu süreçte, ifade yürütme sayılarını
@@ -9775,6 +9778,8 @@ tr:
               display_name: 'Bölüm 1: Web sayfası oluşturma'
             lessonGroup-3:
               display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+            lessonGroup-4:
+              display_name: Anket
           title: Web Geliştirme
           student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl
             oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği
@@ -9788,6 +9793,8 @@ tr:
               display_name: 'Bölüm 1: Resim ve animasyon'
             lessonGroup-3:
               display_name: 'Bölüm 2: Oyun geliştirme'
+            lessonGroup-4:
+              display_name: Anket
           student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli
             sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın.
             Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük
@@ -9800,6 +9807,8 @@ tr:
               display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
             lessonGroup-3:
               display_name: 'Bölüm 2: Uygulama prototipleme'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini
             tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken
             diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz.
@@ -9813,6 +9822,8 @@ tr:
               display_name: 'Bölüm 1: Bilgileri gösterme'
             lessonGroup-3:
               display_name: 'Bölüm 2: Veri problemlerini çözme'
+            lessonGroup-4:
+              display_name: Anket
           description_short: İnsanların veri problemlerini çözmek için bilgisayarı
             nasıl kullandıklarını öğrenin.
           student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır
@@ -9831,6 +9842,8 @@ tr:
               display_name: Bölüm 1
             lessonGroup-4:
               display_name: Bölüm 2
+            lessonGroup-5:
+              display_name: Anket
           title: Yapay Zeka ve Makine Öğrenimi
           student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli
             geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar
@@ -10153,6 +10166,8 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+            lessonGroup-5:
+              display_name: Anket
         vpl-csd-ci-1:
           lesson_groups:
             lessonGroup-2:
@@ -10317,6 +10332,8 @@ tr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bölüm 1: Donanım girdisi'
+            lessonGroup-5:
+              display_name: Anket
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -10337,3 +10354,172 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoşgeldiniz
+        self-paced-pl-csd5-2023:
+          title: Yapay zeka ve makine öğrenimini öğretmek
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Yapay zeka ve makine öğrenimine giriş yapın.
+            -   Ünitede yer alan temel kavramları uygulayın.
+            -   AI Lab ve App Lab ile etkileşime geçin.
+            -   Bölüm sonu projelerini keşfedin.
+            -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
+
+            **Önerilen Süre:** 120 dakika
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Giriş
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gün 1
+          title: Gün 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gün 2
+          title: Gün 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gün 3
+          title: Gün 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Gün 4
+          title: Gün 4
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Giriş
+            lesson-12:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          title: Gün 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          title: Gün 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          title: Gün 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Özet
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          title: Gün 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Değerlendirme
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+        csd-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-data-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-impact-in-society-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-coding-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-hardware-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        focus-on-creativity-post-survey-2023:
+          title: Kurs-Sonrası Anketi
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sayısal Vatandaşlık
+            lessonGroup-3:
+              display_name: Hareketli Nesneler
+            lessonGroup-4:
+              display_name: Değişkenler
+            lessonGroup-5:
+              display_name: Veri ve simülasyonlar
+            lessonGroup-6:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs,
+            kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak
+            başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli
+            Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde,
+            öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere
+            bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun
+            sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli
+            projeler oluşturmuş olacaklardır.
+          student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin
+            ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda
+            arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve
+            oluşturun.

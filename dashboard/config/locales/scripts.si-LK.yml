@@ -1588,3 +1588,17 @@ si:
               display_name: ශ්‍රිතයන්
             csf_nested_loops:
               display_name: කන්ඩිෂනලස්
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: හැදින්වීම
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: හැදින්වීම
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-4:
+              display_name: විචල්‍යන්

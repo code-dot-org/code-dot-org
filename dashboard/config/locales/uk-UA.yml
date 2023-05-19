@@ -117,6 +117,7 @@ uk:
     facebook: Facebook
     windowslive: обліковий запис Microsoft
     microsoft_v2_auth: обліковий запис Microsoft
+    clever: Розумний
     powerschool: Powerschool
     forgot_password: Забули пароль?
     migration_success: Успіх! Ви оновилися до нашої нової версії акаунтів.
@@ -215,7 +216,6 @@ uk:
       дозволяє нам контактувати з учнями. Учні ніколи не отримуватимуть електронних
       листів від Code.org, окрім для відновлення пароля. Докладнішу інформацію дивіться
       у нашій [Політиці конфіденційності] (http://code.org/privacy).
-    additional_information: Нам потрібна додаткова інформація, щоб продовжити реєстрацію.
     user_type_button: Оновлення типу облікового запису
     user_type_label: Тип облікового запису
     user_type_student: Учень
@@ -328,6 +328,7 @@ uk:
       picture: Графічний пароль
       word: Таємне слово
       email: Електронна пошта
+      clever: Розумний
   follower:
     invite_sent: Запрошення надіслано
     added_teacher: "%{name} додано як Вашого учителя"
@@ -394,6 +395,7 @@ uk:
       professional_learning: Підвищення кваліфікації
       documentation: Документація
       tutorials: Навчальні матеріали
+      sprite_lab_documentation: Документація Спрайт Лабораторії
       web_lab_documentation: Документація веб-лабораторії
       educate_overview: Огляд для педагога
       educate_elementary: Початкова школа
@@ -442,6 +444,8 @@ uk:
       algebra_game: Алгебра
       applab: App Lab
       artist: Художник
+      artist_k1: Виконавець (Pre-читалка)
+      basketball: Баскетбол
       bounce: Арканоід
       calc: Калькулятор
       dance: Танцювальна вечірка
@@ -449,20 +453,26 @@ uk:
       flappy: Пурх
       frozen: Крижане серце
       gamelab: Ігрова лабораторія
+      gamelab_jr: Ігрова лабораторія (бета-версія)
       gumball: Гамбол
       iceage: Льодовиковий період
       infinity: Infinity
       makerlab: Maker Toolkit
       minecraft_adventurer: Майнкрафт - Пригоди
+      minecraft_aquatic: Майнкрафт водні
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: Майнкрафт
+      minecraft_hero: Майнкрафт Герой
       playlab: Ігрова студія
+      playlab_k1: Play Lab (попередній зчитувач)
+      poetry: Поезія
       scratch: Scratch
       sports: Спорт
       starwars: Зоряні війни
       starwarsblocks: Зоряні війни (блоки)
       starwarsblocks_hour: Зоряні війни (блоки)
       loading: Завантаження...
+      weblab: Веб-лабораторія
       view_all: Переглянути всі проекти...
     popup:
       progress_for_user: Прогрес %{name}
@@ -577,6 +587,7 @@ uk:
     none: Немає
     only_one_parent_email_supported_warning: Примітка. Наразі ми можемо зареєструвати
       лише одну електронну пошту батьків/опікуна на один обліковий запис учня.
+    encrypted: зашифровані
   user_level:
     completed: Завершено
     tried: Спробував
@@ -1216,7 +1227,9 @@ uk:
       gender: Гендерна приналежність
       school: Школа
       school_name: Назва школи
+      school_city: Шкільне місто
       school_country: Країна твоєї школи
+      colombian_school_city: Шкільне місто
       colombian_school_municipality: Навчальний муніципалітет
       colombian_chilean_school_name: Назва школи
       ages: Які віку ви навчали в цьому році?
@@ -1335,6 +1348,7 @@ uk:
       minecraft: Майнкрафт
       sports: Спорт
       csf: Основи інформатики
+      csc: Підключення CS
   cookie_banner:
     more_information: Переглянути політику конфіденційності в Code.org.
     accept: Погоджуюся

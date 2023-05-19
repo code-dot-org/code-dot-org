@@ -6,9 +6,11 @@ import i18n from '@cdo/locale';
  */
 
 export const PROJECT_TYPE_MAP = {
+  adaptations: i18n.projectTypeAdaptations(),
   algebra_game: i18n.projectTypeAlgebra(),
   applab: i18n.projectTypeApplab(),
   artist: i18n.projectTypeArtist(),
+  ecosystems: i18n.projectTypeEcosystems(),
   frozen: i18n.projectTypeFrozen(),
   gumball: i18n.projectTypeGumball(),
   infinity: i18n.projectTypeInfinity(),

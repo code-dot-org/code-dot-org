@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-04-27 02:56:57 UTC",
+    "serialized_at": "2023-05-11 17:29:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -55,7 +55,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "[Computer Vision Lesson]",
+      "name": "Computer Vision",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -73,12 +73,15 @@
     },
     {
       "key": "lesson-5",
-      "name": "[Neural Networks Lesson]",
+      "name": "Neural Networks",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "Students learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.",
+        "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student",
+        "student_overview": "Learn how neural networks work by adjusting the weights of a recommendation system to adjust the outputs."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -88,7 +91,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "[Generative LLM Lesson (chatbot)]",
+      "name": "Large Language Models (LLMs)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -106,7 +109,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "[Generative Images Lesson (dall-e-esque)]",
+      "name": "Generative Images",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -146,7 +149,7 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
+        "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
         "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
@@ -298,6 +301,61 @@
       }
     },
     {
+      "key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Neural Networks"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
       "key": "82731c6b-052b-425a-aad4-62f85474fd23",
       "position": 1,
       "properties": {
@@ -348,6 +406,18 @@
       "seeding_key": {
         "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp"
       }
@@ -1718,6 +1788,652 @@
       }
     },
     {
+      "key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What's an example of an experience that recommends things to you?\n",
+        "name": "Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b589d1a-8bcf-4b2c-a6f7-f73bc3d8f09d",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "a618943e-7f87-45e7-95ab-d48904978f67",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a618943e-7f87-45e7-95ab-d48904978f67",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "52e15617-7d3f-40b2-a003-e317e5ec7b0a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to think of things that make recommendations, especially different apps or websites. For example, they may be recommended videos from Youtube or new songs on a music app. Some apps may ask you to pick preferences before using them to help figure out your preferences. Some websites give recommendations at the end of an experience, like a takeout menu or online grocery store recommending new items before checking out. Try to crowdsource a variety of examples before continuing to the next prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "52e15617-7d3f-40b2-a003-e317e5ec7b0a",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "ee18fb83-0a5c-4bd1-87ef-ef01f8ef81a7",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee18fb83-0a5c-4bd1-87ef-ef01f8ef81a7",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "0b6f4cd1-d024-41a6-b79c-ab4327f7bc92",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Do these recommendations tend to be accurate? Or do they feel random?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6f4cd1-d024-41a6-b79c-ab4327f7bc92",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "3bd57d75-a5e2-41ec-8e4a-875bbb6c2afd",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd57d75-a5e2-41ec-8e4a-875bbb6c2afd",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "f24de523-1a44-4776-b36b-ad227aa5abc8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Responses here will vary, and there's no expected answer. Instead, focus on the tension between getting recommendations and having them be accurate and how not every recommendation may feel like it matches each student's interests and personality."
+      },
+      "seeding_key": {
+        "activity_section.key": "f24de523-1a44-4776-b36b-ad227aa5abc8",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "3c0d90e1-cf1f-420f-b29a-4b32aebf4eab",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c0d90e1-cf1f-420f-b29a-4b32aebf4eab",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "4ccd67fd-b5a6-4a89-8fa0-e7a05363594a",
+      "position": 9,
+      "properties": {
+        "description": "We get recommended things all the time, but how do these programs know what to recommend? How do they get better? Today we're going to look at one way computers create recommendations using something called neural networks.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4ccd67fd-b5a6-4a89-8fa0-e7a05363594a",
+        "lesson_activity.key": "2163c9b7-5c05-47f2-83d4-c2c661c403c5"
+      }
+    },
+    {
+      "key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r wetube_content_creators/ai-temp/unversioned] resource.",
+        "name": "WeTube"
+      },
+      "seeding_key": {
+        "activity_section.key": "49a4bce2-9bac-469e-b957-c836eeeaf5b8",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "dede1f3c-73ef-4891-aef7-6057575d5667",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dede1f3c-73ef-4891-aef7-6057575d5667",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "3a947b42-c8d5-48cb-8d0f-8ce5276f73d7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with information about WeTube, which is also on the top of the handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "3a947b42-c8d5-48cb-8d0f-8ce5276f73d7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2154438d-c829-4b9a-97c7-dff7e400d03d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2154438d-c829-4b9a-97c7-dff7e400d03d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "17be71f6-f238-4ba5-9f42-200277a7f5f9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students the widget and demonstrate how to select a person and then view the video recommendations.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real Or Fake?** Students may have lots of questions about this business model and why it's a good idea to only go by recommendations. These may be valid questions if this were a real business, but it's not - ensure students that this is just an excuse to focus on the role of recommendations in our world. However, it is true that the underlying concepts in this business and how recommendations work are similar to real-world recommendation systems, even if the company is fake."
+          },
+          {
+            "type": "contentCorner",
+            "markdown": "**Spotify Recommendations:** Spotify is one of many companies that uses a similar interface when users first use the app - it asks users to pick 4-5 different artists, and then curates songs based on those preferences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "17be71f6-f238-4ba5-9f42-200277a7f5f9",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "ccd54d58-6f1b-46ae-9624-4e680c2aa212",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ccd54d58-6f1b-46ae-9624-4e680c2aa212",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
+      "position": 7,
+      "properties": {
+        "description": "Send students to the first level in Code Studio. As they work, have them consider the following prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "46d2fe03-c4f9-41fb-b9f8-fa87c7f30f71",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "7b56027d-eab7-473c-881e-c50e1dee6ef3",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7b56027d-eab7-473c-881e-c50e1dee6ef3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "37f381db-5783-4bcb-9026-386ea7168176",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Which content creator resonates with you the most and are most excited to follow? Which one resonates with you the least?"
+      },
+      "seeding_key": {
+        "activity_section.key": "37f381db-5783-4bcb-9026-386ea7168176",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "efadacf8-2bc4-495d-9bf6-4e164a420d7e",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "efadacf8-2bc4-495d-9bf6-4e164a420d7e",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+      "position": 11,
+      "properties": {
+        "progression_name": "Beta: WeTube Video Recommendations (Widget)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "cc6c0053-1b85-46b4-8569-e4281fb4031d",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cc6c0053-1b85-46b4-8569-e4281fb4031d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d4a7ca60-ff34-4cb9-a069-2c02eb5e0ffa",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>\n**Circulate:** Walk around as students experiment with the app. Make sure they understand the interface - that after choosing a content creator, they see a list of video recommendations they can explore. Encourage students to explore different content creators and see what videos are recommended. Students should notice that the videos seem to match the personalities of each person with some variation. Once most students have looked at a few content creators, regroup the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "d4a7ca60-ff34-4cb9-a069-2c02eb5e0ffa",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c3d98156-3f85-472f-89f4-fd769e92e323",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3d98156-3f85-472f-89f4-fd769e92e323",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "345a98a1-b394-419d-b311-628b531de2f3",
+      "position": 15,
+      "properties": {
+        "description": "**Regroup:** Have students regroup to discuss the following prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "345a98a1-b394-419d-b311-628b531de2f3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e337aa16-d050-44df-9b7a-d2ebdefc1c3d",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e337aa16-d050-44df-9b7a-d2ebdefc1c3d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "8cef1f79-a4fa-44a1-b542-2887784662ba",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Ask the following questions in quick succession and having students respond non-verbally (for example, by raising their hands). The goal is to quickly move through these questions to motivate the next section of the lesson.\n\n* Were there any videos that showed up for your person that you didn't think were super interesting or disagreed with?\n* Were there any videos that showed up for another person that you wish had shown up with your favorite person?"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cef1f79-a4fa-44a1-b542-2887784662ba",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "726dc701-e620-46c6-8ca4-0797bddee133",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "726dc701-e620-46c6-8ca4-0797bddee133",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "6c8d2205-3aae-4542-a71c-160c27e2e8f7",
+      "position": 19,
+      "properties": {
+        "description": "It’s super unlikely that just subscribing to 1 person will give you the ideal recommendations - there may be some things here that you actually don’t like, and you’d rather do something that a different user recommended instead. There’s gotta be a way to combine these different perspectives to fine-tune the recommendations that we get. Let’s look at how computer science and artificial intelligence can help with that!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6c8d2205-3aae-4542-a71c-160c27e2e8f7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e9c9d95f-682a-4499-b44b-cbbf40061deb",
+      "position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9c9d95f-682a-4499-b44b-cbbf40061deb",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \n[r introduction_to_ai_how_neural_networks_work_1/ai-temp/unversioned]"
+      },
+      "seeding_key": {
+        "activity_section.key": "02ee5958-fbb6-479d-899b-3064e6c63f3d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "ac7983bf-5ffa-4b04-a6ea-a4ffb50689d0",
+      "position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ac7983bf-5ffa-4b04-a6ea-a4ffb50689d0",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"WeTube Version 2.0\" slide, which describes the updates to the widget. Click through the next slides to explain the differences in the widget.",
+        "name": "WeTube 2.0"
+      },
+      "seeding_key": {
+        "activity_section.key": "51ad2d12-4160-49d5-8eb1-f4f1e7e275b2",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "654953d7-59fa-44db-bea1-680deb2804a3",
+      "position": 24,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "654953d7-59fa-44db-bea1-680deb2804a3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "70e5a3e7-36d8-40f6-ade9-6937a2e221e7",
+      "position": 25,
+      "properties": {
+        "description": "| Slide                                | Say                                                                                                                                                                                          |\n| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://images.code.org/6e487bccc9772f7eb6c78352c056722a-slide1.png)| <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can now combine recommendations from each person.                                                                                                                   |\n| ![](https://images.code.org/e4bf18a7627489ca6a9ed7d5bdb5e8af-slide2.png)| <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can use the slider to adjust how much this person will influence your recommendations. Just like in the video, we're adding more **weight** to their recommendation |\n| ![](https://images.code.org/ec4d4979551a57e25631bbf3f8abf0bc-slide3.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can click on someone else and combine their recommendations. The thicker the line, the more they influence the recommendations.                                     |\n| ![](https://images.code.org/a590809f6ea6b40482f248d546fe3e7b-slide4.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** Here are some of the recommendations we get with Sofia and Joseph. Both of their preferences are reflected here.                                                        |\n| ![](https://images.code.org/1d017e757cc99c0b7d4eade71605d704-slide5.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** You can also click the Select New Weights button to go back and change your preferences. For example, we could decide to add Alex to our recommendation model.          |\n| ![](https://images.code.org/97a4ce3acb93c9265bf53d26760db754-slide6.png) | <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display and Say:** When we do that, some new videos appear in our feed that were influenced by Alex's preferences.      "
+      },
+      "seeding_key": {
+        "activity_section.key": "70e5a3e7-36d8-40f6-ade9-6937a2e221e7",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "b641746b-198d-497a-bf73-25cb142b4949",
+      "position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b641746b-198d-497a-bf73-25cb142b4949",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
+      "position": 27,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out the \n[r neural_networks/ai-temp/unversioned] Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "388843ec-1db4-47f7-8c2a-741a7b836f69",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5e9a72df-7082-42ad-b164-b9bacff1cd81",
+      "position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e9a72df-7082-42ad-b164-b9bacff1cd81",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5c1b98cf-bd48-45ce-9908-31662fcdab4f",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the widget to create a new set of recommendations to match your interests. Fine tune your weights until the recommendations match your interests."
+      },
+      "seeding_key": {
+        "activity_section.key": "5c1b98cf-bd48-45ce-9908-31662fcdab4f",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+      "position": 30,
+      "properties": {
+        "progression_name": "WeTube Video Recommendations (Widget)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How Is It Learning?** This widget is similar to the example shown in the video and, behind the scenes, each person has given a rating to the different \"videos\" that get recommended. However, there is a key difference: in the video, the network customizes the weights by \"learning\" from how users rate the videos that are recommended to them, but in this widget users can manually adjust the weights to customize the network themselves. In this sense, the widget isn't really \"learning\" in the same way the video learns. However, it does create an equivalent type of recommendation system, and is similar to other recommendation systems that let users customize their interests themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "5f158ea6-d982-4055-bd6c-140f0222cd2f",
+      "position": 31,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f158ea6-d982-4055-bd6c-140f0222cd2f",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "9b2666b8-e890-4d76-a4c2-8a7363a20fb2",
+      "position": 32,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete this task. Students should be testing different combinations of weights and recommendations. Encourage students to share observations with their neighbors and really play with the combinations. Some probing questions could be:\n\n* Are there any videos that appear for certain people?\n* If you pick a particular video, is there a way to get it to the \"front page\" of your recommendations in your top 3?\n* Are there videos that never seem to make it to the top 3?\n\nAs students begin to settle on combinations that they like, regroup the class\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b2666b8-e890-4d76-a4c2-8a7363a20fb2",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "a0dfd053-6ced-40e7-a3ea-e84973774918",
+      "position": 33,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a0dfd053-6ced-40e7-a3ea-e84973774918",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "4a6157d3-e861-4f78-8c2a-06126fd58c00",
+      "position": 34,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Jenna is a student who _loves_ Boba Tea. There's a video called \"Boba Tea Hacks: Unique flavor combinations\". She's trying to find a combination that gets this video to the Top 3 videos. Can you help her?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a6157d3-e861-4f78-8c2a-06126fd58c00",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "f7ce1e2d-0acd-4946-b6c7-99d2820eeb3a",
+      "position": 35,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ce1e2d-0acd-4946-b6c7-99d2820eeb3a",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c9853709-41db-4932-b7ff-7bfbad68608b",
+      "position": 36,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Give students a few minutes to experiment here, but transparently: this video is designed to always be rated low by the current selection of content creators and never appear in the Top 3. This is intentional and designed to motivate the final part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9853709-41db-4932-b7ff-7bfbad68608b",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2adc96e8-0c83-43a6-926f-afd872c53850",
+      "position": 37,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2adc96e8-0c83-43a6-926f-afd872c53850",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "fa98ce25-9c52-47ff-96e1-12cb2864af6d",
+      "position": 38,
+      "properties": {
+        "description": "It seemed like it was nearly impossible for Jenna to see her interest represented in her Top 3.  Thinking about how Jenna must feel, it can be pretty disappointing to not be able to see your own interests represented in an app like this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa98ce25-9c52-47ff-96e1-12cb2864af6d",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "9c624a2f-8fd3-4226-ae4c-b3101aa943bf",
+      "position": 39,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9c624a2f-8fd3-4226-ae4c-b3101aa943bf",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "74160687-e223-4c52-90dd-14fa0a489dfa",
+      "position": 40,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Have there been times where your interests or perspectives haven't been represented in an app? Why do you think that is?\n\nHave students share with their neighbors"
+      },
+      "seeding_key": {
+        "activity_section.key": "74160687-e223-4c52-90dd-14fa0a489dfa",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "c829c1af-740b-4975-896e-9b76c81eea44",
+      "position": 41,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c829c1af-740b-4975-896e-9b76c81eea44",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "3e94de71-adea-42c6-92d4-7fed563a8461",
+      "position": 42,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may have a wide variety of experiences here. Some may be comical or inconsequential, like not having their favorite type of food recommended to them no matter how hard they try. Others may be more influential and consequential, like never having music or books or movies reflective of their identities or culture recommended back to them. Focus the discussion on why this might be, emphasizing answers that focus on the diversity of the data used for the recommendation algorithm. When this comes up, feel free to transition to the next part of the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e94de71-adea-42c6-92d4-7fed563a8461",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e0153a27-b1eb-4dcf-ba12-7040838a8e0c",
+      "position": 43,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0153a27-b1eb-4dcf-ba12-7040838a8e0c",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "cb56a3de-93f4-4dd7-9acf-0e87b8ffd8d4",
+      "position": 44,
+      "properties": {
+        "description": "Recommendation systems are only as good as the data they have to work with. In this example, none of our content creators liked the Boba Tea video enough to make it rise to the top, even though people like Jenna clearly want to watch it. Sometimes this causes people to leave the app entirely, but there's also another solution: adding more perspectives to the data!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb56a3de-93f4-4dd7-9acf-0e87b8ffd8d4",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "d993dbdb-9ca0-496b-b0b2-8e2ae8c52937",
+      "position": 45,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d993dbdb-9ca0-496b-b0b2-8e2ae8c52937",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "e5bf95e9-b4ff-4f27-a385-d2b520d215cf",
+      "position": 46,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the next set of directions - imagining your own content creator\n\n* \"You are now in charge of imagining a new content creator that WeTube will add to their recommendation system. This person could be based on an existing person (even yourself!), or could be totally imaginary. The key thing is that this person should represent new interests and perspectives not represented by the current group of people.\"\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5bf95e9-b4ff-4f27-a385-d2b520d215cf",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "2aec17ca-a172-41f0-aba9-29fdd141071c",
+      "position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2aec17ca-a172-41f0-aba9-29fdd141071c",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "80d2d63a-d2a6-42cd-8ae4-22f2314b5ff3",
+      "position": 48,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Design your own content creator on the activity guide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "80d2d63a-d2a6-42cd-8ae4-22f2314b5ff3",
+        "lesson_activity.key": "3323ec44-0af2-4774-af32-a514bf1a0a98"
+      }
+    },
+    {
+      "key": "793cd2e2-89ad-47e4-8ec3-649d30193a98",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Why is it important to have a diverse set of data when creating a recommendation system?"
+      },
+      "seeding_key": {
+        "activity_section.key": "793cd2e2-89ad-47e4-8ec3-649d30193a98",
+        "lesson_activity.key": "2c9800f3-b947-4bb7-b6dc-937b21089d1b"
+      }
+    },
+    {
+      "key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [Introduction to AI Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cb8ca17-699f-4733-aaee-43d078ae5db6",
+        "lesson_activity.key": "2ed99f0b-e801-4301-908f-ae6867b9c3a4"
+      }
+    },
+    {
       "key": "ce11fd33-a8b0-4edc-86cf-2e4c59f86b10",
       "position": 1,
       "properties": {
@@ -2201,7 +2917,7 @@
       "key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
       "position": 29,
       "properties": {
-        "description": "**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Share Out:** In small groups, have students share the stories they wrote with each other. Students can comment on each other’s stories.\n"
       },
       "seeding_key": {
         "activity_section.key": "8609db90-f18c-4a60-b28e-c9670f676dc4",
@@ -2335,7 +3051,7 @@
       "properties": {
         "description": "Most of the things that generate text today use a Large Language Model, but before we had the computing power to allow models to learn from the entire text of wikipedia, there were text-based AIs that were not based on Large Language Models.\n\nInstead, these programs have rules for what sorts of text make sense at different times.\n\nOne of the most famous examples is Eliza, who was a computer program that was supposed to sound like a therapist that was invented in 1966. It was very impressive in its time. Let’s explore what Eliza is and is not capable of.\n",
         "duration": "10",
-        "name": "(Optional) Generative text that is not an LLM – Eliza",
+        "name": "(Optional) A Chatbot that is not an LLM – Eliza",
         "remarks": true
       },
       "seeding_key": {
@@ -2469,6 +3185,16 @@
       "seeding_key": {
         "activity_section.key": "d7cc0b02-94a5-4416-b536-389b0c47a6ca",
         "lesson_activity.key": "969658e5-7a77-4157-8c32-47a88346b337"
+      }
+    },
+    {
+      "key": "0b056501-6ae2-47e6-858e-5fe88e3fa78c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0b056501-6ae2-47e6-858e-5fe88e3fa78c",
+        "lesson_activity.key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a"
       }
     },
     {
@@ -2967,7 +3693,7 @@
       "key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** WIP"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Why is it important to have a diverse set of data when creating a recommendation system?"
       },
       "seeding_key": {
         "activity_section.key": "6f2516e8-0002-4e88-964e-a10e42bae5f2",
@@ -3136,6 +3862,56 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "Neural Networks - Perceptron - Beta"
+        ],
+        "progression": "Beta: WeTube Video Recommendations (Widget)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Beta"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
+      },
+      "level_keys": [
+        "Neural Networks - Perceptron - Beta"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "progression": "WeTube Video Recommendations (Widget)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
+      },
+      "level_keys": [
+        "Neural Networks - Perceptron - Full"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "U9L5 Cropping Widget_introai"
         ],
         "progression": "Cropping Widget"
@@ -3155,7 +3931,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3180,7 +3956,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -3240,6 +4016,30 @@
         "lesson_group.key": "",
         "script.name": "ai-temp",
         "activity_section.key": "143fb379-8c75-4d60-b1e5-eed9887455e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neural Networks - Perceptron - Beta",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Beta"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "5114cec6-9153-4220-b86f-cc4a44b861d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neural Networks - Perceptron - Full",
+        "script_level.level_keys": [
+          "Neural Networks - Perceptron - Full"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "ai-temp",
+        "activity_section.key": "d92e52fc-a258-4a74-bea6-15fd25fe9511"
       }
     },
     {
@@ -3524,6 +4324,18 @@
       }
     },
     {
+      "name": "Introduction to AI: How Neural Networks Work",
+      "url": "https://youtu.be/JrXazCEACVo",
+      "key": "introduction_to_ai_how_neural_networks_work_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_how_neural_networks_work_1"
+      }
+    },
+    {
       "name": "Introduction to AI: Introduction",
       "url": "https://youtu.be/Ok-xpKjKp2g",
       "key": "introduction_to_ai_introduction",
@@ -3569,6 +4381,30 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+      "key": "neural_networks",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "name": "Neural Networks",
+      "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+      "key": "neural_networks_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "neural_networks_1"
       }
     },
     {
@@ -3631,6 +4467,18 @@
       },
       "seeding_key": {
         "resource.key": "vocabulary_matching"
+      }
+    },
+    {
+      "name": "WeTube Content Creators",
+      "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+      "key": "wetube_content_creators",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "wetube_content_creators"
       }
     },
     {
@@ -3777,6 +4625,30 @@
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
         "resource.key": "our_ai_code_of_ethics_template_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "introduction_to_ai_how_neural_networks_work_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "neural_networks_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "wetube_content_creators"
       }
     },
     {
@@ -4005,6 +4877,16 @@
       }
     },
     {
+      "key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b",
+      "properties": {
+        "description": "Use the weights of an artificial neuron to adjust the outputs of a recommendation system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "43e5d51d-a470-4bab-a2f4-13f54df1b44b"
+      }
+    },
+    {
       "key": "85ebf69e-1ef7-4817-abaf-0a8f0efe2c33",
       "properties": {
         "description": "Apply the Problem Solving Process to train a computer to solve a problem"
@@ -4012,6 +4894,16 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "objective.key": "85ebf69e-1ef7-4817-abaf-0a8f0efe2c33"
+      }
+    },
+    {
+      "key": "93ccdd32-5c10-44b5-b52f-0701036e0953",
+      "properties": {
+        "description": "Explain the need for diverse perspectives when creating recommendation systems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "93ccdd32-5c10-44b5-b52f-0701036e0953"
       }
     },
     {

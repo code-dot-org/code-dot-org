@@ -1851,10 +1851,15 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "वीडीयो"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI लैब का परिचय"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI लैब का परिचय",
           "type": "वीडीयो"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "एआई लैब में प्रशिक्षण और परीक्षण",
           "type": "वीडीयो"
         },
         "ai_training_data_bias/csd/2022": {
@@ -1863,12 +1868,20 @@
           "type": "वीडीयो"
         },
         "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI लैब में मॉडल कार्ड",
           "type": "वीडीयो"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "वीडीयो"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI लैब में संख्यात्मक डेटा"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI लैब में संख्यात्मक डेटा"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI लैब में संख्यात्मक डेटा",
           "type": "वीडीयो"
         },
         "ai_ethics_research_reflection/csd/2022": {
@@ -3662,10 +3675,15 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "वीडीयो"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI लैब का परिचय"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI लैब का परिचय",
           "type": "वीडीयो"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "एआई लैब में प्रशिक्षण और परीक्षण",
           "type": "वीडीयो"
         },
         "ai_training_data_bias/csd/2021": {
@@ -3674,12 +3692,20 @@
           "type": "वीडीयो"
         },
         "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI लैब में मॉडल कार्ड",
           "type": "वीडीयो"
         },
         "if-statements_in_app_lab/csd/2021": {
           "type": "वीडीयो"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI लैब में संख्यात्मक डेटा"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI लैब में संख्यात्मक डेटा"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI लैब में संख्यात्मक डेटा",
           "type": "वीडीयो"
         },
         "ai_ethics_research_reflection/csd/2021": {

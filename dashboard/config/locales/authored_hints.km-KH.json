@@ -5099,7 +5099,8 @@
           "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
         },
         "courseA_maze_seq52022": {
-          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "2": "អ្នកត្រូវតែប្រើប្លុកមួយនេះ៖\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq62022": {
           "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
@@ -5727,6 +5728,249 @@
         },
         "courseB_Scrat_ramp5a_2021": {
           "1": "កូដប្លុករបស់អ្នកគួរតែមើលទៅដូចនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp12022": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "2": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp12022": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2019": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2020": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "កុំខ្លាចការបង្កើតកំហុស! សាកល្បងធ្វើ​ ហើយ​បើ​សិនមិនដំណើរការ សូម​សាកល្បង​វិធីសាស្រ្តផ្សេងៗទៀត!"
+        },
+        "courseA_maze_ramp22022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp22022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a2022": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "កូដប្លុករបស់អ្នកគួរតែដូចខាងក្រោមនេះ៖\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_iceage_loops1": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops12022": {
+          "courseB_iceage_loops1_a": "ប្រយ័ត្នទឹកកកបាក់!  កំប្រុកនឹងធ្លាក់ភ្លាមៗ!",
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2019": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2020": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops22022": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2019": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2020": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseB_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseB_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops1": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops12022": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops1_2019": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops1_2020": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_b": "អ្នកនឹងត្រូវប្រើប្លុកនេះ៖​ <xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops2": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops22022": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2019": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2020": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "បំបែកល្បែងផ្គុំរូបនេះជាពីរបំណែក, មួយនៅមុនជ្រុង និងមួយទៀតនៅបន្ទាប់ពីជ្រុង។",
+          "courseD_iceage_loops2_b": "ប្រសិនបើអ្នកជាប់គាំង, សូមព្យាយាមអោយកំប្រុកនិយាយថា ជំហាន ឱ្យខ្លាំងៗ​ ដោយអ្នកគ្រាន់តែចុចលើពាក្យថា ជំហាន។",
+          "courseD_iceage_loops2_c": "ដើរតាមផ្លូវនេះដើម្បីកំប្រុកទទួលបាន  ផ្លែផ្លេសេន។"
         }
       }
     }

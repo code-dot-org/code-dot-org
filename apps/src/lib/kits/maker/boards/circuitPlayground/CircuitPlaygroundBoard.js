@@ -340,7 +340,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   mappedPin(pin) {
-    return pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
+    return Object.prototype.hasOwnProperty.call(pinMapping, pin)
+      ? pinMapping[pin]
+      : pin;
   }
 
   pinMode(pin, modeConstant) {

@@ -563,7 +563,8 @@
           "low": "niedrig"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Aktualisieren"
+          "Update": "Aktualisieren",
+          "value": "Wert"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Du hast es geschafft!"
@@ -638,16 +639,20 @@
           "Success!": "Geschafft!"
         },
         "CSD U6 analog light": {
-          "Update": "Aktualisieren"
+          "Update": "Aktualisieren",
+          "value": "Wert"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Aktualisieren"
+          "Update": "Aktualisieren",
+          "value": "Wert"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Aktualisieren"
+          "Update": "Aktualisieren",
+          "value": "Wert"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Aktualisieren"
+          "Update": "Aktualisieren",
+          "value": "Wert"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1533,6 +1538,90 @@
           "night": "Nacht",
           "dusk": "Abend",
           "Predict": "Vorhersage"
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Mach mich größer und blau!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me red!": "Mach mich rot!",
+          "Make me blue!": "Mach mich blau!",
+          "Write code to change my text!": "Schreibe Code, um meinen Text zu ändern!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Grüner!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Taschenlampen App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "Pferd!",
+          "You Choose!": "Du wählst!",
+          "Animal Sound Board!!!": "Tiergeräusche Board!!!",
+          "Monkey!": "Affe!",
+          "Tiger!": "Tiger!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This!": "Das!",
+          "This or That?!": "Dies oder Das?!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "Wert"
         }
       }
     }

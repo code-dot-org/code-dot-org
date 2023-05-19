@@ -3020,6 +3020,7 @@ ja:
           name: coursea-2021
           student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
         courseb-2021:
+          title: コース B (2021)
           description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
           description_audience: 5-8 才
           lesson_groups:
@@ -3037,6 +3038,7 @@ ja:
               display_name: コース最後のプロジェクト
           student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
         coursec-2021:
+          title: コース C (2021)
           description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           description_audience: '年齢: 6～10才'
           lesson_groups:
@@ -3058,6 +3060,7 @@ ja:
           student_description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
         coursed-2021:
           title: コース D (2021)
+          description: '3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。 '
           description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
           description_audience: '年齢: 7～11才'
           lesson_groups:
@@ -3728,6 +3731,7 @@ ja:
             end_of_course_project:
               display_name: コース最後のプロジェクト
           title: コース D (2021)
+          description: '3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。 '
           description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
           description_audience: '年齢: 7～11才'
         coursee-2022:
@@ -4126,6 +4130,8 @@ ja:
               display_name: 内容
             lessonGroup-4:
               display_name: アンケート
+            lessonGroup-5:
+              display_name: 代替レッスン
         hello-world-space-2022:
           title: ハローワールド:スペース
         hello-world-soccer-2022:
@@ -4408,6 +4414,7 @@ ja:
             end_of_course_project:
               display_name: コース最後のプロジェクト
           title: コース D (2021)
+          description: '3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。 '
           description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
           description_audience: '年齢: 7～11才'
         coursee-2023:
@@ -4439,6 +4446,8 @@ ja:
               display_name: '第1章: ウェブページの作成'
             lessonGroup-3:
               display_name: '第2章: マルチページのウェブサイト'
+            lessonGroup-4:
+              display_name: アンケート
           student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
         interactive-games-animations-2023:
           lesson_groups:
@@ -4446,6 +4455,8 @@ ja:
               display_name: '第 1 章: 画像とアニメーション'
             lessonGroup-3:
               display_name: '第2章: ゲームを作る'
+            lessonGroup-4:
+              display_name: アンケート
           student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
             サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
         design-process-2023:
@@ -4454,6 +4465,8 @@ ja:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
             lessonGroup-3:
               display_name: 第 2 章：アプリのプロトタイピング
+            lessonGroup-4:
+              display_name: アンケート
           student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
         data-society-2023:
           lesson_groups:
@@ -4461,6 +4474,8 @@ ja:
               display_name: 第1章：情報を表現する
             lessonGroup-3:
               display_name: 第 2 章：データ問題を解決
+            lessonGroup-4:
+              display_name: アンケート
           description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
         aiml-2023:
@@ -4471,6 +4486,8 @@ ja:
               display_name: 第一章
             lessonGroup-4:
               display_name: 第二章
+            lessonGroup-5:
+              display_name: アンケート
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4623,6 +4640,8 @@ ja:
           lesson_groups:
             lessonGroup-3:
               display_name: 入力と出力
+            lessonGroup-5:
+              display_name: アンケート
         vpl-csd-ci-1:
           title: 'モジュール 1: 問題解決と計算を教えるための準備'
           description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。
@@ -4683,6 +4702,8 @@ ja:
           lesson_groups:
             lessonGroup-4:
               display_name: '第 2 章: 物理プロパティの構築'
+            lessonGroup-5:
+              display_name: アンケート
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4703,3 +4724,88 @@ ja:
           lesson_groups:
             lessonGroup-3:
               display_name: 入力と出力
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ようこそ
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: はじめに
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1日目
+          title: 1日目
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: まとめ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2日目
+          title: 2日目
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3日目
+          title: 3日目
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: まとめ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4日目
+          title: 4日目
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: はじめに
+            lesson-12:
+              name: まとめ
+          title: 1日目
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: まとめ
+          title: 2日目
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: まとめ
+          title: 3日目
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: まとめ
+          title: 4日目
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: 評価
+        csd-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-data-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-impact-in-society-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-coding-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-design-with-purpose-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-hardware-post-survey-2023:
+          title: コース終了後アンケート
+        focus-on-creativity-post-survey-2023:
+          title: コース終了後アンケート
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: スプライト
+            lessonGroup-4:
+              display_name: 変数（へんすう）
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。

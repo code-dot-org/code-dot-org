@@ -40,7 +40,10 @@ exports.extendOptionsObject = function (optionsObject) {
     throw new TypeError('Options object must be an object.');
   }
 
-  if (optionsObject && optionsObject.hasOwnProperty('get')) {
+  if (
+    optionsObject &&
+    Object.prototype.hasOwnProperty.call(optionsObject, 'get')
+  ) {
     throw new Error(
       'Cannot extend options; property "get" would be overwritten.'
     );

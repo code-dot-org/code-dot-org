@@ -2457,7 +2457,7 @@ sq-AL:
         - text: blu
         - text: jeshile
         - {}
-        - {}
+        - text: zverdh
         - {}
         - text: e kuqe
         questions:
@@ -3226,8 +3226,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}
@@ -3235,8 +3235,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}
@@ -3244,8 +3244,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}
@@ -3253,8 +3253,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}
@@ -3262,8 +3262,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}
@@ -3271,8 +3271,8 @@ sq-AL:
         answers:
         - text: qen
         - text: pinguin
-        - {}
-        - {}
+        - text: bretkocë
+        - text: gjirafë
         - {}
         questions:
         - {}

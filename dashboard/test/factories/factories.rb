@@ -5,6 +5,24 @@ FactoryBot.define do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
+
+    trait :with_units do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+        create(:course_version, :with_unit, course_offering: course_offering)
+      end
+    end
+
+    trait :with_unit_groups do
+      after(:create) do |course_offering|
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create(:course_version, :with_unit_group, course_offering: course_offering)
+      end
+    end
   end
 
   factory :course_version do
@@ -111,8 +129,14 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
+      trait :with_recent_captcha do
+        last_verified_captcha_at {Time.now.utc}
+      end
       factory :terms_of_service_teacher do
         with_terms_of_service
+      end
+      factory :with_recent_captcha_teacher do
+        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|

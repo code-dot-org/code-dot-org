@@ -1273,8 +1273,9 @@ el-GR:
         title: Πολλαπλή Επιλογή
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - correct: true
+        - text: ΟΡΙΣΕ
+        - text: ΤΕΤΡΆΓΩΝΟ
+          correct: true
         - text: ΝΟΤΙΑ
         questions:
         - text: Ποια λέξη σχηματίζεται;
@@ -1987,36 +1988,40 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
@@ -2702,12 +2707,13 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
@@ -2726,7 +2732,7 @@ el-GR:
         - {}
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
         - {}
@@ -2758,12 +2764,13 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi:
         answers:
         - {}
@@ -3769,7 +3776,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3779,7 +3786,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3789,7 +3796,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3799,7 +3806,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3809,7 +3816,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3819,7 +3826,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -8852,11 +8859,13 @@ el-GR:
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Διαφωνώ
+          correct: true
         - correct: true
         questions:
         - {}
@@ -8918,7 +8927,8 @@ el-GR:
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -9911,9 +9921,11 @@ el-GR:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
         - correct: true
-        - {}
+          feedback: Σωστό! Ο Σκρατ γυρίζει προς τη λάθος κατεύθυνση και δεν θα φτάσει
+            στο βελανίδι.
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή γυρίζει λάθος.
         - {}
         questions:
         - {}
@@ -10001,12 +10013,13 @@ el-GR:
         - {}
       courseD_multi_farmer_while4_predict12022:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict22022:
         answers:
         - correct: true
@@ -10041,12 +10054,13 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict12022:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}

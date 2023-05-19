@@ -128,6 +128,10 @@ th:
             และแพล็นส์ วีเอส. ซอมบีส์!
         text-compression:
           title: การบีบอัดข้อความ
+        allthethings:
+          lessons:
+            lesson-49:
+              name: เพลง
         asUnplugged:
           description_audience: อายุ 6 - 13 ปี
         afterschool1:
@@ -838,6 +842,8 @@ th:
               display_name: ลูป
             csf_conditionals:
               display_name: เงื่อนไข
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             end_of_course_project:
@@ -910,6 +916,8 @@ th:
               display_name: พลเมืองดิจิทัล
             csf_sequencing:
               display_name: การจัดลำดับ
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_loops:
               display_name: ลูป
             csf_events:
@@ -1400,6 +1408,8 @@ th:
               display_name: พลเมืองดิจิทัล
             csf_sequencing:
               display_name: การจัดลำดับ
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_loops:
               display_name: ลูป
             csf_events:
@@ -1427,6 +1437,8 @@ th:
               display_name: ลูป
             csf_conditionals:
               display_name: เงื่อนไข
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             end_of_course_project:
@@ -1669,6 +1681,8 @@ th:
               display_name: พลเมืองดิจิทัล
             csf_sequencing:
               display_name: การจัดลำดับ
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_loops:
               display_name: ลูป
             csf_events:
@@ -1694,6 +1708,8 @@ th:
               display_name: ลูป
             csf_conditionals:
               display_name: เงื่อนไข
+            csf_binary:
+              display_name: เลขฐานสอง
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             end_of_course_project:
@@ -2609,12 +2625,26 @@ th:
             end_of_course_project:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
           description_audience: 'อายุ: 8-12 ปี'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         aiml-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2623,6 +2653,8 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-4:
               display_name: ตอนที่ 2
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2651,6 +2683,10 @@ th:
               display_name: แอปแลปเบื้องต้น
             lessonGroup-4:
               display_name: ตอนที่ 2
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         vpl-csd-ci-1:
           title: 'รูปแบบที่ 1: การเตรียมพร้อมในการสอนการแก้ไขปัญหาและการคำนวณ'
           description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน
@@ -2721,3 +2757,52 @@ th:
             \  ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน AI Lab และ App
             Lab\n-   เรียนจนจบโปรเจกต์\n-   สร้างแผนการสอนเพื่อนำหน่วยการเรียนรู้ไปใช้กับนักเรียน\n\n**เวลาที่แนะนำ:**
             120 นาที"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: บทเกริ่นนำ
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: สรุป
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: สรุป
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
+            lesson-12:
+              name: สรุป
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: สรุป
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: สรุป
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: สรุป
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: การประเมิน
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-4:
+              display_name: ตัวแปร
+            lessonGroup-6:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง

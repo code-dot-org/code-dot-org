@@ -157,7 +157,6 @@ km:
     valid_password: ពាក្យ​សម្ងាត់​ត្រឹម​ត្រូវ!
     invalid_password: ពាក្យ​សម្ងាត់​ត្រូវមាន​យ៉ាង​តិច 6 តួ​អក្សរ
     mismatch_password: ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ
-    additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
     user_type_label: ប្រភេទនៃគណនេយ្យ
     user_type_student: សិស្ស
     user_type_teacher: គ្រូបង្រៀន
@@ -305,6 +304,7 @@ km:
       course_catalog: មុខវិជ្ជាដោយផ្នែក
       project_gallery: គម្រោង
       sections: វគ្គ
+      help_support: ជំនួយ និងការគាំទ្រ
       report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
       report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
       teacher_community: សមាគមគ្រូបង្រៀន
@@ -468,6 +468,7 @@ km:
     student: សិស្ស
     teacher: គ្រូបង្រៀន
   footer:
+    help_from_html_old: វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។
     built_on_github: បង្កើតឡើងលើ GitHub ដោយ Microsoft
     copyright: រក្សាសិទ្ធដោយ
     more: ផ្សេង​ទៀត
@@ -529,6 +530,9 @@ km:
       audience: អាយុ 14 ឆ្នាំឡើង
     unplugged_conditionals:
       title: លក្ខខណ្ឌ
+  landing:
+    support: ទទួលជំនួយ
+    help_support: ជំនួយ និងការគាំទ្រ
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
@@ -553,6 +557,8 @@ km:
   text_match:
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
+  lesson_extras:
+    bonus_level: កម្រិតប្រាក់រង្វាន់
   dialog:
     ok: យល់ព្រម
     startover_title: តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?

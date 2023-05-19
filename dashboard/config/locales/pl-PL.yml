@@ -66,6 +66,7 @@ pl:
   previous_page: Poprzednia strona
   next_page: Następna strona
   next_resource: Kolejne zasoby
+  done_with_module: Sporządzono z tym modułem edukacyjnym
   cancel: Anuluj
   okay: OK
   or: lub
@@ -217,7 +218,6 @@ pl:
       nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili
       od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się
       w naszej [Polityce prywatności](http://code.org/privacy).
-    additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_button: Zaktualizuj typ konta
     user_type_label: Typ konta
     user_type_student: Uczeń
@@ -1282,6 +1282,7 @@ pl:
     instructor_feedback: Opinie instruktora
     peer_feedback: Wzajemne opinie
     outdated: Ta opinia została dodana do wcześniej zgłoszonej wersji
+    review_count: Musisz wypełnić %{review_count} recenzji dla tego urządzenia
     peer_review: Wzajemne recenzje
   external_links:
     disclaimer: Uwaga

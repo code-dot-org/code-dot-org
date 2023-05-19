@@ -330,7 +330,8 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90"
         },
         "CSD U1 processing guess_2022": {
           "?": "?",
@@ -420,7 +421,8 @@
           "No more tries!": "Tentativi terminati!",
           "I'm thinking of a number from 1 to 100.": "Sto pensando a un numero da 1 a 100.",
           "You haven't guessed yet.": "Ancora non hai indovinato.",
-          "Your guess:": "La tua ipotesi:"
+          "Your guess:": "La tua ipotesi:",
+          "90": "90"
         },
         "CSD U1 processing live_2021": {
           "walking": "camminare",
@@ -820,46 +822,105 @@
           "0": "0"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Felice"
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
-          "Fish": "Pesce"
+          "Fish": "Pesce",
+          "Dog": "Cane",
+          "Cat": "Gatto",
+          "Which type of animal makes the best pet?": "Che tipo di animale è il miglior animale domestico?",
+          "Lizard": "Lucertola"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Nord",
           "South": "Sud",
           "East": "Est",
-          "West": "Ovest"
+          "West": "Ovest",
+          "Off": "Off"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Medio"
@@ -957,7 +1018,8 @@
           "F": "F",
           "G": "G",
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "Note:": "Nota:"
         },
         "CSD U6 - Music - SB1_2222": {
           "C": "C",
@@ -987,60 +1049,140 @@
           "B": "B"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Punteggio",
           "0": "0"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nome:"
@@ -1103,7 +1245,8 @@
           "low": "bassa"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Ce l'hai fatta!"
@@ -1142,16 +1285,40 @@
           "on": "acceso"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "change the light": "cambia la luce",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
           "0": "0"
@@ -1166,28 +1333,60 @@
           "0": "0"
         },
         "CSD U6 add LED button": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "ON": "ON",
+          "OFF": "OFF",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 analog light": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Aggiorna"
+          "Update": "Aggiorna",
+          "value": "valore"
         },
         "CSD U6 array piano": {
           "C": "C",
@@ -1462,16 +1661,40 @@
           "0": "0"
         },
         "CSD U6 predict LED button": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Click Me": "Cliccami",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "testo",
@@ -1534,16 +1757,40 @@
           "Game Over": "Fine del gioco"
         },
         "CSD U6 test LED": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU4 Connecting Screens": {
           "Red": "Rossi",
@@ -1567,7 +1814,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Informazioni",
@@ -1581,7 +1829,8 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Informazioni",
@@ -1595,28 +1844,32 @@
           "Yes": "Sì",
           "No": "No",
           "Save": "Salva",
-          "User Profile": "Profilo utente"
+          "User Profile": "Profilo utente",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Informazioni",
           "Why?": "Perchè?",
           "I don't know": "Non lo so",
           "When?": "Quando?",
-          "About Us": "Chi siamo"
+          "About Us": "Chi siamo",
+          "How it works": "Come funziona"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Nascondi",
@@ -1626,19 +1879,22 @@
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Informazioni",
           "About Us": "Chi siamo",
           "Done": "Fatto",
-          "Cancel": "Annulla"
+          "Cancel": "Annulla",
+          "How it works": "Come funziona"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Informazioni",
@@ -1647,7 +1903,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Informazioni",
@@ -1656,7 +1914,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Informazioni",
@@ -1665,7 +1925,9 @@
           "When?": "Quando?",
           "About Us": "Chi siamo",
           "Correct!": "Corretto!",
-          "Next Question": "Domanda successiva"
+          "Next Question": "Domanda successiva",
+          "How it works": "Come funziona",
+          "Take a Quiz": "Fai un quiz"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1676,19 +1938,49 @@
           "Back": "Indietro"
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Fatto!"
+          "Success!": "Fatto!",
+          "Plug in your Circuit Playground and click \"Run\"": "Collega il tuo Circuit Playground e fai clic su «Esegui»",
+          "Board Not Detected!": "Scheda non rilevata!",
+          "Try the following:": "Prova le seguenti soluzioni:",
+          "Refresh this page and try again": "Aggiorna la pagina e riprova",
+          "Plug the board into a different USB": "Collega la scheda a una porta USB diversa",
+          "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
         "CSDU6 circuit playground piano": {
           "C": "C",
@@ -1770,19 +2062,63 @@
         },
         "csd u5 recommender sample": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2019": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2021": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd u5 recommender sample_2022": {
           "Start": "Inizia",
-          "flying": "volo"
+          "flying": "volo",
+          "Where should you go on vacation?": "Dove dovresti andare in vacanza?",
+          "What is your favorite food?": "Qual è il tuo cibo preferito?",
+          "What is the best superpower?": "Qual è il tuo superpotere preferito?",
+          "invisibility": "invisibilità",
+          "super strength": "forza sovrumana",
+          "teleport": "teletrasporto",
+          "Which animal do you like the best?": "Qual è il tuo animale preferito?",
+          "You should go to the beach!": "Dovresti andare al mare!",
+          "You should go to an amusement park!": "Dovresti andare in un parco di divertimenti!",
+          "You should go to a national park!": "Dovresti andare in un parco nazionale!",
+          "You should go to a big city!": "Dovresti andare in una grande città!"
         },
         "csd-apps for good-2": {
           "Next": "Seguente",
@@ -2172,11 +2508,13 @@
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Accettato",
-          "Rejected": "Rifiutato"
+          "Rejected": "Rifiutato",
+          "Green Glass Door": "Porta in vetro verde"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Seguente"
@@ -2187,12 +2525,24 @@
         "ml-customize-raspado-2021": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:"
         },
         "ml-customize-raspado_2022": {
           "yes": "sì",
           "no": "no",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "strawberry:": "fragola:",
+          "mango:": "mango:",
+          "vanilla:": "Vanilla",
+          "lime:": "lime:",
+          "chili en polbo:": "peperoncino in polvere:",
+          "coconut:": "cocco:"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Prosegui",
@@ -2204,83 +2554,111 @@
         },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "O",
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "O",
           "A": "A",
           "yes": "sì",
           "no": "no",
-          "head": "testa"
+          "head": "testa",
+          "Over 60": "Oltre 60",
+          "18-34": "18-34",
+          "Under 18": "Minori di 18 anni",
+          "35-60": "35-60",
+          "Gender?": "Sesso?",
+          "male": "maschio",
+          "female": "femmina",
+          "nonbinary (identifies outside gender binary)": "non binario (identifica chi non si identifica all'interno del cosiddetto binarismo di genere)"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Sciocco",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Cat": "Gatto"
         },
         "ml-models in applab-choice if quotes": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if quotes_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice intended warnings": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
           "Predict": "Predict",
-          "Back": "Indietro"
+          "Back": "Indietro",
+          "4+": "4+"
         },
         "ml-models in applab-choice predict typos": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-choice predict typos_2022": {
           "3": "3",
           "2": "2",
           "1": "1",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "4+": "4+"
         },
         "ml-models in applab-zoo assessment": {
           "Yes": "Sì",
@@ -2316,7 +2694,13 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:"
         },
         "ml-use model card-example3A_2022": {
           "rain": "pioggia",
@@ -2324,7 +2708,13 @@
           "cloudy": "nuvoloso",
           "night": "notte",
           "dusk": "Crepuscolo",
-          "Predict": "Predict"
+          "Predict": "Predict",
+          "Weather:": "Meteo:",
+          "foggy": "nebbiosa",
+          "sunny": "soleggiata",
+          "Time Of Day:": "Ora del giorno:",
+          "daylight": "luce del giorno",
+          "Temperature:": "Temperatura:"
         },
         "CSD U1 processing countries_2021": {
           "have more than a billion people?": "ha più di un miliardo di persone?",
@@ -2386,6 +2776,134 @@
           "Dollars per person": "Dollari a persona",
           "Where Should I Eat?": "Dove devo mangiare?",
           "$15": "$15"
+        },
+        "CSD U6 emoji race demo": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Emoji Race": "Gara degli Emoji"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "Low": "Basso",
+          "Mid": "Medio",
+          "High": "Alto"
+        },
+        "CSD U6 - Board Outputs - PracA_2222": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": "Fai clic sul topo per farlo squittire!"
+        },
+        "CSD U6 - Board Outputs - PracC_2222": {
+          "Light Off": "Luce spenta",
+          "Light On": "Luce accesa"
+        },
+        "CSD U6 - Board Outputs - SB3_2222": {
+          "Short": "Breve",
+          "Long": "Lungo"
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "ON": "ON",
+          "OFF": "OFF"
+        },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Off": "Off"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Off": "Off"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "On": "On",
+          "Off": "Off"
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "OFF": "OFF"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "valore"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "valore"
+        },
+        "CSD U6 analog change": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "valore"
+        },
+        "CSD U6 analog data": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "valore"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "valore"
+        },
+        "CSD U6 setProperty hidden": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2018": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2018": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2019": {
+          "OFF": "OFF"
+        },
+        "CSD U6 setProperty hidden_2021": {
+          "OFF": "OFF"
+        },
+        "CSDU6 - UI and Inputs - setText": {
+          "OFF": "OFF"
         }
       }
     }

@@ -191,6 +191,9 @@
       "fields": {
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Írás"
         }
       }
     },
@@ -280,6 +283,9 @@
         },
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Írás"
         },
         "Achievements": {
           "id": "Eredmények"
