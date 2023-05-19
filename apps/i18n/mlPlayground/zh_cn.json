@@ -13,6 +13,7 @@
   "columnDetailsMaximumValue": "最大",
   "dataCardLastUpdated": "最近更新",
   "predictButton": "预测",
+  "uniqueOptionsWarningNotice": "注意",
   "datasets": {
     "medical_priority": {
       "fields": {

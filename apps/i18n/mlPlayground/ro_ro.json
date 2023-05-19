@@ -12,6 +12,7 @@
   "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
   "dataCardLastUpdated": "Ultima actualizare",
+  "uniqueOptionsWarningNotice": "Notă",
   "datasets": {
     "medical_priority": {
       "fields": {

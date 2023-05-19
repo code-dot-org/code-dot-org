@@ -152,6 +152,13 @@
   module_label_teaching_maker_cp: "Teaching Creating Apps with Devices (Circuit Playground)"
   module_label_teaching_maker_microbit: "Teaching Creating Apps with Devices (micro:bit)"
 
+  values_01: "We believe computer science is foundational for all students"
+  values_02: "We are committed to equity, access, and opportunity"
+  values_03: "We believe in the power of a collaborative education community"
+  values_04: "We are agile and responsive to feedback"
+  values_05: "We act with integrity and transparency"
+  values_06: "We believe broad impact requires thinking big and acting holistically"
+
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
 
@@ -284,7 +291,6 @@
   self_paced_pl_modules_list_01: "Learn how to navigate the Code.org website and teacher tools."
   self_paced_pl_modules_list_02: "Gain a high level understanding of the content, tools, and pedagogy."
   self_paced_pl_modules_list_03: "Prepare to begin teaching the curriculum with your students."
-
   self_paced_pl_facilitator_heading: "Want to take your learning further?"
   self_paced_pl_facilitator_subheading: "Facilitator-led workshops"
   self_paced_pl_facilitator_desc: "In addition to the above self-paced online modules, facilitator-led professional learning workshops are available for teachers. Join the more than 100,000 teachers who have participated in our workshops. More than 90% of attendees would recommend our program to other teachers."

@@ -1923,3 +1923,166 @@ it:
       7:
         image: 'notes/hoc_dance_congrats_7.png'
         text: "Alla fine dell'esercizio potrai condividere la tua creazione con i tuoi amici. Mettici tutta la tua immaginazione e divertiti!"
+    poemart_intro:
+      1:
+        image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Mi chiamo Caia e sono un poeta e uno studente di informatica. Ho imparato così tanto dalla programmazione che mi ha reso un poeta migliore, e tante cose sulla mia poesia mi hanno reso migliore nel programmare, proprio perché devi davvero pensare alle parole che scegli e a ciò che creerai una volta che tutto sarà finito."
+      2:
+        image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "Nell'ora successiva, imparerai a conoscere l'informatica e la poesia creando una poesia animata. In sostanza, la poesia è fare arte con le parole. Creo poesie per esprimermi; cerco di suscitare l'immaginazione e le emozioni del pubblico quando scrivo usando il mio stile e il mio ritmo unici."
+      3:
+        image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Proprio come l'arte, le poesie possono essere interpretate in molti modi diversi. La stessa poesia può significare cose molto diverse per persone diverse, e ogni poesia ha il suo stato d'animo. L'umore è la sensazione che si prova da una poesia. A volte le persone associano determinati colori e immagini a stati d'animo diversi."
+      4:
+        image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "Ad esempio, il colore giallo mi fa sentire allegra. E quando penso a uno stato d'animo come la paura, a volte mi immagino una notte buia e tempestosa nella mia testa. In questa attività avrai l'opportunità di illustrare e animare l'atmosfera di una poesia in base a come ti fa sentire."
+      5:
+        image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Diamo un'occhiata a come lo farai usando il codice. Vedrai che lo schermo è diviso in tre parti principali. A sinistra c'è lo spazio di gioco. È qui che apparirà la tua poesia animata. Ogni poesia ha un titolo e un autore."
+      6:
+        image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "Questa area centrale è la cassetta degli attrezzi. Nuovi blocchi di codice saranno disponibili in questo spazio man mano che proseguirai la lezione."
+      7:
+        image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "Lo spazio a destra è l'area di lavoro. Puoi trascinare i blocchi fuori dalla casella degli strumenti e nell'area di lavoro per creare il tuo programma."
+      8:
+        image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "Le istruzioni per ogni livello si trovano qui nella parte superiore dello schermo. Se vuoi un suggerimento, fai clic sulla lampadina."
+      9:
+        image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "Per prima cosa, seleziona una poesia che ti piace. Ci sono tutti i tipi di poesie e puoi sceglierne una nuova a ogni livello."
+      10:
+        image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Successivamente, trascinerai i blocchi dalla casella degli strumenti nell'area di lavoro per animare la tua poesia. Puoi scegliere un colore o un effetto di sfondo che corrisponda all'atmosfera della tua poesia, quindi fai clic su «Esegui» per vedere la tua poesia in azione."
+      11:
+        image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Passa del tempo a leggere le diverse poesie e trovane una che susciti un'emozione in te. Pensa a come ti senti e a come puoi comunicare quella sensazione attraverso immagini e codice."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "A volte l'umore di una poesia cambia a metà della poesia. Ciò che potrebbe iniziare come una poesia dal suono felice diventa triste, o forse l'oscurità si trasforma in luce."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "In questa attività lavorerai con gli eventi. Puoi usare questo blocco eventi per cambiare il corso del tuo programma quando compare una riga specifica della tua poesia. Nota che i blocchi di eventi non si incastrano nel tuo programma principale. Invece, creano piccoli programmi propri."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Leggi la tua poesia e trova un momento in cui l'umore cambia. Conta su quale riga succede: uno, due, tre. Nel tuo blocco eventi, inserisci il numero della riga."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Quindi programma qualcosa che rifletta il cambiamento di umore quando quella riga appare sullo schermo. Quando premi «Esegui» puoi vedere cosa hai codificato."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "Nella poesia, gli autori usano le immagini per dipingere un'immagine nella mente del lettore. Quando vediamo la parola coccodrillo, immaginiamo automaticamente un coccodrillo verde nella nostra mente. Per inserire un'immagine come questa in un'animazione useremo gli sprite."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Questo crea un nuovo blocco sprite che ti permette di creare uno sprite e di sceglierne un costume. Scegli un costume per lo sprite che pensi sia adatto alla poesia."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Per modificare la posizione dello sprite, puoi fare clic sull'icona a forma di puntina nel blocco della posizione, quindi fai clic nel punto in cui desideri che vada nell'area di gioco."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "Nei prossimi livelli vedrai alcuni nuovi blocchi. Questo blocco ti permette di modificare la dimensione del tuo sprite. Questo blocco ti permette di animare il tuo sprite con il comportamento."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Se una poesia menziona nuvole vaganti, innanzitutto fai scattare la nuvola, quindi seleziona questo blocco di comportamento, trascinalo fuori e scegli vagare."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Assicurati che i tuoi costumi da sprite corrispondano. Quando premi Esegui, leggerai e vedrai una nuvola vagante."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Ora puoi aggiungere immagini letterali per illustrare le parole della poesia. Buon divertimento!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Congratulazioni! Hai appena imparato le basi dell'informatica e come trovare l'atmosfera di una poesia. Ora puoi creare la tua poesia animata da condividere con i tuoi amici."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Sceglierai con cura una scena semplice per l'intera poesia?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Oppure utilizzerai molti eventi per creare una nuova scena per ogni verso della tua poesia?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "Alla fine del tutorial puoi condividere un link alla tua creazione con i tuoi amici."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Allarga la tua immaginazione e divertiti!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Ciao! Mi chiamo Erin e sono un ingegnere del software qui su Code.org. Sono così entusiasta, perché devo lavorare al tutorial che stai per fare! Lo chiamiamo «Hello World»."
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "«Hello World» è una frase famosa nell'informatica e la visualizzazione di quella frase è un primo passo comune nell'apprendimento dell'informatica. Nell'ora successiva, inizierai con l'informatica programmando in Sprite Lab."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab è uno strumento che puoi usare per creare progetti fantasiosi e divertenti. Vedrai che lo schermo è diviso in tre parti principali. A sinistra c'è lo spazio di gioco. È qui che appariranno i tuoi sprite."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Gli sprite sono oggetti sullo schermo con cui puoi interagire, come un personaggio o un oggetto di una storia o di un gioco."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "Questa area centrale è la cassetta degli attrezzi. Nuovi blocchi di codice saranno disponibili in questo spazio man mano che proseguirai la lezione."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Lo spazio a destra è l'area di lavoro. Puoi trascinare i blocchi fuori dalla casella degli strumenti e nell'area di lavoro per creare il tuo programma."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "Le istruzioni per ogni livello si trovano qui nella parte superiore dello schermo. Se vuoi un suggerimento, fai clic sulla lampadina."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Per iniziare, facciamo uno sprite! Questo blocco ti consente di dare al tuo sprite un costume e una posizione. Costume è la parola che usiamo per descrivere l'aspetto di uno sprite. Per modificare la posizione dello sprite, puoi fare clic sull'icona a forma di puntina nel blocco della posizione, quindi fare clic nel punto in cui desideri che vada."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Ora facciamo in modo che lo sprite si presenti! Per far dire qualcosa allo sprite, usa questo blocco «Say» e aggiungilo al tuo programma. Assicurati che il costume selezionato nel blocco «Say» corrisponda al costume del tuo sprite."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Quando premi «Esegui», lo sprite dirà qualsiasi testo tu gli dica. Ora è il momento di iniziare con Sprite Lab e vedere dove ti porta la tua immaginazione!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Ora che hai imparato a usare Sprite Lab, vorrai far reagire il tuo programma quando qualcuno lo usa. Per farlo, utilizzerai gli eventi. Un evento indica al programma di ascoltare se succede qualcosa e quindi reagire immediatamente."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Alcuni esempi di eventi sono l'ascolto di un clic del mouse, di un pulsante freccia o di un tocco sullo schermo. I blocchi come «quando si fa clic» sono chiamati blocchi di eventi. Il codice connesso a un blocco di eventi viene eseguito quando viene rilevata l'azione appropriata."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Ad esempio, se allego questo blocco «dì» all'evento «quando si fa clic», il mio sprite dirà qualcosa quando l'utente fa clic o lo tocca. Nota che i blocchi di eventi non si incastrano nel tuo programma principale. Invece, creano piccoli programmi propri."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Se hai più sprite, puoi utilizzare eventi aggiuntivi per raccontare una storia interattiva."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Presto imparerai a fare ancora di più in Sprite Lab, tra cui modificare le dimensioni o l'aspetto di uno sprite, impostare sfondi diversi, riprodurre suoni e altro ancora. Cosa vuoi che facciano i tuoi folletti quando qualcuno interagisce con loro? Tocca a te!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Congratulazioni! Hai appena imparato le basi dell'informatica. Ora puoi usare Sprite Lab per creare quello che vuoi."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Vedrai un pulsante con la scritta Costumi. Quando fai clic su di esso, puoi scegliere nuovi costumi da sprite da una libreria."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "Puoi anche disegnarne uno tuo! Una volta che hai un costume che ti piace, torna al tuo codice."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Ora, seleziona quel costume per il tuo sprite."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Se guardi nella casella degli strumenti, troverai alcuni blocchi nuovi di zecca che non hai mai visto prima. Ad esempio, ci sono molti blocchi comportamentali che ti permetteranno di far muovere il tuo sprite in modi divertenti e interessanti."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Puoi usare il blocco eventi «quando tocchi» per controllare cosa succede quando due sprite si scontrano."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Cerca il blocco «crea effetto». Questo potente blocco può essere usato per creare un sacco di folletti che esplodono, scoppiano o piovono a comando."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Dai un'occhiata in giro e prova a sperimentare questi nuovi blocchi e funzionalità. Alla fine del tutorial, fai clic sul pulsante «Condividi» per condividere un link alla tua creazione con i tuoi amici."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Hai tutte le competenze necessarie per iniziare a sviluppare app, giochi e altri nuovi programmi in Sprite Lab! Usa i tuoi nuovi poteri per fare del bene. Sii gentile e rispettoso, proprio come faresti se stessi creando qualcosa su carta o parlando con un amico."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Quindi cosa creerai? Potresti raccontare una storia su di te... o inventarne una con i tuoi personaggi speciali. Forse utilizzerai anche le tue nuove competenze informatiche per il tuo prossimo progetto scolastico! Allarga la tua immaginazione e divertiti!"

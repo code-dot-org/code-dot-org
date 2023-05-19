@@ -2222,6 +2222,7 @@
           "description": "Chúng ta có thể thấy rằng trong tất cả các ứng dụng này, người dùng có thể lựa chọn cách sử dụng. Những lựa chọn này có thể là động lực để nhiều người muốn sử dụng ứng dụng hơn."
         },
         "a4614b34-d679-47a0-b4b3-36a360f0336d": {
+          "name": "Giới thiệu Sprite Lab",
           "progression_name": "Video: Giới thiệu Sprite Lab"
         },
         "6e47923a-1f07-4c2d-a55a-c45a35a823e9": {
@@ -2296,6 +2297,7 @@
           ]
         },
         "3aa37d43-0bc2-433c-9fdd-59a704d6d5f8": {
+          "name": "Sprites trong hành động",
           "progression_name": "Dự đoán"
         },
         "fa8242f4-3cba-4a2c-bd5b-069a58450349": {
@@ -3933,6 +3935,7 @@
           "description": "#### Vòng 1 (Sơ cấp):\n\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng vỗ tay.\n-   Bắt đầu giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng mọi hành động.\n\n**Thảo luận:** _Điều gì xảy ra khi bạn được yêu cầu vỗ tay trong lúc đang giậm chân tại chỗ? Điều gì xảy ra nếu bạn được yêu cầu bắt đầu hai hành vi khác nhau cùng một lúc?_\n\nHọc sinh nên hiểu rằng nhiều hành vi có thể xảy ra đồng thời.\n\\|\n\n#### Vòng 2 (Trung cấp):\n\n-   Bắt đầu vẫy tay trên không.\n-   Bắt đầu lắc lư đầu.\n-   Dừng vẫy tay trên không.\n-   Dừng lắc lư đầu.\n-   Bắt đầu lắc đầu gối.\n-   Bắt đầu đập cánh tay như chim.\n-   Dừng lắc đầu gối.\n-   Bắt đầu lắc lư đầu.\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng đập cánh tay như chim.\n-   Dừng mọi hành động.\n\n**Thảo luận:**\n\n_Những loại chỉ dẫn nào khiến mọi người mắc lỗi? Bạn nghĩ chiến lược nào là hữu ích để đảm bảo bạn làm theo đúng chỉ dẫn? Tại sao phải theo dõi từng hành vi riêng biệt?_\n\nHọc sinh nên hiểu rằng mỗi hành vi cần dừng lại riêng lẻ. Họ cần theo dõi riêng từng hành vi.\n\n#### Thử thách\n\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu gõ vào đầu.\n-   Dừng ngồi xổm.\n-   Dừng gõ vào đầu.\n-   Bắt đầu nhảy lên xuống.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu vỗ tay.\n-   Bắt đầu vỗ cánh tay như chim.\n-   Dừng mọi hành động.\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu nhảy lên xuống.\n-   Dừng mọi hành động.\n-   Bắt đầu gõ vào đầu gối.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu xoay trái.\n-   Bắt đầu xoay phải.\n-   Dừng xoay trái.\n-   Dừng xoay phải.\n\n**Thảo luận:** _Điều gì sẽ xảy ra nếu hai hành vi có vẻ xung đột với nhau?_\n\n_Bạn nên làm gì khi được yêu cầu vỗ tay và đập cánh tay cùng lúc?_\n\n_Làm cách nào để nhảy lên và xuống trong khi đang ngồi xổm?_\n\n_Điều gì sẽ xảy ra nếu bạn cần gõ đầu gối và đầu cùng một lúc?_\n\n_Khi bạn được yêu cầu xoay theo hai hướng ngược nhau, bạn thấy mọi người làm gì?_\n\n_Điều gì sẽ xảy ra nếu bạn được yêu cầu xoay trái và phải cùng một lúc_\n\nHọc sinh nên hiểu rằng một số hành vi xung đột với nhau có thể dẫn đến kết quả không mong muốn. Hai hành vi trái ngược nhau có thể triệt tiêu lẫn nhau."
         },
         "fcfb7745-6451-4f94-a9c1-23d681360aac": {
+          "name": "Sprites trong hành động",
           "description": "#### Dự đoán (2 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "progression_name": "Dự đoán"
         },
@@ -4426,7 +4429,8 @@
         },
         "e0582255-a83c-4278-8b18-9ce09ac1118d": {
           "name": "Hàm với game Người thu hoạch",
-          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi."
+          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi.",
+          "progression_name": "The Harvester"
         },
         "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f": {
           "progression_name": "Thực tiễn"
@@ -5083,6 +5087,9 @@
         },
         "2c09883a-7c60-446a-ace5-d896370d3d71": {
           "description": "Hãy dùng các hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể dùng bên ngoài các hoạt động trên lớp hoặc các hoạt động bổ sung khác.\n\n**Nhìn vào bản chất**\n\nKhi chia sẻ liên kết đến câu chuyện của mình, bạn cũng chia sẻ toàn bộ mã lệnh đằng sau. Đây là cách tuyệt vời để học sinh học hỏi lẫn nhau.\n\n-   Đăng liên kết đến các câu chuyện đã hoàn thành lên mạng\n    -   Tạo câu chuyện của riêng bạn để chia sẻ!\n-   Khi học sinh tải lên liên kết, hãy yêu cầu học sinh nhấp vào nút “Cách hoạt động” để xem mã lệnh đằng sau câu chuyện.\n-   Thảo luận theo nhóm về các cách khác nhau mà bạn cùng lớp đã lập trình câu chuyện của mình.\n    -   Điều gì khiến bạn ngạc nhiên?\n    -   Bạn muốn thử điều gì?\n-   Chọn câu chuyện của người khác và nhấp vào `Remix` (chỉnh sửa) để phát triển trên nền tảng câu chuyện đó. (Đừng lo, câu chuyện gốc sẽ không bị ảnh hưởng.)"
+        },
+        "7a945439-a8e0-438c-a2a3-7e81b6832618": {
+          "progression_name": "Khu phố trực tuyến của tôi"
         },
         "05ed12f0-289f-4706-976f-cd05c6780b2e": {
           "description": "### Từ vựng chính\n\n-   **trực tuyến**: sử dụng máy tính, điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng\n-   **trang web hoặc ứng dụng**: nơi bạn có thể truy cập trên internet\n\n**Hỏi**: _Bạn cần làm gì để giữ an toàn khi đến những địa điểm mới?_ ([Slide 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nMời học sinh trả lời. Các câu trả lời sẽ khác nhau, nhưng hãy nhấn mạnh các quy tắc an toàn sau:\n\n-   Luôn đi cùng người lớn.\n-   Đừng đi lang thang một mình.\n-   Chỉ nói chuyện với những người bạn biết.\n\n**Nói**: _Hôm nay chúng ta sẽ nói về việc truy cập các địa điểm trên internet giống như tới thăm các địa điểm trong cuộc sống. Cũng giống như các quy tắc giữ an toàn khi bạn đến thăm các địa điểm mới trên thế giới, có nhiều cách để giữ an toàn cho bản thân khi lên mạng._\n\n**Chiếu** [Slide 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) và định nghĩa **trực tuyến** là _sử dụng máy tính , điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng_.\n\n**Chiếu** video [Môi trường trực tuyến của tôi](https://www.commonsense.org/education/videos/my-online-neighborhood) trên [Slide 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) rồi hỏi: _Arms thích điều gì trên internet? Cậu có thể làm những việc gì trên internet?_\n\nMời học sinh trả lời. Các câu trả lời mẫu:\n\n-   Cậu ấy thích đến thăm những nơi thật ngầu.\n-   Cậu ấy có thể nói chuyện với gia đình và bạn bè của mình.\n-   Cậu ấy có thể học hỏi rất nhiều điều mới.\n-   Cậu ấy có thể tạo ra mọi thứ trên internet.\n\n**Hỏi**: _Arms tuân theo ba quy tắc nào khi cậu ấy truy cập các địa điểm trực tuyến?_\n\nMời học sinh trả lời. Chiếu [Slide 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) và nhấn mạnh ba quy tắc chính:\n\n1.  Luôn hỏi cha mẹ (hoặc người lớn mà bạn tin tưởng) trước.\n2.  Chỉ nói chuyện với những người bạn biết.\n3.  Chỉ truy cập những trang phù hợp với bạn.\n\nGiải thích rằng truy cập những trang “phù hợp” nghĩa là đảm bảo trang web hoặc ứng dụng đó phù hợp với trẻ em và bạn được phép truy cập."
@@ -10391,6 +10398,7 @@
           ]
         },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
+          "name": "Thẻ mẫu trong AI Lab",
           "tips": [
             null
           ]
@@ -10788,6 +10796,9 @@
         "ac9962af-c594-428a-8aca-016b794e0c00": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "9950874e-2903-4dd5-993b-756daf5d7e7d": {
+          "progression_name": "Tab hoạt hình"
+        },
         "b3155f3f-f1d8-49d2-8fb9-32f7caf2de13": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -10851,6 +10862,9 @@
         "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "128361aa-1832-4581-a686-26ec8d72bc30": {
+          "progression_name": "Vận tốc"
         },
         "c67c09eb-f947-4b9e-93df-740612cef3dc": {
           "progression_name": "Game đi cảnh"
@@ -11359,6 +11373,9 @@
         "af8ecf2c-ca6a-4d48-a1be-783adf975f27": {
           "progression_name": "Thực tiễn"
         },
+        "42a28a6d-b136-4659-bdbd-5caed86947d3": {
+          "progression_name": "Sử dụng khối lặp lại"
+        },
         "93ea2ce1-2886-47f0-a9cc-702b4c5969ce": {
           "progression_name": "Thực tiễn"
         },
@@ -11420,6 +11437,9 @@
         "938a26ab-bd9c-44b8-8cb9-63da1bcf591b": {
           "progression_name": "Thực tiễn"
         },
+        "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
+          "progression_name": "The Harvester"
+        },
         "027a43ed-b9d6-48af-acb0-40514f563a5a": {
           "progression_name": "Thực tiễn"
         },
@@ -11457,6 +11477,9 @@
         },
         "3d19ddeb-ca0c-4e1e-9af0-cd5cc2a5eabe": {
           "progression_name": "Thực tiễn"
+        },
+        "1509114f-e57a-4100-b4ec-665739adf403": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "f86d1539-d7e0-4872-997d-5064553f90ca": {
           "progression_name": "Thực tiễn"
@@ -11542,6 +11565,9 @@
         },
         "e2314a32-dd2f-4699-9f77-a5398fd0a9f2": {
           "progression_name": "Thực tiễn"
+        },
+        "f0c21fc1-b243-411a-b177-99f07b95acf3": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "e49641c5-0812-46d3-9bae-93e4c933e04e": {
           "progression_name": "Thực tiễn"
@@ -11660,6 +11686,9 @@
           "name": "Dự đoán",
           "progression_name": "Dự đoán"
         },
+        "502e09e6-3af3-43cb-ae96-e44507f1250c": {
+          "progression_name": "The Harvester"
+        },
         "95928265-96cb-467e-9d34-0e1bbe203c3c": {
           "progression_name": "Thực tiễn"
         },
@@ -11695,11 +11724,17 @@
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
         },
+        "d72f7249-432e-4ae6-b265-c1fe66a6150d": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "d3c1d307-bc5d-4e96-b82e-d5ec9d39748c": {
           "progression_name": "Dự đoán"
         },
         "659719ac-9bcf-4ed4-891b-1a4a37a3ac22": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "9c484311-a0f9-4660-9bc7-a13b03e87d58": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -11931,11 +11966,17 @@
           "name": "Thực tiễn",
           "progression_name": "Thực tiễn"
         },
+        "e554878a-7385-4425-9fc6-e0a5f1bb2966": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "d4e37aa1-3f91-4ec0-bc8f-bf64b461ad99": {
           "progression_name": "Dự đoán"
         },
         "61942940-a071-4c23-9fbc-6632ec70ed93": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "0ab3565a-6d5b-4555-adf0-2133008ae1fa": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -12019,6 +12060,9 @@
         "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
+        },
+        "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
+          "progression_name": "The Harvester"
         },
         "52c49228-8221-4b46-9f42-81a5f1abf27f": {
           "progression_name": "Thực tiễn"
@@ -12174,6 +12218,9 @@
         "0e8985cd-34d0-4ffe-b0f0-53fb0e9bd874": {
           "progression_name": "Thực tiễn"
         },
+        "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
+          "progression_name": "The Harvester"
+        },
         "4bde879a-5158-461f-9d04-3000cc8992a2": {
           "progression_name": "Thực tiễn"
         },
@@ -12266,6 +12313,9 @@
         "5136ca8d-00e2-4fa2-8563-f2edd7bc46d6": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "fe842642-97e4-423d-af5a-a5ffc35984b4": {
+          "progression_name": "Tab hoạt hình"
+        },
         "aae905a1-38d5-48ad-aed9-4de0921bd1ec": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -12332,6 +12382,9 @@
         "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "1c09bf04-72d5-4d17-8e27-cbc096099cb0": {
+          "progression_name": "Vận tốc"
         },
         "d763a5fd-9781-4a36-89f5-6afd6bd25929": {
           "progression_name": "Game đi cảnh"
@@ -12891,6 +12944,9 @@
         "e9c923af-0bf2-42f6-8330-02d063158fa5": {
           "progression_name": "Giới thiệu về nhân vật"
         },
+        "aef969c1-d9bd-43d4-aa4a-2c88df5c1908": {
+          "progression_name": "Tab hoạt hình"
+        },
         "1893f672-0984-4956-a657-90f4a8a4ecb2": {
           "progression_name": "Thêm hình ảnh"
         },
@@ -12978,6 +13034,9 @@
         "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
           "name": "Suy nghĩ",
           "progression_name": "Suy nghĩ"
+        },
+        "4b4b246a-5a4e-40b0-9a98-f5bcd0b96d0c": {
+          "progression_name": "Vận tốc"
         },
         "1cbdcce5-22a2-48dd-a2cd-28086ca9579b": {
           "progression_name": "Game đi cảnh"
@@ -14806,6 +14865,9 @@
         "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
           "name": "Biểu diễn",
           "description": "Để ăn mừng tác phẩm của học sinh, hãy dành khoảng 10 phút cuối cùng để cho họ giới thiệu dự án của mình. Bạn có thể thực hiện hoạt động này theo nhiều cách, nhưng sau đây là một số cách:\n\n-   **Demo công khai:** Chọn một vài tình nguyện viên làm mẫu biểu diễn nhanh dự án của họ trước lớp. Trong lúc đó, hãy yêu cầu họ nêu ý kiến về trải nghiệm của bản thân từ khâu lập kế hoạch đến khâu lập trình, bao gồm cả những ý tưởng mà họ vẫn muốn thực hiện.\n-   **Chơi thử theo cặp:** Cho học sinh hoặc các nhóm bắt cặp và chơi thử các dự án của nhau. Trong lúc đó, hãy yêu cầu họ đưa ra phản hồi tích cực và mang tính xây dựng cho nhau. Lợi ích của việc này là học sinh sẽ có cơ hội đưa ra và trả lời phản hồi trong một môi trường nhỏ hơn. \n-   **Đi vòng quanh chơi thử:** Hãy đảm bảo tất cả học sinh đã chuẩn bị dự án để thử nghiệm. Yêu cầu học sinh di chuyển theo kiểu trò chơi “giành ghế theo nhạc” sang một máy tính khác và chơi thử dự án ở máy tính đó trong một phút, cho đến khi họ nhận được tín hiệu từ bạn để chuyển sang máy tính khác. Hãy lặp lại hoạt động này vài phút một lần. Mặc dù học sinh có ít cơ hội để giao tiếp có cấu trúc, nhưng hoạt động này đảm bảo học sinh có thể demo càng nhiều dự án của bạn cùng lớp càng tốt."
+        },
+        "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
+          "progression_name": "Khu phố trực tuyến của tôi"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
           "description": "### Từ vựng chính\n\n-   **trực tuyến**: sử dụng máy tính, điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng\n-   **trang web hoặc ứng dụng**: nơi bạn có thể truy cập trên internet\n\n**Hỏi**: _Bạn cần làm gì để giữ an toàn khi đến những địa điểm mới?_ ([Slide 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nMời học sinh trả lời. Các câu trả lời sẽ khác nhau, nhưng hãy nhấn mạnh các quy tắc an toàn sau:\n\n-   Luôn đi cùng người lớn.\n-   Đừng đi lang thang một mình.\n-   Chỉ nói chuyện với những người bạn biết.\n\n**Nói**: _Hôm nay chúng ta sẽ nói về việc truy cập các địa điểm trên internet giống như tới thăm các địa điểm trong cuộc sống. Cũng giống như các quy tắc giữ an toàn khi bạn đến thăm các địa điểm mới trên thế giới, có nhiều cách để giữ an toàn cho bản thân khi lên mạng._\n\n**Chiếu** [Slide 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) và định nghĩa **trực tuyến** là _sử dụng máy tính , điện thoại hoặc máy tính bảng để truy cập trang web hoặc ứng dụng_.\n\n**Chiếu** video [Môi trường trực tuyến của tôi](https://www.commonsense.org/education/videos/my-online-neighborhood) trên [Slide 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) rồi hỏi: _Arms thích điều gì trên internet? Cậu có thể làm những việc gì trên internet?_\n\nMời học sinh trả lời. Các câu trả lời mẫu:\n\n-   Cậu ấy thích đến thăm những nơi thật ngầu.\n-   Cậu ấy có thể nói chuyện với gia đình và bạn bè của mình.\n-   Cậu ấy có thể học hỏi rất nhiều điều mới.\n-   Cậu ấy có thể tạo ra mọi thứ trên internet.\n\n**Hỏi**: _Arms tuân theo ba quy tắc nào khi cậu ấy truy cập các địa điểm trực tuyến?_\n\nMời học sinh trả lời. Chiếu [Slide 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) và nhấn mạnh ba quy tắc chính:\n\n1.  Luôn hỏi cha mẹ (hoặc người lớn mà bạn tin tưởng) trước.\n2.  Chỉ nói chuyện với những người bạn biết.\n3.  Chỉ truy cập những trang phù hợp với bạn.\n\nGiải thích rằng truy cập những trang “phù hợp” nghĩa là đảm bảo trang web hoặc ứng dụng đó phù hợp với trẻ em và bạn được phép truy cập."
@@ -17318,7 +17380,8 @@
         },
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
           "name": "Hàm với game Người thu hoạch",
-          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi."
+          "description": "#### Bài tập trực tuyến\n\nMột số bài tập sẽ có hàm được khai báo trước để học sinh điền. Trước tiên, học sinh có thể viết toàn bộ chương trình mà không có hàm, sau đó xác định vị trí mà hàm sẽ phát huy tác dụng trong chương trình.\n\nBạn cần đảm bảo mỗi học sinh hoàn thành bài tập có chấm màu xanh lá cây đậm. Nếu một số học sinh gặp khó khăn trong việc đơn giản hóa mã lệnh và sử dụng hàm, hãy lập các nhóm học sinh giỏi trong lớp để đi vòng quanh và trả lời các câu hỏi.\n\nĐừng quên đưa bút chì và giấy để giúp học sinh phác thảo các giải pháp khả thi.",
+          "progression_name": "The Harvester"
         },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Thực tiễn"
@@ -18819,6 +18882,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Thẻ mẫu trong AI Lab",
           "tips": [
             null
           ]
@@ -22712,6 +22776,9 @@
         "b2137d87-9fc7-451a-aa66-5e88991ec216": {
           "progression_name": "Thực tiễn"
         },
+        "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
+          "progression_name": "The Harvester"
+        },
         "e0c060eb-1f06-4f1d-a91e-edd961631883": {
           "progression_name": "Thực tiễn"
         },
@@ -22749,6 +22816,9 @@
         },
         "4a6e59ba-cdbe-4532-9b2e-d878f550ad8e": {
           "progression_name": "Thực tiễn"
+        },
+        "d40ac398-4f8b-4652-8ec0-503d206ccd17": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "b2a36927-a878-4885-b769-ee48fec75770": {
           "progression_name": "Thực tiễn"
@@ -22855,6 +22925,9 @@
         },
         "dbe9dad9-78fd-4f1c-8778-79bec55d6fc1": {
           "progression_name": "Thực tiễn"
+        },
+        "e2a14e5d-ab2d-41ae-ab3f-133d89bc51f1": {
+          "progression_name": "Sử dụng khối lặp lại"
         },
         "94134ae8-5a03-4079-a051-0538b5db4a77": {
           "progression_name": "Thực tiễn"
@@ -22972,6 +23045,9 @@
         "26f9de85-21ff-409d-893a-7ffc454e167a": {
           "name": "Dự đoán",
           "progression_name": "Dự đoán"
+        },
+        "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
+          "progression_name": "The Harvester"
         },
         "86188817-4050-4ffc-8321-67eb22cc7438": {
           "progression_name": "Thực tiễn"
@@ -23098,6 +23174,9 @@
         "02a6c863-7f2e-4e81-97fb-247b72930518": {
           "progression_name": "Thực tiễn"
         },
+        "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
+          "progression_name": "The Harvester"
+        },
         "fe170410-de6e-4d52-8cd2-62ceb9a8b808": {
           "progression_name": "Thực tiễn"
         },
@@ -23222,11 +23301,17 @@
           "name": "Thực tiễn",
           "progression_name": "Thực tiễn"
         },
+        "ec15e557-0de8-49af-ab15-783c0c14e8b3": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "a580d0a5-1b2f-49ae-9722-5b9471367307": {
           "progression_name": "Dự đoán"
         },
         "bcccd594-04be-4289-bd38-c3e08ca13d89": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "bde1e72a-f2b7-494c-99be-1736a8653391": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"
@@ -23309,6 +23394,9 @@
         "f578d2c6-5557-4872-8505-2ee73c254d6e": {
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
+        },
+        "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
+          "progression_name": "The Harvester"
         },
         "8c92f401-dd45-4021-a38f-b410d49f7195": {
           "progression_name": "Thực tiễn"
@@ -23418,6 +23506,9 @@
         "a42584dc-7fb5-4988-97da-96177da8a05b": {
           "progression_name": "Thực tiễn"
         },
+        "d3456f8d-c77d-4ac0-bc57-d6b0f7adee00": {
+          "progression_name": "Sử dụng khối lặp lại"
+        },
         "f7863404-2557-401b-9c80-dd660b885dad": {
           "progression_name": "Thực tiễn"
         },
@@ -23467,11 +23558,17 @@
           "name": "Chơi tự do",
           "progression_name": "Chơi tự do"
         },
+        "72c41db7-4475-47f2-8d3b-62a5bc7e082e": {
+          "progression_name": "Giới thiệu Sprite Lab"
+        },
         "edf7ac2a-9715-494a-99b2-8ee7e088394e": {
           "progression_name": "Dự đoán"
         },
         "38099bbe-ac85-43ba-9087-19fdf9e613b5": {
           "progression_name": "Dự án nhỏ: Cá bơi"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Làm thế nào để làm cho một Sprite"
         },
         "6187ab8b-2e80-4e5c-bd96-16747d3deea8": {
           "progression_name": "Dự án nhỏ: Cá bơi (tiếp theo)"

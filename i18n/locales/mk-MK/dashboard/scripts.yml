@@ -373,3 +373,9 @@ mk:
           lesson_groups:
             csf_sprites:
               display_name: Сприти
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Сприти
+            lessonGroup-4:
+              display_name: Променливи

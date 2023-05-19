@@ -59,7 +59,19 @@
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
           "moving east and looping": "gumagalaw sa silangan at umiikot",
-          "moving north2": "gumagalaw pahilaga2"
+          "moving north2": "gumagalaw pahilaga2",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "moving west2": "gumagalaw pakanluran2",
+          "spinning right2": "umiikot pakanan2",
+          "growing2": "lumalaki2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "moving east2": "gumagalaw pasilangan2",
+          "patrolling2": "nagpapatrol2",
+          "moving south2": "gumagalaw patimog2",
+          "jittering2": "nanginginig2",
+          "wandering2": "gumagala2",
+          "shrinking2": "lumiliit2",
+          "spinning left2": "umiikot pakaliwa2"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -79,7 +91,19 @@
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
           "moving east and looping": "gumagalaw sa silangan at umiikot",
-          "moving north2": "gumagalaw pahilaga2"
+          "moving north2": "gumagalaw pahilaga2",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "moving west2": "gumagalaw pakanluran2",
+          "spinning right2": "umiikot pakanan2",
+          "growing2": "lumalaki2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "moving east2": "gumagalaw pasilangan2",
+          "patrolling2": "nagpapatrol2",
+          "moving south2": "gumagalaw patimog2",
+          "jittering2": "nanginginig2",
+          "wandering2": "gumagala2",
+          "shrinking2": "lumiliit2",
+          "spinning left2": "umiikot pakaliwa2"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -186,7 +210,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseE_aboutme_1_2021": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -201,7 +226,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_apps_aquarium": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -442,7 +468,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_text_choice_events": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -461,7 +488,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_text_choice_freeplay": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -480,7 +508,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_text_choice_interview": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -499,7 +528,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_text_choice_multiprompt": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -518,7 +548,8 @@
           "fluttering": "pumapagaspas",
           "wobbling": "gumulong-gulong",
           "moving west and looping": "gumagalaw sa kanluran at umiikot",
-          "moving east and looping": "gumagalaw sa silangan at umiikot"
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_variables_card": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
@@ -1002,7 +1033,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "CourseE_hoops": {
           "wandering": "gumagala",
@@ -1106,7 +1138,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party 3_2019": {
           "spinning left": "umiikot pakaliwa",
@@ -1145,7 +1178,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party 4_2019": {
           "spinning left": "umiikot pakaliwa",
@@ -1184,7 +1218,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party 5_2019": {
           "spinning left": "umiikot pakaliwa",
@@ -1223,7 +1258,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party 6": {
           "jittering": "nanginginig",
@@ -1271,7 +1307,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party 7_2019": {
           "jittering": "nanginginig",
@@ -1307,7 +1344,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Dance Party Freeplay": {
           "jittering": "nanginginig",
@@ -1355,7 +1393,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Fish Tank 3-validated_2019": {
           "shrinking": "lumiliit",
@@ -1391,7 +1430,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Fish Tank 4-validated_2019": {
           "shrinking": "lumiliit",
@@ -1427,7 +1467,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Fish Tank 5-validated_2019": {
           "shrinking": "lumiliit",
@@ -1463,7 +1504,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Fish Tank 6-validated_2019": {
           "shrinking": "lumiliit",
@@ -1499,7 +1541,8 @@
           "moving north": "gumagalaw sa hilaga",
           "moving south": "gumagalaw sa timog",
           "moving west": "gumagalaw sa kanluran",
-          "spinning right": "umiikot pakanan"
+          "spinning right": "umiikot pakanan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "OPD-K5-spritelab-2": {
           "shrinking": "lumiliit",
@@ -1637,7 +1680,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "Virtual Pet 3_2019": {
           "wandering": "gumagala",
@@ -1677,7 +1721,19 @@
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
           "patrolling": "nagpapatrolya",
-          "moving north2": "gumagalaw pahilaga2"
+          "moving north2": "gumagalaw pahilaga2",
+          "wandering2": "gumagala2",
+          "moving east2": "gumagalaw pasilangan2",
+          "spinning left2": "umiikot pakaliwa2",
+          "spinning right2": "umiikot pakanan2",
+          "shrinking2": "lumiliit2",
+          "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "growing2": "lumalaki2",
+          "moving south2": "gumagalaw patimog2",
+          "swimming left and right2": "kaliwa't kanan ang paglangoy2",
+          "jittering2": "nanginginig2",
+          "moving west2": "gumagalaw pakanluran2",
+          "patrolling2": "nagpapatrol2"
         },
         "Virtual Pet 4": {
           "shrinking": "lumiliit",
@@ -2023,7 +2079,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseE_aboutme_3": {
           "wandering": "gumagala",
@@ -2062,7 +2119,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseE_aboutme_4": {
           "wandering": "gumagala",
@@ -2101,7 +2159,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseE_aboutme_5": {
           "wandering": "gumagala",
@@ -2140,7 +2199,8 @@
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "nagpapatrolya",
@@ -2353,7 +2413,10 @@
           "jittering": "nanginginig",
           "moving west": "gumagalaw sa kanluran",
           "patrolling": "nagpapatrolya",
-          "moving east": "gumagalaw sa silangan"
+          "moving east": "gumagalaw sa silangan",
+          "mystery behavior": "misteryong pag-uugali",
+          "running east": "tumatakbo pasilangan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_events_review": {
           "patrolling": "nagpapatrolya",
@@ -2663,7 +2726,10 @@
           "moving south": "gumagalaw sa timog",
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "mystery behavior": "misteryong pag-uugali",
+          "running east": "tumatakbo pasilangan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "courseF_sprites_properties": {
           "moving east": "gumagalaw sa silangan",
@@ -2842,7 +2908,10 @@
           "moving south": "gumagalaw sa timog",
           "moving north": "gumagalaw sa hilaga",
           "jittering": "nanginginig",
-          "patrolling": "nagpapatrolya"
+          "patrolling": "nagpapatrolya",
+          "mystery behavior": "misteryong pag-uugali",
+          "running east": "tumatakbo pasilangan",
+          "swimming left and right": "kaliwa't kanan ang paglangoy"
         },
         "helloworld_animals_costumes": {
           "moving east": "gumagalaw sa silangan",

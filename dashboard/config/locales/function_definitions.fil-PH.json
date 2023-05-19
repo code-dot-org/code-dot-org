@@ -1345,16 +1345,23 @@
             "parameters": {
               "points": "mga puntos",
               "length": "haba"
-            }
+            },
+            "description": "gumuhit ng bituin na may ibinigay na mga punto at mga gilid ng ibinigay na haba"
           },
           "draw a circle": {
-            "name": "gumuhit ng bilog"
+            "name": "gumuhit ng bilog",
+            "description": "gumuhit ng bilog sa ibinigay na radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "haba",
-              "repeat": "ulitin"
-            }
+              "repeat": "ulitin",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng pinwheel"
           },
           "draw a triangle": {
             "name": "gumuhit ng tatsulok",
@@ -1364,8 +1371,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "haba"
-            }
+              "length": "haba",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng hugis"
           },
           "draw a house": {
             "name": "gumuhit ng bahay",
@@ -1376,8 +1385,21 @@
           "draw a square": {
             "name": "gumuhit ng parisukat",
             "parameters": {
-              "length": "haba"
+              "length": "haba",
+              "sides": "mga gilid"
             }
+          },
+          "small flower": {
+            "name": "maliit na bulaklak"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "MGA LOGIC FLOWER2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "MGA LOGIC FLOWER"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -1386,16 +1408,23 @@
             "parameters": {
               "points": "mga puntos",
               "length": "haba"
-            }
+            },
+            "description": "gumuhit ng bituin na may ibinigay na mga punto at mga gilid ng ibinigay na haba"
           },
           "draw a circle": {
-            "name": "gumuhit ng bilog"
+            "name": "gumuhit ng bilog",
+            "description": "gumuhit ng bilog sa ibinigay na radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "haba",
-              "repeat": "ulitin"
-            }
+              "repeat": "ulitin",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng pinwheel"
           },
           "draw a triangle": {
             "name": "gumuhit ng tatsulok",
@@ -1405,8 +1434,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "haba"
-            }
+              "length": "haba",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng hugis"
           },
           "draw a house": {
             "name": "gumuhit ng bahay",
@@ -1427,16 +1458,23 @@
             "parameters": {
               "points": "mga puntos",
               "length": "haba"
-            }
+            },
+            "description": "gumuhit ng bituin na may ibinigay na mga punto at mga gilid ng ibinigay na haba"
           },
           "draw a circle": {
-            "name": "gumuhit ng bilog"
+            "name": "gumuhit ng bilog",
+            "description": "gumuhit ng bilog sa ibinigay na radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "haba",
-              "repeat": "ulitin"
-            }
+              "repeat": "ulitin",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng pinwheel"
           },
           "draw a triangle": {
             "name": "gumuhit ng tatsulok",
@@ -1446,8 +1484,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "haba"
-            }
+              "length": "haba",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng hugis"
           },
           "draw a house": {
             "name": "gumuhit ng bahay",
@@ -1468,16 +1508,23 @@
             "parameters": {
               "points": "mga puntos",
               "length": "haba"
-            }
+            },
+            "description": "gumuhit ng bituin na may ibinigay na mga punto at mga gilid ng ibinigay na haba"
           },
           "draw a circle": {
-            "name": "gumuhit ng bilog"
+            "name": "gumuhit ng bilog",
+            "description": "gumuhit ng bilog sa ibinigay na radius",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "haba",
-              "repeat": "ulitin"
-            }
+              "repeat": "ulitin",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng pinwheel"
           },
           "draw a triangle": {
             "name": "gumuhit ng tatsulok",
@@ -1487,8 +1534,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "haba"
-            }
+              "length": "haba",
+              "sides": "mga gilid"
+            },
+            "name": "gumuhit ng hugis"
           },
           "draw a house": {
             "name": "gumuhit ng bahay",
@@ -1507,7 +1556,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "gumuhit ng apoy"
+          },
+          "draw fire": {
+            "name": "gumuhit ng apoy"
           }
         },
         "courseC_data wizard_2021": {
@@ -1518,11 +1571,20 @@
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "draw hexagon": {
+            "name": "gumuhit ng hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "gumuhit ng linya ng mga hexagon"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "gumuhit ng parisukat"
+          },
+          "draw ear stems": {
+            "name": "gumuhit ng mga temple ng salamin"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -1553,6 +1615,15 @@
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "staggered squares": {
+            "name": "umuugoy na mga parisukat"
+          },
+          "draw a line of squares": {
+            "name": "gumuhit ng linya ng mga parisukat"
+          },
+          "draw square": {
+            "name": "gumuhit ng parisukat"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -1566,26 +1637,53 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "draw a line of squares": {
+            "name": "gumuhit ng linya ng mga parisukat"
+          },
+          "draw square": {
+            "name": "gumuhit ng parisukat"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "draw a line of squares": {
+            "name": "gumuhit ng linya ng mga parisukat"
+          },
+          "draw square": {
+            "name": "gumuhit ng parisukat"
+          },
+          "staggered squares": {
+            "name": "umuugoy na mga parisukat"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "draw triangle": {
+            "name": "gumuhit ng tatsulok"
+          },
+          "draw line of triangles": {
+            "name": "gumuhit ng linya ng mga tatsulok"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "my design": {
+            "name": "ang aking disenyo"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "my design": {
+            "name": "ang aking disenyo"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -1601,6 +1699,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "gumawa ng kahit ano"
+          },
+          "draw line of polygons": {
+            "name": "gumuhit ng linya ng mga polygon"
+          },
+          "draw polygon": {
+            "name": "gumuhit ng polygon"
           }
         },
         "courseF_apps_collector": {
@@ -2174,6 +2278,18 @@
             "parameters": {
               "length": "haba"
             }
+          },
+          "small flower": {
+            "name": "maliit na bulaklak"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "MGA LOGIC FLOWER2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "MGA LOGIC FLOWER"
           }
         },
         "CourseD_EOC_artist2022": {
@@ -2387,6 +2503,148 @@
         "CourseF_app_computer_-2022-2": {
           "reset game": {
             "name": "i-reset ang laro"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "function 1"
+          },
+          "function 2": {
+            "name": "function 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "potensyal na solusyon"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "pampalakas"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "gumuhit ng bintana"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "gumuhit ng hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "gumuhit ng linya ng mga hexagon"
+          },
+          "staggered squares": {
+            "name": "umuugoy na mga parisukat"
+          },
+          "draw a line of squares": {
+            "name": "gumuhit ng linya ng mga parisukat"
+          },
+          "draw square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "pumili sa daan"
+          },
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          },
+          "get all pumpkins": {
+            "name": "kunin ang lahat ng kalabasa"
+          },
+          "pumpkin square": {
+            "name": "parisukat ng kalabasa"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "pumili sa daan"
+          },
+          "pumpkin square": {
+            "name": "parisukat ng kalabasa"
+          },
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          },
+          "get produce": {
+            "name": "kumuha ng ani"
+          },
+          "get all pumpkins": {
+            "name": "kunin ang lahat ng kalabasa"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "pumili sa daan"
+          },
+          "check for corn": {
+            "name": "tingnan kung may mais"
+          },
+          "corn rectangle": {
+            "name": "parihaba ng mais"
+          },
+          "lettuce stairs": {
+            "name": "hagdan ng litsugas"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          },
+          "get all pumpkins": {
+            "name": "kunin ang lahat ng kalabasa"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "pumili sa daan"
+          },
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          },
+          "get all pumpkins": {
+            "name": "kunin ang lahat ng kalabasa"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "suriin ang parisukat para sa mais"
+          },
+          "get all pumpkins": {
+            "name": "kunin ang lahat ng kalabasa"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "parisukat na hardin"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "parisukat na hardin"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "parisukat na hardin"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "lumipat at kumuha ng nektar sa counter"
           }
         }
       }
