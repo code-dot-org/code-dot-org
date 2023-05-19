@@ -4,7 +4,7 @@ class CreateParentalPermissionRequests < ActiveRecord::Migration[6.1]
       t.references(:user, null: false, type: :integer)
       t.string :parent_email, null: false
       t.string :uuid, null: false, limit: 36
-      t.integer :reminders_sent, null:false, default: 0
+      t.integer :reminders_sent, null: false, default: 0
 
       t.timestamps
     end
