@@ -343,7 +343,6 @@ class UnconnectedMusicView extends React.Component {
   // When the user initiates going to the next panel in the app.
   onNextPanel = () => {
     this.progressManager?.next();
-    this.handlePanelChange();
 
     // Tell the external system (if there is one) about the new level.
     if (this.hasLevels() && this.props.navigateToLevelId) {
