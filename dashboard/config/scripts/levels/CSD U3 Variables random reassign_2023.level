@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:52:55.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -19,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var petalSize;\r\nbackground(\"green\");\r\n\r\npetalSize = 30;\r\n// petals\r\nfill(\"purple\");\r\nellipse(75,100,petalSize,petalSize);\r\nellipse(125,100,petalSize,petalSize);\r\nellipse(100,75,petalSize,petalSize);\r\nellipse(100,125,petalSize,petalSize);\r\n// center\r\nfill(\"yellow\");\r\nellipse(100,100, 50, 50);\r\n\r\npetalSize = 60;\r\n// petals\r\nfill(\"purple\");\r\nellipse(275,300,petalSize,petalSize);\r\nellipse(325,300,petalSize,petalSize);\r\nellipse(300,275,petalSize,petalSize);\r\nellipse(300,325,petalSize,petalSize);\r\n// center\r\nfill(\"yellow\");\r\nellipse(300,300, 50, 50);",
+    "start_blocks": "var petalSize;\r\nbackground(\"green\");\r\n\r\n//1) Update the first flower's petals to be a random size\r\npetalSize = 30;\r\n// petals\r\nfill(\"purple\");\r\nellipse(75,100,petalSize,petalSize);\r\nellipse(125,100,petalSize,petalSize);\r\nellipse(100,75,petalSize,petalSize);\r\nellipse(100,125,petalSize,petalSize);\r\n// center\r\nfill(\"yellow\");\r\nellipse(100,100, 50, 50);\r\n\r\n//2) Update the second flower's petals to be a random size\r\npetalSize = 60;\r\n// petals\r\nfill(\"purple\");\r\nellipse(275,300,petalSize,petalSize);\r\nellipse(325,300,petalSize,petalSize);\r\nellipse(300,275,petalSize,petalSize);\r\nellipse(300,325,petalSize,petalSize);\r\n// center\r\nfill(\"yellow\");\r\nellipse(300,300, 50, 50);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -37,7 +33,7 @@
     "disable_examples": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "free_play": "true",
+    "free_play": "false",
     "validation_enabled": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
@@ -66,20 +62,19 @@
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "encrypted": "false",
-    "rubric_key_concept": "Use variables to store and update information",
     "mini_rubric": "false",
-    "rubric_performance_level_1": "The eyeSize variable is used such that the two eyes have the same random size as instructed, with no other unexpected changes.",
-    "rubric_performance_level_2": "The eyeSize variable is used such that the two eyes have the same random size, but other changes to the code may have introduced other unexpected behaviors.",
-    "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
-    "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to the eyeSize variable, or the variable is used in a way that prevents the program from running.",
-    "long_instructions": "# Changing variable values\r\n\r\n<img src=\"https://images.code.org/d6ba52ebdc60eabdd2a76e5d9f9971ac-image-1566250367449.gif\" style=\"float:right; width:150px;\">\r\n\r\nThese two flowers use a single variable to store their petal size, but the value stored in the variable changes in the middle of the program.\r\n\r\n\r\n# Do this\r\n* Run the program several times to see how it works.\r\n* Discuss the code with your partner.\r\n* Change the program so that the flowers have random petal sizes as in the image.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/d6ba52ebdc60eabdd2a76e5d9f9971ac-image-1566250367449.gif\" style=\"float: right; width:150px;\">\r\n\r\n# Changing variable values\r\n\r\nThese two flowers use a single variable to store their petal size, but the value stored in the variable changes in the middle of the program. Let's update the program so each petal appears with different sizes each time the program is run.\r\n\r\n\r\n# Do This\r\n1) Update the first flower's petals to be a random size\r\n\t- Find the first time the `petalSize` variable is used\r\n    - Drag out a [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block into the right-side of the `petalSize` variable\r\n    - Update the parameters of the [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block\r\n2) Update the second flower's petals to be a random size\r\n\t- Find the second time the `petalSize` variable is used\r\n    - Drag out a [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block into the right-side of the `petalSize` variable\r\n    - Update the parameters of the [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block\r\n    \r\n**Run your code multiple times!** Both flowers should have different petal lengths _and_ they should be different from each other.\r\n",
     "encrypted_examples": "p0S4WjCMW8UHJ682YifI3RMSZ9E9gfH2KSZVUvEwkU2ep0EBDFCbR8gbpvzP\n4XEMtuWfCw/Qc6G/RRysAdWenw==\n",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:52:55.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:55.480+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables random reassign_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables random reassign_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:55.480+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables random reassign_2022\\\"\"],\"cloned_from\":\"CSD U3 Variables random reassign_2022\"},{\"changed_at\":\"2022-10-12 21:08:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-12 21:08:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 20:10:56 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"rubric_key_concept\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"rubric_performance_level_4\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 20:11:35 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

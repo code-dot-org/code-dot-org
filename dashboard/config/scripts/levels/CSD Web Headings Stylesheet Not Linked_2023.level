@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Debug: Missing Styles\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What is a bug?**]\r\nBugs are mistakes in code which causes it not to work as planned.\r\n:::\r\n\r\n\r\n::: details [**What is debugging?**]\r\nDebugging is the process of finding and fixing bugs.  Debugging is a problem solving process so use your problem solving steps as you try to debug. \r\n:::\r\n\r\n\r\n::: details [**What are some examples of bugs?**]\r\n\r\nBugs can be anything that causes code not to work as planned.  Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\r\n\r\n\r\n:::\r\n\r\n::: details [**Why does the code sometimes turn pink?**]\r\n\r\nWeb Lab is programmed to automatically detect some mistakes in HTML.  When it notices a mistake, it turns that code pink.  The mistake might be in pink, or it might be somewhere before the pink code.  You'll need to carefully debug to find your mistake.\r\n\r\n:::\r\n\r\n::: details [**Why does HTML seem to work even when it's broken?**]\r\n\r\nHTML is read by your web browser to generate web pages. Since people often make little mistakes when writing their web pages, browsers are programmed to make a best guess of what you intended to do. Sometimes different browsers are even programmed to make different guesses! The only way to ensure your code looks like you intend is make sure you're always using tags correctly.\r\n\r\n:::\r\n</div>\r\n\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nHeading 1 color is blue | Heading 1 color is black\r\nHeading 2 color is green | Heading 2 color is black\r\nParagraph font is 12px | Paragraph font is default size\r\n \r\n # Do this\r\n * Find and fix the problem that is causing the bug",
+    "long_instructions": "# Debug: Missing Styles\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nHeading 1 color is blue | Heading 1 color is black\r\nHeading 2 color is green | Heading 2 color is black\r\nParagraph font is 12px | Paragraph font is default size\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
@@ -13,10 +13,12 @@
     "encrypted_examples": "H9wGwp0L3dZjBffG4f77XiRQ5RhayaAlL/hYSYP0erve8hsYphwIRV/hmkZl\nimW76i7mExOuNVxyenddsNS8Tg==\n",
     "reference_links": [
       "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/web-lab",
       "/courses/csd-2022/guides/formatting-html",
       "/courses/csd-2022/guides/lists",
       "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/debugging-html"
     ],
     "map_reference": "/courses/csd-2022/guides/style-sheets",
     "parent_level_id": 18856,
@@ -30,6 +32,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:51.558+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Stylesheet Not Linked_2022\\\"\"],\"cloned_from\":\"CSD Web Headings Stylesheet Not Linked_2022\"},{\"changed_at\":\"2022-09-26 21:00:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:51.558+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Stylesheet Not Linked_2022\\\"\"],\"cloned_from\":\"CSD Web Headings Stylesheet Not Linked_2022\"},{\"changed_at\":\"2022-09-26 21:00:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-18 00:02:26 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

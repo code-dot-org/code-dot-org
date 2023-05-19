@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "cf2c84fe-cbbb-4e69-8650-5c0dbd937855"
-        },
-        {
-          "notice": "Nominate A Student for Student Insight Groups!",
-          "details": "Do you know of CS Principles students who identify as female or nonbinary, and/or as members of underrepresented racial and ethnic groups? Code.org is recruiting currently enrolled CSP students to participate in our CSP Student Insight Groups for the 22-23 school year. Students who join these groups will meet monthly during the school year to discuss their experiences with the CSP curriculum and provide feedback to our team. If you have students who meet the criteria and would be interested, please complete this nomination form by September 23rd. ",
-          "link": "https://docs.google.com/forms/d/e/1FAIpQLSfS1bvQ3rRx9F5UbdBkXOWSTdONhtReAvIcZUdJR873BVn0Tg/viewform",
-          "type": "bullhorn",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn More",
-          "key": "1538091b-a1c5-461a-936e-0a93f1508835"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:51 UTC",
+    "serialized_at": "2022-12-06 15:28:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -987,7 +977,7 @@
       "key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 1. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
       },
       "seeding_key": {
         "activity_section.key": "63a85b8b-4764-41c2-ac27-7b556c8b34c3",
@@ -1067,7 +1057,7 @@
       "key": "5a8a5afe-ace3-4092-a972-eab5e1bc215c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 6-10:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 6. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
         "name": "App Investigation",
         "tips": [
           {
@@ -4442,7 +4432,7 @@
     {
       "key": "83010a59-0e11-47a9-a4ca-124c18fb013c",
       "properties": {
-        "description": "Use the speed slider, break points, and documentation as part of the debugging process"
+        "description": "Use the speed slider, error messages, and documentation as part of the debugging process"
       },
       "seeding_key": {
         "lesson.key": "Debugging",

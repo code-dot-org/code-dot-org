@@ -8,7 +8,7 @@ const DEFAULT_PROPS = {
   isEditable: true,
   onCommentChange: () => {},
   comment: 'Good Work!',
-  placeholderText: 'Add your comment here'
+  placeholderText: 'Add your comment here',
 };
 
 describe('Comment', () => {

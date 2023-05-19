@@ -76,9 +76,7 @@ class ImageLibTest < ActiveSupport::TestCase
     png = ImageLib.to_png(original_jpg)
 
     tmp_path = '/tmp/image.png'
-    File.open(tmp_path, 'wb') do |file|
-      file.write png
-    end
+    File.binwrite(tmp_path, png)
 
     assert_equal 'PNG', MiniMagick::Image.read(png).info(:format)
 
@@ -100,7 +98,7 @@ class ImageLibTest < ActiveSupport::TestCase
       end
     end
     result.strip!
-    '0' == result
+    result == '0'
   end
 
   # Helper function to evaluate and return output to stderr.

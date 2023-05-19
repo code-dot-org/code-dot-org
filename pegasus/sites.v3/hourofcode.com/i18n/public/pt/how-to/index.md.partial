@@ -74,7 +74,7 @@ Promova a sua Hora do Código para outros professores que também possam querer 
 
 ### Avise os voluntários ao registrar o seu evento
 
-Quando você <a href="/#join">se increver no evento Hour of Code</a>, você vai receber um e-mail com informações úteis, notícias e dicas para promover sessões bem-sucedidas do Hour of Code. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
+Quando você [se increver no evento Hour of Code](/#join), você vai receber um e-mail com informações úteis, notícias e dicas para promover sessões bem-sucedidas do Hour of Code. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
 
 ### Entusiasme seus alunos 
 
@@ -113,7 +113,7 @@ Não tem problema se você e os seus alunos são novos na ciência da computaç�
 
 Guie os alunos para a atividade
 
-- Escreva o link do tutorial em um quadro. Encontre o link listado nas [informações para o tutorial escolhido]({{ urls/learn }}) abaixo da quantidade de participantes.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Quando seus alunos tiverem dificuldades, sinta-se livre para responder:
 
@@ -140,7 +140,6 @@ E se os alunos terminarem mais cedo?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Imprima adesivos "Fiz uma Hora do Código!"]({{ urls/promote_stickers }}) para os alunos.
-- [Encomende camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sua escola.
 - Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!
 
 * * *
@@ -154,6 +153,6 @@ E se os alunos terminarem mais cedo?
 
 ### O que vem depois da Hora do Código?
 
-A ciência da computação não precisa terminar com a Hora do Código! Nosso currículo é baseado na Web e permanentemente gratuito. [Saiba como](/beyond) trazer a ciência da computação para a sua escola e alunos.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

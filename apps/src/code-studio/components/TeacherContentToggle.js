@@ -26,7 +26,7 @@ class TeacherContentToggle extends React.Component {
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenLesson: PropTypes.bool.isRequired,
     isLockedLesson: PropTypes.bool.isRequired,
-    isCodeReviewing: PropTypes.bool
+    isCodeReviewing: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -34,19 +34,13 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-lesson')
-      .appendTo(this.refs.lockMessage)
-      .show();
-    $('#hidden-lesson')
-      .appendTo(this.refs.hiddenMessage)
-      .show();
+    $('#locked-lesson').appendTo(this.refs.lockMessage).show();
+    $('#hidden-lesson').appendTo(this.refs.hiddenMessage).show();
     // Server initially sets level-body visibility to hidden when viewAs=Participant
     // so that participant view doesnt show content while we make async calls. Once
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
-    $('#level-body')
-      .css('visibility', '')
-      .appendTo(this.refs.content);
+    $('#level-body').css('visibility', '').appendTo(this.refs.content);
   }
 
   render() {
@@ -57,18 +51,18 @@ class TeacherContentToggle extends React.Component {
       isLockedLesson,
       isHiddenLesson,
       isBlocklyOrDroplet,
-      isCodeReviewing
+      isCodeReviewing,
     } = this.props;
 
     const frameStyle = {
       position: 'relative',
       zIndex: 1,
       backgroundColor: getComputedStyle(document.body).backgroundColor,
-      height: window.screen.height
+      height: window.screen.height,
     };
 
     let contentStyle = {
-      height: '100%'
+      height: '100%',
     };
     let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
@@ -117,11 +111,11 @@ class TeacherContentToggle extends React.Component {
 
 const styles = {
   container: {
-    height: '100%'
+    height: '100%',
   },
   hidden: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
@@ -155,7 +149,7 @@ export const mapStateToProps = state => {
     hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
     isHiddenLesson,
     isLockedLesson,
-    isCodeReviewing: state.pageConstants?.isCodeReviewing
+    isCodeReviewing: state.pageConstants?.isCodeReviewing,
   };
 };
 

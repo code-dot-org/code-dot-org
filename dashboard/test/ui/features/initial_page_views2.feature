@@ -1,5 +1,4 @@
 @eyes
-@eyes_ie
 Feature: Looking at a few things with Applitools Eyes - Part 2
 
   Background:

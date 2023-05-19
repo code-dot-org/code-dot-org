@@ -15,7 +15,7 @@ public class Evaluate {
   public static void myeval(int x, int y) {
     x = x + y;
     y = y * x;
-    System.out.print(x + " " + y);
+    System.out.println(x + " " + y);
   }
 
   public static void main(String[]args) {
@@ -26,3 +26,5 @@ public class Evaluate {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

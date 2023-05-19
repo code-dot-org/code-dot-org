@@ -11,40 +11,40 @@ module.exports = {
       'functional_greater_than',
       {
         ARG1: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2}),
-        ARG2: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1})
+        ARG2: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1}),
       },
       null
     ),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml: blockUtils.mathBlockXml(
         'functional_greater_than',
         {
           ARG1: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 2
+            NUM: 2,
           }),
           ARG2: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 1
-          })
+            NUM: 1,
+          }),
         },
         null
-      )
+      ),
     },
     {
       description: 'wrong boolean',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, evalMsg.wrongBooleanError());
         return true;
       },
@@ -53,34 +53,34 @@ module.exports = {
         'functional_greater_than',
         {
           ARG1: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 1
+            NUM: 1,
           }),
           ARG2: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 2
-          })
+            NUM: 2,
+          }),
         },
         null
-      )
+      ),
     },
     {
       description: 'question marks',
       expected: {
         result: false,
-        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
+        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD,
       },
       // 1 > ???
       xml: blockUtils.mathBlockXml(
         'functional_greater_than',
         {
           ARG1: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 1
+            NUM: 1,
           }),
           ARG2: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: '???'
-          })
+            NUM: '???',
+          }),
         },
         null
-      )
-    }
-  ]
+      ),
+    },
+  ],
 };

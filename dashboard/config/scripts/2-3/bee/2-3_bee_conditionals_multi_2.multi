@@ -12,3 +12,5 @@ right '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png'
 wrong '/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png'
 
 # http://staging.learn.code.org/s/course2/lessons/6/levels/18
+
+allow_multiple_attempts true

@@ -349,11 +349,11 @@ class SourcesTest < FilesApiTestBase
 
   def test_restore_main_json_version
     # Write version 1
-    v1_data = {"source": "//version 1"}.stringify_keys
+    v1_data = {source: "//version 1"}.stringify_keys
     v1_version_id = put_main_json(v1_data)
 
     # Write version 2
-    v2_data = {"source": "//version 2"}.stringify_keys
+    v2_data = {source: "//version 2"}.stringify_keys
     v2_version_id = put_main_json(v2_data)
 
     # Restore version 1
@@ -390,13 +390,13 @@ class SourcesTest < FilesApiTestBase
 
     # Upload main.json version 1
     v1_parsed = {
-      "source": "//version 1",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 1",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "Test animation",
-            "version": animation_v1_vid
+            name: "Test animation",
+            version: animation_v1_vid
           }
         }
       }
@@ -408,13 +408,13 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json
     main_json_v2 = {
-      "source": "//version 2",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 2",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "Test animation",
-            "version": animation_v2_vid
+            name: "Test animation",
+            version: animation_v2_vid
           }
         }
       }
@@ -475,14 +475,14 @@ class SourcesTest < FilesApiTestBase
 
     # Upload main.json version 1
     v1_parsed = {
-      "source": "//version 1",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 1",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "fly_bot_1",
-            "sourceUrl": "/api/v1/animation-library/MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT/category_characters/fly_bot.png",
-            "version": "MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT"
+            name: "fly_bot_1",
+            sourceUrl: "/api/v1/animation-library/MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT/category_characters/fly_bot.png",
+            version: "MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT"
           }.stringify_keys
         }.stringify_keys
       }.stringify_keys
@@ -494,14 +494,14 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json
     main_json_v2 = {
-      "source": "//version 2",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 2",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "Test animation",
-            "sourceUrl": nil,
-            "version": animation_v2_vid
+            name: "Test animation",
+            sourceUrl: nil,
+            version: animation_v2_vid
           }
         }
       }
@@ -581,19 +581,19 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json
     main_json_v1 = {
-      "source": "//version 1",
-      "animations": {
-        "orderedKeys": [animation_key_1, animation_key_2],
-        "propsByKey": {
+      source: "//version 1",
+      animations: {
+        orderedKeys: [animation_key_1, animation_key_2],
+        propsByKey: {
           "#{animation_key_1}": {
-            "name": "Remix First",
-            "sourceUrl": nil,
-            "version": animation_1_vid
+            name: "Remix First",
+            sourceUrl: nil,
+            version: animation_1_vid
           },
           "#{animation_key_2}": {
-            "name": "Remix Second",
-            "sourceUrl": nil,
-            "version": animation_2_vid
+            name: "Remix Second",
+            sourceUrl: nil,
+            version: animation_2_vid
           }
         }
       }
@@ -649,14 +649,14 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json
     main_json_v1 = {
-      "source": "Remix Library",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "Remix Library",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "bear_1",
-            "sourceUrl": "https://studio.code.org/api/test/url/category_animals/bear.png",
-            "version": "1234"
+            name: "bear_1",
+            sourceUrl: "https://studio.code.org/api/test/url/category_animals/bear.png",
+            version: "1234"
           }
         }
       }
@@ -692,10 +692,10 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json
     main_json_v1 = {
-      "source": "//version 1",
-      "animations": {
-        "orderedKeys": [],
-        "propsByKey": {}
+      source: "//version 1",
+      animations: {
+        orderedKeys: [],
+        propsByKey: {}
       }
     }.stringify_keys
     put_main_json(main_json_v1)
@@ -732,7 +732,7 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.stubs(:under_13?).returns(user_age < 13)
 
       sources.each do |source|
-        put_main_json({"source": comment_block_sources[source]}.stringify_keys)
+        put_main_json({source: comment_block_sources[source]}.stringify_keys)
 
         # owner sees unchanged
         @api.get_object(MAIN_JSON)
@@ -824,13 +824,13 @@ class SourcesTest < FilesApiTestBase
 
     # Upload main.json version 1 with bad animation version
     v1_parsed = {
-      "source": "//version 1",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 1",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "Test animation v1",
-            "version": version_value
+            name: "Test animation v1",
+            version: version_value
           }
         }
       }
@@ -843,13 +843,13 @@ class SourcesTest < FilesApiTestBase
 
     # Update main.json, with different bad version
     main_json_v2 = {
-      "source": "//version 2",
-      "animations": {
-        "orderedKeys": [animation_key],
-        "propsByKey": {
+      source: "//version 2",
+      animations: {
+        orderedKeys: [animation_key],
+        propsByKey: {
           "#{animation_key}": {
-            "name": "Test animation v2",
-            "version": version_value
+            name: "Test animation v2",
+            version: version_value
           }
         }
       }

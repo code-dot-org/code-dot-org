@@ -38,7 +38,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>《舞會》</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">程式設計設計一款《舞會》遊戲，與親朋好友共用。 與凱蒂·佩里、肖恩·門德斯、 「迪斯可癟三」樂隊、利爾·納斯·X、約拿斯兄弟、妮琪·米娜及其他34餘位大咖一起勁舞！</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>《舞會》</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">程式設計設計一款《舞會》遊戲，與親朋好友共用。 精選碧昂斯、哈裡·斯泰爾斯、麗佐、利爾·納斯、賽琳娜·戈麥斯、迪士尼《魔法滿屋》中的音樂等等！</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>嘗試活動</button></a>
     </span>
   </div>

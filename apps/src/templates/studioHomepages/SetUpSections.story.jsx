@@ -15,7 +15,7 @@ export default storybook =>
             beginEditingSection={action('beginEditingSection')}
             hasSections={false}
           />
-        )
+        ),
       },
       {
         name: 'Set Up Message for Sections - already has section',
@@ -25,6 +25,6 @@ export default storybook =>
             beginEditingSection={action('beginEditingSection')}
             hasSections={true}
           />
-        )
-      }
+        ),
+      },
     ]);

@@ -1,7 +1,6 @@
 /**
  * @overview Constants and enums used across Internet Simulator.
  */
-/* global exports */
 
 /**
  * @type {number}
@@ -57,7 +56,7 @@ exports.BITS_PER_GIGABIT = 1024 * exports.BITS_PER_MEGABIT;
  */
 exports.NodeType = {
   CLIENT: 'client',
-  ROUTER: 'router'
+  ROUTER: 'router',
 };
 
 /**
@@ -68,7 +67,7 @@ exports.NodeType = {
  */
 exports.MessageGranularity = {
   PACKETS: 'packets',
-  BITS: 'bits'
+  BITS: 'bits',
 };
 
 /**
@@ -86,7 +85,7 @@ exports.DnsMode = {
 
   /** An automatic DNS node is added to the simulation.  Nodes are automatically
    *  registered with the DNS on connection. */
-  AUTOMATIC: 'automatic'
+  AUTOMATIC: 'automatic',
 };
 
 /**
@@ -111,7 +110,7 @@ exports.EncodingType = {
 
   /** An encoding used early in the lessons to show that binary isn't always
    *  1s and 0s.  Just like binary, but replaces 1/0 with A/B. */
-  A_AND_B: 'a_and_b'
+  A_AND_B: 'a_and_b',
 };
 
 /**
@@ -122,7 +121,7 @@ exports.NetSimTabType = {
   INSTRUCTIONS: 'instructions',
   MY_DEVICE: 'my_device',
   ROUTER: 'router',
-  DNS: 'dns'
+  DNS: 'dns',
 };
 
 /**
@@ -137,5 +136,5 @@ exports.PacketUIColumnType = {
   TO_ADDRESS: 'toAddress',
   FROM_ADDRESS: 'fromAddress',
   PACKET_INFO: 'packetInfo',
-  MESSAGE: 'message'
+  MESSAGE: 'message',
 };

@@ -1,26 +1,19 @@
 name 'U2L04 Assessment5'
-encrypted '0lsW+/ok8NDFdVNe0igpklPaFQr5KYc3LvA+Q1bQ0SAn/D+V21V5TJKWzsaF
-Pwm7oAL4kQcact1fvhN1Vu32Bsx/Z3ktkRqHnOb0ZvuVajz9FupbwYJtA8io
-q1OD1eKCelyldO71hys4/Syq3SkCxrhaWjsH2kMFSc+WXbv5Yp6ziaHCLzP0
-R5FsR/HT5hensKC8dJR5o5mhZknv5r5AMegZRu0M7UGziOB6NUklyHWmqHXj
-osQO3ekt/EIdcseSaBp0ojzv+CAq4vCuxZGyuvSPQ8nPR5zQTyzstkICnJ/e
-zeKxTnRcda9andH6r3XC8aG5wh/UC+TcPZbniny/y/TeZf//qUk/82PzLly4
-+H/pMeeESsJkgVKV6FjEk5R9tpxN9nheiAhb+H94w+cS6cDqXrSbUrWxSwr2
-pHXBPzVGUtvtUBIcspXqG4RoPnnuSt8AqSDrYUq5upuNcnqjC64pWRW4beNg
-2TosTro0zhvRdjtzTKze1x84tA114OOuBpUgBJtsEYFeioFp0jIcsbugxgvn
-mu6ke09P36Smqy7KZw7e/qbxkP1zn+vgEZ99YbclxRDfE2L87IibvNDzPpSx
-LV/P13DlOWXYQzwOWqbk/UGyzxiDxNZkwZGVBajEgUuTJLoULia5gcrXRFSf
-30HjPhOdbyx/f0L34FD9SMYoh2rd7NrUmcoOk735UqAXw1X5Tloz4xDbJP7J
-Fg49rCr/F8OhIpRP9CduUw4TDrT1ReWzfB9TUI1CE/NTqzOJze5djnQF2X1k
-gHF8GeM3UIxgsJR1PLW7VfnsCAit9N1IUnf4wCSwqP/MD/ldtCKz9bSRc8iD
-an+ny1WFp5XPmDpG4kOE9LQ2s1tYZ5vH6jJkXhiVcO2rLkvaDaby0MwrSdSx
-Jf9ZU6OCXwqkn4CNJCZNNiTsgx2ALJldGz8G26LpMl4Md7vtGQqvFBEjWQcs
-zip7lxGd08Vv+3aPvKS+PsxVH2SwcUVTyT2UlwZBIPjkd/cZgYvzE8magJ2r
-kAJ9NaU8KlTkMAuWqbBKzayfExYP0P2jBLLMi532y74zijd+7EhwhdfSiGuT
-JbAIQ87XIUH7JW4oou4Ppvg0nawvp79i2zkaaq4g0gUjU3ueniXpjHwhpFGw
-LQl6kGhKofXg4Z5TOjXDdgwDjOdce26HcJQHjm+kD55Krvk4t+67dPrbwk84
-nGB0+SiA2jlkr2A9JmPXgZsGt51ok7xnvuMPfPDg9CacyMpuR1eZH9MyZUKb
-7TNc4/YRAaGb/jimZSVlvL7boA01VftZPPJFI8b6snwX62x6oprm6o7iW7YT
-eRyOKumpG0cUfR9VXtwovtF/M/Yj1LFhRrO/NWVNrO1XlcoZVILgW/HwZGqJ
-5o2Ga9KHADldQ6UfCGOpBbqUSDlUimyJc9ZFxE4wlM4DQcGRtQ==
-'
+title 'Routers and Redundancy: Question 3'
+type 'multi2'
+height 'auto'
+
+question 'Which two of the following statements are true about routing on the Internet.'
+wrong 'Information travelling between two computers over the Internet will always take the same path.'
+wrong 'Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.'
+wrong 'There is one router which receives and redirects all the traffic of the Internet.'
+right 'A packet travelling between two computers on the Internet may be rerouted many times along the way.'
+right 'A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.'
+teacher_markdown <<MARKDOWN
+Answers:
+
+- D: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+- E: A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+MARKDOWN
+
+allow_multiple_attempts true

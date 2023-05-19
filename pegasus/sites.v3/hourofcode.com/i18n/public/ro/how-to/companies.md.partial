@@ -1,12 +1,12 @@
 ---
-title: Ghidul Hour of Code pentru companii
+title: Ghidul Hour of Code pentru Societăți
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Cum se poate implica compania ta în Hour of Code
+# Cum se poate implica societatea ta în Hour of Code
 
 ### Află cum tu și angajații tăi puteți fi surse de inspirație pentru elevii care vor încerca să învețe știința calculatoarelor!
 
@@ -18,41 +18,41 @@ Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a
 
 Verificați pașii de mai jos pentru a începe și citiți ghidul nostru [pentru partenerii corporativi](/files/hoc-corporate-toolkit.pdf) pentru mai multe informații despre cum să vă entuziasmați societatea pentru Hour of Code.
 
-- [Încurajează angajații să facă voluntariat la o clasă](#encourage-employees)
-- [Pune compania ta în legătură cu o școală](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Găzduiește propriul eveniment Hour of Code](#host-hour-of-code)
 - [Promoveaza evenimentul Hour of Code](#promote-hour-of-code)
 - [Mai multe modalități de a susține Hour of Code](#support-hour-of-code)
 
 * * *
 
-<a id="encourage-employees"></a>
-
-## Încurajează angajații să facă voluntariat la o clasă
-
-[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
-
-Unul dintre cele mai satisfăcătoare moduri de a participa la Hour of Code este să vă oferiți voluntar într-o clasă locală, fie în persoană, fie virtual. Cel mai bun lucru de știut, nu trebuie să fiți inginer pentru a fi voluntar. Puteți oferi în continuare o experiență semnificativă elevilor, împărtășind propria experiență profesională și modul în care Informatica sau tehnologia au influențat rolul dumneavoastră.
-
-[<button>Înscrie-te ca voluntar</button>]({{ urls/volunteer }})
-
-Imediat după înregistrarea unui voluntar, profilul acestuia poate fi revizuit de un profesor pe hartanoastră[a voluntarilor](https://code.org/volunteer/local) - deci profilurile trebuie depuse cât mai complete posibil. Dacă sunteți potrivit pentru clasă, veți fi contactat de un profesor prin platformă (niciodată nu vom partaja adresa dv. de email cu profesorul). Apoi, puteți coordona detaliile direct cu profesorul [în legătură cu cel mai bun mod de a fi voluntar în clasă](https://hourofcode.com/us/how-to/volunteers).
-
-Pentru mai multe îndrumări cu privire la voluntariat și exemple de mesaje pentru a vă entuziasma compania cu privire la Hour of Code, verificați ghidul [nostru pentru parteneri corporativi]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
 <a id="connect-with-a-school"></a>
 
-## Pune compania ta în legătură cu o școală
+## Conectați-vă cu o școală locală
 
-Nu trebuie să utilizați harta noastră a voluntarilor pentru a vă conecta cu o clasă sau școală. Adeseori, recomandăm să începeți pe plan local. Luați în considerare dacă există școli cu care dumneavoastră sau angajații dumneavoastră au o legătură puternică, cum ar fi o alma mater, școala unui copil sau o organizație sau o școală care se concentrează pe deservirea unei populații care, din punct de vedere istoric, a fost subreprezentată în domeniul informaticii.
+Întotdeauna este mai bine să începeți la nivel local, cu școlile cu care dumneavoastră sau angajații dumneavoastră aveți o legătură puternică, cum ar fi un alma mater (universitate, școală sau colegiu urmate anterior), școala unui copil sau o organizație locală ori o școală care susține o populație subreprezentată din punct de vedere istoric, in domeniul IT.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-De acolo, puteți vizita site-ul web al școlii pentru a găsi persoanele de contact adecvate cărora să vă adresați, cum ar fi administratorii, directorul sau directorul adjunct, instructorii de tehnologie sau de informatică, sau chiar asociația PTSA a școlii. De asemenea, puteți să deveniți partener cu organizații precum Cluburile de Băieți & Fete din America, o filială a YMCA, ba mai mult să fiți co-gazda unui eveniment.
+De acolo, puteți vizita site-ul web al școlii pentru a găsi persoanele de contact adecvate cărora să vă adresați, cum ar fi directorul, directorul adjunct, profesorii de tehnologie, de informatică sau chiar asociației de părinți, elevi și profesori a școlii. Puteți, de asemenea, să vă asociați cu organizații precum Boys & Girls Clubs of America, o filială YMCA și multe altele pentru a găzdui împreună un eveniment.
 
-Dacă nu vă puteți conecta cu o școală, vă rugăm să ne [contactați](https://support.code.org/hc/en-us/requests/new), iar noi vă vom face legătura cu unul dintre partenerii noștri locali dacă este posibil.
+Dacă nu reușiți să vă conectați cu o școală, vă rugăm să accesați [contactați-ne](https://support.code.org/hc/en-us/requests/new) și vă vom pune în legătură cu unul dintre partenerii noștri locali, dacă este posibil.
+
+* * *
+
+<a id="encourage-employees"></a>
+
+## Încurajați angajații să facă voluntariat la o clasă
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+Una dintre cele mai satisfăcătoare modalități de a participa la Hour of Code este de a fi voluntar la o clasă locală, fie în persoană, fie virtual. Cel mai bun lucru este că nu trebuie să fiți inginer pentru a fi voluntar. Puteți oferi în continuare o experiență semnificativă studenților prin împărtășirea propriei experiențe profesionale și a modului în care CS sau tehnologia a influențat rolul dumneavoastră.
+
+[<button>Înscrie-te ca voluntar</button>]({{ urls/volunteer }})
+
+Odată ce un voluntar se înregistrează, profesorul îi poate examina profilul pe harta noastră [carta voluntarilor](https://code.org/volunteer/local) - astfel încât profilurile ar trebui să fie trimise cât mai complete posibil. Dacă vă potriviți clasei lor, un profesor vă va contacta prin intermediul platformei (nu vom împărtăși niciodată adresa dvs. de e-mail cu profesorul). Apoi puteți stabili detaliile direct cu profesorul în legătură cu [cum să vă oferiți cel mai bine ca voluntar în clasa lor](https://hourofcode.com/us/how-to/volunteers).
+
+Pentru mai multe detalii privind voluntariatul și exemple de mesaje pentru a vă entuziasma compania cu privire la Hour of Code, consultați [ghidul pentru partenerii corporativi]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -85,7 +85,6 @@ Există evenimente [virtuale](https://hourofcode.com/us/how-to/virtual) sau cu p
 - Explică modul în care tehnologia are impact asupra vieții noastre, cu exemple care să îi intereseze pe cursanții din toate mediile - vorbește despre tehnologii care salvează vieți, care îi ajută pe oameni, care îi conectează.
 - Dacă reprezinți o companie de tehnologie, fă demonstrații în care să utilizezi produse amuzante și inovatoare la care lucrează compania ta. Dacă nu reprezinți o astfel de companie, discută despre modul în care compania ta folosește tehnologia pentru a rezolva probleme și a-și atinge obiectivele.
 - Invită IT-iști din compania ta să vorbească despre motivul alegerii carierei lor și despre proiectele la care lucrează.
-- Dacă ai un grup de angajați care vor facilita evenimentul sau care vor fi voluntari la o școală locală, ia în considerare posibilitatea de a comanda [tricouri personalizate pentru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) grupul tău.
 
 ### 3. Planifică nevoile tehnologice
 
@@ -138,7 +137,7 @@ Una dintre cele mai bune modalități prin care poți fi de ajutor este să le s
 
 ### 1. Înregistrează-ți evenimentul
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
+Atunci când vă înscrieți la [evenimentul Hour of Code](/#join), veți primi comunicări folositoare prin email cu știri și sfaturi pentru găzduirea unei Hour of Code reușite. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
 
 ### 2. Postează pe rețelele de socializare
 
@@ -165,7 +164,7 @@ Popularizează mișcarea care promovează știința calculatoarelor cu ajutorul 
 - Dacă prima ta linie de cod ți-a schimbat viața, ajută-i pe participanți să programeze în cadrul primului lor eveniment #HourOfCode https://code.org/volunteer
 - Dacă ai învățat să programezi - care este povestea ta? Fii o sursă de inspirație pentru un alt cursant cu ajutorul primului său eveniment #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Află mai multe</a> despre postere, videoclipuri, autocolante și alte modalități de promovare a evenimentului în comunitate.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

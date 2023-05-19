@@ -435,6 +435,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson.expects(:get_localized_property).with(:overview)
     lesson.expects(:get_localized_property).with(:purpose)
     lesson.expects(:get_localized_property).with(:preparation)
+    lesson.expects(:get_localized_property).with(:assessment_opportunities)
 
     lesson.summarize_for_lesson_show(create(:user), false)
   end
@@ -900,8 +901,8 @@ class LessonTest < ActiveSupport::TestCase
 
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
-      Script.any_instance.stubs(:write_script_json)
-      Script.stubs(:merge_and_write_i18n)
+      Unit.any_instance.stubs(:write_script_json)
+      Unit.stubs(:merge_and_write_i18n)
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
@@ -999,7 +1000,7 @@ class LessonTest < ActiveSupport::TestCase
 
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       create :activity_section, lesson_activity: lesson_activity, description: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
-      create :activity_section, lesson_activity: lesson_activity, tips: [{'markdown': "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]"}, {markdown: "description without resource"}]
+      create :activity_section, lesson_activity: lesson_activity, tips: [{markdown: "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]"}, {markdown: "description without resource"}]
 
       @destination_script.expects(:write_script_json).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
@@ -1281,7 +1282,7 @@ class LessonTest < ActiveSupport::TestCase
       @destination_script.lesson_groups = []
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
+      Unit.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count

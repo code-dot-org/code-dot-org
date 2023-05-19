@@ -44,7 +44,7 @@ const SelectedStudentPairing = ({partnerNames, partnerCount}) => {
 
 SelectedStudentPairing.propTypes = {
   partnerNames: PropTypes.array,
-  partnerCount: PropTypes.number
+  partnerCount: PropTypes.number,
 };
 
 export default SelectedStudentPairing;

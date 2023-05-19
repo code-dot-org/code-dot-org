@@ -100,9 +100,9 @@ module.exports = {
       'grass',
       'grass',
       'grass',
-      'grass'
+      'grass',
     ],
-    verificationFunction: function(verificationAPI) {
+    verificationFunction: function (verificationAPI) {
       return verificationAPI.solutionMapMatchesResultMap([
         '',
         '',
@@ -203,7 +203,7 @@ module.exports = {
         '',
         '',
         '',
-        ''
+        '',
       ]);
     }.toString(),
     blocksToStore: [
@@ -306,10 +306,10 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
 
-    houseBottomRight: [5, 5]
+    houseBottomRight: [5, 5],
   },
   houseC: {
     groundPlane: [
@@ -412,7 +412,7 @@ module.exports = {
       'grass',
       'grass',
       'grass',
-      'grass'
+      'grass',
     ],
     groundDecorationPlane: [
       '',
@@ -514,7 +514,7 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
     actionPlane: [
       '',
@@ -616,7 +616,7 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
     verificationFunction:
       'function (verificationAPI) {\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "any", "any", "any", "any", "", "", "", "",\r\n              "", "", "any", "", "", "", "any", "", "", "",\r\n              "", "", "any", "any", "", "", "any", "", "", "",\r\n              "", "", "", "any", "", "", "any", "", "", "",\r\n              "", "", "", "any", "any", "any", "any", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", ""\r\n            ]);\r\n}',
@@ -723,10 +723,10 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
 
-    houseBottomRight: [5, 5]
+    houseBottomRight: [5, 5],
   },
   houseB: {
     groundPlane: [
@@ -829,7 +829,7 @@ module.exports = {
       'grass',
       'grass',
       'grass',
-      'grass'
+      'grass',
     ],
     verificationFunction:
       'function (verificationAPI) {\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "", "any", "any", "any", "", "", "", "",\r\n              "", "", "", "any", "", "any", "", "", "", "",\r\n              "", "", "", "any", "", "any", "", "", "", "",\r\n              "", "", "", "any", "", "any", "any", "", "", "",\r\n              "", "", "", "any", "", "", "any", "", "", "",\r\n              "", "", "", "any", "", "", "any", "", "", "",\r\n              "", "", "", "any", "any", "any", "any", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", "",\r\n              "", "", "", "", "", "", "", "", "", ""\r\n            ]);\r\n}',
@@ -935,7 +935,7 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
     actionPlane: [
       '',
@@ -1037,10 +1037,10 @@ module.exports = {
       '',
       '',
       '',
-      ''
+      '',
     ],
     playerStartPosition: [3, 7],
 
-    houseBottomRight: [5, 6]
-  }
+    houseBottomRight: [5, 6],
+  },
 };

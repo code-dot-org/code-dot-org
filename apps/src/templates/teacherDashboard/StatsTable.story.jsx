@@ -4,22 +4,22 @@ import {UnconnectedStatsTable as StatsTable} from './StatsTable';
 const students = [
   {
     id: 1,
-    name: 'Student B'
+    name: 'Student B',
   },
   {
     id: 2,
-    name: 'Student C'
+    name: 'Student C',
   },
   {
     id: 3,
-    name: 'Student A'
-  }
+    name: 'Student A',
+  },
 ];
 
 const studentsCompletedLevelCount = {
   1: 2,
   2: 3,
-  3: 1
+  3: 1,
 };
 
 export default storybook =>
@@ -33,6 +33,6 @@ export default storybook =>
           students={students}
           studentsCompletedLevelCount={studentsCompletedLevelCount}
         />
-      )
-    }
+      ),
+    },
   ]);

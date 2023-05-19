@@ -21,8 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## CS ప్రాధమిక అంశాలలో అన్‌ప్లగ్డ్ పాఠాలు 2021-22
-కింది పాఠాలు ఇందులో పొందవచ్చు <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS ప్రాధమిక అంశాలు 2021-22</a>. <br><br>
+## Unplugged lessons in CS Fundamentals 2022-23
+The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -106,15 +106,15 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
   <tr>
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. ఒక ప్రోగ్రామ్ రాసేటప్పుడు మనకు ఎల్లప్పుడు మనకు అవసరమైన సమాచారమంతా ఉండదు. మీ కోడ్ రన్ అయినప్పడు ఏ పరిస్థితి వాస్తవమైందో మీకు తెలియక పోయినప్పటికీ, కొన్నిసార్లు మీరు ఒక పరిస్థితి కంటే మరొక దానిలో ఏదైనా భిన్నమైనది చేయాలని మీకు అనుకుంటారు. ఇక్కడే కండిషనల్స్ ప్రవేశిస్తాయి. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. ఫంక్షన్లు (కొన్నిసార్లు ప్రొసీజర్స్ అని పిలువబడతాయి) మినీ ప్రోగ్రామ్‌లు, వీటిని మీరు మీ పెద్ద ప్రోగ్రామ్ లోపల మళ్లీ మళ్లీ ఉపయోగించవచ్చు. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Course E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. ఫంక్షన్లు (కొన్నిసార్లు ప్రొసీజర్స్ అని పిలువబడతాయి) మినీ ప్రోగ్రామ్‌లు, వీటిని మీరు మీ పెద్ద ప్రోగ్రామ్ లోపల మళ్లీ మళ్లీ ఉపయోగించవచ్చు. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
@@ -126,7 +126,7 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. 
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. 
 ఈ పాఠంలో, విద్యార్థులు ఇంటర్నెట్ గుండా ప్రవహిస్తున్నట్లు నటిస్తారు, అదే సమయంలో కనెక్షన్లు, URLలుs, IP అడ్రసులు మరియు DNS గురించి నేర్చుకుంటూ.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 

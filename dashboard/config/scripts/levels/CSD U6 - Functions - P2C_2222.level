@@ -25,10 +25,10 @@
       "console.log": null,
       "functionParams_n": null,
       "comment": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -50,7 +50,8 @@
       "setText": null,
       "setPosition": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "colorLeds[0].pulse": null
     },
     "edit_code": true,
     "embed": "false",
@@ -93,7 +94,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20576,
     "name_suffix": "_2222",
     "map_reference": "/courses/csd-2022/guides/functions",
@@ -110,13 +111,13 @@
     "encrypted_examples": "HOAoxKRFC16n6lOq4EnmSixj2Y+2C03N1pKr0viUquotH1bbcxgSXsYcOeyu\nRCuDMhJvWD36EnSHg2+64h5LqQ==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 41,
-  "created_at": "2022-04-08T17:10:17.000Z",
-  "user_id": 324,
   "published": true,
+  "created_at": "2022-04-08T17:10:17.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:17.128+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2C_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2C_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:10:17.128+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2C_2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2C_2022\"},{\"changed_at\":\"2023-02-17 21:30:44 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

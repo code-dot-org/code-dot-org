@@ -7,3 +7,5 @@ wrong 'Days when certain items sell the most.'
 markdown <<MARKDOWN
 A bakery collects data on sales. Each sales record includes the date of the sale and some metadata about the items that were part of the sale.  The data includes: the names of the items sold, the types of items sold, the number of each item sold, and the price of each item sold. Which of the following **CANNOT** be determined from the bakery\'s data set?
 MARKDOWN
+
+allow_multiple_attempts true

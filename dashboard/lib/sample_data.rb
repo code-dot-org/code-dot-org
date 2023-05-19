@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class SampleData
   SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze
@@ -138,7 +138,7 @@ class SampleData
   #  :use_imperfect_results - if true, generate some less than perfect
   #    results. (CSF allows imperfect results, CSD and CSP do not.)
   def self.create_section(options)
-    script = Script.get_from_cache(options[:script_name])
+    script = Unit.get_from_cache(options[:script_name])
     level_count = script.script_levels.count
 
     # Create the section

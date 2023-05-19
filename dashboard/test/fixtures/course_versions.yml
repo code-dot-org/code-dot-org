@@ -3,7 +3,7 @@ hour-of-code-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 2
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2022-04-22 05:13:21.000000000 Z
@@ -21,7 +21,7 @@ events-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 4
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &4 2022-04-22 05:19:37.000000000 Z
@@ -38,7 +38,7 @@ jigsaw-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 7
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &6 2022-04-22 05:20:12.000000000 Z
@@ -55,7 +55,7 @@ hourofcode-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 367
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &8 2022-04-22 05:20:10.000000000 Z
@@ -72,7 +72,7 @@ starwars-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 423
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &10 2022-04-22 05:21:00.000000000 Z
@@ -89,7 +89,7 @@ frozen-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 355
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &12 2022-04-22 05:20:05.000000000 Z
@@ -106,7 +106,7 @@ playlab-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 394
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &14 2022-04-22 05:20:37.000000000 Z
@@ -123,7 +123,7 @@ artist-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 77
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &16 2022-04-22 05:13:49.000000000 Z
@@ -140,7 +140,7 @@ algebra-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 50
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &18 2022-04-22 05:13:31.000000000 Z
@@ -157,7 +157,7 @@ flappy-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 6
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &20 2022-04-22 05:20:03.000000000 Z
@@ -174,7 +174,7 @@ flappy-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &22 2022-04-22 05:13:01.000000000 Z
@@ -191,7 +191,7 @@ course1-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 90
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &24 2022-04-22 05:14:02.000000000 Z
@@ -208,7 +208,7 @@ course2-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 91
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &26 2022-04-22 05:14:04.000000000 Z
@@ -225,7 +225,7 @@ course3-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 92
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &28 2022-04-22 05:14:06.000000000 Z
@@ -242,7 +242,7 @@ course4-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 93
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &30 2022-04-22 05:14:08.000000000 Z
@@ -259,7 +259,7 @@ cspunit1-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 300
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &32 2022-04-22 05:19:16.000000000 Z
@@ -276,7 +276,7 @@ cspunit2-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 301
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &34 2022-04-22 05:19:16.000000000 Z
@@ -293,7 +293,7 @@ cspunit3-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 302
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &36 2022-04-22 05:19:18.000000000 Z
@@ -310,7 +310,7 @@ cspunit4-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 304
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &38 2022-04-22 05:19:22.000000000 Z
@@ -327,7 +327,7 @@ cspunit5-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 306
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &40 2022-04-22 05:19:24.000000000 Z
@@ -344,7 +344,7 @@ cspunit6-unversioned:
   key: unversioned
   display_name: unversioned
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 307
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &42 2022-04-22 05:19:24.000000000 Z
@@ -378,7 +378,7 @@ coursea-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 94
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &46 2022-04-22 05:14:10.000000000 Z
@@ -395,7 +395,7 @@ courseb-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 99
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &48 2022-04-22 05:14:19.000000000 Z
@@ -412,7 +412,7 @@ coursec-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 104
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &50 2022-04-22 05:14:29.000000000 Z
@@ -429,7 +429,7 @@ coursed-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 109
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &52 2022-04-22 05:14:44.000000000 Z
@@ -446,7 +446,7 @@ coursee-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 115
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &54 2022-04-22 05:15:01.000000000 Z
@@ -463,7 +463,7 @@ coursef-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 121
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &56 2022-04-22 05:15:20.000000000 Z
@@ -480,7 +480,7 @@ express-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 342
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &58 2022-04-22 05:19:37.000000000 Z
@@ -497,7 +497,7 @@ pre-express-2017:
   key: '2017'
   display_name: '2017'
   properties: 'null'
-  content_root_type: Script
+  content_root_type: Unit
   content_root_id: 396
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &60 2022-04-22 05:20:40.000000000 Z

@@ -27,6 +27,8 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # امتدادات علوم الكمبيوتر Computer Science Connections
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
@@ -40,9 +42,9 @@ They're perfect for teachers who'd like to incorporate computer science into the
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
 <aside>
-  <h3><strong>Feedback</strong></h3>
+  <h3><strong>الملاحظات</strong></h3>
   <p>This is a beta version of our new CS Connections curriculum. We're still adding our finishing touches to these lessons. Do you have any feedback you'd like to share?</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>Give feedback</button></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJMEBHXFcBQjkztOrZcrE9O9uuOqxGNZQ-F_v9QWjLtevv9w/viewform?usp=sf_link" target="_blank" rel="noreferrer"><button>إعطاء ملاحظات</button></a>
 </aside>
 
 {{ csc_module, title: "Marine Life Ecosystems (beta)", image: "/images/csc/landing/module_marine_life.png", grades: "3-5", subject: "Science", duration: "4 hours", description: "Restore balance to a marine life ecosystem on the verge of overfishing.", button_text: "Learn more", url: "https://studio.code.org/s/csc-ecosystems-2022" }}
@@ -51,7 +53,7 @@ They're perfect for teachers who'd like to incorporate computer science into the
 {{ csc_module, title: "Time Capsule (beta)", image: "/images/csc/landing/module_time_capsule.png", grades: "3-5", subject: "Social Studies", duration: "4 hours", description: "Create an immersive time capsule experience and share your story of now.", button_text: "Learn more", url: "https://studio.code.org/s/csc-timecapsule-2022" }}
 {{ clearfix }}
 
-## Sample Projects
+## نماذج مشاريع
 
 Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 
@@ -77,3 +79,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>هل أنهيت نشاط CS Connection و / أو تبحث عن المزيد من الخيارات لصفك الدراسي؟ يرجى <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank"> مشاركة ملاحظاتك </a> وأفكارك لمزيد من الدروس هنا!</em>
+
+{{ visit_partial_event_logger }}

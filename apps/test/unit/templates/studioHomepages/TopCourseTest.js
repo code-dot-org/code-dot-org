@@ -1,7 +1,10 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {
+  // assert,
+  expect,
+} from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import Button from '@cdo/apps/templates/Button';
@@ -49,40 +52,42 @@ describe('TopCourse', () => {
     );
   });
 
-  it('shows blue image when it is a professional learning course', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <TopCourse
-          assignableName={topCourse.assignableName}
-          lessonName={topCourse.lessonName}
-          linkToOverview={topCourse.linkToOverview}
-          linkToLesson={topCourse.linkToLesson}
-          isProfessionalLearningCourse={true}
-        />
-      </Provider>
-    );
-
-    assert.include(
-      wrapper.find('img').props().src,
-      'small_blue_icons_fullwidth'
-    );
-  });
-
-  it('shows purple image when it is a student facing course', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <TopCourse
-          assignableName={topCourse.assignableName}
-          lessonName={topCourse.lessonName}
-          linkToOverview={topCourse.linkToOverview}
-          linkToLesson={topCourse.linkToLesson}
-        />
-      </Provider>
-    );
-
-    assert.include(
-      wrapper.find('img').props().src,
-      'small_purple_icons_fullwidth'
-    );
-  });
+  // TODO: for now we switched off this functionality. However once we turn this back on we'll need to make this test
+  // TODO: working again
+  // it('shows blue image when it is a professional learning course', () => {
+  //   const wrapper = mount(
+  //     <Provider store={store}>
+  //       <TopCourse
+  //         assignableName={topCourse.assignableName}
+  //         lessonName={topCourse.lessonName}
+  //         linkToOverview={topCourse.linkToOverview}
+  //         linkToLesson={topCourse.linkToLesson}
+  //         isProfessionalLearningCourse={true}
+  //       />
+  //     </Provider>
+  //   );
+  //
+  //   assert.include(
+  //     wrapper.find('img').props().src,
+  //     'small_blue_icons_fullwidth'
+  //   );
+  // });
+  //
+  // it('shows purple image when it is a student facing course', () => {
+  //   const wrapper = mount(
+  //     <Provider store={store}>
+  //       <TopCourse
+  //         assignableName={topCourse.assignableName}
+  //         lessonName={topCourse.lessonName}
+  //         linkToOverview={topCourse.linkToOverview}
+  //         linkToLesson={topCourse.linkToLesson}
+  //       />
+  //     </Provider>
+  //   );
+  //
+  //   assert.include(
+  //     wrapper.find('img').props().src,
+  //     'small_purple_icons_fullwidth'
+  //   );
+  // });
 });

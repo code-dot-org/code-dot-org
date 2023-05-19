@@ -8,7 +8,7 @@
     {
       "name": "Profile Object",
       "description": "Creates an object to store profile information",
-      "code": "```\nvar myProfile = {\r\n\t\"name\": \"Michelle\",\r\n    \"age\": \"17\",\r\n    \"interests\": \"Computer science, playing music, basketball\",\r\n    \"favorite food\": \"seafood tacos\"\r\n}\n```",
+      "code": "```\nvar myProfile = {\n\t\"name\": \"Michelle\",\n    \"age\": \"17\",\n    \"interests\": \"Computer science, playing music, basketball\",\n    \"favorite food\": \"seafood tacos\"\n}\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -17,7 +17,7 @@
     {
       "name": "Choose Your Own Adventure",
       "description": "Using objects to start a choose your own adventure game",
-      "code": "```\nvar options = {\r\n\t\"left\": \"You see a giant squid! It looks dangerous at first, but then you start to pet it and it becomes friendly\",\r\n    \"straight\": \"You see a large table with food on it! All of your friends jump out and say 'Surprise! Happy Birthday!'\",\r\n    \"right\": \"You are now outside and it's snowing! You start making a snowman and humming your favorite song to yourself\"\r\n};\r\n\r\nconsole.log(\"There are three doors in front of you - which path will you take? left, right, or straight?\");\r\nvar answer = prompt(\"Enter your choice (left, right, or straight));\r\nvar response = getValue(options, answer);\r\nconsole.log(\"You chose \" + answer + \"! Here's what happens:\");\r\nconsole.log(response);\n```",
+      "code": "```\nvar options = {\n\t\"left\": \"You see a giant squid! It looks dangerous at first, but then you start to pet it and it becomes friendly\",\n    \"straight\": \"You see a large table with food on it! All of your friends jump out and say 'Surprise! Happy Birthday!'\",\n    \"right\": \"You are now outside and it's snowing! You start making a snowman and humming your favorite song to yourself\"\n};\n\nconsole.log(\"There are three doors in front of you - which path will you take? left, right, or straight?\");\nvar answer = prompt(\"Enter your choice (left, right, or straight)\");\nvar response = getValue(options, answer);\nconsole.log(\"You chose \" + answer + \"! Here's what happens:\");\nconsole.log(response);\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -25,7 +25,7 @@
     }
   ],
   "return_value": "An object with the pair \"key\": \"value\" stored in the object",
-  "short_description": "Declare an Object\r\nCategory: Variables",
+  "short_description": "Declare an Object",
   "syntax": "var object = {\"key\": \"value\"};",
   "tips": "- The `keys` in a dictionary must be unique.\r\n\t- For example: `var dictionary = {\"orange\": \"a color\", \"orange\": \"a fruit\"}` would return an error\r\n- Objects are similar to arrays in the following ways:\r\n\t- Both allow you to store a collection of data\r\n\t- You can add elements to both an object and an array\r\n\t- You use a single variable to access the entire collection of variables\r\n- Objects are different from arrays in the following ways:\r\n\t- Arrays store _ordered_ information, and you can access each element by its index in the array\r\n\t- Objects tore _unordered_ information, and you can access each element by it's key value"
 }

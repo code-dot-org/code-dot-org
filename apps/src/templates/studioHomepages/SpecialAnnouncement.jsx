@@ -10,11 +10,11 @@ can be shown to users viewing the site in languages other than English. */
 export default class SpecialAnnouncement extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool,
-    isTeacher: PropTypes.bool
+    isTeacher: PropTypes.bool,
   };
 
   static defaultProps = {
-    isEnglish: true
+    isEnglish: true,
   };
 
   render() {
@@ -22,28 +22,26 @@ export default class SpecialAnnouncement extends Component {
     const headingText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Heading()
-        : i18n.studentAnnouncementSpecial2020Heading()
-      : i18n.intlAnnouncementSpecial2020Heading();
+        : i18n.studentAnnouncementSpecial2023AiLaunchHeading()
+      : i18n.studentAnnouncementSpecial2023AiLaunchHeading(); // replaces International string
     const descriptionText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Body()
-        : i18n.studentAnnouncementSpecial2020Body()
-      : i18n.intlAnnouncementSpecial2020Body();
+        : i18n.studentAnnouncementSpecial2023AiLaunchBody()
+      : i18n.studentAnnouncementSpecial2023AiLaunchBody(); // replaces International string
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
-    const url = isTeacher && isEnglish ? pegasus('/ai') : pegasus('/athome');
+    const url = isTeacher && isEnglish ? pegasus('/ai') : pegasus('/ai');
     const buttonText =
-      isTeacher && isEnglish
-        ? i18n.joinUs()
-        : i18n.studentAnnouncementSpecial2020Button();
+      isTeacher && isEnglish ? i18n.joinUs() : i18n.learnMore();
     const imageUrl =
       isTeacher && isEnglish
         ? pegasus(
             '/shared/images/fill-540x300/announcement/announcement_hoc2020_ai.png'
           )
         : pegasus(
-            '/shared/images/fill-540x300/announcement/announcement_special_fall2020.jpg'
+            '/shared/images/fill-540x300/announcement/announcement_special_ai-launch_2023.png'
           );
 
     return (
@@ -55,8 +53,8 @@ export default class SpecialAnnouncement extends Component {
           {
             id: buttonId,
             url: url,
-            text: buttonText
-          }
+            text: buttonText,
+          },
         ]}
       />
     );

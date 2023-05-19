@@ -52,10 +52,10 @@ def find_mismatched_levels
     else
       matching_levels += 1
     end
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in level: #{path}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in level: #{path}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 

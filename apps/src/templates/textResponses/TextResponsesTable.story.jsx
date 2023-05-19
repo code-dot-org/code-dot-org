@@ -1,6 +1,11 @@
 import React from 'react';
 import TextResponsesTable from './TextResponsesTable';
 
+export default {
+  title: 'TextResponsesTable',
+  component: TextResponsesTable,
+};
+
 const sectionId = 1;
 const responses = [
   {
@@ -10,7 +15,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 1,
     studentName: 'Student A',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 3,
@@ -19,7 +24,7 @@ const responses = [
     lesson: 'Lesson 2',
     studentId: 3,
     studentName: 'Student C',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 1,
@@ -29,31 +34,20 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 2,
     studentName: 'Student B',
-    url: 'http://fake.url'
-  }
+    url: 'http://fake.url',
+  },
 ];
 
-export default storybook =>
-  storybook.storiesOf('TextResponsesTable', module).addStoryTable([
-    {
-      name: 'Text responses table',
-      story: () => (
-        <TextResponsesTable
-          responses={responses}
-          sectionId={sectionId}
-          isLoading={false}
-        />
-      )
-    },
-    {
-      name: 'Empty text responses table',
-      description: 'Displays an empty state message',
-      story: () => (
-        <TextResponsesTable
-          responses={[]}
-          sectionId={sectionId}
-          isLoading={false}
-        />
-      )
-    }
-  ]);
+const Template = args => (
+  <TextResponsesTable sectionId={sectionId} isLoading={false} {...args} />
+);
+
+export const WithResponses = Template.bind({});
+WithResponses.args = {
+  responses: responses,
+};
+
+export const WithoutResponses = Template.bind({});
+WithoutResponses.args = {
+  responses: [],
+};

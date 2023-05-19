@@ -27,11 +27,13 @@ social:
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # Napojení na počítačovou vědu
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
 
-## Modules
+## Moduly
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
@@ -77,3 +79,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Dokončili jste aktivitu Napojení na počítačovou vědu nebo hledáte další možnosti pro svou třídu? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Svou zpětnou vazbu</a> a nápady na další lekce sdílejte prosím tady!</em>
+
+{{ visit_partial_event_logger }}

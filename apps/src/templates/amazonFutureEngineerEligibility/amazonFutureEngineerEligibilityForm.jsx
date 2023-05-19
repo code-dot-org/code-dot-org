@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button, Checkbox} from 'react-bootstrap';
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -10,6 +10,7 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
+import DCDO from '@cdo/apps/dcdo';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -45,11 +46,25 @@ const CSTA_CONSENT_BODY = (
   </span>
 );
 
+const CSTA_PROFESSIONAL_ROLES = [
+  'K-12 Teacher',
+  'Pre-Service Teacher',
+  'School Administrator',
+  'District Administrator',
+  'State Department of Education',
+  'Higher Education Faculty',
+  'Non-Profit',
+  'Corporate',
+  'Other',
+];
+
+const CSTA_GRADE_BANDS = ['K-5', '6-8', '9-12'];
+
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    updateFormData: PropTypes.func
+    updateFormData: PropTypes.func,
   };
 
   constructor(props) {
@@ -59,15 +74,26 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       email: this.props.email,
       inspirationKit: false,
       csta: false,
-      awsEducate: false,
       consentAFE: false,
       consentCSTA: false,
-      errors: {}
+      gradeBands: [false, false, false],
+      professionalRole: '',
+      errors: {},
     };
   }
 
   handleChange = change => {
     this.setState(change);
+  };
+
+  handleRoleChange = change => {
+    this.setState({professionalRole: change.target.value});
+  };
+
+  handleMultiSelectGradeBands = index => {
+    let gradeBands = [...this.state.gradeBands];
+    gradeBands[index] = !gradeBands[index];
+    this.setState({gradeBands});
   };
 
   resetSchool = () =>
@@ -80,8 +106,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       'lastName',
       'inspirationKit',
       'csta',
-      'awsEducate',
-      'consentAFE'
+      'consentAFE',
     ]);
 
     let shippingAddress = {};
@@ -91,7 +116,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
         'street2',
         'city',
         'state',
-        'zip'
+        'zip',
       ]);
     }
 
@@ -100,18 +125,34 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA = {consentCSTA: this.state.consentCSTA};
     }
 
+    let roleCSTA = {};
+    if (this.state.gradeBands || this.state.professionalRole) {
+      let gradeBands = '';
+      for (let i = 0; i < CSTA_GRADE_BANDS.length; i++) {
+        if (this.state.gradeBands[i]) {
+          gradeBands += CSTA_GRADE_BANDS[i] + ', ';
+        }
+      }
+      roleCSTA = {
+        gradesTeaching: gradeBands,
+        primaryProfessionalRole: this.state.professionalRole,
+      };
+    }
+
     let submitData = {
       ...requiredFormData,
       ...shippingAddress,
-      ...consentCSTA
+      ...consentCSTA,
+      ...roleCSTA,
     };
 
     firehoseClient.putRecord({
       study: 'amazon-future-engineer-eligibility',
       event: 'continue',
-      data_json: JSON.stringify(submitData)
+      data_json: JSON.stringify(submitData),
     });
 
+    this.props.updateFormData(submitData);
     this.props.updateFormData(submitData);
   };
 
@@ -122,7 +163,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   checkValidationState = elementId => {
-    return this.state.errors.hasOwnProperty(elementId);
+    return Object.prototype.hasOwnProperty.call(this.state.errors, elementId);
   };
 
   validateRequiredFields = () => {
@@ -191,7 +232,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             defaultValue={this.props.email}
             validationState={
-              this.state.errors.hasOwnProperty('email')
+              Object.prototype.hasOwnProperty.call(this.state.errors, 'email')
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -213,7 +254,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('firstName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'firstName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -225,7 +269,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('lastName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'lastName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -260,29 +307,67 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
           />
           {this.state.csta && (
             <div style={styles.consentIndent}>
-              Since you checked the box above, please consent to sharing your
-              information with the CSTA.
+              <p>
+                Since you checked the box above, please consent to sharing your
+                information with the CSTA.
+              </p>
               <SingleCheckbox
                 name="consentCSTA"
                 label={CSTA_CONSENT_BODY}
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
                 validationState={
-                  this.state.errors.hasOwnProperty('consentCSTA')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'consentCSTA'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
               />
+              {!!DCDO.get('csta-form-extension', true) && (
+                <div>
+                  <p>Tell CSTA a little bit about yourself:</p>
+                  <label
+                    style={styles.descriptiveText}
+                    htmlFor="professionalRoleSelect"
+                  >
+                    What is your current role?
+                  </label>
+                  <select
+                    style={styles.dropdownPadding}
+                    id="professionalRoleSelect"
+                    name="professionalRole"
+                    value={this.state.professionalRole}
+                    onChange={this.handleRoleChange}
+                  >
+                    {CSTA_PROFESSIONAL_ROLES.map(role => (
+                      <option value={role} key={role}>
+                        {role}
+                      </option>
+                    ))}
+                  </select>
+                  <fieldset className="gradebands-group">
+                    <legend style={styles.descriptiveText}>
+                      What grade bands do you teach?
+                    </legend>
+                    {CSTA_GRADE_BANDS.map((grade, index) => (
+                      <Checkbox
+                        style={styles.checkboxItem}
+                        key={index}
+                        checked={this.state.gradeBands[index]}
+                        onChange={() => this.handleMultiSelectGradeBands(index)}
+                      >
+                        <label style={styles.checkboxLabel} htmlFor={grade}>
+                          {grade}
+                        </label>
+                      </Checkbox>
+                    ))}
+                  </fieldset>
+                </div>
+              )}
             </div>
           )}
-          <SingleCheckbox
-            name="awsEducate"
-            label="Send me a free membership to Amazon Web Services Educate to access
-              free content and cloud computing credits to help my students learn
-              to build in the cloud."
-            onChange={this.handleChange}
-            value={this.state.awsEducate}
-          />
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="consentAFE"
@@ -290,7 +375,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             value={this.state.consentAFE}
             validationState={
-              this.state.errors.hasOwnProperty('consentAFE')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'consentAFE'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -314,18 +402,37 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
 const styles = {
   wrong_school: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   sectionBreak: {
-    borderColor: color.teal
+    borderColor: color.teal,
   },
   consentIndent: {
-    marginLeft: '25px'
+    marginLeft: '25px',
   },
   button: {
     backgroundColor: color.orange,
-    color: color.white
-  }
+    color: color.white,
+  },
+  dropdownPadding: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  descriptiveText: {
+    display: 'block',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    fontSize: 14,
+    border: 'none',
+    color: color.dimgray,
+    margin: 0,
+  },
+  checkboxItem: {
+    margin: 5,
+  },
+  checkboxLabel: {
+    paddingLeft: 5,
+  },
 };
 
 const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
@@ -398,5 +505,5 @@ const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
 };
 ShippingAddressFormGroup.propTypes = {
   handleChange: PropTypes.func.isRequired,
-  checkValidationState: PropTypes.func.isRequired
+  checkValidationState: PropTypes.func.isRequired,
 };

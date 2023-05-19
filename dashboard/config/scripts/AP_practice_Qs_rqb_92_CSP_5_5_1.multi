@@ -38,3 +38,5 @@ REPEAT is a concept that, like an IF, is based on a Boolean argument.  It howeve
 NOT is a Boolean operator, but unlike AND and OR, is is not compound.  NOT changes the Boolean value of a single argument.
 LOOP is a concept that, like an IF, is based on a Boolean argument.  It however is not itself a Boolean argument.
 MARKDOWN
+
+allow_multiple_attempts true

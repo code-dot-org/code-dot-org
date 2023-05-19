@@ -12,7 +12,7 @@ var NetSimVizNode = require('./NetSimVizNode');
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizAutoDnsNode = (module.exports = function(useBackgroundAnimation) {
+var NetSimVizAutoDnsNode = (module.exports = function (useBackgroundAnimation) {
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   this.getRoot().addClass('auto-dns-node');

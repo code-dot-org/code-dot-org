@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org కోర్సులను ప్రపంచవ్యాప్తంగా అనేక మిలియన్ల విద్యార్థులు మరియు ఒక మిలియన్ ఉపాధ్యాయులు ఉపయోగస్తున్నారు.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## చరిత్ర
 
 2013 లో, Code.org ను కవల సోదరులైన హాడీ మరియు అలి పర్టోవీ ఒక [కంప్యూటర్ సైన్స్‌ను ప్రోత్సహించే వీడియో](https://www.youtube.com/watch?v=nKIu9yen5nc)తో ప్రారంభించారు. ఈ వీడియో ఒకరోజు మొత్తం YouTube లో నంబరు 1 అయింది మరియు 15,000 పాఠశాలలు మమ్మల్ని సహాయం కోసం సంప్రదించాయి. అప్పటి నుండి, అందుబాటులో ఉన్న వాలంటీర్ల సిబ్బందితో ప్రారంభించి ప్రపంచవ్యాప్య ఉద్యమానికి మద్దతు ఇచ్చే ఒక పూర్తి స్థాయి సంస్థను నిర్మించడానికి మేము దీనిని విస్తరించాము. అదృష్టవంతులైన కొద్దమందికి మాత్రమే కాకుండా, ప్రతి బిడ్డకు నాణ్యమైన కంప్యూటర్ సైన్స్ విద్య అందుబాటులో ఉండాలని మేము నమ్ముతాము.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## మేము ఏమి చేస్తాము
 

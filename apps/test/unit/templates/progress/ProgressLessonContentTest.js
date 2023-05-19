@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-describe('ProgressLessonContent', function() {
+describe('ProgressLessonContent', function () {
   it('renders a bubble set (with no pill) when there is a single unnamed progression', () => {
     const wrapper = shallow(
       <ProgressLessonContent
@@ -21,7 +21,7 @@ describe('ProgressLessonContent', function() {
       <ProgressLessonContent
         levels={fakeLevels(3).map(level => ({
           ...level,
-          progression: 'Progression'
+          progression: 'Progression',
         }))}
         disabled={false}
       />

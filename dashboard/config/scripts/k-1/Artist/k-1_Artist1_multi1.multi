@@ -10,3 +10,5 @@ wrong '/script_assets/k_1_images/artist_images/S-E-E.png'
 wrong '/script_assets/k_1_images/artist_images/E-S.png'
 
 # http://staging.learn.code.org/s/course1/lessons/4/levels/9
+
+allow_multiple_attempts true

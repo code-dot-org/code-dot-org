@@ -69,10 +69,12 @@ class LevelGroup < DSLDefined
       @levels_offset = levels_offset
     end
 
-    attr_reader :page_number
-    attr_reader :levels_and_texts_offset
-    attr_reader :levels_and_texts
-    attr_reader :levels_offset
+    attr_reader(
+      :page_number,
+      :levels_and_texts_offset,
+      :levels_and_texts,
+      :levels_offset
+    )
 
     def levels
       levels_and_texts.reject {|l| l.is_a?(External)}
@@ -179,8 +181,8 @@ class LevelGroup < DSLDefined
       level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, suffix)
       level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
       level
-    rescue Exception => e
-      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 

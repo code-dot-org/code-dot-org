@@ -91,16 +91,16 @@ module.exports = {
     useContractEditor: true,
     examplesRequired: true,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'example is missing result block',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -122,15 +122,15 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'example result doesnt match definition',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'The function green-triangle has one or more' +
@@ -176,16 +176,16 @@ module.exports = {
         '      </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'example result does match definition',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, null);
         return true;
       },
@@ -194,16 +194,16 @@ module.exports = {
         solutionBlocks +
         matchingExampleBlock +
         matchingExampleBlock +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'no examples when examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -212,16 +212,16 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + '</xml>'
+      xml: '<xml>' + solutionBlocks + '</xml>',
     },
 
     {
       description: 'one example when two examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           'You need at least two examples in' +
@@ -230,22 +230,21 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + matchingExampleBlock + '</xml>'
+      xml: '<xml>' + solutionBlocks + matchingExampleBlock + '</xml>',
     },
 
     {
       description: 'example running hides solution and displays result',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var answerElement = document.getElementById('answer');
         var callElement = document.getElementById('test-call');
         var resultElement = document.getElementById('test-result');
-        var triangleBlock = Blockly.mainBlockSpace.findFunctionExamples(
-          'green-triangle'
-        )[0];
+        var triangleBlock =
+          Blockly.mainBlockSpace.findFunctionExamples('green-triangle')[0];
         var contractEditor = Blockly.contractEditor;
 
         // Test result hidden before run
@@ -278,7 +277,7 @@ module.exports = {
         solutionBlocks +
         matchingExampleBlock +
         matchingExampleBlock +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

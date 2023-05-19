@@ -6,13 +6,14 @@ import {castValue, displayableValue, editableValue} from './dataUtils';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import _ from 'lodash';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isDeleting: false,
   isEditing: false,
   isSaving: false,
   // An object whose keys are column names and values are the raw user input.
-  newInput: {}
+  newInput: {},
 };
 
 class EditTableRow extends React.Component {
@@ -22,7 +23,7 @@ class EditTableRow extends React.Component {
     record: PropTypes.object.isRequired,
     readOnly: PropTypes.bool,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -44,7 +45,7 @@ class EditTableRow extends React.Component {
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
-      [columnName]: event.target.value
+      [columnName]: event.target.value,
     });
     this.setState({newInput});
   }
@@ -78,7 +79,7 @@ class EditTableRow extends React.Component {
   handleEdit = () => {
     this.setState({
       isEditing: true,
-      newInput: _.mapValues(this.props.record, editableValue)
+      newInput: _.mapValues(this.props.record, editableValue),
     });
   };
 
@@ -127,13 +128,13 @@ class EditTableRow extends React.Component {
                 <PendingButton
                   isPending={this.state.isSaving}
                   onClick={this.handleSave}
-                  pendingText="Saving..."
+                  pendingText={msg.saving()}
                   className={classNames(
                     dataStyles.button,
                     dataStyles.buttonBlue,
                     dataStyles.buttonBlueSave
                   )}
-                  text="Save"
+                  text={msg.save()}
                 />
               ) : (
                 <button
@@ -145,7 +146,7 @@ class EditTableRow extends React.Component {
                   )}
                   onClick={this.handleEdit}
                 >
-                  Edit
+                  {msg.edit()}
                 </button>
               ))}
 
@@ -154,9 +155,9 @@ class EditTableRow extends React.Component {
                 isPending={this.state.isDeleting}
                 onClick={this.handleDelete}
                 pendingStyle={{float: 'right'}}
-                pendingText="Deleting..."
+                pendingText={msg.deletingWithEllipsis()}
                 className={classNames(dataStyles.button, dataStyles.buttonRed)}
-                text="Delete"
+                text={msg.delete()}
               />
             )}
           </td>

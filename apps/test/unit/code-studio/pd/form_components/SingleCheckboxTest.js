@@ -28,16 +28,10 @@ describe('SingleCheckbox', () => {
         />
       );
 
-    expect(
-      singleCheckBoxWithValue(true)
-        .find(Checkbox)
-        .prop('checked')
-    ).to.be.true;
-    expect(
-      singleCheckBoxWithValue(false)
-        .find(Checkbox)
-        .prop('checked')
-    ).to.be.false;
+    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).to.be
+      .true;
+    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).to.be
+      .false;
   });
 
   it('Calls supplied onChange function with the updated value', () => {

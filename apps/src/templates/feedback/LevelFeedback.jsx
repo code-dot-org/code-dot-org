@@ -11,7 +11,7 @@ function LevelFeedback({
   levelNum,
   linkToLevel,
   unitName,
-  feedbacks
+  feedbacks,
 }) {
   const [showingOlderComments, setShowOlderComments] = useState(false);
 
@@ -29,7 +29,7 @@ function LevelFeedback({
           {i18n.feedbackNotificationLesson({
             lessonNum,
             lessonName,
-            levelNum
+            levelNum,
           })}
         </a>
         <div style={styles.unit}>
@@ -57,16 +57,16 @@ function LevelFeedback({
 
 const styles = {
   levelEntry: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   lessonDetails: {
-    marginBottom: 4
+    marginBottom: 4,
   },
   lessonLevel: {
     fontSize: 18,
     lineHeight: '24px',
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   unit: {
     color: color.dark_charcoal,
@@ -74,13 +74,13 @@ const styles = {
     lineHeight: '17px',
     marginBottom: 8,
     marginTop: 4,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   showOlderComments: {
     float: 'right',
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16
-  }
+    fontSize: 16,
+  },
 };
 
 LevelFeedback.propTypes = levelFeedbackType;

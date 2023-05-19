@@ -30,9 +30,10 @@ class Hamburger
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
 
-      if options[:user_type] == "teacher"
+      case options[:user_type]
+      when 'teacher'
         show_teacher_options = SHOW_ALWAYS
-      elsif options[:user_type] == "student"
+      when 'student'
         show_student_options = SHOW_ALWAYS
       else
         show_signed_out_options = SHOW_ALWAYS
@@ -48,9 +49,10 @@ class Hamburger
 
       # The header is available for showing whichever options we want, but they should
       # appear in the hamburger at mobile widths.
-      if options[:user_type] == "teacher"
+      case options[:user_type]
+      when 'teacher'
         show_teacher_options = SHOW_MOBILE
-      elsif options[:user_type] == "student"
+      when 'student'
         show_student_options = SHOW_MOBILE
       else
         show_signed_out_options = SHOW_MOBILE
@@ -113,11 +115,19 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
-    if  options[:language] == "en"
+    if options[:language] == "en"
       if options[:user_type] == "teacher"
         teacher_entries << {
           title: I18n.t("#{loc_prefix}professional_learning"),
           url: CDO.studio_url("/my-professional-learning"),
+        }
+      end
+
+      entries = [teacher_entries, student_entries, signed_out_entries]
+      entries.each do |entry|
+        entry << {
+          title: I18n.t("#{loc_prefix}incubator"),
+          url: CDO.studio_url("/incubator"),
         }
       end
     else
@@ -172,6 +182,7 @@ class Hamburger
 
     legal_entries = [
       {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
+      {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
       {title: "legal_tos", url: CDO.code_org_url("/tos")},
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
@@ -187,10 +198,11 @@ class Hamburger
 
     # user_type-specific.
 
-    if options[:user_type] == "teacher"
+    case options[:user_type]
+    when 'teacher'
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
-    elsif options[:user_type] == "student"
+    when 'student'
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     else
@@ -267,13 +279,18 @@ class Hamburger
     ]
 
     en_teacher = [
-      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
+      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
 
-    student_links = [
+    any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
       {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
+    ]
+
+    en_student = [
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
 
     en_signed_out_links = [
@@ -284,6 +301,7 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
       {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-en-incubator"},
       {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
     ]
 
@@ -304,8 +322,10 @@ class Hamburger
         header_links.concat(about_intl)
       end
     elsif options[:user_type] == "student"
-      header_links = student_links
-      if options[:language] != "en"
+      header_links = any_student_links
+      if options[:language] == "en"
+        header_links.concat(en_student)
+      else
         header_links.concat(about_intl)
       end
     else
