@@ -37,8 +37,8 @@ section.bg-secondary { background-color: $brand_secondary_light; }
 // FontAwesome icon defaults
 // Sets fixed height on icon container to maintain consistent
 // spacing when icons have varying widths and heights
-i {
-  line-height: 1.25em !important;
+i.fa-fw {
+  line-height: 1.25em;
 }
 
 .icon::before {
