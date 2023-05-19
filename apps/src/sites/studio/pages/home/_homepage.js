@@ -61,7 +61,7 @@ function showHomepage() {
     unitId = parseInt(query.unitId, 10);
     updateQueryParam('unitId', undefined, true);
   }
-  if (courseOfferingId && courseVersionId) {
+  if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
     store.dispatch(
       beginCreatingSection(courseOfferingId, courseVersionId, unitId)
     );
