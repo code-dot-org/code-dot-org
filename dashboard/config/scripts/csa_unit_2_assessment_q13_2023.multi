@@ -27,3 +27,5 @@ Mutator methods change the value assigned to an instance variable, while accesso
 public void setNameOfInstanceVariable(dataType parameterName)
 ```
 MARKDOWN
+
+allow_multiple_attempts true

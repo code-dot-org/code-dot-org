@@ -268,7 +268,7 @@ export default class CoreLibrary {
     if (!spriteArg) {
       return [];
     }
-    if (spriteArg.hasOwnProperty('id')) {
+    if (Object.prototype.hasOwnProperty.call(spriteArg, 'id')) {
       let sprite = this.nativeSpriteMap[spriteArg.id];
       if (sprite) {
         return [sprite];

@@ -167,7 +167,7 @@ class InlineAudio extends React.Component {
   }
 
   isLocaleSupported() {
-    return VOICES.hasOwnProperty(this.props.locale);
+    return Object.prototype.hasOwnProperty.call(VOICES, this.props.locale);
   }
 
   getAudioSrc() {
@@ -284,7 +284,11 @@ class InlineAudio extends React.Component {
             id="volume"
           >
             <i
-              className={classNames('fa fa-volume-up', moduleStyles.buttonImg)}
+              className={classNames(
+                'fa fa-volume-up',
+                moduleStyles.buttonImg,
+                moduleStyles.buttonImgVolume
+              )}
               style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>

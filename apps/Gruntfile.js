@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     const loadContext = isDirectory
       ? `let testsContext = require.context(${JSON.stringify(
           path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
+        )}, true, /\\.[j|t]sx?$/);`
       : '';
     const runTests = isDirectory
       ? 'testsContext.keys().forEach(testsContext);'
@@ -103,9 +103,8 @@ describe('entry tests', () => {
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var piskelRoot = String(
-    child_process.execSync('`npm bin`/piskel-root')
-  ).replace(/\s+$/g, '');
+  var piskelRootStdout = child_process.execSync('npx piskel-root');
+  var piskelRoot = String(piskelRootStdout).replace(/\s+$/g, '');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
     var localNodeModulesRoot = String(
@@ -659,6 +658,7 @@ describe('entry tests', () => {
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
+    'levels/_single_multi': './src/sites/studio/pages/levels/_single_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
@@ -1372,7 +1372,7 @@ describe('entry tests', () => {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      '`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 

@@ -9,3 +9,5 @@ wrong 'None of the above.'
 markdown <<MARKDOWN
 Fill in the blank. Inheritance represents a/an _______ relationship.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -103,7 +103,9 @@ export const BUTTON_TYPES = {
   cancel: {
     style: {
       backgroundColor: color.neutral_white,
-      border: `2px solid ${color.neutral_dark}`,
+      borderWidth: 2,
+      borderStyle: 'solid',
+      borderColor: color.neutral_dark,
       color: color.neutral_dark,
       ':hover': {
         backgroundColor: color.neutral_dark20,

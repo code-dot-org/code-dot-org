@@ -204,7 +204,7 @@ end
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
   wait_short_until do
     element_text = @browser.execute_script("return $(#{selector.dump}).text();")
-    !element_text.include? text
+    element_text.exclude?(text)
   end
 end
 

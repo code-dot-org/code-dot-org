@@ -316,6 +316,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
+        id: id,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
