@@ -807,10 +807,12 @@ ActiveRecord::Schema.define(version: 2023_05_18_155319) do
   create_table "parental_permission_requests", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "parent_email", null: false
-    t.string "uuid", null: false
+    t.string "uuid", limit: 36, null: false
+    t.integer "reminders_sent", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_parental_permission_requests_on_user_id"
+    t.index ["uuid"], name: "index_parental_permission_requests_on_uuid"
   end
 
   create_table "pd_accepted_programs", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
