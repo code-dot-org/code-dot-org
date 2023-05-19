@@ -66,7 +66,7 @@ class Foorm::Form < ApplicationRecord
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    errors_arr.each {|error| errors[:questions] << error}
+    errors_arr.each {|error| errors.add(:questions, error)}
   end
 
   def validate_published
@@ -74,7 +74,7 @@ class Foorm::Form < ApplicationRecord
 
     unless parsed_questions['published'].nil?
       if published != parsed_questions['published']
-        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
       end
     end
   end
@@ -137,8 +137,8 @@ class Foorm::Form < ApplicationRecord
     errors = []
     begin
       filled_questions = Foorm::Form.fill_in_library_items(questions)
-    rescue StandardError => e
-      errors.append(e.message)
+    rescue StandardError => exception
+      errors.append(exception.message)
       return errors
     end
     filled_questions.deep_symbolize_keys!
@@ -147,8 +147,8 @@ class Foorm::Form < ApplicationRecord
       page[:elements]&.each do |element_data|
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
-      rescue StandardError => e
-        errors.append(e.message)
+      rescue StandardError => exception
+        errors.append(exception.message)
       end
     end
     errors

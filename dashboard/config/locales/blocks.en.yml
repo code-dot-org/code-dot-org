@@ -2,8 +2,38 @@
 en:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': follows
+            '"avoids"': avoids
+      AmysBlocks_goldilocks:
+        text: |2-
+           if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           if too much{SPRITE}
+          {STATEMENT}else if just right
+          {STATEMENT3}else if too little
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: make {NUM} new {ANIMATION_NAME} sprites {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving NSEW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}say{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -252,20 +282,12 @@ en:
             '1': "→"
       Dancelab_eval:
         text: eval {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'repeat every {N} measures after {START} '
       Dancelab_everySeconds:
         text: 'repeat every {N} {UNIT} '
         options:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
-      Dancelab_everySecondsRange:
-        text: 'every {N} {UNIT} from {START} to {STOP} '
-        options:
-          UNIT:
-            measures: Measures
-            seconds: Seconds
       Dancelab_everyVerseChorus:
         text: 'every {UNIT} '
         options:
@@ -1036,6 +1058,62 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Microscope has {INPUT1}
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: do {EFFECT} effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
+      DansBlocks_setMicroscope:
+        text: Set Microscope to {INPUT1}
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      DansBlocks_testRectangle:
+        text: 'make rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: addEight
+      FunctionBlocks_addFiveBlock:
+        text: addFive
+      FunctionBlocks_addFourBlock:
+        text: addFour
+      FunctionBlocks_addNineBlock:
+        text: addNine
+      FunctionBlocks_addOneBlock:
+        text: addOne
+      FunctionBlocks_addSevenBlock:
+        text: addSeven
+      FunctionBlocks_addSixBlock:
+        text: addSix
+      FunctionBlocks_addThreeBlock:
+        text: addThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
+      FunctionBlocks_communicate:
+        text: Communicate {VAR1} with {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: make {NUM} new {ANIMATION_NAME} sprites  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: represent {NUM} new {ANIMATION_NAME} sprites
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] represent {NUM} new {ANIMATION_NAME} sprites"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}say{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_addTarget:
@@ -1056,6 +1134,8 @@ en:
         text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1121,6 +1201,8 @@ en:
         text: following targets
       gamelab_getAllSprites:
         text: all sprites
+      gamelab_getCostume:
+        text: sprites with costume of {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1249,6 +1331,19 @@ en:
             '"z"': z
       gamelab_layoutGrid:
         text: layout sprites as a grid
+      gamelab_layoutSprites:
+        text: layout {GROUP} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1275,8 +1370,23 @@ en:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        text: make {N} new {GROUP} in a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
+      gamelab_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       gamelab_makeProjectile:
         text: "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}"
         options:
@@ -1362,6 +1472,34 @@ en:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": select
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": quirky bass
             "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_playSoundOptionsSoccer:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applause
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": cheer
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
+            "'sound://category_sports/One_Whistle_SFX.mp3'": whistle
+      gamelab_playSoundOptionsSpace:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       gamelab_playSpeech:
         text: play speech {SOUND}
       gamelab_playerBehaviors:
@@ -1447,6 +1585,8 @@ en:
             '25': extra small
       gamelab_setPrompt:
         text: prompt user {QUESTION} for variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}
       gamelab_setPromptWithChoices:
         text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       gamelab_setProp:
@@ -1640,6 +1780,18 @@ en:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
         text: y coordinate of {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glide to {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} says {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      KatiesBlocks_tumbling:
+        text: tumbling
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2056,6 +2208,41 @@ en:
         text: setup Monster Town with{COUNT}monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      ParticlesBlocks_getMicroscope:
+        text: Microscope has {INPUT1}
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        text: Set Microscope to {INPUT1}
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): solid
+            new Behavior(liquid, []): liquid
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Set {COSTUME} to {BEHAVIOR} behavior
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Set {COSTUME} to {BEHAVIOR} behavior"
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
       Poetry_addFrame:
         text: set frame to {BRUSH}
         options:
@@ -2146,6 +2333,23 @@ en:
             '"sound://category_achievements/peaceful_win_1.mp3"': win
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': whirl
             '"sound://category_achievements/peaceful_win_6.mp3"': wind chimes
+      Poetry_playSoundOptionsSpace:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       Poetry_setAuthor:
         text: set author {AUTHOR}
       Poetry_setBackground:
@@ -2282,6 +2486,11 @@ en:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: when {VAR} answered
       RyanLab_moveForward:
@@ -2294,8 +2503,6 @@ en:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} say {TEXT} for {SECONDS} seconds
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -2401,6 +2608,35 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+      adaptations_location_picker:
+        text: at:{LOCATION}
+      adaptations_makeNumSpritesNear:
+        text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} says {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      adaptations_startFollowing:
+        text: "{SPRITE} begins following {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2543,7 +2779,70 @@ en:
           DIR:
             right: right ↻
             left: left ↺
-      validation_validatedBackground:
-        text: set background to {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}
+      ecosystems_catchMe:
+        text: catch {THIS}
+      ecosystems_eat:
+        text: eat {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: at:{LOCATION}
+      ecosystems_makeNewSpriteBetween:
+        text: 'make {N} new {GROUP} between location x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: make {NUM} new {ANIMATION_NAME} sprites at {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: make {NUM} new {ANIMATION_NAME} sprites at {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:150, y2:250}": Middle
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
+      storylab_clearHeadings:
+        text: clear headings
+      storylab_setForegroundEffect2:
+        text: do {EFFECT} effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"rain"': rain
+            '"starburst"': starburst
+            '"twinkling"': twinkling
+      storylab_setHeading:
+        text: set heading {HEADING}
+      storylab_setPromptWithChoice:
+        text: prompt user {QUESTION} for variable {VAR} with choice {A}
+      storylab_setSubheading:
+        text: set subheading {SUBHEADING}

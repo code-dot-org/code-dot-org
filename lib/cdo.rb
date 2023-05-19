@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -110,6 +110,14 @@ module Cdo
       host
     end
 
+    def dashboard_site_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_site_host
+      site_host('code.org')
+    end
+
     def site_url(domain, path = '', scheme = '')
       path = '/' + path unless path.empty? || path[0] == '/'
       "#{scheme}//#{site_host(domain)}#{path}"
@@ -166,6 +174,14 @@ module Cdo
       end
     end
 
+    def javabuilder_demo_url(path = '', scheme = '')
+      'wss://javabuilder-demo.code.org'
+    end
+
+    def javabuilder_demo_upload_url(path = '', scheme = '')
+      'https://javabuilder-demo-http.code.org/seedsources/sources.json'
+    end
+
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are
@@ -209,8 +225,8 @@ module Cdo
 
     def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
       return unless uri
-      uri = URI.encode(uri)
-      uri = URI.parse(uri)
+      uri = URI::DEFAULT_PARSER.escape(uri)
+      uri = URI::DEFAULT_PARSER.parse(uri)
 
       uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
       uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path
@@ -222,6 +238,15 @@ module Cdo
       end
 
       uri.to_s
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Amplitude API key.
+    def safe_amplitude_api_key
+      CDO.cdo_amplitude_api_key
+    rescue ArgumentError
+      # Return an empty string, instead of raising.
+      ''
     end
 
     def dir(*dirs)
@@ -253,7 +278,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end

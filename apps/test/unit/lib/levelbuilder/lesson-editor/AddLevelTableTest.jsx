@@ -20,30 +20,30 @@ describe('AddLevelTable', () => {
           name: 'Level 1',
           type: 'Applab',
           owner: 'Islay',
-          updated_at: '09/30/20 at 08:37:04 PM'
+          updated_at: '09/30/20 at 08:37:04 PM',
         },
         {
           id: 2,
           name: 'Level 2',
           type: 'Applab',
           owner: 'Tonka',
-          updated_at: '09/2/20 at 08:37:04 PM'
+          updated_at: '09/2/20 at 08:37:04 PM',
         },
         {
           id: 3,
           name: 'Level 3',
           type: 'Multi',
           owner: 'Islay',
-          updated_at: '09/30/17 at 01:37:04 PM'
+          updated_at: '09/30/17 at 01:37:04 PM',
         },
         {
           id: 4,
           name: 'Level 4',
           type: 'Multi',
           owner: 'Tonka',
-          updated_at: '01/2/18 at 08:37:04 AM'
-        }
-      ]
+          updated_at: '01/2/18 at 08:37:04 AM',
+        },
+      ],
     };
   });
 

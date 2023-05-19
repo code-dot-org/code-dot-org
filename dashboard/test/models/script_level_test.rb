@@ -38,7 +38,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'counts puzzle position and total in lesson' do
     # default script
-    sl = Script.twenty_hour_unit.script_levels[1]
+    sl = Unit.twenty_hour_unit.script_levels[1]
     assert_equal 1, sl.position
     assert_equal 20, sl.lesson_total
 
@@ -239,7 +239,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with custom route' do
-    summary = Script.hoc_2014_unit.script_levels.first.summarize
+    summary = Unit.hoc_2014_unit.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
@@ -757,7 +757,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'end of lesson' do
-    script = Script.find_by_name('course1')
+    script = Unit.find_by_name('course1')
 
     assert script.lessons[0].script_levels.last.end_of_lesson?
     assert script.lessons[1].script_levels.last.end_of_lesson?
@@ -768,11 +768,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    script_level = ScriptLevel.cache_find(Script.twenty_hour_unit.script_levels[0].id)
-    assert_equal(Script.twenty_hour_unit.script_levels[0], script_level)
+    script_level = ScriptLevel.cache_find(Unit.twenty_hour_unit.script_levels[0].id)
+    assert_equal(Unit.twenty_hour_unit.script_levels[0], script_level)
 
-    script_level2 = ScriptLevel.cache_find(Script.course1_unit.script_levels.last.id)
-    assert_equal(Script.course1_unit.script_levels.last, script_level2)
+    script_level2 = ScriptLevel.cache_find(Unit.course1_unit.script_levels.last.id)
+    assert_equal(Unit.course1_unit.script_levels.last, script_level2)
 
     # Make sure that we can also locate a newly created level.
     script_level3 = create(:script_level)

@@ -254,22 +254,38 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute_nil enrollment.code
   end
 
-  test 'CSF Intro enrollments can be created' do
-    assert_creates(Pd::Enrollment) do
-      post :create, params: {
-        workshop_id: @workshop.id,
-        school_info: school_info_params,
-        csf_intro_intent: 'Yes',
-        csf_intro_other_factors: [
-          "I want to learn computer science concepts.",
-          "I have available time on my schedule for teaching computer science."
-        ]
-      }.merge(enrollment_test_params)
-      assert_response :success
-      assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
-    end
-    enrollment = Pd::Enrollment.last
-    refute_nil enrollment.code
+  test 'can enroll in workshop when all params are submitted' do
+    @teacher = create :teacher
+    sign_in @teacher
+    workshop = create :summer_workshop
+
+    assert_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
+
+    post :create, params: {
+      workshop_id: workshop.id,
+      first_name: "Janine",
+      last_name: "Teagues",
+      email: "janine@test.xx",
+      school_info: {school_id: School.first.id},
+      role: "Counselor",
+      grades_teaching: ["Kindergarten", "Grade 1", "Grade 2"],
+      attended_csf_intro_workshop: "No",
+      csf_course_experience: {"Course A": "none", "Course B": "a few lessons", "Course E": "most lessons"},
+      csf_courses_planned: ["Course E", "Course F"],
+      csf_intro_intent: "No",
+      years_teaching: "30",
+      years_teaching_cs: "10",
+      csf_has_physical_curriculum_guide: "No",
+      previous_courses: "I don’t have experience teaching any of these courses",
+      replace_existing: "I don’t know",
+      csf_intro_other_factors: "I want to learn computer science concepts.",
+      taught_ap_before: "Yes, AP CS Principles or AP CS A",
+      planning_to_teach_ap: "Yes"
+    }
+
+    assert_response :success
+    assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
+    refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
   end
 
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do

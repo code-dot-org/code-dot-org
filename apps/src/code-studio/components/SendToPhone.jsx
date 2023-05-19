@@ -11,7 +11,7 @@ const SendState = {
   canSubmit: 'canSubmit',
   sending: 'sending',
   sent: 'sent',
-  error: 'error'
+  error: 'error',
 };
 
 function sendButtonString(sendState) {
@@ -32,7 +32,7 @@ function sendButtonString(sendState) {
 
 const baseStyles = {
   label: {},
-  div: {}
+  div: {},
 };
 
 /**
@@ -45,8 +45,8 @@ export default class SendToPhone extends React.Component {
     appType: PropTypes.string.isRequired,
     styles: PropTypes.shape({
       label: PropTypes.object,
-      div: PropTypes.object
-    })
+      div: PropTypes.object,
+    }),
   };
 
   state = {sendState: SendState.invalidVal};
@@ -62,12 +62,12 @@ export default class SendToPhone extends React.Component {
 
     var phone = this.refs.phone;
     $(phone).mask('(000) 000-0000', {
-      onComplete: function() {
+      onComplete: function () {
         this.setState({sendState: SendState.canSubmit});
       }.bind(this),
-      onChange: function() {
+      onChange: function () {
         this.setState({sendState: SendState.invalidVal});
-      }.bind(this)
+      }.bind(this),
     });
     phone.focus();
   }
@@ -84,7 +84,7 @@ export default class SendToPhone extends React.Component {
 
     const params = {
       type: appType,
-      phone: $(phone).val()
+      phone: $(phone).val(),
     };
     if (isLegacyShare) {
       params.level_source = +location.pathname.split('/')[2];
@@ -94,13 +94,13 @@ export default class SendToPhone extends React.Component {
 
     $.post('/sms/send', $.param(params))
       .done(
-        function() {
+        function () {
           this.setState({sendState: SendState.sent});
           trackEvent('SendToPhone', 'success');
         }.bind(this)
       )
       .fail(
-        function() {
+        function () {
           this.setState({sendState: SendState.error});
           trackEvent('SendToPhone', 'error');
         }.bind(this)

@@ -3,7 +3,7 @@
     .modal-content.no-modal-icon
       %h2.custom-h2= t('race_interstitial.title')
 
-      %h3= t('race_interstitial.message')
+      %p= t('race_interstitial.message')
       .left.full-width
         = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group

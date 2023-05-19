@@ -7,19 +7,19 @@ const REMOVE_STANDARD = 'standardsEditor/REMOVE_STANDARD';
 export const initStandards = (standardType, standards) => ({
   type: INIT,
   standardType,
-  standards
+  standards,
 });
 
 export const addStandard = (standardType, newStandard) => ({
   type: ADD_STANDARD,
   standardType,
-  newStandard
+  newStandard,
 });
 
 export const removeStandard = (standardType, standard) => ({
   type: REMOVE_STANDARD,
   standardType,
-  standard
+  standard,
 });
 
 export default function createStandardsReducer(standardType) {

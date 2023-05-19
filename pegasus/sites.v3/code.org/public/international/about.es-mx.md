@@ -15,20 +15,20 @@ Code.org® es una organización sin fines de lucro dedicada a ampliar el acceso 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Los cursos de Code.org son utilizados por decenas de millones de estudiantes y por un millón de profesores en todo el mundo.</b></font>
- 
+
 </div>
 
 [/col-40]
 
 <div style="clear:both"></div>
 
-## Historia 
+## Historia
 
 En 2013, Code.org fue lanzado por los hermanos gemelos Hadi y Ali Partovi con un [video que promueve la informática](https://www.youtube.com/watch?v=nKIu9yen5nc). Este video se convirtió en el número 1 en YouTube por un día y 15,000 escuelas nos pidieron ayuda. Desde entonces, nos hemos expandido de un equipo de voluntarios para desarrollar una organización completa que apoya un movimiento mundial. Creemos que una educación de informática de calidad debe estar disponible para todos los niños, no solo para unos pocos afortunados.
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Lo que hacemos
 
@@ -40,6 +40,6 @@ Más del 40% del tráfico de nuestro sitio web proviene de fuera de los Estados 
 
 <img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%">
 
-## Traducción 
+## Traducción
 
-¿Quieres tener un impacto directo en los estudiantes de tu país? ¡Ayúdenos a hacer que el contenido de Code.org esté disponible en su idioma nativo! Si se ofrece como voluntario para ayudar a traducir nuestros tutoriales y lecciones, se unirá a una comunidad de más de 7,000 traductores que ayudan a brindar educación en informática a estudiantes de todo el mundo. Echa un vistazo a nuestra [guía de traducción](/translate) para obtener más información. 
+¿Quieres tener un impacto directo en los estudiantes de tu país? ¡Ayúdenos a hacer que el contenido de Code.org esté disponible en su idioma nativo! Si se ofrece como voluntario para ayudar a traducir nuestros tutoriales y lecciones, se unirá a una comunidad de más de 7,000 traductores que ayudan a brindar educación en informática a estudiantes de todo el mundo. Echa un vistazo a nuestra [guía de traducción](/translate) para obtener más información.

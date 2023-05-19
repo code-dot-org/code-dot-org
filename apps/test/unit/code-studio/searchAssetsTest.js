@@ -5,8 +5,8 @@ import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
 
-describe('search assets from animation library', function() {
-  it('searchAssets searches the animation library in a category', function() {
+describe('search assets from animation library', function () {
+  it('searchAssets searches the animation library in a category', function () {
     const maxResults = 5;
     const pageCount = 0;
     const searchedData = searchAssets(
@@ -25,7 +25,7 @@ describe('search assets from animation library', function() {
     assert.equal(searchedData.results[3].name, 'hippo_token');
   });
 
-  it('searchAssets searches the animation library without a category', function() {
+  it('searchAssets searches the animation library without a category', function () {
     const maxResults = 5;
     const pageCount = 0;
     const searchedData = searchAssets(
@@ -45,7 +45,7 @@ describe('search assets from animation library', function() {
     assert.equal(searchedData.results[4].name, 'hip');
   });
 
-  it('searchAssets searches the sound library with a cateogry', function() {
+  it('searchAssets searches the sound library with a cateogry', function () {
     const maxResults = 5;
     const pageCount = 0;
     const searchedData = searchAssets(
@@ -62,7 +62,7 @@ describe('search assets from animation library', function() {
     assert.equal(searchedData.results[1].name, 'metal_click');
   });
 
-  it('searchAssets finds results where search term is not at the begining', function() {
+  it('searchAssets finds results where search term is not at the begining', function () {
     const maxResults = 5;
     const pageCount = 0;
     const searchedData = searchAssets(
@@ -81,7 +81,7 @@ describe('search assets from animation library', function() {
     assert.equal(searchedData.results[4].name, 'panda_square');
   });
 
-  it('searchAssets searches the sound library without a cateogry, using multiple pages', function() {
+  it('searchAssets searches the sound library without a cateogry, using multiple pages', function () {
     const maxResults = 1;
     const pageCount = 0;
     const searchedData = searchAssets(
@@ -100,7 +100,7 @@ describe('search assets from animation library', function() {
     );
   });
 
-  it('searchAssets searches the sound library getting page 2 results', function() {
+  it('searchAssets searches the sound library getting page 2 results', function () {
     const maxResults = 1;
     const pageCount = 1;
     const searchedData = searchAssets(
@@ -119,7 +119,7 @@ describe('search assets from animation library', function() {
     );
   });
 
-  it('can search non-latin characters', function() {
+  it('can search non-latin characters', function () {
     const maxResults = 3;
     const pageCount = 0;
 

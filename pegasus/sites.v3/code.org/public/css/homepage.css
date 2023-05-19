@@ -393,6 +393,12 @@ body.modal-open .supreme-container{
   border-color: black;
 }
 
+#homepage #actions .herohocbutton-hollow-black {
+  color: black;
+  background: none;
+  border-color: black;
+}
+
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;

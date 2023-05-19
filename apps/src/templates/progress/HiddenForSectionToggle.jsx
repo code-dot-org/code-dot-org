@@ -14,7 +14,7 @@ class HiddenForSectionToggle extends React.Component {
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     // Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   render() {
@@ -24,13 +24,12 @@ class HiddenForSectionToggle extends React.Component {
     const mainStyle = {
       ...styles.main,
       ...(disabled && styles.disabled),
-      ...(isRtl ? styles.reverseButtons : null)
+      ...(isRtl ? styles.reverseButtons : null),
     };
 
     return (
       <div style={mainStyle} className="uitest-togglehidden">
         <Button
-          __useDeprecatedTag
           onClick={() => !disabled && onChange('visible')}
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
@@ -39,7 +38,6 @@ class HiddenForSectionToggle extends React.Component {
           style={{...styles.button, ...styles.leftButton}}
         />
         <Button
-          __useDeprecatedTag
           onClick={() => !disabled && onChange('hidden')}
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}
@@ -55,36 +53,35 @@ class HiddenForSectionToggle extends React.Component {
 const styles = {
   main: {
     wrap: 'nowrap',
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
+    margin: '5px 15px',
   },
   disabled: {
-    opacity: 0.5
+    opacity: 0.5,
   },
   button: {
     display: 'inline-block',
     paddingLeft: 0,
     paddingRight: 0,
     boxSizing: 'border-box',
-    width: '50%'
+    width: '50%',
+    margin: '5px 0px',
   },
   leftButton: {
     borderTopRightRadius: 0,
-    borderBottomRightRadius: 0
+    borderBottomRightRadius: 0,
   },
   rightButton: {
     borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0
+    borderBottomLeftRadius: 0,
   },
   reverseButtons: {
     display: 'flex',
-    flexDirection: 'row-reverse'
-  }
+    flexDirection: 'row-reverse',
+  },
 };
 
 export const UnconnectedHiddenForSectionToggle = HiddenForSectionToggle;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(HiddenForSectionToggle);

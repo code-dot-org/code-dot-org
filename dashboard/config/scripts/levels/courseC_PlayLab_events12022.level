@@ -1,12 +1,13 @@
 <Studio>
   <config><![CDATA[{
+  "published": true,
   "game_id": 33,
   "created_at": "2022-01-06T20:09:17.000Z",
   "level_num": "custom",
   "user_id": 302,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.sprite[0].bubbleText == \"Hi there.\";\r\n}",
+    "success_condition": "function (i18n_strings) {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // To allow for this validation to work across languages, use a translateable string\r\n  return Studio.sprite[0].bubbleText == i18n_strings.saySpriteChoices_0();\r\n  // equivalent to\r\n  // return Studio.sprite[0].bubbleText == \"Hi there.\";\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
@@ -45,12 +46,18 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 21270,
     "name_suffix": "2022",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "encrypted": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false",
+    "encrypted_examples": [
+
+    ],
+    "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.002+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events1_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events1_2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.002+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events1_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events1_2021\"},{\"changed_at\":\"2023-05-03 19:03:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":18984,\"changed_by_email\":\"erin.ferreirae@code.org\"},{\"changed_at\":\"2023-05-08 14:35:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1
   }

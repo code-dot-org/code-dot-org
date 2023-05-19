@@ -7,3 +7,5 @@ wrong 'Fred Flintstone'
 wrong 'Martha Washington'
 right 'George Washington'
 wrong 'George Jetson'
+
+allow_multiple_attempts true

@@ -19,3 +19,4 @@ answer 'apply programming and problem solving to the study of robots'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

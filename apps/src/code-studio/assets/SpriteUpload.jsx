@@ -5,8 +5,9 @@ import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import {
   getManifest,
   getLevelAnimationsFiles,
+  getSourceUrlForLevelAnimation,
   uploadAnimationToAnimationLibrary,
-  uploadMetadataToAnimationLibrary
+  uploadMetadataToAnimationLibrary,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const EXTENSION_CHECK = 'extensionError';
@@ -16,40 +17,40 @@ const ANIMATION_EXISTS_CHECK = 'animationExistsError';
 const AnimationLocations = makeEnum('library', 'level');
 
 const initialSpriteLabLibrariesState = {
-  spriteLabLevelAnimations: [],
+  spriteLabLevelAnimations: {},
   spriteLabLibraryCategories: [],
-  spriteLabLibraryAnimations: []
+  spriteLabLibraryAnimations: {},
 };
 
 const newImageState = {
   fileData: null,
   filename: '',
-  filePreviewURL: ''
+  filePreviewURL: '',
 };
 
 const imageChecksInitialState = {
   [EXTENSION_CHECK]: Status.WAITING,
   [FILENAME_CHECK]: Status.WAITING,
   [FILESIZE_CHECK]: Status.WAITING,
-  [ANIMATION_EXISTS_CHECK]: Status.WAITING
+  [ANIMATION_EXISTS_CHECK]: Status.WAITING,
 };
 
 const initialUserInputMetaData = {
   availability: '',
   category: '',
-  aliases: []
+  aliases: [],
 };
 
 const initialGeneratedMetadata = {
   frameSize: {x: NaN, y: NaN},
   destination: '',
-  metadata: ''
+  metadata: '',
 };
 
 const initialComponentState = {
   ...newImageState,
   ...imageChecksInitialState,
-  ...initialGeneratedMetadata
+  ...initialGeneratedMetadata,
 };
 
 const maxSize = 800;
@@ -62,19 +63,20 @@ export default class AnimationUpload extends React.Component {
     ...initialUserInputMetaData,
     ...initialComponentState,
     uploadStatus: Status.WAITING,
-    errorMessage: ''
+    errorMessage: '',
   };
+
   componentDidMount() {
     // Get list of animations from level-specific folder
     getLevelAnimationsFiles().then(files => {
-      this.setState({spriteLabLevelAnimations: Object.keys(files)});
+      this.setState({spriteLabLevelAnimations: files});
     });
 
     // Get data from the spritelab animation library manifest
     getManifest('spritelab', 'en_us').then(data => {
       this.setState({
         spriteLabLibraryCategories: Object.keys(data.categories),
-        spriteLabLibraryAnimations: Object.keys(data.metadata)
+        spriteLabLibraryAnimations: data.metadata,
       });
     });
   }
@@ -84,7 +86,7 @@ export default class AnimationUpload extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     this.setState({
-      uploadStatus: Status.UNKNOWN
+      uploadStatus: Status.UNKNOWN,
     });
     const {availability, fileData, category, filename, metadata} = this.state;
 
@@ -107,7 +109,7 @@ export default class AnimationUpload extends React.Component {
       .then(() => {
         this.setState(
           {
-            uploadStatus: Status.CELEBRATING
+            uploadStatus: Status.CELEBRATING,
           },
           () => {
             this.setState({...initialComponentState});
@@ -120,7 +122,7 @@ export default class AnimationUpload extends React.Component {
         }
         this.setState({
           uploadStatus: Status.FAILED,
-          errorMessage: `${error.toString()}: Error Uploading Image or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
+          errorMessage: `${error.toString()}: Error Uploading Image or Metadata. Please try again. If this occurs again, please reach out to an engineer.`,
         });
       });
   };
@@ -131,7 +133,7 @@ export default class AnimationUpload extends React.Component {
       this.setState({
         ...newImageState,
         ...imageChecksInitialState,
-        ...initialGeneratedMetadata
+        ...initialGeneratedMetadata,
       });
       return;
     }
@@ -144,7 +146,8 @@ export default class AnimationUpload extends React.Component {
         filePreviewURL: URL.createObjectURL(file),
         ...imageChecksInitialState,
         ...initialGeneratedMetadata,
-        uploadStatus: Status.WAITING
+        uploadStatus: Status.WAITING,
+        replaceExistingAnimation: false,
       },
       () => {
         // If the user has already completed Step 2, we can already check whether the animation exists.
@@ -164,15 +167,15 @@ export default class AnimationUpload extends React.Component {
         var reader = new FileReader();
         //Read the contents of Image File.
         reader.readAsDataURL(file);
-        reader.onload = function(e) {
+        reader.onload = function (e) {
           //Initiate the JavaScript Image object.
           var image = new Image();
           //Set the Base64 string return from FileReader as source.
           image.src = e.target.result;
           //Validate the File Height and Width.
-          image.onload = function() {
+          image.onload = function () {
             AnimationUpload.setState({
-              frameSize: {x: this.width, y: this.height}
+              frameSize: {x: this.width, y: this.height},
             });
             const sizeIsTooLarge =
               this.width > maxSize || this.height > maxSize;
@@ -182,7 +185,7 @@ export default class AnimationUpload extends React.Component {
               [FILESIZE_CHECK]:
                 sizeIsTooLarge || sizeIsTooSmall
                   ? Status.FAILED
-                  : Status.SUCCEEDED
+                  : Status.SUCCEEDED,
             });
           };
         };
@@ -197,7 +200,7 @@ export default class AnimationUpload extends React.Component {
             : Status.SUCCEEDED,
           [EXTENSION_CHECK]: extensionIsInvalid
             ? Status.FAILED
-            : Status.SUCCEEDED
+            : Status.SUCCEEDED,
         });
       }
     );
@@ -212,7 +215,8 @@ export default class AnimationUpload extends React.Component {
         category: '',
         metadata: '',
         destination: '',
-        [ANIMATION_EXISTS_CHECK]: Status.WAITING
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
+        replaceExistingAnimation: false,
       },
       () => {
         if (this.state.availability === AnimationLocations.level) {
@@ -234,7 +238,8 @@ export default class AnimationUpload extends React.Component {
       {
         category: value,
         metadata: '',
-        [ANIMATION_EXISTS_CHECK]: Status.WAITING
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
+        replaceExistingAnimation: false,
       },
       () => {
         this.determineIfAnimationAlreadyExists(
@@ -265,8 +270,8 @@ export default class AnimationUpload extends React.Component {
     }
     if (availability === AnimationLocations.library && category === '') {
       this.setState({
-        [ANIMATION_EXISTS_CHECK]: Status.ALERT,
-        destination: 'No category selected'
+        [ANIMATION_EXISTS_CHECK]: Status.WAITING,
+        destination: 'No category selected',
       });
       return;
     }
@@ -275,18 +280,22 @@ export default class AnimationUpload extends React.Component {
     switch (availability) {
       case AnimationLocations.level:
         destination = `level_animations/${filename}`;
-        animationExists = spriteLabLevelAnimations.includes(destination);
+        animationExists = Object.keys(spriteLabLevelAnimations).includes(
+          destination
+        );
         break;
       case AnimationLocations.library:
         destination = `category_${category}/${filename}`;
-        animationExists = spriteLabLibraryAnimations.includes(destination);
+        animationExists = Object.keys(spriteLabLibraryAnimations).includes(
+          destination
+        );
         break;
     }
     this.setState({
       [ANIMATION_EXISTS_CHECK]: animationExists
         ? Status.ALERT
         : Status.SUCCEEDED,
-      destination: destination
+      destination: destination,
     });
   };
 
@@ -299,7 +308,7 @@ export default class AnimationUpload extends React.Component {
       frameSize: this.state.frameSize,
       looping: true,
       frameDelay: 2,
-      categories: [category]
+      categories: [category],
     };
     this.setState({metadata: JSON.stringify(metadata)});
   };
@@ -309,11 +318,12 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Please rename and reupload, then try again.';
+        return 'Filename already exists at this path. Would you like to replace the existing animation?';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
   }
+
   uploadStatusMessage() {
     switch (this.state.uploadStatus) {
       case Status.CELEBRATING:
@@ -327,6 +337,41 @@ export default class AnimationUpload extends React.Component {
     }
   }
 
+  handleReplaceExistingAnimation = event => {
+    this.setState({replaceExistingAnimation: event.target.checked});
+  };
+
+  validImage = () => {
+    const statusChecksPassed = [
+      this.state[EXTENSION_CHECK],
+      this.state[FILENAME_CHECK],
+      this.state[FILESIZE_CHECK],
+    ].every(status => status === Status.SUCCEEDED);
+    const animationExistsCheckPassed =
+      this.state[ANIMATION_EXISTS_CHECK] === Status.SUCCEEDED ||
+      (this.state[ANIMATION_EXISTS_CHECK] === Status.ALERT &&
+        this.state.replaceExistingAnimation);
+
+    return statusChecksPassed && animationExistsCheckPassed;
+  };
+
+  getExistingAnimationSrc = () => {
+    const {availability, destination} = this.state;
+
+    if (availability === AnimationLocations.level) {
+      const {filename, spriteLabLevelAnimations} = this.state;
+      const versionId = spriteLabLevelAnimations[destination]?.png.version_id;
+      return getSourceUrlForLevelAnimation(versionId, filename);
+    }
+
+    if (availability === AnimationLocations.library) {
+      const {spriteLabLibraryAnimations} = this.state;
+      return spriteLabLibraryAnimations[destination]?.sourceUrl;
+    }
+
+    return '';
+  };
+
   render() {
     const {
       filePreviewURL,
@@ -339,24 +384,20 @@ export default class AnimationUpload extends React.Component {
       spriteLabLibraryAnimations,
       spriteLabLibraryCategories,
       metadata,
-      uploadStatus
+      uploadStatus,
     } = this.state;
-    const validImage = [
-      this.state[EXTENSION_CHECK],
-      this.state[FILENAME_CHECK],
-      this.state[FILESIZE_CHECK],
-      this.state[ANIMATION_EXISTS_CHECK]
-    ].every(status => status === Status.SUCCEEDED);
+    const validImage = this.validImage();
     const validCategory =
       category !== '' || availability === AnimationLocations.level;
-    const animationExists = this.state[ANIMATION_EXISTS_CHECK];
+    const animationExistsStatus = this.state[ANIMATION_EXISTS_CHECK];
 
     const librariesLoaded =
-      spriteLabLevelAnimations.length > 0 &&
-      spriteLabLibraryAnimations.length > 0 &&
+      Object.keys(spriteLabLevelAnimations).length > 0 &&
+      Object.keys(spriteLabLibraryAnimations).length > 0 &&
       spriteLabLibraryCategories.length > 0;
     const metadataButtonDisabled = !validImage || !validCategory;
     const uploadButtonDisabled = !validImage || !validCategory || !metadata;
+
     return (
       <div>
         <a href="/sprites">Back to Asset Management</a>
@@ -380,7 +421,7 @@ export default class AnimationUpload extends React.Component {
               <span
                 style={{
                   ...(this.state[EXTENSION_CHECK] === Status.FAILED &&
-                    styles.checkFail)
+                    styles.checkFail),
                 }}
               >
                 {filename.split('.')[1]}
@@ -390,7 +431,7 @@ export default class AnimationUpload extends React.Component {
               <span
                 style={{
                   ...(this.state[FILESIZE_CHECK] === Status.FAILED &&
-                    styles.checkFail)
+                    styles.checkFail),
                 }}
               >
                 {frameSize.x && frameSize.y
@@ -502,17 +543,32 @@ export default class AnimationUpload extends React.Component {
               Animation Upload Destination:{' '}
               <span
                 style={{
-                  ...(animationExists === Status.FAILED && styles.checkFail)
+                  ...(animationExistsStatus === Status.FAILED &&
+                    styles.checkFail),
                 }}
               >
                 {destination}
               </span>
               <div style={styles.testFeedbackBox}>
                 <ValidationStep
-                  stepStatus={animationExists}
+                  stepStatus={animationExistsStatus}
                   stepName={this.animationExistsMessage()}
                   hideWaitingSteps={false}
                 />
+                {animationExistsStatus === Status.ALERT && (
+                  <div style={styles.animationReplace}>
+                    <img src={this.getExistingAnimationSrc()} />
+                    <label>
+                      <input
+                        type="checkbox"
+                        style={styles.checkbox}
+                        value={this.state.replaceExistingAnimation}
+                        onChange={this.handleReplaceExistingAnimation}
+                      />
+                      Replace animation
+                    </label>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -533,7 +589,7 @@ export default class AnimationUpload extends React.Component {
             onClick={this.generateMetadata}
             disabled={metadataButtonDisabled}
             style={{
-              ...(metadataButtonDisabled && styles.disabledButton)
+              ...(metadataButtonDisabled && styles.disabledButton),
             }}
           >
             Generate Metadata
@@ -553,7 +609,7 @@ export default class AnimationUpload extends React.Component {
               type="submit"
               disabled={uploadButtonDisabled}
               style={{
-                ...(uploadButtonDisabled && styles.disabledButton)
+                ...(uploadButtonDisabled && styles.disabledButton),
               }}
             >
               Upload to Library
@@ -574,19 +630,27 @@ export default class AnimationUpload extends React.Component {
 
 const styles = {
   animationUploadStep: {
-    borderTop: '1px solid gray'
+    borderTop: '1px solid gray',
   },
   checkFail: {
-    color: color.red
+    color: color.red,
   },
   disabledButton: {
-    color: color.lighter_gray
+    color: color.lighter_gray,
   },
   radioButton: {
-    margin: 10
+    margin: 10,
+  },
+  animationReplace: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  checkbox: {
+    margin: '0 4px',
   },
   testFeedbackBox: {
     backgroundColor: color.almost_white_cyan,
-    padding: 25
-  }
+    padding: 25,
+  },
 };

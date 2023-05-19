@@ -1,5 +1,6 @@
 class TeacherMailer < ActionMailer::Base
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
+  default reply_to: 'Code.org <support@code.org>'
 
   # Send newly registered teachers a welcome email
   def new_teacher_email(teacher, teacher_locale = 'en-US')
@@ -20,5 +21,9 @@ class TeacherMailer < ActionMailer::Base
     @teacher = teacher
     @removed_students = removed_students
     mail to: teacher.email, from: 'noreply@code.org', subject: I18n.t('teacher_mailer.delete_teacher_subject')
+  end
+
+  def verified_teacher_email(teacher)
+    mail to: teacher.email, from: 'teacher@code.org', subject: I18n.t('teacher_mailer.verified_teacher_subject')
   end
 end

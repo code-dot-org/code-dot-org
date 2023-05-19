@@ -5,6 +5,9 @@
   window.dashboard = window.dashboard || {};
   window.dashboard.CODE_ORG_URL = "#{CDO.code_org_url}";
 
+-# data needed for dcdo.js
+%script{data: {'dcdo': DCDO.frontend_config.to_json}}
+
 .amazon-future-engineer-eligibility-container
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}

@@ -1,13 +1,18 @@
 var vsprintf = require('sprintf-js').vsprintf;
 
 var consoleApi = module.exports;
-var logMethod = function() {};
+var logMethod = function () {};
+var clearMethod = function () {};
 
-consoleApi.setLogMethod = function(newLogMethod) {
+consoleApi.setLogMethod = function (newLogMethod) {
   logMethod = newLogMethod;
 };
 
-consoleApi.log = function() {
+consoleApi.setClearMethod = function (newClearMethod) {
+  clearMethod = newClearMethod;
+};
+
+consoleApi.log = function () {
   var nativeArgs = arguments;
   var output = '';
   var firstArg = nativeArgs[0];
@@ -24,4 +29,8 @@ consoleApi.log = function() {
     }
   }
   logMethod(output);
+};
+
+consoleApi.clear = function () {
+  clearMethod();
 };

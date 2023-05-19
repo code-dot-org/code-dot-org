@@ -16,9 +16,13 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
+  path.resolve(__dirname, 'node_modules', '@blockly', 'keyboard-navigation'),
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
+  path.resolve(__dirname, 'node_modules', 'blockly'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'johnny-five'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
+  path.resolve(__dirname, 'node_modules', 'firmata'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
   path.resolve(__dirname, 'node_modules', 'vmsg'),
@@ -37,7 +41,7 @@ var toTranspileWithinNodeModules = [
   ),
   path.resolve(__dirname, 'node_modules', 'slate'),
   path.resolve(__dirname, 'node_modules', 'react-loading-skeleton'),
-  path.resolve(__dirname, 'node_modules', 'unified')
+  path.resolve(__dirname, 'node_modules', 'unified'),
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -49,27 +53,31 @@ const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
+      events: 'events',
       stream: 'stream-browserify',
       path: 'path-browserify',
       process: 'process/browser',
-      timers: 'timers-browserify'
-    })
+      timers: 'timers-browserify',
+    }),
   ],
   resolve: {
     fallback: {
-      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+      events: require.resolve('events/'),
       path: require.resolve('path-browserify'),
+      'process/browser': require.resolve('process/browser'),
+      stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
-      crypto: false
-    }
-  }
+      crypto: false,
+    },
+  },
 };
 
 // Our base config, on which other configs are derived
 var baseConfig = {
   plugins: [...nodePolyfillConfig.plugins],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
       '@cdo/locale': path.resolve(
@@ -101,6 +109,12 @@ var baseConfig = {
         __dirname,
         'src',
         'javalab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/music/locale': path.resolve(
+        __dirname,
+        'src',
+        'music',
         'locale-do-not-import.js'
       ),
       '@cdo/poetry/locale': path.resolve(
@@ -144,8 +158,9 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
-      '@cdo/storybook': path.resolve(__dirname, '.storybook')
-    }
+      '@cdo/storybook': path.resolve(__dirname, '.storybook'),
+      serialport: false,
+    },
   },
   module: {
     rules: [
@@ -153,9 +168,9 @@ var baseConfig = {
         test: /\.ejs$/,
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test')
+          path.resolve(__dirname, 'test'),
         ],
-        loader: 'ejs-webpack-loader'
+        loader: 'ejs-webpack-loader',
       },
       {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
 
@@ -170,11 +185,11 @@ var baseConfig = {
               implementation: sass,
               sassOptions: {
                 includePaths: [scssIncludePath],
-                outputStyle: 'compressed'
-              }
-            }
-          }
-        ]
+                outputStyle: 'compressed',
+              },
+            },
+          },
+        ],
       },
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
@@ -184,7 +199,7 @@ var baseConfig = {
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images')
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
         // note that in the name template given below, a dash prefixing
         // the hash is explicitly avoided. If rails tries to serve
@@ -198,35 +213,40 @@ var baseConfig = {
               limit: 1024,
               // uses the file-loader when file size is over the limit
               name: '[name]wp[contenthash].[ext]',
-              esModule: false
-            }
-          }
-        ]
+              esModule: false,
+            },
+          },
+        ],
       },
       {
         test: /\.jsx?$/,
         enforce: 'pre',
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test')
+          path.resolve(__dirname, 'test'),
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
         options: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
-          compact: false
-        }
-      }
+          compact: false,
+        },
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
-    noParse: [/html2canvas/]
-  }
+    noParse: [/html2canvas/],
+  },
 };
 
 if (envConstants.HOT) {
   baseConfig.module.loaders.push({
     test: /\.jsx?$/,
     loader: 'react-hot-loader',
-    include: [path.resolve(__dirname, 'src')]
+    include: [path.resolve(__dirname, 'src')],
   });
 }
 
@@ -241,13 +261,13 @@ if (envConstants.COVERAGE) {
       // we need to turn off instrumentation for this file
       // because we have tests that actually make assertions
       // about the contents of the compiled version of this file :(
-      path.resolve(__dirname, 'src', 'flappy', 'levels.js')
+      path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
     ],
     options: {
       cacheDirectory: true,
       compact: false,
-      esModules: true
-    }
+      esModules: true,
+    },
   });
 }
 
@@ -276,18 +296,18 @@ function storybookConfig(sbConfig) {
       ...baseConfig.resolve,
       alias: {
         ...baseConfig.resolve.alias,
-        '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
-      }
+        '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util'),
+      },
     },
     // Overwrite rules
     module: {
       ...sbConfig.module,
       ...baseConfig.module,
-      rules: baseConfig.module.rules
+      rules: baseConfig.module.rules,
     },
     // Overwrite externals
     externals: {
-      blockly: 'this Blockly'
+      blockly: 'this Blockly',
     },
     // Extend plugins
     plugins: [
@@ -300,10 +320,9 @@ function storybookConfig(sbConfig) {
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
-        PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
+        PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
-    ]
+    ],
   };
 }
 
@@ -339,6 +358,13 @@ var karmaConfig = _.extend({}, baseConfig, {
         'gamelab',
         'locale-do-not-import.js'
       ),
+      '@cdo/music/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'music',
+        'locale-do-not-import.js'
+      ),
       '@cdo/javalab/locale': path.resolve(
         __dirname,
         'test',
@@ -372,8 +398,7 @@ var karmaConfig = _.extend({}, baseConfig, {
         'maker',
         'StubChromeSerialPort.js'
       ),
-      serialport: false
-    })
+    }),
   }),
   externals: {
     blockly: 'this Blockly',
@@ -384,17 +409,12 @@ var karmaConfig = _.extend({}, baseConfig, {
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true,
-
-    // The below are necessary for serialport import to not choke during webpack-ing.
-    fs: '{}',
-    child_process: true,
-    bindings: true
   },
   plugins: [
     new webpack.ProvidePlugin({
       React: 'react',
       Buffer: ['buffer', 'Buffer'],
-      process: 'process/browser'
+      process: 'process/browser',
     }),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
@@ -404,9 +424,9 @@ var karmaConfig = _.extend({}, baseConfig, {
         envConstants.NODE_ENV || 'development'
       ),
       LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
-      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-    })
-  ]
+      PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
+    }),
+  ],
 });
 
 /**
@@ -441,7 +461,7 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: `[name]${suffix}`
+      filename: `[name]${suffix}`,
     },
     devtool: devtool(options),
     entry: entries,
@@ -457,20 +477,19 @@ function create(options) {
           envConstants.NODE_ENV || 'development'
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
-        DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
+        DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0,
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
-      ...plugins
+      ...plugins,
     ],
     watch: watch,
     keepalive: watch,
-    failOnError: !watch
+    failOnError: !watch,
   });
 
   if (watch) {
     config.plugins = config.plugins.concat(
       new LiveReloadPlugin({
-        appendScriptTag: envConstants.AUTO_RELOAD
+        appendScriptTag: envConstants.AUTO_RELOAD,
       })
     );
 
@@ -488,5 +507,5 @@ module.exports = {
   config: baseConfig,
   karmaConfig: karmaConfig,
   storybookConfig: storybookConfig,
-  create: create
+  create: create,
 };

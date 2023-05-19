@@ -9,16 +9,16 @@ import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindV
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 import {
   activitySectionShape,
-  vocabularyShape
+  vocabularyShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import {
   addTip,
   updateTip,
-  removeTip
+  removeTip,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
-const AddButton = function(props) {
+const AddButton = function (props) {
   let className = 'btn';
   if (props.className) {
     className += ' ' + props.className;
@@ -40,7 +40,7 @@ const AddButton = function(props) {
 AddButton.propTypes = {
   className: PropTypes.string,
   displayText: PropTypes.string.isRequired,
-  handler: PropTypes.func
+  handler: PropTypes.func,
 };
 
 class ActivitySectionCardButtons extends Component {
@@ -60,7 +60,7 @@ class ActivitySectionCardButtons extends Component {
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
     isLastActivitySection: PropTypes.bool.isRequired,
-    isLastActivity: PropTypes.bool.isRequired
+    isLastActivity: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -73,7 +73,7 @@ class ActivitySectionCardButtons extends Component {
       addVocabularyOpen: false,
       addLevelOpen: false,
       uploadImageOpen: false,
-      tipToEdit: null
+      tipToEdit: null,
     };
   }
 
@@ -102,8 +102,8 @@ class ActivitySectionCardButtons extends Component {
       tipToEdit: {
         key: this.generateTipKey(),
         type: 'teachingTip',
-        markdown: ''
-      }
+        markdown: '',
+      },
     });
   };
 
@@ -187,11 +187,8 @@ class ActivitySectionCardButtons extends Component {
   };
 
   render() {
-    const {
-      allowMajorCurriculumChanges,
-      isLastActivitySection,
-      isLastActivity
-    } = this.props;
+    const {allowMajorCurriculumChanges, isLastActivitySection, isLastActivity} =
+      this.props;
 
     return (
       <div>
@@ -301,26 +298,26 @@ const styles = {
   bottomControls: {
     height: 30,
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   addButton: {
     fontSize: 14,
     background: '#eee',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  }
+    margin: '0 5px 0 0',
+  },
 };
 
 export const UnconnectedActivitySectionCardButtons = ActivitySectionCardButtons;
 
 export default connect(
   state => ({
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
   }),
   {
     addTip,
     updateTip,
-    removeTip
+    removeTip,
   }
 )(ActivitySectionCardButtons);

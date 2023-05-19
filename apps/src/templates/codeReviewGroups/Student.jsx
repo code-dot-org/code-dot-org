@@ -30,7 +30,7 @@ export default function Student({followerId, name, index}) {
         >
           <div
             style={{
-              display: 'flex'
+              display: 'flex',
             }}
           >
             <DragHandle {...provided.dragHandleProps} />
@@ -45,7 +45,7 @@ export default function Student({followerId, name, index}) {
 Student.propTypes = {
   followerId: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
 };
 
 /**
@@ -81,18 +81,18 @@ const getStudentStyle = (isDragging, draggableStyle) => ({
   background: isDragging ? color.background_gray : color.white,
 
   // styles we need to apply on draggables
-  ...draggableStyle
+  ...draggableStyle,
 });
 
 const handleStyles = {
   container: {
     marginRight: 12,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   dotColumn: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   dot: {
     width: 3,
@@ -100,6 +100,6 @@ const handleStyles = {
     backgroundColor: color.dark_charcoal,
     borderRadius: '50%',
     display: 'inline-block',
-    margin: 1.5
-  }
+    margin: 1.5,
+  },
 };

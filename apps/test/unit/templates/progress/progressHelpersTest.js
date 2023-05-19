@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import {
   fakeLesson,
   fakeLevels,
-  fakeProgressForLevels
+  fakeProgressForLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
@@ -14,7 +14,7 @@ import {
   lessonLocked,
   lessonProgressForSection,
   isLevelAssessment,
-  lessonIsAllAssessment
+  lessonIsAllAssessment,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -26,13 +26,13 @@ describe('progressHelpers', () => {
 
     const state = {
       teacherSections: {
-        selectedSectionId: '11'
+        selectedSectionId: '11',
       },
       hiddenLesson: Immutable.fromJS({
         lessonsBySection: {
-          '11': {'3': true}
-        }
-      })
+          11: {3: true},
+        },
+      }),
     };
 
     it('returns false for hidden lessons while viewing as participant', () => {
@@ -67,8 +67,8 @@ describe('progressHelpers', () => {
       const localState = {
         ...state,
         lessonLock: {
-          lockableAuthorized: true
-        }
+          lockableAuthorized: true,
+        },
       };
       assert.strictEqual(
         lessonIsVisible(lockableLesson, localState, ViewType.Instructor),
@@ -83,16 +83,16 @@ describe('progressHelpers', () => {
     const unlockedLevels = fakeLevels(3);
     const lockedLevels = fakeLevels(3).map((level, index) => ({
       ...level,
-      isLocked: index === 2 // lock last level in level group
+      isLocked: index === 2, // lock last level in level group
     }));
 
     const state = {
       currentUser: {
-        userId: 1
+        userId: 1,
       },
       lessonLock: {
-        lockableAuthorized: true
-      }
+        lockableAuthorized: true,
+      },
     };
 
     it('returns false for non-lockable lesson', () => {
@@ -111,8 +111,8 @@ describe('progressHelpers', () => {
       const localState = {
         ...state,
         currentUser: {
-          userId: null
-        }
+          userId: null,
+        },
       };
       assert.strictEqual(
         lessonIsLockedForUser(
@@ -129,8 +129,8 @@ describe('progressHelpers', () => {
       const localState = {
         ...state,
         lessonLock: {
-          lockableAuthorized: false
-        }
+          lockableAuthorized: false,
+        },
       };
       assert.strictEqual(
         lessonIsLockedForUser(
@@ -162,7 +162,7 @@ describe('progressHelpers', () => {
 
     const stateForSelectedSection = sectionId => ({
       teacherSections: {
-        selectedSectionId: sectionId
+        selectedSectionId: sectionId,
       },
       lessonLock: {
         lessonsBySectionId: {
@@ -170,26 +170,26 @@ describe('progressHelpers', () => {
             [lockedLessonId]: [
               {
                 locked: true,
-                name: 'student1'
+                name: 'student1',
               },
               {
                 locked: true,
-                name: 'student2'
-              }
+                name: 'student2',
+              },
             ],
             [unlockedLessonId]: [
               {
                 locked: true,
-                name: 'student1'
+                name: 'student1',
               },
               {
                 locked: false,
-                name: 'student2'
-              }
-            ]
-          }
-        }
-      }
+                name: 'student2',
+              },
+            ],
+          },
+        },
+      },
     });
 
     it('returns false when we have no selected section', () => {
@@ -225,7 +225,7 @@ describe('progressHelpers', () => {
     it('returns true when we only have a level group and it is locked', () => {
       const levels = fakeLevels(3).map((level, index) => ({
         ...level,
-        isLocked: index === 2 // lock last level in level group
+        isLocked: index === 2, // lock last level in level group
       }));
       assert.strictEqual(true, lessonLocked(levels));
     });
@@ -234,14 +234,14 @@ describe('progressHelpers', () => {
       // simulate case where we have a single level, followed by a 3 page level group
       const baseLevels = fakeLevels(4).map((level, index) => ({
         ...level,
-        kind: index === 0 ? LevelKind.puzzle : LevelKind.assessment
+        kind: index === 0 ? LevelKind.puzzle : LevelKind.assessment,
       }));
 
       it('returns true when level group is locked', () => {
         // lock last level in level group
         const levels = baseLevels.map((level, index) => ({
           ...level,
-          isLocked: index === 3 // lock last level in level group
+          isLocked: index === 3, // lock last level in level group
         }));
 
         assert.strictEqual(true, lessonLocked(levels));
@@ -256,14 +256,14 @@ describe('progressHelpers', () => {
   describe('isLevelAssessment', () => {
     it('returns true if level kind is assessment', () => {
       const level = {
-        kind: LevelKind.assessment
+        kind: LevelKind.assessment,
       };
       assert.equal(isLevelAssessment(level), true);
     });
 
     it('returns false if level kind is something other than assessment', () => {
       const level = {
-        kind: LevelKind.puzzle
+        kind: LevelKind.puzzle,
       };
       assert.equal(isLevelAssessment(level), false);
     });
@@ -272,7 +272,7 @@ describe('progressHelpers', () => {
   describe('getIconForLevel', () => {
     it('strips fa- from level.icon if one is provided', () => {
       const level = {
-        icon: 'fa-file-text'
+        icon: 'fa-file-text',
       };
       assert.equal(getIconForLevel(level), 'file-text');
     });
@@ -293,9 +293,9 @@ describe('progressHelpers', () => {
     });
 
     it('throws if icon is invalid', () => {
-      assert.throws(function() {
+      assert.throws(function () {
         const level = {
-          icon: 'asdf'
+          icon: 'asdf',
         };
         getIconForLevel(level);
       }, /Unknown iconType: /);
@@ -391,7 +391,7 @@ describe('progressHelpers', () => {
         imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -410,7 +410,7 @@ describe('progressHelpers', () => {
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -434,7 +434,7 @@ describe('progressHelpers', () => {
         imperfectPercent: 12.5,
         completedPercent: 37.5,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -456,7 +456,7 @@ describe('progressHelpers', () => {
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 3,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -478,7 +478,7 @@ describe('progressHelpers', () => {
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
-        lastTimestamp: 2
+        lastTimestamp: 2,
       });
     });
   });

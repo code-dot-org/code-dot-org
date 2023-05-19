@@ -6,7 +6,6 @@ ruby_block 'stop services' do
   %w(
     pegasus
     dashboard
-    varnish
     nginx
   ).each do |service|
     %i(stop disable).each do |action|

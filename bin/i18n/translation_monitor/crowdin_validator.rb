@@ -1,7 +1,7 @@
-require_relative 'core_validator.rb'
+require_relative 'core_validator'
 require_relative 'data_io_helper'
 require_relative 'config_helper'
-require_relative '../../../lib/cdo/crowdin/client_extentions.rb'
+require_relative '../../../lib/cdo/crowdin/client_extentions'
 
 #
 # A tool to download and validate translations made by specific users/vendors in Crowdin.
@@ -90,9 +90,9 @@ class CrowdinValidator
             puts "Wrote history to file #{history_file}"
           end
         end
-      rescue Exception => e
-        puts "Error: #{e.message}"
-        puts e.backtrace
+      rescue Exception => exception
+        puts "Error: #{exception.message}"
+        puts exception.backtrace
       end
     end
   end

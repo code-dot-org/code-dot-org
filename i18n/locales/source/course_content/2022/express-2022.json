@@ -206,22 +206,22 @@
             {
               "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Correct! Scrat turns the wrong direction and will not reach the acorn."
             },
             {
               "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
-              "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "correct": false,
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not move from the first block.",
               "correct": false,
-              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Scrat will not reach the acorn because he turns the wrong way."
             }
           ],
           "questions": [
@@ -408,17 +408,6 @@
     "authored_hints": {
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
-    },
-    "function_definitions": {
-      "draw flame": {
-        "name": "draw flame",
-        "parameters": {
-          "x": "x"
-        }
-      },
-      "draw fire": {
-        "name": "draw fire"
-      }
     }
   },
   "https://studio.code.org/s/express-2022/lessons/4/levels/5": {
@@ -1772,23 +1761,6 @@
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite move one way, then another way.",
     "long_instructions": "# Switching Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nIf you want to switch from one behavior to another, you need to _stop_ the old behavior and _begin_ the new behavior  at the same time. You can use a new block to make sprites stop their current behaviors.\n\n[blockly block][1]\n\nYou'll need to connect a behavior to this block, such as `moving east`.\n\n## Do This\n\n-   Run the code and see what happens.\n-   Add behaviors to each `stops` and `begins` block to make the sprite change from moving east to moving west at 2 seconds.",
-    "behavior_names": {
-      "moving east": "moving east",
-      "patrolling": "patrolling",
-      "moving forward": "moving forward",
-      "growing": "growing",
-      "moving west": "moving west",
-      "spinning right": "spinning right",
-      "moving north": "moving north",
-      "moving south": "moving south",
-      "jittering": "jittering",
-      "wandering": "wandering",
-      "shrinking": "shrinking",
-      "spinning left": "spinning left",
-      "fluttering": "fluttering",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping"
-    },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
@@ -2448,7 +2420,7 @@
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/6": {
     "short_instructions": "Give your pet a behavior when the new sprite touches it.",
-    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitment.",
+    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitement.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/7": {
@@ -3112,18 +3084,22 @@
     }
   },
   "https://studio.code.org/s/express-2022/lessons/14/levels/9": {
-    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
-    "authored_hints": {
-      "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
-      "mc_13_b": "Use `repeat` loops to make your code shorter."
-    }
-  },
-  "https://studio.code.org/s/express-2022/lessons/14/levels/10": {
     "short_instructions": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
     "authored_hints": {
       "mc_9_a": "Are you facing the right way? The `destroy block` mines the block in front of you.",
       "mc_9_b": "The black specks in the wall are coal! Use `destroy block` on these to mine the coal.",
       "mc_9_c": "Use `place torch` to put a torch in the space where you are standing."
+    }
+  },
+  "https://studio.code.org/s/express-2022/lessons/14/levels/10": {
+    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "authored_hints": {
+      "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
+      "mc_10_b": "When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!",
+      "mc_10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    },
+    "callouts": {
+      "craft_what_is_iron": "Mine this iron!"
     }
   },
   "https://studio.code.org/s/express-2022/lessons/14/levels/11": {
@@ -3147,14 +3123,10 @@
     }
   },
   "https://studio.code.org/s/express-2022/lessons/14/levels/13": {
-    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
     "authored_hints": {
-      "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
-      "mc_10_b": "When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!",
-      "mc_10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
-    },
-    "callouts": {
-      "craft_what_is_iron": "Mine this iron!"
+      "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
+      "mc_13_b": "Use `repeat` loops to make your code shorter."
     }
   },
   "https://studio.code.org/s/express-2022/lessons/14/levels/14": {
@@ -3504,7 +3476,7 @@
   },
   "https://studio.code.org/s/express-2022/lessons/17/levels/8": {
     "short_instructions": "Navigate through the ice to reach the salmon.",
-    "long_instructions": "Looks freezing out there! Catch a **salmon** [][0] on your way to the underwater ruins."
+    "long_instructions": "Looks freezing out there! Navigate through the ice to reach the salmon [][0]."
   },
   "https://studio.code.org/s/express-2022/lessons/17/levels/10": {
     "short_instructions": "Search these underwater ruins for a chest.",
@@ -3639,24 +3611,24 @@
         "dsls": {
           "answers": [
             {
-              "text": "The zombie will pass the correct path and end up going back and forth forever.",
+              "text": "The zombie will pass by the correct path and end up going back and forth forever.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
               "text": "The zombie will make it to the sunflower.",
               "correct": false,
-              "feedback": "Incorrect. The zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "Incorrect. The zombie will pass by the correct path and end up going back and forth forever."
             },
             {
               "text": "The zombie will turn right on the first path and go around in circles forever.",
               "correct": false,
-              "feedback": "Incorrect. The zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "Incorrect. The zombie will pass by the correct path and end up going back and forth forever."
             },
             {
               "text": "The zombie will be stuck at the end of the path forward.",
               "correct": false,
-              "feedback": "In this code, the zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "In this code, the zombie will pass by the correct path and end up going back and forth forever."
             }
           ],
           "questions": [

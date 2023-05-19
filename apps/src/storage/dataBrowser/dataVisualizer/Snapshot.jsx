@@ -1,4 +1,3 @@
-/* global ClipboardItem */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -19,17 +18,18 @@ const INITIAL_STATE = {
   isSnapshotOpen: false,
   isCopyPending: false,
   isSavePending: false,
-  imageSrc: PLACEHOLDER_IMAGE
+  imageSrc: PLACEHOLDER_IMAGE,
 };
 
 class Snapshot extends React.Component {
   static propTypes = {
     chartType: PropTypes.oneOf(Object.values(ChartType)).isRequired,
+    chartTypeName: PropTypes.string.isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
     tableName: PropTypes.string.isRequired,
-    projectName: PropTypes.string.isRequired
+    projectName: PropTypes.string.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -63,7 +63,7 @@ class Snapshot extends React.Component {
       return;
     }
     const options = {
-      background: '#fff'
+      background: '#fff',
     };
     html2canvas(element, options).then(canvas => {
       const dataSrc = canvas.toDataURL('image/png');
@@ -95,7 +95,7 @@ class Snapshot extends React.Component {
       return;
     }
     const options = {
-      background: '#fff'
+      background: '#fff',
     };
     const canvas = await html2canvas(element, options);
     const blob = await new Promise(resolve => canvas.toBlob(resolve));
@@ -106,7 +106,7 @@ class Snapshot extends React.Component {
     this.setState({isCopyPending: true});
     const pngBlob = await this.getPngBlob();
     await navigator.clipboard.write([
-      new ClipboardItem({'image/png': pngBlob})
+      new ClipboardItem({'image/png': pngBlob}),
     ]);
     this.setState({isCopyPending: false});
   };
@@ -136,12 +136,20 @@ class Snapshot extends React.Component {
         >
           <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img style={{maxHeight: '50vh'}} src={this.state.imageSrc} />
+            <img
+              style={{maxHeight: '50vh'}}
+              src={this.state.imageSrc}
+              alt={msg.dataVisualizerAltText({
+                chartType: this.props.chartTypeName,
+                values: this.props.selectedOptions,
+                title: this.props.chartTitle,
+              })}
+            />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),
                 table: this.props.tableName,
-                project: this.props.projectName
+                project: this.props.projectName,
               })}
             </p>
             <p>{this.props.selectedOptions}</p>
@@ -168,5 +176,5 @@ class Snapshot extends React.Component {
 
 export default connect(state => ({
   tableName: state.data.tableName || '',
-  projectName: state.project.projectName || ''
+  projectName: state.project.projectName || '',
 }))(Snapshot);

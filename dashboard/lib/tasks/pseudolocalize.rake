@@ -1,4 +1,7 @@
-task pseudolocalize: :environment do
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
+
+timed_task_with_logging pseudolocalize: :environment do
   def pseudolocalize_string(s)
     # TODO: Something smarter
     "!!-#{s}-!!"

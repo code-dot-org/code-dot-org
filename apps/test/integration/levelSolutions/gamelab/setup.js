@@ -24,6 +24,6 @@ module.exports = {
         var debugOutput = document.getElementById('debug-output');
         assert.include(debugOutput.textContent, 'setup');
       }
-    )
-  ]
+    ),
+  ],
 };

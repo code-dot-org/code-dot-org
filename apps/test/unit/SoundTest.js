@@ -36,7 +36,7 @@ describe('Sound', () => {
       sound.audioElement = {
         addEventListener: sinon.fake(),
         removeEventListener: sinon.fake(),
-        play: sinon.fake()
+        play: sinon.fake(),
       };
       expect(sound.reusableBuffer).to.be.null;
       sound.play();

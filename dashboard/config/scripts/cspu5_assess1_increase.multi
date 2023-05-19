@@ -1,24 +1,25 @@
 name 'cspu5_assess1_increase'
-encrypted 'OPYvIQXQiU1vPMW0Y06D5Wt00OcPXZi7AldUrNfh2gcs5E/PAgpUDstUyqWr
-GN9bPAK7mtdkkzX7yhEPLEcBoWth3fxOhfSbUgxPK4uGFbIi6kclHgS1pOut
-huYPxmKj3gOrPwJUUtDYpgwMdjDotvxDDxNy0w3CbVRWZdp2iInNWjsDBuBP
-H2JnPzpDZLXUcwTpelS1qOjtAeSnUmPeZYhe4K60AHcu5rWAMOVwFkzXGFE7
-/JxCkvq3MkHtx7RQpBWRXknEQ+947chRqvgeHXw4ITpHzyMnxzq0DVBO+m3b
-tihLIIYlpgqsGtP9Pd/5xew0o2SY32ZO9XEpLhvWq1kbowYidcF2jvvl2IKq
-wG1XGs/I4RuO9291khhLpleEq8d3UNxL8mefX57UeWbQ1szwtFCIBFVd83Ep
-sAXAPP0rhJuNQB9VzYBR3oOBZlrIxqN4Xx+6BVrKPVJ2Igpf8dGZJ0LHJ0l+
-2To3Uu18G+dj57sA7/MdhuO+JqiP8lW5wl10IFqwIYHTBP0B7BamsnOUVQqQ
-aravGCFbHmzZzcO3MiVQPSycgP++DQbxEOeGrDGXgIJC4J6ZiSW4bN9GZuoU
-XMW8ZPY6xisEnC7+rcZKc1a7WTlOo4pgTE1EVGoRtOABAfIu1sHj3Hsplmbq
-584YQ99ylQN5KlNaSs1dfBZhAxzbIr/YThbvanaoC9JaJBhsFlhnu24M/9P5
-GYiEXDfbAXWJ3ab4xdyMRscc0Tb5tYtOY3cbb3xIL7Yo5489uloBD2djrqda
-v6XQNvWWL/Q4NoibjlcheP3yBl1nVSUd0BzkuOpuwtGtKuHcuRJUpPrdDhC6
-u8ZK4TRBe77BHe0gAsaUravqRKyWDYalWuhhO4G2ihgoZRE3TKor2IKJpML2
-Btq1rKqIIRmXpIckV3IPU1A1eAIxmPpU4Oviwso/cZu6n+aYFFCOUMbqUNiB
-c/nawCYkyjXbMVYUoGiCQzJtCVhVdQ2Qx9AWXjFkB7dhV/ikPIRo8aWDmZf/
-Q6tN+beL5HU3qVj/WfTLkUphVwuCcj+i2OGl5eAaykODoKKOzXnK45O39puc
-XBnfr6TPVKwLzWzCHPrv5bdC2e9Zvyqpik8wpBnYE8zTBxR2GUCxaMYVuqMC
-4AKATGdo+kVZ6uoNgk4RXK+4nrF4smhl0x2AXYEXtpc7qISE/MgSsgrJ4706
-PgHBlOUvgEAhHL/A/EmBuCAcP1qOXjvXWpwBvwFBVZznMyEAWUBzO+9ww2gT
-gHp0g6K80HAIwZvw9PdS
-'
+wrong '5'
+wrong '8'
+wrong '10'
+right '13'
+wrong 'Error.  Cannot make a new variable x inside function increase()'
+
+markdown <<MARKDOWN
+What is the output to the console after the following code segment is executed?
+
+![](https://images.code.org/8dcfa81e04df71d5f696bf629f2231bf-image-1518821364804.48.52 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 5** - application of local v. global
+
+Going through each line of code:
+
+* 1: A variable x is set to the value 10
+* 2: The function "increase()" is called where a separate local variable that is also named "x" is set to the value 5
+* 3: Exiting the function "increase()", in line 3 the value of x is still 10 because the local variable inside "increase()" is not accessible outside outside the function. Thus, in line 3, x = x + 3 which equals 10 + 3 = 13
+* Printing the value of x, the computer outputs "13"
+MARKDOWN
+
+allow_multiple_attempts true

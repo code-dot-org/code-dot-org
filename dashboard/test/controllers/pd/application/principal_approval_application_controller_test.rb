@@ -32,13 +32,5 @@ module Pd::Application
       assert_equal teacher_application.applicant_name, assigns(:teacher_application)[:name]
       assert_equal 'Computer Science Principles', assigns(:teacher_application)[:course]
     end
-
-    test 'renders not available on production' do
-      Rails.env.stubs(:production?).returns(true)
-      get :new, params: {application_guid: 'some_guid'}
-      assert_template :not_available
-      assert_response :success
-      Rails.env.unstub(:production)
-    end
   end
 end

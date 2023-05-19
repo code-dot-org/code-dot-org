@@ -4,3 +4,5 @@ wrong 'Maintaining privacy of the information stored in the data set.'
 wrong 'Scalability of the system.'
 wrong 'Structuring the metadata of the information for analysis.'
 right 'The frequency of a particular item occurring in a data set.'
+
+allow_multiple_attempts true

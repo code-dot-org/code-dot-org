@@ -1,11 +1,11 @@
 /** @file Tests for our johnny-five Led wrapper */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import five from '@code-dot-org/johnny-five-deprecated';
-import {makeStubBoard} from '../makeStubBoard';
+import five from '@code-dot-org/johnny-five';
+import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 
-describe('Led', function() {
+describe('Led', function () {
   it('is a five.Led', () => {
     const led = newTestLed();
     expect(led).to.be.an.instanceOf(five.Led);
@@ -100,20 +100,20 @@ describe('Led', function() {
 function newTestLed() {
   return new Led({
     controller: makeStubController(),
-    board: makeStubBoard()
+    board: makeCPBoardStub(),
   });
 }
 
 function makeStubController() {
   return {
     initialize: {
-      value: () => {}
+      value: () => {},
     },
     write: {
-      value: () => {}
+      value: () => {},
     },
     update: {
-      value: () => {}
-    }
+      value: () => {},
+    },
   };
 }

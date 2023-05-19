@@ -10,7 +10,7 @@ const levelDef = {
     [2, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -21,13 +21,13 @@ const levelDef = {
     [0, -1, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   flowerType: 'redWithNectar',
   toolbox:
     '<xml id="toolbox"><block type="maze_moveForward" limit="1"></block></xml>',
   requiredBlocks: [],
-  honeyGoal: 1
+  honeyGoal: 1,
 };
 
 module.exports = {
@@ -39,19 +39,19 @@ module.exports = {
       description: 'Limited toolbox blocks - fail goal',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       missingBlocks: [],
       xml:
         '<xml>' +
         blockUtils.blocksFromList(['maze_moveForward', 'maze_moveForward']) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Limited toolbox blocks - pass goal, over limit',
       expected: {
         result: true,
-        testResult: TestResults.BLOCK_LIMIT_FAIL
+        testResult: TestResults.BLOCK_LIMIT_FAIL,
       },
       missingBlocks: [],
       xml:
@@ -59,21 +59,21 @@ module.exports = {
         blockUtils.blocksFromList([
           'maze_moveForward',
           'maze_honey',
-          'maze_moveForward'
+          'maze_moveForward',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Limited toolbox blocks - pass goal, under limit',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       missingBlocks: [],
       xml:
         '<xml>' +
         blockUtils.blocksFromList(['maze_moveForward', 'maze_honey']) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

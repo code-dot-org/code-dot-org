@@ -4,6 +4,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
   skip_before_action :load_user, only: [:current, :netsim_signed_in]
+  skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
     user_id = params[:user_id]
@@ -211,5 +212,19 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def set_standards_report_info_to_seen
     @user.has_seen_standards_report_info_dialog = true
     @user.save!
+  end
+
+  # Expects a param with the key "g-recaptcha-response" that is used
+  # to validate whether a user isn't a bot
+  # POST /dashboardapi/v1/users/<user_id>/verify_captcha
+  def verify_captcha
+    if verify_recaptcha
+      @user.last_verified_captcha_at = Time.now.utc
+      @user.save
+
+      return head :ok
+    else
+      return head :bad_request
+    end
   end
 end
