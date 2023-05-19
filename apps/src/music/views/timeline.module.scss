@@ -7,6 +7,7 @@
   background-size: 100% 200%;
   padding: 10px;
   box-sizing: border-box;
+  background-color: $neutral_dark;
 
   .container {
     width: 100%;
@@ -14,7 +15,6 @@
     overflow-y: hidden;
     height: 100%;
     position: relative;
-    background-color: $dark_black;
 
     .fullWidthOverlay {
       height: 100%;
