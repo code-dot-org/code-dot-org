@@ -425,7 +425,12 @@ img.video_thumbnail {
 /* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
  * to have a 1px separation between it and the PaneHeader above it.
 *  */
-#codeWorkspace > .cdomoderndark-theme {
+#codeWorkspace > .cdomoderndark-theme,
+#codeWorkspace > .cdohighcontrastdark-theme,
+#codeWorkspace > .cdoprotanopiadark-theme,
+#codeWorkspace > .cdodeuteranopiadark-theme,
+#codeWorkspace > .cdotritanopiadark-theme {
+  /* A small separation. */
   margin-top: 1px;
 
   /* Override the height in Google Blockly's .injectionDiv */
