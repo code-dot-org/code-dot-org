@@ -7,7 +7,7 @@
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
     - if local_assigns[:next_level_link]
-      %a.btn.btn-large.btn-primary.next-lesson.nextLevelButton{style: !!local_assigns[:show_next_page_link] ? nil : 'display:none'}
+      %a{href: local_assigns[:next_link_level], class: 'btn btn-large btn-primary next-lesson nextLevelButton', style: !!local_assigns[:show_next_page_link] ? nil : 'display:none'}
         =t('next_level')
     - if local_assigns[:next_page_button]
       %a.btn.btn-large.btn-primary.nextPageButton
